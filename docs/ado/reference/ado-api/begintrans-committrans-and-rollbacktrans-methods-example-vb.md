@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: aa7de324-cd71-4bd0-8043-24229f4a785e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f65c479ae7da20f63108ede0972433eda778987e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0cfb65adeab6f97faca44dc917396bc02fab2fa1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696351"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920452"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-example-vb"></a>BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)
 次の例は、すべての心理学の本の書籍の種類を変更、***タイトル***データベースのテーブル。 後に、 [BeginTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドに加えられたすべての変更を分離するトランザクションの開始、***タイトル***、テーブル、 [CommitTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドは、変更を保存します。 使用することができます、 [RollbackTrans](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-ado.md)メソッドを使用して保存した変更を元に戻す、 [Update](../../../ado/reference/ado-api/update-method.md)メソッド。  

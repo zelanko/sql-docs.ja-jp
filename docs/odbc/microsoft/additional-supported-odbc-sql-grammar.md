@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 2ead7727-3245-4c2b-91f5-ed946ef4edf5
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b34584a32d5a0adbf95a76415d1141a464b3fe8a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2a5939ee2b8163e5e71899d5074b851dfda87484
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658260"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901393"
 ---
 # <a name="additional-supported-odbc-sql-grammar"></a>サポートされているその他の ODBC SQL 文法
 ODBC ドライバーでは、コアおよび ODBC 2.5 の拡張の文法で最小 ODBC 2.5 文法と、次の句を完全にサポートします。 ジャンプすることにより、追加情報を表示できる、 [ALTER TABLE ステートメント](../../odbc/microsoft/alter-table-statement.md)、[相関名](../../odbc/microsoft/correlation-names.md)、および[プロシージャの呼び出し](../../odbc/microsoft/procedure-invocation.md)トピック。  

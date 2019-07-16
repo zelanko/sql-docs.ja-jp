@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3067e1e3-05b7-4f11-9206-c612ef4e7e42
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: c541c61f32b24a2d32ee78d20a78a6f894a0dece
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6121d2e55d6e97d6fc474146d5f2cf41f3c8371
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906590"
 ---
 # <a name="create-a-version-flag-master-data-services"></a>バージョン フラグを作成する (マスター データ サービス)
 
@@ -28,7 +27,7 @@ ms.locfileid: "65477087"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、バージョンに割り当てるバージョン フラグを作成します。 フラグによって、ユーザーまたはサブスクライブ システムが使用する必要があるバージョンを示すことができます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  

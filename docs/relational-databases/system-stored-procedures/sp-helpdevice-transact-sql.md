@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 1a5eafa7-384e-4691-ba05-978eb73bbefb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c856e11b55040bf699eace2fb1f917f058c2fc9a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0db0242e5bdd9e04d3d7c424382933121c2e0ac2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902989"
 ---
 # <a name="sphelpdevice-transact-sql"></a>sp_helpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Microsoft&amp;#xAE; SQL Server&amp;#x2122; のバックアップ デバイスに関する情報をレポートします。  
+  Microsoft&#xAE; SQL Server&#x2122; のバックアップ デバイスに関する情報をレポートします。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用することをお勧め、 [sys.backup_devices](../../relational-databases/system-catalog-views/sys-backup-devices-transact-sql.md)カタログ ビューを代わりに  
@@ -74,7 +73,7 @@ sp_helpdevice [ [ @devname = ] 'name' ]
 EXEC sp_helpdevice;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addumpdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql.md)   
  [sp_dropdevice &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdevice-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   

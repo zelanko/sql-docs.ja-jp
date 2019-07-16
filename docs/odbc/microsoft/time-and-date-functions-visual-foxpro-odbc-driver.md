@@ -17,37 +17,36 @@ helpviewer_keywords:
 ms.assetid: c1fb63b7-af50-45d6-8dec-ae6ea7119527
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cf8e7552faf9567dab25ee3dc5b7b293034faef0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 537af13edf943e27a634d3a8ba4f0f85c645251f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632772"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912403"
 ---
 # <a name="time-and-date-functions-visual-foxpro-odbc-driver"></a>時刻および日付関数 (Visual FoxPro ODBC ドライバー)
 次の表に、Visual FoxPro ODBC ドライバーでサポートされている ODBC の日付と時刻関数ODBC 構文から同じ関数の場合、Visual FoxPro の文法が異なる場合は、Visual FoxPro のと同じですが一覧表示されます。  
   
 |ODBC の文法|Visual FoxPro の文法|  
 |------------------|---------------------------|  
-|CURDATE *( )*|DATE *( )*|  
-|CURTIME *( )*|TIME *( )*|  
+|CURDATE *)*|日付 *)*|  
+|CURTIME *( )*|時間 *)*|  
 |DAYNAME *(date_exp)*|CDOW *(date_exp)*|  
-|DAYOFMONTH(*date_exp)*|DAY *( )*|  
+|DAYOFMONTH(*date_exp)*|1 日 *)*|  
 |1 時間 *(time_exp)*||  
-|MINUTE *(time_exp)*||  
-|MONTH *(time_exp)*||  
+|分 *(time_exp)*||  
+|1 か月 *(time_exp)*||  
 |MONTHNAME *(date_exp)*|CMONTH *(date_exp)*|  
 |今すぐ *)*|DATETIME *( )*|  
-|SECOND *(time_exp)*|SEC *(time_exp)*|  
+|2 番目 *(time_exp)*|1 秒 *(time_exp)*|  
 |週 *(date_exp)*||  
-|YEAR *(date_exp)*||  
+|年 *(date_exp)*||  
   
  次の日付と時刻の関数がサポートされていません。  
   
  DAYOFYEAR *(date_exp)*  
   
- QUARTER *(date_exp)*  
+ 四半期 *(date_exp)*  
   
  TIMESTAMPADD *(間隔、integer_exp、timestamp_exp)*  
   

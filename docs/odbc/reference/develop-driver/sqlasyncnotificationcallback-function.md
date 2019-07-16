@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: c56aedc9-f7f7-4641-b605-f0f98ed4400c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b78764e1dccb7118d43cc967f3b03838366d6eb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 96073b8d5e68d10caaff268aae4c5af60554ef76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915543"
 ---
 # <a name="sqlasyncnotificationcallback-function"></a>SQLAsyncNotificationCallback 関数
 **準拠**  
@@ -24,7 +23,7 @@ ms.locfileid: "63224519"
   
  標準への準拠:なし  
   
- **まとめ**  
+ **概要**  
  **SQLAsyncNotificationCallback**ドライバーに SQL_STILL_EXECUTING が返された後に、現在の非同期操作のいくつかの進行状況がある場合に、ドライバー マネージャーをコールバックするためのドライバーを使用します。 **SQLAsyncNotificationCallback**だけで、ドライバーによって呼び出されることができます。  
   
  ドライバーは呼び出さないでください**SQLAsyncNotificationCallback**関数の名前を持つ**SQLAsyncNotificationCallback**します。 代わりに、ドライバー マネージャーは、関数のポインターを渡しますドライバーに対応する接続ハンドルまたはステートメントのハンドルの SQL_ATTR_ASYNC_DBC_NOTIFICATION_CALLBACK または SQL_ATTR_ASYNC_STMT_NOTIFICATION_CALLBACK 属性の値としてそれぞれします。 別のハンドルには、別の関数ポインターの値を割り当てることができます。 関数ポインターの型は、SQL_ASYNC_NOTIFICATION_CALLBACK として定義されます。  
@@ -54,10 +53,10 @@ typedef SQLRETURN (SQL_API *SQL_ASYNC_NOTIFICATION_CALLBACK)(
 ## <a name="diagnostics"></a>診断  
  **SQLAsyncNotificationCallback** SQL_ERROR を (ドライバーまたはドライバー マネージャーでの実装の問題を示します次の 2 つの状況に戻すことができます。  
   
-|[エラー]|説明|  
+|Error|説明|  
 |-----------|-----------------|  
 |接続やステートメントは、通知を要求しませんでした。||  
 |無効な*処理*|ドライバーは、内部のドライバー マネージャーの検証テストに失敗した、無効なハンドルで渡されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [非同期実行 (ポーリング メソッド)](../../../odbc/reference/develop-app/asynchronous-execution-polling-method.md)

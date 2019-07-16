@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: de1d74af-89b6-4f3f-a8c9-07c3e2b3c9a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 257d9c604d441d8fae9fb34da5ddfce816336f20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0245d492b7014b2dfc0097a9d3f2c9a7098eae51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702056"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925357"
 ---
 # <a name="examining-data"></a>データの調査
 [データの取得](../../../ado/guide/data/getting-data.md)セクションでは、1 つまたは複数としてデータ ソースからデータを取得する方法を説明しました。 **Recordset**オブジェクト。 このセクションで取り上げる**レコード セット**内を移動する方法を含む詳細についてで、**レコード セット**し、そのデータを表示します。  

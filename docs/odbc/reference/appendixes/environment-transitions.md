@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9d11b1ab-f4c8-48ca-9812-8c04303f939d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3ed2bbf40ac333db34d3920b2ed2ec688c344bfe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b1de2f2147357f9e2ed4f71657b9298c4a13684
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188993"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910433"
 ---
 # <a name="environment-transitions"></a>環境の遷移
 ODBC 環境では、次の 3 つの状態があります。  
@@ -37,8 +36,8 @@ ODBC 環境では、次の 3 つの状態があります。
   
 |E0<br /><br /> 未割り当て|E1<br /><br /> 割り当てられました。|E2<br /><br /> 接続|  
 |------------------------|----------------------|-----------------------|  
-|E1[1]|--[4]|--[4]|  
-|(組み込み)[2]|E2[5]<br />(HY010)[6]|--[4]|  
+|E1 [1]|--[4]|--[4]|  
+|(組み込み)[2]|E2 [5]<br />(HY010)[6]|--[4]|  
 |(組み込み)[3]|(組み込み)|--[4]|  
   
  [1] この行は、移行を示しています。 ときに*HandleType* sql_handle_env としてでした。  
@@ -83,7 +82,7 @@ ODBC 環境では、次の 3 つの状態があります。
 |E0<br /><br /> 未割り当て|E1<br /><br /> 割り当てられました。|E2<br /><br /> 接続|  
 |------------------------|----------------------|-----------------------|  
 |(組み込み)[1]|E0|(HY010)|  
-|(組み込み)[2]|(組み込み)|--[4]<br />E1[5]|  
+|(組み込み)[2]|(組み込み)|--[4]<br />E1 [5]|  
 |(組み込み)[3]|(組み込み)|--|  
   
  [1] この行は、移行を示しています。 ときに*HandleType* sql_handle_env としてでした。  

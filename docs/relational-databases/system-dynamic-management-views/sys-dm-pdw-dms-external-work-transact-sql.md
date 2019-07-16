@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 47345015-f861-451e-97c4-6e1cb81d1922
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: d02a1d50e9c7a5f906e78fa6753d594edced341f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a1778cbb88fcd6a4142e800cd45109602509125d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62691050"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899498"
 ---
 # <a name="sysdmpdwdmsexternalwork-transact-sql"></a>sys.dm_pdw_dms_external_work (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62691050"
 |input_name|**nvarchar(60)**|読み取られている入力の名前の文字列を指定します。|Hadoop ファイルの場合は、Hadoop のファイル名です。|  
 |read_location|**bigint**|読み取り位置をオフセットします。||  
 |estimated_bytes_processed|**bigint**|このワーカーによって処理されたバイト数。|大きいまたは 0。|  
-|length|**bigint**|分割、ファイル内のバイト数。<br /><br /> Hadoop は、これは、HDFS ブロックのサイズです。|ユーザー定義です。 既定では 64 MB です。|  
+|長さ|**bigint**|分割、ファイル内のバイト数。<br /><br /> Hadoop は、これは、HDFS ブロックのサイズです。|ユーザー定義です。 既定では 64 MB です。|  
 |status|**nvarchar(32)**|ワーカーの状態。|保留中、処理、完了、失敗した、中止されました|  
 |start_time|**datetime**|ワーカーの実行が開始された時刻。|以上のクエリのステップの開始時刻値にこのワーカーが属しています。 参照してください[sys.dm_pdw_request_steps &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-request-steps-transact-sql.md)します。|  
 |end_time|**datetime**|時間に実行が終了した、失敗、またはが取り消されました。|継続的なまたはキューに置かれた作業者の場合は NULL です。 それ以外の場合、start_time より大きい。|  
@@ -44,7 +43,7 @@ ms.locfileid: "62691050"
   
  このビューで保持される最大行数は、詳細については、メタデータ」セクションを参照してください、[容量制限](/azure/sql-data-warehouse/sql-data-warehouse-service-capacity-limits#metadata)トピック。
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

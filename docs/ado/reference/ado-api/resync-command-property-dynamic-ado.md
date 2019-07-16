@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4e2bb601-0fe8-4d61-b00e-38341d85a6bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5acaaa20667ac13f89b41391c1cc1d567eccf580
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e81fa9ffb28ba31f50d77cacf372bc24d09787ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711666"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917144"
 ---
 # <a name="resync-command-property-dynamic-ado"></a>Resync Command プロパティ - 動的 (ADO)
 文字列をユーザーが指定したコマンドを指定します、[再同期](../../../ado/reference/ado-api/resync-method.md)でという名前のテーブルにデータを更新するメソッドの問題、[一意テーブル](../../../ado/reference/ado-api/unique-table-unique-schema-unique-catalog-properties-dynamic-ado.md)動的プロパティ。  

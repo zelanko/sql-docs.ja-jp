@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3de527e5-2e65-4ab0-9b7f-6d317c4478de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d63f01c937f4a690968fe5edb50ac84958e705ed
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a92077bf72c025fa183292525b3bd756a4bf4b87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700663"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925171"
 ---
 # <a name="handling-errors-in-jscript"></a>JScript でエラーを処理する
 Microsoft® JScript® コードを確認する必要があります、**カウント**のプロパティ、**接続**オブジェクトの**エラー**コレクション。 値が 0 より大きい場合は、コレクションを反復処理し、その他の言語のいずれかで行うように値を出力します。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c611f857-d6b0-4dca-8925-f4a02e769eb0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 556474c3b038f40e21467a4bbc945fc8f29fd5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c8c6b10e63e4cacce0124eb11102db796168d9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695989"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919709"
 ---
 # <a name="commandtimeout-property-ado"></a>CommandTimeout プロパティ (ADO)
 試行を終了し、エラーが発生する前に、コマンドの実行中に待機する時間を示します。  
@@ -42,7 +41,7 @@ ms.locfileid: "66695989"
 |-|-|  
 |[Command オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)|[Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (VB)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vb.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (vc++)](../../../ado/reference/ado-api/activeconnection-commandtext-commandtimeout-commandtype-size-example-vc.md)   
  [ActiveConnection、CommandText、CommandTimeout、CommandType、サイズ、および方向プロパティの例 (JScript)](../../../ado/reference/ado-api/activeconnection-commandtext-timeout-type-size-example-jscript.md)   

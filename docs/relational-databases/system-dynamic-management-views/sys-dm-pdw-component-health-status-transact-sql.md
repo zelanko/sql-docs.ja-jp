@@ -9,14 +9,13 @@ ms.topic: conceptual
 ms.assetid: 68cc3f7a-693c-4d5d-a76b-455352af8d7f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = sqlallproducts-allversions'
-ms.openlocfilehash: 602b8ed0c338ba85c35137cd2752fa4357bf63ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51e364650f8b8f8dae386126bdc820f9c72e571c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62692704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899518"
 ---
 # <a name="sysdmpdwcomponenthealthstatus-transact-sql"></a>sys.dm_pdw_component_health_status (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-xxxx-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "62692704"
 |property_value|**nvarchar (255)**|現在のプロパティの値。|NULL|  
 |update_time|**datetime**|最後に、メトリックが更新されました。|NOT NULL|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse と Parallel Data Warehouse の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-and-parallel-data-warehouse-dynamic-management-views.md)  
   
   

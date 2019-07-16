@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: e19b6002-67bd-4e7d-9f19-ecb455522b1a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 63416f019cfde8ec47029cf962e4aa29643c40c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 77d4bd0bfab8b2c1a7337cae1f5d96300b7f3625
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910002"
 ---
 # <a name="relationship-staging-table-master-data-services"></a>リレーションシップ ステージング テーブル (マスター データ サービス)
 
@@ -30,11 +29,11 @@ ms.locfileid: "65485985"
 ##  <a name="TableColumns"></a> テーブルの列  
  次の表は、リレーションシップ ステージング テーブルの各フィールドの用途を説明しています。  
   
-|列名|説明|値|  
+|列名|説明|[値]|  
 |-----------------|-----------------|-----------|  
 |**ID**|自動的に割り当てられる ID。|このフィールドには値を入力しないでください。 バッチが未処理の場合、このフィールドは空白です。|  
-|**RelationshipType**|必須<br /><br /> 設定しているリレーションシップの種類。|有効な値は次のとおりです。<br /><br /> **1**: 親<br /><br /> **2**:兄弟 (同じレベル)|  
-|**ImportStatus_ID**|必須<br /><br /> インポート処理の状態。|有効な値は次のとおりです。<br /><br /> **0**: レコードがステージング準備済みであることを示すために指定します。<br /><br /> **1**: 自動的に割り当てられ、レコードのステージング処理が正常に完了したことを示します。<br /><br /> **2**: 自動的に割り当てられ、レコードのステージング処理に失敗したことを示します。|  
+|**RelationshipType**|必須<br /><br /> 設定しているリレーションシップの種類。|設定可能な値は、次のとおりです。<br /><br /> **1**: 親<br /><br /> **2**:兄弟 (同じレベル)|  
+|**ImportStatus_ID**|必須<br /><br /> インポート処理の状態。|設定可能な値は、次のとおりです。<br /><br /> **0**: レコードがステージング準備済みであることを示すために指定します。<br /><br /> **1**: 自動的に割り当てられ、レコードのステージング処理が正常に完了したことを示します。<br /><br /> **2**: 自動的に割り当てられ、レコードのステージング処理に失敗したことを示します。|  
 |**Batch_ID**|Web サービスでのみ必須<br /><br /> ステージング用のレコードをグループ化する、自動的に割り当てられる識別子。<br /><br /> バッチが未処理の場合、このフィールドは空白です。|バッチ内のメンバーすべてにこの識別子が割り当てられます。これは、 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] ユーザー インターフェイスの **[ID]** 列に表示されます。|  
 |**BatchTag**|Web サービス以外は必須<br /><br /> バッチの一意名 (最大 50 文字)。||  
 |**HierarchyName**|必須<br /><br /> 明示的階層の名前。 各統合メンバーは、1 つの階層にのみ所属することができます。||  

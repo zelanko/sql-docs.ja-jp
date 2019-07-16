@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 20b3f22e-16a2-4a87-b4eb-c277be6bf5c8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cebdf2ed28287a59ec9d4f0daaa1d0c200f8fe20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32d5e23579b99b323da870d2608b2d197520f99f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909020"
 ---
 # <a name="mapping-mysql-and-sql-server-character-set-mysqltosql"></a>MySQL と SQL Server 文字セットのマッピング (MySQLToSQL)
 MySQL の文字データ型、式とリテラルの文字セット (文字セット) を指定できます。  
@@ -112,8 +111,8 @@ MySQL の文字データ型、式とリテラルの文字セット (文字セッ
     |cp 1251|Windows キリル語|CHAR と VARCHAR (既定値)|  
     |cp 1256|Windows のアラビア語|CHAR と VARCHAR (既定値)|  
     |cp 1257|Windows バルト言語|CHAR と VARCHAR (既定値)|  
-    |binary|バイナリの疑似文字セット|CHAR と VARCHAR (既定値)|  
-    |geostd8|GEOSTD8 Georgian|CHAR と VARCHAR (既定値)|  
+    |バイナリ|バイナリの疑似文字セット|CHAR と VARCHAR (既定値)|  
+    |geostd8|GEOSTD8 グルジア語|CHAR と VARCHAR (既定値)|  
     |cp932|Windows 日本語 SJIS|NCHAR と NVARCHAR (既定値)|  
     |eucjpms|Windows 日本語 UJIS|NCHAR と NVARCHAR (既定値)|  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f227c49a-ed46-4e0f-8992-83093456cf94
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f6c6662cf12eaae7f43dc4041598cf9711eca128
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5136be23e428e670e5f6928944203c446c120ba1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913638"
 ---
 # <a name="changesets-master-data-services"></a>変更セット (Master Data Services)
 
@@ -52,7 +51,7 @@ ms.locfileid: "65487398"
   
     3.  準備ができたら、変更セットをコミットします。 「 [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [変更セットを作成する (マスター データ サービス)](../master-data-services/create-a-changeset-master-data-services.md)   
  [変更セットの適用および更新 &#40;マスター データ サービス&#41;](../master-data-services/apply-and-update-a-changeset-master-data-services.md)   
  [変更セットのコミットまたは送信 (マスター データ サービス)](../master-data-services/commit-or-submit-a-changeset-master-data-services.md)   

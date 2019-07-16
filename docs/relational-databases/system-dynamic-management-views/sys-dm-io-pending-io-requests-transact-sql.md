@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: d1fb46dd-5c74-4c04-9ecf-8934b1bedb5b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 71fb4daabcdb0eef03e615f595df20d555673a24
-ms.sourcegitcommit: 467b2c708651a3a2be2c45e36d0006a5bbe87b79
+ms.openlocfilehash: 4006679f601bbed26ea092f39f8f7b5fb810e99a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/02/2019
-ms.locfileid: "53980208"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900348"
 ---
 # <a name="sysdmiopendingiorequests-transact-sql"></a>sys.dm_io_pending_io_requests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "53980208"
 |**io_pending**|**int**|I/O 要求が Windows で保留されているか、完了しているかを示します。 I/O 要求は、Windows で要求が完了していても、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で I/O 要求を処理し、一覧から削除するコンテキスト切り替えがまだ実行されていない場合には、引き続き保留中になることがあります。 NULL 値は許可されません。|  
 |**io_completion_routine_address**|**varbinary(8)**|I/O 要求が完了したときに呼び出される内部関数。 NULL 値が許可されます。|  
 |**io_user_data_address**|**varbinary(8)**|内部使用のみです。 NULL 値が許可されます。|  
-|**scheduler_address**|**varbinary(8)**|I/O 要求が発行されたスケジューラ。 I/O 要求はスケジューラの保留中 I/O 一覧に表示されます。 詳細については、[sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)を参照してください。 NULL 値は許可されません。|  
+|**scheduler_address**|**varbinary(8)**|I/O 要求が発行されたスケジューラ。 I/O 要求はスケジューラの保留中 I/O 一覧に表示されます。 詳細については、次を参照してください。 [sys.dm_os_schedulers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-schedulers-transact-sql.md)します。 NULL 値は許可されません。|  
 |**io_handle**|**varbinary(8)**|I/O 要求で使用されているファイルのファイル ハンドル。 NULL 値が許可されます。|  
 |**io_offset**|**bigint**|I/O 要求のオフセット。 NULL 値は許可されません。|  
 |**io_handle_path**|**nvarchar (256)**| I/O 要求で使用されているファイルのパス。 NULL 値が許可されます。|
@@ -53,7 +52,7 @@ ms.locfileid: "53980208"
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
   
 ## <a name="see-also"></a>参照  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   

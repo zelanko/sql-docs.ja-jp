@@ -13,19 +13,18 @@ helpviewer_keywords:
 ms.assetid: c2bd3dfd-6103-43d1-859e-8ed8d19c58d3
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9a8879a29c69686992bf5955c335e6854ca9bfa5
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b3f249e7a7a6b48bad3a83533f903987b957d027
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913054"
 ---
 # <a name="filestream-support-ole-db"></a>FILESTREAM のサポート (OLE DB)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../../includes/snac-deprecated.md)]
 
-  以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0、OLE DB は、強化された FILESTREAM 機能をサポートしています。 この機能の詳細については、[FILESTREAM のサポート](../../../relational-databases/native-client/features/filestream-support.md)を参照してください。 サンプルについては、[Filestream と OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)を参照してください。  
+  以降で[!INCLUDE[ssKatmai](../../../includes/sskatmai-md.md)]と[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]Native Client 10.0、OLE DB は、強化された FILESTREAM 機能をサポートしています。 この機能の詳細については、次を参照してください。 [FILESTREAM のサポート](../../../relational-databases/native-client/features/filestream-support.md)します。 サンプルについては、次を参照してください。 [Filestream と OLE DB](../../../relational-databases/native-client-ole-db-how-to/filestream/filestream-and-ole-db.md)します。  
   
  送受信する**varbinary (max)** 2 GB より大きい値では、アプリケーションを使用して**DBTYPE_IUNKNOWN**パラメーターと結果のバインドにします。 パラメーターのプロバイダーは ISequentialStream と ISequentialStream を返す結果の iunknown::queryinterface を呼び出す必要があります。  
   

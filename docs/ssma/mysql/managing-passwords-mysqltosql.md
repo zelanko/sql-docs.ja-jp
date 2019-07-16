@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4ffbc587-ea3f-49ad-bc42-a654f672325e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f04b786aaef8a994cff1051a289bbdad3b3fd5ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eda3f15f0d9ca1cfe04c25bfee5f2ece827e8b83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909004"
 ---
 # <a name="managing-passwords-mysqltosql"></a>パスワードの管理 (MySQLToSQL)
 このセクションでは、データベースのパスワードとサーバー間でのエクスポートをインポートまたはプロシージャのセキュリティ保護の詳細については。  
@@ -130,6 +129,6 @@ SSMA コンソール アプリケーションをセキュリティで保護さ�
     
     Please confirm password: xxxxxxxx  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソール (MySQL) の実行](https://msdn.microsoft.com/e3e9f7e4-0619-4861-a202-3d5d39953b26)  
   

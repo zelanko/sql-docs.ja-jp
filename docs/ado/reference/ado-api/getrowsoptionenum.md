@@ -1,5 +1,5 @@
 ---
-title: GetRowsOptionEnum | Microsoft Docs
+title: GetRowsOptionEnum |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: adc109b9-79f4-4946-a5eb-658e22e9a8a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31693cb3635a226bdc7bdde767ce5bd781e525e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a48d0d3a08095cde1da2c142ed59efafb0ba463f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694821"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918479"
 ---
 # <a name="getrowsoptionenum"></a>GetRowsOptionEnum
 取得するレコードの数を指定します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adGetRowsRest**|-1|内のレコードの残りの部分を取得、**レコード セット**、現在の位置またはで指定されたブックマークのいずれかから、*開始*のパラメーター、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)メソッド。|  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: fdd09b60-39c7-44be-8008-e891a031f80e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 12ae39b965678a47053d3d312c750f7bd87bd7d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c28a0b615a9f250c8539e87abf9fefbc11f513ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916826"
 ---
 # <a name="status-property-example-field-vb"></a>Status プロパティの例 (Field) (VB)
 次の例を使用して読み取り/書き込みフォルダーからドキュメントを開くと、[インターネット パブリッシング用プロバイダー](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md)します。 [状態](../../../ado/reference/ado-api/status-property-ado-field.md)のプロパティを[フィールド](../../../ado/reference/ado-api/field-object.md)のオブジェクト、[レコード](../../../ado/reference/ado-api/record-object-ado.md)は最初に設定されます**adFieldPendingInsert**に更新します。**adfieldok で**します。  

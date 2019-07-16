@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8aa90cb0-f588-4141-9dc9-3b22918394ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37d1fe31524d245da2a6bac9b90ab2e680fab450
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2791bc1a89f8cec1362ab1f00c3be739f7d56b96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696146"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920106"
 ---
 # <a name="chapter-property-ado"></a>Chapter プロパティ (ADO)
 OLE DB の設定を取得または**章**オブジェクトとの間で、 [ADORecordsetConstruction インターフェイス](../../../ado/reference/ado-api/adorecordsetconstruction-interface.md)オブジェクト。 使用すると**put_Chapter**を設定する、**章**オブジェクト、ADO に行のサブセットになって[Recordset オブジェクト](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 これにより、設定の現在の章、**行セット**オブジェクト。 このプロパティは読み取り/書き込み可能です。  

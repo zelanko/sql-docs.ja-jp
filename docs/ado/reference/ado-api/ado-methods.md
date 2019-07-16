@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a38c5670-ba28-44f3-bd5b-fcb46880e904
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67b428a06679bdb0cade14314195d576a1ccc596
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8df204daeda82f809cf50246590141729e3608e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696858"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920923"
 ---
 # <a name="ado-methods"></a>ADO メソッド
 
@@ -34,7 +33,7 @@ ms.locfileid: "66696858"
 |[CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)|現在のまたは新しい行に加えられた変更内容をキャンセル、**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**オブジェクトを呼び出す前に、 **Update**メソッド。|  
 |[Clear](../../../ado/reference/ado-api/clear-method-ado.md)|すべてを削除、**エラー**オブジェクトから、**エラー**コレクション。|  
 |[Clone](../../../ado/reference/ado-api/clone-method-ado.md)|複製を作成します**Recordset**既存のオブジェクト**Recordset**オブジェクト。 必要に応じて、複製が読み取り専用であることを指定します。|  
-|[Close](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
+|[閉じる](../../../ado/reference/ado-api/close-method-ado.md)|開いているオブジェクトとすべての依存オブジェクトを閉じます。|  
 |[CompareBookmarks](../../../ado/reference/ado-api/comparebookmarks-method-ado.md)|2 つのブックマークを比較し、これらの相対値を示す値を返します。|  
 |[CopyRecord](../../../ado/reference/ado-api/copyrecord-method-ado.md)|ファイルまたはディレクトリと、その内容を別の場所にコピーします。|  
 |[CopyTo](../../../ado/reference/ado-api/copyto-method-ado.md)|指定した数の文字またはバイトのコピー (に応じて**型**) で、 **Stream**間**Stream**オブジェクト。|  
@@ -66,7 +65,7 @@ ms.locfileid: "66696858"
 |[put_OLEDBCommand メソッド](../../../ado/reference/ado-api/put-oledbcommand-method.md)|このメソッドは演算を実行しない - 常に S_OK を返します。|  
 |[読み取り](../../../ado/reference/ado-api/read-method.md)|指定したからのバイト数を読み取り、 **Stream**オブジェクト。|  
 |[ReadText](../../../ado/reference/ado-api/readtext-method.md)|テキストから指定数の文字を読み取ります**Stream**オブジェクト。|  
-|[更新](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、特定のオブジェクトを更新します。|  
+|[[更新]](../../../ado/reference/ado-api/refresh-method-ado.md)|プロバイダーをコレクションから、使用可能なオブジェクトを反映するように、特定のオブジェクトを更新します。|  
 |[Requery](../../../ado/reference/ado-api/requery-method.md)|データを更新、**レコード セット**オブジェクトをオブジェクトの基になるクエリを再実行しています。|  
 |[Resync](../../../ado/reference/ado-api/resync-method.md)|現在のデータを更新します**レコード セット**オブジェクト、または**フィールド**のコレクションを**レコード**基になるデータベースからのオブジェクト。|  
 |[および](../../../ado/reference/ado-api/save-method.md)|保存、**レコード セット**ファイルまたは**Stream**オブジェクト。|  
@@ -81,7 +80,7 @@ ms.locfileid: "66696858"
 |[書き込み](../../../ado/reference/ado-api/write-method.md)|バイナリ データを書き込みます、 **Stream**オブジェクト。|  
 |[WriteText](../../../ado/reference/ado-api/writetext-method.md)|指定したテキスト文字列を書き込みます、 **Stream**オブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

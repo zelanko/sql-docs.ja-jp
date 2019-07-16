@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f0ad3cc4-aed7-47c8-94bc-2971fe9fe871
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b58ab23dabb6528783422e82b493f4a721f2fb73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 23c5697b863646bac824b196696345566c06a747
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906448"
 ---
 # <a name="delete-a-model-master-data-services"></a>モデルを削除する (マスター データ サービス)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65487686"
 > [!NOTE]  
 >  これらの手順が完了すると、モデルのすべてのバージョンのすべてのオブジェクトおよびすべてのデータが完全に削除されます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -53,7 +52,7 @@ ms.locfileid: "65487686"
   
  グリッドの **[状態]** 列には、モデルに対する操作の状態が示されます。 **[モデルの保存]** ボタンをクリックすると、モデルが更新されていることを示す ![更新中](../master-data-services/media/mds-model-status-updating.png "更新中") 画像が表示されます。 モデルの作成中または編集中にエラーが発生すると、![エラー](../master-data-services/media/mds-model-status-error.png "エラー") 画像が表示されます。 それ以外の場合は正常な状態であり、 ![[OK]](../master-data-services/media/mds-model-status-ok.png "[OK]") 画像が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル (マスター データ サービス)](../master-data-services/models-master-data-services.md)   
  [モデルを作成する (マスター データ サービス)](../master-data-services/create-a-model-master-data-services.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c78bb-7bb8-4c4f-8e5a-4d3bfc8a208f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 715ad0a98adf1e3c219712699a6b31f2ba1467d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fedde638e343281c5d3810cc80c9ba8db820e839
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918463"
 ---
 # <a name="getrows-method-example-vb"></a>GetRows メソッドの例 (VB)
 この例では、 [GetRows](../../../ado/reference/ado-api/getrows-method-ado.md)から指定された行数を取得するメソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と結果のデータの配列を設定します。 **GetRows**メソッドが返す行の必要な数よりも少ない: 場合[EOF](../../../ado/reference/ado-api/bof-eof-properties-ado.md)に達している場合、または**GetRows**がレコードを取得しようとしています。別のユーザーによって削除されます。 関数を返します**False** 2 番目のケースが発生した場合にのみです。 GetRowsOK 関数は、この手順を実行する必要があります。  
@@ -113,6 +112,6 @@ End Sub
 'EndGetRowsVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GetRows メソッド (ADO)](../../../ado/reference/ado-api/getrows-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: d4683472-4120-4236-8640-fa9ae289e23e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ee5560a27f7df49a82e964753f792bd46270d3a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3a8bc22e57d91ab64bdbbc5fc694575a8aa8ff9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920523"
 ---
 # <a name="begintrans-committrans-and-rollbacktrans-methods-ado"></a>BeginTrans、CommitTrans、および RollbackTrans メソッド (ADO)
 これらのトランザクション メソッド内のトランザクション処理の管理、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクトの次のようにします。  
@@ -76,7 +75,7 @@ object.RollbackTrans
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (VB)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vb.md)   
  [BeginTrans、CommitTrans、および RollbackTrans メソッドの例 (vc++)](../../../ado/reference/ado-api/begintrans-committrans-and-rollbacktrans-methods-example-vc.md)   
  [Attributes プロパティ (ADO)](../../../ado/reference/ado-api/attributes-property-ado.md)

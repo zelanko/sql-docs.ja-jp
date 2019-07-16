@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 14f98054-13b4-4231-a6b0-2452f3b9941d
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: ffe475b53048a97f878bfad1d8bef68d6fb3cfc6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99e86d99a4214b1ccdf317e75218fe22bb2c7af7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312511"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67908990"
 ---
 # <a name="mapping-mysql-and-sql-server-data-types-mysqltosql"></a>MySQL と SQL Server データ型のマッピング (MySQLToSQL)
 MySQL データベースの型が異なる[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースの型。 MySQL のデータベース オブジェクトを変換する際に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure のオブジェクトから MySQL へのデータ型をマップする方法を指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure です。 既定のデータ型マッピングをそのまま使用できるまたはマッピングをカスタマイズするには、次の手順で示すようにします。  

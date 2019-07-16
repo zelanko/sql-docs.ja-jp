@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 3a01a291-f4d9-43bc-a725-5a95546ff364
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5f656396455a8d5669debc158c3edc866491fcb5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c78d3f20e5a03fc80029549318c9c53662e4121
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63457627"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901377"
 ---
 # <a name="alter-table---sql-command"></a>ALTER TABLE - SQL コマンド
 プログラムによってテーブルの構造を変更します。  
@@ -122,10 +121,10 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  ALTER [COLUMN] *FieldName2*  
  変更する既存のフィールドの名前を指定します。  
   
- SET DEFAULT *eExpression2*  
+ 既定値に設定*eExpression2*  
  既存のフィールドの新しい既定値を指定します。 データ型*eExpression2*フィールドのデータ型と同じである必要があります。  
   
- SET CHECK *lExpression2*  
+ セット チェック*lExpression2*  
  既存のフィールドに対して新しい検証規則を指定します。 *lExpression2*論理式を評価する必要があり、ユーザー定義関数またはストアド プロシージャがあります。  
   
  ERROR *cMessageText2*  
@@ -142,7 +141,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  インデックスのキーまたはトリガーの式では、フィールドを参照する場合、式のフィールドが削除されると無効になります。 この場合、フィールドが削除されますが、無効なインデックスのキーまたはトリガーの式は実行時にエラーを生成、エラーは生成されません。  
   
- SET CHECK *lExpression3*  
+ セット チェック*lExpression3*  
  テーブルの検証規則を指定します。 *lExpression3*論理式を評価する必要があり、ユーザー定義関数またはストアド プロシージャがあります。  
   
  ERROR *cMessageText3*  
@@ -151,7 +150,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  チェックを削除します。  
  テーブルの検証規則を削除します。  
   
- ADD PRIMARY KEY *eExpression3*TAG *TagName2*  
+ 追加のプライマリ キー *eExpression3*タグ*TagName2*  
  プライマリ インデックスをテーブルに追加します。 *eExpression3*プライマリ インデックスのキー式を指定し、 *TagName2*プライマリ インデックス タグの名前を指定します。 タグのインデックス名は、最大 10 個の文字を含めることができます。 場合タグ*TagName2*を省略すると、 *eExpression3* 1 つのフィールドは、プライマリ インデックス タグの同じ名前で指定されたフィールドとに*eExpression3*。  
   
  プライマリ キーを削除します  
@@ -163,7 +162,7 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
  一意のタグをドロップ*TagName4*  
  候補のインデックスとそのインデックス タグを削除します。 テーブルには、複数の候補キーを持つことができますため、候補のインデックスのタグの名前を指定する必要があります。  
   
- ADD FOREIGN KEY [ *eExpression5*]TAG *TagName4*  
+ 外部キーの追加 [ *eExpression5*] タグ*TagName4*  
  テーブルには、外部 (プライマリ) のインデックスを追加します。 *eExpression5*外部インデックスのキー式を指定し、 *TagName4*外部インデックス タグの名前を指定します。 タグのインデックス名は、最大 10 個の文字を含めることができます。  
   
  参照*TableName2*[タグ*TagName5*]  
@@ -192,6 +191,6 @@ CREATE TABLE mytable (char1 C(10), char2 C(10) NOCPTRANS,;
   
  変更するテーブルは、データベースの ALTER TABLE - SQL には、データベースを排他的に使用が必要です。 排他的に使用するデータベースを開くには、するには、開くデータベースの排他を含めます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE TABLE - SQL コマンド](../../odbc/microsoft/create-table-sql-command.md)   
  [INDEX コマンド](../../odbc/microsoft/index-command.md)

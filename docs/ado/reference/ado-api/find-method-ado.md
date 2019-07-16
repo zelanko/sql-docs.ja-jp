@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 55c9810a-d8ca-46c2-a9dc-80e7ee7aa188
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19e643c82653ecb10bc2006eb5ed14bd2dede9b7
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 9f394d5e3b3021ca240675d6979152c63b903190
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918627"
 ---
 # <a name="find-method-ado"></a>Find メソッド (ADO)
 検索、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)を指定した条件を満たす行のできます。 必要に応じて、検索、開始行、および開始行からのオフセットの方向を指定することがあります。 現在の行位置が; 検出されたレコードの設定、条件が満たされた場合(先頭または末尾) に、位置を設定する場合は、 **Recordset**します。  
@@ -67,7 +66,7 @@ Find (Criteria, SkipRows, SearchDirection, Start)
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Find メソッドの例 (VB)](../../../ado/reference/ado-api/find-method-example-vb.md)   
  [インデックスのプロパティ](../../../ado/reference/ado-api/index-property.md)   
  [Optimize プロパティ-動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

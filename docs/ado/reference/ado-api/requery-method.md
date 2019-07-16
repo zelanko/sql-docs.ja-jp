@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: d81ab76f-1aa8-4ccf-92ec-b65254dc3ea1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e82d3fd364eef739d352aaa881b0fb18f2db35aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3626f91018714fa4d67304c92ce464d82fb5c8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711648"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917222"
 ---
 # <a name="requery-method"></a>Requery メソッド
 データを更新、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトをオブジェクトの基になるクエリを再実行しています。  
@@ -49,7 +48,7 @@ recordset.Requery Options
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Execute、Requery、および Clear のメソッドの例 (VB)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vb.md)   
  [Execute、Requery、および Clear のメソッドの例 (VBScript)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vbscript.md)   
  [Execute、Requery、および Clear のメソッドの例 (vc++)](../../../ado/reference/ado-api/execute-requery-and-clear-methods-example-vc.md)   

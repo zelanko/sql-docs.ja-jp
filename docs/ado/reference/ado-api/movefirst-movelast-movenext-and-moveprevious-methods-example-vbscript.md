@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 911aa1dd-2786-4f34-992c-bb2fbdabcbdf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e33662b69d4e466cb6bdea40d051dfd32d566b8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9da7517ece0961e5139df4be44ddf575c41c9abe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918121"
 ---
 # <a name="movefirst-movelast-movenext-and-moveprevious-methods-example-vbscript"></a>MoveFirst、MoveLast、MoveNext、MovePrevious メソッドの例 (VBScript)
 この例では、 [MoveFirst](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveLast](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、 [MoveNext](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)、および[MovePrevious](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md) のレコードポインターを移動するメソッド[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)指定されたコマンドに基づきます。  
@@ -184,6 +183,6 @@ ms.locfileid: "66707355"
 <!-- EndMoveFirstVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MoveFirst、MoveLast、MoveNext、MovePrevious メソッド (ADO)](../../../ado/reference/ado-api/movefirst-movelast-movenext-and-moveprevious-methods-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

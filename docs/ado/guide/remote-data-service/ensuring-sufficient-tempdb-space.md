@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 09130db1-6248-4234-a1e5-a9c8e1622c06
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e6d558b64095a4071687ed8edd62d54985015c5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe377cd15f2b95577a561e6784f78113b2843d07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699489"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922655"
 ---
 # <a name="ensuring-sufficient-tempdb-space"></a>十分な TempDB 領域の確保
 処理中にエラーが発生した場合[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md) Microsoft SQL Server 6.5 の領域を処理する必要があるオブジェクトの場合は、TempDB のサイズを大きく必要があります。 (いくつかのクエリが一時的な処理容量が必要ですたとえば、ORDER BY 句を使用してクエリには、並べ替えが必要です。 の、 **Recordset**、いくつかの一時領域必要があります。)。  
@@ -56,7 +55,7 @@ ms.locfileid: "66699489"
   
  詳細については、このトピックでは、「データベースの [展開] ダイアログ ボックス」は、Microsoft SQL Server Enterprise Manager のヘルプ ファイルを検索します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 

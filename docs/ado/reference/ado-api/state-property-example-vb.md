@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9da6db50-d9bb-47e1-ae8b-be3c9b88cf9a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8b52a60f9d2a026d0bb8d934a6cb1af6af23824a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e9c497d8e417ccfcc74df2b21043446c2ce9860
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916855"
 ---
 # <a name="state-property-example-vb"></a>State プロパティの例 (VB)
 この例では、[状態](../../../ado/reference/ado-api/state-property-ado.md)非同期接続を開くと、非同期コマンドを実行中にメッセージを表示するプロパティ。  
@@ -108,6 +107,6 @@ End Sub
 'EndStateVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [State プロパティ (ADO)](../../../ado/reference/ado-api/state-property-ado.md)

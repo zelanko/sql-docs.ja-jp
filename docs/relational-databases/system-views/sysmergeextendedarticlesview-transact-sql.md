@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c8414-5292-41fd-80aa-b55a50ced7e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3f91537880615fd7075db67ff8d89835944d1a79
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: dd7e15e6e0a1a4097cbc79535ffec968f6776db4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125882"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910072"
 ---
 # <a name="sysmergeextendedarticlesview-transact-sql"></a>sysmergeextendedarticlesview (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,13 +67,13 @@ ms.locfileid: "54125882"
 |**identity_support**|**int**|ID 範囲の自動処理が有効かどうかを示します。 **1** id 範囲処理が有効になっていることを意味し、 **0**サポートの範囲は id がないことを意味します。|  
 |**destination_owner**|**sysname**|目的のオブジェクトの所有者名。|  
 |**before_image_objid**|**int**|追跡テーブルのオブジェクト ID。 パブリケーションがパーティション変更の最適化を有効にするよう構成されている場合、追跡テーブルには特定のキー列の値が含まれます。|  
-|**before_view_objid**|**int**|ビュー テーブルのオブジェクト ID。 ビューが存在するテーブルでは、行の削除または更新前に、その行が特定のサブスクライバーに属していたかどうかが追跡されます。 パブリケーションが作成された場合にのみ適用されます*@keep_partition_changes*  =  **true**します。|  
+|**before_view_objid**|**int**|ビュー テーブルのオブジェクト ID。 ビューが存在するテーブルでは、行の削除または更新前に、その行が特定のサブスクライバーに属していたかどうかが追跡されます。 パブリケーションが作成された場合にのみ適用されます *@keep_partition_changes*  =  **true**します。|  
 |**verify_resolver_signature**|**int**|マージ レプリケーションで競合回避モジュールを使用する前に、デジタル署名を確認するかどうかを示します。<br /><br /> **0** = 署名がないことを確認します。<br /><br /> **1** = 署名が信頼できる発行元があるかどうかを確認することを確認します。|  
 |**allow_interactive_resolver**|**bit**|アーティクルに対する対話型の競合回避モジュールの使用が有効かどうかを示します。 **1**インタラクティブ競合回避モジュールが、情報の記事で使用されていることを指定します。|  
 |**fast_multicol_updateproc**|**bit**|1 つの UPDATE ステートメントで同じ行の複数の列に対して変更を適用するように、マージ エージェントが有効になっているかどうかを示します。<br /><br /> **0**列ごとに個別の更新の変更の問題を = です。<br /><br /> **1** 1 つのステートメントで複数の列を更新する UPDATE ステートメントの発行を = です。|  
 |**check_permissions**|**int**|テーブル レベルの権限のビットマップは、マージ エージェントがパブリッシャーに変更を適用するときにことを確認します。 *check_permissions*これらの値のいずれかの。<br /><br /> **0x00** = 権限は確認されません。<br /><br /> **0x10** = では、サブスクライバー側で Insert をアップロードする前に、パブリッシャー側で権限をチェックします。<br /><br /> **0x20**サブスクライバーで行われた更新プログラムをアップロードする前に、パブリッシャー側で権限をチェックしますを = です。<br /><br /> **0x40** = では、サブスクライバー側で Delete をアップロードする前に、パブリッシャー側で権限をチェックします。|  
 |**maxversion_at_cleanup**|**int**|メタデータがクリーンアップされる最上位世代。|  
-|**processing_order**|**int**|マージ パブリケーション内のアーティクルの処理順序を示します値が**0**アーティクルが順序付けられたがないことと、最低から最高値の順序でアーティクルが処理で示されます。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、[マージ レプリケーションの指定プロパティ](../../relational-databases/replication/merge/specify-merge-replication-properties.md)を参照してください。|  
+|**processing_order**|**int**|マージ パブリケーション内のアーティクルの処理順序を示します値が**0**アーティクルが順序付けられたがないことと、最低から最高値の順序でアーティクルが処理で示されます。 2 つのアーティクルの値が同じ場合、それらは同時に処理されます。 詳細については、「[Specify Merge Replication properties](../../relational-databases/replication/merge/specify-merge-replication-properties.md)」 (マージ レプリケーションのプロパティの指定) を参照してください。|  
 |**published_in_tran_pub**|**bit**|マージ パブリケーション内のアーティクルが、トランザクション パブリケーションでもパブリッシュされるかどうかを示します。<br /><br /> **0** = アーティクルはトランザクション アーティクルでパブリッシュされません。<br /><br /> **1** = アーティクルはトランザクション アーティクルでもパブリッシュされます。|  
 |**upload_options**|**tinyiny**|変更がサブスクライバーで許可されるか、サブスクライバーからアップロードされるかを示します。次の値のいずれかになります。<br /><br /> **0** = サブスクライバー側で行われる更新に制限はありません。 すべての変更がパブリッシャーにアップロードされます。<br /><br /> **1** = 変更が、サブスクライバーで許可されますが、パブリッシャーにはアップロードされません。<br /><br /> **2** = 変更はサブスクライバーで許可されません。|  
 |**lightweight**|**bit**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
