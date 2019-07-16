@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 36c31ab2-f3b6-4281-89b6-db7e04e38fd2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a449c0e635c7fe0e63bc1f4d8b1b0b91712135d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4932d3349c2d4e2948ddd28d9df3a30424064dcb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696286"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920388"
 ---
 # <a name="bof-eof-properties-ado"></a>BOF、EOF プロパティ (ADO)
 -   **BOF**の最初のレコードの前に、現在のレコードの位置があることを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。  
@@ -50,9 +49,9 @@ ms.locfileid: "66696286"
   
 ||MoveFirst、<br /><br /> MoveLast|MovePrevious、<br /><br /> < 0 を移動します。|0 を移動します。|MoveNext、<br /><br /> > 0 を移動します。|  
 |------|-----------------------------|---------------------------------|------------|-----------------------------|  
-|**BOF**=**True**、 **EOF**=**False**|Allowed|[エラー]|[エラー]|Allowed|  
-|**BOF**=**False**、 **EOF**=**は True。**|Allowed|Allowed|[エラー]|[エラー]|  
-|両方**は True。**|[エラー]|[エラー]|[エラー]|[エラー]|  
+|**BOF**=**True**、 **EOF**=**False**|Allowed|Error|Error|Allowed|  
+|**BOF**=**False**、 **EOF**=**は True。**|Allowed|Allowed|Error|Error|  
+|両方**は True。**|Error|Error|Error|Error|  
 |どちらも**False**|Allowed|Allowed|Allowed|Allowed|  
   
  許可、**移動**メソッドでは、メソッドが正常にレコードを見つけるは保証されません。 その呼び出し、指定したに過ぎません**移動**メソッドでは、エラーは生成されません。  

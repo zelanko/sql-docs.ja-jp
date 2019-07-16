@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 74aad8a6-06cc-4a2c-811a-d78f9b741d84
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbb484ea6e505940097ff223edb5439944305413
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c195b3f9897d0bc71ab9e03e69153a66cdd80ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924933"
 ---
 # <a name="jscript-code-example-to-return-a-recordset"></a>レコードセットを返す JScript コードの例
 ## <a name="jscript-code-rsjs"></a>JScript コード (rs.js)  
@@ -80,7 +79,7 @@ function alert(str)
 }  
 ```  
   
-#### <a name="try-it"></a>これをお試しください。  
+#### <a name="try-it"></a>手順を次に示します。  
   
 1.  上記のコードをテキスト ファイルに保存します。 Rs.js として保存します。  
   
