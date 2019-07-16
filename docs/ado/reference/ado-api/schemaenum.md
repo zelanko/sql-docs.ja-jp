@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 21c97651-297f-469f-b5b5-c48af72b62a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4aa145a3c42c5ed807a63dc551e67afe6af95cde
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c064120e3c658cafd88a96953ff00e18fbaa9b88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931118"
 ---
 # <a name="schemaenum"></a>SchemaEnum
 スキーマの種類を指定します**Recordset**を[OpenSchema](../../../ado/reference/ado-api/openschema-method.md)メソッドを取得します。  
@@ -35,7 +34,7 @@ ms.locfileid: "66711308"
   
  ADO には、定数、値のスキーマのような結果が生成されます。 **adSchemaDBInfoKeywords**と**adSchemaDBInfoLiterals**します。 ADO の作成、**レコード セット**、によってそれぞれ返される値を使用して各行を入力し、 **IDBInfo::GetKeywords**と**IDBInfo::GetLiteralInfo**メソッド。 これらのメソッドに関する追加情報が見つかりません、 [IDBInfo](https://msdn.microsoft.com/3f5ad97f-3fc6-4f21-b691-f6911e4007f3) OLE DB プログラマーズ リファレンスのセクション。  
   
-|定数|値|説明|制約列|  
+|定数|Value|説明|制約列|  
 |--------------|-----------|-----------------|------------------------|  
 |**adSchemaAsserts**|0|特定のユーザーによって所有されているカタログで定義されているアサーションを返します。<br /><br /> (アサーションの行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  
 |**adSchemaCatalogs**|1|データベース管理システムからアクセス可能なカタログに関連付けられている物理属性を返します。<br /><br /> (行セットのカタログ)|CATALOG_NAME|  
@@ -53,16 +52,16 @@ ms.locfileid: "66711308"
 |**adSchemaDimensions**|33|特定のキューブ ディメンションに関する情報を返します。 各ディメンションの 1 つの行があります。<br /><br /> (ディメンション行セット)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_NAME DIMENSION_UNIQUE_NAME|  
 |**adSchemaForeignKeys**|27|特定のユーザーによってカタログで定義されている外部キー列を返します。<br /><br /> (FOREIGN_KEYS 行セット)|PK_TABLE_CATALOG、PK_TABLE_SCHEMA、PK_TABLE_NAME、FK_TABLE_CATALOG、FK_TABLE_SCHEMA、FK_TABLE_NAME|  
 |**adSchemaHierarchies**|34|ディメンションの使用可能な階層についての情報を返します。<br /><br /> (行セットの階層)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_NAME HIERARCHY_UNIQUE_NAME|  
-|**adSchemaIndexes**|12|特定のユーザーによって所有されているカタログで定義されているインデックスを返します。<br /><br /> (インデックス行セット)|TABLE_CATALOG TABLE_SCHEMA INDEX_NAME TYPE TABLE_NAME|  
+|**adSchemaIndexes**|12|特定のユーザーによって所有されているカタログで定義されているインデックスを返します。<br /><br /> (インデックス行セット)|TABLE_CATALOG、TABLE_SCHEMA、INDEX_NAME 型 TABLE_NAME|  
 |**adSchemaKeyColumnUsage**|8|カタログで定義されている特定のユーザーがキーとして制約する列を返します。<br /><br /> (KEY_COLUMN_USAGE 行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME TABLE_CATALOG、TABLE_SCHEMA、TABLE_NAME、COLUMN_NAME|  
-|**adSchemaLevels**|35|ディメンションで使用できるレベルに関する情報を返します。<br /><br /> (行セットのレベル)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME LEVEL_UNIQUE_NAME|  
+|**adSchemaLevels**|35|ディメンションで使用できるレベルに関する情報を返します。<br /><br /> (行セットのレベル)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_NAME される LEVEL_UNIQUE_NAME|  
 |**adSchemaMeasures**|36|使用できるメジャーに関する情報を返します。<br /><br /> (メジャー行セット)|CATALOG_NAME SCHEMA_NAME CUBE_NAME MEASURE_NAME MEASURE_UNIQUE_NAME|  
 |**adSchemaMembers**|38|利用可能なメンバーに関する情報を返します。<br /><br /> (行セットのメンバー)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME される LEVEL_UNIQUE_NAME LEVEL_NUMBER MEMBER_NAME MEMBER_UNIQUE_NAME MEMBER_CAPTION MEMBER_TYPE ツリー演算子です。 詳細については、のオンライン分析処理 (OLAP) の OLE DB を参照してください。|  
 |**adSchemaPrimaryKeys**|28|特定のユーザーによってカタログで定義されている主キー列を返します。<br /><br /> (PRIMARY_KEYS 行セット)|PK_TABLE_CATALOG PK_TABLE_SCHEMA PK_TABLE_NAME|  
 |**adSchemaProcedureColumns**|29|プロシージャによって返される行セットの列に関する情報を返します。<br /><br /> (PROCEDURE_COLUMNS 行セット)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME COLUMN_NAME|  
 |**adSchemaProcedureParameters**|26|プロシージャのパラメーターとリターン コードに関する情報を返します。<br /><br /> (PROCEDURE_PARAMETERS 行セット)|PROCEDURE_CATALOG、PROCEDURE_SCHEMA、PROCEDURE_NAME、PARAMETER_NAME|  
 |**adSchemaProcedures**|16|特定のユーザーによって所有されているカタログで定義されているプロシージャを返します。<br /><br /> (プロシージャ行セット)|PROCEDURE_CATALOG PROCEDURE_SCHEMA PROCEDURE_NAME PROCEDURE_TYPE|  
-|**adSchemaProperties**|37|ディメンションの各レベルで利用できるプロパティに関する情報を返します。<br /><br /> (行セットのプロパティ)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
+|**adSchemaProperties**|37|ディメンションの各レベルで利用できるプロパティに関する情報を返します。<br /><br /> (行セットのプロパティ)|CATALOG_NAME SCHEMA_NAME CUBE_NAME DIMENSION_UNIQUE_NAME HIERARCHY_UNIQUE_NAME される LEVEL_UNIQUE_NAME MEMBER_UNIQUE_NAME PROPERTY_TYPE PROPERTY_NAME|  
 |**adSchemaProviderSpecific**|-1|プロバイダーには、独自の標準スキーマ クエリが定義されている場合に使用されます。|\<プロバイダー固有 >|  
 |**adSchemaProviderTypes**|22|データ プロバイダーでサポートされている (基本) データ型を返します。<br /><br /> (PROVIDER_TYPES 行セット)|DATA_TYPE、BEST_MATCH|  
 |**AdSchemaReferentialConstraints**|9|特定のユーザーによって所有されているカタログで定義されている参照に関する制約を返します。<br /><br /> (REFERENTIAL_CONSTRAINTS 行セット)|CONSTRAINT_CATALOG CONSTRAINT_SCHEMA CONSTRAINT_NAME|  

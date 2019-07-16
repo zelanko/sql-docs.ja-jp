@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 32187282-1385-4c52-9134-09f061eb44f5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3df6609af185d09c01641de495ae23687a083e07
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 0909a94ea49f2a4deee20cd29b26b0e1e2aaf6e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53210461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895682"
 ---
 # <a name="bcpcontrol"></a>bcp_control
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -49,10 +48,10 @@ RETCODE bcp_control (
  *eOption*  
  次のいずれかを指定します。  
   
- BCPABORT   
+ BCPABORT  
  既に実行中の一括コピー操作を停止します。 呼び出す**bcp_control**で、 *eOption*実行が停止する別のスレッドから BCPABORT の一括コピー操作をします。 *IValue*パラメーターは無視されます。  
   
- BCPBATCH   
+ BCPBATCH  
  バッチごとの行数の数です。 既定値は 0 です。既定値を指定すると、データを抽出するときはテーブル内のすべての行が抽出されることを示し、データを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にコピーするときはユーザー データ ファイル内のすべての行がコピーされることを示します。 1 より小さい値を指定すると、BCPBATCH は既定値にリセットされます。  
   
  BCPDELAYREADFMT  
@@ -60,7 +59,7 @@ RETCODE bcp_control (
   
  呼び出す場合もシーケンス エラーが発生`bcp_control(hdbc,`BCPDELAYREADFMT`, (void *)FALSE)`呼び出した後`bcp_control(hdbc,`BCPDELAYREADFMT`, (void *)TRUE)` bcp_writefmt とします。  
   
- 詳細については、[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)を参照してください。  
+ 詳細については、次を参照してください。[メタデータ検出](../../relational-databases/native-client/features/metadata-discovery.md)します。  
   
  BCPFILECP  
  *iValue*データ ファイルのコード ページの数が含まれています。 1252 や 850 などのコード ページ番号を指定するか、次のいずれかの値を指定できます。  
@@ -74,7 +73,7 @@ RETCODE bcp_control (
  BCPFILEFMT  
  データ ファイル形式のバージョン番号を指定します。 これは、80 ( [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)])、90 ( [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)])、100 ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]または[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)])、110 ( [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)])、または 120 ( [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)])。 120 が既定値です。 このオプションは、以前のバージョンのサーバーでサポートされていた形式でデータをエクスポートおよびインポートする際に便利です。 テキスト列から取得されたデータをインポートするなど、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]にサーバーを**varchar (max)** 内の列を[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のサーバーでは、80 を指定する必要があります。 同様からのデータをエクスポートするときに 80 を指定する場合、 **varchar (max)** 列、保存されるのでテキスト列は、保存と同様、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]書式設定、およびテキストの列にインポートすることができます、[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]サーバー。  
   
- BCPFIRST   
+ BCPFIRST  
  ファイルまたはテーブルにコピーする最初のデータ行を指定します。 既定値は 1 です。1 未満の値を指定すると、このオプションは既定値にリセットされます。  
   
  BCPFIRSTEX  
@@ -93,15 +92,15 @@ RETCODE bcp_control (
 >  XML フォーマット ファイルがサポートされるのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client と共にインストールした場合だけです。  
   
  BCPHINTS  
- *iValue* SQLTCHAR 文字列ポインターが含まれています。 ポインターが指す文字列には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピー処理ヒント、または結果セットを返す Transact-SQL ステートメントを指定します。 複数の結果セットを返す Transact-SQL ステートメントを指定すると、1 つ目以外の結果セットはすべて無視されます。 一括コピー処理ヒントの詳細については、[bcp ユーティリティ](../../tools/bcp-utility.md)を参照してください。  
+ *iValue* SQLTCHAR 文字列ポインターが含まれています。 ポインターが指す文字列には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 一括コピー処理ヒント、または結果セットを返す Transact-SQL ステートメントを指定します。 複数の結果セットを返す Transact-SQL ステートメントを指定すると、1 つ目以外の結果セットはすべて無視されます。 一括コピー処理ヒントの詳細については、次を参照してください。 [bcp ユーティリティ](../../tools/bcp-utility.md)します。  
   
  BCPKEEPIDENTITY  
  ときに*iValue* TRUE は、一括コピー関数が指定されているデータ値を挿入することを指定します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を id 制約で定義されている列。 入力ファイルには ID 列の値を指定する必要があります。 このオプションを設定しないと、挿入される行に対して新しい ID 値が生成されます。 ファイル内に存在する ID 列用のデータはすべて無視されます。  
   
- BCPKEEPNULLS   
+ BCPKEEPNULLS  
  ファイル内の空のデータ値を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルで NULL 値に変換するかどうかを指定します。 ときに*iValue*が true の場合、空の値は NULL に変換されます、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル。 既定では、空の値は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内の列の既定値 (存在する場合) に変換されます。  
   
- BCPLAST   
+ BCPLAST  
  コピーする最後の行です。 既定では、すべての行がコピーされます。1 より小さい値を指定すると、このオプションは既定値にリセットされます。  
   
  BCPLASTEX  
@@ -111,7 +110,7 @@ RETCODE bcp_control (
   
  *IValue*パラメーターが値を含む符号付き 64 ビット整数のアドレスにする必要があります。 BCPLASTEX に渡すことができる最大値は 2^63-1 です。  
   
- BCPMAXERRS   
+ BCPMAXERRS  
  一括コピー操作が失敗するまでに発生してもかまわないエラーの数です。 既定値は 10 です。1 未満の値は、このオプションの既定値にリセットされます。 一括コピーでは、最大 65,535 個のエラーが許容されます。 このオプションに 65,535 を超える値を設定しようとすると、65,535 が設定されます。  
   
  BCPODBC  

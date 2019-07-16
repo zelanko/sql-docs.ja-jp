@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b3880eed-1bf6-4f65-ab23-b08c194cc858
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 497bbda56028394547414aff5b360473445da9c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e60af25238f52e9a1f6245fc938cee1aabec0bab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945204"
 ---
 # <a name="hierarchy-member-permissions-master-data-services"></a>階層メンバーの権限 (マスター データ サービス)
 
@@ -66,7 +65,7 @@ ms.locfileid: "65485884"
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [階層メンバーの権限を割り当てる (マスター データ サービス)](../master-data-services/assign-hierarchy-member-permissions-master-data-services.md)   
  [権限の決定方法 (マスター データ サービス)](../master-data-services/how-permissions-are-determined-master-data-services.md)   
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)   

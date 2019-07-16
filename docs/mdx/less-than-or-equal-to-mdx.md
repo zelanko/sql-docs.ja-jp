@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 02f6990698603efdf813e244d11e57c3bd6bb7eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 00021ea9c23de80f6b025963543af2cf4be2f572
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63311898"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905683"
 ---
 # <a name="lt-less-than-or-equal-to-mdx"></a>&lt;= (に等しいまたはそれよりも小さい) (MDX)
 
@@ -61,7 +60,7 @@ WHERE
     ([Measures].[LowGPM])  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)  
   
   

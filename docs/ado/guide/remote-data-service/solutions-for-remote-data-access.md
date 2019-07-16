@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d311cc67-7db7-4c43-9590-d465564695e4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13c7179576cd29fb646b3fc62b21694452a0749b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40485562c8385e05ced033062563d5c5165218de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922176"
 ---
 # <a name="solutions-for-remote-data-access"></a>リモート データ アクセスのソリューション
 ## <a name="the-issue"></a>問題  
@@ -43,7 +42,7 @@ ms.locfileid: "66699324"
 ## <a name="the-solution"></a>解決策  
  RDS では、一連のアクティビティにアクセスし、インターネット インフォメーション サービス (IIS) など、仲介者を使用してデータにアクセスする - データ ソースを更新するために必要なプログラミング モデルを定義します。 プログラミング モデルは、RDS の全体の機能をまとめたものです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [基本的な RDS のプログラミング モデル](../../../ado/guide/remote-data-service/basic-rds-programming-model.md)   
  [RDS のシナリオ](../../../ado/guide/remote-data-service/rds-scenario.md)   
  [RDS チュートリアル](../../../ado/guide/remote-data-service/rds-tutorial.md)   

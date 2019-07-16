@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6e2da78373d8bcb613bb11dca54857bc7b98dfe1
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982614"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208339"
 ---
 # <a name="configuration-setting-reference-power-pivot-for-sharepoint"></a>構成設定のリファレンス (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -87,15 +87,15 @@ ms.locfileid: "38982614"
 |----------|-------------|------------------|-----------------|  
 |クエリをレポートする間隔|300 (秒)|1 ～ n 秒 (n は任意の有効な整数)。|使用状況データ収集によってファームのデータ転送容量が過度に消費されないようにするため、接続ごとにクエリ統計情報が収集され、単一のイベントとしてレポートされます。 [クエリをレポートする間隔] は、イベントがレポートされる頻度を指定します。 既定では、クエリ統計情報は 5 分おきにレポートされます。<br /><br /> 接続は要求が送信されるとすぐに閉じられるので、1 人のユーザーが 1 つの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースにアクセスする場合でも、非常に多数の接続が生成されます。 このため、接続が一度作成されたら、同じデータに対する同じユーザーがその接続を再利用できるように、ユーザーと [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ ソースの組み合わせごとに接続プールが作成されます。 定期的に、この構成設定で指定した間隔で、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションによって接続プールの接続ごとに使用状況データがレポートされます。<br /><br /> このレポート間隔の値を大きくすると、ログに記録されるイベントが少なくなります。 ただし、値を大きくしすぎると、サーバーが再起動した場合や接続が閉じられた場合に、イベント データが失われることがあります。<br /><br /> この値を小さくすると、頻度が高くなることでログに記録されるイベントが多くなり、SharePoint の使用状況データベースのデータ コレクション システムに追加される [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]関連の使用状況データが増加します。<br /><br /> 通常は、特定の問題 ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 使用状況データが原因で使用状況データベースが急激に大きくなっている場合など) を解決しようとしている場合を除き、この構成設定は変更しないでください。|  
 |使用状況データ履歴|365 (日)|0、または 1 ～ n 日 (n は任意の有効な整数)。<br /><br /> 0 を指定した場合、履歴は常に保持され、削除されません。|既定では、使用状況データは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション データベースに 1 年間保存されます。 1 年を経過したレコードはデータベースから削除されます。<br /><br /> 期限切れの履歴データのチェックは、Microsoft SharePoint Foundation の使用状況データ処理ジョブが実行されるときに、毎日行われます。 このタイマー ジョブは、この設定を読み取り、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーション データベース内にある期限切れの履歴に対してデータ削除コマンドを起動します。|  
-|簡易応答の上限|500 (ミリ秒単位)|1 ～ n ミリ秒 (n は任意の有効な整数)。|既定では、簡易要求のしきい値は 0.5 秒です。<br /><br /> 簡易要求としては、サーバーの ping、メタデータに対する要求、セッションの開始があります。|  
+|[簡易応答の上限]|500 (ミリ秒単位)|1 ～ n ミリ秒 (n は任意の有効な整数)。|既定では、簡易要求のしきい値は 0.5 秒です。<br /><br /> 簡易要求としては、サーバーの ping、メタデータに対する要求、セッションの開始があります。|  
 |迅速な応答の上限|1000 (ミリ秒単位)|1 ～ n ミリ秒 (n は任意の有効な整数)。|既定では、迅速な要求のしきい値は 1 秒です。<br /><br /> 迅速な要求は、非常に小さいデータセットを持つ要求、または多数のメンバー セットにまたがるメタデータに対する要求です。|  
 |[想定される応答の上限]|3000 (ミリ秒単位)|1 ～ n ミリ秒 (n は任意の有効な整数)。|既定では、想定される要求のしきい値は 3 秒です。<br /><br /> このしきい値は想定されるクエリ時間の上限を設定します。|  
 |長い応答の上限|10,000 (ミリ秒)|1 ～ n ミリ秒 (n は任意の有効な整数)。|既定では、長い要求のしきい値は 10 秒です。<br /><br /> 長い要求は、想定よりも長い時間実行されるが許容範囲内である要求です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [「サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成」](../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)   
- [SharePoint 2010 での power Pivot データ更新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
- [使用状況データ収集の構成 &#40;対象は Power Pivot for SharePoint](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
+ [SharePoint 2010 での PowerPivot データの更新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
+ [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)   
  [Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)   
  [Power Pivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   

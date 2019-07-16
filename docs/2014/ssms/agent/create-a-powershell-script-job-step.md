@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 08a27fd6edbfa93fd76ae99186e2425e5279e8aa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52818087"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211464"
 ---
 # <a name="create-a-powershell-script-job-step"></a>PowerShell スクリプト ジョブ ステップの作成
   このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] を使用して、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] で PowerShell スクリプトを実行する [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェント ジョブ ステップを作成して定義する方法について説明します。  
@@ -88,7 +88,7 @@ ms.locfileid: "52818087"
     GO  
     ```  
   
- 詳細については、[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **PowerShell スクリプト ジョブ ステップを作成するには**  

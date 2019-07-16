@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 51a87e91-c9d9-4e49-af47-79cce2c4cfe0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: abcc619a47994684edce33b2e5b19f7786f517d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ceafffc9d6b87428ae3da58a2f824bb7ed3c34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697918"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918821"
 ---
 # <a name="execute-requery-and-clear-methods-example-jscript"></a>Execute、Requery、および Clear のメソッドの例 (JScript)
 この例では、 **Execute**メソッドの両方から実行する場合、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトと[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。 またを使用して、 [Requery](../../../ado/reference/ado-api/requery-method.md)の現在のデータを取得するメソッドを[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)と[オフ](../../../ado/reference/ado-api/clear-method-ado.md)メソッドの内容を消去する、[エラー](../../../ado/reference/ado-api/errors-collection-ado.md)コレクション。 (、**エラー**コレクションへのアクセスを使用して、**接続**のオブジェクト、 [ActiveConnection](../../../ado/reference/ado-api/activeconnection-property-ado.md)のプロパティ、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md))。ファイルに名前を**ExecuteJS.asp**します。  

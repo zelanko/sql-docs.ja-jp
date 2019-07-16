@@ -7,13 +7,12 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: dccc9afa9961d5ce8f2e9de75b4e8b34f28e0438
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: a7c17af9ab7302e2856130be58759b56430e1341
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961889"
 ---
 # <a name="create-data-features-using-t-sql"></a>T-SQL を使用してデータ機能を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "58513359"
 
 1.  このチュートリアルの準備の一環として関数 _fnCalculateDistance_ がダウンロードされ、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に登録されているはずです。 時間がかかるコードを確認します。
   
-    [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]** の順に展開します。
+    [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]** 、 **[関数]** 、 **[スカラー値関数]** の順に展開します。
     _fnCalculateDistance_を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   
     ```sql

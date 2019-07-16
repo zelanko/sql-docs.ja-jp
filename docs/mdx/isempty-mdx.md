@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: dbed0eba3fec73d7134b1ce21275c28dbd387fcd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b31b884e0f86bf2aebe4859cd1c7a441669e813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905991"
 ---
 # <a name="isempty-mdx"></a>IsEmpty (MDX)
 
@@ -58,7 +57,7 @@ IsEmpty(Value_Expression)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空の値の操作](../mdx/working-with-empty-values.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

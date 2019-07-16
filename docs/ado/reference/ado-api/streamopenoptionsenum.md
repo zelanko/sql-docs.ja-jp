@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 85b6c57f-47ed-46ba-bd92-07882ae9e9d2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 091c640ab09cf70cff5e6f7ce3d7bf1dc9dd34ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 562e79590a2a5f1f5e9bb609b9a0ad0ea8b2bfd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928689"
 ---
 # <a name="streamopenoptionsenum"></a>StreamOpenOptionsEnum
 開くのためのオプションを指定します、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。 値は、OR 演算と組み合わせることができます。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adOpenStreamAsync**|1|開く、 **Stream**非同期モードでのオブジェクト。|  
 |**adOpenStreamFromRecord**|4|内容を識別、*ソース*パラメーターは既に開いている[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト。 既定の動作を扱う方法が*ソース*ツリー構造内のノードを直接指す URL として。 そのノードに関連付けられている既定のストリームが開かれます。|  

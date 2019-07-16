@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4daa93aa-9727-4d1c-886a-e9d22017a1ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bbde3935181603bece9e07ac5cf1e0dffc2a6a5a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 501b58a0d4e69ba7ea843441d866f8580858ea5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932448"
 ---
 # <a name="getstring-method-example-vc"></a>GetString メソッドの例 (VC++)
 この例では、 [GetString](../../../ado/reference/ado-api/getstring-method-ado.md)メソッド。  
@@ -176,7 +175,7 @@ void PrintComError(_com_error &e) {
 MD  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Enter a state (CA, IN, KS, MD, MI, OR, TN, UT): State = 'md'  
@@ -184,6 +183,6 @@ Name            Address            City
 Sylvia   Panteley   1956 Arlington Pl.   Rockville  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GetString メソッド (ADO)](../../../ado/reference/ado-api/getstring-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

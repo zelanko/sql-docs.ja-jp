@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2db7c9ca-d7d0-4c8e-840b-b27d7933ec40
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32e51d3e459bc9c1698b731618cf139d602cd586
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 218103d24bc7fb35e8432743f543ad7bb9558479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920534"
 ---
 # <a name="attributes-and-name-properties-example-vc"></a>属性と Name プロパティの例 (vc++)
 この例の値を表示、[属性](../../../ado/reference/ado-api/attributes-property-ado.md)プロパティ[接続](../../../ado/reference/ado-api/connection-object-ado.md)、[フィールド](../../../ado/reference/ado-api/field-object.md)、および[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクト。 使用して、[名前](../../../ado/reference/ado-api/name-property-ado.md)それぞれの名前を表示するプロパティ**フィールド**と**プロパティ**オブジェクト。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f207c22d-8fb2-4756-8a9d-6c51d6cd3470
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54222842aa51e6904944a8b97507a3368e144612
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5fa9e40e0f83e4d47d4f31cfd43f4215ec60ea49
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943514"
 ---
 # <a name="sphelpdistpublisher-transact-sql"></a>sp_helpdistpublisher (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 |**security_mode**|**int**|キュー更新サブスクリプションの場合、または以外のパブリッシャーに接続するレプリケーション エージェントによって使用されるセキュリティ モード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
 |**login**|**sysname**|キュー更新サブスクリプションのパブリッシャーへの接続、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のパブリッシャーとの接続のため、レプリケーション エージェントで使用されるログイン名です。|  
 |**password**|**nvarchar(524)**|単純な暗号化形式で返されるパスワードです。 パスワードは NULL ですユーザー以外の**sysadmin**します。|  
-|**active**|**bit**|かどうかリモート パブリッシャーをディストリビューターとしてローカル サーバーの使用は。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
+|**アクティブ**|**bit**|かどうかリモート パブリッシャーをディストリビューターとしてローカル サーバーの使用は。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
 |**working_directory**|**nvarchar (255)**|作業ディレクトリの名前です。|  
 |**信頼されています。**|**bit**|パブリッシャーがディストリビューターに接続するときにパスワードが必要かどうかを示します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンでこのを常に返します**0**、つまり、パスワードが必要であります。|  
 |**thirdparty_flag**|**bit**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] またはサード パーティのアプリケーションによってパブリケーションが有効にされるかどうかを示します。<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]oracle、または Oracle Gateway Publisher です。<br /><br /> **1** = パブリッシャーと統合されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サード パーティ製アプリケーションを使用します。|  
@@ -71,7 +70,7 @@ sp_helpdistpublisher [ [ @publisher=] 'publisher']
 ## <a name="permissions"></a>アクセス許可  
  メンバー、 **sysadmin**固定サーバー ロールが実行**sp_helpdistpublisher**の任意のパブリッシャーをディストリビューターとしてローカル サーバーを使用します。 メンバー、 **db_owner**固定データベース ロール、または**replmonitor**ディストリビューション データベースでロール実行**sp_helpdistpublisher**を使用しているパブリッシャーのディストリビューション データベースです。 指定したパブリケーションのパブリケーション アクセスのユーザーを一覧表示*パブリッシャー*実行**sp_helpdistpublisher**します。 場合*パブリッシャー*が指定されていない、ユーザーへのアクセス権を持っているすべてのパブリッシャーに対して情報が返されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   

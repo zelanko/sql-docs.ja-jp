@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 5dd48483-858a-48c2-98ce-f2359abe1f59
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1bbed5f6668f4f9fa6fd1a32b07a4b8671a74e6d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c99b9281071bc608f46edb9ace3c374c1fa60564
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699547"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922848"
 ---
 # <a name="configuring-rds"></a>RDS の構成
 > [!IMPORTANT]
@@ -44,7 +43,7 @@ ms.locfileid: "66699547"
   
 -   [安全または無制限モード用の DataFactory の構成](../../../ado/guide/remote-data-service/configuring-datafactory-for-safe-or-unrestricted-modes.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS での関連テクノロジの使用](../../../ado/guide/remote-data-service/using-related-technologies-with-rds.md)   
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS のトラブルシューティング](../../../ado/guide/remote-data-service/troubleshooting-rds.md)

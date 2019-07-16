@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 10cb4dcf-4cd8-4a56-8725-d080bd3ffe47
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 24b62c2b5cd449b6e7201d413b315e48fbd570f6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37209a75c03a051e3def4d26fa0d4e7f85d0e91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897746"
 ---
 # <a name="scalar-function-calls"></a>スカラー関数の呼び出し
 スカラー関数は、各行の値を返します。 たとえば、絶対値のスカラー関数は数値の列を引数として受け取りと、列の各値の絶対値を返します。 スカラー関数を呼び出すためのエスケープ シーケンスは、します。  
@@ -43,7 +42,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  相互運用性を最大に、アプリケーションを使用する必要があります、**変換**スカラー関数、スカラー関数の出力が必要な型であることを確認します。 **変換**関数は、1 つの SQL データ型のデータを指定した SQL データ型に変換します。 構文、**変換**関数  
   
- **CONVERT(** _value_exp_ **,** _data_type_ **)**  
+ **変換 (** _value_exp_ **、** _data_type_ **)**  
   
  場所*value_exp*列名、もう 1 つのスカラー関数、または、リテラル値の結果と*data_type*と一致するキーワード、 **#define**によって使用される名前、定義されている、SQL データ型識別子[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。 たとえば、次の SQL ステートメントを使用して、**変換**ことを確認する関数の出力、 **CURDATE**関数は、タイムスタンプ列または文字データではなく、日付。  
   
