@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: b122c8dbd5e087ab8b871eb7a29e3bb2b330acaa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a717c47163e03e6430272ca44d2120c7328289e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794408"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061785"
 ---
 # <a name="best-practices-for-running-data-migration-assistant"></a>Data Migration Assistant を実行するためのベスト プラクティス
 この記事では、インストール、評価、および移行のベスト プラクティスについてはいくつか提供します。
@@ -28,7 +27,7 @@ ms.locfileid: "66794408"
 ## <a name="installation"></a>インストール
 インストールして、SQL Server のホスト コンピューターで直接 Data Migration Assistant を実行しないでください。
 
-## <a name="assessment"></a>評価
+## <a name="assessment"></a>Assessment
 - 実稼働データベースで非ピーク時の評価を実行します。
 - 実行、**互換性の問題**と**新機能のお勧め**評価期間を短縮するには、個別に評価します。
 

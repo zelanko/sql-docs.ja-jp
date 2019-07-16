@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ccdafec7-2a9b-4356-bffb-1caa3a12db59
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d055e9b76d248319bddb37241b1b79428ee5f3b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7f2dfc6196bfba6c274eb45a45745159447cc39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62470810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061177"
 ---
 # <a name="dbosysjobschedules-transact-sql"></a>では (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "62470810"
 |**next_run_date**|**int**|実行するジョブがスケジュールされている次の日。 日付の書式設定 yyyymmdd 形式で指定します。|  
 |**next_run_time**|**int**|ジョブが実行するスケジュールされた時刻。 時間は、HHMMSS の形式し、24 時間制を使用します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo.sysschedules &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysschedules-transact-sql.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 3ef05bfb-b467-4403-89cc-6e77ef9247dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8a24bb05e8f10e2920bd206531723c228d6c1734
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cfeacf9f3c18d3f80b7ad83a3697e33a5797ba22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529354"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096026"
 ---
 # <a name="sptracegenerateevent-transact-sql"></a>sp_trace_generateevent (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,9 +46,9 @@ sp_trace_generateevent [ @eventid = ] event_id
 ## <a name="arguments"></a>引数  
 `[ @eventid = ] event_id` 有効にするイベントの ID です。 *event_id*は**int**、既定値はありません。 ID は、82 ~ 91 のセットとしてユーザー定義イベントを表すからのイベント番号のいずれかを指定する必要があります[sp_trace_setevent](../../relational-databases/system-stored-procedures/sp-trace-setevent-transact-sql.md)します。  
   
-`[ @userinfo = ] 'user_info'` イベントの理由を特定する省略可能なユーザー定義の文字列です。 *user_info*は**nvarchar (128)**、既定値は NULL です。  
+`[ @userinfo = ] 'user_info'` イベントの理由を特定する省略可能なユーザー定義の文字列です。 *user_info*は**nvarchar (128)** 、既定値は NULL です。  
   
-`[ @userdata = ] user_data` イベントの省略可能なユーザー指定のデータです。 *user_data*は**varbinary (8000)**、既定値は NULL です。  
+`[ @userdata = ] user_data` イベントの省略可能なユーザー指定のデータです。 *user_data*は**varbinary (8000)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  次の表は、このストアド プロシージャの完了時に返されるコード値を示しています。  

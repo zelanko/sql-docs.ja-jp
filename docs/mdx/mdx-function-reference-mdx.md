@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 5e38d37eae107c713ced69857898c604a77af297
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff14718e09fa3732a40ea245430f33c599325eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187608"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003511"
 ---
 # <a name="mdx-function-reference-mdx"></a>MDX 関数リファレンス (MDX)
 
@@ -220,7 +219,7 @@ ms.locfileid: "63187608"
 |--------------|-----------------|  
 |[Error &#40;MDX&#41;](../mdx/error-mdx.md)|必要に応じて指定したエラー メッセージを提供するエラーが発生します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

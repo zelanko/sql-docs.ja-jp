@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: b7f1be66-e6c7-4790-88ec-62b7662103c0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3af78971a17035091ab8a72bf0c9a8fe90250dd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2960c42690a9528763321bc882bb788b437cb66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036201"
 ---
 # <a name="sqlbrowseconnect-function"></a>SQLBrowseConnect 関数
 **準拠**  
@@ -113,8 +112,8 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="inconnectionstring-argument"></a>InConnectionString 引数  
  参照要求の接続文字列では、次の構文があります。  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*;<br>
- *attribute* ::= *attribute-keyword*`=`*attribute-value* &#124; `DRIVER=`[`{`]*attribute-value*[`}`]<br>
+ *接続文字列*:: =*属性*[`;`] &#124; *属性* `;` *接続文字列*;<br>
+ *属性*:: =*属性キーワード*`=`*属性値* &#124; `DRIVER=`[`{`]*属性と値の*[`}`]<br>
  *属性キーワード*:: = `DSN` &#124; `UID` &#124; `PWD` &#124; *ドライバー-定義の属性-キーワード*<br>
  *属性値*:: =*文字の文字列*<br>
  *ドライバーの定義の属性-キーワード*:: =*識別子*<br>
@@ -128,11 +127,11 @@ SQLRETURN SQLBrowseConnect(
 ## <a name="outconnectionstring-argument"></a>OutConnectionString 引数  
  参照結果の接続文字列は、接続属性の一覧です。 接続属性は、属性のキーワードと対応する属性値で構成されます。 参照結果の接続文字列では、次の構文があります。  
   
- *connection-string* ::= *attribute*[`;`] &#124; *attribute* `;` *connection-string*<br>
- *attribute* ::= [`*`]*attribute-keyword*`=`*attribute-value*<br>
+ *接続文字列*:: =*属性*[`;`] &#124; *属性* `;` *接続文字列*<br>
+ *属性*:: = [`*`]*属性キーワード*`=`*属性値*<br>
  *属性キーワード*:: = *ODBC 属性-キーワード* &#124; *ドライバー-定義の属性-キーワード*<br>
  *ODBC 属性-キーワード*= {`UID` &#124; `PWD`} [`:`*ローカライズ識別子*]*ドライバー-定義の属性-キーワード*:: = *識別子*[`:`*ローカライズ識別子*]*属性値*:: = `{` *属性値リスト* `}` &#124; `?` (中かっこはリテラルは、ドライバーによって返される)。<br>
- *attribute-value-list* ::= *character-string* [`:`*localized-character string*] &#124; *character-string* [`:`*localized-character string*] `,` *attribute-value-list*<br>
+ *属性値リスト*:: =*文字列*[`:`*ローカライズされた文字の文字列*] &#124; *文字列*[`:`*ローカライズされた文字の文字列*] `,` *属性値リスト*<br>
   
  場所*文字列*と*ローカライズされた文字の文字列*0 個以上の文字。*識別子*と*ローカライズ識別子*1 つまたは複数の文字。*属性キーワード*小文字は区別; されず*属性値*小文字が区別されます。 接続により文字列および初期化ファイルの文法、キーワード、ローカライズされた識別子は、および属性値の文字が含まれている **:operator[]{}()、;?\*=! @** 避ける必要があります。 システム情報の文法、ため、キーワードおよびデータ ソース名が円記号を含めることはできません (\\) 文字。  
   

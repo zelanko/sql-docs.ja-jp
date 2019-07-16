@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 509717221a51ac790b92969ff052d0a8a5d0143d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bccdd6efcf17af9d485e155b6653bab52bbcbd3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248267"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038219"
 ---
 # <a name="mdx-data-definition---drop-cell-calculation"></a>MDX データ操作 - DROP CELL CALCULATION
 
@@ -35,8 +34,8 @@ DROP [ SESSION ] CELL CALCULATION CURRENTCUBE | Cube_Name.CellCalc_Name
  *CellCalc_Name*  
  削除するセル計算の名前を指定する有効な文字列式です。  
   
-## <a name="see-also"></a>参照  
- [CREATE CELL CALCULATION ステートメント (MDX)](../mdx/mdx-data-definition-create-cell-calculation.md)   
+## <a name="see-also"></a>関連項目  
+ [CREATE CELL CALCULATION ステートメント &#40;MDX&#41;](../mdx/mdx-data-definition-create-cell-calculation.md)   
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)  
   
   

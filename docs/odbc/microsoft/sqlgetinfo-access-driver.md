@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c226aba7-a2f4-4b32-b640-92654b40e5a7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 626ee1de57fdcecdf53d20263b1717df25480c40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d71e3522ab46116e378b2ee17689a7048af04c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003308"
 ---
 # <a name="sqlgetinfo-access-driver"></a>SQLGetInfo (Access ドライバー)
 > [!NOTE]  
@@ -188,7 +187,7 @@ ms.locfileid: "63313430"
   
  PIVOT  
   
- 短い  
+ SHORT  
   
  1 つ  
   
@@ -222,7 +221,7 @@ ms.locfileid: "63313430"
  SQL_FN_NUM_ABS &#124; です。SQL_FN_NUM_ATAN &#124; です。SQL_FN_NUM_CEILING &#124; です。SQL_FN_NUM_COS &#124; です。SQL_FN_NUM_EXP &#124; です。SQL_FN_NUM_FLOOR &#124; です。SQL_FN_NUM_LOG &#124; です。SQL_FN_NUM_MOD &#124; です。SQL_FN_NUM_POWER &#124; です。SQL_FN_NUM_RAND &#124; です。SQL_FN_NUM_SIGN &#124; です。SQL_FN_NUM_SIN &#124; です。SQL_FN_NUM_SQRT &#124; です。SQL_FN_NUM_TAN  
   
 ## <a name="sqlojcapabilities"></a>SQL_OJ_CAPABILITIES  
- SQL_OJ_LEFT SQL_OJ_RIGHT SQL_OJ_NOT_ORDERED SQL_OJ_INNER SQL_OJ_ALL_COMPARISON_OPS  
+ SQL_OJ_LEFT、SQL_OJ_RIGHT SQL_OJ_NOT_ORDERED SQL_OJ_INNER SQL_OJ_ALL_COMPARISON_OPS  
   
 ## <a name="sqlcatalogusage"></a>SQL_CATALOG_USAGE  
  SQL_QU_DML_STATEMENTS &#124; です。SQL_QU_TABLE_DEFINITION &#124; です。SQL_QU_INDEX_DEFINITION &#124; です。SQL_QU_PROCEDURE_INVOCATION  

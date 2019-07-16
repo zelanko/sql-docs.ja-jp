@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 8a91df6a-eb84-4512-9a17-4a6e32a9538a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85878b79ec98b3523f18ed1c5c4d3f1bf08fc540
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1b3015651dc263d95aa80e6108db2e8017e112d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032831"
 ---
 # <a name="spstartjob-transact-sql"></a>sp_start_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_start_job
   
 `[ @error_flag = ] error_flag` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
-`[ @server_name = ] 'server_name'` ジョブを開始する対象サーバーです。 *server_name*は**nvarchar (128)**、既定値は NULL です。 *server_name*ジョブが現在対象となる対象のサーバーのいずれかを指定する必要があります。  
+`[ @server_name = ] 'server_name'` ジョブを開始する対象サーバーです。 *server_name*は**nvarchar (128)** 、既定値は NULL です。 *server_name*ジョブが現在対象となる対象のサーバーのいずれかを指定する必要があります。  
   
 `[ @step_name = ] 'step_name'` ジョブの実行を開始するステップの名前。 ローカル ジョブにのみ適用されます。 *step_name*は**sysname**、既定値は NULL  
   

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 464f8504850c6aa13f1cf040f9429be56f7181be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 385206d4a94362831e0949bafe5a11c1ce48d7bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298498"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017130"
 ---
 # <a name="ancestor-mdx"></a>Ancestor (MDX)
 
@@ -39,7 +38,7 @@ Ancestor(Member_Expression, Distance)
  *Level_Expression*  
  レベルを返す有効な多次元式 (MDX) 式。  
   
- *距離*  
+ *Distance*  
  指定されたメンバーからの距離を指定する有効な数値式です。  
   
 ## <a name="remarks"></a>コメント  

@@ -2,19 +2,18 @@
 title: 並列データ ウェアハウスのコンポーネント - Analytics Platform System |Microsoft Docs
 description: この記事では、アプライアンスのソフトウェアと Analytics Platform System の非アプライアンス ソフトウェア コンポーネントについて説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: aaf90124cc7877b633a997a2c4f170057b965028
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87525a741c1d0081b366394c0c5dd1b152ad15f1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960474"
 ---
 # <a name="parallel-data-warehouse-components---analytics-platform-system"></a>並列データ ウェアハウスのコンポーネント - Analytics Platform System
 この記事では、アプライアンスのソフトウェアと Analytics Platform System の非アプライアンス ソフトウェア コンポーネントについて説明します。  
@@ -66,7 +65,7 @@ MPP エンジンは、超並列処理 (MPP) システムの頭脳であります
 ### <a name="admin-console"></a>管理コンソール  
 管理者コンソールは、アプライアンスの状態、ヘルス、およびパフォーマンス情報を提供する web アプリケーションです。  
   
-### <a name="configuration-manager"></a>構成マネージャー  
+### <a name="configuration-manager"></a>Configuration Manager  
 Configuration Manager (dwconfig.exe) は、アプライアンス管理者 Analytics Platform System の構成に使用するツールです。  
   
 ### <a name="control-node-databases"></a>制御ノード データベース  

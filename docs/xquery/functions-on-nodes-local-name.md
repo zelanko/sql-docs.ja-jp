@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: c901ef5d-89c5-482a-bf64-3eefbcf3098d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 93f289ed165742ae8fdf8d49732186161a4a8b5d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 382bbc9aeedacf37c7fe38abd592bcee7e154f5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62936504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038872"
 ---
 # <a name="functions-on-nodes---local-name"></a>ノードの関数 - local-name
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -84,7 +83,7 @@ WHERE ProductModelID=7
   
  クエリでは、すべてを返します、<`Location`> の子要素、<`root`> 要素。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ノードの関数](https://msdn.microsoft.com/library/09a8affa-3341-4f50-aebc-fdf529e00c08)   
  [名前空間 uri 関数&#40;XQuery&#41;](../xquery/functions-on-nodes-namespace-uri.md)  
   

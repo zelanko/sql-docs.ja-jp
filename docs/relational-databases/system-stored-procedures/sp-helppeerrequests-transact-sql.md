@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37bd503e-46c4-47c6-996e-be7ffe636fe8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9a51015d8c1e6e6df7f23f32fc7febf7fe9e429f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5b9e2a370c9acc9c22dac7e5e60ceb10e08e46ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137630"
 ---
 # <a name="sphelppeerrequests-transact-sql"></a>sp_helppeerrequests (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` 状態要求を送信したピア ツー ピア トポロジ内のパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
-`[ @description = ] 'description'` 呼び出すときに提供される情報を定義したユーザーに基づいて、返された応答をフィルター選択できる、個々 の状態要求を識別するために使用できる値[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)します。 *説明*は**nvarchar (4000)**、既定値は **%** します。 既定では、パブリケーションのすべての状態要求が返されます。 指定された値に一致する説明で状態要求のみを返すためにこのパラメーターを使用します*説明*を使用して文字の文字列が一致する、[など&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)。句。  
+`[ @description = ] 'description'` 呼び出すときに提供される情報を定義したユーザーに基づいて、返された応答をフィルター選択できる、個々 の状態要求を識別するために使用できる値[sp_requestpeerresponse &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md)します。 *説明*は**nvarchar (4000)** 、既定値は **%** します。 既定では、パブリケーションのすべての状態要求が返されます。 指定された値に一致する説明で状態要求のみを返すためにこのパラメーターを使用します*説明*を使用して文字の文字列が一致する、[など&#40;TRANSACT-SQL&#41; ](../../t-sql/language-elements/like-transact-sql.md)。句。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -63,7 +62,7 @@ sp_helppeerrequests [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helppeerrequests**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
  [sp_helppeerresponses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerresponses-transact-sql.md)  
   

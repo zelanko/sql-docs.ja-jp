@@ -3,18 +3,17 @@ title: Linux 上の SQL Server のセキュリティを概要します。
 description: この記事では、一般的なセキュリティ アクションを説明します。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 10/02/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ecc72850-8b01-492e-9a27-ec817648f0e0
-ms.openlocfilehash: 9fe29cadaa14168871e7448350d41bc89afed05b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 1e64ce76ef2528c96ecc0206b7a56b31d4c95ef7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834737"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019501"
 ---
 # <a name="walkthrough-for-the-security-features-of-sql-server-on-linux"></a>Linux 上の SQL Server のセキュリティ機能のチュートリアル
 
@@ -137,9 +136,9 @@ Create a security policy adding the function as both a filter and a block predic
 
 ```
 セキュリティ ポリシー SalesFilter を作成します。   
-ADD FILTER PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+フィルター述語 Security.fn_securitypredicate(SalesPersonID) を追加します。    
   Sales.SalesOrderHeader、   
-ADD BLOCK PREDICATE Security.fn_securitypredicate(SalesPersonID)    
+ブロック述語 Security.fn_securitypredicate(SalesPersonID) を追加します。    
   Sales.SalesOrderHeader で   
 WITH (STATE = ON);   
 ```
@@ -172,17 +171,17 @@ Use an `ALTER TABLE` statement to add a masking function to the `EmailAddress` c
  
 ```
 AdventureWorks2014; の使用します。移動の ALTER TABLE Person.EmailAddress     ALTER 列 EmailAddress    
-ADD MASKED WITH (FUNCTION = 'email()');
+追加マスクで (関数 = ' email()');
 ``` 
  
 Create a new user `TestUser` with `SELECT` permission on the table, then execute a query as `TestUser` to view the masked data:   
 
 ```  
-CREATE USER TestUser WITHOUT LOGIN;   
-GRANT SELECT ON Person.EmailAddress TO TestUser;    
+TestUser のユーザーを作成しますログインに関係なく。   
+GRANT SELECT ON Person.EmailAddress TestUser; に    
  
 EXECUTE AS USER = 'TestUser';   
-SELECT EmailAddressID, EmailAddress FROM Person.EmailAddress;       
+SELECT EmailAddressID、EmailAddress Person.EmailAddress; から       
 元に戻します。    
 ```
  
@@ -229,11 +228,11 @@ GO
 CREATE CERTIFICATE MyServerCert WITH SUBJECT = 'My Database Encryption Key Certificate';  
 GO  
 
-USE AdventureWorks2014;   GO
+AdventureWorks2014; の使用します。 移動
   
 CREATE DATABASE ENCRYPTION KEY  
 アルゴリズムで AES_256 を =  
-ENCRYPTION BY SERVER CERTIFICATE MyServerCert;  
+サーバー証明書 MyServerCert; による暗号化  
 GO
   
 ALTER DATABASE AdventureWorks2014  
@@ -265,7 +264,7 @@ WITH
   ENCRYPTION   
    (  
    アルゴリズム、AES_256 を =  
-   SERVER CERTIFICATE = BackupEncryptCert  
+   サーバー証明書 BackupEncryptCert を =  
    ),  
   STATS = 10  
 GO  

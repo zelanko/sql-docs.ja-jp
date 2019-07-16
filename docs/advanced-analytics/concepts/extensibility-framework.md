@@ -7,13 +7,12 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 8e5f874e43e70ce1bddfe21b745199fef44aa04a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3d4d8108fda500d48425abfb52fd9f72c6faa147
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510629"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963058"
 ---
 # <a name="extensibility-architecture-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services で拡張可能アーキテクチャ 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -84,7 +83,7 @@ BxlServer は、次のタスクに SQL サテライトを使用します。
 
 SQL サテライトは、SQL Server と外部スクリプト言語間の高速データ転送に最適化されたカスタム データ形式を使用します。 型変換を実行し、SQL Server と外部スクリプトのランタイム間の通信中に入力と出力データセットのスキーマを定義します。
 
-SQL サテライトは、windows の拡張イベント (Xevent) を使用して監視できます。 詳細については、[R の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)と[Python の拡張イベント](../../advanced-analytics/python/extended-events-for-python.md)を参照してください。
+SQL サテライトは、windows の拡張イベント (Xevent) を使用して監視できます。 詳細については、次を参照してください。 [R の拡張イベント](../../advanced-analytics/r/extended-events-for-sql-server-r-services.md)と[Python の拡張イベント](../../advanced-analytics/python/extended-events-for-python.md)します。
 
 ## <a name="communication-channels-between-components"></a>コンポーネント間の通信チャネル
 

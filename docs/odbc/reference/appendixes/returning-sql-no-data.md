@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: deed0163-9d1a-4e9b-9342-3f82e64477d2
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e2f731589dcbc10d24ff42d895db60f9f8c054de
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2613593d9c2e20d5dfa01c0a0b4f9886dbc8e889
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794180"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057133"
 ---
 # <a name="returning-sqlnodata"></a>SQL_NO_DATA を返す
 ときに、ODBC *2.x*アプリケーションを処理する ODBC *3.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**、検索された update または delete ステートメントが実行されましたが、ODBC データ ソースの行によって影響されなかったと*3.x*ドライバーは SQL_SUCCESS を返す必要があります。 ときに、ODBC *3.x* odbc 作業アプリケーション*3.x*ドライバー呼び出し**SQLExecDirect**、 **SQLExecute**、または**SQLParamData**と同じ結果が、ODBC *3.x*ドライバーが SQL_NO_DATA を返す必要があります。  

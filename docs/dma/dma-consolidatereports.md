@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
-manager: jroth
-ms.openlocfilehash: 361b1d318a7db08007d4506531441ab19347ea62
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9538e66180fa401059135a5f8714ea39dd4e3f4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680259"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058807"
 ---
 # <a name="assess-an-enterprise-and-consolidate-assessment-reports-with-dma"></a>エンタープライズを評価し、DMA で評価レポートの統合
 
@@ -139,7 +138,7 @@ DmaProcessor 関数に関連付けられているパラメーターは、次の�
 
 |パラメーター  |説明 |
 |---------|---------|
-|**processTo** | JSON ファイルの処理される場所です。 指定できる値は**SQLServer**と**AzureSQLDatabase**します。 |
+|**プロセス** | JSON ファイルの処理される場所です。 指定できる値は**SQLServer**と**AzureSQLDatabase**します。 |
 |**serverName** | SQL Server インスタンスは、データを処理します。  指定した場合**AzureSQLDatabase**の**プロセス**パラメーターでは、SQL Server の名前のみを含める (は含まれていません。 database.windows.net)。 求められます 2 つのログインの Azure SQL データベースを対象とする場合最初の 2 つ目は、Azure の SQL Server の管理者ログイン中に、Azure テナントの資格情報です。 |
 |**CreateDMAReporting** | JSON ファイルを処理するために作成するステージング データベースです。  既に指定したデータベースが存在する、いずれかにこのパラメーターを設定すると、オブジェクトを作成取得はありません。  このパラメーターは、削除された 1 つのオブジェクトを再作成するために便利です。 |
 |**CreateDataWarehouse** | Power BI レポートで使用されるデータ ウェアハウスを作成します。 |

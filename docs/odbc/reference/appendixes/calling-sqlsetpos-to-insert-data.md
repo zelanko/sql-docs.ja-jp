@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 03e5c4d0-2bb3-4649-9781-89cab73f78eb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 86647601dfc0223dd6fa4f0ffcc0e5db695868b5
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: e07bf71f0d622ad9095974cd7020001625edf1f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793210"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037709"
 ---
 # <a name="calling-sqlsetpos-to-insert-data"></a>データを挿入するための SQLSetPos の呼び出し
 ときに、ODBC *2.x* odbc 作業アプリケーション*3.x*ドライバー呼び出し**SQLSetPos**で、*操作*SQL_ADD の引数、ドライバー マネージャーにこの呼び出しにマップされていない**SQLBulkOperations**します。 場合、ODBC *3.x*ドライバーを呼び出すアプリケーションを使用する必要があります**SQLSetPos** SQL_ADD で、ドライバーが操作をサポートする必要があります。  
