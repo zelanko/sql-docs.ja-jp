@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 9109f10d-326b-4a6d-8c97-831f60da8c4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a27e23710cb0b620152991c96516d58df8d92fca
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5b45e71e5501a1c294760c4e7cadba5f96b169e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47748490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078810"
 ---
 # <a name="scrolling-and-fetching-rows"></a>行のスクロールとフェッチ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "47748490"
 |1 画面分上へ移動 (PageUp)|SQL_FETCH_PRIOR|  
 |1 画面分下へ移動 (PageDown)|SQL_FETCH_NEXT|  
 |1 行上へ移動|指定したを-1 に FetchOffset SQL_FETCH_RELATIVE|  
-|1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE |  
+|1 行下へ移動|FetchOffset に 1 を指定した SQL_FETCH_RELATIVE|  
 |スクロール ボックスを先頭に移動|SQL_FETCH_FIRST|  
 |スクロール ボックスを末尾に移動|SQL_FETCH_LAST|  
 |スクロール ボックスを任意の位置に移動|SQL_FETCH_ABSOLUTE|  
@@ -63,7 +62,7 @@ ms.locfileid: "47748490"
   
 -   [ODBC での行のブックマーク](../../relational-databases/native-client-odbc-cursors/scrolling-and-fetching-rows-bookmarking-rows-in-odbc.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カーソルを使用して&#40;ODBC&#41;](../../relational-databases/native-client-odbc-cursors/using-cursors-odbc.md)  
   
   

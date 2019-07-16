@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5e0d04f2-6175-44a2-ad96-a8e2986ce4c9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf650c095e27fe3a270ad9610e959bd6f5f1a6a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8771d7c821a82733b0664f09c5dadf2128baf877
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090847"
 ---
 # <a name="spchangemergepullsubscription-transact-sql"></a>sp_changemergepullsubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 |**ftp_login**||旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー名です。|  
 |**ftp_password**||旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー パスワードです。|  
 |**ftp_port**||旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用の FTP サービスのポート番号です。|  
-|**hostname**||指定します、この関数は、結合フィルターまたは論理レコード リレーションシップの WHERE 句で使用される場合の HOST_NAME() の値。|  
+|**ホスト名**||指定します、この関数は、結合フィルターまたは論理レコード リレーションシップの WHERE 句で使用される場合の HOST_NAME() の値。|  
 |**internet_login**||基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントを使用してログインします。|  
 |**internet_password**||マージ エージェントが基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに使用するログインのパスワードです。|  
 |**internet_security_mode**|**1**|Web 同期をホストしている Web サーバーに接続するときは、Windows 認証を使用します。|  
@@ -82,7 +81,7 @@ sp_changemergepullsubscription [ [ @publication= ] 'publication' ]
 ||**1**|パブリッシャーに接続するときに Windows 認証を使用。|  
 ||**2**|同期のトリガーを使用して、静的な**sysservers**でリモート プロシージャ コール (RPC)、およびパブリッシャーを実行するエントリを定義する必要があります、 **sysservers**リモート サーバーまたはリンク サーバーとしてのテーブル。|  
 |**sync_type**|**自動**|スキーマと初期データのパブリッシュされたテーブルの」は最初に、サブスクライバーに転送されます。|  
-||**[なし]**|スキーマと初期データのパブリッシュされたテーブル以外のサブスクライバーに既に存在します。システム テーブルとデータは常に転送します。|  
+||**none**|スキーマと初期データのパブリッシュされたテーブル以外のサブスクライバーに既に存在します。システム テーブルとデータは常に転送します。|  
 |**use_ftp**|**true**|一般的なプロトコルの代わりに FTP を使用して、スナップショットを取得します。|  
 ||**false**|スナップショットを取得するのにには、一般的なプロトコルを使用します。|  
 |**use_web_sync**|**true**|サブスクリプションは、HTTP 経由で同期できます。|  

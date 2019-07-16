@@ -36,13 +36,12 @@ helpviewer_keywords:
 ms.assetid: fdd3cff2-4d62-4395-8acf-71ea8f17f524
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 71a52a619ba2a3c16c372021181b90bae72ccfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c140489877be5f34bc6d7a5b20a4ce36fdb3820f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62759708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068953"
 ---
 # <a name="access-inventory-schemas-accesstosql"></a>Access インベントリ スキーマ (AccessToSQL)
 次のセクションでは、SSMA によってへのアクセスのスキーマをエクスポートするときに作成されるテーブルを記述する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
@@ -55,7 +54,7 @@ ms.locfileid: "62759708"
 |**DatabaseId**|**uniqueidentifier**|各データベースを一意に識別する GUID。 この列がテーブルの主キーもあります。|  
 |**DatabaseName**|**nvarchar (4000)**|Access データベースの名前。|  
 |**ExportTime**|**datetime**|このメタデータが SSMA によって作成された日付と時刻。|  
-|**FilePath**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
+|**ファイル パス**|**nvarchar (4000)**|Access データベースの完全パスとファイル名。|  
 |**FileSize**|**bigint**|サポート技術情報で Access データベースのサイズ。|  
 |**FileOwner**|**nvarchar (4000)**|Access データベースの所有者として指定されている Windows アカウント。|  
 |**DateCreated**|**datetime**|日付と、Access データベースが作成された時刻。|  
@@ -138,7 +137,7 @@ ms.locfileid: "62759708"
 |---------------|-------------|---------------|  
 |**DatabaseId**|**uniqueidentifier**|このクエリを含むデータベースを識別します。|  
 |**QueryId**|**int**|クエリを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
-|**QueryName**|**nvarchar (4000)**|クエリの名前。|  
+|**QueryName**|**nvarchar (4000)**|クエリ名を返します。|  
 |**QueryText**|**nvarchar (4000)**|SELECT ステートメントなどの SQL クエリ コード。|  
 |**IsUpdateable**|**bit**|クエリは更新可能または読み取り専用のかどうかを指定します。|  
 |**QueryType**|**nvarchar (4000)**|などのクエリの種類を指定**選択**または**SetOperation**します。|  
@@ -153,7 +152,7 @@ ms.locfileid: "62759708"
 |**FormId**|**int**|フォームを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
 |**FormName**|**nvarchar (4000)**|フォームの名前。|  
   
-## <a name="macros"></a>マクロ  
+## <a name="macros"></a>[マクロ]  
 マクロのメタデータにエクスポートするが、 **SSMA_Access_InventoryMacros**テーブル。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  
@@ -162,7 +161,7 @@ ms.locfileid: "62759708"
 |**MacroId**|**int**|マクロを識別するインクリメント整数。 この列は、テーブルの主キーです。|  
 |**マクロ名**|**nvarchar (4000)**|マクロの名前。|  
   
-## <a name="reports"></a>[レポート]  
+## <a name="reports"></a>レポート  
 レポートのメタデータにエクスポートするが、 **SSMA_Access_InventoryReports**テーブル。 このテーブルには、次の列が含まれています。  
   
 |列名|データ型|説明|  

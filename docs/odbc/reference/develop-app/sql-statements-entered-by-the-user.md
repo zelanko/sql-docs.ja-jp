@@ -14,16 +14,15 @@ helpviewer_keywords:
 ms.assetid: 109af162-93ba-425a-8fe5-49c7dc7cc784
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 28256433802d686f4362b2b733fc2d2b13e65302
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78a1653df60b21cde772cbe32a688b3fdef80a42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086072"
 ---
 # <a name="sql-statements-entered-by-the-user"></a>ユーザーが入力した SQL ステートメント
-よくアド ホック分析を実行するアプリケーションでは、SQL ステートメントを直接入力するユーザーを許可します。 例 :  
+よくアド ホック分析を実行するアプリケーションでは、SQL ステートメントを直接入力するユーザーを許可します。 以下に例を示します。  
   
 ```  
 SQLCHAR *     Statement, SqlState[6], Msg[SQL_MAX_MESSAGE_LENGTH];  

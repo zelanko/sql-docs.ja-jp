@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 19c54fc5-9dd6-49b6-8c9f-a38961b40a65
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 4a51183964fe36d799e0e62243c6a0012da99727
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 9939d11e3a779cc25d7faeb4950783353947f140
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793283"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081454"
 ---
 # <a name="writing-odbc-3x-applications"></a>ODBC 3.x アプリケーションの作成
 ときに、ODBC *2.x*を ODBC アプリケーションはアップグレード*3.x*、ODBC の両方で機能するように書き込む*2.x*と*3.x*ドライバー. アプリケーションは、ODBC のフル活用するために条件付きのコードを組み込む必要があります*3.x*機能します。  

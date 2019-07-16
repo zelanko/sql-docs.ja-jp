@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 62a4fd88-afc3-4f1f-b978-40710a30c4e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 084faa615253c58d7b41214f9abfb4d3c8880bac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ae55ec1fccbd491854fb8bff2daa215d38b20ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964185"
 ---
 # <a name="executeoptions-property-rds"></a>ExecuteOptions プロパティ (RDS)
 非同期実行が有効になっているかどうかを示します。  
@@ -48,7 +47,7 @@ ms.locfileid: "66712605"
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ExecuteOptions と FetchOptions プロパティの例 (VBScript)](../../../ado/reference/rds-api/executeoptions-and-fetchoptions-properties-example-vbscript.md)   
  [Cancel メソッド (RDS)](../../../ado/reference/rds-api/cancel-method-rds.md)
 

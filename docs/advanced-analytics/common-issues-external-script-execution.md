@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: a6943a850a2955a36723d14c0226bd5c503f23ec
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 2d7f82230dbc6b87bcc8f752c99b7c92ef759253
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963128"
 ---
 # <a name="common-issues-with-launchpad-service-and-external-script-execution-in-sql-server"></a>スタート パッド サービスと SQL Server の外部スクリプトの実行に関する一般的な問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -57,7 +56,7 @@ SQL Server Machine Learning サービスのセットアップ中に、Windows �
 
 問題を解決するには、グループ **SQLRUserGroup** に**ローカルのログオンを許可する**システム権限があることを確認します。
 
-詳細については、次を参照してください。[構成 Windows サービス アカウントとアクセス許可](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)します。
+詳細については、「[Windows サービス アカウントと権限の構成](../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)」を参照してください。
 
 ## <a name="permissions-to-run-external-scripts"></a>外部スクリプトを実行するアクセス許可
 

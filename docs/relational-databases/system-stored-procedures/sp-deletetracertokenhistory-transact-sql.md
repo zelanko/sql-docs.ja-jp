@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9ae1be14-0d2f-40b1-9d6e-22d79726abf4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f84cd1cbb9a49f0c13a93fdff721f430983088ca
-ms.sourcegitcommit: 2ab79765e51913f1df6410f0cd56bf2a13221f37
+ms.openlocfilehash: 0a7f70f5cd56867add98150d471d61cbc70faad0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/27/2019
-ms.locfileid: "56955973"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111919"
 ---
 # <a name="spdeletetracertokenhistory-transact-sql"></a>sp_deletetracertokenhistory (Transact-SQL)
 
@@ -44,7 +43,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数
 
 `@publication= 'publication'`  
-トレーサー トークンが挿入されたパブリケーションの名前です。 データ型は**sysname**します。 このパラメーターが必要です。
+トレーサー トークンが挿入されたパブリケーションの名前です。 データ型は**sysname**します。 このパラメーターは必須です。
 
 `[ @tracer_id= ] tracer_id`  
 削除するトレーサー トークンの ID です。 データ型は**int**します。既定値は、*null* です。 場合*null*パブリケーションに属するすべてのトレーサー トークンが削除されます。
@@ -59,7 +58,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 > このパラメーターは、に対してのみ指定する必要があります以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーまたはディストリビューターからストアド プロシージャを実行する場合。
 
 `[ @publisher_db= ] 'publisher_db'`  
-パブリケーション データベースの名前です。 データ型は**sysname**します。 既定値は、NULL です。 ストアド プロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。
+パブリケーション データベースの名前です。 データ型は**sysname**します。 既定値は NULL です。 ストアド プロシージャがパブリッシャーで実行される場合、このパラメーターは無視されます。
 
 > [!NOTE]
 > ディストリビューターからストアド プロシージャを実行するときに、このパラメーターを指定する必要があります。
@@ -87,7 +86,7 @@ sp_deletetracertokenhistory [ @publication = ] 'publication'
 - メンバー、 **db_owner**でパブリケーション データベースの固定データベース ロール。
 - **Db_owner**の固定データベース。
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)
 
