@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a86c8a02-dd69-420d-8a47-0188b339858d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb02a96e6ee3d28c67e21996677c02b58fc97c07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b744dbd464aedbd9b87d22aa74277787fcc3c7a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925049"
 ---
 # <a name="how-event-handlers-work-together"></a>複数のイベント ハンドラーの連携方法
 Visual Basic でのすべてのイベント ハンドラーでプログラミングしている場合を除き、**接続**と**Recordset**かどうか実際に処理するすべてのイベントに関係なく、イベントを実装する必要があります。 行う必要がある実装の作業の量は、使用するプログラミング言語に依存します。 詳細については、次を参照してください。[言語で ADO イベントのインスタンス化](../../../ado/guide/data/ado-event-instantiation-by-language.md)します。  

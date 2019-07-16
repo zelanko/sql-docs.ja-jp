@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6d82e770-fba7-49e0-9a0c-3b34b393e4a7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ff0854e1252b4adc38c2c3d5f2022762fb3bd0f8
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3fd3c53f5603567e0f6c2b6ee4f1712f742c1137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544126"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900228"
 ---
 # <a name="sysdmosclusterproperties-transact-sql"></a>sys.dm_os_cluster_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "52544126"
 
 |列名|プロパティ|説明|  
 |-----------------|--------------|-----------------|  
-|VerboseLogging|BIGINT|SQL Server フェールオーバー クラスターのログ記録レベルです。 詳細ログをオンにすると、トラブルシューティングを目的とした詳細情報をエラー ログに追加できます。 次のいずれかの値です。<br /><br /> 0: ログ記録はオフです (既定)<br /><br /> 1: エラーのみ。<br /><br /> 2: エラーおよび警告<br /><br /> 詳細については、[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)を参照してください。|  
+|VerboseLogging|BIGINT|SQL Server フェールオーバー クラスターのログ記録レベルです。 詳細ログをオンにすると、トラブルシューティングを目的とした詳細情報をエラー ログに追加できます。 次のいずれかの値です。<br /><br /> 0: ログ記録はオフです (既定)<br /><br /> 1: エラーのみ。<br /><br /> 2: エラーおよび警告<br /><br /> 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)します。|  
 |SqlDumperDumpFlags|BIGINT|SQLDumper ダンプ フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によって生成されるダンプ ファイルの種類を決定します。 既定の設定は 0 です。|  
 |SqlDumperDumpPath|nvarchar (260)|SQLDumper ユーティリティがダンプ ファイルを生成する場所です。|  
 |SqlDumperDumpTimeOut|BIGINT|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でエラーが発生した場合の、SQLDumper ユーティリティによるダンプの生成のタイムアウト値 (ミリ秒単位) です。 既定値は 0 です。|  

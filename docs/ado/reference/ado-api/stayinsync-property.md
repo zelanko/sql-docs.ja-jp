@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 502d69b5-dc9a-455d-b115-a03bd39a552b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 98a0cc1df12f905cd0d22d05b162983742d0f355
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18d17e0a761fe03053ba90b8ff1ef87f3067df76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930747"
 ---
 # <a name="stayinsync-property"></a>StayInSync プロパティ
 階層構造内に示します[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトかどうか、基になる子レコードへの参照 (、 *」の章*)、親の行の位置が変わったときに変更します。  
@@ -39,6 +38,6 @@ ms.locfileid: "66710788"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [StayInSync プロパティの例 (VB)](../../../ado/reference/ado-api/stayinsync-property-example-vb.md)   
  [Microsoft のデータ シェイプの OLE DB (ADO サービス プロバイダー) のサービス](../../../ado/guide/appendixes/microsoft-data-shaping-service-for-ole-db-ado-service-provider.md)

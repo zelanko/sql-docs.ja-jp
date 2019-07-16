@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 440dbdb1-16fc-4cfe-9451-59a153852537
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3185f7666d628b6461c3ae3a432393a6965be89
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 8e166b4c7517a6901bb383629821daebe56984a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62910442"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936658"
 ---
 # <a name="type-property-example-field-vc"></a>Type プロパティの例 (Field) (VC++)
 この例では、[型](../../../ado/reference/ado-api/type-property-ado.md)プロパティの値に対応する定数の名前を表示することによって、**型**すべてのプロパティ、[フィールド](../../../ado/reference/ado-api/field-object.md)内のオブジェクト、***従業員***テーブル。 FieldType 関数は、この手順を実行する必要があります。  
@@ -158,19 +157,19 @@ void PrintComError(_com_error &e) {
  **Name: emp_id**  
  **型: ファミリ**  
  **名前: fname**  
- **Type: adVarChar**  
+ **型: advarchar:**  
  **名前: minit**  
  **型: ファミリ**  
  **名前: lname**  
- **Type: adVarChar**  
- **Name: job_id**  
+ **型: advarchar:**  
+ **名前: job_id**  
  **Type: adSmallInt**  
- **Name: job_lvl**  
+ **名前: job_lvl**  
  **Type: adUnsignedTinyInt**  
  **名前: pub_id**  
  **型: ファミリ**  
  **名前: hire_date**  
  **型: adDBTimeStamp**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [Type プロパティ (ADO)](../../../ado/reference/ado-api/type-property-ado.md)
