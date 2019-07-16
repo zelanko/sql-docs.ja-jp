@@ -15,21 +15,20 @@ helpviewer_keywords:
 ms.assetid: 20809f5f-941d-427f-8f0c-de7a6c487584
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7a7fd3ce556a1d5766d0f68ffdbe307f83c4ccaa
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: eaf42b746fca4999e7a67e0aff220ff2d09772cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52765004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950727"
 ---
-# <a name="spreplflush-transact-sql"></a>sp_replflush (Transact-SQL)
+# <a name="spreplflush-transact-sql"></a>sp_replflush (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   アーティクル キャッシュをフラッシュします。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
 > [!IMPORTANT]  
->  このプロシージャは手動で実行しないでください。 **sp_replflush**サポート プロフェッショナルの経験豊富なレプリケーションのレプリケーションのトラブルシューティングにのみ使用する必要があります。  
+>  このプロシージャを手動で実行する必要はありません。 **sp_replflush**サポート プロフェッショナルの経験豊富なレプリケーションのレプリケーションのトラブルシューティングにのみ使用する必要があります。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -48,12 +47,12 @@ sp_replflush
   
  効率を上げるため、アーティクル定義がキャッシュに格納されます。 **sp_replflush**アーティクル定義を変更または削除されるときに、その他のレプリケーションのストアド プロシージャによって使用されます。  
   
- 1 つのクライアント接続だけが、指定されたデータベースに対するログ リーダー アクセス権を持つことができます。 実行するとき、クライアントは、データベースに対するログ リーダー アクセス権を持っている、 **sp_replflush**により、クライアントのアクセスを解放します。 他のクライアントでは、トランザクション ログを使用してをスキャンできますし、 **sp_replcmds**または**sp_replshowcmds**します。  
+ 1 つのみのクライアント接続、特定のデータベースに対するログ リーダー アクセス権ことができます。 実行するとき、クライアントは、データベースに対するログ リーダー アクセス権を持っている、 **sp_replflush**により、クライアントのアクセスを解放します。 他のクライアントでは、トランザクション ログを使用してをスキャンできますし、 **sp_replcmds**または**sp_replshowcmds**します。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_replflush**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_repldone &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repldone-transact-sql.md)   
  [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   
