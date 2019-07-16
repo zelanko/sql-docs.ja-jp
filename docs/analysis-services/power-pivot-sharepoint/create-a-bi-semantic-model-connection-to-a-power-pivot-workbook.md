@@ -1,5 +1,5 @@
 ---
-title: Power Pivot ブックへの BI セマンティック モデル接続を作成 |Microsoft ドキュメント
+title: Power Pivot ブックへの BI セマンティック モデル接続の作成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 992e8a3f84af3de9cb9c8ae461b5c6c0505c1b66
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164122"
 ---
 # <a name="create-a-bi-semantic-model-connection-to-a-power-pivot-workbook"></a>Power Pivot ブックへの BI セマンティック モデル接続の作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -47,9 +47,9 @@ ms.locfileid: "34026509"
   
 1.  BI セマンティック モデル接続の格納先となるライブラリで、SharePoint リボンの **[ドキュメント]** をクリックします。 [新しいドキュメント] の下矢印をクリックし、 **[BISM 接続ファイル]** を選択して、[新しい BI セマンティック モデル接続] ページを開きます。  
   
-     ![SharePoint ライブラリに新しいドキュメント サブメニュー](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint ライブラリに新しいドキュメント サブメニュー")  
+     ![SharePoint ライブラリ内の新しいドキュメント サブメニュー](../../analysis-services/power-pivot-sharepoint/media/ssas-bismconnection-new.gif "SharePoint ライブラリ内の新しいドキュメント サブメニュー")  
   
-2.  設定、**サーバー**プロパティの SharePoint URL を[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブック (たとえば、`http://mysharepoint/shared documents/myWorkbook.xlsx`です。 Power Pivot for SharePoint 用の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の配置では、ファーム内の任意のサーバーにデータを読み込むことができます。 このため、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データへのデータ ソース接続では、ブックへのパスだけを指定します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスによって、データを読み込むサーバーが決定されます。  
+2.  設定、 **Server**プロパティの SharePoint URL を[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ブック (たとえば、`http://mysharepoint/shared documents/myWorkbook.xlsx`します。 Power Pivot for SharePoint 用の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の配置では、ファーム内の任意のサーバーにデータを読み込むことができます。 このため、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データへのデータ ソース接続では、ブックへのパスだけを指定します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスによって、データを読み込むサーバーが決定されます。  
   
      **[データベース]** プロパティは使用しません。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの場所を指定する場合は使用しません。  
   
@@ -96,9 +96,9 @@ ms.locfileid: "34026509"
 ##  <a name="bkmk_next"></a> 次の手順  
  BI セマンティック モデル接続を作成し、セキュリティで保護したら、データ ソースとして指定できます。 詳細については、「 [Excel または Reporting Services での BI セマンティック モデル接続の使用](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power Pivot BI セマンティック モデル接続 &#40;.bism&#41;](../../analysis-services/power-pivot-sharepoint/power-pivot-bi-semantic-model-connection-bism.md)   
- [Excel または Reporting Services での BI セマンティック モデル接続を使用します。](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
+ [Excel または Reporting Services での BI セマンティック モデル接続の使用](../../analysis-services/power-pivot-sharepoint/use-a-bi-semantic-model-connection-in-excel-or-reporting-services.md)   
  [テーブル モデル データベースへの BI セマンティック モデル接続の作成](../../analysis-services/power-pivot-sharepoint/create-a-bi-semantic-model-connection-to-a-tabular-model-database.md)  
   
   

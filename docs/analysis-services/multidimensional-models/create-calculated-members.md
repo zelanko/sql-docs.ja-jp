@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bfa37a34ae6c3010c36dfe7693bb6d569e6e63d
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59241471"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209064"
 ---
 # <a name="create-calculated-members"></a>計算されるメンバーの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -56,7 +56,7 @@ ms.locfileid: "59241471"
  書式設定文字列  
  計算されるメンバーに基づいたセル値の書式を指定します。 このプロパティは、メジャーの **[表示形式]** プロパティと同じ値を使用します。 表示形式の詳細については、「 [メジャーのプロパティの構成](../../analysis-services/multidimensional-models/configure-measure-properties.md)」を参照してください。  
   
- [表示]  
+ Visible  
  計算されるメンバーをキューブ メタデータの取得時に表示するかどうかを決定します。 計算されるメンバーを表示しない場合でも、そのメンバーを MDX 式、ステートメント、およびスクリプトで使用できますが、クライアント ユーザー インターフェイスでは選択可能なオブジェクトとしては表示されません。  
   
  空以外の動作  
@@ -75,7 +75,7 @@ ms.locfileid: "59241471"
   
 -   計算されるメンバーがメジャー ディメンションで作成された場合、そのメンバーはそのディメンション内でアドレス指定可能です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルの計算](../../analysis-services/multidimensional-models/calculations-in-multidimensional-models.md)  
   
   

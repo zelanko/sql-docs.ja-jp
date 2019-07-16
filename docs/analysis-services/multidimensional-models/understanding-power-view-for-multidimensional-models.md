@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f8874a442897bd5dd887d7e9903777f81824cb46
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52543529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165032"
 ---
 # <a name="understanding-power-view-for-multidimensional-models"></a>多次元モデルの Power View について
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "52543529"
   
  ![Power View の多次元モデル アーキテクチャ](../../analysis-services/multidimensional-models/media/daxmd-architecture.gif "Power View の多次元モデルのアーキテクチャ")  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  **サーバーの要件**  
   
 -   多次元モードで実行されている Microsoft SQL Server 2016 Analysis Services  

@@ -1,5 +1,5 @@
 ---
-title: Microsoft クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft クラスタ リング アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,21 +10,21 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb86c8271599b56deb27fd3143fd205c11f52f35
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183124"
 ---
 # <a name="microsoft-clustering-algorithm-technical-reference"></a>Microsoft クラスタリング アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  ここでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
+  ここでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムの実装について、クラスター モデルの動作を制御するために使用できるパラメーターを含めて説明します。 クラスター モデルの作成時や処理時のパフォーマンスを向上させる方法に関するアドバイスも含まれています。  
   
  クラスター モデルの使用方法の詳細については、次のトピックを参照してください。  
   
--   [クラスタ リング モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+-   [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
--   [クラスタ リング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
+-   [クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)  
   
 ## <a name="implementation-of-the-microsoft-clustering-algorithm"></a>Microsoft クラスタリング アルゴリズムの実装  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムには、クラスターを作成し、クラスターにデータ ポイントを割り当てるための 2 つの方法が用意されています。 1 つ目の *K-Means* アルゴリズムは、ハード クラスタリングの手法です。 この手法では、データ ポイントが所属できるクラスターは 1 つだけであるため、そのクラスターの各データ ポイントのメンバーシップについて 1 つの確率が計算されます。 2 つ目の *Expectation Maximization* (EM) 手法は、 *ソフト クラスタリング* の手法です。 この手法では、データ ポイントが常に複数のクラスターに所属するため、データ ポイントとクラスターの組み合わせごとに確率が計算されます。  
@@ -81,7 +81,7 @@ ms.locfileid: "34018359"
  CLUSTERING_METHOD  
  アルゴリズムで使用するクラスタリング手法を指定します。 使用可能なクラスタリング手法は次のとおりです。  
   
-|ID|方法|  
+|ID|メソッド|  
 |--------|------------|  
 |1|スケーラブル EM|  
 |2|非スケーラブル EM (Non-scalable EM)|  
@@ -93,7 +93,7 @@ ms.locfileid: "34018359"
  CLUSTER_COUNT  
  アルゴリズムによって作成されるクラスターの概数を指定します。 その数のクラスターをデータから作成できない場合は、可能な限り多数のクラスターが作成されます。 CLUSTER_COUNT を 0 に設定すると、アルゴリズムではヒューリスティックを使用して、作成するクラスターの数が最適に決定されます。  
   
- 既定値は、10 です。  
+ 既定値は 10 です。  
   
  CLUSTER_SEED  
  モデル作成の初期段階にクラスターをランダムに生成するために使用するシード数を指定します。  
@@ -117,12 +117,12 @@ ms.locfileid: "34018359"
   
  この数を減らすと、適切な候補モデルが作成されなくなる可能性もありますが、パフォーマンスを向上させることができます。  
   
- 既定値は、10 です。  
+ 既定値は 10 です。  
   
  STOPPING_TOLERANCE  
  収束に到達し、アルゴリズムによるモデルの作成が完了する時点を決定するための値を指定します。 収束に到達するのは、クラスターの確率の全体的な変化が、モデルのサイズで除算された STOPPING_TOLERANCE パラメーターの比率に満たないときです。  
   
- 既定値は、10 です。  
+ 既定値は 10 です。  
   
  SAMPLE_SIZE  
  CLUSTERING_METHOD パラメーターをスケーラブルなクラスタリング手法のいずれかに設定する場合に、アルゴリズムにより各パスで使用されるケースの数を指定します。 SAMPLE_SIZE パラメーターを 0 に設定すると、データセット全体が単一のパスでクラスター化されます。 データセット全体を単一のパスで読み込むと、メモリやパフォーマンスの問題が発生する可能性があります。  
@@ -146,9 +146,9 @@ ms.locfileid: "34018359"
 ### <a name="modeling-flags"></a>ModelingFlags  
  アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、 分析時に各列の値をどのように処理するかを指定します。  
   
-|モデリング フラグ|Description|  
+|モデリング フラグ|説明|  
 |-------------------|-----------------|  
-|MODEL_EXISTENCE_ONLY|列が、Missing および Existing の 2 つの可能な状態を持つ列として扱われます。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
+|MODEL_EXISTENCE_ONLY|列は 2 つの状態を持つものとして扱われます。Missing および Existing。 NULL は Missing 値になります。<br /><br /> マイニング モデル列に適用されます。|  
 |NOT NULL|列に NULL を含めることはできません。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
   
 ## <a name="requirements"></a>必要条件  
@@ -157,7 +157,7 @@ ms.locfileid: "34018359"
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] クラスタリング アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Discrete、Discretized、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Discrete、Discretized、Table、Ordered|  
@@ -165,9 +165,9 @@ ms.locfileid: "34018359"
 > [!NOTE]  
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
-## <a name="see-also"></a>参照  
- [Microsoft クラスタ リング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
- [クラスタ リング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)   
- [クラスタ リング モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
+## <a name="see-also"></a>関連項目  
+ [Microsoft クラスタリング アルゴリズム](../../analysis-services/data-mining/microsoft-clustering-algorithm.md)   
+ [クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)   
+ [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)  
   
   

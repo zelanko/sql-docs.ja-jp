@@ -1,5 +1,5 @@
 ---
-title: モデルでリグレッサーとして使用する列の指定 |Microsoft ドキュメント
+title: モデルでリグレッサーとして使用する列の指定 |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0cfbe8f17c14518b2acf41bdb9ecf64b1679ffb2
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016549"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182344"
 ---
 # <a name="specify-a-column-to-use-as-regressor-in-a-model"></a>モデルでリグレッサーとして使用する列の指定
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,10 +59,10 @@ ms.locfileid: "34016549"
   
      ビューアーでは、モデルが、回帰式を含む 1 つのノードとして表されます。 その式を **マイニング凡例**に表示したり、クエリを使用して式の係数を抽出したりすることもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft 線形回帰アルゴリズム](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   
- [線形回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: データベース アクセス許可 (Analysis Services) |Microsoft ドキュメント
+title: データベース アクセス許可 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,23 +10,23 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f799b086833f0be7b08786aff08e65d202f29674
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024639"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68177639"
 ---
 # <a name="grant-database-permissions-analysis-services"></a>データベース権限の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   リレーショナル データベースのバックグラウンドを持つ方が Analysis Services データベース管理を始める場合に、まず理解する必要があることは、データ アクセスの観点で、データベースは Analysis Services の主要なセキュリティ保護可能なオブジェクトではないということです。  
   
- Analysis Services の主要なクエリ構造はキューブ (または表形式モデル) であり、それらの特定のオブジェクトにユーザー権限が設定されます。 リレーショナル データベース エンジンではデータベース ログインおよびユーザー権限 (多くの場合 **db_datareader**) がデータベース自体に対して設定されるのとは対照的に、Analysis Services データベースは大部分がデータ モデルの主要なクエリ オブジェクトのコンテナーとなります。 当面の目的がキューブまたは表形式モデルに対するデータ アクセスを有効にすることである場合、ここではデータベース権限をバイパスし、すぐに次のトピックに進むことができます: [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)。  
+ Analysis Services の主要なクエリ構造はキューブ (または表形式モデル) であり、それらの特定のオブジェクトにユーザー権限が設定されます。 リレーショナル データベース エンジンではデータベース ログインおよびユーザー権限 (多くの場合 **db_datareader**) がデータベース自体に対して設定されるのとは対照的に、Analysis Services データベースは大部分がデータ モデルの主要なクエリ オブジェクトのコンテナーとなります。 キューブまたは表形式モデルに対するデータ アクセスを有効にすることがある場合は、ここでは、データベースの権限をバイパスし、このトピックに直接移動します。[キューブまたはモデル アクセス許可を付与&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)します。  
   
  Analysis Services のデータベース権限によって、管理機能が使用できるようになります。フル コントロール データベース権限と概要は同じですが、処理操作を委任する場合の粒度が高くなるという特性があります。 Analysis Services データベースの権限レベルは、次の図と説明に示すように、 **[ロールの作成]** ダイアログ ボックスの **[全般]** ペインに指定されています。  
   
  Analysis Services にはログインがありません。 単にロールを作成し、 **[メンバーシップ]** ペインで Windows アカウントを割り当てるだけです。 管理者も含めてすべてのユーザーが、Windows アカウントを使用して Analysis Services に接続します。  
   
- ![データベースの作成のロール ダイアログを表示権限](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "ロール ダイアログを示すデータベースのアクセス許可の作成")  
+ ![ロールを作成するには、ダイアログが表示されたデータベースのアクセス許可](../../analysis-services/multidimensional-models/media/ssas-permsdbrole.png "ロールを作成するには、ダイアログが表示されたデータベースのアクセス許可")  
   
  データベース レベルで指定される権限には、3 つの種類があります。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "34024639"
   
 #### <a name="create-roles-in-ssms"></a>SSMS でのロールの作成  
   
-1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のインスタンスに接続[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]を開き、**データベース**フォルダー、データベースを選択し、右クリック**ロール** | **新しいロール**.  
+1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のインスタンスに接続[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、オープン、**データベース**フォルダー、データベースを選択し、右クリック**ロール** | **新しいロール**.  
   
 2.  **[全般]** ペインで、DBAdmin などのような名前を入力します。  
   
@@ -74,8 +74,8 @@ ms.locfileid: "34024639"
 ## <a name="read-definition"></a>[定義の読み取り]  
  **[データベースの処理]** と同じく、データベース レベルで **[定義の読み取り]** 権限を設定すると、データベース内の他のオブジェクトに連鎖的に影響を及ぼします。 よりきめ細かいレベルで定義の読み取り権限を設定する場合は、[全般] ペインでデータベース プロパティとして [定義の読み取り] をオフにする必要があります。 詳細については、「[オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-read-definition-permissions-on-object-metadata-analysis-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services インスタンスにサーバー管理者権限を付与する](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [処理権限の Grant & #40 です。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
+ [処理権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-process-permissions-analysis-services.md)  
   
   

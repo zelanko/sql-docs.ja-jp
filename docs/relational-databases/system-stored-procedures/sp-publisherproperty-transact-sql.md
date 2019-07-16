@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 0ed1ebc1-a1bd-4aed-9f46-615c5cf07827
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 49be961d1bc34bcc06b046e95b73d0b5c8ed33ac
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 5c4ba291619ae756fa9803606eda4427a155ae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53204401"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896493"
 ---
-# <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (Transact-SQL)
+# <a name="sppublisherproperty-transact-sql"></a>sp_publisherproperty (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  表示、またはパブリッシャーのプロパティの変更以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 このストアド プロシージャは、ディストリビューター側で実行されます。  
+  表示、またはパブリッシャーのプロパティの変更以外[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 このストアド プロシージャは、ディストリビューターで実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,11 +39,11 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@publisher** =] **'***パブリッシャー***'**  
- 異種パブリッシャーの名前を指定します。 *パブリッシャー*は**sysname**、既定値はありません。  
+ [ **@publisher** =] **'***パブリッシャー***'**  
+ 異種パブリッシャーの名前を指定します。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
- [**@propertyname** =] **'***propertyname***'**  
- 設定するプロパティの名前を指定します。 *propertyname*は**sysname**値は次のいずれかを指定できます。  
+ [ **@propertyname** =] **'***propertyname***'**  
+ プロパティの名前は設定されています。 *propertyname*は**sysname**値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -54,14 +53,14 @@ sp_publisherproperty [ @publisher = ] 'publisher'
   
  ときに*propertyname*を省略するとすべての設定可能なプロパティが返されます。  
   
- [**@propertyvalue** =] **'***propertyvalue***'**  
+ [ **@propertyvalue** =] **'***propertyvalue***'**  
  プロパティ設定の新しい値を指定します。 *propertyvalue*は**sysname**既定値は NULL です。 ときに*propertyvalue*を省略すると、現在の設定、プロパティが返されます。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**propertyname**|**sysname**|設定可能な次のパブリケーション プロパティを返します。<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
+|**propertyname**|**sysname**|設定できる次のパブリケーションのプロパティが返されます。<br /><br /> **xactsetbatching**<br /><br /> **xactsetjob**<br /><br /> **xactsetjobinterval**|  
 |**propertyvalue**|**sysname**|内のプロパティの現在の設定は、 **propertyname**列。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -81,7 +80,7 @@ sp_publisherproperty [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin** 、ディストリビューター側の固定サーバー ロールが実行できる**sp_publisherproperty**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

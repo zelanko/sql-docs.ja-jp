@@ -1,5 +1,5 @@
 ---
-title: ファクト リレーションシップとファクト リレーションシップのプロパティの定義 |Microsoft ドキュメント
+title: ファクト リレーションシップとファクト リレーションシップのプロパティの定義 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2341335d1d9c4904e1832e0a8087c0fa8198fd58
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021699"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178839"
 ---
 # <a name="define-a-fact-relationship-and-fact-relationship-properties"></a>ファクト リレーションシップとファクト リレーションシップのプロパティの定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]

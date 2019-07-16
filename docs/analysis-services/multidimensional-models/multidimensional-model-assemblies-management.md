@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5b7b04f074dcd11eec022a689f865454681d2ae8
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53215791"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165705"
 ---
 # <a name="multidimensional-model-assemblies-management"></a>多次元モデルのアセンブリの管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -101,7 +101,7 @@ Call MyAssembly.MyClass.MyVoidProcedure(a, b, c)
   
  アプリケーション ドメインの境界と各ドメインで実行されるアセンブリは実装ごとに定義されるため、同じアプリケーション ドメインからアセンブリを検出できるとは限らないことに注意してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャのセキュリティの設定](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/setting-security-for-stored-procedures.md)   
  [ストアド プロシージャの定義](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/defining-stored-procedures.md)  
   

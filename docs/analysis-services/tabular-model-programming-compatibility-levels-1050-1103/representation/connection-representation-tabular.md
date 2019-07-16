@@ -1,5 +1,5 @@
 ---
-title: 接続表現 (テーブル) |Microsoft ドキュメント
+title: 接続表現 (表形式) |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2aa92dddc61d1b09c7a18ad0b334554b0026a228
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34039306"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163447"
 ---
 # <a name="connection-representation-tabular"></a>接続表現 (表形式)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -68,6 +68,6 @@ newDatasource.Update();
 ```  
   
 ## <a name="tabular-amo-2012-sample"></a>Tabular AMO 2012 サンプル  
- AMO を使用して作成して接続表現を操作する方法の理解がある、Tabular AMO 2012 サンプル; 内のソース コードを参照してください。具体的には次のソース ファイルで確認してください: Database.cs です。 このサンプルは、Codeplex から入手できます。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
+ AMO を使用して作成して接続表現を操作する方法の理解がある、Tabular AMO 2012 サンプル; でのソース コードを参照してください。具体的には、次のソース ファイルで確認します。Database.cs します。 このサンプルは、Codeplex から入手できます。 サンプル コードは、ここで説明する論理的概念をサポートする目的でのみ提供されるものであり、運用環境では使用しないでください。  
   
   

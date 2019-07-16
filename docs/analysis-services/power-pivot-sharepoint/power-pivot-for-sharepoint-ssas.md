@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: fcfce0a21e66e0ae1e5a440eda0fd32fd7d1964b
-ms.sourcegitcommit: b70b99c2e412b4d697021f3bf1a92046aafcbe37
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2018
-ms.locfileid: "40393237"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164313"
 ---
 # <a name="power-pivot-for-sharepoint-ssas"></a>Power Pivot for SharePoint (SSAS)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -82,8 +82,8 @@ ms.locfileid: "40393237"
   
  [SQL Server 2016 Business Intelligence のライセンスのトポロジおよびコストの例](http://msdn.microsoft.com/library/682b8711-407a-48d1-9807-415d4c24dad6)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power Pivot Planning and Deployment (Power Pivot の計画と配置)](http://go.microsoft.com/fwlink/?linkID=220972)   
- [Power Pivot for SharePoint のディザスター リカバリー](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
+ [Disaster Recovery for Power Pivot for SharePoint (Power Pivot for SharePoint の災害復旧)](http://go.microsoft.com/fwlink/p/?LinkId=389570)  
   
   

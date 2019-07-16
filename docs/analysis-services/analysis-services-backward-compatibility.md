@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5ab4f304d865992a3269b4ee83c9e25f61069e8c
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37984694"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210266"
 ---
 # <a name="analysis-services-backward-compatibility-sql-server-2016"></a>Analysis Services の旧バージョンとの互換性 (SQL Server 2016)
 [!INCLUDE[ssas-appliesto-sql2016](../includes/ssas-appliesto-sql2016.md)]
@@ -39,7 +39,7 @@ A*非推奨の機能*は将来のリリースで製品から廃止されます�
 |テーブル|表形式モデルの 1100 および 1103 互換性レベルは、将来のリリースではサポートされません。 置換では、1200 またはそれ以降、モデルの定義を表形式メタデータに変換する、互換性レベル モデルを設定します。 「 [Analysis Services での表形式モデルの互換性レベル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)」を参照してください。|  
 |ツール|SQL Server Profiler for Trace Capture<br /><br /> この機能に代えて、SQL Server Management Studio に組み込まれている Extended Events Profiler を使用します。  <br /> 「 [Monitor Analysis Services with SQL Server Extended Events](../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md)」を参照してください。|  
 |ツール|Server Profiler for Trace Replay <br />置換します。 これに代わる機能はありません。|  
-|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> -トレース構成: Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り: Microsoft.SqlServer.XEvent.Linq<br />- トレース再生: なし|  
+|トレース管理オブジェクトおよびトレース API|Microsoft.AnalysisServices.Trace オブジェクト (Analysis Services Trace および Replay オブジェクトの API を含みます)。 置き換えは、複数の手順で行います。<br /><br /> -トレース構成:Microsoft.SqlServer.Management.XEvent<br />-トレース読み取り:Microsoft.SqlServer.XEvent.Linq<br />-トレース再生。なし|  
   
 > [!NOTE]  
 >  以前の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での非推奨の機能の発表内容は有効です。 これらの機能のコードはまだ製品から削除されていないため、これらの機能の多くはこのリリースにおいても存在します。 以前に非推奨の機能の中に可能性がありますがアクセス可能で、非推奨とされ、物理的に可能性がありますと見なされるまだ製品から削除、いつでも。  
@@ -61,7 +61,7 @@ A*機能を廃止*以前のリリースで非推奨とされました。 現在�
 > [!NOTE]  
 >  以前の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] での非推奨の機能の発表内容は有効です。 これらの機能のコードはまだ製品から削除されていないため、これらの機能の多くはこのリリースにおいても存在します。 以前に非推奨の機能の中に可能性がありますがアクセス可能で、非推奨とされ、物理的に可能性がありますと見なされるまだ製品から削除、いつでも。  
 
-## <a name="breaking-changes"></a>重大な変更
+## <a name="breaking-changes"></a>互換性に影響する変更
 *重大な変更* は、モデルまたはサーバーのアップグレード後に、データ モデル、アプリケーション コード、またはスクリプトが機能しなくなるような変更です。
   
 ### <a name="net-40-version-upgrade"></a>.NET 4.0 のバージョン アップグレード  
@@ -112,5 +112,5 @@ using Microsoft.AnalysisServices.Core;
  以前の互換性レベル設定では、対応する新しい 1200 以降の互換性レベルがあるないために、DirectQuery モデルのインプレース アップグレードはありません。 DirectQuery モードで実行されている既存のテーブル モデルがあれば、する必要があります SQL Server Data Tools でモデルを開いて、DirectQuery をオフにするの設定、**互換性レベル**プロパティを 1200 以上とし、DirectQuery を再構成プロパティ。 参照してください[DirectQuery モード](../analysis-services/tabular-models/directquery-mode-ssas-tabular.md)詳細についてはします。
 
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 [Analysis Services の旧バージョンとの互換性 (SQL Server 2017)](analysis-services-backward-compatibility-sql2017.md)

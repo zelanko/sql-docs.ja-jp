@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a3647ff06d00aebc4b5feb735d5a69b0b8db79e7
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524578"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210237"
 ---
 # <a name="add-mining-models-to-a-structure-analysis-services---data-mining"></a>マイニング モデルを構造に追加する (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "52524578"
 ## <a name="specifying-column-content"></a>列のコンテンツの指定  
  一部の列に対しては、 *列のコンテンツ*も指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のデータ マイニングでは、各データ列の Content Type プロパティによって、その列のデータの処理方法をアルゴリズムに指示します。 たとえば、Income 列がデータにある場合、コンテンツの種類を Continuous に設定することによって、連続する数値が列に含まれていることを示す必要があります。 一方、コンテンツの種類を Discretized に設定し、必要に応じて正確なバケット数を指定することによって、Income 列内の数値を複数のバケットにグループ化するよう指定することもできます。 列の処理方法が異なる複数のモデルを作成できます。たとえば、あるモデルでは顧客を 3 つの年齢層のバケットに分け、別のモデルでは顧客を 10 の年齢層のバケットに分けることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [リレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
  [マイニング モデルのプロパティ](../../analysis-services/data-mining/mining-model-properties.md)   

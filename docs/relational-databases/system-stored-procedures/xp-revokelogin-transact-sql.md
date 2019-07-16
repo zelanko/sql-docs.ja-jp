@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b3fa7678-dba4-4537-be94-5ae63ca11f81
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 0785e7b7d394177efee3ae12cb6d0e2f7d8cb5f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4b5e0f04f893bd5f351857a5a1b655d52350c52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645516"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898350"
 ---
 # <a name="xprevokelogin-transact-sql"></a>xp_revokelogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ xp_revokelogin {[@loginame=] 'login'}
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する ALTER ANY LOGIN 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [sp_revokelogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revokelogin-transact-sql.md)   

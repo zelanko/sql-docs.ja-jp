@@ -16,11 +16,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: b044fb7b3b8dd0cc0586cc9908daab8f0a2b6424
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53350212"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189520"
 ---
 # <a name="create-a-schedule"></a>Create a Schedule
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] 、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、または SQL Server 管理オブジェクトを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]エージェントのジョブのスケジュールを作成できます。  
@@ -60,7 +60,7 @@ ms.locfileid: "53350212"
   
     -   CPU がアイドル状態になったときにジョブを開始するには、 **[CPU がアイドル状態になったときに開始]** をクリックします。  
   
-    -   スケジュールを繰り返し実行する場合は **[定期的]** をクリックします。 定期的なスケジュールを設定するには、ダイアログ ボックス上の **[頻度]**、 **[一日のうちの頻度]**、および **[実行時間]** のグループに値を指定します。  
+    -   スケジュールを繰り返し実行する場合は **[定期的]** をクリックします。 定期的なスケジュールを設定するには、ダイアログ ボックス上の **[頻度]** 、 **[一日のうちの頻度]** 、および **[実行時間]** のグループに値を指定します。  
   
     -   スケジュールを一度だけ実行するには、 **[指定日時]** をクリックします。 **指定日時** のスケジュールを設定するには、ダイアログ ボックス上の **[指定日時に発生]** グループに値を指定します。  
   
@@ -88,7 +88,7 @@ ms.locfileid: "53350212"
     GO  
     ```  
   
- 詳細については、[sp_add_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)を参照してください。  
+ 詳細については、次を参照してください。 [sp_add_schedule &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-schedule-transact-sql)します。  
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **スケジュールを作成するには**  

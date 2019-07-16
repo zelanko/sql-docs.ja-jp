@@ -1,5 +1,5 @@
 ---
-title: Microsoft ロジスティック回帰アルゴリズム |Microsoft ドキュメント
+title: Microsoft ロジスティック回帰アルゴリズム |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5d293b386cf02d492e3a78a6cef34396f22277ee
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016939"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183000"
 ---
 # <a name="microsoft-logistic-regression-algorithm"></a>Microsoft ロジスティック回帰アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -63,7 +63,7 @@ ms.locfileid: "34016939"
   
 -   ロジスティック回帰モデルでのクエリの例については、「 [クラスタリング モデルのクエリ例](../../analysis-services/data-mining/clustering-model-query-examples.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 -   ドリルスルーはサポートされていません。 これは、マイニング モデルのノードの構造がその基になるデータと必ずしも直接対応しているわけではないからです。  
   
@@ -73,7 +73,7 @@ ms.locfileid: "34016939"
   
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成はサポートされていません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ロジスティック回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-logistic-regression-models.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)   
  [ロジスティック回帰モデルのクエリ例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)  

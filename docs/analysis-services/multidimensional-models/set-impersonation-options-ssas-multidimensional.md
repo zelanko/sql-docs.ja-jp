@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 279aff4acd671318b75988919d7625591f17812f
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533812"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165196"
 ---
 # <a name="set-impersonation-options-ssas---multidimensional"></a>権限借用オプションの設定 (SSAS - 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "52533812"
 3.  このトピックの「 [権限借用のオプション](#bkmk_options) 」で説明するオプションを選択します。  
   
 ## <a name="set-impersonation-options-in-management-studio"></a>Management Studio での権限借用オプションの設定  
- [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のダイアログ ボックスのプロパティの参照ボタン ( **[...]** ) をクリックして、**[権限借用情報]** ダイアログ ボックスを開きます。  
+ [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、次のダイアログ ボックスのプロパティの参照ボタン ( **[...]** ) をクリックして、 **[権限借用情報]** ダイアログ ボックスを開きます。  
   
 -   **[データベースのプロパティ]** ダイアログ ボックスの、[データ ソースの権限借用情報] プロパティ。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "52533812"
  ダイアログ ボックスのすべてのオプションを使用できますが、すべてのオプションが各シナリオに適しているわけではありません。 以下の情報を参考にして、シナリオに最適なオプションを判断してください。  
   
  **[特定のユーザー名とパスワードを使用する]**  
- このオプションを選択、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトは、この形式で指定された Windows ユーザー アカウントのセキュリティ資格情報を使用します。*\<ドメイン名 >***\\***\<ユーザー アカウント名 >* します。  
+ このオプションを選択、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]オブジェクトは、この形式で指定された Windows ユーザー アカウントのセキュリティ資格情報を使用します。 *\<ドメイン名 >***\\***\<ユーザー アカウント名 >* します。  
   
  データ アクセスのために特別に作成した専用の最小特権 Windows ユーザー ID を使用する場合に、このオプションを選択します。 たとえば、レポートで使用されるデータを取得するための汎用アカウントを定期的に作成している場合は、ここでそのアカウントを指定できます。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "52533812"
 
  多次元データベースの場合、 **[既定]** はサービス アカウントを使用し、データ マイニング操作に現在のユーザーを使用することを意味します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソースの作成 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
  [データ ソースのプロパティの設定 &#40;SSAS 多次元&#41;](../../analysis-services/multidimensional-models/set-data-source-properties-ssas-multidimensional.md)   
 

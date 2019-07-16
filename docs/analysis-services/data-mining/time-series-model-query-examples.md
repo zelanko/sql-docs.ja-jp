@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f839b7e108f6398f96c302016cfc45c82a110c6d
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52526501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209611"
 ---
 # <a name="time-series-model-query-examples"></a>Time Series Model Query Examples
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -98,7 +98,7 @@ WHERE NODE_NAME = 'TA00000007'
   
   
 ###  <a name="bkmk_Query3"></a> サンプル クエリ 3:ARTXP モデルの式を取得します。  
- ARTxp モデルでは、ツリーの各レベルにさまざまな情報が格納されます。 ARTxp モデルの構造と式の意味の詳細については、「 [タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
+ ARTxp モデルでは、ツリーの各レベルにさまざまな情報が格納されます。 ARTxp モデルの構造と式の意味の詳細については、「[タイム シリーズ モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-time-series-models-analysis-services-data-mining.md)」を参照してください。  
   
  次の DMX ステートメントは、ヨーロッパにおける R250 モデルの販売数量を表す ARTxp ツリーの情報の一部を取得します。  
   

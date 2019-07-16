@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3b9bb77c5139b299a25fbd75bc30a58790ee0c30
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207954"
 ---
 # <a name="network-properties"></a>ネットワーク プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "53072359"
  **IPV4Support**  
  IPv4 プロトコルのサポートを定義する、符号付き 32 ビット整数のプロパティです。 このプロパティは、次の表に示すいずれかの値になります。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |*0*|IPv4 は無効です。クライアントは接続できません。|  
 |*1*|(既定) IPv4 が必要です。IPv4 をリッスンできない場合、サーバーは起動しません。|  

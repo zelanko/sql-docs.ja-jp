@@ -1,5 +1,5 @@
 ---
-title: データ マイニング構造およびモデル (Analysis Services) に対するアクセス許可を付与 |Microsoft ドキュメント
+title: データ マイニング構造およびモデル (Analysis Services) に対する権限の付与 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 91e805488ff5a90b4f358cb908fe2efa6fd8d04a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208843"
 ---
 # <a name="grant-permissions-on-data-mining-structures-and-models-analysis-services"></a>データ マイニング構造およびデータ マイニング モデルに対する権限の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -45,7 +45,7 @@ ms.locfileid: "34023059"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のインスタンスに接続し、オブジェクト エクスプローラーで適切なデータベースの **[ロール]** を展開し、データベース ロールをクリックするか、新しいデータベース ロールを作成します。  
   
-2.  **[マイニング構造]** ペインで、 **[マイニング モデル]** ボックスの一覧からマイニング モデルを見つけ、そのマイニング モデルの **[読み取り]**、 **[読み取り/書き込み]**、 **[ドリルスルー]**、または **[参照]** を選択します。  
+2.  **[マイニング構造]** ペインで、 **[マイニング モデル]** ボックスの一覧からマイニング モデルを見つけ、そのマイニング モデルの **[読み取り]** 、 **[読み取り/書き込み]** 、 **[ドリルスルー]** 、または **[参照]** を選択します。  
   
 3.  **[メンバーシップ]** ペインで、このロールを使用して Analysis Services に接続する Windows ユーザー アカウントおよびグループ アカウントを追加します。  
   
@@ -56,9 +56,9 @@ ms.locfileid: "34023059"
 > [!NOTE]  
 >  既定では、OPENROWSET を使った DMX クエリの送信が無効になっています。  
   
-## <a name="see-also"></a>参照  
- [Analysis Services インスタンスにサーバー管理者権限を付与](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
- [キューブ権限またはモデル権限の付与(Analysis Services)](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)
+## <a name="see-also"></a>関連項目  
+ [Analysis Services インスタンスにサーバー管理者権限を付与する](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  
   

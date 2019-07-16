@@ -1,5 +1,5 @@
 ---
-title: サポートされているデータ ソース (SSAS - 多次元) |Microsoft ドキュメント
+title: サポートされるデータ ソース (SSAS - 多次元) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 907e6cc6deaa9617a4af93ab2080bfe495dacd0b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208459"
 ---
 # <a name="supported-data-sources-ssas---multidimensional"></a>サポートされるデータ ソース (SSAS - 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "34025379"
 |-|-|-|-|  
 |ソース|バージョン|ファイルの種類|プロバイダー*|  
 |Access データベース|Microsoft Access 2010、2013、2016|.accdb または .mdb|Microsoft Jet 4.0 OLE DB Provider|  
-|SQL Server リレーショナル データベース*|Microsoft SQL Server 2008、2008 R2、2012、2014、2016、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> 注: [!INCLUDE[ssSDS](../../includes/sssds-md.md)] の詳細については、 [Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)を参照してください。<br /><br /> 注: Analytics Platform System (APS) として SQL Server 並列データ ウェアハウス (PDW) を呼んでいました。 当初、Analysis Services から PDW に接続するには、特別なデータ プロバイダーが必要でした。 このプロバイダーは、SQL Server 2012 で変更されました。 SQL Server 2012 以降、PDW/APS への接続には、SQL Server Native Client が使用されます。 APS の詳細については、Web サイト「 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)」を参照してください。|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 11.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
+|SQL Server リレーショナル データベース*|Microsoft SQL Server 2008、2008 R2、2012、2014、2016、 [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)]、Azure SQL Data Warehouse、Microsoft Analytics Platform System (APS)<br /><br /> <br /><br /> 注:詳細については[!INCLUDE[ssSDS](../../includes/sssds-md.md)]で[Azure.com](http://go.microsoft.com/fwlink/?LinkID=157856)します。<br /><br /> 注:Analytics Platform System (APS) が以前のとして SQL Server 並列データ ウェアハウス (PDW)。 当初、Analysis Services から PDW に接続するには、特別なデータ プロバイダーが必要でした。 このプロバイダーは、SQL Server 2012 で変更されました。 SQL Server 2012 以降、PDW/APS への接続には、SQL Server Native Client が使用されます。 APS の詳細については、Web サイト「 [Microsoft Analytics Platform System](http://www.microsoft.com/en-us/server-cloud/products/analytics-platform-system/resources.aspx)」を参照してください。|(該当なし)|OLE DB Provider for SQL Server<br /><br /> SQL Server Native Client OLE DB プロバイダー<br /><br /> SQL Server Native 11.0 Client OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for SQL Client|  
 |Oracle リレーショナル データベース|Oracle 9i、10g、11g、12g|(該当なし)|Oracle OLE DB プロバイダー<br /><br /> .NET Framework Data Provider for Oracle Client<br /><br /> .NET Framework Data Provider for SQL Server<br /><br /> OraOLEDB<br /><br /> MSDASQL|  
 |Teradata リレーショナル データベース|Teradata V2R6、V12|(該当なし)|TDOLEDB OLE DB プロバイダー<br /><br /> .Net Data Provider for Teradata|  
 |Informix リレーショナル データベース|V11.10|(該当なし)|Informix OLE DB プロバイダー|  
@@ -42,9 +42,9 @@ ms.locfileid: "34025379"
   
  ** 一部の機能では、オンプレミスで実行される SQL Server リレーショナル データベースが必要です。 具体的には、書き戻しと ROLAP ストレージでは、基になるデータ ソースが SQL Server リレーショナル データベースであることが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サポートされるデータ ソース](../../analysis-services/tabular-models/data-sources-supported-ssas-tabular.md)   
- [多次元モデル内のデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
+ [多次元モデルのデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: データ接続のユーザーに委任されませんでした |Microsoft ドキュメント
+title: データ接続のユーザーを借用できませんでした。Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbf9b41b58e4c492c4b278aa4cad60fa26dbcb08
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34028343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208015"
 ---
-# <a name="the-data-connection-user-could-not-be-delegated"></a>データ接続のユーザーに委任されませんでした。
+# <a name="the-data-connection-user-could-not-be-delegated"></a>データ接続のユーザーを借用できませんでした。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含む Excel ブックで、Excel Services は、SharePoint の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー インスタンスに接続できない場合にこのエラーを返します。  
   
@@ -25,9 +25,9 @@ ms.locfileid: "34028343"
 |||  
 |-|-|  
 |適用対象|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint|  
-|[製品バージョン]|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
+|製品バージョン|[!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]、 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]、 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|  
 |原因|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ プロバイダーを使用しようとしたときに接続が失敗しました。|  
-|メッセージ テキスト|データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 以下の接続を更新できませんでした: [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ|  
+|メッセージ テキスト|データ接続では Windows 認証を使用しており、ユーザーの資格情報を借用できませんでした。 次の接続の更新に失敗しました:[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ|  
   
 ## <a name="explanation"></a>説明  
  このエラー メッセージには複数の原因があります。 それらの原因に共通する要因は、Excel Services が SharePoint のクレーム トークンから有効な Windows ユーザー ID を取得できないことです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データを含む Excel ブックの場合、次のいずれかの条件に当てはまるときは、このエラーが発生します。  
@@ -59,7 +59,7 @@ ms.locfileid: "34028343"
   
     2.  Windows トークン サービスに対するクレームが実行されていない場合は開始します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

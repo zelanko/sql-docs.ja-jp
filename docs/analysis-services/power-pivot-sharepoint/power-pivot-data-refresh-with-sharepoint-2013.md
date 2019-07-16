@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 583059b93268f3652cf2e8f324574ec739d449dd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658233"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208194"
 ---
 # <a name="power-pivot-data-refresh-with-sharepoint-2013"></a>SharePoint 2013 での PowerPivot データ更新
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "58658233"
 ||||  
 |-|-|-|  
 ||Excel 2013 ブック|Excel 2010 ブック|  
-|データ更新をトリガーする|**対話型。** Authenticated User<br /><br /> **スケジュール済み。**[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス|  
+|データ更新をトリガーする|**対話型。** Authenticated User<br /><br /> **スケジュール済み。** [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス|  
 |コンテンツ データベースからブックを読み込む|SharePoint 2013 の Excel Services|SharePoint 2013 の Excel Services|  
 |Analysis Services インスタンスでデータ モデルを読み込む|SharePoint 2013 の Excel Services|SharePoint 2013 の Excel Services|  
 |Analysis Services インスタンスに処理コマンドを送信する|SharePoint 2013 の Excel Services|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービス|  
@@ -60,7 +60,7 @@ ms.locfileid: "58658233"
  **(\*)** ブックのアップグレードの詳細については、「[ブックのアップグレードと定期データ更新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
   
 ##  <a name="bkmk_interactive_refresh"></a> Interactive Data Refresh  
- SharePoint Server 2013 の Excel Services で、対話型または手動のデータ更新は、元のデータ ソースから取得したデータを使用してデータ モデルを更新できます。 対話型のデータ更新は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに登録して Excel Services アプリケーションを構成すると使用できるようになり、SharePoint モードで実行されます。 詳細については、[Excel Services の管理のデータ モデルの設定 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx)を参照してください。  
+ SharePoint Server 2013 の Excel Services で、対話型または手動のデータ更新は、元のデータ ソースから取得したデータを使用してデータ モデルを更新できます。 対話型のデータ更新は、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに登録して Excel Services アプリケーションを構成すると使用できるようになり、SharePoint モードで実行されます。 詳細については、次を参照してください。 [Excel Services の管理のデータ モデルの設定 (SharePoint Server 2013)](http://technet.microsoft.com/library/jj219780.aspx) (http://technet.microsoft.com/library/jj219780.aspx) します。  
   
 > [!NOTE]
 >  対話型のデータ更新は、Excel 2013 で作成されたブックでのみ使用できます。 Excel Services がのようなエラー メッセージを表示する場合は、Excel 2010 ブックを更新しようとすると、"[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]操作が失敗しました。ブックが Excel の古いバージョンで作成されたと[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]ファイルがアップグレードされるまでに更新することはできません"です。 ブックのアップグレードの詳細については、「[ブックのアップグレードと定期データ更新 (SharePoint 2013)](../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)」を参照してください。  
@@ -114,7 +114,7 @@ ms.locfileid: "58658233"
   
     1.  実行"`secpol.msc`"  
   
-    2.  **[ローカル セキュリティ ポリシー]**、 **[ローカル ポリシー]**、 **[ユーザー権利の割り当て]** の順にクリックします。  
+    2.  **[ローカル セキュリティ ポリシー]** 、 **[ローカル ポリシー]** 、 **[ユーザー権利の割り当て]** の順にクリックします。  
   
     3.  サービス アカウントを追加します。  
   
@@ -124,7 +124,7 @@ ms.locfileid: "58658233"
   
  ![as_interactive_data_refresh2012SP1_windowsauth](../../analysis-services/power-pivot-sharepoint/media/as-interactive-data-refresh2012sp1-windowsauth.gif "as_interactive_data_refresh2012SP1_windowsauth")  
   
- 詳細については、[オペレーティング システムの一部として機能](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx)を参照してください。  
+ 詳細については、次を参照してください。[オペレーティング システムの一部として機能](http://technet.microsoft.com/library/cc784323\(WS.10\).aspx)(http://technet.microsoft.com/library/cc784323(WS.10).aspx) します。  
   
 ##  <a name="bkmk_scheduled_refresh"></a> Scheduled Data Refresh  
  **定期データ更新の要点**  
@@ -147,9 +147,9 @@ ms.locfileid: "58658233"
   
 -   手順に沿った図を参照してください。  
   
-1.  SharePoint ドキュメント ライブラリで、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの **[メニューを開く]** (**...**) をクリックします。  
+1.  SharePoint ドキュメント ライブラリで、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックの **[メニューを開く]** ( **...** ) をクリックします。  
   
-2.  2 番目の **[メニューを開く]** をクリックしてから、**[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデータ更新の管理]** をクリックします。  
+2.  2 番目の **[メニューを開く]** をクリックしてから、 **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のデータ更新の管理]** をクリックします。  
   
 3.  **[データ更新の管理]** ページで **[有効化]** をクリックし、更新のスケジュールを構成します。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "58658233"
  ![データ更新のコンテキスト メニューを管理](../../analysis-services/power-pivot-sharepoint/media/as-manage-datarefresh-sharepoint2013.gif "データ更新のコンテキスト メニューの管理")  
   
 > [!TIP]  
->  SharePoint からオンライン ブックの更新方法の詳細については、[SharePoint Online (ホワイト ペーパー) からの埋め込みの Power Pivot モデルを使用した更新の Excel ブック](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx)を参照してください。  
+>  SharePoint からオンライン ブックの更新方法の詳細については、次を参照してください。 [SharePoint Online (ホワイト ペーパー) からの埋め込みの Power Pivot モデルを使用した更新の Excel ブック](http://technet.microsoft.com/library/jj992650.aspx)(http://technet.microsoft.com/library/jj992650.aspx) します。  
   
 ##  <a name="bkmk_refresh_architecture"></a> SharePoint 2013 の定期データ更新のアーキテクチャ  
  次の図は、SharePoint 2013 および SQL Server 2012 SP1 のデータ更新のアーキテクチャをまとめたものです。  
@@ -195,7 +195,7 @@ ms.locfileid: "58658233"
   
 1.  SharePoint サーバーの全体管理の **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [アプリケーションの全般設定]** グループで **管理ダッシュボード** をクリックします。  
   
-2.  ダッシュ ボードの下部には、、**データ更新 - 最近のアクティビティ**と**データ更新 - 最近のエラー**を参照してください。  
+2.  ダッシュ ボードの下部には、次を参照してください。、**データ更新 - 最近のアクティビティ**と**データ更新 - 最近のエラー**します。  
   
 3.  使用状況データの詳細と使用状況データを有効にする方法については、「 [Power Pivot Management Dashboard and Usage Data](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)」を参照してください。  
   
@@ -203,7 +203,7 @@ ms.locfileid: "58658233"
   
  ログ エントリには次のものがあります。  
   
--   **サービス** の **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [エリア]**。  
+-   **サービス** の **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] [エリア]** 。  
   
 -   **[データ更新]** のカテゴリ。  
   
@@ -212,11 +212,11 @@ ms.locfileid: "58658233"
 ##  <a name="datarefresh_additional_authentication"></a> 認証に関するその他の注意点  
  Excel 2013 の **[Excel Services の認証設定]** ダイアログ ボックスの設定によって、Excel Services および [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] がデータ更新に使用する Windows ID が決まります。  
   
--   **認証されたユーザーのアカウントを使用して、**:Excel Services は、現在ログインしているユーザーの ID でデータ更新を実行します。  
+-   **認証されたユーザーのアカウントを使用して、** :Excel Services は、現在ログインしているユーザーの ID でデータ更新を実行します。  
   
--   **保存されたアカウントを使用して、**:SharePoint の Secure Store Service アプリケーションの ID が必要です。この ID を Excel Services で使用して、データ更新認証を認証するためのユーザー名とパスワードを取得します。  
+-   **保存されたアカウントを使用して、** :SharePoint の Secure Store Service アプリケーションの ID が必要です。この ID を Excel Services で使用して、データ更新認証を認証するためのユーザー名とパスワードを取得します。  
   
--   **[なし]**:Excel Services**無人サービス アカウント**使用されます。 サービス アカウントは、Secure Store プロキシに関連付けられます。 **[外部データ]** セクションの **[Excel Services アプリケーションの設定]** ページの設定を構成します。  
+-   **[なし]** :Excel Services**無人サービス アカウント**使用されます。 サービス アカウントは、Secure Store プロキシに関連付けられます。 **[外部データ]** セクションの **[Excel Services アプリケーションの設定]** ページの設定を構成します。  
   
  認証の設定のダイアログを開くには  
   

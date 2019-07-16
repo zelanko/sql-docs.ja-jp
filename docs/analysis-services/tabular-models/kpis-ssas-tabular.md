@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2f6714d61ce53b251a6511aaf78c803213e19860
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207635"
 ---
 # <a name="kpis"></a>KPI
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -75,7 +75,7 @@ Target SalesAmountQuota:=Sum(FactSalesQuota[SalesAmountQuota])
 |-----------|-----------------|  
 |[KPI の作成および管理](../../analysis-services/tabular-models/create-and-manage-kpis-ssas-tabular.md)|ベース メジャー、対象のメジャー、および状態のしきい値と共に KPI を作成する方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)   
  [パースペクティブ](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)  
   

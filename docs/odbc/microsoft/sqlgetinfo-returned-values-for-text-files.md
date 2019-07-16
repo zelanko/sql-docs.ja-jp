@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 739a9d72-26aa-42dd-b9fd-76c679976d09
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 36188b0cb646106d2b54ea8bcec8e417aa05c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d2578c9abe6e2e3b1f99b0e680fc0fcf8c104f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66403227"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898805"
 ---
 # <a name="sqlgetinfo-returned-values-for-text-files"></a>SQLGetInfo でテキスト ファイルに返される値
 次の表に、C 言語 # の defines、 *fInfoType*引数と対応する値によって返される**SQLGetInfo**します。 この情報を一覧表示されている C 言語を渡すことによって取得できます #defines **SQLGetInfo**で、 *fInfoType*引数。 によって返される値の詳細については**SQLGetInfo**を参照してください、 [ODBC プログラマ リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)します。  

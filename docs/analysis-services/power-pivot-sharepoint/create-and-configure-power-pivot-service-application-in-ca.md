@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e79087f98d5947706720b1dc63c000ae9d9e0ad5
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38982604"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164048"
 ---
 # <a name="create-and-configure-power-pivot-service-application-in-ca"></a>作成し、CA での Power Pivot サービス アプリケーションの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -67,7 +67,7 @@ ms.locfileid: "38982604"
   
 8.  **[データベース認証]** の既定値は、"Windows 認証" です。 **[SQL 認証]** を選択する場合は、SharePoint 管理者ガイドを参照して、SharePoint 配置でその認証の種類を使用するためのベスト プラクティスを確認してください。  
   
-9. 必要に応じて、**[この [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションのプロキシをファームの既定のプロキシ グループに追加します]** のチェック ボックスをオンにします。 のチェック ボックスをオンにします。これにより、このサービス アプリケーション接続が既定のサービス接続のグループに追加されます。  
+9. 必要に応じて、 **[この [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションのプロキシをファームの既定のプロキシ グループに追加します]** のチェック ボックスをオンにします。 のチェック ボックスをオンにします。これにより、このサービス アプリケーション接続が既定のサービス接続のグループに追加されます。  
   
      最初の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションを作成する場合は、このチェック ボックスをオンにする必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードが正しく機能するには、既定の接続グループに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションが 1 つ存在している必要があります。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "38982604"
   
 3.  リボンの **[プロパティ]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

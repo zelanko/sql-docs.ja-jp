@@ -1,5 +1,5 @@
 ---
-title: 変更または Analysis Services データベースの削除 |Microsoft ドキュメント
+title: 変更または Analysis Services データベースの削除 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 44952f477cf16a169ad96f2bfe881b16ee9738da
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022949"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208696"
 ---
 # <a name="modify-or-delete-an-analysis-services-database"></a>Analysis Services データベースの変更または削除
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "34022949"
   
 4.  **[オブジェクトの削除]** ダイアログ ボックスで **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [ドキュメントし、Analysis Services データベースをスクリプトの実行](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
+## <a name="see-also"></a>関連項目  
+ [Analysis Services データベースのドキュメントとスクリプトの作成](../../analysis-services/multidimensional-models/document-and-script-an-analysis-services-database.md)  
   
   

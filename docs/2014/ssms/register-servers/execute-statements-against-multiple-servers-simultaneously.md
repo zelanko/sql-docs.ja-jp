@@ -15,11 +15,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 2747b7b13d2eda5aeda1677631ba04d3ed840d59
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52796190"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211232"
 ---
 # <a name="execute-statements-against-multiple-servers-simultaneously-sql-server-management-studio"></a>複数のサーバーに対してステートメントを同時に実行する (SQL Server Management Studio)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]で複数のサーバーに対してクエリを同時に実行する方法について説明します。これを行うには、ローカル サーバー グループ、または 1 つの中央管理サーバーと 1 つ以上のサーバー グループ、およびグループ内の 1 つ以上の登録済みサーバーを作成し、このグループ全体に対してクエリを実行します。 クエリから返された結果は、結合して 1 つの結果ペインに表示するか、別々の結果ペインに表示することができます。 結果セットには、サーバー名を表示する列と、各サーバーに対するクエリで使用されたログインを表示する列を追加できます。 中央管理サーバーおよび従属サーバーは、Windows 認証を使用しないと登録できません。 ローカル サーバー グループ内のサーバーは、Windows 認証または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して登録できます。  
@@ -50,7 +50,7 @@ ms.locfileid: "52796190"
   
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。  
   
-2.  中央管理サーバーを展開して、サーバー グループを右クリックし、**[接続]** をポイントして、**[新しいクエリ]** をクリックします。  
+2.  中央管理サーバーを展開して、サーバー グループを右クリックし、 **[接続]** をポイントして、 **[新しいクエリ]** をクリックします。  
   
 3.  クエリ エディターで、次のような [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントを入力して実行します。  
   
@@ -67,11 +67,11 @@ ms.locfileid: "52796190"
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[ツール]** メニューの **[オプション]** をクリックします。  
   
-2.  **[クエリ結果]**、 **[SQL Server]** の順に展開し、 **[マルチサーバーの結果]** をクリックします。  
+2.  **[クエリ結果]** 、 **[SQL Server]** の順に展開し、 **[マルチサーバーの結果]** をクリックします。  
   
 3.  **[マルチサーバーの結果]** ページで、使用するオプション設定を指定し、 **[OK]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [中央管理サーバーを使用した複数のサーバーの管理](../../relational-databases/administer-multiple-servers-using-central-management-servers.md)  
   
   

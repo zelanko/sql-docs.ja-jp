@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 06be2363-00c0-4936-97c1-7347f294a936
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 124d5d14f810a32e32ce92cbb96afe4569804c67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c7e6323c8a20aec7d464f7aa6f11a27fc24728d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537174"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896623"
 ---
 # <a name="sppublicationvalidation-transact-sql"></a>sp_publication_validation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定されたパブリケーション内の各アーティクルの評価の要求を開始します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  指定されたパブリケーション内の各アーティクルの評価の要求を開始します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,19 +41,19 @@ sp_publication_validation [ @publication = ] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@publication=**] **'**_publication'_  
+ [ **@publication=** ] **'** _パブリケーション '_  
  パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
- [**@rowcount_only=**] *rowcount_only*  
+ [ **@rowcount_only=** ] *rowcount_only*  
  テーブルの行数のみを返すかどうかを指定します。 *rowcount_only*は**smallint**値は次のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 互換のチェックサム。<br /><br /> 注:アーティクルが行方向にフィルター選択されている場合、チェックサム操作ではなく行数操作が実行されます。|  
+|**0**|実行、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 互換のチェックサム。<br /><br /> 注:アーティクルが水平方向にフィルター処理されたチェックサム操作ではなくく行数操作が実行されます。|  
 |**1** (既定値)|行数チェックのみを実行します。|  
 |**2**|行数とバイナリ チェックサムを実行します。<br /><br /> 注:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バージョン 7.0 サブスクライバーの場合、行数検証のみを実行します。|  
   
- [**@full_or_fast=**] *full_or_fast*  
+ [ **@full_or_fast=** ] *full_or_fast*  
  行数を計算するために使用するメソッド。 *full_or_fast*は**tinyint**値は次のいずれかを指定できます。  
   
 |値|説明|  
@@ -83,7 +82,7 @@ sp_publication_validation [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_publication_validation**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サブスクライバーでのデータの検証](../../relational-databases/replication/validate-data-at-the-subscriber.md)   
  [sp_article_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-article-validation-transact-sql.md)   
  [sp_table_validation &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-table-validation-transact-sql.md)   

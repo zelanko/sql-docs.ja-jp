@@ -1,5 +1,5 @@
 ---
-title: Microsoft デシジョン ツリー アルゴリズム |Microsoft ドキュメント
+title: Microsoft デシジョン ツリー アルゴリズム |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9d4bbe16f28adf0fe3f3cf73f12a18e9d0e7f20f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017489"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209844"
 ---
 # <a name="microsoft-decision-trees-algorithm"></a>Microsoft デシジョン ツリー アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,13 +50,13 @@ ms.locfileid: "34017489"
 ### <a name="predicting-continuous-columns"></a>連続列の予測  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムが連続する予測可能列に基づいてツリーを作成するとき、各ノードには回帰式が含まれます。 分割は、回帰式内の非線形性のポイントで発生します。 たとえば、次の図について検討します。  
   
- ![複数の回帰の行を示す非線形](../../analysis-services/data-mining/media/regression-tree1.gif "線を示す非線形の複数の回帰")  
+ ![複数の回帰の行が表示された非線形](../../analysis-services/data-mining/media/regression-tree1.gif "行が表示された非線形を複数の回帰")  
   
  標準の回帰モデルでは、データ全体の傾向とリレーションシップを表す 1 つの数式を引き出すことを試行します。  しかし、1 つの数式では複雑なデータから連続性を十分にキャプチャできない可能性があります。 代わりに、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムは大部分が線形であるツリーのセグメントを探し、それらのセグメントに対して別の数式を作成します。 データをセグメントに分割することで、モデルはデータをさらに的確に表すことができます。  
   
  次の図は、上記散布図のモデルのツリー ダイアグラムを表します。  このモデルでは、結果の予測に 2 つの数式を使用しています。左分岐の数式は y = .5x x 5、右分岐の数式は y = .25x + 8.75 です。 散布図で 2 本の線が交差するポイントは非線形性のポイントで、これはデシジョン ツリー モデルのノードが分割されるポイントになります。  
   
- ![非線形性のポイントを表す数式](../../analysis-services/data-mining/media/regression-tree2.gif "非線形性のポイントを表す式")  
+ ![非直線性のポイントを表す式](../../analysis-services/data-mining/media/regression-tree2.gif "非直線性のポイントを表す式")  
   
  これは 2 つの線形方程式だけで構成される簡単なモデルであるため、 **[All]** ノードの直後にツリーが分割されています。 ただし、分割はツリーのあらゆるレベルで発生する可能性があります。 つまり、複数のレベルやノードが存在するツリーで、各ノードが異なる属性のコレクションで特徴づけられている場合、数式が複数のノードで共有されるか、1 つのノードにのみ適用される可能性があります。 たとえば、1 つの数式は "特定の年齢や収入を超えている顧客" と定義されているノードに対して、もう 1 つの数式は "遠くから通っている顧客" を表すノードに対して設定される可能性があります。 ノードをクリックすると、個々のノードやセグメントの数式を確認できます。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "34017489"
 ## <a name="viewing-a-decision-trees-model"></a>デシジョン ツリー モデルの表示  
  モデルを参照するには、 **Microsoft ツリー ビューアー**を使用します。 モデルで複数のツリーが生成される場合、そのいずれかを選択すると、予測可能属性ごとのケースの分類がビューアーに表示されます。 また、依存関係ネットワーク ビューアーを使用すると、複数ツリー間の相互関係を表示できます。 詳細については、「 [Microsoft ツリー ビューアーを使用したモデルの参照](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-tree-viewer.md)」を参照してください。  
   
- ツリー内の特定の分岐 (ノード) の詳細を調べる場合は、 [Microsoft 汎用コンテンツ ツリー ビューアー](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照することもできます。 モデルに保存される内容には、各ノードのすべての値の分布、ツリーの各レベルにおける確率、および連続属性用の回帰式が含まれます。 詳細については、「[デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)」を参照してください。  
+ ツリー内の特定の分岐 (ノード) の詳細を調べる場合は、 [Microsoft 汎用コンテンツ ツリー ビューアー](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)でモデルを参照することもできます。 モデルに保存される内容には、各ノードのすべての値の分布、ツリーの各レベルにおける確率、および連続属性用の回帰式が含まれます。 詳細については、「 [デシジョン ツリー モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)として表されます。  
   
 ## <a name="creating-predictions"></a>予測の作成  
  モデルの処理後、結果がパターンと統計のセットとして保存されます。これを使用して、関係を調査したり予測を実行したりできます。  
@@ -85,7 +85,7 @@ ms.locfileid: "34017489"
   
  マイニング モデルに対するクエリの作成方法については、「 [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)」を参照してください。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
   
 -   Predictive Model Markup Language (PMML) を使用したマイニング モデルの作成がサポートされています。  
   
@@ -93,10 +93,10 @@ ms.locfileid: "34017489"
   
 -   OLAP マイニング モデルの使用およびデータ マイニング ディメンションの作成がサポートされています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)   
  [デシジョン ツリー モデルのクエリ例](../../analysis-services/data-mining/decision-trees-model-query-examples.md)   
- [デシジョン ツリー モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
+ [デシジョン ツリー モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-decision-tree-models-analysis-services-data-mining.md)  
   
   

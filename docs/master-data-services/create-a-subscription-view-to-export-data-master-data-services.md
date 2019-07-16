@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a5e28961-af16-414a-9845-d2e06aac5214
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 62118034106187081ba41be91026ecd6d7330ec5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 755e9c6baa708033f166f7026164590c2119e44d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485062"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896914"
 ---
 # <a name="create-a-subscription-view-to-export-data-master-data-services"></a>サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65485062"
 
   サブスクリプション ビューを作成して、マスター データ サービスのデータをサブスクライブ システムにエクスポートします。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] データベース内のデータのビューを作成します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[統合管理]** 機能領域にアクセスする権限が必要です。 詳細については、「[機能領域権限 (マスター データ サービス)](../master-data-services/functional-area-permissions-master-data-services.md)」を参照してください。  
@@ -70,7 +69,7 @@ ms.locfileid: "65485062"
 |------------|-----------------|  
 |状態|ビューの状態。<br /><br /> **[保存]** をクリックしたときに表示される ![更新中状態のアイコン](../master-data-services/media/mds-statusicon-updating.png "更新中状態のアイコン") 画像は、ビューが更新中であることを示します。<br /><br /> ビューの作成中または編集中にエラーが発生すると、![エラー状態のアイコン](../master-data-services/media/mds-statusicon-error.png "エラー状態のアイコン") 画像が表示されます。<br /><br /> それ以外の場合は適切な状態であり、![適切な状態のアイコン](../master-data-services/media/mds-statusicon-ok.png "適切な状態のアイコン") が表示されます。|  
 |名前|サブスクリプション ビュー名。|  
-|[モデル]|モデル名。|  
+|モデル|モデル名。|  
 |[バージョンのオプション]|バージョン名。|  
 |[バージョン]|バージョン フラグ名。|  
 |[エンティティ]|派生階層名。|  

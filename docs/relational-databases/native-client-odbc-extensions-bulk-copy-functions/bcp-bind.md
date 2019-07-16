@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 6e335a5c-64b2-4bcf-a88f-35dc9393f329
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0574683e2f77efe0654a8c3193bee2f499a9400b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: c1c53d7fc6578f753e92cf3192c7cd7783590292
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135742"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895733"
 ---
 # <a name="bcpbind"></a>bcp_bind
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -189,7 +188,7 @@ bcp_bind(hdbc, szName, 0,
   
  場合*pData*はその値への呼び出しによって指定されるため、列が NULL に設定されて[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)、以降のすべての列で*eDataType* SQLTEXT、SQLNTEXT に設定SQLXML、SQLUDT、SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY、SQLNCHAR、または SQLIMAGE をバインドする必要がありますも*pData*は NULL に設定し、その値への呼び出しによっても指定する必要があります**bcp_moretext**.  
   
- 新しい大きな値型など**varchar (max)**、 **varbinary (max)**、または**nvarchar (max)** SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY を使用してSQLNCHAR で型を表すインジケーターとして、 *eDataType*パラメーター。  
+ 新しい大きな値型など**varchar (max)** 、 **varbinary (max)** 、または**nvarchar (max)** SQLCHARACTER、SQLVARCHAR、SQLVARBINARY、SQLBINARY を使用してSQLNCHAR で型を表すインジケーターとして、 *eDataType*パラメーター。  
   
  場合*cbTerm*は任意の値 (1、2、4、または 8) は、プレフィックス、0 ではありません (*cbIndicator*)。 このような状況で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client は、終端文字の検索、ターミネータを基準データの長さを計算 (*は*) を設定し、 *cbData* i の値と値を小さくするプレフィックス。  
   
@@ -214,7 +213,7 @@ bcp_bind(hdbc, szName, 0,
 ## <a name="bcpbind-support-for-enhanced-date-and-time-features"></a>bcp_bind による機能強化された日付と時刻のサポート  
  使用される型については、 *eDataType*日付/時刻の型のパラメーターを参照してください[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。  
   
- 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="example"></a>例  
   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b3f9d94d35d5aaa4ea86cf1f1d9dc845b67eaf4f
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072269"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162352"
 ---
 # <a name="workspace-database"></a>[ワークスペース データベース]
 
@@ -53,7 +53,7 @@ model.bim の [ワークスペース データベース] と [ワークスペー
   
  テーブルのインポート ウィザードを使用するか、コピー/貼り付けを行って、モデル プロジェクトにデータを追加後、モデル デザイナーでテーブル、列、データを表示すると、ワークスペース データベースが表示されます。 追加のテーブル、列、リレーションシップなどを追加すると、ワークスペース データベースも変更されます。  
   
- テーブル モデル プロジェクトを配置すると、基本的にワークスペース データベースのコピーである配置済みのモデル データベースが、配置サーバー プロパティに指定された Analysis Services サーバー インスタンスに作成されます。 配置サーバー プロパティの詳細については、[プロジェクト プロパティ](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)を参照してください。  
+ テーブル モデル プロジェクトを配置すると、基本的にワークスペース データベースのコピーである配置済みのモデル データベースが、配置サーバー プロパティに指定された Analysis Services サーバー インスタンスに作成されます。 配置サーバー プロパティの詳細については、次を参照してください。[プロジェクト プロパティ](../../analysis-services/tabular-models/project-properties-ssas-tabular.md)します。  
   
  通常、モデル ワークスペース データベースは [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーの localhost またはローカルの名前付きインスタンスに存在します。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のリモート インスタンスを使用してワークスペース データベースをホストできますが、データのクエリ中の待機時間とその他の制約のため、この構成はお勧めしません。 最適に、ワークスペース データベースをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のインスタンスが [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]と同じコンピューター上にあります。 ワークスペース データベースをホストする [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスと同じコンピューター上にモデル プロジェクトを作成すると、パフォーマンスが向上します。  
   
@@ -79,7 +79,7 @@ model.bim の [ワークスペース データベース] と [ワークスペー
  ワークスペース データベースのプロパティは、モデルのプロパティに含まれます。 モデルのプロパティを表示するには、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]の **ソリューション エクスプローラー**で **Model.bim** ファイルをクリックします。 モデルのプロパティは **[プロパティ]** ウィンドウを使用して構成できます。 ワークスペース データベース固有のプロパティには、次のものが含まれます。  
   
 > [!NOTE]  
->  **[統合ワークスペース モード]**、**[ワークスペース サーバー]**、**[ワークスペースの保有期間]**、**[データ バックアップ]** の各プロパティには、新しいモデル プロジェクトを作成するときに既定の設定が適用されます。 [ツール] メニューから開く [オプション] ダイアログ ボックスで、 **[分析サーバー]** 設定の **[データ モデリング]** ページを使用して、新しいモデル プロジェクトの既定の設定を変更できます。 他のプロパティと同様に、これらのプロパティは **[プロパティ]** ウィンドウでモデル プロジェクトごとに設定することもできます。 既定の設定の変更は、作成済みのモデル プロジェクトには適用されません。 詳細については、[既定のデータ モデリングとデプロイのプロパティを構成する](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)を参照してください。  
+>  **[統合ワークスペース モード]** 、 **[ワークスペース サーバー]** 、 **[ワークスペースの保有期間]** 、 **[データ バックアップ]** の各プロパティには、新しいモデル プロジェクトを作成するときに既定の設定が適用されます。 [ツール] メニューから開く [オプション] ダイアログ ボックスで、 **[分析サーバー]** 設定の **[データ モデリング]** ページを使用して、新しいモデル プロジェクトの既定の設定を変更できます。 他のプロパティと同様に、これらのプロパティは **[プロパティ]** ウィンドウでモデル プロジェクトごとに設定することもできます。 既定の設定の変更は、作成済みのモデル プロジェクトには適用されません。 詳細については、次を参照してください。[既定のデータ モデリングとデプロイのプロパティを構成する](../../analysis-services/tabular-models/configure-default-data-modeling-and-deployment-properties-ssas-tabular.md)します。  
   
 |プロパティ|既定の設定|説明|  
 |--------------|---------------------|-----------------|  

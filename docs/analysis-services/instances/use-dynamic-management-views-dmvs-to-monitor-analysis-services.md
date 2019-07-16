@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 24dd1bce8d7433f55ba64eecb1e7a08396b9e548
-ms.sourcegitcommit: 38076f423663bdbb42f325e3d0624264e05beda1
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/06/2018
-ms.locfileid: "52984103"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209407"
 ---
 # <a name="dynamic-management-views-dmvs"></a>動的管理ビュー (DMV) 
 
@@ -58,7 +58,7 @@ Select * from SYSTEMRESTRICTSCHEMA ($System.Discover_csdl_metadata, [CATALOG_NAM
 
 ## <a name="examples-and-scenarios"></a>例とシナリオ
 
-DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 以下に例を示します。
+DMV クエリは、アクティブなセッションおよび接続に関する疑問に答えたり、特定の時刻に CPU またはメモリを最も消費しているオブジェクトを特定するために役立つ可能性があります。 例:
   
  `Select * from $System.discover_object_activity`  
 このクエリは、サービスが前回起動されてからオブジェクト アクティビティについてレポートします。 

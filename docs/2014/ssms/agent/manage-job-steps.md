@@ -25,11 +25,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 9a844f429409210b1b7ba6de9784714b5af336eb
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52768454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68189146"
 ---
 # <a name="manage-job-steps"></a>ジョブ ステップの管理
   ジョブ ステップは、ジョブがデータベースまたはサーバーで行う処理です。 すべてのジョブには、最低 1 つのジョブ ステップを含める必要があります。 ジョブ ステップには次のような種類があります。  
@@ -50,7 +50,7 @@ ms.locfileid: "52768454"
   
  各ジョブ ステップは特定のセキュリティ コンテキストで実行されます。 ジョブ ステップがプロキシを指定している場合、このジョブ ステップは指定されたプロキシの資格情報のセキュリティ コンテキストで実行されます。 ジョブ ステップがプロキシを指定していない場合、このジョブ ステップは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントのコンテキストで実行されます。 プロキシを明示的に指定せずにジョブを作成できるのは、sysadmin 固定サーバー ロールのメンバーのみです。  
   
- ジョブ ステップは特定の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーのコンテキストで実行されるので、ユーザーには、ジョブ ステップの実行に必要なアクセス許可と構成が必要です。 たとえば、ドライブ文字または汎用名前付け規則 (UNC) パスを必要とするようなジョブを作成した場合、タスクのテスト時にはジョブ ステップを作成者の Windows ユーザー アカウントで実行していることがあります。 ところが、このジョブ ステップの Windows ユーザーにも、このジョブ ステップを実行するためのアクセス許可、ドライブ文字構成、指定ドライブへのアクセスが必要になります。 そうでなければ、このジョブ ステップは失敗します。 この問題を回避するには、各ジョブ ステップのプロキシに、ジョブ ステップで実行するタスクに対して必要なアクセス許可が設定されていることを確認してください。 詳細については、[SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)を参照してください。  
+ ジョブ ステップは特定の [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザーのコンテキストで実行されるので、ユーザーには、ジョブ ステップの実行に必要なアクセス許可と構成が必要です。 たとえば、ドライブ文字または汎用名前付け規則 (UNC) パスを必要とするようなジョブを作成した場合、タスクのテスト時にはジョブ ステップを作成者の Windows ユーザー アカウントで実行していることがあります。 ところが、このジョブ ステップの Windows ユーザーにも、このジョブ ステップを実行するためのアクセス許可、ドライブ文字構成、指定ドライブへのアクセスが必要になります。 そうでなければ、このジョブ ステップは失敗します。 この問題を回避するには、各ジョブ ステップのプロキシに、ジョブ ステップで実行するタスクに対して必要なアクセス許可が設定されていることを確認してください。 詳細については、次を参照してください。 [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../../relational-databases/security/security-center-for-sql-server-database-engine-and-azure-sql-database.md)します。  
   
 ## <a name="job-step-logs"></a>ジョブ ステップのログ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、オペレーティング システム ファイルまたは msdb データベースの sysjobstepslogs テーブルに、一部のジョブ ステップからの出力を書き込むことができます。 両方の出力先に出力を書き込めるジョブ ステップの種類は次のとおりです。  
@@ -75,7 +75,7 @@ ms.locfileid: "52768454"
   
 -   コマンドが正常に終了した場合に返されるプロセス終了コード。  
   
--   実行するコマンド。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、これは、プログラムと、プログラムの引数の名前などです。**C:\Program files \microsoft SQL Server\100\Tools\Binn\sqlcmd.exe-e-q"sp_who"**  
+-   実行するコマンド。 オペレーティング システム コマンドを実行する場合、これはコマンド自体を指します。 外部プログラムの場合は、これはプログラムの名前とプログラムの引数になります。例:**C:\Program Files\Microsoft SQL Server\100\Tools\Binn\sqlcmd.exe -e -q "sp_who"**  
   
     > [!NOTE]  
     >  システム パスまたはジョブ ステップの実行ユーザーのパスで指定されたディレクトリ内に、実行可能ファイルが存在しない場合は、実行可能ファイルの完全パスを指定する必要があります。  
@@ -89,7 +89,7 @@ ms.locfileid: "52768454"
   
  必要に応じて、ジョブ ステップのコマンドとして既存の [!INCLUDE[tsql](../../includes/tsql-md.md)] ファイルを開くことができます。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを使用しません。 このジョブ ステップはジョブ ステップの所有者として実行されるか、ジョブ ステップの所有者が sysadmin 固定サーバー ロールのメンバーの場合には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントとして実行されます。 sysadmin 固定サーバー ロールのメンバーは、sp_add_jobstep ストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *パラメーターを使用して、別のユーザーのコンテキストで* ジョブ ステップが実行されるように指定することもできます。 詳細については、[sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)を参照してください。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップでは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント プロキシを使用しません。 このジョブ ステップはジョブ ステップの所有者として実行されるか、ジョブ ステップの所有者が sysadmin 固定サーバー ロールのメンバーの場合には [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス アカウントとして実行されます。 sysadmin 固定サーバー ロールのメンバーは、sp_add_jobstep ストアド プロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] database_user_name *パラメーターを使用して、別のユーザーのコンテキストで* ジョブ ステップが実行されるように指定することもできます。 詳細については、次を参照してください。 [sp_add_jobstep &#40;TRANSACT-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-add-jobstep-transact-sql)します。  
   
 > [!NOTE]  
 >  1 つの [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップに、複数のバッチを含めることができます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ジョブ ステップには埋め込み GO コマンドを含めることができます。  
@@ -166,7 +166,7 @@ Set oServer = nothing
   
 -   実行するステートメントを入力します。 このステートメントでは、多次元式 (MDX) クエリを使用する必要があります。  
   
- MDX の詳細については、[MDX クエリの基礎&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)を参照してください。  
+ MDX の詳細については、次を参照してください。 [MDX クエリの基礎&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)します。  
   
 ## <a name="integration-services-packages"></a>Integration Services パッケージ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] パッケージ ジョブ ステップを作成するには、次の操作を行う必要があります。  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b2e318d8426f9c78e0065377dcb27a6186e31c0d
-ms.sourcegitcommit: bbdf51f0d56acfa6bcc4a5c4fe2c9f3cd4225edc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/12/2019
-ms.locfileid: "56079468"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182141"
 ---
 # <a name="configure-http-access-to-analysis-services-on-iis-80"></a>IIS 8.0 で Analysis Services への HTTP アクセスを構成します。
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -62,17 +62,17 @@ ms.locfileid: "56079468"
   
  IIS 8.0 の既定の構成では、Analysis Services への HTTP アクセスに必要なコンポーネントが不足しています。 それらのコンポーネントは **[Web サーバー (IIS)]** ロールの **[セキュリティ]** と **[アプリケーション開発]** 機能領域にあり、以下のものが含まれます。  
   
--   **[セキュリティ]** |  **[Windows 認証]** や **[基本認証]** など、データ アクセスのシナリオに必要な各種セキュリティ機能。  
+-   **[セキュリティ]**  |  **[Windows 認証]** や **[基本認証]** など、データ アクセスのシナリオに必要な各種セキュリティ機能。  
   
 -   **アプリケーション開発** | **CGI**  
   
--   **[アプリケーション開発]** |  **[ISAPI 拡張機能]**  
+-   **[アプリケーション開発]**  |  **[ISAPI 拡張機能]**  
   
- これらのコンポーネントを確認または追加するには、**[サーバー マネージャー]**  |  **[管理]**  |  **[役割と機能の追加]** を使用します。 **[サーバー ロール]** が表示されるまで、ウィザードを進みます。 **[Web サーバー (IIS)]** が表示されるまで下へスクロールします。  
+ これらのコンポーネントを確認または追加するには、 **[サーバー マネージャー]**  |  **[管理]**  |  **[役割と機能の追加]** を使用します。 **[サーバー ロール]** が表示されるまで、ウィザードを進みます。 **[Web サーバー (IIS)]** が表示されるまで下へスクロールします。  
   
 1.  **[Web サーバー]**  |  **[セキュリティ]** を開き、認証方法を選択します。  
   
-2.  **[Web サーバー]**  |  **[アプリケーション開発]** を開き、**[CGI]** と **[ISAPI 拡張機能]** を選択します。  
+2.  **[Web サーバー]**  |  **[アプリケーション開発]** を開き、 **[CGI]** と **[ISAPI 拡張機能]** を選択します。  
   
      ![ISAPI および CGI の機能を Web サーバーの役割](../../analysis-services/instances/media/ssas-httpaccess-isapcgi.png "ISAPI および CGI の機能を Web サーバーの役割")  
   
@@ -106,9 +106,9 @@ ms.locfileid: "56079468"
   
 4.  Web サーバーの \inetpub\wwwroot\OLAP フォルダーに以下のものが含まれていることを確認します。MSMDPUMP.DLL、MSMDPUMP.INI、および [リソース] フォルダーです。 フォルダー構造は次のようになります。  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.dll  
+    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.dll  
   
-    -   \<drive>:\inetpub\wwwroot\OLAP\MSMDPUMP.ini  
+    -   \<ドライブ >: \inetpub\wwwroot\OLAP\MSMDPUMP.ini  
   
     -   \<drive>:\inetpub\wwwroot\OLAP\Resources  
 > [!NOTE]  
@@ -133,7 +133,7 @@ ms.locfileid: "56079468"
   
 #### <a name="create-an-application"></a>アプリケーションの作成  
   
-1.  IIS マネージャで、**[サイト]** を開き、**[既定の Web サイト]** を開きます。 **Olap**という名前のフォルダーが表示されます。 これは \inetpub\wwwroot の下に作成した OLAP フォルダーへの参照です。  
+1.  IIS マネージャで、 **[サイト]** を開き、 **[既定の Web サイト]** を開きます。 **Olap**という名前のフォルダーが表示されます。 これは \inetpub\wwwroot の下に作成した OLAP フォルダーへの参照です。  
   
      ![アプリに変換する前に、OLAP フォルダー](../../analysis-services/instances/media/ssas-httpaccess-convertfolderbefore.png "アプリに変換する前に、OLAP フォルダー")  
   
@@ -257,7 +257,7 @@ ms.locfileid: "56079468"
   
  エラーに関する詳細情報を取得するには、次の操作を行います。  
   
-1.  **Internet Explorer**  >  **[インターネット オプション]**  >  **[詳細設定]** の順に選択し、**[HTTP エラー メッセージを簡易表示する]** チェック ボックスをオフにします。  
+1.  **Internet Explorer**  >  **[インターネット オプション]**  >  **[詳細設定]** の順に選択し、 **[HTTP エラー メッセージを簡易表示する]** チェック ボックスをオフにします。  
   
 2.  接続を再試行します (たとえば、 `http://my-web-srv01:8080/OLAP/msmdpump.dll`)  
   
@@ -275,7 +275,7 @@ ms.locfileid: "56079468"
   
  **Excel を使用した接続テスト**  
   
-1.  Excel の [データ] タブの [外部データの取り込み] で、 **[その他のデータ ソース]**、 **[Analysis Services]** の順にクリックして、データ接続ウィザードを起動します。  
+1.  Excel の [データ] タブの [外部データの取り込み] で、 **[その他のデータ ソース]** 、 **[Analysis Services]** の順にクリックして、データ接続ウィザードを起動します。  
   
 2.  [サーバー名] に、msmdpump 拡張機能の HTTP アドレス ( `http://my-web-srv01/OLAP/msmdpump.dll`) を入力します。  
   
