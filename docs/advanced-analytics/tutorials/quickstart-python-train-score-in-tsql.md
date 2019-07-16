@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e8bacc383eba1148c1b357c344bc483e824df99b
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
-ms.translationtype: HT
+ms.openlocfilehash: 9bbdaa2d23b5e605eb9e36490536a25ab344c8a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046912"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962057"
 ---
-# <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>クイック スタート:作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用
+# <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>クイック スタート: 作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 Python を使用してこのクイック スタートでは、作成し、2 つのストアド プロシージャを実行します。 1 つ目は、クラシックあやめデータ セットを使用し、単純ベイズ花の特性に基づき、Iris species を予測するモデルを生成します。 2 番目の手順では、スコア付けします。 予測のセットを出力する最初の手順で生成されたモデルを呼び出します。 ストアド プロシージャのコードを配置すると、操作は他のストアド プロシージャおよびクライアント アプリケーションによっては包含、再利用可能なおよび呼び出し可能です。 
@@ -27,7 +26,7 @@ Python を使用してこのクイック スタートでは、作成し、2 つ�
 > * ストアド プロシージャの入力を通じたコードへの入力を渡す方法
 > * モデルを運用するストアド プロシージャの使用方法
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 前のクイック スタート[SQL server が存在することを確認する Python](quickstart-python-verify.md)情報を提供し、このクイック スタートに必要な Python 環境を設定するためにリンクします。
 
@@ -75,7 +74,7 @@ SQL Server 開発の一般的なパターンでは、個別のストアド プ�
 
 3. ストアド プロシージャが存在することを確認します。 
 
-   新しいストアド プロシージャと呼ばれる場合は、前の手順から T-SQL スクリプトの実行エラーが発生せず、 **generate_iris_model**が作成され、追加、 **irissql**データベース。 Management studio のストアド プロシージャを見つけることができます**オブジェクト エクスプ ローラー****プログラミング**します。
+   新しいストアド プロシージャと呼ばれる場合は、前の手順から T-SQL スクリプトの実行エラーが発生せず、 **generate_iris_model**が作成され、追加、 **irissql**データベース。 Management studio のストアド プロシージャを見つけることができます**オブジェクト エクスプ ローラー** **プログラミング**します。
 
 ## <a name="execute-the-procedure-to-create-and-train-models"></a>作成し、モデルをトレーニングする手順を実行します。
 

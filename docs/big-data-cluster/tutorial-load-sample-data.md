@@ -5,17 +5,16 @@ description: このチュートリアルでは、SQL Server のビッグ デー�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 04/23/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f4ea5540c0188ec9a57ad8b6780cf3ab6af5dfc2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 30e3756251cc8df5ba9e14278983d44d0f6d4ef3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727345"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957783"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server のビッグ データ クラスターにサンプル データを読み込む
 
@@ -64,7 +63,7 @@ ms.locfileid: "67727345"
 
    | パラメーター | 説明 |
    |---|---|
-   | <CLUSTER_NAMESPACE> | ビッグ データ クラスターを指定した名前。 |
+   | < CLUSTER_NAMESPACE > | ビッグ データ クラスターを指定した名前。 |
    | <SQL_MASTER_IP> | マスター インスタンスの IP アドレス。 |
    | <SQL_MASTER_SA_PASSWORD> | マスター インスタンスの SA パスワード。 |
    | <KNOX_IP> | HDFS/Spark ゲートウェイの IP アドレス。 |
@@ -100,7 +99,7 @@ ms.locfileid: "67727345"
 
    | パラメーター | 説明 |
    |---|---|
-   | <CLUSTER_NAMESPACE> | ビッグ データ クラスターを指定した名前。 |
+   | < CLUSTER_NAMESPACE > | ビッグ データ クラスターを指定した名前。 |
    | <SQL_MASTER_IP> | マスター インスタンスの IP アドレス。 |
    | <SQL_MASTER_SA_PASSWORD> | マスター インスタンスの SA パスワード。 |
    | <KNOX_IP> | HDFS/Spark ゲートウェイの IP アドレス。 |

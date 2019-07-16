@@ -10,13 +10,12 @@ ms.reviewer: achatter; alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 02146596b8c0c21531d269a815f97512b5c955a5
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 9af2e04a3973eddfcd714c7968c35e544302aba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959262"
 ---
 # <a name="how-to-use-notebooks-in-azure-data-studio"></a>Azure Data Studio で notebook を使用する方法
 
@@ -179,6 +178,6 @@ import <package-name>
 
 必要がある場合**アンインストール**する 1 つまたは複数のパッケージをクリックし、をクリックし、これらのパッケージ化、**選択したパッケージをアンインストール**オプション。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 既存のノートブックを使用する方法については、次を参照してください。 [notebook Azure Data Studio での管理方法](https://docs.microsoft.com/sql/big-data-cluster/notebooks-how-to-manage?view=sqlallproducts-allversions)します。

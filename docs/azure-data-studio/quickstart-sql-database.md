@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: efff2a0ac451afb869451735545be6cc50ad15f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdb1a9c8efb8ebdf5d2e35c1da00c12578ade7d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778292"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959436"
 ---
 # <a name="quickstart-use-includename-sosincludesname-sos-shortmd-to-connect-and-query-azure-sql-database"></a>クイック スタート: 使用[!INCLUDE[name-sos](../includes/name-sos-short.md)]に接続して Azure SQL database のクエリ
 
@@ -48,7 +47,7 @@ Azure SQL サーバーを持っていない場合は、次の Azure SQL Database
    | 設定       | 提案される値 | Description |
    | ------------ | ------------------ | ------------------------------------------------- | 
    | **サーバー名** | 完全修飾サーバー名 | 次のように: **servername.database.windows.net**します。 |
-   | **[認証]** | SQL ログイン| このチュートリアルでは、SQL 認証を使用します。 |
+   | **\[認証]** | SQL ログイン| このチュートリアルでは、SQL 認証を使用します。 |
    | **ユーザー名** | サーバー管理者アカウントのユーザー名 | サーバーの作成に使用するアカウントからユーザー名。 |
    | **パスワード (SQL ログイン)** | サーバー管理者アカウントのパスワード | サーバーの作成に使用するアカウントのパスワードです。 |
    | **パスワードを保存しますか?** | はい、いいえ | 選択**はい**たびに、パスワードを入力しない場合。 |

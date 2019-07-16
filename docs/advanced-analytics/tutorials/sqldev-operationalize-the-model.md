@@ -7,13 +7,12 @@ ms.date: 11/16/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4e74f587177c31f55c952eb06ccb8a7e8960c93a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: ca5d09b052d80083589189f53a8dc9c059e5cf99
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961860"
 ---
 # <a name="lesson-4-run-predictions-using-r-embedded-in-a-stored-procedure"></a>レッスン 4:ストアド プロシージャに埋め込まれた R を使用して予測を実行します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -188,7 +187,7 @@ GO
 
 3. 結果はチップを得る確率が低いことを示し (ゼロ) でこれらの上位 10 個の乗車距離が比較的短い、乗客 1 名の乗車すべてがあるためです。
 
-## <a name="conclusions"></a>結論
+## <a name="conclusions"></a>まとめ
 
 これでチュートリアルは終わりです。 ストアド プロシージャに R コードを埋め込むには理解できたら、これで、独自のモデルを構築するためのこれらのプラクティスを拡張できます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] との統合により、R モデルを展開して予測することと、企業データ ワークフローの一部としてモデルを組み込み、維持することが簡単になります。
 

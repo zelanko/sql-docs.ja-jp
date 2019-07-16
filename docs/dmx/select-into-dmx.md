@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8a453fb545fd0a51b7d356c0d855813cea69f272
-ms.sourcegitcommit: 63b4f62c13ccdc2c097570fe8ed07263b4dc4df0
+ms.openlocfilehash: a34cdf743ff0bcecbb4b3088d99efdf3bbfef744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/13/2018
-ms.locfileid: "51602602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938166"
 ---
 # <a name="select-into-dmx"></a>SELECT INTO (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,7 +40,7 @@ FROM <existing model>
  任意。 アルゴリズムのプロバイダー定義パラメーターのコンマ区切りのリストです。  
   
  *式 (expression)*  
- トレーニング データに対する有効なフィルター条件に評価される式です。 フィルターとして使用できる式の詳細については、[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)を参照してください。  
+ トレーニング データに対する有効なフィルター条件に評価される式です。 フィルターとして使用できる式の詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
  *既存のモデル*  
  コピーする既存のモデルの名前です。  
@@ -53,7 +52,7 @@ FROM <existing model>
   
  **WITH DRILLTHROUGH**句は、新しいマイニング モデルでドリルスルーを使用します。 ドリルスルーは、モデルの作成時にのみ可能です。  
   
-## <a name="example-1-altering-the-parameters-of-the-model"></a>例 1: モデルのパラメーターの変更  
+## <a name="example-1-altering-the-parameters-of-the-model"></a>例 1 : モデルのパラメーターの変更  
  次の例は、既存のマイニング モデルに基づく新しいマイニング モデルを作成します。 `TM_Clustering`、で作成した、 [Basic Data Mining Tutorial](https://msdn.microsoft.com/library/6602edb6-d160-43fb-83c8-9df5dddfeb9c)します。 新しいモデルでは、新しいモデル内に最大 5 つのクラスターが存在するよう CLUSTER_COUNT パラメーターが変更されています。 これに対して、既存のモデルでは既定値 10 が使用されています。  
   
 ```  
@@ -62,7 +61,7 @@ USING [Microsoft_Clustering] (CLUSTER_COUNT = 5)
 FROM [TM Clustering]  
 ```  
   
-## <a name="example-2-adding-a-filter-to-the-model"></a>例 2: モデルへのフィルターの追加  
+## <a name="example-2-adding-a-filter-to-the-model"></a>例 2:モデルにフィルターを追加します。  
  次の例では、既存のマイニング モデルに基づいた新しいマイニング モデルを作成し、モデルにフィルターを追加します。 フィルターは、トレーニング データを特定の地域に住んでいる顧客だけに制限します。  
   
 ```  

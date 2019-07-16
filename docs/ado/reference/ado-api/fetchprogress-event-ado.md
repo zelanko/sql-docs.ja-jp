@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 301716fd-81fc-40eb-8a04-221ef7ab410e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f7b31524a6c54846072fdce8cca76189c7034ad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab93d8117a5fb3d2bbc95ea33bbacdc7fba3f151
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698088"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932829"
 ---
 # <a name="fetchprogress-event-ado"></a>FetchProgress イベント (ADO)
 **FetchProgress**に現在取得された複数行の数を報告する時間のかかる非同期操作中に定期的にイベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  

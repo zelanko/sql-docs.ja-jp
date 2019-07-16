@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0400ba8-9609-4901-917e-925e119103a1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 224d304a44c3e66eb8f2c18f4c581bf271f926f9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 95d45e34c5e32e2ace95c2f0e86684aa0e5b575c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950627"
 ---
 # <a name="spreplmonitorhelpmergesession-transact-sql"></a>sp_replmonitorhelpmergesession (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -71,7 +70,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**Session_id**|**int**|エージェント ジョブ セッションの ID。|  
-|**ステータス**|**int**|エージェントの状態を実行します。<br /><br /> **1** = 開始<br /><br /> **2** = 成功<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル状態<br /><br /> **5** = 再試行<br /><br /> **6** = 失敗|  
+|**状態**|**int**|エージェントの状態を実行します。<br /><br /> **1** = 開始<br /><br /> **2** = 成功<br /><br /> **3** = 実行中<br /><br /> **4** = アイドル状態<br /><br /> **5** = 再試行<br /><br /> **6** = 失敗|  
 |**StartTime**|**datetime**|時間のエージェント ジョブ セッションが開始されました。|  
 |**EndTime**|**datetime**|エージェント ジョブ セッションの時間が完了しました。|  
 |**Duration**|**int**|累積的な期間 (秒)、このジョブ セッションのです。|  
@@ -95,7 +94,7 @@ sp_replmonitorhelpmergesession [ [ @agent_name = ] 'agent_name' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **db_owner**または**replmonitor**ディストリビューターでディストリビューション データベースまたはサブスクライバー側でサブスクリプション データベースの固定データベース ロールが実行できる**sp _replmonitorhelpmergesession**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Programmatically Monitor Replication (プログラムによるレプリケーションの監視)](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)  
   
   

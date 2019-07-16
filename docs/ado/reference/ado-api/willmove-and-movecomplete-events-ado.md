@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1a3d1042-4f30-4526-a0c7-853c242496db
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 88a04ff636f06589515f409b7c2274217ae8f3f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c91f3166b493ac1e2fada3e759cb107e34c7ca81
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945913"
 ---
 # <a name="willmove-and-movecomplete-events-ado"></a>WillMove および MoveComplete イベント (ADO)
 **WillMove**保留中の操作の現在の位置を変更する前に、イベントが呼び出される、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。 **MoveComplete**内の現在位置の後にイベントが呼び出される、 **Recordset**変更します。  

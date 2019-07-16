@@ -5,17 +5,16 @@ description: SQL Server 2019 ビッグ データ クラスター (プレビュ�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 07/10/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 872988b29cddc202ea2c0f199548bc28b946b918
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: d39f62345a539094c585b196c9b6030b673f8e89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958486"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server のビッグ データ クラスター デプロイ用 Azure Kubernetes サービスを構成します。
 
@@ -82,7 +81,7 @@ Kubernetes の最新バージョンを使用します。 最新のバージョ�
 
 コマンドを実行する前に、スクリプトを更新します。 置換`<Azure data center>`クラスターの場所を使用します。
 
-   **bash**
+   **Bash**
 
    ```bash
    az aks get-versions \

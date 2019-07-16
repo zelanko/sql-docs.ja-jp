@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 062036a4-cda6-4aaa-9765-f1ec3e0b31b1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3edbd41bc5361d864abcc7d631a90521af98ef01
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0701218b5ef489d1f8962ffadc9409986a0c36c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942810"
 ---
 # <a name="updating-data-overview"></a>データの概要の更新
 SQL ステートメントを実行するか、呼び出すことによって、アプリケーションでデータを更新できる**SQLSetPos**または**SQLBulkOperations**します。 **UPDATE**、**削除**、および**挿入**ステートメントは、データ ソース上で直接実行し、通常、ドライバーによってサポートされます。 更新プログラムを検索する delete ステートメントを変更する行の仕様を含めることができます。 更新プログラムの配置、および delete ステートメントと**SQLSetPos**カーソルを介して、データ ソースに対して動作し、はあまり広くサポートされています。  

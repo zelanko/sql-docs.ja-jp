@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 850cf3ce-f18f-4e7c-8597-96c1dc504866
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32f8c0086f1f81103156e5f592bcd63b0a43dd73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2080145e00c658288f9d34e3fa42ed335e0c1d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931860"
 ---
 # <a name="openschema-method"></a>OpenSchema メソッド
 プロバイダーからデータベース スキーマ情報を取得します。  
@@ -70,7 +69,7 @@ Set recordset = connection.OpenSchema(QueryType, Criteria, SchemaID)
 ## <a name="applies-to"></a>適用対象  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OpenSchema メソッドの例 (VB)](../../../ado/reference/ado-api/openschema-method-example-vb.md)   
  [OpenSchema メソッドの例 (vc++)](../../../ado/reference/ado-api/openschema-method-example-vc.md)   
  [Open メソッド (ADO Connection)](../../../ado/reference/ado-api/open-method-ado-connection.md)   

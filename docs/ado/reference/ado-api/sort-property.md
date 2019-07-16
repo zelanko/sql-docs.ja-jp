@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 3683ffa0-6f93-4906-9533-ef6942f24f39
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 092eb49216874a59e4bcba09431fcc01dc3679a4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 946314f7be9f6c39d47a3f26b577e10834064dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930946"
 ---
 # <a name="sort-property"></a>Sort プロパティ
 1 つまたは複数のフィールド名を示します、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)が並べ替えられると、各フィールドが昇順または降順で並べ替えられたかどうか。  
@@ -53,7 +52,7 @@ ms.locfileid: "66711159"
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Sort プロパティの例 (VB)](../../../ado/reference/ado-api/sort-property-example-vb.md)   
  [Sort プロパティの例 (vc++)](../../../ado/reference/ado-api/sort-property-example-vc.md)   
  [Optimize プロパティ-動的 (ADO)](../../../ado/reference/ado-api/optimize-property-dynamic-ado.md)   

@@ -5,17 +5,16 @@ description: RESTful web サービス (プレビュー) を使用して SQL Serv
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-manager: jroth
 ms.date: 03/18/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 308bbe40ba49566bf6cbccad13f8edab0db3d363
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 919ffb2cd4916451245f29c7d783ca05dbfa6998
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958889"
 ---
 # <a name="consume-an-app-deployed-on-sql-server-big-data-cluster-using-a-restful-web-service"></a>RESTful web サービスを使用して SQL Server のビッグ データ クラスターにデプロイされたアプリを使用します。
 
@@ -91,7 +90,7 @@ IP アドレスに注意してください (`10.1.1.3`この例では) とポー
 
 内容を貼り付けて、`swagger.json`に、 [Swagger Editor](https://editor.swagger.io)はどのような方法を理解します。
 
-![API Swagger](media/big-data-cluster-consume-apps/api_swagger.png)
+![API の Swagger](media/big-data-cluster-consume-apps/api_swagger.png)
 
 通知、 `app` GET メソッドだけでなく`token`POST メソッドです。 POST 呼び出しを好みのツールを使用して、トークンを取得する必要があります apps の認証が JWT トークンを使用しているため、`token`メソッド。 これを実現する方法の例を次に示します[Postman](https://www.getpostman.com/):
 

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 5004ea72-4c49-4064-9752-f7032ba7f133
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 00732de7eca32dc8b2984fdda14163c77c66ad43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c2a2787be1bf44e1f214d396444a73b938acf7ce
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942838"
 ---
 # <a name="update-delete-and-insert-statements"></a>UPDATE、DELETE、INSERT ステートメント
 SQL ベースのアプリケーションでは、テーブルに変更を加えるを実行して、 **UPDATE**、**削除**、および**挿入**ステートメント。 これらのステートメントでは、Minimum SQL 文法の準拠レベルの一部であるし、すべてのドライバーとデータ ソースでサポートする必要があります。  
@@ -39,9 +38,9 @@ SQL ベースのアプリケーションでは、テーブルに変更を加え�
   
  **DELETE FROM** _table-name_[**WHERE** _search-condition_]  
   
- **INSERT INTO** _table-name_[ **(** _column-identifier_ [ **,** _column-identifier_]... **)** ]  
+ **INSERT INTO** _テーブル名_[ **(** _列識別子_[ **、** _列識別子_]... **)** ]  
   
- {*query-specification* &#124; **VALUES (** _insert-value_ [ **,** _insert-value_]... **)** }  
+ {*クエリ仕様* &#124; **値 (** _挿入値_[ **、** _挿入値_]. **)** }  
   
  なお、*クエリ仕様*要素は、コアと拡張 SQL 文法とでのみ有効ですが、*式*と*検索条件*要素の詳細になりますコアと拡張 SQL 文法で複雑です。  
   
