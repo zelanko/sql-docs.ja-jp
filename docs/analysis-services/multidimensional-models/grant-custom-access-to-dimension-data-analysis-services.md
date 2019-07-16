@@ -1,5 +1,5 @@
 ---
-title: 付与 (Analysis Services) のディメンション データへのカスタム アクセス |Microsoft ドキュメント
+title: ディメンション データ (Analysis Services) へのカスタム アクセス権の付与 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eb93b4aeeaae9d659a225763286fc15a7d9f52a3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024729"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208870"
 ---
 # <a name="grant-custom-access-to-dimension-data-analysis-services"></a>ディメンション データへのカスタム アクセス権の付与 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,12 +31,12 @@ ms.locfileid: "34024729"
 > [!NOTE]  
 >  次の手順では、MDX でクエリを発行するクライアント接続を想定しています。 クライアントが Power BI の Power View などの DAX を使用する場合、ディメンションのセキュリティはクエリ結果で明らかになりません。 詳細については、「[多次元モデルの Power View について](understanding-power-view-for-multidimensional-models.md)」を参照してください。
       
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  すべてのメジャーまたはディメンション メンバーがカスタム アクセス シナリオで使用できる訳ではありません。 ロールが既定のメジャーまたはメンバーへのアクセスを制限したり、メジャー式の一部であるメジャーへのアクセスを制限したりすると、接続は失敗します。  
   
  **ディメンション セキュリティに対する障害 (既定のメジャー、既定のメンバー、メジャー式に使用されるメジャー) を確認します。**  
   
-1.  SQL Server Management Studio でキューブを右クリックし、 **[キューブをスクリプト化]** | **[ALTER]** | **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
+1.  SQL Server Management Studio でキューブを右クリックし、 **[キューブをスクリプト化]**  |  **[ALTER]**  |  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   
 2.  **DefaultMeasure**を探します。 キューブに対して 1 つと、パースペクティブごとに 1 つ見つかります。 ディメンション セキュリティを定義する際、既定のメジャーへのアクセスを制限しないようにしてください。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "34024729"
   
      ロールは、既にキューブへの読み込みアクセス権を持っている必要があります。 詳細については、「 [Grant cube or model permissions &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md) を参照してください。  
   
-2.  **[ディメンション データ]** | **[基本]** で、権限を設定するディメンションを選択します。  
+2.  **[ディメンション データ]**  |  **[基本]** で、権限を設定するディメンションを選択します。  
   
 3.  属性階層を選択します。 属性の一部は、利用できない場合があります。 **[AttributeHierarchyEnabled]** を持つ属性のみが、 **[属性階層]** の一覧に表示されます。  
   
@@ -66,7 +66,7 @@ ms.locfileid: "34024729"
 ## <a name="hiding-measures"></a>メジャーの非表示  
  「 [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)」で、セル データだけでなく、メジャーのすべての表示部分を完全に非表示にするには、ディメンション メンバーに対する権限が必要であることが説明されています。 ここでは、メジャーのオブジェクト メタデータへのアクセスを拒否する方法について説明します。  
   
-1.  **ディメンション データ** | **基本**、表示されるまで、キューブ ディメンションを選択し、ディメンションの一覧を下にスクロール**Measures ディメンション**です。  
+1.  **ディメンション データ** | **基本的な**、キューブ ディメンションを選択するまでは、ディメンション一覧をスクロールして**メジャー ディメンション**します。  
   
 2.  メジャーの一覧から、このロールを使用して接続しているユーザーに対しては表示しないメジャーのチェック ボックスをオフにします。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "34024729"
 >  ロール セキュリティを解除できるメジャーを識別する方法については、前提条件を確認してください。  
   
 ## <a name="advanced-dimension-security"></a>強化されたディメンション セキュリティ  
- MDX の専門知識がある場合は、別の方法として、アクセスが許可または拒否されたメンバー用の条件を設定するための MDX 式を記述します。 **[ロールの作成]** | **[ディメンション データ]** | **[詳細設定]** の順にクリックして、スクリプトを指定します。  
+ MDX の専門知識がある場合は、別の方法として、アクセスが許可または拒否されたメンバー用の条件を設定するための MDX 式を記述します。 **[ロールの作成]**  |  **[ディメンション データ]**  |  **[詳細設定]** の順にクリックして、スクリプトを指定します。  
   
  MDX ビルダーを使用すると、MDX ステートメントを記述できます。 詳細については、「[MDX ビルダー &#40;Analysis Services - 多次元データ&#41;](http://msdn.microsoft.com/library/fecbf093-65ea-4e1b-b637-f04876f1cb0f)」を参照してください。 **[詳細設定]** タブには次のオプションがあります。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "34024729"
  AllowedSet を作成すると、属性が複数階層に参加する際に波及効果があります。 たとえば、ロールが Washington 州へのアクセスを許可するとします (ロールから、Washington 州 にある会社の営業部門に権限が付与されるというシナリオを想定します)。 このロールを使用して接続しているユーザーの場合、先祖 (United States) または子孫 (Seattle および Redmond) を含むクエリに対しては、Washington 州を含むチェーンにあるメンバーのみが表示されます。 他の州は明示的に許可されていないため、与える影響は拒否された場合と同じです。  
   
 > [!NOTE]  
->  空のセットを定義する場合 ({}) の属性メンバーの属性のメンバーは表示されません、データベース ロールにします。 許可されたセットが存在しない場合は、空のセットが存在するものとして解釈されます。  
+>  空のセットを定義する場合 ({}) の属性メンバーの属性のメンバーは表示されませんをデータベース ロール。 許可されたセットが存在しない場合は、空のセットが存在するものとして解釈されます。  
   
  **[拒否されたメンバー セット]**  
  DeniedSet プロパティは、空のメンバー、すべてのメンバー (既定)、または一部の属性メンバーに解決されます。 拒否されたセットに特定の属性メンバーのセットのみが含まれている場合、データベース ロールに対しては、それらの特定のメンバーと子孫 (属性が複数階層にある場合) へのアクセスのみが拒否されます。 Washington 州の営業部門の例を考えてみましょう。 Washington が DeniedSet に配置されている場合、このロールを使用して接続しているユーザーには、Washington 以外のすべての州とそれらの子孫の属性が表示されます。  
@@ -115,10 +115,10 @@ ms.locfileid: "34024729"
  **[確認]**  
  このページに定義された MDX 構文をテストします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
- [セル データへのカスタム アクセス権を付与&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
- [データ マイニング構造およびモデルに対する権限を与える&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
- [データ ソース オブジェクト & #40; に対する権限を付与します。Analysis Services & #41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
+ [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)   
+ [データ マイニング構造およびデータ マイニング モデルに対する権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)   
+ [データ ソース オブジェクトに対する権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-permissions-on-a-data-source-object-analysis-services.md)  
   
   

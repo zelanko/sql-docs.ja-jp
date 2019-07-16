@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e59d0687-1f5a-45c5-9d0a-c1f27079495d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 842aba9aea6ece34996fc9c5864150c5ab326646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdbd75a8b89ffdc6c100d3d124329c8212c4bdc3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930687"
 ---
 # <a name="stream-visual-c-syntax-index-with-import"></a>Stream (Visual C 構文のインデックスで #import)
 ## <a name="methods"></a>メソッド  
@@ -58,7 +57,7 @@ HRESULT WriteText( _bstr_t Data, enum StreamWriteEnum
     Options );  
 ```  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 ```  
 _bstr_t GetCharset( );  

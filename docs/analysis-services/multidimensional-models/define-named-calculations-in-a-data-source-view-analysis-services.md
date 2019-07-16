@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビュー (Analysis Services) で名前付き計算の定義 |Microsoft ドキュメント
+title: データ ソース ビュー (Analysis Services) で名前付き計算の定義 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8f0324dc3b2b2c5f250cb6c49a136a5fb7e2a06e
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026999"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178657"
 ---
 # <a name="define-named-calculations-in-a-data-source-view-analysis-services"></a>データ ソース ビューでの名前付き計算の定義 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ FROM
   
 3.  **[テーブル]** ペインまたは **[ダイアグラム]** ペインで、名前付き計算を定義するテーブルを右クリックし、 **[新しい名前付き計算]** をクリックします。 必ず、属性ではなくテーブル名を右クリックします。 メニューは以下のようになります。  
   
-     ![ダイアグラム ワークスペースのスクリーン ショットの右クリック メニュー](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "スクリーン ショット ダイアグラム ワークスペースのショートカット メニュー")  
+     ![ダイアグラムのワークスペースのスクリーン ショットの右クリック メニュー](../../analysis-services/multidimensional-models/media/ssas-olapdsv-diagram.gif "ダイアグラム ワークスペースのスクリーン ショットの右クリック メニュー")  
   
     > [!NOTE]  
     >  テーブルまたはビューを検索する場合は、 **[データ ソース ビュー]** メニューをクリックするか、 **[テーブル]** ペインまたは **[ダイアグラム]** ペインの空いている領域を右クリックすることで、 **[テーブルの検索]** オプションを使用できます。  
@@ -79,7 +79,7 @@ FROM
 ## <a name="delete-a-named-calculation"></a>名前付き計算の削除  
  名前付き計算を削除しようとすると、削除するかどうかを確認するメッセージが、削除によって無効になるプロジェクトまたはデータベースに定義されているオブジェクトのリストと共に表示されます。 計算を削除する前に、リストを慎重に確認します。  
   
-## <a name="see-also"></a>参照  
- [データ ソース ビュー & #40; で名前付きクエリを定義します。Analysis Services & #41;](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
+## <a name="see-also"></a>関連項目  
+ [データ ソース ビューでの名前付きクエリの定義 (Analysis Services)](../../analysis-services/multidimensional-models/define-named-queries-in-a-data-source-view-analysis-services.md)  
   
   

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f2773117b2578f22af63ed022a61f1eeb283295
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52511469"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210074"
 ---
 # <a name="data-mining-wizard-analysis-services---data-mining"></a>データ マイニング ウィザード (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のデータ マイニング ウィザードは、新しいマイニング構造をデータ マイニング プロジェクトに追加するたびに起動されます。 このウィザードでは、データ ソースを選択し、分析に使用されるデータを定義するデータ ソース ビューをセットアップできます。さらに、初期モデルを作成できます。  
   
  ウィザードの最後のフェーズでは、オプションでデータをトレーニング セットとテスト セットに分けることができ、ドリルスルーなどの機能を有効にすることができます。  
   
@@ -31,7 +31,7 @@ ms.locfileid: "52511469"
   
 -   どの列または属性を予測に使用するか。 どの列または属性を分析の入力として使用するのが適しているか。  
   
--   どのアルゴリズムを使用するのがよいか。  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているすべてのアルゴリズムは、それぞれに特性が異なり、生成する結果も異なります。 データの各セット用のモデルは 1 つに限られていないので、さまざまなモデルを追加して試してみることができます。  
+-   どのアルゴリズムを使用するのがよいか。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] に用意されているすべてのアルゴリズムは、それぞれに特性が異なり、生成する結果も異なります。 データの各セット用のモデルは 1 つに限られていないので、さまざまなモデルを追加して試してみることができます。  
   
 -   統合されたデータ セットでモデルをテストできる必要があるか。 その場合は、テストのためにデータを確保しておくオプションの使用を検討してください。 割合を選択して、必要であれば、指定した行数で上限を設定できます。  
   
@@ -53,7 +53,7 @@ ms.locfileid: "52511469"
   
  各オプションの詳細のチュートリアルについては、以下のトピックを参照してください。  
   
- [リレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
+ [Create a Relational Mining Structure](../../analysis-services/data-mining/create-a-relational-mining-structure.md)  
  リレーショナル データ マイニング モデルを作成する場合の判断について説明します。  
   
  [Create an OLAP Mining Structure](../../analysis-services/data-mining/create-an-olap-mining-structure.md)  
@@ -111,7 +111,7 @@ ms.locfileid: "52511469"
   
  [マイニング モデルでのドリルスルー](../../analysis-services/data-mining/drillthrough-on-mining-models.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   
  [データ マイニング ソリューション](../../analysis-services/data-mining/data-mining-solutions.md)  
   

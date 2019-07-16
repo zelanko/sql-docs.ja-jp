@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: 7bd6c42882c9adc938904621b7939bea1b0e68de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1916a10a468fdc44c021e410eb1521cb7c219d58
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800748"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959548"
 ---
 # <a name="includeazure-data-studioincludesname-sosmd-faq"></a>[!INCLUDE[Azure Data Studio](../includes/name-sos.md)] FAQ
 
@@ -97,7 +96,7 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |ダーク モード|はい||
 |Azure リソース エクスプ ローラー|[プレビュー]||
 |スクリプト生成ウィザード||はい
-|Import\Export DACPAC||はい|
+|DACPAC のインポート||はい|
 |オブジェクトのプロパティ||はい|
 |テーブル デザイナー (Table Designer)||はい|
 
@@ -146,8 +145,8 @@ No. に加えて、次世代の複数 os と複数のデータベースと GUI �
 |Always On||はい|
 |Always Encrypted||はい|
 |データのコピー ウィザード||はい|
-|チューニング アドバイザーのデータ||[はい]|
-|データベース ダイアグラム||はい|
+|チューニング アドバイザーのデータ||はい|
+|データベース ダイアグラム||[はい]|
 |エラー ログの表示||はい|
 |メンテナンス プラン||はい|
 |マルチ サーバー クエリ||はい|

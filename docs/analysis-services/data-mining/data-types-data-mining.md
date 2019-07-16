@@ -1,5 +1,5 @@
 ---
-title: データ型 (データ マイニング) |Microsoft ドキュメント
+title: データ型 (データ マイニング) |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b62c9a4ebc9caf9875a1e5b6aef987bf0b4fa8a
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014639"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183356"
 ---
 # <a name="data-types-data-mining"></a>データ型 (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,11 +24,11 @@ ms.locfileid: "34014639"
   
 |データ型|サポートされているコンテンツの種類|  
 |---------------|-----------------------------|  
-|**テキスト**|Cyclical、Discrete、Discretized、Key Sequence、Ordered、Sequence|  
+|**Text**|Cyclical、Discrete、Discretized、Key Sequence、Ordered、Sequence|  
 |**Long**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time、Ordered、Sequence、Time<br /><br /> 分類済み|  
 |**ブール値**|Cyclical、Discrete、Ordered|  
 |**Double**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time、Ordered、Sequence、Time<br /><br /> 分類済み|  
-|**日付**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time、Ordered|  
+|**Date**|Continuous、Cyclical、Discrete、Discretized、Key、Key Sequence、Key Time、Ordered|  
   
 > [!NOTE]  
 >  コンテンツの種類のうち Time および Sequence は、サード パーティのアルゴリズムでのみサポートされています。 コンテンツの種類 Cyclical および Ordered はサポートされますが、多くのアルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  

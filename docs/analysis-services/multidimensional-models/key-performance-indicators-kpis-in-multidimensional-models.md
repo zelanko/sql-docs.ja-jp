@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bf1ee397ea32faadc191d90eed11a33861a71e5d
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147787"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208824"
 ---
 # <a name="key-performance-indicators-kpis-in-multidimensional-models"></a>多次元モデルの主要業績評価指標 (KPI)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50147787"
 |項目|定義|  
 |----------|----------------|  
 |[目標]|KPI のターゲット値を返す MDX 数値式または計算。|  
-|値|KPI の実際の値を返す MDX 数値式。|  
+|[値]|KPI の実際の値を返す MDX 数値式。|  
 |状態|特定時点の KPI の状態を示す MDX 式。<br /><br /> 状態 MDX 式は、-1 ～ 1 の正規化された値を返します。 -1 以下の値は "不良" または "低" と解釈されます。 値 0 は "許容値" または "中" と解釈されます。 1 以上の値は、"良" または "高" と解釈されます。<br /><br /> 中間値は数の制限なく返すことができ、クライアント アプリケーションでサポートされていれば、それを使用して任意の数の状態情報を表示できます。|  
 |傾向|一定期間にわたり、KPI の値を評価する MDX 式。 傾向は、特定のビジネス コンテキストで役に立つ任意の時間ベースの条件です。<br /><br /> 傾向 MDX 式を使用すると、ビジネス ユーザーは、一定期間内の KPI の上下を判断できるようになります。|  
 |状態インジケーター|KPI の状態をわかりやすく示す視覚的要素。 要素の表示は、状態を評価する MDX 式の値によって決まります。|  

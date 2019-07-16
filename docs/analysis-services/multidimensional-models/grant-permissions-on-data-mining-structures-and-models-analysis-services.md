@@ -57,7 +57,7 @@ ms.locfileid: "68208843"
 >  既定では、OPENROWSET を使った DMX クエリの送信が無効になっています。  
   
 ## <a name="see-also"></a>関連項目  
- [Analysis Services インスタンスにサーバー管理者権限を付与する](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
+ [Analysis Services インスタンスにサーバー管理者権限を付与](../../analysis-services/instances/grant-server-admin-rights-to-an-analysis-services-instance.md)   
  [キューブ権限またはモデル権限の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-cube-or-model-permissions-analysis-services.md)   
  [ディメンション データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-dimension-data-analysis-services.md)   
  [セル データへのカスタム アクセス権の付与 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/grant-custom-access-to-cell-data-analysis-services.md)  

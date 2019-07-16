@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9028aba4-90fc-4dfc-88e4-fa8a7b6fedee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0ed637d8e77ef7fc152f994da81db010fa80900
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba165d51dde5224dac65467061eac0d38aeefc7c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931424"
 ---
 # <a name="recordopenoptionsenum"></a>RecordOpenOptionsEnum
 開くのためのオプションを指定します、[レコード](../../../ado/reference/ado-api/record-object-ado.md)します。 使用して、これらの値を組み合わせることができますか。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adDelayFetchFields**|0x8000|フィールドに関連付けられているプロバイダーに示します、**レコード**最初に、取得する必要がありませんが、フィールドにアクセスする最初の試行で取得できます。 ない場合、このフラグで示される、既定の動作がすべて取得するには、**レコード**フィールド オブジェクトします。|  
 |**adDelayFetchStream**|0x4000|既定のストリームに関連付けられているプロバイダーに示します、**レコード**最初に取得する必要がありません。 関連付けられている既定のストリームを取得するがない場合、このフラグで示された既定の動作は、**レコード**オブジェクト。|  

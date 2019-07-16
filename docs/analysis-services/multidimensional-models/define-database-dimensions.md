@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 94fa4e719e99928a56694b748e11fff1ad16db9c
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534710"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178749"
 ---
 # <a name="define-database-dimensions"></a>データベース ディメンションの定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション デザイナーを使用します。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
+  [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のディメンション デザイナーを使用します。 ディメンション デザイナーを使用すると、次の操作を実行できます。  
   
 -   ディメンションレベルのプロパティを構成します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "52534710"
   
  ディメンション デザイナーには、次の表で説明しているように、3 つの異なるタブがあります。  
   
-|タブ|説明|  
+|Tab|説明|  
 |---------|-----------------|  
 |**[ディメンション構造]**|このタブにディメンションの構造と動作を確認またはディメンション、属性を使用して、ユーザー定義階層の属性を整理するには、データ ソース ビュー スキーマの作成に使用します。|  
 |**属性リレーションシップ**|ディメンションの属性リレーションシップを作成、変更、または削除するときに使用します。|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f53c8835da14fc3ee41eb9598303f80c062a0e82
-ms.sourcegitcommit: b51edbe07a0a2fdb5f74b5874771042400baf919
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/28/2019
-ms.locfileid: "55087751"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208103"
 ---
 # <a name="power-pivot-management-dashboard-and-usage-data"></a>Power Pivot 管理ダッシュボードと使用状況データ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "55087751"
 |ブックの利用状況 - リスト|データ アクセスの頻度をレポートします。 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] データ ソースへの接続が発生する頻度を日単位または週単位で確認できます。|  
 |データ更新 - 最近の利用状況|データ更新ジョブの状態をレポートします (実行に失敗したジョブを含む)。 このレポートは、データ更新操作をアプリケーション レベルで総合的に理解するのに役立ちます。 管理者は、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション全体に対して定義されているデータ更新ジョブの数が一目でわかります。|  
 |データ更新 - 最近のエラー|データ更新が正常に完了しなかった [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックを一覧表示します。|  
-|[レポート]|Excel で開くことができるレポートへのリンクを示します。|  
+|レポート|Excel で開くことができるレポートへのリンクを示します。|  
   
 ##  <a name="open"></a> Power Pivot 管理ダッシュボードを開く  
  ダッシュボードには、一度に 1 つの [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションの情報が表示されます。 管理ダッシュボードは、異なる 2 つの場所から開くことができます。  
@@ -70,7 +70,7 @@ ms.locfileid: "55087751"
   
 -   [使用状況データ収集の構成 &#40;対象は Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
- Power Pivot サーバー システムに関するデータをキャプチャするために、イベント メッセージング、データ更新の履歴、およびその他の使用状況履歴が各 Power Pivot サービス アプリケーションに対して有効になっていることを確認してください。 通常のサーバー操作中に収集されるサーバーおよび使用状況のデータは、最終的に、内部データ モデルに格納されるソース データになります。 **注:** イベントまたは使用状況履歴を無効にすると、複合レポートは不完全またはエラーになります。  
+ Power Pivot サーバー システムに関するデータをキャプチャするために、イベント メッセージング、データ更新の履歴、およびその他の使用状況履歴が各 Power Pivot サービス アプリケーションに対して有効になっていることを確認してください。 通常のサーバー操作中に収集されるサーバーおよび使用状況のデータは、最終的に、内部データ モデルに格納されるソース データになります。 **注:** イベントまたは使用状況履歴を無効にした場合、複合レポートは不完全またはエラーになります。  
   
 ##  <a name="edit"></a> Power Pivot 管理ダッシュボードの編集  
  ダッシュボードの開発またはカスタマイズに関する専門知識がある場合は、ダッシュボードを編集して新しい Web パーツを含めることができます。 また、ダッシュボードに含まれる Web パーツのプロパティも編集できます。  
@@ -81,7 +81,7 @@ ms.locfileid: "55087751"
  カスタム レポートでの作業を簡単に開始できるように、 [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] 管理ダッシュボードには、ソースのブックに接続するための Office データ接続 (.odc) ファイルが用意されています。 たとえば、.odc ファイルを Excel で使用して、追加のレポートを作成できます。  
   
 > [!NOTE]  
->  Excel で .odc ファイルを使用しようとしたときに "データ ソースの初期化に失敗しました" というエラーが表示されないように、ファイルを編集してください。 自動生成される .odc ファイルには、MSOLAP OLE DB プロバイダーでサポートされていないパラメーターが 1 つ含まれています。 次の手順では、これらのパラメーターを削除する回避策について説明します。  
+>  Excel で .odc ファイルを使用するときに、次のエラーを回避するためにファイルを編集します。「データ ソースの初期化に失敗しました」。 自動生成される .odc ファイルには、MSOLAP OLE DB プロバイダーでサポートされていないパラメーターが 1 つ含まれています。 次の手順では、これらのパラメーターを削除する回避策について説明します。  
   
  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ブックに基づいて全体管理でレポートを作成するには、ファーム管理者またはサービス管理者である必要があります。  
   
@@ -121,7 +121,7 @@ ms.locfileid: "55087751"
   
 9. 1.  Excel 2010 を起動します。  
   
-    2.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] リボンで、**[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ウィンドウの起動]** をクリックします。  
+    2.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] リボンで、 **[[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ウィンドウの起動]** をクリックします。  
   
     3.  [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] ウィンドウのデザイン リボンで、 **[既存の接続]** をクリックします。  
   
@@ -137,7 +137,7 @@ ms.locfileid: "55087751"
   
     9. [MDX クエリの指定] で、 **[デザイン]** をクリックして MDX クエリ デザイナーを開き、操作するデータを収集してから、ピボットテーブル レポートまたはピボットグラフ レポートを作成して、データを Excel で表示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SharePoint 2010 での PowerPivot データの更新](http://msdn.microsoft.com/01b54e6f-66e5-485c-acaa-3f9aa53119c9)   
  [使用状況データ収集の構成 (Power Pivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint.md)  
   
