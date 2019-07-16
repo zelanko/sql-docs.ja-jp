@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dc7a38e1-93b9-4034-9af2-ff419e8fb2a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 101cb855ea4d73b5f537e8738ab3177b7f618fbe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 693029bf83fe28343b450906da3e16e2665819d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706052"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965437"
 ---
 # <a name="procedures-collection-adox"></a>Procedures コレクション (ADOX)
 すべてを含む[プロシージャ](../../../ado/reference/adox-api/procedure-object-adox.md)カタログのオブジェクト。  
@@ -46,7 +45,7 @@ ms.locfileid: "66706052"
   
 -   [Indexes コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Command プロパティおよび CommandText プロパティの例 (VB)](../../../ado/reference/adox-api/command-and-commandtext-properties-example-vb.md)   
  [Parameters コレクションおよび Command プロパティの例 (VB)](../../../ado/reference/adox-api/parameters-collection-command-property-example-vb.md)   
  [Procedures Append メソッドの例 (VB)](../../../ado/reference/adox-api/procedures-append-method-example-vb.md)   

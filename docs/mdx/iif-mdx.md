@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0b05929d24533e0bdcdbcac59820307a373428ff
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 87b7b030776c1c18bb13307bf97db721fe472bd3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105335"
 ---
 # <a name="iif-mdx"></a>IIf (MDX)
 
@@ -34,10 +33,10 @@ IIf(Logical_Expression, Expression1 [HINT <hints>], Expression2 [HINT <hints>])
  *Logical_Expression*  
  評価される条件**true** (1) または**false** (0)。 有効な多次元式 (MDX) の論理式を指定する必要があります。  
   
- *Expression1 Hint [Eager|Strict|Lazy]]*  
+ *Expression1 ヒント [Eager |厳密な |遅延]*  
  論理式を評価するときに使用**true**します。 Expression1 には、有効な多次元式 (MDX) を指定する必要があります。  
   
- *Expression2 Hint [Eager|Strict|Lazy]]*  
+ *Expression2 ヒント [Eager |厳密な |遅延]*  
  論理式を評価するときに使用**false**します。 Expression2 には、有効な多次元式 (MDX) を指定する必要があります。  
   
 ## <a name="remarks"></a>コメント  

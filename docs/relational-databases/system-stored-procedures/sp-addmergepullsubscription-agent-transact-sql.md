@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2f4b086-078d-49b5-8971-8a1e3f6a6feb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5859d7e4c026375d5e9ade69628b9cf9e4a76ed0
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8bfa9ff0683f67a1d38aeb17bccd0cfc1443d6d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117959"
 ---
 # <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
@@ -167,7 +166,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @frequency_interval = ] frequency_interval` マージ エージェントを実行する曜日または日付。 *frequency_interval*は**int**、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1**|日曜日|  
 |**2**|月曜日|  
@@ -176,7 +175,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |**5**|木曜日|  
 |**6**|金曜日|  
 |**7**|土曜日|  
-|**8**|日|  
+|**8**|Day|  
 |**9**|平日|  
 |"**10**"|週末の曜日|  
 |NULL (既定値)||  
@@ -187,7 +186,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
 |NULL (既定値)||  
@@ -214,15 +213,15 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @active_end_date = ] active_end_date` マージ エージェントが停止した日付、スケジュールに yyyymmdd です。 *active_end_date*は**int**、既定値は NULL です。  
   
-`[ @optional_command_line = ] 'optional_command_line'` マージ エージェントに用意されているオプションのコマンド プロンプトです。 *optional_command_line*は**nvarchar (255)**、既定値は '' です。 追加のパラメーターをマージ エージェントに提供する場合に使用できます。たとえば、次の例では、既定のクエリ タイムアウトを `600` 秒に増やします。  
+`[ @optional_command_line = ] 'optional_command_line'` マージ エージェントに用意されているオプションのコマンド プロンプトです。 *optional_command_line*は**nvarchar (255)** 、既定値は '' です。 追加のパラメーターをマージ エージェントに提供する場合に使用できます。たとえば、次の例では、既定のクエリ タイムアウトを `600` 秒に増やします。  
   
 ```  
 @optional_command_line = N'-QueryTimeOut 600'  
 ```  
   
-`[ @merge_jobid = ] merge_jobid` ジョブ ID の出力パラメーターです。 *merge_jobid*は**binary (16)**、既定値は NULL です。  
+`[ @merge_jobid = ] merge_jobid` ジョブ ID の出力パラメーターです。 *merge_jobid*は**binary (16)** 、既定値は NULL です。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Windows 同期マネージャーを使用できる、サブスクリプションに同期するかどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` Windows 同期マネージャーを使用できる、サブスクリプションに同期するかどうかを指定します。 *enabled_for_syncmgr*は**nvarchar (5)** 、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 `[ @ftp_address = ] 'ftp_address'` 旧バージョンと互換性を保つのためです。  
   
@@ -232,9 +231,9 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @ftp_password = ] 'ftp_password'` 旧バージョンと互換性を保つのためです。  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` スナップショット ファイルを取得する元の場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)**、既定値は NULL です。 NULL の場合、スナップショット ファイルは、発行元によって指定された既定の場所から取得します。  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'` スナップショット ファイルを取得する元の場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)** 、既定値は NULL です。 NULL の場合、スナップショット ファイルは、発行元によって指定された既定の場所から取得します。  
   
-`[ @working_directory = ] 'working_directory'` FTP を使用してスナップショット ファイルを転送する場合、パブリケーションのデータとスキーマ ファイルを一時的に格納するために使用する作業ディレクトリの名前です。 *working_directory*は**nvarchar (255)**、既定値は NULL です。  
+`[ @working_directory = ] 'working_directory'` FTP を使用してスナップショット ファイルを転送する場合、パブリケーションのデータとスキーマ ファイルを一時的に格納するために使用する作業ディレクトリの名前です。 *working_directory*は**nvarchar (255)** 、既定値は NULL です。  
   
 `[ @use_ftp = ] 'use_ftp'` スナップショットを取得する一般的なプロトコルの代わりに FTP を使用して指定します。 *@use_ftp* は **nvarchar (5)** 、既定値は FALSE。  
   
@@ -252,11 +251,11 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @job_name = ] 'job_name' ]` 既存のエージェント ジョブの名前です。 *job_name* は **sysname** 既定値は NULL です。 新しく作成されたジョブ (既定値) の代わりに、既存のジョブを使用して、サブスクリプションを同期するときにのみこのパラメーターを指定します。 メンバーになっていない場合、 **sysadmin**するを指定する必要があります固定サーバー ロール、 *job_login*と*job_password*を指定すると*job_name*.  
   
-`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` 場所、スナップショット ファイルが読み取られる場合からフィルター選択されたデータ スナップショット フォルダーへのパスでは、使用します。 *dynamic_snapshot_location*は**nvarchar (260)**、既定値は NULL です。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
+`[ @dynamic_snapshot_location = ] 'dynamic_snapshot_location' ]` 場所、スナップショット ファイルが読み取られる場合からフィルター選択されたデータ スナップショット フォルダーへのパスでは、使用します。 *dynamic_snapshot_location*は**nvarchar (260)** 、既定値は NULL です。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。  
   
 `[ @use_web_sync = ] use_web_sync` Web 同期が有効になっていることを示します。 *@use_web_sync*は**ビット**、既定値は 0。 **1** HTTP を使用してインターネット経由でプル サブスクリプションを同期できることを指定します。  
   
-`[ @internet_url = ] 'internet_url'` レプリケーション リスナー (REPLISAPI の場所はします。DLL) Web 同期します。 *internet_url*は**nvarchar (260)**、既定値は NULL です。 *internet_url*形式での完全修飾 URL は、`http://server.domain.com/directory/replisapi.dll`します。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`http://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
+`[ @internet_url = ] 'internet_url'` レプリケーション リスナー (REPLISAPI の場所はします。DLL) Web 同期します。 *internet_url*は**nvarchar (260)** 、既定値は NULL です。 *internet_url*形式での完全修飾 URL は、`http://server.domain.com/directory/replisapi.dll`します。 サーバーの構成で、リッスンするポートがポート 80 以外の場合は、`http://server.domain.com:portnumber/directory/replisapi.dll` の形式のポート番号も指定する必要があります。ここで `portnumber` はポートを表します。  
   
 `[ @internet_login = ] 'internet_login'` HTTP 基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに、マージ エージェントが使用するログインをします。 *internet_login* は **sysname** 、既定値は NULL です。  
   
@@ -267,7 +266,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @internet_security_mode = ] internet_security_mode` HTTPS を使用して Web 同期中に、Web サーバーに接続するときに、マージ エージェントで使用する認証方法。 *internet_security_mode*は**int**これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**0**|基本認証を使用します。|  
 |**1** (既定値)|Windows 統合認証を使用|  
@@ -279,7 +278,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @hostname = ] 'hostname'` この関数はパラメーター化されたフィルターの WHERE 句で使用すると、HOST_NAME() の値をオーバーライドします。 *ホスト名* は **sysname** 、既定値は NULL です。  
   
-`[ @job_login = ] 'job_login'` エージェントを実行する Windows アカウントのログインです。 *job_login*は**nvarchar (257)**、既定値はありません。 Windows 統合認証を使用する場合は、この Windows アカウントが、サブスクライバーへのエージェント接続と、ディストリビューターとパブリッシャーへの接続を常に使用します。  
+`[ @job_login = ] 'job_login'` エージェントを実行する Windows アカウントのログインです。 *job_login*は**nvarchar (257)** 、既定値はありません。 Windows 統合認証を使用する場合は、この Windows アカウントが、サブスクライバーへのエージェント接続と、ディストリビューターとパブリッシャーへの接続を常に使用します。  
   
 `[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードです。 *job_password* は **sysname** 、既定値はありません。  
   

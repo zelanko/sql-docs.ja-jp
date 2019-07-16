@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 4620f03f-1193-43e7-ba19-ad022737d300
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c304659dd88b376bf540d893ef83531f648c808b
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 29cdabcbf61bda237c810356d0d1ef8d271df882
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674606"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106893"
 ---
 # <a name="information-in-error-interfaces"></a>エラー インターフェイス内の情報
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "51674606"
 |---------------------|-----------------|  
 |**GetDescription**|エラー メッセージを説明する文字列を返します。|  
 |**GetGUID**|エラーを定義したインターフェイスの GUID を返します。|  
-|**GetHelpContext**|サポートされていません。 常に 0 を返します。|  
+|**GetHelpContext**|サポートされていません。 常にゼロが返されます。|  
 |**GetHelpFile**|サポートされていません。 常に NULL が返されます。|  
 |**GetSource**|文字列 "Microsoft SQL Server Native Client" を返します。|  
   
@@ -59,7 +58,7 @@ ms.locfileid: "51674606"
 |*pbstrSQLState*|エラーの SQLSTATE 値を返します。 SQLSTATE 値は、SQL-92、ODBC と ISO SQL、および API の各仕様で定義されています。 どちらも[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]も[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーが実装に固有の SQLSTATE 値を定義します。|  
 |*plNativeError*|該当する場合は、**master.dbo.sysmessages** から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー番号を返します。 ネイティブ エラーは、初期化に成功したときに使用可能な[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Native Client OLE DB プロバイダーのデータ ソース。 試行する前に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーは常に 0 を返します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラー](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

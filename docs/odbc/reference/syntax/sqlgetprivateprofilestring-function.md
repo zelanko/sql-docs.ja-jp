@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: b72ca065-4d67-48df-baac-e18379a8320a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 17ac06d65d519be86ec077e6c6d39896c7f5ad46
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d58fe69e487b4f61384f9bd146b17c6d9ada9ba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061472"
 ---
 # <a name="sqlgetprivateprofilestring-function"></a>SQLGetPrivateProfileString 関数
 **準拠**  
  バージョンが導入されました。ODBC 2.0  
   
- **まとめ**  
+ **概要**  
  **SQLGetPrivateProfileString**値やシステム情報の値に対応するデータの名前の一覧を取得します。  
   
 ## <a name="syntax"></a>構文  
@@ -48,7 +47,7 @@ int SQLGetPrivateProfileString(
 ```  
   
 ## <a name="arguments"></a>引数  
- *lpszSection*  
+ *大文字、小文字*  
  [入力]キー名を格納しているセクションを指定する null で終わる文字列へのポインター。 この引数が NULL の場合、関数では、ファイルのすべてのセクション名を指定されたバッファーにコピーします。  
   
  *lpszEntry*  
@@ -63,7 +62,7 @@ int SQLGetPrivateProfileString(
  *cbRetBuffer*  
  [入力]指し示されるバッファーの文字のサイズを指定します、 *RetBuffer*引数。  
   
- *lpszFilename*  
+ *場合*  
  [入力]初期化ファイルの名前を示す null で終わる文字列へのポインター。 この引数に、ファイルへの完全パスが含まれていない場合、既定のディレクトリが検索されます。  
   
 ## <a name="returns"></a>戻り値  

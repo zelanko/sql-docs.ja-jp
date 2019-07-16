@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9eb0dd82-7920-42e0-9e50-7ce6e7ecee8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ebc5947611129086952394f157c6173a3b4efcf0
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 83e9368b562a7ac200171dc814830b21d677770a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826301"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090095"
 ---
 # <a name="sysdmxtpsystemmemoryconsumers-transact-sql"></a>sys.dm_xtp_system_memory_consumers (TRANSACT-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ select * from sys.dm_xtp_system_memory_consumers
 |-----------------|----------|-----------------|  
 |memory_consumer_id|**bigint**|メモリ コンシューマーの内部 ID。|  
 |memory_consumer_type|**int**|次の値のいずれかのメモリ コンシューマーの種類を表す整数。<br /><br /> 0 - これは表示されません。 複数のコンシューマーのメモリ使用量を集計します。<br /><br /> 1-ルック アサイド:システムのルック アサイドのメモリ使用量を追跡します。<br /><br /> 2-VARHEAP:可変長ヒープのメモリ使用量を追跡します。<br /><br /> 4-IO ページ プール。IO 操作に使用されるシステム ページ プールのメモリ使用量を追跡します。|  
-|memory_consumer_type_desc|**nvarchar(16)**|メモリ コンシューマーの種類の説明:<br /><br /> 0 - これは表示されません。<br /><br /> 1-ルック アサイド<br /><br /> 2 - VARHEAP<br /><br /> 4-PGPOOL|  
+|memory_consumer_type_desc|**nvarchar(16)**|メモリ コンシューマーの種類の説明:<br /><br /> 0 - これは表示されません。<br /><br /> 1-ルック アサイド<br /><br /> 2-VARHEAP<br /><br /> 4-PGPOOL|  
 |memory_consumer_desc|**nvarchar(64)**|メモリ コンシューマー インスタンスの説明。<br /><br /> VARHEAP: <br />システム ヒープ。 一般的な用途は。 現在、ガベージ コレクション作業項目の割り当てに使用されるだけです。<br />-または-<br />ルック アサイド ヒープ。 ルック アサイド リストに含まれる項目の数が事前に定義された上限 (通常は約 5,000 個の項目) に達した場合にルック アサイドで使用されます。<br /><br /> PGPOOL。IO システム プールは、3 つのサイズです。System 4 K ページ プール、System 64 K ページ プール、および System 256 K ページ プール。|  
 |lookaside_id|**bigint**|スレッド ローカルなルック アサイド メモリ プロバイダーの ID。|  
 |pagepool_id|**bigint**|スレッド ローカルなページ プール メモリ プロバイダーの ID。|  

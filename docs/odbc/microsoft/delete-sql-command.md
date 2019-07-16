@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d5bd477-626f-4f22-a05a-f531d9f8c5e7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: dac94d8bfb0e2bc0ab91f6a18e6f18606481b112
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79a9c9a86e290f568f205a7e7678122f9089a7e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198577"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096331"
 ---
 # <a name="delete---sql-command"></a>DELETE - SQL コマンド
 レコードの削除をマークします。  
@@ -39,7 +38,7 @@ DELETE FROM [DatabaseName!]TableName
   
  *DatabaseName!* 包含データベースは、データ ソースと指定されたデータベースがない場合は、テーブルを含むデータベースの名前を指定します。 データベースが、データ ソースと指定されたデータベースではない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に、テーブル名の前に感嘆符 (!) 区切り記号が含まれます。  
   
- WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
+ 場所*FilterCondition1*[AND&#124;または*FilterCondition2*...]  
  Visual FoxPro が特定のレコードの削除だけをマークすることを指定します。  
   
  *FilterCondition*レコードが削除対象としてマークを満たす必要のある条件を指定します。 AND で接続して、必要な数のフィルター条件を含めることができますか、OR 演算子。 NOT 演算子を使用して、論理式の値を反転するかを使用することができます**空**空のフィールドを確認する ()。  
@@ -52,5 +51,5 @@ DELETE FROM [DatabaseName!]TableName
 ## <a name="driver-remarks"></a>ドライバーの解説  
  アプリケーションでは、ODBC SQL ステートメントの削除をデータ ソースに送信するときに、Visual FoxPro ODBC ドライバーを翻訳しないで、Visual FoxPro の削除のコマンドに、コマンドに変換します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SET DELETED コマンド](../../odbc/microsoft/set-deleted-command.md)

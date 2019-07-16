@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e9625b59-06a0-4883-b155-b932ba7528d9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d1c31ef622281b4f52f62ca3867c5afa7dcae8ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2895ec765df3910dbbaa1e76ba1579e4afe5cca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63194418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091647"
 ---
 # <a name="updating-data-with-sqlsetpos"></a>SQLSetPos によるデータの更新
 アプリケーションの更新または削除を含む行セットの任意の行**SQLSetPos**します。 呼び出す**SQLSetPos**を構築して、SQL ステートメントの実行に代わる便利な方法です。 位置指定更新をサポートして、データ ソースが配置されている SQL ステートメントをサポートしていない場合にも ODBC ドライバーことができます。 関数呼び出しを使用してデータベースの完全なアクセスを実現するためのパラダイムの一部になります。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2b7fdbad-17e4-4442-b0b2-9b5e8f84b91d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 56e490fa3a860b3fc4e18e72d674c70d29130f5b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc600aeabd1c988c0f9a6768da7fd0f0d280552b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119416"
 ---
 # <a name="spvalidateredirectedpublisher-transact-sql"></a>sp_validate_redirected_publisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "58527304"
  [なし] :  
   
 ## <a name="remarks"></a>コメント  
- パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher** 、出力パラメーターで null を返します *@redirected_publisher*します。 エントリが存在する場合、成功と失敗の両方の場合、出力パラメーターで返されます。  
+ パブリッシャーとパブリッシングのデータベースのエントリが存在しない場合**sp_validate_redirected_publisher** 、出力パラメーターで null を返します *@redirected_publisher* します。 エントリが存在する場合、成功と失敗の両方の場合、出力パラメーターで返されます。  
   
  検証が成功すると、 **sp_validate_redirected_publisher**成功を示す値を返します。  
   
@@ -63,7 +62,7 @@ ms.locfileid: "58527304"
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元する必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールには、ディストリビューション データベースまたは定義済みパブリケーションのパブリケーション アクセス リストのメンバーパブリッシャー データベースと関連付けられています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   
  [sp_redirect_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-redirect-publisher-transact-sql.md)   

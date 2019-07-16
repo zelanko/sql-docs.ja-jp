@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ef5c89d-faaa-4f8e-aef7-00649ebc8bc9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 06a0e5e2edb793a94e8d8542ca17734f23824121
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 302d807b70e4cceb7cf25bffd0af637df7c4ad8c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997811"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120163"
 ---
 # <a name="spchangedistpublisher-transact-sql"></a>sp_changedistpublisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
   
 |プロパティ|値|説明|  
 |--------------|------------|-----------------|  
-|**active**|**true**|パブリッシャーをアクティブにします。|  
+|**アクティブ**|**true**|パブリッシャーをアクティブにします。|  
 ||**false**|パブリッシャーを非アクティブ化します。|  
 |**distribution_db**||ディストリビューション データベースの名前です。|  
 |**login**||ログイン名です。|  
@@ -76,7 +75,7 @@ sp_changedistpublisher [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_changedistpublisher**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   

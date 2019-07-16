@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e69aa9e3da29abe054aaf272c5fe3ed12172a4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411ae301c2f0ce858b7273c6bb721269f709b5c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63309142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098486"
 ---
 # <a name="mdx-data-definition---create-cell-calculation"></a>MDX データ操作 - CREATE CELL CALCULATION
 
@@ -74,7 +73,7 @@ CREATE CELL CALCULATION CURRENTCUBE | Cube_Name.Calculation_Name
 > [!NOTE]  
 >  バッカスナウア記法 (BNF) の`{*(<comment> | <whitespace> | <newline>)}`として解析されます`{*}`の下位互換性です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セッション スコープの計算されるセルを作成します。](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)   
  [クエリ スコープのセル計算の作成 (MDX)](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
  [MDX でのセル計算の構築&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-build-cell-calculations.md)   

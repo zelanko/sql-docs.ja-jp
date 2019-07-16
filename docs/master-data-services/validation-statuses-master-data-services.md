@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fc829d25-b3e8-4801-8a94-4df19a7a5971
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8dc6f15406ae5d89c7aeb3d69d4f63806172b65e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 27a205b5cf6775ea8d7486cbc6c3776fc5c9e825
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485533"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017385"
 ---
 # <a name="validation-statuses-master-data-services"></a>検証状態 (マスター データ サービス)
 
@@ -32,7 +31,7 @@ ms.locfileid: "65485533"
 |検証に失敗しました|ビジネス ルールの検証に失敗したメンバー|  
 |依存メンバーの再検証を待機しています|子メンバーと共に検証を待機している更新済みの統合メンバー|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルールに対してバージョンを検証する (マスター データ サービス)](../master-data-services/validate-a-version-against-business-rules-master-data-services.md)   
  [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   

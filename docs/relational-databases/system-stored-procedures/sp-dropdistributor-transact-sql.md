@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0644032f-5ff0-4718-8dde-321bc9967a03
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f1a1baec088af48cd18972c177463fbb3f574eb
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9943e6f3d43ff1b543a86425b2644ee4c46a105c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081514"
 ---
 # <a name="spdropdistributor-transact-sql"></a>sp_dropdistributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="remarks"></a>コメント  
  **sp_dropdistributor**はあらゆる種類のレプリケーションで使用します。  
   
- サーバーで、その他のパブリッシャーまたはディストリビューション オブジェクトが存在しない場合**sp_dropdistributor**失敗しない限り、 **@no_checks**に設定されている**1**します。  
+ サーバーで、その他のパブリッシャーまたはディストリビューション オブジェクトが存在しない場合**sp_dropdistributor**失敗しない限り、 **@no_checks** に設定されている**1**します。  
   
  実行して、ディストリビューション データベースを削除した後、このストアド プロシージャを実行する必要があります**sp_dropdistributiondb**します。  
   
@@ -67,7 +66,7 @@ sp_dropdistributor [ [ @no_checks= ] no_checks ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dropdistributor**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
  [sp_adddistributor &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)   
  [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)   

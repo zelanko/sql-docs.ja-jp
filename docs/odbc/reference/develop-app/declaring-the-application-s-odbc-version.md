@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 083a1ef5-580a-4979-9cf3-50f4549a080a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9f1dc43ee81f1be386d0518625d36464f029dc0f
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: ea97e3cd7a8fee3b3397524bf2c48c428d6a0be0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68076841"
 ---
 # <a name="declaring-the-application39s-odbc-version"></a>アプリケーションを宣言する&#39;s ODBC のバージョン
 アプリケーションが接続によって割り当てられる前に、SQL_ATTR_ODBC_VERSION 環境属性を設定があります。 この属性は、アプリケーションが ODBC に従うことを示す*2.x*または ODBC *3.x*仕様、次のものを使用する場合。  

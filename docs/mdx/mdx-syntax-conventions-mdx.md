@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ec9918497b28951f85f3214a6c69302a87b47ecd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 063d629ff908210b2c8e042d2c131a3449295ba3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507878"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138267"
 ---
 # <a name="mdx-syntax-conventions-mdx"></a>MDX 構文表記規則 (MDX)
 
@@ -29,7 +28,7 @@ ms.locfileid: "62507878"
 |[,] ...n|先行する項目ができることを示します何回繰り返されます。 項目はコンマで区切ることもあります。|  
 |\<label> ::=|構文のブロックの名前を示します。 この表記は、1 つのステートメント内の複数の箇所で使用できる長い構文の一部または構文の 1 単位をグループにまとめて、ラベルを付けるために使用します。 構文のブロックを使用できる箇所は山かっこで囲まれたラベルで示されます。\<ラベル >。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)  
   
   

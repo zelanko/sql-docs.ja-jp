@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 780cffa17f6ee1af70d942545632c98c9d6dc1e7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c934c2fe8357cb4d37484984998edfcb7219c649
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122663"
 ---
 # <a name="indexresumableoperations-transact-sql"></a>index_resumable_operations (TRANSACT-SQL)
 
@@ -61,7 +60,7 @@ ms.locfileid: "63004377"
 SELECT * FROM  sys.index_resumable_operations WHERE STATE = 1;  
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)
 - [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)

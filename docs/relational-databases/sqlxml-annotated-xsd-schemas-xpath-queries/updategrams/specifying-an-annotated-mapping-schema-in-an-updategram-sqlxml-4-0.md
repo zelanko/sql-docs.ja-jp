@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: 2e266ed9-4cfb-434a-af55-d0839f64bb9a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9e55ec7d8ed06914299f56b3d613186d8c612a05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f75d127b6b8bd723a4d39a5e0610884010e4106
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63025548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018500"
 ---
 # <a name="specifying-an-annotated-mapping-schema-in-an-updategram-sqlxml-40"></a>アップデートグラムでの注釈付きマッピング スキーマの指定 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "63025548"
 >  このドキュメントは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でサポートされるテンプレートとマッピング スキーマについて理解していることを前提としています。 詳細については、次を参照してください。[注釈付き XSD スキーマの概要&#40;SQLXML 4.0&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/introduction-to-annotated-xsd-schemas-sqlxml-4-0.md)します。 XDR を使用する従来のアプリケーションでは、次を参照してください。[注釈付き XDR スキーマ&#40;SQLXML 4.0 では非推奨&#41;](../../../relational-databases/sqlxml/annotated-xsd-schemas/annotated-xdr-schemas-deprecated-in-sqlxml-4-0.md)します。  
   
 ## <a name="dealing-with-data-types"></a>データ型の扱い  
- スキーマが指定されている場合、**イメージ**、**バイナリ**、または**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型 (を使用して**sql:datatype**) していません。XML データ型では、指定、アップデート グラムでは、XML データ型が**バイナリの base 64**します。 データが場合**bin.base**型、型を明示的に指定する必要があります (**dt:type=bin.base**または**型 ="xsd:hexBinary"**)。  
+ スキーマが指定されている場合、**イメージ**、**バイナリ**、または**varbinary** [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型 (を使用して**sql:datatype**) していません。XML データ型では、指定、アップデート グラムでは、XML データ型が**バイナリの base 64**します。 データが場合**bin.base**型、型を明示的に指定する必要があります (**dt:type=bin.base**または**型 ="xsd:hexBinary"** )。  
   
  スキーマが指定されている場合、 **dateTime**、**日付**、または**時間**XSD データ型を指定することする必要がありますも、対応する[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型を使用して**sql:datatype ="dateTime"** します。  
   
@@ -118,7 +117,7 @@ ms.locfileid: "63025548"
 ### <a name="b-inserting-a-record-by-using-the-parent-child-relationship-specified-in-the-mapping-schema"></a>B. マッピング スキーマに指定されている親子リレーションシップを使用して、レコードを挿入する  
  スキーマ要素は関連付けることができます。 **\<Sql:relationship >** 要素がスキーマ要素間の親子リレーションシップを指定します。 この情報は、主キー/外部キーのリレーションシップがある対応するテーブルを更新するときに使用されます。  
   
- 次のマッピング スキーマ (SampleSchema.xml) は、2 つの要素で構成されます **\<順序 >** と **\<OD >**:  
+ 次のマッピング スキーマ (SampleSchema.xml) は、2 つの要素で構成されます **\<順序 >** と **\<OD >** :  
   
 ```  
 <xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"  

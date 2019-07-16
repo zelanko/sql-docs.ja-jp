@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: e9699d59-c8c9-45f6-a561-f7f95084a540
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 02c46d74a1e68af322aa50c7b0ac1c3d4f96ee49
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f180e2b3478ce136fa16d82084d46b79e6152957
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070419"
 ---
 # <a name="spcheckjoinfilter-transact-sql"></a>sp_check_join_filter (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,11 +45,11 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @filtered_table = ] 'filtered_table'` フィルター選択されたテーブルの名前です。 *filtered_table*は**nvarchar (400)**、既定値はありません。  
+`[ @filtered_table = ] 'filtered_table'` フィルター選択されたテーブルの名前です。 *filtered_table*は**nvarchar (400)** 、既定値はありません。  
   
-`[ @join_table = ] 'join_table'` 結合するテーブルの名前を指定*filtered_table*します。 *join_table*は**nvarchar (400)**、既定値はありません。  
+`[ @join_table = ] 'join_table'` 結合するテーブルの名前を指定*filtered_table*します。 *join_table*は**nvarchar (400)** 、既定値はありません。  
   
-`[ @join_filterclause = ] 'join_filterclause'` テスト対象の結合フィルター句。 *join_filterclause*は**nvarchar (1000)**、既定値はありません。  
+`[ @join_filterclause = ] 'join_filterclause'` テスト対象の結合フィルター句。 *join_filterclause*は**nvarchar (1000)** 、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -73,7 +72,7 @@ sp_check_join_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_check_join_filter**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a6d74000-0828-49ba-850a-63da865f8802
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 43679897bf49e9a2505dad1540f3b494b66f180d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10f3add3cb243d54643c3294104ec2546e7737d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705853"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965162"
 ---
 # <a name="table-object-adox"></a>Table オブジェクト (ADOX)
 列、インデックス、およびキーを含むデータベース テーブルを表します。  
@@ -60,7 +59,7 @@ Dim obj As New Table
   
 -   [Table オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/table-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ActiveConnection プロパティの例 (VB)](../../../ado/reference/adox-api/catalog-activeconnection-property-example-vb.md)   
  [Columns および Tables Append メソッド、Name プロパティの例 (VB)](../../../ado/reference/adox-api/columns-and-tables-append-methods-name-property-example-vb.md)   
  [Connection Close メソッド、Table Type プロパティの例 (VB)](../../../ado/reference/adox-api/connection-close-method-table-type-property-example-vb.md)   

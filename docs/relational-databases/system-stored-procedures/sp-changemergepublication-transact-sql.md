@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 81fe1994-7678-4852-980b-e02fedf1e796
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6ca4142ca78d0842b535036e99464b9a1b7dc2c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7bcedfb666b5fffb2f31b6bf73ee02972ea30067
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997123"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097681"
 ---
 # <a name="spchangemergepublication-transact-sql"></a>sp_changemergepublication (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -96,8 +95,8 @@ sp_changemergepublication [ @publication= ] 'publication'
 |**max_concurrent_dynamic_snapshots**||これは、 **int**パラメーター化された行フィルターのことを表します、スナップショットの最大数をフィルター選択されたデータを生成するスナップショットのセッションを使用するマージ パブリケーションに対して同時に実行することができます。 場合**0**制限はありません。 ここで指定した数を超えるスナップショット処理が同時に実行されるようにスケジュールすると、超過したジョブはキューに保存されて、現在実行中のマージ処理が終了するまで待機します。|  
 |**post_snapshot_script**||ポインターを指定します、 **.sql**ファイルの場所。 ディストリビューション エージェントまたはマージ エージェントは、その他のすべてのレプリケートされたオブジェクト スクリプトとデータが、初期同期中に適用された後、ポスト スナップ ショット スクリプトを実行します。 このプロパティを変更するには、新しいスナップショットが必要です。|  
 |**pre_snapshot_script**||ポインターを指定します、 **.sql**ファイルの場所。 マージ エージェントは、サブスクライバーでスナップショットを適用するときに、レプリケートされたオブジェクト スクリプトの前に、プリスナップ ショット スクリプトを実行します。 このプロパティを変更するには、新しいスナップショットが必要です。|  
-|**publication_compatibility_level**|**100RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
-||**90RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
+|**publication_compatibility_level**|**100 RTM**|[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|  
+||**90 RTM**|[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]|  
 |**publish_to_activedirectory**|**true**|このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 現在、Active Directory にはパブリケーション情報を追加できません。|  
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
 |**replicate_ddl**|**1**|パブリッシャー側で実行されるデータ定義言語 (DDL) ステートメントがレプリケートされます。|  
@@ -111,7 +110,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ||**false**|指定されている別の場所にスナップショット ファイルが格納されている*alt_snapshot_folder*します。 この組み合わせは、スナップショット ファイルが既定と代替手段の両方の場所に格納されていることを指定します。|  
 |**snapshot_ready**|**true**|パブリケーションのスナップショットは使用できます。|  
 ||**false**|パブリケーションのスナップショットは使用できません。|  
-|**status**|**active**|パブリケーションはアクティブな状態です。|  
+|**status**|**アクティブ**|パブリケーションはアクティブな状態です。|  
 ||**非アクティブ**|パブリケーションは非アクティブな状態です。|  
 |**sync_mode**|**ネイティブ**または<br /><br /> **ネイティブ bcp**|初期スナップショットに対してすべてのテーブルのネイティブ モードの一括コピー プログラム出力が使用されます。|  
 ||**character**<br /><br /> または**bcp 文字**|最初のスナップショットは、すべての必要なすべてのテーブルのキャラクター モード一括コピー プログラム出力が使用される非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバー。|  
@@ -187,7 +186,7 @@ sp_changemergepublication [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changemergepublication**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   

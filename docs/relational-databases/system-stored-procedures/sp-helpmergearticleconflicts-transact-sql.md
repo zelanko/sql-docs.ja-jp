@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 4678a2b9-9a5f-4193-a20d-2e11fc896c3a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e02cbdeaaf754819b3a0efa15aa9515cc8515e62
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 85e75e1ce52866eb04b3c410f021db8de392239a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122327"
 ---
 # <a name="sphelpmergearticleconflicts-transact-sql"></a>sp_helpmergearticleconflicts (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` マージ パブリケーションの名前です。*パブリケーション*は**sysname**、既定値は**%**、競合するデータベース内のすべてのアーティクルが返されます。  
+`[ @publication = ] 'publication'` マージ パブリケーションの名前です。*パブリケーション*は**sysname**、既定値は **%** 、競合するデータベース内のすべてのアーティクルが返されます。  
   
 `[ @publisher = ] 'publisher'` パブリッシャーの名前です。*パブリッシャー*は**sysname**、既定値は NULL です。  
   
@@ -68,7 +67,7 @@ sp_helpmergearticleconflicts [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergearticleconflicts**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

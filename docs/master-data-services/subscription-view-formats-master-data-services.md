@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ff1e2566-ac8f-467d-a6d9-12c3f13879b9
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 27d0f3f85117812719a642c947fda71b71c4e32c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba0152d37b1a050c1e46594ab8a5820606b116c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085613"
 ---
 # <a name="subscription-view-formats-master-data-services"></a>サブスクリプション ビュー形式 (マスター データ サービス)
 
@@ -43,7 +42,7 @@ ms.locfileid: "65488003"
 |**派生親子関係 (派生階層ビュー)**|派生階層構造を親子形式で含みます。|  
 |**派生レベル (派生階層ビュー)**|派生階層構造をレベル形式で含みます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [概要:データのエクスポート (マスター データ サービス)](../master-data-services/overview-exporting-data-master-data-services.md)   
  [サブスクリプション ビューを作成してデータをエクスポートする (マスター データ サービス)](../master-data-services/create-a-subscription-view-to-export-data-master-data-services.md)  
   

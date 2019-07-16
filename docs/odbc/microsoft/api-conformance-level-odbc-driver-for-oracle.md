@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 3d96e8ff-a310-44d7-ae3f-7d2851b3d8ce
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fbacb3f2e217d5fff95c59027e17e1caf67b43bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 046469263866206fa3c4d04de3184cd0baaf7944
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63302026"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138197"
 ---
 # <a name="api-conformance-level-odbc-driver-for-oracle"></a>API への準拠レベル (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -48,8 +47,8 @@ ms.locfileid: "63302026"
   
 -   [SQLProcedureColumns( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLProcedures( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
+-   [SQLProcedures)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
 -   [SQLSetPos( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)  
   
--   [SQLSetScrollOptions( )](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)
+-   [SQLSetScrollOptions)](../../odbc/microsoft/level-2-api-functions-odbc-driver-for-oracle.md)

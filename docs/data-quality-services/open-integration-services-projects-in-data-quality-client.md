@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: a8bad2f1-8fb0-4d14-a978-11a5720e62d6
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 0d31536e59004786acf85828ad256c2ed197c2bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22a5ebe7d4165644b346bad38429666836228a91
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991900"
 ---
 # <a name="open-integration-services-projects-in-data-quality-client"></a>Data Quality Client で Integration Services プロジェクトを開く
 
@@ -64,7 +63,7 @@ ms.locfileid: "66788005"
 6.  データをエクスポートした後で **[完了]** をクリックして Integration Services プロジェクトを閉じます。  
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DQS クレンジング変換](../integration-services/data-flow/transformations/dqs-cleansing-transformation.md)   
  [Integration Services (SSIS) プロジェクト](../integration-services/integration-services-ssis-projects-and-solutions.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 8d87ca10-f955-4284-8689-e9f4cc31e7ae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 683b81f82094aa33deef86ffc19dc8c5c0a53a27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 802040851259a8537fabcd3cc0da1afdf9b8dbe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63270436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68057052"
 ---
 # <a name="sqlardtype"></a>SQL_ARD_TYPE
 SQL_ARD_TYPE 型識別子を使用してを ARD の SQL_DESC_CONCISE_TYPE フィールドで指定した型のバッファー内のデータがなることを示します。 SQL_ARD_TYPE が入力されて、 *TargetType*への呼び出しの引数**SQLGetData**特定のデータ型と記述子を変更することで、データを変更するアプリケーションが入力バッファーの有効ではなくフィールド。 この値のデータ型を結び付ける、  *\*TargetValuePtr*記述子フィールドをバッファーします。 (SQL_ARD_TYPE への呼び出しが入力されていない**SQLBindCol**または**SQLBindParameter**のため、バインドされたバッファーの種類の SQL_DESC_TYPE、SQL_DESC_CONCISE_TYPE フィールドに既に関連付けられている、変更できますいつでもこれらのフィールドのいずれかを変更することによって。)  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1b97c46a-d2e5-4540-8239-9d975e5321c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 736867be33531a73c0ada66a3be0f1245f1c483a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5e50e8128bb80b290e7610d9cc846dd3e148e398
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118629"
 ---
 # <a name="sqlcompleteasync-function"></a>SQLCompleteAsync 関数
 **準拠**  
@@ -28,7 +27,7 @@ ms.locfileid: "65537597"
   
  標準への準拠:なし  
   
- **まとめ**  
+ **概要**  
  **SQLCompleteAsync**非同期関数のいずれかの通知またはポーリング ベースの処理を使用して完了時に決定するために使用できます。 非同期操作の詳細については、次を参照してください。[非同期実行](../../../odbc/reference/develop-app/asynchronous-execution.md)します。  
   
  **SQLCompleteAsync**は、ODBC ドライバー マネージャーでのみ実装します。  

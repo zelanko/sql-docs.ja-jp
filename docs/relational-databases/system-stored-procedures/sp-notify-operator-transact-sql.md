@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c440f5c9-9884-4196-b07c-55d87afb17c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f12ce5837e47ce9cb647d1f7364ce23ad921e26c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 74558320df59414a756e1655bb073e9bf0d7d73c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107979"
 ---
 # <a name="spnotifyoperator-transact-sql"></a>sp_notify_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_notify_operator
   
 `[ @id = ] id` メッセージを送信するオペレーターの識別子。 *id*は**int**、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
   
-`[ @name = ] 'name'` メッセージを送信するオペレーターの名前。 *名前*は**nvarchar (128)**、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
+`[ @name = ] 'name'` メッセージを送信するオペレーターの名前。 *名前*は**nvarchar (128)** 、既定値は NULL です。 いずれかの*id*または*名前*指定する必要があります。  
   
 > **注:** メッセージを受信する前に、オペレーターの電子メール アドレスを定義する必要があります。  
   
@@ -60,9 +59,9 @@ sp_notify_operator
   
 `[ @body = ] 'message'` 電子メール メッセージの本文。 *メッセージ*は**nvarchar (max)** 既定値はありません。  
   
-`[ @file_attachments = ] 'attachment'` 電子メール メッセージに添付するファイルの名前。 *添付ファイル*は**nvarchar (512)**、既定値はありません。  
+`[ @file_attachments = ] 'attachment'` 電子メール メッセージに添付するファイルの名前。 *添付ファイル*は**nvarchar (512)** 、既定値はありません。  
   
-`[ @mail_database = ] 'mail_host_database'` メール ホスト データベースの名前を指定します。 *mail_host_database* is **nvarchar(128)**. ない場合は*mail_host_database*が指定されている、 **msdb**データベースが既定で使用されます。  
+`[ @mail_database = ] 'mail_host_database'` メール ホスト データベースの名前を指定します。 *mail_host_database* is **nvarchar(128)** . ない場合は*mail_host_database*が指定されている、 **msdb**データベースが既定で使用されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

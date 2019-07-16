@@ -4,18 +4,17 @@ description: この記事で SQL Server のコンテナーの高可用性が導�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: da4c702e8ec5e8c1d645af616df53edd287eae5a
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: aa54849c16ea9dfb821404b553b1e9183b61d66a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833925"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077477"
 ---
 # <a name="high-availability-for-sql-server-containers"></a>SQL Server のコンテナーの高可用性
 
@@ -73,14 +72,14 @@ SQL Server 2019 では、Kubernetes でコンテナーの可用性グループ�
 
 | |可用性グループで | スタンドアロンのコンテナー インスタンス<br/> 可用性グループなし
 |:------|:------|:------
-|ノードの障害から自動的に回復します。 | はい | [はい]
-|ポッドの障害から自動的に回復します。 | はい | はい
+|ノードの障害から自動的に回復します。 | はい | はい
+|ポッドの障害から自動的に回復します。 | はい | [はい]
 |高速フェールオーバー |はい |
 |SQL Server インスタンスの障害から自動的に回復します。 | はい | 
 |データベースの正常性チェックのエラーから自動的に回復します。 | [はい] | 
 |読み取り専用レプリカを指定します。 | はい |
-|セカンダリ レプリカのバックアップ | はい | 
-|StatefulSet に従って実行されます。 | はい | 
+|セカンダリ レプリカのバックアップ | [はい] | 
+|StatefulSet に従って実行されます。 | [はい] | 
 
 1 つの主な違いは、recovery (またはフェールオーバー) の時間がよりも、コンテナー内の SQL Server の 1 つのインスタンスに可用性グループで高速なことです。 この向上は、SQL Server 可用性グループがクラスター内の他のノード上のセカンダリ レプリカを保持しているためにです。 フェールオーバー時は、セカンダリ レプリカが選択され、プライマリに昇格します。 サービスに接続されているアプリケーションは、新しいプライマリ レプリカにリダイレクトされます。
 

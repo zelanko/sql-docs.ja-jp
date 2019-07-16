@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 85777525-1555-4731-8309-63a464c6b43a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9e33beff29463172a26d53953dd5f563fe1f3f5c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: caf8f68221c1ac14649bf10be0105e1e691c7482
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63240962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129957"
 ---
 # <a name="elements-used-in-sql-statements"></a>SQL ステートメントで使用される要素
 次の要素は、前の表に、SQL ステートメントで使用されます。  
@@ -58,7 +57,7 @@ ms.locfileid: "63240962"
   
  *挿入値*:: =  
   
- *dynamic-parameter*  
+ *動的パラメーター*  
   
  &#124; です。*リテラル*  
   

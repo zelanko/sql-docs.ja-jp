@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0fb1693b-11c3-43b1-bb16-c3323b7b2d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe5bce7a8a13c7296ce08f84ea4b0c60c2eb5261
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f48a3c7568a9db8b599f6d5a1997607fb16e6020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069883"
 ---
 # <a name="features-to-watch-for"></a>ウォッチする機能
 このセクションでは、さまざまな機能の多くの場合、アプリケーション開発者が受け取るについて説明します。 サポートと Dbms; の間でのサポートの方法でこれらの機能が実際には、大きくに異なるそれらのコードに相互運用可能なアプリケーションで問題が発生する可能性があります。  

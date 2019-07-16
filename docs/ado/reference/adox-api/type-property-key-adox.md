@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 8ca2f1fd-eb1e-490c-a28b-67eda92e0fc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3b8cdca662c935d7e0d5ce2bb74c2fc3d56c704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e72c93cf7f2126e26d5ed09d3cff246319e0495a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705706"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965042"
 ---
 # <a name="type-property-key-adox"></a>Type プロパティ (キー) (ADOX)
 キーの種類を示します。  
@@ -39,7 +38,7 @@ ms.locfileid: "66705706"
 ## <a name="applies-to"></a>適用対象  
  [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Keys Append メソッド、キーの種類、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)](../../../ado/reference/adox-api/keys-append-method-key-type-relatedcolumn-relatedtable-example-vb.md)   
  [Type プロパティ (列) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Type プロパティ (テーブル) (ADOX)](../../../ado/reference/adox-api/type-property-table-adox.md)

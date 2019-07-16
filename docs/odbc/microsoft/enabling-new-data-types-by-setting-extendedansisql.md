@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: f2865543-7fff-44fa-9a6a-968bec33acdc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 80a86ef188796883e76c6d5f6149a3e40afd341b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88f11adcab09dbe6964bfd67a944912fc185bccb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031118"
 ---
 # <a name="enabling-new-data-types-by-setting-extendedansisql"></a>ExtendedAnsiSQL を設定して新しいデータ型の有効化
 ExtendedAnsiSQL フラグがオンにすると、2 つの新しいデータ型は Jet 4.0 データベースで使用できます。SQL_DECIMAL SQL_NUMERIC. 既定の有効桁数と小数点 18 と 0 をそれぞれされます。 SQL_DECIMAL または SQL_NUMERIC として型指定された ODBC 経由でアクセスされるデータは、Microsoft Jet を decimal 型に通貨の代わりにマップされます。  

@@ -2,19 +2,18 @@
 title: Parallel Data Warehouse の transparent data encryption |Microsoft Docs
 description: Transparent data encryption (TDE) の並列データ ウェアハウス (PDW) 実行リアルタイム I/O 暗号化と、データとトランザクション ログ ファイルと、特殊な PDW ログ ファイルの復号化します。"
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: e9067416365e56dccf9c09f2e826c01fb3ecfa3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 582c237819dab5f0a1e30e2bd4e27fe3cc9ae57f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63156945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959980"
 ---
 # <a name="transparent-data-encryption"></a>透過的なデータ暗号化
 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープ) などが盗まれるシナリオで悪意のあるパーティできますだけ復元またはデータベースをアタッチし、データを参照します。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  

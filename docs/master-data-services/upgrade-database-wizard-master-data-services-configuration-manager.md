@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b74edba7-d0a2-456b-9673-b1e02bcdea43
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4e587d29d8e711fa3e61a7e80fa447566b2e1411
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28330ba902b32f0b9622a3b8df0ca316848e1752
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485045"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102567"
 ---
 # <a name="upgrade-database-wizard-master-data-services-configuration-manager"></a>データベースのアップグレード ウィザード (Master Data Services 構成マネージャー)
 
@@ -38,7 +37,7 @@ ms.locfileid: "65485045"
 ## <a name="progress-and-finish"></a>[続行して完了する]  
  アップグレード処理の進捗状況を表示します。 データベースのアップグレードが完了したら、ログ ファイルへのリンクをクリックしてアップグレードに関する詳細情報を表示するか、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 アップグレードされたデータベースが選択され、そのシステム設定を表示および変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [マスター データ サービスのイントールと構成](../master-data-services/master-data-services-installation-and-configuration.md)  
  [マスター データ サービスのアップグレード](../database-engine/install-windows/upgrade-master-data-services.md)  
