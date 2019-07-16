@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 0ac09dbe-2665-411e-8fbb-d1efe6c777be
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9d1322d872d5e05de4c7f142804fe2f1390b9859
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd0c2273739a3651c7fdd4c424ce0cb47d39dd5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700889"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925845"
 ---
 # <a name="command-streams"></a>コマンド ストリーム
 ADO で指定された文字列の形式でコマンドの入力を常にサポートされている、 **CommandText**プロパティ。 代わりに、ADO 2.7 以降で使用することできますも情報のストリーム コマンドの入力のストリームを割り当てることで、 **CommandStream**プロパティ。 ADO を割り当てることができます**Stream**オブジェクト、または、COM をサポートする任意のオブジェクト**IStream**インターフェイス。  

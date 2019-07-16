@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c8fb09e-10ad-49b5-ab41-2603771780d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9de69478469a6bd177d12beab96e199b4720f3f5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 623f9b1f1e8873ddc4819bb8500c11edf09f5f76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919218"
 ---
 # <a name="datamember-property"></a>DataMember プロパティ
 取得するデータ メンバーの名前を示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)によって参照される、 [DataSource](../../../ado/reference/ado-api/datasource-property-ado.md)プロパティ。  
@@ -47,5 +46,5 @@ Set rs.DataSource = myDE      'Name of the object containing an IRowset
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataSource プロパティ (ADO)](../../../ado/reference/ado-api/datasource-property-ado.md)

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: adb5c37e-7874-41db-b4ee-572c1323deff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9fa46bba5f4842b277c4b70622165adf95817858
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1b6a81b69fc16c587786685897c476c65937bb4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932634"
 ---
 # <a name="find-method-example-jscript"></a>Find メソッドの例 (JScript)
 この例では、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[検索](../../../ado/reference/ado-api/find-method-ado.md)メソッドを見つけて、企業での表示、 ***Northwind*** G. 切り取り文字で始まる名前のデータベースし、貼り付け次のコードをメモ帳または別のテキスト エディターととして保存**FindJS.asp**します。  
@@ -153,6 +152,6 @@ BODY {
 <!-- EndFindJS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Find メソッド (ADO)](../../../ado/reference/ado-api/find-method-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

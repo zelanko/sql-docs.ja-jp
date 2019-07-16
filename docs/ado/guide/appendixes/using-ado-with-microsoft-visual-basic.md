@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9dfb6784-037d-4f9d-bb7f-b506b4498573
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: abbdbeec81a029716ac6516f9436373e91365a23
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22286cbe571420475cf273ca377d16e79610fc3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702777"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926565"
 ---
 # <a name="using-ado-with-microsoft-visual-basic-and-visual-basic-for-applications"></a>アプリケーションの Microsoft Visual Basic および Visual Basic と ADO の併用
 ADO のプロジェクトを設定し、ADO コードの記述は似ていますアプリケーションの Visual Basic または Visual Basic を使用するかどうか。 このトピックでは、ADO を Visual Basic と Visual Basic の両方のアプリケーションを使用してアドレスし、相違点をメモします。

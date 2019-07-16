@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e75ef0dc-2016-4fcc-8918-23311c0d4e02
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d1ae4f8cba9235700edf410904862d39ed4f7f64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2bd341a3af2d1fdb076312b4c0993184fb4fae39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926764"
 ---
 # <a name="microsoft-ole-db-persistence-provider-overview"></a>Microsoft OLE DB の永続化プロバイダーの概要
 Microsoft OLE DB 永続化プロバイダーでは、保存することができます、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)ファイルにオブジェクトし、後で復元する**Recordset**ファイルからのオブジェクト。 スキーマ情報、データ、および保留中の変更は保持されます。

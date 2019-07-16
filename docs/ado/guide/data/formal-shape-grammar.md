@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea691475-0f03-4abe-a785-b77e77712d1d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0af2421a0d1f80922560be556062c89074c21838
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 91bdf0cfbfe87075d2c9484bca7edd835a950ee6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925346"
 ---
 # <a name="formal-shape-grammar"></a>Shape の正式文法
 これは、任意図形のコマンドを作成するための正式な文法です。  
@@ -57,7 +56,7 @@ ms.locfileid: "66702001"
 |\<aggregate-exp>|SUM (\<修飾されたフィールド名 >) &#124;<br /><br /> AVG (\<修飾されたフィールド名 >) &#124;<br /><br /> MIN (\<修飾されたフィールド名 >) &#124;<br /><br /> MAX (\<修飾されたフィールド名 >) &#124;<br /><br /> カウント (\<修飾されたエイリアス > &#124; です。\<修飾名 >) &#124;<br /><br /> STDEV (\<修飾されたフィールド名 >) &#124;<br /><br /> ANY(\<qualified-field-name>)|  
 |\<calculated-exp>|CALC(\<expression>)|  
 |\<qualified-field-name>|\<alias>.[\<alias>...]\<field-name>|  
-|\<alias>|\<quoted-name>|  
+|\<エイリアス >|\<quoted-name>|  
 |\<field-name>|\<quoted-name> [[AS] \<alias>]|  
 |\<quoted-name>|"\<文字列 >"&#124; です。<br /><br /> '\<文字列 >' &#124;<br /><br /> [\<文字列 >] &#124; です。<br /><br /> \<name>|  
 |\<qualified-name>|エイリアス [.alias...]|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 11ca7e42-ab6a-47da-ab32-55abab663069
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6e4b7d4f79b3ba3572a20cb8876909f90e4e5870
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc69511e41d00aa96e69181a654194f31f7dcc02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709996"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930551"
 ---
 # <a name="ado-md-properties"></a>ADO MD のプロパティ
 
@@ -45,13 +44,13 @@ ms.locfileid: "66709996"
 |[序数 (位置)](../../../ado/reference/ado-md-api/ordinal-property-ado-md-position.md)|軸に沿った位置を一意に識別します。|  
 |[Parent](../../../ado/reference/ado-md-api/parent-property-ado-md.md)|階層内の現在のメンバーの親であるメンバーを示します。|  
 |[ParentSameAsPrev](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)|この位置メンバーの親がすぐ前のメンバーの親と同じかどうかを示します。|  
-|[Source](../../../ado/reference/ado-md-api/source-property-ado-md.md)|セルセットのデータ ソースを示します。|  
+|[ソース](../../../ado/reference/ado-md-api/source-property-ado-md.md)|セルセットのデータ ソースを示します。|  
 |[State](../../../ado/reference/ado-md-api/state-property-ado-md.md)|セル セットの現在の状態を示します。|  
 |[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)|現在のメンバーの種類を示します。|  
 |[UniqueName](../../../ado/reference/ado-md-api/uniquename-property-ado-md.md)|現在のオブジェクトの一意の名前を示します。|  
 |[[値]](../../../ado/reference/ado-md-api/value-property-ado-md.md)|現在のセルの値を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO MD の API リファレンス](../../../ado/reference/ado-md-api/ado-md-api-reference.md)   
  [ADO MD のコード例](../../../ado/reference/ado-md-api/ado-md-code-examples.md)   
  [ADO MD のコレクション](../../../ado/reference/ado-md-api/ado-md-collections.md)   

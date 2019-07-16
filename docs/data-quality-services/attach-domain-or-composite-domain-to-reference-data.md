@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 36af981c-d0d0-4dc6-afe5-bbb3c97845dc
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 551e66805dc53f7113aeb0260716967bb8a78486
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8171d552d850ec929f7aba5b55b6f0e2c6ae7265
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66780462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935635"
 ---
 # <a name="attach-domain-or-composite-domain-to-reference-data"></a>参照データへのドメインまたは複合ドメインのアタッチ
 
@@ -91,7 +90,7 @@ ms.locfileid: "66780462"
 ##  <a name="FollowUp"></a>補足情報: 参照データにドメインをマップした後  
  データ品質プロジェクトを作成し、このトピックで作成したナレッジ ベースと照らし合わせて、米国の住所を含むソース データに対するクレンジング アクティビティを実行します。 「[参照データ &#40;外部&#41; のナレッジを使用したデータのクレンジング](../data-quality-services/cleanse-data-using-reference-data-external-knowledge.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DQS の参照データ サービス](../data-quality-services/reference-data-services-in-dqs.md)   
  [データ クレンジング](../data-quality-services/data-cleansing.md)  
   

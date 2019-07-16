@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: ab561b096c4436349580201eec3b3ea10a8aaa75
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 4e8e6bea11794545a2b0ab9c340e85344ec23d33
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685309"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162212"
 ---
 # <a name="deploy"></a>配置
 
@@ -25,7 +25,7 @@ ms.locfileid: "57685309"
   
 このレッスンを完了するまでに時間を推定するには。**5 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 12:Excel で分析](../tutorial-tabular-1400/as-lesson-12-analyze-in-excel.md)します。  
 

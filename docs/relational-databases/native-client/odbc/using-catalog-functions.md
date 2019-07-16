@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 7773fb2e-06b5-4c4b-88e9-0ad9132ad273
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1fa87ff82d9fb47cc51f5add1380ae26270cd7
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: c24e98f15793820df59bf372a73e42204814fb19
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913068"
 ---
 # <a name="using-catalog-functions"></a>カタログ関数の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "54255387"
   
      リンク サーバーに含まれるカタログの一覧を返します。  
   
- リンク サーバー名とカタログ名を取得したら、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの 2 つの部分名を使用して、カタログから情報を取得をサポートしている_linked_server_name_**.**_カタログ_の*CatalogName*で次の ODBC カタログ関数。  
+ リンク サーバー名とカタログ名を取得したら、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーの 2 つの部分名を使用して、カタログから情報を取得をサポートしている_linked_server_name_ **.** _カタログ_の*CatalogName*で次の ODBC カタログ関数。  
   
 -   **SQLColumnPrivileges**  
   
@@ -62,7 +61,7 @@ ms.locfileid: "54255387"
   
 -   **SQLTables**  
   
- 2 つの部分_linked_server_name_**.**_カタログ_はサポートされても*FKCatalogName*と*PKCatalogName*で[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)します。  
+ 2 つの部分_linked_server_name_ **.** _カタログ_はサポートされても*FKCatalogName*と*PKCatalogName*で[SQLForeignKeys](../../../relational-databases/native-client-odbc-api/sqlforeignkeys.md)します。  
   
  SQLLinkedServers と SQLLinkedCatalogs を使用する場合は、次のファイルが必要です。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "54255387"
   
      実行時に存在する必要があります。 sqlncli11.dll は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーに付属しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Native Client &#40;ODBC&#41;](../../../relational-databases/native-client/odbc/sql-server-native-client-odbc.md)   
  [SQLColumnPrivileges](../../../relational-databases/native-client-odbc-api/sqlcolumnprivileges.md)   
  [SQLColumns](../../../relational-databases/native-client-odbc-api/sqlcolumns.md)   

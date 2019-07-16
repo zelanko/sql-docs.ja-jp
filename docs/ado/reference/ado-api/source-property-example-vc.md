@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: e10d33da-ea30-4138-ae40-e9f6aa9d17d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9d235195b9a20c5212f24f971c80be290f95c60c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da0bfacc4ab64929bcd37051efa9d36944871253
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930882"
 ---
 # <a name="source-property-example-vc"></a>Source プロパティの例 (VC++)
 この例では、[ソース](../../../ado/reference/ado-api/source-property-ado-recordset.md)プロパティを 3 つを開いて[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトは、さまざまなデータ ソースに基づきます。  
@@ -157,6 +156,6 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Source プロパティ (ADO Recordset)](../../../ado/reference/ado-api/source-property-ado-recordset.md)

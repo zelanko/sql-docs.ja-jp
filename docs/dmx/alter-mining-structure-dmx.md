@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 65374ec0499d6dbb549a14af239c03c06dca4062
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 487fb5c04d623f2a4ef408cf35784dd57b067f4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545421"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913845"
 ---
 # <a name="alter-mining-structure-dmx"></a>ALTER MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -97,7 +96,7 @@ USING <algorithm> [(<parameter list>)]
 ```  
   
 ### <a name="column-name-and-alias"></a>列名と別名  
- 列定義リストで使用する列名は、マイニング構造で使用されている列の名前にする必要があります。 ただし、マイニング モデルの構造列を表すために、必要に応じて別名を定義できます。 同じ構造列に複数の列定義を作成し、列の各コピーに異なる別名と予測の使用方法を割り当てることもできます。 既定では、別名を定義しない場合、構造列の名前が使用されます。 詳細については、[モデル列の別名を作成](../analysis-services/data-mining/create-an-alias-for-a-model-column.md)を参照してください。  
+ 列定義リストで使用する列名は、マイニング構造で使用されている列の名前にする必要があります。 ただし、マイニング モデルの構造列を表すために、必要に応じて別名を定義できます。 同じ構造列に複数の列定義を作成し、列の各コピーに異なる別名と予測の使用方法を割り当てることもできます。 既定では、別名を定義しない場合、構造列の名前が使用されます。 詳細については、次を参照してください。[モデル列の別名を作成](../analysis-services/data-mining/create-an-alias-for-a-model-column.md)です。  
   
  入れ子になったテーブル列の場合、入れ子になったテーブルの名前を指定、データ型として指定**テーブル**、かっこで囲まれた、モデルに含める入れ子になった列の一覧を指定します。  
   
@@ -115,7 +114,7 @@ USING <algorithm> [(<parameter list>)]
 |**REGRESSOR**|アルゴリズムが、指定した列を回帰アルゴリズムの回帰式に使用できることを示します。|  
 |**MODEL_EXISTENCE_ONLY**|属性列の値が属性の有無ほど重要ではないことを示します。|  
   
- 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、[モデリング フラグ&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)を参照してください。  
+ 列には複数のモデリング フラグを定義できます。 モデリング フラグを使用する方法の詳細については、次を参照してください。[モデリング フラグ&#40;DMX&#41;](../dmx/modeling-flags-dmx.md)します。  
   
 ### <a name="prediction-clause"></a>予測句  
  予測句では、予測列の使用方法を説明します。 次の表は、使用可能な句を示しています。  
@@ -130,15 +129,15 @@ USING <algorithm> [(<parameter list>)]
   
  フィルター条件式は、簡略化された DMX 述語で、WHERE 句に似ています。 フィルター式は、基本的な算術演算子、スカラー、および列名を使用する式に制限されます。 ただし、EXISTS 演算子は例外です。これは、サブクエリに対して少なくとも 1 行が返される場合は true に評価されます。 述語は、共通の論理演算子を使用して結合できます。AND、OR、および NOT です。  
   
- マイニング モデルで使用されるフィルターの詳細については、[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)を参照してください。  
+ マイニング モデルで使用されるフィルターの詳細については、次を参照してください。[マイニング モデルのフィルター選択&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)します。  
   
 > [!NOTE]  
 >  フィルター内の列は、マイニング構造列である必要があります。 モデル列または別名の列に対してフィルターを作成することはできません。  
   
- DMX の演算子と構文の詳細については、[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)を参照してください。  
+ DMX の演算子と構文の詳細については、次を参照してください。[マイニング モデル列](../analysis-services/data-mining/mining-model-columns.md)します。  
   
 ## <a name="parameter-definition-list"></a>パラメーター定義リスト  
- アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧は、[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)を参照してください。  
+ アルゴリズム パラメーターをパラメーター リストに追加して、モデルのパフォーマンスと機能を調整できます。 使用できるパラメーターは、USING 句で指定するアルゴリズムによって異なります。 各アルゴリズムに関連付けられているパラメーターの一覧は、次を参照してください。[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)します。  
   
  パラメーター リストの構文は次のとおりです。  
   
@@ -177,7 +176,7 @@ USING Microsoft_Naive_Bayes
 WITH FILTER([Gender] = 'F' AND [Age] >50)  
 ```  
   
-## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>例 3:入れ子になったテーブルを含む構造体にフィルター選択されたモデルを追加します。  
+## <a name="example-3-add-a-filtered-model-to-a-structure-with-a-nested-table"></a>例 3: 入れ子になったテーブルを含む構造体にフィルター選択されたモデルを追加します。  
  次の例では、変更した Market Basket マイニング構造にマイニング モデルを追加します。 追加する例で使用されるマイニング構造が変更された、**リージョン**列は、顧客の地域の属性が含まれていると、 **Income Group**を使用して顧客の収入を分類します。値**高**、**中程度**、または**低**します。  
   
  マイニング構造には、顧客が購入した品目を一覧表示する、入れ子になったテーブルも含まれます。  
