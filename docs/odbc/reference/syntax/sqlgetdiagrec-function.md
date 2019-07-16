@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ebdbac93-3d68-438f-8416-ef1f08e04269
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 6cb79375475e4827e1e1c4d3b76721f1614e864e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c404cbb1f29adbdcb49ef6bed8bb57a047f64f3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538165"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911315"
 ---
 # <a name="sqlgetdiagrec-function"></a>SQLGetDiagRec 関数
 **準拠**  
@@ -61,7 +60,7 @@ SQLRETURN SQLGetDiagRec(
   
 -   SQL_HANDLE_ENV として  
   
--   SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT として  
   
  SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバー マネージャーとドライバーでのみ使用されます。 アプリケーションでは、この種類のハンドルは使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。  
   

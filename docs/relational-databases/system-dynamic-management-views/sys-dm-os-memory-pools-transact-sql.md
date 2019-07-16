@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1ef053f3-c6f3-456e-82b6-26e4bd630d46
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0483d616a8e95662b7501b1d5de74abd6ad3cfef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4292c659e796a61e601296a2ac984de987526cad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013294"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899897"
 ---
 # <a name="sysdmosmemorypools-transact-sql"></a>sys.dm_os_memory_pools (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -50,7 +49,7 @@ ms.locfileid: "63013294"
 ## <a name="permissions"></a>アクセス許可
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
 
 ## <a name="remarks"></a>Remarks  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンポーネントは、場合によってキャッシュの同種でステートレスな種類のデータに共通のプール フレームワークを使用します。 プール フレームワークは、キャッシュ フレームワークよりも単純です。 プール内のすべてのエントリは、等しいと見なされます。 内部的には、プールはメモリ クラークであり、メモリ クラークが使用される場所で使用できます。  

@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 5d2337d4-e2c7-48de-9c26-cdc7e6eb5d55
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 11c8cc0797bafff6cc8c38bffb55023be00003a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4429585d735ee4eb51d2b0b421b53fdf06bf8ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899391"
 ---
 # <a name="sysdmpdwhadoopoperations-transact-sql"></a>sys.dm_pdw_hadoop_operations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62690431"
 |map_progress|**float**|これまでに、マップ ジョブによって消費された入力データの割合。|浮動小数点数の間、および、0 から 100。|  
 |reduce_progress|**int**|Reduce ジョブが完了したことの割合.|浮動小数点数の間、および、0 から 100。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   

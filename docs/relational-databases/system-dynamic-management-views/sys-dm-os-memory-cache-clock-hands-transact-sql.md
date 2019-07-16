@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 0660eddc-691c-425f-9d43-71151d644de7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b39f40a36a9b9a639b8b6c90f6a6a37f7a32a4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 47dbe34459bc3774a9588fb347eca019f9de3e1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900063"
 ---
 # <a name="sysdmosmemorycacheclockhands-transact-sql"></a>sys.dm_os_memory_cache_clock_hands (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ ms.locfileid: "63047187"
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
   
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ キャッシュと呼ばれる構造体でメモリ内の情報を格納します。 キャッシュには、データ、インデックス エントリ、コンパイル済みプロシージャ プランなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に関するさまざまな種類の情報が格納されます。 情報を再作成を避けるためには、保持されるメモリがキャッシュ可能な限りおよび利用するのには古すぎる場合、またはメモリ領域が新しい情報が必要なときに通常、キャッシュから削除します。 古い情報を削除する処理は、メモリ スイープと呼ばれます。 メモリ スイープは、頻繁にアクティビティしますが、継続的ないません。 メモリ キャッシュのスイープはクロック アルゴリズムによって制御され、 1 つのクロック ハンドと呼ばれるいくつかのメモリ スイープを制御できます。 メモリ キャッシュのクロック ハンドは、メモリ スイープの手の 1 つの現在の場所です。  
