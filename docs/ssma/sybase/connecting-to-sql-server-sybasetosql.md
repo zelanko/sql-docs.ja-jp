@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: dd368a1a-45b0-40e9-b4d3-5cdb48c26606
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2d7370b9b219c43bab4bfdc45377795edf148fc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f40fd6fa88b001eaa222789d6be35b83f9bf90a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63207854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948544"
 ---
 # <a name="connecting-to-sql-server-sybasetosql"></a>SQL Server への接続 (SybaseToSQL)
 Sybase Adaptive Server Enterprise (ASE) のデータベースを移行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のターゲット インスタンスのいずれかに接続する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 SSMA がのインスタンスのすべてのデータベースに関するメタデータを取得して接続すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]でデータベースのメタデータを表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メタデータ エクスプ ローラー。 SSMA のインスタンスに関する情報を格納する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に接続しているが、パスワードは保存されません。  

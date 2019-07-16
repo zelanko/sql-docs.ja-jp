@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 798c325e-e8d8-412a-b02e-118f2741d1c7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: b32182dd1d75a35d42587c839c3f46c89654511b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 988d57ab3d0f86c3da1e45109a6ad818cecb894e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906575"
 ---
 # <a name="create-an-attribute-group-master-data-services"></a>属性グループを作成する (マスター データ サービス)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65477140"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、 **[エクスプローラー]** グリッドの個々のタブに属性を表示する場合、属性グループを作成します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -72,7 +71,7 @@ ms.locfileid: "65477140"
   
 -   [属性グループのユーザーへの表示 (マスター データ サービス)](../master-data-services/make-an-attribute-group-visible-to-users-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性グループ (マスター データ サービス)](../master-data-services/attribute-groups-master-data-services.md)   
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)   
  [属性グループ名を変更する (マスター データ サービス)](../master-data-services/change-an-attribute-group-name-master-data-services.md)   

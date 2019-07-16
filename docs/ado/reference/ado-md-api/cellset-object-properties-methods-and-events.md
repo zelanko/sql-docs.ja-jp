@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb303e33-5a85-4e4e-81db-acaaa6f53799
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a1ecd6dce77a1e8ad04313707c62e4f20460be15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ccee0a1b6f31bf9cb54272387e2d7363d2324530
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709485"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911538"
 ---
 # <a name="cellset-object-properties-methods-and-events"></a>Cellset オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -44,5 +43,5 @@ ms.locfileid: "66709485"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CellSet オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cellset-object-ado-md.md)

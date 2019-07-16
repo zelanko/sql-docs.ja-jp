@@ -1,5 +1,5 @@
 ---
-title: 組 |Microsoft ドキュメント
+title: タプル |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 33bfe1d6e46a7687736afd837614eec350a941ca
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34020389"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165760"
 ---
-# <a name="tuples"></a>組
+# <a name="tuples"></a>Tuples
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   組はキューブからデータのスライスを一意に識別します。 組は、同じ階層に属するメンバーが複数存在しない限り、ディメンション メンバーを組み合わせて作成されます。  
   
@@ -43,7 +43,7 @@ FROM [Adventure Works]
 ```  
   
 > [!NOTE]  
->  クエリでセット (ここでは、1 つの組から構成されます) の軸を指定するときは、行の軸のセットを指定する前に列の軸のセットを指定する必要があります。 列の軸は、*axis(0)*、または単に *0* とも表現できます。 MDX クエリの詳細については、「[MDX の基本的なクエリ (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)」を参照してください。  
+>  クエリでセット (ここでは、1 つの組から構成されます) の軸を指定するときは、行の軸のセットを指定する前に列の軸のセットを指定する必要があります。 列の軸は、*axis(0)* 、または単に *0* とも表現できます。 MDX クエリの詳細については、「[MDX の基本的なクエリ (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)」を参照してください。  
   
 ### <a name="tuples-as-values-or-member-references"></a>値またはメンバー参照としての組  
  上記の例のように、クエリで組を使用して、その組が参照しているセルの値を取得できます。 また、式で組を使用して、組で指定されているメンバーを明示的に参照できます。 組を取得または使用する関数をクエリまたは式で使用できます。 組を使用して、組で指定されているセルの値を参照できます。また、関数内で使用する場合はメンバーの組み合わせを指定できます。  
@@ -65,10 +65,10 @@ FROM [Adventure Works]
 > [!NOTE]  
 >  属性メンバーは、メンバー名またはメンバー キーで参照できます。 上記の例で、[CY 2004] への参照を &[2004] としてもかまいません。  
   
-## <a name="see-also"></a>参照  
- [MDX & #40; の主な概念Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
+## <a name="see-also"></a>関連項目  
+ [MDX の主な概念 (Analysis Services)](../../../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [キューブ空間](../../../analysis-services/multidimensional-models/mdx/cube-space.md)   
  [Autoexists](../../../analysis-services/multidimensional-models/mdx/autoexists.md)   
- [メンバー、組、およびセット & #40; の操作MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
+ [メンバー、組、およびセットの操作 (MDX)](../../../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)  
   
   

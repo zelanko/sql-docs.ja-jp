@@ -1,5 +1,5 @@
 ---
-title: ニューラル ネットワーク モデルのマイニング モデル コンテンツ |Microsoft ドキュメント
+title: ニューラル ネットワーク モデルのマイニング モデル コンテンツ |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e01fea742e5af04efa470bd80da4e2c75c5eebc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34018529"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182668"
 ---
-# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>ニューラル ネットワーク モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
+# <a name="mining-model-content-for-neural-network-models-analysis-services---data-mining"></a>Mining Model Content for Neural Network Models (Analysis Services - Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   このトピックでは、Microsoft ニューラル ネットワーク アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
@@ -29,7 +29,7 @@ ms.locfileid: "34018529"
   
 -   後続のノードには、それぞれ異なる *サブネットワーク* (NODE_TYPE = 17) が含まれています。 各サブネットワークには、そのサブネットワークの非表示層 (NODE_TYPE = 19) と出力層 (NODE_TYPE = 20) が常に含まれます。  
   
- ![ニューラル ネットワークのモデル コンテンツの構造体](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "ニューラル ネットワークのモデル コンテンツの構造")  
+ ![ニューラル ネットワーク モデルのコンテンツの構造](../../analysis-services/data-mining/media/modelcontentstructure-nn.gif "ニューラル ネットワーク モデルのコンテンツの構造")  
   
  入力層の情報は簡単です。各入力層の最初のノード (NODE_TYPE = 18) は、入力ノード (NODE_TYPE = 21) のコレクションのオーガナイザーの役割を果たします。 次の表では、入力ノードの内容について説明します。  
   
@@ -56,7 +56,7 @@ ms.locfileid: "34018529"
  ATTRIBUTE_NAME  
  このノードに対応する属性の名前です。  
   
-|ノード|コンテンツ|  
+|ノード|Content|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -78,7 +78,7 @@ ms.locfileid: "34018529"
  NODE_TYPE  
  ニューラル ネットワーク モデルでは次のノードの種類が出力されます。  
   
-|ノードの種類の ID|Description|  
+|ノードの種類の ID|説明|  
 |------------------|-----------------|  
 |1|モデル。|  
 |17|サブネットワークのオーガナイザー ノード。|  
@@ -96,7 +96,7 @@ ms.locfileid: "34018529"
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
-|ノード|コンテンツ|  
+|ノード|Content|  
 |----------|-------------|  
 |モデル ルート|子ノードの数を示します。1 つ以上のネットワーク、1 つの必須マージナル ノード、および 1 つの必須入力層が含まれます。 たとえば、値が 5 の場合はサブネットワークが 3 つあります。|  
 |マージナル統計|常に 0 です。|  
@@ -115,7 +115,7 @@ ms.locfileid: "34018529"
  NODE_DESCRIPTION  
  ノードについてのわかりやすい説明。  
   
-|ノード|コンテンツ|  
+|ノード|Content|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -129,7 +129,7 @@ ms.locfileid: "34018529"
  NODE_RULE  
  ノードに埋め込まれたルールの XML による記述。  
   
-|ノード|コンテンツ|  
+|ノード|Content|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -161,7 +161,7 @@ ms.locfileid: "34018529"
  特定の値に対するトレーニング ケースでのサポートについて情報を得るには、マージナル統計ノードを参照してください。  
   
  MSOLAP_MODEL_COLUMN  
- |ノード|コンテンツ|  
+ |ノード|Content|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -178,7 +178,7 @@ ms.locfileid: "34018529"
  MSOLAP_NODE_SHORT_CAPTION  
  ニューラル ネットワーク モデルでは常に空白です。  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  ニューラル ネットワーク モデルをトレーニングする目的は、入力から中間点へ、および中間点からエンドポイントへの各遷移に関連付けられた重みを特定することです。 したがって、モデルの入力層は、主に、モデルの作成に使用された実際の値を格納するために存在します。 非表示層は、計算された重みを格納し、元の入力属性へのポインターを提供します。 出力層は、予測可能な値を格納し、非表示層内の中間点へのポインターも提供します。  
   
 ##  <a name="bkmk_NodeIDs"></a> ノードの名前と ID の使用  
@@ -206,11 +206,11 @@ ms.locfileid: "34018529"
 ### <a name="input-nodes"></a>入力ノード  
  入力層には、モデルで使用された属性の値ごとに 1 つのノードが含まれます。  
   
- **不連続属性:** 入力ノードには、属性名とその値だけが ATTRIBUTE_NAME 列と ATTRIBUTE_VALUE 列に格納されます。 たとえば、列が [勤務シフト] の場合、モデルで使用されたその列の値 (AM や PM など) ごとに個別のノードが作成されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
+ **不連続属性:** 入力ノードは、ATTRIBUTE_NAME 列と ATTRIBUTE_VALUE 列で、属性とその値の名前のみを格納します。 たとえば、列が [勤務シフト] の場合、モデルで使用されたその列の値 (AM や PM など) ごとに個別のノードが作成されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
- **分離された数値属性 :** 入力ノードには、属性名と値 (値の範囲または特定の値) が格納されます。 すべての値は式で表されます。たとえば [問題あたりの時間] の場合の値は、"77.4 - 87.4" や "< 64.0" などと表現されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
+ **分離された数値属性:** 入力ノードには、属性と、値は、範囲、または特定の値の名前が格納されます。 すべての値は式で表されます。たとえば [問題あたりの時間] の場合の値は、"77.4 - 87.4" や "< 64.0" などと表現されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
- **連続属性 :** 入力ノードには、属性の平均値が格納されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
+ **連続属性:** 入力ノードには、属性の平均値が格納されます。 各ノードの NODE_DISTRIBUTION テーブルには、属性の現在の値だけが表示されます。  
   
 ### <a name="hidden-layer-nodes"></a>非表示層ノード  
  非表示層には可変数のノードが含まれます。 各ノードの NODE_DISTRIBUTION テーブルには、非表示層から入力層のノードへのマッピングが含まれます。 ATTRIBUTE_NAME 列には、入力層のノードに対応するノード ID が含まれます。 ATTRIBUTE_VALUE 列には、入力ノードと非表示層ノードの組み合わせに関連付けられた重みが含まれます。 テーブルの最終行には、非表示層内のその隠しノードの重みを表す係数が含まれます。  
@@ -220,15 +220,15 @@ ms.locfileid: "34018529"
   
  属性の型に応じて、NODE_DISTRIBUTION テーブルには次の追加情報が含まれます。  
   
- **不連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、ノード全体の係数と、属性の現在の値が含まれます。  
+ **不連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、ノード全体と、属性の現在の値としての係数が含まれます。  
   
- **分離された数値属性 :** 属性の値が値の範囲である点を除くと、不連続属性と同じです。  
+ **分離された数値属性:** 不連続属性の場合と同じです、属性の値が値の範囲である点が異なります。  
   
- **連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、属性の平均、ノード全体の係数、および係数の分散が含まれます。  
+ **連続属性:** NODE_DISTRIBUTION テーブルの最後の 2 行には、属性、ノード全体の係数の平均および係数の分散が含まれます。  
   
-## <a name="see-also"></a>参照  
- [Microsoft ニューラル ネットワーク アルゴリズム](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
- [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
- [ニューラル ネットワーク モデルのクエリ例](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
+## <a name="see-also"></a>関連項目  
+ [Microsoft Neural Network Algorithm](../../analysis-services/data-mining/microsoft-neural-network-algorithm.md)   
+ [Microsoft Neural Network Algorithm Technical Reference](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)   
+ [Neural Network Model Query Examples](../../analysis-services/data-mining/neural-network-model-query-examples.md)  
   
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a576bf81-8f3c-4ba1-817b-87e89a8da684
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75638344b249274e8e4a7b637330c1c6806b0c86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3a5694613d3830b057204c89d2173eea4375519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924950"
 ---
 # <a name="intervening-shape-compute-clauses"></a>介在する Shape COMPUTE 句
 次の例のように、パラメーター化された図形コマンドで親と子の 1 つまたは複数の COMPUTE 句を埋め込むには有効です。  
@@ -36,7 +35,7 @@ SHAPE {select au_lname, state from authors} APPEND
 RELATE state TO PARAMETER 0)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ シェイプの例](../../../ado/guide/data/data-shaping-example.md)   
  [Shape の正式文法](../../../ado/guide/data/formal-shape-grammar.md)   
  [一般的な Shape コマンド](../../../ado/guide/data/shape-commands-in-general.md)

@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fe60197671e40317f56a62ad98ea364a238df174
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 80bb86beedf54c29fbe67e2362a4163cb489c05a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67033394"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962078"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>クイック スタート: 入力と出力を SQL Server での Python の使用を処理します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ ms.locfileid: "67033394"
 
 ストアド プロシージャが返す 1 つの Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)データ フレームの出力として、スカラー、および変数としてモデルを出力することもできます。 たとえば、二項変数としてトレーニング済みモデルを出力し、そのモデルをテーブルに書き込む、T-SQL INSERT ステートメントに渡すできます。 (バイナリ形式) でのプロットまたはスカラーを生成することもできます (日付と時刻をなど、個々 の値、経過時間、モデルのトレーニングなど)。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 前のクイック スタート[SQL server が存在することを確認する Python](quickstart-python-verify.md)情報を提供し、このクイック スタートに必要な Python 環境を設定するためにリンクします。
 
@@ -109,7 +108,7 @@ SELECT * FROM PythonTestData
 
     ![使用してクエリ結果@script入力として](./media/python-data-generated-output.png)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 Python と SQL Server の間で表形式のデータを渡すときに発生する可能性のある問題のいくつかを確認します。
 

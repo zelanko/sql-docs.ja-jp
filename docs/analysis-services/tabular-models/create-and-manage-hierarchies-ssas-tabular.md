@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5e785fe0e4a5f0030beceff7b9393932a29eaa52
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579553"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163029"
 ---
 # <a name="create-and-manage-hierarchies"></a>作成し、階層の管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -93,7 +93,7 @@ ms.locfileid: "57579553"
   
 -   または、親階層レベルをクリックし、Del キーを押します。 これにより、すべての子レベルも削除されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テーブル モデル デザイナー](../../analysis-services/tabular-models/tabular-model-designer-ssas.md)   
  [階層](../../analysis-services/tabular-models/hierarchies-ssas-tabular.md)   
  [メジャー](../../analysis-services/tabular-models/measures-ssas-tabular.md)  

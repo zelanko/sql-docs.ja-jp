@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 864fd0e6-9d61-4f07-92ef-145318d2f881
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 29a95b506fbbfb5342410d8d393f0091dd98834b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 632df5807e1e857c852807d0088219dee4448b6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946704"
 ---
 # <a name="spupdateproxy-transact-sql"></a>sp_update_proxy (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -60,15 +59,15 @@ sp_update_proxy
   
 `[ @enabled = ] is_enabled` プロキシが有効になっているかどうか。 *Is_enabled*フラグが**tinyint**、既定値は NULL です。 ときに*is_enabled*は**0**プロキシが有効でないと、ジョブ ステップでは使用できません。 この引数が NULL の場合、プロキシの状態は変更されません。  
   
-`[ @description = ] 'description'` プロキシの新しい説明します。 *説明*は**nvarchar (512)**、既定値は NULL です。 この引数が NULL の場合は、プロキシの説明は変更されません。  
+`[ @description = ] 'description'` プロキシの新しい説明します。 *説明*は**nvarchar (512)** 、既定値は NULL です。 この引数が NULL の場合は、プロキシの説明は変更されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- いずれか**@proxy_name**または**@proxy_id**指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
+ いずれか **@proxy_name** または **@proxy_id** 指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
   
- いずれか**@credential_name**または**@credential_id**プロキシの資格情報を変更するのには指定する必要があります。 両方の引数を指定する場合は、両方とも同じ資格情報を参照する必要があります。異なる資格情報を参照する場合、ストアド プロシージャは失敗します。  
+ いずれか **@credential_name** または **@credential_id** プロキシの資格情報を変更するのには指定する必要があります。 両方の引数を指定する場合は、両方とも同じ資格情報を参照する必要があります。異なる資格情報を参照する場合、ストアド プロシージャは失敗します。  
   
  このプロシージャでプロキシが変更されますが、プロキシへのアクセスは変更されません。 プロキシにアクセスを変更するには、使用**sp_grant_login_to_proxy**と**sp_revoke_login_from_proxy**します。  
   
@@ -88,7 +87,7 @@ EXEC dbo.sp_update_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [SQL Server エージェントのセキュリティを実装します。](../../ssms/agent/implement-sql-server-agent-security.md)   
  [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   

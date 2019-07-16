@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 05f7cc97-b806-41d2-939d-a955d10844c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6597d6a834771872abab75d9be3fbf3127eca539
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 340f471215e9f8ec8bf4f0feaabec5cce559a9a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718268"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921472"
 ---
 # <a name="actualsize-and-definedsize-properties-example-vc"></a>ActualSize および DefinedSize プロパティの例 (vc++)
 この例では、 [ActualSize](../../../ado/reference/ado-api/actualsize-property-ado.md)と[DefinedSize](../../../ado/reference/ado-api/definedsize-property.md)定義されたサイズと、フィールドの実際のサイズを表示するプロパティ。  
@@ -138,7 +137,7 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **ストア名:ニュースおよび Brews**  
 **定義されているサイズ:40**  
 **実際のサイズ:12**  
-**ストア名:Doc-U-Mat:洗濯物の品質とブックの「**  
+**ストア名:次のドキュメント-U:洗濯物の品質とブックの「**  
 **定義されているサイズ:40**  
 **実際のサイズ:36**  
 **ストア名:Fricative Bookshop**  
@@ -147,6 +146,6 @@ void PrintProviderError(_ConnectionPtr pConnection) {
 **ストア名:Bookbeat**  
 **定義されているサイズ:40**  
 **実際のサイズ:8**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActualSize プロパティ (ADO)](../../../ado/reference/ado-api/actualsize-property-ado.md)   
  [DefinedSize プロパティ](../../../ado/reference/ado-api/definedsize-property.md)

@@ -1,5 +1,5 @@
 ---
-title: Microsoft 線形回帰アルゴリズム テクニカル リファレンス |Microsoft ドキュメント
+title: Microsoft 線形回帰アルゴリズム テクニカル リファレンス |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 84d0d6609538bb9abdbca61e75c6691c25a45950
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183060"
 ---
 # <a name="microsoft-linear-regression-algorithm-technical-reference"></a>Microsoft 線形回帰アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "34019379"
 ### <a name="setting-algorithm-parameters"></a>アルゴリズム パラメーターの設定  
  次の表に、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムで提供されるパラメーターを示します。  
   
-|パラメーター|Description|  
+|パラメーター|説明|  
 |---------------|-----------------|  
 |*MAXIMUM_INPUT_ATTRIBUTES*|選択した機能を呼び出す前にアルゴリズムが処理できる入力属性の数を定義します。 この値を 0 に設定すると、機能の選択がオフになります。<br /><br /> 既定値は 255 です。|  
 |*MAXIMUM_OUTPUT_ATTRIBUTES*|選択した機能を呼び出す前にアルゴリズムが処理できる出力属性の数を定義します。 この値を 0 に設定すると、機能の選択がオフになります。<br /><br /> 既定値は 255 です。|  
@@ -52,10 +52,10 @@ ms.locfileid: "34019379"
 ### <a name="modeling-flags"></a>ModelingFlags  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次のモデリング フラグがサポートされています。 モデリング フラグは、マイニング構造やマイニング モデルを作成するときに定義し、分析時に各列の値をどのように処理するかを指定します。 詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)」を参照してください。  
   
-|モデリング フラグ|Description|  
+|モデリング フラグ|説明|  
 |-------------------|-----------------|  
 |NOT NULL|列に NULL を含めることはできないことを示します。 モデルのトレーニング中に NULL が検出された場合はエラーが発生します。<br /><br /> マイニング構造列に適用されます。|  
-|REGRESSOR|列には、分析中に潜在的な独立変数として扱われる連続する数値が含まれることを示します。 マイニング モデル列に適用されます。<br /><br /> 注: 列にリグレッサーとしてフラグを設定しても、最終的なモデルでその列がリグレッサーとして使用されるかどうかは保証されません。|  
+|REGRESSOR|列には、分析中に潜在的な独立変数として扱われる連続する数値が含まれることを示します。 マイニング モデル列に適用されます。<br /><br /> 注:列がリグレッサーとしてフラグを設定しても、列が、最終的なモデルでリグレッサーとして使用されることとは限りません。|  
   
 ### <a name="regressors-in-linear-regression-models"></a>線形回帰モデルのリグレッサー  
  線形回帰モデルは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] デシジョン ツリー アルゴリズムに基づいています。 ただし、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムを使用していない場合でも、連続属性の回帰を表すツリーやノードがデシジョン ツリー モデルに含まれることはあります。  
@@ -72,7 +72,7 @@ ms.locfileid: "34019379"
 ### <a name="input-and-predictable-columns"></a>入力列と予測可能列  
  [!INCLUDE[msCoName](../../includes/msconame-md.md)] 線形回帰アルゴリズムでは、次の表に示す特定の入力列と予測可能列がサポートされています。 マイニング モデルにおけるコンテンツの種類の意味については、「[コンテンツの種類 &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-types-data-mining.md)」を参照してください。  
   
-|列|コンテンツの種類|  
+|[列]|コンテンツの種類|  
 |------------|-------------------|  
 |入力属性|Continuous、Cyclical、Key、Table、Ordered|  
 |予測可能な属性|Continuous、Cyclical、Ordered|  
@@ -80,9 +80,9 @@ ms.locfileid: "34019379"
 > [!NOTE]  
 >  コンテンツの種類**Cyclical** および **Ordered** はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。らを不連続の値として扱い、特別な処理は行いません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft 線形回帰アルゴリズム](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [線形回帰モデルのクエリ例](../../analysis-services/data-mining/linear-regression-model-query-examples.md)   
- [線形回帰モデル & #40; のマイニング モデル コンテンツAnalysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
+ [線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-for-linear-regression-models-analysis-services-data-mining.md)  
   
   

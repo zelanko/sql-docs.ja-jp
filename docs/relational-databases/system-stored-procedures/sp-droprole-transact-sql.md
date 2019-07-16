@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 889ee074-00f8-40a9-bddb-d7d3ef0cbc19
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f07ccd19a419f3b6d332213e9846aec740b0c152
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2573019948a326c9171fc83d62428e7e2f888eb5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538403"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933817"
 ---
 # <a name="spdroprole-transact-sql"></a>sp_droprole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_droprole [ @rolename= ] 'role'
   
  固定ロールと**パブリック**ロールは削除できません。  
   
- 保護可能なアイテムが所有している場合、ロールを削除できません。 セキュリティ保護可能リソースを所有しているアプリケーション ロールを削除する前に、最初のセキュリティ保護可能な所有権を譲渡する必要があります。 またはにドロップします。 削除する必要がないオブジェクトの所有者を変更するのにには、ALTER AUTHORIZATION を使用します。  
+ 保護可能なアイテムが所有している場合、ロールを削除できません。 セキュリティ保護可能なリソースを所有しているアプリケーション ロールを削除するには、先にセキュリティ保護可能なリソースの所有権を譲渡するか削除する必要があります。 削除する必要がないオブジェクトの所有者を変更するのにには、ALTER AUTHORIZATION を使用します。  
   
  **sp_droprole**ユーザー定義のトランザクション内で実行することはできません。  
   
@@ -70,7 +69,7 @@ EXEC sp_droprole 'Sales';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_addrole &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addrole-transact-sql.md)   
  [DROP ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-role-transact-sql.md)   

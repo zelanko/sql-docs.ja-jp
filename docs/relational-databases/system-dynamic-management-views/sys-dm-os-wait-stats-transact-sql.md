@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 568d89ed-2c96-4795-8a0c-2f3e375081da
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1d4fa43746db12f8a1ee2957e3846bf1082ff219
-ms.sourcegitcommit: c0e48b643385ce19c65ca6e348ce83b2d22b6514
+ms.openlocfilehash: fc1c8cff535d44cedeb5f42301f010278b87c96d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/01/2019
-ms.locfileid: "67492764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899737"
 ---
 # <a name="sysdmoswaitstats-transact-sql"></a>sys.dm_os_wait_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -48,7 +47,7 @@ ms.locfileid: "67492764"
 ## <a name="permissions"></a>アクセス許可
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
 
 ##  <a name="WaitTypes"></a> 待機の種類  
  **リソースの待機**リソース待機をワーカーが使用可能なリソースが他のワーカーによって使用されているかはまだ使用可能なリソースへのアクセスを要求する場合に発生します。 リソース待機の例としては、ロック、ラッチ、ネットワークおよびディクス I/O 待機があります。 ロック待機およびラッチ待機は、同期オブジェクトで発生する待機です。  

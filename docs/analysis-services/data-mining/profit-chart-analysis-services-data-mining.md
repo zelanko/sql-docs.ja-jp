@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d13dc442d1c0f5067b3db232d7fd6756503bb91c
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409959"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209709"
 ---
 # <a name="profit-chart-analysis-services---data-mining"></a>利益チャート (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -90,7 +90,7 @@ ms.locfileid: "52409959"
 |マイニング モデルとマイニング構造の相互検証について説明します。|[相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)|  
 |リフト チャートおよびその他の精度チャートを作成する手順について説明します。|[テストおよび検証タスク、および操作方法 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-tasks-and-how-tos-data-mining.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テストおよび検証 (データ マイニング)](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
  [リフト チャートを使用した精度テスト (基本的なデータ マイニング チュートリアル)](http://msdn.microsoft.com/library/822d414b-4a39-473f-80c3-53476e30655a)  
   

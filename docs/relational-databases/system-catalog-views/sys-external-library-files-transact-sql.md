@@ -19,11 +19,11 @@ ms.author: heidist
 manager: cgronlun
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
 ms.openlocfilehash: a9666b58132feb79876c4e8074dc530440c05b2c
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47828060"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68220343"
 ---
 # <a name="sysexternallibraryfiles-transact-sql"></a>sys.external_library_files (TRANSACT-SQL)  
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "47828060"
 |列名 |データ型 |説明|
 |------|------|-----|
 |external_library_id | ssNoversion |外部ライブラリ オブジェクトの ID。 |
-|content |varbinary(max) |外部ライブラリのファイル成果物のコンテンツ。 |
+|コンテンツ |varbinary(max) |外部ライブラリのファイル成果物のコンテンツ。 |
 |プラットフォーム |TINYINT |SQL Server がインストールされているホスト プラットフォームの ID。 |
 |platform_desc | nvarchar(60) |ホストのプラットフォームの名前です。 有効な値は、'WINDOWS'、'LINUX' です。 |
 

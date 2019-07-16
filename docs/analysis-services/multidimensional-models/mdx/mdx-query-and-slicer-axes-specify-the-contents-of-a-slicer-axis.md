@@ -1,5 +1,5 @@
 ---
-title: スライサー軸 (MDX) の内容の指定 |Microsoft ドキュメント
+title: スライサー軸 (MDX) の内容の指定 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9c21efd8ac93c6d105d11cc6b006d0cc3b916f81
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34025809"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208741"
 ---
-# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX クエリ軸とスライサー軸にスライサー軸の内容を指定します。
+# <a name="mdx-query-and-slicer-axes---specify-the-contents-of-a-slicer-axis"></a>MDX クエリ軸とスライサー軸 - スライサー軸のコンテンツを指定する
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   スライサー軸は、多次元式 (MDX) の SELECT ステートメントから返されるデータを絞り込み、指定されているメンバーと重なり合うデータだけが返されるように、返されるデータを制限します。 クエリ内の見えない追加の軸であると考えることができます。 スライサー軸は、MDX の SELECT ステートメントの WHERE 句で定義します。  
   
@@ -63,7 +63,7 @@ FROM [Adventure Works]
 WHERE([Customer].[Customer Geography].[Country].&[United States], [Product].[Category].&[1])  
 ```  
   
- 同じ階層の複数のメンバーを使用する場合は、WHERE 句にセットを含める必要があります。 たとえば、次のクエリは、すべての年の、カテゴリ Bikes の製品を購入した、米国および英国に住む顧客に関する Internet Sales Amount の値を表示します。  
+ 同じ階層の複数のメンバーを使用する場合は、WHERE 句にセットを含める必要があります。 たとえば、次のクエリは、すべての年の、カテゴリ Bikes の製品を購入した、米国およびイギリスに住む顧客に関する Internet Sales Amount の値を表示します。  
   
 ```  
 SELECT {[Measures].[Internet Sales Amount]} ON COLUMNS,  
@@ -76,6 +76,6 @@ WHERE(
   
 ```  
   
- 上で説明したように、WHERE 句でセットを使用すると、セット内のすべてのメンバーに関する値が暗黙的に集計されます。 この例の場合、クエリは各セルに米国と英国の集計値を表示します。  
+ 上で説明したように、WHERE 句でセットを使用すると、セット内のすべてのメンバーに関する値が暗黙的に集計されます。 この例の場合、クエリは各セルに米国とイギリスの集計値を表示します。  
   
   

@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 8e0c26e32425f204f7dab29aa65c66f3a11f09d7
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52753714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212125"
 ---
 # <a name="define-and-modify-a-column-filter"></a>列フィルターの定義および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、列フィルターを定義および変更する方法について説明します。  
@@ -74,17 +74,17 @@ ms.locfileid: "52753714"
   
 2.  パブリッシャー側のパブリケーション データベースで、 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)を実行します。 これにより、アーティクルに含める列、またはアーティクルから削除する列を定義します。  
   
-    -   多数の列を含むテーブルから少数の列をパブリッシュする場合は、追加する各列に対して [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) を一度実行します。 **@column** に列名を指定し、**@operation** に **add** を指定します。  
+    -   多数の列を含むテーブルから少数の列をパブリッシュする場合は、追加する各列に対して [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) を一度実行します。 **@column** に列名を指定し、 **@operation** に **add** を指定します。  
   
-    -   多数の列を含むテーブルの列の大半をパブリッシュする場合は、 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)を実行します。その場合、 **@column** に **@column** に列名を指定し、 **@operation** に **@operation** を指定してすべての列を追加します。 次に、除外する各列に [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)を一度ずつ実行します。その場合、 **@operation** に **@operation** を指定し、 **@column**を使用して、列フィルターを定義および変更する方法について説明します。  
+    -   多数の列を含むテーブルの列の大半をパブリッシュする場合は、 [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)を実行します。その場合、 **@column** に **@column** に列名を指定し、 **@operation** に **@operation** を指定してすべての列を追加します。 次に、除外する各列に [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql)を一度ずつ実行します。その場合、 **@operation** に **@operation** を指定し、 **@column** を使用して、列フィルターを定義および変更する方法について説明します。  
   
-3.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)を実行します。 **@publication** にパブリケーション名を指定し、**@article** にフィルターを適用するアーティクルの名前を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
+3.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)を実行します。 **@publication** にパブリケーション名を指定し、 **@article** にフィルターを適用するアーティクルの名前を指定します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが作成されます。  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされたアーティクルに対して、追加列を含めるための列フィルターを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースで、追加する各列に対して [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) を一度ずつ実行します。 **@column** に列名を指定し、**@operation** に **add** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースで、追加する各列に対して [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) を一度ずつ実行します。 **@column** に列名を指定し、 **@operation** に **add** を指定します。  
   
-2.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)を実行します。 **@publication** にパブリケーション名を指定し、**@article** にフィルターを適用するアーティクルの名前を指定します。 パブリケーションに既存のサブスクリプションが存在する場合は、 **@change_active** に **@change_active**を使用して、列フィルターを定義および変更する方法について説明します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが再作成されます。  
+2.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)を実行します。 **@publication** にパブリケーション名を指定し、 **@article** にフィルターを適用するアーティクルの名前を指定します。 パブリケーションに既存のサブスクリプションが存在する場合は、 **@change_active** に **@change_active** を使用して、列フィルターを定義および変更する方法について説明します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが再作成されます。  
   
 3.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
   
@@ -92,9 +92,9 @@ ms.locfileid: "52753714"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされたアーティクルに対して、列を削除するための列フィルターを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースで、削除する各列に対して [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) を一度実行します。 **@column** に列名を指定し、**@operation** に **drop** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースで、削除する各列に対して [sp_articlecolumn](/sql/relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql) を一度実行します。 **@column** に列名を指定し、 **@operation** に **drop** を指定します。  
   
-2.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)を実行します。 **@publication** にパブリケーション名を指定し、**@article** にフィルターを適用するアーティクルの名前を指定します。 パブリケーションに既存のサブスクリプションが存在する場合は、 **@change_active** に **@change_active**を使用して、列フィルターを定義および変更する方法について説明します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが再作成されます。  
+2.  パブリッシャー側のパブリケーション データベースで、 [sp_articleview](/sql/relational-databases/system-stored-procedures/sp-articleview-transact-sql)を実行します。 **@publication** にパブリケーション名を指定し、 **@article** にフィルターを適用するアーティクルの名前を指定します。 パブリケーションに既存のサブスクリプションが存在する場合は、 **@change_active** に **@change_active** を使用して、列フィルターを定義および変更する方法について説明します。 これにより、フィルターを適用するアーティクルの同期オブジェクトが再作成されます。  
   
 3.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
   
@@ -106,13 +106,13 @@ ms.locfileid: "52753714"
   
 2.  パブリッシャー側のパブリケーション データベースで、 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)を実行します。 これにより、アーティクルに含める列、またはアーティクルから削除する列を定義します。  
   
-    -   多数の列を含むテーブルから少数の列のみをパブリッシュする場合は、追加する各列に対して [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) を一度ずつ実行します。 **@column** に列名を指定し、**@operation** に **add** を指定します。  
+    -   多数の列を含むテーブルから少数の列のみをパブリッシュする場合は、追加する各列に対して [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) を一度ずつ実行します。 **@column** に列名を指定し、 **@operation** に **add** を指定します。  
   
-    -   多数の列を含むテーブルの列の大半をパブリッシュする場合は、 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)を実行します。その場合、 **@column** に **@column** に列名を指定し、 **@operation** に **@operation** を指定してすべての列を追加します。 次に、除外する各列に [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)を一度ずつ実行します。その場合、 **@operation** に **@operation** を指定し、 **@column**を使用して、列フィルターを定義および変更する方法について説明します。  
+    -   多数の列を含むテーブルの列の大半をパブリッシュする場合は、 [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)を実行します。その場合、 **@column** に **@column** に列名を指定し、 **@operation** に **@operation** を指定してすべての列を追加します。 次に、除外する各列に [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql)を一度ずつ実行します。その場合、 **@operation** に **@operation** を指定し、 **@column** を使用して、列フィルターを定義および変更する方法について説明します。  
   
 #### <a name="to-change-a-column-filter-to-include-additional-columns-for-an-article-published-in-a-merge-publication"></a>マージ パブリケーションでパブリッシュされたアーティクルに対して、追加列を含めるための列フィルターを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースで、追加する各列に対して [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) を一度ずつ実行します。 **@column** に列名を指定し、**@operation** に **add** を指定し、**@force_invalidate_snapshot** と **@force_reinit_subscription** の両方に **1** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースで、追加する各列に対して [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) を一度ずつ実行します。 **@column** に列名を指定し、 **@operation** に **add** を指定し、 **@force_invalidate_snapshot** と **@force_reinit_subscription** の両方に **1** を指定します。  
   
 2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "52753714"
   
 #### <a name="to-change-a-column-filter-to-remove-columns-for-an-article-published-in-a-merge-publication"></a>マージ パブリケーションでパブリッシュされたアーティクルに対して、列を削除するための列フィルターを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースで、削除する各列に対して [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) を一度ずつ実行します。 **@column** に列名を指定し、**@operation** に **drop** を指定し、**@force_invalidate_snapshot** と **@force_reinit_subscription** の両方に **1**を指定します。  
+1.  パブリッシャー側のパブリケーション データベースで、削除する各列に対して [sp_mergearticlecolumn](/sql/relational-databases/system-stored-procedures/sp-mergearticlecolumn-transact-sql) を一度ずつ実行します。 **@column** に列名を指定し、 **@operation** に **drop** を指定し、 **@force_invalidate_snapshot** と **@force_reinit_subscription** の両方に **1**を指定します。  
   
 2.  パブリケーションに対してスナップショット エージェント ジョブを再実行し、更新済みスナップショットを生成します。  
   
@@ -135,7 +135,7 @@ ms.locfileid: "52753714"
   
  [!code-sql[HowTo#sp_AddMergeArticle](../../../snippets/tsql/SQL15/replication/howto/tsql/createmergepub.sql#sp_addmergearticle)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリケーションとアーティクルのプロパティの変更](change-publication-and-article-properties.md)   
  [パブリッシュされたデータのフィルター処理](filter-published-data.md)   
  [マージ レプリケーション用にパブリッシュされたデータのフィルター処理](../merge/filter-published-data-for-merge-replication.md)  

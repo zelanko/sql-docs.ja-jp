@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0a61931404c298824bbfd29187470bef6875ccfa
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52524462"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209322"
 ---
 # <a name="dimension-relationships"></a>ディメンション リレーションシップ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "52524462"
  ディメンションとメジャー グループ間のリレーション シップは、そのリレーション シップに参加しているディメンション テーブルとファクト テーブル、および特定のメジャー グループに含まれているディメンションの粒度を指定する粒度属性で構成されます。  
   
 ## <a name="regular-dimension-relationships"></a>標準ディメンションのリレーションシップ  
- ディメンションのキー列が直接ファクト テーブルと結合されている場合、キューブ ディメンションとメジャー グループ間には標準ディメンションのリレーションシップが存在します。 この直接的なリレーションシップは、基になるリレーショナル データベース、プライマリ キーと外部キー リレーションシップに基づきますが、データ ソース ビューで定義されている論理リレーションシップに基づくこともあります。 標準ディメンションのリレーションシップは、従来のスター スキーマ デザインにおけるディメンション テーブルとファクト テーブル間のリレーションシップを表します。 通常のリレーションシップの詳細については、[標準のリレーションシップとファクト リレーションシップのプロパティを定義](../../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)を参照してください。  
+ ディメンションのキー列が直接ファクト テーブルと結合されている場合、キューブ ディメンションとメジャー グループ間には標準ディメンションのリレーションシップが存在します。 この直接的なリレーションシップは、基になるリレーショナル データベース、プライマリ キーと外部キー リレーションシップに基づきますが、データ ソース ビューで定義されている論理リレーションシップに基づくこともあります。 標準ディメンションのリレーションシップは、従来のスター スキーマ デザインにおけるディメンション テーブルとファクト テーブル間のリレーションシップを表します。 通常のリレーションシップの詳細については、次を参照してください。[標準のリレーションシップとファクト リレーションシップのプロパティを定義](../../analysis-services/multidimensional-models/define-a-regular-relationship-and-regular-relationship-properties.md)します。  
   
 ## <a name="reference-dimension-relationships"></a>参照ディメンション リレーションシップ  
  次の図に示すように、キューブ ディメンションのキー列が別のディメンション テーブルのキーを使用して間接的にファクト テーブルに結合される場合は、このキューブ ディメンションとメジャー グループ間には参照ディメンションのリレーションシップが存在します。  
@@ -42,7 +42,7 @@ ms.locfileid: "52524462"
   
  ![論理図、参照されるディメンション リレーションシップ](../../analysis-services/multidimensional-models-olap-logical-cube-objects/media/as-refdimension2.gif "論理図、参照されるディメンション リレーションシップ")  
   
- 参照リレーションシップの詳細については、[参照リレーションシップと参照リレーションシップのプロパティを定義](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)を参照してください。  
+ 参照リレーションシップの詳細については、次を参照してください。[参照リレーションシップと参照リレーションシップのプロパティを定義](../../analysis-services/multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)します。  
   
 ## <a name="fact-dimension-relationships"></a>ファクト ディメンションのリレーションシップ  
  ファクト ディメンションは逆ディメンションとも呼ばれますが、ディメンション テーブルの属性列ではなくファクト テーブルの属性列で構築される標準ディメンションです。 重複部分を減らすために、有用な多次元データがファクト テーブルに格納されることがあります。 たとえば、次の図、 **FactResellerSales** 、ファクト テーブルから、[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]サンプル データベース。  
@@ -59,7 +59,7 @@ ms.locfileid: "52524462"
 > [!NOTE]  
 >  ファクト ディメンションは、ファクト リレーションシップが参照するメジャー グループが更新されるたびに増分更新する必要があります。 ファクト ディメンションが ROLAP ディメンションの場合、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理エンジンがすべてのキャッシュを削除し、メジャー グループの増分処理を行います。  
   
- ファクト リレーションシップの詳細については、[ファクト リレーションシップとファクト リレーションシップのプロパティを定義](../../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)を参照してください。  
+ ファクト リレーションシップの詳細については、次を参照してください。[ファクト リレーションシップとファクト リレーションシップのプロパティを定義](../../analysis-services/multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)します。  
   
 ## <a name="many-to-many-dimension-relationships"></a>多対多ディメンションのリレーションシップ  
  ほとんどのディメンションでは、各ファクトは一意のディメンション メンバーと結合していますが、1 つのディメンション メンバーは複数のファクトと関連付けることができます。 リレーショナル データベース用語では、これを一対多のリレーションシップと呼びます。 ただし、多くの場合、1 つのファクトを複数のディメンション メンバーと結合すると便利です。 たとえば、銀行の顧客は複数の口座 (当座預金口座、普通預金口座、クレジット カードの口座、および投資口座) を持つ場合がありますが、1 つの口座に対し、共同所有者がいたり、複数の所有者がいたりするケースもあります。 このようなリレーションシップから作成された顧客ディメンションには、1 回の口座取引に関連付けられるメンバーが複数存在します。  
@@ -71,7 +71,7 @@ ms.locfileid: "52524462"
 > [!NOTE]  
 >  上の図に示したように、多対多ディメンションのリレーションシップをサポートするには、データ ソース ビューで、関係するすべてのテーブル間に外部キー リレーションシップを確立する必要があります。 それができないことで、リレーションシップを確立するときに正しい中間メジャー グループを選択する、**ディメンションの使用法**ディメンション デザイナーのタブ。  
   
- 多対多リレーションシップの詳細については、[定義多対多リレーションシップと多対多リレーションシップのプロパティ](../../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)を参照してください。  
+ 多対多リレーションシップの詳細については、次を参照してください。[定義多対多リレーションシップと多対多リレーションシップのプロパティ](../../analysis-services/multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ディメンション &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  

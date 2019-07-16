@@ -1,5 +1,5 @@
 ---
-title: DMX を使用したドリルスルー クエリを作成 |Microsoft ドキュメント
+title: DMX を使用したドリルスルー クエリの作成 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6616f90f475da91f3f5c38c0f5922d16d72a5408
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014499"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210147"
 ---
 # <a name="create-drillthrough-queries-using-dmx"></a>DMX を使用したドリルスルー クエリの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,8 +43,8 @@ WHERE [Model Region] = 'M200 Pacific'
   
  この例では、別名を使用して構造列の名前が変更されています。 構造列に別名を割り当てないと、'Expression' という名前で列が返されます。 これはすべての名前のない列に対する既定の動作です。  
   
-## <a name="see-also"></a>参照  
- [ドリルスルー クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
+## <a name="see-also"></a>関連項目  
+ [ドリルスルー クエリ (データ マイニング)](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)   
  [マイニング構造でのドリルスルー](../../analysis-services/data-mining/drillthrough-on-mining-structures.md)  
   
   

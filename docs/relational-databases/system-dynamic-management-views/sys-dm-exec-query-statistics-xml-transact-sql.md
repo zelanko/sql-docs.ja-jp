@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fdc7659e-df41-488e-b2b5-0d79734dfecb
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 63e1d22670929448110083c31e9900e462d576bc
-ms.sourcegitcommit: 671370ec2d49ed0159a418b9c9ac56acf43249ad
+ms.openlocfilehash: 06091ffc26ea036a4a0bd7e30196545bcaca60d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/15/2019
-ms.locfileid: "58072306"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936944"
 ---
 # <a name="sysdmexecquerystatisticsxml-transact-sql"></a>sys.dm_exec_query_statistics_xml (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -49,16 +48,22 @@ sys.dm_exec_query_statistics_xml(session_id)
 
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|
-|session_id|**smallint**|セッションの ID。 Null を許容しません。|
+|session_id|**smallint**|セッションの ID を指定します。 Null を許容しません。|
 |request_id|**int**|要求の ID。 Null を許容しません。|
-|sql_handle|**varbinary(64)**|要求の SQL テキストのハッシュ マップ。 Null 値を許容します。|
-|plan_handle|**varbinary(64)**|クエリ プランのハッシュ マップ。 Null 値を許容します。|
-|query_plan|**xml**|Showplan XML 部分の統計を使用します。 Null 値を許容します。|
+|sql_handle|**varbinary(64)**|バッチを一意に識別するトークンまたはクエリの一部であるストアド プロシージャです。 Null 値を許容します。|
+|plan_handle|**varbinary(64)**|現在実行しているバッチのクエリ実行プランを一意に識別するトークンです。 Null 値を許容します。|
+|query_plan|**xml**|ランタイムで指定されているクエリの実行プランのプラン表示の表現が含まれて*plan_handle*部分的な統計情報を格納しています。 プラン表示は XML 形式です。 含まれているなどのアドホック バッチごとに 1 つのプランが生成された[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント、ストアド プロシージャの呼び出し、およびユーザー定義関数の呼び出し。 Null 値を許容します。|
 
 ## <a name="remarks"></a>コメント
 このシステム関数は [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降で利用可能です。 サポート技術情報を参照してください[3190871。](https://support.microsoft.com/en-us/help/3190871)
 
-このシステム関数が両方の下で動作**標準**と**軽量**実行統計プロファイリング インフラストラクチャをクエリします。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-statistics-xml-transact-sql.md)」を参照してください。  
+このシステム関数が両方の下で動作**標準**と**軽量**実行統計プロファイリング インフラストラクチャをクエリします。 詳細については、「[クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)」を参照してください。  
+
+次の条件では、プラン表示出力が返されない、 **query_plan**の返されたテーブルの列**sys.dm_exec_query_statistics_xml**:  
+  
+-   指定した場合は、クエリ プランが対応*session_id*が実行できなく、 **query_plan**返されるテーブルの列が null です。 プラン ハンドルがキャプチャされた、と共に使用された場合との間の遅延時間がある場合にこの状態が発生するなど、 **sys.dm_exec_query_statistics_xml**します。  
+    
+許可される入れ子のレベルの数の制限により、 **xml**データ型、 **sys.dm_exec_query_statistics_xml**を満たす、または入れ子になった要素のレベルが 128 を超えるクエリ プランを返すことはできません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンでは、この条件が原因でクエリ プランが返されず、エラー 6335 が生成されます。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] Service Pack 2 および以降のバージョンで、 **query_plan**列は NULL を返します。   
 
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW SERVER STATE` 権限が必要です。  
@@ -90,7 +95,7 @@ CROSS APPLY sys.dm_exec_query_statistics_xml(session_id);
 GO  
 ```   
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
   [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [データベース関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/database-related-dynamic-management-views-transact-sql.md)  

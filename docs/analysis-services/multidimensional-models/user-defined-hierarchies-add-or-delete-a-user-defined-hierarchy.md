@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 89f92c07753462fc26cb6de7447395f02e571e7a
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57578714"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164907"
 ---
 # <a name="user-defined-hierarchies---add-or-delete-a-user-defined-hierarchy"></a>ユーザー定義階層 - ユーザー定義階層を追加または削除する
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   ディメンションでのユーザー定義階層の追加と削除は、 **のディメンション デザイナーにある** [ディメンション構造] [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]タブで実行します。  
   
- ユーザー定義階層を追加した場合、この階層は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスでインスタンス化され、ディメンションが処理されるまで、ユーザーが使用することはできません。 詳細については、[多次元モデル データベース](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)と[多次元モデルの処理&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)を参照してください。  
+ ユーザー定義階層を追加した場合、この階層は [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスでインスタンス化され、ディメンションが処理されるまで、ユーザーが使用することはできません。 詳細については、次を参照してください。[多次元モデル データベース](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)と[多次元モデルの処理&#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)します。  
   
 ### <a name="to-add-a-user-defined-hierarchy-to-a-dimension"></a>ディメンションにユーザー定義階層を追加するには  
   
@@ -47,11 +47,11 @@ ms.locfileid: "57578714"
   
 -   **[ディメンション構造]** タブの **[階層]** ペインで、削除するユーザー定義階層をクリックします。 ツール バーの **[削除]** をクリックします。  
   
-     - - または -  
+     - \- または -  
   
 -   **[階層]** ペインで、削除するユーザー定義階層を右クリックし、 **[削除]** をクリックします。  
   
-     - - または -  
+     - \- または -  
   
 -   ユーザー定義階層をデザイン画面外にドラッグします。  
   
