@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f5ba97f90b877896d68cd62598f11d0845fb698e
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38057850"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209529"
 ---
 # <a name="client-libraries-data-providers-used-for-analysis-services-connections"></a>Analysis Services 接続に使用されるクライアント ライブラリ (データ プロバイダー)
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -28,7 +28,7 @@ Analysis Services とも呼ばれる 3 つのクライアント ライブラリ�
 
 最新を取得するを参照してください。 [Azure Analysis Services に接続するためのクライアント ライブラリ](https://docs.microsoft.com/azure/analysis-services/analysis-services-data-providers)します。 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services への接続](../../analysis-services/instances/connect-to-analysis-services.md)  
   
   

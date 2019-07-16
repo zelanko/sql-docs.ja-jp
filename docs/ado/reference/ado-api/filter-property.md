@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 80263a7a-5d21-45d1-84fc-34b7a9be4c22
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d68f0e74e4bbfb275cbe23641c72eca4c941559
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff06bc27e765945d1cca74b5f8401e0caadf6b17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918635"
 ---
 # <a name="filter-property"></a>Filter プロパティ
 内のデータのフィルターを示します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -102,7 +101,7 @@ ms.locfileid: "66697968"
 
 [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [Filter および RecordCount プロパティの例 (VB)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vb.md)
 [Filter および RecordCount プロパティの例 (vc++)](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-vc.md)

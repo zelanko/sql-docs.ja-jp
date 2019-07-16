@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1b5dfd9cf062e5767606d83c3beb8a25b36387f1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: eec8b91bbb7d90483b627aebddb7088bc80cb1ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538224"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912892"
 ---
 # <a name="spdetachdb-transact-sql"></a>sp_detach_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 `[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` デタッチされているデータベースに関連付けられているフルテキスト インデックス ファイルをデータベースの中に削除しないを指定します。 操作をデタッチします。 *KeepFulltextIndexFile*は、 **nvarchar (10)** 値、既定値は**true**します。 場合*KeepFulltextIndexFile*は**false**データベースに関連付けられているフルテキスト インデックスのすべてのファイルおよびデータベースが読み取り専用でない限り、フルテキスト インデックスのメタデータを削除します。 NULL の場合、または**true**、フルテキスト関連するメタデータが保持されます。  
   
 > [!IMPORTANT]
->  **@keepfulltextindexfile**パラメーターは将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業でこのパラメーターを使用しないようにし、できるだけ早くこのパラメーターを使用されているアプリケーションを変更します。  
+>  **@keepfulltextindexfile** パラメーターは将来のバージョンで削除される[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 新しい開発作業でこのパラメーターを使用しないようにし、できるだけ早くこのパラメーターを使用されているアプリケーションを変更します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -67,7 +66,7 @@ sp_detach_db [ @dbname= ] 'database_name'
  データベースがデタッチされると、そのすべてのメタデータが削除されます。 データベースが、任意のログイン アカウントの既定のデータベースであった場合**マスター**既定のデータベースになります。  
   
 > [!NOTE]  
->  すべてのログイン アカウントの既定のデータベースを表示する方法については、[sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)を参照してください。 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
+>  すべてのログイン アカウントの既定のデータベースを表示する方法については、次を参照してください。 [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)します。 使用することが必要なアクセス許可があれば、 [ALTER LOGIN](../../t-sql/statements/alter-login-transact-sql.md)に新しい既定のデータベースをログインに割り当てます。  
   
 ## <a name="restrictions"></a>制限  
  次のいずれかに該当する場合、データベースをデタッチできません。  

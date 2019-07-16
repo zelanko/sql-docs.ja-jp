@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 55d273c4-ccee-48ef-ba90-8893d04313c8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e2b83c403d9798a8009556bf9fe21a0be0a5a0da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69bce043f7c5ce72de37e6e085e57baccd8c4864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920358"
 ---
 # <a name="bookmarkenum"></a>BookmarkEnum
 操作の開始位置を示すブックマークを指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adBookmarkCurrent**|0|現在のレコードから開始します。|  
 |**adBookmarkFirst**|1|最初のレコードから開始します。|  

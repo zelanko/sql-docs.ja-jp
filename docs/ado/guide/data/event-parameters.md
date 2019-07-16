@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: bd5c5afa-d301-4899-acda-40f98a6afa4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2912328aa61437b663a290952deaaea7b5c06bca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26caf2b54b4f0affbbe7cdc58fa2bf742f0d4101
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700768"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925367"
 ---
 # <a name="event-parameters"></a>イベント パラメーター
 すべてのイベント ハンドラーでは、イベント ハンドラーを制御する状態パラメーターがあります。 完全なイベントは、このパラメーターもイベントを生成する操作の成否を示すために使用されます。 最も包括的なイベントは、エラーが発生した場合をし、操作を実行するために使用する ADO オブジェクトを参照する 1 つまたは複数のオブジェクトのパラメーターに関する情報を提供するエラー パラメーターを指定します。 たとえば、 [ExecuteComplete](../../../ado/reference/ado-api/executecomplete-event-ado.md)イベントにはオブジェクトのパラメーターが含まれています、**コマンド**、**レコード セット**、および**接続**オブジェクトイベントに関連付けられています。 Microsoft® Visual Basic® の次の例では、pCommand、pRecordset、および表す pConnection オブジェクトを参照できます、**コマンド**、 **Recordset**、および**の接続**オブジェクトによって使用される、 **Execute**メソッド。  

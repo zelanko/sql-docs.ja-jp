@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 92905044-579f-4c38-bca6-f8bd5b239c20
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58cbba2bb39807dd242cee925ce23b2f953624e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c580006938c4180ccd0f575af81f687de5d6a630
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922010"
 ---
 # <a name="troubleshooting-rds"></a>RDS のトラブルシューティング
 > [!IMPORTANT]
@@ -38,7 +37,7 @@ ms.locfileid: "66718591"
   
 -   [ログ ファイルの使用領域の最小化](../../../ado/guide/remote-data-service/minimizing-log-file-space-usage.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 
 
