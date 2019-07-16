@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: f3592f1494661fa603e6dc252d3cd2e10093c24e
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 715fe6144cc430e545feb3c484d148531cff6ec9
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207347"
 ---
 # <a name="create-measures"></a>メジャーを作成する
 
@@ -31,7 +31,7 @@ ms.locfileid: "57685649"
   
 このレッスンを完了するまでに時間を推定するには。**30 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 5: 計算列を作成](../tutorial-tabular-1400/as-lesson-5-create-calculated-columns.md)です。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "57685649"
     |DiscountAmount|InternetTotalDiscountAmount|Sum|=SUM([DiscountAmount])|  
     |TotalProductCost|InternetTotalProductCost|Sum|=SUM([TotalProductCost])|  
     |SalesAmount|InternetTotalSales|Sum|=SUM([SalesAmount])|  
-    |Margin|InternetTotalMargin|Sum|=SUM([Margin])|  
+    |余白|InternetTotalMargin|Sum|=SUM([Margin])|  
     |TaxAmt|InternetTotalTaxAmt|Sum|=SUM([TaxAmt])|  
     |Freight|InternetTotalFreight|Sum|=SUM([Freight])|  
   

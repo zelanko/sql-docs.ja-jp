@@ -15,20 +15,19 @@ helpviewer_keywords:
 ms.assetid: e06da1e2-303f-41b2-a3b0-61e233da152c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1ba7fe546f7ac8e1a036fc8fe7e5f523ebf09d4c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d3ad005a4c26a033f6c97d97def4cd55d867c14e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719211"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918666"
 ---
 # <a name="fieldstatusenum"></a>FieldStatusEnum
 指定します、[状態](../../../ado/reference/ado-api/status-property-ado-field.md)の[フィールド オブジェクト](../../../ado/reference/ado-api/field-object.md)します。  
   
  **AdFieldPending\*** 値は、設定されていない状態の原因し、その他の状態値と組み合わせることもなった操作を示します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adFieldAlreadyExists**|26|指定したフィールドが既に存在することを示します。|  
 |**adFieldBadStatus**|12|ADO から OLE DB プロバイダーに、無効な状態の値が送信されたことを示します。 考えられる原因は、OLE DB 1.0 または 1.1 プロバイダー、または不適切な組み合わせた[値](../../../ado/reference/ado-api/value-property-ado.md)と[状態](../../../ado/reference/ado-api/status-property-ado-field.md)します。|  

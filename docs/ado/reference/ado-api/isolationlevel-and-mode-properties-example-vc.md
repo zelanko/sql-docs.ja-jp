@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 92ddec5d-e3dc-4e8e-997a-c5417cceab69
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 14e1012530745e0e695c70efaf8b1b1e16b8a064
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb39288499e2a78523ca29f2e1e4feff4ea9a310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932318"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vc"></a>IsolationLevel および Mode プロパティの例 (vc++)
 この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)、排他的な接続を開き、プロパティ、および[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離を実行したトランザクションを開きます。  
@@ -244,6 +243,6 @@ void PrintComError(_com_error &e) {
 **タマネギ、Leeks とガーリック トースト:地中海 - trad_cook の料理のシークレット**  
 **バッキンガム Palace 台所 - trad_cook で 50 年**  
 **寿司、すべてのユーザーですか?-trad_cook**   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [IsolationLevel プロパティ](../../../ado/reference/ado-api/isolationlevel-property.md)   
  [Mode プロパティ (ADO)](../../../ado/reference/ado-api/mode-property-ado.md)

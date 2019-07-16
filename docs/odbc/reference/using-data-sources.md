@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: d5550619-22b2-4b16-bd08-fbabb6554c40
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c898cb5cd8c9998d9126ec468a2b43587e2e279a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52015cb202f46c50c16dcab408bed7761f0925db
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951801"
 ---
 # <a name="using-data-sources"></a>データ ソースの使用
 通常、データ ソースが、エンドユーザーによって作成、またはプログラムでの技術者と呼ばれる、 *ODBC アドミニストレーター*します。 Odbc データ ソース アドミニストレーターでは、ドライバーを使用するユーザーを要求、そのドライバーを呼び出します。 ドライバーでは、データ ソースに接続するために必要な情報を要求するダイアログ ボックスが表示されます。 ユーザー情報を入力すると、ドライバーは、システムでそれを格納します。  

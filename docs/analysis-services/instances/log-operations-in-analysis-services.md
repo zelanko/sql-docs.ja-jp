@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9f597f1968f947b9e0dd792568ea59f42af1d2a0
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52521092"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209436"
 ---
 # <a name="log-operations-in-analysis-services"></a>Analysis Services でのログ操作
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -40,13 +40,13 @@ ms.locfileid: "52521092"
 ##  <a name="bkmk_location"></a> ログの場所と種類  
  Analysis Services では、次に示すログが提供されています。  
   
-|ファイルの名前または場所|型|使用目的|オン (既定)|  
+|ファイルの名前または場所|種類|使用目的|オン (既定)|  
 |---------------------------|----------|--------------|-------------------|  
-|Msmdsrv.log|エラー ログ|ルーチン監視と基本的なトラブルシューティング|はい|  
+|Msmdsrv.log|エラー ログ|ルーチン監視と基本的なトラブルシューティング|[はい]|  
 |リレーショナル データベースの OlapQueryLog テーブル|クエリ ログ|[使用法の最適化] ウィザードでの入力の収集|いいえ|  
 |SQLDmp\<guid > .mdmp ファイル|クラッシュと例外|高度なトラブルシューティング|いいえ|  
   
- このトピックで説明されていない追加の情報リソースには、次のリンクを強くお勧めします。[Microsoft サポートからのデータ収集のヒントの初期](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)します。  
+ このトピックで記載されていない追加の情報リソースには、次のリンクを強くお勧めします。[Microsoft サポートからのデータ収集のヒントの初期](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)します。  
   
 ##  <a name="bkmk_general"></a> ログ ファイルの構成設定に関する一般情報  
  各ログのセクションは msmdsrv.ini サーバー構成ファイル内にあります。このファイルは \Program Files\Microsoft SQL Server\MSAS13.MSSQLSERVER\OLAP\Config フォルダーにあります。 ファイルの編集手順については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md) 」を参照してください。  
@@ -107,7 +107,7 @@ ms.locfileid: "52521092"
   
 2.  Analysis Services のサービス アカウントに、データベースに対する十分なアクセス許可を付与します。 アカウントには、テーブルの作成、テーブルへの書き込み、テーブルからの読み取りの権限が必要です。  
   
-3.  SQL Server Management Studio で、 **[Analysis Services]** | **[プロパティ]** | **[全般]** の順にクリックして、 **[CreateQueryLogTable]** を [true] に設定します。  
+3.  SQL Server Management Studio で、 **[Analysis Services]**  |  **[プロパティ]**  |  **[全般]** の順にクリックして、 **[CreateQueryLogTable]** を [true] に設定します。  
   
 4.  (省略可能) クエリを異なるレートでサンプリングする場合、またはテーブルに異なる名前を使用する場合は、 **QueryLogSampling** または **QueryLogTableName** を変更します。  
   
@@ -146,11 +146,11 @@ ms.locfileid: "52521092"
   
  **クラッシュ レポートの構成**  
   
- 特に Microsoft サポートから指示がない限り、ほとんどの管理者は既定の設定を使用します。 このサポート技術情報は古いものですが、ダンプ ファイルの構成手順として今も使用されています。[メモリ ダンプ ファイルを生成する Analysis Services を構成する方法](http://support.microsoft.com/kb/919711)します。  
+ 特に Microsoft サポートから指示がない限り、ほとんどの管理者は既定の設定を使用します。 この以前のサポート技術情報の記事では、ダンプ ファイルを構成する方法を説明が使用されます。[メモリ ダンプ ファイルを生成する Analysis Services を構成する方法](http://support.microsoft.com/kb/919711)します。  
   
  最も変更される可能性が高い構成設定は、メモリ ダンプ ファイルを生成するかどうかの指定に使用する **CreateAndSendCrashReports** の設定です。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|メモリ ダンプ ファイルをオフにします。 「Exception (例外)」セクションの他のすべての設定は無視されます。|  
 |1|(既定) メモリ ダンプ ファイルを有効にしますが送信しません。|  
@@ -173,11 +173,11 @@ ms.locfileid: "52521092"
   
 -   msmdsrv log ファイルのサイズと数を制御するには、msmdsrv.log ファイルを構成します。 既定では設定が無効になっているため、必ずインストール後の手順として設定を追加してください。 このトピックの [MSMDSRV サービス ログ ファイル](#bkmk_msmdsrv) を参照してください。  
   
--   サーバーの操作に関する情報の取得に使用するリソースについて知るには、マイクロソフト カスタマー サポートからこのブログの投稿を確認します。[初期データの収集](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
+-   サーバーの操作に関する情報の取得に使用するリソースについては、マイクロソフト カスタマー サポートからこのブログの投稿を確認してください。[初期データの収集](http://blogs.msdn.com/b/as_emea/archive/2012/01/02/initial-data-collection-for-troubleshooting-analysis-services-issues.aspx)  
   
 -   キューブのクエリを実行している人を確認するには、クエリ ログではなく ASTrace2012 を使用します。 通常、クエリ ログは、[使用法に基づく最適化] ウィザードへの入力に使用され、クエリ ログでキャプチャしたデータは読み取りや解釈が簡単ではありません。 ASTrace2012 は、クエリ操作のキャプチャに広く使われているコミュニティ ツールです。 参照してください[Microsoft SQL Server コミュニティ サンプル。Analysis Services](https://sqlsrvanalysissrvcs.codeplex.com/)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services インスタンス管理](../../analysis-services/instances/analysis-services-instance-management.md)   
  [SQL Server Profiler による Analysis Services の監視の概要](../../analysis-services/instances/introduction-to-monitoring-analysis-services-with-sql-server-profiler.md)   
  [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)  

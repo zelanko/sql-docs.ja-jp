@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eee2e859abf5b7924cb072c4653ac3e83e7b7824
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072309"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163172"
 ---
 # <a name="bi-directional-cross-filters-in-tabular-models"></a>表形式モデルの双方向クロス フィルターします。
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "53072309"
   
  設定は、プロジェクトの作成時にプロジェクト レベルで評価されるので、既定値を双方向に変更した場合、次のプロジェクトの作成時にその効果を確認できます。  
   
-1.  SSDT で、 **[ツール]** > **[オプション]** > **[Analysis Services Tabular Designers]** > **[新しいプロジェクトの設定]** の順に選択します。  
+1.  SSDT で、 **[ツール]**  >  **[オプション]**  >  **[Analysis Services Tabular Designers]**  >  **[新しいプロジェクトの設定]** の順に選択します。  
   
 2.  **[既定のフィルターの方向]** を **[一方向]** または **[双方向]** に設定します。  
   
  既定値はモデルで変更することもできます。  
   
-1.  ソリューション エクスプローラーで、 **[Model.bim]** > **[プロパティ]** の順に選択します。  
+1.  ソリューション エクスプローラーで、 **[Model.bim]**  >  **[プロパティ]** の順に選択します。  
   
 2.  **[既定のフィルターの方向]** を **[一方向]** または **[双方向]** に設定します。  
   
@@ -99,17 +99,17 @@ ms.locfileid: "53072309"
   
 1.  SQL Server Data Tools for Visual Studio 2015 を起動します。  
   
-2.  **[ファイル]** > **[新規作成]** > **[プロジェクト]** > **[Analysis Services 表形式モデル]** の順にクリックします。  
+2.  **[ファイル]**  >  **[新規作成]**  >  **[プロジェクト]**  >  **[Analysis Services 表形式モデル]** の順にクリックします。  
   
 3.  Tabular Model Designer で、ワークスペース データベースを、表形式のサーバー モードの SQL Server 2016 Preview Analysis Services インスタンスに設定します。  
   
 4.  モデルの互換性レベルに設定することを確認**SQL Server 2016 RTM (1200)** またはそれ以降。  
   
-     **[OK]** をクリックすると、プロジェクトが作成されます。  
+     **[OK]** をクリックして、プロジェクトを作成します。  
   
 ### <a name="add-data"></a>データを追加する  
   
-1.  **[モデル]** > **[データ ソースからのインポート]** > **[Microsoft SQL Server]** の順にクリックします。  
+1.  **[モデル]**  >  **[データ ソースからのインポート]**  >  **[Microsoft SQL Server]** の順にクリックします。  
   
 2.  サーバー、データベース、認証方法を指定します。  
   
@@ -142,36 +142,36 @@ ms.locfileid: "53072309"
   
  ![SSAS BIDI 2 モデル](../../analysis-services/tabular-models/media/ssas-bidi-2-model.PNG "SSAS BIDI 2 モデル")  
   
- **[テーブル]** > **[リレーションシップの管理]** の順にクリックすると、同じ情報をテーブル レイアウトで表示することもできます。  
+ **[テーブル]**  >  **[リレーションシップの管理]** の順にクリックすると、同じ情報をテーブル レイアウトで表示することもできます。  
   
  ![ssas bidi 3 defaultrelationships](../../analysis-services/tabular-models/media/ssas-bidi-3-defaultrelationships.PNG "ssas bidi 3 defaultrelationships")  
   
 ### <a name="create-measures"></a>メジャーを作成する  
  ディメンション データのさまざまな側面を売り上げ高の合計を集計する必要があります。 **DimProduct** で、製品数をカウントするメジャーを作成し、特定の年、特定の地域、または顧客タイプの売上に関与する製品の数を示す、製品販売促進の分析に使用できます。  
   
-1.  **[モデル]** > **[モデル ビュー]** > **[ダイアグラム ビュー]** をクリックします。  
+1.  **[モデル]**  >  **[モデル ビュー]**  >  **[ダイアグラム ビュー]** をクリックします。  
   
 2.  **[FactOnlineSales]** をクリックします。  
   
 3.  **[SalesAmount]** 列を選択します。  
   
-4.  **[列]** > **[オート SUM]** > **[合計]** の順にクリックして、売上のメジャーを作成します。  
+4.  **[列]**  >  **[オート SUM]**  >  **[合計]** の順にクリックして、売上のメジャーを作成します。  
   
 5.  **[DimProduct]** をクリックします。  
   
 6.  **[ProductKeycolumn]** を選択します。  
   
-7.  **[列]** > **[オート SUM]** > **[DistinctCount]** の順にクリックして、一意の製品のメジャーを作成します。  
+7.  **[列]**  >  **[オート SUM]**  >  **[DistinctCount]** の順にクリックして、一意の製品のメジャーを作成します。  
   
 ### <a name="analyze-in-excel"></a>[Excel で分析]  
   
-1.  **[モデル]** > **[Excel で分析]** の順にクリックして、すべてのデータをピボットテーブルにまとめます。  
+1.  **[モデル]**  >  **[Excel で分析]** の順にクリックして、すべてのデータをピボットテーブルにまとめます。  
   
 2.  フィールドの一覧から先ほど作成した 2 つのメジャーを選択します。  
   
-3.  **[製品]** > **[製造元]** を選択します。  
+3.  **[製品]**  >  **[製造元]** を選択します。  
   
-4.  **[Date]** > **[Calendar Year]** の順に選択します。  
+4.  **[Date]**  >  **[Calendar Year]** の順に選択します。  
   
  売上が年と製造元で予想どおりに分類されていることがわかります。 これは、既定のフィルター コンテキスト間**FactOnlineSales**、 **DimProduct**、および**DimDate**リレーションシップの「多」側のメジャーを正常に動作します。  
   
@@ -179,7 +179,7 @@ ms.locfileid: "53072309"
   
 ### <a name="change-the-cross-filter"></a>クロス フィルターの変更  
   
-1.  モデルに戻り、 **[テーブル]** > **[リレーションシップの管理]** の順に選択します。  
+1.  モデルに戻り、 **[テーブル]**  >  **[リレーションシップの管理]** の順に選択します。  
   
 2.  **FactOnlineSales** と **DimProduct**の間のリレーションシップを編集します。  
   

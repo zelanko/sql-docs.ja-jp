@@ -7,13 +7,12 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e036aa2a4c104eaf92e3e9aaf4513f2542bf23b4
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: cf64f8ad137f8dea94bbc08d4a72981393de44ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961908"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの Python データの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "58511689"
 このチュートリアルで使用する Python コードのすべては、作成して、Management Studio で実行するストアド プロシージャにラップされます。
 
 > [!NOTE]
-> このチュートリアルは、R と Python の両方で使用できます。 R のバージョンについては、[in-database analytics R 開発者向け](sqldev-in-database-r-for-sql-developers.md)を参照してください。
+> このチュートリアルは、R と Python の両方で使用できます。 R のバージョンについては、次を参照してください。 [in-database analytics R 開発者向け](sqldev-in-database-r-for-sql-developers.md)します。
 
 ## <a name="overview"></a>概要
 
