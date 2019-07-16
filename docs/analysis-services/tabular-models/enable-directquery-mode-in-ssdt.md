@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 83fa1cf8d99f18cd82e00b4020a2d846b1bdfdc6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206301"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162888"
 ---
 # <a name="enable-directquery-mode-in-ssdt"></a>SSDT での DirectQuery モードの有効化
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,7 +42,7 @@ DirectQuery モードを有効にする前にモデルが部分的または完�
 テーブルごとにサンプル パーティションを作成し、サンプル データを追加できるため、作成時にモデルの動作を検証することができます。 追加したすべてのサンプル データは、 **[Excel で分析]** またはワークスペース データベースに接続できるその他のクライアント ツールで使用されます。 詳細については、「 [Design モードで DirectQuery モデルにサンプル データを追加する](../../analysis-services/tabular-models/add-sample-data-to-a-directquery-model-in-design-mode.md) 」を参照してください。  
   
 > [!TIP]
->  空のモデルの DirectQuery モードでも、各テーブルの小規模な組み込み行セットをいつでも表示できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]** > **[テーブルのプロパティ]** の順にクリックすると、50 行データセットが表示されます。  
+>  空のモデルの DirectQuery モードでも、各テーブルの小規模な組み込み行セットをいつでも表示できます。 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]で、 **[テーブル]**  >  **[テーブルのプロパティ]** の順にクリックすると、50 行データセットが表示されます。  
   
   
 ## <a name="see-also"></a>関連項目  

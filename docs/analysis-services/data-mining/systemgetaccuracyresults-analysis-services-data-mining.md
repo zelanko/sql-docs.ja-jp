@@ -1,5 +1,5 @@
 ---
-title: SystemGetAccuracyResults (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: SystemGetAccuracyResults (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 54fc91b67a695110383c19422befab0d7b0f7a9d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017799"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209666"
 ---
 # <a name="systemgetaccuracyresults-analysis-services---data-mining"></a>SystemGetAccuracyResults (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -78,40 +78,40 @@ SystemGetAccuracyResults(<mining structure>,
   
  既定値は **null**です。  
   
- (省略可能)  
+ (オプション)  
   
  *target threshold*  
  予測値が正確であると見なされる最小確率を示す 0.0 ～ 1 の範囲の数値。  
   
  既定値は **null**です。これは、すべての予測が正しいと見なされることを意味します。  
   
- (省略可能)  
+ (オプション)  
   
  *テスト リスト (test list)*  
  テスト オプションを指定する文字列。 このパラメーターは将来使用するために予約されています。  
   
- (省略可能)  
+ (オプション)  
   
 ## <a name="return-type"></a>戻り値の型  
  返される行セットには、各パーティションのスコアと、すべてのモデルの集計が含まれます。  
   
  次の表は、 **GetValidationResults**によって返される列の一覧です。  
   
-|列名|Description|  
+|列名|説明|  
 |-----------------|-----------------|  
-|[モデル]|テストされたモデルの名前。 **All** は、結果がすべてのモデルの集計であることを示します。|  
+|モデル|テストされたモデルの名前。 **All** は、結果がすべてのモデルの集計であることを示します。|  
 |AttributeName|予測可能列の名前。|  
 |AttributeState|予測可能列の対象の値。<br /><br /> この列に値が含まれる場合、指定した状態の基準だけが収集されます。<br /><br /> この値が指定されていない場合や Null の場合は、予測ごとに最も可能性の高い状態の基準が計算されます。|  
 |PartitionIndex|結果が適用されるパーティションを表します。<br /><br /> このプロシージャでは、常に 0 になります。|  
-|PartitionCases|基づいた、ケースのセット内の行の数を示す整数、 *\<データ セット >* パラメーター。|  
+|PartitionCases|に基づいて、ケース セット内の行の数を示す整数を *\<データ セット >* パラメーター。|  
 |テスト|実行されたテストの種類。|  
 |[メジャー]|テストから返されたメジャーの名前。 各モデルのメジャーは、モデルの種類と、予測可能な値の型によって異なります。<br /><br /> 予測可能な型ごとに返されるメジャーの一覧については、「[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」をご覧ください。<br /><br /> 各メジャーの定義については、「[相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」をご覧ください。|  
 |値|指定したメジャーの値。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次の表は、クロス検証に使用されるマイニング構造のデータを指定するために使用できる値の例を示しています。 クロス検証にテスト ケースを使用する場合、マイニング構造には、既にテスト データセットが含まれている必要があります。 マイニング構造の作成時にテスト データセットを定義する方法の詳細については、「 [トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)」をご覧ください。  
   
-|整数値|Description|  
+|整数値|説明|  
 |-------------------|-----------------|  
 |1|トレーニング ケースのみが使用されます。|  
 |2|テスト ケースのみが使用されます。|  
@@ -154,10 +154,10 @@ CALL SystemGetAccuracyResults (
 ## <a name="requirements"></a>必要条件  
  相互検証は、 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 以降の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]でのみ使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SystemGetCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
- [SystemGetClusterCrossValidationResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
- [SystemGetClusterAccuracyResults & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
+ [SystemGetClusterCrossValidationResults (Analysis Services - データ マイニング)](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   
+ [SystemGetClusterAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclusteraccuracyresults-analysis-services-data-mining.md)  
   
   

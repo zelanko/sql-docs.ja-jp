@@ -1,5 +1,5 @@
 ---
-title: メジャー グループのリンク |Microsoft ドキュメント
+title: リンク メジャー グループ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a18e61e3c59a36fbeea576234e90ce2f54123a9b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023769"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176946"
 ---
 # <a name="linked-measure-groups"></a>リンク メジャー グループ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "34023769"
   
  リンク メジャー グループを定義または使用するには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの Windows サービス アカウントが、ソース [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスでソース キューブおよびメジャー グループに対する **ReadDefinition** アクセス権および **Read** アクセス権を持つ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データベース ロールに属しているか、またはソース [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスの [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] Administrators ロールに属している必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンク ディメンションの定義](../../analysis-services/multidimensional-models/define-linked-dimensions.md)  
   
   

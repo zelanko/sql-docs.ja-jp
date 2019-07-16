@@ -1,5 +1,5 @@
 ---
-title: セッション スコープを作成する計算されるメンバー (MDX) |Microsoft ドキュメント
+title: 計算されるメンバー (MDX) のセッション スコープの作成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 476c62ef2aa4f0aad3d65cd2b78f27fc9ae6fd7c
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021289"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176580"
 ---
-# <a name="mdx-calculated-members---session-scoped-calculated-members"></a>MDX の計算されるメンバーのセッション スコープの計算されるメンバー
+# <a name="mdx-calculated-members---session-scoped-calculated-members"></a>MDX 計算されるメンバー - セッション スコープの計算されるメンバー
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、[CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
+  多次元式 (MDX) セッション全体で使用できる計算されるメンバーを作成するには、 [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md) ステートメントを使用します。 CREATE MEMBER ステートメントを使用して作成された計算されるメンバーは、MDX セッションが閉じるまで削除されません。  
   
  このトピックで説明するように、CREATE MEMBER ステートメントの構文は非常に単純で使いやすいものです。  
   
@@ -48,7 +48,7 @@ sum(([Stores].[ByLocation].Lag(3) :
 [Stores].[ByLocation].NextMember), [Measures].[Units Sold])  
 ```  
   
-## <a name="see-also"></a>参照  
- [計算されるメンバー & #40; のクエリ スコープの作成MDX と #41 です。](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
+## <a name="see-also"></a>関連項目  
+ [クエリ スコープの計算されるメンバーの作成 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-query-scoped-calculated-members.md)  
   
   

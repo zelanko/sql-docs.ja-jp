@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 19d555e988ecc1093388d751ea9f66a720b21def
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52506042"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209745"
 ---
 # <a name="prediction-queries-data-mining"></a>Prediction Queries (Data Mining)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -147,7 +147,7 @@ FROM
   
  階層的な行セットを処理できないプロバイダーを使用している場合は、予測クエリ内で FLATTEN キーワードを使用して結果をフラット化することができます。 フラットな行セットの例などの詳細については、「[SELECT &#40;DMX&#41;](../../dmx/select-dmx.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コンテンツ クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/content-queries-data-mining.md)   
  [データ定義クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/data-definition-queries-data-mining.md)  
   
