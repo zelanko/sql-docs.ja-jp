@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7d4938bc0eac0d3a5568f668b181af1b4169de27
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52539740"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208588"
 ---
 # <a name="parent-child-dimension-attributes---unary-operators"></a>親子ディメンションの属性 - 単項演算子
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーにカスタム ロールアップを指定する、単項 (またはカスタム ロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の親子リレーションシップを含んでいるディメンションでは、親属性のすべての計算されないメンバーにカスタム ロールアップを指定する、単項 (またはカスタム ロールアップ) 演算子列を指定します。 単項演算子は、親メンバーの値が評価されるたびにメンバーに適用されます。 親属性 ( **Usage** =Parent) の**UnaryOperatorColumn**は、単項演算子を含んでいるテーブル列をデータ ソース ビューで指定します。 この列に格納されるカスタム ロールアップ演算子の値は、属性の各メンバーに適用されます。  
   
  データ ソース ビューでは、ディメンション テーブルの名前付き計算を作成し、単項演算子列として指定できます。 "+" などの単純な式は、すべてのメンバーに関して同じ演算子を返します。 ただし、すべてのメンバーに関して 1 つの演算子を返す式に限り、使用できます。  
   
@@ -40,7 +40,7 @@ ms.locfileid: "52539740"
   
  ディメンション デザイナーの **[ブラウザー]** タブでは、階層内の各メンバーの隣に単項演算子を表示できます。 書き込み許可ディメンションを使用する場合は、単項演算子を変更することもできます。 ディメンションが書き込み可能でない場合は、データ ソースを直接変更するためのツールを使用する必要があります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンションの属性のプロパティの参照](../../analysis-services/multidimensional-models/dimension-attribute-properties-reference.md)   
  [親子ディメンションのカスタム ロールアップ演算子](../../analysis-services/multidimensional-models/parent-child-dimension-attributes-custom-rollup-operators.md)   
  [ディメンション デザイナーでのビジネス インテリジェンス ウィザードの起動](../../analysis-services/multidimensional-models/database-dimensions-bi-wizard-in-dimension-designer.md)  

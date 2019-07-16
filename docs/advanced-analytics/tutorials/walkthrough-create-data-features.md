@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 609896357845aa4f466e874524b8136b34e32b9a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5a17eb0c39e45080de83e39d002d8f6693131688
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511699"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961798"
 ---
 # <a name="create-data-features-using-r-and-sql-server-walkthrough"></a>R と SQL Server (チュートリアル) を使用してデータ機能を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -30,7 +29,7 @@ ms.locfileid: "58511699"
 
 目標は、新たに作成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]一連の元の列の名前と、新しい数値機能データ*direct_distance*します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 この手順では、このチュートリアルで前の手順に基づいて継続的な R セッションを想定しています。 これらの手順で作成された接続文字列およびデータ ソース オブジェクトを使用します。 次のツールとパッケージは、スクリプトの実行に使用されます。
 
@@ -247,7 +246,7 @@ SQL 関数を呼び出すときに、どのくらいの時間のデータの変�
 > [!TIP]
 > 非常に多くの場合は、機能を使用してエンジニア リング[!INCLUDE[tsql](../../includes/tsql-md.md)]R. よりも高速になりますたとえば、T-SQL に高速ウィンドウ化と移動平均のロールバックなどの一般的なデータ サイエンス計算に適用できる、順位付け関数が含まれていますと*n*-タイル。 データとタスクに基づいて、最も効率的な方法を選択してください。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [R モデルを構築し、SQL に保存](walkthrough-build-and-save-the-model.md)
