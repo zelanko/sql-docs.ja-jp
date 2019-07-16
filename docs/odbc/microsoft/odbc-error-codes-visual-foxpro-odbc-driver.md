@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b4251f2-6fa6-49df-8abf-7cc1cc35d1c8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: af6fb682e6179f99096a86d93e3f02c7b59cb91f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4364590e908688fe094da0e7687410bdda3b97cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63244616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915776"
 ---
 # <a name="odbc-error-codes-visual-foxpro-odbc-driver"></a>ODBC エラー コード (Visual FoxPro ODBC ドライバー)
 次の表では、ODBC エラー コードの SQLSTATE 値にマップされている Visual FoxPro のエラー コードを示します。 マップの SQLSTATE 値に由来[SQLExecDirect](../../odbc/microsoft/sqlexecdirect-visual-foxpro-odbc-driver.md)と[SQLPrepare](../../odbc/microsoft/sqlprepare-visual-foxpro-odbc-driver.md)します。 その他の ODBC API の他の SQLSTATE 値がマップされていないため、 **SQLExecDirect**と**SQLPrepare** Visual FoxPro エンジンにアクセスする唯一の関数。  

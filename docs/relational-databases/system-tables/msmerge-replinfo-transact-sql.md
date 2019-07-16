@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b0924094-c0cc-49c1-869a-65be0d0465a0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cae6c84d0ca85a8cb27d8310bcc3cb02dca47f8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 045f9ab13b701b8dbd5e0895531932c21767853f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62903331"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909047"
 ---
 # <a name="msmergereplinfo-transact-sql"></a>MSmerge_replinfo (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,11 +36,11 @@ ms.locfileid: "62903331"
 |**validation_level**|**int**|サブスクリプションに対して実行する検証の種類。 指定されたレベルの検証には、これらの値のいずれかを指定できます。<br /><br /> **0** = 検証なし。<br /><br /> **1** = 行数のみの検証。<br /><br /> **2** = 行数とチェックサムの検証。<br /><br /> **3** = 行数とバイナリ チェックサムの検証。|  
 |**resync_gen**|**bigint**|サブスクリプションの再同期化で使用される世代番号。 値 **-1**サブスクリプションが再同期のマークされていないことを示します。|  
 |**login_name**|**sysname**|サブスクリプションを作成したユーザーの名前。|  
-|**hostname**|**sysname**|サブスクリプションのパーティションの生成時に、パラメーター化された行フィルターで使用される値。|  
+|**ホスト名**|**sysname**|サブスクリプションのパーティションの生成時に、パラメーター化された行フィルターで使用される値。|  
 |**merge_jobid**|**binary(16)**|サブスクリプションのマージ ジョブ ID。|  
 |**sync_info**|**int**|内部使用のみ。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

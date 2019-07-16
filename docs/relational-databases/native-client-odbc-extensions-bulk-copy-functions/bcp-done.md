@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e59b3f16-5b59-40da-880f-f3edf657d1ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a7393b4900b2942ef67f28fc6ecd9cbf3eee5d54
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 28d16d1ef5e63ee48d2e2251f5661437883c4324
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47818710"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895635"
 ---
 # <a name="bcpdone"></a>bcp_done
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -47,7 +46,7 @@ DBINT bcp_done (
 ## <a name="returns"></a>戻り値  
  最後の呼び出し後に完全に保存されている行の数[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)またはエラーが発生した場合は-1。  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
  呼び出す**bcp_done**を最後に呼び出した後[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md)または[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)します。 呼び出しに失敗する**bcp_done**エラーですべてのデータの結果をコピーした後。  
   
 ## <a name="see-also"></a>関連項目  

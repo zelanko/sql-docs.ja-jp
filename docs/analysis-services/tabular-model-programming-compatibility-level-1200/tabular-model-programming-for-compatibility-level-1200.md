@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7493c09964db2e0a8cbd17c6a2278dd554a2dcc
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579452"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207896"
 ---
 # <a name="tabular-model-programming-for-compatibility-level-1200-and-higher"></a>テーブル モデルのプログラミング互換性レベル 1200 以降
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "57579452"
 > [!NOTE]  
 >  Analysis Services 管理オブジェクト (AMO)、ADOMD.NET、および表形式オブジェクト モデル (TOM) のクライアント ライブラリは、.NET 4.0 ランタイムを対象するようになりました。   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services Developer Documentation (Analysis Services の開発者向けドキュメント)](../../analysis-services/analysis-services-developer-documentation.md)   
  [表形式のモデルのプログラミング互換性レベル 1050 から 1103](../../analysis-services/tabular-model-programming-compatibility-levels-1050-1103/tabular-model-programming-for-compatibility-levels-1050-through-1103.md)   
  [テクニカル リファレンス](../../analysis-services/powershell/technical-reference-ssas.md)[Analysis Services のアップグレード](../../database-engine/install-windows/upgrade-analysis-services.md)  

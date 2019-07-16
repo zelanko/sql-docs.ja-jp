@@ -17,11 +17,11 @@ author: stevestein
 ms.author: sstein
 manager: craigg
 ms.openlocfilehash: 526e95490644b4fddae3e02e9ee73b57c00797c1
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52786724"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68211272"
 ---
 # <a name="write-the-job-status-to-the-windows-application-log"></a>Windows アプリケーション ログへのジョブ状態の書き込み
   このトピックでは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../includes/tsql-md.md)]、または SQL Server 管理オブジェクトを使用して、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] でジョブの状態を Windows アプリケーションのイベント ログに書き込むように [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントを構成する方法について説明します。  
@@ -63,11 +63,11 @@ ms.locfileid: "52786724"
   
 4.  **[Windows アプリケーション イベント ログに書き込む]** チェック ボックスをオンにし、次のいずれかを選択します。  
   
-    -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、**[ジョブ成功時]** をクリックします。  
+    -   ジョブが正常終了したときにジョブの状態をログに記録する場合は、 **[ジョブ成功時]** をクリックします。  
   
-    -   ジョブが異常終了したときにジョブの状態をログに記録する場合は、**[ジョブ失敗時]** をクリックします。  
+    -   ジョブが異常終了したときにジョブの状態をログに記録する場合は、 **[ジョブ失敗時]** をクリックします。  
   
-    -   終了の状態にかかわらずジョブの状態をログに記録する場合は、**[ジョブ完了時]** をクリックします。  
+    -   終了の状態にかかわらずジョブの状態をログに記録する場合は、 **[ジョブ完了時]** をクリックします。  
   
 ##  <a name="SMO"></a> SQL Server 管理オブジェクトの使用  
  **ジョブの状態を Windows アプリケーション ログに書き込むには**  

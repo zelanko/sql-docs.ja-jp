@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 31844099-4b33-4dc9-84b4-bac70aa82598
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b867e4ffe4b23ee1a7195bb3c201ae05c2b6d075
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c19f2d8e75a3c9744318d65683b29d1d84857ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67907424"
 ---
 # <a name="msdistpublishers-transact-sql"></a>MSdistpublishers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62817068"
 |**security_mode**|**int**|ディストリビューターで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1** = Windows 認証。|  
 |**login**|**sysname**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証のログイン ID です。|  
 |**password**|**nvarchar(524)**|(暗号化) パスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
-|**active**|**bit**|ローカルのディストリビューターがリモート パブリッシャーによって使用するかどうかを示します。|  
+|**アクティブ**|**bit**|ローカルのディストリビューターがリモート パブリッシャーによって使用するかどうかを示します。|  
 |**信頼されています。**|**bit**|リモート パブリッシャーがローカル ディストリビューターと同じパスワードを使用するかどうかを示します。<br /><br /> **0** = A、ディストリビューターに接続するリモートのパブリッシャーでパスワードが必要です。<br /><br /> **1** = No パスワードが必要です。|  
 |**third_party**|**bit**|パブリッシャーがのインストールであるかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]:<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インストール **。1** = 異種データ ソース。|  
 |**publisher_type**|**sysname**|パブリッシャーの種類:<br /><br /> **MSSQLSERVER**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。<br /><br /> **ORACLE**標準の Oracle パブリッシャーを = です。<br /><br /> **ORACLE GATEWAY** = Oracle ゲートウェイ パブリッシャーです。|  

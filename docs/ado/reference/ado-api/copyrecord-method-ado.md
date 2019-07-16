@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b9bcf272-3c74-479f-95dd-0229a32e98fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d11a8d5d775499246bd8af709764dec3f2ad61e8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aaabb32234cefe2e3c3727ce5a18dd2d98549a77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698519"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933417"
 ---
 # <a name="copyrecord-method-ado"></a>CopyRecord メソッド (ADO)
 によって表されるエンティティのコピーを[レコード](../../../ado/reference/ado-api/record-object-ado.md)別の場所にします。  
@@ -50,7 +49,7 @@ Record.CopyRecord (Source, Destination, UserName, Password, Options, Async)
  *[オプション]*  
  任意。 A [CopyRecordOptionsEnum](../../../ado/reference/ado-api/copyrecordoptionsenum.md)の既定値を持つ値**adCopyUnspecified**します。 このメソッドの動作を指定します。  
   
- *非同期*  
+ *Async*  
  任意。 A**ブール**値と**True**、この操作を非同期にすることを指定します。  
   
 ## <a name="return-value"></a>戻り値  

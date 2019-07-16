@@ -19,11 +19,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 4af21c912ce5a703cd46f0f9b00b5dd4bda7d2d3
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54135832"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212050"
 ---
 # <a name="view-and-modify-publication-properties"></a>パブリケーション プロパティの表示および変更
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、パブリケーションのプロパティを表示および変更する方法について説明します。  
@@ -109,7 +109,7 @@ ms.locfileid: "54135832"
 1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を実行します。このとき、変更するパブリケーションのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** を実行します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot**を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription**」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription** 」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
 #### <a name="to-view-the-properties-of-a-merge-publication"></a>マージ パブリケーションのプロパティを表示するには  
   
@@ -120,7 +120,7 @@ ms.locfileid: "54135832"
 1.  変更対象のスナップショット パラメーターに新しいスナップショット プロパティを少なくとも 1 つ指定して、 [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。このとき、変更するパブリケーションのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** を実行します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、**@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、**@force_reinit_subscription** に **1** を指定します。変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[パブリケーションとアーティクルのプロパティの変更](change-publication-and-article-properties.md)」をご覧ください。  
+    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_reinit_subscription** に **1** を指定します。変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[パブリケーションとアーティクルのプロパティの変更](change-publication-and-article-properties.md)」をご覧ください。  
   
 #### <a name="to-view-the-properties-of-a-snapshot"></a>スナップショットのプロパティを表示するには  
   
@@ -187,13 +187,13 @@ ms.locfileid: "54135832"
   
  [!code-vb[HowTo#rmo_vb_ChangeMergePub_ddl](../../../snippets/visualbasic/SQL15/replication/howto/vb/rmotestenv.vb#rmo_vb_changemergepub_ddl)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データとデータベース オブジェクトのパブリッシュ](publish-data-and-database-objects.md)   
  [パブリケーションとアーティクルのプロパティの変更](change-publication-and-article-properties.md)   
  [パブリケーション データベースでのスキーマの変更](make-schema-changes-on-publication-databases.md)   
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [ドロップのアーティクルおよびパブリケーションを追加します。](add-articles-to-and-drop-articles-from-a-publication.md)   
- [表示情報とレプリケーション モニターを使用してタスクを実行します。](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
- [アーティクルのプロパティの表示と変更](view-and-modify-article-properties.md)  
+ [レプリケーション モニターを使用して情報を表示し、タスクを実行する](../monitor/view-information-and-perform-tasks-replication-monitor.md)   
+ [アーティクルのプロパティの表示および変更](view-and-modify-article-properties.md)  
   
   

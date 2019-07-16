@@ -17,11 +17,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: d8698ef84d74c98d02f0a8df0d59077fe0c7ac7b
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131192"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212036"
 ---
 # <a name="validate-replicated-data"></a>レプリケートされたデータの検証
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、サブスクライバーでデータを検証する方法について説明します。  
@@ -29,7 +29,7 @@ ms.locfileid: "54131192"
   トランザクション レプリケーションとマージ レプリケーションを使用すると、サブスクライバーのデータがパブリッシャーのデータと一致するかどうかを検証できます。 検証は、1 つのパブリケーションの特定のサブスクリプション、またはすべてのサブスクリプションに対して行うことができます。 次のいずれかの種類の検証を指定すると、ディストリビューション エージェントまたはマージ エージェントは次回の実行時にデータを検証します。  
   
 -   **行数のみ**します。 サブスクライバーのテーブルにパブリッシャーのテーブルと同じ数の行があるかどうかを検証しますが、行の内容が一致するかどうかについては検証しません。 行数の確認は、データに問題があるかどうかを調べる手軽な検証方法です。    
--   **行の数とバイナリ チェックサム**します。 パブリッシャーとサブスクライバーの行数に加え、チェックサム アルゴリズムを使用して、すべてのデータのチェックサムが計算されます。 行数の検証で失敗となった場合、チェックサムは実行されません。  
+-   **行数とバイナリ チェックサム**。 パブリッシャーとサブスクライバーの行数に加え、チェックサム アルゴリズムを使用して、すべてのデータのチェックサムが計算されます。 行数の検証で失敗となった場合、チェックサムは実行されません。  
   
  サブスクライバーとパブリッシャーのデータが一致するかどうかの検証に加え、マージ レプリケーションでは、各サブスクライバーに対してデータが正しくパーティション分割されているかどうかを検証する機能も用意されています。 詳細については、「[Validate Partition Information for a Merge Subscriber](validate-partition-information-for-a-merge-subscriber.md)」 (マージ サブスクライバーのパーティション情報の検証) を参照してください。  
 
@@ -42,7 +42,7 @@ ms.locfileid: "54131192"
   
  データの検証は、3 つの部分で構成されるプロセスです。  
   
-1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが検証対象として *マーク* されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーと **[ローカル サブスクリプション]** フォルダーから使用できる、**[サブスクリプションの検証]**、**[サブスクリプションの検証]** および **[すべてのサブスクリプションの検証]** の各ダイアログ ボックスで検証対象のサブスクリプションにマークを付けます。 また、 **[すべてのサブスクリプション]** タブ、 **[サブスクリプション ウォッチ リスト]** タブ、およびレプリケーション モニターのパブリケーション ノードでもサブスクリプションにマークを付けることができます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+1.  パブリケーションの単一のサブスクリプションまたはすべてのサブスクリプションが検証対象として *マーク* されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] の **[ローカル パブリケーション]** フォルダーと **[ローカル サブスクリプション]** フォルダーから使用できる、 **[サブスクリプションの検証]** 、 **[サブスクリプションの検証]** および **[すべてのサブスクリプションの検証]** の各ダイアログ ボックスで検証対象のサブスクリプションにマークを付けます。 また、 **[すべてのサブスクリプション]** タブ、 **[サブスクリプション ウォッチ リスト]** タブ、およびレプリケーション モニターのパブリケーション ノードでもサブスクリプションにマークを付けることができます。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 2.  サブスクリプションは、ディストリビューション エージェント (トランザクション レプリケーションの場合) またはマージ エージェント (マージ レプリケーションの場合) による次回の同期時に検証されます。 ディストリビューション エージェントは、通常は連続して実行されるので、検証はすぐに実行されます。マージ エージェントは、通常は要求時に実行されるので、エージェントを実行した後で検証が実行されます。  
   
@@ -54,7 +54,7 @@ ms.locfileid: "54131192"
 
 
   
-## <a name="considerations-and-restrictions"></a>考慮事項と制限  
+## <a name="considerations-and-restrictions"></a>注意点と制約  
   
 -   レプリケーション モニターの手順は、プッシュ サブスクリプションにのみ適用されます。プル サブスクリプションはレプリケーション モニターでは同期できないからです。 ただし、レプリケーション モニターで、サブスクリプションに検証対象のマークを付けたり、プル サブスクリプションの検証結果を表示することはできます。    
 -   検証結果には、検証が成功したかどうかが示されますが、失敗した場合、検証に失敗した行は示されません。 パブリッシャーとサブスクライバーのデータを比較するには、 [tablediff Utility](../../tools/tablediff-utility.md)を使用します。 レプリケートされたデータでのこのユーティリティの使用の詳細については、「[Compare Replicated Tables for Differences &#40;Replication Programming&#41;](administration/compare-replicated-tables-for-differences-replication-programming.md)」 (レプリケートされたテーブルを比較して相違があるかどうかを確認する &#40;レプリケーション プログラミング&#41;) を参照してください。  
@@ -79,7 +79,7 @@ ms.locfileid: "54131192"
   
  データ検証の問題に対処するために、次の点を検討してください。  
   
--   構成というレプリケーション警告**レプリケーション。サブスクライバーでは、データの検証が失敗した**エラーの場合に通知されるようにします。 詳細については、[構成の定義済みのレプリケーションの警告&#40;SQL Server Management Studio & #41 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) を参照してください。  
+-   レプリケーション警告を **[レプリケーション: サブスクライバーでデータ検証の問題が見つかりました]** というレプリケーション警告が通知されるようにします。 詳細については、次を参照してください。 [構成の定義済みのレプリケーションの警告&#40;SQL Server Management Studio & #41 41(administration/configure-predefined-replication-alerts-sql-server-management-studio.md) します。  
   
 -   検証の失敗はアプリケーションにとって問題となりますか? 検証の失敗が問題となる場合、データを手動で更新して同期するか、サブスクリプションを再初期化してください。  
   
@@ -108,11 +108,11 @@ ms.locfileid: "54131192"
   
      検証に関するメッセージが表示されない場合、エージェントは既にその後のメッセージを記録しています。 この場合は、検証結果をレプリケーション モニターに表示します。 詳細については、このトピックのレプリケーション モニターの実行手順を参照してください。  
 
-### <a name="using-transact-sql-t-sql"></a>TRANSACT-SQL (T-SQL) を使用してください。
+### <a name="using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) の使用
 
 #### <a name="all-articles"></a>すべてのアーティクル
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) を実行します。 **@publication** を指定し、**@rowcount_only** に次のいずれかの値を指定します。    
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_publication_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-publication-validation-transact-sql) を実行します。 **@publication** を指定し、 **@rowcount_only** に次のいずれかの値を指定します。    
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
   
@@ -122,9 +122,9 @@ ms.locfileid: "54131192"
 2.  (省略可) ディストリビューション エージェントがまだ実行されていない場合は、各サブスクリプションについてディストリビューション エージェントを開始します。 詳細については、「 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 」および「 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)」を参照してください。    
 3.  エージェントの出力で検証結果を確認します。 詳細については、「[Validate Replicated Data](validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。  
   
-#### <a name="single-article"></a>1 つの記事 
+#### <a name="single-article"></a>単一のアーティクル 
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) を実行します。 **@publication** を指定し、**@article** にアーティクルの名前を、**@rowcount_only** に次のいずれかの値を指定します。    
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) を実行します。 **@publication** を指定し、 **@article** にアーティクルの名前を、 **@rowcount_only** に次のいずれかの値を指定します。    
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
   
@@ -134,12 +134,12 @@ ms.locfileid: "54131192"
 2.  (省略可) ディストリビューション エージェントがまだ実行されていない場合は、各サブスクリプションについてディストリビューション エージェントを開始します。 詳細については、「 [Synchronize a Pull Subscription](synchronize-a-pull-subscription.md) 」および「 [Synchronize a Push Subscription](synchronize-a-push-subscription.md)」を参照してください。    
 3.  エージェントの出力で検証結果を確認します。 詳細については、「[Validate Replicated Data](validate-data-at-the-subscriber.md)」 (レプリケートされたデータの検証) を参照してください。  
   
-#### <a name="single-subscriber"></a>1 つのサブスクライバー
+#### <a name="single-subscriber"></a>単一のサブスクライバー
   
 1.  パブリッシャーのパブリケーション データベースで、[BEGIN TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-transaction-transact-sql) を使用して明示的なトランザクションを開始します。    
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql) を実行します。 **@publication** にパブリケーションを、**@subscriber** にサブスクライバーの名前を、**@destination_db** にサブスクリプション データベースの名前を指定します。    
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_marksubscriptionvalidation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-marksubscriptionvalidation-transact-sql) を実行します。 **@publication** にパブリケーションを、 **@subscriber** にサブスクライバーの名前を、 **@destination_db** にサブスクリプション データベースの名前を指定します。    
 3.  (省略可) 検証の対象となる各サブスクリプションについて、手順 2. を繰り返します。    
-4.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) を実行します。 **@publication** を指定し、**@article** にアーティクルの名前を、**@rowcount_only** に次のいずれかの値を指定します。    
+4.  パブリッシャー側のパブリケーション データベースに対して [sp_article_validation &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-article-validation-transact-sql) を実行します。 **@publication** を指定し、 **@article** にアーティクルの名前を、 **@rowcount_only** に次のいずれかの値を指定します。    
     -   **1** - 行数チェックのみ (既定値)    
     -   **2** - 行数とバイナリ チェックサム  
   
@@ -169,7 +169,7 @@ ms.locfileid: "54131192"
     3.  **[ディストリビューターからサブスクライバーまでの履歴]** タブの **[選択されたセッションのアクション]** テキスト領域に情報が表示されます。  
   
 
-## <a name="for-a-single-subscription-to-a-merge-publication"></a>マージ パブリケーションに対する 1 つのサブスクリプションの
+## <a name="for-a-single-subscription-to-a-merge-publication"></a>マージ パブリケーションの単一のサブスクリプション
   
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用
   
@@ -185,9 +185,9 @@ ms.locfileid: "54131192"
   
      検証に関するメッセージが表示されない場合、エージェントは既にその後のメッセージを記録しています。 この場合は、検証結果をレプリケーション モニターに表示します。 詳細については、このトピックのレプリケーション モニターの実行手順を参照してください。  
 
-### <a name="using-transact-sql-t-sql"></a>TRANSACT-SQL (T-SQL) を使用してください。
+### <a name="using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) の使用
 
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql) を実行します。 **@publication** を指定し、**@subscriber** にサブスクライバーの名前を、**@subscriber_db** にサブスクリプション データベースの名前を、**@level** に次のいずれかの値を指定します。   
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergesubscription &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql) を実行します。 **@publication** を指定し、 **@subscriber** にサブスクライバーの名前を、 **@subscriber_db** にサブスクリプション データベースの名前を、 **@level** に次のいずれかの値を指定します。   
     -   **1** - 行数の検証のみ    
     -   **3** - 行数とバイナリ チェックサムの検証  
   
@@ -201,7 +201,7 @@ ms.locfileid: "54131192"
 >  **Replication Merge Agent** を実行するときに、 [-Validate](agents/replication-merge-agent.md)パラメーターを指定することによって、マージ パブリケーションのサブスクリプションについても同期処理の最後に検証を実行できます。  
 
   
-## <a name="for-all-subscriptions-to-a-merge-publication"></a>マージ パブリケーションに対するすべてのサブスクリプション
+## <a name="for-all-subscriptions-to-a-merge-publication"></a>マージ パブリケーションのすべてのサブスクリプション
 
 ### <a name="using-sql-server-management-studio"></a>SQL Server Management Studio の使用 
   
@@ -216,9 +216,9 @@ ms.locfileid: "54131192"
   
      検証に関するメッセージが表示されない場合、エージェントは既にその後のメッセージを記録しています。 この場合は、検証結果をレプリケーション モニターに表示します。 詳細については、このトピックのレプリケーション モニターの実行手順を参照してください。  
 
-### <a name="using-transact-sql-t-sql"></a>TRANSACT-SQL (T-SQL) を使用してください。
+### <a name="using-transact-sql-t-sql"></a>Transact-SQL (T-SQL) の使用
 
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql) を実行します。 **@publication** を指定し、**@level** に次のいずれかの値を指定します。    
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_validatemergepublication &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-validatemergepublication-transact-sql) を実行します。 **@publication** を指定し、 **@level** に次のいずれかの値を指定します。    
     -   **1** - 行数の検証のみ    
     -   **3** - 行数とバイナリ チェックサムの検証  
   
@@ -228,7 +228,7 @@ ms.locfileid: "54131192"
 3.  エージェントの出力で検証結果を確認します。 詳しくは、「 [Validate Data at the Subscriber](validate-data-at-the-subscriber.md)」をご覧ください。  
 
 
-## <a name="for-a-single-push-subscription-to-a-merge-publication"></a>マージ パブリケーションに対する 1 つのプッシュ サブスクリプションの場合 
+## <a name="for-a-single-push-subscription-to-a-merge-publication"></a>マージ パブリケーションの単一のプッシュ サブスクリプション 
 
 ### <a name="using-replication-monitor"></a>レプリケーション モニターの使用
   
@@ -244,7 +244,7 @@ ms.locfileid: "54131192"
     2.  サブスクリプションを右クリックし、 **[詳細表示]** をクリックします。    
     3.  **[同期の履歴]** タブの **[選択されたセッションの最終メッセージ]** テキスト領域に情報が表示されます。  
   
-## <a name="for-all-push-subscriptions-to-a-merge-publication"></a>マージ パブリケーションに対するプッシュ サブスクリプションのすべて 
+## <a name="for-all-push-subscriptions-to-a-merge-publication"></a>マージ パブリケーションのすべてのプッシュ サブスクリプション 
 
 ### <a name="using-replication-monitor"></a>レプリケーション モニターの使用
   

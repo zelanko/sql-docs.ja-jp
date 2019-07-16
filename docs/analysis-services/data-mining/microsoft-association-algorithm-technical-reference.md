@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 21f779f1e0b1764fd35d6399aa220e244574d576
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545590"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183170"
 ---
 # <a name="microsoft-association-algorithm-technical-reference"></a>Microsoft アソシエーション アルゴリズム テクニカル リファレンス
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -151,7 +151,7 @@ ms.locfileid: "52545590"
 > [!NOTE]  
 >  コンテンツの種類 Cyclical および Ordered はサポートされますが、アルゴリズムはこれらを不連続の値として扱い、特別な処理は行いません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft アソシエーション アルゴリズム](../../analysis-services/data-mining/microsoft-association-algorithm.md)   
  [結合モデルのクエリ例](../../analysis-services/data-mining/association-model-query-examples.md)   
  [アソシエーション モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-association-models-analysis-services-data-mining.md)  

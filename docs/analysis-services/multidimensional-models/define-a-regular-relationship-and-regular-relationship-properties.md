@@ -1,5 +1,5 @@
 ---
-title: 標準リレーションシップおよび標準リレーションシップ プロパティの定義 |Microsoft ドキュメント
+title: 標準のリレーションシップとファクト リレーションシップのプロパティの定義 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9ee79742f919d7f47ae73968666d96622e3429bc
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022279"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209026"
 ---
-# <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>標準リレーションシップおよび標準リレーションシップ プロパティの定義
+# <a name="define-a-regular-relationship-and-regular-relationship-properties"></a>ファクト リレーションシップとファクト リレーションシップのプロパティの定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   新しいキューブ ディメンションまたは新しいメジャー グループが定義されると、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] は、標準リレーションシップが存在するかどうかを検出し、ディメンションの使用法を **正規**に設定しようと試みます。 標準ディメンションのリレーションシップはキューブ デザイナーの **[ディメンションの使用法]** タブで表示または編集できます。  
   

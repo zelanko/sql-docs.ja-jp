@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4baa8b1fa57acde99439584483381f84f7a8d5c4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59042261"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180624"
 ---
 # <a name="write-enabled-dimensions"></a>書き込み許可ディメンション
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "59042261"
   
  管理者ロールに含まれているユーザーとグループは、書き込み許可ディメンションがキューブに含まれていなくても、その書き込み許可ディメンションの属性メンバーを更新できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース ディメンション プロパティ](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/database-dimension-properties.md)   
  [書き込み許可パーティション](../../analysis-services/multidimensional-models-olap-logical-cube-objects/partitions-write-enabled-partitions.md)   
  [ディメンション &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)  

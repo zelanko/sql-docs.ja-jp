@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9cb977ace8ccd1856d9a08c8eeaa2cf698637e68
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37999734"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182510"
 ---
 # <a name="process-a-mining-structure"></a>マイニング構造の処理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "37999734"
   
 -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]  
   
--   XMLA: Process コマンド  
+-   XMLA:Process コマンド  
   
  個々のモデルを処理する方法の詳細については、「 [マイニング モデルの処理](../../analysis-services/data-mining/process-a-mining-model.md)」を参照してください。  
   
@@ -44,7 +44,7 @@ ms.locfileid: "37999734"
   
 4.  クリックして**閉じる**で、**マイニング構造の処理 -\<構造 >**  ダイアログ ボックス。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング構造のタスクと操作方法](../../analysis-services/data-mining/mining-structure-tasks-and-how-tos.md)  
   
   
