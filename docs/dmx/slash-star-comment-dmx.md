@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1d96c65ea1dd187d5678987447415ca419ad10d7
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: 5d0b929ba60915f116d9ff6843b4f20b3105a7ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "38020750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942845"
 ---
 # <a name="slash-star-comment-dmx"></a>スラッシュ アスタリスク (コメント) (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "38020750"
   
  コメントの長さには制限がありません。  
   
- DMX でさまざまな種類のコメントを使用する方法の詳細については、[コメント&#40;DMX&#41;](../dmx/comments-dmx.md)を参照してください。  
+ DMX でさまざまな種類のコメントを使用する方法の詳細については、次を参照してください。[コメント&#40;DMX&#41;](../dmx/comments-dmx.md)します。  
   
 ## <a name="see-also"></a>参照  
  [2 つのスラッシュ&#40;コメント&#41; &#40;DMX&#41;](../dmx/double-slash-comment-dmx.md)   

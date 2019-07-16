@@ -7,20 +7,19 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 278eba1189b376b57f2dec7249a378832c18095c
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: f1eaa39e5f22efbe7bea7a44ac2ce93a5e28205e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962038"
 ---
-# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>クイック スタート:SQL Server で R を使用して予測モデルを作成します。
+# <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>クイック スタート: SQL Server で R を使用して予測モデルを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このクイック スタートでは、R を使用するモデルをトレーニングする方法について説明し、SQL Server のテーブルに、モデルを保存します。 モデルは、手動の送信を車両がどのように収めるされている確率を予測する単純な一般化線形モデル (GLM) です。 使用して、 `mtcars` R. に含まれているデータセット
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 前のクイック スタート[SQL server が存在することを確認する R](quickstart-r-verify.md)情報を提供し、このクイック スタートに必要な R 環境を設定するためにリンクします。
 

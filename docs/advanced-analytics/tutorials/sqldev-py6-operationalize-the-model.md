@@ -7,13 +7,12 @@ ms.date: 11/02/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 77d08db22ca7ff1b4b66620d277280f0c1ac314e
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: e5f88beb2c429091fcea8ce66e4defa291e718d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58860583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961844"
 ---
 # <a name="run-predictions-using-python-embedded-in-a-stored-procedure"></a>ストアド プロシージャに埋め込まれた Python を使用して予測を実行します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -347,7 +346,7 @@ GO
 
 どちらの手順からの出力は、中、指定されたパラメーターまたは機能をタクシー乗車で支払われたチップの確率です。
 
-## <a name="conclusions"></a>結論
+## <a name="conclusions"></a>まとめ
 
 このチュートリアルでは、ストアド プロシージャに埋め込まれた Python コードを操作する方法を学習できました。 統合[!INCLUDE[tsql](../../includes/tsql-md.md)]予測の Python のモデルをデプロイして、企業データ ワークフローの一部としてモデルの再トレーニングを組み込むにははるかに簡単になります。
 
@@ -355,6 +354,6 @@ GO
 
 [トレーニングし、Python モデルの保存](sqldev-py5-train-and-save-a-model-using-t-sql.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [SQL Server での Python 拡張機能](../concepts/extension-python.md)
