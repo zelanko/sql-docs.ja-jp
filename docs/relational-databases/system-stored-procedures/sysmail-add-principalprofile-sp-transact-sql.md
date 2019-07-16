@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: b2a0b313-abb9-4c23-8511-db77ca8172b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cf12b97028d3d98f7d5cc5ab034db95411d913dc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0a8db1f3b8d9bc209b6f8ed238cbf0be6177e578
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68017822"
 ---
 # <a name="sysmailaddprincipalprofilesp-transact-sql"></a>sysmail_add_principalprofile_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,11 +55,11 @@ sysmail_add_principalprofile_sp  { [ @principal_id = ] principal_id | [ @princip
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- プロファイルをパブリックにするために、指定、 **@principal_id**の**0**または**@principal_name**の**パブリック**します。 パブリック プロファイルは、すべてのユーザーに使用可能な**msdb**データベース、ユーザーは、のメンバーでもある必要がありますが**DatabaseMailUserRole**を実行する**sp_send_dbmail**します。  
+ プロファイルをパブリックにするために、指定、 **@principal_id** の**0**または **@principal_name** の**パブリック**します。 パブリック プロファイルは、すべてのユーザーに使用可能な**msdb**データベース、ユーザーは、のメンバーでもある必要がありますが**DatabaseMailUserRole**を実行する**sp_send_dbmail**します。  
   
- データベース ユーザーは、既定のプロファイルを 1 つのみあります。 ときに**@is_default**は '**1**' し、ユーザーは、既に 1 つまたは複数のプロファイルに関連付け、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
+ データベース ユーザーは、既定のプロファイルを 1 つのみあります。 ときに **@is_default** は '**1**' し、ユーザーは、既に 1 つまたは複数のプロファイルに関連付け、指定されたプロファイルがユーザーの既定のプロファイルになります。 それまで既定のプロファイルであったプロファイルは、引き続きこのユーザーに関連付けられますが、既定のプロファイルではなくなります。  
   
- ときに**@is_default**は '**0**' とその他の関連付けがない場合、ストアド プロシージャには、エラーが返されます。  
+ ときに **@is_default** は '**0**' とその他の関連付けがない場合、ストアド プロシージャには、エラーが返されます。  
   
  ストアド プロシージャ**sysmail_add_principalprofile_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合、3 つの部分の名前を持つプロシージャを実行する必要があります**msdb**します。  
   
@@ -90,7 +89,7 @@ EXECUTE msdb.dbo.sysmail_add_principalprofile_sp
     @is_default = 1 ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール構成オブジェクト](../../relational-databases/database-mail/database-mail-configuration-objects.md)   
  [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
