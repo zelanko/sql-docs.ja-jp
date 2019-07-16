@@ -32,38 +32,39 @@ SSMS のクラッシュまたはハングをトラブルシューティングす
 
 3. コマンド プロンプトを開き、次のコマンドを実行します。
 
-    ```コマンド プロンプト <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
+    ```command prompt
+    <PathToProcDumpFolder>\procdump.exe -e -h -ma -w ssms.exe
     ```
 
-    If it prompts you to accept a license agreement, select *Agree*.
+    使用許諾契約書に同意するように求められた場合は、 *[同意する]* を選択します。
 
-4. Start SSMS, if it hasn't started already.
+4. SQL Server Management Studio をまだ起動していない場合は起動します。
 
-5. Reproduce the issue.
+5. 問題を再現します。
 
-6. The text should appear in the cmd prompt about writing the dump file, wait for that to finish.
+6. ダンプ ファイルの書き込みに関する cmd プロンプトにテキストが表示されるはずです。書き込みが完了するまで待ちます。
 
-7. Create a new folder and copy the *.dmp file that is written out to that folder.
+7. 新しいフォルダーを作成し、そのフォルダーに書き込む *.dmp ファイルをコピーします。
 
-8. Copy the following files into the same folder.
+8. 次のファイルを同じフォルダーにコピーします。
 
     "C:\Windows\Microsoft.NET\Framework\v4.0.30319\mscordacwks.dll"
     "C:\Windows\Microsoft.NET\Framework\v4.0.30319\SOS.dll"
     "C:\Windows\Microsoft.NET\Framework\v4.0.30319\clr.dll"
 
-9. Zip up the folder
+9. フォルダーを圧縮します。
 
-## Get full memory dump of SSMS when it throws an OutOfMemoryException
+## <a name="user-content-get-full-memory-dump-of-ssms-when-it-throws-an-outofmemoryexception"></a>SSMS が OutOfMemoryException をスローしたときに、その完全メモリ ダンプを取得する
 
-You can get a full memory dump with any managed exception.
+マネージド例外ならば完全メモリ ダンプを取得できます。
 
-To capture diagnostic information to troubleshoot an OutOfMemoryException from SSMS, follow the steps below.
+SSMS の OutOfMemoryException をトラブルシューティングするために診断情報を取得するには、以下の手順を行います。
 
-1. Download [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx).
+1. [ProcDump](https://technet.microsoft.com/sysinternals/dd996900.aspx) をダウンロードします。
 
-2. Unzip the download into a folder.
+2. ダウンロードしたものをフォルダーに解凍します。
 
-3. Open Command Prompt and run the following command.
+3. コマンド プロンプトを開き、次のコマンドを実行します。
 
     ```command prompt
     <PathToProcDumpFolder>\procdump.exe -e 1 -f System.OutOfMemoryException -ma -w ssms.exe
