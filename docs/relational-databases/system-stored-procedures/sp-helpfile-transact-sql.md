@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1546e0ae-5a99-4e01-9eb9-d147fa65884c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6447f9a8a8504539400154c29c34d7340fcdb2d8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7b60f4929bd537089c05211cc3ecc548b82b6307
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943492"
 ---
 # <a name="sphelpfile-transact-sql"></a>sp_helpfile を実行する (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_helpfile [ [ @filename= ] 'name' ]
 |**size**|**nvarchar(15)**|ファイル サイズ (KB 単位) です。|  
 |**maxsize**|**nvarchar(15)**|ファイルの最大拡張サイズです。 このフィールドの値が UNLIMITED である場合、ディスクがいっぱいになるまでファイルを拡張できることを示します。|  
 |**growth**|**nvarchar(15)**|ファイルの拡張増分値。 これは、その新しい領域が必要するたびに、ファイルに追加される領域の容量を示します。<br /><br /> 0 = ファイルのサイズは固定されており、容量を追加することはできません。|  
-|**usage**|**varchar(9)**|データ ファイルの場合、値は **'data only'** とログ ファイルの値が **'ログのみ'** します。|  
+|**使用状況**|**varchar (9)**|データ ファイルの場合、値は **'data only'** とログ ファイルの値が **'ログのみ'** します。|  
   
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
@@ -71,7 +70,7 @@ EXEC sp_helpfile;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [sp_helpfilegroup &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpfilegroup-transact-sql.md)   
  [sys.database_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-files-transact-sql.md)   

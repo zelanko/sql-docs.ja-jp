@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 708efd50-2905-4168-b7e4-91b2e9b23539
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cfea2f0ded82fb08b25f0227bb73090f61bf47a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 023ee009831cb3576691f0af5dfb85752d51fcc1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710478"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938740"
 ---
 # <a name="version-property-example-vb"></a>Version プロパティの例 (VB)
 この例では、[バージョン](../../../ado/reference/ado-api/version-property-ado.md)のプロパティを[接続](../../../ado/reference/ado-api/connection-object-ado.md)ADO の現在のバージョンを表示するオブジェクト。 表示するいくつかの動的プロパティを使用します。  
@@ -78,6 +77,6 @@ End Sub
 'EndVersionVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Version プロパティ (ADO)](../../../ado/reference/ado-api/version-property-ado.md)

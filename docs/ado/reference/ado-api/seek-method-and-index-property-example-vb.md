@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 337c9eda-9ddf-49ac-94d3-b33114ba6224
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db5be65f007a667d23f7d94b3a7ae17eb6d2f36c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc39677c9d3c847a87c5ef510fffbd776acf8e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931126"
 ---
 # <a name="seek-method-and-index-property-example-vb"></a>Seek メソッドおよび Index プロパティの例 (VB)
 この例では、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトの[シーク](../../../ado/reference/ado-api/seek-method.md)メソッドと[インデックス](../../../ado/reference/ado-api/index-property.md)プロパティと組み合わせて、指定された***従業員 ID***、検索するには従業員の名前、***従業員***Nwind.mdb データベースのテーブル。  
@@ -116,7 +115,7 @@ End Sub
 'EndSeekVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [インデックスのプロパティ](../../../ado/reference/ado-api/index-property.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Seek メソッド](../../../ado/reference/ado-api/seek-method.md)

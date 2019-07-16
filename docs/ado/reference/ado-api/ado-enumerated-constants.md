@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c97ed131-1a93-463c-9e61-22f029b0c474
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4d9b2e581bfbce225bd34e78761b9e8ade621172
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a2b02498905b73f321d7585b5c91adfbfd1b4b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696724"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921028"
 ---
 # <a name="ado-enumerated-constants"></a>ADO の列挙定数
 デバッグに役立つ、ADO 列挙体には、各定数の値が一覧表示します。 ただし、この値は、参考し、ADO の 1 つのリリース別に変更があります。 コードは、各列挙型定数の実際の値ではなく、名前にのみ依存する必要があります。  
@@ -78,7 +77,7 @@ ms.locfileid: "66696724"
 |[StringFormatEnum](../../../ado/reference/ado-api/stringformatenum.md)|取得するときに、形式を指定します、 **Recordset**を文字列として。 トランザクション属性を指定します、**接続**オブジェクト。|  
 |[XactAttributeEnum](../../../ado/reference/ado-api/xactattributeenum.md)|トランザクション属性を指定します、**接続**オブジェクト。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)   
  [ADO のコレクション](../../../ado/reference/ado-api/ado-collections.md)   
  [ADO の動的プロパティ](../../../ado/reference/ado-api/ado-dynamic-properties.md)   

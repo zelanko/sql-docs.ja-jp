@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8d88c9aa-8ec8-4969-8fa1-1663fd29bfc4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 77c9434fd92b8b3c30addce7967c4965d07cbb38
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0b58000da5f29824fbfdd134a701088775c90af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701927"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924781"
 ---
 # <a name="navigating-through-data"></a>データ内の移動
 **レコード セット**さまざまなメソッドや結果のデータセットをナビゲートするプロパティをサポートしています。 サンプルをいくつかのシナリオを経由してこの機能を調べる**Recordset**オブジェクト。  

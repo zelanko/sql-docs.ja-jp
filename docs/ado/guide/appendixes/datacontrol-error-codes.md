@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 293df9d5-e1a2-406d-9107-07bf7cdc6f96
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fe2a6cc350291ac2304e2f00825bef76e37e75cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b59f0f98122d37447e2e702304a31c44073bacfa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926845"
 ---
 # <a name="datacontrol-object-error-codes"></a>DataControl オブジェクトのエラー コードします。
 次の表、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)オブジェクトのエラー コード。 下位 2 バイトの正の 10 進変換、完全なエラー コードと 16 進数の値の負の値の 10 進数の翻訳が表示されます。
@@ -47,5 +46,5 @@ ms.locfileid: "66701278"
 |**IDS_UpdatesFailed**|4098 -2146824190 0x800A1002|データベースを更新できません。|
 |**IDS_URLMONNotFound**|4119 -2146824169 0x800A1017|DataControl **URL**プロパティには、システム ファイルが見つかりません、Urlmon.dll が必要です。|
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486e4216-a946-4c6e-828c-61bc905f7ec1
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: f709a2a58b6dd6f18c992a79c94ad63bdd8f0ef6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0a769bc9471c4bbbedfa2cec7d749b87267fb5d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776466"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67935179"
 ---
 # <a name="install-data-quality-services"></a>Data Quality Services のインストール
 
@@ -115,7 +114,7 @@ ms.locfileid: "66776466"
      詳細については、「  
                     「[DQS 操作のためのデータへのアクセス](../../data-quality-services/install-windows/access-data-for-the-dqs-operations.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビデオ: DQS のインストールと構成](https://go.microsoft.com/fwlink/?LinkId=238241)   
  [.NET Framework 更新後の SQLCLR アセンブリのアップグレード](../../data-quality-services/install-windows/upgrade-sqlclr-assemblies-after-net-framework-update.md)   
  [DQSInstaller.exe を使用した DQS ナレッジ ベースのエクスポートとインポート](../../data-quality-services/install-windows/export-and-import-dqs-knowledge-bases-using-dqsinstaller-exe.md)   

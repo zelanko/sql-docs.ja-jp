@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4f0930e3f7f9d037ebb3033cc947f243657a1480
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 8bf0485b63e341dbeff24a1974df840b0a28dfef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140761"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961897"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの R データの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -47,7 +46,7 @@ Machine learning ソリューションを構築するプロセスをいくつか
 
 モデルをデータベースに保存した後から予測モデルを呼び出す[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを使用します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 すべてのタスクを行うことができますを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]します。
 
@@ -62,7 +61,7 @@ Machine learning ソリューションを構築するプロセスをいくつか
 + [NYC タクシー デモ データベース](demo-data-nyctaxi-in-sql.md)
 
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [探索し、ストアド プロシージャで R 関数を使用してデータを視覚化します。](../tutorials/sqldev-explore-and-visualize-the-data.md)

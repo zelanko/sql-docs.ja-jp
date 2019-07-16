@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8e17a7bc-b8a3-4ae2-b6c9-ce088ad31fdf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aea36947856b26d33a0d777374eccf02a7cddb6a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15ae2aac2851c496b6cac9e47d37fe5fa26b8e34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918370"
 ---
 # <a name="isolationlevelenum"></a>IsolationLevelEnum
 トランザクションの分離のレベルを指定します、[接続](../../../ado/reference/ado-api/connection-object-ado.md)オブジェクト。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adXactUnspecified**|-1|プロバイダーを使用している別の分離レベルを指定するよりも、レベルを特定できないことを示します。|  
 |**adXactChaos**|16|保留中のより高度な分離レベルのトランザクションから変更できません上書きされることを示します。|  

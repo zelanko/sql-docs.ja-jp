@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e711b01c-ef29-4eb6-a016-0e647e337818
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 109e031e95b7535733bd9cb71baa4d20128ceb5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9559a882da12c3e2a7a48a0aaa656a554633aa6f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62719504"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937913"
 ---
 # <a name="sphelplogshippingprimarydatabase-transact-sql"></a>sp_help_log_shipping_primary_database (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_help_log_shipping_primary_database
 |**backup_directory**|プライマリ サーバーからのトランザクション ログ バックアップ ファイルの保存先ディレクトリ。|  
 |**backup_share**|ネットワークまたはバックアップ ディレクトリへの UNC パス。|  
 |**backup_retention_period**|バックアップ ディレクトリでログ バックアップ ファイルが保持される時間 (分単位)。この時間を過ぎるとファイルは削除されます。|  
-|**backup_compression**|ログ配布構成を使用するかどうかを示す[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)します。<br /><br /> **0** = 無効になっています。 ログ バックアップは圧縮されません。<br /><br /> **1** = 有効にします。 常にログ バックアップを圧縮します。<br /><br /> **2** = の設定を使用して、 [backup compression default サーバー構成オプションの構成を表示または](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)します。 これが既定値です。<br /><br /> バックアップの圧縮がでのみサポートされている[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)](またはそれ以降のバージョン)。 その他のエディションでは、値は常に 2 です。|  
+|**backup_compression**|ログ配布構成を使用するかどうかを示す[バックアップの圧縮](../../relational-databases/backup-restore/backup-compression-sql-server.md)します。<br /><br /> **0** = 無効になっています。 ログ バックアップは圧縮されません。<br /><br /> **1** = 有効にします。 常にログ バックアップを圧縮します。<br /><br /> **2** = の設定を使用して、 [backup compression default サーバー構成オプションの構成を表示または](../../database-engine/configure-windows/view-or-configure-the-backup-compression-default-server-configuration-option.md)します。 これは既定値です。<br /><br /> バックアップの圧縮がでのみサポートされている[!INCLUDE[ssEnterpriseEd10](../../includes/ssenterpriseed10-md.md)](またはそれ以降のバージョン)。 その他のエディションでは、値は常に 2 です。|  
 |**backup_job_id**|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プライマリ サーバー上のバックアップ ジョブに関連付けられているエージェント ジョブの ID。|  
 |**monitor_server**|インスタンスの名前、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]ログ配布構成で監視サーバーとして使用されています。|  
 |**monitor_server_security_mode**|監視サーバーへの接続に使用されるセキュリティ モード。<br /><br /> 1 = [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。<br /><br /> 0 =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
@@ -84,7 +83,7 @@ EXEC master.dbo.sp_help_log_shipping_primary_database @database=N'AdventureWorks
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ログ配布について &#40;SQL Server&#41;](../../database-engine/log-shipping/about-log-shipping-sql-server.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

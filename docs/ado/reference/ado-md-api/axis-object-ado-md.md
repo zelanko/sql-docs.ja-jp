@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 5f498c9a-b1e7-4e6e-9ae6-71eadaf9aada
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 970555ceef08d07aafb506f006652abec2139d6c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf2b072acfda34ebdcafc1af82cd90c6be5d2537
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67939966"
 ---
 # <a name="axis-object-ado-md"></a>Axis オブジェクト (ADO MD)
 1 つまたは複数のディメンションの選択したメンバーを含むセル セットのフィルター軸または位置指定を表します。  
@@ -43,7 +42,7 @@ ms.locfileid: "66709955"
   
 -   [プロパティ、メソッド、およびイベント](../../../ado/reference/ado-md-api/axis-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [軸の例 (VBScript)](../../../ado/reference/ado-md-api/axis-example-vbscript.md)   
  [Axes コレクション (ADO MD)](../../../ado/reference/ado-md-api/axes-collection-ado-md.md)   
  [Positions コレクション (ADO MD)](../../../ado/reference/ado-md-api/positions-collection-ado-md.md)   

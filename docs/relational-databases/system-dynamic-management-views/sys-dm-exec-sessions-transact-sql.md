@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 2b7e8e0c-eea0-431e-819f-8ccd12ec8cfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 49638971a01d2082938d4759bb9f597d7bfdf254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 209914c7b8b5b67f5b9d3129bf09f2b222b7bf4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66462623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936904"
 ---
 # <a name="sysdmexecsessions-transact-sql"></a>sys.dm_exec_sessions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ ms.locfileid: "66462623"
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|アクティブな各プライマリ接続に関連付けられたセッションの識別子。 NULL 値は許可されません。|  
 |login_time|**datetime**|セッションが確立された時刻。 NULL 値は許可されません。|  
-|host_name|**nvarchar(128)**|セッション固有のクライアント ワークステーションの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。<br /><br /> **セキュリティに関する注意:** クライアント アプリケーションから返されたワークステーション名が、必ずしも正確なデータであるとは限りません。 セキュリティ機能として HOST_NAME に依存することは避けてください。|  
+|host_name|**nvarchar(128)**|セッション固有のクライアント ワークステーションの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。<br /><br /> **セキュリティに関するメモ:** クライアント アプリケーションから返されたワークステーション名が、必ずしも正確なデータであるとは限りません。 セキュリティ機能として HOST_NAME に依存することは避けてください。|  
 |program_name|**nvarchar(128)**|セッションを開始したクライアント プログラムの名前。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |host_process_id|**int**|セッションを開始したクライアント プログラムのプロセス ID。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  
 |client_version|**int**|クライアントでサーバーへの接続に使用されるインターフェイスの TDS プロトコル バージョン。 内部セッションの場合、この値は NULL になります。 NULL 値が許可されます。|  

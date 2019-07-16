@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 743bf6f78fa84f628a20bed23af0ace8cf23d06f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959205"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 中央管理サーバーの拡張機能 (プレビュー)
 中央管理サーバーの拡張機能では、1 つまたは複数のグループに編成は、SQL Server のインスタンスのリストを格納することができます。 CMS のグループを使用して実行されるアクションは、サーバー グループ内のすべてのサーバー上で動作します。
@@ -34,7 +33,7 @@ ms.locfileid: "66798014"
 ### <a name="how-do-i-start-central-management-servers"></a>中央管理サーバーを起動する方法はありますか
  中央管理サーバーは、(およびコマンド Ctrl + G)、接続アイコンをクリックして表示できます。 最初に、拡張機能をダウンロードする CMS ビューを最小化とでクリックして開くことができます**中央管理サーバー**
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 中央管理サーバーでは、詳細については概念[詳しくはこちらを確認できます。](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)
 
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55bedd08-7440-4da4-b854-4ac9ef2fdedb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 690173882856e1b53e6f50eefc2cdd9115bd38bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef4017cce110c9217111df40b833eaf294d52521
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937834"
 ---
 # <a name="update-and-cancelupdate-methods-example-vb"></a>Update および CancelUpdate メソッドの例 (VB)
 この例では、 [Update](../../../ado/reference/ado-api/update-method.md)メソッドと組み合わせて、 [CancelUpdate](../../../ado/reference/ado-api/cancelupdate-method-ado.md)メソッド。  
@@ -121,7 +120,7 @@ End Sub
 Attribute VB_Name = "Update"  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CancelUpdate メソッド (ADO)](../../../ado/reference/ado-api/cancelupdate-method-ado.md)   
  [RecordSet オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)   
  [Update メソッド](../../../ado/reference/ado-api/update-method.md)

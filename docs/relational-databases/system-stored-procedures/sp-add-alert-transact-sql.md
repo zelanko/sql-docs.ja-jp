@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9b41853-e22d-4813-a79f-57efb4511f09
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 750d299b951b403ed6fe51baa43b047505860c3f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b16fe1f29d132b900eeb4c8f450fcdbd66eb22b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493804"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942382"
 ---
 # <a name="spaddalert-transact-sql"></a>sp_add_alert (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_add_alert [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` アラートの名前。 この名前は、警告に対する応答として送信される電子メールまたはポケットベルのメッセージに表示されます。 一意であり、割合を含めることができます (**%**) 文字。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'` アラートの名前。 この名前は、警告に対する応答として送信される電子メールまたはポケットベルのメッセージに表示されます。 一意であり、割合を含めることができます ( **%** ) 文字。 *名前*は**sysname**、既定値はありません。  
   
 `[ @message_id = ] message_id` 警告を定義したメッセージ エラー番号。 (通常、エラー番号に対応して、 **sysmessages**テーブルです)。*message_id*は**int**、既定値は**0**します。 場合*重大度*、警告を定義するために使用*message_id*あります**0**または NULL。  
   
@@ -73,7 +72,7 @@ sp_add_alert [ @name = ] 'name'
   
  この値を設定するには、望ましくない電子メール メッセージ、アラートは、短時間で繰り返し発生時に送信されるを防ぐためになります。  
   
-`[ @notification_message = ] 'notification_message'` 電子メールの一部としてオペレーターに送信される追加の省略可能なメッセージ**net send**、またはポケットベル通知します。 *このパラメーター*は**nvarchar (512)**、既定値は NULL です。 指定する*このパラメーター*は書き加えるなど特別な注意を追加するために便利です。  
+`[ @notification_message = ] 'notification_message'` 電子メールの一部としてオペレーターに送信される追加の省略可能なメッセージ**net send**、またはポケットベル通知します。 *このパラメーター*は**nvarchar (512)** 、既定値は NULL です。 指定する*このパラメーター*は書き加えるなど特別な注意を追加するために便利です。  
   
 `[ @include_event_description_in = ] include_event_description_in` あるかどうかの説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラーが通知メッセージの一部として含めるする必要があります。 *include_event_description_in*は**tinyint**、既定値は**5** (電子メールと**net send**)、およびは 1 つまたはと共にこれらの値の詳細は、**または**論理演算子です。  
   
@@ -87,9 +86,9 @@ sp_add_alert [ @name = ] 'name'
 |**2**|[ポケットベル]|  
 |**4**|**net send**|  
   
-`[ @database_name = ] 'database'` データベースの警告が、エラーが発生する必要があります。 場合*データベース*が指定されていない、エラーの発生場所に関係なく警告が発生します。 *データベース*は**sysname**します。 角かっこ () で囲まれた名前を指定することはできません。 既定値は、NULL です。  
+`[ @database_name = ] 'database'` データベースの警告が、エラーが発生する必要があります。 場合*データベース*が指定されていない、エラーの発生場所に関係なく警告が発生します。 *データベース*は**sysname**します。 角かっこ () で囲まれた名前を指定することはできません。 既定値は NULL です。  
   
-`[ @event_description_keyword = ] 'event_description_keyword_pattern'` 文字のシーケンスの説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のようなエラーがある必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のように、パターン検索文字を使用できます。 *event_description_keyword_pattern*は**nvarchar (100)**、既定値は NULL です。 このパラメーターはオブジェクト名をフィルター処理するために役立ちます (たとえば、 **%customer_table%**)。  
+`[ @event_description_keyword = ] 'event_description_keyword_pattern'` 文字のシーケンスの説明、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のようなエラーがある必要があります。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のように、パターン検索文字を使用できます。 *event_description_keyword_pattern*は**nvarchar (100)** 、既定値は NULL です。 このパラメーターはオブジェクト名をフィルター処理するために役立ちます (たとえば、 **%customer_table%** )。  
   
 `[ @job_id = ] job_id` このアラートに応答して実行するジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
   
@@ -112,7 +111,7 @@ sp_add_alert [ @name = ] 'name'
   
 `[ @wmi_namespace = ] 'wmi_namespace'` イベントを照会する WMI 名前空間。 *wmi_namespace*は**sysname**、既定値は NULL です。 サポートされるのはローカル サーバーの名前空間だけです。  
   
-`[ @wmi_query = ] 'wmi_query'` このクエリは、警告に対する WMI イベントを指定します。 *wmi_query*は**nvarchar (512)**、既定値は NULL です。  
+`[ @wmi_query = ] 'wmi_query'` このクエリは、警告に対する WMI イベントを指定します。 *wmi_query*は**nvarchar (512)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -167,7 +166,7 @@ EXEC dbo.sp_add_alert
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_altermessage &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-altermessage-transact-sql.md)   
  [sp_delete_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-alert-transact-sql.md)   
