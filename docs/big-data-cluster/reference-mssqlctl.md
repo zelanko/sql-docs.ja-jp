@@ -5,17 +5,16 @@ description: Mssqlctl コマンドに関する参照記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a30f78b24a85f85b85beb914dc0f26af652242fd
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5567b46376acc5aee6c42cdae19eef133c7af506
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957898"
 ---
 # <a name="mssqlctl"></a>mssqlctl
 
@@ -32,7 +31,7 @@ ms.locfileid: "67728536"
 [mssqlctl login](#mssqlctl-login) | クラスターのコント ローラーのエンドポイントにログインします。
 [mssqlctl logout](#mssqlctl-logout) | クラスターからログアウトします。
 |[mssqlctl sql](reference-mssqlctl-sql.md) | SQL DB の CLI には、T-SQL を使用して SQL Server との対話をユーザーができます。 |
-## <a name="mssqlctl-login"></a>mssqlctl login
+## <a name="mssqlctl-login"></a>mssqlctl ログイン
 使用する必要があります、展開中にコント ローラー エンドポイントが一覧表示、クラスターを展開するときにログインします。  コント ローラー エンドポイントがわからない場合、システムの既定の場所で、クラスターの kube 構成することでログイン<user home>/.kube/config または、KUBECONFIG 環境変数を使用して、つまり KUBECONFIG=path/to/.kube/config をエクスポートします。
 ```bash
 mssqlctl login [--cluster-name -n] 
@@ -73,7 +72,7 @@ mssqlctl login -n ClusterName
 JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
 #### `--verbose`
 ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
-## <a name="mssqlctl-logout"></a>mssqlctl logout
+## <a name="mssqlctl-logout"></a>mssqlctl ログアウト
 クラスターからログアウトします。
 ```bash
 mssqlctl logout 
