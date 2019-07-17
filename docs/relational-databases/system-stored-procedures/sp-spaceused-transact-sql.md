@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: c6253b48-29f5-4371-bfcd-3ef404060621
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 61cd3c5c4ba15d42c1b1fe261703cfbb67b3e24f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1dc80f17fc88fa665b41a130bb69ebe0d4f1f26c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538554"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032867"
 ---
 # <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -51,11 +50,11 @@ sp_spaceused [[ @objname = ] 'objname' ]
    
  領域の使用情報を要求するテーブル、インデックス付きビュー、またはキューの、修飾付きまたは修飾なしの名前を指定します。 引用符は、オブジェクトの修飾名が指定されている場合にのみ必要です。 (データベース名を含む) 完全修飾オブジェクト名が指定されている場合、データベース名は、現在のデータベースの名前である必要があります。  
 場合*objname*が指定されていない、データベース全体の結果が返されます。  
-*objname*は**nvarchar (776)**、既定値は NULL です。  
+*objname*は**nvarchar (776)** 、既定値は NULL です。  
 > [!NOTE]  
 > [!INCLUDE[sssdw-md](../../includes/sssdw-md.md)] [!INCLUDE[sspdw-md](../../includes/sspdw-md.md)]データベースとテーブルのオブジェクトのみをサポートします。
   
-`[ @updateusage = ] 'updateusage'` 領域使用状況の情報を更新する DBCC UPDATEUSAGE を実行することを示します。 ときに*objname*はステートメントを実行して、データベース全体に対して; でステートメントを実行する場合は、指定されていない*objname*します。 値は、 **true**または**false**します。 *updateusage*は**varchar (5)**、既定値は**false**します。  
+`[ @updateusage = ] 'updateusage'` 領域使用状況の情報を更新する DBCC UPDATEUSAGE を実行することを示します。 ときに*objname*はステートメントを実行して、データベース全体に対して; でステートメントを実行する場合は、指定されていない*objname*します。 値は、 **true**または**false**します。 *updateusage*は**varchar (5)** 、既定値は**false**します。  
   
 `[ @mode = ] 'mode'` 結果のスコープを示します。 拡張されたテーブルまたはデータベースの*モード*パラメーターで、含めるまたはリモート オブジェクトの部分を除外することができます。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
   
@@ -67,14 +66,14 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |LOCAL_ONLY|オブジェクトまたはデータベースのローカル部分だけの記憶域の統計を返します。 オブジェクトまたはデータベースでない場合 Stretch が有効な場合と同様の統計情報を返します@mode= ALL です。|  
 |REMOTE_ONLY|オブジェクトまたはデータベースのリモートの部分だけの記憶域の統計を返します。 このオプションでは、次の条件のいずれかが true の場合にエラーが発生します。<br /><br /> テーブルを Stretch に対しては無効です。<br /><br /> Stretch」の表が有効になっているが、データの移行を有効にしていることはありません。 この場合、リモート テーブルは、スキーマをまだがありません。<br /><br /> ユーザーがリモート テーブルを削除して手動でします。<br /><br /> リモート データ アーカイブのプロビジョニングの成功した場合、状態が返されますが、実際に失敗しました。|  
   
- *モード*は**varchar (11)**、既定値は**N'ALL'** します。  
+ *モード*は**varchar (11)** 、既定値は**N'ALL'** します。  
   
 `[ @oneresultset = ] oneresultset` 1 つの結果セットを返すかどうかを示します。 *Oneresultset*引数は、次の値であることができます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
-|0|ときに*@objname*が null またはが指定されていない 2 つの結果セットが返されます。 2 つの結果セットでは、既定の動作です。|  
-|1|ときに*@objname* = null またはが指定されていない 1 つの結果セットが返されます。|  
+|0|ときに *@objname* が null またはが指定されていない 2 つの結果セットが返されます。 2 つの結果セットでは、既定の動作です。|  
+|1|ときに *@objname* = null またはが指定されていない 1 つの結果セットが返されます。|  
   
  *oneresultset*は**ビット**、既定値は**0**します。  
 
@@ -100,7 +99,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
-|**unused**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|  
+|**未使用**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|  
   
  場合*objname*を省略するの値*oneresultset*は 1 です。 現在のデータベースのサイズ情報を提供する次の 1 つの結果セットが返されます。  
   
@@ -112,7 +111,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
-|**unused**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|  
+|**未使用**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|  
   
  場合*objname*を指定すると、指定したオブジェクトの次の結果セットが返されます。  
   
@@ -123,7 +122,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|予約領域の合計量*objname*します。|  
 |**data**|**varchar(18)**|内のデータによって使用される領域の合計量*objname*します。|  
 |**index_size**|**varchar(18)**|インデックスで使用される領域の合計量*objname*します。|  
-|**unused**|**varchar(18)**|予約された領域の合計量*objname*が使用されていません。|  
+|**未使用**|**varchar(18)**|予約された領域の合計量*objname*が使用されていません。|  
  
 パラメーターが指定されていない場合、既定のモードになります。 次の結果セットには、ディスク上のデータベース サイズの詳細情報が返されます。 
 
@@ -140,7 +139,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
-|**unused**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|
+|**未使用**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|
 
 次の結果セットが返される**場合にのみ**を少なくとも 1 つのコンテナーと、MEMORY_OPTIMIZED_DATA ファイル グループ、データベースには。 
 
@@ -160,7 +159,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
-|**unused**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|
+|**未使用**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|
 |**xtp_precreated**|**varchar(18)**|チェックポイント ファイルと状態 (KB 単位) の PRECREATED の合計サイズ。 これは、データベース内の未割り当て領域には全体としてカウントされます。 データベースが少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループを持っていない場合は、NULL を返します。 *この列にのみが含まれる場合@include_total_xtp_storage= 1*します。| 
 |**xtp_used**|**varchar(18)**|状態 UNDER CONSTRUCTION、アクティブ、およびサポート技術情報でのマージ ターゲット チェックポイント ファイルの合計サイズ。 これは、メモリ最適化テーブルのデータを積極的に使用されるディスク領域です。 データベースが少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループを持っていない場合は、NULL を返します。 *この列にのみが含まれる場合@include_total_xtp_storage= 1*します。| 
 |**xtp_pending_truncation**|**varchar(18)**|チェックポイント ファイルと状態 (KB 単位) の WAITING_FOR_LOG_TRUNCATION の合計サイズ。 これは、ログが切り捨て後のクリーンアップを待機しているチェックポイント ファイルに使用されるディスク領域です。 データベースが少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループを持っていない場合は、NULL を返します。 この列にのみが含まれる場合`@include_total_xtp_storage=1`します。|
@@ -203,7 +202,7 @@ GO
 ```  
   
 ### <a name="c-displaying-space-usage-information-about-the-remote-table-associated-with-a-stretch-enabled-table"></a>C. Stretch が有効なテーブルに関連付けられているリモート テーブルの領域使用状況の情報を表示します。  
- 次の例を使用して、Stretch が有効なテーブルに関連付けられているリモート テーブルで使用される領域をまとめたもの、 **@mode**リモート ターゲットを指定する引数。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
+ 次の例を使用して、Stretch が有効なテーブルに関連付けられているリモート テーブルで使用される領域をまとめたもの、 **@mode** リモート ターゲットを指定する引数。 詳細については、「 [Stretch Database](../../sql-server/stretch-database/stretch-database.md)」を参照してください。  
   
 ```sql  
 USE StretchedAdventureWorks2016  
@@ -245,7 +244,7 @@ EXEC sp_spaceused
 GO
 ```  
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
  [DBCC UPDATEUSAGE &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   

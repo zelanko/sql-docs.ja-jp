@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2f2d22c1-51d6-4055-9f5a-53bc31e9fea0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d477dbc6b54d7ebd82b7e2ef8611f5f6dd807e83
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6352a5ae894adb09f714a78386bfecfa3ce1df77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188819"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041625"
 ---
 # <a name="interval-literal-syntax"></a>Interval のリテラルの構文
 次の構文は、ODBC で interval のリテラルに使用されます。  
@@ -33,9 +32,9 @@ ms.locfileid: "63188819"
   
  *日付時刻リテラル*:: =*日間隔*&#124; です。*時間間隔*  
   
- *day-time-interval* ::= *days-value* [*hours-value* [:*minutes-value*[:*seconds-value*]]]  
+ *1 日間隔*:: =*日数値*[*時間値*[:*分値*[:*秒値*]]  
   
- *time-interval* ::= *hours-value* [:*minutes-value* [:*seconds-value* ] ]  
+ *時間間隔*:: =*時間値*[:*分値*[:*秒値*]  
   
  &#124; です。*分値*[:*秒値*]  
   
@@ -51,13 +50,13 @@ ms.locfileid: "63188819"
   
  *分値*:: = *datetime 値*  
   
- *seconds-value* ::= *seconds-integer-value* [.[*seconds-fraction*] ]  
+ *秒の値*:: =*秒整数*[. [*秒の端数*]  
   
- *seconds-integer-value* ::= *unsigned-integer*  
+ *整数値の秒*:: =*符号なし整数*  
   
  *秒の端数*:: =*符号なし整数*  
   
- *datetime-value* ::= *unsigned-integer*  
+ *datetime 値*:: =*符号なし整数*  
   
  *間隔修飾子*:: =*開始フィールド*TO*終了フィールド*&#124;*単一 datetime フィールド*  
   

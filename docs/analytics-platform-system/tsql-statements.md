@@ -2,19 +2,18 @@
 title: T-SQL ステートメント - Parallel Data Warehouse |Microsoft Docs
 description: T-SQL ステートメントの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ca12b3926fb848defc2a19a08ffa9702516726fd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 804f4cb744ad036978341de4eedcc3351d5f620c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034939"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959947"
 ---
 # <a name="t-sql-statements-for-parallel-data-warehouse"></a>Parallel Data Warehouse の T-SQL ステートメント
 TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム System (APS) SQL Server 並列データ ウェアハウス (PDW)。
@@ -28,8 +27,8 @@ TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム Syst
 * [CREATE COLUMNSTORE INDEX](../t-sql/statements/create-columnstore-index-transact-sql.md)
 * [CREATE DATABASE](../t-sql/statements/create-database-azure-sql-data-warehouse.md)
 * [作成するデータベース スコープ資格情報](../t-sql/statements/create-database-scoped-credential-transact-sql.md)
-* [外部データ ソースを作成します。](../t-sql/statements/create-external-data-source-transact-sql.md)
-* [外部ファイル形式を作成します。](../t-sql/statements/create-external-file-format-transact-sql.md)
+* [CREATE EXTERNAL DATA SOURCE](../t-sql/statements/create-external-data-source-transact-sql.md)
+* [CREATE EXTERNAL FILE FORMAT](../t-sql/statements/create-external-file-format-transact-sql.md)
 * [外部テーブルを作成します。](../t-sql/statements/create-external-table-transact-sql.md)
 * [関数を作成します。](../t-sql/statements/create-function-sql-data-warehouse.md)
 * [CREATE INDEX](../t-sql/statements/create-index-transact-sql.md)
@@ -46,7 +45,7 @@ TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム Syst
 * [プロシージャを削除します。](../t-sql/statements/drop-procedure-transact-sql.md)
 * [統計を削除します。](../t-sql/statements/drop-statistics-transact-sql.md)
 * [DROP TABLE](../t-sql/statements/drop-table-transact-sql.md)
-* [DROP SCHEMA](../t-sql/statements/drop-schema-transact-sql.md)
+* [スキーマを削除します](../t-sql/statements/drop-schema-transact-sql.md)
 * [ビューを削除します。](../t-sql/statements/drop-view-transact-sql.md)
 * [RENAME](../t-sql/statements/rename-transact-sql.md)
 * [TRUNCATE TABLE](../t-sql/statements/truncate-table-transact-sql.md)
@@ -91,7 +90,7 @@ TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム Syst
 * [データベース暗号化キーを変更します](../t-sql/statements/alter-database-encryption-key-transact-sql.md)
 * [ALTER LOGIN](../t-sql/statements/alter-login-transact-sql.md)
 * [マスター _ キーを変更します。](../t-sql/statements/alter-master-key-transact-sql.md)
-* [ALTER ROLE](../t-sql/statements/alter-role-transact-sql.md)
+* [ロールを変更します。](../t-sql/statements/alter-role-transact-sql.md)
 * [ALTER USER](../t-sql/statements/alter-user-transact-sql.md)
 * [BACKUP CERTIFICATE](../t-sql/statements/backup-certificate-transact-sql.md)
 * [CLOSE MASTER KEY](../t-sql/statements/close-master-key-transact-sql.md)
@@ -105,7 +104,7 @@ TRANSACT-SQL (T-SQL) ステートメントの分析プラットフォーム Syst
 * [データベース暗号化キーを削除します](../t-sql/statements/drop-database-encryption-key-transact-sql.md)
 * [DROP LOGIN](../t-sql/statements/drop-login-transact-sql.md)
 * [DROP MASTER KEY](../t-sql/statements/drop-master-key-transact-sql.md)
-* [DROP ROLE](../t-sql/statements/drop-role-transact-sql.md)
+* [ロールを削除します](../t-sql/statements/drop-role-transact-sql.md)
 * [ユーザーを削除します。](../t-sql/statements/drop-user-transact-sql.md)
 * [OPEN MASTER KEY](../t-sql/statements/open-master-key-transact-sql.md)
 

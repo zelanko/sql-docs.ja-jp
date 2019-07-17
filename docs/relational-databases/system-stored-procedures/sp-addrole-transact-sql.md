@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e8a21642-8440-419a-8585-93d3d9d44f00
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: a1cc9a65d1d4b6baba4d457d28ee36f0ac6156a1
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 1711ec3941a5fced5ef9e0c32808d6153b673e2b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492194"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030922"
 ---
 # <a name="spaddrole-transact-sql"></a>sp_addrole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- 名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールは、1 ~ 128 文字、文字、記号、および数字を含めることができます。 データベース ロールの名前のことはできません。 円記号を含める (\\)、null 値、または空の文字列 (**''**)。  
+ 名前[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールは、1 ~ 128 文字、文字、記号、および数字を含めることができます。 データベース ロールの名前のことはできません。 円記号を含める (\\)、null 値、または空の文字列 ( **''** )。  
   
  データベース ロールに追加した後を使用して、 [sp_addrolemember &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-addrolemember-transact-sql.md) 、ロールにプリンシパルを追加します。 GRANT、DENY、または REVOKE ステートメントを使用して、データベース ロールにアクセス許可を適用するときにデータベース ロールのメンバーは、アクセス許可が自分のアカウントに直接適用されたかのようにこれらのアクセス許可を継承します。  
   
@@ -70,7 +69,7 @@ sp_addrole [ @rolename = ] 'role' [ , [ @ownername = ] 'owner' ]
 EXEC sp_addrole 'Managers';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-role-transact-sql.md)  

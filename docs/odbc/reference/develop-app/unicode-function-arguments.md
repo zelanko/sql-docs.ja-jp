@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: eafe8c7e-f6d2-44d7-99ee-cf2148a30f4f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 83cb2faad86268c3270e9386ca10b25e4807e030
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1fee0aa76bc5b903d65461261a8eb5dbc2349581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793747"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087763"
 ---
 # <a name="unicode-function-arguments"></a>Unicode 関数の引数
 ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、その引数の文字の文字列または SQLPOINTER へのポインターをそのまま使用するすべての関数の ANSI および Unicode の両方のバージョンをサポートします。 Unicode 関数の関数として実装されます (のサフィックスを持つ*W*) マクロではなく、します。 ANSI 関数 (サフィックスの有無を呼び出すことが*A*) は、現在の ODBC API 関数と同じです。  
@@ -43,7 +42,7 @@ ODBC 3.5 (またはそれ以降) のドライバー マネージャーは、そ�
 |**SQLDescribeCol**|**SQLProcedureColumns**|  
 |**SQLDriverConnect**|**SQLProcedures**|  
 |**SQLDrivers**|**SQLSetConnectAttr**|  
-|**SQLError**|**SQLSetConnectOption**|  
+|**Sqlerror 関数**|**SQLSetConnectOption**|  
 |**SQLExecDirect**|**SQLSetCursorName**|  
 |**SQLForeignKeys**|**SQLSetDescField**|  
 |**SQLGetConnectAttr**|**SQLSetStmtAttr**|  
