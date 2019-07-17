@@ -2,19 +2,18 @@
 title: アプライアンスの管理タスク - Analytics Platform System |Microsoft Docs
 description: このガイドでは、Analytics Platform System (APS) のアプライアンスの管理タスクを実行する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9012ddc562e9252367c7204383fa4ccc06f06345
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a24c7fe3d167775845ea6360aefdd1172eeaa72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276409"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961490"
 ---
 # <a name="appliance-management-tasks-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスの管理タスク
 このガイドでは、Analytics Platform System (APS) のアプライアンスの管理タスクを実行する方法について説明します。  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 787a2fa5-87a1-49bd-938b-6043c245f46b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 13c566ef9163cd7bc71ac6934f3db9782c87f06f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 71aaa9e52cfca8435501695a4ebf60b2a6aa6ee4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096052"
 ---
 # <a name="sptables-transact-sql"></a>sp_tables (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,15 +48,15 @@ sp_tables [ [ @table_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @table_name = ] 'name'` カタログ情報を返すために使用するテーブル。 *名前*は**nvarchar (384)**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。  
+`[ @table_name = ] 'name'` カタログ情報を返すために使用するテーブル。 *名前*は**nvarchar (384)** 、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。  
   
-`[ @table_owner = ] 'owner'` カタログ情報を返すために使用するテーブルのテーブル所有者です。 *所有者*は**nvarchar (384)**、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。 所有者が指定されていない場合は、基になる DBMS の既定のテーブル可視性規則が適用されます。  
+`[ @table_owner = ] 'owner'` カタログ情報を返すために使用するテーブルのテーブル所有者です。 *所有者*は**nvarchar (384)** 、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。 所有者が指定されていない場合は、基になる DBMS の既定のテーブル可視性規則が適用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、現在のユーザーが指定した名前のテーブルを所有している場合、そのテーブルの列が返されます。 所有者が指定されていない、現在のユーザーが指定した名前のテーブルを所有していない場合は、この手順は、データベースの所有者によって所有されている指定した名前のテーブルを探します。 そのテーブルが存在する場合、そのテーブルの列が返されます。  
   
-`[ @table_qualifier = ] 'qualifier'` テーブル修飾子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_修飾子_**.**_所有者_**.**_名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
+`[ @table_qualifier = ] 'qualifier'` テーブル修飾子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_修飾子_ **.** _所有者_ **.** _名前_)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
-``[ , [ @table_type = ] "'type', 'type'" ]`` 指定されているテーブルの種類のすべてのテーブルに関する情報をコンマで区切って、値の一覧を示します。 以下の**テーブル**、 **SYSTEMTABLE**、および**ビュー**します。 *型*は**varchar (100)**、既定値は NULL です。  
+``[ , [ @table_type = ] "'type', 'type'" ]`` 指定されているテーブルの種類のすべてのテーブルに関する情報をコンマで区切って、値の一覧を示します。 以下の**テーブル**、 **SYSTEMTABLE**、および**ビュー**します。 *型*は**varchar (100)** 、既定値は NULL です。  
   
 > [!NOTE]  
 >  各テーブル型を囲む必要があります単一引用符と二重引用符は、パラメーター全体を囲む必要があります。 テーブル型は、大文字である必要があります。 SET QUOTED_IDENTIFIER が ON の場合は、それぞれ単一引用符が 2 倍にする必要があり、パラメーター全体を単一引用符で囲む必要があります。  
@@ -75,7 +74,7 @@ sp_tables [ [ @table_name = ] 'name' ]
 |**TABLE_OWNER**|**sysname**|テーブルの所有者名です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、テーブルを作成したデータベース ユーザーの名前を表します。 このフィールドは、常に値を返します。|  
 |**TABLE_NAME**|**sysname**|テーブル名です。 このフィールドは、常に値を返します。|  
 |**TABLE_TYPE**|**varchar(32)**|テーブル、システム テーブルまたはビュー。|  
-|**REMARKS**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
+|**「解説」**|**varchar(254)**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
   
 ## <a name="remarks"></a>コメント  
  相互運用性を最大に、ゲートウェイのクライアントは、92 標準 SQL のパターン照合 (% と _ ワイルドカード文字) のみを想定してください。  
@@ -129,7 +128,7 @@ EXEC sp_tables
    @table_qualifier = 'AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.synonyms &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-synonyms-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

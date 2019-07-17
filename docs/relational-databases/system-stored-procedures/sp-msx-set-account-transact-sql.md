@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 314ec720-3a37-48f7-bb6b-8d5b894bf843
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16d5c1815e42e419940223b7f25a565e04ab0508
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 22372412f9c3f905b8978741b556724ca880568c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533254"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108019"
 ---
 # <a name="spmsxsetaccount-transact-sql"></a>sp_msx_set_account (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,7 +52,7 @@ sp_msx_set_account [ @credential_name = ] 'credential_name'  | [ @credential_id 
 ## <a name="remarks"></a>コメント  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報を使用して、ターゲット サーバーはマスター サーバーにログインを使用してユーザー名とパスワード情報を格納します。 このプロシージャでは、ターゲット サーバーの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがマスター サーバーへのログインで使用する資格情報を設定します。  
   
- 既存の資格情報を指定する必要があります。 資格情報の作成の詳細については、[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)を参照してください。  
+ 既存の資格情報を指定する必要があります。 資格情報の作成の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  実行権限**sp_msx_set_account**既定のメンバーに、 **sysadmin**固定サーバー ロール。  

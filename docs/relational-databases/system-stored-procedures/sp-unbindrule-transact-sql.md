@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f54ee155-c3c9-4f1a-952e-632a8339f0cc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 86efa9f7951277e6effdae9f59669fb7101f6f67
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b409b76d3a7c07ac03173346059f38ac616f5a87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095857"
 ---
 # <a name="spunbindrule-transact-sql"></a>sp_unbindrule (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,12 +43,12 @@ sp_unbindrule [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'object_name'` テーブルと列、または元のルールをバインド解除、別名データ型の名前です。 *object_name*は**nvarchar (776)**、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型からルールをバインド解除すると同じ規則が作成されたデータ型の列もバインドされています。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
+`[ @objname = ] 'object_name'` テーブルと列、または元のルールをバインド解除、別名データ型の名前です。 *object_name*は**nvarchar (776)** 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。 別名データ型からルールをバインド解除すると同じ規則が作成されたデータ型の列もバインドされています。 ただし、同じデータ型でも、ルールが直接バインドされている列には影響はありません。  
   
 > [!NOTE]  
 >  *object_name*角かっこを含めることができます **:operator[]** として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
-`[ @futureonly = ] 'futureonly_flag'` 別名データ型からルールをバインド解除するときにのみ使用されます。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、そのデータ型の既存の列には指定されたルールは解除されません。  
+`[ @futureonly = ] 'futureonly_flag'` 別名データ型からルールをバインド解除するときにのみ使用されます。 *futureonly_flag*は**varchar (15)** 、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、そのデータ型の既存の列には指定されたルールは解除されません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -103,7 +102,7 @@ GO
 EXEC sp_unbindrule '[t.4].c1';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE RULE &#40;Transact-SQL&#41;](../../t-sql/statements/create-rule-transact-sql.md)   

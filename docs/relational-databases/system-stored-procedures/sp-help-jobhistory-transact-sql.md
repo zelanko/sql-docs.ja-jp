@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a944d44e-411b-4735-8ce4-73888d4262d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0b2ee476694098f4734c31439b48a7ec9efdc892
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 10033b2525ba28e79bd31a73bd9e71a7cca15e42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054931"
 ---
 # <a name="sphelpjobhistory-transact-sql"></a>sp_help_jobhistory (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -76,9 +75,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @run_status = ] run_status` ジョブの実行状態。 *run_status*は**int**、既定値は null の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|**0**|失敗|  
+|**0**|Failed|  
 |**1**|成功しました|  
 |**2**|再試行 (ステップのみ)|  
 |**3**|Canceled|  
@@ -89,9 +88,9 @@ sp_help_jobhistory [ [ @job_id = ] job_id ]
   
 `[ @oldest_first = ] oldest_first` 最初に出力された最も古いジョブを表示するかどうかです。 *oldest_first*は**int**、既定値は**0**、最初、最新のジョブを提供します。 **1**最初に、最も古いジョブを表示します。  
   
-`[ @server = ] 'server'` ジョブが実行されたサーバーの名前。 *server*は**nvarchar (30)**、既定値は NULL です。  
+`[ @server = ] 'server'` ジョブが実行されたサーバーの名前。 *server*は**nvarchar (30)** 、既定値は NULL です。  
   
-`[ @mode = ] 'mode'` SQL Server が、結果セット内のすべての列を出力するかどうか (**完全**) または列の概要。 *モード*は**varchar (7)**、既定値は**概要**します。  
+`[ @mode = ] 'mode'` SQL Server が、結果セット内のすべての列を出力するかどうか (**完全**) または列の概要。 *モード*は**varchar (7)** 、既定値は**概要**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -164,7 +163,7 @@ EXEC dbo.sp_help_jobhistory
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_purge_jobhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-purge-jobhistory-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

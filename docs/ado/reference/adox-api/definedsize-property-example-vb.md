@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4dda2239-7ab5-4729-9c63-eb530803f7d9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 67e0d2f3b98a54cd914739e62536080c3f9cc88f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d188ba801112a94d1ac09c6e1bae7fbbe5bccfee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966455"
 ---
 # <a name="definedsize-property-example-vb"></a>DefinedSize プロパティの例 (VB)
 この例では、 [DefinedSize](../../../ado/reference/adox-api/definedsize-property-adox.md)のプロパティを[列](../../../ado/reference/adox-api/column-object-adox.md)します。 コードが FirstName 列のサイズを再定義、**従業員**のテーブル、 *Northwind*データベース。 FirstName の値に変更し、[フィールド](../../../ado/reference/ado-api/field-object.md)の[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)に基づいて、**従業員**テーブルが表示されます。 既定では、FirstName フィールドが空白で埋められます再定義した後に注意してください、 **DefinedSize**プロパティ。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 1b28f280-8ef9-48e9-bd99-ec14d79abaca
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: df2bab593e0e945e854e310a394abbc93f75efa4
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0722bbc713804af6b2b97b5651df5b564d17a136
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493124"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117804"
 ---
 # <a name="spaltermessage-transact-sql"></a>sp_altermessage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,15 +41,15 @@ sp_altermessage [ @message_id = ] message_number   ,[ @parameter = ]'write_to_lo
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@message_id =** ] *message_number*  
+ [ **@message_id =** ] *message_number*  
  変更するメッセージのエラー番号は、 **sys.messages**します。 *message_number*は**int**で既定値はありません。  
   
-`[ @parameter = ] 'write\_to\_log_'` 併用**@parameter_value**に書き込まれるメッセージがあることを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ。 *write_to_log*は**sysname**で既定値はありません。 *write_to_log* WITH_LOG または NULL に設定する必要があります。 場合*write_to_log* WITH_LOG または null の場合、しの値に設定されている**@parameter_value**は**true**メッセージは、Windows アプリケーション ログに書き込まれます。 場合*write_to_log* WITH_LOG または NULL との値に設定されている**@parameter_value**は**false**メッセージは、Windows アプリケーション ログには常に書き込まれませんが、可能性がありますエラーの発生状況によっては書き込まれます。 場合*write_to_log*が指定されている値**@parameter_value**も指定する必要があります。  
+`[ @parameter = ] 'write\_to\_log_'` 併用 **@parameter_value** に書き込まれるメッセージがあることを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ。 *write_to_log*は**sysname**で既定値はありません。 *write_to_log* WITH_LOG または NULL に設定する必要があります。 場合*write_to_log* WITH_LOG または null の場合、しの値に設定されている **@parameter_value** は**true**メッセージは、Windows アプリケーション ログに書き込まれます。 場合*write_to_log* WITH_LOG または NULL との値に設定されている **@parameter_value** は**false**メッセージは、Windows アプリケーション ログには常に書き込まれませんが、可能性がありますエラーの発生状況によっては書き込まれます。 場合*write_to_log*が指定されている値 **@parameter_value** も指定する必要があります。  
   
 > [!NOTE]  
 >  Windows のアプリケーション ログにメッセージを書き込む場合は、[!INCLUDE[ssDE](../../includes/ssde-md.md)]のエラー ログ ファイルにも同じ内容が書き込まれます。  
   
-`[ @parameter_value = ]'value_'` 併用**@parameter**にへの書き込みエラーがあることを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ。 *値*は**varchar (5)** 既定値はありません。 場合**true**エラーが常に Windows アプリケーション ログに書き込まれます。 場合**false**エラーは、Windows アプリケーション ログには常に書き込まれませんが、エラーの発生状況によっては書き込まれる可能性があります。 場合*値*が指定されている*write_to_log*の**@parameter**も指定する必要があります。  
+`[ @parameter_value = ]'value_'` 併用 **@parameter** にへの書き込みエラーがあることを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アプリケーション ログ。 *値*は**varchar (5)** 既定値はありません。 場合**true**エラーが常に Windows アプリケーション ログに書き込まれます。 場合**false**エラーは、Windows アプリケーション ログには常に書き込まれませんが、エラーの発生状況によっては書き込まれる可能性があります。 場合*値*が指定されている*write_to_log*の **@parameter** も指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -74,7 +73,7 @@ EXECUTE sp_altermessage 55001, 'WITH_LOG', 'true';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RAISERROR &#40;Transact-SQL&#41;](../../t-sql/language-elements/raiserror-transact-sql.md)   
  [sp_addmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmessage-transact-sql.md)   
  [sp_dropmessage &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmessage-transact-sql.md)   

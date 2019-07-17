@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cbdfea38-9e42-47f3-8fc8-5978b82e2623
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c12e078505c8049511e59973c26d6a1417c7eae0
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5428ae9130646db662c6c960f777c6a7dfe25000
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537854"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084892"
 ---
 # <a name="spupdatejob-transact-sql"></a>sp_update_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,12 +76,12 @@ sp_update_job [ @job_id =] job_id | [@job_name =] 'job_name'
   
 `[ @notify_level_eventlog = ] eventlog_level` このジョブの Microsoft Windows アプリケーション ログにエントリを配置する場合を指定します。 *eventlog_level*は**int**、これらの値のいずれかを指定できます。  
   
-|値|説明 (動作)|  
+|[値]|説明 (動作)|  
 |-----------|----------------------------|  
-|**0**|Never|  
+|**0**|しない|  
 |**1**|成功した場合|  
 |**2**|エラー発生時|  
-|**3**|毎回|  
+|**3**|常に|  
   
 `[ @notify_level_email = ] email_level` このジョブの完了時に電子メールを送信するタイミングを指定します。 *email_level*は**int**します。*email_level*として同じ値を使用して*eventlog_level*します。  
   
@@ -136,7 +135,7 @@ EXEC dbo.sp_update_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-job-transact-sql.md)   
  [sp_delete_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-job-transact-sql.md)   
  [sp_help_job &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-job-transact-sql.md)   

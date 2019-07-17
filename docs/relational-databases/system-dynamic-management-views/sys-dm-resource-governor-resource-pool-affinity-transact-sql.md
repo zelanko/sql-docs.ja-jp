@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a197ec19-a2ba-44f5-a4f2-3eee33ebd77d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 547a1dd14eab2a5627dbd8e3b8b6e09a4c5143b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b51cd98cd9ef0e6adc3d17d2b1263a62604ab52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62680290"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053274"
 ---
 # <a name="sysdmresourcegovernorresourcepoolaffinity-transact-sql"></a>sys.dm_resource_governor_resource_pool_affinity (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "62680290"
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)。  
   
-|Colmn 名|データ型|説明|  
+|Colmn 名|データの種類|説明|  
 |----------------|---------------|-----------------|  
 |Pool_id|**int**|リソース プールの ID。 NULL 値は許可されません。|  
 |Processor_group|**smallint**|Windows の論理プロセッサ グループの ID。 NULL 値は許可されません。|  

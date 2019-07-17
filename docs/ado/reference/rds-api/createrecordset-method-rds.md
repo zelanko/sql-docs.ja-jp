@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6840b1e5-c04d-4d3e-9dcc-42128c83492f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e0ac86f4ceac4c806bfa3f6df5cc9e2024b4d03d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c65f7d415864b169b683e0c9ab858506d31783b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964512"
 ---
 # <a name="createrecordset-method-rds"></a>CreateRecordset メソッド (RDS)
 空を作成します。 切断[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)します。  
@@ -50,9 +49,9 @@ object.CreateRecordset(ColumnInfos)
 |属性|説明|  
 |---------------|-----------------|  
 |名前|列ヘッダーの名前。|  
-|型|データ型の整数。|  
+|種類|データ型の整数。|  
 |サイズ|データ型に関係なく、文字幅の整数。|  
-|NULL 値の許容|ブール値。|  
+|NULL 値の許容|ブール値を指定します。|  
 |(省略可能) のスケール|この省略可能な属性は、数値フィールドの小数点以下桁数を定義します。 この値が指定されていない場合は 3 つの小数点以下桁数に数値の値は切り捨てられます。 有効桁数が影響を受けませんが、小数点以下桁数は 3 つに切り捨てられます。|  
   
  列の配列のセットが定義する配列にグループ化し、 **Recordset**します。  

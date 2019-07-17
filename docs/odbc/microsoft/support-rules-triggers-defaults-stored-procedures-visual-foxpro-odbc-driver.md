@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: e449de20-d6ca-4902-9f8e-814eb6e86650
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 47795998b019df22b01852519f75f6e8d3d274dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a39ad540f3320ed78e981030679b59d911eeef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68080774"
 ---
 # <a name="support-for-rules-triggers-default-values-and-stored-procedures-visual-foxpro-odbc-driver"></a>ルール、トリガー、既定値、およびストアド プロシージャのサポート (Visual FoxPro ODBC ドライバー)
 Visual FoxPro ルール、トリガー、既定値、または、Visual FoxPro ODBC ドライバーを使用してストアド プロシージャを作成することはできません。 ただし、挿入、更新、またはデータベースに格納されている Visual FoxPro データを削除すると、アプリケーションは既存のルール、トリガー、既定値、またはストアド プロシージャとやり取りします。  
@@ -63,7 +62,7 @@ Visual FoxPro ルール、トリガー、既定値、または、Visual FoxPro O
 |AFIELDS () 関数|AINS () 関数|ALTER TABLE - SQL コマンド|  
 |エイリアス () 関数|ALLTRIM () 関数|配列のコマンドを追加します。|  
 |AND 演算子|コマンドを追加します。|メモのコマンドを追加します。|  
-|コマンドを追加します。|[全般] のコマンドを追加します。|ASCAN( ) Function|  
+|コマンドを追加します。|[全般] のコマンドを追加します。|ASCAN () 関数|  
 |プロシージャのコマンドを追加します。|ASC () 関数|ASUBSCRIPT () 関数|  
 |ASIN () 関数|ASORT () 関数|ATAN () 関数|  
 |() 関数|AT_C () 関数|ATCLINE () 関数|  
@@ -107,7 +106,7 @@ Visual FoxPro ルール、トリガー、既定値、または、Visual FoxPro O
 |相違点 () 関数|ディメンション コマンド|ディスク容量 () 関数|  
 |DMY () 関数|ケースを実行してください...ENDCASE コマンド|コマンドの操作を行います|  
 |実行中にしてください...ENDDO コマンド|DOW () 関数|DTOC () 関数|  
-|DTOR () 関数|DTOS( ) Function|DTOT( ) Function|  
+|DTOR () 関数|DTO () 関数|DTOT () 関数|  
   
 ## <a name="e"></a>E  
   
@@ -177,7 +176,7 @@ Visual FoxPro ルール、トリガー、既定値、または、Visual FoxPro O
 |_MLINE システム メモリ変数|MAX () 関数|MDX () 関数|  
 |年 (mdy) に関するページ () 関数|MEMLINES () 関数|メッセージ () 関数|  
 |MIN () 関数|分 () 関数|MLINE () 関数|  
-|MOD () 関数|月 () 関数|MTON( ) Function|  
+|MOD () 関数|月 () 関数|MTON () 関数|  
   
 ## <a name="n"></a>N  
   
@@ -191,14 +190,14 @@ Visual FoxPro ルール、トリガー、既定値、または、Visual FoxPro O
 ||||  
 |-|-|-|  
 |() 関数に発生します|ない () 関数|エラー コマンド|  
-|キー コマンド|ON( ) Function|データベースを開くコマンド|  
+|キー コマンド|() 関数|データベースを開くコマンド|  
 |OR 演算子|順序 () 関数|OS () 関数|  
   
 ## <a name="p"></a>P  
   
 ||||  
 |-|-|-|  
-|PACK コマンド|PARAMETERS( ) Function|支払いに関するページ () 関数|  
+|PACK コマンド|パラメーター () 関数|支払いに関するページ () 関数|  
 |コマンドのパラメーター|プライマリ () 関数|プライベート コマンド|  
 |PI () 関数|プログラム () 関数|適切な () 関数|  
 |PROCEDURE コマンド|PV () 関数||  

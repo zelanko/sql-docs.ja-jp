@@ -20,15 +20,14 @@ helpviewer_keywords:
 ms.assetid: c9b1969f-be1d-4dfb-a33d-551f380b9e27
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: f6a70ce4ec31dafb2d02179ed36919030cedefff
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 2a000db8f64fc5895b1f82150e8786341d0c13e5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47721440"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082706"
 ---
-# <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (Transact-SQL)
+# <a name="sysfnhadrisprimaryreplica-transact-sql"></a>sys.fn_hadr_is_primary_replica (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   現在のレプリカがプライマリ レプリカであるかどうかを決定するために使用されます。  
@@ -50,7 +49,7 @@ sys.fn_hadr_is_primary_replica ( 'dbname' )
  現在のインスタンス上のデータベースがプライマリ レプリカの場合は 1 を返します。 それ以外の場合 0 を返します。  
   
 ## <a name="remarks"></a>コメント  
- この関数を使用すると、ローカル インスタンスが特定の可用性データベースのプライマリ レプリカをホストしているかどうかを効率的に確認できます。 サンプル コードは次のようになります。  
+ ローカル インスタンスが指定された可用性データベースのプライマリ レプリカをホストしているかどうかを簡単に判断するのにには、この関数を使用します。 サンプル コードは次のようになります。  
   
 ```  
 If sys.fn_hadr_is_primary_replica ( @dbname ) <> 1   
@@ -71,7 +70,7 @@ SELECT sys.fn_hadr_is_primary_replica ('TestDB');
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [AlwaysOn 可用性グループの関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/always-on-availability-groups-functions-transact-sql.md)   
  [AlwaysOn 可用性グループ&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/always-on-availability-groups-sql-server.md)   
  [CREATE AVAILABILITY GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/create-availability-group-transact-sql.md)   

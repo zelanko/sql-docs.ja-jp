@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: d9934590-c6ae-4936-91c3-146055ef2c57
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f20945b6c4dc8fc1dda398c3dc9e721ff8b44d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ee6b9df37e61dcb4eed45bc11431d49b160cf87
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053104"
 ---
 # <a name="spdepends-transact-sql"></a>sp_depends (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -70,8 +69,8 @@ sp_depends [ @objname = ] '<object>'
 |-----------------|---------------|-----------------|  
 |**name**|**nvarchar(257** **)**|依存関係が存在する項目の名前。|  
 |**type**|**nvarchar(16)**|項目の種類。|  
-|**updated**|**nvarchar(7)**|項目を更新するかどうか。|  
-|**selected**|**nvarchar(8)**|かどうか、項目は、SELECT ステートメントで使用されます。|  
+|**更新**|**nvarchar(7)**|項目を更新するかどうか。|  
+|**選択されています。**|**nvarchar(8)**|かどうか、項目は、SELECT ステートメントで使用されます。|  
 |**column**|**sysname**|従属性が存在する列またはパラメーター。|  
   
  次の結果セットに依存するオブジェクトを表示する *\<オブジェクト >* します。  
@@ -102,7 +101,7 @@ EXEC sp_depends @objname = N'Sales.Customer' ;
 EXEC sp_depends @objname = N'AdventureWorks2012.Production.iWorkOrder' ;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

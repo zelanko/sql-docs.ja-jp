@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f3a43597-4c5a-4520-bcab-becdbbf81d2e
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3344ad65a2445a8d39451f6a048f057b7158d135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7d698932bb7ef7e0fd37a0ced8ab536eeb0d5d68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096031"
 ---
 # <a name="sptracecreate-transact-sql"></a>sp_trace_create (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -118,7 +117,7 @@ sp_trace_create [ @traceid = ] trace_id OUTPUT
  **Sp_trace_create**、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントでは、トレース ファイル フォルダーに対する書き込み権限が必要です。 場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントが管理者でないトレース ファイルが配置されているコンピューターでは、書き込みアクセス許可を明示的に付与する必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウント。  
   
 > [!NOTE]  
->  作成されたトレース ファイルを自動的に読み込むことができます**sp_trace_create**を使用してテーブルに、 **fn_trace_gettable**システム関数。 このシステム関数を使用する方法については、[sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)を参照してください。  
+>  作成されたトレース ファイルを自動的に読み込むことができます**sp_trace_create**を使用してテーブルに、 **fn_trace_gettable**システム関数。 このシステム関数を使用する方法については、次を参照してください。 [sys.fn_trace_gettable &#40;TRANSACT-SQL&#41;](../../relational-databases/system-functions/sys-fn-trace-gettable-transact-sql.md)します。  
   
  トレース ストアド プロシージャを使用した例については、「[トレースの作成 &#40;Transact-SQL&#41;](../../relational-databases/sql-trace/create-a-trace-transact-sql.md)」を参照してください。  
   

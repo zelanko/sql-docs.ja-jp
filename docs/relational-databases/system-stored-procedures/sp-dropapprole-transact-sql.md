@@ -17,19 +17,18 @@ helpviewer_keywords:
 ms.assetid: ea1aefe6-8f7d-46e9-a3cb-7b037b393e73
 ms.author: vanto
 author: VanMSFT
-manager: jroth
-ms.openlocfilehash: 0928137201d9a731051ab95e603744f60c3a52e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 36c3aaf72390ac5005ff5577000820f07ac5856d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822823"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001032"
 ---
 # <a name="spdropapprole-transact-sql"></a>sp_dropapprole (Transact-SQL)
 
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベースからアプリケーション ロールを削除します。  
+  アプリケーション ロールを現在のデータベースから削除します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[DROP APPLICATION ROLE](../../t-sql/statements/drop-application-role-transact-sql.md)代わりにします。  
@@ -49,7 +48,7 @@ sp_dropapprole [@rolename = ] 'role'
  0 (成功) または 1 (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_dropapprole**アプリケーション ロールの削除にのみ使用できます。 ロールがセキュリティ保護可能なリソースを所有している場合、そのロールを削除することはできません。 セキュリティ保護可能リソースを所有しているアプリケーション ロールを削除する前に、最初のセキュリティ保護可能な所有権を譲渡する必要があります。 またはにドロップします。  
+ **sp_dropapprole**アプリケーション ロールの削除にのみ使用できます。 ロールがセキュリティ保護可能なリソースを所有している場合、そのロールを削除することはできません。 セキュリティ保護可能なリソースを所有しているアプリケーション ロールを削除するには、先にセキュリティ保護可能なリソースの所有権を譲渡するか削除する必要があります。  
   
  **sp_dropapprole**ユーザー定義のトランザクション内で実行することはできません。  
   

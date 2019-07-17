@@ -9,20 +9,19 @@ ms.topic: conceptual
 ms.assetid: ec23d188-b890-49b8-9a88-446df96269e4
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: cddfa2e3fd5d1263bf4f9e5e0bb1fd4c6e8fe675
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 324aff21d677c213148922f7e06f267e08740c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989839"
 ---
 # <a name="creating-script-files-db2tosql"></a>スクリプト ファイル (DB2ToSQL) の作成
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
   
 スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
   
-1.  **config:** コンソール アプリケーションの構成パラメーターを設定するユーザーを有効にします。  
+1.  **構成:** コンソール アプリケーションの構成パラメーターを設定するユーザーを有効にします。  
   
 2.  **サーバー:** ソース/ターゲットのサーバー定義を設定するユーザーを有効にします。 別のサーバー接続ファイルにこのことができます。  
   

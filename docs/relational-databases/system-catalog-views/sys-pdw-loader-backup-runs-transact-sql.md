@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 2b72034c-6a11-46b9-a76c-7a88b2bea360
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 067a39c807b546bc8364bab05d0423f86407a625
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8e7826e4dcefdbed65fb0fa1f3368411a9ef12a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047221"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68127471"
 ---
 # <a name="syspdwloaderbackupruns-transact-sql"></a>sys.pdw_loader_backup_runs (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "63047221"
 |Principal_id|**int**|操作を要求するユーザーの ID。||  
 |session_id|**nvarchar(32)**|操作を実行するセッションの ID。|Session_id を参照してください。 [sys.dm_pdw_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-sessions-transact-sql.md)します。|  
 |request_id|**nvarchar(32)**|操作を実行する要求の ID。 読み込み、これが、この負荷に関連付けられている現在または最近要求.|Request_id 内を参照してください。 [sys.dm_pdw_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-exec-requests-transact-sql.md)します。|  
-|status|**nvarchar(16)**|実行の状態。|'CANCELLED','COMPLETED','FAILED','QUEUED','RUNNING'|  
+|status|**nvarchar(16)**|実行の状態。|'が取り消されました'、' 完了 '、'失敗'、'QUEUED'、'実行中|  
 |進行状況|**int**|完了率。|0 ~ 100|  
 |command|**nvarchar (4000)**|ユーザーによって送信されたコマンドの完全なテキスト。|(スペースをカウントする)、4,000 文字より長い場合は切り捨てられます。|  
 |rows_processed|**bigint**|この操作の一部として処理された行の数。||  

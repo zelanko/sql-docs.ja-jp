@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ec20e446-e540-41ad-8559-d9c0a5b8358f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a042229e3149f97b72b6e86b485771966eb80c30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d9d4a7572131afeeb0017d3773b72d899052b32
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305617"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087792"
 ---
 # <a name="types-of-descriptors"></a>記述子の種類
 次のいずれかを記述する記述子が使用されます。  
@@ -41,7 +40,7 @@ ms.locfileid: "63305617"
   
  記述子の種類は、次の表にまとめたものです。  
   
-|バッファーの種類|[行]|動的パラメーター|  
+|バッファーの種類|行|動的パラメーター|  
 |-----------------|----------|------------------------|  
 |**アプリケーション バッファー**|アプリケーション行記述子 (ARD)|アプリケーション パラメーター記述子 (APD)|  
 |**バッファーの実装**|実装行記述子 (IRD)|実装パラメーター記述子 (IPD)|  

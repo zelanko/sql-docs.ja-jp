@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 4a83b8cb-2d57-4e64-b497-80bd587ee1f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: db287e729678f54aaf637950c89c724724678f08
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f748e75f4e1579446b72b519356f2f649889fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208393"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078969"
 ---
 # <a name="was-a-result-set-created"></a>結果セットは作成されましたか?
 ほとんどの場合は、アプリケーション プログラマは、アプリケーションが実行するステートメントが結果セットを作成するかどうかを把握します。 これは、アプリケーション プログラマによって書き込まれたハード コーディングされた SQL ステートメントを使用している場合、大文字と小文字です。 アプリケーションが実行時に SQL ステートメントを構築したときに大文字と小文字は、通常は。プログラマがフラグを設定するコードを簡単に含めるかどうかを**選択**ステートメントまたは**挿入**ステートメントが構築されます。 いくつかの状況で、プログラマが知ることはできません可能性があるステートメントが結果セットを作成するかどうか。 これは、アプリケーションが、ユーザーを入力して、SQL ステートメントを実行するための手段を提供する場合に当てはまります。 これは、アプリケーションは、プロシージャを実行する実行時に、ステートメントを構築したときにも当てはまります。  

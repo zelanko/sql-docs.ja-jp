@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: f2355a75-3a8e-43e6-96ad-4f41038f6d22
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1063facd150c6dfd6273f1fd78b6f507d062788e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dc58447e9893647dfa73643f14455d715625478e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053050"
 ---
 # <a name="spdescribefirstresultset-transact-sql"></a>sp_describe_first_result_set (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -47,7 +46,7 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
   
 `[ \@params = ] N'parameters'` \@params パラメーターの宣言文字列の提供、[!INCLUDE[tsql](../../includes/tsql-md.md)]バッチは、これは、sp_executesql と同様にします。 パラメーターがあります**nvarchar (n)** または**nvarchar (max)** します。  
   
- 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 文字列は、Unicode 定数または Unicode 変数のいずれかである必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定されたすべてのパラメーターを定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない\@params は必要ありません。 NULL は、このパラメーターの既定値です。  
+ 1 つの文字列に埋め込まれたすべてのパラメーターの定義を含む、 [!INCLUDE[tsql](../../includes/tsql-md.md)] *_batch*します。 この文字列は Unicode 定数または Unicode 変数にする必要があります。 各パラメーター定義は、パラメーター名とデータ型で構成されます。 *n*は追加のパラメーター定義を示すプレース ホルダーです。 ステートメントで指定されたすべてのパラメーターを定義する必要があります\@params します。 場合、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはステートメント内のバッチは、パラメーターを含まない\@params は必要ありません。 NULL は、このパラメーターの既定値です。  
   
 `[ \@browse_information_mode = ] tinyint` 追加のキー列とソース テーブル情報が返されるかどうかを指定します。 場合は、クエリに FOR BROWSE オプションが含まれている場合に、1、各クエリに設定するが分析されます。 追加のキー列とソース テーブル情報が返されます。  
   
@@ -61,44 +60,44 @@ sp_describe_first_result_set [ @tsql = ] N'Transact-SQL_batch'
  **sp_describe_first_result_set**常に成功した場合に 0 の状態を返します。 プロシージャは、エラーをスローします。 プロシージャが RPC として呼び出された場合は、状態の戻り値は sys.dm_exec_describe_first_result_set の error_type 列に記述されているエラーの種類が設定されます。 プロシージャが呼び出された場合[!INCLUDE[tsql](../../includes/tsql-md.md)]、戻り値は常に 0、エラーがある場合でもです。  
   
 ## <a name="result-sets"></a>結果セット  
- この共通メタデータが返されますその結果セット列ごとに 1 つの行と、結果のメタデータ。 各行には、型と、次のセクションで説明されている形式で列の null 値許容属性がについて説明します。 最初のステートメントは、各コントロールのパスが存在しない場合は、0 行を含む結果セットが返されます。  
+ この共通メタデータは、結果のメタデータの各列に対する 1 行の結果セットとして返されます。 各行には、列の種類と NULL 値の許容属性が次のセクションに示す形式で記述されます。 最初のステートメントは、各コントロールのパスが存在しない場合は、0 行を含む結果セットが返されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**is_hidden**|**bit NOT NULL**|列が、参照情報のために追加された追加の列であると、それが表示されないこと実際に結果セットを示します。|  
-|**column_ordinal**|**int NOT NULL**|結果セット内の列の序数位置が含まれています。 最初の列の位置は 1 として指定されます。|  
-|**name**|**sysname NULL**|名前を特定できる場合は、列の名前が含まれています。 それ以外の場合、NULL が含まれます。|  
+|**column_ordinal**|**int NOT NULL**|結果セット内の列の位置を示す序数を格納します。 最初の列の位置は 1 として指定されます。|  
+|**name**|**sysname NULL**|列の名前を確認できる場合は、その名前を格納します。 それ以外の場合、NULL が含まれます。|  
 |**is_nullable**|**bit NOT NULL**|列は Null を許可する場合に特定できない場合に、Null を列に Null を許容しない場合は 0 と 1 を許可する場合は、値 1 が含まれています。|  
-|**system_type_id**|**int NOT NULL**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR の型の場合でも、system_type_name 列が NULL を返す、この列は値 240 を返します。|  
-|**system_type_name**|**nvarchar(256) NULL**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型である場合は、この列で NULL が返されます。|  
-|**max_length**|**smallint NOT NULL**|列のバイト単位で最大長。<br /><br /> -1 = 列のデータ型は**varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、または**xml**します。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'** します。|  
+|**system_type_id**|**int NOT NULL**|Sys.types で指定された列のデータ型の system_type_id を格納します。 CLR 型の場合は、system_type_name 列が NULL を返しても、この列は値 240 を返します。|  
+|**system_type_name**|**nvarchar(256) NULL**|列のデータ型に指定されている名前と引数 (長さ、有効桁数、小数点以下桁数など) を格納します。 データ型がユーザー定義の別名型の場合は、基になるシステム型がここで指定されます。 CLR ユーザー定義型の場合は、この列には NULL が返されます。|  
+|**max_length**|**smallint NOT NULL**|列の最大長 (バイト単位) です。<br /><br /> -1 = 列のデータ型は**varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、または**xml**します。<br /><br /> **テキスト**、列、 **max_length**値は 16 かによって設定された値になります**sp_tableoption 'text in row'** します。|  
 |**有効桁数 (precision)**|**tinyint NOT NULL**|数値ベースの場合は、列の有効桁数です。 それ以外の場合 0 を返します。|  
-|**scale**|**tinyint NOT NULL**|数値ベースの場合、列の小数点以下桁数。 それ以外の場合 0 を返します。|  
+|**scale**|**tinyint NOT NULL**|数値ベースの場合は、列の小数点以下桁数です。 それ以外の場合 0 を返します。|  
 |**collation_name**|**sysname NULL**|文字ベースの場合は、列の照合順序の名前です。 それ以外の場合、NULL を返します。|  
-|**user_type_id**|**int NULL**|CLR 型と別名型、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
-|**user_type_database**|**sysname NULL**|CLR 型と別名型、型が定義されているデータベースの名前が含まれます。 それ以外の場合は NULL です。|  
-|**user_type_schema**|**sysname NULL**|CLR 型と別名型、型が定義されているスキーマの名前が含まれます。 それ以外の場合は NULL です。|  
-|**user_type_name**|**sysname NULL**|CLR 型と別名型、型の名前が含まれます。 それ以外の場合は NULL です。|  
+|**user_type_id**|**int NULL**|CLR 型と別名型の場合、sys.types で指定された列のデータ型の user_type_id を格納します。 それ以外の場合は NULL です。|  
+|**user_type_database**|**sysname NULL**|CLR 型と別名型の場合、その型が定義されたデータベースの名前を格納します。 それ以外の場合は NULL です。|  
+|**user_type_schema**|**sysname NULL**|CLR 型と別名型の場合、その型が定義されたスキーマの名前を格納します。 それ以外の場合は NULL です。|  
+|**user_type_name**|**sysname NULL**|CLR 型と別名型の場合、その型の名前を格納します。 それ以外の場合は NULL です。|  
 |**assembly_qualified_type_name**|**nvarchar (4000)**|CLR 型の場合、その型を定義するアセンブリの名前とクラスを返します。 それ以外の場合は NULL です。|  
-|**xml_collection_id**|**int NULL**|sys.columns で指定された列のデータ型の xml_collection_id を格納します。 返される型は、XML スキーマ コレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**xml_collection_database**|**sysname NULL**|この種類に関連付けられた XML スキーマ コレクションが定義されているデータベースが含まれています。 返される型は、XML スキーマ コレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**xml_collection_schema**|**sysname NULL**|この種類に関連付けられた XML スキーマ コレクションが定義されているスキーマが含まれています。 返される型は、XML スキーマ コレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 返される型は、XML スキーマ コレクションに関連付けられていない場合、この列は NULL を返します。|  
-|**is_xml_document**|**bit NOT NULL**|場合 1 を返します、返されるデータ型が XML とその型を完全な XML ドキュメント (ルート ノードを含む)、XML フラグメントとは対照的にすることが保証されます)。 それ以外の場合 0 を返します。|  
+|**xml_collection_id**|**int NULL**|sys.columns で指定された列のデータ型の xml_collection_id を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**xml_collection_database**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているデータベースを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**xml_collection_schema**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションが定義されているスキーマを格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**xml_collection_name**|**sysname NULL**|この型に関連付けられている XML スキーマ コレクションの名前を格納します。 この列は、返される型が XML スキーマ コレクションに関連付けられていない場合は NULL を返します。|  
+|**is_xml_document**|**bit NOT NULL**|返されたデータ型が XML で、その型が XML フラグメントではなく完全な XML ドキュメント (ルート ノードを含む) であると保証される場合、1 を返します。 それ以外の場合 0 を返します。|  
 |**is_case_sensitive**|**bit NOT NULL**|されていない場合、列が大文字の文字列型で、0 の場合は、1 を返します。|  
 |**is_fixed_length_clr_type**|**bit NOT NULL**|されていない場合、列が固定長の CLR 型と 0 の場合は、1 を返します。|  
-|**source_server**|**sysname**|(リモート サーバーから発生する) 場合、この結果内の列によって返される元のサーバーの名前。 Sys.servers に表示される、名前が与えられます。 この列がローカル サーバー上で発生した場合、または元のサーバーを特定できない場合は NULL を返します。 参照情報が要求された場合のみ設定されます。|  
-|**source_database**|**sysname**|この結果内の列によって返される元のデータベースの名前。 データベースを特定できない場合は、NULL を返します。 参照情報が要求された場合のみ設定されます。|  
-|**source_schema**|**sysname**|この結果内の列によって返される元のスキーマの名前。 スキーマを特定できない場合は、NULL を返します。 参照情報が要求された場合のみ設定されます。|  
-|**source_table**|**sysname**|この結果内の列によって返される元のテーブルの名前。 テーブルを特定できない場合は、NULL を返します。 参照情報が要求された場合のみ設定されます。|  
-|**source_column**|**sysname**|結果列によって返される元の列の名前。 列を特定できない場合は NULL を返します。 参照情報が要求された場合のみ設定されます。|  
-|**is_identity_column**|**bit NULL**|この列が ID 列の場合は 1、それ以外の場合は 0 を返します。 列が id 列であるを特定できない場合は、NULL を返します。|  
-|**is_part_of_unique_key**|**bit NULL**|ない場合は、列が一意インデックス (一意、主な制約を含む) と 0 の一部である場合の 1 を返します。 列が一意のインデックスの一部であることを特定できない場合は、NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
-|**is_updateable**|**bit NULL**|この列が更新可能である場合は 1、それ以外の場合は 0 を返します。 列が更新可能なことを特定できない場合は、NULL を返します。|  
+|**source_server**|**sysname**|この結果内の列によって返された元のサーバーの名前です (リモート サーバーから発生する場合)。 Sys.servers に表示される、名前が与えられます。 この列がローカル サーバー上で発生した場合、または元のサーバーを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**source_database**|**sysname**|この結果内の列によって返された元のデータベースの名前です。 データベースを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**source_schema**|**sysname**|この結果内の列によって返された元のスキーマの名前です。 スキーマを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**source_table**|**sysname**|この結果内の列によって返された元のテーブルの名前です。 テーブルを特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**source_column**|**sysname**|結果列から返された元の列の名前です。 列を特定できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**is_identity_column**|**bit NULL**|この列が ID 列の場合は 1、それ以外の場合は 0 を返します。 ID 列であることを確認できない場合は NULL を返します。|  
+|**is_part_of_unique_key**|**bit NULL**|この列が一意インデックス (一意制約と主キー制約を含む) の一部である場合は 1、それ以外の場合は 0 を返します。 一意インデックスの一部であることを確認できない場合は NULL を返します。 参照情報が要求された場合にのみ設定されます。|  
+|**is_updateable**|**bit NULL**|この列が更新可能である場合は 1、それ以外の場合は 0 を返します。 更新可能であることを確認できない場合は NULL を返します。|  
 |**is_computed_column**|**bit NULL**|この列が計算列の場合は 1、それ以外の場合は 0 を返します。 列が計算列を特定できない場合は、NULL を返します。|  
-|**is_sparse_column_set**|**bit NULL**|場合は列がスパース列と 0 の場合は、1 を返します。 列がスパース列セットの一部であることを特定できない場合は、NULL を返します。|  
+|**is_sparse_column_set**|**bit NULL**|この列がスパース列の場合は 1、それ以外の場合は 0 を返します。 列がスパース列セットの一部であることを特定できない場合は、NULL を返します。|  
 |**ordinal_in_order_by_list**|**smallint NULL**|ORDER BY リストにおけるこの列の位置。 列が ORDER BY リストに表示されない場合、または ORDER BY リストを一意に特定できない場合は、NULL を返します。|  
-|**order_by_list_length**|**smallint NULL**|ORDER BY リストの長さ。 ORDER BY リストが存在しない場合、または ORDER BY リストを一意に特定できない場合は、NULL を返します。 この値がによって返されるすべての行で同じになることに注意してください。 **sp_describe_first_result_set します。**|  
+|**order_by_list_length**|**smallint NULL**|ORDER BY リストの長さを返します。 ORDER BY リストがない場合、または ORDER BY リストを一意に特定できない場合は NULL を返します。 この値がによって返されるすべての行で同じになることに注意してください。 **sp_describe_first_result_set します。**|  
 |**order_by_is_descending**|**smallint NULL**|Ordinal_in_order_by_list が NULL でない場合、 **order_by_is_descending**列は、この列の ORDER BY 句の方向を報告します。 それ以外の場合は、NULL が報告されます。|  
 |**tds_type_id**|**int NOT NULL**|内部使用です。|  
 |**tds_length**|**int NOT NULL**|内部使用です。|  
@@ -298,7 +297,7 @@ ELSE
     SELECT c FROM t1;'  
 ```  
   
- 結果:エラー、型の不一致 (**varchar (10)** と**nvarchar (10)**)。  
+ 結果:エラー、型の不一致 (**varchar (10)** と**nvarchar (10)** )。  
   
 #### <a name="result-set-can-return-an-error"></a>結果セットはエラーを返すことができます。  
  最初の結果セットはエラーまたは結果セットです。  
@@ -399,7 +398,7 @@ N'
   
  結果: **int NULL** dbo.t1.a と s1.t1.a 型であるため、 **int**と異なる null 許容属性。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_describe_undeclared_parameters &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)   
  [sys.dm_exec_describe_first_result_set_for_object &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-for-object-transact-sql.md)  

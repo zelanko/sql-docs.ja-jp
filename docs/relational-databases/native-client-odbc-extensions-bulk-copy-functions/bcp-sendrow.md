@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: ddbdb4bd-ad4e-4bf1-9a75-656aa26ce10a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5898c55baa1cb3447c97fd42e8435217c3a11325
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 84a8e4c35d752e8ee8bf34ac3ee754e57173f8ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47666280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099456"
 ---
 # <a name="bcpsendrow"></a>bcp_sendrow
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -52,7 +51,7 @@ RETCODE bcp_sendrow (
   
  呼び出しの前に**bcp_sendrow**への呼び出しを行う必要があります[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)行のデータを格納しているプログラム変数を指定します。  
   
- 場合**bcp_bind**長い可変長データ型を指定すると呼ばれますが、 *eDataType* SQLTEXT と NULL 以外のパラメーター *pData*パラメーター、 **bcp_sendrow**は他のデータ型の場合と同様に、すべてのデータ値を送信します。 場合、ただし、 **bcp_bind** null になります*pData*パラメーター、 **bcp_sendrow**に指定したデータを持つすべての列を送信した後すぐに、アプリケーションにコントロールを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. アプリケーションを呼び出して[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 、長い可変長データを送信するには、繰り返し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、一度にチャンクです。 詳細については、[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)を参照してください。  
+ 場合**bcp_bind**長い可変長データ型を指定すると呼ばれますが、 *eDataType* SQLTEXT と NULL 以外のパラメーター *pData*パラメーター、 **bcp_sendrow**は他のデータ型の場合と同様に、すべてのデータ値を送信します。 場合、ただし、 **bcp_bind** null になります*pData*パラメーター、 **bcp_sendrow**に指定したデータを持つすべての列を送信した後すぐに、アプリケーションにコントロールを返します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]. アプリケーションを呼び出して[bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md) 、長い可変長データを送信するには、繰り返し[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、一度にチャンクです。 詳細については、次を参照してください。 [bcp_moretext](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-moretext.md)します。  
   
  ときに**bcp_sendrow**一括にプログラム変数から行をコピーするために使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル、行はコミットされた場合にのみユーザーを呼び出して[bcp_batch](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-batch.md)または[bcp_done](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-done.md). 呼び出して、ユーザーが選択できます**bcp_batch**したらすべて*n*行または着信データの期間の間で転送がある場合。 場合**bcp_batch**は呼び出されず、行がコミットされたときに**bcp_done**が呼び出されます。  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1f915832-a7c1-41cd-8c4f-bf6d976951b0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 11145ad7c63ff36686b70a6a4b30b4d9084d7be8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 63d80d6d28427843937f12bf973e52309b56f870
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63125418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036571"
 ---
 # <a name="choosing-a-level-of-interoperability"></a>相互運用性のレベルの選択
 次の手順は、アプリケーションで ODBC を使用した場合、必要な相互運用性のレベルを特定するは。 基本レベルの相互運用性は、通常、アプリケーションの種類の関数です。カスタム アプリケーションが、相互運用できるようにしない傾向があります垂直方向のアプリケーションは、限られた数、Dbms の間で相互運用できるようにする傾向があり、汎用アプリケーションは、すべての Dbms の間で相互運用できるようにする傾向があります。  

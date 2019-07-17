@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: 25b5d051f6241919f34a60a42582e8a101052290
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1183c6a443406f6031453b876f9165257db82c07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794456"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058898"
 ---
 # <a name="overview-of-database-experimentation-assistant"></a>データベースの実験のアシスタントの概要
 
@@ -106,6 +105,6 @@ DEA が Microsoft に製品利用統計情報を送信するインターネッ�
 
 DEA に準拠するもの、 [Microsoft プライバシーに関する声明](https://aka.ms/dea-privacy)します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 [開始](database-experimentation-assistant-get-started.md)キャプチャ、再生、およびトレースを分析に必要な手順について説明します。

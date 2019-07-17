@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 1fb3f83cd3bbd39e3af4936ce8dfb8f16bad82d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 484f238e53db21030b04cdf46b86271236509989
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641464"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962264"
 ---
 # <a name="create-new-sql-server-table-using-rxdatastep-sql-server-and-revoscaler-tutorial"></a>RxDataStep (SQL Server と RevoScaleR チュートリアル) を使用した新しい SQL Server のテーブルを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -92,7 +91,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
         overwrite = TRUE )
     ```
   
-    これは非常に大きなテーブル、このような最終状態メッセージが表示されるまでまで待機します。*行の読み取り:処理された合計行は 200000、:600000*.
+    これは非常に大きなテーブル、このような最終状態メッセージが表示されるまでまで待機します。*行の読み取り:処理された合計行は 200000、:600000*します。
      
 ## <a name="load-data-from-a-sql-table"></a>SQL テーブルからデータを読み込む
 
@@ -114,7 +113,7 @@ Var 3: DayOfWeek 7 factor levels: Monday Tuesday Wednesday Thursday Friday Satur
     rxSummary(~., data = sqlServerAirDemo2)
     ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 > [!div class="nextstepaction"]
 > [rxDataStep を使用したチャンク分析の実行](../../advanced-analytics/tutorials/deepdive-perform-chunking-analysis-using-rxdatastep.md)

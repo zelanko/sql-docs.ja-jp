@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 55ef0ade-68ea-4da5-8aa5-4cd27d1f6d1e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8f11fb5e227b5b6ebd418775247756da55c359af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b4b3de5f445ddd09bf7d069b0b93d82c6f8de978
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966215"
 ---
 # <a name="group-object-adox"></a>Group オブジェクト (ADOX)
 セキュリティで保護されたデータベース内のアクセス許可を持つグループ アカウントを表します。  
@@ -43,6 +42,6 @@ ms.locfileid: "66712073"
   
 -   [Group オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/group-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

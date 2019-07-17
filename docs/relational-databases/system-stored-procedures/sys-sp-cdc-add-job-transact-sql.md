@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4458738-ed25-40a6-8294-a26ca5a05bd9
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 533f37252fa16e2e139f29ac843d6d4a933f13de
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7dd10d28855cc4c10f5496c74f1f39a91826052f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58532144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106545"
 ---
 # <a name="sysspcdcaddjob-transact-sql"></a>sys.sp_cdc_add_job (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -90,7 +89,7 @@ sys.sp_cdc_add_job [ @job_type = ] 'job_type'
   
  クリーンアップ ジョブとキャプチャ ジョブは既定で作成されるため、このストアド プロシージャが必要となるのは、ジョブを明示的に削除した後で、再び作成する必要が生じた場合だけです。  
   
- ジョブの名前は**cdc** 。_\<データベース\_名前\>_**\_クリーンアップ**または**cdc** 。_\<データベース\_名前\>_**\_キャプチャ**ここで、 *< database_name >* 名前を指定します現在のデータベース。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 (**.**) などの一意の識別子が続く: **cdc です。AdventureWorks_capture します。A1ACBDED-13FC-428C-8302-10100EF74F52**します。  
+ ジョブの名前は**cdc** 。 _\<データベース\_名前\>_ **\_クリーンアップ**または**cdc** 。 _\<データベース\_名前\>_ **\_キャプチャ**ここで、 *< database_name >* 名前を指定します現在のデータベース。 名前にピリオドが付加されますと同じ名前のジョブが既に存在する場合 ( **.** ) などの一意の識別子が続く: **cdc です。AdventureWorks_capture します。A1ACBDED-13FC-428C-8302-10100EF74F52**します。  
   
  クリーンアップまたはキャプチャ ジョブの現在の構成を表示する使用[sp_cdc_help_jobs](../../relational-databases/system-stored-procedures/sys-sp-cdc-help-jobs-transact-sql.md)します。 ジョブの構成を変更する[sp_cdc_change_job](../../relational-databases/system-stored-procedures/sys-sp-cdc-change-job-transact-sql.md)します。  
   
@@ -121,7 +120,7 @@ EXEC sys.sp_cdc_add_job
     ,@retention = 5760;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)  

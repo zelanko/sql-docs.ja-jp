@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f9ad3767-5b9f-420d-8922-b637811404f7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3461d6f80bb1ac693cca78954e5165fb7f012436
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b4c3d6ded5d85e5d38556792aaa7ea71dd9f42fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122451"
 ---
 # <a name="sphelplogins-transact-sql"></a>sp_helplogins (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +53,8 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**SID**|**varbinary(85)**|ログイン セキュリティ識別子 (SID)。|  
 |**DefDBName**|**sysname**|既定のデータベースを**LoginName**のインスタンスに接続するときは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**DefLangName**|**sysname**|既定の言語で使用される**LoginName**します。|  
-|**Auser**|**char(5)**|Yes = **LoginName**データベースに関連付けられているユーザー名を持っています。<br /><br /> いいえ = **LoginName**関連付けられているユーザー名がありません。|  
-|**ARemote**|**char(7)**|Yes = **LoginName**が関連付けられたリモート ログインします。<br /><br /> いいえ = **LoginName**関連付けられたログインはありません。|  
+|**Auser**|**char (5)**|Yes = **LoginName**データベースに関連付けられているユーザー名を持っています。<br /><br /> いいえ = **LoginName**関連付けられているユーザー名がありません。|  
+|**ARemote**|**char (7)**|Yes = **LoginName**が関連付けられたリモート ログインします。<br /><br /> いいえ = **LoginName**関連付けられたログインはありません。|  
   
  2 番目のレポートには、次の表に示すとおり、各ログインにマップされているユーザーに関する情報、およびログインのロール メンバーシップが含まれています。  
   
@@ -64,7 +63,7 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**LoginName**|**sysname**|ログイン名です。|  
 |**データベース名**|**sysname**|既定のデータベースを**LoginName**のインスタンスに接続するときは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**UserName**|**sysname**|ユーザー アカウントは、 **LoginName**でマップが**DBName**、およびロールを**LoginName**でのメンバーである**DBName**します。|  
-|**UserOrAlias**|**char(8)**|MemberOf = **UserName**は、ロールです。<br /><br /> ユーザー = **UserName**はユーザー アカウントです。|  
+|**UserOrAlias**|**char (8)**|MemberOf = **UserName**は、ロールです。<br /><br /> ユーザー = **UserName**はユーザー アカウントです。|  
   
 ## <a name="remarks"></a>コメント  
  ログインを削除する前に、使用して**sp_helplogins**ログインにマップされているユーザー アカウントを特定します。  
@@ -100,7 +99,7 @@ John        pubs     John       User
 (1 row(s) affected)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [sp_helpdb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
  [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   

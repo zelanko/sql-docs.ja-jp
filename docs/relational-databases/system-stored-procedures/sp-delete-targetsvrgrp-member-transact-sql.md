@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 178a38d9-9b19-4648-95d7-e1397110d14c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59a58e143809848640db7d92d912e3eac619d0b5
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dcf3788480a6e3dbb3bde20ef3f9e6a43269c9e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026729"
 ---
 # <a name="spdeletetargetsvrgrpmember-transact-sql"></a>sp_delete_targetsvrgrp_member (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ sp_delete_targetsvrgrp_member [ @group_name = ] 'group_name' , [ server_name = ]
 ## <a name="arguments"></a>引数  
 `[ @group_name = ] 'group_name'` グループの名前。 *group_name*は**sysname**、既定値はありません。  
   
-`[ @server_name = ] 'server_name'` 指定されたグループから削除するサーバーの名前。 *server_name*は**nvarchar (30)**、既定値はありません。  
+`[ @server_name = ] 'server_name'` 指定されたグループから削除するサーバーの名前。 *server_name*は**nvarchar (30)** 、既定値はありません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

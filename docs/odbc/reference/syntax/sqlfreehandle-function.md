@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 17a6fcdc-b05a-4de7-be93-a316f39696a1
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e0ddaae66e60f77156b2d7c7e975875bb78d56cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d853d843e7b2cf168516fa4007883f280029e53b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537329"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006232"
 ---
 # <a name="sqlfreehandle-function"></a>SQLFreeHandle 関数
 **準拠**  
@@ -58,7 +57,7 @@ SQLRETURN SQLFreeHandle(
   
 -   SQL_HANDLE_ENV として  
   
--   SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT として  
   
  SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバー マネージャーとドライバーでのみ使用されます。 アプリケーションでは、この種類のハンドルは使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。  
   

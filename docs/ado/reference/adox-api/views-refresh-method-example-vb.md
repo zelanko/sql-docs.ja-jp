@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cdad2d66-6ade-40dc-9e74-e40cfa9bc127
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a83ddfe567a0a4fc900e3098e0cb33b00e417c73
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0d50c8cab60ddf1839c5683023af0b90ebe527c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964735"
 ---
 # <a name="views-refresh-method-example-vb"></a>Views Refresh メソッドの例 (VB)
 次のコードを更新する方法を示しています、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)のコレクションを[カタログ](../../../ado/reference/adox-api/catalog-object-adox.md)します。 これは、前に必要[ビュー](../../../ado/reference/adox-api/view-object-adox.md)オブジェクトから、**カタログ**アクセスできます。  

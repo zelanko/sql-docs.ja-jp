@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0fb9986a-3c33-46ef-87bb-297396ea5a6a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eec9be936a14b0d5c78b5bc183516a8118c339a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e1c297e050121c3013242c40938fdd4c0ba8b936
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122340"
 ---
 # <a name="sphelpmergearticle-transact-sql"></a>sp_helpmergearticle (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,9 +38,9 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` に関する情報を取得するパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、現在のデータベース内のすべてのパブリケーションに含まれるすべてのマージ アーティクルに関する情報が返されます。  
+`[ @publication = ] 'publication'` に関する情報を取得するパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、現在のデータベース内のすべてのパブリケーションに含まれるすべてのマージ アーティクルに関する情報が返されます。  
   
-`[ @article = ] 'article'` 情報を返すアーティクルの名前です。 *記事*は**sysname**、既定値は**%**、指定したパブリケーションのすべてのマージ アーティクルに関する情報が返されます。  
+`[ @article = ] 'article'` 情報を返すアーティクルの名前です。 *記事*は**sysname**、既定値は **%** 、指定したパブリケーションのすべてのマージ アーティクルに関する情報が返されます。  
   
 ## <a name="result-set"></a>結果セット  
   
@@ -60,27 +59,27 @@ sp_helpmergearticle [ [ @publication = ] 'publication' ]
 |**article_resolver**|**nvarchar (255)**|アーティクルのカスタム競合回避モジュール。|  
 |**subset_filterclause**|**nvarchar(1000)**|水平方向のフィルター処理を指定する WHERE 句です。|  
 |**pre_creation_command**|**tinyint**|事前作成メソッドは、次のいずれかを指定できます。<br /><br /> **0** = なし<br /><br /> **1**ドロップを =<br /><br /> **2** = delete<br /><br /> **3** = truncate|  
-|**schema_option**|**binary(8)**|アーティクルに対するスキーマ生成オプションのビットマップです。 このビットマップ オプションについては、[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)または[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を参照してください。|  
+|**schema_option**|**binary(8)**|アーティクルに対するスキーマ生成オプションのビットマップです。 このビットマップ オプションについては、次を参照してください。 [sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)または[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)します。|  
 |**type**|**smallint**|アーティクルの種類。次のいずれかの値になります。<br /><br /> **10** = テーブル<br /><br /> **32**ストアド プロシージャを =<br /><br /> **64** = ビューまたはインデックス付きビュー<br /><br /> **128** = ユーザー定義関数<br /><br /> **160** = シノニム スキーマのみ|  
 |**column_tracking**|**int**|列レベルの追跡の設定場所**1**列レベルの追跡が、上にあることを意味し、 **0**列レベルの追跡がオフであることを意味します。|  
 |**resolver_info**|**nvarchar (255)**|アーティクルの競合回避モジュールの名前。|  
 |**vertical_partition**|**bit**|アーティクルが垂直方向にパーティション分割されている場合場所**1** 、情報の記事を垂直方向にパーティション分割することを意味し、 **0**でないことを意味します。|  
 |**destination_owner**|**sysname**|対象オブジェクトの所有者です。 ストアド プロシージャ、ビュー、およびユーザー定義関数 (UDF) スキーマ アーティクルをマージするときのみ適用されます。|  
 |**identity_support**|**int**|自動 id 範囲処理が有効の場合場所**1**を有効にし、 **0**は無効です。|  
-|**pub_identity_range**|**bigint**|新しい id 値を割り当てるときに使用する範囲のサイズ。 詳細については、の「マージ レプリケーション」セクションを参照してください。 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)します。|  
+|**identity_range**|**bigint**|新しい id 値を割り当てるときに使用する範囲のサイズ。 詳細については、の「マージ レプリケーション」セクションを参照してください。 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)します。|  
 |**identity_range**|**bigint**|新しい id 値を割り当てるときに使用する範囲のサイズ。 詳細については、の「マージ レプリケーション」セクションを参照してください。 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)します。|  
 |**threshold**|**int**|実行しているサブスクライバーに使用されるパーセンテージ値[!INCLUDE[ssEW](../../includes/ssew-md.md)]または以前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 **しきい値**マージ エージェントが新しい id 範囲を割り当てるときを制御します。 しきい値で指定された値の割合を使用すると、マージ エージェントは新しい id 範囲を作成します。 詳細については、の「マージ レプリケーション」セクションを参照してください。 [Id 列のレプリケート](../../relational-databases/replication/publish/replicate-identity-columns.md)します。|  
 |**verify_resolver_signature**|**int**|マージ レプリケーションで競合回避モジュールを使用する前に、デジタル署名を検証する場合場所**0** 、署名が確認しないことを意味し、 **1**元が信頼できるかどうかを署名を検証することを意味します。|  
 |**destination_object**|**sysname**|対象オブジェクトの名前です。 ストアド プロシージャ、ビュー、および UDF スキーマ アーティクルをマージするときのみ適用されます。|  
 |**allow_interactive_resolver**|**int**|アーティクルで、インタラクティブ競合回避モジュールを使用する場合場所**1**この競合回避モジュールを使用することを意味し、 **0**使用しないことを意味します。|  
 |**fast_multicol_updateproc**|**int**|有効または、1 つの UPDATE ステートメントで同じ行で複数の列に変更を適用するマージ エージェントを無効にします。場所**1** 1 つのステートメントで複数の列が更新されることを意味し、 **0** UPDATE ステートメントを分離する手段が更新される各列の問題。|  
-|**check_permissions**|**int**|確認されるテーブル レベル権限のビットマップを表す整数値。 使用可能な値の一覧は、[sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を参照してください。|  
+|**check_permissions**|**int**|確認されるテーブル レベル権限のビットマップを表す整数値。 使用可能な値の一覧は、次を参照してください。 [sp_addmergearticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)します。|  
 |**processing_order**|**int**|データ変更は、パブリケーションのアーティクルに適用する順序。|  
-|**upload_options**|**tinyint**|次の値のいずれかのクライアント サブスクリプションを使用したサブスクライバーで行われる更新の制限を定義します。<br /><br /> **0** = クライアント サブスクリプションを使用したサブスクライバーで行われる更新に制限はありません。 すべての変更がパブリッシャーにアップロードされます。<br /><br /> **1** = 変更は、クライアント サブスクリプションを使用したサブスクライバーで許可されますが、パブリッシャーにはアップロードされません。<br /><br /> **2** = クライアント サブスクリプションを使用したサブスクライバーでの変更は許可されません。<br /><br /> 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。|  
+|**upload_options**|**tinyint**|クライアント サブスクリプションを使用したサブスクライバー側での更新に対する制限を定義します。次のいずれかの値になります。<br /><br /> **0** = クライアント サブスクリプションを使用したサブスクライバーで行われる更新に制限はありません。 すべての変更がパブリッシャーにアップロードされます。<br /><br /> **1** = 変更は、クライアント サブスクリプションを使用したサブスクライバーで許可されますが、パブリッシャーにはアップロードされません。<br /><br /> **2** = クライアント サブスクリプションを使用したサブスクライバーでの変更は許可されません。<br /><br /> 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。|  
 |**identityrangemanagementoption**|**int**|自動 id 範囲処理が有効の場合場所**1**を有効にし、 **0**は無効です。|  
 |**delete_tracking**|**bit**|削除がレプリケートされる; 場合場所**1**削除がレプリケートされることを意味し、 **0**いないことを意味します。|  
 |**compensate_for_errors**|**bit**|同期中にエラーが発生したときに、補正アクションが行われるかどうかを示します場所**1**補正アクションが実行されることを示しますと**0**補正アクションが考慮されないことを意味します。|  
-|**partition_options**|**tinyint**|アーティクル内のデータがパーティション分割されて 1 つのパーティションまたは 1 つのサブスクリプションのすべての行が属している場合に、パフォーマンスの最適化を有効にする方法を定義します。 *partition_options*値は次のいずれかを指定できます。<br /><br /> **0** = アーティクルのフィルター処理または静的のいずれかの各パーティションのデータの一意のサブセットを作成しません。 これは、"重複する"パーティションがあります。<br /><br /> **1** = パーティションが重複していると、データ操作言語 (DML) の更新がサブスクライバーで行が属しているパーティションを変更することはできません。<br /><br /> **2**記事、重複しないパーティションが得られますが、複数のサブスクライバーが同じパーティションを受け取ることができます = フィルター選択します。<br /><br /> **3** =、フィルタ リング、情報の記事には、サブスクリプションごとに固有の重複しないパーティションが得られます。|  
+|**partition_options**|**tinyint**|アーティクル内のデータをパーティション分割する方法を定義します。パーティション分割することにより、すべての行が 1 つのパーティションまたは 1 つのサブスクリプションに属している場合に、パフォーマンスを最適化できます。 *partition_options*値は次のいずれかを指定できます。<br /><br /> **0** = アーティクルのフィルター処理または静的のいずれかの各パーティションのデータの一意のサブセットを作成しません。 これは、"重複する"パーティションがあります。<br /><br /> **1** = パーティションが重複していると、データ操作言語 (DML) の更新がサブスクライバーで行が属しているパーティションを変更することはできません。<br /><br /> **2**記事、重複しないパーティションが得られますが、複数のサブスクライバーが同じパーティションを受け取ることができます = フィルター選択します。<br /><br /> **3** =、フィルタ リング、情報の記事には、サブスクリプションごとに固有の重複しないパーティションが得られます。|  
 |**artid**|**uniqueidentifier**|アーティクルを一意に識別する識別子。|  
 |**pubid**|**uniqueidentifier**|アーティクルがパブリッシュされるパブリケーションを一意に識別する識別子。|  
 |**stream_blob_columns**|**bit**|バイナリ ラージ オブジェクト列をレプリケートするときに、データ ストリームの最適化が使用されているかどうかです。 **1**最適化が使用されていることを意味し、 **0**最適化が使用されていないことを意味します。|  

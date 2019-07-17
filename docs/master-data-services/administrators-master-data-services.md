@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d330aa4e-6ade-4b09-b376-1b15d6c78f7d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: edc42dc5746e551913395249cd029e41132f8f0e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b70c5182ec177b8867d2afab7d39dc5ac5955a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486396"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047816"
 ---
 # <a name="administrators-master-data-services"></a>管理者 (Master Data Services)
 
@@ -74,7 +73,7 @@ ms.locfileid: "65486396"
 ## <a name="external-resources"></a>外部リソース  
  msdn.com のブログ投稿「 [Security Improvements (セキュリティの向上)](https://go.microsoft.com/fwlink/p/?LinkId=615376)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル管理者を作成する (マスター データ サービス)](../master-data-services/create-a-model-administrator-master-data-services.md)   
  [マスター データ サービス データベースの作成](../master-data-services/install-windows/create-a-master-data-services-database.md)   
  [通知 (マスター データ サービス)](../master-data-services/notifications-master-data-services.md)  

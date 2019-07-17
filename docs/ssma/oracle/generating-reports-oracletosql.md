@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: ccad6262-01e1-447a-bd2b-c105154c80ce
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: a1f175de4b205b6af98ea9bcc29e7679711b0943
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 971d7e8dde2ae56da02205b50b2f6576a875bd70
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63192385"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264456"
 ---
 # <a name="generating-reports-oracletosql"></a>レポートの生成 (OracleToSQL)
 オブジェクト ツリーのレベルでの SSMA コンソールのコマンドを使用して実行される特定のアクティビティ レポートが生成されます。  
@@ -33,9 +33,9 @@ ms.locfileid: "63192385"
     ||||  
     |-|-|-|  
     |**Sl.No.**|**Command**|**レポートのタイトル**|  
-    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;.XML|  
-    |2|変換とスキーマ|SchemaConversionReport&lt;n&gt;.XML|  
-    |3|データの移行|DataMigrationReport&lt;n&gt;.XML|  
+    |@shouldalert|generate-assessment-report|AssessmentReport&lt;n&gt;します。XML|  
+    |2|変換とスキーマ|SchemaConversionReport&lt;n&gt;します。XML|  
+    |3|データの移行|DataMigrationReport&lt;n&gt;します。XML|  
     |4|convert-sql-statement|ConvertSQLReport&lt;n&gt;します。XML|  
     |5|同期ターゲット|TargetSynchronizationReport&lt;n&gt;します。XML|  
     |6|データベースからの更新|SourceDBRefreshReport&lt;n&gt;.XML|  
@@ -50,8 +50,8 @@ ms.locfileid: "63192385"
     ||||  
     |-|-|-|  
     |**Sl.No.**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|verbose="false"|アクティビティの集計レポートを生成します。|  
-    |2|verbose="true"|各アクティビティの概要と詳細の状態レポートを生成します。|  
+    |1|詳細な ="false"|アクティビティの集計レポートを生成します。|  
+    |2|詳細な ="true"|各アクティビティの概要と詳細の状態レポートを生成します。|  
   
     > [!NOTE]  
     > 上記で指定したレポートの詳細度の設定は生成評価レポート、convert スキーマ、データの移行、sql ステートメントの変換コマンド。  
@@ -61,7 +61,7 @@ ms.locfileid: "63192385"
     ||||  
     |-|-|-|  
     |**Sl.No.**|**コマンドとパラメーター**|**出力の説明**|  
-    |1|report-errors="false"|エラーの詳細はありません/警告/情報メッセージ。|  
+    |1|レポート エラー ="false"|エラーの詳細はありません/警告/情報メッセージ。|  
     |2|report-errors="true"|エラーの詳細/警告/情報メッセージ。|  
   
     > [!NOTE]  
@@ -103,7 +103,7 @@ ms.locfileid: "63192385"
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**object-name:** 同期 (含めることもできます個々 のオブジェクト名またはグループ オブジェクトの名前) と見なされるオブジェクトを指定します。  
+**オブジェクト名:** 同期 (含めることもできます個々 のオブジェクト名またはグループ オブジェクトの名前) と見なされるオブジェクトを指定します。  
   
 **エラー:** 同期エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時の使用可能なオプション:  
   
@@ -131,7 +131,7 @@ ms.locfileid: "63192385"
   
    report-errors-to="<file-name/folder-name>"/>  
 ```  
-**object-name:** 最新の更新 (含めることもできます個々 のオブジェクト名またはグループ オブジェクトの名前) と見なされるオブジェクトを指定します。  
+**オブジェクト名:** 最新の更新 (含めることもできます個々 のオブジェクト名またはグループ オブジェクトの名前) と見なされるオブジェクトを指定します。  
   
 **エラー:** 更新エラーを警告またはエラーとして指定するかどうかを指定します。 エラー時の使用可能なオプション:  
   
@@ -141,6 +141,6 @@ ms.locfileid: "63192385"
   
 -   フェールオーバー スクリプト  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA コンソール (Oracle) の実行](https://msdn.microsoft.com/7228ccba-c69f-4b4c-8664-01a2750183c5)  
   
