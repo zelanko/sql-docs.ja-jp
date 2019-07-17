@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ab1fa449-a695-4987-b1ee-bc68f89418dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33cc979e0a3af9b684899cf7563573fd6ac8dadd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3c7af4f5d217670ab23e71a3c53ccd5cf7944b0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66707279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932035"
 ---
 # <a name="nextrecordset-method-ado"></a>NextRecordset メソッド (ADO)
 現在のクリア[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクトし、[次へ] を返します**レコード セット**一連のコマンドを進めることで。  

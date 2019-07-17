@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0273457f-9d2a-4a6f-9a16-6a6bf281cba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d003b1f15500b1f6d0b8490d9e712a6a34b100a3
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 630c2f90085cedfbb5c59ba395c7d0d9ae9d9643
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906106"
 ---
 # <a name="sphelpnotification-transact-sql"></a>sp_help_notification (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,11 +44,11 @@ sp_help_notification
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @object_type = ] 'object_type'` 返される情報の種類。 *object_type*は**char (9)**、既定値はありません。 *object_type*指定されたオペレーター名に割り当てられているアラートを一覧表示する、アラートは、*、* または演算子では、指定された警告名を担当する演算子の一覧を表示する*します。*  
+`[ @object_type = ] 'object_type'` 返される情報の種類。 *object_type*は**char (9)** 、既定値はありません。 *object_type*指定されたオペレーター名に割り当てられているアラートを一覧表示する、アラートは、 *、* または演算子では、指定された警告名を担当する演算子の一覧を表示する*します。*  
   
 `[ @name = ] 'name'` オペレーター名 (場合*object_type* is 演算子) または警告の名前 (場合*object_type* alerts)。 *名前*は**sysname**、既定値はありません。  
   
-`[ @enum_type = ] 'enum_type'` *Object_type*返される情報。 *enum_type*は「ACTUAL」は、ほとんどの場合。 *enum_type*は**char (10)**, で、既定値はありませんはこれらの値のいずれかを指定します。  
+`[ @enum_type = ] 'enum_type'` *Object_type*返される情報。 *enum_type*は「ACTUAL」は、ほとんどの場合。 *enum_type*は**char (10)** , で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -136,7 +135,7 @@ EXEC sp_help_notification
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-notification-transact-sql.md)   
  [sp_delete_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-notification-transact-sql.md)   
  [sp_update_notification &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-notification-transact-sql.md)   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2290ea89a9666f472421c94038e277eff6f4458c
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50148217"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209752"
 ---
 # <a name="plugin-algorithms"></a>プラグイン アルゴリズム
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "50148217"
   
  `</ConfigurationSettings>`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [DMSCHEMA_MINING_SERVICES 行セット](https://docs.microsoft.com/bi-reference/schema-rowsets/data-mining/dmschema-mining-services-rowset)  
   

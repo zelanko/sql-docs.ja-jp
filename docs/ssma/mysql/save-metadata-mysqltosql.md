@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 9bc6273f-e8b1-430b-81a5-14330a783562
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f641b27357e75db0fb0f6ef71ff701d4f04b45a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 549c4b88e7ca75ce86c8a4e2ddd3eba25f138583
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63154574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929368"
 ---
 # <a name="save-metadata--mysqltosql"></a>メタデータの保存 (MySQLToSQL)
 **メタデータの保存** ダイアログ ボックスでは、SSMA プロジェクトにメタデータを保存する前にロードするように求められます。 これにより、オフラインで使用してテクニカル サポート担当者などの他のユーザーに送信する完全なプロジェクト ファイルがあります。  
@@ -26,7 +25,7 @@ ms.locfileid: "63154574"
 **名前**  
 プロジェクト内の各データベースの名前。  
   
-**ステータス**  
+**状態**  
 SSMA プロジェクトにメタデータが読み込まれている場合、またはメタデータが不足している場合を示します。  
   
 SSMA は、必要に応じて、プロジェクトにメタデータを読み込みます。 参照メタデータのスキーマを変換すると、メタデータが自動的に読み込まれます。  

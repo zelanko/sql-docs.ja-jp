@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 46664ac5-d6e6-4457-8bae-3a98300f2a41
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: adec8a50e6bcf0af25227e2e456f3f76692f6d67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 29bf8d19b9e3c9ec9b4072edd9575add9947c8f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66704182"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922217"
 ---
 # <a name="setting-dcom-stream-marshaling-format"></a>DCOM のストリームのマーシャリング形式の設定
 RDS 1.5 以前のコンポーネントを使用してクライアント コンピューターは、RDS 2.0 またはそれ以降のコンポーネントを使用するサーバーと互換性がありません。 RDS 2.0 またはそれ以降のサポートはより効率的に転送を基になるプロトコルとして DCOM を使用する場合[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)オブジェクト。 RDS 1.5 以前のコンポーネント、クライアントを実行する場合は、(RDS 1.0 と呼ばれます) 前の RDS サポートや新しい RDS サポート (2.0 以降と呼ばれる RDS) を使用するようにサーバーを設定できます。 次のレジストリ エントリのいずれかを設定します。  

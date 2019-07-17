@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc8c2ee84c8210adc3a52d81deff5edf6d3f542f
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52811154"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181694"
 ---
 # <a name="configure-analysis-services-and-kerberos-constrained-delegation-kcd"></a>Analysis Services と Kerberos の制約付き委任 (KCD) の構成
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "52811154"
   
  ![データ ソースとしてブック](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-wds.png "データ ソースとしてブック")  
   
-## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>シナリオ 2:Excel ブックへの Analysis Services 表形式のモデル リンク  
+## <a name="scenario-2-an-analysis-services-tabular-model-links-to-an-excel-workbook"></a>例 2:Excel ブックへの Analysis Services 表形式のモデル リンク  
  Analysis Services 表形式モデルを![1 を参照してください。](../../../analysis-services/instances/install-windows/media/ssas-callout1.png "1 を参照してください。") Power Pivot モデルを含む Excel ブックへのリンク。 このシナリオでは、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が表形式モデルを読み込んだときに、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] はブックへのリンクを検出します。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、モデルを処理するときに、クエリ要求を SharePoint に送信してブックを読み込みます。 このシナリオでは、Analysis Services から SharePoint にクライアントの資格情報を委任する必要は **ありません** が、クライアント アプリケーションがアウトオブライン バインドでデータ ソース情報を上書きする可能性があります。 アウトオブライン バインド要求で現在のユーザーの権限の借用が指定されている場合、ユーザーの資格情報を委任する必要があるため、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] と SharePoint 間で KCD を構成する必要があります。  
   
  ![office online server](../../../analysis-services/instances/install-windows/media/ssas-kcd-wtih-oos.png "office online server")  
@@ -53,9 +53,9 @@ ms.locfileid: "52811154"
 ### <a name="domain-controller"></a>ドメイン コントローラー  
  ドメイン コントローラー (DC) 用にインストールするものは次のとおりです。  
   
--   **ロール:** Active Directory Domain Services。 概要については、「 [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)」 (Windows Server 2012 での Active Directory (AD DS) の構成) をご覧ください。  
+-   **役割:** Active Directory Domain Services。 概要については、「 [Configuring Active Directory (AD DS) in Windows Server 2012](http://sharepointgeorge.com/2012/configuring-active-directory-ad-ds-in-windows-server-2012/)」 (Windows Server 2012 での Active Directory (AD DS) の構成) をご覧ください。  
   
--   **ロール:** DNS Server  
+-   **役割:** DNS サーバー  
   
 -   **機能:** .NET Framework 3.5 の機能/.NET Framework 3.5  
   
@@ -65,23 +65,23 @@ ms.locfileid: "52811154"
   
 -   IPv4 と IPv6 の両方のアドレスを構成することをお勧めします。 これは、Windows コントロール パネルで構成できます。  
   
-    1.   **[ネットワークと共有センター]** をクリックします。  
+    1.  **[ネットワークと共有センター]** をクリックします。  
   
     2.  イーサネット接続をクリックします。  
   
-    3.   **[プロパティ]** をクリックします。  
+    3.  **[プロパティ]** をクリックします。  
   
-    4.   **[インターネット プロトコル バージョン 6 (TCP/IPv6)]** をクリックします。  
+    4.  **[インターネット プロトコル バージョン 6 (TCP/IPv6)]** をクリックします。  
   
-    5.   **[プロパティ]** をクリックします。  
+    5.  **[プロパティ]** をクリックします。  
   
-    6.   **[次の DNS サーバーのアドレスを使う]** をクリックします。  
+    6.  **[次の DNS サーバーのアドレスを使う]** をクリックします。  
   
     7.  ipconfig コマンドで取得した IP アドレスを入力します。  
   
     8.  **[詳細設定]** をクリックし、 **[DNS]** タブをクリックして DNS サフィックスが正しいことを確認します。  
   
-    9.  **[以下の DNS サフィックスを順に追加する]** をクリックします。  
+    9. **[以下の DNS サフィックスを順に追加する]** をクリックします。  
   
     10. IPv4 でこれらの手順を繰り返します。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "52811154"
   
      **注:** Active Directory ユーザーとコンピューター アカウントの委任タブが表示されない場合、そのアカウントに SPN がないためにです。  `my/spn`のような仮の SPN を追加することで、委任タブを表示できます。  
   
-     **[指定されたサービスへの委任でのみこのユーザーを信頼する]** と **[任意の認証プロトコルを使う]**。  
+     **[指定されたサービスへの委任でのみこのユーザーを信頼する]** と **[任意の認証プロトコルを使う]** 。  
   
      これは制約付き委任と呼ばれます。Windows トークンは、プロトコル遷移で制約付き委任を必要とする Claims to Windows Token Service (C2WTS) によって生成されるため、これが必要となります。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "52811154"
   
      **注:** Active Directory ユーザーとコンピューター アカウントの委任タブが表示されない場合、そのアカウントに SPN がないためにです。  `my/spn`のような仮の SPN を追加することで、委任タブを表示できます。  
   
-     **[指定されたサービスへの委任でのみこのユーザーを信頼する]** と **[任意の認証プロトコルを使う]**。  
+     **[指定されたサービスへの委任でのみこのユーザーを信頼する]** と **[任意の認証プロトコルを使う]** 。  
   
      これは制約付き委任と呼ばれます。Windows トークンは、プロトコル遷移で制約付き委任を必要とする Claims to Windows Token Service (C2WTS) によって生成されるため、これが必要となります。  これで、以前に作成した SPN である MSOLAPSvc.3 と MSOLAPDisco.3 への委任が可能になります。  
   

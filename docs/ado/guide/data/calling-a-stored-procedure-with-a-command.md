@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 685f7652-2271-4ede-b552-2eeb8c756b4c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4763939e3eccd0bf4783df87141619cbc0fb011c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 32f1013ef0aa9c8f02e19ec98234418480bc5f22
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702328"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925862"
 ---
 # <a name="calling-a-stored-procedure-with-a-command"></a>Command を使用してストアド プロシージャを呼び出す
 ストアド プロシージャを呼び出すコマンドを使用することができます。 このトピックの最後のコード サンプルは、次のように定義されている、CustOrdersOrders と呼ばれる、Northwind サンプル データベース内のストアド プロシージャを参照します。  
@@ -133,5 +132,5 @@ End Function
 'EndNewConnection  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サポート技術情報記事 117500](https://go.microsoft.com/fwlink/?LinkId=117500)

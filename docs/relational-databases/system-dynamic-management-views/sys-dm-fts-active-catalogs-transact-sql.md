@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 40ab5453-040c-4d2e-bb49-e340cf90c3ee
 author: pmasl
 ms.author: pelopes
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3157284e23c2ec2ccee6df89b24c557403ecc5a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 91a811fd2c868194ad0fc45d75cae7649a324672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944397"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950998"
 ---
 # <a name="sysdmftsactivecatalogs-transact-sql"></a>sys.dm_fts_active_catalogs (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "65944397"
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
    
 ## <a name="physical-joins"></a>物理結合  
  ![この動的管理ビューの重要な結合](../../relational-databases/system-dynamic-management-views/media/join-dm-fts-active-catalogs-1.gif "この動的管理ビューの重要な結合")  

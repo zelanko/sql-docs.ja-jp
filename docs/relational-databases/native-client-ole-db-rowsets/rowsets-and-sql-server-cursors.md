@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: 26a11e26-2a3a-451e-8f78-fba51e330ecb
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6f8c58f38f100258ed9c6b0b1a95cbd37273aaa1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 3c4c34ae8fbfc88bde59b44bc079b1df0dbcdf26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52507814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67985077"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -94,7 +93,7 @@ ms.locfileid: "52507814"
   
  特定の種類のカーソル モデルを使用するには、カーソル モデルに対応する列を探し、列の値が "T" であるすべての行セット プロパティを見つけます。 これらの行セット プロパティに VARIANT_TRUE を設定すると、その特定のカーソル モデルを使用できます。 値が "-" の行セット プロパティには、VARIANT_TRUE と VARIANT_FALSE のどちらも設定できます。  
   
-|行セット プロパティ/カーソル モデル|既定値<br /><br /> result<br /><br /> セット (set)<br /><br />  (RO)|[高速]<br /><br /> 順方向<br /><br /> 専用<br /><br />  (RO)|スタティック<br /><br />  (RO)|Keyset<br /><br /> ドリブン<br /><br />  (RO)|  
+|行セット プロパティ/カーソル モデル|既定<br /><br /> 結果<br /><br /> セット (set)<br /><br /> (RO)|[高速]<br /><br /> 順方向<br /><br /> 専用<br /><br /> (RO)|スタティック<br /><br /> (RO)|Keyset<br /><br /> ドリブン<br /><br /> (RO)|  
 |--------------------------------------|-------------------------------------------|--------------------------------------------|-----------------------|----------------------------------|  
 |DBPROP_SERVERCURSOR|F|T|T|T|  
 |DBPROP_DEFERRED|F|F|-|-|  
@@ -155,7 +154,7 @@ ms.locfileid: "52507814"
   
  行セットの作成や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] カーソル ブロックの形成にどのメソッドを使用したかにかかわらず、行セットの次の行をフェッチするメソッドが実行されるまで、カーソル ブロックはアクティブです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [行セット](../../relational-databases/native-client-ole-db-rowsets/rowsets.md)  
   
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3a09d81b-55d5-416f-9cda-1a3a5492abe0
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 86b2ed6f19f17147eb5622f120898e6f579cb77a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
-ms.translationtype: MT
+ms.openlocfilehash: 6f167aa6f4572fc1a44db83cfb9f7ea7b7a092b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65626771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899842"
 ---
 # <a name="sysdmosschedulers-transact-sql"></a>sys.dm_os_schedulers (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -71,7 +70,7 @@ ms.locfileid: "65626771"
 ## <a name="permissions"></a>アクセス許可
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。   
 
 ## <a name="examples"></a>使用例  
   

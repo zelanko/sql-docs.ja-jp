@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 43911660-b4e4-4934-8c02-35221160aaec
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4639f548ec75844e72c19cb34ec29fc21933e31a
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: fc850c8be9b5222fe178563de78e34e2ba263c12
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47851610"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899188"
 ---
 # <a name="spdbmmonitorhelpalert-transact-sql"></a>sp_dbmmonitorhelpalert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_dbmmonitorhelpalert database_name
 |4|ミラー コミットのオーバーヘッド|許容可能な、トランザクションあたりの平均遅延時間 (ミリ秒単位) を指定します。この時間を経過すると、プリンシパル サーバーで警告が生成されます。 この遅延時間は、ミラー サーバー インスタンスによってトランザクションのログ レコードが再実行キューに書き込まれるのをプリンシパル サーバー インスタンスが待機している間、発生したオーバーヘッドの量になります。 この値は高安全モードにのみ関係します。|  
 |5|保有期間|データベース ミラーリングの状態テーブルにある行の保有期間を制御するメタデータです。|  
   
- 警告に対応するイベント Id については、[使用量の警告しきい値とアラートをミラーリング パフォーマンス基準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)を参照してください。  
+ 警告に対応するイベント Id については、次を参照してください。[使用量の警告しきい値とアラートをミラーリング パフォーマンス基準&#40;SQL Server&#41;](../../database-engine/database-mirroring/use-warning-thresholds-and-alerts-on-mirroring-performance-metrics-sql-server.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -69,10 +68,10 @@ sp_dbmmonitorhelpalert database_name
 |[列]|データ型|説明|  
 |------------|---------------|-----------------|  
 |**alert_id**|**int**|次の表、 **alert_id**各パフォーマンス基準とに表示されるメトリックの測定単位の値、 **sp_dbmmonitorresults**結果セット。|  
-|**threshold**|**int**|警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 現在しきい値が設定されていない場合、値は NULL です。<br /><br /> **注:** を現在の値を表示するには、実行、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアド プロシージャ。|  
-|**enabled**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:** 保有期間は常に有効にします。|  
+|**threshold**|**int**|警告しきい値を指定します。 ミラーリングの状態が更新されたときに、このしきい値より大きな値が返されると、Windows のイベント ログにエントリが作成されます。 この値は、警告に応じて、KB、分、またはミリ秒となります。 現在しきい値が設定されていない場合、値は NULL です。<br /><br /> **注:** 現在の値を表示するには、実行、 [sp_dbmmonitorresults](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)ストアド プロシージャ。|  
+|**enabled**|**bit**|0 = イベントは無効です。<br /><br /> 1 = イベントは有効です。<br /><br /> **注:** 保有期間は常に有効になります。|  
   
-|値|パフォーマンス基準|ユニット|  
+|[値]|パフォーマンス基準|ユニット|  
 |-----------|------------------------|----------|  
 |1|最も古い未送信のトランザクション|Minutes|  
 |2|未送信のログ|KB|  

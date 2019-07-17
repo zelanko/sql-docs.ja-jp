@@ -5693,6 +5693,8 @@
           href: dma/dma-migrateonpremsqltosqldb.md
         - name: SQL Server ログインの移行
           href: dma/dma-migrateserverlogins.md
+        - name: Azure SQL Database の準備のための SQL Server データ資産の評価
+          href: dma/dma-assess-sql-data-estate-to-sqldb.md
         - name: ベスト プラクティス
           href: dma/dma-bestpractices.md
         - name: 評価レポートの統合

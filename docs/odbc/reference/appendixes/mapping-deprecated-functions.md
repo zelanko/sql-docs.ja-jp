@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ee462617-1d79-4c88-afeb-b129cff34cc6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0568306ad0e2fd8a73737bf80a4270e8eaa3ed18
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 307f0f54434fdcb4ebb19c38256a7a04f4a5c46d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990716"
 ---
 # <a name="mapping-deprecated-functions"></a>非推奨の関数のマッピング
 このセクションには、どのように非推奨の関数がについて説明します、ODBC によってマップされます*3.x* ODBC の旧バージョンとの互換性を保証するために、ドライバー マネージャー *3.x* ODBC で使用されるドライバー *2.x*アプリケーション。 ドライバー マネージャーは、アプリケーションのバージョンに関係なく、このマッピングを実行します。 ODBC の各*2.x*関数は、次の一覧は、対応する ODBC にマップされて*3.x*関数、ODBC で呼び出されると*3.x*ドライバー、ODBC *3.x*ドライバーは ODBC を実装する必要はありません*2.x*関数。  
@@ -39,7 +38,7 @@ ms.locfileid: "67793181"
 |**SQLAllocStmt**|**SQLAllocHandle**|  
 |**SQLBindParam**[1]|**SQLBindParameter**|  
 |**SQLColAttributes**|**SQLColAttribute**|  
-|**SQLError**|**SQLGetDiagRec**|  
+|**Sqlerror 関数**|**SQLGetDiagRec**|  
 |**SQLFreeConnect**|**SQLFreeHandle**|  
 |**SQLFreeEnv**|**SQLFreeHandle**|  
 |**SQLFreeStmt**で、*オプション*SQL_DROP の|**SQLFreeHandle**|  

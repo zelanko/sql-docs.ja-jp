@@ -27,13 +27,12 @@ helpviewer_keywords:
 ms.assetid: 99d45b9c-e3b9-4d56-8c25-b594b887ace1
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 29b5225f95c6b2cb04f42c0e67c504ac2cb20e53
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2cc48fa530730beec07aaca4bfb933c9ff8fb2b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62740904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986355"
 ---
 # <a name="incompatible-access-features-accesstosql"></a>互換性のない Access の機能 (AccessToSQL)
 アクセスするすべてのデータベース機能と互換性のある[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]アクセスは、予約済みキーワードの別のセットを持っているとします。 これらへの移行を成功を防ぐことができますなどの問題[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 次の表を使用して、考えられる移行の問題とそれらについて何ができるについて説明します。  

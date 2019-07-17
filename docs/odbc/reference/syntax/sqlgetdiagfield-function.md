@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dbc4398-97a8-4585-bb77-1f7ea75e24c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1446a999029b2c39bfbe4c6c43cf48ad3a09e58f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 620ccce9a035139482b2d9b4630bb2242f720af8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538119"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103774"
 ---
 # <a name="sqlgetdiagfield-function"></a>SQLGetDiagField 関数
 
@@ -61,7 +60,7 @@ SQLRETURN SQLGetDiagField(
   
 -   SQL_HANDLE_ENV として  
   
--   SQL_HANDLE_STMT  
+-   SQL_HANDLE_STMT として  
   
  SQL_HANDLE_DBC_INFO_TOKEN ハンドルは、ドライバー マネージャーとドライバーでのみ使用されます。 アプリケーションでは、この種類のハンドルは使用しないでください。 SQL_HANDLE_DBC_INFO_TOKEN の詳細については、次を参照してください。 [ODBC ドライバーで接続プールの認識を開発](../../../odbc/reference/develop-driver/developing-connection-pool-awareness-in-an-odbc-driver.md)します。  
   
@@ -190,33 +189,33 @@ SQLRETURN SQLGetDiagField(
   
 |SQL ステートメント (SQL statement)<br /><br /> 実行|値<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION|値<br /><br /> SQL_DIAG_DYNAMIC_FUNCTION_CODE|  
 |--------------------------------|-----------------------------------------------|-----------------------------------------------------|  
-|*alter-domain-statement*|「ALTER ドメイン」|SQL_DIAG_ALTER_DOMAIN|  
-|*alter-table-statement*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
-|*assertion-definition*|「アサーションの作成」|SQL_DIAG_CREATE_ASSERTION|  
-|*character-set-definition*|"文字セットの作成|SQL_DIAG_CREATE_CHARACTER_SET|  
-|*collation-definition*|「照合順序の作成」|SQL_DIAG_CREATE_COLLATION|  
-|*domainn-definition*|「ドメインの作成」|SQL_DIAG_CREATE_DOMAIN|
-|*create-index-statement*|「インデックスの作成」|SQL_DIAG_CREATE_INDEX|  
-|*create-table-statement*|「テーブルの作成」|SQL_DIAG_CREATE_TABLE|  
-|*create-view-statement*|「ビューの作成」|SQL_DIAG_CREATE_VIEW|  
+|*alter ドメイン ステートメント*|「ALTER ドメイン」|SQL_DIAG_ALTER_DOMAIN|  
+|*alter table ステートメント*|"ALTER TABLE"|SQL_DIAG_ALTER_TABLE|  
+|*アサーション定義*|「アサーションの作成」|SQL_DIAG_CREATE_ASSERTION|  
+|*文字セットの定義*|"文字セットの作成|SQL_DIAG_CREATE_CHARACTER_SET|  
+|*照合順序定義*|「照合順序の作成」|SQL_DIAG_CREATE_COLLATION|  
+|*domainn 定義*|「ドメインの作成」|SQL_DIAG_CREATE_DOMAIN|
+|*create index ステートメント*|「インデックスの作成」|SQL_DIAG_CREATE_INDEX|  
+|*create table ステートメント*|「テーブルの作成」|SQL_DIAG_CREATE_TABLE|  
+|*create view ステートメント*|「ビューの作成」|SQL_DIAG_CREATE_VIEW|  
 |*カーソルの指定*|"カーソルの選択|SQL_DIAG_SELECT_CURSOR|  
 |*delete-statement-positioned*|"動的な削除の CURSOR"|SQL_DIAG_DYNAMIC_DELETE_CURSOR|  
-|*delete-statement-searched*|[場所の削除]|SQL_DIAG_DELETE_WHERE|  
-|*drop-assertion-statement*|「ドロップ アサーション」|SQL_DIAG_DROP_ASSERTION|  
-|*drop-character-set-stmt*|「ドロップ文字セット」|SQL_DIAG_DROP_CHARACTER_SET|  
-|*drop-collation-statement*|「照合順序をドロップ」|SQL_DIAG_DROP_COLLATION|  
-|*drop-domain-statement*|「ドロップ ドメイン」|SQL_DIAG_DROP_DOMAIN|  
-|*drop-index-statement*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
-|*drop-schema-statement*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
-|*drop-table-statement*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
-|*drop-translation-statement*|"DROP TRANSLATION"|SQL_DIAG_DROP_TRANSLATION|  
-|*drop-view-statement*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
+|*delete ステートメントの検索*|[場所の削除]|SQL_DIAG_DELETE_WHERE|  
+|*drop アサーションのステートメント*|「ドロップ アサーション」|SQL_DIAG_DROP_ASSERTION|  
+|*ドロップ文字セット stmt*|「ドロップ文字セット」|SQL_DIAG_DROP_CHARACTER_SET|  
+|*drop の照合順序-ステートメント*|「照合順序をドロップ」|SQL_DIAG_DROP_COLLATION|  
+|*drop ドメイン-ステートメント*|「ドロップ ドメイン」|SQL_DIAG_DROP_DOMAIN|  
+|*drop index-ステートメント*|"DROP INDEX"|SQL_DIAG_DROP_INDEX|  
+|*drop schema のステートメント*|"DROP SCHEMA"|SQL_DIAG_DROP_SCHEMA|  
+|*drop-テーブル-ステートメント*|"DROP TABLE"|SQL_DIAG_DROP_TABLE|  
+|*drop-変換-ステートメント*|「変換してドロップ」|SQL_DIAG_DROP_TRANSLATION|  
+|*drop-ビュー-ステートメント*|"DROP VIEW"|SQL_DIAG_DROP_VIEW|  
 |*grantstatement*|「許可」|SQL_DIAG_GRANT|
 |*insert ステートメント*|"INSERT"|SQL_DIAG_INSERT|  
 |*ODBC の手順-拡張機能*|"CALL"|SQL_DIAG_ 呼び出し|  
 |*revoke-statement*|"REVOKE"|SQL_DIAG_REVOKE|  
 |*スキーマ定義*|「スキーマの作成」|SQL_DIAG_CREATE_SCHEMA|  
-|*translation-definition*|「翻訳の作成」|SQL_DIAG_CREATE_TRANSLATION|  
+|*翻訳の定義*|「翻訳の作成」|SQL_DIAG_CREATE_TRANSLATION|  
 |*update-statement-positioned*|「動的な更新カーソル」|SQL_DIAG_DYNAMIC_UPDATE_CURSOR|  
 |*update-statement-searched*|「場所の更新」|SQL_DIAG_UPDATE_WHERE|  
 |Unknown|*空の文字列*|SQL_DIAG_UNKNOWN_STATEMENT|  
