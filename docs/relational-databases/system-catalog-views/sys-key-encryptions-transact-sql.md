@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: c39cecf8-af63-40b9-98e5-f84a5bf3ae54
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a8fb9b2103316219bcdac74c1b861ac0a2668cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 61ad8e163eddb4875aad362c3090875bd450bc3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63003555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104591"
 ---
 # <a name="syskeyencryptions-transact-sql"></a>sys.key_encryptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -37,9 +36,9 @@ ms.locfileid: "63003555"
 |列名|データ型|説明|  
 |------------------|----------------|-----------------|  
 |**key_id**|**int**|暗号化されたキーの ID。|  
-|**thumbprint**|**varbinary(32)**|キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された対称キーの GUID。|  
+|**拇印**|**varbinary(32)**|キーの暗号化で使用された証明書の SHA-1 ハッシュ。または、キーの暗号化で使用された対称キーの GUID。|  
 |**crypt_type**|**char(4)**|暗号化の種類。<br /><br /> ESKS = 対称キーによる暗号化<br /><br /> ESKP、ESP2、または ESP3 = パスワードによる暗号化<br /><br /> EPUC = 証明書による暗号化<br /><br /> EPUA = 非対称キーによる暗号化<br /><br /> ESKM = マスター_キーによる暗号化|  
-|**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明です。<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> パスワードによる暗号化 <br />(以降で[!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]CSS で使用するためのバージョン番号が含まれています)。<br /><br /> 証明書による暗号化<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 注:Windows DPAPI を使用して、サービス マスター_キーを保護できます。|  
+|**crypt_type_desc**|**nvarchar(60)**|暗号化の種類の説明です。<br /><br /> ENCRYPTION BY SYMMETRIC KEY<br /><br /> ENCRYPTION BY PASSWORD <br />(以降で[!INCLUDE[sssqlv14_md](../../includes/sssqlv14-md.md)]CSS で使用するためのバージョン番号が含まれています)。<br /><br /> 証明書による暗号化<br /><br /> ENCRYPTION BY ASYMMETRIC KEY<br /><br /> ENCRYPTION BY MASTER KEY<br /><br /> 注:Windows DPAPI を使用して、サービス マスター_キーを保護できます。|  
 |**crypt_property**|**varbinary(max)**|署名された、または暗号化されたビット。|  
   
 ## <a name="permissions"></a>アクセス許可  

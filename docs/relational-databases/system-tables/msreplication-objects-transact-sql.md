@@ -17,15 +17,14 @@ helpviewer_keywords:
 ms.assetid: 08f9710d-976d-448e-bead-ac9835e87bc5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f0098cd55f03a7103345407e566615e10a63b2ac
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 058e1948fa79ed2ba250a4f4d504f95201d1e254
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52757884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079078"
 ---
-# <a name="msreplicationobjects-transact-sql"></a>MSreplication_objects (Transact-SQL)
+# <a name="msreplicationobjects-transact-sql"></a>MSreplication_objects (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSreplication_objects**テーブルには、サブスクライバー データベースのレプリケーションに関連付けられているオブジェクトごとに 1 つの行が含まれています。 このテーブルは、サブスクリプション データベースに格納されます。  
@@ -37,9 +36,9 @@ ms.locfileid: "52757884"
 |**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
 |**object_name**|**sysname**|オブジェクトの名前。|  
 |**object_type**|**char(2)**|オブジェクトの種類:<br /><br /> **u**テーブルを = です。<br /><br /> **t** = トリガーします。<br /><br /> **p**ストアド プロシージャを = です。|  
-|**article**|**sysname**|このオブジェクトが関連付けられているアーティクルの名前|  
+|**article**|**sysname**|オブジェクトが関連付けられているアーティクルの名前。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
   
   

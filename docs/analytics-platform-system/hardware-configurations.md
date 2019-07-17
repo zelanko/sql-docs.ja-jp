@@ -2,19 +2,18 @@
 title: Analytics Platform System のハードウェア構成 |Microsoft Docs
 description: お客様のビジネス要件に従って処理およびストレージの量を適切を購入するために、スケーラブルなユニットで、Analytics Platform System (APS) アプライアンスのハードウェアが設計されています。 アプライアンスは、超える 6 ペタバイト規模のデータに数テラバイトから Parallel Data Warehouse 用のストレージをスケーリングします。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2a252e5f2aebd8d51b9b0eb1f353ded504155c2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f3e1759dcde0dd792ce5179de08e9add1ef355e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63283258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960893"
 ---
 # <a name="hardware-configurations---analytics-platform-system"></a>Analytics Platform System のハードウェア構成
 お客様のビジネス要件に従って処理およびストレージの量を適切を購入するために、スケーラブルなユニットで、Analytics Platform System (APS) ハードウェアが設計されています。 アプライアンスの SQL Server 並列データ Wareouse (PDW) 数テラバイトからを超える 6 ペタバイト規模のデータ ストレージをスケーリングします。  

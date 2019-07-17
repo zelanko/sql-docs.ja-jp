@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c96a6c5e-f3ca-4c1e-b64b-0d8ef6986af8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d34b13931151e5b4490cd64292d66ae38756c125
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7616401e8dcc9461d5eb3c7d67aedccf3a8c7af9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534944"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095880"
 ---
 # <a name="spunbindefault-transact-sql"></a>sp_unbindefault (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,14 +43,14 @@ sp_unbindefault [ @objname = ] 'object_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'object_name'` テーブルと列、または元の既定値はバインドを解除するのには、別名データ型の名前です。 *object_name*は**nvarchar (776)**、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。  
+`[ @objname = ] 'object_name'` テーブルと列、または元の既定値はバインドを解除するのには、別名データ型の名前です。 *object_name*は**nvarchar (776)** 、既定値はありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、最初に列名に対して、次に別名データ型に対して、2 つの要素で構成される識別子の解決が試行されます。  
   
  別名データ型からデフォルトをバインド解除すると同じ既定値であるようなデータ型の列もバインドされています。 ただし、同じデータ型でも、デフォルトが直接バインドされている列は影響を受けません。  
   
 > [!NOTE]  
 >  *object_name*角かっこを含めることができます **:operator[]** として識別子の区切り文字。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。  
   
-`[ @futureonly = ] 'futureonly_flag'` 別名データ型からデフォルトをアンバインドするときにのみ使用されます。 *futureonly_flag*は**varchar (15)**、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、既存のデータ型の列には、指定された既定は失われません。  
+`[ @futureonly = ] 'futureonly_flag'` 別名データ型からデフォルトをアンバインドするときにのみ使用されます。 *futureonly_flag*は**varchar (15)** 、既定値は NULL です。 ときに*futureonly_flag*は**futureonly**、既存のデータ型の列には、指定された既定は失われません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -100,7 +99,7 @@ EXEC sp_bindefault 'default2', '[t.3].c1' ;
 EXEC sp_unbindefault '[t.3].c1';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [CREATE DEFAULT &#40;Transact-SQL&#41;](../../t-sql/statements/create-default-transact-sql.md)   

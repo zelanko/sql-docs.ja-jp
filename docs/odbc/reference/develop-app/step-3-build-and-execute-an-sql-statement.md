@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 133b8bd4-a3c8-4f7e-93c5-c05283c8e96f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a3427057e70ee27fe1108fde71c833f0c511836b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0e369b74ef629c5fd7136b9098f579b5ad2b1b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148968"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114259"
 ---
 # <a name="step-3-build-and-execute-an-sql-statement"></a>手順 3:SQL ステートメントのビルドと実行
 3 番目の手順は、次の図に示すようをビルドして、SQL ステートメントを実行します。 この手順を実行するために使用するメソッドは、非常に異なる可能性があります。 アプリケーションは、SQL ステートメントを入力し、ユーザーの入力に基づいて、SQL ステートメントを作成するように求めるか、ハード コーディングされた SQL ステートメントを使用して可能性があります。 詳細については、次を参照してください。 [SQL ステートメントを構築する](../../../odbc/reference/develop-app/constructing-sql-statements.md)します。  

@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 45643dbcdc2876fe0794ddb731abe6334537169c
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: HT
+ms.openlocfilehash: b29f8136e3394c5424233ac3f966d2b6c0ad7bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510359"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962250"
 ---
 # <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData (SQL Server と RevoScaleR チュートリアル) を使用した SQL Server のデータ オブジェクトを作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,7 +67,7 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
   
     最初の値としては、各チャンク (5,000 行) 内の行の数を制御するのにデータベース エンジンのインスタンスで定義された既定のバッチ処理サイズを使用します。 その値を変数に保存*sqlRowsPerRead*します。
   
-4.  新しいデータ ソース オブジェクトの変数を定義し、以前に定義されている引数を渡す、 **RxSqlServerData**コンストラクター。 ここではデータ ソース オブジェクトが作成されるだけで、設定は行われないことに注意してください。 データの読み込みとは別の手順です。
+4.  新しいデータ ソース オブジェクトの変数を定義し、以前に定義されている引数を渡す、 **RxSqlServerData**コンス トラクター。 ここではデータ ソース オブジェクトが作成されるだけで、設定は行われないことに注意してください。 データの読み込みとは別の手順です。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,

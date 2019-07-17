@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 23afb52d9728fae0d7e9c0fe1615e3f96ff58114
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b1a542ffba5f24ec1ed3cfbad0b6a084b81b74d3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003495"
 ---
 # <a name="mdx-language-reference-mdx"></a>MDX 言語リファレンス (MDX)
 
@@ -31,7 +30,7 @@ ms.locfileid: "63187586"
 |[MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)|MDX 言語で使用できる関数をについて説明します。|  
 |[MDX の予約語](../mdx/mdx-reserved-words.md)|MDX 言語で使用する予約語の一覧を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元式 &#40;MDX&#41; リファレンス](../mdx/multidimensional-expressions-mdx-reference.md)  
   
   

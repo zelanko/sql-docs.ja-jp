@@ -2,19 +2,18 @@
 title: Analytics Platform System を監視するための SCOM の構成 |Microsoft Docs
 description: Analytics Platform System の System Center Operations Manager (SCOM) 管理パックを構成するこれらの手順に従います。 管理パックは、SCOM から Analytics Platform System を監視する必要があります。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2dae92263d7be76490a51ea7027f79ab5fcd6118
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5ec495b3dd321f712aed54fb3b337efe85719be5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62509763"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961234"
 ---
 # <a name="configure-system-center-operations-manager-scom-to-monitor-analytics-platform-system"></a>System Center Operations Manager (SCOM) Analytics Platform System を監視するための構成します。
 Analytics Platform System の System Center Operations Manager (SCOM) 管理パックを構成するこれらの手順に従います。 管理パックは、SCOM から Analytics Platform System を監視する必要があります。  
@@ -41,7 +40,7 @@ System Center を設定するには、次の手順を実行しなければなり
   
         ![ConfigureScomCreateRunAsAccount](./media/configure-scom-to-monitor-analytics-platform-system/ConfigureScomCreateRunAsAccount.png "ConfigureScomCreateRunAsAccount")  
   
-    2.  **作成実行アカウント ウィザード**ダイアログ ボックスが開きます。 **概要**] ページで [**次**。  
+    2.  **作成実行アカウント ウィザード**ダイアログ ボックスが開きます。 **[はじめに]** ページで **[次へ]** をクリックします。  
   
     3.  **全般プロパティ**] ページで、[ **Windows**から**実行アカウントの種類**として「AP ウォッチャー」を指定し、**表示名**します。  
   

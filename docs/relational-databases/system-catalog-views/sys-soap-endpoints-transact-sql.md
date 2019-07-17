@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f50dcbfc-02ed-4a19-9c07-c78a5a1b3224
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 251e5f79c03c02499aec9f3c0f90f42902d32474
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f7081d96d996d33bbabedd13201d7b0fa2547563
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51656611"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078669"
 ---
 # <a name="syssoapendpoints-transact-sql"></a>sys.soap_endpoints (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "51656611"
  
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**< 継承された列 >**||このビューが継承する列の一覧は、[sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)を参照してください。|  
+|**< 継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.endpoints &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)します。|  
 |**is_sql_language_enabled**|**bit**|1 は、BATCHES = ENABLED オプションが指定されていることを示します。エンドポイントでアドホック SQL バッチが許可されます。|  
 |**wsdl_generator_procedure**|**nvarchar(776)**|このメソッドを実装するストアド プロシージャの、3 つの要素で構成される名前。<br /><br /> メソッドの名前は、3 つの要素で構成する必要があります。 1 つの要素、2 つの要素、または 4 つの要素で構成される名前は許可されません。|  
 |**default_database**|**sysname**|DATABASE = オプションで指定される、既定のデータベースの名前。<br /><br /> NULL = DEFAULT が指定されています。|  

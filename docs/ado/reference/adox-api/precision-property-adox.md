@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0e0ecbbf-d7de-49d4-a128-5a519ecd54ba
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0b9ff1d51d762ea50a81f5542b88dd83e767060b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d1416842f3c122e9e5e5e28b8a14310b679697cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706137"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965563"
 ---
 # <a name="precision-property-adox"></a>Precision プロパティ (ADOX)
 内のデータ値の最大有効桁数を示す、[列](../../../ado/reference/adox-api/column-object-adox.md)します。  
@@ -41,7 +40,7 @@ ms.locfileid: "66706137"
 ## <a name="applies-to"></a>適用対象  
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX のコード例:NumericScale および Precision プロパティの例 (VB)](../../../ado/reference/adox-api/adox-code-example-numericscale-and-precision-properties-example-vb.md)   
  [Type プロパティ (列) (ADOX)](../../../ado/reference/adox-api/type-property-column-adox.md)   
  [Column オブジェクト (ADOX)](../../../ado/reference/adox-api/column-object-adox.md)

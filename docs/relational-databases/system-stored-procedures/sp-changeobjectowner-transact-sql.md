@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 45b3dc1c-1cde-45b7-a248-5195c12973e9
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 8980ab1f968bcc842fdd17a6095a9945fcc26b42
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f00b788ecf6b6e4c02d4b8343ba14fa2c345e6b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997076"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056582"
 ---
 # <a name="spchangeobjectowner-transact-sql"></a>sp_changeobjectowner (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_changeobjectowner [ @objname = ] 'object' , [ @newowner = ] 'owner'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'object'` 既存のテーブル、ビュー、ユーザー定義関数、または現在のデータベース内のストアド プロシージャの名前です。 *オブジェクト*は、 **nvarchar (776)**、既定値はありません。 *オブジェクト*形式で、既存のオブジェクトの所有者で修飾できます_existing_owner_**.**_オブジェクト_場合は、スキーマとその所有者が同じ名前を指定します。  
+`[ @objname = ] 'object'` 既存のテーブル、ビュー、ユーザー定義関数、または現在のデータベース内のストアド プロシージャの名前です。 *オブジェクト*は、 **nvarchar (776)** 、既定値はありません。 *オブジェクト*形式で、既存のオブジェクトの所有者で修飾できます_existing_owner_ **.** _オブジェクト_場合は、スキーマとその所有者が同じ名前を指定します。  
   
 `[ @newowner = ] 'owner_ '` オブジェクトの新しい所有者となるセキュリティ アカウントの名前です。 *所有者*は**sysname**、既定値はありません。 *所有者*有効なデータベース ユーザー、サーバーの役割をする必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)]Windows ログイン、または現在のデータベースへのアクセス権を持つ Windows グループ。 新しい所有者は、Windows ユーザーまたは Windows グループが対象の対応するデータベース レベルのプリンシパルはありませんが、データベース ユーザーが作成されます。  
   
@@ -69,7 +68,7 @@ EXEC sp_changeobjectowner 'authors', 'Corporate\GeorgeW';
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER SCHEMA &#40;Transact-SQL&#41;](../../t-sql/statements/alter-schema-transact-sql.md)   
  [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md)   
  [ALTER AUTHORIZATION &#40;Transact-SQL&#41;](../../t-sql/statements/alter-authorization-transact-sql.md)   

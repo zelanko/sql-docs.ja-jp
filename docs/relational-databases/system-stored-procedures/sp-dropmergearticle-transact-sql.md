@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5ef1fbf7-c03d-4488-9ab2-64aae296fa4f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 13f48722b940c26cda8b29258f16f641f74d15e9
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 751f99cad3a2064dce366a90905918075cb697a7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056481"
 ---
 # <a name="spdropmergearticle-transact-sql"></a>sp_dropmergearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  アーティクルをマージ パブリケーションから削除します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  アーティクルをマージ パブリケーションから削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -50,7 +49,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
   
 `[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続しなくてもこのストアド プロシージャを実行するかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。  
   
-`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み*は**nvarchar (20)**、既定値は NULL です。  
+`[ @reserved = ] reserved` 将来使用するために予約されています。 *予約済み*は**nvarchar (20)** 、既定値は NULL です。  
   
 `[ @force_invalidate_snapshot = ] force_invalidate_snapshot` 有効またはスナップショットを無効にする機能を無効にします。 *更によって*は、**ビット**、既定値は、 **0**します。  
   
@@ -70,7 +69,7 @@ sp_dropmergearticle [ @publication= ] 'publication'
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- **sp_dropmergearticle**はマージ レプリケーションで使用します。 アーティクルを削除する詳細については、[記事を追加し、既存のパブリケーションからアーティクル](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)を参照してください。  
+ **sp_dropmergearticle**はマージ レプリケーションで使用します。 アーティクルを削除する詳細については、次を参照してください。[記事を追加し、既存のパブリケーションからアーティクル](../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)します。  
   
  実行**sp_dropmergearticle**パブリケーションからアーティクルを削除してから削除されません、オブジェクト、パブリケーション データベースまたはサブスクリプション データベースから対応するオブジェクト。 必要であれば `DROP <object>` を使用して、手動でこれらのオブジェクトを削除します。  
   

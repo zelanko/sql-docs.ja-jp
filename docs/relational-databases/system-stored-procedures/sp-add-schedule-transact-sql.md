@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9060aae3-3ddd-40a5-83bb-3ea7ab1ffbd7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 16468053ee1e0d09b5be37c034800c122c1d16c9
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 438fe71bcc32c63f97aea95c7105399c2ff8a479
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493291"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088503"
 ---
 # <a name="spaddschedule-transact-sql"></a>sp_add_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ sp_add_schedule [ @schedule_name = ] 'schedule_name'
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
   
@@ -191,7 +190,7 @@ EXEC sp_attach_schedule
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [作成し、スケジュールをジョブにアタッチ](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [ジョブのスケジュール](../../ssms/agent/schedule-a-job.md)   
  [スケジュールを作成します。](../../ssms/agent/create-a-schedule.md)   

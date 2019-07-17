@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 3dde0397-ef6f-4b3f-8250-3f25584eb62b
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 75d95fbe9c289eab419360bef35263b41930c9f7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 19b78ff53b5640d74b49d2e5956c39aa1df2e230
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068074"
 ---
 # <a name="sysplanguides-transact-sql"></a>sys.plan_guides (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "63032981"
 |**create_date**|**datetime**|プラン ガイドが作成された日時。|  
 |**modify_date**|**DateTime**|プラン ガイドの最終変更日。|  
 |**is_disabled**|**bit**|1 = プラン ガイドが無効になっています。<br /><br /> 0 = プラン ガイドは有効です。|  
-|**query_text**|**nvarchar(max)**|プラン ガイドの作成対象であるクエリのテキストです。|  
+|**ステートメント**|**nvarchar(max)**|プラン ガイドの作成対象であるクエリのテキストです。|  
 |**scope_type**|**tinyint**|プラン ガイドのスコープを識別します。<br /><br /> 1 = OBJECT<br /><br /> 2 = SQL<br /><br /> 3 = TEMPLATE|  
 |**scope_type_desc**|**nvarchar(60)**|プラン ガイドのスコープの説明。<br /><br /> OBJECT<br /><br /> SQL<br /><br /> TEMPLATE|  
 |**scope_object_id**|**Int**|スコープがオブジェクトである場合に、プラン ガイドのスコープを定義するオブジェクトの object_id です。<br /><br /> プラン ガイドのスコープはオブジェクトにない場合は NULL です。|  

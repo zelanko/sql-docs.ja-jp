@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b9de003f-cb49-4dec-b528-14a5b8ff12bd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 156dfaf5c6a6a4ec06a0c96b5f726383cba32ba6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 93cf744cf105762fb90a92049d6698e67a19d58c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447551"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138997"
 ---
 # <a name="identifier-arguments"></a>識別子の引数
 識別子の引数の文字列を引用符で囲まれた、ドライバーは先頭と末尾の空白を削除し、文字どおり引用符で囲まれた文字列が扱われます。 文字列が引用符で囲まれていない場合、ドライバーを削除末尾の空白およびフォールド文字列を大文字にします。 SQL_ERROR と SQLSTATE HY009 返します識別子の引数を null ポインターを設定 (null ポインターの無効な使用)、しない限り、引数がカタログ名とカタログがサポートされていません。  

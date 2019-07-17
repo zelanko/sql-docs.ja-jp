@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: eaecd6e0-8486-4e5d-ace7-8ae75768c0a8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d3abdc711d509f323dfd1600360b26c46b2e05ab
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b96ef181f0a584c51258a81a37b9f246af46f090
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108744"
 ---
 # <a name="spcopymergesnapshot-transact-sql"></a>sp_copymergesnapshot (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  表示されているフォルダーに、指定されたパブリケーションのスナップショット フォルダーをコピー、 **@destination_folde** _r_します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  表示されているフォルダーに、指定されたパブリケーションのスナップショット フォルダーをコピー、 **@destination_folde** _r_します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -40,7 +39,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` スナップショットの内容をコピーするパブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
-`[ @destination_folder = ] 'destination_folder'` パブリケーションのスナップショットの内容がコピーされるフォルダーの名前です。 *destination_folder*は**nvarchar (255)**、既定値はありません。 *Destination_folder*別の場所などの別のサーバー、ネットワーク ドライブ、またはリムーバブル メディア (Cd-rom やリムーバブル ディスク) を指定できます。  
+`[ @destination_folder = ] 'destination_folder'` パブリケーションのスナップショットの内容がコピーされるフォルダーの名前です。 *destination_folder*は**nvarchar (255)** 、既定値はありません。 *Destination_folder*別の場所などの別のサーバー、ネットワーク ドライブ、またはリムーバブル メディア (Cd-rom やリムーバブル ディスク) を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -51,7 +50,7 @@ sp_copymergesnapshot [ @publication = ] 'publication', [ @destination_folder = ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_copymergesnapshot**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [スナップショット フォルダーの代替位置](../../relational-databases/replication/snapshot-options.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

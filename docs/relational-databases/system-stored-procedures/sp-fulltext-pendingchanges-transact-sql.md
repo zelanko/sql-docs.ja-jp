@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: fee042fe-4781-4a33-a01b-d98fb5629f1b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ef93287acb610e813f20f213e8fb6a325058116d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d4d8cbd7082a3ec8d19ccc6df7212a70b101e6b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983023"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124222"
 ---
 # <a name="spfulltextpendingchanges-transact-sql"></a>sp_fulltext_pendingchanges (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -50,7 +49,7 @@ sp_fulltext_pendingchanges table_id
 |-----------------|---------------|-----------------|  
 |**[キー]**|*|指定したテーブルからのフルテキスト キー値。|  
 |**DocId**|**bigint**|キー値に対応する内部ドキュメント識別子 (DocId) 列。|  
-|**ステータス**|**int**|0 = 行は、フルテキスト インデックスから削除されます。<br /><br /> 1 = 行にはフルテキスト インデックスが作成されます。<br /><br /> 2 = 行は最新です。<br /><br /> -1 = 行は、遷移 (一括処理されたがコミットされていない) 状態またはエラー状態にします。|  
+|**状態**|**int**|0 = 行は、フルテキスト インデックスから削除されます。<br /><br /> 1 = 行にはフルテキスト インデックスが作成されます。<br /><br /> 2 = 行は最新です。<br /><br /> -1 = 行は、遷移 (一括処理されたがコミットされていない) 状態またはエラー状態にします。|  
 |**DocState**|**tinyint**|内部ドキュメント識別子 (Docld) のマップ ステータス列の行ダンプ。|  
   
  <sup>* キーのデータ型は、ベース テーブルのフルテキスト キー列のデータ型と同じです。</sup>  
@@ -65,7 +64,7 @@ sp_fulltext_pendingchanges table_id
   
  いくつの変更が保留中を検索する特定のテーブルを使用して、 **TableFullTextPendingChanges** OBJECTPROPERTYEX 関数のプロパティ。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索およびセマンティック検索ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [OBJECTPROPERTYEX &#40;Transact-SQL&#41;](../../t-sql/functions/objectpropertyex-transact-sql.md)  
   

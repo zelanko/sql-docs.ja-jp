@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e26299f221facfc6828369e1c75225f206937eb4
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: 7e9d8fe2dba82e83594c73e442a2e52260900ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579582"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091251"
 ---
 # <a name="wideworldimporters-database-catalog"></a>WideWorldImporters データベース カタログ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |-----------------------------|---------------------|
 |アプリケーション|アプリケーション全体のユーザー、連絡先、およびパラメーター。 これも参照テーブルに複数のスキーマで使用されるデータが含まれています|
 |Purchasing|在庫品目は、業者と仕入先に関する詳細から購入します。|  
-|売上|在庫製品版の顧客、および顧客や販売人に関する情報を項目に販売します。 |  
+|販売|在庫製品版の顧客、および顧客や販売人に関する情報を項目に販売します。 |  
 |Warehouse|在庫品目の在庫とトランザクション。|  
 
 ### <a name="secure-access-schemas"></a>セキュリティで保護された access スキーマ
@@ -43,7 +42,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |スキーマ|説明|
 |-----------------------------|---------------------|
 |[Web サイト]|会社の web サイトから、データベースへすべてのアクセスは、このスキーマでです。|
-|[レポート]|Reporting Services レポートから、データベースへすべてのアクセスは、このスキーマでです。|
+|レポート|Reporting Services レポートから、データベースへすべてのアクセスは、このスキーマでです。|
 |PowerBI|エンタープライズ ゲートウェイ経由で Power BI ダッシュ ボードから、データベースへのすべてのアクセスは、このスキーマでです。|
 
 なお、レポートと power Bi スキーマは、サンプル データベースの初期リリースでは使用されません。 ただし、これらのスキーマを使用してこのデータベースの上に構築されたすべての Reporting Services と Power BI のサンプルを推奨します。
@@ -71,7 +70,7 @@ WideWorldImporters は、データを格納する、ユーザーが、データ�
 |ユーザー|ユーザー名、連絡先については、すべてのアプリケーションを使用して、お客様の組織において、Wide World Importers を処理するユーザーが含まれています。 これには、スタッフ、顧客、サプライヤー、およびその他すべての連絡先が含まれます。 システムまたは web サイトを使用するアクセス許可が付与されたユーザーにはについてには、ログインの詳細が含まれます。|
 |市区町村|人々 にとって、お客様の組織の配送先住所、サプライヤーなどにピックアップ アドレス システムでは、格納されている多くのアドレスがあります。アドレスが格納されているときにこのテーブルの city への参照があります。 各都市の所在地もあります。|
 |StateProvinces|市区町村には、州または郡の一部です。 このテーブルでは、州や都道府県など、境界を記述する空間データの詳細があります。|
-|Countries|州または郡の国の一部であります。 このテーブルには、各国の境界を記述する空間データを含む、それらの詳細があります。|
+|国|州または郡の国の一部であります。 このテーブルには、各国の境界を記述する空間データを含む、それらの詳細があります。|
 |DeliveryMethods|品目の在庫 (例: トラック/van、post、pickup、媒体使用など) を配信するための選択肢|
 |PaymentMethods|支払いを行うための選択肢 (など、現金、チェック、EFT など)。|
 |TransactionTypes|顧客、仕入先、または (たとえば、請求書、貸方票など) の株価のトランザクションの種類|

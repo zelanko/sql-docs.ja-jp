@@ -14,15 +14,14 @@ helpviewer_keywords:
 ms.assetid: 267c9fa9-599e-4ee6-b51b-0cae43f09183
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9eeeaeaa3bb4af7a244697e992e79e8c66c2a660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cc5e26b30816d0989dca90566a1a5de008b71c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63201668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019421"
 ---
-# <a name="c-to-sql-bit"></a>C から SQL へ: bit
+# <a name="c-to-sql-bit"></a>C から SQL へ: ビット
 ODBC C データ型の識別子を示します。  
   
  SQL_C_BIT  
