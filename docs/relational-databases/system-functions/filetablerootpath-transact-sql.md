@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 0cba908a-c85c-4b09-b16a-df1cb333c629
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b693f3318d3b5a30e10c267b52569c0b238eaca3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 80651e82fb643d044f4c953481dde2114adcadda
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52407600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042863"
 ---
 # <a name="filetablerootpath-transact-sql"></a>FileTableRootPath (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  特定の FileTable または現在のデータベースの、ルート レベルの UNC パスを返します。  
+  特定の FileTable または現在のデータベースのルート レベルの UNC パスを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -42,11 +41,11 @@ FileTableRootPath ( [ '[schema_name.]FileTable_name' ], @option )
  FileTable の名前。 *FileTable_name*の種類は**nvarchar**します。 これは省略可能なパラメーターです。 既定値は、現在のデータベースです。 指定する*schema_name*も省略可能です。 NULL を渡すことが*FileTable_name*パラメーターの既定値を使用するには  
   
  *@option*  
- パスのサーバー コンポーネントの書式設定の方法を定義する整数式です。 *@option* 次の値のいずれかを設定できます。  
+ パスのサーバー コンポーネントの書式設定を定義する整数式。 *@option* 次の値のいずれかを設定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> これが既定値です。|  
+|**0**|サーバー名を次のような NetBIOS 形式に変換して返します。<br /><br /> `\\SERVERNAME\MSSQLSERVER\MyDocumentDatabase`<br /><br /> これは既定値です。|  
 |**1**|次のように、サーバー名を変換せずに返します。<br /><br /> `\\ServerName\MSSQLSERVER\MyDocumentDatabase`|  
 |**2**|次のような、完全なサーバー パスを返します。<br /><br /> `\\ServerName.MyDomain.com\MSSQLSERVER\MyDocumentDatabase`|  
   
@@ -86,7 +85,7 @@ WHERE Name = N'document.docx';
 ### <a name="permissions"></a>アクセス許可  
  **FileTableRootPath**関数が必要です。  
   
--   特定の FileTable のルート パスを取得するために、FileTable に対する SELECT 権限が必要です。  
+-   特定の FileTable のルート パスを取得する、FileTable に対するアクセス許可を選択します。  
   
 -   **db_datareader**または上位の権限を現在のデータベースのルート パスを取得します。  
   
@@ -105,7 +104,7 @@ SELECT FileTableRootPath(N'dbo.MyFileTable');
 SELECT FileTableRootPath(N'MyFileTable');  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable 内のディレクトリとパスの操作](../../relational-databases/blob/work-with-directories-and-paths-in-filetables.md)  
   
   

@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0b1820e15975ca027af7b51e809ba920af3ffc82
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 45d587b4d62c33e944b15c6b951fa1323620c50e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961703"
 ---
 # <a name="tutorial-sql-development-for-r-data-scientists"></a>チュートリアル:SQL R データ サイエンティスト向けの開発
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +37,7 @@ R コードの組み合わせを使用する[!INCLUDE[ssNoVersion](../../include
 
 + RStudio などの R IDE または R に付属する組み込み RGUI ツール
 
-クライアント ワークステーションでは、このチュートリアルを実行することをお勧めします。 を、同じネットワーク上に接続できる必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server と R 言語を有効になっているコンピューター。 ワークステーションの構成については、[R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)を参照してください。
+クライアント ワークステーションでは、このチュートリアルを実行することをお勧めします。 を、同じネットワーク上に接続できる必要があります、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] SQL Server と R 言語を有効になっているコンピューター。 ワークステーションの構成については、次を参照してください。 [R 開発用のデータ サイエンス クライアント セットアップ](../r/set-up-a-data-science-client.md)します。
 
 両方を備えたコンピューターでチュートリアルを実行する代わりに、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と R 開発環境では、ですが運用環境のためには、この構成は推奨されません。 同じコンピューターにクライアントとサーバーを配置する必要がある場合は、「リモート」のクライアントから R スクリプトを送信するための Microsoft R ライブラリの 2 番目のセットをインストールすることを確認します。 SQL Server インスタンスのプログラム ファイルにインストールされている R ライブラリを使用しません。 具体的には、1 台のコンピューターを使用している場合は、クライアントとサーバーの操作をサポートするためにこれらの場所の両方で RevoScaleR ライブラリ必要があります。
 
@@ -68,7 +67,7 @@ R 環境では、次の行をコピーし、(Rgui または IDE) は、コンソ
 SQL Server にパッケージをインストールするためのいくつかのオプションがあります。 たとえば、SQL Server は[R パッケージ管理](../r/install-additional-r-packages-on-sql-server.md)により、データベース管理者はパッケージ リポジトリを作成し、ユーザーが自分のパッケージをインストールする権限を割り当てる機能。 ただし、コンピューターの管理者の場合は、適切なライブラリをインストールする場合に限り、R を使用して新しいパッケージをインストールできます。
 
 > [!NOTE]
-> サーバーで、**しない**場合でも、入力を求め、ユーザー ライブラリにインストールします。 ユーザー ライブラリにインストールする場合、SQL Server インスタンスが見つからないか、パッケージを実行します。 詳細については、[SQL サーバーに新しい R パッケージをインストールする](../r/install-additional-r-packages-on-sql-server.md)を参照してください。
+> サーバーで、**しない**場合でも、入力を求め、ユーザー ライブラリにインストールします。 ユーザー ライブラリにインストールする場合、SQL Server インスタンスが見つからないか、パッケージを実行します。 詳細については、次を参照してください。 [SQL サーバーに新しい R パッケージをインストールする](../r/install-additional-r-packages-on-sql-server.md)します。
 
 1. [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューターで、**管理者権限で** RGui.exe を開きます。  既定値を使用して SQL Server R Services をインストールした場合、Rgui.exe は C:\Program files \microsoft SQL Server\MSSQL13 で見つかんだことができます。MSSQLSERVER\R_SERVICES\bin\x64)。
 
@@ -80,7 +79,7 @@ SQL Server にパッケージをインストールするためのいくつかの
   install.packages("ROCR", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   install.packages("RODBC", lib=grep("Program Files", .libPaths(), value=TRUE)[1])
   ```
-  この例では、R grep 関数を使用して、使用可能なパスのベクトルを検索し、"Program Files"を含むパスを見つけます。 詳細については、[ https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)を参照してください。
+  この例では、R grep 関数を使用して、使用可能なパスのベクトルを検索し、"Program Files"を含むパスを見つけます。 詳細については、「[https://www.rdocumentation.org/packages/base/functions/grep](https://www.rdocumentation.org/packages/base/functions/grep)」を参照してください。
 
   パッケージが既にインストールされている場合を実行してインストールされているパッケージの一覧を確認してください。`installed.packages()`します。
 

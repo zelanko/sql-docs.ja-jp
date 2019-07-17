@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 83dfb6bd-dbd5-45d8-aad2-a11926317f91
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 4589eac1a564ee06f96d175eda8dcf63d860a262
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: cc901f2ccd68fbdee19fc7887638f7f89ff04efa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51668161"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006849"
 ---
 # <a name="startservice-method-sqlservice-class"></a>StartService メソッド (SqlService クラス)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ object.StartService()
  次のスタートアップ状態のうちの 1 つを指定する uint32 値。  
   
  0  
- 正常終了しました。 要求が受け入れられました。  
+ 成功。 要求が受け入れられました。  
   
  1  
  サポートされていません。 要求はサポートされていません。  
@@ -120,7 +119,7 @@ object.StartService()
   
 ## <a name="remarks"></a>コメント  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [開始とサービスの停止](https://technet.microsoft.com/library/ms174886\(v=sql.105\).aspx)  
   
   
