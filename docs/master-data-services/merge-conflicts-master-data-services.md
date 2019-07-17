@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 797219ad-5109-4666-94d3-dd1d59440a33
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 993e46a9795aa8528f4e1a1744dbf9dd5b27f89f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3b28c432ec05b1b26861073b2444d52caba7e5ec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488916"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092575"
 ---
 # <a name="merge-conflicts-master-data-services"></a>競合のマージ (マスター データ サービス)
 
@@ -24,7 +23,7 @@ ms.locfileid: "65488916"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でパブリッシュしようとしているデータが他のユーザーによって変更されている場合、パブリッシュ操作は競合エラーで失敗します。 このエラーを解決するには、競合のマージを実行した後で変更を再パブリッシュします。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -47,7 +46,7 @@ ms.locfileid: "65488916"
   
 4.  **[適用]** をクリックした後、さらに変更を加えて、再びパブリッシュすることができます。 または、 **[キャンセル]** をクリックして更新を取り消し、サーバーから最新のバージョンを再び読み込むことができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [メンバー (マスター データ サービス)](../master-data-services/members-master-data-services.md)  
   
   

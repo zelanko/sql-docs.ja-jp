@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6f3125f3-0dfa-40bd-b725-8aa1591234f6
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 899846e0868b6381c019281c432c014144e6354c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c92ea8e2f172d9cb5b40559c2a7b77a60153065b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137712"
 ---
 # <a name="sphelpmergepullsubscription-transact-sql"></a>sp_helpmergepullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ```  
   
 ## <a name="argument"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** します。 場合*パブリケーション*は**%**、すべてのマージ パブリケーションと、現在のデータベース内のサブスクリプションに関する情報が返されます。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** します。 場合*パブリケーション*は **%** 、すべてのマージ パブリケーションと、現在のデータベース内のサブスクリプションに関する情報が返されます。  
   
 `[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は **%** します。  
   
 `[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は **%** します。  
   
-`[ @subscription_type = ] 'subscription_type'` プル サブスクリプションを表示するかどうかです。 *subscription_type*は**nvarchar (10)**、既定値は **'pull'** します。 有効な値は **'push'**、 **'pull'**、または **'both'** します。  
+`[ @subscription_type = ] 'subscription_type'` プル サブスクリプションを表示するかどうかです。 *subscription_type*は**nvarchar (10)** 、既定値は **'pull'** します。 有効な値は **'push'** 、 **'pull'** 、または **'both'** します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -77,7 +76,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**distributor_security_mode**|**int**|ディストリビューターのセキュリティ モードを指定します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
 |**ftp_address**|**sysname**|旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用ファイル転送プロトコル (FTP) サービスのネットワーク アドレスです。|  
 |**ftp_port**|**int**|旧バージョンとの互換性のためにだけ使用できます。 ディストリビューター用の FTP サービスのポート番号です。|  
-|**ftp_login**|**sysname**|旧バージョンとの互換性のためにだけ使用できます。 ユーザー名は FTP サービスへの接続に使用されます。|  
+|**ftp_login**|**sysname**|旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー名です。|  
 |**ftp_password**|**sysname**|旧バージョンとの互換性のためにだけ使用できます。 FTP サービスに接続するときに使用するユーザー パスワードです。|  
 |**alt_snapshot_folder**|**nvarchar (255)**|スナップショット フォルダーの場合は、場所は以外、またはさらに、既定の場所に格納される場所。|  
 |**working_directory**|**nvarchar (255)**|ディレクトリへの完全修飾パスが、そのオプションを指定した場合は、FTP を使用してスナップショット ファイルを転送します。|  
@@ -95,9 +94,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**nvarchar(524)**|マージ エージェントが基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに使用するログインのパスワードです。|  
 |**internet_security_mode**|**int**|Web 同期をホストしている Web サーバーに接続するときに使用する認証モードです。 値**1** 、Windows 認証を示し、値の**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**internet_timeout**|**int**|Web 同期要求の有効期限が切れるまでの秒数で、時間の長さ。|  
-|**hostname**|**nvarchar(128)**|オーバー ロードの値を指定します[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化された行フィルターの WHERE 句でこの関数を使用する場合。|  
+|**ホスト名**|**nvarchar(128)**|オーバー ロードの値を指定します[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化された行フィルターの WHERE 句でこの関数を使用する場合。|  
 |**job_login**|**nvarchar(512)**|形式で返される、マージ エージェントを実行する Windows アカウントは、*ドメイン*\\*username*します。|  
-|**job_password**|**sysname**|セキュリティ上の理由の値"**\*\*\*\*\*\*\*\*\*\***"が常に返されます。|  
+|**job_password**|**sysname**|セキュリティ上の理由の値" **\*\*\*\*\*\*\*\*\*\*** "が常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -108,7 +107,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergepullsubscription**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
  [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
  [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   

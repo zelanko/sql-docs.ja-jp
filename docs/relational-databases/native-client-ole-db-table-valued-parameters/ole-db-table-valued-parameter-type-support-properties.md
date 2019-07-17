@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: b9c4e6ed-fe4f-4ef8-9bc8-784d80d44039
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 372a4859c80fc58dff37080e9383ffeebc1721a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d578fe4b389f9d20d656d43d17c28cd610e3437
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62465605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133378"
 ---
 # <a name="ole-db-table-valued-parameter-type-support-properties"></a>OLE DB テーブル値パラメーターの型のサポート (プロパティ)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "62465605"
 
   このトピックでは、テーブル値パラメーターの行セット オブジェクトに関連付けられている OLE DB プロパティおよびプロパティ セットについて説明します。  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  次に、テーブル値パラメーターの行セット オブジェクトの IRowsetInfo::GetProperties メソッドを使用して公開されるプロパティの一覧を示します。 テーブル値パラメーターの行セット プロパティはすべて読み取り専用であることに注意してください。 そのため、いずれかを設定しようと iopenrowset::openrowset または ITableDefinitionWithConstraints::CreateTableWithConstraints プロパティのメソッドが既定以外の値にエラーが発生する、オブジェクトは作成されません。  
   
  テーブル値パラメーターの行セット オブジェクトで実装されていないプロパティは、次の一覧には含まれていません。 すべてのプロパティの一覧は、Windows Data Access Components の OLE DB に関するドキュメントを参照してください。  
@@ -94,7 +93,7 @@ ms.locfileid: "62465605"
 |-----------------|--------------------|  
 |SSPROP_PARAM_TYPE_TYPENAME|R/W[読み取り/書き込み]<br /><br /> 既定値:VT_EMPTY<br /><br /> 型:VT_BSTR<br /><br /> 説明:コンシューマーは、取得、またはテーブル値パラメーターの型の名前を設定する、このプロパティを使用します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。<br /><br /> このプロパティは、テーブル値パラメーターのテーブルの型名を指定するように、必要に応じて指定できます (ODBC の呼び出し構文のコマンドの場合)。 このプロパティは、パラメーター化されたアドホック SQL クエリに必要です。|  
 |SSPROP_PARAM_TYPE_SCHEMANAME|R/W[読み取り/書き込み]<br /><br /> 既定値:VT_EMPTY<br /><br /> 型:VT_BSTR<br /><br /> 説明:コンシューマーは、取得またはテーブル値パラメーターの型のスキーマ名を設定する、このプロパティを使用します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。|  
-|SSPROP_PARAM_TYPE_CATALOGNAME|R/W読み取り専用です。<br /><br /> 既定値:VT_EMPTY<br /><br /> 型:VT_BSTR<br /><br /> 説明:コンシューマーでは、このプロパティを使用して、テーブル値パラメーターの型のカタログ名を取得します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。 このプロパティを設定するとエラーになります。ユーザー定義テーブル型は、それを使用するテーブル値パラメーターと同じデータベースに内にある必要があります。|  
+|SSPROP_PARAM_TYPE_CATALOGNAME|R/W読み取り専用かどうか<br /><br /> 既定値:VT_EMPTY<br /><br /> 型:VT_BSTR<br /><br /> 説明:コンシューマーでは、このプロパティを使用して、テーブル値パラメーターの型のカタログ名を取得します。<br /><br /> このプロパティは、CLR ユーザー定義型と共に使用することもできます。 このプロパティを設定するとエラーになります。ユーザー定義テーブル型は、それを使用するテーブル値パラメーターと同じデータベースに内にある必要があります。|  
 |SSPROP_PARAM_TABLE_DEFAULT_COLUMNS|R/W[読み取り/書き込み]<br /><br /> 既定値:VT_EMPTY<br /><br /> 型:VT_UI2 &#124; VT_ARRAY<br /><br /> 説明:コンシューマーは、行セットの列のセットが既定値として扱うには指定するこのプロパティを使用します。 これらの列の値は送信されません。 プロバイダーは、コンシューマーの行セット オブジェクトからデータをフェッチしている間、このような列のバインドを必要としません。<br /><br /> 配列の各要素は、行セット オブジェクト内の列の序数である必要があります。 序数が無効な場合、コマンドの実行時にエラーが発生します。|  
 |SSPROP_PARAM_TABLE_COLUMN_ORDER|R/W[読み取り/書き込み]<br /><br /> 既定値:VT_EMPTY<br /><br /> 型:VT_UI2 &#124; VT_ARRAY<br /><br /> 説明:このプロパティは、並べ替えを示すために、サーバーへのヒントを提供するコンシューマーによって使用データの列の順序付けします。 プロバイダーでは検証は行われず、提供された仕様にコンシューマーが準拠していることが想定されます。 サーバーでは、このプロパティを使用して最適化を実行します。<br /><br /> 各列の列順序情報は、配列内の要素のペアで表されます。 ペアの最初の要素は列数で、 ペアの 2 番目の要素は、昇順の場合は 1、降順の場合は 2 になります。|  
   

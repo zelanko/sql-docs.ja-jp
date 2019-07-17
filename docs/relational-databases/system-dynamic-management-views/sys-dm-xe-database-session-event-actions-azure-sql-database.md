@@ -9,19 +9,18 @@ ms.topic: language-reference
 ms.assetid: 48519fd9-c7c2-434b-848d-ccbf41133fdd
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 0516016ad04132cae3899811b8f20f7f43538d53
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 40587866b77e67947a1658c742ceed9f9e71b581
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56035883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090446"
 ---
-# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL データベース)
+# <a name="sysdmxedatabasesessioneventactions-azure-sql-database"></a>sys.dm_xe_database_session_event_actions (Azure SQL Database)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
-  イベント セッション アクションに関する情報を返します。 アクションは、イベントが発生したときに実行されます。 この管理ビューでは、アクションの実行回数およびアクションの合計実行時間に関する統計が集計されます。  
+  イベント セッション アクションに関する情報を返します。 イベントが発生したときに、アクションが実行されます。 この管理ビューは、アクションを実行した回数に関する統計情報を集約し、アクションの合計実行時間。  
   
 ||  
 |-|  
@@ -31,7 +30,7 @@ ms.locfileid: "56035883"
 |-----------------|---------------|-----------------|  
 |event_session_address|**varbinary(8)**|イベント セッションのメモリ アドレス。 NULL 値は許可されません。|  
 |action_name|**nvarchar(60)**|アクションの名前。 NULL 値は許可されません。|  
-|action_package_guid|**uniqueidentifier**|アクションを含むパッケージの GUID。 NULL 値は許可されません。|  
+|action_package_guid|**uniqueidentifier**|操作を含むパッケージの GUID。 NULL 値は許可されません。|  
 |event_name|**nvarchar(60)**|アクションがバインドされているイベントの名前。 NULL 値は許可されません。|  
 |event_package_guid|**uniqueidentifier**|イベントを含むパッケージの GUID。 NULL 値は許可されません。|  
   
@@ -40,13 +39,13 @@ ms.locfileid: "56035883"
   
 ### <a name="relationship-cardinalities"></a>リレーションシップの基数  
   
-|From|目的|リレーションシップ|  
+|From|変換先|リレーションシップ|  
 |----------|--------|------------------|  
 |sys.dm_xe_database_session_event_actions.event_session_address|sys.dm_xe_database_sessions.address|多対一|  
 |sys.dm_xe_database_session_event_actions.action_name<br /><br /> sys.dm_xe_session_event_actions.action_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_database_session_events.event_package_guid|多対一|  
 |sys.dm_xe_database_session_event_actions.event_name<br /><br /> sys.dm_xe_database_session_event_actions.event_package_guid|sys.dm_xe_objects.name<br /><br /> sys.dm_xe_objects.package_guid|多対一|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [拡張イベント](../../relational-databases/extended-events/extended-events.md)  
   
   

@@ -2,19 +2,18 @@
 title: Parallel Data Warehouse -、TDE で保護されたデータベースの復元 |Microsoft Docs
 description: Analytics Platform System Parallel Data Warehouse での transparent data encryption を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: a791d4110dc70c506025f8f11fb06b9ba2e5dcb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7c2f676f75c5a8c79bfc2f2417ff30c9806e3c80
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63157017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960165"
 ---
 # <a name="restore-a-database-protected-by-tde-in-parallel-data-warehouse"></a>Parallel Data Warehouse での TDE で保護されたデータベースを復元します。
 透過的なデータ暗号化を使用して暗号化されたデータベースを復元するのにには、次の手順を使用します。  
@@ -58,7 +57,7 @@ RESTORE DATABASE AdventureWorksPDW2012
     FROM DISK = '\\SECURE_SERVER\Backups\AdventureWorksPDW2012';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [データベースのバックアップ](../t-sql/statements/backup-database-parallel-data-warehouse.md)  
 [CREATE MASTER KEY](../t-sql/statements/create-master-key-transact-sql.md) 
 [sp_pdw_add_network_credentials](../relational-databases/system-stored-procedures/sp-pdw-add-network-credentials-sql-data-warehouse.md)  

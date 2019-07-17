@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 085deef8-2709-4da9-bb97-9ab32effdacf
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f36ad40a2b16401218fe2a5927407464fe6ac11b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 93e9c574346ad57a6947645552616cd8db46fe85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056369"
 ---
 # <a name="sppostmsxoperation-transact-sql"></a>sp_post_msx_operation (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_post_msx_operation
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @operation = ] 'operation'` ポストされた操作の操作の種類。 *操作*は**varchar (64)**、既定値はありません。 有効な操作が異なります*object_type*します。  
+`[ @operation = ] 'operation'` ポストされた操作の操作の種類。 *操作*は**varchar (64)** 、既定値はありません。 有効な操作が異なります*object_type*します。  
   
 |オブジェクトの種類|操作|  
 |-----------------|---------------|  
@@ -54,11 +53,11 @@ sp_post_msx_operation
 |**サーバー**|RE-ENLIST<br /><br /> DEFECT<br /><br /> SYNC-TIME<br /><br /> SET-POLL|  
 |**SCHEDULE**|INSERT<br /><br /> UPDATE<br /><br /> Del|  
   
-`[ @object_type = ] 'object'` 操作を投稿する対象のオブジェクトの型。 有効な種類は**ジョブ**、 **SERVER**、および**スケジュール**します。 *オブジェクト*は**varchar (64)**、既定値は**ジョブ**します。  
+`[ @object_type = ] 'object'` 操作を投稿する対象のオブジェクトの型。 有効な種類は**ジョブ**、 **SERVER**、および**スケジュール**します。 *オブジェクト*は**varchar (64)** 、既定値は**ジョブ**します。  
   
 `[ @job_id = ] job_id` 操作が適用されるジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値はありません。 **0x00**すべてのジョブを示します。 場合*オブジェクト*は**SERVER**、し*job_id*は必要ありません。  
   
-`[ @specific_target_server = ] 'target_server'` 指定された操作を適用するターゲット サーバーの名前。 場合*job_id*が指定されているが、 *target_server*が指定されていない、すべてのジョブ、ジョブのサーバー操作が通知されます。 *target_server*は**nvarchar (30)**、既定値は NULL です。  
+`[ @specific_target_server = ] 'target_server'` 指定された操作を適用するターゲット サーバーの名前。 場合*job_id*が指定されているが、 *target_server*が指定されていない、すべてのジョブ、ジョブのサーバー操作が通知されます。 *target_server*は**nvarchar (30)** 、既定値は NULL です。  
   
 `[ @value = ] value` ポーリング間隔 (秒) です。 *value* のデータ型は **int**で、既定値は NULL です。 場合にのみ、このパラメーターを指定*操作*は**SET-POLL**します。  
   
@@ -77,7 +76,7 @@ sp_post_msx_operation
   
  操作が通知されると後に、表示される、 **sysdownloadlist**テーブル。 ジョブを作成し通知した後でそのジョブに変更を加える場合は、対象サーバー (TSX) にその変更を伝える必要があります。 これを行うには、ダウンロードの一覧を使用します。  
   
- ダウンロードの一覧は、SQL Server Management Studio を使用して管理することを強くお勧めします。 詳細については、[の表示または変更するジョブ](../../ssms/agent/view-or-modify-jobs.md)を参照してください。  
+ ダウンロードの一覧は、SQL Server Management Studio を使用して管理することを強くお勧めします。 詳細については、次を参照してください。[の表示または変更するジョブ](../../ssms/agent/view-or-modify-jobs.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  このストアド プロシージャを実行するユーザーに付与する必要があります、 **sysadmin**固定サーバー ロール。  

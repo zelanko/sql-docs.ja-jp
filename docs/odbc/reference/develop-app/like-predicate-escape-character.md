@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 185d6109-48cf-4981-bc40-ec2a4a90cafc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30547551cc1793622eaa981c07bbc002d07a094d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20310c60759aea17d61b9252fd73d226567a7a54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312921"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027231"
 ---
 # <a name="like-predicate-escape-character"></a>LIKE 述語のエスケープ文字
 **など**述語、パーセント記号 (%)一致する 0 個以上の任意の文字、およびアンダー スコア (_) では、任意の 1 文字と一致します。 実際のパーセント記号の一致またはでアンダー スコア、**など**述語、エスケープ文字はアンダー スコアまたはパーセント記号の前に取得する必要があります。 エスケープ シーケンスを定義する、**など**述語のエスケープ文字とは。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6d63ed32-68cf-4d8f-aa40-05a3826e05b8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 04874761ce88069f35c75d5e2ac3b6354a5af5fe
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a2f4b2e8dbcf8e8427f51388c7bead75263d95a6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130641"
 ---
 # <a name="spdeletejobserver-transact-sql"></a>sp_delete_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_delete_jobserver { [ @job_id = ] job_id | [ @job_name = ] 'job_name' } ,
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要があります。 両方を指定することはできません。  
   
-`[ @server_name = ] 'server'` 指定されたジョブから削除する対象サーバーの名前。 *server*は**nvarchar (30)**、既定値はありません。 *server*できる **(LOCAL)** または対象リモート サーバーの名前。  
+`[ @server_name = ] 'server'` 指定されたジョブから削除する対象サーバーの名前。 *server*は**nvarchar (30)** 、既定値はありません。 *server*できる **(LOCAL)** または対象リモート サーバーの名前。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

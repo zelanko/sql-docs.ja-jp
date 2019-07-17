@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d63909a0-8ea7-4734-9ce8-8204d936a3e4
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 59e639c1dd319d7db074d692d3776105abe89f0f
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ef860a30ba5994e25a9d532445af0ec2c39f9e1c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68042731"
 ---
 # <a name="spaddmergepullsubscription-transact-sql"></a>sp_addmergepullsubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,16 +49,16 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
   
 `[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は NULL です。  
   
-`[ @subscriber_type = ] 'subscriber_type'` サブスクライバーの種類です。 *subscriber_type*は**nvarchar (15)**、でき、**グローバル**、**ローカル**または**匿名**します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンでは、ローカル サブスクリプションはクライアント サブスクリプションとして参照し、グローバル サブスクリプションはサーバー サブスクリプションとして参照します。  
+`[ @subscriber_type = ] 'subscriber_type'` サブスクライバーの種類です。 *subscriber_type*は**nvarchar (15)** 、でき、**グローバル**、**ローカル**または**匿名**します。 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]と以降のバージョンでは、ローカル サブスクリプションはクライアント サブスクリプションとして参照し、グローバル サブスクリプションはサーバー サブスクリプションとして参照します。  
   
 `[ @subscription_priority = ] subscription_priority` サブスクリプションの優先順位です。 *subscription_priority*は**実際**、既定値は NULL です。 ローカル サブスクリプションと匿名サブスクリプションを優先度は**0.0**します。 優先順位は、競合が検出された場合、優勝者を選択する既定の競合回避モジュールによって使用されます。 グローバル サブスクライバーは、サブスクリプションの優先度必要があります 100 よりも小さい、これは、パブリッシャーの優先順位です。  
   
-`[ @sync_type = ] 'sync_type'` サブスクリプションの同期型です。 *sync_type*は**nvarchar (15)**、既定値は**自動**します。 **自動**または**none**します。 場合**自動**スキーマと初期データのパブリッシュされたテーブルの最初に転送されます、サブスクライバー。 場合**none**サブスクライバーが既にスキーマと初期データのパブリッシュされたテーブルのことが前提とします。 システム テーブルとデータは常に転送されます。  
+`[ @sync_type = ] 'sync_type'` サブスクリプションの同期型です。 *sync_type*は**nvarchar (15)** 、既定値は**自動**します。 **自動**または**none**します。 場合**自動**スキーマと初期データのパブリッシュされたテーブルの最初に転送されます、サブスクライバー。 場合**none**サブスクライバーが既にスキーマと初期データのパブリッシュされたテーブルのことが前提とします。 システム テーブルとデータは常に転送されます。  
   
 > [!NOTE]  
 >  値を指定しないで**none**します。  
   
-`[ @description = ] 'description'` このプル サブスクリプションの簡単な説明です。 *説明*は**nvarchar (255)**、既定値は NULL です。 レプリケーション モニターでこの値が表示されます、**フレンドリ名**列は、監視されるパブリケーションのサブスクリプションの並べ替えに使用できます。  
+`[ @description = ] 'description'` このプル サブスクリプションの簡単な説明です。 *説明*は**nvarchar (255)** 、既定値は NULL です。 レプリケーション モニターでこの値が表示されます、**フレンドリ名**列は、監視されるパブリケーションのサブスクリプションの並べ替えに使用できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -77,7 +76,7 @@ sp_addmergepullsubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addmergepullsubscription**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addmergepullsubscription_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md)   

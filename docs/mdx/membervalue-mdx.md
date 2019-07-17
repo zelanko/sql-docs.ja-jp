@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 73a54986a951095b16465cd4934b4dfd447d38bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4db81766060f8f1afde2241d0c89407ad3cbb864
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63456708"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001404"
 ---
 # <a name="membervalue-mdx"></a>MemberValue (MDX)
 
@@ -53,7 +52,7 @@ SELECT {Measures.ValueColumn, Measures.KeyColumn, Measures.NameColumn}  ON 0
 from [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

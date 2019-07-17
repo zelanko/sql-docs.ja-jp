@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6a7db81a-20aa-4915-aed8-429711a36f49
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ca1b0fc2f7a1a74e1b9ab9a85baba945e4edf491
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 5f43dbf75754a16b3163bbb8e268400f34d372b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087813"
 ---
 # <a name="types-of-changes"></a>変更の種類
 ODBC で 3 種類の変更が行われた*3.x* (および ODBC の任意のバージョン)。 これらの異なる方法で旧バージョンとの互換性に影響し、さまざまな方法で処理されます。 これらの変更は、次の表で説明します。  

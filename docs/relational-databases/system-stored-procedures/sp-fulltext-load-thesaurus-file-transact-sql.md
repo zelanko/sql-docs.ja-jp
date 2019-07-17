@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 73a309c3-6d22-42dc-a6fe-8a63747aa2e4
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: c0857066ba5f8f57a5a6d088a4f37d69315225ea
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a71c4d61ec920b51146cc3d3111adefc09f23b3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124231"
 ---
 # <a name="spfulltextloadthesaurusfile-transact-sql"></a>sp_fulltext_load_thesaurus_file (Transact-SQL)
 
@@ -45,10 +44,10 @@ sys.sp_fulltext_load_thesaurus_file lcid [ , @loadOnlyIfNotLoaded  = action ]
  *lcid*  
  類義語辞典 XML 定義の対応する言語のロケール識別子 (LCID) を対応する整数。 サーバー インスタンスで使用可能な言語の Lcid を取得する、 [sys.fulltext_languages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-catalog-views/sys-fulltext-languages-transact-sql.md)カタログ ビューです。  
   
- **@loadOnlyIfNotLoaded** = *アクション*  
+ **@loadOnlyIfNotLoaded**  = *アクション*  
  既に読み込まれている場合でも、内部の類義語辞典テーブルに類義語辞典ファイルが読み込まれるかどうかを指定します。 *アクション*の 1 つです。  
   
-|値|定義|  
+|[値]|定義|  
 |-----------|----------------|  
 |**0**|既にの読み込むかどうかに関係なく、類義語辞典ファイルを読み込みます。 これは、既定の動作の**sp_fulltext_load_thesaurus_file**します。|  
 |1|類義語辞典ファイルがまだ読み込まれていない場合にのみ、類義語辞典ファイルを読み込みます。|  
@@ -85,7 +84,7 @@ EXEC sys.sp_fulltext_load_thesaurus_file 1033;
 EXEC sys.sp_fulltext_load_thesaurus_file 1025, @loadOnlyIfNotLoaded = 1;
 ```  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [FULLTEXTSERVICEPROPERTY &#40;Transact-SQL&#41;](../../t-sql/functions/fulltextserviceproperty-transact-sql.md)  
 [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

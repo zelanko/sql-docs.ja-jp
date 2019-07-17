@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7d9abe49-ce92-47f3-82c9-aea749518c91
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b4187dbe3ac00830919b07920a720b89818c25d8
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1389e76d4e679a3ee16c548bf752d5668dfa48b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075671"
 ---
 # <a name="spreinitpullsubscription-transact-sql"></a>sp_reinitpullsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
   
  **sp_reinitpullsubscription**ディストリビューション エージェントの次回の実行中に、サブスクリプションを再初期化するサブスクライバーから呼び出すことができます。  
   
- 値で作成されたパブリケーションに対するサブスクリプション**false**の**@immediate_sync**サブスクライバーから再初期化することはできません。  
+ 値で作成されたパブリケーションに対するサブスクリプション**false**の **@immediate_sync** サブスクライバーから再初期化することはできません。  
   
  いずれかを実行してプル サブスクリプションを再初期化できます**sp_reinitpullsubscription**サブスクライバーまたは**sp_reinitsubscription**パブリッシャー側でします。  
   
@@ -66,7 +65,7 @@ sp_reinitpullsubscription [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_reinitpullsubscription**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-a-subscription.md)   
  [サブスクリプションの再初期化](../../relational-databases/replication/reinitialize-subscriptions.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

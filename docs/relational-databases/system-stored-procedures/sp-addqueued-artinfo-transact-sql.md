@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: decdb6eb-3dcd-4053-a21d-fd367c3fbafb
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e44891f5a16625cb6c3176fac8188fa568822add
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: a0f94fbf686e9b9bd9fd1b6780b298c661ce42f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68031011"
 ---
 # <a name="spaddqueuedartinfo-transact-sql"></a>sp_addqueued_artinfo (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -62,7 +61,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
   
 `[ @dest_table = ] _'dest_table'` レプリケーション先テーブルの名前です。 *dest_table*は**sysname**、既定値はありません。  
   
- [ **@owner =** ] **'**_所有者_**'**  
+ [ **@owner =** ] **'** _所有者_ **'**  
  サブスクリプションの所有者です。 *所有者*は**sysname**、既定値はありません。  
   
 `[ @cft_table = ] 'cft_table'` この記事のキューに置かれた更新の競合テーブルの名前。 *cft_table*は**sysname**、既定値はありません。  
@@ -78,7 +77,7 @@ sp_addqueued_artinfo [ @artid= ] 'artid'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addqueued_artinfo**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_script_synctran_commands &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [MSsubscription_articles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mssubscription-articles-transact-sql.md)   

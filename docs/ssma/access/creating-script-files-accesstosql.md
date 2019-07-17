@@ -10,19 +10,19 @@ ms.assetid: 64dfe192-965c-49d4-a3ea-848fbc5f619f
 author: Shamikg
 ms.author: Shamikg
 manager: murato
-ms.openlocfilehash: 5258a95b713da0ec1fe526e94ce11c6e5e0b595c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9d888fa133e6cb1026ae23486dfabfc5e0b13b57
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138774"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259837"
 ---
 # <a name="creating-script-files-accesstosql"></a>スクリプト ファイル (AccessToSQL) の作成
 SSMA コンソールのアプリケーションを起動すると、スクリプト ファイルを作成する前に、変数値ファイルとサーバー接続ファイルを作成するために必要な場合、最初の手順します。  
   
 スクリプト ファイルを viz 3 つのセクションに分割できますします..,:  
   
-1.  **config:** コンソール アプリケーションの構成パラメーターを設定するユーザーを有効にします。  
+1.  **構成:** コンソール アプリケーションの構成パラメーターを設定するユーザーを有効にします。  
   
 2.  **サーバー:** ソース/ターゲットのサーバー定義を設定するユーザーを有効にします。 別のサーバー接続ファイルにこのことができます。  
   

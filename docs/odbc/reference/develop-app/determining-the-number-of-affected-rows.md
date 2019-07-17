@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1e56297d-a786-415e-b66d-b42d1b2a8d45
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 99e3676c3b73b177f5e6fc3acef0d93d55cce898
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a6a1bebf7d5cfb85e49fb0e382dacc4f4464054e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63262096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039982"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>影響を受ける行数の決定
 呼び出すことができます、アプリケーションは、更新、削除、または行を挿入後、 **SQLRowCount**に影響を受けた行の数を決定します。 **SQLRowCount**更新、削除、または実行することによって挿入された行かどうかは、この値を返す、 **UPDATE**、**削除**、または**挿入**ステートメントでは、位置指定を実行して更新または delete ステートメント、または呼び出すことによって**SQLSetPos**します。  

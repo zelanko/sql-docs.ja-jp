@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f424e8e799c7550ff426a7b4c2a2022fe4b0c4bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8366b04be48df3e47e9c6d531738ebebfee45da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68058825"
 ---
 # <a name="upgrade-on-premises-sql-server-to-sql-server-or-sql-server-on-azure-vms-using-the-data-migration-assistant"></a>SQL Server または Data Migration Assistant を使用して Azure Vm 上の SQL Server にオンプレミスの SQL Server のアップグレードします。
 
@@ -65,9 +64,9 @@ Data Migration Assistant は、Azure Vm または Azure SQL Database で SQL Ser
    > [!NOTE]
    > 左側のウィンドウで、サーバーを選択して、移行するすべてのデータベースには、移行の設定を適用できます。 左側のウィンドウで、データベースを選択して、個々 のデータベース固有の設定で構成することもできます。
 
-    A. 指定、**ソースとターゲットの SQL サーバーのバックアップ操作でアクセスできる場所を共有**します。 サービス アカウントが実行されているソース SQL Server のインスタンスが書き込み共有の場所での特権と、ターゲット サービス アカウントに読み取り、共有の場所での特権があることを確認してください。
+    a. 指定、**ソースとターゲットの SQL サーバーのバックアップ操作でアクセスできる場所を共有**します。 サービス アカウントが実行されているソース SQL Server のインスタンスが書き込み共有の場所での特権と、ターゲット サービス アカウントに読み取り、共有の場所での特権があることを確認してください。
 
-    B. データと対象サーバー上のトランザクションのログ ファイルを復元する場所を指定します。
+    b. データと対象サーバー上のトランザクションのログ ファイルを復元する場所を指定します。
 
     ![[データベース] ページを追加します。](../dma/media/AddDatabases.png)
 

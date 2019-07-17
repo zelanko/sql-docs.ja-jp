@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6a9dbc1a-e1e1-40c4-97cb-8164a2288f76
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0d009b05fea2a2c587f97dc4b2416588932ad0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0c750fd35dce98c1d754f192214cd96cfc56143
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62447990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032895"
 ---
 # <a name="spshowrowreplicainfo-transact-sql"></a>sp_showrowreplicainfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 |**db_name**|**sysname**|このエントリを作成したデータベースの名前です。|  
 |**db_nickname**|**binary(6)**|このエントリを作成したデータベースのニックネームです。|  
 |**version**|**int**|エントリのバージョンです。|  
-|**current_state**|**nvarchar(9)**|行の現在の状態に関する情報を返します。<br /><br /> **y** -行データが行の現在の状態を表します。<br /><br /> **n** -行データは、行の現在の状態を表しません。<br /><br /> **\<該当なし >** は適用されません。<br /><br /> **\<不明な >** -現在の状態を特定できません。|  
+|**current_state**|**nvarchar (9)**|行の現在の状態に関する情報を返します。<br /><br /> **y** -行データが行の現在の状態を表します。<br /><br /> **n** -行データは、行の現在の状態を表しません。<br /><br /> **\<該当なし >** は適用されません。<br /><br /> **\<不明な >** -現在の状態を特定できません。|  
 |**rowversion_table**|**nchar(17)**|格納される行バージョンであるかどうかを示す、 [MSmerge_contents](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)テーブルまたは[MSmerge_tombstone](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)テーブル。|  
 |**comment**|**nvarchar (255)**|この行バージョン エントリに関する追加情報。 通常、このフィールドが空です。|  
   
@@ -81,7 +80,7 @@ sp_showrowreplicainfo [ [ @ownername = ] 'ownername' ]
 ## <a name="permissions"></a>アクセス許可  
  **sp_showrowreplicainfo**のメンバーによってのみ実行されることができます、 **db_owner**のパブリケーション データベースのパブリケーション アクセス リスト (PAL) のメンバー、またはパブリケーション データベースの固定データベース ロール。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [検出およびマージ レプリケーションの競合を解決します。](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

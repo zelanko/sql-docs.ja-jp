@@ -8,20 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7abc83ae3483afedaa540c8fdcff0383af6ae994
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41ff63d47a62b9b83fb583c55ff2405638de22cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097113"
 ---
 # <a name="using-member-expressions"></a>メンバー式の使用
 
 
   メンバー式には、メンバー識別子、メンバー関数の場合、またはメンバーに変換できる式が含まれています。  
   
- メンバー識別子には、さまざまな形式があります。 メンバー識別子の最も単純な形式は、メンバーの名前で構成されます。 例 :  
+ メンバー識別子には、さまざまな形式があります。 メンバー識別子の最も単純な形式は、メンバーの名前で構成されます。 例:  
   
 ```  
 SELECT Amount ON 0  
@@ -62,7 +61,7 @@ Dimension_Name
 > [!NOTE]  
 >  メンバー名およびメンバー キーの詳細については、次を参照してください。[メンバー、組、およびセットの操作&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

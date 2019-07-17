@@ -16,14 +16,13 @@ helpviewer_keywords:
 - sp_grantlogin
 ms.assetid: 0c873d99-c3bf-4eb1-948b-a46cb235ccd4
 ms.author: vanto
-manager: jroth
 author: VanMSFT
-ms.openlocfilehash: efed12f21dd3413108849124d1326d7ec2c8540c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a32826266a9e844b01b455116e18ae821f71e9c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055309"
 ---
 # <a name="spgrantlogin-transact-sql"></a>sp_grantlogin (TRANSACT-SQL)
 
@@ -64,7 +63,7 @@ CREATE LOGIN [Corporate\BobJ] FROM WINDOWS;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

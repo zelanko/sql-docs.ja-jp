@@ -4,18 +4,17 @@ description: この記事の SQL Server Always On 可用性グループに Kuber
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 09/24/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: dfee5188c6fe54ed91172f9d83de7af6395c8956
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 181773a19e87c34a1931cae05f5a329aedbc1239
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833637"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000134"
 ---
 # <a name="create-deployment-script-for-sql-server-always-on-availability-group"></a>SQL Server Always On 可用性グループのデプロイ スクリプトを作成します。
 
@@ -129,7 +128,7 @@ python ./deploy-ag.py deploy --help
   
   `-p SA_PASSWORD, --sa-password SA_PASSWORD`
   
-  SA パスワードです。 Default='SAPassword2018'
+  SA パスワードです。 既定の 'SAPassword2018' を =
   
   `-e {ON_PREM,AKS}, --env {ON_PREM,AKS}`
   

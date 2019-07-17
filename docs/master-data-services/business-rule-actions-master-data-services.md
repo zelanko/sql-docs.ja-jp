@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cdc4daca-3dff-46d8-b7f0-57f7826dd61a
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 0a7c0f48de5d42d067662619124342d4fb92ab3a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac5ea6b5f4f2c863cc5f8352e4822ac00c207057
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047501"
 ---
 # <a name="business-rule-actions-master-data-services"></a>ビジネス ルール アクション (マスター データ サービス)
 
@@ -30,7 +29,7 @@ ms.locfileid: "65485430"
 ## <a name="default-value-actions"></a>既定値のアクション  
  "**既定値** " アクションは、指定した属性の既定値を設定します。 権限を持つユーザーは、これらの既定値を変更できます。  
   
-|値の名前|説明|  
+|値名|説明|  
 |----------------|-----------------|  
 |**の既定値が次の値**|選択した属性**の既定値は**特定の属性、特定の属性値、または空白に設定されます。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
 |**の既定値が生成値である**|選択した属性**の既定値は、開始値**および増分値の入力によって決まる、生成された値に設定されます。<br /><br /> このアクションは、文字列値および数値に有効です。|  
@@ -72,7 +71,7 @@ ms.locfileid: "65485430"
 |-----------------|-----------------|  
 |**がワークフローで始まる**|外部ワークフローを開始します。 このアクションが実行される原因となったデータはワークフローに渡されます。 詳細については、「 [SharePoint ワークフローとマスター データ サービスとの統合](https://msdn.microsoft.com/library/gg690195.aspx)」を参照してください。<br /><br /> このアクションは、文字列値、数値、データ値、およびリンク値に有効です。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)   
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
  [ビジネス ルールを作成しパブリッシュする (マスター データ サービス)](../master-data-services/create-and-publish-a-business-rule-master-data-services.md)  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f0216f4a-46e3-48ae-be0a-e2625e8403a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e5510eb58315f70195eb40390edec1766c350fb6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e3694690ef1cba210da29766e7528762e691f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62468596"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061599"
 ---
 # <a name="scrollable-cursors-and-transaction-isolation"></a>スクロール可能なカーソルとトランザクション分離
 次の表は、変更の可視性を規定する要因を一覧表示します。  
@@ -49,7 +48,7 @@ ms.locfileid: "62468596"
 |更新|はい|[はい]|[はい]|[はい]|いいえ|いいえ|  
 |DELETE|おそらく [b]|はい|[はい]|[はい]|いいえ|いいえ|  
 |動的|||||||  
-|Insert|はい|[はい]|[はい]|[はい]|[はい]|いいえ|  
+|Insert|[はい]|[はい]|[はい]|[はい]|[はい]|いいえ|  
 |更新|はい|[はい]|[はい]|[はい]|いいえ|いいえ|  
 |DELETE|はい|[はい]|[はい]|[はい]|いいえ|いいえ|  
   

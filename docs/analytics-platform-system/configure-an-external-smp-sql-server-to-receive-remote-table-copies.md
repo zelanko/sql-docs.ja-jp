@@ -2,19 +2,18 @@
 title: リモート テーブル コピー - Parallel Data Warehouse を受け取るための SQL Server の構成 |Microsoft Docs
 description: Parallel Data Warehouse からリモート テーブル コピーを受信する外部 SMP SQL Server インスタンスを構成する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ae6799d468d57dec04046b443c613823c0a8cb8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3ad1ee005f5d28e7477fab7c1abe7ed4074e233d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63224686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961292"
 ---
 # <a name="configure-an-external-smp-sql-server-to-receive-remote-table-copies---parallel-data-warehouse"></a>リモート テーブル コピー - Parallel Data Warehouse を受け取るため、外部 SMP SQL Server の構成します。
 Parallel Data Warehouse からリモート テーブル コピーを受信する外部の SQL Server インスタンスを構成する方法について説明します。  

@@ -9,13 +9,12 @@ ms.technology: samples
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: b0fd90b553aaefad61d9285f8630650b2b38763d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 38ba117051ad10d788c2357dfb70d36c2b5e50d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47810540"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091268"
 ---
 # <a name="wideworldimporters-data-generation"></a>WideWorldImporters データ生成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "47810540"
 
 現在の日付までのサンプル データを生成するには。
 
-1. これを完了していない場合は、WideWorldImporters データベースのクリーン バージョンをインストールします。 インストール手順については、[インストールと構成](wide-world-importers-oltp-install-configure.md)を参照してください。
+1. これを完了していない場合は、WideWorldImporters データベースのクリーン バージョンをインストールします。 インストール手順については、次を参照してください。[インストールと構成](wide-world-importers-oltp-install-configure.md)します。
 2. データベースでは、次のステートメントを実行します。
 
     ```
@@ -48,7 +47,7 @@ ms.locfileid: "47810540"
 WideWorldImportersDW OLAP データベースの現在の日付までのサンプル データをインポートするには。
 
 1. 前のセクションで手順を使用して、WideWorldImporters OLTP データベースのデータの生成ロジックを実行します。
-2. 場合は、まだ完了していない、WideWorldImportersDW のデータベースのクリーン バージョンをインストールします。 インストール手順については、[インストールと構成](wide-world-importers-oltp-install-configure.md)を参照してください。
+2. 場合は、まだ完了していない、WideWorldImportersDW のデータベースのクリーン バージョンをインストールします。 インストール手順については、次を参照してください。[インストールと構成](wide-world-importers-oltp-install-configure.md)します。
 3. データベースで、次のステートメントを実行することによって OLAP データベースを再作成します。
 
     ```sql

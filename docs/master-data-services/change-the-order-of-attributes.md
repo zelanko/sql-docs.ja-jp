@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 835a032c-e37c-4f35-8ab0-5e4ae25c2e9b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 09043c7ddd8a57dff7b72048997af01b97b9328d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b95e3200a797ccd078731618ea9da643afacaad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68052093"
 ---
 # <a name="change-the-order-of-attributes"></a>属性の順序の変更
 
@@ -24,7 +23,7 @@ ms.locfileid: "65488376"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、属性の順序を変更できます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -56,7 +55,7 @@ ms.locfileid: "65488376"
   
 7.  **[上へ移動]** または **[下へ移動]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性 (マスター データ サービス)](../master-data-services/attributes-master-data-services.md)  
   
   

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: faaa3e40-1c95-43c2-9fdc-c61a1d3cc0c3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8f98f62b10b38d726feec2bd427bc7d1fc6dcea9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7db43df5d500e56e58e3e8465ac03158fe7e4d21
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62635869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997473"
 ---
 # <a name="sphelprotect-transact-sql"></a>sp_helprotect (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ sp_helprotect [ [ @name = ] 'object_statement' ]
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**[所有者]**|**sysname**|オブジェクトの所有者の名前です。|  
-|**Object**|**sysname**|オブジェクトの名前。|  
+|**Object**|**sysname**|オブジェクト名。|  
 |**権限付与対象ユーザー**|**sysname**|権限が許可されたプリンシパルの名前。|  
 |**Grantor**|**sysname**|指定した権限付与対象ユーザーに権限を許可したプリンシパルの名前。|  
 |**ProtectType**|**nvarchar(10)**|保護の種類の名前。<br /><br /> 許可の付与取り消し|  
