@@ -2,19 +2,18 @@
 title: リモート テーブル コピー - Parallel Data Warehouse |Microsoft Docs
 description: Analytics Platform System Parallel Data Warehouse でのリモート テーブルのコピーを使用します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5ed517a471368e4192ad7393a92274424d37f975
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28bd5deda25650d36467281ccbffa7b666f4c695
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678562"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960205"
 ---
 # <a name="remote-table-copy"></a>リモート テーブルのコピー
 (非アプライアンス) のリモート SMP SQL Server データベースに SQL Server PDW のデータベースからテーブルをコピーするリモート テーブル コピー機能を使用する方法について説明します。 SQL Server PDW のハブとスポークのシナリオを有効にするリモート テーブル コピーを使用します。  

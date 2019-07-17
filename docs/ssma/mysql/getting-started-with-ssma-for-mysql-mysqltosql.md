@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8ebfa061-be6f-4a07-923f-8dc832a82f70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1ae91f90bf601e4ef17ae2f363260dbb47a2822e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5a1adb6d9354dc870c11fab0a68f6c92e704ebfb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984537"
 ---
 # <a name="getting-started-with-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL 入門 (MySQLToSQL)
 SQL Server Migration Assistant (SSMA) for MySQL では、迅速に MySQL データベースのスキーマを SQL Server または Azure SQL DB のスキーマに変換、SQL Server または Azure SQL DB に結果のスキーマをアップロードおよび MySQL から SQL Server または Azure SQL DB にデータを移行することができます。  
@@ -108,7 +107,7 @@ SSMA は 2 つのツールバー: プロジェクト ツールバー、および
   
 |||  
 |-|-|  
-|**メニュー**|**[説明]**|  
+|**Menu**|**[説明]**|  
 |**[最近使ったファイル]**|プロジェクトでの作業、MySQL への接続、および SQL Server または Azure SQL DB に接続するためのコマンドが含まれています。|  
 |**[編集]**|検索と詳細ページのテキストを扱うのためのコマンドが含まれています。 開くには**ブックマークの管理** ダイアログの編集 メニューの ブックマークの管理 をクリックします。 ダイアログ ボックスで、既存のブックマークの一覧が表示されます。 ダイアログ ボックスの右側にあるボタンを使用するには、ブックマークを管理します。|  
 |**[表示]**|含まれています、**メタデータ エクスプ ローラーの同期**コマンド。 MySQL メタデータ エクスプ ローラーと SQL Server または Azure SQL DB メタデータ エクスプ ローラーの間のオブジェクトを同期するとします。 表示し、非表示にするためのコマンドも含まれています、**出力**と**エラー一覧**ペインおよびオプション**レイアウト**レイアウトを管理します。|  

@@ -2,19 +2,18 @@
 title: パスワード リセット - Analytics Platform System |Microsoft Docs
 description: パスワードのリセット ページでは、Analytics Platform System で使用される管理者アカウントのパスワードを変更することができます。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 63fbb097bf1ca926223ce7c0114c8da5d10cd969
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5fb3bbb5adba5754c220c34503a22656f6da39c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960468"
 ---
 # <a name="password-reset---analytics-platform-system"></a>パスワード リセット - Analytics Platform System
 **パスワードのリセット** ページでは、Analytics Platform System で使用される管理者アカウントのパスワードを変更することができます。  
@@ -54,7 +53,7 @@ ms.locfileid: "62639957"
   
     ![SQL Server DWConfig パスワード](./media/password-reset/SQL_Server_PDW_DWConfig_TopPW.png "SQL_Server_PDW_DWConfig_TopPW")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ディレクトリ サービス復元モードで AD ノードにログオンするための管理者パスワードを設定&#40;DSRM&#41; &#40;Analytics Platform System&#41;](set-admin-password-for-logging-on-to-ad-nodes-in-directory-services-restore-mode.md)  
 [Configuration Manager の起動&#40;Analytics Platform System&#41;](launch-the-configuration-manager.md)  
   

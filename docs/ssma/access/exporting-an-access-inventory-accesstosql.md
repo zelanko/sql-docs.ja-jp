@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 7e1941fb-3d14-4265-aff6-c77a4026d0ed
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: f35ae03cb6588bc7828349dd4a4beafcc5a7b2f3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c05eafd1fb58b6ece15f5ad8721228d9d4beab6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760833"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006559"
 ---
 # <a name="exporting-an-access-inventory-accesstosql"></a>Access インベントリ (AccessToSQL) のエクスポート
 複数の Access データベースがあるし、に移行するものがわからない場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]プロジェクト内のすべての Access データベースのインベントリをエクスポートすることができます。 確認し、データベースと移行するには、そのデータベース内のオブジェクトを決定するインベントリのメタデータを照会します。 このインベントリすることができます簡単に、次の質問に対する回答を検索します。  
@@ -146,7 +145,7 @@ Access データベースに関するメタデータをエクスポートした�
   
 5.  クエリを実行する F5 キーを押します。  
   
-## <a name="query-examples"></a>クエリ例  
+## <a name="query-examples"></a>クエリの例  
 次のクエリを実行する前にを使用してを実行する必要があります*database_name*エクスポートされたメタデータを含むデータベースに対してクエリを実行することを確認するクエリ。 たとえば、MyAccessMetadata という名前のデータベースにメタデータをエクスポートする場合は追加する、次の先頭に、[!INCLUDE[tsql](../../includes/tsql-md.md)]コード。  
   
 ```  

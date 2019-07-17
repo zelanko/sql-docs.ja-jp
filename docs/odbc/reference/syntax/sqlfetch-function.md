@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 6c6611d2-bc6a-4390-87c9-1c5dd9cfe07c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 15074b31b1c147ef78a898dbb8624f3b40358d13
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f9b3171d496f54942e7ac1005acea1b3566ff76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537138"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003065"
 ---
 # <a name="sqlfetch-function"></a>SQLFetch 関数
 **準拠**  
@@ -107,7 +106,7 @@ SQLRETURN SQLFetch(
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
 |開始する前に|1|  
-|*CurrRowsetStart* \<= *LastResultRow - RowsetSize*[1]|*CurrRowsetStart* + *RowsetSize*[2]|  
+|*CurrRowsetStart* \< =  *LastResultRow - 複合カーソル*[1]|*CurrRowsetStart* + *複合カーソル*[2]|  
 |*CurrRowsetStart* > *LastResultRow - 複合カーソル*[1]|終了後|  
 |終了後|終了後|  
   
@@ -115,7 +114,7 @@ SQLRETURN SQLFetch(
   
  [2] のフェッチ、行セットのサイズが変更された場合、新しくフェッチで使用されていた行セットのサイズになります。  
   
-|表記法|説明|  
+|Notation|説明|  
 |--------------|-------------|  
 |開始する前に|ブロック カーソルは結果セットの開始前に配置されます。 新しい行セットの最初の行は、結果セットの開始前に、する場合**SQLFetch** sql_no_data が返されます。|  
 |終了後|ブロック カーソルは、結果の最後の設定後に配置されます。 場合、新しい行セットの最初の行は、結果セットの終了後**SQLFetch** sql_no_data が返されます。|  

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: fed4aea2-6d3d-4199-a5db-3d033eb63927
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a2524c51f1b4b9297b6e3483a27fd78e6c1836e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba2e23bf4b3c464c5483897c0a9dd3e6c9dea626
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63301985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003278"
 ---
 # <a name="sqlgetinfo-excel-driver"></a>SQLGetInfo (Excel ドライバー)
 > [!NOTE]  
@@ -70,7 +69,7 @@ ms.locfileid: "63301985"
  "."(Excel 5.0/7.0/97)  
   
 ## <a name="sqlcatalogterm"></a>SQL_CATALOG_TERM  
- "Directory" (Excel 3.0/4.0)  
+ "Directory"(Excel 3.0 または 4.0)  
   
  「ブック」(Excel 5.0/7.0/97)  
   

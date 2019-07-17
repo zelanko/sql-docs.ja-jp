@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: f020fffd28223fe37699c38f55bedb2f9e5e65d8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: HT
+ms.openlocfilehash: 3131dfc65d8964232073d37aba697f62de9fcc2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962238"
 ---
 # <a name="define-and-use-compute-contexts-sql-server-and-revoscaler-tutorial"></a>定義し、計算コンテキスト (SQL Server と RevoScaleR チュートリアル) を使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -62,7 +61,7 @@ ms.locfileid: "58511020"
   
     *RxInSqlServer* に渡す **wait** 引数は、次のオプションをサポートします。
   
-    -   **TRUE**。 ジョブは、ブロッキングとして構成されているが失敗したかが完了するまでは返されません。  詳細については、[分散し、Machine Learning Server での並列コンピューティング](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)を参照してください。
+    -   **TRUE**。 ジョブは、ブロッキングとして構成されているが失敗したかが完了するまでは返されません。  詳細については、次を参照してください。[分散し、Machine Learning Server での並列コンピューティング](https://docs.microsoft.com/machine-learning-server/r/how-to-revoscaler-distributed-computing)します。
   
     -   **FALSE**。 ジョブは、ブロック不可として構成されているし、その他の R コードの実行を継続することができますを即座に戻ります。 ただし、非ブロック モードであっても、ジョブの実行中は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] とのクライアント接続を維持する必要があります。
 
@@ -78,7 +77,7 @@ ms.locfileid: "58511020"
     dir.create(sqlShareDir, recursive = TRUE)
     ```
 
-4. 引数を渡す、 **RxInSqlServer**を作成するコンストラクター、*計算コンテキスト オブジェクト*します。
+4. 引数を渡す、 **RxInSqlServer**を作成するコンス トラクター、*計算コンテキスト オブジェクト*します。
 
     ```R
     sqlCompute <- RxInSqlServer(  
@@ -120,7 +119,7 @@ ms.locfileid: "58511020"
 
 リモート計算コンテキストで実行すると、ローカル コンテキストで動作する操作で問題が発生することがあります。 問題を分析またはパフォーマンスを監視する場合は、実行時のトラブルシューティングをサポートするために、計算コンテキストでトレースを有効にすることができます。
 
-1. 同じ接続文字列を使用する新しい計算コンテキストの作成が、引数を追加*traceEnabled*と*traceLevel*を**RxInSqlServer**コンストラクター。
+1. 同じ接続文字列を使用する新しい計算コンテキストの作成が、引数を追加*traceEnabled*と*traceLevel*を**RxInSqlServer**コンス トラクター。
 
     ```R
     sqlComputeTrace <- RxInSqlServer(

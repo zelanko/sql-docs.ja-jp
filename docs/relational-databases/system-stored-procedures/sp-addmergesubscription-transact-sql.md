@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a191d817-0132-49ff-93ca-76f13e609b38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 639c090f1c133183dc4b864a3e0215e4c64b6773
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 5c8d968a3baa17749acccdde5ef54b4da7394ca5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493014"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117918"
 ---
 # <a name="spaddmergesubscription-transact-sql"></a>sp_addmergesubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  プッシュ マージ サブスクリプションまたはプル マージ サブスクリプションを作成します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  プッシュ マージ サブスクリプションまたはプル マージ サブスクリプションを作成します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -68,7 +67,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @subscriber_db = ] 'subscriber_db'` サブスクリプション データベースの名前です。 *@subscriber_db*は**sysname**、既定値は NULL です。  
   
-`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類です。 *subscription_type*は**nvarchar (15)**、既定値は PUSH です。 場合**プッシュ**、プッシュ サブスクリプションが追加され、ディストリビューターでマージ エージェントを追加します。 場合**プル**ディストリビューターでマージ エージェントを追加せずにプル サブスクリプションが追加されます。  
+`[ @subscription_type = ] 'subscription_type'` サブスクリプションの種類です。 *subscription_type*は**nvarchar (15)** 、既定値は PUSH です。 場合**プッシュ**、プッシュ サブスクリプションが追加され、ディストリビューターでマージ エージェントを追加します。 場合**プル**ディストリビューターでマージ エージェントを追加せずにプル サブスクリプションが追加されます。  
   
 > [!NOTE]  
 >  匿名サブスクリプションは、このストアド プロシージャを使用する必要はありません。  
@@ -78,13 +77,13 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**ローカル**(既定値)|パブリッシャーだけが認識しているサブスクライバー。|  
-|**グローバル**|すべてのサーバーが認識しているサブスクライバー。|  
+|**global**|すべてのサーバーが認識しているサブスクライバー。|  
   
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]以降のバージョンでは、ローカル サブスクリプションは、クライアント サブスクリプションとして参照し、グローバル サブスクリプションはサーバー サブスクリプションとして参照と  
   
 `[ @subscription_priority = ] subscription_priority` サブスクリプションの優先度を示す数値です。 *subscription_priority*は**実際**、既定値は NULL です。 ローカルおよび匿名サブスクリプションの場合は、優先度は 0.0 です。 グローバル サブスクリプションの場合は、優先度を 100.0 未満にする必要があります。  
   
-`[ @sync_type = ] 'sync_type'` サブスクリプションの同期型です。 *sync_type*は**nvarchar (15)**、既定値は**自動**します。 **自動**または**none**します。 場合**自動**スキーマと初期データのパブリッシュされたテーブルの最初に転送されます、サブスクライバー。 場合**none**サブスクライバーが既にスキーマと初期データのパブリッシュされたテーブルのことが前提とします。 システム テーブルとデータは常に転送されます。  
+`[ @sync_type = ] 'sync_type'` サブスクリプションの同期型です。 *sync_type*は**nvarchar (15)** 、既定値は**自動**します。 **自動**または**none**します。 場合**自動**スキーマと初期データのパブリッシュされたテーブルの最初に転送されます、サブスクライバー。 場合**none**サブスクライバーが既にスキーマと初期データのパブリッシュされたテーブルのことが前提とします。 システム テーブルとデータは常に転送されます。  
   
 > [!NOTE]  
 >  値を指定しないことをお勧めします**none**します。  
@@ -112,7 +111,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |**5**|木曜日|  
 |**6**|金曜日|  
 |**7**|土曜日|  
-|**8**|日|  
+|**8**|Day|  
 |**9**|平日|  
 |"**10**"|週末の曜日|  
 |NULL (既定値)||  
@@ -123,7 +122,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
 |NULL (既定値)||  
@@ -150,11 +149,11 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @active_end_date = ] active_end_date` マージ エージェントが停止した日付、スケジュールに yyyymmdd です。 *active_end_date*は**int**、既定値は NULL です。  
   
-`[ @optional_command_line = ] 'optional_command_line'` 省略可能なコマンド プロンプトが実行されます。 *optional_command_line*は**nvarchar (4000)**、既定値は NULL です。 このパラメーターを使用して、出力をキャプチャしてファイルに保存するコマンドを追加したり、構成ファイルや属性を指定できます。  
+`[ @optional_command_line = ] 'optional_command_line'` 省略可能なコマンド プロンプトが実行されます。 *optional_command_line*は**nvarchar (4000)** 、既定値は NULL です。 このパラメーターを使用して、出力をキャプチャしてファイルに保存するコマンドを追加したり、構成ファイルや属性を指定できます。  
   
-`[ @description = ] 'description'` このマージ サブスクリプションの簡単な説明です。 *説明*は**nvarchar (255)**、既定値は NULL です。 レプリケーション モニターでこの値が表示されます、**フレンドリ名**列は、監視されるパブリケーションのサブスクリプションの並べ替えに使用できます。  
+`[ @description = ] 'description'` このマージ サブスクリプションの簡単な説明です。 *説明*は**nvarchar (255)** 、既定値は NULL です。 レプリケーション モニターでこの値が表示されます、**フレンドリ名**列は、監視されるパブリケーションのサブスクリプションの並べ替えに使用できます。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` を介してサブスクリプションを同期することができるかどうかを指定します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` を介してサブスクリプションを同期することができるかどうかを指定します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)** 、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 `[ @offloadagent = ] remote_agent_activation` エージェントをリモートから起動できることを指定します。 *remote_agent_activation*は**ビット**、既定値は**0**します。  
   
@@ -165,7 +164,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
   
 `[ @use_interactive_resolver = ] 'use_interactive_resolver'` 対話型の解決を許可するすべてのアーティクルを対話的に解決する競合を許可します。 *use_interactive_resolver* は **nvarchar (5)** 、既定値は FALSE。  
   
-`[ @merge_job_name = ] 'merge_job_name'` *@merge_job_name*パラメーターは非推奨し、設定することはできません。 *merge_job_name*は**sysname**、既定値は NULL です。  
+`[ @merge_job_name = ] 'merge_job_name'` *@merge_job_name* パラメーターは非推奨し、設定することはできません。 *merge_job_name*は**sysname**、既定値は NULL です。  
   
 `[ @hostname = ] 'hostname'` によって返される値よりも優先[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化されたフィルターの WHERE 句でこの関数を使用する場合。 *ホスト名*は**sysname**、既定値は NULL です。  
   
@@ -178,7 +177,7 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="remarks"></a>コメント  
  **sp_addmergesubscription**はマージ レプリケーションで使用します。  
   
- ときに**sp_addmergesubscription**のメンバーによって実行される、 **sysadmin**プッシュ サブスクリプションを作成するサーバーの役割を修正するには、マージ エージェント ジョブが暗黙的に作成し、実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービス アカウント。 実行することをお勧めします[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)に対して異なるエージェントに固有の Windows アカウントの資格情報を指定**@job_login**と**@job_password**. 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
+ ときに**sp_addmergesubscription**のメンバーによって実行される、 **sysadmin**プッシュ サブスクリプションを作成するサーバーの役割を修正するには、マージ エージェント ジョブが暗黙的に作成し、実行、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントサービス アカウント。 実行することをお勧めします[sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)に対して異なるエージェントに固有の Windows アカウントの資格情報を指定 **@job_login** と **。@job_password** . 詳細については、「 [レプリケーション エージェント セキュリティ モデル](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addmergepushsubscriptionagent](../../relational-databases/replication/codesnippet/tsql/sp-addmergesubscription-_1.sql)]  
@@ -186,9 +185,9 @@ sp_addmergesubscription [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addmergesubscription**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [インタラクティブな競合解決](../../relational-databases/replication/merge/advanced-merge-replication-conflict-interactive-resolution.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_changemergesubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   

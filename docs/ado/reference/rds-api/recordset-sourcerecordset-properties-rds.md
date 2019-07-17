@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a29e3fb9-306d-497a-9a59-1856a914e5e9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ec8dbdce6a813663f7909adb2a9ec1edacee9b1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f0cca4735e65ce5d96d431fa455181de921e4474
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963570"
 ---
 # <a name="recordset-sourcerecordset-properties-rds"></a>Recordset、SourceRecordset プロパティ (RDS)
 示す、**レコード セット**カスタム ビジネス オブジェクトからオブジェクトが返されます。  
@@ -56,7 +55,7 @@ Recordset = DataControl.Recordset
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レコード セットと SourceRecordset プロパティの例 (VBScript)](../../../ado/reference/rds-api/recordset-and-sourcerecordset-properties-example-vbscript.md)   
  [CreateRecordset メソッド (RDS)](../../../ado/reference/rds-api/createrecordset-method-rds.md)   
  [クエリ メソッド (RDS)](../../../ado/reference/rds-api/query-method-rds.md)

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 30e25719-176b-4c48-97d4-920766b22412
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e216fae50bf8f4bd37f294abcc14be98ad4f69ea
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 08abd0128a6fa2a478af0e9dc9c292ff973ace79
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793022"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68064487"
 ---
 # <a name="sqlcolattributes-mapping"></a>SQLColAttributes のマッピング
 アプリケーションを呼び出すと**SQLColAttributes** ODBC を通じて*3.x*ドライバーでは、呼び出し**SQLColAttributes**にマップされて**SQLColAttribute**次のようにします。  

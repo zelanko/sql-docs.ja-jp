@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 1d72cef1-22d8-4ae0-91db-6694fe918c9e
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ca0db131690b0b734d7e42175f4ccfb4df6a381
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6195ee80fb851a9875e4a95a6e5aab87deb905e
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013216"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255353"
 ---
 # <a name="sysdmexecqueryoptimizerinfo-transact-sql"></a>sys.dm_exec_query_optimizer_info (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "63013216"
 > [!NOTE]  
 >  これから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]または[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]、名前を使用して、 **sys.dm_pdw_nodes_exec_query_optimizer_info**します。  
   
-|名前|データ型|説明|  
+|名前|データの種類|説明|  
 |----------|---------------|-----------------|  
 |**counter**|**nvarchar (4000)**|オプティマイザーの統計イベントの名前。|  
 |**occurrence**|**bigint**|このカウンターに関する最適化イベントの出現回数。|  
@@ -46,7 +45,7 @@ ms.locfileid: "63013216"
 ## <a name="permissions"></a>アクセス許可  
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
     
 ## <a name="remarks"></a>コメント  
  **sys.dm_exec_query_optimizer_info**次のプロパティ (カウンター) が含まれています。 すべてのオカレンス値は、累積的なシステムの再起動時に 0 に設定されます。 値フィールドのすべての値は、システムの再起動で NULL に設定されます。 平均を示す列のすべての値では、平均計算の分母として、同一行を基にした発生回数の値が使用されます。 すべてのクエリの最適化のときに測定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]への変更が決定**dm_exec_query_optimizer_info**、両方のユーザーとシステムによって生成されたクエリを含みます。 既にキャッシュされている計画の実行がの値を変更していない**dm_exec_query_optimizer_info**、専用の最適化が重要です。  
@@ -77,7 +76,7 @@ ms.locfileid: "63013216"
 |update stmt|UPDATE ステートメントに対する最適化の数。|適用なし|  
 |contains subquery|少なくとも 1 つのサブクエリを含むクエリの最適化の数。|適用なし|  
 |unnest failed|内部使用のみ|内部使用のみ|  
-|表|最適化の合計数。|最適化された 1 つのクエリあたりの、参照テーブルの平均数。|  
+|tables|最適化の合計数。|最適化された 1 つのクエリあたりの、参照テーブルの平均数。|  
 |ヒント|ヒントが指定された回数。 カウントされるヒントは次のとおりです。結合、グループ、共用体、および FORCE ORDER クエリ ヒント、FORCE PLAN 設定オプション、および結合ヒント。|適用なし|  
 |order hint|FORCE ORDER ヒントが指定された回数。|適用なし|  
 |結合ヒント|結合ヒントによって結合アルゴリズムが強制された回数。|適用なし|  

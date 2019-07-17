@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 7abc5260-733a-48d4-9974-2d1a6a9ea5f6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0805cafcdae76e3f4d7f8405088f5fe93fbc985b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 583639a5cd4680bf6cfcf03bbaf6ee9eb63adba8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039649"
 ---
 # <a name="sqlsetstmtattr-function"></a>SQLSetStmtAttr 関数
 **準拠**  
@@ -98,7 +97,7 @@ SQLRETURN SQLSetStmtAttr(
 |SQLSTATE|[エラー]|説明|  
 |--------------|-----------|-----------------|  
 |01000|一般的な警告|ドライバー固有の情報メッセージです。 (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
-|01S02|オプション値が変更されました|ドライバーがで指定された値をサポートしていませんでした*ValuePtr*で指定された値または*ValuePtr*が、ドライバーのような値を代入するため、実装の動作状態のため無効です。 (**SQLGetStmtAttr**一時的に置き換えられた値を決定するということができます)。代替値が有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は次のとおりです。<br /><br /> SQL_ ATTR_CONCURRENCY SQL_ ATTR_CURSOR_TYPE SQL_ ATTR_KEYSET_SIZE SQL_ ATTR_MAX_LENGTH SQL_ ATTR_MAX_ROWS SQL_ ATTR_QUERY_TIMEOUT  SQL_ATTR_ROW_ARRAY_SIZE SQL_ ATTR_SIMULATE_CURSOR<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
+|01S02|オプション値が変更されました|ドライバーがで指定された値をサポートしていませんでした*ValuePtr*で指定された値または*ValuePtr*が、ドライバーのような値を代入するため、実装の動作状態のため無効です。 (**SQLGetStmtAttr**一時的に置き換えられた値を決定するということができます)。代替値が有効、 *StatementHandle*カーソルが閉じられるまで、ステートメント属性はこの時点で、前の値に元に戻します。 変更可能なステートメント属性は次のとおりです。<br /><br /> SQL _ ATTR_CONCURRENCY SQL _ ATTR_CURSOR_TYPE SQL _ ATTR_KEYSET_SIZE SQL _ ATTR_MAX_LENGTH SQL _ ATTR_MAX_ROWS SQL _ ATTR_QUERY_TIMEOUT SQL_ATTR_ROW_ARRAY_SIZE SQL _ ATTR_SIMULATE_CURSOR<br /><br /> (関数は、SQL_SUCCESS_WITH_INFO を返します)。|  
 |08S01|通信リンク エラー|関数が完了した処理の前に、ドライバーとドライバーが接続されているデータ ソース間の通信リンクに失敗しました。|  
 |24000|カーソル状態が無効|*属性*SQL_ATTR_CONCURRENCY、SQL_ATTR_CURSOR_TYPE、SQL_ATTR_SIMULATE_CURSOR、または、SQL_ATTR_USE_BOOKMARKS、カーソルが開かれていた。|  
 |HY000|一般的なエラー|これがなかった固有の SQLSTATE とする実装に固有の SQLSTATE が定義されていない、エラーが発生しました。 によって返されるエラー メッセージ**SQLGetDiagRec**で、  *\*MessageText*バッファーは、エラーとその原因について説明します。|  

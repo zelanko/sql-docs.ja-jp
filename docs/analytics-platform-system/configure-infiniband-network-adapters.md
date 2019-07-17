@@ -2,19 +2,18 @@
 title: Analytics Platform System を構成するには、InfiniBand、|Microsoft Docs
 description: コントロールのノードで並列データ ウェアハウス (PDW) に接続するクライアントの非アプライアンス サーバーで、InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込むように基本的な接続性と高可用性のために次の手順を使用して、バックアップ、およびその他のプロセスが自動的にアクティブな InfiniBand ネットワークに接続します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 9e52e3962fa1928d7f7680a750d6c1efe5201c6f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4739a79989321c215819bab90da1d1831764f820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63057199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961245"
 ---
 # <a name="configure-infiniband-network-adapters-for-analytics-platform-system"></a>Analytics Platform System の InfiniBand ネットワーク アダプターを構成します。
 コントロールのノードで並列データ ウェアハウス (PDW) に接続するクライアントの非アプライアンス サーバーで、InfiniBand ネットワーク アダプターを構成する方法について説明します。 読み込むように基本的な接続性と高可用性のために次の手順を使用して、バックアップ、およびその他のプロセスが自動的にアクティブな InfiniBand ネットワークに接続します。  
@@ -53,7 +52,7 @@ APS アプライアンスのドメイン アカウント AD01 ノードにログ
   
 ネットワーク アダプターを構成する権限を持つクライアント サーバー上の Windows アカウントが必要です。  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
 これらの手順では、クライアント サーバーが既にラックし、アプライアンスの InfiniBand ネットワークに接続されていると仮定します。 ラック構成と手順を配線を参照してください。[の取得と構成を読み込むサーバー](acquire-and-configure-loading-server.md)します。  
   
 ### <a name="general-remarks"></a>全般的な解説  
@@ -181,6 +180,6 @@ SQLCTL01 を使用すると、Analytics Platform System の DNS は、コント�
   
     -   MyPDW SQLCTL01  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [取得し、読み込みサーバーの構成](acquire-and-configure-loading-server.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98027871-9901-476e-a722-ee58b7723c1f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 883cd29d8628f1e9270ae95a772c4d116b896710
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 39ebda5de5820cdfd7333ad1d0997593922e0a4f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63034919"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039894"
 ---
 # <a name="diagnostic-messages"></a>診断メッセージ
 各 sqlstate は、診断メッセージが返されます。 同じ SQLSTATE は多くの場合、さまざまなメッセージの数が返されます。 たとえば、SQL 構文でほとんどのエラーの SQLSTATE 42000 (構文エラーまたはアクセス違反) が返されます。 ただし、各構文エラーは、別のメッセージで説明を取得する可能性があります。  
@@ -45,8 +44,8 @@ ms.locfileid: "63034919"
 |-------------|-------------|  
 |*仕入先 id*|エラーまたは警告が発生したか、データ ソースから直接、エラーまたは警告を受信するコンポーネントのベンダーを識別します。|  
 |*ODBC コンポーネントの識別子*|エラーまたは警告が発生したか、データ ソースから直接、エラーまたは警告を受信するコンポーネントを識別します。|  
-|*data-source-identifier*|データ ソースを識別します。 ファイル ベースのドライバーでは、これは通常、ファイル形式など Xbase [1] の DBMS ベースのドライバーでは、これは、DBMS の製品です。|  
-|*component-supplied-text*|ODBC コンポーネントによって生成されます。|  
+|*データ ソースの識別子*|データ ソースを識別します。 ファイル ベースのドライバーでは、これは通常、ファイル形式など Xbase [1] の DBMS ベースのドライバーでは、これは、DBMS の製品です。|  
+|*コンポーネント指定されたテキスト*|ODBC コンポーネントによって生成されます。|  
 |*data-source-supplied-text*|データ ソースによって生成されます。|  
   
  [1] この場合は、ドライバーは、ドライバーとデータ ソースの両方として機能しています。  

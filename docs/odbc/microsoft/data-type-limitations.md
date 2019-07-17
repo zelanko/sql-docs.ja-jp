@@ -14,18 +14,17 @@ helpviewer_keywords:
 ms.assetid: 81c4eab7-1f6b-47a0-b940-89d6c6a14dae
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d4ce0eb96832f4a6b9c1953b0a9a9d0af65cb3b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64d16a9181c475427677371d1e6e180570225b7a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187435"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096460"
 ---
 # <a name="data-type-limitations"></a>データ型の制限事項
 Microsoft ODBC のデスクトップ データベース ドライバーでは、データ型には、以下の制限を強制します。  
   
-|データ型|説明|  
+|データの種類|説明|  
 |---------------|-----------------|  
 |すべてのデータ型|型変換に失敗すると、影響を受ける列を NULL に設定されている可能性があります。|  
 |BINARY|長さ 0 のバイナリ列を作成すると、255 バイトのバイナリ列実際に返されます。|  

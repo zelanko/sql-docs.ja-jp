@@ -20,12 +20,12 @@ author: bluefooted
 ms.author: pamela
 manager: amitban
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 71e32cbe889a6c8236bf536a83109b37e6845842
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 31b1a282e6d68bf9a31f26536926f9dccd4ff6de
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833004"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68263818"
 ---
 # <a name="sysdmdbpageinfo-transact-sql"></a>sys.dm_db_page_info (TRANSACT-SQL)
 
@@ -39,13 +39,13 @@ sys.dm_db_page_info ( DatabaseId, FileId, PageId, Mode )
 ``` 
 
 ## <a name="arguments"></a>引数  
-*DatabaseId* | NULL | DEFAULT     
+*DatabaseId* |NULL |既定値     
 データベースの ID です。 *DatabaseId*は**smallint**します。 有効な入力は、データベースの ID 番号です。 既定では null の場合、ただし送信このパラメーターの NULL 値がエラーになります。
  
-*FileId* | NULL | DEFAULT   
+*FileId* |NULL |既定値   
 ファイルの ID を指定します。 *FileId*は**int**します。有効な入力で指定されたデータベース内のファイルの ID 番号は、 *DatabaseId*します。 既定では null の場合、ただし送信このパラメーターの NULL 値がエラーになります。
 
-*PageId* | NULL | DEFAULT   
+*PageId* |NULL |既定値   
 ページの ID です。  *PageId*は**int**します。有効な入力で指定されたファイル内のページの ID 番号は、 *FileId*します。 既定では null の場合、ただし送信このパラメーターの NULL 値がエラーになります。
 
 *モード*|NULL |既定値   

@@ -14,14 +14,13 @@ helpviewer_keywords:
 ms.assetid: 01050a8e-0ccc-4a02-a4eb-b48be5c3f4f3
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57029e2aad7497e68eba2b2007102654f6aa58e0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa7b7004f1cfca9a1fbec27742af7df515c05c59
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63013348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68073350"
 ---
 # <a name="introduction-to-using-xpath-queries-sqlxml-40"></a>XPath クエリの使用について (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -114,7 +113,7 @@ ms.locfileid: "63013348"
 |ノード関数|**先祖**、**先祖や self**、**子孫**、**子孫または self (//)** 、**次**、 **次の兄弟**、**名前空間**、**前**、**前兄弟**|  
 |文字列関数|**string()** 、 **concat()** 、 **starts-with()** 、 **contains()** 、 **substring-before()** 、 **substring-after()** 、 **substring()** 、 **string-length()** 、 **normalize()** 、 **translate()**|  
 |Boolean 関数群|**lang()**|  
-|数値関数|**sum()** , **floor()** , **ceiling()** , **round()**|  
+|数値関数|**sum()** 、 **floor()** 、 **ceiling()** 、 **round()**|  
 |Union 演算子|&#124;|  
   
  テンプレートに XPath クエリを指定する場合には、次の動作に注意してください。  

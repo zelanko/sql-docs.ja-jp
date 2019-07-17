@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 59c7cd5e-32d6-43ab-bac3-7010322d105a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 71c80efdb2f4a87537d472ee4b6dc6bdc65af70f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bb5f16485312979e9fb2ad6b3a95dacb79b695d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026682"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996175"
 ---
 # <a name="appendix-e-scalar-functions"></a>付録 E: スカラー関数
 ODBC では、この付録の対応するセクションで提供されるこれらの関数型のそれぞれについて詳しい情報のスカラー関数は、次の種類を指定します。 関数の説明には、関連する構文が含まれます。  

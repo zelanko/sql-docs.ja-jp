@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: bb651639-a488-4e38-b6de-0ed99fa4dd92
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7cdadbf3db6447f46fefac19d4979c266165905f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f9843ad9ac0a456f7e38e741e08ce9b66f862fd9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708077"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967055"
 ---
 # <a name="catalog-object-adox"></a>Catalog オブジェクト (ADOX)
 コレクションが含まれています ([テーブル](../../../ado/reference/adox-api/tables-collection-adox.md)、[ビュー](../../../ado/reference/adox-api/views-collection-adox.md)、[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)、[グループ](../../../ado/reference/adox-api/groups-collection-adox.md)、および[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)) します。データ ソースのスキーマ カタログをについて説明します。  

@@ -2,19 +2,18 @@
 title: 処理とストレージの容量、Analytics Platform System |Microsoft Docs
 description: お客様のビジネス要件は、データのスケール ユニットの数と、Analytics Platform System (APS) アプライアンスで必要なコンピューティング ノードのディスクのサイズを決定します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: f20de8ebc4e3b2970e439dbc413e588aa08b5324
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db2b68230e0e2a1fa9a5645ff40c25cc5146392c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960234"
 ---
 # <a name="processing-and-storage-capacity-in-analytics-platform-system"></a>Analytics Platform System での処理とストレージの容量
 お客様のビジネス要件は、データのスケール ユニットの数と、Analytics Platform System (APS) アプライアンスで必要なコンピューティング ノードのディスクのサイズを決定します。 これらの処理およびストレージの計算を使用して購入および計画の決定、容量を進めます。  

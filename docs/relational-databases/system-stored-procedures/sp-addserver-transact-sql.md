@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 160a6b29-5e80-44ab-80ec-77d4280f627c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ab5c15d15c77688c06eedec1d54e82c7b8199380
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 616b835b2b190346df4891caa4d7295c8fb328e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492930"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022429"
 ---
 # <a name="spaddserver-transact-sql"></a>sp_addserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,13 +48,13 @@ sp_addserver [ @server = ] 'server' ,
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスがコンピューターにインストールされている場合、インスタンスは別のサーバー上にあるように動作します。 参照することで、名前付きインスタンスを指定*server*として*servername \instancename*します。  
   
-`[ @local = ] 'LOCAL'` 指定するローカル サーバーとして追加されているサーバー。 **@local** **varchar (10)**、既定値は NULL です。 指定する**@local**として**ローカル**定義**@server**原因として、ローカル サーバーの名前として、@@SERVERNAME値を返す関数 *server* します。  
+`[ @local = ] 'LOCAL'` 指定するローカル サーバーとして追加されているサーバー。 **@local** **varchar (10)** 、既定値は NULL です。 指定する **@local** として**ローカル**定義 **@server** 原因として、ローカル サーバーの名前として、@@SERVERNAME値を返す関数 *server* します。  
   
  インストール中、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップによってこの変数がコンピューター名に設定されます。 既定では、追加構成を行うことなく、ユーザーはこのコンピューター名を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続できます。  
   
  ローカル定義は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] を再起動した後に有効になります。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の各インスタンスでは、1 つのローカル サーバーだけを定義できます。  
   
-`[ @duplicate_ok = ] 'duplicate_OK'` 重複するサーバー名が許可されているかどうかを指定します。 **@duplicate_OK** **varchar (13)**、既定値は NULL です。 **@duplicate_OK** 値を持つことができますのみ**duplicate_OK**または NULL。 場合**duplicate_OK**を指定し、既に追加されているサーバー名が存在する、エラーは発生しません。 名前付きパラメーターを使用しない場合**@local**指定する必要があります。  
+`[ @duplicate_ok = ] 'duplicate_OK'` 重複するサーバー名が許可されているかどうかを指定します。 **@duplicate_OK** **varchar (13)** 、既定値は NULL です。 **@duplicate_OK** 値を持つことができますのみ**duplicate_OK**または NULL。 場合**duplicate_OK**を指定し、既に追加されているサーバー名が存在する、エラーは発生しません。 名前付きパラメーターを使用しない場合 **@local** 指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -77,7 +76,7 @@ sp_addserver [ @server = ] 'server' ,
 sp_addserver 'ACCOUNTS', 'local';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server のスタンドアロン インスタンスをホストするコンピューターの名前変更します。](../../database-engine/install-windows/rename-a-computer-that-hosts-a-stand-alone-instance-of-sql-server.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_dropserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropserver-transact-sql.md)   

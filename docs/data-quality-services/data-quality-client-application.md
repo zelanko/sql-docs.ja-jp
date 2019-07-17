@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 25d1547e-4113-4b34-a9f8-8897db1acf16
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 35eb7e7ac49cda0601117566e8b377abf36b6aba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b63c81595cc25820a537a931dafe1e489a49b59f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66777798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992216"
 ---
 # <a name="data-quality-client-application"></a>Data Quality Client アプリケーション
 
@@ -44,7 +43,7 @@ ms.locfileid: "66777798"
 |DQS で照合を実行する方法について説明します。|[データ照合](../data-quality-services/data-matching.md)|  
 |DQS を管理する方法について説明します。|[DQS 管理](../data-quality-services/dqs-administration.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Data Quality Client のホーム画面](../data-quality-services/data-quality-client-home-screen.md)  
   
   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: joesackmsft
 ms.author: josack
-manager: craigg
 monikerRange: =azuresqldb-current||=sqlallproducts-allversions
-ms.openlocfilehash: 130c4f9c38e5eb7ee47d31377a224c5b602b5b35
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 7b40d9afe54137fb31088aa8aa8b5664c90b715d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053299"
 ---
 # <a name="sysdmresourcegovernorresourcepoolshistoryex-transact-sql"></a>sys.dm_resource_governor_resource_pools_history_ex (TRANSACT-SQL)
 
@@ -85,7 +84,7 @@ ms.locfileid: "67412945"
 |**max_vcores**|decimal(5,2)|現在、最大平均 CPU 帯域幅 CPU の競合がある場合に、リソース プールのすべての要求に許可されている構成です。  仮想コアの単位|
 |**cap_vcores**|decimal(5,2)|リソース プール内のすべての要求を受信する、CPU 帯域幅のハード キャップ。  仮想コアの単位|
 |**instance_cpu_count**|ssNoversion|インスタンス用に構成された CPU の数|
-|**instance_cpu_percent|decimal(5,2)|インスタンス用に構成された CPU 使用率|
+|\* * instance_cpu_percent|decimal(5,2)|インスタンス用に構成された CPU 使用率|
 |**instance_vcores**|decimal(5,2)|インスタンス用に構成された仮想コアの数|
 |**delta_log_bytes_used**|decimal(5,2)|最後のスナップショットからプール レベルでのバイト単位での生成の合計ログ|
 |**avg_login_rate_percent**|decimal(5,2)|ログインの制限と比較の最後のスナップショット以降のログイン数|

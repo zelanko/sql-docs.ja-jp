@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: d18b251d-b37a-4f5f-b50c-502d689594c8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 23b75beb0782fc0a13155d12890cbe3a620e1733
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 8b36fffa5c1999033f0cc1902eda9c2cb4ba61d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530244"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061804"
 ---
 # <a name="spconfigure-transact-sql"></a>sp_configure (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-pdw-md.md)]
@@ -61,7 +60,7 @@ RECONFIGURE
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @configname = ] 'option_name'` 構成オプションの名前です。 *option_name* は **varchar(35)**、既定値は NULL です。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の構成名に含まれている一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
+`[ @configname = ] 'option_name'` 構成オプションの名前です。 *option_name* は **varchar(35)** 、既定値は NULL です。 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]の構成名に含まれている一意の文字列を認識します。 指定しない場合、オプションの完全な一覧が返されます。  
   
  使用可能な構成オプションとその設定方法についてを参照してください[サーバーの構成オプション&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
   
@@ -105,7 +104,7 @@ RECONFIGURE
   
  詳細についてを参照してください[再構成&#40;Transact SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)。  
   
-## <a name="advanced-options"></a>[詳細設定オプション]  
+## <a name="advanced-options"></a>[詳細オプション]  
  いくつかの環境設定オプションは、次のように**アフィニティ マスク**と**復旧間隔**、高度なオプションとして指定されます。 既定では、これらのオプションは表示および変更に使用できます。 利用できるように、設定、 **ShowAdvancedOptions**構成オプションを 1 にします。  
   
  構成オプションとその設定に関する詳細についてを参照してください[サーバーのコンフィギュレーション オプション&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)。  
@@ -163,7 +162,7 @@ EXEC sp_configure @configname='hadoop connectivity';
 ### <a name="e-set-hadoop-connectivity"></a>E. Hadoop 接続を設定する  
  Hadoop 接続を設定するには、sp_configure を実行しているだけでなく、いくつかの手順が必要です。 完全な手順を参照してください[外部データ ソースの作成&#40;Transact SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [RECONFIGURE &#40;Transact-SQL&#41;](../../t-sql/language-elements/reconfigure-transact-sql.md)   
  [SET ステートメント &#40;Transact-SQL&#41;](../../t-sql/statements/set-statements-transact-sql.md)   
  [サーバー構成オプション &#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)   

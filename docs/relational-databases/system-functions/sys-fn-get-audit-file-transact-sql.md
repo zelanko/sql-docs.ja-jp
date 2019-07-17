@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 571ed8140e408577626c437d38080ccabb6c241f
-ms.sourcegitcommit: c3b190f8f87a4c80bc9126bb244896197a6dc453
+ms.openlocfilehash: 350b1eca94f8041a0a38105c650e1c0ec7e1f617
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/26/2019
-ms.locfileid: "56852957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046279"
 ---
 # <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ fn_get_audit_file ( file_pattern,
 | 列名 | 型 | 説明 |  
 |-------------|------|-------------|  
 | action_id | **varchar (4)** | アクションの ID。 Null を許容しません。 |  
-| additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 監査可能なアクションの数が少ないには、この種情報にはが含まれます。<br /><br /> TSQL スタックが関連付けられているアクションに関して、XML 形式で、1 つのレベルの TSQL スタックが表示されます。 XML 形式になります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、次の 3 つの部分 (database_name、schema_name、object_name) で表されます。  モジュール名を解析してなどの無効な xml 文字をエスケープ`'\<'`、 `'>'`、 `'/'`、`'_x'`します。 としてエスケープする必要がある`_xHHHH\_`します。 HHHH は文字の 4 桁の 16 進 ucs-2 コード<br /><br /> Null 値は。 イベントから追加情報が報告されない場合は NULL を返します。 |
+| additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 監査可能なアクションの数が少ないには、この種情報にはが含まれます。<br /><br /> TSQL スタックが関連付けられているアクションに関して、XML 形式で、1 つのレベルの TSQL スタックが表示されます。 XML 形式になります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、次の 3 つの部分 (database_name、schema_name、object_name) で表されます。  モジュール名を解析してなどの無効な xml 文字をエスケープ`'\<'`、 `'>'`、 `'/'`、`'_x'`します。 としてエスケープする必要がある`_xHHHH\_`します。 HHHH は文字の 4 桁の 16 進 ucs-2 コード<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。 |
 | affected_rows | **bigint** | **適用対象**:Azure SQL DB のみ<br /><br /> 実行されたステートメントによって影響を受ける行の数。 |  
 | application_name | **nvarchar(128)** | **適用対象**:Azure SQL DB + SQL Server (2017年以降)<br /><br /> 監査イベントの原因となったステートメントを実行するクライアント アプリケーションの名前 |  
 | audit_file_offset | **bigint** | **対象としています**:。SQL Server のみ<br /><br /> 監査レコードを含むファイルのバッファーのオフセット。 NULL 値は許可されません。 |  
@@ -96,35 +95,35 @@ fn_get_audit_file ( file_pattern,
 | client_ip | **nvarchar(128)** | **適用対象**:Azure SQL DB + SQL Server (2017年以降)<br /><br />    クライアント アプリケーションの ip アドレスのソース |  
 | connection_id | GUID | **適用対象**:Azure SQL DB およびマネージ インスタンス<br /><br /> サーバーの接続の ID |
 | data_sensitivity_information | nvarchar (4000) | **適用対象**:Azure SQL DB のみ<br /><br /> 情報の種類と機密ラベルのデータベースでは、分類済みの列に基づく、監査対象のクエリによって返されます。 詳細については[Azure SQL Database のデータの検出と分類](https://docs.microsoft.com/azure/sql-database/sql-database-data-discovery-and-classification) |
-| database_name | **sysname** | アクションが発生したデータベース コンテキスト。 Null 値は。 サーバー レベルの監査には、NULL を返します。 |  
+| database_name | **sysname** | アクションが発生したデータベース コンテキスト。 NULL 値が許可されます。 サーバー レベルの監査には、NULL を返します。 |  
 | database_principal_id | **int** |アクションが実行されるデータベース ユーザー コンテキストの ID。 NULL 値は許可されません。 この場合は 0 を返します。 には適用されません。 たとえば、サーバー操作などの場合です。|
-| database_principal_name | **sysname** | 現在のユーザー。 Null 値は。 使用できない場合は NULL を返します。 |  
+| database_principal_name | **sysname** | 現在のユーザー。 NULL 値が許可されます。 使用できない場合は NULL を返します。 |  
 | duration_milliseconds | **bigint** | **適用対象**:Azure SQL DB およびマネージ インスタンス<br /><br /> クエリ実行時間 (ミリ秒) |
 | event_time | **datetime2** | 監査可能なアクションが発生した日時。 NULL 値は許可されません。 |  
 | file_name | **varchar(260)** | パスと、レコードの送信元、監査ログ ファイルの名前。 NULL 値は許可されません。 |
 | is_column_permission | **bit** | 列レベルの権限かどうかを示すフラグ。 NULL 値は許可されません。 場合は 0 を返します permission_bitmask = 0。<br /> 1 = true<br /> 0 = false |
 | object_id | **int** | 監査が発生したエンティティの ID。 これには、次の内容が含まれます。<br /> Server オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値は許可されません。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は 0 を返します。 たとえば、認証などの場合です。 |  
-| object_name | **sysname** | 監査が発生したエンティティの名前。 これには、次の内容が含まれます。<br /> Server オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> Null 値は。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
+| object_name | **sysname** | 監査が発生したエンティティの名前。 これには、次の内容が含まれます。<br /> Server オブジェクト<br /> データベース<br /> データベース オブジェクト<br /> スキーマ オブジェクト<br /> NULL 値が許可されます。 エンティティがサーバー自体である場合、または監査がオブジェクト レベルで実行されない場合は NULL を返します。 たとえば、認証などの場合です。 |
 | permission_bitmask | **varbinary(16)** | 一部のアクションでは、権限の許可、拒否、または取り消しを示します。 |
 | response_rows | **bigint** | **適用対象**:Azure SQL DB およびマネージ インスタンス<br /><br /> 結果セットで返される行の数。 |  
-| schema_name | **sysname** | アクションが発生したスキーマ コンテキスト。 Null 値は。 監査がスキーマの外部で発生しているは、NULL を返します。 |  
+| schema_name | **sysname** | アクションが発生したスキーマ コンテキスト。 NULL 値が許可されます。 監査がスキーマの外部で発生しているは、NULL を返します。 |  
 | sequence_group_id | **varbinary** | **適用対象**:SQL Server のみ (2016年以降)<br /><br />  一意識別子 |  
 | sequence_number | **int** | 大きすぎて監査の書き込みバッファーに収まらなかった 1 つの監査レコード内のレコードの順序を追跡します。 NULL 値は許可されません。 |  
 | server_instance_name | **sysname** | 監査が発生したサーバー インスタンスの名前。 標準の server \instance の形式が使用されます。 |  
 | server_principal_id | **int** | アクションが実行されるログイン コンテキストの ID。 NULL 値は許可されません。 |  
-| server_principal_name | **sysname** | 現在のログイン。 Null 値は。 |  
-| server_principal_sid | **varbinary** | 現在のログイン SID。 Null 値は。 |  
+| server_principal_name | **sysname** | 現在のログイン。 NULL 値が許可されます。 |  
+| server_principal_sid | **varbinary** | 現在のログイン SID。 NULL 値が許可されます。 |  
 | session_id | **smallint** | イベントが発生したセッションの ID。 NULL 値は許可されません。 |  
-| session_server_principal_name | **sysname** | セッションのサーバー プリンシパル。 Null 値は。 |  
-| statement | **nvarchar (4000)** | TSQL ステートメントが存在する場合。 Null 値は。 該当しない場合は NULL を返します。 |  
+| session_server_principal_name | **sysname** | セッションのサーバー プリンシパル。 NULL 値が許可されます。 |  
+| statement | **nvarchar (4000)** | TSQL ステートメントが存在する場合。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
 | succeeded | **bit** | イベントをトリガーしたアクションが成功したかどうかを示します。 NULL 値は許可されません。 ログイン イベント以外のすべてのイベントで、操作ではなく、権限チェックが成功したか失敗したかのみを報告します。<br /> 1 = 成功<br /> 0 = 失敗 |
 | target_database_principal_id | **int** | データベース プリンシパルで、許可/拒否/取り消し操作が実行されます。 NULL 値は許可されません。 該当しない場合は 0 を返します。 |  
-| target_database_principal_name | **sysname** | アクションの対象ユーザー。 Null 値は。 該当しない場合は NULL を返します。 |  
+| target_database_principal_name | **sysname** | アクションの対象ユーザー。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
 | target_server_principal_id | **int** | GRANT/DENY/REVOKE 操作が実行されるサーバー プリンシパル。 NULL 値は許可されません。 該当しない場合は 0 を返します。 |  
-| target_server_principal_name | **sysname** | アクションの対象ログインします。 Null 値は。 該当しない場合は NULL を返します。 |  
-| target_server_principal_sid | **varbinary** | 対象ログインの SID。 Null 値は。 該当しない場合は NULL を返します。 |  
+| target_server_principal_name | **sysname** | アクションの対象ログインします。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
+| target_server_principal_sid | **varbinary** | 対象ログインの SID。 NULL 値が許可されます。 該当しない場合は NULL を返します。 |  
 | transaction_id | **bigint** | **適用対象**:SQL Server のみ (2016年以降)<br /><br /> 1 つのトランザクションで複数の監査イベントを識別するために一意識別子 |  
-| user_defined_event_id | **smallint** | **適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Azure SQL DB およびマネージ インスタンス<br /><br /> 引数として渡されるユーザー定義済みのイベント id **sp_audit_write**します。 **NULL**システム イベント (既定値) のユーザー定義のイベントに対しては 0 以外。 詳細については、[sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)を参照してください。 |  
+| user_defined_event_id | **smallint** | **適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Azure SQL DB およびマネージ インスタンス<br /><br /> 引数として渡されるユーザー定義済みのイベント id **sp_audit_write**します。 **NULL**システム イベント (既定値) のユーザー定義のイベントに対しては 0 以外。 詳細については、次を参照してください。 [sp_audit_write &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-audit-write-transact-sql.md)します。 |  
 | user_defined_information | **nvarchar (4000)** | **適用対象**:[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]、Azure SQL DB およびマネージ インスタンス<br /><br /> ユーザーを使用して監査ログに記録する追加情報を記録するために使用、 **sp_audit_write**ストアド プロシージャ。 |  
 
   
@@ -177,7 +176,7 @@ fn_get_audit_file ( file_pattern,
 
 監査を作成する方法の完全な例については、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」をご覧ください。
 
-Azure SQL Database 監査をセットアップする方法については、[SQL Database 監査の](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)を参照してください。
+Azure SQL Database 監査をセットアップする方法については、次を参照してください。 [SQL Database 監査の](https://docs.microsoft.com/azure/sql-database/sql-database-auditing)します。
   
 ## <a name="see-also"></a>参照  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
