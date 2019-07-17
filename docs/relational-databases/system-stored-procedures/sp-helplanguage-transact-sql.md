@@ -53,7 +53,7 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |**langid**|**smallint**|言語 ID 番号です。|  
 |**dateformat**|**nchar(3)**|日付の形式です。|  
 |**datefirst**|**tinyint**|週の最初の曜日:1 は月曜、7 の日曜日、火曜日の場合は 2 です。|  
-|**アップグレード**|**int**|この言語を使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新アップグレード バージョンです。|  
+|**upgrade**|**int**|この言語を使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新アップグレード バージョンです。|  
 |**name**|**sysname**|言語の名前。|  
 |**alias**|**sysname**|言語の別名です。|  
 |**months**|**nvarchar(372)**|月の名前。|  
