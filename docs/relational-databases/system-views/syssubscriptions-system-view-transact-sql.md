@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c9613858-9512-43a9-aa53-7ee8064f064c
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 529572f02568cb7e13ff8821ab8d48a86d908141
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 3a50ce1b42c8963aac0bc152e08c6d39eec73eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52783454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094786"
 ---
 # <a name="syssubscriptions-system-view-transact-sql"></a>syssubscriptions (System View) (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "52783454"
 |**update_mode**|**tinyint**|更新モード。<br /><br /> **0** = 読み取り専用です。<br /><br /> **1** = 即時更新します。|  
 |**loopback_detection**|**bit**|双方向トランザクション レプリケーション トポロジの一部であるサブスクリプションに適用されます。 ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **0** = 戻す。<br /><br /> **1** = は送信しません。|  
 |**queued_reinit**|**bit**|アーティクルが初期化または再初期化の対象としてマークされているかどうかを指定します。 値**1**サブスクライブされるアーティクルが初期化または再初期化のマークされているを指定します。|  
-|**nosync_type**|**tinyint**|サブスクリプションの初期化の種類。<br /><br /> **0** = 自動 (スナップショット)<br /><br /> **1**レプリケーションのサポートのみを =<br /><br /> **2**バックアップによる初期化を =<br /><br /> **3** = ログ シーケンス番号 (LSN) からの初期化<br /><br /> 詳細については、、 **@sync_type**パラメーターの[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)を参照してください。<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**nosync_type**|**tinyint**|サブスクリプションの初期化の種類。<br /><br /> **0** = 自動 (スナップショット)<br /><br /> **1**レプリケーションのサポートのみを =<br /><br /> **2**バックアップによる初期化を =<br /><br /> **3** = ログ シーケンス番号 (LSN) からの初期化<br /><br /> 詳細については、次を参照してください。、 **@sync_type** パラメーターの[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)します。<br /><br /> **3** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**srvname**|**sysname**|サブスクライバーの名前。|  
   
 ## <a name="see-also"></a>参照  

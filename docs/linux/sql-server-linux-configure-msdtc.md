@@ -3,18 +3,17 @@ title: Linux で MSDTC を構成する方法
 description: この記事では、Linux 上の MSDTC を構成するためのチュートリアルについてを提供します。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 03/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f4fe81c5e306b059414fe0f2245aca9c9787ee1b
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834025"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077610"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux 上の Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
 
@@ -28,7 +27,7 @@ ms.locfileid: "67834025"
 
 SQL Server 2019 には、mssql conf ユーティリティの 2 つの構成パラメーターが導入されています。
 
-| mssql-conf setting | 説明 |
+| mssql conf 設定 | 説明 |
 |---|---|
 | **network.rpcport** | RPC エンドポイント マッパーのプロセスがバインドされる TCP ポート。 |
 | **distributedtransaction.servertcpport** | MSDTC サーバーがリッスンするポート。 できない場合は、設定すると、MSDTC サービスを使用してランダムな一時的なポートでサービスが再起動し、ファイアウォールの例外が MSDTC サービスが通信を継続できるようにすることを確認するように再構成する必要があります。 |

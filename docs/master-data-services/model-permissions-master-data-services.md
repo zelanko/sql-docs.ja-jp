@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 210f440b-2cc1-4c49-94b1-3a97e2af7bc3
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 1f42513c7f8fa52fddfa9d3f77f537d81a34c0bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 027240f161ec2853aa2d40a7b4792ccea82c7e64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484083"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68000024"
 ---
 # <a name="model-permissions-master-data-services"></a>モデル権限 (Master Data Services)
 
@@ -41,7 +40,7 @@ ms.locfileid: "65484083"
   
  読み取り、作成、更新、削除の各権限は組み合わせることができます。 作成、更新、削除の各権限を割り当てた場合は、読み取り権限が自動的に割り当てられます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [モデル オブジェクト権限を割り当てる (マスター データ サービス)](../master-data-services/assign-model-object-permissions-master-data-services.md)   
  [モデル オブジェクト権限 (マスター データ サービス)](../master-data-services/model-object-permissions-master-data-services.md)   
  [エンティティ権限 (マスター データ サービス)](../master-data-services/entity-permissions-master-data-services.md)   

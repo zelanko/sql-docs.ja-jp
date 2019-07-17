@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 82f6cf68-cfde-4417-9788-d6382ca14bf8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 49a7a1af0f4b487baddfffa3e4f14d2a148b7a1d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 7d12906f8dec0bfb12fc861c067e6e615e758a3b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134987"
 ---
 # <a name="block-cursors-scrollable-cursors-and-backward-compatibility-for-odbc-3x-applications"></a>ODBC 3.x アプリケーション用のブロック カーソル、スクロール可能なカーソル、および下位互換性
 両方が存在する**SQLFetchScroll**と**SQLExtendedFetch** odbc の間で、アプリケーション プログラミング インターフェイス (API)、一連の関数である最初の平文の分割は、アプリケーションの呼び出し、およびサービス プロバイダー インターフェイス (SPI) 関数のセットである、ドライバーが実装されます。 この分割は ODBC の要件のバランスを取るために必要な*3.x*、使用する**SQLFetchScroll**に、標準の連携して、ODBC との互換性、 *2.x*、使用します。**SQLExtendedFetch**します。  

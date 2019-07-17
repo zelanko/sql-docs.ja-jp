@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 143ce689-108b-49d7-9892-fd3a86897f38
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a56e8cb4531fbe48e2a66242d23406d6d647573c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe71adc1be14b40d18baf50eecd68c2bef65c836
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536704"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997563"
 ---
 # <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'dbname'` データベースの名前です。 *dbname*は**sysname**、既定値は **%** します。 場合**%**、その結果、パブリッシャーのすべてのデータベースには、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 以下に示すように、ユーザーが適切なアクセス許可で、すべてのデータベースの情報は返されません。  
+`[ @dbname = ] 'dbname'` データベースの名前です。 *dbname*は**sysname**、既定値は **%** します。 場合 **%** 、その結果、パブリッシャーのすべてのデータベースには、それ以外の場合、指定されたデータベースに関する情報のみが返されます。 以下に示すように、ユーザーが適切なアクセス許可で、すべてのデータベースの情報は返されません。  
   
 `[ @type = ] 'type'` 結果セットをいるデータベースのみに制限指定したレプリケーション オプション*型*値が有効になっています。 *型*は**sysname**値は次のいずれかを指定できます。  
   
@@ -74,7 +73,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバー、 **sysadmin**固定サーバー ロールが実行できる**sp_helpreplicationdboption**任意のデータベース。 メンバー、 **db_owner**固定データベース ロールが実行できる**sp_helpreplicationdboption**データベース。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_replicationdboption &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

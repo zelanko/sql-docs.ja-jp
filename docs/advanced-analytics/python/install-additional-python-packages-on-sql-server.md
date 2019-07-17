@@ -7,13 +7,12 @@ ms.date: 06/16/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0c6c4384dd6c02e35fe77a6fb2bfc4017a445b1b
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: f30c00503a0dd183619550d3ab0e92c0be1449dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140718"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962771"
 ---
 # <a name="install-new-python-packages-on-sql-server"></a>SQL Server に新しい Python パッケージをインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -80,7 +79,7 @@ SQL Server で使用される既定 Python ライブラリの場所を見つけ�
 
   完全なパス、**スクリプト**既定のインストール フォルダーを次に示します。
 
-    C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+    C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 + Python 拡張機能を Visual Studio 2017 または Visual Studio 2015 を使用する場合は実行できます`pip install`から、 **Python 環境**ウィンドウ。 クリックして**パッケージ**、テキスト ボックスで、名前またはインストールするパッケージの場所を提供します。 入力する必要はありません`pip install`; が自動的に入力できます。 
 
@@ -109,7 +108,7 @@ Successfully installed cntk-2.1
 
 インストールが完了したら、次の手順で説明したようにパッケージを使用してすぐに開始できます。
 
-CNTK を使用したディープ ラーニングの例については、これらのチュートリアルを参照してください。[Python API for CNTK](https://cntk.ai/pythondocs/tutorials.html)
+CNTK を使用したディープ ラーニングの例については、これらのチュートリアルを参照してください。[CNTK は Python API](https://cntk.ai/pythondocs/tutorials.html)
 
 パッケージから関数をスクリプトを使用する挿入の標準`import <package_name>`スクリプトの最初の行のステートメント。
 
@@ -125,7 +124,7 @@ cntk._version_
 
 Python のコマンドラインを使用している場合は、いずれかを使用**Pip**または**conda**パッケージ マネージャー、SQL Server セットアップによって追加された Anaconda Python 環境に含まれています。
 
-1. Go to C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\Scripts
+1. C:\Program files \microsoft SQL Server\MSSQL14 に移動します。MSSQLSERVER\PYTHON_SERVICES\Scripts
 
 1. 右クリック**conda.exe** > **管理者として実行**、入力と`conda list`を現在の環境にインストールされているパッケージの一覧を返します。
 

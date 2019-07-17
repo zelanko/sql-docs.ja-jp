@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8596eed7-bda6-4cac-ae1f-efde1aab785f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2e77ffd4fe892bc2f3d9a944c79d6b702d5e671
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc95ec17dc221cb77bd94fc3378af483aeee92dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081969"
 ---
 # <a name="core-level-api-functions-odbc-driver-for-oracle"></a>コア レベルの API 関数 (ODBC Driver for Oracle)
 > [!IMPORTANT]  
@@ -40,7 +39,7 @@ ms.locfileid: "66354584"
 |**SQLConnect**|データ ソースに接続します。 Oracle オペレーティング システムの認証を使用する指定として「/」、 *szUID*パラメーターと""として、 *szAuthStr*パラメーター。|  
 |**SQLDescribeCol**|名前、型、有効桁数、スケール、および指定された結果の列の null 値を返します。 **注:SQLDescribeCol** SQL_VARCHAR として計算列をレポートします。|  
 |**SQLDisconnect**|接続を閉じます。 共有環境の接続プールが有効になっているし、アプリケーションを呼び出すかどうか**SQLDisconnect**その環境で、接続で、接続が接続プールに返されを使用して他のコンポーネントを引き続き使用できます同じ共有環境です。|  
-|**SQLError**|最後のエラーについてのエラーまたは状態情報を返します。 このドライバーは、スタックまたはに対して返されるエラーの一覧、 *hstmt*、 *hdbc*、および*henv*方法に応じて、引数への呼び出し**SQLError**されます。 エラー キューは、各ステートメントの後にフラッシュされます。 通常、Oracle のエラー メッセージを取得し、空ではそれ以外の場合。|  
+|**Sqlerror 関数**|最後のエラーについてのエラーまたは状態情報を返します。 このドライバーは、スタックまたはに対して返されるエラーの一覧、 *hstmt*、 *hdbc*、および*henv*方法に応じて、引数への呼び出し**SQLError**されます。 エラー キューは、各ステートメントの後にフラッシュされます。 通常、Oracle のエラー メッセージを取得し、空ではそれ以外の場合。|  
 |**SQLExecDirect**|新しい、準備されていない SQL ステートメントを実行します。 ドライバーでは、ステートメントにパラメーターが存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。 テーブル、ビュー、またはフィールド名にスペースが含まれる場合の名前で囲みます引用符の背面にマークします。 例では、データベースには、という名前のテーブルが含まれている場合、 *My Table*とフィールド*My Field*識別子の各要素を囲むようになります。<br /><br /> 選択\`表\`します。 \`マイ Field1\`、;\`表\`.\`マイ Field2\` FROM\`テーブル\`|  
 |**SQLExecute**|準備された SQL ステートメントを実行します (既にによって準備ステートメント**SQLPrepare**)。 ドライバーでは、ステートメントにパラメーターが存在しない場合、パラメーター マーカーの変数の現在の値が使用されます。|  
 |**SQLFetch**|前の呼び出しで指定された場所に結果セットから 1 つの行を取得します。 **SQLBindCol**します。 呼び出すのため、ドライバーを準備します**SQLGetData**バインドされていない列にします。|  

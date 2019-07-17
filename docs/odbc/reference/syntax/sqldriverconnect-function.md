@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e299be1d-5c74-4ede-b6a3-430eb189134f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 225b882a6c48900e9a15a23e4073910315848985
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9528280514be2eb2424b15a39ded3206aaca112f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104706"
 ---
 # <a name="sqldriverconnect-function"></a>SQLDriverConnect 関数
 **準拠**  
@@ -145,7 +144,7 @@ SQLRETURN SQLDriverConnect(
 ## <a name="comments"></a>コメント  
  接続文字列では、次の構文があります。  
   
- *connection-string* ::= *empty-string*[;] &#124; *attribute*[;] &#124; *attribute*; *connection-string*  
+ *接続文字列*:: =*空の文字列*[;]&#124; *属性*[;]&#124; *属性*;*接続文字列*  
   
  *空の文字列*:: =*属性*:: =*属性キーワード*=*属性値*&#124;ドライバー = [{}]*属性値*[}]  
   

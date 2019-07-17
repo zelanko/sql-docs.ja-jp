@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2cfd1525-6677-4d36-9b9e-730496853750
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba08d33efca6fa90531f89bd57a307f42f343ebd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 576fe7268ccf71a8c926f6b1124ebbf8a8c711b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68100637"
 ---
 # <a name="outer-join-escape-sequence"></a>外部結合のエスケープ シーケンス
 ODBC では、外部結合のエスケープ シーケンスを使用します。 このエスケープ シーケンスの構文は次のとおりです。  
@@ -40,9 +39,9 @@ ODBC では、外部結合のエスケープ シーケンスを使用します�
   
  外部結合 {*テーブル名*[*相関名*] &#124; *外部結合*} ON  
   
- *search-*  
+ *検索-*  
   
- *condition*  
+ *条件*  
   
  *相関名*:: =*ユーザー定義名*  
   

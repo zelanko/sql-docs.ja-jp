@@ -2,19 +2,18 @@
 title: アプライアンス ノードと Analytics Platform System への接続 |Microsoft Docs
 description: この記事では、Analytics Platform System appliance 内の各ノードに接続するさまざまな方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 873ce3cf5ad2707979d66068b3930d6f59f7057c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae40d38768f081ea6c439c40059065d695ebee23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66186797"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961086"
 ---
 # <a name="connect-to-appliance-nodes-in-analytics-platform-system"></a>Analytics Platform System でアプライアンス ノードへの接続します。
 この記事では、Analytics Platform System appliance 内の各ノードに接続するさまざまな方法について説明します。  

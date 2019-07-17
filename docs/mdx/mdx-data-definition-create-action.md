@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 1e55a35144fce7b90cf4bb33cbbb82f26d8db62c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b723a706521b24c9aa216c46f617d8ff94997137
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63233623"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098553"
 ---
 # <a name="mdx-data-definition---create-action"></a>MDX データ操作 - CREATE ACTION
 
@@ -88,7 +87,7 @@ FOR
 |**ステートメント**|返されるアクション文字列は、設定によって実行される必要があるステートメント、 **:settext**文字列と呼び出し元にコマンド オブジェクトのメソッド、 **icommand::execute**メソッド。 コマンドが成功しなかった場合、エラーが返されます。|  
 |**データセット**|返されるアクション文字列は、MDX ステートメントを設定して実行する必要がある、 **:settext**文字列と呼び出し元にコマンド オブジェクトのメソッド、 **icommand::execute**メソッド。 要求されたインターフェイス ID (IID) にする必要があります**IDataset**します。 データ セットが作成されている場合、コマンドは成功します。 クライアント アプリケーションでは、返されたデータセットをユーザーが表示できるようにする必要があります。|  
 |**行セット**|ような**データセット**がの IID を要求する代わりに**IDataset**、クライアント アプリケーションの IID を要求する必要があります**IRowset**します。 行セットが作成されれば、コマンドは成功したことになります。 クライアント アプリケーションは、返された行セットを参照するユーザーに許可する必要があります。|  
-|**COMMANDLINE**|クライアント アプリケーションでアクション文字列を実行します。 文字列は、コマンド ラインです。|  
+|**コマンドライン**|クライアント アプリケーションでアクション文字列を実行します。 文字列は、コマンド ラインです。|  
 |**独自**|クライアント アプリケーションの表示や、アプリケーションに特定のアクションのカスタムの非ジェネリックの知識がない場合、アクションを実行する必要がありますされません。 これらのオプションに適切な制限を設定して、クライアント アプリケーションが明示的に要求する場合を除き、独自のアクションは、クライアント アプリケーションに返されません、 **APPLICATION_NAME**します。|  
   
 ## <a name="invocation-types"></a>呼び出しの種類  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4a3618b7-d2b8-43c6-a1fd-7a4e6fa8c7d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 94afb817462022ff21c312291b31c738be15c72f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8de1a2053913ee0339c58a4a27ccd45772487e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118672"
 ---
 # <a name="sqlcolumns-function"></a>SQLColumns 関数
 **準拠**  
@@ -54,7 +53,7 @@ SQLRETURN SQLColumns(
  *StatementHandle*  
  [入力]ステートメント ハンドルです。  
   
- *CatalogName*  
+ *カタログ名*  
  [入力]カタログの名前。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") それらのテーブルのカタログがないことを示します。 *CatalogName*文字列の検索パターンを含めることはできません。  
   
 > [!NOTE]  

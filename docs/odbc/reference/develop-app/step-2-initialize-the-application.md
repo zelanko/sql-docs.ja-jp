@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 23a7a230-ae2c-4a5e-9760-d2e17f92c389
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0d25173dc8dc14aa1ed41a4a88496ef654e2ff0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41030015645bda11242a703a163f26104e66dba0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68114250"
 ---
 # <a name="step-2-initialize-the-application"></a>手順 2:アプリケーションを初期化する
 2 番目の手順は、アプリケーションを初期化するためには次の図に示すようにします。 正確にどのようなここでは、アプリケーションによって異なります。  

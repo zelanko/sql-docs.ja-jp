@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b4a03273-5e30-4d7b-826e-02f8f28ba078
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c706dca3a1479a299841f9d47743785d29689f12
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 2d20f2535038b13eac0b8d5ca20dfa77bfc12588
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67792556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139029"
 ---
 # <a name="header-files"></a>ヘッダー ファイル
 Sql.h ヘッダー ファイルには、主要な ODBC インターフェイスへの準拠レベルの機能のプロトタイプが含まれています。 Sqlext.h ヘッダー ファイルには、レベル 1 およびレベル 2 API の適合性レベルで機能のプロトタイプが含まれています。 Sqltypes.h ヘッダー ファイルには、型の定義と、SQL データ型のインジケーターが含まれています。  

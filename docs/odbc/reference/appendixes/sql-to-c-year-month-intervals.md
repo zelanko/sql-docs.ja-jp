@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1233634b-8214-420f-b872-3b2630105ba4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 01af57739f23db586991f8a54d14b90b47f15933
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c7412226dd0674022da022b0a0a63e5bf2063cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065045"
 ---
 # <a name="sql-to-c-year-month-intervals"></a>SQL から C へ: 年月の間隔
 
@@ -35,8 +34,8 @@ ms.locfileid: "63259575"
 
 |C 型識別子|テスト|TargetValuePtr|StrLen_or_IndPtr|SQLSTATE|  
 |-----------------------|----------|------------------------|----------------------------|--------------|  
-|[A] SQL_C_INTERVAL_MONTH<br /><br /> SQL_C_INTERVAL_YEAR[a]<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH [a]|末尾のフィールドの部分を切り捨てることができません。<br /><br /> 末尾のフィールドの部分が切り捨てられます<br /><br /> ソースからデータを保持するために十分な大きさが先頭のターゲットの有効桁数です。|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22015|  
-|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT[b]<br /><br /> SQL_C_SHORT[b]<br /><br /> SQL_C_SLONG[b]<br /><br /> SQL_C_ULONG[b]<br /><br /> SQL_C_NUMERIC[b]<br /><br /> SQL_C_BIGINT[b]|間隔の有効桁数が 1 つのフィールドとデータを切り捨てることがなく変換されました。<br /><br /> 間隔の有効桁数が 1 つのフィールドおよび全体が切り捨て<br /><br /> 間隔の有効桁数が 1 つのフィールド|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> バイト単位でデータの長さ<br /><br /> C データ型のサイズ|n/a<br /><br /> 22003<br /><br /> 22015|  
+|[A] SQL_C_INTERVAL_MONTH<br /><br /> [A] SQL_C_INTERVAL_YEAR<br /><br /> SQL_C_INTERVAL_YEAR_TO_MONTH [a]|末尾のフィールドの部分を切り捨てることができません。<br /><br /> 末尾のフィールドの部分が切り捨てられます<br /><br /> ソースからデータを保持するために十分な大きさが先頭のターゲットの有効桁数です。|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 01S07<br /><br /> 22015|  
+|SQL_C_STINYINT[b]<br /><br /> SQL_C_UTINYINT[b]<br /><br /> SQL_C_USHORT [b]<br /><br /> SQL_C_SHORT [b]<br /><br /> SQL_C_SLONG [b]<br /><br /> SQL_C_ULONG [b]<br /><br /> SQL_C_NUMERIC [b]<br /><br /> SQL_C_BIGINT [b]|間隔の有効桁数が 1 つのフィールドとデータを切り捨てることがなく変換されました。<br /><br /> 間隔の有効桁数が 1 つのフィールドおよび全体が切り捨て<br /><br /> 間隔の有効桁数が 1 つのフィールド|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> バイト単位でデータの長さ<br /><br /> C データ型のサイズ|n/a<br /><br /> 22003<br /><br /> 22015|  
 |SQL_C_BINARY|データのバイト長 < = *BufferLength*<br /><br /> データのバイト長 > *BufferLength*|データ<br /><br /> 未定義。|バイト単位でデータの長さ<br /><br /> 未定義。|n/a<br /><br /> 22003|  
 |SQL_C_CHAR|バイトの長さを文字 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 > = *BufferLength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  
 |SQL_C_WCHAR|文字長 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 < *BufferLength*<br /><br /> (ではなく小数部) 全体の桁数 > = *BufferLength*|データ<br /><br /> 切り捨てられたデータ<br /><br /> 未定義。|C データ型のサイズ<br /><br /> C データ型のサイズ<br /><br /> 未定義。|n/a<br /><br /> 01004<br /><br /> 22003|  

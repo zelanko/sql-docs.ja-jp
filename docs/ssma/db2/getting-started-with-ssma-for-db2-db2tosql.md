@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 48ca32fc-1830-4d1f-add7-480ba5ad02e8
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 86a931c9132a23d9ceb3d46b48fbdce23bf76f92
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0eab4f23e342c95d83baa70dd03aba2f5d4bc8d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63298865"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989640"
 ---
 # <a name="getting-started-with-ssma-for-db2-db2tosql"></a>Ssma for DB2 作業の開始 (DB2ToSQL)
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) の DB2 できます簡単に変換する DB2 データベース スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]スキーマへの結果として得られるスキーマのアップロード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を DB2 からデータを移行および[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  

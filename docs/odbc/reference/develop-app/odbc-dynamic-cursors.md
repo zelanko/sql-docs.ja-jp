@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de709fd3-9eb2-44e1-a2f0-786e2b9602a6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 64215cff750e39dc78ad1a695bbe553d900f4120
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 628de07f90de47efb0546dff84c03f56efb0674c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63312868"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086297"
 ---
 # <a name="odbc-dynamic-cursors"></a>ODBC 動的カーソル
 動的カーソルがあっただけです。 動的です。 メンバーシップ、順序、および、カーソルを開いた後に結果セットの値に加えられた変更を検出できます。 たとえば、動的カーソルで 2 つの行がフェッチされた後、別のアプリケーションによって一方の行は更新され、他の行は削除されたものとします。 動的カーソルは、行の再フェッチしようとすると、削除された行は見つかりませんが、更新された行の新しい値を返します。  

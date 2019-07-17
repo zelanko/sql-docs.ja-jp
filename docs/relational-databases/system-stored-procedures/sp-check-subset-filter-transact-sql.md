@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 525cfcfc-f317-478d-ba84-72e62285f160
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ee22bbf5028959d0aab178924d38465c9d98b432
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fa956275619286c059dacf25a5b9b2b83ed732e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070526"
 ---
 # <a name="spchecksubsetfilter-transact-sql"></a>sp_check_subset_filter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @filtered_table = ] 'filtered_table'` フィルター選択されたテーブルの名前です。 *filtered_table*は**nvarchar (400)**、既定値はありません。  
+`[ @filtered_table = ] 'filtered_table'` フィルター選択されたテーブルの名前です。 *filtered_table*は**nvarchar (400)** 、既定値はありません。  
   
-`[ @subset_filterclause = ] 'subset_filterclause'` テスト対象フィルター句を指定します。 *subset_filterclause*は**nvarchar (1000)**、既定値はありません。  
+`[ @subset_filterclause = ] 'subset_filterclause'` テスト対象フィルター句を指定します。 *subset_filterclause*は**nvarchar (1000)** 、既定値はありません。  
   
 `[ @has_dynamic_filters = ] has_dynamic_filters` フィルター句がパラメーター化された行フィルターがかどうかです。 *has_dynamic_filters*は**ビット**、既定値は NULL は出力パラメーター。 値を返します**1**フィルター句がパラメーター化された行フィルターの場合。  
   
@@ -72,7 +71,7 @@ sp_check_subset_filter [ @filtered_table = ] 'filtered_table'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_check_subset_filter**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)  
   
   

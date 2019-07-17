@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c4709ed1-bf88-4458-9e98-8e9b78150441
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fa2bae15b2da81dcf69ca1e486c74e7b4ccd5ba8
-ms.sourcegitcommit: 1e28f923cda9436a4395a405ebda5149202f8204
+ms.openlocfilehash: 9eb9ced4e010001f42e106ce8b1903e029f2f1c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/25/2019
-ms.locfileid: "55044998"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68109564"
 ---
 # <a name="sysconfigurations-transact-sql"></a>sys.configurations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "55044998"
 |**is_dynamic**|**bit**|1 = RECONFIGURE ステートメントの実行時に影響を与える変数|  
 |**is_advanced**|**bit**|1 = 変数が表示される場合にのみ、 **advancedoption を表示する**設定されます。|  
   
- すべてのサーバー構成オプションの一覧は、[サーバー構成オプションの&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)を参照してください。  
+ すべてのサーバー構成オプションの一覧は、次を参照してください。[サーバー構成オプションの&#40;SQL Server&#41;](../../database-engine/configure-windows/server-configuration-options-sql-server.md)します。  
   
 > [!NOTE]  
 >  データベース レベルの構成のオプションを参照してください[データベース スコープの構成の変更&#40;Transact SQL&#41;](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)。 ソフト NUMA を構成するのにを参照してください[ソフト NUMA &#40;SQL Server&#41;](../../database-engine/configure-windows/soft-numa-sql-server.md)。  

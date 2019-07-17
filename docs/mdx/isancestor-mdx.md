@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8aacd6825a81ff172d8fdf79373f5b251d6e18b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cc8352b0d087b54a623cce892a05dfed29258b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62653472"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105262"
 ---
 # <a name="isancestor-mdx"></a>IsAncestor (MDX)
 
@@ -51,7 +50,7 @@ IsAncestor(Member_Expression1, Member_Expression2)
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [先祖&#40;MDX&#41;](../mdx/ancestor-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

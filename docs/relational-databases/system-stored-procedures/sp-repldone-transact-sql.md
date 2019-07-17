@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 045d3cd1-712b-44b7-a56a-c9438d4077b9
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8aa102f134d262eb2342e3774c1960f33f8adffc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5ed4502b7f3e737b8e3adbfae852c2a513e2ccd4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58538234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006885"
 ---
 # <a name="sprepldone-transact-sql"></a>sp_repldone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  サーバーで最後にディストリビュートされたトランザクションを識別するレコードを更新します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  サーバーで最後にディストリビュートされたトランザクションを識別するレコードを更新します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
 > [!CAUTION]  
 >  実行する場合**sp_repldone**順序や配信されたトランザクションの一貫性を無効にできる、手動でします。 **sp_repldone**サポート プロフェッショナルの経験豊富なレプリケーションのレプリケーションのトラブルシューティングにのみ使用する必要があります。  
@@ -45,9 +44,9 @@ sp_repldone [ @xactid= ] xactid
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @xactid = ] xactid` 最後に、サーバーの分散トランザクションの最初のレコードのログ シーケンス番号 (LSN) は、します。 *xactid*は**binary (10)**、既定値はありません。  
+`[ @xactid = ] xactid` 最後に、サーバーの分散トランザクションの最初のレコードのログ シーケンス番号 (LSN) は、します。 *xactid*は**binary (10)** 、既定値はありません。  
   
-`[ @xact_seqno = ] xact_seqno` 最後に、サーバーの分散トランザクションの最後のレコードの LSN です。 *xact_seqno*は**binary (10)**、既定値はありません。  
+`[ @xact_seqno = ] xact_seqno` 最後に、サーバーの分散トランザクションの最後のレコードの LSN です。 *xact_seqno*は**binary (10)** 、既定値はありません。  
   
 `[ @numtrans = ] numtrans` 分散トランザクションの数です。 *numtrans*は**int**、既定値はありません。  
   
@@ -80,7 +79,7 @@ EXEC sp_repldone @xactid = NULL, @xact_segno = NULL, @numtrans = 0,     @time = 
 > [!CAUTION]  
 >  このプロシージャは、レプリケーション保留中のトランザクションが存在する場合は、トランザクション ログの切り捨てを許可する緊急の状況で使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_replcmds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replcmds-transact-sql.md)   
  [sp_replflush &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replflush-transact-sql.md)   
  [sp_repltrans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-repltrans-transact-sql.md)   

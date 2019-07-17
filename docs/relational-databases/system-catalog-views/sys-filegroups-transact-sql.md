@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 9e851f72-1f8e-4515-a25d-152ebc12ed56
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 479ba4e8eefadfe37cccb1ff08aed38ab8b629a7
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 313c0b80a1bf1d2a094760198053e26426e99c36
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51666378"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005175"
 ---
 # <a name="sysfilegroups-transact-sql"></a>sys.filegroups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "51666378"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<列を継承 >**|--|このビューが継承する列の一覧は、[sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)を参照してください。|  
+|**\<列を継承 >**|--|このビューが継承する列の一覧は、次を参照してください。 [sys.data_spaces &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-data-spaces-transact-sql.md)します。|  
 |**filegroup_guid**|**uniqueidentifier**|ファイル グループの GUID です。<br /><br /> NULL = PRIMARY ファイル グループ|  
 |**log_filegroup_id**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この値は NULL です。|  
 |**is_read_only**|**bit**|1 = ファイル グループは読み取り専用です。<br /><br /> 0 = ファイル グループは読み取り/書き込み可能です。|  

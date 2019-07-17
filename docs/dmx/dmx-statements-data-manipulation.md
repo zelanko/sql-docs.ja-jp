@@ -8,28 +8,27 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 7e1d6e375a43592faeceab8da6bccfc8902c63bd
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
-ms.translationtype: HT
+ms.openlocfilehash: fe94bd1291100dda6680737fe06c96a08e52f0ac
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37968184"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071061"
 ---
-# <a name="dmx-statements---data-manipulation"></a>DMX ステートメント - データの操作
+# <a name="dmx-statements---data-manipulation"></a>DMX ステートメント - データ操作
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  次の表は、データ マイニング拡張機能 (DMX) でデータ マイニング データ操作言語 (DML) の一部であるステートメントについて示しています。  
+  次の表では、データ マイニング データ操作言語 (DML) のデータ マイニング拡張機能 (DMX) の一部であるステートメントが一覧表示します。  
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[削除&#40;DMX&#41;](../dmx/delete-dmx.md)|学習済みの内容をマイニング モデルから削除します。|  
+|[削除&#40;DMX&#41;](../dmx/delete-dmx.md)|マイニング モデルからトレーニング済みのコンテンツを消去します。|  
 |[挿入&#40;DMX&#41;](../dmx/insert-into-dmx.md)|マイニング モデルを学習します。|  
 |[選択&#40;DMX&#41;](../dmx/select-dmx.md)|マイニング モデルを参照します。|  
 |[&#60;ソース データ クエリ&#62;](../dmx/source-data-query.md)|両方のデータ ソースにクエリ**INSERT INTO**と**選択**ステートメント。|  
 |[UPDATE &#40;DMX&#41;](../dmx/update-dmx.md)|マイニング モデルの内容を変更します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   

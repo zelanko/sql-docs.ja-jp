@@ -3,18 +3,17 @@ title: Linux 上の SQL Server の設定を構成します。
 description: この記事では、mssql-conf ツールを使用して、Linux 上の SQL Server の設定を構成する方法について説明します。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 02/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: 57e43f3afd9c46e3b49e4f1f07ab3038359c8c50
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834005"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077603"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>Linux 上の SQL Server を mssql-conf ツールを構成します。
 
@@ -28,7 +27,7 @@ ms.locfileid: "67834005"
 |||
 |---|---|
 | [エージェント](#agent) | SQL Server エージェントを有効にします。 |
-| [[照合順序]](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
+| [照合順序](#collation) | Linux 上の SQL Server の新しい照合順序を設定します。 |
 | [お客様からのフィードバック](#customerfeedback) | SQL Server が Microsoft にフィードバックを送信するかどうかを選択します。 |
 | [[データベース メール プロファイル]](#dbmail) | Linux 上の SQL Server の既定のデータベース メール プロファイルを設定します。 |
 | [既定のデータ ディレクトリ](#datadir) | 新しい SQL Server データベースのデータ ファイル (.mdf) の既定のディレクトリを変更します。 |
@@ -508,7 +507,7 @@ sudo systemctl restart mssql-server
 
 Mssql conf を監視し、MSDTC をトラブルシューティングする際の他のいくつかの設定があります。 次の表は、これらの設定を簡単に説明します。 使用の詳細については、Windows のサポートの記事で詳細をご覧ください。 [MS DTC の診断トレースを有効にする方法](https://support.microsoft.com/help/926099/how-to-enable-diagnostic-tracing-for-ms-dtc-on-a-windows-based-compute)します。
 
-| mssql-conf setting | 説明 |
+| mssql conf 設定 | 説明 |
 |---|---|
 | distributedtransaction.allowonlysecurerpccalls | 分散トランザクションの唯一の RPC 呼び出しをセキュリティで保護を構成します。 |
 | distributedtransaction.fallbacktounsecurerpcifnecessary | 分散型のみ RPC 呼び出しのセキュリティを構成します。 |トランザクション
@@ -680,7 +679,7 @@ sudo cat /var/opt/mssql/mssql.conf
 このファイルに表示されていないすべての設定が既定値を使用していることに注意してください。 次のセクションで、サンプル**mssql.conf**ファイル。
 
 
-## <a id="mssql-conf-format"></a> mssql.conf format
+## <a id="mssql-conf-format"></a> mssql.conf 形式
 
 次 **/var/opt/mssql/mssql.conf**ファイルは、各設定の例を示します。 変更を手動で行うこの形式を使用することができます、 **mssql.conf**に応じてファイルします。 場合は、ファイルを手動で変更しないでください、変更が適用される前に SQL Server を再起動する必要があります。 使用する、 **mssql.conf**ファイル Docker を使用する必要があります Docker[のデータを保存](sql-server-linux-configure-docker.md)します。 最初に完全な追加**mssql.conf**ホスト ディレクトリにファイルを開き、コンテナーを実行します。 この例は[お客様からのフィードバック](sql-server-linux-customer-feedback.md)します。
 

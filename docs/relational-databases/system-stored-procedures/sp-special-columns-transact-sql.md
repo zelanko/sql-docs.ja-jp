@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 0b0993f8-73e0-402b-8c6c-1b0963956f5d
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d96c8565a8d908518504cf86eb253fc5913f1a85
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c82970caa25089320a1dc5daf68076f27478081f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63004158"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032843"
 ---
 # <a name="spspecialcolumns-transact-sql"></a>sp_special_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ sp_special_columns [ @table_name = ] 'table_name'
  [ @col_type=] '*col_type*'  
  列の型です。 *col_type*は**char (** 1 **)** 、既定値は r です種類 R 最適な列または列のセットを返します、または複数の列から値を取得することによって、指定した任意の行では、。一意に識別するテーブル。 列には、この目的では、または、列またはテーブルの一意のインデックスの列用にデザインされた疑似をすることができます。 V の型を返します、列、指定したテーブルであれば、任意のトランザクションによって行の任意の値が更新されたときに、データ ソースによって自動的に更新されます。  
   
- [ @scope=] '*scope*'  
+ [ @scope=] '*スコープ*'  
  ROWID の最低限必要な範囲です。 *スコープ*は**char (** 1 **)** 、既定値は t です。 範囲 C には、、ROWID がその行に配置されている場合にのみ有効であることを指定します。 範囲 T は、ROWID がトランザクションに対して有効であることを指定します。  
   
  [ @nullable=] '*null 許容*'  
@@ -77,7 +76,7 @@ sp_special_columns [ @table_name = ] 'table_name'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|SCOPE|**smallint**|行 ID の実際の範囲 0、1、または 2 を指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 0 を返します。 このフィールドは、常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID をその行に位置している間のみ有効にすることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION. 行 ID を現在のトランザクションの期間を有効にすることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION します。 行 ID は、セッションの期間は (複数のトランザクション境界)、有効であることが保証されます。|  
+|SCOPE|**smallint**|行 ID の実際の範囲 0、1、または 2 を指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 常に 0 を返します。 このフィールドは、常に値を返します。<br /><br /> 0 = SQL_SCOPE_CURROW。 行 ID をその行に位置している間のみ有効にすることが保証されます。 その行が別のトランザクションによって更新または削除された場合は、後でその行 ID を使って再度選択しても行は返されません。<br /><br /> 1 = SQL_SCOPE_TRANSACTION します。 行 ID を現在のトランザクションの期間を有効にすることが保証されます。<br /><br /> 2 = SQL_SCOPE_SESSION します。 行 ID は、セッションの期間は (複数のトランザクション境界)、有効であることが保証されます。|  
 |COLUMN_NAME|**sysname**|各列の列名、*テーブル*が返されます。 このフィールドは、常に値を返します。|  
 |DATA_TYPE|**smallint**|ODBC SQL データ型します。|  
 |TYPE_NAME|**sysname**|データ ソースに依存するデータ型名です。たとえば、 **char**、 **varchar**、 **money**、または**テキスト**します。|  
@@ -102,7 +101,7 @@ EXEC sp_special_columns @table_name = 'Department'
     ,@table_owner = 'HumanResources';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

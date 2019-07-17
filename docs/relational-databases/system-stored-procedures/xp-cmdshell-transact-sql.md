@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 18935cf4-b320-4954-b6c1-e007fcefe358
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 533b096b11ded9c76db81e640c961449a2785330
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: b01628e339e4a3ce1f824f27edd75e2e5aea2526
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68123770"
 ---
 # <a name="xpcmdshell-transact-sql"></a>xp_cmdshell (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ xp_cmdshell { 'command_string' } [ , no_output ]
   
 ## <a name="arguments"></a>引数  
  **'** *command_string* **'**  
- オペレーティング システムに渡すコマンドを含む文字列を指定します。 *command_string*は**varchar (8000)** または**nvarchar (4000)**、既定値はありません。 *command_string*二重引用符のセットを 1 つ以上を含めることはできません。 スペースは、ファイル パスに存在またはプログラムの名前で参照されている場合、1 組の引用符が必要な*command_string*します。 ファイル パスやファイル名に埋め込まれたスペースに関する問題が発生する場合は、その問題への対処方法として FAT 8.3 ファイル名の使用を検討してください。  
+ オペレーティング システムに渡すコマンドを含む文字列を指定します。 *command_string*は**varchar (8000)** または**nvarchar (4000)** 、既定値はありません。 *command_string*二重引用符のセットを 1 つ以上を含めることはできません。 スペースは、ファイル パスに存在またはプログラムの名前で参照されている場合、1 組の引用符が必要な*command_string*します。 ファイル パスやファイル名に埋め込まれたスペースに関する問題が発生する場合は、その問題への対処方法として FAT 8.3 ファイル名の使用を検討してください。  
   
  **no_output**  
  クライアントに出力を返す必要がないことを指定します (省略可能)。  
@@ -68,7 +67,7 @@ The command(s) completed successfully.
   
  **xp_cmdshell**同期的に動作します。 制御は、コマンド シェルのコマンドが完了するまで呼び出し元に返されません。  
   
- **xp_cmdshell**有効になっているし、ポリシー ベースの管理を使用するか、実行することによって無効になっていることができます**sp_configure**します。 詳細については、[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)と[xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)を参照してください。  
+ **xp_cmdshell**有効になっているし、ポリシー ベースの管理を使用するか、実行することによって無効になっていることができます**sp_configure**します。 詳細については、次を参照してください。[セキュリティ構成](../../relational-databases/security/surface-area-configuration.md)と[xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)します。  
   
 > [!IMPORTANT]
 >  場合**xp_cmdshell**バッチ内で実行され、エラーが返されます、バッチは失敗します。 これは新しい動作です。 以前のバージョンの[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]バッチは実行を続行します。  
@@ -82,7 +81,7 @@ The command(s) completed successfully.
 EXEC sp_xp_cmdshell_proxy_account 'SHIPPING\KobeR','sdfh%dkc93vcMt0';  
 ```  
   
- 詳細については、[sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)を参照してください。  
+ 詳細については、次を参照してください。 [sp_xp_cmdshell_proxy_account &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-xp-cmdshell-proxy-account-transact-sql.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  悪意のあるユーザーが場合がありますを使用して、特権の昇格を試みるため**xp_cmdshell**、 **xp_cmdshell**は既定で無効になります。 使用**sp_configure**または**ポリシー ベースの管理**を有効にします。 詳細については、「 [xp_cmdshell サーバー構成オプション](../../database-engine/configure-windows/xp-cmdshell-server-configuration-option.md)」を参照してください。  

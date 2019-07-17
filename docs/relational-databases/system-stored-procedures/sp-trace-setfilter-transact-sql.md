@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 11e7c7ac-a581-4a64-bb15-9272d5c1f7ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c296c668bf553569becb9b4cf2e30001021d47c1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0f48f7e8dd6e7d8fa57868994f9bcabb66777e90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535754"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68095937"
 ---
 # <a name="sptracesetfilter-transact-sql"></a>sp_trace_setfilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -74,7 +73,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
   
  列の値の範囲内のフィルターを適用する**sp_trace_setfilter**実行する必要が 2 回 - 1 回、大きい-よりも-または-equals を ('> =') 比較演算子、および、小さいよりも-または--equals で別の時間 ('< =') 演算子.  
   
- データ列のデータ型の詳細については、、 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)を参照してください。  
+ データ列のデータ型の詳細については、次を参照してください。、 [SQL Server Event Class Reference](../../relational-databases/event-classes/sql-server-event-class-reference.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  次の表は、このストアド プロシージャの完了時に返されるコード値を示しています。  
@@ -93,7 +92,7 @@ sp_trace_setfilter [ @traceid = ] trace_id
 |16|関数は、このトレースは無効です。|  
   
 ## <a name="remarks"></a>コメント  
- **sp_trace_setfilter**は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンで使用可能な拡張のストアド プロシージャで実行される操作の多くを実行するストアド プロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 使用**sp_trace_setfilter**の代わりに、 **xp_trace_set\*フィルター**を作成するストアド プロシージャを拡張するには、適用、削除、またはトレースのフィルターを操作します。 詳細については、[トレースをフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)を参照してください。  
+ **sp_trace_setfilter**は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の以前のバージョンで使用可能な拡張のストアド プロシージャで実行される操作の多くを実行するストアド プロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 使用**sp_trace_setfilter**の代わりに、 **xp_trace_set\*フィルター**を作成するストアド プロシージャを拡張するには、適用、削除、またはトレースのフィルターを操作します。 詳細については、次を参照してください。[トレースをフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)します。  
   
  特定の列のすべてのフィルターは、1 回実行でまとめて有効にする必要があります**sp_trace_setfilter**します。 たとえば場合は、ユーザーがアプリケーション名の列と 1 つのフィルターを username 列に 2 つのフィルターを適用しようとすると、ユーザー必要がありますフィルターを指定、アプリケーション名のシーケンスで。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ユーザーが 1 つのストアド プロシージャの呼び出しでアプリケーション名でフィルターを指定する場合で、後にフィルターをユーザー名、アプリケーション名の後に別のフィルターを返します。  
   

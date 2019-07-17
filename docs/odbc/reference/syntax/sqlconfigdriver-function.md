@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 4f681961-ac9f-4d88-b065-5258ba112642
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20316f2a7932768951633ae24e1b1e180c1dfb49
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e324b1f49bd6f8d0cad15ac2bcde73f558220330
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537580"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121446"
 ---
 # <a name="sqlconfigdriver-function"></a>SQLConfigDriver 関数
 **準拠**  
  バージョンが導入されました。ODBC 2.5  
   
- **まとめ**  
+ **概要**  
  **SQLConfigDriver**適切なドライバーのセットアップ DLL と呼び出しを読み込み、 **ConfigDriver**関数。  
   
  機能**SQLConfigDriver**にアクセスすることも[ODBCCONF します。EXE](../../../odbc/odbcconf-exe.md)します。  
@@ -54,7 +53,7 @@ BOOL SQLConfigDriver(
  *hwndParent*  
  [入力]親ウィンドウ ハンドル。 関数では、ハンドルが null の場合、ダイアログ ボックスは表示されません。  
   
- *fRequest*  
+ *起こり*  
  [入力]要求の種類。 *起こり*値は次のいずれかを含める必要があります。  
   
  ODBC_CONFIG_DRIVER:接続プール、ドライバーによって使用されるタイムアウトを変更します。  

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf56c684-c261-4b89-994a-db14ab2241d6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 21054bdb3f869a0f06349b32e481144b3582de4e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1a2ed3cffcb196cb09841df3b54fbfab53e22477
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63258816"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056875"
 ---
 # <a name="sql-to-c-guid"></a>SQL から C へ: GUID
 GUID の ODBC SQL データ型の識別子です。  

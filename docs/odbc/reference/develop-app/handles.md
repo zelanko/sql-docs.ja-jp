@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f663101e-a4cc-402b-b9d7-84d5e975be71
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a205a23c4c7e7e45269fd00fc0923d4168ec7091
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d31d36f315291d6826712771d0e3b6b1d8fbc496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061444"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139040"
 ---
 # <a name="handles"></a>ハンドル
 ハンドルは、特定の項目を識別する非透過、32 ビットの値ODBC では、この項目は、環境、接続、ステートメント、または記述子をすることができます。 アプリケーションを呼び出すと**SQLAllocHandle**、ドライバー マネージャーまたはドライバーを指定した型の新しい項目を作成およびアプリケーションへのハンドルを返します。 後で、アプリケーションは、ODBC 関数を呼び出すときに、その項目を識別するために、ハンドルを使用します。 ドライバー マネージャーとドライバーは、ハンドルを使用して、項目に関する情報を探します。  

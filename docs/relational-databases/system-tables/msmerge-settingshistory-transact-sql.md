@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bdf2d5f-5502-44cd-aa9d-2d5006ad20ce
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 25505e0b96c627feb51fd59abfe587851520b724
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8cb78229ea20d5b4c1b01b17c9fef1d85ca83b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026555"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106322"
 ---
 # <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "63026555"
 |**eventtime**|**datetime**|イベントが発生した日時。|  
 |**pubid**|**uniqueidentifier**|指定したパブリケーションの一意な識別番号。|  
 |**artid**|**uniqueidentifier**|指定したアーティクルの一意な ID 番号です。|  
-|**eventtype**|**tinyint**|次のいずれかの値を記録中イベントの種類を指定します。<br /><br /> **1** -の初期パブリケーション レベルのプロパティの設定。<br /><br /> **2** -パブリケーションのプロパティを変更します。<br /><br /> **101** -最初のアーティクルのプロパティの設定。<br /><br /> **102** -アーティクルのプロパティを変更します。|  
+|**イベントの種類**|**tinyint**|次のいずれかの値を記録中イベントの種類を指定します。<br /><br /> **1** -の初期パブリケーション レベルのプロパティの設定。<br /><br /> **2** -パブリケーションのプロパティを変更します。<br /><br /> **101** -最初のアーティクルのプロパティの設定。<br /><br /> **102** -アーティクルのプロパティを変更します。|  
 |**propertyname**|**sysname**|設定または変更されたプロパティの名前|  
 |**previousvalue**|**sysname**|前のプロパティをプロパティが変更された場合を値。|  
 |**newvalue**|**sysname**|変更後または作成時のプロパティの値。|  

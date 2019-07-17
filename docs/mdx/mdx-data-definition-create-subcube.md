@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2b505de916ba274ebb69137aa3f61fe384386829
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9726d654427d394a5a43712ce70dc4c98a5548f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248313"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038268"
 ---
 # <a name="mdx-data-definition---create-subcube"></a>MDX データ操作 - CREATE SUBCUBE
 
@@ -44,7 +43,7 @@ CREATE SUBCUBE Cube_Name AS Select_Statement
 |元の既定のメンバー|集計可能/不可能|サブセレクト|変更後の既定のメンバー|  
 |-----------------------------|-----------------------|---------------|----------------------------|  
 |Time.Year.All|はい|{Time.Year.2003}|変更なし|  
-|Time.Year です。[1997]|はい|{Time.Year.2003}|Time.Year.All|  
+|Time.Year です。[1997]|[はい]|{Time.Year.2003}|Time.Year.All|  
 |Time.Year です。[1997]|いいえ|{Time.Year.2003}|Time.Year です。[2003]|  
 |Time.Year です。[1997]|はい|{Time.Year.2003、Time.Year.2004}|Time.Year.All|  
 |Time.Year です。[1997]|いいえ|{Time.Year.2003、Time.Year.2004}|いずれかの Time.Year です。[2003] または<br /><br /> Time.Year.[2004]|  
@@ -93,9 +92,9 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
 |||||  
 |-|-|-|-|  
 ||All Products|Accessories|Clothing|  
-|All Resellers|$2,031,079.39|$506,172.45|$1,524,906.93|  
-|Value Added Reseller|$767,388.52|$175,002.81|$592,385.71|  
-|Warehouse|$1,263,690.86|$331,169.64|$932,521.23|  
+|All Resellers|2,031,079.39 ドル|$506,172.45|$1,524,906.93|  
+|Value Added Reseller|767,388.52 ドル|$175,002.81|$592,385.71|  
+|Warehouse|1,263,690.86 ドル|$331,169.64|$932,521.23|  
   
  削除して、NON VISUAL 句を使用してサブキューブを再作成には、Products.Category および Resellers 内のすべてのメンバーの実際の合計を維持するサブキューブを作成します。[Business Type]、表示されるかどうか、またはサブキューブではなく。  
   
@@ -128,7 +127,7 @@ SELECT [Geography].[Country].[Country].MEMBERS ON 0
   
  [All Products] および [All Resellers] の列と行それぞれに、表示されているメンバーだけでなく、すべてのメンバーの合計が含まれます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX の主な概念 (Analysis Services)](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   
  [MDX スクリプト ステートメント&#40;MDX&#41;](../mdx/mdx-scripting-statements-mdx.md)   
  [DROP SUBCUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-drop-subcube.md)   

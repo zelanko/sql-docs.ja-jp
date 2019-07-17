@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b987b141-5abf-4161-a073-4cfc3e7f5aae
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 879ee3d55a178e2ef5fc7feca3f6ef475e683a8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57b24ed1096078529e4e46a094737c8b37bf7020
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65477167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092265"
 ---
 # <a name="filter-dialog-box-mds-add-in-for-excel"></a>[フィルター] ダイアログ ボックス (Excel 用 MDS アドイン)
 
@@ -47,19 +46,19 @@ ms.locfileid: "65477167"
 |演算子|選択した属性の型に対応する演算子が表示されます。 詳細については、「[フィルター演算子 (マスター データ サービス)](../../master-data-services/filter-operators-master-data-services.md)」を参照してください。|  
 |[抽出条件]|フィルター処理に使用する条件。|  
 |概要の更新|大きなデータセットを操作する場合に、クリックすると、読み込まれるデータの量に関する詳細を含む **[概要]** セクションが更新されます。|  
-|[追加]|**[列]** セクションで属性をクリックし、 **[追加]** をクリックすると、属性がフィルターの一覧に追加されます。|  
+|追加|**[列]** セクションで属性をクリックし、 **[追加]** をクリックすると、属性がフィルターの一覧に追加されます。|  
 |[すべて削除]|一覧からすべてのフィルターを削除します。|  
-|[削除]|一覧から選択したフィルターを削除します。|  
+|削除|一覧から選択したフィルターを削除します。|  
   
 ## <a name="summary"></a>[概要]  
  データを読み込む前に、読み込まれるデータの量に関する詳細を表示するには、 **[概要]** セクションを使用します。  
   
 |コントロール名|説明|  
 |------------------|-----------------|  
-|[モデル]|モデルの名前。|  
+|モデル|モデルの名前。|  
 |バージョン|バージョンの名前。|  
 |Entity|エンティティの名前。|  
-|[行]|Excel に読み込まれる行数。 **[行]** セクションで適用したフィルターに基づきます。|  
+|行|Excel に読み込まれる行数。 **[行]** セクションで適用したフィルターに基づきます。|  
 |[列]|Excel に読み込まれる列数。 **[列]** セクションで選択した属性に基づきます。|  
   
 ## <a name="see-also"></a>関連項目  

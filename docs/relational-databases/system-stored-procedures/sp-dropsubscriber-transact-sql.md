@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8c6eb282-81b5-4ec4-b691-aa061d9267dc
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c6b9190a22d89e98a683361ba9460d2fd68a9dde
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 02d46b5df95335920dca9ef9cf80e9fa6dabb94f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534404"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124800"
 ---
 # <a name="spdropsubscriber-transact-sql"></a>sp_dropsubscriber (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  登録済みサーバーから、サブスクライバーの指定を削除します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  登録済みサーバーから、サブスクライバーの指定を削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
 > [!IMPORTANT]  
 >  このストアド プロシージャは非推奨とされました。 パブリッシャーでサブスクライバーを明示的に登録する必要はなくなりました。  
@@ -60,7 +59,7 @@ sp_dropsubscriber [ @subscriber= ] 'subscriber'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_dropsubscriber**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プッシュ サブスクリプションを削除します。](../../relational-databases/replication/delete-a-push-subscription.md)   
  [プル サブスクリプションを削除します。](../../relational-databases/replication/delete-a-pull-subscription.md)   
  [sp_addsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscriber-transact-sql.md)   

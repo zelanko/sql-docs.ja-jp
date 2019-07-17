@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2aad7d6b-216e-47e7-b3cb-f95ad096f21a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 388995cd5cb8a711d72533685c14088a7e908475
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 529b71540b4abde5fce868975fcbf2749e31dc8e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63313505"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135541"
 ---
 # <a name="using-block-cursors"></a>ブロック カーソルの使用
 ブロック カーソルのサポートは、ODBC 3 に組み込まれています。*x*します。 **SQLFetch** ODBC 3 で呼び出されると、複数行のフェッチに対してのみ使用できます *。x*場合は、ODBC 2 *。x*アプリケーション呼び出し**SQLFetch**単一行、順方向専用カーソルのみが開きます。 ODBC 3 時にします。*x*アプリケーション呼び出し**SQLFetch** 、ODBC 2 *。x*ドライバー、ドライバーをサポートしない限り、1 行を返します、 **SQLExtendedFetch**します。 詳細については、次を参照してください[ブロック カーソル、スクロール可能なカーソル、および下位互換性](../../../odbc/reference/appendixes/block-cursors-scrollable-cursors-and-backward-compatibility.md)で付録 g:。旧バージョンとの互換性のためのガイドラインをドライバーです。  

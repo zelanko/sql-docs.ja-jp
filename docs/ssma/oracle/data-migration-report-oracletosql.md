@@ -9,19 +9,19 @@ ms.topic: conceptual
 ms.assetid: d63aa7e2-62c6-4c84-b3da-dcf2d89ee134
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 7a88d7225d574794b4dc50ae30a9205b1cac08e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 0d58f07f4e9d43f78c9c8990d174030cce484781
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287468"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264250"
 ---
 # <a name="data-migration-report--oracletosql"></a>データ移行レポート (OracleToSQL)
 **データ移行レポート**へのデータを移行した後、ダイアログ ボックスが表示されます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
 ## <a name="options"></a>および  
-**ステータス**  
+**状態**  
 ソースからターゲット データベースへのデータ移行の状態が表示されます。  
   
 **From**  

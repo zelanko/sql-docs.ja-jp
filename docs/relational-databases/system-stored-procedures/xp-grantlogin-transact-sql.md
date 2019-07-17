@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c851c1ab-3b29-4b99-9902-78c2665a844b
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c6a6e31b4dc36e0f280dfb03d8eadf09a7d4ff7c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 957bbdc43c0f0adf3a545fee76e9f69df130d8f9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534864"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68116669"
 ---
 # <a name="xpgrantlogin-transact-sql"></a>xp_grantlogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="arguments"></a>引数  
 `[ @loginame = ] 'login'` 追加するには、Windows ユーザーまたはグループの名前です。 Windows ユーザーまたはグループは、フォームでの Windows ドメイン名で修飾する必要があります*ドメイン*\\*ユーザー*します。 *ログイン*は**sysname**、既定値はありません。  
   
-`[ @logintype = ] 'logintype'` ログインのセキュリティ レベルは、アクセスを許可されています。 *logintype*は**varchar (5)**、既定値は NULL です。 のみ**管理者**を指定できます。 場合**管理者**が指定されている*ログイン*へのアクセスを許可するが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメンバーとして追加して、 **sysadmin**固定サーバー ロール。  
+`[ @logintype = ] 'logintype'` ログインのセキュリティ レベルは、アクセスを許可されています。 *logintype*は**varchar (5)** 、既定値は NULL です。 のみ**管理者**を指定できます。 場合**管理者**が指定されている*ログイン*へのアクセスを許可するが[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のメンバーとして追加して、 **sysadmin**固定サーバー ロール。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -56,7 +55,7 @@ xp_grantlogin {[@loginame = ] 'login'} [,[@logintype = ] 'logintype']
 ## <a name="permissions"></a>アクセス許可  
  メンバーシップが必要です、 **securityadmin**固定サーバー ロール。 変更するときに、 *logintype*、メンバーシップが必要です、 **sysadmin**固定サーバー ロール。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_denylogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-denylogin-transact-sql.md)   
  [sp_grantlogin &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grantlogin-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   

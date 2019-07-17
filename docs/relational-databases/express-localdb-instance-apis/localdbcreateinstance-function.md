@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: 3eebb485-8a53-4a79-82a9-57b8de9f8e84
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: f629f7b5e25117fa85938c6b4fa9957559868027
-ms.sourcegitcommit: ddb682c0061c2a040970ea88c051859330b8ac00
+ms.openlocfilehash: 297dd5ca109e7b35d8d74d5daf1f8b1c7fd06703
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/12/2018
-ms.locfileid: "51570911"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126937"
 ---
 # <a name="localdbcreateinstance-function"></a>LocalDBCreateInstance 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,7 +102,7 @@ HRESULT LocalDBCreateInstance(
   
  既存のインスタンスが破損するいると、以降の呼び出しの場合、 **LocalDBCreateInstance** API メソッドは失敗します。 破損したインスタンスは、手動で修正するか明示的に削除しないと、再度使用できるようになりません。  
   
- LocalDB API を使用するコード サンプルは、[SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

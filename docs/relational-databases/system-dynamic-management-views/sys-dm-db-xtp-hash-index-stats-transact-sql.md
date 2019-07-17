@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 45969884-cd61-48e8-aee5-c725c78e3e4c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 683adbb172802d3709250c3cac46efdbed6cc544
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f2bbaaaa6770c5644da227c7e64a9ff9e0fc2c13
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47766134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026842"
 ---
 # <a name="sysdmdbxtphashindexstats-transact-sql"></a>sys.dm_db_xtp_hash_index_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ ms.locfileid: "47766134"
 > [!WARNING]
 > **sys.dm_db_xtp_hash_index_stats**テーブル全体をスキャンします。 そのため、データベースの大規模なテーブルがある場合**sys.dm_db_xtp_hash_index_stats**実行時間がかかる場合があります。  
   
-詳細については、[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)を参照してください。  
+詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックス](../../relational-databases/sql-server-index-design-guide.md#hash_index)します。  
   
 |列名|型|説明|  
 |-----------------|----------|-----------------|  
@@ -88,7 +87,7 @@ ms.locfileid: "47766134"
   ORDER BY [table], [index];  
 ``` 
 
-このクエリの結果を解釈する方法の詳細については、[メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)を参照してください。  
+このクエリの結果を解釈する方法の詳細については、次を参照してください。[メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング](../../relational-databases/in-memory-oltp/hash-indexes-for-memory-optimized-tables.md)します。  
 
 ### <a name="b-hash-index-statistics-for-internal-tables"></a>B. 内部テーブルのハッシュ インデックスの統計
 

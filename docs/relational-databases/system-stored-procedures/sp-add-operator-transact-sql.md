@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c1a6a9e45b1640a82cd15074373f162a97d9a0a6
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 49d7ac030eb8e391f083311fc0248b0f0752e72a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121016"
 ---
 # <a name="spaddoperator-transact-sql"></a>sp_add_operator (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -53,20 +52,20 @@ sp_add_operator [ @name = ] 'name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @name = ] 'name'` オペレーター (通知受信者) の名前。 この名前は一意であり、% を含めることはできません (**%**) 文字。 *名前*は**sysname**、既定値はありません。  
+`[ @name = ] 'name'` オペレーター (通知受信者) の名前。 この名前は一意であり、% を含めることはできません ( **%** ) 文字。 *名前*は**sysname**、既定値はありません。  
   
 `[ @enabled = ] enabled` オペレーターの現在の状態を示します。 *有効になっている*は**tinyint**、既定値は**1** (有効)。 場合**0**オペレーターが有効でないと、通知を受信しません。  
   
-`[ @email_address = ] 'email_address'` オペレーターの電子メール アドレス。 この文字列はメール システムに直接渡されます。 *email_address*は**nvarchar (100)**、既定値は NULL です。  
+`[ @email_address = ] 'email_address'` オペレーターの電子メール アドレス。 この文字列はメール システムに直接渡されます。 *email_address*は**nvarchar (100)** 、既定値は NULL です。  
   
- 実際の電子メール アドレスまたはエイリアスのいずれかを指定する*email_address*します。 例 :  
+ 実際の電子メール アドレスまたはエイリアスのいずれかを指定する*email_address*します。 以下に例を示します。  
   
- '**jdoe**'または'**jdoe@xyz.com**'  
+ '**jdoe**'または' **jdoe@xyz.com** '  
   
 > [!NOTE]  
 >  データベース メールには電子メール アドレスを使用する必要があります。  
   
-`[ @pager_address = ] 'pager_address'` オペレーターのポケットベル アドレス。 この文字列はメール システムに直接渡されます。 *pager_address*は**narchar (100)**、既定値は NULL です。  
+`[ @pager_address = ] 'pager_address'` オペレーターのポケットベル アドレス。 この文字列はメール システムに直接渡されます。 *pager_address*は**narchar (100)** 、既定値は NULL です。  
   
 `[ @weekday_pager_start_time = ] weekday_pager_start_time` 時刻を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ポケットベルの通知送信指定したオペレーター、平日、月曜日から金曜日までからです。 *weekday_pager_start_time*は**int**、既定値は**090000**9時 00分 am を 24 時間形式で表したものです。HHMMSS 形式で入力する必要があります。  
   
@@ -92,7 +91,7 @@ sp_add_operator [ @name = ] 'name'
 |**32**|金曜日|  
 |**64**|土曜日|  
   
-`[ @netsend_address = ] 'netsend_address'` ネットワーク メッセージを送信するオペレーターのネットワーク アドレス。 *netsend_address*は**nvarchar (100)**、既定値は NULL です。  
+`[ @netsend_address = ] 'netsend_address'` ネットワーク メッセージを送信するオペレーターのネットワーク アドレス。 *netsend_address*は**nvarchar (100)** 、既定値は NULL です。  
   
 `[ @category_name = ] 'category'` この演算子のカテゴリの名前。 *カテゴリ*は**sysname**、既定値は NULL です。  
   
@@ -130,7 +129,7 @@ EXEC dbo.sp_add_operator
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-operator-transact-sql.md)   
  [sp_help_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-operator-transact-sql.md)   
  [sp_update_operator &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-operator-transact-sql.md)   

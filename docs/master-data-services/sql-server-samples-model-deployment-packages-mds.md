@@ -13,13 +13,12 @@ keywords:
 ms.assetid: 9b31b7b6-319b-4840-b67d-eb383e7762b1
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 6526794fe6895e31b618a25d17b47ccabb940258
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 411496c30f9b32d9c011252ce1d345e64a7d02c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487977"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085640"
 ---
 # <a name="sql-server-examples-model-deployment-packages-mds"></a>SQL Server 例:モデル配置パッケージ (MDS)
 
@@ -55,7 +54,7 @@ ms.locfileid: "65487977"
  
  マスター データ サービスのパッケージは、配置可能なモデル構造と (必要に応じて) モデル データを含んだ XML ファイルです。 モデル パッケージを使用して、モデルのコピーを MDS 環境間で移動したり、既存の [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] 環境に新しいモデルを作成したりすることができます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDSModelDeploy を使用したモデルの配置パッケージの配置](../master-data-services/deploy-a-model-deployment-package-by-using-mdsmodeldeploy.md)  
   
   

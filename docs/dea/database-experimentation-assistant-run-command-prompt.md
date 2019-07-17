@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: c4603bf5fec8f1df8ae1e7fe0e711bf7b6e8f1e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 475c3dc1366e69dbc164547bbf5dfc8c06515c56
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794426"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050470"
 ---
 # <a name="run-database-experimentation-assistant-at-a-command-prompt"></a>コマンド プロンプトでデータベース実験アシスタントを実行します。
 
@@ -43,9 +42,9 @@ ms.locfileid: "66794426"
 
 3.  StartReplayCaptureTrace.sql を使用して SQL Server を実行しているターゲット コンピューター上のトレース キャプチャを開始します。
        
-    A.  SQL Server Management Studio (SSMS) で開く < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql します。
+    a.  SQL Server Management Studio (SSMS) で開く < Dea_InstallPath\>\Scripts\StartReplayCaptureTrace.sql します。
     
-    B.  実行`Set @durationInMins=0`トレースのキャプチャは、指定時間後に自動的に停止しないようにします。
+    b.  実行`Set @durationInMins=0`トレースのキャプチャは、指定時間後に自動的に停止しないようにします。
     
     c.  トレース ファイルあたりの最大ファイル サイズを設定するには、実行`Set @maxfilesize`します。 推奨サイズは、200 (単位は MB) です。
     
@@ -56,9 +55,9 @@ ms.locfileid: "66794426"
 
     `DReplay replay -m "dreplaycontroller" -d "<Folder Path on Dreplay Controller>\IrfFolder" -o -s "SQL2016Target" -w "dreplaychild1,dreplaychild2,dreplaycild3,dreplaychild4"`
         
-    A.  状態を監視するには、コマンド プロンプト ウィンドウを開き、実行`DReplay status -f 1`します。
+    a.  状態を監視するには、コマンド プロンプト ウィンドウを開き、実行`DReplay status -f 1`します。
         
-    B.  再生を停止するなどパス % が、予想より少ないかのようコマンド プロンプト ウィンドウを開き実行`DReplay cancel`します。
+    b.  再生を停止するなどパス % が、予想より少ないかのようコマンド プロンプト ウィンドウを開き実行`DReplay cancel`します。
 
 5.  ターゲット SQL Server インスタンスでトレースでキャプチャを停止します。
 6.  SSMS で開く`<Dea_InstallPath>\Scripts\StopCaptureTrace.sql`します。
@@ -75,7 +74,7 @@ ms.locfileid: "66794426"
 
 `Deacmd.exe -o analysis -a C:\Trace\SQL2008Source\Trace.trc -b C:\ Trace\SQL2014Trace\Trace.trc -r upgrade20082014 -s localhost -e`
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 DEA とデモンストレーションを 19 分については、次のビデオをご覧ください。
 

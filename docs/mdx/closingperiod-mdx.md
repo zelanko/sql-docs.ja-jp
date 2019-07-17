@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: c6c9dea03a4b09ae4dcbe66e6712a542b1920ce0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 102485ede0e52389d43bdb64742a2564aaa71419
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181583"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016794"
 ---
 # <a name="closingperiod-mdx"></a>ClosingPeriod (MDX)
 
@@ -80,7 +79,7 @@ SELECT ClosingPeriod ([Date].[Fiscal].[Month],[Date].[Fiscal].[Fiscal Year].&[20
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [OpeningPeriod &#40;MDX&#41;](../mdx/openingperiod-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
  [LastSibling &#40;MDX&#41;](../mdx/lastsibling-mdx.md)  
