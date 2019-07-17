@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9ee4be21-657b-407a-afa4-0b27a6b096ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a4bb76e9172458c26e59dc366e8a321a548f34e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e83ffa37af2a6e33cad2645105b0df034f59d9f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926189"
 ---
 # <a name="ado-event-instantiation-ado-and-wfc"></a>ADO イベントのインスタンス化: ADO と WFC
 ADO の Windows Foundation Class (ADO と WFC) では、ADO イベント モデルの構築し、簡略化されたアプリケーション プログラミング インターフェイスを示します。 一般に、ADO と WFC ADO イベントを取得、1 つのイベント クラスにイベント パラメーターを統合し、イベント ハンドラーを呼び出します。  
