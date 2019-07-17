@@ -17,14 +17,13 @@ helpviewer_keywords:
 - SQL graph, MATCH statement
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3ed9fbb373febd803fedfd7519df7656c23181f2
-ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
+ms.openlocfilehash: b4e07c8aa0c7911b02f7df5386c03b1860df38c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/08/2019
-ms.locfileid: "67652845"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035883"
 ---
 # <a name="shortestpath-transact-sql"></a>SHORTEST_PATH (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver2015-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -49,7 +48,7 @@ SHORTEST_PATH 関数を使用して、検索できます。
 ## <a name="arbitrary-length-pattern"></a>任意の長さのパターン
 このパターンには、ノードが含まれていて、目的のノードに到達するまで、またはパターンで指定されているイテレーションの最大数まで繰り返しトラバースする必要がある端を満たします。 クエリが実行されるたびにこのパターンの実行結果のノードとエッジの終了ノードに、開始ノードからパスに沿って走査の順序付きコレクション値になります。 これは、正規表現の構文スタイル パターンと、次の 2 つのパターン量指定子がサポートされています。
 
-* **‘+’** :パターンを 1 回以上繰り返します。 最短パスが見つかったらすぐに終了します。
+* **'+'** :パターンを 1 回以上繰り返します。 最短パスが見つかったらすぐに終了します。
 * **{1,n}** : パターンを 1 から "n" 回繰り返します。 最短が見つかるとすぐに終了します。
 
 ## <a name="lastnode"></a>LAST_NODE
@@ -209,7 +208,7 @@ FROM (
 WHERE Q.levels = 2
 ```
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MATCH (SQL グラフ)](../../t-sql/queries/match-sql-graph.md)    
  [CREATE TABLE &#40;SQL グラフ&#41;](../../t-sql/statements/create-table-sql-graph.md)   
  [INSERT (SQL グラフ)](../../t-sql/statements/insert-sql-graph.md)  

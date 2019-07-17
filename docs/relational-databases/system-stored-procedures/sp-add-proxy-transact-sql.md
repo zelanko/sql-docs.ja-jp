@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: cb59df37-f103-439b-bec1-2871fb669a8b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 247c834abfbc47485628702bf4cd87c7662c44a8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 4aa4120db7b45cb0b3a7d7a10bb53931b8300d9d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494274"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088472"
 ---
 # <a name="spaddproxy-transact-sql"></a>sp_add_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ sp_add_proxy
   
 `[ @enabled = ] is_enabled` プロキシが有効になっているかどうかを指定します。 *Is_enabled*フラグが**tinyint**、既定値は 1 です。 ときに*is_enabled*は**0**プロキシが有効でないと、ジョブ ステップでは使用できません。  
   
-`[ @description = ] 'description'` プロキシの説明。 この説明は、 **nvarchar (512)**、既定値は NULL です。 この説明はプロキシを記述する場合の参照情報として利用できますが、それ以外の目的では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってこの説明が使用されることはありません。 そのため、この引数は省略可能です。  
+`[ @description = ] 'description'` プロキシの説明。 この説明は、 **nvarchar (512)** 、既定値は NULL です。 この説明はプロキシを記述する場合の参照情報として利用できますが、それ以外の目的では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントによってこの説明が使用されることはありません。 そのため、この引数は省略可能です。  
   
 `[ @credential_name = ] 'credential_name'` プロキシの資格情報の名前。 *Credential_name*は**sysname**、既定値は NULL です。 いずれか*credential_name*または*credential_id*指定する必要があります。  
   
@@ -76,7 +75,7 @@ sp_add_proxy
  メンバー、 **sysadmin**固定セキュリティ ロールは、任意のプロキシを使用するジョブ ステップを作成できます。 ストアド プロシージャを使用して、 [sp_grant_login_to_proxy &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-grant-login-to-proxy-transact-sql.md)プロキシに他のログイン アクセスを許可します。  
   
 ## <a name="examples"></a>使用例  
- この例は、資格情報のプロキシを作成します`CatalogApplicationCredential`します。 コードでは、資格情報が既に存在することを前提としています。 資格情報の詳細については、[CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)を参照してください。  
+ この例は、資格情報のプロキシを作成します`CatalogApplicationCredential`します。 コードでは、資格情報が既に存在することを前提としています。 資格情報の詳細については、次を参照してください。 [CREATE CREDENTIAL &#40;TRANSACT-SQL&#41;](../../t-sql/statements/create-credential-transact-sql.md)します。  
   
 ```  
 USE msdb ;  

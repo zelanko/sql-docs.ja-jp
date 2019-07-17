@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 82dd8a9527b85350cae31396ad4d238ef1c8c850
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0149898e44476233eafcb226a221fc5cc48ae1d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187655"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006265"
 ---
 # <a name="mdx-data-manipulation---drillthrough"></a>MDX データ操作 - DRILLTHROUGH
 
@@ -60,7 +59,7 @@ DRILLTHROUGH[MAXROWSUnsigned_Integer]
  UniqueName(attribute_name)  
  指定された属性メンバーの一意の名前を返します。  
   
- Key(attribute_name[, N])  
+ キー (attribute_name [、N])  
  指定された属性メンバーのキーを返します。N は、複合キーの列 (存在する場合) を指定します。 N の既定値は 1 です。  
   
  Caption(attribute_name)  
@@ -97,7 +96,7 @@ RETURN
   ,[Reseller Sales].[Reseller Standard Product Cost]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX データ操作ステートメント&#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)  
   
   

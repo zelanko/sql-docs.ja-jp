@@ -6,13 +6,12 @@ ms.date: 02/28/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: fe383652a63b0972097fc739cf33bd3fcbe2e7e6
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 3c9d8d6cc8c0a5cfdc697c5daaa3b56631d74116
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513229"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963028"
 ---
 # <a name="troubleshoot-data-collection-for-machine-learning"></a>Machine learning のデータ コレクションをトラブルシューティングします。
 
@@ -39,7 +38,7 @@ SQL Server 2017 では、Python 言語の統合を追加します。 以前の�
 
 一般に、R Services の機能または Machine Learning サービスの機能を選択するときにインストールされている Microsoft R のバージョンは、SQL Server のビルド番号によって決定されます。 アップグレードまたは SQL Server 修正プログラムを適用した場合のアップグレードまたはその R コンポーネントの修正プログラムを適用もする必要があります。
 
-リリースと R コンポーネントのダウンロードへのリンクの一覧は、[インターネットへのアクセスなしで machine learning コンポーネントをインストール](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access)を参照してください。 インターネットにアクセスできるコンピューターで R の必要なバージョンが識別され、自動的にインストールされます。
+リリースと R コンポーネントのダウンロードへのリンクの一覧は、次を参照してください。[インターネットへのアクセスなしで machine learning コンポーネントをインストール](https://docs.microsoft.com/sql/advanced-analytics/r/installing-ml-components-without-internet-access)します。 インターネットにアクセスできるコンピューターで R の必要なバージョンが識別され、自動的にインストールされます。
 
 SQL Server データベース エンジンのバインドと呼ばれるプロセスでの R Server コンポーネントを個別にアップグレードすることになります。 そのため、SQL Server で R コードを実行するときに使用する R のバージョンがインストールされているバージョンの SQL Server と R の最新のバージョンに、サーバーを移行したかどうかに応じて異なる場合があります。
 
@@ -284,7 +283,7 @@ Machine Learning サービスでは、拡張機能のコンポーネント間の
    - *db_ddladmin*:新しいオブジェクトを作成します。
    - *db_datareader*:R または Python コードで使用されるデータを読み取る。
 4. SQL Server 2016 をインストールしたときに、既定のスタートアップ アカウントを変更するかどうかに注意してください。
-5. 新しい R パッケージをインストールまたは他のユーザーがインストールされた R パッケージを使用して、ユーザーに必要な場合をインスタンス上のパッケージ管理を有効にし、追加のアクセス許可を割り当てる必要があります。 詳細については、[を有効にするか、R パッケージの管理を無効にする](r/r-package-how-to-enable-or-disable.md)を参照してください。
+5. 新しい R パッケージをインストールまたは他のユーザーがインストールされた R パッケージを使用して、ユーザーに必要な場合をインスタンス上のパッケージ管理を有効にし、追加のアクセス許可を割り当てる必要があります。 詳細については、次を参照してください。[を有効にするか、R パッケージの管理を無効にする](r/r-package-how-to-enable-or-disable.md)します。
 
 ### <a name="what-folders-are-subject-to-locking-by-antivirus-software"></a>どのようなフォルダーでは、ウイルス対策ソフトウェアによってロックされるでしょうか。
 
@@ -300,7 +299,7 @@ SQL Server のプロセスとその機能で必要なすべてのフォルダー
 
 1. SQL Server がリモート接続をサポートするかどうかを確認するのを参照してください。[リモート サーバー接続を構成する](../database-engine/configure-windows/view-or-configure-remote-server-connection-options-sql-server.md)します。
 
-2. SQL Server のファイアウォール規則が作成されたかどうかを決定します。 既定のインストールで、セキュリティ上の理由ができない可能性があります、インスタンスに接続するリモートの R または Python クライアントの。 詳細については、[SQL Server への接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)を参照してください。
+2. SQL Server のファイアウォール規則が作成されたかどうかを決定します。 既定のインストールで、セキュリティ上の理由ができない可能性があります、インスタンスに接続するリモートの R または Python クライアントの。 詳細については、次を参照してください。 [SQL Server への接続のトラブルシューティング](../database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine.md)します。
 
 ## <a name="see-also"></a>関連項目
 

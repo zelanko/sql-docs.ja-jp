@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9c2eaed-6d2d-4b78-ae9b-73633133180b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ef3f22ffa0456c69b7e46f8c5aadfc89f95ccc67
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 220e21713935409d7d85ecd156524883dbbace08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022464"
 ---
 # <a name="spaddpullsubscriptionagent-transact-sql"></a>sp_addpullsubscription_agent (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -127,7 +126,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-`[ @optional_command_line = ] 'optional_command_line'` オプションのコマンド プロンプトは、ディストリビューション エージェントに提供されます。 たとえば、 **-definitionfile** C:\Distdef.txt または **- CommitBatchSize** 10。 *optional_command_line*は**nvarchar (4000)**、既定値は空の文字列。  
+`[ @optional_command_line = ] 'optional_command_line'` オプションのコマンド プロンプトは、ディストリビューション エージェントに提供されます。 たとえば、 **-definitionfile** C:\Distdef.txt または **- CommitBatchSize** 10。 *optional_command_line*は**nvarchar (4000)** 、既定値は空の文字列。  
   
 `[ @frequency_type = ] frequency_type` ディストリビューション エージェントをスケジュールする頻度です。 *frequency_type*は**int**値は次のいずれかを指定できます。  
   
@@ -153,7 +152,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 |-----------|-----------------|  
 |**1** (既定値)|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
   
@@ -161,7 +160,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @frequency_subday = ] frequency_subday` 定義した期間中に再スケジュールするには、多くの場合、方法です。 *frequency_subday*は**int**値は次のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|1 回。|  
 |**2**|第 2 週|  
@@ -178,11 +177,11 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @active_end_date = ] active_end_date` ディストリビューション エージェントが停止した日付、スケジュールに yyyymmdd です。 *active_end_date*は**int**、既定値は**0**します。  
   
-`[ @distribution_jobid = ] _distribution_jobidOUTPUT` このジョブのディストリビューション エージェントの ID です。 *distribution_jobid*は**binary (16)**、既定値は null には、出力パラメーター。  
+`[ @distribution_jobid = ] _distribution_jobidOUTPUT` このジョブのディストリビューション エージェントの ID です。 *distribution_jobid*は**binary (16)** 、既定値は null には、出力パラメーター。  
   
 `[ @encrypted_distributor_password = ] encrypted_distributor_password` 設定*encrypted_distributor_password*現在サポートされていません。 これを設定しようとしています。**ビット**パラメーターを**1** 、エラーが発生します。  
   
-`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` サブスクリプションを介した同期が可能かどうかは、[!INCLUDE[msCoName](../../includes/msconame-md.md)]同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)**、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+`[ @enabled_for_syncmgr = ] 'enabled_for_syncmgr'` サブスクリプションを介した同期が可能かどうかは、[!INCLUDE[msCoName](../../includes/msconame-md.md)]同期マネージャーです。 *enabled_for_syncmgr*は**nvarchar (5)** 、既定値は FALSE。 場合**false**サブスクリプションが同期マネージャーに登録されません。 場合**true**、サブスクリプションは同期マネージャーに登録および起動しなくても同期できます[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
   
 `[ @ftp_address = ] 'ftp_address'` 旧バージョンと互換性を保つのためです。  
   
@@ -192,9 +191,9 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @ftp_password = ] 'ftp_password'` 旧バージョンと互換性を保つのためです。  
   
-`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` スナップショットの代替フォルダーの場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)**、既定値は NULL です。  
+`[ @alt_snapshot_folder = ] 'alternate_snapshot_folder'_` スナップショットの代替フォルダーの場所を指定します。 *alternate_snapshot_folder*は**nvarchar (255)** 、既定値は NULL です。  
   
-`[ @working_directory = ] 'working_director'` パブリケーションのデータとスキーマ ファイルを格納するために使用する作業ディレクトリの名前です。 *working_directory*は**nvarchar (255)**、既定値は NULL です。 名前は UNC 形式で指定する必要があります。  
+`[ @working_directory = ] 'working_director'` パブリケーションのデータとスキーマ ファイルを格納するために使用する作業ディレクトリの名前です。 *working_directory*は**nvarchar (255)** 、既定値は NULL です。 名前は UNC 形式で指定する必要があります。  
   
 `[ @use_ftp = ] 'use_ftp'` スナップショットを取得する標準のプロトコルの代わりに FTP の使用を指定します。 *@use_ftp* は **nvarchar (5)** 、既定値は FALSE。  
   
@@ -207,7 +206,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 > [!NOTE]  
 >  場合は、パスワードを指定する必要があります*dts_package_name*を指定します。  
   
-`[ @dts_package_location = ] 'dts_package_location'` パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は**サブスクライバー**します。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**します。  
+`[ @dts_package_location = ] 'dts_package_location'` パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)** 、既定値は**サブスクライバー**します。 パッケージの場所を指定できます**ディストリビューター**または**サブスクライバー**します。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -221,7 +220,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @job_name = ] 'job_name'` 既存のエージェント ジョブの名前です。 *job_name* は **sysname** 既定値は NULL です。 新しく作成されたジョブ (既定値) の代わりに、既存のジョブを使用して、サブスクリプションを同期するときにのみこのパラメーターを指定します。 メンバーになっていない場合、 **sysadmin**するを指定する必要があります固定サーバー ロール、 *job_login*と*job_password*を指定すると*job_name*.  
   
-`[ @job_login = ] 'job_login'` エージェントを実行する Windows アカウントのログインです。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントはサブスクライバーへのエージェント接続で常に使用されます。  
+`[ @job_login = ] 'job_login'` エージェントを実行する Windows アカウントのログインです。 *job_login*は**nvarchar (257)** 、既定値はありません。 この Windows アカウントはサブスクライバーへのエージェント接続で常に使用されます。  
   
 `[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードです。 *job_password* は **sysname** 、既定値はありません。  
   
@@ -240,7 +239,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpullsubscription_agent**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
  [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   

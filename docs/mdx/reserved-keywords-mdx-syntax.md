@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2f50b0292b9139dcbb2b3a5652ad41136b31702a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d88e78e49a52919ff710cd123ab2b25022aa5d1b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149871"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037063"
 ---
 # <a name="reserved-keywords-mdx-syntax"></a>予約されたキーワード (MDX 構文)
 
@@ -29,7 +28,7 @@ ms.locfileid: "63149871"
   
 -   予約されたキーワードを使用しない名前付け規則を使用してください。 オブジェクト名をする必要があります、予約済みキーワードのような場合は、子音や母音を削除できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 構文の要素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)  
   
   

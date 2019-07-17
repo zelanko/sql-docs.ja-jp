@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 808595c3-8ef1-40bd-a93e-5cf237950e08
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 00144c51e60b72fe043443d2a9c8d1d51a6cb8da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 051ded7d675f81998718b858c71488ba968ec680
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63138835"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006593"
 ---
 # <a name="creating-variable-value-files-accesstosql"></a>変数値ファイル (AccessToSQL) の作成
 変数値ファイルは、サーバーの移行の間で頻繁に変更される (送信元または送信先のサーバー名) などのコマンドのパラメーター値を構成する XML ファイルです。 各ソース サーバーの値を格納するための複数の変数ファイルが作成されでマスター スクリプト ファイルで参照されている多数のデータベースの移行が発生すると、 **-v**コマンド ライン スイッチします。 この動作は、変数の複数のファイルで変数の値を持ついくつかのスクリプト ファイルの静的な値を維持するために役立ちます。  

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4ca37b28-a6df-465b-8988-d422d37fc025
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1a2971ef09877a3a6e86334563913941282244f8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5a869d38782478b69ce47656455c38c2b4645b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005744"
 ---
 # <a name="sqlprocedurecolumns-function"></a>SQLProcedureColumns 関数
 **準拠**  
@@ -54,7 +53,7 @@ SQLRETURN SQLProcedureColumns(
  *StatementHandle*  
  [入力]ステートメント ハンドルです。  
   
- *CatalogName*  
+ *カタログ名*  
  [入力]プロシージャのカタログ名。 ドライバーをドライバーがさまざまな Dbms、空の文字列からデータを取得する場合など、他ではなく一部のプロシージャのカタログをサポートしている場合 ("") のカタログはありません。 それらの手順を示します。 *CatalogName*文字列の検索パターンを含めることはできません。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*は通常の引数です。 文字どおり、扱われ、そのケースは重要では。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  
@@ -114,7 +113,7 @@ SQLRETURN SQLProcedureColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- この関数は、プロシージャのパラメーターと存在する場合、結果セットまたはプロシージャによって返されたセットを構成する列についての情報を取得するステートメントを実行する前に通常使用されます。 詳細については、次を参照してください。[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)します。  
+ この関数は、プロシージャのパラメーターと存在する場合、結果セットまたはプロシージャによって返されたセットを構成する列についての情報を取得するステートメントを実行する前に通常使用されます。 詳細については、「[プロシージャ](../../../odbc/reference/develop-app/procedures-odbc.md)」を参照してください。  
   
 > [!NOTE]  
 >  **SQLProcedureColumns**プロシージャで使用されるすべての列が返されない可能性があります。 たとえば、ドライバーは、プロシージャ、および生成の結果セットの列によって使用されるパラメーターに関する情報だけを返す可能性があります。  

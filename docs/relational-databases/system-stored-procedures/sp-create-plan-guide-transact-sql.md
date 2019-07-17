@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5a8c8040-4f96-4c74-93ab-15bdefd132f0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6900c60b788c30cadd404cc2d687cf7993aa119c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b08de0ce5acde863d8f2683b9bc8d6f38c2fa4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108633"
 ---
 # <a name="spcreateplanguide-transact-sql"></a>sp_create_plan_guide (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ \@name = ] N'*plan_guide_name*'  
+ [\@名前 =] N'*plan_guide_name*'  
  プラン ガイドの名前を指定します。 プラン ガイド名は現在のデータベースに対して有効です。 *plan_guide_name*の規則に従っている必要があります[識別子](../../relational-databases/databases/database-identifiers.md)番号記号で始めることはできません (#)。 最大長*plan_guide_name*は 124 文字です。  
   
  [ \@stmt = ] N'*statement_text*'  
@@ -72,7 +71,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
  TEMPLATE  
  示されたフォームにパラメーター化されるクエリに対してプラン ガイドが適用されることを示します*statement_text*します。 テンプレートが指定されている場合のみ、PARAMETERIZATION {FORCED |単純な} クエリ ヒントで指定できます、\@パラメーターのヒントします。 TEMPLATE プラン ガイドの詳細については、次を参照してください。[クエリ パラメーター化動作の指定を使用してプラン ガイドによって](../../relational-databases/performance/specify-query-parameterization-behavior-by-using-plan-guides.md)します。  
   
- [\@module_or_batch =]{ N'[ *schema_name*. ] *object_name*' | N'*batch_text*' | NULL }  
+ [\@module_or_batch =] {N'[ *schema_name*します。 ] *object_name*' | N'*batch_text*' | NULL }  
  これで、オブジェクトの名前を指定します。 *statement_text*が表示されたら、またはバッチのテキストを*statement_text*が表示されます。 バッチのテキストは、使用を含めることはできません*データベース*ステートメント。  
   
  アプリケーションから送信されたバッチと一致するプラン ガイドの*batch_tex*t は、同じ形式で指定する必要がありますの文字を送信するときと[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 この適合を容易にするために内部変換は実行されません。 詳細については、「解説」を参照してください。  
@@ -88,7 +87,7 @@ sp_create_plan_guide [ @name = ] N'plan_guide_name'
   
  *\@parameter_name data_type*送信するときとまったく同じ形式で指定する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を sp_executesql を使用するか、またはパラメーター化してから内部的に送信します。 詳細については、「解説」を参照してください。 バッチにパラメーターが含まれていない場合は、NULL を指定する必要があります。 サイズ\@params が利用可能なサーバー メモリによってのみ制限されます。  
   
- [\@hints = ]{ N'OPTION (*query_hint* [ , *...n* ] )' | N'*XML_showplan*' | NULL }  
+ [\@ヒント =] {N'OPTION (*query_hint* [、 *.n* ])' |N'*XML_showplan*' |NULL}  
  N'OPTION (*query_hint* [ , *...n* ] )  
  一致するクエリにアタッチする OPTION 句を指定します\@stmt。\@ヒント構文的に、SELECT ステートメントの OPTION 句と同じあり、有効な一連のクエリ ヒントを含めることができます。  
   
@@ -332,7 +331,7 @@ GO
  [sys.plan_guides &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-plan-guides-transact-sql.md)   
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+ [sys.dm_exec_sql_text &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
  [sys.dm_exec_cached_plans &#40です。TRANSACT-SQL と&#41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)   
  [sys.dm_exec_query_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)   
  [sp_create_plan_guide_from_handle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-create-plan-guide-from-handle-transact-sql.md)   

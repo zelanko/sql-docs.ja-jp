@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: d5cd30bb-89fd-4814-a7e8-9074f043f90f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 41ae978e31db70f0cc49469d5ec14ae6f075ab7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1d232d602f2496fff03ed050a8faf11b53e718b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760240"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124919"
 ---
 # <a name="syscollectorcollectortypes-transact-sql"></a>syscollector_collector_types (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "62760240"
 |データ型を修正、 **collection_package_path**列、値が null 許容であることを示す説明を更新します。|  
 |データ型を修正、 **upload_package_path**列、値が null 許容であることを示す説明を更新します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ コレクター ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/data-collector-stored-procedures-transact-sql.md)   
  [データ コレクターのビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/data-collector-views-transact-sql.md)   
  [[データ コレクション]](../../relational-databases/data-collection/data-collection.md)  

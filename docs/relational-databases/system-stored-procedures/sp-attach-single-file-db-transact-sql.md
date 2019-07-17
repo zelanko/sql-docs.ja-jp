@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 13bd1044-9497-4293-8390-1f12e6b8e952
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d8d2ad4c7df20b2b9649b1ad780dd40353a7796e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b285b5032c1ccde03ef8bd3f287d6b7f60eb0ffc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996808"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046170"
 ---
 # <a name="spattachsinglefiledb-transact-sql"></a>sp_attach_single_file_db (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_attach_single_file_db [ @dbname= ] 'dbname'
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] 'dbname'` サーバーに接続するデータベースの名前です。 名前は一意である必要があります。 *dbname*は**sysname**、既定値は NULL です。  
   
-`[ @physname = ] 'physical_name'` データベース ファイルのパスを含む、物理名です。 *physical_name*は**nvarchar (260)**、既定値は NULL です。  
+`[ @physname = ] 'physical_name'` データベース ファイルのパスを含む、物理名です。 *physical_name*は**nvarchar (260)** 、既定値は NULL です。  
   
 > [!NOTE]  
 >  この引数は、CREATE DATABASE ステートメントの FILENAME パラメーターにマップされます。 詳細については、「[CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md)」を参照してください。  

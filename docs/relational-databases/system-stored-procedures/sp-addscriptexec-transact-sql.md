@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1627db41-6a80-45b6-b0b9-c0b7f9a1c886
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 97e6d74a619bc19571dda69a63ac8b3caf27f6d3
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: e8ae792ba7f8422e841abbbe2f80b096497df993
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492950"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022451"
 ---
 # <a name="spaddscriptexec-transact-sql"></a>sp_addscriptexec (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  SQL スクリプト (.sql ファイル) をパブリケーションのすべてのサブスクライバーに送信します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  SQL スクリプト (.sql ファイル) をパブリケーションのすべてのサブスクライバーに送信します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -43,7 +42,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション* は **sysname** 、既定値はありません。  
   
-`[ @scriptfile = ] 'scriptfile'` SQL スクリプト ファイルへの完全なパスです。 *scriptfile*は**nvarchar (4000)**、既定値はありません。  
+`[ @scriptfile = ] 'scriptfile'` SQL スクリプト ファイルへの完全なパスです。 *scriptfile*は**nvarchar (4000)** 、既定値はありません。  
   
 `[ @skiperror = ] 'skiperror'` かどうか、ディストリビューション エージェントまたはマージ エージェントを停止スクリプトの処理中にエラーが発生したときを示します。 *SkipError*は**ビット**、既定値は 0。  
   
@@ -78,7 +77,7 @@ sp_addscriptexec [ @publication = ] publication
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addscriptexec**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [同期中にスクリプトを実行&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/execute-scripts-during-synchronization-replication-transact-sql-programming.md)   
  [データの同期](../../relational-databases/replication/synchronize-data.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

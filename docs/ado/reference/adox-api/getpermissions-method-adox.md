@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: df201c1f-c76a-465d-98f0-83b7fc36e6e3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8bff406485266af99a1c2538a4df237fd5bf43bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f5b2a5170b499f5e88d4caac4822d2998691eea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712082"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966226"
 ---
 # <a name="getpermissions-method-adox"></a>GetPermissions メソッド (ADOX)
 に対する権限を返します、[グループ](../../../ado/reference/adox-api/group-object-adox.md)または[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトまたはオブジェクトのコンテナー。  
@@ -55,7 +54,7 @@ ReturnValue=GroupOrUser.GetPermissions(Name, ObjectType    [,ObjectTypeId])
 |-|-|  
 |[Group オブジェクト (ADOX)](../../../ado/reference/adox-api/group-object-adox.md)|[User オブジェクト (ADOX)](../../../ado/reference/adox-api/user-object-adox.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GetPermissions および SetPermissions メソッドの例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Name プロパティ (ADOX)](../../../ado/reference/adox-api/name-property-adox.md)   
  [SetPermissions メソッド (ADOX)](../../../ado/reference/adox-api/setpermissions-method-adox.md)

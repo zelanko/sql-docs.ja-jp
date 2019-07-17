@@ -2,19 +2,18 @@
 title: アプライアンスの監視 - Analytics Platform System |Microsoft Docs
 description: このアプライアンスの監視のガイドでは、ツールと Analytics Platform System appliance の監視のタスクについて説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 100a587814e62a6455d25e78a3defca973f39bf6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb25a5eccd1e77f08cedc74ad8042e0dc573605c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276140"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961508"
 ---
 # <a name="appliance-monitoring-for-analytics-platform-system"></a>Analytics Platform System のアプライアンスの監視
 このアプライアンスの監視のガイドでは、ツールと Analytics Platform System appliance の監視のタスクについて説明します。  
@@ -80,7 +79,7 @@ SQL Server PDW では、広範な Systems Center Operations Manager 統合が。
 <!-- MISSING LINKS |Monitor backups and restores.|[Monitor Backups and Restores &#40;SQL Server PDW&#41;](../sqlpdw/monitor-backups-and-restores-sql-server-pdw.md)|  -->  
 <!-- MISSING LINKS |Monitor the active queries.|[Monitoring Active Queries &#40;SQL Server PDW&#41;](../sqlpdw/monitoring-active-queries-sql-server-pdw.md)|  -->  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [アプライアンスの管理タスク&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

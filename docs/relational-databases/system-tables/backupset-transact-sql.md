@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 6ff79bbf-4acf-4f75-926f-38637ca8a943
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: baf454d021f64931d06c39b49ee0a18f92841507
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: b138a299edbb1e9f3a2314e92b7e77418594a711
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52402857"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119331"
 ---
 # <a name="backupset-transact-sql"></a>backupset (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-pdw-md.md)]
@@ -66,8 +65,8 @@ ms.locfileid: "52402857"
 |**backup_start_date**|**datetime**|バックアップ操作が開始された日付と時刻。 NULL にすることができます。|  
 |**backup_finish_date**|**datetime**|バックアップ操作が終了した日付と時刻。 NULL にすることができます。|  
 |**type**|**char(1)**|バックアップの種類。 次の値をとります。<br /><br /> D = データベース<br /><br /> I = データベースの差分<br /><br /> L = ログ<br /><br /> F = ファイルまたはファイル グループ<br /><br /> G = ファイルの差分<br /><br /> P = 部分的<br /><br /> Q = 部分的な差分<br /><br /> NULL にすることができます。|  
-|**sort_order**|**smallint**|バックアップ操作を実行するサーバーの並べ替え順。 NULL にすることができます。 並べ替え順序および照合順序の詳細については、[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)を参照してください。|  
-|**code_page**|**smallint**|バックアップ操作を実行するサーバーのコード ページ。 NULL にすることができます。 コード ページに関する詳細については、[Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)を参照してください。|  
+|**sort_order**|**smallint**|バックアップ操作を実行するサーバーの並べ替え順。 NULL にすることができます。 並べ替え順序および照合順序の詳細については、次を参照してください。 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)します。|  
+|**code_page**|**smallint**|バックアップ操作を実行するサーバーのコード ページ。 NULL にすることができます。 コード ページに関する詳細については、次を参照してください。 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)します。|  
 |**compatibility_level**|**tinyint**|データベースに対する互換性レベルの設定。 次の値をとります。<br /><br /> 90 = [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]<br /><br /> 100 = [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]<br /><br /> 110 = [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /><br /> 120 = [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]<br /><br /> NULL にすることができます。<br /><br /> 互換性レベルの詳細については、「[ALTER DATABASE 互換性レベル &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。|  
 |**database_version**|**int**|データベースのバージョン番号。 NULL にすることができます。|  
 |**backup_size**|**numeric(20,0)**|バックアップ セットのサイズ (バイト単位)。 NULL にすることができます。 VSS のバックアップの backup_size は、推定値です。|  
@@ -79,7 +78,7 @@ ms.locfileid: "52402857"
 |**unicode_compare_style**|**int**|Unicode の比較形式。 NULL にすることができます。|  
 |**collation_name**|**nvarchar(128)**|照合順序名。 NULL にすることができます。|  
 |**Is_password_protected**|**bit**|バックアップ セット。<br /><br /> パスワードの保護は次のとおりです。<br /><br /> 0 = 保護されていない<br /><br /> 1 = 保護されている|  
-|**recovery_model**|**nvarchar(60)**|データベースの復旧モデル。<br /><br /> FULL<br /><br /> BULK-LOGGED <br /><br /> SIMPLE|  
+|**recovery_model**|**nvarchar(60)**|データベースの復旧モデル。<br /><br /> FULL<br /><br /> BULK-LOGGED<br /><br /> SIMPLE|  
 |**has_bulk_logged_data**|**bit**|1 = 一括ログ データを含むバックアップ。|  
 |**is_snapshot**|**bit**|1 = バックアップは SNAPSHOT オプションで実行された。|  
 |**is_readonly**|**bit**|1 = バックアップ時、データベースは読み取り専用であった。|  

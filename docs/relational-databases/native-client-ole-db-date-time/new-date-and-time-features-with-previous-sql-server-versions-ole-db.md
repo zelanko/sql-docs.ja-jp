@@ -10,14 +10,13 @@ ms.topic: reference
 ms.assetid: 96976bac-018c-47cc-b1b2-fa9605eb55e5
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4a568fdfcf2e6dc6abd59d060f2e374339e13341
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 188a2322dd60a84b62a509d5622e827bdbae8e38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52534725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106910"
 ---
 # <a name="new-date-and-time-features-with-previous-sql-server-versions-ole-db"></a>以前のバージョンの SQL Server における、新しい日付または時刻の機能の動作 (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -34,19 +33,19 @@ ms.locfileid: "52534725"
   
 |OLE DB クライアントの型|SQL Server 2005 の型|SQL Server 2008 (またはそれ以降) の種類|結果の変換 (サーバーからクライアントへ)|パラメーターの変換 (クライアントからサーバーへ)|  
 |------------------------|--------------------------|---------------------------------------|--------------------------------------------|-----------------------------------------------|  
-|DBTYPE_DBDATE|DATETIME|date|[OK]|[OK]|  
+|DBTYPE_DBDATE|DateTime|date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
-|DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
+|DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部が 0 以外の場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
-|DBTYPE_DBTIME||Time(7)|失敗する-無効な時刻のリテラルです。|[OK]|  
-|DBTYPE_DBTIMESTAMP|||失敗する-無効な時刻のリテラルです。|[OK]|  
-|DBTYPE_DBTIMESTAMP||Datetime2 (3)|[OK]|[OK]|  
-|DBTYPE_DBTIMESTAMP||datetime2 (7)|[OK]|[OK]|  
-|DBTYPE_DBDATE|Smalldatetime|date|[OK]|[OK]|  
+|DBTYPE_DBTIME||Time(7)|失敗する-無効な時刻のリテラルです。|OK|  
+|DBTYPE_DBTIMESTAMP|||失敗する-無効な時刻のリテラルです。|OK|  
+|DBTYPE_DBTIMESTAMP||Datetime2 (3)|OK|OK|  
+|DBTYPE_DBTIMESTAMP||datetime2 (7)|OK|OK|  
+|DBTYPE_DBDATE|Smalldatetime|date|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||時刻フィールドは 0 に設定されます。|時刻フィールドが 0 以外の場合は、IRowsetChange を文字列の切り捨てにより失敗します。|  
-|DBTYPE_DBTIME||Time(0)|[OK]|[OK]|  
+|DBTYPE_DBTIME||Time(0)|OK|OK|  
 |DBTYPE_DBTIMESTAMP|||日付フィールドは現在の日付に設定されます。|IRowsetChange は、秒の小数部が 0 以外の場合、文字列の切り捨てにより失敗します。<br /><br /> 日付は無視されます。|  
-|DBTYPE_DBTIMESTAMP||Datetime2(0)|[OK]|[OK]|  
+|DBTYPE_DBTIMESTAMP||Datetime2(0)|OK|OK|  
   
  OK は、[!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] で機能した場合には、[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降でも引き続き機能することを意味します。  
   
@@ -168,7 +167,7 @@ ms.locfileid: "52534725"
 ## <a name="comparability-for-irowsetfind"></a>IRowsetFind での比較  
  新しい日付型または時刻型に対しては、すべての比較演算子を使用できます。これは、日付型または時刻型ではなく文字列型と見なされるためです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../relational-databases/native-client-ole-db-date-time/date-and-time-improvements-ole-db.md)  
   
   

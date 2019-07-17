@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4c18be5f-a3fa-45a8-9be6-0f45f58bbc9e
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 64f77ccc8a1e4fdc6bb2aa35aa2b4d4d7b0d5de0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5f490bd51ac31046e6daf3c1e90420b4efb84e03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047411"
 ---
 # <a name="business-rules-extension-master-data-services"></a>ビジネス ルールの拡張機能 (マスター データ サービス)
 
@@ -71,7 +70,7 @@ CREATE PROCEDURE [usr].[YourAction]
 |stg|SELECT、UPDATE、DELETE、EXECUTE、INSERT|  
 |ユーザー|FULL|  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   [システム管理] 機能領域にアクセスする権限が必要です。  
@@ -114,7 +113,7 @@ CREATE PROCEDURE [usr].[YourAction]
   
     3.  **[保存]** をクリックします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)   
  [ビジネス ルール条件 (マスター データ サービス)](../master-data-services/business-rule-conditions-master-data-services.md)   
  [ビジネス ルール アクション (マスター データ サービス)](../master-data-services/business-rule-actions-master-data-services.md)  

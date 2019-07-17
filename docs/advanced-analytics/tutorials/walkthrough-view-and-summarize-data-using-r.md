@@ -7,13 +7,12 @@ ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 613053b05d675963ceef89a71de4e8ac73352fad
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
-ms.translationtype: HT
+ms.openlocfilehash: c91733601949e8a084fef72e6ae388c25b569085
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58510909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961682"
 ---
 # <a name="view-and-summarize-sql-server-data-using-r-walkthrough"></a>表示し、R (チュートリアル) を使用した SQL Server データの概要
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,11 +67,11 @@ ms.locfileid: "58510909"
 
     - ワークステーションと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コンピューター間で双方向に R オブジェクトをシリアル化する際、R では、一時ディレクトリが使用されます。 *sqlShareDir*として使用されるローカル ディレクトリを指定するか、既定のものをそのまま利用できます。
   
-    - 使用*sqlWait*を R サーバーからの結果を待機するかどうかを示します。  待機時間のないジョブとの比較の詳細については、[分散し、Microsoft R で RevoScaleR の並列コンピューティング](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)を参照してください。
+    - 使用*sqlWait*を R サーバーからの結果を待機するかどうかを示します。  待機時間のないジョブとの比較の詳細については、次を参照してください。[分散し、Microsoft R で RevoScaleR の並列コンピューティング](https://docs.microsoft.com/r-server/r/how-to-revoscaler-distributed-computing)します。
   
     - 引数を使用して*sqlConsoleOutput*に R コンソールからの出力を確認しないことを示します。
 
-4. 呼び出す、 [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)変数と、既に定義されている接続文字列で計算コンテキスト オブジェクトを作成し、R 変数に新しいオブジェクトを保存するコンストラクター *sqlcc*します。
+4. 呼び出す、 [RxInSqlServer](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxinsqlserver)変数と、既に定義されている接続文字列で計算コンテキスト オブジェクトを作成し、R 変数に新しいオブジェクトを保存するコンス トラクター *sqlcc*します。
   
     ```R
     sqlcc <- RxInSqlServer(connectionString = connStr, shareDir = sqlShareDir, wait = sqlWait, consoleOutput = sqlConsoleOutput)
@@ -91,7 +90,7 @@ ms.locfileid: "58510909"
 
 ## <a name="create-a-data-source-using-rxsqlserver"></a>RxSqlServer を使用してデータ ソースを作成します。
 
-RevoScaleR と MicrosoftML などの Microsoft R ライブラリを使用する場合、*データソース*RevoScaleR 関数を使用して作成するオブジェクトです。 データ ソース オブジェクトには、モデルのトレーニングや機能の抽出などのタスクを使用するデータのセットを指定します。 さまざまな SQL Server を含むソースからデータを取得できます。 現在サポートされているソースの一覧で、[RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)を参照してください。
+RevoScaleR と MicrosoftML などの Microsoft R ライブラリを使用する場合、*データソース*RevoScaleR 関数を使用して作成するオブジェクトです。 データ ソース オブジェクトには、モデルのトレーニングや機能の抽出などのタスクを使用するデータのセットを指定します。 さまざまな SQL Server を含むソースからデータを取得できます。 現在サポートされているソースの一覧で、次を参照してください。 [RxDataSource](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource)します。
 
 以前、接続文字列を定義し、R 変数にその情報を保存します。 取得するデータを指定する接続情報を再利用することができます。
 
@@ -115,7 +114,7 @@ RevoScaleR と MicrosoftML などの Microsoft R ライブラリを使用する�
       )
     ```
     
-    + 引数  *colClasses* により、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と R の間でデータを移動するときに使用する列の型が指定されます。これが重要なのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が R と異なるデータ型とその他のデータ型を使用するためです。 詳細については、[R ライブラリとデータ型](../r/r-libraries-and-data-types.md)を参照してください。
+    + 引数  *colClasses* により、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と R の間でデータを移動するときに使用する列の型が指定されます。これが重要なのは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が R と異なるデータ型とその他のデータ型を使用するためです。 詳細については、次を参照してください。 [R ライブラリとデータ型](../r/r-libraries-and-data-types.md)します。
   
     + 引数*rowsPerRead*がメモリ使用量と効率的な計算を管理するために重要です。  [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] 内の拡張分析関数の大部分は、データをチャンク単位で処理し、中間結果を蓄積していきます。すべてのデータを読み取ったら、最終的な計算結果を返します。  追加することで、 *rowsPerRead*パラメーター、データの行の数は、処理のためには、各チャンクに読み取られるかを制御できます。  このパラメーターの値が大きすぎる場合は、データの大きなチャンクを効率的に処理するための十分なメモリがあるないため、データ アクセスが低速あります。  システムによっては、 *rowsPerRead*極端に小さい値にもできるパフォーマンスが低下します。
 

@@ -15,13 +15,12 @@ apitype: DLLExport
 ms.assetid: f95a9980-8bc0-426c-8aa1-e2660b6784cf
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: d04bc4e669faad149a4dccbfc1b40a82a9a1aae0
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 04554c7aa9f891aab414ae5ae77f3c92bb86ac4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398175"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036051"
 ---
 # <a name="localdbgetinstances-function"></a>LocalDBGetInstances 関数
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ HRESULT LocalDBGetInstances(
  予期しないエラーが発生しました。 詳細をイベント ログで確認してください。  
   
 ## <a name="remarks"></a>コメント  
- LocalDB API を使用するコード サンプルは、[SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)を参照してください。  
+ LocalDB API を使用するコード サンプルは、次を参照してください。 [SQL Server Express LocalDB リファレンス](../../relational-databases/sql-server-express-localdb-reference.md)します。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server Express LocalDB ヘッダーとバージョン情報](../../relational-databases/express-localdb-instance-apis/sql-server-express-localdb-header-and-version-information.md)  

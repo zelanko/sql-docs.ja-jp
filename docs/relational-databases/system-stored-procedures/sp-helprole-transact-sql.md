@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: b023103f-ccf3-44e2-b418-4be9bdd49f4a
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc8cae9353ad780a0711c77e138246f0be0d7d15
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 4caa5d8ab850c06aec62b84088463dc21bb40ea2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58534424"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997496"
 ---
 # <a name="sphelprole-transact-sql"></a>sp_helprole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ sp_helprole [ [ @rolename = ] 'role' ]
 EXEC sp_helprole  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [サーバー レベルのロール](../../relational-databases/security/authentication-access/server-level-roles.md)   
  [データベース レベルのロール](../../relational-databases/security/authentication-access/database-level-roles.md)   

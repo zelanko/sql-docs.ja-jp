@@ -12,13 +12,12 @@ ms.topic: conceptual
 author: HJToland3
 ms.author: ajaykar
 ms.reviewer: mathoma
-manager: jroth
-ms.openlocfilehash: dc53a9e1d151e07ce7e2eebf1444fd0d0065f8be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab361c4e83ae5e2b2bb6614bdc4a513e0bdd77ed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059004"
 ---
 # <a name="capture-a-trace-in-database-experimentation-assistant"></a>データベース実験アシスタントでのトレースをキャプチャします。
 
@@ -139,7 +138,7 @@ DEA を使用して、または単一のデータベースのすべてのデー�
 
 というラベルが付いた他のエラーを表示する場合は*Sql エラー コード*を参照してください[システム エラー メッセージ](https://docs.microsoft.com/previous-versions/sql/sql-server-2008-r2/cc645603(v=sql.105))詳細な説明と解決策です。
     
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 - キャプチャしたトレースを再生する前に、SQL server Distributed Replay のツールを構成する方法についてを参照してください。[構成の再生](database-experimentation-assistant-configure-replay.md)します。
 

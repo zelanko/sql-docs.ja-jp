@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a2c5ee32-e6d9-46e9-8031-8ff13c20acf7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 4e116b0350e23f3ae86e3c7de819b47ecae13baf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d868ea9ce585dece65653cb010d0ed73b1b0cf51
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63047057"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129637"
 ---
 # <a name="sprestoredbreplication-transact-sql"></a>sp_restoredbreplication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_restoredbreplication [ @srv_orig = ] 'original_server_name'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**または**dbcreator**固定サーバー ロールまたは**dbo**データベース スキーマが実行できる**sp_restoredbreplication**.  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

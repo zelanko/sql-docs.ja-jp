@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1a7155e6-2d4a-4ed1-a72c-edb37fa1a46b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 086294f3615c32d9d8bbbd8c26da0439288dc8d3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c750efb1570db2e8b1f6e2d521cdb24773f01da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486423"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047886"
 ---
 # <a name="add-members-to-a-collection-master-data-services"></a>コレクションにメンバーを追加する (マスター データ サービス)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65486423"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]では、リーフ メンバーおよび統合メンバーをコレクションに追加できます。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[エクスプローラー]** 機能領域にアクセスする権限が必要です。  
@@ -59,7 +58,7 @@ ms.locfileid: "65486423"
   
 11. 必要に応じて、 **[重み]** 列の値をクリックして、重みの値を設定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コレクション (マスター データ サービス)](../master-data-services/collections-master-data-services.md)  
   
   

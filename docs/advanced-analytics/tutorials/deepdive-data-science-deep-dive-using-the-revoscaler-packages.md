@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 48d65bfe54890c5ea0d8bfdca9c76fa0978a917d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 28f3ebe1887e188513c01881f68d5d7f323e31f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962243"
 ---
 # <a name="tutorial-use-revoscaler-r-functions-with-sql-server-data"></a>チュートリアル:SQL Server データで RevoScaleR R 関数を使用します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,7 +49,7 @@ R 開発者は、通常記述および R コードをデバッグするための
 
 - **R Tools for Visual Studio** (RTVS) は、無料プラグインを Intellisense、デバッグを提供し、Microsoft R 向けサポートR Server と SQL Server Machine Learning サービスの両方で使用できます。 ダウンロードするには、「 [R Tools for Visual Studio](https://www.visualstudio.com/vs/rtvs/)」を参照してください。
 
-- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、次を参照してください。 [ https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)します。
+- **RStudio** は R 開発用の最も一般的な環境の 1 つです。 詳細については、「[https://www.rstudio.com/products/RStudio/](https://www.rstudio.com/products/RStudio/)」を参照してください。
 
 - 基本 R ツール (R.exe、RTerm.exe、RScripts.exe) は、SQL Server または R Client に R をインストールするときにも既定でインストールされます。 IDE をインストールしたくない場合は、このチュートリアルでは、コードを実行する組み込みの R ツールを使用できます。
 

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 96910d1c-be76-43eb-9c93-4477e6761749
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 268f94665641e29156c20ea55debf26db63e1142
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: a73c8e45803bc10d47ef042acebf0650ea183f61
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048284"
 ---
 # <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 |-----------------|---------------|-----------------|  
 |**distributor_latency**|**bigint**|トレーサー トークン レコードをパブリッシャー側でコミットされると、ディストリビューター側でコミットされるまでの秒数。|  
 |**サブスクライバー**|**sysname**|トレーサー トークンを受信したサブスクライバーの名前です。|  
-|**subscriber_db**|**sysname**|トレーサー トークン レコードが挿入されたサブスクリプション データベースの名前。|  
+|**@subscriber_db**|**sysname**|トレーサー トークン レコードが挿入されたサブスクリプション データベースの名前。|  
 |**subscriber_latency**|**bigint**|トレーサー トークン レコードをディストリビューターでコミットされると、サブスクライバーでコミットされるまでの秒数。|  
 |**overall_latency**|**bigint**|トレーサー トークン レコードをパブリッシャーとサブスクライバーでコミットされるトークンのレコードでコミットされるまでの秒数。|  
   
@@ -78,7 +77,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner** 、パブリケーション データベースの固定データベース ロールまたは**db_owner**固定データベースまたは**replmonitor**ディストリビューション データベース内のロールが実行できる**sp_helptracertokenhistory**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
  [sp_deletetracertokenhistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   

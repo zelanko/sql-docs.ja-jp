@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 64fc085f-f81b-493b-b59a-ee6192d9736d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f252d55a41def8e816e6e7843fb57574caacf385
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55f5597af15a264d85cd31175d570cc33ee47f63
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081299"
 ---
 # <a name="spchangesubscriptiondtsinfo-transact-sql"></a>sp_changesubscriptiondtsinfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` プッシュ サブスクリプションのディストリビューション エージェントのジョブの ID です。 *job_id*は**varbinary (16)**、既定値はありません。 ディストリビューション ジョブ ID を見つけるには実行**sp_helpsubscription**または**sp_helppullsubscription**します。  
+`[ @job_id = ] job_id` プッシュ サブスクリプションのディストリビューション エージェントのジョブの ID です。 *job_id*は**varbinary (16)** 、既定値はありません。 ディストリビューション ジョブ ID を見つけるには実行**sp_helpsubscription**または**sp_helppullsubscription**します。  
   
 `[ @dts_package_name = ] 'dts_package_name'` DTS パッケージの名前を指定します。 *dts_package_name*は、 **sysname**、既定値は NULL です。 たとえば、パッケージを指定する名前付き**DTSPub_Package**、するには指定`@dts_package_name = N'DTSPub_Package'`します。  
   
@@ -50,7 +49,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 > [!NOTE]  
 >  DTS パッケージには、パスワードが必要です。  
   
-`[ @dts_package_location = ] 'dts_package_location'` パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)**、既定値は null の場合、変更せずに残す、パッケージの場所が指定します。 パッケージの場所を変更できます**ディストリビューター**または**サブスクライバー**します。  
+`[ @dts_package_location = ] 'dts_package_location'` パッケージの場所を指定します。 *dts_package_location*は、 **nvarchar (12)** 、既定値は null の場合、変更せずに残す、パッケージの場所が指定します。 パッケージの場所を変更できます**ディストリビューター**または**サブスクライバー**します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -61,7 +60,7 @@ sp_changesubscriptiondtsinfo [ [ @job_id = ] job_id ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはサブスクリプションの作成者が実行できる**sp_changesubscriptiondtsinfo**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

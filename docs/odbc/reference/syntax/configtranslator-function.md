@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 7c22f07e-36de-425b-aa67-e32a84afae92
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0b56a5ebd0ad00e2c3abb87b72d2de8735245f99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18bf7e3f66140ef92b520ea7c86b616ea7067b16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016702"
 ---
 # <a name="configtranslator-function"></a>ConfigTranslator 関数
 **準拠**  
  バージョンが導入されました。ODBC 2.0  
   
- **まとめ**  
+ **概要**  
  **ConfigTranslator**トランスレーターの翻訳の既定のオプションを返します。 これは、トランスレーター DLL または別のセットアップ DLL に存在できます。  
   
 ## <a name="syntax"></a>構文  

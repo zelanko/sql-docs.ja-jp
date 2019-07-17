@@ -2,19 +2,18 @@
 title: -WSUS を構成するには、Analytics Platform System |Microsoft Docs
 description: これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System のように WSUS を構成するための手順を説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 776859eb291004431a7e4e2743f1c008a7b752dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 16dc05500964bb37e3252edf81aff85042b7abdb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63134954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961124"
 ---
 # <a name="configure-windows-server-update-services-wsus-in-analytics-platform-system"></a>Analytics Platform System での Windows Server Update Services (WSUS) の構成します。
 これらの手順では、Windows Server Update Services (WSUS) の構成ウィザードを使用して、Analytics Platform System のように WSUS を構成するための手順を説明します。 アプライアンスにソフトウェア更新プログラムを適用する前に、WSUS を構成する必要があります。 WSUS は、アプライアンスの VMM 仮想マシンに既にインストールされています。  

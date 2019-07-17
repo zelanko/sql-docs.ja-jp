@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: cffcae43-a208-443f-9f43-a0ec9e05f79c
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 8669a087dd2cd4459c4bdb35c7a808d6d7b665d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59ecf00588ceeeb7d4ca0b9a4bd71675f2d74739
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65485376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68047368"
 ---
 # <a name="change-a-business-rule-name-master-data-services"></a>ビジネス ルールの名前を変更する (マスター データ サービス)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65485376"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]で、ビジネス ルールに割り当てられている名前がビジネス ニーズに合わない場合には、名前を変更します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[システム管理]** 機能領域にアクセスする権限が必要です。  
@@ -57,7 +56,7 @@ ms.locfileid: "65485376"
   
 10. 確認のダイアログ ボックスで **[OK]** をクリックします。 **[ビジネス ルールの状態]** 列の値は **[アクティブ]** です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ビジネス ルール (マスター データ サービス)](../master-data-services/business-rules-master-data-services.md)  
   
   

@@ -11,31 +11,30 @@ dev_langs:
 ms.assetid: b4216752-4813-4b2c-b259-7d8ffc6cc190
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: e70d11a9161461a01189bbfe69e1959eed124543
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: 00ce680a0648b7641249d5fba6b7d0fa493deebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56012553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001147"
 ---
 # <a name="syspdwnodespartitions-transact-sql"></a>sys.pdw_nodes_partitions (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  すべてのテーブルとインデックスでのほとんどの種類の各パーティションの行を格納、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベース。 すべてのテーブルとインデックスには明示的にパーティション分割されているかどうかを示す、少なくとも 1 つのパーティションが含まれます。  
+  すべてのテーブルとインデックスのほとんどの種類の各パーティションの行を格納する[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]データベース。 すべてのテーブルとインデックスに明示的にパーティション分割されているかどうかを示すには少なくとも 1 つのパーティションが含まれます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|partition_id|`bigint`|パーティションの id です。 データベース内で一意です。|  
-|object_id|`int`|このパーティションが所属するオブジェクトの id。 すべてのテーブルまたはビューは 1 つ以上のパーティションで構成されます。|  
-|index_id|`int`|このパーティションが所属するオブジェクト内のインデックスの id です。|  
-|partition_number|`int`|所有しているインデックスまたはヒープ内の 1 から始まるパーティション番号。  [!INCLUDE[ssSDW](../../includes/sssdw-md.md)], 、この列の値は 1 です。|  
-|hobt_id|`bigint`|このパーティションの行を保持するデータ ヒープまたは B ツリーの ID です。|  
+|partition_id|`bigint`|パーティションの id。 データベース内で一意です。|  
+|object_id|`int`|このパーティションが所属するオブジェクトの id。 すべてのテーブルまたはビューは、少なくとも 1 つのパーティションで構成されます。|  
+|index_id|`int`|このパーティションが所属するオブジェクト内のインデックスの id。|  
+|partition_number|`int`|所有しているインデックスまたはヒープ内の 1 から始まるパーティション番号。 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)]、この列の値は 1 です。|  
+|hobt_id で|`bigint`|データ ヒープまたは B ツリーを含むこのパーティションの行の ID。|  
 |rows|`bigint`|このパーティション内の行の概数です。 |  
-|data_compression|`int`|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE<br /><br /> 1 = ROW<br /><br /> 2 = PAGE<br /><br /> 3 = COLUMNSTORE|  
-|data_compression_desc|`nvarchar(60)`|各パーティションの圧縮状態を示します。 有効値は、NONE、ROW、および PAGE です。|  
-|pdw_node_id|`int`|一意の識別子、 [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] ノードです。|  
+|data_compression|`int`|各パーティションの圧縮の状態を示します。<br /><br /> 0 = NONE<br /><br /> 1 行を =<br /><br /> 2 ページを =<br /><br /> 3 = 列ストア|  
+|data_compression_desc|`nvarchar(60)`|各パーティションの圧縮の状態を示します。 指定できる値は、NONE、ROW、およびページには。|  
+|pdw_node_id|`int`|一意の識別子、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]ノード。|  
   
 ## <a name="permissions"></a>アクセス許可  
  CONTROL SERVER 権限が必要です。  
@@ -70,7 +69,7 @@ WHERE o.name = 'myTable'
 ORDER BY o.name, pnp.index_id, pnp.partition_id;  
 ```    
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse と Parallel Data Warehouse カタログ ビュー](../../relational-databases/system-catalog-views/sql-data-warehouse-and-parallel-data-warehouse-catalog-views.md)  
   
   
