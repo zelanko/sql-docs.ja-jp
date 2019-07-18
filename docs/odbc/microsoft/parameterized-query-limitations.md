@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4edc0566-bba8-42b2-ab0e-60dfb67b5e7b
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d394dea5af4f2602918dc4b85b21e0cc4704eaba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bc7d6a88cca932187d0b8ce5e09c82cb8420a63d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63200657"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68043703"
 ---
 # <a name="parameterized-query-limitations"></a>パラメーター化クエリの制限事項
-Microsoft Access ドライバーを使用する場合、次の構文を使用してパラメーター化クエリを呼び出すことが。CALL *query-name* [(*parameter*[,*parameter*]...)].
+Microsoft Access ドライバーを使用する場合、次の構文を使用してパラメーター化クエリを呼び出すことが。呼び出す*クエリ名*[(*パラメーター*[、*パラメーター*]...)]。

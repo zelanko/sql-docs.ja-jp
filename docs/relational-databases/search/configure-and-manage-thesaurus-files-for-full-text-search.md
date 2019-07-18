@@ -14,12 +14,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
-ms.openlocfilehash: d7035a47368ead8af3a20d9ca56f0c5452395516
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: 17879dc4c932ff127b858657a9af0aca340029b5
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67586176"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860520"
 ---
 # <a name="configure-and-manage-thesaurus-files-for-full-text-search"></a>フルテキスト検索に使用する類義語辞典ファイルの構成と管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "67586176"
 
 -   分音文字の設定  
   
-     類義語辞典では、チルダ ( **~** )、アキュート アクセント記号 ( **?** )、ウムラウト ( **?** ) などの分音記号をすべての検索パターンで区別するかしないか (つまり、"*アクセントを区別する*" か"*アクセントを区別しない*") が設定されます。 たとえば、フルテキスト クエリで "caf?" というパターンが 他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "caf?" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "caf?" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
+     類義語辞典では、チルダ ( **~** )、アキュート アクセント記号 ( **&acute;** )、ウムラウト ( **&uml;** ) などの分音記号をすべての検索パターンで区別するかしないか (つまり、"*アクセントを区別する*" か "*アクセントを区別しない*" か) が設定されます。 たとえば、フルテキスト クエリで "caf&eacute;" というパターンが他のパターンに置き換えられるように指定するとします。 類義語辞典でアクセントが区別されない場合、フルテキスト検索では、パターン "caf&eacute;" と "cafe" が置き換えられます。 類義語辞典でアクセントが区別される場合、フルテキスト検索では "caf&eacute;" というパターンのみが置き換えられます。 既定では、類義語辞典でアクセントは区別されません。  
   
 ##  <a name="initial_thesaurus_files"></a> 既定の類義語辞典ファイル
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には XML 類義語辞典ファイルのセットが用意されており、サポートされている各言語に対して 1 つのファイルが存在します。 これらのファイルは基本的に空です。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 類義語辞典およびコメント アウトされたサンプル類義語辞典に共通する最上位の XML 構造のみが格納されています。  

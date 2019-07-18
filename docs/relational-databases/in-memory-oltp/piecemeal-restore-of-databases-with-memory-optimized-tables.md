@@ -12,12 +12,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: c9f4f22990a4fb1fa3fdb78241cf2989027e7106
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ef81931a39bd6e1cf9d30b465d1bd11541c9d540
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65106262"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67687602"
 ---
 # <a name="piecemeal-restore-of-databases-with-memory-optimized-tables"></a>メモリ最適化テーブルを持つデータベースの段階的な部分復元
 
@@ -102,7 +102,7 @@ BACKUP database imoltp
     with init;
 ```
   
- 次のサンプルでは、プライマリ ファイル グループとメモリ最適化ファイル グループのどちらでもないファイル グループのバックアップが、メモリ最適化テーブルの存在しないデータベースを操作する状況に似ていることを示します。 次のコマンドを使用すると、セカンダリ ファイル グループがバックアップされます。  
+ 次のサンプルでは、プライマリ ファイル グループとメモリ最適化ファイル グループのどちらでもないファイル グループのバックアップが、メモリ最適化テーブルの存在しないデータベースを操作する状況に似ていることを示します。 次のコマンドを使用すると、セカンダリ ファイル グループがバックアップされます  
   
 ```sql
 BACKUP database imoltp

@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE 互換性レベル (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/14/2019
+ms.date: 07/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg'
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ccc7241c6d549985df4a838ebcc8cbb2120d3eb0
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 151e6573ebeb5497f2de001d57272af647f5e737
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469200"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860692"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 
@@ -86,12 +86,12 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 > [!NOTE]
 > 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で作成され、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM または Service Pack 1 にアップグレードされる[ディストリビューション データベース](../../relational-databases/replication/distribution-database.md)は、互換性レベルが 90 であり、その他のデータベースではサポートされません。 これはレプリケーションの機能には影響がありません。 新しいバージョンのサービス パックと [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にアップグレードすると、分散データベースの互換性レベルが増加し、**マスター** データベースの互換性レベルと一致します。
 
-**2018 年 1 月**の時点で、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しく作成されたデータベースの既定の互換性レベルは 140 です。 既存のデータベースに対してデータベースの互換性レベルは更新されません。 それは、お客様の独自の裁量にまかされます。 お客様には、最新のクエリ最適化の改善点を活用するため、最新の互換性レベルにアップグレードすることを強くお勧めします。
+**2018 年 1 月**の時点で、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で新しく作成されたデータベースの既定の互換性レベルは 140 です。 既存のデータベースに対してデータベースの互換性レベルは更新されません。 それは、お客様の独自の裁量にまかされます。 Microsoft では、クエリ最適化に関する最新の改善点を活用するために、最新の互換性レベルへのアップグレードを計画することをお客様に強くお勧めいたします。
 データベース全体ではデータベース互換性レベル 140 を利用する一方で、データベース互換性レベル 110 にマップされる [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] の[**カーディナリティ推定**](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルにオプトインする場合は、「[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。特にそのキーワード `LEGACY_CARDINALITY_ESTIMATION = ON` をご覧ください。
 
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] における 2 つの互換性レベル間での、最も重要なクエリのパフォーマンスの違いを評価する方法の詳細については、「[Improved Query Performance with Compatibility Level 130 in Azure SQL Database](https://blogs.msdn.microsoft.com/sqlserverstorageengine/2016/05/06/improved-query-performance-with-compatibility-level-130-in-azure-sql-database/)」 (Azure SQL Database での互換性レベル 130 によるクエリ パフォーマンスの改善) を参照してください。 この記事では互換性レベル 130 と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を取り上げていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] で 140 に移行する場合も同じ手法が適用されます。
 
-接続先の [!INCLUDE[ssDE](../../includes/ssde-md.md)] のバージョンを確認するには、次のクエリを実行します。
+接続先である [!INCLUDE[ssDE](../../includes/ssde-md.md)] のバージョンを特定するには、次のクエリを実行します。
 
 ```sql
 SELECT SERVERPROPERTY('ProductVersion');
@@ -165,7 +165,7 @@ SELECT name, compatibility_level FROM sys.databases;
 > - システム オブジェクトで変更された列名。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、sys.dm_os_sys_info 内の列 *single_pages_kb* の名前が *pages_kb* に変更されました。 互換性レベルに関係なく、クエリ `SELECT single_pages_kb FROM sys.dm_os_sys_info` によってエラー 207 (無効な列名) が生成されます。
 > - 削除されたシステム オブジェクト。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、`sp_dboption` が削除されました。 互換性レベルに関係なく、ステートメント `EXEC sp_dboption 'AdventureWorks2016', 'autoshrink', 'FALSE';` はエラー 2812 (ストアド プロシージャ 'sp_dboption' が見つかりませんでした) を生成します。
 >
-> 重大な変更の詳細については、「[SQL Server 2017 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)」、「[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」、「[ SQL Server 2014 におけるデータベース エンジン機能の重大な変更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)」、「[SQL Server 2012 におけるデータベース エンジン機能の重大な変更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)、および[SQL Server 2008 におけるデータベース エンジン機能の重大な変更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#KJKatmai)」を参照してください。
+> 重大な変更の詳細については、「[SQL Server 2017 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md)」、「[SQL Server 2016 におけるデータベース エンジン機能の重大な変更](../../database-engine/breaking-changes-to-database-engine-features-in-sql-server-2016.md)」、「[ SQL Server 2014 におけるデータベース エンジン機能の重大な変更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014)」、「[SQL Server 2012 におけるデータベース エンジン機能の重大な変更](https://docs.microsoft.com/sql/database-engine/discontinued-database-engine-functionality-in-sql-server-2016?view=sql-server-2014#Denali)」をご覧ください。
 
 ## <a name="best-practices-for-upgrading-database-compatibility-level"></a>データベース互換性レベルのアップグレードのベスト プラクティス
 
@@ -197,10 +197,10 @@ SELECT name, compatibility_level FROM sys.databases;
 
 |130 以下の互換性レベルの設定|140 の互換性レベルの設定|
 |--------------------------------------------------|-----------------------------------------|
-|複数ステートメントのテーブル値関数を参照するステートメントのカーディナリティの推定値は、固定された行推定値を使用します。|複数ステートメントのテーブル値関数を参照する対象のステートメントのカーディナリティの推定値は、関数出力の実際のカーディナリティを使用します。 これは、複数ステートメントのテーブル値関数の**インターリーブ実行**によって有効にされます。|
+|複数ステートメントのテーブル値関数を参照するステートメントのカーディナリティの推定値には、固定された行推定値が使用されます。|複数ステートメントのテーブル値関数を参照する対象のステートメントのカーディナリティの推定値には、関数出力の実際のカーディナリティが使用されます。 これは、複数ステートメントのテーブル値関数の**インターリーブ実行**を介して有効になります。|
 |ディスクへのスピルを引き起こす不十分なメモリ許可サイズを要求するバッチモード クエリでは、連続実行において引き続き問題が発生する可能性があります。|ディスクへのスピルを引き起こす不十分なメモリ許可サイズを要求するバッチモード クエリでは、連続実行でのパフォーマンスが改善されている可能性があります。 これは**バッチ モード メモリ許可フィードバック**を介して有効になります。バッチ モード演算子に対してスピルが発生した場合、このフィードバックによりキャッシュ プランのメモリ許可サイズが更新されます。 |
 |コンカレンシーの問題を引き起こす過度なメモリ許可サイズを要求するバッチモード クエリでは、連続実行において引き続き問題が発生する可能性があります。|コンカレンシーの問題を引き起こす過度なメモリ許可サイズを要求するバッチモード クエリでは、連続実行でのコンカレンシーが改善されている可能性があります。 これは**バッチ モード メモリ許可フィードバック**を介して有効になります。過度な容量が元々要求されている場合、このフィードバックによりキャッシュ プランのメモリ許可サイズが更新されます。|
-|結合演算子を含むバッチモード クエリは、3 つの物理結合アルゴリズム (入れ子になったループ、ハッシュ結合、マージ結合) の対象となります。 カーディナリティの推定値が結合入力として適切でない場合は、不適切な結合アルゴリズムが選択される場合があります。 そのような事態になった場合は、パフォーマンスが低下し、キャッシュ プランが再コンパイルされるまで不適切な結合アルゴリズムが使用中のままとなります。|その他に**適応型結合**と呼ばれる結合演算子もあります。 カーディナリティの推定値が外部ビルドの結合入力として適切でない場合は、不適切な結合アルゴリズムが選択されることがあります。 このような事態が発生し、ステートメントが適応型結合の対象である場合は、小さな結合入力には入れ子になったループが使用され、大きな結合入力にはハッシュ結合が使用されます。これらの使用は再コンパイルを要求することなく動的に行われます。 |
+|結合演算子を含むバッチモード クエリは、3 つの物理結合アルゴリズム (入れ子になったループ、ハッシュ結合、マージ結合) の対象となります。 カーディナリティの推定値が結合入力として適切でない場合は、不適切な結合アルゴリズムが選択される場合があります。 その場合は、パフォーマンスが低下し、キャッシュ プランが再コンパイルされるまで不適切な結合アルゴリズムが使用され続けます。|その他に**適応型結合**と呼ばれる結合演算子もあります。 カーディナリティの推定値が外部ビルドの結合入力として適切でない場合は、不適切な結合アルゴリズムが選択されることがあります。 このような事態が発生し、ステートメントが適応型結合の対象である場合は、小さな結合入力には入れ子になったループが使用され、大きな結合入力にはハッシュ結合が使用されます。これらの使用は再コンパイルを要求することなく動的に行われます。 |
 |列ストア インデックスを参照する単純なプランは、バッチ モード実行の対象ではありません。 |列ストア インデックスを参照する単純なプランは、バッチ モード実行の対象であるプランを優先するために廃止されます。|
 |`sp_execute_external_script` UDX 演算子は、行モードでのみ実行できます。|`sp_execute_external_script` UDX 演算子は、バッチ モードでの実行に適しています。|
 |複数ステートメントのテーブル値関数 (TVF) にはインターリーブ実行はありません。 |複数ステートメントの TVF のインターリーブ実行で、プランの品質を向上。|
@@ -215,7 +215,7 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 |--------------------------------------------------|-----------------------------------------|
 |INSERT-SELECT ステートメント内の INSERT はシングル スレッドです。|INSERT-SELECT ステートメントの INSERT はマルチ スレッドであるか、並列プランを与えることができます。|
 |メモリ最適化テーブルに対するクエリでは、シングル スレッドを実行します。|メモリ最適化テーブルに対するクエリで、並列プランを利用できるようになりました。|
-|SQL 2014 のカーディナリティ推定機能 **CardinalityEstimationModelVersion="120"** が導入されました。|さらにカーディナリティの推定 (CE)、クエリから表示されるカーディナリティの推定モデルの 130 の改良点を計画します。 **CardinalityEstimationModelVersion="130"**|
+|SQL 2014 のカーディナリティ推定機能 **CardinalityEstimationModelVersion="120"** が導入されました。|クエリ プランから表示できる、カーディナリティ推定モデル 130 を使ったカーディナリティの推定 (CE) のさらなる改善。 **CardinalityEstimationModelVersion="130"**|
 |列ストア インデックスで行モードがバッチ モードに変更:<br /><ul><li>列ストア インデックスを持つテーブルでの並べ替えは行モードで行われます <li>ウィンドウ関数の集計が `LAG` や `LEAD` などの行のモードで動作します。 <li>行モードで運用されている複数の個別の句を持つ列ストア テーブルに対するクエリ <li>MAXDOP 1 または行モードで実行される直列プランで実行されているクエリ</li></ul>| 列ストア インデックスで行モードがバッチ モードに変更:<br /><ul><li>列ストア インデックスを持つテーブルでの並べ替えがバッチ モードになりました。 <li>ウィンドウ集計が `LAG` や `LEAD` などのバッチモードで動作します。 <li>複数の distinct 句で列ストア テーブルに対するクエリがバッチ モードで動作します。 <li>MAXDOP 1 または直列プランで実行されているクエリをバッチ モードで実行します。</li></ul>|
 |統計情報を自動的に更新できます。 | 統計情報を自動的に更新するロジックは、大規模なテーブルでより積極的に活用されます。 実際には、これにより、クエリに関するパフォーマンス上の問題 (新たに挿入された行に対してクエリが頻繁に実行されるが、それらの値を取り込むための統計情報の更新が行われていない) に顧客が遭遇するケースが減少します。 |
 |[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、トレース 2371 は既定ではオフになっています。 | [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、[トレース 2371](https://blogs.msdn.microsoft.com/psssql/2016/10/04/default-auto-statistics-update-threshold-change-for-sql-server-2016/) は既定では ON です。 トレース フラグ 2371 は、多くの行を含むテーブル内で、小さくても有用な行のサブセットをサンプリングするように自動統計更新ツールに指示します。 <br/> <br/> 1 つの改良点は、最近挿入された行をより多くサンプルに含めるというものです。 <br/> <br/> もう 1 つの改良点は、統計の更新プロセスが実行されている間に、クエリをブロックするのでなく、クエリが実行されるようにするというものです。 |
@@ -254,7 +254,7 @@ SQL Server 2017 より前の SQL Server の初期のバージョンのトレー�
 |RC4 アルゴリズムは、旧バージョンとの互換性のためにのみサポートされています。 データベース互換性レベルが 90 または 100 の場合、新しい素材は RC4 または RC4_128 を使用してのみ暗号化できます (非推奨)。[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|RC4 または RC4_128 を使用して新素材を暗号化することはできません。 AES アルゴリズムのいずれかなど、新しいアルゴリズムを使用してください。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] では、どの互換性レベルでも、RC4 または RC4_128 を使用して暗号化された素材を暗号化解除できます。|
 |**time** および **datetime2** データ型に対する `CAST` および `CONVERT` 操作の既定のスタイルは、いずれかの型が計算列の式で使用されている場合を除き、121 です。 計算列の場合、既定のスタイルは 0 です。 この動作は、計算列が作成されるとき、自動パラメーター化を含むクエリで使用されるとき、または制約の定義で使用されるときに、計算列に影響を与えます。<br /><br /> 以下の「例」の D では、スタイル 0 とスタイル 121 の違いを示します。 上記の動作については示しません。 日付および時刻のスタイルの詳細については、[CAST および CONVERT](../../t-sql/functions/cast-and-convert-transact-sql.md) に関するページを参照してください。|互換性レベル 110 では、**time** および **datetime2** データ型に対する `CAST` および `CONVERT` 操作の既定のスタイルは常に 121 です。 クエリが古い動作に依存する場合は、110 より小さい互換性レベルを使用するか、または影響を受けるクエリで 0 スタイルを明示的に指定してください。<br /><br /> データベースを互換性レベル 110 にアップグレードしても、ディスクに格納されているユーザー データは変更されません。 このようなデータは手動で適切に修正する必要があります。 たとえば、`SELECT INTO` を使用して、前に説明した計算列の式を含むソースからテーブルを作成した場合は、計算列の定義自体ではなく、(スタイル 0 を使用する) データが格納されます。 このようなデータは、手動で更新してスタイル 121 に一致させる必要があります。|
 |パーティション ビューで参照されるリモート テーブルの **smalldatetime** 型の列は、**datetime** としてマップされます。 ローカル テーブルの対応する列 (選択リストの同じ順番にある列) は、**datetime** 型であることが必要です。|パーティション ビューで参照されるリモート テーブルの **smalldatetime** 型の列は、**smalldatetime** としてマップされます。 ローカル テーブルの対応する列 (選択リストの同じ順番にある列) は、**smalldatetime** 型であることが必要です。<br /><br /> 110 にアップグレードした後は、データ型の不一致により、分散パーティション ビューは失敗します。 この問題を解決するには、リモート テーブルでのデータ型を **datetime** に変更するか、またはローカル データベースの互換性レベルを 100 以下に設定します。|
-|`SOUNDEX` 関数では次のルールが実装されます。<br /><br /> 1) `SOUNDEX` コードの同じ数値が割り当てられている 2 つの子音の間に大文字の H または大文字の W がある場合、この H または W は無視されます。<br /><br /> 2) *character_expression* の最初の 2 文字に `SOUNDEX` コードの同じ数値が割り当てられている場合は、両方の文字が含まれます。 最初の 2 文字の場合を除き、並んでいる一連の子音に `SOUNDEX` コードの同じ数値が割り当てられている場合、最初の文字以外はすべて除外されます。|`SOUNDEX` 関数では次のルールが実装されます。<br /><br /> 1) `SOUNDEX` コードの同じ数値が割り当てられている 2 つの子音の間に大文字の H または大文字の W がある場合、右側の子音は無視されます。<br /><br /> 2) 並んでいる一連の子音に `SOUNDEX` コードの同じ数値が割り当てられている場合、最初の文字以外はすべて除外されます。<br /><br /> <br /><br /> その他のルールにより、`SOUNDEX` 関数で計算された値が、110 未満の互換性レベルで計算された値と異なる結果になる場合があります。 互換性レベル 110 へのアップグレード後に、`SOUNDEX` 関数を使用するインデックス、ヒープ、または CHECK 制約の再構築が必要になる場合があります。 詳細については、[SOUNDEX](../../t-sql/functions/soundex-transact-sql.md) に関するページを参照してください。|
+|`SOUNDEX` 関数では次のルールが実装されます。<br /><br /> 1) `SOUNDEX` コードの同じ数値が割り当てられている 2 つの子音の間に大文字の H または大文字の W がある場合、この H または W は無視されます。<br /><br /> 2) *character_expression* の最初の 2 文字に `SOUNDEX` コードの同じ数値が割り当てられている場合は、両方の文字が含まれます。 または、並んでいる一連の子音に `SOUNDEX` コードの同じ数値が割り当てられている場合は、最初の文字を除いてすべて除外されます。|`SOUNDEX` 関数では次のルールが実装されます。<br /><br /> 1) `SOUNDEX` コードの同じ数値が割り当てられている 2 つの子音の間に大文字の H または大文字の W がある場合、右側の子音は無視されます。<br /><br /> 2) 並んでいる一連の子音に `SOUNDEX` コードの同じ数値が割り当てられている場合は、最初の文字を除いてすべて除外されます。<br /><br /> <br /><br /> その他のルールにより、`SOUNDEX` 関数で計算された値が、110 未満の互換性レベルで計算された値と異なる結果になる場合があります。 互換性レベル 110 へのアップグレード後に、`SOUNDEX` 関数を使用するインデックス、ヒープ、または CHECK 制約の再構築が必要になる場合があります。 詳細については、[SOUNDEX](../../t-sql/functions/soundex-transact-sql.md) に関するページを参照してください。|
 
 ## <a name="differences-between-compatibility-level-90-and-level-100"></a>互換性レベル 90 とレベル 100 の相違点
 

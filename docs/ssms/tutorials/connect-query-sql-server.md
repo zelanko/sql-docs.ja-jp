@@ -1,10 +1,10 @@
 ---
 title: SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
-description: SQL Server Management Studio を使用し、基本的な T-SQL クエリを実行して SQL Server インスタンスに接続するためのクイックスタート チュートリアルです。
+description: SQL Server Management Studio を使用し、基本的な T-SQL クエリを実行して SQL Server インスタンスに接続するためのチュートリアルです。
 keywords: SQL Server, SSMS, SQL Server Management Studio
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
+manager: jroth
 ms.reviewer: sstein
 ms.topic: quickstart
 ms.prod_service: sql-tools
@@ -12,16 +12,16 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 62646a7e2b09c4a733dde0ddff9d078cb0a3c958
-ms.sourcegitcommit: f7ad034f748ebc3e5691a5e4c3eb7490e5cf3ccf
+ms.openlocfilehash: 4f3e1b5e03f70aa0d552e89d3ebdd254909d7b2a
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/29/2019
-ms.locfileid: "67469233"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67834961"
 ---
-# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>チュートリアル:SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う 
+# <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>チュートリアル:SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
 
-このチュートリアルでは、SQL Server Management Studio (SSMS) を使って SQL Server インスタンスに接続し、いくつかの基本的な Transact-SQL (T-SQL) コマンドを実行する方法を説明します。 この記事では、以下のことを行う方法を示します。
+このチュートリアルでは、SQL Server Management Studio (SSMS) を使って SQL Server インスタンスに接続し、いくつかの基本的な Transact-SQL (T-SQL) コマンドを実行する方法を説明します。 この記事では、以下の手順を行う方法を示します。
 
 > [!div class="checklist"]
 > * SQL Server インスタンスに接続する
@@ -54,9 +54,9 @@ SQL Server インスタンスへのアクセス権を持っていない場合は
     * **[サーバーの種類]** に、 **[データベース エンジン]** (通常は既定のオプションです) を選択します。
     * **[サーバー名]** に、SQL Server インスタンスの名前を入力します。 (この記事では、ホスト名 NODE5 でインスタンス名 SQL2016ST を使用します [NODE5\SQL2016ST]。)SQL Server インスタンス名を確認する方法がわからない場合は、「[SSMS を使用するためのヒントとテクニック](ssms-tricks.md#determine-sql-server-name)」を参照してください。
 
-    ![SQL Server インスタンスの使用のオプションが表示された "サーバー名" フィールド](media/connect-query-sql-server/connection2.png)
-
     * **[認証]** に、 **[Windows 認証]** を選択します。 この記事では Windows 認証を使用しますが、SQL Server ログインもサポートされています。 **[SQL ログイン]** を選択した場合は、ユーザー名とパスワードが求められます。 認証の種類の詳細については、「[サーバーへの接続 (データベース エンジン)](https://docs.microsoft.com/sql/ssms/f1-help/connect-to-server-database-engine)」を参照してください。
+
+    ![SQL Server インスタンスの使用のオプションが表示された "サーバー名" フィールド](media/connect-query-sql-server/connection2.png)
 
     **[オプション]** を選択して追加の接続オプションを変更することもできます。 接続オプションの例には、接続しているデータベース、接続のタイムアウト値、ネットワーク プロトコルなどがあります。 この記事では、すべてのオプションについて既定値を使用します。
 
@@ -129,7 +129,7 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
    GO
    ```
 
-クエリが完了すると、オブジェクト エクスプローラーのテーブルの一覧に新しい Customers テーブルが表示されます。 テーブルが表示されない場合は、オブジェクト エクスプローラーで **[TutorialDB]**  >  **[テーブル]** ノードを右クリックし、 **[更新]** を選択します。
+クエリが完了すると、オブジェクト エクスプローラーのテーブルの一覧に新しい Customers テーブルが表示されます。 テーブルが表示されない場合は、オブジェクト エクスプローラーで **[TutorialDB]**  >  **[テーブル]** ノードを右クリックした後、 **[更新]** を選択します。
 
 ## <a name="insert-rows-into-the-new-table"></a>新しいテーブルに行を挿入する
 
@@ -188,7 +188,7 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
 
 1. クエリ ウィンドウを右クリックして、 **[接続]**  >  **[接続の変更]** を選択します。 **[サーバーへの接続]** ウィンドウがもう一度開きます。
 
-2. クエリで使用されるサーバーを変更します。 
+2. クエリで使用されるサーバーを変更します。
 
    ![[接続の変更] コマンド](media/connect-query-sql-server/changeconnection.png)
 
@@ -197,8 +197,9 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
 
 ## <a name="next-steps"></a>次の手順
 
-次の記事では、SQL Server Management Studio 内のさまざまなオブジェクトのスクリプトを作成する方法について説明します。
+SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
-詳細については、次の記事に進んでください
-> [!div class="nextstepaction"]
-> [次の手順](scripting-ssms.md)
+* [スクリプトの作成](scripting-ssms.md)
+* [SSMS でテンプレートを使用する](../template/templates-ssms.md)
+* [SSMS を構成する](ssms-configuration.md)
+* [SSMS を使用するための追加のヒントとテクニック](ssms-tricks.md)

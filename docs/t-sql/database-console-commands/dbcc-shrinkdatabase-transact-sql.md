@@ -29,12 +29,12 @@ author: pmasl
 ms.author: umajay
 manager: craigg
 monikerRange: = azuresqldb-current ||>= sql-server-2016 ||>= sql-server-linux-2017||=azure-sqldw-latest||= sqlallproducts-allversions
-ms.openlocfilehash: ab639417592966f1c591116743d2d38bfacc837f
-ms.sourcegitcommit: 1a182443e4f70f4632617cfef4efa56d898e64e9
+ms.openlocfilehash: d580ed70608dc68fbd86b31177a568e7b74e3796
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/22/2019
-ms.locfileid: "58342896"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866235"
 ---
 # <a name="dbcc-shrinkdatabase-transact-sql"></a>DBCC SHRINKDATABASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +66,7 @@ NOTRUNCATE
   
 ファイル末尾の空き領域はオペレーティング システムに返されず、ファイルの物理サイズは変わりません。 そのため、NOTRUNCATE を指定した場合、データベースが圧縮されていないように見えます。  
   
-NOTRUNCATE はデータ ファイルにのみ適用され、 ログ ファイルは影響を受けません。  
+NOTRUNCATE はデータ ファイルにのみ適用され、 NOTRUNCATE はログ ファイルには影響しません。  
   
 TRUNCATEONLY  
 ファイル末尾のすべての空き領域をオペレーティング システムに解放します。 ファイル内でのページの移動は行いません。 データ ファイルは、最後に割り当てられたエクステントを限度として圧縮されます。 _target\_percent_ が TRUNCATEONLY と共に指定された場合は、無視します。 Azure SQL Data Warehouse では、このオプションはサポートされていません。

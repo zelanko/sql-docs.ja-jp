@@ -12,12 +12,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b8cd9f4e066096bcffa5181e112710fb1c4e2d17
-ms.sourcegitcommit: cff8dd63959d7a45c5446cadf1f5d15ae08406d8
+ms.openlocfilehash: f3dca7f9498ae10d67fd804d6ce0e4a33f99584e
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67583218"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860717"
 ---
 # <a name="columnstore-indexes---query-performance"></a>列ストア インデックス - クエリ パフォーマンス
 
@@ -92,7 +92,7 @@ ms.locfileid: "67583218"
     
  すべてのクエリ実行演算子をバッチ モードで実行できるわけではありません。 たとえば、Insert、Delete、Update などの DML 操作は、一度に 1 行ずつ実行されます。 バッチ モードの演算子は、Scan、Join、Aggregate、Sort など、クエリのパフォーマンスを向上させる演算子を対象としています。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] で列ストア インデックスが導入されてから、バッチ モードで実行できる演算子を拡充する継続的な取り組みが行われています。 次の表は、バッチ モードで実行される演算子と、対応する製品のバージョンを示します。    
     
-|バッチ モードで実行される演算子|用途|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]?|コメント|    
+|バッチ モードで実行される演算子|用途|[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]|[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] および [!INCLUDE[ssSDS](../../includes/sssds-md.md)]<sup>1</sup>|コメント|    
 |---------------------------|------------------------|---------------------|---------------------|---------------------------------------|--------------|    
 |DML 操作 (Insert、Delete、Update、Merge)||いいえ|いいえ|いいえ|DML 操作は並列ではないため、バッチ モードでは実行できません。 直列モードのバッチ処理を有効にして、DML のバッチ モードでの処理を許可したとしても、パフォーマンスの向上はほとんど認められません。|    
 |列ストア インデックス スキャン|SCAN|NA|はい|はい|列ストア インデックスの場合は、SCAN ノードに述語をプッシュできます。|    
@@ -111,7 +111,7 @@ ms.locfileid: "67583218"
 |Top Sort||いいえ|いいえ|はい||    
 |Window Aggregates||NA|NA|はい|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の新しいオペレーター。|    
     
- ?[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層、Standard 層 - S3 以上、およびすべての仮想コア層と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に適用されます。    
+<sup>1</sup>[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] Premium 層、Standard 層 - S3 以上、およびすべての仮想コア層と [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に適用されます    
     
 ### <a name="aggregate-pushdown"></a>集計プッシュ ダウン    
  SCAN ノードから条件を満たす行をフェッチしてバッチ モードで値を集計する、集計計算の通常の実行パスです。 パフォーマンスは良好ですが、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、次の条件を満たしていれば、集計操作を SCAN ノードにプッシュして、集計計算のパフォーマンスを大幅に (バッチ モードでの実行に加えてさらに) 向上できます。 
@@ -146,7 +146,7 @@ FROM FactResellerSalesXL_CCI
     
 たとえば、特定の地域における特定の商品の売上を表すレコードがファクトで、一連の地域や商品などを表すのがディメンションす。 ファクト テーブルとディメンション テーブルは、主キーと外部キーのリレーションシップによって接続されます。 1 つ以上のディメンション テーブルをファクト テーブルと結合する分析クエリが最もよく使用されます。    
     
-ディメンション テーブル `Products` について考えてみましょう。 一般的な主キーは `ProductCode` で、通常は文字列データ型として表されます。 クエリのパフォーマンスのためには、代理キー (通常は整数型の列) を作成して、ファクト テーブルからディメンション テーブル内の行を参照することをお勧めします。 ? ?
+ディメンション テーブル `Products` について考えてみましょう。 一般的な主キーは `ProductCode` で、通常は文字列データ型として表されます。 クエリのパフォーマンスのためには、代理キー (通常は整数型の列) を作成して、ファクト テーブルからディメンション テーブル内の行を参照することをお勧めします。 
     
 列ストア インデックスは、数値または整数ベースのキーが関与する結合/述語を持つ分析クエリを非常に効率よく実行します。 ただし、多くの顧客ワークロードでは、ファクト テーブルとディメンション テーブルをリンクする文字列ベースの列を使用した場合、列ストア インデックスを含むクエリのパフォーマンスが低くなることがわかっています。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] では、文字列型の列を持つ述語を SCAN ノードをプッシュ ダウンすることで、文字列ベースの列を持つ分析クエリのパフォーマンスを大きく向上しています。    
     

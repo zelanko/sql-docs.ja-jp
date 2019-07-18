@@ -9,7 +9,7 @@ ms.prod: sql
 ms.technology: ssms
 ms.prod_service: sql-tools
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - templates [SQL Server], SQL Server Management Studio
 - source controls [SQL Server Management Studio], tutorials
@@ -20,12 +20,12 @@ helpviewer_keywords:
 - scripts [SQL Server], SQL Server Management Studio
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 30b40d10ec7a4da7df0bfc9e4ba1f3aa6bb68ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a634a106704cebd91ce74910de17166c85c6c4de
+ms.sourcegitcommit: 4181429ada1169871c2f4d73d18d2ba013007501
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822940"
+ms.lasthandoff: 07/13/2019
+ms.locfileid: "67866261"
 ---
 # <a name="use-templates-in-sql-server-management-studio"></a>SQL Server Management Studio でテンプレートを使用する
 
@@ -35,8 +35,9 @@ ms.locfileid: "66822940"
 
 このチュートリアルを実行するには、SQL Server Management Studio と、SQL Server へのアクセスが必要です。
 
-- [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
+* [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
+
+* [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
 
 ## <a name="use-template-browser"></a>テンプレート ブラウザーを使用する
 
@@ -108,15 +109,17 @@ ms.locfileid: "66822940"
 
 5. 作成したテンプレートを右クリックして、 **[編集]** を選びます。 新しいクエリ ウィンドウが開きます。
 
-6. 保存する T-SQL テキストを入力します。 
+6. 保存する T-SQL テキストを入力します。
 
 7. **[ファイル]** メニューの **[保存]** を選択します。
 
-8. 既存のクエリ ウィンドウを閉じて、新しいカスタム テンプレートを開きます。 
+8. 既存のクエリ ウィンドウを閉じて、新しいカスタム テンプレートを開きます。
 
 ## <a name="next-steps"></a>次の手順
 
-次の記事では、SQL Server Management Studio を使う際の他のヒントとテクニックを示します。 
+SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
 
-> [!div class="nextstepaction"]
-> [SSMS を使用するためのヒントとテクニック](../tutorials/ssms-tricks.md)
+* [インスタンスに接続してクエリを実行する](../tutorials/connect-query-sql-server.md)
+* [スクリプトの作成](../tutorials/scripting-ssms.md)
+* [SSMS を構成する](../tutorials/ssms-configuration.md)
+* [SSMS を使用するための追加のヒントとテクニック](../tutorials/ssms-tricks.md)

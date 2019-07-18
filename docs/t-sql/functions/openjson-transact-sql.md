@@ -19,12 +19,12 @@ author: jovanpop-msft
 ms.author: jovanpop
 manager: craigg
 monikerRange: = azuresqldb-current||= azure-sqldw-latest||>= sql-server-2016||>= sql-server-linux-2017||= sqlallproducts-allversions
-ms.openlocfilehash: 88c74779b60ae25ea381a2814b06a11b4fdd2e22
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 471b4fac245dcdb1aec537ccd3e8345d99039871
+ms.sourcegitcommit: 9af07bd57b76a34d3447e9e15f8bd3b17709140a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343854"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67624377"
 ---
 # <a name="openjson-transact-sql"></a>OPENJSON (Transact-SQL)
 
@@ -239,7 +239,10 @@ OPENJSON 関数によって返される列は、WITH オプションによって
   
      最初のレベル プロパティのみが返されます。 JSON のテキストが正しくフォーマットされていない場合、ステートメントが失敗します。  
 
-2. -OPENJSON を呼び出すし、WITH 句で、明示的なスキーマを指定する、するときに、WITH 句で定義したスキーマを持つテーブルを返します。  
+2. -OPENJSON を呼び出すし、WITH 句で、明示的なスキーマを指定する、するときに、WITH 句で定義したスキーマを持つテーブルを返します。
+
+> [!NOTE]  
+> **Key**、**Value**、および **Type** 列が返されるのは、既定のスキーマで OPENJSON を使った場合のみです。明示的なスキーマでは使用できません。
 
 ## <a name="remarks"></a>Remarks  
 
@@ -317,7 +320,7 @@ CROSS APPLY OPENJSON(SalesReasons)
 ```  
   
 > [!TIP] 
-> 通常使用順に展開するときに、JSON 配列は、個々 のフィールドに格納されているし、その親の行との結合に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] CROSS APPLY 演算子。 詳細については、CROSS APPLY、を参照してください。 [FROM & #40 です。TRANSACT-SQL と #41;](../../t-sql/queries/from-transact-sql.md).  
+> 通常使用順に展開するときに、JSON 配列は、個々 のフィールドに格納されているし、その親の行との結合に、 [!INCLUDE[tsql](../../includes/tsql-md.md)] CROSS APPLY 演算子。 CROSS APPLY について詳しくは、[FROM &#40;Transact-SQL&#41;](../../t-sql/queries/from-transact-sql.md) に関する記事をご覧ください。  
   
 返される行の明示的に定義されたスキーマを指定した `OPENJSON` を使用することで、同じクエリを書き直すことができます。  
   
