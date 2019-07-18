@@ -7396,6 +7396,8 @@
       items:
         - name: リンク サーバーを作成する
           href: relational-databases/linked-servers/create-linked-servers-sql-server-database-engine.md
+        - name: リンク サーバー プロバイダーを作成する
+          href: relational-databases/linked-servers/create-linked-servers-sql-server-oledb-provider.md
     - name: フルテキスト検索
       href: relational-databases/search/full-text-search.md
       items:
