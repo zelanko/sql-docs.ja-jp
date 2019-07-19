@@ -81,7 +81,7 @@ ms.locfileid: "47681990"
   
 -   SET TRANSACTION ISOLATION LEVEL を使用すると、セッションに対するロックのレベルを指定できます。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
--   テーブル ヒントをロックすると、FROM 句内にあるテーブルの個別の参照に対してロックのレベルを指定できます。 構文と制限事項については、[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md)を参照してください。  
+- テーブル ヒントをロックすると、FROM 句内にあるテーブルの個別の参照に対してロックのレベルを指定できます。構文と制限事項については、[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md) を参照してください。	  
   
  1 つのセッション ID で実行されているリソースには、複数のロックを許可できます。 それぞれの 1 つのセッションを実行している別のエンティティが同じリソースのロックを所有できるし、情報が表示されます、 **request_owner_type**と**request_owner_id**である列によって返される**sys.dm_tran_locks**します。 場合の同じインスタンスを複数**request_owner_type**が存在する、 **request_owner_id**列は、各インスタンスを区別するために使用されます。 分散トランザクションの場合、 **request_owner_type**と**request_owner_guid**列は、異なるエンティティ情報が表示されます。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "47681990"
   
  1 つのセッションで実行する複数のカーソルは区別できないため、1 つのエンティティとして扱われます。  
   
- セッション ID 値に関連付けられていない分散トランザクションは孤立したトランザクションで、セッション ID 値 -2 が割り当てられます。 詳細については、[KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)を参照してください。  
+ セッション ID 値に関連付けられていない分散トランザクションは孤立したトランザクションで、セッション ID 値 -2 が割り当てられます。詳細については、[KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md) を参照してください。  
   
 ## <a name="resource-details"></a>リソースの詳細  
  次の表に、リソースで表される、 **resource_associated_entity_id**列。  
