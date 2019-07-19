@@ -44,7 +44,7 @@ sp_execute_remote [ @data_source_name = ] datasourcename
   
 ## <a name="arguments"></a>引数  
  [ \@data_source_name = ] *datasourcename*  
- ステートメントを実行する外部データ ソースを識別します。 参照してください[外部データ ソースの作成 & #40 です。TRANSACT-SQL と #41 です](../../t-sql/statements/create-external-data-source-transact-sql.md)。 外部データ ソースは、"RDBMS"または"SHARD_MAP_MANAGER"の型指定できます。  
+ ステートメントを実行する外部データ ソースを識別します。 [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)を参照してください。 外部データ ソースは、"RDBMS"または"SHARD_MAP_MANAGER"の型指定できます。  
   
  [ \@stmt =]*ステートメント*  
  含む Unicode 文字列には、[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントまたはバッチです。 \@stmt は、Unicode 定数または Unicode 変数のいずれかである必要があります。 \+ 演算子で 2 つの文字列を連結するなどの複雑な Unicode 式は使用できません。 文字定数も使用できません。 Unicode 定数が指定されている場合に付ける必要があります、 **N**します。Unicode 定数など**N 'sp_who'** が有効で、文字定数 **'sp_who'** はありません。 文字列のサイズは、使用可能なデータベース サーバーのメモリによってのみ制限されます。 64 ビット サーバーで、文字列のサイズが 2 GB の最大サイズに制限、 **nvarchar (max)** します。  
@@ -75,11 +75,11 @@ sp_execute_remote [ @data_source_name = ] datasourcename
 ## <a name="remarks"></a>コメント  
  `sp_execute_remote` 上記の「構文」の説明に従って、特定の順序でパラメーターを入力する必要があります。 パラメーターは、誤順序の入力は、エラー メッセージが発生します。  
   
- `sp_execute_remote`として動作は同じ[EXECUTE &#40;TRANSACT-SQL &#41;](../../t-sql/language-elements/execute-transact-sql.md)に関してバッチおよび名前のスコープです。 TRANSACT-SQL ステートメントまたはバッチ、sp_execute_remote に *\@stmt*パラメーターは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
+ `sp_execute_remote`として動作は同じ[EXECUTE &#40;Transact-SQL&#41;](../../t-sql/language-elements/execute-transact-sql.md)に関してバッチおよび名前のスコープです。 TRANSACT-SQL ステートメントまたはバッチ、sp_execute_remote に *\@stmt*パラメーターは、sp_execute_remote ステートメントが実行されるまでコンパイルされません。  
   
  `sp_execute_remote` という名前の '$ShardName'、行を生成したリモート データベースの名前を含む結果セットに追加の列を追加します。  
   
- `sp_execute_remote`同様に使用できる[sp_executesql & #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)。  
+ `sp_execute_remote`同様に使用できる[sp_executesql &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-executesql-transact-sql.md)。  
   
 ## <a name="examples"></a>使用例  
 ### <a name="simple-example"></a>簡単な例  
