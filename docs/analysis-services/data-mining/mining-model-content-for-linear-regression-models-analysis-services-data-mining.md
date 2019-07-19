@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c016d54d9272409e3edc3d6fc379980b952dd917
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49120182"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182754"
 ---
 # <a name="mining-model-content-for-linear-regression-models-analysis-services---data-mining"></a>線形回帰モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -41,9 +41,9 @@ ms.locfileid: "49120182"
  モデルの名前。  
   
  ATTRIBUTE_NAME  
- **ルート ノード :** 空白。  
+ **ルート ノード:** 空白  
   
- **回帰ノード :** 予測可能な属性の名前。  
+ **回帰ノード:** 予測可能な属性の名前。  
   
  NODE_NAME  
  常に NODE_UNIQUE_NAME と同じです。  
@@ -54,23 +54,23 @@ ms.locfileid: "49120182"
  NODE_TYPE  
  線形回帰モデルでは次の種類のノードが出力されます。  
   
-|ノードの種類の ID|型|説明|  
+|ノードの種類の ID|種類|説明|  
 |------------------|----------|-----------------|  
 |25|回帰ツリーのルート|入力変数と出力変数のリレーションシップを表す数式が含まれます。|  
   
  NODE_CAPTION  
  ノードに関連付けられたラベルまたはキャプション。 このプロパティは、主に表示を目的としています。  
   
- **ルート ノード :** 空白。  
+ **ルート ノード:** 空白  
   
- **回帰ノード :** すべて。  
+ **回帰ノード:** すべて。  
   
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
- **ルート ノード :** 回帰ノードの数を示します。 モデルの予測可能な属性ごとに 1 つの回帰ノードが作成されます。  
+ **ルート ノード:** 回帰ノードの数を示します。 モデルの予測可能な属性ごとに 1 つの回帰ノードが作成されます。  
   
- **回帰ノード :** 常に 0。  
+ **回帰ノード:** 常に 0 です。  
   
  PARENT_UNIQUE_NAME  
  ノードの親の一意な名前です。 ルート レベルのノードには NULL を返します。  
@@ -78,9 +78,9 @@ ms.locfileid: "49120182"
  NODE_DESCRIPTION  
  ノードの説明です。  
   
- **ルート ノード :** 空白。  
+ **ルート ノード:** 空白  
   
- **回帰ノード :** すべて。  
+ **回帰ノード:** すべて。  
   
  NODE_RULE  
  線形回帰モデルでは使用されません。  
@@ -91,23 +91,23 @@ ms.locfileid: "49120182"
  NODE_PROBABILITY  
  このノードに関連付けられている確率。  
   
- **ルート ノード :** 0  
+ **ルート ノード:** 0  
   
- **回帰ノード :** 1  
+ **回帰ノード:** 1  
   
  MARGINAL_PROBABILITY  
  親ノードからノードに到達する確率です。  
   
- **ルート ノード :** 0  
+ **ルート ノード:** 0  
   
- **回帰ノード :** 1  
+ **回帰ノード:** 1  
   
  NODE_DISTRIBUTION  
  ノード内の値に関する統計情報を提供する、入れ子になったテーブル。  
   
- **ルート ノード :** 0  
+ **ルート ノード:** 0  
   
- **回帰ノード :** 回帰式の作成に使用される要素を含むテーブル。 回帰ノードには、次の値型が含まれます。  
+ **回帰ノード:** 回帰式の作成に使用する要素を格納するテーブル。 回帰ノードには、次の値型が含まれます。  
   
 |VALUETYPE|  
 |---------------|  
@@ -121,9 +121,9 @@ ms.locfileid: "49120182"
  NODE_SUPPORT  
  このノードをサポートするケースの数。  
   
- **ルート ノード :** 0  
+ **ルート ノード:** 0  
   
- **回帰ノード :** トレーニング ケースの数。  
+ **回帰ノード:** トレーニング ケースの数。  
   
  MSOLAP_MODEL_COLUMN  
  予測可能な属性の名前。  
@@ -182,7 +182,7 @@ ms.locfileid: "49120182"
   
  したがって、平均年齢が 45 歳前後である場合、回帰式の切片 (VALUETYPE = 11) は平均収入を示します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [Microsoft 線形回帰アルゴリズム](../../analysis-services/data-mining/microsoft-linear-regression-algorithm.md)   
  [Microsoft 線形回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-linear-regression-algorithm-technical-reference.md)   

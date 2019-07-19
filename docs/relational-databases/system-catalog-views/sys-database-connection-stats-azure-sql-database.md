@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 5c8cece0-63b0-4dee-8db7-6b43d94027ec
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 225e80855c0042085b35670efc0666f133806d04
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 8b241d1f90a24ae69ab180404621a2feda393c01
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59242330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940234"
 ---
 # <a name="sysdatabaseconnectionstats-azure-sql-database"></a>sys.database_connection_stats (Azure SQL データベース)
 
@@ -33,10 +32,10 @@ ms.locfileid: "59242330"
 
   統計情報を含む[!INCLUDE[ssSDS](../../includes/sssds-md.md)]データベース**接続**イベント、データベース接続の成功と失敗の概要について説明します。 接続イベントの詳細については、イベントの種類を参照してください。 [sys.event_log &#40;Azure SQL Database&#41;](../../relational-databases/system-catalog-views/sys-event-log-azure-sql-database.md)します。  
   
-|統計|型|説明|  
+|統計|種類|説明|  
 |---------------|----------|-----------------|  
 |**database_name**|**sysname**|データベースの名前です。|  
-|**start_time**|**datetime2**|集計の間隔の開始日時 (UTC)。 この時刻は常に 5 分の倍数です。 以下に例を示します。<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
+|**start_time**|**datetime2**|集計の間隔の開始日時 (UTC)。 この時刻は常に 5 分の倍数です。 例:<br /><br /> '2011-09-28 16:00:00'<br />'2011-09-28 16:05:00'<br />'2011-09-28 16:10:00'|  
 |**end_time**|**datetime2**|集計の間隔の終了日時 (UTC)。 **End_time**は常に 5 分後に、対応するよりも**start_time**同じ行にします。|  
 |**success_count**|**int**|成功した接続の数。|  
 |**total_failure_count**|**int**|失敗した接続の合計数。 これは、合計の**connection_failure_count**、 **terminated_connection_count**、および**throttled_connection_count**、デッドロック イベントは含まれません。|  
@@ -99,7 +98,7 @@ FROM sys.database_connection_stats
 WHERE start_time>='2011-09-25:12:00:00' and end_time<='2011-09-28 12:00:00';  
 ```  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
  [Azure SQL Database への接続に関する問題をトラブルシューティングします。](/azure/sql-database/sql-database-troubleshoot-common-connection-issues)  
   

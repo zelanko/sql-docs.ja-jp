@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d17cc2ccc46733c857f884f78a1b0c9b3f980586
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: f33d36cccbbea6f37139410f9d3d6e03f740ee96
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067622"
 ---
 # <a name="wideworldimportersdw-etl-workflow"></a>WideWorldImportersDW ETL ワークフロー
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -45,9 +44,9 @@ ms.locfileid: "51674111"
 
 ## <a name="download"></a>ダウンロード
 
-サンプルの最新リリースでは、[wide world importers リリース](https://go.microsoft.com/fwlink/?LinkID=800630)を参照してください。 ダウンロード、*毎日 ETL.ispac* Integration Services パッケージ ファイル。
+サンプルの最新リリースでは、次を参照してください。 [wide world importers リリース](https://go.microsoft.com/fwlink/?LinkID=800630)します。 ダウンロード、*毎日 ETL.ispac* Integration Services パッケージ ファイル。
 
-ソース コードをサンプル データベースを再作成をするには、[wide world-importers 社](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)を参照してください。
+ソース コードをサンプル データベースを再作成をするには、次を参照してください。 [wide world-importers 社](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/wide-world-importers/wwi-integration-etl)します。
 
 ## <a name="install"></a>インストール
 

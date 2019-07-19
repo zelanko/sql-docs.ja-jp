@@ -19,13 +19,12 @@ ms.assetid: 2736d376-fb9d-4b28-93ef-472b7a27623a
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: 16df7ce483209be058d44448e9071406f897b41a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa60c1785e0740dde4bc6b3755dea36db8a5a21a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66822367"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900916"
 ---
 # <a name="sysdmftsparser-transact-sql"></a>sys.dm_fts_parser (TRANSACT-SQL)
 
@@ -69,7 +68,7 @@ sys.dm_fts_parser('query_string', lcid, stoplist_id, accent_sensitivity)
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |キーワード (keyword)|**varbinary (128)**|ワード ブレーカーによって返される特定のキーワードの 16 進数表現。 この表記は、フルテキスト インデックスにキーワードを格納するために使用します。 この値は人間が判読できるなど、フルテキスト インデックスのコンテンツを返す他の動的管理ビューによって返される関連する特定のキーワードを出力するため便利ですが、 [sys.dm_fts_index_keywords](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-transact-sql.md)と[sys.dm_fts_index_keywords_by_document](../../relational-databases/system-dynamic-management-views/sys-dm-fts-index-keywords-by-document-transact-sql.md)します。<br /><br /> **注:** 0 Xff は、ファイルまたはデータセットの終了位置を示す特殊文字を表します。|  
-|group_id|**int**|特定の用語の生成元となる論理グループを区別するのに役立つ整数値が含まれます。 たとえば、英語の場合、'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' で次の group_id 値が生成されます。<br /><br /> 1:[サーバー]<br />2:DB (DB)<br />3:DB (DB)|  
+|group_id|**int**|特定の用語の生成元となる論理グループを区別するのに役立つ整数値が含まれます。 たとえば、英語の場合、'`Server AND DB OR FORMSOF(THESAURUS, DB)"`' で次の group_id 値が生成されます。<br /><br /> 1:Server<br />2:DB (DB)<br />3:DB (DB)|  
 |phrase_id|**int**|これで、フルテキストなどの複合語の代替形式がワード ブレーカーによって発行されたケースを差別化に役立つ整数値が含まれています。 複合語 ('multi-million' など) が存在する場合、ワード ブレーカーによって代替形式が発行されることがあります。 このような代替形式 (語句) は区別が必要になる場合があります。<br /><br /> たとえば、英語の場合、'`multi-million`' で次の phrase_id 値が生成されます。<br /><br /> 場合は 1 `multi`<br />場合は 1 `million`<br />2 `multimillion`|  
 |occurrence|**int**|解析結果の各用語の順序を示します。 たとえば、英語の "`SQL Server query processor`" という語句の場合、occurrence には語句内の用語に対する次のオカレンス値が格納されます。<br /><br /> 場合は 1 `SQL`<br />2 `Server`<br />3 `query`<br />4 `processor`|  
 |special_term|**nvarchar (4000)**|ワード ブレーカーによって発行されている用語の特性に関する情報を格納します。次のいずれかになります。<br /><br /> 完全一致<br /><br /> ノイズ ワード<br /><br /> 文の終了<br /><br /> 段落の末尾<br /><br /> 章の末尾|  
@@ -162,7 +161,7 @@ SELECT * FROM sys.dm_fts_parser (' "The Microsoft business analysis"  OR " MS re
 SELECT * FROM sys.dm_fts_parser(N'français', 1036, 5, 1);  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索とセマンティック検索の動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/full-text-and-semantic-search-dynamic-management-views-functions.md)   
  [フルテキスト検索](../../relational-databases/search/full-text-search.md)   
  [検索用のワード ブレーカーとステミング機能の構成と管理](../../relational-databases/search/configure-and-manage-word-breakers-and-stemmers-for-search.md)   

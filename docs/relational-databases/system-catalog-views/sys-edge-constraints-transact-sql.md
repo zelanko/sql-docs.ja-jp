@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 0f782d2f-7126-46ab-85b7-bcba44862231
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: '>=sql-server-2017||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4068b127bdf4563e18cb459781f8a9a98ced6230
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 5dc2e47c49dc9d639489426fceab0b848c9def3e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47785120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079323"
 ---
 # <a name="sysedgeconstraints-transact-sql"></a>sys.edge_constraints (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx.md](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "47785120"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、[sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)を参照してください。|  
+|**\<Sys.objects から継承された列 >**||このビューが継承する列の一覧は、次を参照してください。 [sys.objects &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-objects-transact-sql.md)します。|  
 |**is_disabled**|**bit**|1 = 制約が無効なエッジ。<br /><br /> 0 = エッジの制約が有効にします。|  
 |**is_not_trusted**|**bit**|1 = エッジの制約がシステムによって検証されていません。<br /><br /> 0 = エッジの制約がシステムによって確認されました。|  
 |**delete_referential_action**|**tinyint**|このエッジの制約で定義された参照操作。<br /><br />0 = no Action です。|  

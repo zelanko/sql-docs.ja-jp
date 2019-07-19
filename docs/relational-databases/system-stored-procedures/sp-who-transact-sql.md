@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 132dfb08-fa79-422e-97d4-b2c4579c6ac5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: dbed86af1415f89a59b7de85061a6db1db324307
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5d758c7ca2d21183b9486030704c31b9d5f621d0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950512"
 ---
 # <a name="spwho-transact-sql"></a>sp_who (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,12 +57,12 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
   
 |[列]|データ型|説明|  
 |------------|---------------|-----------------|  
-|**spid**|**smallint**|セッション id です。|  
+|**spid**|**smallint**|セッション ID。|  
 |**ecid**|**smallint**|特定のセッション ID に関連付けられている、指定されたスレッドの実行コンテキスト ID。<br /><br /> ECID = {0、1、2、3、...*n*} 0 常を表しますメインまたは親スレッド、および {1、2、3、...、*n*}、サブスレッドを表します。|  
-|**status**|**nchar(30)**|プロセスの状態。 可能な値は次のとおりです。<br /><br /> **休止**します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でセッションがリセットされています。<br /><br /> **実行している**します。 セッションには、1 つまたは複数のバッチが実行中です。 複数のアクティブな結果セット (MARS) が有効にすると、セッションは、複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **バック グラウンド**します。 セッションがデッドロック検出などのバック グラウンド タスクを実行中です。<br /><br /> **ロールバック**します。 セッションでトランザクション ロールバックが実行中です。<br /><br /> **保留中**します。 セッションは、ワーカー スレッドが使用可能になるのを待機しています。<br /><br /> **実行可能な**します。 セッションのタスクはクォンタムの取得を待機中にスケジューラの実行可能キューでです。<br /><br /> **spinloop**します。 セッションのタスクはスピンロックの空きを待機しています。<br /><br /> **中断**します。 セッションが完了する I/O などのイベントを待機しています。|  
+|**status**|**nchar(30)**|プロセスの状態。 設定できる値は次のとおりです。<br /><br /> **休止**します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でセッションがリセットされています。<br /><br /> **実行している**します。 セッションには、1 つまたは複数のバッチが実行中です。 複数のアクティブな結果セット (MARS) が有効にすると、セッションは、複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **バック グラウンド**します。 セッションがデッドロック検出などのバック グラウンド タスクを実行中です。<br /><br /> **ロールバック**します。 セッションでトランザクション ロールバックが実行中です。<br /><br /> **保留中**します。 セッションは、ワーカー スレッドが使用可能になるのを待機しています。<br /><br /> **実行可能な**します。 セッションのタスクはクォンタムの取得を待機中にスケジューラの実行可能キューでです。<br /><br /> **spinloop**します。 セッションのタスクはスピンロックの空きを待機しています。<br /><br /> **中断**します。 セッションが完了する I/O などのイベントを待機しています。|  
 |**loginame**|**nchar(128)**|特定のプロセスに関連付けられているログイン名です。|  
-|**hostname**|**nchar(128)**|各プロセスのホストまたはコンピューターの名前。|  
-|**blk**|**char(5)**|ブロック中のプロセスが存在する場合は、そのプロセスのセッション ID。 存在しない場合は、この列は 0 になります。<br /><br /> 指定したセッション ID に関連付けられたトランザクションが、孤立した分散トランザクションによってブロックされると、この列は、ブロックの孤立したトランザクションに対して '-2' を返します。|  
+|**ホスト名**|**nchar(128)**|各プロセスのホストまたはコンピューターの名前。|  
+|**blk**|**char (5)**|ブロック中のプロセスが存在する場合は、そのプロセスのセッション ID。 存在しない場合は、この列は 0 になります。<br /><br /> 指定したセッション ID に関連付けられたトランザクションが、孤立した分散トランザクションによってブロックされると、この列は、ブロックの孤立したトランザクションに対して '-2' を返します。|  
 |**dbname**|**nchar(128)**|プロセスによって使用されるデータベース。|  
 |**cmd**|**nchar(16)**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] コマンド ([!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントでは、内部[!INCLUDE[ssDE](../../includes/ssde-md.md)]プロセスが、)、プロセスを実行します。|  
 |**request_id**|**int**|特定のセッションで実行されている要求の ID。|  
@@ -120,7 +119,7 @@ EXEC sp_who '10' --specifies the process_id;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_lock &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
  [sys.sysprocesses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

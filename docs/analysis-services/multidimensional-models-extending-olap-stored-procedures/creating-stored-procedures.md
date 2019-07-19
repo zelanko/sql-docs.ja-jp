@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 782a5911ee4be6619551d80788a42d10c5b13856
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533951"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209388"
 ---
 # <a name="creating-stored-procedures"></a>ストアド プロシージャの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "52533951"
   
 4.  **アセンブリ名**アセンブリの名前を指定します。  
   
-5.  これが、デバッグ ビルドの場合、ライブラリのデバッグを使用しているストアド プロシージャ、選択、**デバッグ情報を含める**チェック ボックスをオンします。 ストアド プロシージャのデバッグの詳細については、[ストアド プロシージャのデバッグ](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md)を参照してください。  
+5.  これが、デバッグ ビルドの場合、ライブラリのデバッグを使用しているストアド プロシージャ、選択、**デバッグ情報を含める**チェック ボックスをオンします。 ストアド プロシージャのデバッグの詳細については、次を参照してください。[ストアド プロシージャのデバッグ](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md)します。  
   
 6.  クリックすることができます**ok**即座に、またはダイアログ ボックスのツールバーで、アセンブリの登録でコマンドをクリックすることができます、**スクリプト**をクエリ ウィンドウ、ファイル、またはクリップボードへの登録操作をスクリプト化 メニュー。  
   
@@ -65,7 +65,7 @@ ms.locfileid: "52533951"
   
 4.  **アセンブリ名**アセンブリの名前を指定します。  
   
-5.  これが、デバッグ ビルドの場合、ライブラリのデバッグを使用しているストアド プロシージャ、選択、**デバッグ情報を含める**チェック ボックスをオンします。 ストアド プロシージャのデバッグの詳細については、[ストアド プロシージャのデバッグ](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md)を参照してください。  
+5.  これが、デバッグ ビルドの場合、ライブラリのデバッグを使用しているストアド プロシージャ、選択、**デバッグ情報を含める**チェック ボックスをオンします。 ストアド プロシージャのデバッグの詳細については、次を参照してください。[ストアド プロシージャのデバッグ](../../analysis-services/multidimensional-models-extending-olap-stored-procedures/debugging-stored-procedures.md)します。  
   
 6.  クリックすることができます**ok**即座に、またはダイアログ ボックスのツールバーで、アセンブリの登録でコマンドをクリックすることができます、**スクリプト**をクエリ ウィンドウ、ファイル、またはクリップボードへの登録操作をスクリプト化 メニュー。  
   

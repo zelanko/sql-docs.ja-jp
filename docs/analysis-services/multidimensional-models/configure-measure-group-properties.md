@@ -1,5 +1,5 @@
 ---
-title: メジャー グループのプロパティを構成する |Microsoft ドキュメント
+title: メジャー グループのプロパティの構成 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: eed879fa9bdeab12398f53d424bb5eaf8aea5bc7
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023900"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209120"
 ---
 # <a name="configure-measure-group-properties"></a>メジャー グループのプロパティの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "34023900"
 |--------------|----------------|  
 |**AggregationPrefix**|ROLAP ストレージに適用されます。 このメジャー グループに関連付けられているパーティションの集計の格納に使用する SQL Server のインデックス付きビューに、共通のプレフィックスを割り当てます。|  
 |**DataAggregation**|このプロパティは、将来使用するために予約済みであり、現在のところ何も効果がありません。 そのため、この設定を変更しないことをお勧めします。|  
-|**Description**|このプロパティを使用すると、メジャー グループを文書化することができます。|  
+|**[説明]**|このプロパティを使用すると、メジャー グループを文書化することができます。|  
 |**ErrorConfiguration**|重複するキー、不明なキー、NULL キー、エラーの制限、エラー検出時のアクション、およびエラー ログ ファイルを処理するための、構成可能なエラー処理設定です。 「[キューブ、パーティション、およびディメンションに関する処理のエラー構成 &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/error-configuration-for-cube-partition-and-dimension-processing.md)」をご覧ください。|  
 |**EstimatedRows**|ファクト テーブルの推定行数を指定します。|  
 |**EstimatedSize**|メジャー グループの推定サイズを指定します (バイト単位)。|  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2d15054f3d6ebbcd25627df42aab5b9248db1f6
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53207501"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163903"
 ---
 # <a name="power-pivot-configuration-tools"></a>Power Pivot Configuration Tools
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "53207501"
   
 |名前|サポートされている SharePoint のバージョン|詳細な構成|  
 |----------|-------------------------------------|----------------------------|  
-|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 の構成|SharePoint 2013|[PowerPivot for SharePoint 2013 の構成または修復 &#40;PowerPivot 構成ツール&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
+|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 2013 構成|SharePoint 2013|[PowerPivot for SharePoint 2013 の構成または修復 &#40;PowerPivot 構成ツール&#41;](../../analysis-services/power-pivot-sharepoint/configure-or-repair-power-pivot-for-sharepoint-2013.md)|  
 |[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール|SharePoint 2010 と SharePoint 2010 の組み合わせ|[Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)|  
   
 ###  <a name="bkmk_sum_differences_betweentools"></a> 2 つの構成ツールの相違点  
@@ -65,9 +65,9 @@ ms.locfileid: "53207501"
 |--------------------------------------------------------------|-----------------------------------------------|  
 |メイン ページには、 **[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー**という新しいオプションがあります。 このオプションでは、SharePoint ファームの外部で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行できる新しいアーキテクチャがサポートされます。 SharePoint モードで実行されている 1 つ以上の [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーを使用するように Excel Services を構成します。<br /><br /> ![PowerPivot サーバー構成ツールで新しい](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-mainpage.gif "構成ツールで新しい PowerPivot サーバー")||  
 ||2010 ツールには、[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] のローカル インスタンスを構成する **[ローカル サーバーへの SQL Server Analysis Services ([!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) の登録]** ページがあります。 このページは 2013 ツールにはありません。 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のローカル インスタンスが存在しないためです。<br /><br /> ![古い構成ツールでサービス アカウントとして](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-register-as-localserver.gif "古い構成ツールでサービス アカウントとして")|  
-||**[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの作成]** ページには、**[ブックをアップグレードして、データ更新を有効にします]** という追加のオプションがあります。 このオプションは、2013 ツールでは使用できません。<br /><br /> ![古い構成ツールでブックをアップグレードして](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "古い構成ツールでブックのアップグレード")|  
-|2013 ツールには、**[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの構成]** という新しいページがあります。 このページでは、SharePoint ファームの外部で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行できる新しいアーキテクチャがサポートされます。 既定では、メイン ページの **[Excel Services 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー]** テキスト ボックスに入力したサーバー名も **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの構成]** に表示されます。<br /><br /> ![PowerPivot サーバーの新しい構成ツールを登録](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "登録の PowerPivot サーバーの新しい構成ツール")||  
-|2013 ツールには、**[Excel Services Usage Tracker として [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] アドインを登録します]** という新しいページがあります。 SharePoint 2010 の Excel Services では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]の使用状況データを追跡しません。||  
+||**[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サービス アプリケーションの作成]** ページには、 **[ブックをアップグレードして、データ更新を有効にします]** という追加のオプションがあります。 このオプションは、2013 ツールでは使用できません。<br /><br /> ![古い構成ツールでブックをアップグレードして](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-old-uprgadeworkbooks.gif "古い構成ツールでブックのアップグレード")|  
+|2013 ツールには、 **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの構成]** という新しいページがあります。 このページでは、SharePoint ファームの外部で [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を実行できる新しいアーキテクチャがサポートされます。 既定では、メイン ページの **[Excel Services 用 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバー]** テキスト ボックスに入力したサーバー名も **[[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] サーバーの構成]** に表示されます。<br /><br /> ![PowerPivot サーバーの新しい構成ツールを登録](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-configtool-differences-new-powerpivot-servers.gif "登録の PowerPivot サーバーの新しい構成ツール")||  
+|2013 ツールには、 **[Excel Services Usage Tracker として [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] アドインを登録します]** という新しいページがあります。 SharePoint 2010 の Excel Services では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]の使用状況データを追跡しません。||  
 ||2010 ツールには、SharePoint 2010 の Excel Services で **モデルを読み込むことができるように MSOLAP を登録する** [MSOLAP.5 を信頼できるプロバイダーとして追加] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ページがあります。 このページは、2013 ツールにはありません。 SharePoint 2013 の Excel Services では、モデルの読み込みに MSOLAP プロバイダーを使用しません。|  
   
 ##  <a name="bkmk_overview"></a> Power Pivot 構成ツールの使用の概要  
@@ -91,7 +91,7 @@ ms.locfileid: "53207501"
   
 ##  <a name="bmkm_start_tool"></a> いずれかの PowerPivot 構成ツールを起動する  
   
-1.   **[スタート]** 画面で、「 **powerpivot**」と入力します。  
+1.  **[スタート]** 画面で、「 **powerpivot**」と入力します。  
   
      **[スタート]** 画面で「 **powerpivot** 」と入力するか、 **[スタート]** メニューの **[すべてのプログラム]** をクリックし、[ [!INCLUDE[ssCurrentUI](../../includes/sscurrentui-md.md)]] をクリックします。次に、 **[構成ツール]** をクリックし、次のいずれかをクリックします。  
   

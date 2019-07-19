@@ -1,5 +1,5 @@
 ---
-title: '付録 A: プロバイダー |Microsoft Docs'
+title: 付録 A:プロバイダー |Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -16,15 +16,14 @@ helpviewer_keywords:
 ms.assetid: e2581b47-b11e-4e1e-b96c-d39c77c5b48a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f31e5522fdac506e31ffe0bbaa5ad76e3fae87b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4ffecfc87ec23fc4d62174dae31220511c9f72d4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926977"
 ---
-# <a name="appendix-a-data-and-service-providers"></a>付録 A: データとサービス プロバイダー
+# <a name="appendix-a-data-and-service-providers"></a>付録 A:データとサービス プロバイダー
 このセクションでは、次の 3 つの種類のプロバイダーを取り上げます。 データ プロバイダー、サービス プロバイダー、およびサービスのコンポーネント。 プロバイダーは、2 つのカテゴリに分類されます。 データとサービスを提供するものを提供するものです。 A*データ プロバイダー*が独自のデータを所有し、アプリケーションに表形式で公開します。 A*サービス プロバイダー*作成や、ADO アプリケーションの機能を強化して、データの利用によって、サービスをカプセル化します。 サービス プロバイダーがさらとして定義しても、*サービス コンポーネント*、他のサービス プロバイダーまたはコンポーネントと連携する必要があります。
 
 ## <a name="data-providers"></a>データ プロバイダー

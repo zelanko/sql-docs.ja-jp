@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: c0d4b47b-a855-451e-90e5-5fb2d836ebfa
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b895692bf9ce65d9e063fb1d484cf84734897c86
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 0bc8ea22699762927a026ae4cc811500c193555c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58494284"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072753"
 ---
 # <a name="spaddextendedproc-transact-sql"></a>sp_addextendedproc (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -44,9 +43,9 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @functname = ] 'procedure'` ダイナミック リンク ライブラリ (DLL) 内で呼び出す関数の名前です。 *プロシージャ*は**nvarchar (517)**、既定値はありません。 *プロシージャ*形式で所有者名を含めることができます必要に応じて*owner.function*します。  
+`[ @functname = ] 'procedure'` ダイナミック リンク ライブラリ (DLL) 内で呼び出す関数の名前です。 *プロシージャ*は**nvarchar (517)** 、既定値はありません。 *プロシージャ*形式で所有者名を含めることができます必要に応じて*owner.function*します。  
   
-`[ @dllname = ] 'dll'` 関数を含む DLL の名前です。 *dll*は**varchar (255)**、既定値はありません。 DLL の完全なパスを指定することをお勧めします。  
+`[ @dllname = ] 'dll'` 関数を含む DLL の名前です。 *dll*は**varchar (255)** 、既定値はありません。 DLL の完全なパスを指定することをお勧めします。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -55,7 +54,7 @@ sp_addextendedproc [ @functname = ] 'procedure' ,
  なし  
   
 ## <a name="remarks"></a>コメント  
- 拡張ストアド プロシージャが作成された後に追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して**sp_addextendedproc**します。 詳細については、[拡張ストアド プロシージャを SQL Server に追加する](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)を参照してください。  
+ 拡張ストアド プロシージャが作成された後に追加する必要があります[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して**sp_addextendedproc**します。 詳細については、次を参照してください。[拡張ストアド プロシージャを SQL Server に追加する](../../relational-databases/extended-stored-procedures-programming/adding-an-extended-stored-procedure-to-sql-server.md)します。  
   
  のみこの手順を実行することができます、**マスター**データベース。 以外のデータベースから拡張ストアド プロシージャを実行する**マスター**、拡張ストアド プロシージャの名前を修飾**マスター**します。  
   

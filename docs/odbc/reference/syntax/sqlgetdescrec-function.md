@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 325e0907-8e87-44e8-a111-f39e636a9cbc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c737a9dfd6e7a33b5e160b3d952fac0b354148b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c27b16d8b72e289f66a051cb2710004f72309599
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68103795"
 ---
 # <a name="sqlgetdescrec-function"></a>SQLGetDescRec 関数
 **準拠**  
  バージョンが導入されました。ODBC 3.0 規格に準拠します。ISO 92  
   
- **まとめ**  
+ **概要**  
  **SQLGetDescRec**現在の設定または記述子レコードの複数のフィールドの値を返します。 返されるフィールドは、名前、データ型、および列またはパラメーターのデータの格納について説明します。  
   
 ## <a name="syntax"></a>構文  

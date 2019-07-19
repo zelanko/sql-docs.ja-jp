@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0f461a00c1b9ecca1569b2b4f6257966c075491c
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: f294f5f12e3efd734d1e54ace3041702c39d390a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579692"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961962"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>クイック スタート: SQL Server に R が存在することを確認する 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -76,7 +75,7 @@ SQL Server インスタンスと R のバージョンがインストールされ
 
 このクエリからすべてのエラーが発生した場合のインストール問題を排除します。 インストール後の構成は、外部コード ライブラリの使用を有効にする必要があります。 参照してください[SQL Server 2017 の Machine Learning サービスをインストール](../install/sql-machine-learning-services-windows-install.md)または[SQL Server 2016 R Services のインストール](../install/sql-r-services-windows-install.md)します。 同様に、スタート パッド サービスが実行されていることを確認します。
 
-環境によっては、SQL Server に接続するための R ワーカー アカウントの有効化、追加のネットワーク ライブラリのインストール、リモートでのコード実行の有効化、すべてを構成した後のインスタンスの再起動が必要な場合があります。 詳細については、[R Services のインストールとアップグレードに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)を参照してください。
+環境によっては、SQL Server に接続するための R ワーカー アカウントの有効化、追加のネットワーク ライブラリのインストール、リモートでのコード実行の有効化、すべてを構成した後のインスタンスの再起動が必要な場合があります。 詳細については、次を参照してください。 [R Services のインストールとアップグレードに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
 
 ## <a name="list-r-packages"></a>リストの R パッケージ
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ceb3b2bc-0cc4-48d8-9bdc-6a809556e35f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7ba29ca0d4522367e22273b4f07720f4e563ef6f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 905ec9c26fe84ceaf1230665c3ff13e2e7ffe9f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58526584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108032"
 ---
 # <a name="spmsxenlist-transact-sql"></a>sp_msx_enlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_msx_enlist [@msx_server_name =] 'msx_server'
 ## <a name="arguments"></a>引数  
 `[ @msx_server_name = ] 'msx_server'` マルチ サーバー管理 (マスター) サーバーの名前。 *msx_server*は**sysname**、既定値はありません。  
   
-`[ @location = ] 'location'` 追加する対象サーバーの場所。 *場所*は**nvarchar (100)**、既定値は NULL です。  
+`[ @location = ] 'location'` 追加する対象サーバーの場所。 *場所*は**nvarchar (100)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

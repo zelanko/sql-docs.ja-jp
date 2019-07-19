@@ -8,16 +8,16 @@ ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 84cebceddc18ee3d288226ebd00bc86ea25ac926
-ms.sourcegitcommit: eb1f3a2f5bc296f74545f17d20c6075003aa4c42
-ms.translationtype: MTE75
+ms.openlocfilehash: 0d7683ed4f45a2d2e28843b24d9abd2592b08fae
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/20/2018
-ms.locfileid: "52190992"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67731597"
 ---
 # <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL Server、Azure SQL Database、および Azure SQL Data Warehouse の SQL ツールとユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,6 @@ ms.locfileid: "52190992"
 (クエリ、モニターなど) を管理するツールを必要とするデータベース。 クラウド、Windows、または上で、データベースを実行できる中に[Linux](../linux/sql-server-linux-overview.md)ツール、データベースと同じプラットフォーム上で実行する必要はありません。 
 
 ある多くのデータベース ツール、使用可能なので、この記事では、SQL データベースを操作するための説明と使用可能なツールの一部へのポインターを提供します。 表示、かどうかどのツールを決定する必要があります。[どのツールを使用する必要がありますか?](#which-tool-should-i-choose)します。
-
 
 ## <a name="gui-tools-to-manage-databases"></a>データベースを管理する GUI ツール  
 
@@ -45,13 +44,13 @@ ms.locfileid: "52190992"
 
 | ツール | [説明] | 上で実行します。 |
 |:--|:--|:--|
-|[**mssql-cli (プレビュー)**](mssql-cli.md)|**mssql cli**は SQL Server を照会するための対話型コマンド ライン ツールです。 | Windows、macOS、および Linux|
+|[**mssql-cli (プレビュー)** ](mssql-cli.md)|**mssql cli**は SQL Server を照会するための対話型コマンド ライン ツールです。 | Windows、macOS、および Linux|
 | [**sqlpackage**](sqlpackage.md) |**sqlpackage**はいくつかのデータベース開発タスクを自動化するコマンド ライン ユーティリティです。 macOS および Linux のバージョンの sqlpackage は現在プレビュー段階です。 | Windows、macOS、および Linux|
 |[**SQL Server PowerShell**](../powershell/sql-server-powershell.md)| **SQL Server PowerShell** SQL を使用するためのコマンドレットを提供します。| Windows、macOS、および Linux|
 | [**sqlcmd**](sqlcmd-utility.md) |**sqlcmd**ユーティリティを使用して、TRANSACT-SQL ステートメント、システム プロシージャ、およびコマンド プロンプトのスクリプト ファイルを入力できます。 | Windows、macOS、および Linux|
 |[**bcp**](https://docs.microsoft.com/sql/tools/bcp-utility?view=sql-server-2014)|**b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) では、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。|Windows、macOS、および Linux|
-|[**mssql scripter (プレビュー)**](https://github.com/Microsoft/mssql-scripter)|**mssql scripter**は SQL Server データベースのスクリプトを実行して、マルチプラット フォーム コマンドライン エクスペリエンス|Windows、macOS、および Linux|
-|[**mssql conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf** Linux で実行されている SQL Server を構成します。|Linux|
+|[**mssql scripter (プレビュー)** ](https://github.com/Microsoft/mssql-scripter)|**mssql scripter**は SQL Server データベースのスクリプトを実行して、マルチプラット フォーム コマンドライン エクスペリエンス|Windows、macOS、および Linux|
+|[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql conf** Linux で実行されている SQL Server を構成します。|Linux|
 
 
 

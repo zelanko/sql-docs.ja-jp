@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: df58b5c7f6da05700f00b4ec5fd46b81926dd3bb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ad0b92a970c3618584365d9ad6e99420daef05d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037013"
 ---
 # <a name="set-operators"></a>セット演算子
 
@@ -27,7 +26,7 @@ ms.locfileid: "63150167"
 |--------------|-----------------|  
 |[- (を除く)](../mdx/except-mdx-operator.md)|重複するメンバーを削除する 2 つのセット間の差を返します。<br /><br /> この演算子は機能的に等価、[を除く](../mdx/except-mdx-function.md)関数。|  
 |[* (クロス積)](../mdx/crossjoin-mdx-operator-reference.md)|2 つのセットのクロス積を返します。<br /><br /> この演算子は機能的に等価、 [Crossjoin](../mdx/crossjoin-mdx.md)関数。|  
-|[:(範囲)](../mdx/range-mdx.md)|エンドポイントとして指定した 2 つのメンバーと、すべてのメンバー、セットのメンバーとして含まれている 2 つの指定したメンバーの間の自然順序のセットを返します。|  
+|[ :(範囲)](../mdx/range-mdx.md)|エンドポイントとして指定した 2 つのメンバーと、すべてのメンバー、セットのメンバーとして含まれている 2 つの指定したメンバーの間の自然順序のセットを返します。|  
 |[+ (和集合)](../mdx/union-mdx-operator-reference.md)|重複するメンバーを除く、2 つのセットの和集合を返します。<br /><br /> この演算子は機能的に等価、[共用体&#40;MDX&#41; ](../mdx/union-mdx.md)関数。|  
   
 ## <a name="see-also"></a>関連項目  

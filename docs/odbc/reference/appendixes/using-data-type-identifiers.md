@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 467e0c0c-a818-4737-8a24-3d8e15c7e162
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f14294b76fc7977de256697c730f7dca31e7a469
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2b5e9fea64986bf595676540d74bb87a6e62521c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62735132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070014"
 ---
 # <a name="using-data-type-identifiers"></a>データ型識別子の使用
 アプリケーションでは、2 つの方法でデータ型識別子を使用します。 ドライバーにバッファーを記述すると、結果を使用してデータを格納するバッファーの C の種類を判別できるように、ドライバーからセットに関するメタデータを取得します。 アプリケーションでは、これらのタスクを実行するには、次の関数を呼び出します。  

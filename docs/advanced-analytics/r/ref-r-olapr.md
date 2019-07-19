@@ -7,13 +7,12 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: e5419900b8ba573ec0658a5022be68105b0b8607
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 431fddf870b5755691cad92e576c95d0d3a83890
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62641848"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962494"
 ---
 # <a name="olapr-r-library-in-sql-server"></a>olapR (SQL Server での R ライブラリ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -40,10 +39,10 @@ library(olapR)
 
 このパッケージは、次の製品と Azure の仮想マシン イメージがいくつか提供されます。 パッケージの場所でもそれに応じて異なります。
 
-製品 | 場所 |
+製品 | Location |
 --------|----------|
 (R 統合) SQL Server 2017 Machine Learning サービス | C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library | 
-SQL Server 2016 R Services | C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\R_SERVICES\library
+SQL Server 2016 R Services | C:\Program files \microsoft SQL Server\MSSQL13 します。MSSQLSERVER\R_SERVICES\library
 Microsoft Machine Learning Server (R Server) | C:\Program Files\Microsoft\R_SERVER\library |
 Microsoft R Client | C:\Program Files\Microsoft\R Client\R_SERVER\library |
 (Azure) では、データ サイエンス仮想マシン | C:\Program Files\Microsoft\R Client\R_SERVER\library |

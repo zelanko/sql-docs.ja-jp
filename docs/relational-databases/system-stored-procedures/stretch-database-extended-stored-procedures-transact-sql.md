@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: bda29952-4b8b-4295-ab78-f24dcb0b03c6
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 5acbd4a14de04df412d71fb4ec8fd7d40e8fb7a8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 675695ed3eef8fd5ddd29fa48aa64e30f8fd822c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65979981"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106643"
 ---
 # <a name="stretch-database-extended-stored-procedures-transact-sql"></a>Stretch Database の拡張ストアド プロシージャ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "65979981"
  
  [sys.sp_rda_test_connection](../../relational-databases/system-stored-procedures/sys-sp-rda-test-connection-transact-sql.md) SQL Server から、リモート Azure サーバーへの接続をテストし、データの移行を妨げる可能性のある問題が報告されました。
  
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

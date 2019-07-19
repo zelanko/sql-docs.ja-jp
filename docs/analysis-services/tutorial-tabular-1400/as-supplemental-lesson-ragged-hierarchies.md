@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 39f8bcc63b7e5344f70a6d4a3b6c44ae3e69e108
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 420b1ca4e6cdd72d86c715301957be1f14074fee
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685399"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207143"
 ---
 # <a name="supplemental-lesson---ragged-hierarchies"></a>補足のレッスン: 不規則階層
 
@@ -29,7 +29,7 @@ ms.locfileid: "57685399"
   
 このレッスンを完了するまでに時間を推定するには。**20 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 この補足のレッスンの記事では、表形式モデルのチュートリアルの一部です。 この補足のレッスンの実習を行う前に作成した前のレッスンをすべて完了した Adventure Works Internet Sales サンプル モデル プロジェクトがあるか。 
 
 を、チュートリアルの一環として AW Internet Sales プロジェクトを作成した場合、モデルにはまだが含まれていないデータや不規則な階層。 この補足のレッスンを完了するには、まず、いくつかのテーブルを追加することで、問題の作成、リレーションシップ、計算列、メジャー、および新しい組織階層を作成する必要があります。 その一部は、約 15 分かかります。 それから、ほんの数分でそれを解決します。  
@@ -121,7 +121,7 @@ ms.locfileid: "57685399"
 
     大幅に改善を検索するようになりました。
 
-## <a name="see-also"></a>参照   
+## <a name="see-also"></a>関連項目   
 [レッスン 9:階層を作成します。](../tutorial-tabular-1400/as-lesson-9-create-hierarchies.md)  
 [補足のレッスン - 動的なセキュリティ](../tutorial-tabular-1400/as-supplemental-lesson-dynamic-security.md)  
 [補足のレッスン - 詳細行](../tutorial-tabular-1400/as-supplemental-lesson-detail-rows.md)  

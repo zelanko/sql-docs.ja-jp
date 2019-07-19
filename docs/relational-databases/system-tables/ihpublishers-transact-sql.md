@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 77007246-f10b-4b87-8edf-7afc3c2096af
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6f44035df278b3e187654eb59d525436915fa31e
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 92f0c507b15e5a582fbcc1a12b1bccd77d08f7de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52802434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990171"
 ---
-# <a name="ihpublishers-transact-sql"></a>IHpublishers (Transact-SQL)
+# <a name="ihpublishers-transact-sql"></a>IHpublishers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **IHpublishers**システム テーブルには各 SQL Server 以外のパブリッシャー、現在のディストリビューターを使用して 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに保存されます。  
+  **IHpublishers**システム テーブルには各 SQL Server 以外のパブリッシャー、現在のディストリビューターを使用して 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
   
 ## <a name="definition"></a>定義  
   
@@ -36,11 +35,11 @@ ms.locfileid: "52802434"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャーを識別します。|  
 |**仕入先**|**sysname**|SQL Server 以外のデータベースのベンダーの名前。|  
-|**publisher_guid**|**uniqueidentifier**|SQL Server 以外のパブリッシャーを識別する GUID です。|  
-|**flush_request_time**|**datetime**|メタデータ キャッシュを更新するためにログ リーダー エージェントを必要としたアーティクル メタデータに対して最後の変更が発生した日付と時刻を示します。|  
+|**publisher_guid**|**uniqueidentifier**|-SQL Server 以外のパブリッシャーを識別する GUID。|  
+|**flush_request_time**|**datetime**|ログ リーダー エージェントは、メタデータ キャッシュを更新するために必要な記事のメタデータには、最後の変更が発生したときの日時を示します。|  
 |**version**|**sysname**|バージョンの SQL Server 以外のパブリッシャーの特性を設定するテキスト文字列。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

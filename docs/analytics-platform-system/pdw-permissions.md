@@ -2,19 +2,18 @@
 title: Parallel Data Warehouse でのアクセス許可 |Microsoft Docs
 description: この記事では、要件および Parallel Data Warehouse のデータベース アクセス許可を管理するためのオプションについて説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 1ac058e42b8bad4f499210835a1f85c3cc7a08a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2284c6b39693363de262e4ea307b0de45a0b6f06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639521"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960398"
 ---
 # <a name="managing-permissions-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのアクセス許可の管理
 この記事では、要件および SQL Server PDW のデータベース アクセス許可を管理するためのオプションについて説明します。  

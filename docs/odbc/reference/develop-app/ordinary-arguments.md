@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a18cdae1-6b85-41cb-875c-b5a01ec90aeb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 31d83b00fd70cd54587a19ebfea7310154167493
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 997604b4376656d36d2bc4bc31f1959aa6c8a229
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62999280"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987820"
 ---
 # <a name="ordinary-arguments"></a>通常の引数
 カタログ関数の文字列引数に通常の引数がある場合は、リテラル文字列として扱われます。 通常の引数は、文字列の検索パターンも値の一覧を受け入れます。 通常の引数の大文字と小文字が重要でと、文字列内の引用符文字が文字どおり表示。 SQL_ATTR_METADATA_ID ステートメントの属性が SQL_FALSE; に設定されている場合、これらの引数は通常の引数として扱われますとして扱われます識別子引数代わりにこの属性が SQL_TRUE に設定されている場合。  

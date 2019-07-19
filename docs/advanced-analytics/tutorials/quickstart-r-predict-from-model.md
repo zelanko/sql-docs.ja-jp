@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7175b99eb20710f5dd08689bd055d3a4ec93ae92
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: 00fdcb0c8c9c535645268a0212e52eef6f7c88f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961996"
 ---
-# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>クイック スタート:SQL Server で R を使用して、モデルから予測します。
+# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>クイック スタート: SQL Server で R を使用して、モデルから予測します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このクイック スタートでは、新しいデータに対して予測をスコア付けの前のクイック スタートで作成したモデルを使用します。 実行する_スコアリング_新しいデータを使用して、トレーニング済みモデルのいずれかをテーブルから取得し、予測の基になるデータの新しいセットを呼び出しています。 スコア付けは、データ サイエンスで使用されることの予測、確率、またはトレーニング済みのモデルに渡す新しいデータに基づくその他の値を生成することを意味する用語です。

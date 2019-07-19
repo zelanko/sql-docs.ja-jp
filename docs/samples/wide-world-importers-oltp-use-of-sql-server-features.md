@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 06f89721-8478-4abc-8ada-e9c73b08bf51
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 914ec6be6d73bf6411a700ab6fc9586743c40527
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: a2dfe7b9efa78d03a2233eedaa040e47d6f2b25c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305350"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68067665"
 ---
 # <a name="use-of-sql-server-features-and-capabilities"></a>SQL Server の機能と機能の使用
 
@@ -43,11 +42,11 @@ SQL Server 2016 で導入された最新の機能を含め、SQL Server の主�
 |フルテキスト インデックス|フルテキスト インデックスには、ユーザー、顧客、および StockItems 検索が向上します。 フルテキスト インデックスが、SQL Server インスタンスにインストールされている場合にのみ、インデックスがクエリに適用されます。 非永続的な計算列は、StockItems テーブルでインデックスがフルテキストをされているデータの作成に使用されます。<br/><br/>`CONCAT` SearchData は、フルテキスト インデックスを作成する、フィールドの連結に使用されます。<br/>サンプルでは、フルテキスト インデックスの使用を有効にするには、データベースで、次のステートメントを実行します。<br/><br/>`EXECUTE [Application].[Configuration_ConfigureFullTextIndexing]`<br/><br/>プロシージャを作成します既定のフルテキスト カタログが既に存在していずれかの場合は、フルテキストのバージョンをこれらのビューの検索ビューを置き換えます)。<br/><br/>SQL Server でフルテキスト インデックスを使用するには、インストール中に、フルテキストのオプションを選択が必要だことに注意してください。 Azure SQL Database は必要ありませんし、特定の構成、フルテキスト インデックスを有効にします。|
 |保存される計算列のインデックスを作成します。|SupplierTransactions および CustomerTransactions で使用される、保存される計算列のインデックスを作成します。|
 |CHECK 制約|比較的複雑な check 制約が`Sales.SpecialDeals`します。 これにより、1 つ、DiscountAmount、DiscountPercentage の 1 つだけあり、UnitPrice が構成されます。|
-|Unique 制約|多対多の構築 (と一意制約) が設定されて`Warehouse.StockItemStockGroups`します。|
+|UNIQUE 制約|多対多の構築 (と一意制約) が設定されて`Warehouse.StockItemStockGroups`します。|
 |テーブルのパーティション分割|(データベースの完全バージョン)テーブル`Sales.CustomerTransactions`と`Purchasing.SupplierTransactions`パーティション関数を使用して年でパーティション分割両方`PF_TransactionDate`およびパーティション構成`PS_TransactionDate`します。 パーティション分割は、大きなテーブルの管理性を向上させるために使用されます。|
 |リストの処理|例のテーブル型`Website.OrderIDList`提供されます。 手順の例で使用されて`Website.InvoiceCustomerOrders`します。 手順が、アプリケーションからのラウンド トリップを最小限に抑える、1 つの注文だけではなく、注文の一覧を処理する機能について説明する共通テーブル式 (Cte)、TRY/CATCH、JSON_MODIFY、XACT_ABORT、NOCOUNT、THROW と XACT_STATE を使用しますデータベース エンジン。|
 |GZip 圧縮|`Warehouse.VehicleTemperature`ビュー、そのテーブルは、センサー データを保持します。 このデータが数か月以内の場合は、領域を節約するために圧縮します。 COMPRESS 関数は、GZip 圧縮を使用します。<br/><br/>ビュー `Website.VehicleTemperatures` DECOMPRESS 関数を使って、以前に圧縮されたデータを取得するときにします。|
-|クエリ ストア|クエリ ストアは、データベースで有効にします。 いくつかのクエリを実行した後、次の手順に従います。<br/><br/>1.Management Studio でデータベースを開きます。<br/>2.クエリ ストアは、データベースのノードを開きます。<br/>3.レポートを開く*トップ リソース コンシューマー クエリ*します。 クエリの実行と実行したクエリのプランを参照してください。|
+|クエリ ストア|クエリ ストアは、データベースで有効にします。 いくつかのクエリを実行した後、次の手順に従います。<br/><br/>1. Management Studio でデータベースを開きます。<br/>2. クエリ ストアは、データベースのノードを開きます。<br/>3.レポートを開く*トップ リソース コンシューマー クエリ*します。 クエリの実行と実行したクエリのプランを参照してください。|
 |STRING_SPLIT|列`DeliveryInstructions`表内の`Sales.Invoices`STRING_SPLIT を示すために使用できるコンマ区切りの値を持ちます。|
 |監査|データベースで、次のステートメントを実行して、このサンプル データベースの SQL Server Audit を有効にできます。<br/><br/>`EXECUTE [Application].[Configuration_ApplyAuditing]`<br/><br/>を通じて、Azure SQL database の監査が有効になっている、 [Azure portal](https://portal.azure.com/)します。<br/><br/>ログインに関連するセキュリティ操作では、ロールとアクセス許可は、(standard edition のシステム) を含む監査が有効になっているすべてのシステムで記録されます。 これはすべてのシステムで使用可能な追加の権限は必要ありませんので、アプリケーション ログに監査が送られます。 警告は、セキュリティを強化する必要がありますリダイレクトされる必要がセキュリティ ログに、またはセキュリティで保護されたフォルダー内のファイルにいるです。 必要な追加の構成を記述するリンクが提供されます。<br/><br/>評価/開発者/エンタープライズ エディションのシステムでは、すべての財務トランザクション データへのアクセスが監査されます。|
 | &nbsp; | &nbsp; |

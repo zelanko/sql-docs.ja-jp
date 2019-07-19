@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 285cb1ea-f461-4596-97f2-fc57af05dede
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b2d7e879c35e7cbf2f2b261d94eff22936f7880b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e38f2f513b7da2c9342470ba75e2ee11b3d7e52a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63238094"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053905"
 ---
 # <a name="sqldriverconnect-excel-driver"></a>SQLDriverConnect (Excel ドライバー)
 > [!NOTE]  
@@ -36,6 +35,6 @@ ms.locfileid: "63238094"
   
 |Driver|必要なキーワード|使用例|  
 |------------|-----------------------|--------------|  
-|3.0 または 4.0、Microsoft Excel|ドライバー、DriverID|ドライバー {0} Microsoft Excel ドライバー (*.xls)} を = です。DBQ c:\temp; を =DriverID 278 を =|  
+|3\.0 または 4.0、Microsoft Excel|ドライバー、DriverID|ドライバー {0} Microsoft Excel ドライバー (*.xls)} を = です。DBQ c:\temp; を =DriverID 278 を =|  
 |Microsoft Excel 5.0/7.0|ドライバー、DriverID、DBQ|ドライバー {0} Microsoft Excel ドライバー (*.xls)} を = です。DBQ=c:\temp\sample.xls;DriverID 22 を =|  
 |Microsoft Excel 97 以降|ドライバー、DriverID、DBQ|ドライバー {0} Microsoft Excel ドライバー (*.xls)} を = です。DBQ=c:\temp\sample.xls;DriverID 790 を =|

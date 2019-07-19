@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4975c455b942f053287b344a956a0083c8ca4e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41bd34fbd3d296f4aa38877e6d26e25eba9ae726
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187506"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138690"
 ---
 # <a name="mdx-scripting---if"></a>MDX スクリプティング - IF
 
@@ -32,7 +31,7 @@ IF expression THEN assignment END IF
  *式 (expression)*  
  true または false のブール値に評価される多次元式 (MDX) 式です。  
   
- *assignment*  
+ *割り当て*  
  サブキューブまたは計算されるプロパティに値を割り当てる MDX 式です。  
   
 ## <a name="remarks"></a>コメント  
@@ -47,7 +46,7 @@ IF expression THEN assignment END IF
   
  `END SCOPE`;  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

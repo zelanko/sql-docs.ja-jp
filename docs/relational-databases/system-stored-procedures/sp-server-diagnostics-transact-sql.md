@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 62658017-d089-459c-9492-c51e28f60efe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fb0923c57006041c8d01fd0beecbc7cef08c1135
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 30ea7fba212cc99b8d6d7e58397d29731048c6f4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056299"
 ---
 # <a name="spserverdiagnostics-transact-sql"></a>sp_server_diagnostics (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -78,7 +77,7 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 -   **イベント**:エラーとリング バッファーの例外、メモリ、スケジューラ モニター、バッファー プール、スピンロック、外のメモリ ブローカーに関するリング バッファー イベントに関する詳細情報を含む、サーバーによって記録された対象のイベントのデータと、ストアド プロシージャからのサーフェスを収集しますセキュリティ、および接続します。 イベントは、状態として 0 を常に表示されます。  
   
--   **\<可用性グループの名前 >**:指定された可用性グループのデータを収集 (場合 component_type ="常に : AvailabilityGroup")。  
+-   **\<可用性グループの名前 >** :指定された可用性グループのデータを収集 (場合 component_type ="常に : AvailabilityGroup")。  
   
 ## <a name="remarks"></a>コメント  
 障害からは、分析観点、システム、リソース、および query_processing のコンポーネントを利用してエラーの検出中に、io_subsystem および events コンポーネントは診断目的でのみ利用されます。  
@@ -87,11 +86,11 @@ sp_server_diagnostics [@repeat_interval =] 'repeat_interval_in_seconds'
   
 |コンポーネント|(1) のクリーンアップします。|警告 (2)|エラー (3)|不明 (0)|  
 |----------------|-----------------|-------------------|-----------------|--------------------|  
-|システム|x|x|x||  
-|resource|x|x|x||  
-|query_processing|x|x|x||  
-|io_subsystem|x|x|||  
-|イベント||||x|  
+|システム|○|○|○||  
+|resource|○|○|○||  
+|query_processing|○|○|○||  
+|io_subsystem|○|○|||  
+|イベント||||○|  
   
 各行の (x) は、そのコンポーネントに対して有効な正常性状態を表します。 たとえば、io_subsystem はクリーンまたは警告として表示をされます。 エラー状態は表示されません。  
  
@@ -241,7 +240,7 @@ where component_name like 'events'
 go  
 ``` 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フェールオーバー クラスター インスタンスのフェールオーバー ポリシー](../../sql-server/failover-clusters/windows/failover-policy-for-failover-cluster-instances.md)  
   
   

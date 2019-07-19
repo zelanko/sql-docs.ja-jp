@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: jovanpop-msft
 ms.author: jovanpop
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7382e4d1b9e9d968d7ad87af9830691dd931d657
-ms.sourcegitcommit: 170c275ece5969ff0c8c413987c4f2062459db21
+ms.openlocfilehash: 4ad185085c19d8286fa6a09e46742860a948849a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/11/2019
-ms.locfileid: "54226619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934556"
 ---
 # <a name="automatic-tuning"></a>自動調整
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -28,11 +27,11 @@ ms.locfileid: "54226619"
 自動チューニングは、潜在的なクエリ パフォーマンスの問題に関する洞察を提供し、解決策を推奨して、特定された問題を自動的に解決するデータベース機能です。
 
 自動チューニング[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]潜在的なパフォーマンスの問題が検出され、修正措置を適用することができますが常に通知することもできます、[!INCLUDE[ssde_md](../../includes/ssde_md.md)]自動的にパフォーマンスの問題を修正します。
-自動チューニング[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]特定し、によるパフォーマンスの問題を修正することができます**クエリ実行プランの選択による後退**します。 自動チューニング[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]も必要なインデックスを作成し、未使用のインデックスを削除します。 クエリ実行プランの詳細については、[実行プラン](../../relational-databases/performance/execution-plans.md)を参照してください。
+自動チューニング[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]特定し、によるパフォーマンスの問題を修正することができます**クエリ実行プランの選択による後退**します。 自動チューニング[!INCLUDE[ssazure_md](../../includes/ssazure_md.md)]も必要なインデックスを作成し、未使用のインデックスを削除します。 クエリ実行プランの詳細については、次を参照してください。[実行プラン](../../relational-databases/performance/execution-plans.md)します。
 
 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]モニター、データベースと自動的に実行されるクエリ ワークロードのパフォーマンスが向上します。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)]組み込みのインテリジェンス メカニズムを自動的に調整して、ワークロードにデータベースを動的に適応することで、クエリのパフォーマンスを向上させることができます。 利用できる 2 つの自動チューニング機能があります。
 
- -  **自動プラン修正**問題のあるクエリ実行プランし、クエリの実行プランのパフォーマンスに関する問題の修正を識別します。 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (以降[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
+ -  **自動プラン修正**問題のあるクエリ実行プランし、クエリの実行プランのパフォーマンスに関する問題の修正を識別します。 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (開始値 [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
  -  **自動インデックス管理**を削除するインデックスと、データベースに追加するインデックスを識別します。 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
 ## <a name="why-automatic-tuning"></a>なぜ自動チューニングでしょうか。
@@ -49,7 +48,7 @@ ms.locfileid: "54226619"
 
 ## <a name="automatic-plan-correction"></a>自動プラン修正
 
-自動プラン修正は、自動チューニング機能を識別する**実行プランの選択の回帰**最後の既知の良好なプランを強制することで、問題を自動的に解決します。 詳細については、クエリ実行プランとクエリ オプティマイザーは、、[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)を参照してください。
+自動プラン修正は、自動チューニング機能を識別する**実行プランの選択の回帰**最後の既知の良好なプランを強制することで、問題を自動的に解決します。 詳細については、クエリ実行プランとクエリ オプティマイザーは、次を参照してください。、[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md)します。
 
 ### <a name="what-is-execution-plan-choice-regression"></a>実行プランの選択の回帰とは何ですか。
 

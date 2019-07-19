@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 194ce221-49bd-4474-ba34-91453d329381
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6a6d028acaf5d2354c520aed513082945e2fe397
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 708120992341b0e184cc42d13ebe1f461ecf861a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916782"
 ---
 # <a name="status-property-example-vc"></a>Status プロパティの例 (VC++)
 この例では、[状態](../../../ado/reference/ado-api/status-property-ado-recordset.md)バッチ更新が発生する前に、バッチ操作で変更されたレコードを表示するプロパティ。  
@@ -187,5 +186,5 @@ void PrintComError(_com_error &e) {
 }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Status プロパティ (ADO Recordset)](../../../ado/reference/ado-api/status-property-ado-recordset.md)

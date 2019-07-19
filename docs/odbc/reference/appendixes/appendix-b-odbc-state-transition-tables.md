@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 15088dbe-896f-4296-b397-02bb3d0ac0fb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 82c19931073aa96eb045f574e8670068f3d3c659
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7ceb128aec3a4cbe5ef7180483eb2a033ae57138
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026883"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996244"
 ---
 # <a name="appendix-b-odbc-state-transition-tables"></a>付録 B:ODBC の状態遷移テーブル
 この付録の内容の表では、ODBC 関数による環境、接続、ステートメント、および記述子の状態の遷移の発生を示しています。 通常、環境、接続、ステートメント、または記述子の状態は、ハンドル (環境、接続、ステートメント、または記述子) の対応する型を使用する関数を呼び出すことがときにによって決まります。 次の図に示すようにほぼ重複する環境、接続、ステートメント、および記述子の状態。 たとえば、接続の正確な重複を示す C5、C6、S1 S12 からされているデータ ソースに依存する、異なるデータ ソースの場合は、異なる時刻でトランザクションが開始し、記述子の状態 (暗黙的に割り当てられた記述子) D1i 依存ためにについてはステートメント記述子が関連付けられているステートメントの状態、状態 (明示的に割り当てられた記述子) D1e 中には任意のステートメントの状態の独立したです。 各状態の説明は、次を参照してください[環境遷移](../../../odbc/reference/appendixes/environment-transitions.md)、[接続の遷移](../../../odbc/reference/appendixes/connection-transitions.md)、[ステートメントの遷移](../../../odbc/reference/appendixes/statement-transitions.md)、および[記述子の遷移。](../../../odbc/reference/appendixes/descriptor-transitions.md)、この付録で後述します。  
@@ -73,7 +72,7 @@ ms.locfileid: "63026883"
 |o|その他の関数。 別の関数は非同期的に実行しています。|  
 |p|準備します。 ステートメントが準備されています。|  
 |r|結果。 または (場合によっては空) の結果セットを作成してステートメントです。|  
-|s|正常終了しました。 関数には、SQL_SUCCESS_WITH_INFO または SQL_SUCCESS が返されます。|  
+|s|成功。 関数には、SQL_SUCCESS_WITH_INFO または SQL_SUCCESS が返されます。|  
 |v|有効な行です。 カーソルが結果セット内の行に配置されていると、行が正常に挿入されると、正常に更新または行に対する別の操作が正常に完了しました。 行の状態配列が存在する場合は、行の行の状態配列内の値は SQL_ROW_ADDED、SQL_ROW_SUCCESS、または SQL_ROW_UPDATED でした。 (行の状態配列を指していますし、SQL_ATTR_ROW_STATUS_PTR ステートメントの属性です。)|  
 |○|実行中。 関数には、SQL_STILL_EXECUTING が返されます。|  
   

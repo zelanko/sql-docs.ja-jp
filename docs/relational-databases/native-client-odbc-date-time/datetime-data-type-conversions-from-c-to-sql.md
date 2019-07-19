@@ -12,14 +12,13 @@ helpviewer_keywords:
 ms.assetid: 7ac098db-9147-4883-8da9-a58ab24a0d31
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e547a21eb86a76a76bc1d4560005bcd58595dfb3
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.openlocfilehash: 4f9fe3c7f5753788df339484bbf29e2d6e953dba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52417223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030432"
 ---
 # <a name="datetime-data-type-conversions-from-c-to-sql"></a>datetime データ型の C から SQL への変換
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "52417223"
 
   このトピックでは、C 型から変換する際に考慮する問題を示します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]日付/時刻型です。  
   
- 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントがサーバーで定義されているパラメーターとは異なる小数秒の有効桁数を指定する場合、クライアントの変換が成功可能性がありますが、サーバーはエラーを返しますと**SQLExecute**または**SQLExecuteDirect**が呼び出されます。 一方、ODBC で秒の小数部の切り捨てがエラーとして処理する具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に丸める動作は、たとえば、丸め処理を行うときに発生しますから移動する**datetime2(6)** に**datetime2(2)**. datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
+ 次の表で説明する変換は、クライアントで行われる変換に当てはまります。 クライアントがサーバーで定義されているパラメーターとは異なる小数秒の有効桁数を指定する場合、クライアントの変換が成功可能性がありますが、サーバーはエラーを返しますと**SQLExecute**または**SQLExecuteDirect**が呼び出されます。 一方、ODBC で秒の小数部の切り捨てがエラーとして処理する具体的には、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に丸める動作は、たとえば、丸め処理を行うときに発生しますから移動する**datetime2(6)** に**datetime2(2)** . datetime 列の値は 1/300 秒単位に丸められ、smalldatetime 列では、サーバーによって秒が 0 に設定されます。  
   
 |||||||||  
 |-|-|-|-|-|-|-|-|  
@@ -49,7 +48,7 @@ ms.locfileid: "52417223"
   
 ## <a name="key-to-symbols"></a>記号の説明  
   
--   **-**:変換はサポートされていません。 "データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
+-   **-** :変換はサポートされていません。 "データ型の属性に関する制限に違反しました" というメッセージで SQLSTATE 07006 の診断レコードが生成されます。  
   
 -   **1**:指定したデータが無効な場合、"datetime 形式が無効です" というメッセージで SQLSTATE 22007 の診断レコードが生成されます。  
   
@@ -83,7 +82,7 @@ ms.locfileid: "52417223"
   
     ||||  
     |-|-|-|  
-    |型|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1..9|  
+    |種類|暗黙の小数点以下桁数<br /><br /> 0|暗黙の小数点以下桁数<br /><br /> 1..9|  
     |SQL_C_TYPE_TIMESTAMP|19|21..29|  
   
      ただし、SQL_C_TYPE_TIMESTAMP では、データを損失することなく秒の小数部を 3 桁で表すことができる場合で、かつ、列のサイズが 23 以上である場合、ちょうど 3 桁になるように秒の小数部が生成されます。 この動作により、以前の ODBC ドライバーを使用して開発されたアプリケーションの下位互換性が保証されます。  
@@ -94,7 +93,7 @@ ms.locfileid: "52417223"
   
 -   **該当なし**:既存の [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] 以前のバージョンの動作が維持されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)  
   
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 45fe7a23-a46c-4d40-8bca-3431fbfc5c9d
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: a808883b706700bb28888e4d66b8aa64bf1c7ee2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15fb0978443c50bd38bb743feed65f4769831340
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484535"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67906500"
 ---
 # <a name="create-database-wizard-master-data-services-configuration-manager"></a>データベースの作成ウィザード (マスター データ サービス構成マネージャー)
 
@@ -52,13 +51,13 @@ ms.locfileid: "65484535"
 |------------------|-----------------|  
 |**[ユーザー名]**|[!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]の既定のスーパー ユーザーを指定します。 スーパー ユーザーには、すべての機能領域へのアクセス権があり、すべてのモデルを追加、削除、および更新できます。 [!INCLUDE[ssMDSmdm](../includes/ssmdsmdm-md.md)] のスーパー ユーザー権限とその他の管理者の種類の詳細については、「[管理者 (マスター データ サービス)](../master-data-services/administrators-master-data-services.md)」を参照してください。|  
   
-## <a name="summary"></a>まとめ  
+## <a name="summary"></a>Summary  
  選択したオプションの概要を表示します。 選択内容を確認して **[次へ]** をクリックすると、指定した設定でデータベースの作成が開始されます。  
   
 ## <a name="progress-and-finish"></a>[続行して完了する]  
  作成処理の進捗状況を表示します。 データベースが作成されたら、 **[完了]** をクリックしてデータベースのウィザードを終了し、 **[データベース]** ページに戻ります。 新しいデータベースが選択され、そのシステム設定を表示および変更できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [[データベース構成] ページ (マスター データ サービス構成マネージャー)](../master-data-services/database-configuration-page-master-data-services-configuration-manager.md)   
 [マスター データ サービスのインストールと構成](../master-data-services/master-data-services-installation-and-configuration.md) [データベース要件 &#40;マスター データ サービス&#41;](../master-data-services/install-windows/database-requirements-master-data-services.md)  
   

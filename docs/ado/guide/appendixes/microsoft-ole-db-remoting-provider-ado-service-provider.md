@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a4360ed4-b70f-4734-9041-4025d033346b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 99fe38d78ff146503995a3e28dbe186b04be870d
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 5c60567da677564c168f0601625686bdfb8b3d67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597488"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926598"
 ---
 # <a name="microsoft-ole-db-remoting-provider-overview"></a>Microsoft OLE DB リモート処理のプロバイダーの概要
 Microsoft OLE DB リモート処理プロバイダーにより、リモート コンピューター上のデータ プロバイダーを呼び出すため、クライアント コンピューター上のローカル ユーザーです。 リモート コンピューター上のローカル ユーザーをした場合と同様に、リモート コンピューターのデータ プロバイダーのパラメーターを指定します。 次に、リモート コンピューターにアクセスするリモート処理のプロバイダーによって使用されるパラメーターを指定します。 ローカル ユーザーをした場合と、リモート コンピューターをアクセスできます。
@@ -91,5 +90,5 @@ rs.UpdateBatch     'Equivalent of RDS SubmitChanges
 ...
 ```
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [OLE DB のリモート処理のプロバイダーの概要](https://msdn.microsoft.com/4083b72f-68c4-4252-b366-abb70db5ca2b)

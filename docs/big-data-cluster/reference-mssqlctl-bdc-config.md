@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc config reference
+title: mssqlctl bdc 構成リファレンス
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc コマンドに関する参照記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5c4182f216b13d4b56d1c37f6d003ad2ea6f5cf6
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f6aee38bd11d226ba324153b76c750ba57eb9fb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958174"
 ---
 # <a name="mssqlctl-bdc-config"></a>mssqlctl bdc config
 
@@ -27,9 +26,9 @@ ms.locfileid: "67728683"
 |     |     |
 | --- | --- |
 [mssqlctl bdc config show](#mssqlctl-bdc-config-show) | ビッグ データ クラスターの現在の構成を取得します。
-[mssqlctl bdc config init](#mssqlctl-bdc-config-init) | クラスターで使用できる構成プロファイルを作成、ビッグ データ クラスターを初期化します。
-[mssqlctl bdc config list](#mssqlctl-bdc-config-list) | 使用可能な構成プロファイルの選択内容を一覧表示します。
-[mssqlctl bdc config section](reference-mssqlctl-bdc-config-section.md) | 個々 のセクションでは、「ビッグ データ クラスターの構成プロファイルを操作するコマンド。
+[mssqlctl bdc 構成の初期化](#mssqlctl-bdc-config-init) | クラスターで使用できる構成プロファイルを作成、ビッグ データ クラスターを初期化します。
+[mssqlctl bdc 構成一覧](#mssqlctl-bdc-config-list) | 使用可能な構成プロファイルの選択内容を一覧表示します。
+[mssqlctl bdc 構成セクション](reference-mssqlctl-bdc-config-section.md) | 個々 のセクションでは、「ビッグ データ クラスターの構成プロファイルを操作するコマンド。
 ## <a name="mssqlctl-bdc-config-show"></a>mssqlctl bdc config show
 ビッグ データ クラスターの現在の構成プロファイルを取得し、ターゲット ディレクトリに出力またはかなりし、コンソールに出力します。
 ```bash
@@ -108,7 +107,7 @@ mssqlctl bdc config list --config-profile aks-dev-test
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--config-profile -c`
-Default config profile: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
+既定の構成プロファイル: ['aks、開発、テスト '、' kubeadm、開発、テスト ', ' minikube、開発、テスト ']
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するログの詳細度を向上します。

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: e486d39b-771d-488d-a786-7136433a2203
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d59f7e05180ce2f0528159d64b0199ae8975464a
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 1e6244443fc1f6ba7d83376226fedd56563e0d39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528594"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048218"
 ---
 # <a name="sphelptrigger-transact-sql"></a>sp_helptrigger (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ sp_helptrigger [ @tabname = ] 'table'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @tabname = ] 'table'` トリガー情報を返す対象の現在のデータベース内のテーブルの名前です。 *テーブル*は**nvarchar (776)**、既定値はありません。  
+`[ @tabname = ] 'table'` トリガー情報を返す対象の現在のデータベース内のテーブルの名前です。 *テーブル*は**nvarchar (776)** 、既定値はありません。  
   
-`[ @triggertype = ] 'type'` 情報を返す DML トリガーの種類です。 *型*は**char (6)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ @triggertype = ] 'type'` 情報を返す DML トリガーの種類です。 *型*は**char (6)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**DELETE**|DELETE トリガー情報を返します。|  
 |**INSERT**|INSERT トリガー情報を返します。|  
@@ -81,7 +80,7 @@ GO
 EXEC sp_helptrigger 'Person.Person';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [ALTER TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/alter-trigger-transact-sql.md)   
  [CREATE TRIGGER &#40;Transact-SQL&#41;](../../t-sql/statements/create-trigger-transact-sql.md)   

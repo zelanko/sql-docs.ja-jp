@@ -2,26 +2,25 @@
 title: Configuration Manager - Analytics Platform System の起動 |Microsoft Docs
 description: Analytics Platform System appliance 用 Configuration Manager ツールを起動するための手順です。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 087360981a7c31de6980755cfee4f98f88f48a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7aef9ada4a93605460cf2759dbe9deeddfc9e0d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63183418"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960724"
 ---
 # <a name="launch-the-configuration-manager-in-analytics-platform-system"></a>Analytics Platform System で Configuration Manager を起動します。
 このトピックでは起動するための手順、 **Configuration Manager** Analytics Platform System appliance。  
   
 ## <a name="before-you-begin"></a>はじめに  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
 Analytics Platform System**Configuration Manager**アプライアンスのドメイン管理者によってのみ実行できます。 このツールを実行するには、アプライアンスのドメイン管理者のパスワードが必要です。 追加の AP 管理者を作成するを参照してください。 [APS ドメイン管理者を作成&#40;AP&#41;](create-an-aps-domain-administrator-aps.md)します。  
   
 ## <a name="Accessing"></a>Configuration Manager ツールを起動します。  
@@ -39,7 +38,7 @@ Configuration Manager を実行するには、PDW 管理ノードに接続する
   
 2.  コマンド プロンプトでディレクトリを変更するのには、次のコマンドを入力します:`cd /d "C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100"`します。  
   
-3.  コマンド プロンプトで次のように入力します。`dwconfig.exe`します。  
+3.  コマンド プロンプトで、「`dwconfig.exe`」と入力します。  
   
 後に、 **Configuration Manager**が開始されると、左側のウィンドウで表示されているすべての機能が表示されます。 このセクションの残りの部分では、このツールで使用できる各操作を実行する方法について説明します。  
   
@@ -47,6 +46,6 @@ Configuration Manager を実行するには、PDW 管理ノードに接続する
   
 ![SQL_Server_PDW_DWConfig_ApplTop](./media/launch-the-configuration-manager/SQL_Server_PDW_DWConfig_ApplTop.png "SQL_Server_PDW_DWConfig_ApplTop")  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
   

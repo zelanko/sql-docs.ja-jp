@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: df1c4c50e21ba5db5459da958f915be560500dc7
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: baa7a378c85668ac87ff8dc28422d4a6bbbcd225
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046928"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962024"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>クイック スタート:データ型と SQL Server で R を使用するオブジェクトを処理します。
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>クイック スタート: データ型と SQL Server で R を使用するオブジェクトを処理します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このクイック スタートでは、R と SQL Server の間でデータを移動するときに発生する一般的な問題に対する実践的な概要を取得します。 この演習でできるように、エクスペリエンスは、独自のスクリプトでデータを扱うときに、重要な背景知識を提供します。
@@ -88,7 +87,7 @@ EXECUTE sp_execute_external_script
   @input_data_1 = N'  ';
 ```
 
-これで、**[メッセージ]** のテキストを確認すると、出力が異なる理由がわかります。
+これで、 **[メッセージ]** のテキストを確認すると、出力が異なる理由がわかります。
 
 **結果 - 例 1**
 
@@ -274,9 +273,9 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 + 予期しない動作を回避するために、入力データを準備する際に、必要に応じて明示的なキャストを実行します。
 + エラーが発生して、モデリングの役に立たない (GUID や rowguids) などのデータの列を渡すことを回避します。
 
-サポートされているとサポートされていないデータ型の詳細については、[R ライブラリとデータ型](../r/r-libraries-and-data-types.md)を参照してください。
+サポートされているとサポートされていないデータ型の詳細については、次を参照してください。 [R ライブラリとデータ型](../r/r-libraries-and-data-types.md)します。
 
-文字列数値因子からの実行時の変換のパフォーマンスに与える影響については、[SQL Server R Services のパフォーマンス チューニング](../r/sql-server-r-services-performance-tuning.md)を参照してください。
+文字列数値因子からの実行時の変換のパフォーマンスに与える影響については、次を参照してください。 [SQL Server R Services のパフォーマンス チューニング](../r/sql-server-r-services-performance-tuning.md)します。
 
 ## <a name="next-step"></a>次の手順
 

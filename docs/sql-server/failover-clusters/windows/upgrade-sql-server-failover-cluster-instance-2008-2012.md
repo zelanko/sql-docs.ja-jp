@@ -46,7 +46,7 @@ ms.locfileid: "63243377"
 
 |                                   | すべてのサーバー オブジェクトと VNN が必要 | すべてのサーバー オブジェクトと VNN が必要 | サーバー オブジェクト/VNN は不要\* | サーバー オブジェクト/VNN は不要\* |
 |-----------------------------------|--------------------------------------|--------------------------------------------------------------------|------------|------------|
-| **_可用性グループ(Y/N)_ **                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
+| **_可用性グループ(Y/N_)**                  | **_Y_**                              | **_N_**                                                            | **_Y_**    | **_N_**    |
 | **クラスターで SQL FCI のみを使用**         | [シナリオ 3](#scenario-3-windows-cluster-has-both-sql-fcis-and-sql-server-availability-groups)                           | [シナリオ 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis)                                                        | [シナリオ 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [シナリオ 2](#scenario-2-windows-clusters-with-sql-server-failover-cluster-instances-fcis) |
 | **クラスターでスタンドアロン インスタンスを使用** | [シナリオ 5](#scenario-5-windows-cluster-with-standalone-sql-server-instances-and-availability-groups)                           | [シナリオ 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups)                                                         | [シナリオ 1](#scenario-1-windows-cluster-with-sql-server-availability-groups-and-no-failover-cluster-instances-fcis) | [シナリオ 4](#scenario-4-windows-cluster-with-standalone-sql-server-instances-and-no-availability-groups) |
 

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 302445cadc829de35eca28db2888aaa01673ca75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 05df2d0a846af30d46e702c1d5489945d57c9115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001491"
 ---
 # <a name="members-string-mdx"></a>Members (String) (MDX)
 
@@ -43,7 +42,7 @@ SELECT Members ('[Geography].[Geography].[Country].&[United States] ') ON 0
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

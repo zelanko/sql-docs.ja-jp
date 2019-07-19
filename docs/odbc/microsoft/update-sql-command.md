@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: ff1e0331-c060-4304-b280-039725b45f63
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3fbd5ec98791d782fe7ad1fdb1e1884b646dcf9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0230329d10d2414724379d4b9d38c4851a031bca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62632559"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912333"
 ---
 # <a name="update---sql-command"></a>UPDATE - SQL コマンド
 新しい値では、テーブル内のレコードを更新します。  
@@ -41,10 +40,10 @@ SET Column_Name1 = eExpression1
   
  *DatabaseName1!* テーブルを含むデータ ソースで指定されたデータベース以外のデータベースの名前を指定します。 データベースで現在ない場合は、テーブルを含むデータベースの名前を含める必要があります。 データベース名の後に、テーブル名の前に感嘆符 (!) 区切り記号が含まれます。  
   
- SET *Column_Name1*= *eExpression1*[, *Column_Name2*= *eExpression2*  
+ 設定*Column_Name1*= *eExpression1*[、 *Column_Name2*= *eExpression2*  
  更新される列とその新しい値を指定します。 WHERE 句を省略した場合は、同じ値を持つ列のすべての行が更新されます。  
   
- WHERE *FilterCondition1*[AND &#124; OR *FilterCondition2*...]  
+ 場所*FilterCondition1*[AND&#124;または*FilterCondition2*...]  
  新しい値で更新されるレコードを指定します。  
   
  *FilterCondition*に新しい値で更新するレコードが満たす必要のある条件を指定します。 AND で接続して、好きな数のフィルター条件を含めることができますか、OR 演算子。 NOT 演算子を使用して、論理式の値を反転するかを使用することができます**空**空のフィールドを確認する ()。  
@@ -57,6 +56,6 @@ SET Column_Name1 = eExpression1
 ## <a name="driver-remarks"></a>ドライバーの解説  
  アプリケーションでは、ODBC SQL ステートメントの更新をデータ ソースに送信するときに、Visual FoxPro ODBC ドライバーを翻訳しないで Visual FoxProUPDATE コマンドに、コマンドに変換します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DELETE - SQL コマンド](../../odbc/microsoft/delete-sql-command.md)   
  [INSERT - SQL コマンド](../../odbc/microsoft/insert-sql-command.md)

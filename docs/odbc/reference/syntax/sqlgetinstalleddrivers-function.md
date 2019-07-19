@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: a1983a2e-0edf-422e-bd1b-ec5db40a34bc
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0ff675a184ea0804988972ef10e9a383cdd45230
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e7b079e2b66f4e1ba7b3233a6aaa20cd9908a67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061522"
 ---
 # <a name="sqlgetinstalleddrivers-function"></a>SQLGetInstalledDrivers 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0  
   
- **まとめ**  
+ **概要**  
  **SQLGetInstalledDrivers**のシステム情報 [ODBC Drivers] セクションを読み取って、インストールされたドライバーの説明の一覧を返します。  
   
 ## <a name="syntax"></a>構文  

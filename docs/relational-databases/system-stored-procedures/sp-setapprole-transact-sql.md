@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: cf0901c0-5f90-42d4-9d5b-8772c904062d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: c18aa6fefb23bb3d388069773aa1633c29859e90
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 44e7b670ef5f16b6df861e939f9b8b2d9ace8dd5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533534"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68104428"
 ---
 # <a name="spsetapprole-transact-sql"></a>sp_setapprole (TRANSACT-SQL)
 
@@ -63,7 +62,7 @@ sp_setapprole [ @rolename = ] 'role',
   
 `[ @fCreateCookie = ] true | false` Cookie が作成されるかどうかを指定します。 **true**は 1 に暗黙的に変換します。 **false**は 0 に暗黙的に変換します。  
   
-`[ @cookie = ] @cookie OUTPUT` クッキーを含める出力パラメーターを指定します。 場合にのみ、クッキーが生成される値の**@fCreateCookie**は**true**します。 **varbinary(8000)**  
+`[ @cookie = ] @cookie OUTPUT` クッキーを含める出力パラメーターを指定します。 場合にのみ、クッキーが生成される値の **@fCreateCookie** は**true**します。 **varbinary(8000)**  
   
 > [!NOTE]  
 > **sp_setapprole** のクッキーの **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(50)** を返します。 アプリケーションが引き続き予約**varbinary (8000)** サイズの増加、将来のリリースでクッキーの戻り値が正しく動作するアプリケーションが引き続き行われるようにします。
@@ -76,7 +75,7 @@ sp_setapprole [ @rolename = ] 'role',
 
  使用して、アプリケーション後ロールをアクティブ化**sp_setapprole**、ユーザーがサーバーから切断またはを実行するまで、ロールがアクティブなまま**sp_unsetapprole**します。 **sp_setapprole**直接でのみ実行できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。 **sp_setapprole**またはユーザー定義のトランザクション内で別のストアド プロシージャ内で実行することはできません。  
   
- アプリケーション ロールの概要については、[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)を参照してください。  
+ アプリケーション ロールの概要については、次を参照してください。[アプリケーション ロール](../../relational-databases/security/authentication-access/application-roles.md)します。  
   
 > [!IMPORTANT]  
 > ネットワーク経由で送信されるアプリケーション ロールのパスワード保護のため、アプリケーション ロールを有効にする場合に、暗号化された接続を常に使用する必要があります。

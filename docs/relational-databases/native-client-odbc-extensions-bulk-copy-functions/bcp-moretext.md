@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 23e98015-a8e4-4434-9b3f-9c7350cf965f
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 262280be894eb446d5a097f53f96306e4de410e8
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f6b88e9931ab7575e46f6179680ad721ce40dea8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47665453"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67895505"
 ---
 # <a name="bcpmoretext"></a>bcp_moretext
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -56,7 +55,7 @@ RETCODE bcp_moretext (
  SUCCEED または FAIL。  
   
 ## <a name="remarks"></a>コメント  
- この関数を組み合わせて使用できる[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long、数より小さいチャンク内の SQL Server に可変長データ値をコピーします。 **bcp_moretext**次の SQL Server データ型を持つ列で使用できます:**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、 **nvarchar (max)**、 **varbinary (max)**、ユーザー定義型 (UDT)、および XML。 **bcp_moretext**サポート データ変換ではありませんが、指定したデータが対象列のデータ型と一致する必要があります。  
+ この関数を組み合わせて使用できる[bcp_bind](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-bind.md)と[bcp_sendrow](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-sendrow.md) long、数より小さいチャンク内の SQL Server に可変長データ値をコピーします。 **bcp_moretext**次の SQL Server データ型を持つ列で使用できます:**テキスト**、 **ntext**、**イメージ**、 **varchar (max)** 、 **nvarchar (max)** 、 **varbinary (max)** 、ユーザー定義型 (UDT)、および XML。 **bcp_moretext**サポート データ変換ではありませんが、指定したデータが対象列のデータ型と一致する必要があります。  
   
  場合**bcp_bind**が NULL 以外で呼び出された*pData*でサポートされているデータ型のパラメーター **bcp_moretext**、 **bcp_sendrow**送信長さに関係なくすべてのデータの値。 場合、ただし、 **bcp_bind** null になります*pData*サポートされているデータ型のパラメーター **bcp_moretext** から正常に返された後すぐにデータをコピーするために使用できます**bcp_sendrow**存在するデータを含むバインドされた列が処理されたことを示します。  
   
@@ -167,7 +166,7 @@ nRowsProcessed = bcp_done(hdbc);
 // Carry on.  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 基本的な MDX スクリプト (MDX) |Microsoft ドキュメント
+title: 基本的な MDX スクリプト (MDX) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2bebee1057180259c9813d7a650594c0c6d4736d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208700"
 ---
 # <a name="the-basic-mdx-script-mdx"></a>基本的な MDX スクリプト (MDX)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  多次元式 (MDX) スクリプトは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] におけるキューブの計算処理を定義します。 MDX スクリプトには、以下の 2 種類があります。  
+  多次元式 (MDX) スクリプトは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]におけるキューブの計算処理を定義します。 MDX スクリプトには、以下の 2 種類があります。  
   
  **既定の MDX スクリプト**  
  キューブを作成すると、そのキューブの既定の MDX スクリプトが [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] によって作成されます。 このスクリプトは、キューブ全体の計算パスを定義します。  
@@ -47,18 +47,18 @@ ms.locfileid: "34023009"
  すべての MDX スクリプト ステートメント  
  MDX スクリプトにおいて、MDX スクリプト ステートメントは、計算のコンテキストと範囲を制御し、MDX スクリプト内の他のステートメントの動作を管理します。 このカテゴリには以下のステートメントが含まれます。  
   
--   [計算](../../../mdx/mdx-scripting-calculate.md)  
+-   [CALCULATE](../../../mdx/mdx-scripting-calculate.md)  
   
--   [固定](../../../mdx/mdx-scripting-freeze.md)  
+-   [FREEZE](../../../mdx/mdx-scripting-freeze.md)  
   
--   [スコープ](../../../mdx/mdx-scripting-scope.md)  
+-   [SCOPE](../../../mdx/mdx-scripting-scope.md)  
   
  MDX スクリプト ステートメントの詳細については、「[MDX スクリプト ステートメント &#40;MDX&#41;](../../../mdx/mdx-scripting-statements-mdx.md)」を参照してください。  
   
- [メンバーを作成します。](../../../mdx/mdx-data-definition-create-member.md)  
+ [CREATE MEMBER](../../../mdx/mdx-data-definition-create-member.md)  
  CREATE MEMBER ステートメントは、計算されるメンバーを作成します。 計算されるメンバーの作成方法の詳細については、「[MDX での計算されるメンバーの作成 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-calculated-members-building-calculated-members.md)」を参照してください。  
   
- [セットを作成します。](../../../mdx/mdx-data-definition-create-set.md)  
+ [CREATE SET](../../../mdx/mdx-data-definition-create-set.md)  
  CREATE SET ステートメントは名前付きセットを作成します。 名前付きセットの作成方法の詳細については、「[MDX での名前付きセットの作成 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-named-sets-building-named-sets.md)」を参照してください。  
   
  条件ステートメント  
@@ -84,8 +84,8 @@ ms.locfileid: "34023009"
 <Natural hierarchy member> ::= <Natural hierarchy>.<identifier>[.<identifier>...]  
 ```  
   
-## <a name="see-also"></a>参照  
- [MDX 言語リファレンス & #40 です。MDX と #41 です。](../../../mdx/mdx-language-reference-mdx.md)   
- [MDX スクリプティングの基礎と #40 です。Analysis Services & #41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
+## <a name="see-also"></a>関連項目  
+ [MDX 言語リファレンス &#40;MDX&#41;](../../../mdx/mdx-language-reference-mdx.md)   
+ [MDX スクリプティングの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)  
   
   

@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 60d5068a-7d7c-447c-acc6-f3f2cf73440c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2a69ffbde7ec4ff1d7eebbb73f0b60a619755c37
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e99dd2f5cf3186120297d7679f87e973d5164a57
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039530"
 ---
 # <a name="sqltables-function"></a>SQLTables 関数
 **準拠**  
@@ -54,7 +53,7 @@ SQLRETURN SQLTables(
  *StatementHandle*  
  [入力]ステートメント ハンドルでは、結果を取得します。  
   
- *CatalogName*  
+ *カタログ名*  
  [入力]カタログの名前。 *CatalogName* SQL_ODBC_VERSION 環境属性が SQL_OV_ODBC3 場合引数は検索パターンを受け入れます。 SQL_OV_ODBC2 が設定されている場合の検索パターンを受け取ることはできません。 ドライバーは、いくつかのテーブルのドライバーをさまざまな Dbms、空の文字列からデータを取得した場合など、他ではなく、カタログをサポートしている場合 ("") それらのテーブルのカタログがないことを示します。  
   
  SQL_ATTR_METADATA_ID ステートメント属性は、SQL_TRUE に設定されている場合*CatalogName*は識別子として扱われますそのケースは重要ではありません。 場合は sql_false になります、 *CatalogName*パターン引数の値は、; 文字どおり、扱われ、そのケースは重要です。 詳細については、次を参照してください。[カタログ関数の引数](../../../odbc/reference/develop-app/arguments-in-catalog-functions.md)します。  

@@ -1,5 +1,5 @@
 ---
-title: Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cbfb701bf6c4a90cf285e4643377b38e51121dd3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019409"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182685"
 ---
 # <a name="mining-model-content-for-naive-bayes-models-analysis-services---data-mining"></a>Naive Bayes モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  このトピックでは、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+  このトピックでは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Naive Bayes アルゴリズムを使用するモデルに固有のマイニング モデル コンテンツについて説明します。 すべてのモデルの種類に共通の統計および構造を解釈する方法の説明、およびマイニング モデル コンテンツに関連する用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ## <a name="understanding-the-structure-of-a-naive-bayes-model"></a>Naive Bayes モデルの構造について  
  Naive Bayes モデルには、モデルとそのメタデータを表す 1 つの親ノードがあり、その親ノードの下に、選択した予測可能な属性を表す任意の数の独立したツリーがあります。 属性のツリーに加え、各モデルに 1 つ、トレーニング ケースのセットに関する説明的な統計情報を提供するマージナル統計ノード (NODE_TYPE = 26) が含まれます。 詳細については、「 [マージナル統計ノードの情報](#bkmk_margstats)」を参照してください。  
@@ -28,12 +28,12 @@ ms.locfileid: "34019409"
 > [!NOTE]  
 >  Naive Bayes モデルでは、連続するデータ型が許可されないため、入力列のすべての値が不連続値または分離された値として処理されます。 値を分離する方法は指定できます。 詳細については、「 [マイニング モデルでの列の分離の変更](../../analysis-services/data-mining/change-the-discretization-of-a-column-in-a-mining-model.md)」を参照してください。  
   
- ![naïve bayes のモデル コンテンツの構造体](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "naïve bayes のモデル コンテンツの構造")  
+ ![単純ベイズのモデル コンテンツの構造体](../../analysis-services/data-mining/media/modelcontentstructure-nb.gif "単純ベイズのモデル コンテンツの構造")  
   
 ## <a name="model-content-for-a-naive-bayes-model"></a>Naive Bayes モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、Naive Bayes モデルに関連する列についてのみ詳細と例を紹介します。  
   
- ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -67,7 +67,7 @@ ms.locfileid: "34019409"
  NODE_TYPE  
  Naive Bayes モデルでは、次のノードの種類が出力されます。  
   
-|ノードの種類の ID|Description|  
+|ノードの種類の ID|説明|  
 |------------------|-----------------|  
 |26 (マージナル統計ノード)|モデルのトレーニング ケースのセット全体を表す統計が含まれます。|  
 |9 (予測可能な属性)|予測可能な属性の名前が含まれます。|  
@@ -184,9 +184,9 @@ ms.locfileid: "34019409"
 |---------------|----------------------------|  
 |モデル ルート (1)|常に 0 です。|  
 |マージナル統計ノード (26)|任意の ID 値。|  
-|予測可能な属性 (9)|10000000 で始まる 16 進数。<br /><br /> 例 :100000001、10000000b|  
-|入力属性 (10)|2 つの部分で構成される 16 進数。最初の部分は常に 20000000 であり、2 番目の部分は関連する予測可能な属性の 16 進数の識別子で始まります。<br /><br /> 例 :20000000b00000000<br /><br /> この場合、関連する予測可能な属性は 10000000b です。|  
-|入力属性の状態 (11)|3 つの部分で構成される 16 進数。最初の部分は常に 30000000 であり、2 番目の部分は関連する予測可能な属性の 16 進数の識別子で始まります。3 番目の部分は値の識別子を表します。<br /><br /> 例 :30000000b00000000200000000<br /><br /> この場合、関連する予測可能な属性は 10000000b です。|  
+|予測可能な属性 (9)|10000000 で始まる 16 進数。<br /><br /> 例:100000001、10000000b です。|  
+|入力属性 (10)|2 つの部分で構成される 16 進数。最初の部分は常に 20000000 であり、2 番目の部分は関連する予測可能な属性の 16 進数の識別子で始まります。<br /><br /> 例:20000000b00000000<br /><br /> この場合、関連する予測可能な属性は 10000000b です。|  
+|入力属性の状態 (11)|3 つの部分で構成される 16 進数。最初の部分は常に 30000000 であり、2 番目の部分は関連する予測可能な属性の 16 進数の識別子で始まります。3 番目の部分は値の識別子を表します。<br /><br /> 例:30000000b00000000200000000<br /><br /> この場合、関連する予測可能な属性は 10000000b です。|  
   
  これらの ID を使用すると、入力属性と状態を予測可能な属性に関連付けることができます。 たとえば、次のクエリでは、 `TM_NaiveBayes`というモデルについて、入力属性と予測可能な属性の考えられる組み合わせを表すノードの名前とキャプションが返されます。  
   
@@ -252,13 +252,13 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  期待される結果:  
   
-|NODE_CAPTION|t.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
+|NODE_CAPTION|T.ATTRIBUTE_NAME|t.ATTRIBUTE_VALUE|t.SUPPORT|t.PROBABILITY|t.VALUETYPE|  
 |-------------------|-----------------------|------------------------|---------------|-------------------|-----------------|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|Missing|0|0|1|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|0|3783|0.472934117|4|  
 |Bike Buyer -> Marital Status = S|Bike Buyer|1|4216|0.527065883|4|  
   
- これらの結果の SUPPORT 列の値は、指定した結婚歴に当てはまる顧客のうち、自転車を購入した顧客の数を示します。 PROBABILITY 列には、このノードのみについて計算された各属性値の確率が格納されます。 NODE_DISTRIBUTION テーブルで使用される用語の一般的な定義については、「[マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ これらの結果の SUPPORT 列の値は、指定した結婚歴に当てはまる顧客のうち、自転車を購入した顧客の数を示します。 PROBABILITY 列には、このノードのみについて計算された各属性値の確率が格納されます。 NODE_DISTRIBUTION テーブルで使用される用語の一般的な定義については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
 ###  <a name="bkmk_margstats"></a> マージナル統計ノードの情報  
  Naive Bayes モデルでは、マージナル統計ノードの入れ子になったテーブルに、トレーニング データのセット全体の値の分布が含まれます。 たとえば、次の表は、 `TM_NaiveBayes`モデルの入れ子になった NODE_DISTRIBUTION テーブルに含まれる統計の一部を示しています。  
@@ -282,8 +282,8 @@ AND NODE_CAPTION = 'Bike Buyer -> Marital Status = S'
   
  トレーニング データには存在しなかった有効な値を表すために、すべての入力属性と出力属性に **Missing** 値 (VALUE_TYPE = 1) が追加されます。 "missing" という文字列と既定の **Missing** 値を区別するように注意する必要があります。 詳細については、「[Missing 値 (Analysis Services - データ マイニング)](../../analysis-services/data-mining/missing-values-analysis-services-data-mining.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [マイニング モデル コンテンツ & #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
+## <a name="see-also"></a>関連項目  
+ [マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)   
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)   
  [Microsoft Naive Bayes アルゴリズム](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm.md)  

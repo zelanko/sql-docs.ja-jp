@@ -7,13 +7,12 @@ ms.date: 08/30/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 001b90eafd26c90f730e5647f0dc62d756ca9d1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4af5fff7581ae2ae8f74e09603b75bca620ca775
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62503765"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962634"
 ---
 # <a name="how-to-generate-forecasts-and-predictions-using-machine-learning-models-in-sql-server"></a>予測および SQL Server で機械学習モデルを使用して予測を生成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -24,7 +23,7 @@ ms.locfileid: "62503765"
 
 次の表では、予測および予測のスコア付けのフレームワークをまとめたものです。 
 
-| 手法           | インターフェイス         | ライブラリの要件 | 処理速度 |
+| 手法           | Interface         | ライブラリの要件 | 処理速度 |
 |-----------------------|-------------------|----------------------|----------------------|
 | 機能拡張フレームワーク | [rxPredict (R)](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxpredict) <br/>[rx_predict (Python)](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-predict) | [なし] : モデルは、任意の R または Python 関数に基づくことができます。 | 数百ミリ秒かかります。 <br/>ランタイム環境の読み込みとが固定コストは、新しいデータをスコア付けする前に 3 つを 600 ミリ秒単位の平均を計算します。 |
 | [リアルタイム スコアリングの CLR の拡張機能](../real-time-scoring.md) | [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)でシリアル化されたモデル | R:RevoScaleR の MicrosoftML <br/>Python: revoscalepy、microsoftml | 数十ミリ秒単位の平均です。 |
@@ -109,5 +108,5 @@ R コードから呼び出して、 [rxWriteObject](https://docs.microsoft.com/m
 
 + [rxSerializeModel](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxserializemodel)  
 + [rxRealTimeScoring](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxrealtimescoring)
-+ [sp-rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
++ [sp rxPredict](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)
 + [T-SQL を予測します。](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)

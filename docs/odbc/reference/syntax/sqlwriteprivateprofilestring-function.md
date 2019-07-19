@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 526f36a4-92ed-4874-9725-82d27c0b86f9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff853976cf0d900cb24391ff6bf13838782ea876
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4b847576e503fbbbb511d2dda8f60675c298681c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536767"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039383"
 ---
 # <a name="sqlwriteprivateprofilestring-function"></a>SQLWritePrivateProfileString 関数
 **準拠**  
  バージョンが導入されました。ODBC 2.0  
   
- **まとめ**  
+ **概要**  
  **SQLWritePrivateProfileString**システム情報の Odbc.ini サブキーに値の名前とデータを書き込みます。  
   
 ## <a name="syntax"></a>構文  
@@ -46,7 +45,7 @@ BOOL SQLWritePrivateProfileString(
 ```  
   
 ## <a name="arguments"></a>引数  
- *lpszSection*  
+ *大文字、小文字*  
  [入力]文字列のコピー先となるセクションの名前を含む null で終わる文字列へのポインター。 セクションが存在しない場合は作成されます。 セクションの名前がケースに依存しません。文字列は、任意の大文字と小文字を使用できます。  
   
  *lpszEntry*  
@@ -55,7 +54,7 @@ BOOL SQLWritePrivateProfileString(
  *lpszString*  
  [入力]ファイルに書き込まれる null で終わる文字列へのポインター。 この引数が NULL の場合、キーが指す、 *lpszEntry*引数を削除します。  
   
- *lpszFilename*  
+ *場合*  
  [出力]初期化ファイルの名前を示す null で終わる文字列へのポインター。  
   
 ## <a name="returns"></a>戻り値  

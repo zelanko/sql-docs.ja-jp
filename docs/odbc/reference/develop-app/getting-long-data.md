@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6ccb44bc-8695-4bad-91af-363ef22bdb85
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: d61f6e2d5c2999a1ff7cea86d497eb4f0fb13244
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49f0023f726dd4bb290ffba1018ce2608800dd90
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68216366"
 ---
 # <a name="getting-long-data"></a>長い形式のデータの取得
 Dbms 定義*長いデータ*として任意の文字または 255 文字などの特定のサイズを超えるバイナリ データ。 このデータは、数千のいくつかの文字の部分の説明などの 1 つのバッファーに格納するのに十分な小さ可能性があります。 ただし、長いテキスト ドキュメントやビットマップなどのメモリに格納するには長すぎる場合があります。 使用して、パーツ内のドライバーから取得されるこのようなデータは、1 つのバッファーに格納されることはできません、ため**SQLGetData**行の他のデータがフェッチされた後にします。  

@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 15c9b05c418d300b7c65266826df552864d0a5b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a51d64202d3d906b3106092084628b0a961297ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798089"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959324"
 ---
 # <a name="schema-compare-extension-preview"></a>スキーマ比較の拡張機能 (プレビュー)
 スキーマ比較の拡張機能には、.dacpac ファイルやデータベースを比較し、ソースからターゲットに変更を適用する使いやすいエクスペリエンスが提供されます。
@@ -36,7 +35,7 @@ ms.locfileid: "66798089"
 ## <a name="why-would-i-use-the-schema-compare"></a>使用する理由、スキーマを比較しますか。
 スキーマ比較は、.dacpac ファイルやデータベースからスキーマを比較し、変更を適用する機能を追加作成されました。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 スキーマ比較の詳細について[ドキュメントを確認します。](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
 
 

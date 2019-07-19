@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e9ee96a04aa6b023be51f8e1e8d913e26a7e2a8
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072099"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207739"
 ---
 # <a name="create-a-relationship"></a>リレーションシップを作成します。 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
-  データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 表形式モデルでリレーションシップを使用する方法については、[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)を参照してください。  
+  データ ソース内のテーブルに既存のリレーションシップがない場合、または新しいテーブルを追加する場合は、モデル デザイナーのツールを使用して新しいリレーションシップを作成できます。 表形式モデルでリレーションシップを使用する方法については、次を参照してください。[リレーションシップ](../../analysis-services/tabular-models/relationships-ssas-tabular.md)します。  
   
 ## <a name="create-a-relationship-between-two-tables"></a>2 つのテーブル間のリレーションシップの作成  
   

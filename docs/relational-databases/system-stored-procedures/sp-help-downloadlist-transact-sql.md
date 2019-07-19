@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 745b265b-86e8-4399-b928-c6969ca1a2c8
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f6bb56be8654b37eea250122068ef52e165a2d99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 40345ed8ad1a10da0088c5c1388c44fa24cad929
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62796185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055194"
 ---
 # <a name="sphelpdownloadlist-transact-sql"></a>sp_help_downloadlist (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -65,7 +64,7 @@ sp_help_downloadlist { [ @job_id = ] job_id | [ @job_name = ] 'job_name' }
 |**SET-POLL**|ターゲット サーバーがマルチサーバー ドメインを呼び出す間隔を秒単位で設定するサーバー操作。 指定した場合*値*は必要な間隔の値として解釈されから値を指定できます**10**に**28,800**します。|  
 |**開始**|ジョブ実行の開始を要求するジョブ操作。|  
 |**STOP**|ジョブ実行の停止を要求するジョブ操作。|  
-|**SYNC-TIME**|ターゲット サーバーでシステム クロックとマルチサーバー ドメインとの同期化を行うためのサーバー操作。 これは非常に時間のかかる操作なので、頻繁に実行しないでください。限られた場合にだけ、実行するようにしてください。|  
+|**同期時刻**|ターゲット サーバーでシステム クロックとマルチサーバー ドメインとの同期化を行うためのサーバー操作。 これは非常に時間のかかる操作なので、頻繁に実行しないでください。限られた場合にだけ、実行するようにしてください。|  
 |**UPDATE**|ジョブだけを更新する操作、 **sysjobs**ジョブ ステップまたはスケジュールではない、ジョブの情報。 によって自動的に呼び出される**sp_update_job**します。|  
   
 `[ @object_type = ] 'object_type'` 指定したジョブのオブジェクトの型。 *object_type*は**varchar (64)** 、既定値は NULL です。 *object_type*ジョブまたはサーバーのいずれかにすることができます。 有効なの詳細については*object_type*値を参照してください[sp_add_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-category-transact-sql.md)します。  

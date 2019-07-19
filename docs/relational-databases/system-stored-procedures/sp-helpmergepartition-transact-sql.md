@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 184188cc-f519-445d-97ce-aae38f1eb550
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ddf87e08b113d3512a8d824ff4abdf1359476e32
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 01155b1fb294660c92bfa975bc04de8f748b730f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58530159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137660"
 ---
 # <a name="sphelpmergepartition-transact-sql"></a>sp_helpmergepartition (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**partition**|**int**|サブスクライバー パーティションを識別します。|  
+|**パーティション**|**int**|サブスクライバー パーティションを識別します。|  
 |**host_name**|**sysname**|値によってフィルター選択は、サブスクリプションのパーティションを作成するときに使用される値、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)サブスクライバーでの関数。|  
 |**suser_sname**|**sysname**|値によってフィルター選択は、サブスクリプションのパーティションを作成するときに使用される値、 [SUSER_SNAME](../../t-sql/functions/suser-sname-transact-sql.md)サブスクライバーでの関数。|  
 |**dynamic_snapshot_location**|**nvarchar (255)**|サブスクライバーのパーティションのフィルター選択されたデータ スナップショットの場所。|  
@@ -72,7 +71,7 @@ sp_helpmergepartition [ @publication= ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergepartition**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addmergepartition &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md)   
  [sp_dropmergepartition &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md)  
   

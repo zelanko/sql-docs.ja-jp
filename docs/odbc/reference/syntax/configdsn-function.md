@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 01ced74e-c575-4a25-83f5-bd7d918123f8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9387ffefe2fdcc9b30824018a763b87b81b831dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78be24ea75fad04c7b7c1bdae103dfd3f92c78ee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68016719"
 ---
 # <a name="configdsn-function"></a>ConfigDSN 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0  
   
- **まとめ**  
+ **概要**  
  **ConfigDSN**追加、変更、またはシステム情報のデータ ソースを削除します。 接続情報をユーザーに求めることができます。 これは、ドライバ DLL または別のセットアップ DLL に存在できます。  
   
 ## <a name="syntax"></a>構文  
@@ -49,7 +48,7 @@ BOOL ConfigDSN(
  *hwndParent*  
  [入力]親ウィンドウ ハンドル。 関数では、ハンドルが null の場合、ダイアログ ボックスは表示されません。  
   
- *fRequest*  
+ *起こり*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
   
  ODBC_ADD_DSN:新しいデータ ソースを追加します。  

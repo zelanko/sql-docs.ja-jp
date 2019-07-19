@@ -6,13 +6,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 805dd613c49351c0106231b9147a4af54ac8cf0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 88dcbbf3a336af38b80ab8c5aa4b49dbe17d9184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "67140731"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962810"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning サービスの既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -490,7 +489,7 @@ SQL Server 2017 CU2 以降では、次のメッセージが表示される場合
 
 この問題は SQL Server 2017 Cumulative Update 3 (CU3) で修正されました。 
 
-### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5.数値、10 進数、およびコストのデータ型がサポートされていません
+### <a name="5-numeric-decimal-and-money-data-types-not-supported"></a>5。数値、10 進数、およびコストのデータ型がサポートされていません
 
 以降では、SQL Server 2017 Cumulative Update 12 (CU12) は、WITH RESULT SETS 内の数値、10 進数、およびコストのデータ型はサポートされていませんで Python を使用する場合`sp_execute_external_script`します。 次のメッセージが表示されます。
 

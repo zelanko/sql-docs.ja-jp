@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2d22e4b3b9c53aa02a7666c929fcba25d2c17ced
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52410319"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209082"
 ---
 # <a name="create-a-data-source-ssas-multidimensional"></a>データ ソースの作成 (SSAS 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "52410319"
         >   
         >  この動作は、データベースが a) Analysis Services サーバー インスタンスに保存され、b) リレーショナル データを更新または処理するために SQL Server 認証を使用する場合にのみ適用されます。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] でセットアップする、セッションの期間内だけ使用されるデータ ソース接続には、適用されません。 既に保存されているパスワードを削除する方法はありませんが、異なる資格情報または Windows 認証を使用して、現在データベースで保存されているユーザー情報を上書きできます。  
   
-    3.  データベースを指定するには、**[データベース名の選択または入力]** または **[データベース ファイルの添付]** を使用します。  
+    3.  データベースを指定するには、 **[データベース名の選択または入力]** または **[データベース ファイルの添付]** を使用します。  
   
     4.  ダイアログ ボックスの左側で **[すべて]** をクリックして、このプロバイダーのすべての既定の設定など、この接続の追加の設定を表示します。  
   
@@ -103,9 +103,9 @@ ms.locfileid: "52410319"
   
      権限借用のオプションを選択するためのガイドラインは、データ ソースをどのように使用するかによって異なります。 処理タスクの場合、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスは、データ ソースへの接続の際に、そのサービス アカウントまたは指定されたユーザー アカウントのいずれかのセキュリティ コンテキストで実行する必要があります。  
   
-    -   最小特権資格情報の一意のセットを指定する場合は、**[特定の Windows ユーザー名とパスワードを使用する]** 。  
+    -   最小特権資格情報の一意のセットを指定する場合は、 **[特定の Windows ユーザー名とパスワードを使用する]** 。  
   
-    -   サービス ID を使用してデータを処理する場合は、**[サービス アカウントを使用する]** 。  
+    -   サービス ID を使用してデータを処理する場合は、 **[サービス アカウントを使用する]** 。  
   
      指定するアカウントは、データ ソースに対する読み取り権限を持っている必要があります。  
   
@@ -163,7 +163,7 @@ ms.locfileid: "52410319"
   
 5.  追加したテーブルを探し、選択します。 テーブルを右クリックし、 **[新しいリレーションシップ]** を選択します。 一致するデータを含む、基になる列と対象になる列を選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サポートされるデータ ソース &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)   
  [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)  
   

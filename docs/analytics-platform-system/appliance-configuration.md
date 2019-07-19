@@ -2,19 +2,18 @@
 title: 構成のチェックリスト - Analytics Platform System |Microsoft Docs
 description: Analytics Platform System を独自の環境の構成に必要なタスクのチェックリストを提供します。 これらの構成タスクは、アプライアンスを使用する前に必要です。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: ada3d2f782a33caf5334361a9682c53cf7cdec95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9977ac8ea73e37afef85a46d6794ea5136357b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63276048"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961597"
 ---
 # <a name="appliance-configuration-checklists-for-analytics-platform-system"></a>Analytics Platform System のアプライアンス構成のチェックリスト
 Analytics Platform System を独自の環境の構成に必要なタスクのチェックリストを提供します。 これらの構成タスクは、アプライアンスを使用する前に必要です。  

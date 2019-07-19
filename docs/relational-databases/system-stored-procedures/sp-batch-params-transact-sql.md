@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7b92fe9e-e755-4b7a-8a15-822c58a813d3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: b66e8b2d1b0d397a24c4ff5c702c00aff14988d4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9a5b4ac7c5e1e8d3c136f99475fa7a17ebd8b002
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996171"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68001810"
 ---
 # <a name="spbatchparams-transact-sql"></a>sp_batch_params (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_batch_params [ [ @tsqlbatch = ] 'tsqlbatch' ]
 |**DATA_TYPE**|**smallint**|パラメーター (ODBC データ型の整数コード) のデータ型。 このデータ型が ISO 型にマッピングできない場合、値は NULL です。 ネイティブ データ型の名前が返されます、 **TYPE_NAME**列。 この値は常に NULL です。|  
 |**TYPE_NAME**|**sysname**|基になる DBMS によって表された、データ型を表す文字列です。 この値は NULL です。|  
 |**PRECISION**|**int**|有効桁数の値。 戻り値、**精度**列は 10 進数。|  
-|**LENGTH**|**int**|データのサイズを転送します。 この値は NULL です。|  
+|**LENGTH**|**int**|データの転送サイズです。 この値は NULL です。|  
 |**スケール**|**smallint**|小数点の右側にある数字の数。 この値は NULL です。|  
 |**RADIX**|**smallint**|数値型の基数です。 この値は NULL です。|  
 |**NULLABLE**|**smallint**|Null 値許容属性を指定します。<br /><br /> 1 = NULL 値を許容するパラメーターのデータ型が作成されます。<br /><br /> 0 = null 値は許可されません。<br /><br /> この値は NULL です。|  
@@ -78,7 +77,7 @@ SET @SQLString =
 EXECUTE sp_batch_params @SQLString;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャの実行](../../relational-databases/native-client-odbc-stored-procedures/running-stored-procedures.md)   
  [ストアド プロシージャの操作方法に関するトピックを実行している&#40;ODBC&#41;](https://msdn.microsoft.com/library/c2220182-a23d-4475-b353-77a77ab613d6)   
  [ストアド プロシージャの実行 &#40;OLE DB&#41;](../../relational-databases/native-client/ole-db/stored-procedures-running.md)  

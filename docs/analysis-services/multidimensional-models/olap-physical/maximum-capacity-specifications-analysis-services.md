@@ -1,5 +1,5 @@
 ---
-title: 最大容量仕様 (Analysis Services) |Microsoft ドキュメント
+title: 最大容量仕様 (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 187a3a76f63853c63b9fe92dbd7ccfd4a0cfcdb5
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027359"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165489"
 ---
 # <a name="maximum-capacity-specifications-analysis-services"></a>最大容量仕様 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "34027359"
  [テーブル (DeploymentMode = 2)](#bkmk_vertipaq)  
   
 ##  <a name="bkmk_OLAP"></a> 多次元およびデータ マイニング (DeploymentMode = 0)  
- データとメタデータの両方を格納する MOLAP ストレージ モードは、ファイル サイズに物理的な制限があります。 文字列ストア ファイルの既定の最大サイズは 4 GB です。 文字列を格納するためにより大きなファイルが必要な場合は、別の文字列ストレージ アーキテクチャを指定できます。 詳細については、次を参照してください。[ディメンションおよびパーティションの文字列ストレージを構成する](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)です。  
+ データとメタデータの両方を格納する MOLAP ストレージ モードは、ファイル サイズに物理的な制限があります。 文字列ストア ファイルの既定の最大サイズは 4 GB です。 文字列を格納するためにより大きなファイルが必要な場合は、別の文字列ストレージ アーキテクチャを指定できます。 詳細については、次を参照してください。[ディメンションおよびパーティションの文字列ストレージを構成する](../../../analysis-services/multidimensional-models/configure-string-storage-for-dimensions-and-partitions.md)します。  
   
 |オブジェクト|最大サイズと最大数|  
 |------------|----------------------------|  
@@ -54,9 +54,9 @@ ms.locfileid: "34027359"
 |データ マイニング モデル属性列の個別状態の最大数|2^31-1 = 2,147,483,647|  
 |使用される属性の最大数 (機能選択)|2^31-1 = 2,147,483,647|  
   
- オブジェクトの名前付けガイドラインの詳細については、次を参照してください。 [ASSL オブジェクトとオブジェクトの特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)です。  
+ オブジェクトの名前付けのガイドラインの詳細については、次を参照してください。 [ASSL オブジェクトとオブジェクトの特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)します。  
   
- オンライン分析処理 (OLAP) およびデータ マイニングのデータ ソース制限の詳細については、次を参照してください[データ ソースのサポートされている&#40;SSAS - 多次元&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)、 [&#40;SSAS - 多次元&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)、および[ASSL オブジェクトとオブジェクトの特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)です。  
+ オンライン分析処理 (OLAP) およびデータ マイニングのデータ ソース制限の詳細については、次を参照してください[サポートされるデータ ソース&#40;SSAS - 多次元&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)、 [&#40;SSAS - 多次元&#41;](../../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)、および[ASSL オブジェクトとオブジェクトの特性](../../../analysis-services/multidimensional-models/scripting-language-assl/assl-objects-and-object-characteristics.md)します。  
   
 ##  <a name="bkmk_sharepoint"></a> SharePoint (DeploymentMode = 1)  
   
@@ -64,36 +64,36 @@ ms.locfileid: "34027359"
 |------------|----------------------------|  
 |インスタンス内のデータベース|2^31-1 = 2,147,483,647|  
 |データベース内のテーブル|2^31-1 = 2,147,483,647|  
-|テーブル内の列|2^31-1 = 2,147,483,647<br /><br /> **警告:** テーブル内の列の合計数がメジャーの合計数に依存していて、同じテーブルに関連付けられている計算列です。<br /><br /> テーブルの '列 + メジャー + 計算される列' の最大数は、2^31-1 = 2,147,483,647 です。|  
-|テーブル内の行|無制限<br /><br /> **警告:** 制限の 1 つの列は含めないこと 1,999,999,997 複数の個別の値。|  
+|テーブル内の列|2^31-1 = 2,147,483,647<br /><br /> **警告:** 同じテーブルに関連付けられている計算列とテーブル内の列の合計数は、メジャーの合計数によって異なります。<br /><br /> テーブルの '列 + メジャー + 計算される列' の最大数は、2^31-1 = 2,147,483,647 です。|  
+|テーブル内の行|無制限<br /><br /> **警告:** 1 つの列が含まれていないこと 1,999,999,997 複数の個別の値には制限。|  
 |テーブル内の階層|2^31-1 = 2,147,483,647|  
-|階層内のレベル|2^31-1 = 2,147,483,647|  
+|階層のレベル|2^31-1 = 2,147,483,647|  
 |リレーションシップ|2^31-1 = 2,147,483,647|  
 |テーブル内のキー列|2^31-1 = 2,147,483,647|  
-|テーブル内のメジャー|2^31-1 = 2,147,483,647<br /><br /> **警告:** テーブル内のメジャーの合計数は、列の合計数によって異なります。 および、同じテーブルに関連付けられている計算列です。<br /><br /> テーブルの '列 + メジャー + 計算される列' の最大数は、2^31-1 = 2,147,483,647 です。|  
-|テーブル内の計算される列|2^31-1 = 2,147,483,647<br /><br /> **警告:** テーブルで計算される列の合計数は、列の合計数によって異なります。 および、同じテーブルにメジャーが関連付けられています。<br /><br /> テーブルの '列 + メジャー + 計算される列' の最大数は、2^31-1 = 2,147,483,647 です。|  
+|テーブル内のメジャー|2^31-1 = 2,147,483,647<br /><br /> **警告:** 同じテーブルに関連付けられている計算列とテーブルのメジャーの合計数は、列の合計数によって異なります。<br /><br /> テーブルの '列 + メジャー + 計算される列' の最大数は、2^31-1 = 2,147,483,647 です。|  
+|テーブル内の計算される列|2^31-1 = 2,147,483,647<br /><br /> **警告:** テーブルの計算列の合計数は、列と同じテーブルに関連付けられているメジャーの合計数によって異なります。<br /><br /> テーブルの '列 + メジャー + 計算される列' の最大数は、2^31-1 = 2,147,483,647 です。|  
 |クエリによって返されるセル|2^31-1 = 2,147,483,647|  
 |ソース クエリのレコード サイズ|64 K|  
 |オブジェクト名の長さ|100 文字|  
   
 ##  <a name="bkmk_vertipaq"></a> テーブル (DeploymentMode = 2)  
-理論上の制限を次に示します。 小さい番号のパフォーマンスは低下します。   
+理論的制限を次に示します。 小さい番号のパフォーマンスは低下します。   
 
 |オブジェクト|最大サイズと最大数|  
 |------------|----------------------------|  
 |インスタンス内のデータベース|16,000|  
 |データベースのテーブルと列の合計数|16,000|  
-|テーブル内の行|無制限<br /><br /> **警告:** 制限のあるテーブルの列を 1 つ持つことができるありません 1,999,999,997 複数の個別の値。|  
+|テーブル内の行|無制限<br /><br /> **警告:** 制限は、テーブル内 1 つの列を持たない 1,999,999,997 複数の個別の値。|  
 |テーブル内の階層|15,999|  
-|階層内のレベル|15,999|  
+|階層のレベル|15,999|  
 |リレーションシップ|8,000|  
-|すべてのテーブル内のキー列|15,999|  
+|すべてのテーブルのキー列|15,999|  
 |テーブル内のメジャー|2^31-1 = 2,147,483,647|  
 |クエリによって返されるセル|2^31-1 = 2,147,483,647|  
 |ソース クエリのレコード サイズ|64 K|  
 |オブジェクト名の長さ|512 文字|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services インスタンスのサーバー モードの決定](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)   
  [全般プロパティ](../../../analysis-services/server-properties/general-properties.md)  
   

@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 228b978d-eef1-4e30-928a-005b2f77ef14
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 08dbea83f84a1b4606d48a79c80b8b6ef082d023
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a7ddf42eb5a34d17c735066cd4e936c75e64ff64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921213"
 ---
 # <a name="ado-code-examples-in-microsoft-jscript"></a>Microsoft JScript での ADO のコード例
 次のコード例を使用して、ADO メソッド、プロパティ、および JScript で記述するときにイベントを使用する方法について説明します。  
@@ -40,7 +39,7 @@ ms.locfileid: "66697029"
   
 -   [GetRows メソッドの例](../../../ado/reference/ado-api/getrows-method-example-vb.md)  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 -   [AbsolutePage、PageCount、PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-jscript.md)  
   
@@ -56,7 +55,7 @@ ms.locfileid: "66697029"
   
 -   [Filter および RecordCount プロパティの例](../../../ado/reference/ado-api/filter-and-recordcount-properties-example-jscript.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Visual Basic での ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-basic.md)   
  [ADO のコード例の VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual C で ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   

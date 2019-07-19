@@ -90,7 +90,7 @@ ms.locfileid: "66074888"
 5.  **[OK]** をクリックすると、ロール定義が完了します。  
   
 ## <a name="see-also"></a>参照  
- [データベースの処理、テーブル、またはパーティション](../tabular-models/process-database-table-or-partition-analysis-services.md)   
+ [データベース、テーブル、またはパーティションの処理](../tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多次元モデル オブジェクトの処理](processing-a-multidimensional-model-analysis-services.md)   
  [データベース権限の付与 &#40;Analysis Services&#41;](grant-database-permissions-analysis-services.md)   
  [オブジェクト メタデータに対する定義の読み取り権限の付与 &#40;Analysis Services&#41;](grant-read-definition-permissions-on-object-metadata-analysis-services.md)  

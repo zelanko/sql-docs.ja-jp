@@ -2,19 +2,18 @@
 title: Integration Services - Parallel Data Warehouse を使用して読み込む |Microsoft Docs
 description: SQL Server Integration Services (SSIS) パッケージを使用して並列データ ウェアハウス (PDW) にデータを読み込むための参照と展開の情報を提供します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b8a1ca0ec3662dddb2baa5fbac5fe01ed4d4f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90d9f7422a3073df79a93949b3b7ed2e94208412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960678"
 ---
 # <a name="load-data-with-integration-services-to-parallel-data-warehouse"></a>Parallel Data Warehouse に Integration Services を使用してデータを読み込む
 SQL Server Integration Services (SSIS) パッケージを使用して SQL Server Parallel Data Warehouse にデータを読み込むための参照と展開の情報を提供します。  

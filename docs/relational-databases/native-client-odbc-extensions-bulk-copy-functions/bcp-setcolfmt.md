@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: afb47987-39e7-4079-ad66-e0abf4d4c72b
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9fd6ac6c5dccd9f33e2e8389f5847a5ac73b795d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3f3666c6951fcacea031c5d86dc9d17381a2f963
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47694200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68099429"
 ---
 # <a name="bcpsetcolfmt"></a>bcp_setcolfmt
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -99,7 +98,7 @@ RETCODE bcp_setcolfmt (
   
 -   省略可能なターミネータ バイト シーケンスの長さ  
   
- 呼び出しごとに**bcp_setcolfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)**(5)** を呼び出して**bcp_setcolfmt**の 5 回これらの呼び出しの 3 つのカスタム形式を設定します。 残りの 2 つの呼び出しでは、BCP_FMT_TYPE を 0 に設定し、BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN を設定し、 *cbValue* 0、SQL_VARLEN_DATA、0 とそれぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
+ 呼び出しごとに**bcp_setcolfmt**のユーザー ファイルの 1 つの列の形式を指定します。 たとえば、5 つの列のユーザーのデータ ファイル内の 3 つの列の既定の設定を変更するにまず[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md) **(5)** を呼び出して**bcp_setcolfmt**の 5 回これらの呼び出しの 3 つのカスタム形式を設定します。 残りの 2 つの呼び出しでは、BCP_FMT_TYPE を 0 に設定し、BCP_FMT_INDICATOR_LENGTH、BCP_FMT_DATA_LEN を設定し、 *cbValue* 0、SQL_VARLEN_DATA、0 とそれぞれします。 このプロシージャでは、5 つの列すべてをコピーします。それらの列のうち 3 つはカスタマイズされた形式でコピーされ、2 つは既定の形式でコピーされます。  
   
  **Bcp_columns**関数を呼び出す前に呼び出す必要があります**bcp_setcolfmt**します。  
   
@@ -112,7 +111,7 @@ RETCODE bcp_setcolfmt (
 ## <a name="bcpsetcolfmt-support-for-enhanced-date-and-time-features"></a>bcp_setcolfmt による機能強化された日付と時刻のサポート  
  日付/時刻型の BCP_FMT_TYPE プロパティと共に使用される型がで指定されている[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。  
   
- 詳細については、[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)を参照してください。  
+ 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

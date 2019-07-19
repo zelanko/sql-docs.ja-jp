@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: eb69f303-1adf-4602-b6ab-f62e028ed9f6
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: c34d7f326c10ceebb3ee3b97c72b583e13a78ff5
-ms.sourcegitcommit: acb5de9f493238180d13baa302552fdcc30d83c0
-ms.translationtype: HT
+ms.openlocfilehash: 1bf39a9a1262f30e3c0bbd6fd2ea5892a55540dd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/12/2019
-ms.locfileid: "59542192"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072669"
 ---
 # <a name="spaddlinkedsrvlogin-transact-sql"></a>sp_addlinkedsrvlogin (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_addlinkedsrvlogin [ @rmtsrvname = ] 'rmtsrvname'
  ログイン マッピングを適用するリンク サーバーの名前です。 *rmtsrvname*は**sysname**、既定値はありません。  
   
  `[ @useself = ] { 'TRUE' | 'FALSE' | NULL }'`  
- 接続するかどうかを判断します*rmtsrvname*ローカル ログインの権限を借用または明示的にログインとパスワードを送信します。 データ型は**varchar (** 8 **)**、既定値は TRUE。  
+ 接続するかどうかを判断します*rmtsrvname*ローカル ログインの権限を借用または明示的にログインとパスワードを送信します。 データ型は**varchar (** 8 **)** 、既定値は TRUE。  
   
  TRUE の値は、ログインがへの接続に自身の資格情報を使用することを指定します*rmtsrvname*で、 *rmtuser*と*rmtpassword*引数は無視されます。 FALSE を指定する、 *rmtuser*と*rmtpassword*引数がへの接続に使用される*rmtsrvname* 、指定された*locallogin*. 場合*rmtuser*と*rmtpassword*も NULL でないログインまたはパスワードに設定を使用して、リンク サーバーに接続します。  
   
@@ -117,7 +116,7 @@ EXEC sp_addlinkedsrvlogin 'Accounts', 'false', 'Domain\Mary', 'MaryP', 'd89q3w4u
 > [!IMPORTANT]  
 >  この例では、Windows 認証は使用しません。 暗号化されていないパスワードが送信されます。 パスワードは、ディスク、バックアップ、およびログファイルに保存されたデータ ソース定義やスクリプトで参照できます。 この種類の接続では、システム管理者のパスワードを使用しないでください。 セキュリティのガイダンスについては、環境に合わせたネットワーク管理者に問い合わせてください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リンク サーバーのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/linked-servers-catalog-views-transact-sql.md)   
  [sp_addlinkedserver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedserver-transact-sql.md)   
  [sp_droplinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droplinkedsrvlogin-transact-sql.md)   

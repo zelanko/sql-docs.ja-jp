@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 835b09b5-eb42-47ea-b46e-e115d4d6461f
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2cc49bbd3d2927431da2c16debbe0f35dbf4bb79
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 72efa0f050a3b930ebaa99ff425b48e1fe9b6ba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63453561"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986645"
 ---
 # <a name="global-settings-logging-accesstosql"></a>グローバル設定 (ログ) (AccessToSQL)
 使用して、**グローバル設定**SSMA のログ記録設定を指定 ダイアログ ボックス。 通常、製品サポートを使用する場合にのみ、これらの設定を変更するは。  
@@ -26,7 +25,7 @@ ms.locfileid: "63453561"
 **メッセージ レベル**  
 次のオプションが **メッセージ レベル**:  
   
-|オプション|説明|  
+|OPTION|説明|  
 |----------|---------------|  
 |**[すべてのカテゴリ]**|次のオプションのすべてのログ記録レベルを設定するために使用します。|  
 |**コレクター**|送信元スキーマに関するメタデータを収集し、プロジェクトに保存します。|  

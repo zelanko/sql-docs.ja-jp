@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 4c7cfdc33c6087373fd003dcd92a0703cf7fb0cf
-ms.sourcegitcommit: b7fd118a70a5da9bff25719a3d520ce993ea9def
+ms.openlocfilehash: 549224ae30b710292324a178aa48432bde7d34ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2018
-ms.locfileid: "46714064"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215633"
 ---
 ## <a name="connect-locally"></a>ローカル接続
 
@@ -20,7 +20,7 @@ ms.locfileid: "46714064"
    > コマンド ラインでパスワードを省略すると、入力を求められます。
 
    > [!TIP]
-   > 後でリモート接続する場合は、**-S** パラメーターとしてコンピューター名または IP アドレスを指定し、ファイアウォールでポート 1433 が開いていることを確認してください。
+   > 後でリモート接続する場合は、 **-S** パラメーターとしてコンピューター名または IP アドレスを指定し、ファイアウォールでポート 1433 が開いていることを確認してください。
 
 1. 成功すると、**sqlcmd** コマンド プロンプト `1>` が表示されます。
 
@@ -52,13 +52,13 @@ ms.locfileid: "46714064"
    ```
 
 > [!TIP]
-> Transact-SQL ステートメントおよびクエリの作成の詳細については、「[Tutorial: Writing Transact-SQL Statements (チュートリアル: TRANSACT-SQL ステートメントの作成)](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
+> TRANSACT-SQL ステートメントおよびクエリの記述方法の詳細についてを参照してください。[チュートリアル。Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
 
 ### <a name="insert-data"></a>データの挿入
 
 次に、新しいテーブル `Inventory` を作成し、2 つの新しい行を挿入します。
 
-1. **sqlcmd** のコマンド プロンプトで、新しい `TestDB` データベースのコンテキストに切り替えます。 
+1. **sqlcmd** のコマンド プロンプトで、新しい `TestDB` データベースのコンテキストに切り替えます。
 
    ```sql
    USE TestDB
@@ -108,7 +108,7 @@ QUIT
 
 ## <a name="performance-best-practices"></a>パフォーマンスのベスト プラクティス
 
-Linux 上の SQL Server をインストールした後、運用環境のシナリオのパフォーマンスを向上させるには、Linux と SQL Server を構成するためのベスト プラクティスを確認します。 詳細については、[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](../linux/sql-server-linux-performance-best-practices.md)を参照してください。
+Linux 上の SQL Server をインストールした後、運用環境のシナリオのパフォーマンスを向上させるには、Linux と SQL Server を構成するためのベスト プラクティスを確認します。 詳細については、次を参照してください。[パフォーマンスのベスト プラクティスと SQL Server on Linux の構成ガイドライン](../linux/sql-server-linux-performance-best-practices.md)します。
 
 ## <a name="cross-platform-data-tools"></a>データのクロス プラットフォーム ツール
 
@@ -117,8 +117,9 @@ Linux 上の SQL Server をインストールした後、運用環境のシナ�
 |||
 |---|---|
 | [Azure Data Studio](../azure-data-studio/index.md) | クロス プラットフォーム GUI データベース管理ユーティリティです。 |
-| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL コマンドを実行するためのクロス プラットフォーム コマンド ライン インターフェイス。 |
 | [Visual Studio Code](../linux/sql-server-linux-develop-use-vscode.md) | Mssql 拡張機能による TRANSACT-SQL ステートメントを実行するクロス プラットフォーム GUI コード エディターです。 |
+| [PowerShell Core](../linux/sql-server-linux-manage-powershell-core.md) | クロス プラットフォーム自動化と構成ツールのコマンドレットに基づくです。 |
+| [mssql-cli](https://github.com/dbcli/mssql-cli/tree/master/doc) | TRANSACT-SQL コマンドを実行するためのクロス プラットフォーム コマンド ライン インターフェイス。 |
 
 ## <a name="connecting-from-windows"></a>Windows からの接続
 
@@ -144,7 +145,7 @@ Windows で実行し、Linux 上の SQL Server に接続するその他のツー
 | [オフライン インストール](../linux/sql-server-linux-setup.md#offline) | オフライン インストール パッケージを手動でダウンロードする方法を説明する |
 
 > [!TIP]
-> よく寄せられる質問の回答は、、 [SQL Server on Linux の FAQ](../linux/sql-server-linux-faq.md)を参照してください。
+> よく寄せられる質問の回答は、次を参照してください。、 [SQL Server on Linux の FAQ](../linux/sql-server-linux-faq.md)します。
 
 ## <a name="next-steps"></a>次の手順
 

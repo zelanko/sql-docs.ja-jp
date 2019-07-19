@@ -55,12 +55,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: e6ca14f18b89093db5ad3c6b86a381eebcd2fad5
-ms.sourcegitcommit: 0b0f5aba602732834c8439c192d95921149ab4c3
+ms.openlocfilehash: 195f7d0f298d191845a65864e752ab9a4dea5d06
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/02/2019
-ms.locfileid: "67500234"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652791"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -734,7 +734,7 @@ DROP_EXISTING を使用すると、非クラスター化インデックスが定
 - オンラインでのインデックス作成は、`RESUMABLE = ON` オプションを使って再開可能として指定できます。
 - RESUMABLE オプションは特定のインデックス用のメタデータ内に保持されるのではなく、現在の DDL ステートメントの実行中にのみ適用されます。 したがって、再開機能を有効にするには、`RESUMABLE = ON` 句を明示的に指定する必要があります。
 - MAX_DURATION オプションは、`RESUMABLE = ON` オプションに対してのみサポートされます。
-- MAX_DURATION for RESUMABLE オプションでは、構築するインデックスの時間間隔を指定します。 この時間が経過すると、インデックスの構築が一時停止するか、またはその実行が完了します。 ユーザーは、一時停止されたインデックスの構築を再開可能にするタイミングを決定します。 MAX_DURATION の分単位の**時間**は、0 分より長く、かつ 1 週間 (7 * 24 * 60 = 10080 分) 以内とする必要があります。 インデックス操作の一時停止時間を長くすると、特定のテーブルでの DML パフォーマンスおよびデータベースのディスク容量に影響を及ぼす可能性があります。元々存在するインデックスも新たに作成されたインデックスもディスク容量を必要とし、DML 操作中に更新される必要があるからです。 MAX_DURATION オプションを省略した場合、インデックス操作は、それが完了するかまたは障害が発生するまで続行されます。
+- MAX_DURATION for RESUMABLE オプションでは、構築するインデックスの時間間隔を指定します。 この時間が経過すると、インデックスの構築が一時停止するか、またはその実行が完了します。 ユーザーは、一時停止されたインデックスの構築を再開可能にするタイミングを決定します。 MAX_DURATION の**時間** (分単位) は、0 分より長く、かつ 1 週間 (7 \* 24 \* 60 = 10080 分) 以下とする必要があります。 インデックス操作の一時停止時間を長くすると、特定のテーブルでの DML パフォーマンスおよびデータベースのディスク容量に影響を及ぼす可能性があります。元々存在するインデックスも新たに作成されたインデックスもディスク容量を必要とし、DML 操作中に更新される必要があるからです。 MAX_DURATION オプションを省略した場合、インデックス操作は、それが完了するかまたは障害が発生するまで続行されます。
 - インデックス操作を直ちに一時停止するには、進行中のコマンドを停止するか (Ctrl + C キー)、[ALTER INDEX](alter-index-transact-sql.md) PAUSE コマンドを実行するか、または `KILL <session_id>` コマンドを実行します。 コマンドが一時停止されたら、[ALTER INDEX](alter-index-transact-sql.md) コマンドを使って再開することができます。
 - 再開可能なインデックスに対する元の CREATE INDEX ステートメントを再実行すると、一時停止されていたインデックス作成操作が自動的に再開されます。
 - `SORT_IN_TEMPDB = ON` オプションは、再開可能なインデックスに対してはサポートされていません。

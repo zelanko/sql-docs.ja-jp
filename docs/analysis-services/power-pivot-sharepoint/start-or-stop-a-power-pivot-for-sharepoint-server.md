@@ -1,5 +1,5 @@
 ---
-title: 開始または SharePoint サーバーに対して Stop a Power Pivot |Microsoft ドキュメント
+title: 開始または Power Pivot を SharePoint サーバーの停止 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b53cc7730f962d790ebdb9a0373bf98e9bf32bf
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34037406"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208095"
 ---
 # <a name="start-or-stop-a-power-pivot-for-sharepoint-server"></a>PowerPivot for SharePoint サーバーの開始または停止
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -53,7 +53,7 @@ ms.locfileid: "34037406"
 ##  <a name="effects"></a> Power Pivot サーバーの停止の影響  
  次の表に、SharePoint サーバーでの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] System サービスおよび Analysis Services サービスの停止の影響を示します。  
   
-|影響を受ける対象|Description|  
+|影響を受ける対象|説明|  
 |---------------|-----------------|  
 |既存のクエリ|Analysis Services サーバーで処理されているクエリは直ちに停止します。 ユーザーは、データまたはデータ ソース接続が見つからないことを示すエラーを受け取ります。|  
 |現在処理中の既存のデータ更新ジョブ|現在の Analysis Services サーバーで処理されているジョブは直ちに停止します。 データ更新が失敗し、データ更新の履歴にエラーが記録されます。<br /><br /> SharePoint サーバーの全体管理の [ジョブの状態の確認] ページを使用することにより、サービスを停止する前に現在のジョブの状態を表示できます。<br /><br /> 現在処理中のジョブを確認することはできますが、キュー自体を表示して、他のジョブが開始されようとしているかどうかを確認することはできません。|  
@@ -61,7 +61,7 @@ ms.locfileid: "34037406"
 |新しいクエリ要求またはデータ更新要求|ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーのみを停止した場合、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データに対する新しい要求は処理されません。データを要求すると、データが見つからないことを示すエラーが発生します。<br /><br /> ファーム内に追加の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーがある場合、要求は使用可能なサーバーのうちの 1 つに送信されます。|  
 |使用状況データ|使用状況データは、サービスの停止中は収集されません。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power Pivot サービス アカウントの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-service-accounts.md)  
   
   

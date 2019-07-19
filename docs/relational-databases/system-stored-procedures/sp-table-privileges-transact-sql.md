@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0512e688-4fc0-4557-8dc8-016672c1e3fe
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: dcc3d02505a1bd568d440d5b70fc06bcfff93ae9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 14e532d76f70f6a2d4fa623d80fa02e6c756348a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62688368"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096139"
 ---
 # <a name="sptableprivileges-transact-sql"></a>sp_table_privileges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
  [ @table_qualifier= ] '*table_qualifier*'  
  テーブル修飾子の名前です。 *table_qualifier*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (*qualifier.owner.name*)。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は、データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
   
- [ @fUsePattern= ] '*fUsePattern*'  
+ [ @fUsePattern=] '*fUsePattern*'  
  アンダー スコア (_)、パーセント (%) と角かっこ ([または]) の文字がワイルドカードとして解釈されるかどうかを判断します。 有効な値は 0 (パターン一致がオフ) および 1 (パターン一致では)。 *fUsePattern*は**ビット**、既定値は 1 です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -68,7 +67,7 @@ sp_table_privileges [ @table_name = ] 'table_name'
 |TABLE_OWNER|**sysname**|テーブルの所有者名です。 このフィールドは、常に値を返します。|  
 |TABLE_NAME|**sysname**|テーブル名です。 このフィールドは、常に値を返します。|  
 |GRANTOR|**sysname**|この TABLE_NAME の権限を、表示される GRANTEE に与えたデータベース ユーザーの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この列は常に TABLE_OWNER と同じです。 このフィールドは、常に値を返します。 また、GRANTOR 列には、データベース所有者 (TABLE_OWNER) か、データベース所有者が GRANT ステートメントで WITH GRANT OPTION 句を使用して、アクセス許可を許可するユーザーがあります。|  
-|権限付与対象ユーザー|**sysname**|この TABLE_NAME の権限を、表示される GRANTOR によって与えられたデータベース ユーザーの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列には常に、sys.database_principalssystem ビューからデータベース ユーザーが含まれています。 このフィールドは、常に値を返します。|  
+|GRANTEE|**sysname**|この TABLE_NAME の権限を、表示される GRANTOR によって与えられたデータベース ユーザーの名前。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列には常に、sys.database_principalssystem ビューからデータベース ユーザーが含まれています。 このフィールドは、常に値を返します。|  
 |PRIVILEGE|**sysname**|使用可能なテーブル権限の 1 つ。 テーブル権限は、次に挙げる値 (または実装が定義されるときにデータ ソースによってサポートされるその他の値) のいずれかになります。<br /><br /> SELECT。GRANTEE は、1 列以上のデータを取得できます。<br /><br /> INSERT。GRANTEE は、新しい行の 1 列以上にデータを提供できます。<br /><br /> UPDATE。GRANTEE は、1 列以上の既存のデータを修正できます。<br /><br /> DELETE。GRANTEE は、テーブルから行を削除できます。<br /><br /> REFERENCES。GRANTEE は、主キー/外部キーのリレーションシップで外部テーブル内の列を参照できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、主キー/外部キーのリレーションシップはテーブル制約で定義されます。<br /><br /> 特定のテーブル特権によって GRANTEE に与えられる操作の範囲は、データ ソースに依存します。 たとえば、UPDATE 特権の場合、GRANTEE は、あるデータ ソース上ではテーブルのすべての列を更新することが許可されても、別のデータ ソース上では、GRANTOR が UPDATE 特権を持っている列しか更新できないことがあります。|  
 |IS_GRANTABLE|**sysname**|GRANTEE が他のユーザーに権限を与えることが許可されているかどうかを示します。これは "許可の許可" 権限とも呼ばれます。 いいえ、はい、できますまたは NULL。 不明な (または NULL) の値は、「許可の許可」が適用されないデータ ソースを参照します。|  
   

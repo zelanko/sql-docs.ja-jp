@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e37d0c3b-19bf-4719-9535-96ba361372b3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3ae733d560c227ccf282dfe4caed3935d9ffaebe
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 2b9bdabcc11c900ae0a1cbe71280b64efb6ccdaf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096211"
 ---
 # <a name="spaddsynctriggers-transact-sql"></a>sp_addsynctriggers (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,9 +81,9 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
   
 `[ @ts_col = ] 'timestamp_col'` 名前を指定します、**タイムスタンプ**パブリッシャーの列。 *timestamp_col*は**sysname**、既定値は NULL です。  
   
-`[ @filter_clause = ] 'filter_clause'` 制限は、水平方向のフィルターを定義する (、) where 句。 制限句を入力するときに、キーワードを省略する場所。 *filter_clause*は**nvarchar (4000)**、既定値は NULL です。  
+`[ @filter_clause = ] 'filter_clause'` 制限は、水平方向のフィルターを定義する (、) where 句。 制限句を入力するときに、キーワードを省略する場所。 *filter_clause*は**nvarchar (4000)** 、既定値は NULL です。  
   
-`[ @primary_key_bitmap = ] 'primary_key_bitmap'` テーブルの主キー列のビット マップです。 *primary_key_bitmap*は**varbinary (4000)**、既定値はありません。  
+`[ @primary_key_bitmap = ] 'primary_key_bitmap'` テーブルの主キー列のビット マップです。 *primary_key_bitmap*は**varbinary (4000)** 、既定値はありません。  
   
 `[ @identity_support = ] identity_support` 有効にし、キュー更新を使用するときに自動 id 範囲処理を無効にします。 *identity_support*は、**ビット**、既定値は**0**します。 **0** id がないことを意味の範囲のサポート、 **1**自動 id 範囲処理を有効にします。  
   
@@ -103,7 +102,7 @@ sp_addsynctriggers [ @sub_table = ] 'sub_table'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addsynctriggers**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Updatable Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)   
  [sp_script_synctran_commands &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-script-synctran-commands-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

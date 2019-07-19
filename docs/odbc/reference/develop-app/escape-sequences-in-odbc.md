@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: cf229f21-6c38-4b5b-aca8-f1be0dfeb3d0
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 3866a45a2b55a5372769eacc0bb6b0eb1e5c088f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 17183a7eacdc5348eea0ddcd7aee4cc493249e77
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62942975"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68051124"
 ---
 # <a name="escape-sequences-in-odbc"></a>ODBC でのエスケープ シーケンス
 さまざまな外部結合およびスカラー関数の呼び出しなどの言語機能は通常の Dbms によって実装されます。 ただし、これらの機能の構文は、さまざまな標準化団体によって標準の構文が定義されている場合でも、DBMS 固有にする傾向があります。 このため、ODBC では、標準の構文を次の言語機能を含むエスケープ シーケンスが定義されています。  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: bf53939f-5543-40ac-a707-aa35e9bde1dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31b4edac079f8b05868b1ed7b16a7c71fa7aa39c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cfb208880586d0bda6bfe6bf956bbb544b48e69a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708746"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949181"
 ---
 # <a name="schemaobjecttypeenum"></a>SchemaObjectTypeEnum
 取得するオブジェクトの種類を指定します、 [GetSchemaObject](../../../ado/reference/ado-md-api/getschemaobject-method-ado-md.md)メソッド。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adObjectTypeDimension**|1|A[ディメンション](../../../ado/reference/ado-md-api/dimension-object-ado-md.md)オブジェクト。|  
 |**adObjectTypeHierarchy**|2|A[階層](../../../ado/reference/ado-md-api/hierarchy-object-ado-md.md)オブジェクト。|  

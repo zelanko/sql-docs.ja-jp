@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a5383fe83963a9b388413b9b829b4fac7fc11788
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071589"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207975"
 ---
 # <a name="lock-manager-properties"></a>ロック マネージャーのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "53071589"
   
  **適用対象:** 多次元および表形式サーバー モード  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  **DefaultLockTimeoutMS**  
  内部ロック要求の既定のロック タイムアウトをミリ秒単位で定義する、符号付き 32 ビット整数のプロパティです。  
   

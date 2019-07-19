@@ -1,5 +1,5 @@
 ---
-title: クエリ スコープのセル計算 (MDX) を作成する |Microsoft ドキュメント
+title: クエリ スコープのセル計算 (MDX) を作成する |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: c9cb6f083751b14ad3cd8f2ffaac692ef4e6eb86
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022839"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208784"
 ---
-# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>クエリ スコープのセル計算の MDX セル計算
+# <a name="mdx-cell-calculations---query-scoped-cell-calculations"></a>MDX セル計算 - クエリ スコープのセル計算
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   計算されるセルをクエリのコンテキストの中で記述するには、多次元式 (MDX) の **WITH** キーワードを使用します。 **WITH** キーワードの構文は、以下のとおりです。  
   
@@ -26,7 +26,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  `CellCalc_Identifier` の値は、計算されるセルの名前です。 `String_Expression` の値には、直交する 1 次元の MDX セット式の一覧を指定します。 それぞれの式は次の表に示されているカテゴリのいずれかに解決する必要があります。  
   
-|カテゴリ|Description|  
+|Category|説明|  
 |--------------|-----------------|  
 |空セット|空セットに解決される MDX セット式。 この場合、計算されるセルのスコープはキューブ全体です。|  
 |単一メンバー セット|1 つのメンバーに解決される MDX セット式。|  
@@ -37,7 +37,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  `MDX_Expression` 引数には、 `String_Expression` 引数で定義したすべてのセルのセル値に評価される MDX 式を指定します。  
   
-## <a name="additional-considerations"></a>その他の注意点  
+## <a name="additional-considerations"></a>その他の考慮事項  
  **CONDITION** プロパティによって指定された計算条件は、MDX によって一度だけ処理されます。 このように一度だけの処理を行うことにより、複数の計算されるセルの定義を評価する場合、特に計算されるセルがキューブ パス間で重複している場合のパフォーマンスが向上します。  
   
  この一度だけの処理がいつ行われるかは、計算されるセルの定義の作成スコープによって異なります。  
@@ -50,7 +50,7 @@ WITH CELL CALCULATION Cube_Name.CellCalc_Identifier  String_Expression
   
  一方、計算式は、計算されるセルの定義に含まれるセルを伴うキューブに対して MDX クエリが実行されるたびに MDX によって処理されます。 この処理は、作成スコープに関係なく行われます。  
   
-## <a name="see-also"></a>参照  
- [CELL CALCULATION ステートメント & #40; を作成します。MDX と #41 です。](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
+## <a name="see-also"></a>関連項目  
+ [CREATE CELL CALCULATION ステートメント (MDX)](../../../mdx/mdx-data-definition-create-cell-calculation.md)  
   
   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ab79a623-88a9-40b6-a017-a658bf19b778
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4d105d648c7877e7099dea637c2a2c6a094985f
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 97c7f1c143c83dd35ca5ff17e9776d79fb734ff9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63241085"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917923"
 ---
 # <a name="open-method-ado-record"></a>Open メソッド (ADO Record)
 既存を開く[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト、またはで表される新しい項目の作成、**レコード**ファイルやディレクトリなどです。  

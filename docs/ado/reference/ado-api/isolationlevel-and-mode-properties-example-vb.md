@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3382fd41-0aa1-4091-97d3-624403111e07
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c32e63fc0c58d6772396da86adeb5ca434eb7585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5826cc8edcb857ffeb10cc197134708d20468b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697599"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918416"
 ---
 # <a name="isolationlevel-and-mode-properties-example-vb"></a>IsolationLevel および Mode プロパティの例 (VB)
 この例では、[モード](../../../ado/reference/ado-api/mode-property-ado.md)、排他的な接続を開き、プロパティ、および[IsolationLevel](../../../ado/reference/ado-api/isolationlevel-property.md)を他のトランザクションの分離を実行したトランザクションを開きます。  

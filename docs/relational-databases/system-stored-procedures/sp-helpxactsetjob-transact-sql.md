@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 242cea3e-e6ac-4f84-a072-b003b920eb33
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 7402fcc825e6f537703268c1fd3fead9c88b1f5e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db259133a2ddd7ebe18b6d198c0f91e8ffc7b8bf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62959612"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048188"
 ---
 # <a name="sphelpxactsetjob-transact-sql"></a>sp_helpxactsetjob (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,22 +37,22 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher** = ] **'***publisher***'**  
+ [ **@publisher** =] **'***パブリッシャー***'**  
  以外の名前を指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーは、ジョブが属しています。 *パブリッシャー* は **sysname** 、既定値はありません。  
   
 ## <a name="result-sets"></a>結果セット  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**jobnumber**|**int**|Oracle のジョブの数。|  
+|**仕事番号**|**int**|Oracle のジョブの数。|  
 |**lastdate**|**varchar(22)**|ジョブが実行された最後の日付。|  
 |**thisdate**|**varchar(22)**|変更時刻です。|  
 |**nextdate**|**varchar(22)**|[次へ] の日付、ジョブの実行です。|  
-|**broken**|**varchar(1)**|ジョブが破損している場合を示すフラグします。|  
+|**分割**|**varchar (1)**|ジョブが破損している場合を示すフラグします。|  
 |**間隔**|**varchar(200)**|ジョブの間隔。|  
 |**エラー**|**int**|ジョブの失敗の回数です。|  
 |**xactsetjobwhat**|**varchar(200)**|ジョブによって実行されるプロシージャの名前です。|  
-|**xactsetjob**|**varchar(1)**|次のいずれかの値と、ジョブの状態です。<br /><br /> **1** -ジョブが有効にします。<br /><br /> **0** -ジョブは無効です。|  
+|**xactsetjob**|**varchar (1)**|次のいずれかの値と、ジョブの状態です。<br /><br /> **1** -ジョブが有効にします。<br /><br /> **0** -ジョブは無効です。|  
 |**xactsetlonginterval**|**int**|ジョブの長い間隔です。|  
 |**xactsetlongthreshold**|**int**|ジョブの長いしきい値です。|  
 |**xactsetshortinterval**|**int**|ジョブの間隔を短くします。|  
@@ -70,7 +69,7 @@ sp_helpxactsetjob [ @publisher = ] 'publisher'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_helpxactsetjob**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Oracle パブリッシャー用のトランザクション セット ジョブの構成 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/configure-the-transaction-set-job-for-an-oracle-publisher.md)   
  [sp_publisherproperty &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-publisherproperty-transact-sql.md)  
   

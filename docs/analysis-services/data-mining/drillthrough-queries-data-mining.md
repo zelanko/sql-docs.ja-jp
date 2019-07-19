@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2a39742fa8e97e198d54baf73d91534d69a6ee36
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
-ms.translationtype: HT
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52516675"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210032"
 ---
 # <a name="drillthrough-queries-data-mining"></a>ドリルスルー クエリ (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -22,11 +22,11 @@ ms.locfileid: "52516675"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ マイニングは、ドリルスルーの次の 2 つのオプションを提供します。  
   
--    **モデル ケース**へのドリルスルー  
+-   **モデル ケース** へのドリルスルー  
   
      モデル_ケースへのドリルスルーがクラスターまたはデシジョン ツリーの分岐としてモデルなどの特定のパターンから移動する場合に使用されるのと、個々 のケースに関する詳細を表示します。  
   
--    **構造ケース**へのドリルスルー  
+-   **構造ケース** へのドリルスルー  
   
      構造ケースのドリルスルーは、モデル内で使用できない情報が構造に含まれている際に使用します。 たとえば、構造のデータとして顧客の連絡先情報が含まれていても、クラスター モデルでは使用しません。 しかし、モデルを作成した後に、特定のクラスターにグループ化された顧客に関する連絡先情報を取得する必要が生じる場合もあります。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "52516675"
   
 -   モデルのドリルスルー操作には、モデルの作成に使用したアルゴリズムに応じて、次の制限事項が適用されます。  
   
-|アルゴリズム名|問題点|  
+|アルゴリズム名|問題|  
 |--------------------|-----------|  
 |Microsoft Naïve Bayes アルゴリズム|サポートされていません。 これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
 |Microsoft ニューラル ネットワーク アルゴリズム|サポートされていません。 これらのアルゴリズムでは、コンテンツ内の特定のノードにケースが割り当てられません。|  
@@ -94,7 +94,7 @@ ms.locfileid: "52516675"
 |DMX WITH DRILLTHROUGH 句を使用してマイニング構造のドリルスルーを有効にする|[CREATE MINING STRUCTURE (DMX)](../../dmx/create-mining-structure-dmx.md)|  
 |マイニング構造とマイニング モデルにドリルスルーを適用する権限の割り当ての詳細について|[データ マイニング構造およびデータ マイニング モデルに対する権限の付与 (Analysis Services)](../../analysis-services/multidimensional-models/grant-permissions-on-data-mining-structures-and-models-analysis-services.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング モデル ビューアー](../../analysis-services/data-mining/data-mining-model-viewers.md)   
  [データ マイニング クエリ](../../analysis-services/data-mining/data-mining-queries.md)  
   

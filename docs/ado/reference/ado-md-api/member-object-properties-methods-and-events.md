@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dadd6e7e-b5b4-4ede-8747-ae67ec917d90
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e63e72dc81a99fca2423820869fa18da26366919
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb8efcb41ea0a82f11351e5a439ee8b9cf7a053e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66709097"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949484"
 ---
 # <a name="member-object-properties-methods-and-events"></a>Member オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -40,7 +39,7 @@ ms.locfileid: "66709097"
   
  [親プロパティ](../../../ado/reference/ado-md-api/parent-property-ado-md.md)  
   
- [ParentSameAsPrev Property](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
+ [ParentSameAsPrev プロパティ](../../../ado/reference/ado-md-api/parentsameasprev-property-ado-md.md)  
   
  [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
@@ -54,5 +53,5 @@ ms.locfileid: "66709097"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Member オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/member-object-ado-md.md)

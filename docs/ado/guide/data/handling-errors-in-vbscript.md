@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 31bc3743-32d3-4bc7-ac61-ee6ed0fdec70
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 13f769ae3d2b8ddcc720df33596093ff9562af99
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99c3d2a615abe64a6ea5fc79cab8fb3dc083178d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700646"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925141"
 ---
 # <a name="handling-errors-in-vbscript"></a>VBScript でエラーを処理する
 Visual Basic で使用されるメソッドと VBScript で使用されるほとんど違いがあります。 主な違いは、VBScript がラベルで実行を継続してエラー処理の概念をサポートしていません。 つまり、使用することはできません`On Error GoTo`VBScript でします。 代わりに、`On Error Resume Next`両方をチェックし、 **Err.Number**と**カウント**のプロパティ、**エラー**次の例に示すように、コレクション。  

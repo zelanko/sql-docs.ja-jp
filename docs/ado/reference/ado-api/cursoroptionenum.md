@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 4e10cda7-ce81-4466-94c2-844d38191cf1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9136a3057000258518cb64d048a8cc6245e7c20
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1d5cc44950754c4b63e644d2d9210edcc94bd9ff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698465"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933265"
 ---
 # <a name="cursoroptionenum"></a>CursorOptionEnum
 どのような機能を指定します、[サポート](../../../ado/reference/ado-api/supports-method.md)メソッドをテストする必要があります。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adAddNew**|0x1000400|では、 [AddNew](../../../ado/reference/ado-api/addnew-method-ado.md)新しいレコードを追加するメソッド。|  
 |**adApproxPosition**|0x4000|では、 [AbsolutePosition](../../../ado/reference/ado-api/absoluteposition-property-ado.md)と[AbsolutePage](../../../ado/reference/ado-api/absolutepage-property-ado.md)プロパティ。|  

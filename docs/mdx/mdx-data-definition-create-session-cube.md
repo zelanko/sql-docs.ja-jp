@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 09e093b46127090d232f023a7c7277c398ec349c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ac95afcebcf07a5d691db5f2599b3290b9587d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248200"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038362"
 ---
 # <a name="mdx-data-definition---create-session-cube"></a>MDX データ操作 - CREATE SESSION CUBE
 
@@ -102,7 +101,7 @@ CREATE SESSION CUBE session_cube_name FROM <cube list> (<param list>)
  dimension_name  
  セッション キューブのディメンションの名前。  
   
- FROM \<dim from clause>  
+ \<句から dim >  
  派生ディメンションの定義のみ有効な仕様。  
   
  NOT_RELATED_TO_FACTS  

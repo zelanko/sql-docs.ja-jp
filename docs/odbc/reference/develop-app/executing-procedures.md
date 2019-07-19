@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a75e497a-4661-438a-a10e-f598c65f81be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ff234d1d8e099611c8718eac5ae3b584e926a2bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 98c36f02bde63862748eef14a8cbae063ca4e472
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63061970"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069951"
 ---
 # <a name="executing-procedures"></a>プロシージャの実行
 ODBC では、プロシージャを実行するための標準のエスケープ シーケンスを定義します。 このシーケンスおよびそれを使用するコード例の構文を参照してください。[プロシージャ呼び出し](../../../odbc/reference/develop-app/procedure-calls.md)します。  

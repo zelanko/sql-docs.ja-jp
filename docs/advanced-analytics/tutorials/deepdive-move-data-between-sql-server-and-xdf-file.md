@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 40852f62cc985f300d04eac4dbef5810f823e124
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: f5800f315ee09328908b612c18faf6c77a7ac13c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58512309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962212"
 ---
 # <a name="move-data-between-sql-server-and-xdf-file-sql-server-and-revoscaler-tutorial"></a>SQL Server と XDF ファイル (SQL Server と RevoScaleR チュートリアル) の間でデータを移動します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "58512309"
     ```
     **結果**
     
-    CA|OR|WA
+    CA|スイッチまたは|WA
     ----|----|----
     5|38|48
     
@@ -107,7 +106,7 @@ ms.locfileid: "58512309"
     rxSummary(~gender + cardholder + balance + state, data = localDS)
     ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このレッスンで、マルチパートのチュートリアル シリーズの最後に**RevoScaleR**と SQL Server。 独自のデータとプロジェクトの要件を進めるための基盤を提供、さまざまなデータ関連およびコンピューティング概念が導入されました。
 

@@ -1,5 +1,5 @@
 ---
-title: スキーマ生成ウィザード (Analysis Services) |Microsoft ドキュメント
+title: スキーマ生成ウィザード (Analysis Services) |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 41e1c17aac763657a16327bb038c180f614fcf67
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022979"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165229"
 ---
 # <a name="schema-generation-wizard-analysis-services"></a>スキーマ生成ウィザード (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,15 +35,15 @@ ms.locfileid: "34022979"
 ## <a name="in-this-section"></a>このセクションの内容  
  次の表に、スキーマ生成ウィザードの操作方法を説明するその他のトピックを示します。  
   
-|トピック|Description|  
+|トピック|説明|  
 |-----------|-----------------|  
 |[スキーマ生成ウィザードの使用 (Analysis Services)](../../analysis-services/multidimensional-models/use-the-schema-generation-wizard-analysis-services.md)|サブジェクト領域データベースとステージング領域データベースのスキーマの生成方法について説明します。|  
 |[データベース スキーマの理解](../../analysis-services/multidimensional-models/understanding-the-database-schemas.md)|サブジェクト領域データベースとステージング領域データベースに対して生成されるスキーマについて説明します。|  
 |[増分生成の理解](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)|スキーマ生成ウィザードの増分生成機能について説明します。|  
   
-## <a name="see-also"></a>参照  
- [多次元モデル内のデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
- [多次元モデル内のデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
- [サポートされるデータ ソース &#40;SSASSSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
+## <a name="see-also"></a>関連項目  
+ [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
+ [多次元モデルのデータ ソース](../../analysis-services/multidimensional-models/data-sources-in-multidimensional-models.md)   
+ [サポートされるデータ ソース &#40;SSAS - 多次元&#41;](../../analysis-services/multidimensional-models/supported-data-sources-ssas-multidimensional.md)  
   
   

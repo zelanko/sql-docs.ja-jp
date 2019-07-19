@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: bedc3372-50eb-40f2-bcf2-d6db6a63b7e6
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: acb2fe2d6c6b439295c0a6f0b7a4e233c23cb337
-ms.sourcegitcommit: 08b3de02475314c07a82a88c77926d226098e23f
+ms.openlocfilehash: 7fc3da1474546f0719af20c52f44248baa8ce5da
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2018
-ms.locfileid: "49119750"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68028261"
 ---
 # <a name="creating-user-defined-types---requirements"></a>ユーザー定義型の作成 - 要件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -113,7 +112,7 @@ ms.locfileid: "49119750"
  この UDT のすべてのインスタンスの長さが同じであるかどうかを示します。  
   
  **MaxByteSize**  
- インスタンスのバイト単位の最大サイズ。 指定する必要があります**MaxByteSize**で、 **UserDefined**シリアル化形式。 ユーザー定義シリアル化が指定すると、UDT の**MaxByteSize**ユーザーが定義されている、UDT のシリアル化された形式での合計サイズを示します。 値**MaxByteSize** 1 ~ 8000 の範囲内で指定または UDT が (合計サイズは、LOB の最大サイズを超えることはできません) 8000 バイトを超えていることを示す-1 に設定する必要があります。 10 文字の文字列のプロパティを持つ UDT を検討してください (**System.Char**)。 BinaryWriter を使用して UDT をシリアル化すると、シリアル化された文字列の合計サイズは 22 バイトになります。このサイズは、2 バイト (Unicode UTF-16 の文字 1 文字) に最大文字数を掛け、さらにバイナリ ストリームのシリアル化から生じるオーバーヘッドの制御バイト 2 バイトを加えたものです。 そのための値を決定するときに**MaxByteSize**、シリアル化される UDT の合計サイズを考慮する必要があります: バイナリ形式でシリアル化データと、シリアル化によるオーバーヘッドのサイズ。  
+ インスタンスのバイト単位の最大サイズ。 指定する必要があります**MaxByteSize**で、 **UserDefined**シリアル化形式。 ユーザー定義シリアル化が指定すると、UDT の**MaxByteSize**ユーザーが定義されている、UDT のシリアル化された形式での合計サイズを示します。 値**MaxByteSize** 1 ~ 8000 の範囲内で指定または UDT が (合計サイズは、LOB の最大サイズを超えることはできません) 8000 バイトを超えていることを示す-1 に設定する必要があります。 10 文字の文字列のプロパティを持つ UDT を検討してください (**System.Char**)。 BinaryWriter を使用して UDT をシリアル化されるとき、シリアル化された文字列の合計サイズは 22 バイト数を示します。Unicode utf-16 の文字ごとに 2 バイトでは、バイトのバイナリ ストリームにシリアル化から生じるオーバーヘッド文字および 2 のコントロールの最大数を掛けます。 そのための値を決定するときに**MaxByteSize**、シリアル化される UDT の合計サイズを考慮する必要があります: バイナリ形式でシリアル化データと、シリアル化によるオーバーヘッドのサイズ。  
   
  **ValidationMethodName**  
  UDT のインスタンスの検証に使用するメソッドの名前。  
@@ -131,7 +130,7 @@ ms.locfileid: "49119750"
   
 -   この型の計算列を保存する機能。  
   
- なお両方、**ネイティブ**と**UserDefined**シリアル化形式は次の比較演算子をサポートと**IsByteOrdered**に設定されている**は true。**:  
+ なお両方、**ネイティブ**と**UserDefined**シリアル化形式は次の比較演算子をサポートと**IsByteOrdered**に設定されている**は true。** :  
   
 -   等しい (=)  
   
@@ -146,7 +145,7 @@ ms.locfileid: "49119750"
 -   以下 (<=)  
   
 ### <a name="implementing-nullability"></a>NULL 値の許容属性の実装  
- アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 読み込まれる Udt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は null に対応して、UDT に null 値を認識させるためには、クラスを実装する必要がありますが、 **INullable**インターフェイス。 UDT に null 値許容属性を実装する方法の例と詳細については、[Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)を参照してください。  
+ アセンブリの属性を正しく指定することに加えて、クラスで NULL 値の許容属性をサポートする必要があります。 読み込まれる Udt[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は null に対応して、UDT に null 値を認識させるためには、クラスを実装する必要がありますが、 **INullable**インターフェイス。 UDT に null 値許容属性を実装する方法の例と詳細については、次を参照してください。 [Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)します。  
   
 ### <a name="string-conversions"></a>文字列の変換  
  文字列変換との間の UDT をサポートするために指定する必要があります、**解析**メソッドと**ToString**クラスのメソッド。 **解析**メソッドにより UDT に変換する文字列。 として宣言する必要がある必要があります**静的**(または**Shared** Visual basic)、型のパラメーターを受け取ると**System.Data.SqlTypes.SqlString**します。 実装する方法の例と詳細について、**解析**と**ToString**メソッドを参照してください[Coding User-Defined 型](../../relational-databases/clr-integration-database-objects-user-defined-types/creating-user-defined-types-coding.md)します。  

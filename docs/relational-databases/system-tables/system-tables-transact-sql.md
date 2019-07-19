@@ -22,22 +22,21 @@ helpviewer_keywords:
 ms.assetid: 56b8ad51-930c-4e5c-8d99-8c939d5b70ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eca96ac675223971e0eec5433fb6c1822495d08d
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 98f9a51b2248a1d218e9cbed576dc41bf64c91b5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663371"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029620"
 ---
 # <a name="system-tables-transact-sql"></a>システム テーブル (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のシステム テーブルについて説明します。  
   
- ユーザーはシステム テーブルを直接変更しないでください。 たとえば、システム テーブルを DELETE、UPDATE、INSERT ステートメント、またはユーザー定義のトリガーで変更しないでください。  
+ システム テーブルは、すべてのユーザーが直接変更しないでください。 たとえば、システム テーブルを DELETE、UPDATE、INSERT ステートメント、またはユーザー定義のトリガーで変更しないでください。  
   
- システム テーブル内の列で、このドキュメントに記載されている列の参照は許可されています。 ただし、システム テーブルの列の多くは記載されていません。 この記載されていない列を直接クエリするアプリケーションは作成しないでください。 代わりに、システム テーブル内に保存されている情報を取得するには、アプリケーションでは次のコンポーネントのいずれかを使用します。  
+ システム テーブル内の列で、このドキュメントに記載されている列の参照は許可されています。 ただし、システム テーブルの列の多くは記載されていません。 アプリケーションは必要があります記載されていない列を直接クエリには書き込まれません。 代わりに、システム テーブル内に保存されている情報を取得するには、アプリケーションでは次のコンポーネントのいずれかを使用します。  
   
 -   システム ストアド プロシージャ  
   
@@ -49,10 +48,10 @@ ms.locfileid: "51663371"
   
 -   データベース API カタログ関数  
   
- これらのコンポーネントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からシステム情報を取得するための公開された API を構成します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] では、リリース間でのこれらのコンポーネントの互換性を維持しています。 システム テーブルの形式は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部アーキテクチャに依存し、リリースごとに変化する可能性があります。 このため、ドキュメントに記載されていないシステム テーブルの列に直接アクセスするアプリケーションを作成すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンにアクセスするために変更を余儀なくされることがあります。  
+ システム情報を取得するため、これらのコンポーネントが公開された API を構成する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] リリースごとにこれらのコンポーネントとの互換性を維持します。 システム テーブルの形式は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の内部アーキテクチャに依存し、リリースごとに変化する可能性があります。 このため、ドキュメントに記載されていないシステム テーブルの列に直接アクセスするアプリケーションを作成すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新バージョンにアクセスするために変更を余儀なくされることがあります。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
- システム テーブルのトピックは、次の機能別に編成されています。  
+ 次の機能領域では、システム テーブルのトピックが構成されています。  
   
 |||  
 |-|-|  
@@ -62,7 +61,7 @@ ms.locfileid: "51663371"
 |[SQL Server 拡張イベント テーブル&#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/6d52ff03-f5aa-4f0f-8c98-9b49dc76f94e)|[sys.sysoledbusers &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysoledbusers-transact-sql.md)|  
 |[Integration Services テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)|[systranschemas &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/systranschemas-transact-sql.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [互換性ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   

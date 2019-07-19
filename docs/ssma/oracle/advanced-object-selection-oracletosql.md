@@ -9,13 +9,13 @@ ms.topic: conceptual
 ms.assetid: c978fba4-c953-4ed0-a21d-1b38e7225552
 author: Shamikg
 ms.author: Shamikg
-manager: v-pelars
-ms.openlocfilehash: 8bc452dff465ca872f094fa7aaaba98612beb135
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 36bf17e1667596582ed60fd6c35d6f74fc81a231
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287198"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264541"
 ---
 # <a name="advanced-object-selection--oracletosql"></a>高度なオブジェクトの選択 (OracleToSQL)
 **オブジェクト セクションの高度な** ダイアログ ボックスでは、オブジェクト名の文字列と部分文字列を使用してデータベース オブジェクトをフィルター処理し選択するか、オブジェクトの選択を解除することができます。 SSMA は、選択したオブジェクトで変換と移行操作を実行します。  

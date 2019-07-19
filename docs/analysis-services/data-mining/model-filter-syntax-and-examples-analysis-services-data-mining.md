@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ae34f06997d1647f6345c0cf77494aa8688a8616
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52393548"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209768"
 ---
 # <a name="model-filter-syntax-and-examples-analysis-services---data-mining"></a>モデル フィルターの構文と例 (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -122,7 +122,7 @@ ms.locfileid: "52393548"
 ## <a name="examples-of-filters"></a>フィルターの例  
  次の例は、マイニング モデルに適用するフィルターの使用方法を示しています。 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]を使用してフィルター式を作成する場合、 **[プロパティ]** ウィンドウや、フィルターのダイアログ ボックスの **[式]** ペインには、WITH FILTER キーワードより後の文字列だけが表示されます。 ここでは、列の型と使用法をわかりやすくするため、マイニング構造の定義も示します。  
   
-###  <a name="bkmk_Ex1"></a> 例 1:一般的なケースレベルのフィルター処理  
+###  <a name="bkmk_Ex1"></a> 例 1: 一般的なケースレベルのフィルター処理  
  次の例は、モデルに使用するケースを、職業が Architect で 31 歳以上の顧客だけに制限するための、単純なフィルターです。  
   
 ```  
@@ -137,7 +137,7 @@ WITH FILTER (Age > 30 AND Occupation='Architect')
 ```  
   
   
-###  <a name="bkmk_Ex2"></a> 例 2:ケース レベルの入れ子になったテーブルの属性を使用してフィルター処理  
+###  <a name="bkmk_Ex2"></a> 例 2: ケース レベルの入れ子になったテーブルの属性を使用してフィルター処理  
  入れ子になったテーブルがマイニング構造に含まれている場合は、入れ子になったテーブルに値が存在するかどうかに基づいてフィルター処理することも、特定の値を含む入れ子になったテーブル行に基づいてフィルター処理することもできます。 次の例では、モデルに使用するケースを、Milk を購入したことがある 31 歳以上の顧客だけに制限します。  
   
  この例からわかるとおり、フィルターには、モデルに含まれている列のみを使用する必要はありません。 入れ子になったテーブル **Products** はマイニング構造の一部ですが、マイニング モデルには含まれていません。 それでも、この入れ子になったテーブル内の値や属性に基づいてフィルター処理を行うことができます。 これらのケースの詳細を表示するには、ドリルスルーを有効にする必要があります。  
@@ -306,7 +306,7 @@ FILTER (EXISTS (Products))
  たとえば、コール センターの結果にフィルターを適用して週末のみを表示する場合、データ ソース ビューに各日付の曜日名を抽出する式を作成して、その曜日名の値を入力に使用したり、フィルター処理で不連続値として使用したりすることができます。 繰り返し値はモデルに影響を及ぼす可能性があるため、日付列と不連続値ではなく、1 列のみを使用する必要があることを忘れないでください。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデルのフィルター &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/filters-for-mining-models-analysis-services-data-mining.md)   
  [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)  
   

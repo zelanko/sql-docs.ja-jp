@@ -17,26 +17,25 @@ helpviewer_keywords:
 ms.assetid: da04df2a-f7a1-41e7-a1ef-2d5d68919892
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 9121485ddbe3f4fd72bf40b4518a7af8b196fa23
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 73638d41c7a24a37c068d365771b4d0469a174d5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47725410"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041026"
 ---
 # <a name="sysspxtpmergecheckpointfiles-transact-sql"></a>sys.sp_xtp_merge_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-xxxx-xxxx-xxx-md.md)]
 
   **sys.sp_xtp_merge_checkpoint_files**指定トランザクション範囲内のすべてのデータとデルタ ファイルをマージします。  
   
- 詳細については、[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)を参照してください。  
+ 詳細については、次を参照してください。[の作成とメモリ最適化オブジェクト用ストレージの管理](../../relational-databases/in-memory-oltp/creating-and-managing-storage-for-memory-optimized-objects.md)します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ||  
 |-|  
-|**注**: このストアド プロシージャは非推奨[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]します。 これは、必要がなくなったら、使用できません開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]します。|  
+|**注意**:このストアド プロシージャは非推奨[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]します。 これは、必要がなくなったら、使用できません開始[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]します。|  
   
 ## <a name="syntax"></a>構文  
   

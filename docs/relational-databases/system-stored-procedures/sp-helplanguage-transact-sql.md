@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 8c4651a5-7dbc-49c5-8691-dc72103c2dfa
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d1b567b7d20f4d588fe0ca70f68be4318ce24398
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: d46e178fc1872a84bb573f16629803c59f2fb6c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531674"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122509"
 ---
 # <a name="sphelplanguage-transact-sql"></a>sp_helplanguage (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,11 +52,11 @@ sp_helplanguage [ [ @language = ] 'language' ]
 |-----------------|---------------|-----------------|  
 |**langid**|**smallint**|言語 ID 番号です。|  
 |**dateformat**|**nchar(3)**|日付の形式です。|  
-|**datefirst**|**tinyint**|週の最初の曜日:1 = 月曜日、2 = 火曜日、7 = 日曜を指定します。|  
+|**datefirst**|**tinyint**|週の最初の曜日:1 は月曜、7 の日曜日、火曜日の場合は 2 です。|  
 |**upgrade**|**int**|この言語を使用する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の最新アップグレード バージョンです。|  
 |**name**|**sysname**|言語の名前。|  
 |**alias**|**sysname**|言語の別名です。|  
-|**か月間**|**nvarchar(372)**|月の名前。|  
+|**months**|**nvarchar(372)**|月の名前。|  
 |**shortmonths**|**nvarchar(132)**|月の短縮名です。|  
 |**days**|**nvarchar(217)**|曜日です。|  
 |**lcid**|**int**|言語の Windows ロケール ID。|  
@@ -82,10 +81,10 @@ sp_helplanguage French;
 sp_helplanguage;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [@@LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/functions/language-transact-sql.md)   
- [言語を設定する (&) #40 です。TRANSACT-SQL と #41 です。](../../t-sql/statements/set-language-transact-sql.md)   
+ [SET LANGUAGE &#40;Transact-SQL&#41;](../../t-sql/statements/set-language-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

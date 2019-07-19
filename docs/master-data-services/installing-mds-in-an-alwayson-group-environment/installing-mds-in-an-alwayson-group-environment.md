@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f7716b7e41e739a100c16e34560e737d2350e122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 81a8e4ae45f8652b5928bb768e506dc1acc682d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66015096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135840"
 ---
 # <a name="high-availability-and-disaster-recovery-for-master-data-services"></a>マスター データ サービスの高可用性とディザスター リカバリー
 
@@ -94,7 +93,7 @@ ms.locfileid: "66015096"
 
 WSFC は、アプリケーションやサービスの高可用性を改善する機能です。 Microsoft フェールオーバー クラスター サービスを実行する非依存 Windows Server インスタンスのグループで構成されています。 Windows Server インスタンス (ノードと呼ばれることもあります) は互いに通信できるように接続され、不具合の検出が可能になります。 WSFC は不具合の検出機能とフェールオーバー機能を提供します。 クラスターでノードやサービスに不具合が生じた場合、それが検出され、別のノードが、自動または手動で、不具合のあるノードでホストされているサービスの提供を開始します。 そのため、ユーザーにとっては、サービスの中断が最小限に抑えられます。サービスの可用性が向上します。  
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
 Windows Server オペレーティング システムがすべてのインスタンスにインストールされており、あらゆる更新プログラムが適用されていること。
 
@@ -213,7 +212,7 @@ AG は、データベース レベルで高可用性を強化します。 AG (�
 FCI は、インスタンス レベルで高可用性を強化します。 SQL Server サービスと関連サービスはリソースとして WSFC に登録されます。 また、FCI ソリューションには、SAN または SMB ファイル共有など、対称的共有ディスク ストレージが必要です。対称的共有ディスク ストレージは、WFC クラスターのすべてのノードで利用できるようにする必要があります。
 
 
-### <a name="prerequisites"></a>前提条件
+### <a name="prerequisites"></a>必須コンポーネント
 
 -   すべてのノードに SQL Server をインストールすること。 詳細については、「[SQL Server 2016 のインストール](https://docs.microsoft.com/sql/database-engine/install-windows/install-sql-server)」を参照してください。
 
@@ -316,9 +315,9 @@ AG は既存のデータベースにのみ作成できます。 そのため、1
 
 8.  **[レプリカの指定]** ページで、 **[リスナー]** タブをクリックし、次の操作を行います。 図 18 を参照してください。
 
-    A.  **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
+    a.  **[可用性グループ リスナーの作成]** をクリックし、MDS データベース接続の可用性グループ リスナーを設定します。
 
-    B.  **[リスナーの DNS 名]** を入力します。たとえば、「MDSSQLServer」にします。
+    b.  **[リスナーの DNS 名]** を入力します。たとえば、「MDSSQLServer」にします。
 
     c.  **[ポート]** テキスト ボックスに既定の SQL ポートである 1433 を入力します。
 

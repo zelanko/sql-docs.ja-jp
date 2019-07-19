@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: c66aa6e6-d4f0-4f0f-9640-e08ae6cfdef3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3f62d2119764466cabb542d26849712d733453ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68aaa0bfb8aa72c9e94a8b5db65768fe85895f0e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67917741"
 ---
 # <a name="parameterdirectionenum"></a>ParameterDirectionEnum
 指定するかどうか、[パラメーター](../../../ado/reference/ado-api/parameter-object.md)表します入力パラメーター、出力パラメーター、両方の入力と出力パラメーター、またはストアド プロシージャからの戻り値。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adParamInput**|1|既定値です。 パラメーターが入力パラメーターを表すことを示します。|  
 |**adParamInputOutput**|3|パラメーターが入力と出力の両方のパラメーターを表すことを示します。|  

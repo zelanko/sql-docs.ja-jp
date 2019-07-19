@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: cc847784-7f61-4c69-8b78-5f971bb24d61
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 604718c747819517bd323b73f276eb1fcc2a220f
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: d9ce81a0d7aad6b41945b1564076004db80cd5e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56024999"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67900276"
 ---
 # <a name="sysdmoperationstatus-azure-sql-database"></a>sys.dm_operation_status (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-asdw-xxx-md.md)]
@@ -45,7 +44,7 @@ ms.locfileid: "56024999"
 |percent_complete|**int**|操作が完了した割合 (%)。 値は連続していないと、有効な値を以下に示します。 NULL 以外です。<br/><br/>0 = 操作が開始されていません<br/>50 = 実行中の操作<br/>100 = 操作が完了しました|  
 |error_code|**int**|失敗した操作中に発生したエラーを示すコード。 値が 0 の場合は、操作が正常に完了したことを示します。|  
 |error_desc|**nvarchar(2048)**|失敗した操作中に発生したエラーの説明。|  
-|error_severity|**int**|失敗した操作中に発生したエラーの重大度レベル。 エラーの重大度に関する詳細については、[データベース エンジン エラーの重大度](https://go.microsoft.com/fwlink/?LinkId=251052)を参照してください。|  
+|error_severity|**int**|失敗した操作中に発生したエラーの重大度レベル。 エラーの重大度に関する詳細については、次を参照してください。[データベース エンジン エラーの重大度](https://go.microsoft.com/fwlink/?LinkId=251052)します。|  
 |error_state|**int**|将来使用するために予約されています。 将来の互換性は保証されません。|  
 |start_time|**datetime**|操作が開始した時点のタイムスタンプ。|  
 |last_modify_time|**datetime**|実行時間の長い操作のレコードが最後に変更された時点のタイムスタンプ。 操作が正常に完了した場合、このフィールドには操作が完了した時点のタイムスタンプが表示されます。|  

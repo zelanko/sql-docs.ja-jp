@@ -1,5 +1,5 @@
 ---
-title: 準加法の動作を定義 |Microsoft ドキュメント
+title: 準加法の動作の定義 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ab36e1835af05010fa3fa206e49feec6161c31d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34023439"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178642"
 ---
 # <a name="define-semiadditive-behavior"></a>準加法の動作の定義
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,9 +46,9 @@ ms.locfileid: "34023439"
   
 -   なし  
   
- 標準の集計関数 **Sum**、 **Min**、 **Max**、 **Count**、 **Distinct****Count**のメジャーはこのオプションによって変更されません。  
+ このオプションでは、メジャーの標準の集計関数は変更されません。**合計**、 **Min**、**最大**、**カウント**、または**個別 * * * 数**します。  
   
- **準加法メンバーを含む 'Account' 勘定科目ディメンションが検出されました。サーバーは、各勘定科目の種類の指定された準加法動作に従って、このディメンションのメンバーに集計されます。**  
+ **ウィザードを検出しましたが、' アカウント"勘定科目ディメンションが準加法メンバーを含みます。サーバーは、各アカウントの種類に指定された準加法動作に従って、このディメンションのメンバーで集計されます。**  
  Account 型のディメンションにより次元設定されたメジャー グループのすべてのメジャーが By Account 集計関数に設定され、このディメンションのメンバーは、勘定科目の種類ごとに指定されている準加法動作に従って集計されます。  
   
 > [!NOTE]  
@@ -62,7 +62,7 @@ ms.locfileid: "34023439"
   
  各メジャーに対して、次の表に示した種類から準加法の機能を選択できます。  
   
-|準加法関数|Description|  
+|準加法関数|説明|  
 |---------------------------|-----------------|  
 |Average of Children|子の平均がメンバーの集計です。|  
 |[ByAccount]|勘定科目の種類に対して指定された準加法を読み取ります。|  

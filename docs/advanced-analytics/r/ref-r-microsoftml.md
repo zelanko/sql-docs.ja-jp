@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0266f6288e0b28ebd56c2aff634dc27a1ec72b06
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: e3dc94026f90ef769abb3889a716b5dadb317c4b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140486"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962502"
 ---
 # <a name="microsoftml-r-library-in-sql-server"></a>MicrosoftML (SQL Server での R ライブラリ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -77,7 +76,7 @@ Api の内部の machine learning のアプリケーション、Microsoft によ
 |[featurizeText](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/featurizetext) | 指定したテキストのコーパスから n グラムと呼ばれる、連続したワードのシーケンスの数のバッグを生成します。 言語検出、トークン化、ストップ ワードを削除する、テキストの正規化、および特徴の生成を提供します。  |
 |[getSentiment](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/getsentiment) | 自然言語テキストをスコア付けし、テキストのセンチメントが正である確率を含む列を作成します。|
 |[ngram](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/ngram) | 引数の数およびハッシュ ベースの特徴の抽出を定義できます。|
-|[selectColumns](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | 他のすべての削除、再トレーニングする列のセットを選択します。 |
+|[列の選択](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectcolumns) | 他のすべての削除、再トレーニングする列のセットを選択します。 |
 |[selectFeatures](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/selectfeatures) | 指定されたモードを使用して、指定された変数から機能を選択します。|
 |[loadImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/loadimage) | イメージ データの読み込み。|
 |[resizeImage](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/resizeimage) | 指定したサイズ変更メソッドを使用してディメンションを指定するイメージのサイズを変更します。|
@@ -126,7 +125,7 @@ Api の内部の machine learning のアプリケーション、Microsoft によ
 
 | 関数名 | 説明 |
 |---------------|-------------|
-|[optimizer](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | 最適化アルゴリズムを指定します、 [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)機械学習アルゴリズムです。|
+|[オプティマイザー](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/optimizer) | 最適化アルゴリズムを指定します、 [rxNeuralNet](https://docs.microsoft.com/machine-learning-server/r-reference/microsoftml/rxneuralnet)機械学習アルゴリズムです。|
 
 
 ## <a name="8-package-state-functions"></a>8 パッケージの状態の関数

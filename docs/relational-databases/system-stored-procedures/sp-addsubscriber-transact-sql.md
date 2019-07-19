@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b8a584ea-2a26-4936-965b-b84f026e39c0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cd59aae098a91a47e1137bd55cd97cf1066b02bf
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: cb21731dd02fee4ec3779affed56f85e5dbc0e9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493374"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079231"
 ---
 # <a name="spaddsubscriber-transact-sql"></a>sp_addsubscriber (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -77,7 +76,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  このパラメーターは非推奨とされましたが、スクリプトの旧バージョンと互換性が維持されます。 実行するときに、サブスクリプションごとにプロパティが指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)します。 値を指定すると、このサブスクライバーでサブスクリプションを作成するときに、既定値として使用され、警告メッセージが返されます。  
   
-`[ @password = ] 'password'` パスワードを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 *パスワード*は**nvarchar (524)**、既定値は NULL です。  
+`[ @password = ] 'password'` パスワードを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 *パスワード*は**nvarchar (524)** 、既定値は NULL です。  
   
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
@@ -116,7 +115,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  このパラメーターは非推奨とされましたが、スクリプトの旧バージョンと互換性が維持されます。 実行するときに、サブスクリプションごとにプロパティが指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)します。 値を指定すると、このサブスクライバーでサブスクリプションを作成するときに、既定値として使用され、警告メッセージが返されます。  
   
- [**@frequency_interval=** ] *frequency_interval*  
+ [ **@frequency_interval=** ] *frequency_interval*  
  設定した頻度に適用される値は、 *frequency_type*します。 *frequency_interval*は**int**、既定値は 1 です。  
   
 > [!NOTE]  
@@ -124,11 +123,11 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
   
 `[ @frequency_relative_interval = ] frequency_relative_interval` レプリケーション エージェントの日です。 このパラメーターが使用されるときに *frequency_type* に設定されている **32** (月単位)。 *frequency_relative_interval*は**int**、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**1** (既定値)|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
   
@@ -145,7 +144,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 |値|説明|  
 |-----------|-----------------|  
 |**1**|1 回。|  
-|**2**|第 2 週|  
+|**2**|Second|  
 |**4** (既定値)|Minute|  
 |**8**|Hour|  
   
@@ -177,7 +176,7 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 > [!NOTE]  
 >  このパラメーターは非推奨とされましたが、スクリプトの旧バージョンと互換性が維持されます。 実行するときに、サブスクリプションごとにプロパティが指定ようになりました[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)します。 値を指定すると、このサブスクライバーでサブスクリプションを作成するときに、既定値として使用され、警告メッセージが返されます。  
   
-`[ @description = ] 'description'` サブスクライバーのテキスト説明します。 *説明*は**nvarchar (255)**、既定値は NULL です。  
+`[ @description = ] 'description'` サブスクライバーのテキスト説明します。 *説明*は**nvarchar (255)** 、既定値は NULL です。  
   
 `[ @security_mode = ] security_mode` 実装されているセキュリティ モードです。 *security_mode*は**int**、既定値は 1 です。 **0**指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。 **1** Windows 認証を指定します。  
   
@@ -204,9 +203,9 @@ sp_addsubscriber [ @subscriber = ] 'subscriber'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_addsubscriber**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
- [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)   
+ [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)   
  [sp_changesubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubscriber-transact-sql.md)   
  [sp_dropsubscriber &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscriber-transact-sql.md)   
  [sp_helpsubscriberinfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)  

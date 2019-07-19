@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 7bb38a06-e3d5-4c9a-a0e8-7b59b2ec6927
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 84d4a72577af04750d4f1735e84a5e71d3501e8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 54aeb0ecd88509f9390103e8e476bb0f3cb60440
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62760785"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036233"
 ---
 # <a name="sqlallocstmt-function"></a>SQLAllocStmt 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
- **まとめ**  
+ **概要**  
  ODBC 3。*x*、ODBC 2 *。x*関数**SQLAllocStmt**置き換わりました**SQLAllocHandle**します。 詳細については、次を参照してください。 [SQLAllocHandle 関数](../../../odbc/reference/syntax/sqlallochandle-function.md)します。  
   
 > [!NOTE]  

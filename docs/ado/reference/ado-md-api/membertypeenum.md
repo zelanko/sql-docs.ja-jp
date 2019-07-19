@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 5d8132c0-7ca2-4f86-8336-1b34213869ad
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 10d96f7c89198b2267654073570fdfdbac38257b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: da396bd71e64925bcd8fb74f71f8e334bf7f1d7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67949406"
 ---
 # <a name="membertypeenum"></a>MemberTypeEnum
 設定を指定します、[型](../../../ado/reference/ado-md-api/type-property-ado-md.md)のプロパティを[メンバー](../../../ado/reference/ado-md-api/member-object-ado-md.md)オブジェクト。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adMemberAll**|4|示します、**メンバー**オブジェクトは、レベルのすべてのメンバーを表します。|  
 |**adMemberFormula**|3|示します、**メンバー**オブジェクトは、数式を使用して計算されます。|  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 14513c5e-5774-4e4c-92e1-75cd6985b6a3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: a7b07ccf7641f0529d03b2b37650e2ac8afbc9d2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4635bffa5b5b681d0ff202c4231c4d8b8d10ae26
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62724572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108509"
 ---
 # <a name="spcursorfetch-transact-sql"></a>sp_cursorfetch (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,12 +41,12 @@ sp_cursorfetch cursor
   
 ## <a name="arguments"></a>引数  
  *cursor*  
- *処理*によって生成される値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_cursoropen から返されるとします。 *カーソル*が必要なパラメーターです、 **int**値を入力します。 詳細については、このトピックの後半の「解説」を参照してください。  
+ *処理*によって生成される値[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]sp_cursoropen から返されるとします。 *カーソル*が必要なパラメーターです、 **int**値を入力します。 詳細については、このトピックで後述する「解説」を参照してください。  
   
  *fetchtype*  
  フェッチするカーソル バッファーを指定します。 *fetchtype*省略可能なパラメーターで、次の整数入力値のいずれかが必要です。  
   
-|値|名前|説明|  
+|[値]|名前|説明|  
 |-----------|----------|-----------------|  
 |0x0001|FIRST|最初のバッファーをフェッチ*nrows*行。 場合*nrows*が 0 と等しい、カーソルが結果セットの前に、行は返されません。|  
 |0x0002|NEXT|次のバッファーをフェッチ*nrows*行。|  
@@ -63,10 +62,10 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  値 0x40 のサポートはありません。  
   
- 詳細については、このトピックの後半の「解説」を参照してください。  
+ 詳細については、このトピックで後述する「解説」を参照してください。  
   
  *rownum*  
- ABSOLUTE または INFO の行の位置を指定するために使用するオプションのパラメーターは、 *fetchtype*入力または出力、あるいはその両方の整数値のみを使用して値。 *rownum*行オフセットとして機能、 *fetchtype*ビット値が RELATIVE です。 *rownum*の他のすべての値は無視されます。 詳細については、このトピックの後半の「解説」を参照してください。  
+ ABSOLUTE または INFO の行の位置を指定するために使用するオプションのパラメーターは、 *fetchtype*入力または出力、あるいはその両方の整数値のみを使用して値。 *rownum*行オフセットとして機能、 *fetchtype*ビット値が RELATIVE です。 *rownum*の他のすべての値は無視されます。 詳細については、このトピックで後述する「解説」を参照してください。  
   
  *nrows*  
  フェッチする行数を指定するために使用される省略可能なパラメーターです。 場合*nrows*が指定されていない、既定値は 20 行です。 データを返さずに位置を設定するには、値 0 を指定します。 ときに*nrows*に適用される、 *fetchtype* INFO であるクエリ、そのクエリで行の合計数を返しますにします。  
@@ -74,7 +73,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  *nrows*更新では無視されて*fetchtype*ビット値。  
 >   
->  詳細については、このトピックの後半の「解説」を参照してください。  
+>  詳細については、このトピックで後述する「解説」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  ビット値 INFO を指定すると、返される値は、次の表に表示されます。  
@@ -82,7 +81,7 @@ sp_cursorfetch cursor
 > [!NOTE]  
 >  : 行が返されない場合と同様に、バッファーの内容が残ります。  
   
-|*\<rownum>*|を設定します。|  
+|*\<rownum >*|を設定します。|  
 |------------------|------------|  
 |開いていない場合|0|  
 |結果セットより前の場合|0|  
@@ -134,7 +133,7 @@ sp_cursorfetch cursor
   
  RPC 状態パラメーターは、次の表に示した値のいずれかに設定されます。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|プロシージャが正常に実行されました。|  
 |0x0001|プロシージャが失敗しました。|  
@@ -192,7 +191,7 @@ row2 contents
 row3 contents   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_cursoropen &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursoropen-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f3648ef4-9f36-4991-a868-83a617389844
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 90904154f324a86088fac0d637301193464feb2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07a1a3723b4169872c1b8aa872457e67a60d1f71
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66701234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926274"
 ---
 # <a name="adding-multiple-fields-and-values"></a>複数のフィールドと値の追加
 フィールドとを対応する値の配列を渡すより効率的である可能性がある場合によっては、 **AddNew**設定ではなく、メソッド、**値**の新しいフィールドごとに複数回です。 場合*FieldList* 、配列は、*値*配列である必要があります、同じメンバーの数。 それ以外の場合、エラーが発生します。 フィールド名の順序は、各配列内のフィールド値の順序と一致する必要があります。 次のコードは、フィールドの配列と値の配列を渡します、 **AddNew**メソッド。

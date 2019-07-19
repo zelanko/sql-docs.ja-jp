@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 4052134e9fd7d3c6877894c61480897e40982b59
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de74590ac4c43a9141c0ab2092babf41ffd23ba5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187678"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106299"
 ---
 # <a name="mdx-data-manipulation---call"></a>MDX データ操作 - CALL
 
@@ -50,7 +49,7 @@ CALL SP_Name
 > [!NOTE]  
 >  クライアントでは、ストアド プロシージャが登録されていない場合、**呼び出す**ステートメントのインスタンスからストアド プロシージャを呼び出すしよう[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX データ操作ステートメント &#40;MDX&#41;](../mdx/mdx-data-manipulation-statements-mdx.md)   
  [ストアド プロシージャの使用 &#40;MDX&#41;](../mdx/using-stored-procedures-mdx.md)  
   

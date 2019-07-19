@@ -18,12 +18,12 @@ ms.author: pelopes
 ms.reviewer: mikeray
 manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a38cad4af807d5d9d7a64e6ca45a4fdfa0df77c7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 6d3abb2fe6d16b89ce80b50c5e33d397d1c38403
+ms.sourcegitcommit: f97394f18f8509aec596179acd4c59d8492a4cd2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973581"
+ms.lasthandoff: 07/08/2019
+ms.locfileid: "67652812"
 ---
 # <a name="improve-the-performance-of-full-text-indexes"></a>フルテキスト インデックスのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,11 +133,11 @@ ms.locfileid: "57973581"
   
 |プラットフォーム|fdhost.exe のメモリ要件の推定 (MB 単位) - *F*^1|max server memory の計算式 - *M*^2|  
 |--------------|-----------------------------------------------------------|-----------------------------------------------------|  
-|x86|*F* = *クロール範囲の数* * 50|*M* =minimum(*T*, 2000) - F - 500|  
-|x64|*F* = *クロール範囲の数* * 10 * 8|*M* = *T* - *F* - 500|  
+|x86|*F* = *クロール範囲の数* \* 50|*M* =minimum(*T*, 2000) - F - 500|  
+|x64|*F* = *クロール範囲の数* \* 10 \* 8|*M* = *T* - *F* - 500|  
 
 **式に関する注意事項**
-1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、*M* as _T_**-** sigma **(**_F_i **)** で計算します。  
+1.  複数の完全作成を実行中の場合は、それぞれの fdhost.exe のメモリ要件を、*F1*、*F2* などのように個別に計算してください。 その後、*M* as _T_ **-** sigma **(** _F_i **)** で計算します。  
 2.  500 MB は、システムの他のプロセスに必要なメモリの推定値です。 システムで追加の作業を実行している場合、適宜この値を大きくします。  
 3.  」を参照してください。*ism_size* は 8 MB と見なされます (x64 プラットフォームの場合)。  
   

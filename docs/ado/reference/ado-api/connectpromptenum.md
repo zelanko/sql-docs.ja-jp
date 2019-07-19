@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 21026e24-62b7-4cc9-8aef-62c1fc6cba75
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 40ce74748e15a2715de26e813007e00be0c33729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: afd5d9ca0de6b8d2ffba75f862e6ca0afb594848
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698616"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919445"
 ---
 # <a name="connectpromptenum"></a>ConnectPromptEnum
 データ ソースへの接続を開くときに、不足しているパラメーターを要求する ダイアログ ボックスを表示するかどうかを指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adPromptAlways**|1|常にメッセージが表示されます。|  
 |**adPromptComplete**|2|詳細については、必要な場合は、メッセージが表示されます。|  

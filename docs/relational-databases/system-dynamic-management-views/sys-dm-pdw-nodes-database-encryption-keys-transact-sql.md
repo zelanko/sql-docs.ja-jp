@@ -11,19 +11,18 @@ dev_langs:
 ms.assetid: e7fd02b2-5d7e-4816-a0af-b58ae2ac3f7a
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 34de2634c0aa1dd6a0b55ef281dba4c7d8579afd
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: 7819be3ffe1f3d3efc5d39c3973d089e3ab7757c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657068"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089142"
 ---
 # <a name="sysdmpdwnodesdatabaseencryptionkeys-transact-sql"></a>sys.dm_pdw_nodes_database_encryption_keys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
 
-  暗号化キー、データベースとその関連付けられているデータベースの暗号化の状態に関する情報を返します。 **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. データベース暗号化の詳細については、[Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)を参照してください。  
+  暗号化キー、データベースとその関連付けられているデータベースの暗号化の状態に関する情報を返します。 **sys.dm_pdw_nodes_database_encryption_keys** provides this information for each node. データベース暗号化の詳細については、次を参照してください。 [Transparent Data Encryption (SQL Server PDW)](../../analytics-platform-system/transparent-data-encryption.md)します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

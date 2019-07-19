@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 1ab921a0-6c57-43b4-9291-701b2599f3e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6ff6704ca12fbb20c93133d7e73f29a5f72c9e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a936eb39583afff34dd317b85bc4198022b15e7f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920757"
 ---
 # <a name="affectenum"></a>AffectEnum
 操作の対象となるレコードを指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adAffectAll**|3|ない場合、[フィルター](../../../ado/reference/ado-api/filter-property.md)に適用される、 **Recordset**、すべてのレコードに影響を与えます。<br /><br /> 場合、**フィルター**プロパティが文字列の条件 (など"作成者 'Smith' を =")、操作が現在」の章で表示されるレコードに影響し、します。<br /><br /> 場合、**フィルター**プロパティのメンバーに設定されて、 [FilterGroupEnum](../../../ado/reference/ado-api/filtergroupenum.md)またはブックマーク、操作の配列はのすべての行に影響を与える、 **Recordset**します。 **注: adAffectAll** Visual Basic のオブジェクト ブラウザーには表示されません。|  
 |**呼び出します**|4|すべての兄弟章のすべてのレコードに影響を与える、**レコード セット**、いずれかを使用して非表示のものも含め**フィルター**現在適用されています。|  

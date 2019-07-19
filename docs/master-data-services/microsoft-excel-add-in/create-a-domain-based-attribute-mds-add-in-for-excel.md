@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7b3e30dc-8f41-4a5d-8009-ae5a4426a64b
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 15b8f9aa0a2395d353fad3cde36ec1ee596d0202
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c38d850cb7f20f61f709f7e27161d84fa9b84dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65486128"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988127"
 ---
 # <a name="create-a-domain-based-attribute-mds-add-in-for-excel"></a>ドメイン ベースの属性の作成 (Excel 用 MDS アドイン)
 
@@ -64,7 +63,7 @@ ms.locfileid: "65486128"
   
 -   制約された一覧の値を追加および削除するには、その属性が基づいているエンティティを読み込みます。 詳細については、「 [マスター データ サービスから Excel へのデータのエクスポート](../../master-data-services/microsoft-excel-add-in/export-data-to-excel-from-master-data-services.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ドメインベースの属性 (マスター データ サービス)](../../master-data-services/domain-based-attributes-master-data-services.md)   
  [エンティティの作成 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/create-an-entity-mds-add-in-for-excel.md)   
  [モデルの構築 (Excel 用 MDS アドイン)](../../master-data-services/microsoft-excel-add-in/building-a-model-mds-add-in-for-excel.md)  

@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: af00a85aa1515ae5d43e6842fede00880bf9a573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4117d8c16e96252f792e14d282d285527008874f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800762"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959392"
 ---
 # <a name="quickstart-connect-and-query-sql-server-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: 接続し、クエリを使用して SQL Server [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して SQL Server に接続し、TRANSACT-SQL (T-SQL) ステートメントを使用して、[!INCLUDE[name-sos](../includes/name-sos-short.md)] チュートリアルで使用する *TutorialDB* を作成します。
@@ -48,7 +47,7 @@ SQL Server へのアクセスを持っていない場合は、次のリンクか
     - **ユーザー名:** SQL Server のユーザー名  
     - **パスワード:** SQL Server のパスワード  
     - **データベース名:** このフィールドを空白のままにします 
-    - **サーバー グループ:** \<Default\>  
+    - **サーバー グループ:** \<[Default]\>  
 
    ![新しい接続 画面](media/quickstart-sql-server/new-connection-screen.png)
 

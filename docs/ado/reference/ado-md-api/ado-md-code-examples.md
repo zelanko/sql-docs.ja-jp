@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 72cf9eb3-31f6-441c-aede-5383fdfb81af
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e02fd7318925ef04b5baf18353cac9253a2ea9d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9655281302eddb65e693da9a9516c1eecbbce1dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940064"
 ---
 # <a name="ado-md-code-examples"></a>ADO MD のコード例
 次のコード例を使用して、ADO MD オブジェクト、メソッド、およびプロパティを使用する方法について説明します。 これらの例では、SQL Server 7.0 の Microsoft SQL Server OLAP Services と共にインストールされているサンプル アプリケーションのサブセットです。  

@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 62c18c21-35c5-4772-be0d-ffdcc19c97ab
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8fd3e7ba4880a5d908991d32faaa9c1a5275976f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6739d9bcff2639b4b4f3562624beaf2cb3a76507
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63032745"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032824"
 ---
 # <a name="spsproccolumns-transact-sql"></a>sp_sproc_columns (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -76,11 +75,11 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 |**DATA_TYPE**|**smallint**|ODBC データ型用の整数コードです。 このデータ型が ISO 型にマッピングできない場合、値は NULL です。 ネイティブ データ型の名前が返されます、 **TYPE_NAME**列。|  
 |**TYPE_NAME**|**sysname**|データ型の文字列表現。 これは、基になる DBMS によって表されるデータ型の名前です。|  
 |**PRECISION**|**int**|有効桁数の値。 戻り値、**精度**列は 10 進数。|  
-|**LENGTH**|**int**|データのサイズを転送します。|  
+|**LENGTH**|**int**|データの転送サイズです。|  
 |**スケール**|**smallint**|小数点の右側にある数字の数。|  
 |**RADIX**|**smallint**|数値型の基数です。|  
 |**NULLABLE**|**smallint**|Null 値許容属性を指定します。<br /><br /> 1 = データ型を作成できる null 値を許容します。<br /><br /> 0 = null 値は許可されません。|  
-|**REMARKS**|**varchar(** 254 **)**|プロシージャの列の説明です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
+|**「解説」**|**varchar(** 254 **)**|プロシージャの列の説明です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
 |**COLUMN_DEF**|**nvarchar(** 4000 **)**|列の既定値です。|  
 |**SQL_DATA_TYPE**|**smallint**|表示されるように SQL データ型の値、**型**の記述子フィールド。 この列は、**datetime** データ型と ISO **interval** データ型以外は、**DATA_TYPE** 列と同じです。 この列は常に値が返されます。|  
 |**SQL_DATETIME_SUB**|**smallint**|**SQL_DATA_TYPE** の値が **SQL_DATETIME** または **SQL_INTERVAL** の場合は、**datetime** ISO **interval** サブコードになります。 型のデータ型以外**datetime**と ISO**間隔**、このフィールドは NULL です。|  
@@ -95,7 +94,7 @@ sp_sproc_columns [[@procedure_name = ] 'name']
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   

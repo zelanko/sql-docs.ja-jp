@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: ea918888-0fc5-4cc1-b301-26b2a9fbb20d
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 644873dd367705b02c3d14fcc7d95e0c9c81736e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 5f5973382b7a09080fa990b0807deb01660ce0d2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536104"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106533"
 ---
 # <a name="sysspcdcchangejob-transact-sql"></a>sys.sp_cdc_change_job (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,9 +63,9 @@ sys.sp_cdc_change_job [ [ @job_type = ] 'job_type' ]
   
  ときに*連続*= 0 の場合、 **sp_cdc_scan**ジョブが実行されるまで*max_scans*までの処理、ログのスキャン*max_trans*トランザクション中に各スキャン、およびし終了します。  
   
- 場合**@continuous** 1 から 0 に変更が**@pollinginterval**は自動的に 0 に設定します。 指定された値**@pollinginterval**以外の 0 は無視されます。  
+ 場合 **@continuous** 1 から 0 に変更が **@pollinginterval** は自動的に 0 に設定します。 指定された値 **@pollinginterval** 以外の 0 は無視されます。  
   
- 場合**@continuous**を省略するか明示的に NULL に設定し、 **@pollinginterval**が明示的に設定する値を 0 より大きく、 **@continuous**自動的には1 に設定します。  
+ 場合 **@continuous** を省略するか明示的に NULL に設定し、 **@pollinginterval** が明示的に設定する値を 0 より大きく、 **@continuous** 自動的には1 に設定します。  
   
  *継続的な*はキャプチャ ジョブでのみ有効です。  
   
@@ -112,7 +111,7 @@ GO
 ```  
   
 ### <a name="b-changing-a-cleanup-job"></a>B. クリーンアップ ジョブを変更します。  
- 次の例のクリーンアップ ジョブの更新、`AdventureWorks2012`データベース。 この有効なパラメーターをすべてのジョブ以外の種類、  **@threshold**が指定されています。 値**@threshold**は変更されません。  
+ 次の例のクリーンアップ ジョブの更新、`AdventureWorks2012`データベース。 この有効なパラメーターをすべてのジョブ以外の種類、  **@threshold** が指定されています。 値 **@threshold** は変更されません。  
   
 ```  
 USE AdventureWorks2012;  
@@ -123,7 +122,7 @@ EXECUTE sys.sp_cdc_change_job
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [dbo.cdc_jobs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-cdc-jobs-transact-sql.md)   
  [sys.sp_cdc_enable_table &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-enable-table-transact-sql.md)   
  [sys.sp_cdc_add_job &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sys-sp-cdc-add-job-transact-sql.md)  

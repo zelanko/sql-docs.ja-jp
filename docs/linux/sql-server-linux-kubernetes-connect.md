@@ -4,18 +4,17 @@ description: この記事は、Always On 可用性グループに接続する方
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
-manager: jroth
 ms.date: 08/09/2018
 ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: b4d56e3d470ca0ba3dbffe6b8cb5ebc64ab48445
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: f05bc51f587723414d3b0a4090fe2b27ad5fb837
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833586"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952602"
 ---
 # <a name="connect-to-a-sql-server-always-on-availability-group-on-kubernetes"></a>SQL Server Always On Kubernetes 上の可用性グループへの接続します。
 
@@ -52,7 +51,7 @@ kubectl get services
 
 SQL 認証を使用してプライマリ レプリカに接続するには、使用、`sa`アカウントの値は、`sapassword`から作成したシークレットとこの IP アドレス。
 
-以下に例を示します。
+例:
 
 ```cmd
 sqlcmd -S <0.0.0.0> -U sa -P "<MyC0m9l&xP@ssw0rd>"

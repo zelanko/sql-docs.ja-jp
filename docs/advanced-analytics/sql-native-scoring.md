@@ -7,13 +7,12 @@ ms.date: 08/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: bd0a79a3991c34ddbcf874aca80160299074919a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 65a7954aa18f9e8dbdfd814a6b0d189683e4606f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962313"
 ---
 # <a name="native-scoring-using-the-predict-t-sql-function"></a>T-SQL の予測関数を使用して、ネイティブのスコアリング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ ms.locfileid: "58513219"
 
 関数は、通過するソース データの列と共に、入力データの予測を返します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 予測が SQL Server 2017 データベース エンジンのすべてのエディションで使用可能な Windows、SQL Server 2017 (Windows)、SQL Server 2017 (Linux) または Azure SQL Database で SQL Server 2017 Machine Learning サービスを含む、既定で有効にします。 R、Python をインストールまたはその他の機能を有効にする必要はありません。
 
@@ -164,7 +163,7 @@ go
 > [!NOTE]
 > 列と値がによって返されるため、 **PREDICT**はモデルの種類によって異なる場合を使用して、返されるデータのスキーマを定義する必要があります、 **WITH**句。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 ネイティブ スコアリングを含む完全なソリューションでは、SQL Server 開発チームからこれらのサンプルを参照してください。
 

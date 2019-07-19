@@ -1,5 +1,5 @@
 ---
-title: 機能の選択 (データ マイニング) |Microsoft ドキュメント
+title: 機能の選択 (データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: a93e503978779e56250ddf190c61b1b2411050b9
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019189"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68183262"
 ---
 # <a name="feature-selection-data-mining"></a>機能の選択 (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -31,7 +31,7 @@ ms.locfileid: "34019189"
   
  選択機能の処理中は、分析での有用性に基づいて、アナリストまたはモデリング ツール (アルゴリズム) のいずれかが能動的に属性を選択または除外します。  アナリストは機能エンジニアリングを実施して、機能を追加したり既存のデータを削除したり変更したりします。一方、機械学習アルゴリズムは、通常は列にスコアを付けてモデルでの実用性を検証します。  
   
- ![機能の選択とエンジニア リング プロセス](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "の特徴の選択とエンジニア リング プロセス")  
+ ![機能の選択とエンジニア リング プロセス](../../analysis-services/data-mining/media/ssdm-featureselectionprocess.png "機能の選択とエンジニア リング プロセス")  
   
  つまり、機能の選択は、価値の低いデータが多すぎること、または価値の高いデータが少なすぎることという、2 つの問題を解決するために役立ちます。 機能の選択の目的は、モデルの作成に最低限必要なデータ ソースの列を特定することです。  
   
@@ -97,7 +97,7 @@ ms.locfileid: "34019189"
   
 |アルゴリズム|分析の方法|コメント|  
 |---------------|------------------------|--------------|  
-|Naive Bayes|Shannon のエントロピ<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft Naïve Bayes アルゴリズムで使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)」を参照してください。|  
+|Naive Bayes|Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft Naïve Bayes アルゴリズムで使用できる属性は、不連続属性と分離された属性だけです。したがって、興味深さのスコアは使用できません。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft Naive Bayes アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-naive-bayes-algorithm-technical-reference.md)」を参照してください。|  
 |デシジョン ツリー|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|非バイナリの連続する値を含む列がある場合は、一貫性を保つため、すべての列に対して興味深さのスコアが使用されます。 それ以外の場合は、既定の機能の選択の方法か、モデルを作成したときに指定した方法が使用されます。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft デシジョン ツリー アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-decision-trees-algorithm-technical-reference.md)」を参照してください。|  
 |ニューラル ネットワーク|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft ニューラル ネットワーク アルゴリズムでは、データに連続列が含まれている限り、ベイズおよびエントロピに基づく方法の両方を使用できます。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft ニューラル ネットワーク アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-neural-network-algorithm-technical-reference.md)」を参照してください。|  
 |ロジスティック回帰|興味深さのスコア<br /><br /> Shannon のエントロピー<br /><br /> K2 事前分布を指定したベイズ定理<br /><br /> 均一な事前分布を指定したベイズ ディリクレ等式 (既定値)|Microsoft ロジスティック回帰アルゴリズムは Microsoft ニューラル ネットワーク アルゴリズムに基づいていますが、ロジスティック回帰モデルをカスタマイズして機能の選択動作を制御することはできません。したがって、機能の選択では、常に属性に最も適した方法が既定で使用されます。<br /><br /> すべての属性が不連続属性または分離された属性の場合は、既定値は BDEU です。<br /><br /> このアルゴリズムの詳細については、「 [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)」を参照してください。|  
@@ -120,7 +120,7 @@ ms.locfileid: "34019189"
   
  機能の選択のこれらのメソッドに加え、モデルの "*モデリング フラグ*"、または構造の "*ディストリビューション フラグ*" を設定すると、アルゴリズム機能を改善して重要な属性を識別したり昇格させたりすることができます。 これらの概念の詳細については、「[モデリング フラグ &#40;データ マイニング&#41;](../../analysis-services/data-mining/modeling-flags-data-mining.md)」および「[列の分布 &#40;データ マイニング&#41;](../../analysis-services/data-mining/column-distributions-data-mining.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデルとマイニング構造のカスタマイズ](../../analysis-services/data-mining/customize-mining-models-and-structure.md)  
   
   

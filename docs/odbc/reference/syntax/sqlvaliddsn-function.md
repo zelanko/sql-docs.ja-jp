@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 930d1d89-337a-4429-85a2-84ee10555ac9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 991884e14f68cf279543b9194114c5ea1fc8d7dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bbd8df72bcb0e76c8abcc3d738c2ff8da61a7bfe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536757"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68039485"
 ---
 # <a name="sqlvaliddsn-function"></a>SQLValidDSN 関数
 **準拠**  
  バージョンが導入されました。ODBC 2.0  
   
- **まとめ**  
+ **概要**  
  **SQLValidDSN**名前は、システムの情報を追加する前に、長さとデータ ソース名の有効性を確認します。  
   
 ## <a name="syntax"></a>構文  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4d802ef-b199-4e64-b7a5-6f2b3e5e2c80
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b15aa278e2fe38afe93f5628433a6c8f4b41cd8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8f5523c54286ed2e7cc554745dc269599115793e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198320"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094173"
 ---
 # <a name="driver-specification-subkeys"></a>ドライバーの仕様のサブキー
 ODBC ドライバーのサブキーの一覧の各ドライバーでは、独自のサブキーがあります。 このサブキーは、ODBC ドライバーのサブキーの下の対応する値として同じ名前を持ちます。 このサブキーの下の値は、ドライバーとドライバーのセットアップ Dll、によって返されるドライバー キーワードの値の完全なパスを一覧表示**SQLDrivers**、および使用状況カウントします。 値の形式は、次の表に示すようにします。  
@@ -29,11 +28,11 @@ ODBC ドライバーのサブキーの一覧の各ドライバーでは、独自
 |名前|データ型|data|  
 |----------|---------------|----------|  
 |APILevel|REG_SZ|**0** &#124; **1** &#124; **2**|  
-|ConnectFunctions|REG_SZ|{**Y**&#124;**N**}{**Y**&#124;**N**}{**Y**&#124;**N**}|  
+|ConnectFunctions|REG_SZ|{**Y**&#124;**N**} {**Y**&#124;**N**} {**Y**&#124;**N**}|  
 |CreateDSN|REG_SZ|*ドライバーの説明*|  
 |Driver|REG_SZ|*ドライバー DLL のパス*|  
 |DriverODBCVer|REG_SZ|*nn.nn*|  
-|FileExtns|REG_SZ|**\*.** *file-extension1*[ **,\*.** *ファイル extension2*].|  
+|FileExtns|REG_SZ|**\*.** *ファイル extension1*[ **、\*します。** *ファイル extension2*].|  
 |FileUsage|REG_SZ|**0** &#124; **1** &#124; **2**|  
 |セットアップ|REG_SZ|*セットアップ DLL へのパス*|  
 |SQLLevel|REG_SZ|**0** &#124; **1** &#124; **2**|  

@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 723107a1-be08-4ea3-a8c0-b2c45d38d1aa
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: ba21e2a13b755c938c8b1bdc321a5f23bf87c29f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d8d7f1b8ec5647a34b09f0636fc8fcc2ad070f72
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213303"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68019239"
 ---
 # <a name="column-size-decimal-digits-transfer-octet-length-and-display-size---odbc"></a>列のサイズ、10 進数字は、転送オクテット長、および ODBC のサイズを表示
 データ型は、特性は、その列 (またはパラメーター) のサイズ、10 進桁数、長さ、およびサイズを表示します。 次の ODBC 関数では、データ ソースの SQL ステートメント内のパラメーターまたは SQL データ型をこれらの属性を返します。 各 ODBC 関数では、次のように、これらの属性の別のセットを返します。  

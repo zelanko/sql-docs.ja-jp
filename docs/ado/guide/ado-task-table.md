@@ -13,18 +13,17 @@ helpviewer_keywords:
 ms.assetid: 2fad33fb-c858-4dcb-98dc-3dfd0e555055
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 1186615ccd409ba34f65d3f63dd51c76dfa2fdb1
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: 79ba71c38f6ccff4e5a55471839df09252344c68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "62518622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927024"
 ---
 # <a name="ado-programming-task-table"></a>ADO プログラミング タスク テーブル
 次の表に含まれるタスクのプログラミング、 *ADO プログラマー ガイド*し、各タスクの参照を提供します。 これらの参照には、テキストの説明またはタスクを実行する ADO 機能についての情報を得られるコード例を指定できます。
 
-|ADO タスク|References|
+|ADO タスク|リファレンス|
 |--------------|----------------|
 |データ プロバイダーに接続します。|[データ ソースに接続します。](../../ado/guide/data/connecting-to-data-sources.md)|
 |コマンドの実行またはストアド プロシージャの呼び出し|[Prepare および Execute コマンド](../../ado/guide/data/preparing-and-executing-commands.md)|

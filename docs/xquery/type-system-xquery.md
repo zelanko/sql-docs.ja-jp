@@ -23,22 +23,21 @@ helpviewer_keywords:
 ms.assetid: 22d6f861-d058-47ee-b550-cbe9092dcb12
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 34680d0af0e8c69bca15e4e93cddbe6b2a3386cb
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
+ms.openlocfilehash: 0736bc39ceaa6d9a0aa541d2af3b2b784614322b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54254787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946202"
 ---
 # <a name="type-system-xquery"></a>型システム (XQuery)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   XQuery は、スキーマ型に対しては厳密に型指定された言語で、型指定されていないデータに対しては厳密には型指定されていない言語です。 XQuery の定義済みの型には、次のものがあります。  
   
--   内の XML スキーマの組み込み型、 **http://www.w3.org/2001/XMLSchema**名前空間。  
+-   内の XML スキーマの組み込み型、 **http://www.w3.org/2001/XMLSchema** 名前空間。  
   
--   定義された型、 **http://www.w3.org/2004/07/xpath-datatypes**名前空間。  
+-   定義された型、 **http://www.w3.org/2004/07/xpath-datatypes** 名前空間。  
   
  このトピックでは、次の内容についても説明します。  
   
@@ -51,7 +50,7 @@ ms.locfileid: "54254787"
 ## <a name="built-in-types-of-xml-schema"></a>XML スキーマの組み込み型  
  XML スキーマの組み込み型には、xs という定義済みの名前空間プレフィックスが付いています。 これらの種類のものが**xs:integer**と**xs:string**します。 これらの組み込み型はすべてサポートされます。 XML スキーマ コレクションを作成するときに、これらの型を使用できます。  
   
- 型指定された XML のクエリを実行するとき、ノードの静的および動的な型は、クエリの対象の列または変数に関連付けられた XML スキーマ コレクションによって決まります。 静的および動的な型の詳細については、[式コンテキストとクエリの評価&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)を参照してください。 次のクエリを指定するなど、型指定されたに対して**xml**列 (`Instructions`)。 この式では `instance of` を使用して、返される `LotSize` 属性の型指定された値が `xs:decimal` 型であることを確認しています。  
+ 型指定された XML のクエリを実行するとき、ノードの静的および動的な型は、クエリの対象の列または変数に関連付けられた XML スキーマ コレクションによって決まります。 静的および動的な型の詳細については、次を参照してください。[式コンテキストとクエリの評価&#40;XQuery&#41;](../xquery/expression-context-and-query-evaluation-xquery.md)します。 次のクエリを指定するなど、型指定されたに対して**xml**列 (`Instructions`)。 この式では `instance of` を使用して、返される `LotSize` 属性の型指定された値が `xs:decimal` 型であることを確認しています。  
   
 ```  
 SELECT Instructions.query('  
@@ -65,7 +64,7 @@ WHERE ProductModelID=7
  この型指定情報は、列に関連付けられた XML スキーマ コレクションによって提供されます。  
   
 ## <a name="types-defined-in-xpath-data-types-namespace"></a>XPath データ型の名前空間で定義されている型  
- 定義された型、 **http://www.w3.org/2004/07/xpath-datatypes**名前空間の定義済みのプレフィックスがある**xdt**します。 これらの型には、次のことが当てはまります。  
+ 定義された型、 **http://www.w3.org/2004/07/xpath-datatypes** 名前空間の定義済みのプレフィックスがある**xdt**します。 これらの型には、次のことが当てはまります。  
   
 -   XML スキーマ コレクションを作成しているときは、これらの型を使用できません。 これらの型が、XQuery 型システムで使用され、使わ[XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。 たとえば、アトミック型にキャストできます**xdt:untypedAtomic**の**xdt**名前空間。  
   
@@ -97,7 +96,7 @@ SELECT @x.query( '/a[1] instance of element()')
 > [!NOTE]  
 >  型指定された XML インスタンスにクエリを実行して、クエリ式に parent 軸が含まれるときは、結果のノードの静的な型情報は使用できなくなります。 ただし、動的な型はノードに関連付けられたままです。  
   
-## <a name="typed-value-vs-string-value"></a>型指定された値と文字列値  
+## <a name="typed-value-vs-string-value"></a>型指定された値と[Key]  
  どのノードにも型指定された値と文字列値があります。 型指定された XML データの場合、型指定された値の型は、クエリ対象の列または変数に関連付けられた XML スキーマ コレクションによって提供されます。 XML データの型指定されていない、型指定された値の型は**xdt:untypedAtomic**します。  
   
  使用することができます、 **data()** または**string()** ノードの値を取得します。  

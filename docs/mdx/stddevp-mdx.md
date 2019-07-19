@@ -8,20 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ac6d625c1cef2d0650b94bb7babfdb88541595ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8ceb37a1802fc39c6d99a1e12cbbe51f299374d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150222"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036898"
 ---
 # <a name="stddevp-mdx"></a>StddevP (MDX)
 
 
   別名、 [StdevP](../mdx/stdevp-mdx.md)関数  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

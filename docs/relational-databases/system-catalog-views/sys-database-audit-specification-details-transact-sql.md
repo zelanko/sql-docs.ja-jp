@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 03fc60a9-1696-4109-b15e-a50046310859
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 865fb25a08bdf549c09a9bb4e4e23cff929f12ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4dcf9664adcdeba495b53f1a1392781df3fa60bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62652480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940283"
 ---
 # <a name="sysdatabaseauditspecificationdetails-transact-sql"></a>sys.database_audit_specification_details (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,11 +37,11 @@ ms.locfileid: "62652480"
 |**audit_action_id**|**int**|監査アクションの ID。|  
 |**audit_action_name**|**sysname**|監査アクションまたは監査アクション グループの名前|  
 |**Class**|**int**|監査対象のオブジェクトのクラスを識別します。|  
-|**class_ desc**|**Nvarchar(60)**|監査対象のオブジェクトのクラスの説明です。<br /><br /> スキーマ<br /><br /> - TABLE|  
+|**class_ desc**|**nvarchar (60)**|監査対象のオブジェクトのクラスの説明です。<br /><br /> スキーマ<br /><br /> - TABLE|  
 |**major_id**|**int**|テーブル監査アクションのテーブル ID など、監査対象のオブジェクトの主要な ID。|  
 |**minor_id**|**Int**|監査対象のオブジェクトのセカンダリ ID は、テーブル監査アクションの列 ID などのクラスに基づいて解釈されます。|  
 |**audited_principal_id**|**int**|監査対象のプリンシパル。|  
-|**audited_result**|**Nvarchar(60)**|監査アクションの結果。<br /><br /> - SUCCESS AND FAILURE (成功および失敗) – SUCCESS (成功)<br /><br /> -エラー|  
+|**audited_result**|**nvarchar (60)**|監査アクションの結果。<br /><br /> - SUCCESS AND FAILURE (成功および失敗) – SUCCESS (成功)<br /><br /> -エラー|  
 |**is_group**|**Bit**|オブジェクトがグループかどうかを示します。<br /><br /> 0 - グループではない<br /><br /> 1 - グループ|  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -50,7 +49,7 @@ ms.locfileid: "62652480"
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/create-server-audit-transact-sql.md)   
  [ALTER SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/alter-server-audit-transact-sql.md)   
  [DROP SERVER AUDIT &#40;Transact-SQL&#41;](../../t-sql/statements/drop-server-audit-transact-sql.md)   

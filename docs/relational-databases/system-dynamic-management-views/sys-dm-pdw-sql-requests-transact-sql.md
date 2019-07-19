@@ -11,14 +11,13 @@ dev_langs:
 ms.assetid: 44e19609-902c-46cf-acdf-19ea75011365
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 24bcf44fe2e1e0d35610dba9fb40d64ac2c819bb
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: bca9930ef51de28c8059223c93ea0bb2651f971d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58658006"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68089154"
 ---
 # <a name="sysdmpdwsqlrequests-transact-sql"></a>sys.dm_pdw_sql_requests (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -35,7 +34,7 @@ ms.locfileid: "58658006"
 |error_id|**nvarchar(36)**|エラーの一意の識別子は、存在する場合、このクエリの分布に関連付けられています。|Error_id を参照してください。 [sys.dm_pdw_errors &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-pdw-errors-transact-sql.md)します。 エラーが発生していない場合は NULL に設定します。|  
 |start_time|**datetime**|クエリの配布が実行を開始する時刻。|このクエリの分布が属している小さいまたは現在の時刻に等しいと大きいまたは等しい start_time のクエリのステップ|  
 |end_time|**datetime**|時間をこのクエリの分布の実行完了が取り消された場合、または失敗しました。|大きいまたは等しい開始時刻、またはクエリの分布が継続的なまたはキューに置かれた場合は NULL に設定します。|  
-|total_elapsed_time|**int**|クエリの配布が実行されている、ミリ秒単位で時間を表します。|大きいまたは 0。 Start_time のデルタに等しいと end_time 完了済み、失敗、またはクエリの分布が取り消されました。<br /><br /> Total_elapsed_time では、整数の最大値を超えている場合、最大値になります total_elapsed_time では引き続きします。 この状態が"、最大値を超過しました"警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
+|total_elapsed_time|**int**|クエリの配布が実行されている、ミリ秒単位で時間を表します。|大きいまたは 0。 Start_time のデルタに等しいと end_time 完了済み、失敗、またはクエリの分布が取り消されました。<br /><br /> Total_elapsed_time では、整数の最大値を超えると、total_elapsed_time 引き続き、最大値になります。 この状態が"、最大値を超過しました"警告を生成します。<br /><br /> 最大値をミリ秒単位は 24.8 日に相当します。|  
 |row_count|**bigint**|行の数が変更されたか、このクエリの分布を読み取りません。|CREATE TABLE や DROP TABLE などのデータを取得または変更しない操作の場合は-1。|  
 |spid|**int**|クエリの配布を実行している SQL Server インスタンス上のセッション id。||  
 |command|**nvarchar (4000)**|このクエリの配布用のコマンドの完全なテキスト。|有効なクエリまたは要求文字列。|  

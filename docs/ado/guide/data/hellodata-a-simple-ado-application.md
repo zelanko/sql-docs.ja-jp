@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: de4bcd56-dac2-45e6-95ab-9fd7f25878fc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97957adf53cfea64693530b79920dd54d6d0a1bf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e666f479d95e3915703dc539ba2731e95175488b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925139"
 ---
 # <a name="hellodata-a-simple-ado-application"></a>HelloData: 単純な ADO アプリケーション
 この単純なアプリケーションの 4 つの主要な ADO 操作の各ステップ: を取得する、確認、編集、およびデータを更新します。 これらの操作は、Microsoft® SQL Server に含まれている Northwind サンプル データベースに対して実行されます。 ADO の基礎に注目して、コードの煩雑さを回避するには、エラー処理の例では最小限です。  
@@ -49,7 +48,7 @@ ms.locfileid: "66700641"
 ||[高さ]|6500|  
 ||[幅]|6500|  
 |MS DataGrid|名前|grdDisplay1|  
-|テキスト ボックス|名前|txtDisplay1|  
+|TextBox|名前|txtDisplay1|  
 ||複数行|true|  
 |コマンド ボタン|名前|cmdGetData|  
 ||[キャプション]|Get Data|  

@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 33070e5f-4e39-4b70-ae81-b8af6e4983c5
 author: Shamikg
 ms.author: Shamikg
-manager: v-thobro
-ms.openlocfilehash: 2041901a851ca755b1079535ccbf763472ec7bc4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: shamikg
+ms.openlocfilehash: 2ce13298c61595d5e5641cb89bffb28fd277e0d7
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63055672"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68259732"
 ---
 # <a name="installing-ssma-components-on-sql-server-oracletosql"></a>SQL Server での SSMA コンポーネントのインストール (OracleToSQL)
 SSMA のインストール、に加えて必要がありますもコンポーネントをインストールする実行しているコンピューターで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 これらのコンポーネントには、データの移行、およびサーバー間の接続を有効にする Oracle プロバイダーをサポートする SSMA 拡張パックが含まれます。  
@@ -28,7 +28,7 @@ SSMA の拡張機能パックでは、データベースを追加します。 **
   
 データを移行する場合にも、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA 作成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブのデータを移行するサーバー側のデータ移行のエンジンを使用するとします。  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
 SSMA for Oracle サーバー コンポーネントをインストールする前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]システムが、次の要件を満たしていることを確認します。  
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスがインストールされます。 SSMA では、SQL Server 2008 Express Edition はサポートされていません。  
@@ -103,7 +103,7 @@ SSMA for Oracle サーバー コンポーネントをインストールする前
   
 データを移行するたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、SSMA を作成、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント ジョブ。 これらのジョブの名前は**ssma_oracle データ移行パッケージ {GUID}** に表示し、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエージェント ノード[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]Jobs フォルダーでします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SSMA for Oracle クライアントのインストール&#40;OracleToSQL&#41;](../../ssma/oracle/installing-ssma-for-oracle-client-oracletosql.md)  
 [SQL Server にデータベースを移行する Oracle &#40;OracleToSQL&#41;](../../ssma/oracle/migrating-oracle-databases-to-sql-server-oracletosql.md)  
   

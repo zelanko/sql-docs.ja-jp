@@ -21,19 +21,19 @@ keywords:
 ms.assetid: adafeeef-4255-4924-8042-02f503d599ca
 author: dnethi
 ms.author: dinethi
-manager: craigg
+manager: jroth
 ms.custom: ''
 ms.date: 06/12/2019
-ms.openlocfilehash: 403ca9e5132a00f003aa67a2011d98d0044b4807
-ms.sourcegitcommit: 65ceea905030582f8d89e75e97758abf3b1f0bd6
+ms.openlocfilehash: e7fb5ecb66552ef4d061c36326788f4be51255bb
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/26/2019
-ms.locfileid: "67399659"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680379"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
-[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-xxx-md.md](../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
 SQL Server Management Studio (SSMS) は、SQL Server から Azure SQL Database まで、SQL インフラストラクチャを管理するための統合環境です。 SSMS には、SQL Server とデータベースのインスタンスを構成、監視、および管理するためのツールが備わっています。 SSMS を使用して、アプリケーションで使われるデータ層コンポーネントを配置、監視、アップグレードしたり、クエリとスクリプトを作成したりすることもできます。
 
@@ -45,7 +45,7 @@ SSMS は無料です。
 
 **SSMS 18.1 をご利用いただけるようになりました。これは *SQL Server Management Studio* の GA (一般提供) 最新版であり、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]!** に対応しています。
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 18.1 のダウンロード ](https://go.microsoft.com/fwlink/?linkid=2094583)**
+**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 18.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2094583)**
 
 SSMS 18.1 は SSMS の GA (一般提供) 最新版です。 SSMS 18.0 (GA) をインストールしている場合、SSMS 18.1 をインストールすると、18.1 にアップグレードされます。 以前の*プレビュー*版の SSMS 18.0 がインストールされている場合は、それをアンインストールしてから SSMS 18.1 をインストールしてください。
 

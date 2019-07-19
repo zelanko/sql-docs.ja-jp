@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 380264da-e6bb-418c-b4af-3c22d35644b8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7ab58a0d406df88fcf68162020ec84904738f2d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e9c359b20cf790188cf3d6b0b7b7f73de406fb1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963705"
 ---
 # <a name="rds-code-examples-in-visual-c"></a>Visual C++ の RDS コード例
 Microsoft Visual C++ で RDS プロパティを使用する方法を学習するために、次のコード例を使用してください。  

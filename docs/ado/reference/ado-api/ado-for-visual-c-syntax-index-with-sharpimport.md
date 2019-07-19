@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 5930ccd2-5bab-448a-b0bf-773b8a83e87c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 987dbf95c4db08d5ac88d56dbd7097b8a45afe77
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 626cad2e57a725ac953b678e648e7e3f4ac21cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920964"
 ---
 # <a name="ado-for-visual-c-syntax-index-with-import"></a>#Import の Visual C 構文のインデックス用の ADO
 このインデックスはベースの Microsoft Visual C で ADO 言語リファレンスへの相互参照と **#import**ディレクティブ。  
@@ -58,5 +57,5 @@ ms.locfileid: "66696645"
   
 -   [レコード セットのイベント](../../../ado/reference/ado-api/recordsetevents-visual-c-syntax-index-with-sharpimport.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [COM 向け Visual C++ 構文用の ADO のインデックス](../../../ado/reference/ado-api/ado-for-visual-c-syntax-index-for-com.md)

@@ -16,13 +16,13 @@ helpviewer_keywords:
 ms.assetid: aafda520-9e2a-4e1e-b936-1b165f1684e8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9f36faf136a97d185cf1461f7affc414370b813f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: d740d7bd8eeb2a273e74053f76dd98a1a77f0975
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102608"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67688495"
 ---
 # <a name="ssms-utility"></a>Ssms ユーティリティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -53,35 +53,35 @@ Ssms
  *solutionfile*  
  開くソリューションを指定します。 パラメーターには、ソリューション ファイルへの完全パスを含める必要があります。  
   
- [**-S** _servername_]  
+ [ **-S** _servername_]  
   サーバー名  
   
- [**-d** _databasename_]  
+ [ **-d** _databasename_]  
   データベース名  
 
- [**-G**] Azure Active Directory 認証を使用して接続します。 接続の種類は、**-P** および/または **-U** が含まれるかどうかで決まります。
- - **-U** も **-P** も含まれて*いない*場合は、**[Active Directory - 統合]** が使用され、ダイアログは表示されません。
- - **-U** と **-P** の両方が含まれている場合は、**[Active Directory - パスワード]** が使用されます。 このオプションを使用することは**お勧めできません**。コマンドライン上にクリア テキスト パスワードを指定する必要があり、これが推奨されないためです。
- - **-U** が含まれており、**-P** は含まれていない場合、認証ダイアログはポップアップ表示されますが、ログインの試みはすべて失敗します。 
+ **[-G]** Azure Active Directory 認証を使用して接続します。 接続の種類は、 **-P** および/または **-U** が含まれるかどうかで決まります。
+ - **-U** も **-P** も含まれて*いない*場合は、 **[Active Directory - 統合]** が使用され、ダイアログは表示されません。
+ - **-U** と **-P** の両方が含まれている場合は、 **[Active Directory - パスワード]** が使用されます。 このオプションを使用することは**お勧めできません**。コマンドライン上にクリア テキスト パスワードを指定する必要があり、これが推奨されないためです。
+ - **-U** が含まれており、 **-P** は含まれていない場合、認証ダイアログはポップアップ表示されますが、ログインの試みはすべて失敗します。 
 
   **[Active Directory - MFA サポートで汎用]** は現在サポートされていません。 
   
-[**-U** _username_]  
+[ **-U** _username_]  
  'SQL 認証' または 'Active Directory - パスワード' に接続するときのユーザー名  
   
-[**-P** _password_]  
+[ **-P** _password_]  
  'SQL 認証' または 'Active Directory - パスワード' で接続するときのパスワード
   
-[**-E**]  
+**[-E]**  
  Windows 認証を使用した接続  
   
-[**-nosplash**]  
+**[-nosplash]**  
  [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を開くとき、スプラッシュ スクリーンのグラフィックを表示しません。 限られた帯域幅を使用した接続では、ターミナル サービスを使用して [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] を起動しているコンピューターへ接続する場合に、このオプションを使用してください。 この引数では、大文字と小文字は区別されず、他の引数の前後どちらにも指定できます。  
   
-[**-log**_[filename]?_]  
+[ **-log** _[filename]?_ ]  
  トラブルシューティング用に指定したファイルに [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のアクティビティを記録します。  
   
-[**-?**]  
+**[-?]**  
  コマンド ライン ヘルプを表示します。  
   
 ## <a name="remarks"></a>Remarks  

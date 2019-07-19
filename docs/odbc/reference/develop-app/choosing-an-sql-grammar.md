@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 4e0d189b-e407-47e0-92a9-f9982230dd0e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 670ed0adbbd5ad993af0942d492ee19f75fa9628
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f7bf7e77f892f10de17402b59e732523d58fbc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026584"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036553"
 ---
 # <a name="choosing-an-sql-grammar"></a>SQL 文法の選択
 使用するには、どの文法は、SQL ステートメントを構築するときに最初に決定します。 Open Group、ANSI、および ISO など、さまざまな標準化団体から使用可能な文法だけでなくは、ほぼすべての DBMS ベンダーは、標準と若干異なりますそれぞれの独自の文法を定義します。  

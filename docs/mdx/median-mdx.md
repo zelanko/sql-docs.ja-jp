@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e962507d6e437974708aa042919ea6fb7bd632d0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b6f941e269bb9948dd39ba52db0ea4d0961c029a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63048526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033856"
 ---
 # <a name="median-mdx"></a>Median (MDX)
 
@@ -38,7 +37,7 @@ Median(Set_Expression [ ,Numeric_Expression ] )
 ## <a name="remarks"></a>コメント  
  数値式が指定されている場合、指定された数値式は、セット全体が評価され、その評価から得られる中央値を返します。 数値式が指定されていない場合、指定したセットは、セットのメンバーの現在のコンテキストでが評価され、評価から中央値を返します。  
   
- 中央値とは、順番に並べられた数値のセットの中央に位置する値です  (セット内の数値の合計を、セット内にある数値の数で除算する平均値とは異なります)。 中央値は、セット内の値の少なくとも半数が、その値以下になるような最小の値を選択することによって決まります。 セット内の値の数が奇数の場合、中央値は 1 つの値になります。 セット内の値の数が偶数の場合は、中央に位置する 2 つの値の合計を 2 で除算した値が返されます。  
+ 中央値とは、順番に並べられた数値のセットの中央に位置する値です (セット内の数値の合計を、セット内にある数値の数で除算する平均値とは異なります)。 中央値は、セット内の値の少なくとも半数が、その値以下になるような最小の値を選択することによって決まります。 セット内の値の数が奇数の場合、中央値は 1 つの値になります。 セット内の値の数が偶数の場合は、中央に位置する 2 つの値の合計を 2 で除算した値が返されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、数値セットの中央値が計算される際、NULL 値は無視されます。  
@@ -60,7 +59,7 @@ FROM [Adventure Works]
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   
   

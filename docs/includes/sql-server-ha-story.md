@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: bac867f5f3532f931d2708c46979659e2851645f
-ms.sourcegitcommit: 3cfedfeba377560d460ca3e42af1e18824988c07
+ms.openlocfilehash: 1394414db170826fa96ca51a5d35ff8dea199310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/05/2019
-ms.locfileid: "59055667"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68212309"
 ---
 この記事では、SQL Server での高可用性とディザスター リカバリーのためのビジネス継続性ソリューションの概要を提供します。 
 
@@ -12,7 +12,7 @@ SQL Server を展開するすべての人が行う必要がある 1 つの共通
 
 SQL Server 2017 では、多くの新機能の導入と、既存機能への強化が行われ、そのいくつかは可用性に対するものです。 SQL Server 2017 の最大の補強は、Linux ディストリビューションでの SQL Server のサポートです。 SQL Server 2017 の新機能の完全なリストについては、「[SQL Server 2017 の新機能](https://docs.microsoft.com/sql/sql-server/what-s-new-in-sql-server-2017)」のトピックを参照してください。
 
-この記事では、SQL Server 2017 の可用性シナリオと、SQL Server 2017 の新機能と強化された機能について重点的に取り上げます。 シナリオには、Windows Server と Linux の両方にまたがって SQL Server を展開できるハイブリッドなものと、データベースの読み取り可能なコピーの数を増やすことができるものが含まれます。 この記事では、SQL Server 以外の可用性オプション (仮想化によって提供される可用性オプションなど) は取り上げません。ここで説明しているものはすべて、パブリック クラウドであれ、オンプレミスのハイパーバイザー サーバーであれ、ゲスト仮想マシン内の SQL Server のインストールに適用されます。
+この記事では、SQL Server 2017 の可用性シナリオと、SQL Server 2017 の新機能と強化された機能について重点的に取り上げます。 シナリオには、Windows Server と Linux の両方にまたがって SQL Server を展開できるハイブリッドなものと、データベースの読み取り可能なコピーの数を増やすことができるものが含まれます。 この記事では、SQL Server 以外の可用性オプション (仮想化によって提供されるものなど) については扱いませんが、ここで説明している内容はすべて、パブリック クラウド内であれ、オンプレミスのハイパーバイザー サーバーでホストされる場合であれ、ゲスト仮想マシン内での SQL Server のインストールに適用されます。
 
 ## <a name="sql-server-2017-scenarios-using-the-availability-features"></a>可用性機能を使用した SQL Server 2017 のシナリオ
 

@@ -1,5 +1,5 @@
 ---
-title: For SharePoint のインストール verify a Power Pivot |Microsoft ドキュメント
+title: For SharePoint のインストール verify a Power Pivot |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f047593657806b872aafdda802c9c85ac4526b56
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209471"
 ---
 # <a name="verify-a-power-pivot-for-sharepoint-installation"></a>Power Pivot for SharePoint インストールの確認
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -57,12 +57,12 @@ ms.locfileid: "34017509"
   
 8.  **[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** をクリックして、このアプリケーションの [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 管理ダッシュボードを開きます。 最初に使用するときは、ダッシュボードの読み込みに数分かかります。  
   
-     または、**[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** の横の空白部分をクリックして行を選択し、**[プロパティ]** をクリックしてこのサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、「 [サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)」を参照してください。  
+     または、 **[既定の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション]** の横の空白部分をクリックして行を選択し、 **[プロパティ]** をクリックしてこのサービス アプリケーションの構成設定を表示します。 構成設定とアプリケーション プロパティの両方を修正して、サーバーの構成を変更できます。 これらの設定の詳細については、「 [サーバーの全体管理での Power Pivot サービス アプリケーションの作成および構成](../../../analysis-services/power-pivot-sharepoint/create-and-configure-power-pivot-service-application-in-ca.md)」を参照してください。  
   
 ## <a name="verify-integration-at-the-site-level"></a>サイト レベルでの統合の確認  
  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、http:// を指定できます\<コンピューター名 >、URL アドレスにします。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、 http:// を指定できます\<コンピューター名 >、URL アドレス。  
   
 2.  [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータ アクセス機能とデータ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]から提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
@@ -89,7 +89,7 @@ ms.locfileid: "34017509"
   
 7.  [サーバーの種類] で **[Analysis Services]** を選択します。  
   
-8.  サーバー名を入力**\<サーバー名 > \powerpivot**ここで、 **\<サーバー名 >** があるコンピューターの名前を指定、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePointインストール。  
+8.  サーバー名 で次のように入力します **\<サーバー名 > \powerpivot**ここで、 **\<サーバー名 >** されているコンピューターの名前を指定します、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] for SharePoint。インストールします。  
   
 9. **[接続]** をクリックします。 これにより、Analysis Services サーバーが使用可能であることを確認します。  
   

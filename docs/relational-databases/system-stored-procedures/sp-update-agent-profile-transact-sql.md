@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cc81f227-0df3-4151-bb4d-4f45ea997b71
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: bf8ec9183ce1bac5557040aa3256ef5e6499c0f5
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 5e90136d319ed0f04766bfec503126999bb73dd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52760134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061219"
 ---
 # <a name="spupdateagentprofile-transact-sql"></a>sp_update_agent_profile (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@agent_type=**] **'***agent_type***'**  
+ [ **@agent_type=** ] **'***agent_type***'**  
  エージェントの種類を指定します。 *agent_type*は**int**, で、既定値はありませんはこれらの値のいずれかを指定します。  
   
 |値|説明|  
@@ -49,11 +48,11 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|マージ エージェントです。|  
 |**9**|キュー リーダー エージェント|  
   
- [**@agent_id=**] *agent_id*  
+ [ **@agent_id=** ] *agent_id*  
  エージェントの ID を指定します。 *agent_id*は**int**、既定値はありません。  
   
- [**@profile_id=**] *profile_id*  
- エージェントで使用する必要のあるプロファイルの ID を指定します。 *profile_id*は**int**、既定値はありません。 をエージェントごとに定義されているプロファイルの一覧を表示するには使用[sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)します。 システム プロファイルの詳細については、[レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)を参照してください。  
+ [ **@profile_id=** ] *profile_id*  
+ エージェントで使用する必要のあるプロファイルの ID を指定します。 *profile_id*は**int**、既定値はありません。 をエージェントごとに定義されているプロファイルの一覧を表示するには使用[sp_help_agent_profile &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)します。 システム プロファイルの詳細については、次を参照してください。[レプリケーション エージェント プロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

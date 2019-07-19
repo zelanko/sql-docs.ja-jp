@@ -9,18 +9,38 @@ ms.assetid: 112e0240-351d-46a9-98c7-2be09f26ac60
 ms.reviewer: maghan
 author: RhysSchmidtke
 ms.author: rhys
-ms.openlocfilehash: d6d4da6d5574288fa66ea18a9c63b1488a6abcca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1528358c8aff5d6e99869f0f4f8c1676ee2d5e75
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63226004"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67730907"
 ---
 # <a name="release-notes-for-the-report-viewer-controls-for-webforms-and-winforms-of-ssrs"></a>WebForms および WinForms の SSRS にレポート ビューアー コントロールのリリース ノート
 
 これらの WebForms および WinForms、関連するレポート ビューアー コントロールのリリース ノートは、 [!INCLUDE[ssnoversion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] (SSRS)。
 
 SSRS のリリース ノートについては、次を参照してください。[の SQL Server Reporting Services (SSRS) 2017 以降のリリース ノート](../release-notes-reporting-services.md)します。
+
+## <a name="15013580"></a>150.1358.0
+| 変更の説明 | 詳細 |
+| :----------------- | :------ |
+| バグの修正 | プロジェクトの参照から Microsoft.ReportViewer.Design アセンブリを削除する変更を元に戻されます。 |
+|           | その他の変更の一環として、2 つのアセンブリは 15.3 を 15.0 のバージョンから変更されました。 これが戻されました。 |
+| &nbsp; | &nbsp; |
+
+## <a name="15013570"></a>150.1357.0
+| 変更の説明 | 詳細 |
+| :----------------- | :------ |
+| バグの修正  | 高 DPI モニターの適切な印刷のプレビュー |
+|            | 表示領域外印刷ダイアログ ボックスが表示されます。 |
+|            | 多数のパラメーターにより、スクロール バーのパラメーターおよびドロップダウン リストが正しく動作していません |
+|            | Null と日付時刻のパラメーターで問題を修正しました |
+|            | 更新された JQuery バージョン 3.3.1 |
+|            | HTML のレンダリングで tablix セルの重複を修正しました |
+|            | プロジェクトの参照をプロジェクトに追加される VS アセンブリを誤ったを排除するデザイン時の削除 |
+|            | アクティブな項目に対してのみナレーションをツール バーのアクセシビリティの修正します。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="15900148"></a>15.900.148
 

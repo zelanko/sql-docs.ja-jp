@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ddccdf58-9c57-4c9b-8b7f-0cf193f955fb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32ed7e6240f5f9622bfcb80e2f05a633fcaf2fdc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d42488f8f167cc7c98f663478c742963d24253c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931194"
 ---
 # <a name="save-and-open-methods-example-vb"></a>Save および Open メソッドの例 (VB)
 これら 3 つの例を示す方法、[保存](../../../ado/reference/ado-api/save-method.md)と[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)メソッドを併用することができます。  

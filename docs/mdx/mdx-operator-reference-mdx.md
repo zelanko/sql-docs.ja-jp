@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: aded187be089b3c1af004bd6f7e88d75780b9f22
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c026da3551448faf7cf204dbdde1e794d5b12967
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187597"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033907"
 ---
 # <a name="mdx-operator-reference-mdx"></a>MDX 演算子リファレンス (MDX)
 
@@ -34,7 +33,7 @@ ms.locfileid: "63187597"
 |[&#40;分割&#41; &#40;MDX&#41;](../mdx/divide-mdx-operator-reference.md)|1 つの数値を別の数値で除算する算術演算を実行します。|  
 |[^ &#40;Power&#41; &#40;MDX&#41;](../mdx/power-mdx.md)|別の数が 1 つの数値演算を実行します。|  
 |[コメント &#40;MDX&#41;](../mdx/comment-mdx.md)|コメントのテキストは、ユーザーによって提供されることを示します。|  
-|[(コメント) (MDX)](../mdx/comment-mdx-double-slash.md)|ユーザーが入力したテキストを示します。|  
+|[&#40;コメント&#41; &#40;MDX&#41;](../mdx/comment-mdx-double-slash.md)|ユーザーが入力したテキストを示します。|  
 |[:&#40;範囲&#41; &#40;MDX&#41;](../mdx/range-mdx.md)|自然な順序で並べたセットを返すセット演算を実行します。指定された 2 つのメンバーが終端になり、その 2 つのメンバーの間にあるすべてのメンバーがセットのメンバーに含まれます。|  
 |[+&#40;追加&#41; &#40;MDX&#41;](../mdx/add-mdx.md)|2 つの数値を加算する算術演算を実行します。|  
 |[+&#40;正&#41; &#40;MDX&#41;](../mdx/positive-mdx.md)|数値式の正の値を返す単項演算を実行します。|  

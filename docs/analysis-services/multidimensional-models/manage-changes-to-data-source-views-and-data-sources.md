@@ -1,5 +1,5 @@
 ---
-title: データ ソース ビューとデータ ソースへの変更の管理 |Microsoft ドキュメント
+title: データ ソース ビューおよびデータ ソースへの変更の管理 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0f8cb72fe4650cd76465207f3e7cd529e2a7b032
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026009"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208816"
 ---
 # <a name="manage-changes-to-data-source-views-and-data-sources"></a>データ ソース ビューおよびデータ ソースへの変更の管理
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "34026009"
   
  一方、データ ソース接続文字列を以前の生成後に別のデータベースに変更した場合は、エラーは発生しません。 この場合は新しいデータベースが使用され、以前のデータベースには変更は行われません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [増分生成の理解](../../analysis-services/multidimensional-models/understanding-incremental-generation.md)  
   
   

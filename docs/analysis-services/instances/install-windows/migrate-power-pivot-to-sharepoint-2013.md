@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8df7cc04ea0682212f5a046ca4c614e83ebe9c86
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53206821"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68231873"
 ---
 # <a name="migrate-power-pivot-to-sharepoint-2013"></a>SharePoint 2013 への Power Pivot の移行
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "53206821"
 |1|2|3|4|  
 |-------|-------|-------|-------|  
 |SharePoint 2013 ファームを準備する|データベースをバックアップ、コピー、および復元する|コンテンツ データベースをマウントする|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のスケジュールを移行する|  
-||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|- SharePoint サーバーの全体管理<br /><br /> - Windows PowerShell|- SharePoint アプリケーション ページ<br /><br /> - Windows PowerShell|  
+||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|\- SharePoint サーバーの全体管理<br /><br /> \- Windows PowerShell|\- SharePoint アプリケーション ページ<br /><br /> \- Windows PowerShell|  
   
 ##  <a name="bkmk_prepare_sharepoint2013"></a>SharePoint 2013 ファームを準備します。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "53206821"
   
 1.  新しい SharePoint Server 2013 ファームをインストールします。  
   
-2.   [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのインスタンスを SharePoint モードでインストールします。 詳細については、「 [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」を参照してください。  
+2.  [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] サーバーのインスタンスを SharePoint モードでインストールします。 詳細については、「 [Install Analysis Services in Power Pivot Mode](../../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」を参照してください。  
   
 3.  SharePoint ファーム内の各サーバーで [!INCLUDE[ssGeminiShort](../../../includes/ssgeminishort-md.md)] 2013 のインストール パッケージ **spPowerPivot.msi** を実行します。 詳細については、「 [Power Pivot for SharePoint アドインのインストールまたはアンインストール &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013.md)」を参照してください。  
   
@@ -47,9 +47,9 @@ ms.locfileid: "53206821"
 ##  <a name="bkmk_backup_restore"></a>データベースをバックアップ、コピー、復元  
  「SharePoint データベース アタッチ アップグレード」プロセスは、バックアップ、コピー、および復元する手順のシーケンス[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]関連のコンテンツと SharePoint 2013 ファームにサービス アプリケーション データベース。  
   
-1.  **データベースは、読み取り専用に設定します。**[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]データベース名を右クリックし、クリックして**プロパティ**します。 **[オプション]** ページで、 **[読み取り専用データベース]** プロパティを **[True]** に設定します。  
+1.  **データベースは、読み取り専用に設定します。** [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]データベース名を右クリックし、クリックして**プロパティ**します。 **[オプション]** ページで、 **[読み取り専用データベース]** プロパティを **[True]** に設定します。  
   
-2.  **バックアップ：** 各コンテンツ データベースと SharePoint 2013 ファームに移行するサービス アプリケーション データベースをバックアップします。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[タスク]**、 **[バックアップ]** を順にクリックします。  
+2.  **バックアップ：** 各コンテンツ データベースと SharePoint 2013 ファームに移行するサービス アプリケーション データベースをバックアップします。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[タスク]** 、 **[バックアップ]** を順にクリックします。  
   
 3.  データベース バックアップ ファイル (.bak) をバックアップ先サーバーにファイル コピーします。  
   
@@ -58,7 +58,7 @@ ms.locfileid: "53206821"
 5.  **データベースを読み取り/書き込みに設定します。** 設定、**読み取り専用データベース**に**False**します。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a>Web アプリケーションとマウント コンテンツ データベースを準備します。  
- 次の手順の詳細については、[SharePoint 2010 から SharePoint 2013 にデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)を参照してください。  
+ 次の手順の詳細については、次を参照してください。 [SharePoint 2010 から SharePoint 2013 にデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690) します。  
   
 1.  **データベースをオフラインにする**  
   
@@ -82,7 +82,7 @@ ms.locfileid: "53206821"
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     詳細については、[アタッチまたはデタッチ コンテンツ データベース (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx)を参照してください。  
+     詳細については、次を参照してください。[アタッチまたはデタッチ コンテンツ データベース (SharePoint Server 2010)](http://technet.microsoft.com/library/ff628582.aspx) (http://technet.microsoft.com/library/ff628582.aspx) します。  
   
      **ステップの完了時の状態:** マウント操作が完了したら、ユーザーは、古いコンテンツ データベースに含まれていたファイルを確認できます。 そのため、ユーザーはドキュメント ライブラリのブックを表示して開くことができます。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53206821"
   
     1.  スケジュールを移行するもう 1 つの方法は、ブックごとに定期更新を有効にすることです。 ブックがあるドキュメント ライブラリに移動します。  
   
-    2.  ショートカット メニューを開き、**[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータ更新の管理]** をクリックします。  
+    2.  ショートカット メニューを開き、 **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のデータ更新の管理]** をクリックします。  
   
     3.  **[定期更新]** セクションで、 **[有効化]** をクリックします。  
   
@@ -157,10 +157,10 @@ ms.locfileid: "53206821"
   
 -   [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](../../../analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013.md)  
   
--   [SharePoint 2013 へのアップグレード プロセスの概要](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688)します。  
+-   [SharePoint 2013 へのアップグレード プロセスの概要](http://go.microsoft.com/fwlink/p/?LinkId=256688)(http://go.microsoft.com/fwlink/p/?LinkId=256688) します。  
   
--   [SharePoint 2013 へアップグレードする前に環境をクリーンアップする](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689)します。  
+-   [SharePoint 2013 へアップグレードする前に環境をクリーンアップする](http://go.microsoft.com/fwlink/p/?LinkId=256689)(http://go.microsoft.com/fwlink/p/?LinkId=256689) します。  
   
--   [SharePoint 2010 から SharePoint 2013 までデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690)します。  
+-   [SharePoint 2010 から SharePoint 2013 までデータベースをアップグレード](http://go.microsoft.com/fwlink/p/?LinkId=256690)(http://go.microsoft.com/fwlink/p/?LinkId=256690) します。  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a8159282-de3b-4b9e-bdc9-3d3fce485c7f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 85f9104d9a9bb634dd10dfb588cf07e01d1c1fb1
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: c10451148c6f9b2fda231691b770bca3928517f2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075755"
 ---
 # <a name="spregistercustomscripting-transact-sql"></a>sp_register_custom_scripting (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @type = ] 'type'` 登録されているカスタム ストアド プロシージャまたはスクリプトの種類。 *型*は**varchar (16)**, で、既定値はありませんは、次の値のいずれかを指定します。  
+`[ @type = ] 'type'` 登録されているカスタム ストアド プロシージャまたはスクリプトの種類。 *型*は**varchar (16)** , で、既定値はありませんは、次の値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -50,7 +49,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 |**delete**|登録したカスタム ストアド プロシージャを、DELETE ステートメントがレプリケートされるときに実行。|  
 |**custom_script**|スクリプトは、データ定義言語 (DDL) トリガーの最後に実行されます。|  
   
-`[ @value = ] 'value'` ストアド プロシージャまたは名前と完全修飾パスの名前、[!INCLUDE[tsql](../../includes/tsql-md.md)]登録されているスクリプト ファイル。 *値*は**nvarchar (1024)**、既定値はありません。  
+`[ @value = ] 'value'` ストアド プロシージャまたは名前と完全修飾パスの名前、[!INCLUDE[tsql](../../includes/tsql-md.md)]登録されているスクリプト ファイル。 *値*は**nvarchar (1024)** 、既定値はありません。  
   
 > [!NOTE]  
 >  NULL を指定する*値*パラメーターには、以前に登録されたスクリプトを実行すると同じであるが登録解除[sp_unregister_custom_scripting](../../relational-databases/system-stored-procedures/sp-unregister-custom-scripting-transact-sql.md)します。  
@@ -67,7 +66,7 @@ sp_register_custom_scripting [ @type  = ] 'type'
 ## <a name="remarks"></a>コメント  
  **sp_register_custom_scripting**スナップショットおよびトランザクション レプリケーションで使用されます。  
   
- このストアド プロシージャは、スキーマのレプリケートされたテーブルに変更を行う前に実行する必要があります。 このストアド プロシージャの使用に関する詳細については、[再生成カスタム トランザクション プロシージャのスキーマ変更の反映を](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)を参照してください。  
+ このストアド プロシージャは、スキーマのレプリケートされたテーブルに変更を行う前に実行する必要があります。 このストアド プロシージャの使用に関する詳細については、次を参照してください。[再生成カスタム トランザクション プロシージャのスキーマ変更の反映を](../../relational-databases/replication/transactional/transactional-articles-regenerate-to-reflect-schema-changes.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、または**db_ddladmin**固定データベース ロールが実行できる**sp _register_custom_scripting**します。  

@@ -1,5 +1,5 @@
 ---
-title: コンストラクター関数 (XQuery) |Microsoft Docs
+title: コンス トラクター関数 (XQuery) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 98562d0e-d0e0-4f62-b001-90acbac67277
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: b426d7f4f5056c76e7ccc6807785366f0f12287f
-ms.sourcegitcommit: 0f7cf9b7ab23df15624d27c129ab3a539e8b6457
-ms.translationtype: HT
+ms.openlocfilehash: 7f64c9ff6664410983d9c3ce7ebdbf07e493ca03
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/09/2018
-ms.locfileid: "51293038"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038993"
 ---
 # <a name="constructor-functions-xquery"></a>コンストラクター関数 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -141,7 +140,7 @@ TYP($atomicvalue as xdt:anyAtomicType?
 ### <a name="a-using-the-datetime-xquery-function-to-retrieve-older-product-descriptions"></a>A. dateTime() XQuery 関数を使用して、製品の説明の古いバージョンを取得する  
  サンプルの XML ドキュメントに最初に割り当てられている、この例では、 **xml**型の変数。 このドキュメントには 3 つのサンプル <`ProductDescription`> 要素が含まれます。各要素には <`DateCreated`> 子要素が含まれています。  
   
- 次に、その変数がクエリされ、指定された日時より前に作成された製品の説明だけを取得します。 比較のために、クエリを使用して、 **xs:dateTime()** コンストラクター関数を日付を入力します。  
+ 次に、その変数がクエリされ、指定された日時より前に作成された製品の説明だけを取得します。 比較のために、クエリを使用して、 **xs:dateTime()** コンス トラクター関数を日付を入力します。  
   
 ```  
 declare @x xml  
@@ -176,7 +175,7 @@ select @x.query('
   
 -   FOR ... WHERE ループ構造を使用して、取得、 \<ProductDescription > WHERE 句で指定された条件を満たす要素。  
   
--   **DateTime()** コンストラクター関数が構築に使用される**dateTime**適切に比較できる型の値。  
+-   **DateTime()** コンス トラクター関数が構築に使用される**dateTime**適切に比較できる型の値。  
   
 -   この後、クエリは結果の XML を出力します。 一連の属性を構成しているため、XML の構造にコンマとかっこが使用されています。  
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a175d453-fa55-4f49-9ede-a26d83177919
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bc9dc5f19dacfb6fbdab8c2e0dd8278cbc4b97b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5018dc921267663d64037024ef21c82ac6e3f7c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719275"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932963"
 ---
 # <a name="error-object"></a>Error オブジェクト
 プロバイダーを含む 1 つの操作に関連するデータ アクセス エラーの詳細が含まれています。  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: c7167ed1-2b7e-4824-b82b-65f4667c4407
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 14e35b85b594cadf90a467c5017ac31033bc464b
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: f676acf9b3ee91bb5a1fb46cae2f7c693dc66983
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493964"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061820"
 ---
 # <a name="spaddpublication-transact-sql"></a>sp_addpublication (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  スナップショット パブリケーションまたはトランザクション パブリケーションを作成します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  スナップショット パブリケーションまたはトランザクション パブリケーションを作成します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -96,7 +95,7 @@ sp_addpublication [ @publication = ] 'publication'
 |-----------|-----------------|  
 |**native**|すべてのテーブルのネイティブ モードの一括コピー プログラム出力を生成します。 *Oracle パブリッシャーに対してはサポートされていません*します。|  
 |**character**|すべてのテーブルのキャラクター モードの一括コピー プログラム出力を生成します。 _Oracle パブリッシャーの場合、_ **文字**_はスナップショット レプリケーションでのみ有効です_します。|  
-|**concurrent**|すべてのテーブルのネイティブ モードの一括コピー プログラム出力が生成されますが、スナップショット時にテーブルをロックしません。 トランザクション パブリケーションに対してのみサポートされます。 *Oracle パブリッシャーに対してはサポートされていません*します。|  
+|**同時実行**|すべてのテーブルのネイティブ モードの一括コピー プログラム出力が生成されますが、スナップショット時にテーブルをロックしません。 トランザクション パブリケーションに対してのみサポートされます。 *Oracle パブリッシャーに対してはサポートされていません*します。|  
 |**concurrent_c**|すべてのテーブルのキャラクター モードの一括コピー プログラム出力が生成されますが、スナップショット時にテーブルをロックしません。 トランザクション パブリケーションに対してのみサポートされます。|  
 |**データベース スナップショット**|データベース スナップショットから、すべてのテーブルのネイティブ モードの一括コピー プログラム出力を作成します。 データベース スナップショットは、すべてのエディションで使用可能な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。|  
 |**データベース スナップショットの文字**|データベース スナップショットからのすべてのテーブルのキャラクター モードの一括コピー プログラム出力を生成します。 データベース スナップショットは、すべてのエディションで使用可能な[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされる機能の一覧については、「 [SQL Server 2016 の各エディションがサポートする機能](~/sql-server/editions-and-supported-features-for-sql-server-2016.md)」を参照してください。|  
@@ -107,32 +106,32 @@ sp_addpublication [ @publication = ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**継続的な**(既定値)|すべてのログベースのトランザクションの出力をパブリッシュする。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、このことが必要*sync_method*に設定する**concurrent_c**します。|  
-|**snapshot**|スケジュールされた同期イベントのみをパブリッシュする。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、このことが必要*sync_method*に設定する**文字**します。|  
+|**スナップショット**|スケジュールされた同期イベントのみをパブリッシュする。 非[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーの場合、このことが必要*sync_method*に設定する**文字**します。|  
   
-`[ \@description = ] 'description'` パブリケーションのオプションの説明です。 *説明*は**nvarchar (255)**、既定値は NULL です。  
+`[ \@description = ] 'description'` パブリケーションのオプションの説明です。 *説明*は**nvarchar (255)** 、既定値は NULL です。  
   
 `[ \@status = ] 'status'` パブリケーション データがあるかを指定します。 *ステータス*は**nvarchar (8)** 値は次のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**active**|サブスクライバーでパブリケーション データを直ちに使用できる。|  
+|**アクティブ**|サブスクライバーでパブリケーション データを直ちに使用できる。|  
 |**非アクティブな**(既定値)|パブリケーション データが、パブリケーションが最初に作成されたときに、サブスクライバーで使用できます (をサブスクライブしたことができますが、サブスクリプションは処理されません)。|  
   
  *Oracle パブリッシャーに対してはサポートされていません*します。  
   
-`[ \@independent_agent = ] 'independent_agent'` このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを指定します。 *independent_agent*は**nvarchar (5)**、既定値は FALSE。 場合**true**、このパブリケーション用のスタンドアロン ディストリビューション エージェントが存在します。 場合**false**パブリケーションは共有ディストリビューション エージェント、およびパブリッシャー データベース/サブスクライバー データベースの各ペアが 1 つの共有エージェント。  
+`[ \@independent_agent = ] 'independent_agent'` このパブリケーションに対して、スタンドアロンのディストリビューション エージェントがあるかどうかを指定します。 *independent_agent*は**nvarchar (5)** 、既定値は FALSE。 場合**true**、このパブリケーション用のスタンドアロン ディストリビューション エージェントが存在します。 場合**false**パブリケーションは共有ディストリビューション エージェント、およびパブリッシャー データベース/サブスクライバー データベースの各ペアが 1 つの共有エージェント。  
   
-`[ \@immediate_sync = ] 'immediate_synchronization'` パブリケーションの同期ファイルが、スナップショット エージェントが実行されるたびに作成されるかどうかを指定します。 *immediate_synchronization*は**nvarchar (5)**、既定値は FALSE。 場合**true**、同期ファイルが作成またはスナップショット エージェントを実行するたびに再作成します。 登録者は、サブスクリプションが作成される前に、スナップショット エージェントが完了した場合は、同期ファイルをすぐに得られます。 新しいサブスクリプションは、最近実行されたスナップショット エージェントによって生成された最新の同期ファイルを取得します。 *independent_agent*必要があります**true**の*immediate_synchronization*する**true**します。 場合**false**、新しいサブスクリプションがある場合にのみ、同期ファイルが作成されます。 呼び出す必要があります[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)既存のパブリケーションを段階的に新しいアーティクルを追加するときに、サブスクリプションごとにします。 サブスクリプションの後、スナップショット エージェントが起動して完了するまでは、サブスクライバーでは同期ファイルを取得できません。  
+`[ \@immediate_sync = ] 'immediate_synchronization'` パブリケーションの同期ファイルが、スナップショット エージェントが実行されるたびに作成されるかどうかを指定します。 *immediate_synchronization*は**nvarchar (5)** 、既定値は FALSE。 場合**true**、同期ファイルが作成またはスナップショット エージェントを実行するたびに再作成します。 登録者は、サブスクリプションが作成される前に、スナップショット エージェントが完了した場合は、同期ファイルをすぐに得られます。 新しいサブスクリプションは、最近実行されたスナップショット エージェントによって生成された最新の同期ファイルを取得します。 *independent_agent*必要があります**true**の*immediate_synchronization*する**true**します。 場合**false**、新しいサブスクリプションがある場合にのみ、同期ファイルが作成されます。 呼び出す必要があります[sp_addsubscription](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)既存のパブリケーションを段階的に新しいアーティクルを追加するときに、サブスクリプションごとにします。 サブスクリプションの後、スナップショット エージェントが起動して完了するまでは、サブスクライバーでは同期ファイルを取得できません。  
   
-`[ \@enabled_for_internet = ] 'enabled_for_internet'` パブリケーションが、インターネットに対して有効にし、ファイル転送プロトコル (FTP) をサブスクライバーへスナップショット ファイルを転送に使用できるかどうかを決定かどうかを指定します。 *enabled_for_internet*は**nvarchar (5)**、既定値は FALSE。 場合**true**パブリケーションの同期ファイルは C:\Program files \microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp ディレクトリに格納します。 ユーザーは、Ftp ディレクトリを作成する必要があります。  
+`[ \@enabled_for_internet = ] 'enabled_for_internet'` パブリケーションが、インターネットに対して有効にし、ファイル転送プロトコル (FTP) をサブスクライバーへスナップショット ファイルを転送に使用できるかどうかを決定かどうかを指定します。 *enabled_for_internet*は**nvarchar (5)** 、既定値は FALSE。 場合**true**パブリケーションの同期ファイルは C:\Program files \microsoft SQL Server\MSSQL\MSSQL.x\Repldata\Ftp ディレクトリに格納します。 ユーザーは、Ftp ディレクトリを作成する必要があります。  
   
-`[ \@allow_push = ] 'allow_push'` 指定したパブリケーションに対してプッシュ サブスクリプションを作成できるかどうかを指定します。 *allow_push*は**nvarchar (5)**、既定値は TRUE、パブリケーションに対してプッシュ サブスクリプションを許可します。  
+`[ \@allow_push = ] 'allow_push'` 指定したパブリケーションに対してプッシュ サブスクリプションを作成できるかどうかを指定します。 *allow_push*は**nvarchar (5)** 、既定値は TRUE、パブリケーションに対してプッシュ サブスクリプションを許可します。  
   
-`[ \@allow_pull = ] 'allow_pull'` 指定したパブリケーションに対してプル サブスクリプションを作成できるかどうかを指定します。 *allow_pull*は**nvarchar (5)**、既定値は FALSE。 場合**false**、パブリケーションに対してプル サブスクリプションが許可されていません。  
+`[ \@allow_pull = ] 'allow_pull'` 指定したパブリケーションに対してプル サブスクリプションを作成できるかどうかを指定します。 *allow_pull*は**nvarchar (5)** 、既定値は FALSE。 場合**false**、パブリケーションに対してプル サブスクリプションが許可されていません。  
   
-`[ \@allow_anonymous = ] 'allow_anonymous'` 指定したパブリケーションに対して匿名サブスクリプションを作成できるかどうかを指定します。 *allow_anonymous*は**nvarchar (5)**、既定値は FALSE。 場合**true**、 *immediate_synchronization*に設定する必要がありますも**true**します。 場合**false**、パブリケーションに対して匿名サブスクリプションを許可しません。  
+`[ \@allow_anonymous = ] 'allow_anonymous'` 指定したパブリケーションに対して匿名サブスクリプションを作成できるかどうかを指定します。 *allow_anonymous*は**nvarchar (5)** 、既定値は FALSE。 場合**true**、 *immediate_synchronization*に設定する必要がありますも**true**します。 場合**false**、パブリケーションに対して匿名サブスクリプションを許可しません。  
   
-`[ \@allow_sync_tran = ] 'allow_sync_tran'` パブリケーションに対してサブスクリプションの即時更新を許可するかどうかを指定します。 *allow_sync_tran*は**nvarchar (5)**、既定値は FALSE。 **true**は*Oracle パブリッシャーに対してサポートされていません*します。  
+`[ \@allow_sync_tran = ] 'allow_sync_tran'` パブリケーションに対してサブスクリプションの即時更新を許可するかどうかを指定します。 *allow_sync_tran*は**nvarchar (5)** 、既定値は FALSE。 **true**は*Oracle パブリッシャーに対してサポートされていません*します。  
   
 `[ \@autogen_sync_procs = ] 'autogen_sync_procs'` 更新サブスクリプションの同期ストアド プロシージャがパブリッシャーで生成されるかどうかを指定します。 *autogen_sync_procs*は**nvarchar (5)** 値は次のいずれかを指定できます。  
   
@@ -155,15 +154,15 @@ sp_addpublication [ @publication = ] 'publication'
   
 `[ \@pre_snapshot_script = ] 'pre_snapshot_script'` ポインターを指定します、 **.sql**ファイルの場所。 *pre_snapshot_script*は**nvarchar (255)、** 既定値は NULL です。 ディストリビューション エージェントは、サブスクライバーでスナップショットを適用するときに、レプリケートされたオブジェクト スクリプトのいずれかを実行する前に、プリスナップ ショット スクリプトを実行します。 スクリプトは、サブスクリプション データベースに接続するときに、ディストリビューション エージェントによって使用されるセキュリティ コンテキストで実行されます。  
   
-`[ \@post_snapshot_script = ] 'post_snapshot_script'` ポインターを指定します、 **.sql**ファイルの場所。 *post_snapshot_script*は**nvarchar (255)**、既定値は NULL です。 その他のすべてのレプリケートされたオブジェクト スクリプトとデータが、初期同期中に適用された後、ディストリビューション エージェントは、ポスト スナップ ショット スクリプトを実行します。 スクリプトは、サブスクリプション データベースに接続するときに、ディストリビューション エージェントによって使用されるセキュリティ コンテキストで実行されます。  
+`[ \@post_snapshot_script = ] 'post_snapshot_script'` ポインターを指定します、 **.sql**ファイルの場所。 *post_snapshot_script*は**nvarchar (255)** 、既定値は NULL です。 その他のすべてのレプリケートされたオブジェクト スクリプトとデータが、初期同期中に適用された後、ディストリビューション エージェントは、ポスト スナップ ショット スクリプトを実行します。 スクリプトは、サブスクリプション データベースに接続するときに、ディストリビューション エージェントによって使用されるセキュリティ コンテキストで実行されます。  
   
-`[ \@compress_snapshot = ] 'compress_snapshot'` 指定に書き込まれたスナップショット、  **\@alt_snapshot_folder**の場所を圧縮するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式です。 *compress_snapshot*は**nvarchar (5)**、既定値は FALSE。 **false**こと、スナップショットは圧縮されません。 を指定します。**true**スナップショットが圧縮されることを指定します。 2 GB を超えるスナップショット ファイルは圧縮できません。 ディストリビューション エージェントが実行される場所で圧縮スナップショット ファイルは圧縮されていませんプル サブスクリプションは、ファイルは、サブスクライバーで圧縮がされるように通常圧縮されたスナップショットが使用されます。 既定のフォルダー内のスナップショットは圧縮できません。  
+`[ \@compress_snapshot = ] 'compress_snapshot'` 指定に書き込まれたスナップショット、  **\@alt_snapshot_folder**の場所を圧縮するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] CAB 形式です。 *compress_snapshot*は**nvarchar (5)** 、既定値は FALSE。 **false**こと、スナップショットは圧縮されません。 を指定します。**true**スナップショットが圧縮されることを指定します。 2 GB を超えるスナップショット ファイルは圧縮できません。 ディストリビューション エージェントが実行される場所で圧縮スナップショット ファイルは圧縮されていませんプル サブスクリプションは、ファイルは、サブスクライバーで圧縮がされるように通常圧縮されたスナップショットが使用されます。 既定のフォルダー内のスナップショットは圧縮できません。  
   
 `[ \@ftp_address = ] 'ftp_address'` ディストリビューター用 FTP サービスのネットワーク アドレスです。 *ftp_address*は**sysname**、既定値は NULL です。 ここでは、サブスクライバーのディストリビューション エージェントまたはマージ エージェントがパブリケーション スナップショット ファイルを取得する場所を指定します。 各パブリケーションを別に持つことができますので、このプロパティはパブリケーションごとに格納されている、 *ftp_address*します。 パブリケーションが FTP を使用してスナップショットの配布をサポートする必要があります。  
   
 `[ \@ftp_port = ] ftp_port` ディストリビューター用 FTP サービスのポート番号です。 *ftp_port*は**int**、既定値は 21 です。 パブリケーションのスナップショット ファイルが取得するサブスクライバーのマージ エージェントまたはディストリビューション エージェントの存在を指定します。 このプロパティはパブリケーションごとに格納されている、ために各パブリケーションが持つことができます独自*ftp_port*します。  
   
-`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` スナップショット ファイルがディストリビューション エージェントまたはパブリケーションが FTP を使用してスナップショットの配布をサポートしている場合に、サブスクライバーのマージ エージェントで使用されるかを指定します。 *ftp_subdirectory*は**nvarchar (255)**、既定値は NULL です。 このプロパティはパブリケーションごとに格納されている、ために各パブリケーションが持つことができます独自*ftp_subdirctory*に NULL 値を持つ、サブディレクトリがないこともできます。  
+`[ \@ftp_subdirectory = ] 'ftp_subdirectory'` スナップショット ファイルがディストリビューション エージェントまたはパブリケーションが FTP を使用してスナップショットの配布をサポートしている場合に、サブスクライバーのマージ エージェントで使用されるかを指定します。 *ftp_subdirectory*は**nvarchar (255)** 、既定値は NULL です。 このプロパティはパブリケーションごとに格納されている、ために各パブリケーションが持つことができます独自*ftp_subdirctory*に NULL 値を持つ、サブディレクトリがないこともできます。  
   
 `[ \@ftp_login = ] 'ftp_login'` ユーザー名は FTP サービスへの接続に使用されます。 *ftp_login*は**sysname**、既定値は ANONYMOUS です。  
   
@@ -173,7 +172,7 @@ sp_addpublication [ @publication = ] 'publication'
   
  **true**は*Oracle パブリッシャーに対してサポートされていません*します。  
   
-`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` 有効またはこのパブリケーションにサブスクライブするサブスクリプション データベースをコピーする機能を無効にします。 *allow_subscription_copy*は**nvarchar (5)**、既定値は FALSE。  
+`[ \@allow_subscription_copy = ] 'allow_subscription_copy'` 有効またはこのパブリケーションにサブスクライブするサブスクリプション データベースをコピーする機能を無効にします。 *allow_subscription_copy*は**nvarchar (5)** 、既定値は FALSE。  
   
 `[ \@conflict_policy = ] 'conflict_policy'` キュー更新サブスクライバー オプションを使用する場合の後に、競合解決ポリシーを指定します。 *conflict_policy*は**nvarchar (100)** 既定値は null の場合、次の値のいずれかを指定できます。  
   
@@ -186,13 +185,13 @@ sp_addpublication [ @publication = ] 'publication'
   
  *Oracle パブリッシャーに対してはサポートされていません*します。  
   
-`[ \@centralized_conflicts = ] 'centralized_conflicts'` パブリッシャーで、競合レコードが格納されているかどうかを指定します。 *centralized_conflicts*は**nvarchar (5)**、既定値は TRUE。 場合**true**、競合レコードはパブリッシャーに保存されます。 場合**false**、競合レコードはパブリッシャー側の両方と、競合の原因となったサブスクライバーで格納されます。 *Oracle パブリッシャーに対してはサポートされていません*します。  
+`[ \@centralized_conflicts = ] 'centralized_conflicts'` パブリッシャーで、競合レコードが格納されているかどうかを指定します。 *centralized_conflicts*は**nvarchar (5)** 、既定値は TRUE。 場合**true**、競合レコードはパブリッシャーに保存されます。 場合**false**、競合レコードはパブリッシャー側の両方と、競合の原因となったサブスクライバーで格納されます。 *Oracle パブリッシャーに対してはサポートされていません*します。  
   
 `[ \@conflict_retention = ] conflict_retention` 競合の保有期間を日数で指定します。 これはピア ツー ピア トランザクション レプリケーションの競合メタデータの期間が格納され、キュー更新サブスクリプション。 *conflict_retention*は**int**、既定値は 14 です。 *Oracle パブリッシャーに対してはサポートされていません*します。  
   
-`[ \@queue_type = ] 'queue_type'` キューの種類を指定します。 *queue_type*は**nvarchar (10)**、既定値は null の場合、これらの値のいずれかを指定できます。  
+`[ \@queue_type = ] 'queue_type'` キューの種類を指定します。 *queue_type*は**nvarchar (10)** 、既定値は null の場合、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**sql**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納します。|  
 |NULL (既定値)|既定値は**sql**、使用することを指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納します。|  
@@ -213,15 +212,15 @@ sp_addpublication [ @publication = ] 'publication'
 > [!NOTE]  
 >  *パブリッシャー*にパブリケーションを追加するときに使用されません、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
-`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` サブスクライバーが初期スナップショットではなく、バックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 *allow_initialize_from_backup*は**nvarchar (5)**、これらの値のいずれかを指定できます。  
+`[ \@allow_initialize_from_backup = ] 'allow_initialize_from_backup'` サブスクライバーが初期スナップショットではなく、バックアップから、このパブリケーションに対するサブスクリプションを初期化できるかどうかを示します。 *allow_initialize_from_backup*は**nvarchar (5)** 、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**true**|バックアップからの初期化を有効にする。|  
 |**false**|バックアップからの初期化を無効にします。|  
 |NULL (既定値)|既定値は**true** 、ピア ツー ピア レプリケーション トポロジでパブリケーションのおよび**false**の他のすべてのパブリケーション。|  
   
- 詳細については、「 [Initialize a Transactional Subscription Without a Snapshot](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)を使用して、サブスクリプションを手動で初期化する方法について説明します。  
+ 詳細については、「[スナップショットを使用しないトランザクション サブスクリプションの初期化](../../relational-databases/replication/initialize-a-transactional-subscription-without-a-snapshot.md)」を参照してください。  
   
 > [!WARNING]  
 >  サブスクライバー データの欠落を回避するために、 **sp_addpublication** で `@allow_initialize_from_backup = N'true'`を使用する場合は、常に `@immediate_sync = N'true'`を使用します。  
@@ -236,7 +235,7 @@ sp_addpublication [ @publication = ] 'publication'
   
 -   DDL ステートメントは、新しい列を追加するときに sysarticlecolumns では、新しい列が含まれません。 DML ステートメントでは、新しい列のデータがレプリケート試みません。 レプリケートするか、DDL をレプリケートしないかが許容されるため、パラメーターは有効にします。  
   
-`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` ピア ツー ピア レプリケーション トポロジで使用するパブリケーションを有効にします。 *enabled_for_p2p*は**nvarchar (5)**、既定値は FALSE。 **true**パブリケーションがピア ツー ピア レプリケーションをサポートしていることを示します。 設定するときに*enabled_for_p2p*に**true**、次の制限が適用されます。  
+`[ \@enabled_for_p2p = ] 'enabled_for_p2p'` ピア ツー ピア レプリケーション トポロジで使用するパブリケーションを有効にします。 *enabled_for_p2p*は**nvarchar (5)** 、既定値は FALSE。 **true**パブリケーションがピア ツー ピア レプリケーションをサポートしていることを示します。 設定するときに*enabled_for_p2p*に**true**、次の制限が適用されます。  
   
 -   *allow_anonymous*あります**false**します。  
   
@@ -330,7 +329,7 @@ sp_addpublication [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_addpublication**します。 Windows 認証ログインを行うには、Windows ユーザー アカウントを表すユーザー アカウントがデータベースに必要です。 Windows グループを表すユーザー アカウントは不十分です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addlogreader_agent &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md)   
  [sp_addpublication_snapshot &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   

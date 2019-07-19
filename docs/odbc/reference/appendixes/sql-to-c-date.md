@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 703c7960-9cf4-4d7a-9920-53b29c184f97
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: fe0c30f0f0fbf0ea695d79387fdec3694a54ebca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d282798a31ac9059ed3c1901ea01f1f3104f09c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151273"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056885"
 ---
 # <a name="sql-to-c-date"></a>SQL から C へ: date
 ODBC SQL データ型が日付の識別子。  

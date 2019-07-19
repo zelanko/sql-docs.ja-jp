@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: b33c3c43-ae66-44a3-be17-9cd82624dd96
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c83a7de609d200da2957a65b9325d031eda49780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd729956ee7bb1fccf7a8fceb7a435042df4df7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63273036"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111191"
 ---
 # <a name="odbc-programmer39s-reference"></a>ODBC プログラマ&#39;リファレンス
 *ODBC プログラマ リファレンス*次のセクションが含まれています。  
@@ -48,9 +47,9 @@ ms.locfileid: "63273036"
   
  次の表記規則が使用されます。  
   
-|形式|使用目的|  
+|Format|使用目的|  
 |------------|--------------|  
-|SELECT * FROM|大文字の文字は、SQL ステートメント、マクロ名、およびオペレーティング システム コマンド レベルで使用される用語を示します。|  
+|選択 * から|大文字の文字は、SQL ステートメント、マクロ名、およびオペレーティング システム コマンド レベルで使用される用語を示します。|  
 |`RETCODE SQLFetch(hdbc)`|固定幅フォントは、コマンドラインのサンプルとプログラム コードに使用されます。|  
 |*argument*|斜体の単語は、プログラムの引数については、ユーザーまたはアプリケーションを提供する必要があります強調を word ことを示します。|  
 |**SQLEndTran**|太字では、構文を正確に示すように、関数名を含む入力する必要があることを示します。|  

@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 4cb4da20-3b99-4aae-8c80-329ee23e796e
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 1c4b128dc548780350d76c758543a852895118e2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26e24bc55df7eef0af34f9cd23215f27ba314700
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126605"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029051"
 ---
 # <a name="global-settings-logging-sybasetosql"></a>グローバル設定 (ログ) (SybaseToSQL)
 使用して、**グローバル設定**SSMA のログ記録設定を指定 ダイアログ ボックス。 通常、製品サポートを使用する場合にのみ、これらの設定を変更するは。  
@@ -26,7 +25,7 @@ ms.locfileid: "63126605"
 **メッセージ レベル**  
 次のオプションが **メッセージ レベル**:  
   
-|オプション|説明|  
+|OPTION|説明|  
 |----------|---------------|  
 |**[すべてのカテゴリ]**|次のオプションのすべてのログ記録レベルを設定するために使用します。|  
 |**コレクター**|送信元スキーマに関するメタデータを収集し、プロジェクトに保存します。|  

@@ -1,7 +1,7 @@
 ---
 title: Data Migration Assistant (SQL Server) の新 |Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 07/15/2019
 ms.prod: sql
 ms.prod_service: dma
 ms.reviewer: ''
@@ -13,16 +13,19 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: f88562c25982ce8c5d6c8d4b87dd629e4ba57c03
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4bce2ed84dbaac8d6ec95bbcf34827a8113c1f54
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794311"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262272"
 ---
 # <a name="whats-new-in-data-migration-assistant"></a>Data Migration Assistant の新機能
 この記事では、各リリースで追加の Data Migration Assistant (DMA) を示します。
+
+## <a name="dma-v44"></a>DMA v4.4
+
+DMA の v4.4 リリースでは、Azure Migrate に評価をアップロードするためのサポートを提供します。
 
 ## <a name="dma-v43"></a>DMA v4.3
 
@@ -156,7 +159,7 @@ DMA の v2.0 リリースには、記憶域の節約を最大化する適切な�
 DMA の v1.0 リリースは初期のリリースとを提供します。
 
 * オンプレミス バージョンの SQL Server へのアップグレードに影響する問題の検出。 互換性の問題として、結果が記載されているし、これらは、次の領域に分類しています。
-  * 重大な変更
+  * 互換性に影響する変更
   * 動作の変更
   * 非推奨の機能
 * データベースがアップグレード後に活用できるターゲット SQL Server プラットフォームの新機能の検出。 機能の推奨事項として、結果が記載されているし、これらは、次の領域に分類しています。

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f5e6d9da-76ef-42cb-b3f5-f640857df732
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 099fd0ff318a77f1f1916395fbd13087ab8ba18b
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 45cec32e818eab1ec5586196eadef998b8f988ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67793309"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036392"
 ---
 # <a name="mapping-replacement-functions-for-backward-compatibility-of-applications"></a>アプリケーションの旧バージョンとの互換性のためのマッピング置換関数
 ODBC *3.x*作業を通じて、ODBC アプリケーション*3.x*ドライバー マネージャーは ODBC に対して動作*2.x*の新機能が使用されない限りドライバー。 両方の複製機能と動作の変更には、ただし、方法に影響する、ODBC *3.x*に ODBC アプリケーションが動作*2.x*ドライバー。 ODBC を使用する場合*2.x*ドライバー、ドライバー マネージャーは、マップの次の ODBC *3.x*関数で、1 つまたは複数の ODBC に置き換えられている*2.x*関数の場合に、対応する ODBC *2.x*関数。  
@@ -39,7 +38,7 @@ ODBC *3.x*作業を通じて、ODBC アプリケーション*3.x*ドライバー
 |**SQLFetchScroll**|**SQLExtendedFetch**|  
 |**SQLFreeHandle**|**SQLFreeEnv**、 **SQLFreeConnect**、または**SQLFreeStmt**|  
 |**SQLGetConnectAttr**|**SQLGetConnectOption**|  
-|**SQLGetDiagRec**|**SQLError**|  
+|**SQLGetDiagRec**|**Sqlerror 関数**|  
 |**SQLGetStmtAttr**|**SQLGetStmtOption**[1]|  
 |**SQLSetConnectAttr**|**SQLSetConnectOption**|  
 |**SQLSetStmtAttr**|**SQLSetStmtOption**[1]|  
@@ -452,8 +451,8 @@ SQLParamOptions (StatementHandle, Size, &RowCount);
 |バッファー|値|  
 |------------|-----------|  
 |[ColumnName]|"" (空の文字列)|  
-|*NameLengthPtr|0|  
-|*DataTypePtr|SQL_BINARY|  
+|\* NameLengthPtr|0|  
+|\* DataTypePtr|SQL_BINARY|  
 |\* ColumnSizePtr|4|  
 |\* DecimalDigitsPtr|0|  
 |\* NullablePtr|SQL_NO_NULLS|  

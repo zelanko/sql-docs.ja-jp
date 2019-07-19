@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: meet-bhagdev
 ms.author: meetb
-manager: jroth
-ms.openlocfilehash: d06af565a581ea8ed9dbbdd6330271ef9f6c7218
-ms.sourcegitcommit: 3a64cac1e1fc353e5a30dd7742e6d6046e2728d9
+ms.openlocfilehash: 5c8fae6bf1333742b40e9c8aae4ee575736058cd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67556894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959666"
 ---
 # <a name="connect-includename-sosincludesname-sos-shortmd-to-your-sql-server-using-windows-authentication---kerberos"></a>接続[!INCLUDE[name-sos](../includes/name-sos-short.md)]Windows 認証に Kerberos を使用して、SQL server 
 
@@ -130,7 +129,7 @@ sudo realm join contoso.com -U 'user@CONTOSO.COM' -v
 
 
 
-## <a name="configure-kdc-in-krb5conf"></a>Configure KDC in krb5.conf
+## <a name="configure-kdc-in-krb5conf"></a>Krb5.conf の KDC を構成します。
 
 編集、`/etc/krb5.conf`好みのエディターでします。 次のキーを構成します。
 

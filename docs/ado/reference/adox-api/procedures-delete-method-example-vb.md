@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 94f1ac93-e778-4a40-a85e-94bce5316ac7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2dbbc8f6adf2340e058f8328af77a1a061b55186
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5c7dfc901434c086b46bfb11c70e1eb2ee3bff7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965367"
 ---
 # <a name="procedures-delete-method-example-vb"></a>Procedures Delete メソッドの例 (VB)
 次のコードを使用して、プロシージャを削除する方法を示して、[削除](../../../ado/reference/adox-api/delete-method-adox-collections.md)のメソッド、[プロシージャ](../../../ado/reference/adox-api/procedures-collection-adox.md)コレクション。  
@@ -55,7 +54,7 @@ End Sub
 ' EndDeleteProcedureVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActiveConnection プロパティ (ADOX)](../../../ado/reference/adox-api/activeconnection-property-adox.md)   
  [Catalog オブジェクト (ADOX)](../../../ado/reference/adox-api/catalog-object-adox.md)   
  [Delete メソッド (ADOX Collections)](../../../ado/reference/adox-api/delete-method-adox-collections.md)   

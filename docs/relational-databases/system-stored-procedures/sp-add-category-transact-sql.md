@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6cca32cd-d941-4378-aed6-a7c90cb7520a
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: ac78863fd2bad39675bfe3f486a8a88a8d026e37
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: b29f3e348800c300698533fb8aad47066bd0b46a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941777"
 ---
 # <a name="spaddcategory-transact-sql"></a>sp_add_category (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,7 +44,7 @@ sp_add_category
 ## <a name="arguments"></a>引数  
 `[ @class = ] 'class'` 追加するカテゴリのクラス。 *クラス*は**varchar (8)** でジョブの既定値は、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |ジョブ|ジョブ カテゴリを追加します。|  
 |ALERT|アラートのカテゴリを追加します。|  
@@ -53,7 +52,7 @@ sp_add_category
   
 `[ @type = ] 'type'` 追加するカテゴリの種類。 *型*は**varchar (12)** の既定値を持つ**ローカル**、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |LOCAL|ローカル ジョブ カテゴリ|  
 |マルチ サーバー|マルチ サーバー ジョブ カテゴリ。|  
@@ -87,7 +86,7 @@ EXEC dbo.sp_add_category
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_delete_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-category-transact-sql.md)   
  [sp_help_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-category-transact-sql.md)   
  [sp_update_category &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-update-category-transact-sql.md)   

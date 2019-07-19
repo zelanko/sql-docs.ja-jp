@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 7448d9ee-7f4b-47e3-be54-2df8c9bbac32
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6bf2120468a00de2150f6105f4d79ec5a2ed4278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2295d421f8b802f2f3b531d7de3fc086e43ad572
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924560"
 ---
 # <a name="preparing-and-executing-commands"></a>準備とコマンドの実行
 コマンドは、基になるデータ ソースに対していくつかの操作を実行するプロバイダーに発行する手順です。 たとえば、SQL ステートメントは、Microsoft SQL データ プロバイダーにコマンドです。 ADO では、コマンドは通常によって表される**コマンド**オブジェクトからのシンプルなコマンドを発行することもが**接続**または**レコード セット**オブジェクト。  

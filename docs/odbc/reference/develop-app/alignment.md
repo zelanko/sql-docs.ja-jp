@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 06a01e51-e7a5-495f-aa27-e304b0d005ff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e4c86fd8fba66e6424b41fa4b80b42fc089e6d64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b8b5a107f5ed8cd1c6c45317e60cc515a2601316
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63287436"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077272"
 ---
 # <a name="alignment"></a>Alignment
 ODBC アプリケーションでのアライメントの問題は通常ありません、他のアプリケーションよりも。 つまり、ほとんどの ODBC アプリケーションでは、配置にほとんどまたはまったくの問題があります。 しないアドレスの配置のペナルティはハードウェアおよびオペレーティング システムによって異なります、わずかなパフォーマンスの低下としてそのマイナーまたは実行時の致命的なエラーとしてとしてメジャーがあります。 そのため、ODBC アプリケーション、および ODBC アプリケーションの移植可能な具体的には、注意が必要にデータを正しく配置します。  

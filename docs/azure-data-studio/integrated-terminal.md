@@ -10,13 +10,12 @@ ms.reviewer: alayu; sstein
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: d29234810e30efd204f498e2f7c63ba6571cbfe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 13a0e3c17f45e0ba136d83f832d3531bc8059884
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797527"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959535"
 ---
 # <a name="integrated-terminal"></a>統合ターミナル
 
@@ -94,7 +93,7 @@ Windows で、シェルを正しく構成するには適切な実行可能ファ
 
 統合ターミナル内のナビゲーションを迅速にキーボード ショートカットを次に示します。
 
-|Key|コマンド|  
+|Key|Command|  
 |---|---|  
 |**Ctrl +\`**|統合ターミナルを表示します。|  
 |**Ctrl + Shift +\`**|新しいターミナルを作成します。|  
@@ -110,12 +109,12 @@ Windows で、シェルを正しく構成するには適切な実行可能ファ
 
 これらは次のとおりです。
 
-* `workbench.action.terminal.focus`:端末の焦点を当てます。 これは、切り替えのようなものですが、表示されている場合、非表示ではなくターミナル重点を置いています。
-* `workbench.action.terminal.focusNext`:次の端末のインスタンスに焦点を当てます。
-* `workbench.action.terminal.focusPrevious`:以前のターミナル インスタンスをについて説明します。
-* `workbench.action.terminal.kill`:ターミナルの現在のインスタンスを削除します。
-* `workbench.action.terminal.runSelectedText`:ターミナルのインスタンスでは、選択したテキストを実行します。
-* `workbench.action.terminal.runActiveFile`:ターミナルのインスタンスでは、作業中のファイルを実行します。
+* `workbench.action.terminal.focus` :端末の焦点を当てます。 これは、切り替えのようなものですが、表示されている場合、非表示ではなくターミナル重点を置いています。
+* `workbench.action.terminal.focusNext` :次の端末のインスタンスに焦点を当てます。
+* `workbench.action.terminal.focusPrevious` :以前のターミナル インスタンスをについて説明します。
+* `workbench.action.terminal.kill` :ターミナルの現在のインスタンスを削除します。
+* `workbench.action.terminal.runSelectedText` :ターミナルのインスタンスでは、選択したテキストを実行します。
+* `workbench.action.terminal.runActiveFile` :ターミナルのインスタンスでは、作業中のファイルを実行します。
 
 ### <a name="run-selected-text"></a>選択したテキストの実行
 

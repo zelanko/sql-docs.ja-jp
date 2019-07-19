@@ -2,24 +2,23 @@
 title: アクティブなクエリの並列データ ウェアハウスの監視 |Microsoft Docs
 description: 管理コンソールと Parallel Data Warehouse システム ビューを使用すると、Analytics Platform System でのアクティブなクエリを監視できます。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d2b1ee84b2ae738d7790e1238176331a221ac473
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65d656b02ef0d726292a7d37aef565bf508d7662
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640009"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960492"
 ---
 # <a name="monitoring-active-queries---parallel-data-warehouse"></a>アクティブなクエリの並列データ ウェアハウスの監視
 この記事では、管理コンソールと、SQL Server PDW システム ビューを使用して、アクティブなクエリを監視する方法を示します。 参照してください[アプライアンスの監視、管理コンソールを使用して](monitor-the-appliance-by-using-the-admin-console.md)と[システム ビュー](tsql-system-views.md)についてこれらのツール。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 アクティブなクエリを監視するために使用する方法に関係なく、ログインに「すべての管理者コンソールを使用して」で説明されているアクセス許可がある[管理者コンソールを使用してアクセス許可の付与](grant-permissions.md#grant-permissions-to-use-the-admin-console)します。  
   
 ## <a name="PermsAdminConsole"></a>アクティブなクエリの監視  

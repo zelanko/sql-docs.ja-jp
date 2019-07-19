@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0d4d455ed7bd804f4c2d4ce036c00f85fd94629f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4daa38f185569e1579413870cc929a8b1b3b6570
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251581"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038007"
 ---
 # <a name="using-stored-procedures-mdx"></a>ストアド プロシージャの使用 (MDX)
 
@@ -41,7 +40,7 @@ WHERE [Measures].[Reseller Freight Cost]
 > [!NOTE]  
 >  Microsoft Visual Basic for Applications (VBA) COM アセンブリは自動的に登録されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [関数&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)  
   
   

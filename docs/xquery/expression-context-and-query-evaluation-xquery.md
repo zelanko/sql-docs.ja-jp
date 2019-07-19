@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 5059f858-086a-40d4-811e-81fedaa18b06
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: f8092182bff23580936e17923985739525309097
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: d665b16c6b635da8b267ac0549ab8d918af8c06b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54256877"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038917"
 ---
 # <a name="expression-context-and-query-evaluation-xquery"></a>式コンテキストとクエリの評価 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "54256877"
 ## <a name="static-context"></a>静的コンテキスト  
  静的コンテキストの初期化とは、式の静的分析向けに、すべての情報をまとめるプロセスのことです。 静的コンテキストの初期化の一環として、次のことが行われます。  
   
--   **境界空白文字**ポリシーが分離に設定します。 そのため、境界の空白で保持されません、**任意の要素**と**属性**クエリのコンストラクター。 以下に例を示します。  
+-   **境界空白文字**ポリシーが分離に設定します。 そのため、境界の空白で保持されません、**任意の要素**と**属性**クエリのコンス トラクター。 以下に例を示します。  
   
     ```  
     declare @x xml  
@@ -146,7 +145,7 @@ ms.locfileid: "54256877"
     SELECT @x.value('declare namespace x="myNS"; data(/x:Elem)[1]','varchar(20)')  
     ```  
   
-     詳細については、[XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)を参照してください。  
+     詳細については、次を参照してください。 [XQuery と静的な型指定](../xquery/xquery-and-static-typing.md)します。  
   
 ### <a name="implementation-restrictions"></a>実装の制限  
  次に、静的コンテキストに関する制限事項を示します。  

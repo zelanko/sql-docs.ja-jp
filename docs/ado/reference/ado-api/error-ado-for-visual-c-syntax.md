@@ -15,16 +15,15 @@ helpviewer_keywords:
 ms.assetid: 1c3fafe1-8bcc-4c04-b8d1-f5ffebac00dd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a203e3737ab6157f7aa40db57817404e370e97bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f71246fa641f74579f181f93da46333e2ffe3f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933038"
 ---
 # <a name="error-ado-for-visual-c-syntax"></a>Error (Visual C++ 構文用の ADO)
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 ```  
 get_Description(BSTR *pbstr)  
@@ -34,5 +33,5 @@ get_Source(BSTR *pbstr)
 get_SQLState(BSTR *pbstr)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Error オブジェクト](../../../ado/reference/ado-api/error-object.md)

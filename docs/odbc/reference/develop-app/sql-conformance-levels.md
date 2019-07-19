@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 3529df2c-a09b-4c16-9c60-eae7a06d903a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c2e8ce5aeeb94a4f7a33b22054adc8067e0654ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7862b2e3a86c6d98a51c73ecb470d59bcfe29dc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62690205"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107523"
 ---
 # <a name="sql-conformance-levels"></a>SQL の適合性レベル
 ドライバーによってサポートされている SQL 92 文法のレベルがへの呼び出しによって返される値によって示される**SQLGetInfo** SQL_SQL_CONFORMANCE 情報の種類にします。 これは、ドライバーが、sql-92 で定義されたエントリ、FIPS Transitional、中間、または完全なレベルに準拠しているかどうかを示します。  

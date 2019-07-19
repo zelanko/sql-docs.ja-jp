@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 7be9e644-36a2-48fc-9206-faf59fdff4d7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 69903654faf21a7649ec8b54a269e71a99d559c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 922489d1145204a4ae5d2dcf8e483149f1b11bcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354548"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068462"
 ---
 # <a name="common-language-runtime-integration"></a>共通言語ランタイム統合
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -61,7 +60,7 @@ CLR 統合では、.Net で使用できるは複雑な機能を実装するこ�
  [CLR 統合の有効化](../../relational-databases/clr-integration/clr-integration-enabling.md)  
  CLR 統合を有効にする方法を説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [.NET Framework のインストール](https://technet.microsoft.com/library/ms166014\(v=SQL.105\).aspx)([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のみ)   
  [CLR 統合のパフォーマンス](../../relational-databases/clr-integration/clr-integration-architecture-performance.md)  
   

@@ -2,19 +2,18 @@
 title: Parallel Data Warehouse の読み込みの監視 |Microsoft Docs
 description: Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) のシステム ビューを使用してアクティブと最近の負荷を監視します。"
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: cb840c64c2235a2f3902c45633aa5471655482dc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1eadf20e036c6c76cd3bece7c404fde2af4a7d70
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960604"
 ---
 # <a name="monitor-loads-into-parallel-data-warehouse"></a>モニターは、Parallel Data Warehouse に読み込みます
 モニターがアクティブで最近[dwloader](dwloader.md) 、Analytics Platform System (APS) 管理コンソールまたは並列データ ウェアハウス (PDW) を使用して読み込む[システム ビュー](https://azure.microsoft.com/documentation/articles/sql-data-warehouse-reference-tsql-system-views/)します。 
@@ -26,7 +25,7 @@ ms.locfileid: "62639966"
 To monitor this type of load, see [Monitoring Active Queries](monitor-active-queries.md).  
 -->
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 負荷を監視するために使用する方法に関係なく、ログインは、基になるデータ ソースにアクセスする権限が必要です。 
 
 <!-- MISSING LINKS

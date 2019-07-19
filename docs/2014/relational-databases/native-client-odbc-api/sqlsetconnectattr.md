@@ -15,11 +15,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: b1b48f9ee2e7ee3092e3f31fd6ef97e91c5cd9db
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351671"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207104"
 ---
 # <a name="sqlsetconnectattr"></a>SQLSetConnectAttr
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、SQL_ATTR_CONNECTION_TIMEOUT の設定が無視されます。  
@@ -107,7 +107,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |文字列への SQLPOINTER|この文字列には、アタッチするデータベースのプライマリ ファイル名を指定します。 ファイル名には、ファイルの完全なパスを含めます。|  
   
 ## <a name="sqlcoptssbcp"></a>SQL_COPT_SS_BCP  
- SQL_COPT_SS_BCP 属性は、接続で一括コピー関数を有効にします。 詳細については、[一括コピー関数](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)を参照してください。  
+ SQL_COPT_SS_BCP 属性は、接続で一括コピー関数を有効にします。 詳細については、次を参照してください。[一括コピー関数](../native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -185,7 +185,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_APPLICATION_INTENT, TEXT("Readonly"), SQL_NT
 |SQL_MARS_ENABLED_NO|既定値です。 複数のアクティブな結果セット (MARS) を無効にします。|  
 |SQL_MARS_ENABLED_YES|MARS を有効にします。|  
   
- MARS の詳細については、[複数のアクティブな結果セットのを使用して&#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)を参照してください。  
+ MARS の詳細については、次を参照してください。[複数のアクティブな結果セットのを使用して&#40;MARS&#41;](../native-client/features/using-multiple-active-result-sets-mars.md)します。  
   
 ## <a name="sqlcoptssmultisubnetfailover"></a>SQL_COPT_SS_MULTISUBNET_FAILOVER  
  異なるサブネット上にある [!INCLUDE[ssHADR](../../includes/sshadr-md.md)] 可用性グループ (AG) に対してアプリケーションが接続している場合、この接続プロパティによって、(現在) アクティブなサーバーを迅速に検出し、接続するように [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client が構成されます。 以下に例を示します。  
@@ -204,7 +204,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptssoldpwd"></a>SQL_COPT_SS_OLDPWD  
  [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] では、SQL Server 認証におけるパスワードの期限切れが導入されました。 クライアントから接続の古いパスワードと新しいパスワードの両方を提供できるようにするために、SQL_COPT_SS_OLDPWD 属性が追加されました。 この属性が設定されている場合、接続文字列には変更された "古いパスワード" が含まれているので、プロバイダーは最初の接続またはそれ以降の接続で接続プールを使用しません。  
   
- 詳細については、[プログラムでパスワードを変更する](../native-client/features/changing-passwords-programmatically.md)を参照してください。  
+ 詳細については、次を参照してください。[プログラムでパスワードを変更する](../native-client/features/changing-passwords-programmatically.md)します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -218,7 +218,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_PERF_START|ドライバーのパフォーマンス データのサンプリングを開始します。|  
 |SQL_PERF_STOP|パフォーマンス データのサンプリングのカウンターを停止します。|  
   
- 詳細については、[SQLGetConnectAttr](sqlgetconnectattr.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQLGetConnectAttr](sqlgetconnectattr.md)します。  
   
 ## <a name="sqlcoptssperfdatalog"></a>SQL_COPT_SS_PERF_DATA_LOG  
  SQL_COPT_SS_PERF_DATA_LOG 属性は、パフォーマンス データの記録に使用するログ ファイル名を割り当てます。 ログ ファイル名は、アプリケーションのコンパイル方法に応じて、ANSI または Unicode 形式の、NULL で終わる文字列になります。 *StringLength*引数は SQL_NTS をする必要があります。  
@@ -234,7 +234,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |SQL_PERF_START|実行時間の長いクエリのログ記録を開始します。|  
 |SQL_PERF_STOP|実行時間の長いクエリのログ記録を停止します。|  
   
- 詳細については、[SQLGetConnectAttr](sqlgetconnectattr.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQLGetConnectAttr](sqlgetconnectattr.md)します。  
   
 ## <a name="sqlcoptssperfqueryinterval"></a>SQL_COPT_SS_PERF_QUERY_INTERVAL  
  SQL_COPT_SS_PERF_QUERY_INTERVAL 属性は、クエリのログ記録のしきい値をミリ秒単位で設定します。 指定のしきい値内に解決しないクエリは、実行時間の長いクエリのログ ファイルに記録されます。 クエリのしきい値に上限はありません。 クエリのしきい値に値 0 が設定されている場合、すべてのクエリがログに記録されます。  
@@ -283,7 +283,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 |-----------|-----------------|  
 |SQL_TXN_SS_SNAPSHOT|あるトランザクションで行った変更内容を別のトランザクションから参照できないことを示します。この場合、クエリを再実行しても変更内容を参照することはできません。|  
   
- スナップショット分離の詳細については、[スナップショット分離を使用した作業](../native-client/features/working-with-snapshot-isolation.md)を参照してください。  
+ スナップショット分離の詳細については、次を参照してください。[スナップショット分離を使用した作業](../native-client/features/working-with-snapshot-isolation.md)します。  
   
 ## <a name="sqlcoptssuseprocforprep"></a>SQL_COPT_SS_USE_PROC_FOR_PREP  
  この属性は現在サポートされていません。  
@@ -291,7 +291,7 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlcoptssuserdata"></a>SQL_COPT_SS_USER_DATA  
  SQL_COPT_SS_USER_DATA 属性は、ユーザー データのポインターを設定します。 ユーザー データとは、接続ごとに記録されているクライアントが所有するメモリのことです。  
   
- 詳細については、[SQLGetConnectAttr](sqlgetconnectattr.md)を参照してください。  
+ 詳細については、次を参照してください。 [SQLGetConnectAttr](sqlgetconnectattr.md)します。  
   
 ## <a name="sqlcoptsswarnoncperror"></a>SQL_COPT_SS_WARN_ON_CP_ERROR  
  この属性は、コード ページの変換中に損失したデータがある場合に警告を表示するかどうかを指定します。 これは、サーバーから送信されるデータにのみ適用されます。  
@@ -304,12 +304,12 @@ SQLSetConnectAttr(hdbc, SQL_COPT_SS_MULTISUBMIT_FAILOVER, SQL_IS_ON, SQL_IS_INTE
 ## <a name="sqlsetconnectattr-support-for-service-principal-names-spns"></a>SQLSetConnectAttr によるサービス プリンシパル名 (SPN) のサポート  
  新しい接続属性である SQL_COPT_SS_SERVER_SPN および SQL_COPT_SS_FAILOVER_PARTNER_SPN の値を設定するのには、SQLSetConnectAttr を使用できます。 接続が開いている場合、これらの属性を設定することはできません。接続が開いているときにこれらの属性を設定しようとすると、"現時点での操作は正しくありません。" というメッセージと共に、エラー HY011 が返されます (SQLSetConnectOption こともできますをこれらの値を設定します。)  
   
- Spn の詳細については、[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)を参照してください。  
+ Spn の詳細については、次を参照してください。[サービス プリンシパル名&#40;Spn&#41;クライアント接続で&#40;ODBC&#41;](../native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md)します。  
   
 ## <a name="sqlcoptssconnectiondead"></a>SQL_COPT_SS_CONNECTION_DEAD  
  これは読み取り専用属性です。  
   
- SQL_COPT_SS_CONNECTION_DEAD の詳細については、[SQLGetConnectAttr](sqlgetconnectattr.md)と[データ ソースに接続する&#40;ODBC&#41;](../native-client-odbc-communication/connecting-to-a-data-source-odbc.md)を参照してください。  
+ SQL_COPT_SS_CONNECTION_DEAD の詳細については、次を参照してください。 [SQLGetConnectAttr](sqlgetconnectattr.md)と[データ ソースに接続する&#40;ODBC&#41;](../native-client-odbc-communication/connecting-to-a-data-source-odbc.md)します。  
   
 ## <a name="example"></a>例  
  次の例では、パフォーマンス データがログに記録されます。  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f803ea892166819cee846a7dc97ef435802e9ae3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a209fe7fbd62082d467077a147b52a3f142b8214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63187641"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003536"
 ---
 # <a name="mdx-data-manipulation---select"></a>MDX データ操作 - SELECT
 
@@ -461,7 +460,7 @@ WHERE
 |||||  
 |-|-|-|-|  
 |Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|Reseller Gross Profit Margin|  
-|$80,450,596.98|$79,980,114.38|$470,482.60|0.58%|  
+|$80,450,596.98|79,980,114.38 ドル|470,482.60 ドル|0.58%|  
   
 ## <a name="see-also"></a>関連項目  
  [MDX の主な概念 &#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)   

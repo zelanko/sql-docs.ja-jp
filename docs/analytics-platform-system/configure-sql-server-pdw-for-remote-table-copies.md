@@ -2,19 +2,18 @@
 title: リモート テーブル コピー用の並列データ ウェアハウスの構成 |Microsoft Docs
 description: リモート テーブル コピー機能を使用して非アプライアンス サーバー上の SMP SQL Server データベースにテーブルをコピーする並列データ ウェアハウスを構成する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: fdac0b6ed211e223c3fad7ba15ac79a282c61303
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4f3abd60cb4f87abc5e6cbdc420fc6c551b0ab15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62509524"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961223"
 ---
 # <a name="configure-parallel-data-warehouse-for-remote-table-copies"></a>リモート テーブル コピー用の並列データ ウェアハウスを構成します。
 リモート テーブル コピー機能を使用して非アプライアンス サーバー上の SMP SQL Server データベースにテーブルをコピーする SQL Server PDW を構成する方法について説明します。  

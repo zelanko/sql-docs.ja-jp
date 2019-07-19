@@ -20,12 +20,12 @@ ms.assetid: b2ca6791-3a07-4209-ba8e-2248a92dd738
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: c867fd986ea88d6323c56b2ac76c9aecaba57a15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 144bcbf882b997dfa07889c2cae5977d0b12b8dc
+ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981668"
+ms.lasthandoff: 07/11/2019
+ms.locfileid: "67832965"
 ---
 # <a name="sql-server-utilities-statements---go"></a>SQL Server のユーティリティのステートメント - GO
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -39,7 +39,6 @@ ms.locfileid: "65981668"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 GO [count]  
 ```  
   
@@ -78,16 +77,16 @@ GO
   
  ODBC または OLE DB API に基づくアプリケーションで、GO コマンドを実行しようとすると、構文エラーになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ユーティリティは、サーバーに GO コマンドを送信することはありません。  
   
- GO の後、ステートメントのターミネータとしてセミコロンを使用しません。  
-  
-## <a name="permissions"></a>アクセス許可  
- GO は、権限を必要としないユーティリティ コマンドです。 すべてのユーザーが実行できます。  
-  
-```  
+ GO の後、ステートメントのターミネータとしてセミコロンを使用しません。
+ 
+```
 -- Yields an error because ; is not permitted after GO  
 SELECT @@VERSION;  
 GO;  
-```  
+```
+  
+## <a name="permissions"></a>アクセス許可  
+ GO は、権限を必要としないユーティリティ コマンドです。 すべてのユーザーが実行できます。    
   
 ## <a name="examples"></a>使用例  
  次の例では、2 つのバッチを作成します。 最初のバッチは、データベース コンテキストを設定する `USE AdventureWorks2012` ステートメントのみで構成されます。 その他のステートメントではローカル変数が使用されます。 このため、すべてのローカル変数宣言を 1 つのバッチにまとめる必要があります。 これには、変数を参照する最後のステートメントが実行されてから `GO` コマンドを実行するようにします。  

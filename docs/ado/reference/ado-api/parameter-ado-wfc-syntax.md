@@ -13,16 +13,15 @@ helpviewer_keywords:
 ms.assetid: d00d1e1e-14b1-41a2-a00f-2a3cb7396f15
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d39d181190d6bc28fa94271c7be787735e0515dd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22f9d928cf008396346067a3e166fa281be4093d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931716"
 ---
 # <a name="parameter-ado---wfc-syntax"></a>Parameter (ADO - WFC 構文)
-## <a name="package-commswfcdata"></a>package com.ms.wfc.data  
+## <a name="package-commswfcdata"></a>パッケージ com.ms.wfc.data  
   
 ### <a name="constructor"></a>コンストラクター  
   
@@ -43,7 +42,7 @@ public void appendChunk(char[] chars)
 public void appendChunk(String chars)  
 ```  
   
-### <a name="properties"></a>プロパティ  
+### <a name="properties"></a>Properties  
   
 ```  
 public int getAttributes()  

@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 220fe51d-4889-4020-a099-2ec9c7485503
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b32684eebb9668335211e592c5768ead4291d27
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 09f917f326db197fa42aedf9a668134c257af4a2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710664"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936728"
 ---
 # <a name="streamtypeenum"></a>StreamTypeEnum
 格納されたデータの種類を指定します、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adTypeBinary**|1|バイナリ データを示します。|  
 |**adTypeText**|2|既定値です。 文字で指定されたセット内にあるテキスト データを示す[Charset](../../../ado/reference/ado-api/charset-property-ado.md)します。|  

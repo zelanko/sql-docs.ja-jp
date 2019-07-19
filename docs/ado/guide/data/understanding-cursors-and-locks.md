@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1b7d7e6-1707-4ce2-863f-0c6dea967df6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a828bbbc42638cddaec609fc101b4cf70f7e356
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41fd90d4f30c080951bd5d68407e38adac482418
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718635"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67923796"
 ---
 # <a name="understanding-cursors-and-locks"></a>カーソルとロックを理解する
 アプリケーションのデータ アクセス要件の最適なと最も効率的なカーソルの種類を選択する、カーソルの動作を理解しておく必要があります。 最適のないカーソルの構成には、データ アクセス操作を落としてをことができます。  

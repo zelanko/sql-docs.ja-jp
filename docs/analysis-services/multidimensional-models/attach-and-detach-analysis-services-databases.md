@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2419b057f6bc3fbe85c937911dd76bc8b9729b95
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50144857"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180266"
 ---
 # <a name="attach-and-detach-analysis-services-databases"></a>Analysis Services データベースのインポートとデタッチ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "50144857"
   
 |読み書き可能なデータベースのデタッチ|読み取り専用データベースのデタッチ|  
 |--------------------------------------|-------------------------------------|  
-|1) サーバーはデータベースに対する CommitExclusive ロックの要求を発行します<br /><br /> 2) サーバーは、実行中のトランザクションすべてがコミットまたはロールバックされるまで待機します<br /><br /> 3) サーバーはデータベースのデタッチに必要なすべてのメタデータを構築します<br /><br /> 4) データベースは削除済みに設定されます<br /><br /> 5) サーバーはトランザクションをコミットします|1) データベースは削除済みに設定されます<br /><br /> 2) サーバーはトランザクションをコミットします<br /><br /> 注: 読み取り専用データベースでは、デタッチ用のパスワードを変更できません。 アタッチされたデータベースに既にパスワードが含まれている場合にパスワード パラメーターを指定すると、エラーが発生します。|  
+|1) サーバーはデータベースに対する CommitExclusive ロックの要求を発行します<br /><br /> 2) サーバーは、実行中のトランザクションすべてがコミットまたはロールバックされるまで待機します<br /><br /> 3) サーバーはデータベースのデタッチに必要なすべてのメタデータを構築します<br /><br /> 4) データベースは削除済みに設定されます<br /><br /> 5) サーバーはトランザクションをコミットします|1) データベースは削除済みに設定されます<br /><br /> 2) サーバーはトランザクションをコミットします<br /><br /> 注:読み取り専用データベースのデタッチのパスワードを変更できません。 アタッチされたデータベースに既にパスワードが含まれている場合にパスワード パラメーターを指定すると、エラーが発生します。|  
   
  **Attach** コマンドおよび **Detach** コマンドは 1 つの操作として実行する必要があります。 同じトランザクション内でその他の操作と組み合わせることはできません。 また、 **Attach** コマンドおよび **Detach** コマンドはアトミックなトランザクション コマンドです。 つまり、操作は成功するか失敗するかのどちらかになります。 データベースは未完了の状態にしておくことはできません。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "50144857"
 > [!IMPORTANT]  
 >  **Attach** コマンドを実行するには、サーバーの管理者特権が必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services データベースの移動](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   
  [データベースの ReadWriteMode](../../analysis-services/multidimensional-models/database-readwritemodes.md)   

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 46c288c1-3410-4d68-a027-3bbf33239289
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fbb52087baa5c11f972ae531f6c619352fbd13a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c6817e41f48df740a59e371da9b78e09dd6894af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980987"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079387"
 ---
 # <a name="sysdatabases-transact-sql"></a>sys.databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -42,14 +41,14 @@ ms.locfileid: "65980987"
 |**source_database_id**|**int**|NULL 以外 = このデータベース スナップショットのソース データベースの ID です。<br /> NULL = データベース スナップショットではありません。|  
 |**owner_sid**|**varbinary(85)**|サーバーに登録されているデータベースの外部所有者の SID (セキュリティ識別子) にします。 データベースを所有する方法の詳細については、次を参照してください。、**データベースに対する ALTER AUTHORIZATION**の[ALTER AUTHORIZATION](../../t-sql/statements/alter-authorization-transact-sql.md)します。|  
 |**create_date**|**datetime**|日付、データベースの作成または変更します。 **Tempdb**、この値が、サーバーを再起動するたびに変更します。|  
-|**compatibility_level**|**tinyint**|バージョンに対応する整数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のどちらの動作が互換性のあります。<br /> **値** &#124; **に適用されます**<br /> 70 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120 &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130 &#124; [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 140 &#124; [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br /> 150 &#124; [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  |  
+|**compatibility_level**|**tinyint**|バージョンに対応する整数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のどちらの動作が互換性のあります。<br /> **値** &#124; **に適用されます**<br /> 70 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 80 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)]<br /> 90 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]<br /> 100 &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 110 &#124; [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 120 &#124; [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]<br /> 130 &#124; [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 140 &#124; [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] <br /> 150&#124; [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]  |  
 |**collation_name**|**sysname**|データベースの照合順序です。 データベースの既定の照合順序として機能します。<br /> NULL = データベースがオンラインでないまたは AUTO_CLOSE が ON に設定され、データベースが閉じられます。|  
-|**user_access**|**tinyint**|ユーザー アクセス設定です。<br /> 0 = MULTI_USER が指定されています。<br /> 1 = SINGLE_USER が指定されています。<br /> 2 = RESTRICTED_USER specified|  
+|**user_access**|**tinyint**|ユーザー アクセス設定です。<br /> 0 = MULTI_USER が指定されています。<br /> 1 = SINGLE_USER が指定されています。<br /> 2 = RESTRICTED_USER が指定されて|  
 |**user_access_desc**|**nvarchar(60)**|ユーザー アクセス設定の説明です。|  
 |**is_read_only**|**bit**|1 = データベースは READ_ONLY です。<br /> 0 = データベースは READ_WRITE です。|  
-|**is_auto_close_on**|**bit**|1 = AUTO_CLOSE is ON<br /> 0 = AUTO_CLOSE は OFF です。|  
+|**is_auto_close_on**|**bit**|1 = AUTO_CLOSE は ON です。<br /> 0 = AUTO_CLOSE は OFF です。|  
 |**is_auto_shrink_on**|**bit**|1 = AUTO_SHRINK は ON です。<br /> 0 = AUTO_SHRINK は OFF です。|  
-|**state**|**tinyint**|**値&#124;に適用されます**<br /> 0 = ONLINE <br /> 1 = を復元します。 <br /> 2 = RECOVERING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = 問題あり <br /> 5 = EMERGENCY &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = オフライン&#124;[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注:** Always On データベース クエリ、`database_state`または`database_state_desc`列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)します。|  
+|**state**|**tinyint**|**値&#124;に適用されます**<br /> 0 = ONLINE <br /> 1 = を復元します。 <br /> 2 = RECOVERING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 3 = RECOVERY_PENDING &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 4 = 問題あり <br /> 5 = EMERGENCY &#124; [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 6 = オフライン&#124;[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]経由 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /> 7 = COPYING &#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /> 10 = OFFLINE_SECONDARY&#124; [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] [!INCLUDE[ssGeoDR](../../includes/ssgeodr-md.md)] <br /><br /> **注:** Always On データベース クエリ、`database_state`または`database_state_desc`列[sys.dm_hadr_database_replica_states](../../relational-databases/system-dynamic-management-views/sys-dm-hadr-database-replica-states-transact-sql.md)します。|  
 |**state_desc**|**nvarchar(60)**|データベースの状態の説明です。 状態を参照してください。|  
 |**is_in_standby**|**bit**|データベースは、復元ログに対し、読み取り専用です。|  
 |**is_cleanly_shutdown**|**bit**|1 = データベースは正常にシャット ダウン起動時に必要な復旧なし<br /> 0 = データベースはクリーンにシャットダウンされなかったため、起動時に復旧処理が必要です。|  
@@ -61,10 +60,10 @@ ms.locfileid: "65980987"
 |**recovery_model_desc**|**nvarchar(60)**|選択される復旧モデルの説明です。|  
 |**page_verify_option**|**tinyint**|PAGE_VERIFY オプションの設定:<br /> 0 = NONE<br /> 1 = TORN_PAGE_DETECTION<br /> 2 = チェックサム|  
 |**page_verify_option_desc**|**nvarchar(60)**|PAGE_VERIFY オプション設定の説明です。|  
-|**is_auto_create_stats_on**|**bit**|1 = AUTO_CREATE_STATISTICS is ON<br /> 0 = AUTO_CREATE_STATISTICS は OFF です。|  
+|**is_auto_create_stats_on**|**bit**|1 = AUTO_CREATE_STATISTICS は ON です。<br /> 0 = AUTO_CREATE_STATISTICS は OFF です。|  
 |**is_auto_create_stats_incremental_on**|**bit**|Auto stats の増分オプションの既定の設定を示します。<br /> 0 = 自動作成統計は増分<br /> 1 = 自動作成統計は増分可能な場合<br /> **適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
 |**is_auto_update_stats_on**|**bit**|1 = AUTO_UPDATE_STATISTICS は ON です。<br /> 0 = AUTO_UPDATE_STATISTICS は OFF です。|  
-|**is_auto_update_stats_async_on**|**bit**|1 = AUTO_UPDATE_STATISTICS_ASYNC is ON<br /> 0 = AUTO_UPDATE_STATISTICS_ASYNC is OFF|  
+|**is_auto_update_stats_async_on**|**bit**|1 = AUTO_UPDATE_STATISTICS_ASYNC は ON です。<br /> 0 = AUTO_UPDATE_STATISTICS_ASYNC は OFF です。|  
 |**is_ansi_null_default_on**|**bit**|1 = ANSI_NULL_DEFAULT は ON です。<br /> 0 = ANSI_NULL_DEFAULT は OFF です。|  
 |**is_ansi_nulls_on**|**bit**|1 = ANSI_NULLS は ON です。<br /> 0 = ANSI_NULLS は OFF です。|  
 |**is_ansi_padding_on**|**bit**|1 = ANSI_PADDING は ON です。<br /> 0 = ANSI_PADDING は OFF です。|  
@@ -72,9 +71,9 @@ ms.locfileid: "65980987"
 |**is_arithabort_on**|**bit**|1 = ARITHABORT は ON です。<br /> 0 = ARITHABORT は OFF です。|  
 |**is_concat_null_yields_null_on**|**bit**|1 = CONCAT_NULL_YIELDS_NULL は ON です。<br /> 0 = CONCAT_NULL_YIELDS_NULL は OFF です。|  
 |**is_numeric_roundabort_on**|**bit**|1 = NUMERIC_ROUNDABORT は ON です。<br /> 0 = NUMERIC_ROUNDABORT は OFF です。|  
-|**is_quoted_identifier_on**|**bit**|1 = QUOTED_IDENTIFIER は ON です。<br /> 0 = QUOTED_IDENTIFIER is OFF|  
+|**is_quoted_identifier_on**|**bit**|1 = QUOTED_IDENTIFIER は ON です。<br /> 0 = QUOTED_IDENTIFIER は OFF です。|  
 |**is_recursive_triggers_on**|**bit**|1 = RECURSIVE_TRIGGERS は ON です。<br /> 0 = RECURSIVE_TRIGGERS は OFF です。|  
-|**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT is ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT is OFF|  
+|**is_cursor_close_on_commit_on**|**bit**|1 = CURSOR_CLOSE_ON_COMMIT is ON<br /> 0 = CURSOR_CLOSE_ON_COMMIT は OFF です。|  
 |**is_local_cursor_default**|**bit**|1 = CURSOR_DEFAULT はローカルです<br /> 0 = CURSOR_DEFAULT はグローバル|  
 |**is_fulltext_enabled**|**bit**|1 = データベースに対してフルテキストが有効です。<br /> 0 = データベースのフルテキストが無効になっています|  
 |**is_trustworthy_on**|**bit**|1 = データベースが信頼可能のマークにされている場合<br /> 0 = データベースがマークされていない信頼|  

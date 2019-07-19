@@ -10,13 +10,13 @@ ms.topic: conceptual
 ms.assetid: c28ffa44-7b8b-4efa-b755-c7a3b1c11ce4
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 0810533a3488043ef4b3d8db9c0de4f3174b4ba8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: jroth
+ms.openlocfilehash: 1aac4a0582906ac74994ac45a932b4a781f97e37
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102614"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680751"
 ---
 # <a name="local-audit-for-ssms-usage-and-diagnostic-data-collection"></a>SSMS の使用状況および診断データの収集のローカル監査
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +29,7 @@ SSMS で収集される機能の使用状況データを表示するには、次
 
 1.  SSMS を起動します。
 2.  メインメニューで **[表示]** 、 **[出力]** の順にクリックし、 **[出力]** ウィンドウを表示します。 
-3.  **[出力]** ウィンドウが表示されたら、**[出力元の表示:]** メニューで **[テレメトリ]** を選択します。
+3.  **[出力]** ウィンドウが表示されたら、 **[出力元の表示:]** メニューで **[テレメトリ]** を選択します。
 
 SSMS を使用してデータベースと対話している間に、収集されたデータが **[出力]** ウィンドウに表示されます。
 

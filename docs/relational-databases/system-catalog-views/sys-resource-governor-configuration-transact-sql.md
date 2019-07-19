@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 89099668-1dc6-4b07-9d8b-49bc95c7bfc0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 38ba526abcafb8d8bd046cbb1624b778bab52090
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: c85332cb1c26f81cdbbaa7bffa5410cf29e711e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47816300"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904548"
 ---
 # <a name="sysresourcegovernorconfiguration-transact-sql"></a>sys.resource_governor_configuration (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  リソース ガバナーの格納されている状態を返します。  
+  格納されているリソース ガバナーの状態を返します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -39,13 +38,13 @@ ms.locfileid: "47816300"
 |max_outstanding_io_per_volume|**int**|**適用対象**: [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ボリュームごとの未処理の I/O の最大数。|  
   
 ## <a name="remarks"></a>コメント  
- カタログ ビューには、メタデータに格納されているリソース ガバナー構成が表示されます。 メモリ内の構成を表示するには、対応する動的管理ビューを使用します。  
+ カタログ ビューには、メタデータに格納されているリソース ガバナー構成が表示されます。 対応する動的管理ビューを使用してメモリ内の構成を参照してください。  
   
 ## <a name="permissions"></a>アクセス許可  
  内容を表示するには VIEW ANY DEFINITION 権限が必要です。内容を変更するには CONTROL SERVER 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、リソース ガバナーの構成の格納されているメタデータの値とメモリ内の値を取得して比較する方法を示します。  
+ 次の例では、取得し、格納されているメタデータと、リソース ガバナーの構成のメモリ内の値を比較する方法を示します。  
   
 ```  
 USE master;  
@@ -66,7 +65,7 @@ sys.dm_resource_governor_configuration;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [リソース ガバナーのカタログ ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.dm_resource_governor_configuration &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-configuration-transact-sql.md)   

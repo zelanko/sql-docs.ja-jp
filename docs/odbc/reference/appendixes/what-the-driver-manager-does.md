@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 57f65c38-d9ee-46c8-9051-128224a582c6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: f29a40db8b35b5915de1889996e7953b1a8ad3f8
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 1c5fa421e4b0def070cc8c63dda394ebb832a9d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135707"
 ---
 # <a name="what-the-driver-manager-does"></a>ドライバー マネージャーの機能
 次の表にまとめたものですか、ODBC *3.x*ドライバー マネージャーは odbc 呼び出しをマッピング*2.x*および ODBC *3.x*ドライバー。  

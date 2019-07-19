@@ -2,19 +2,18 @@
 title: SSIS PDW 変換先アダプターを使用したスクリプト タスクの作成 |Microsoft Docs
 desciption: This Integration Services (SSIS) package script code is a code example for using the SSIS PDW destination adaptor. The Integration Services Script Task allows you to perform virtually any operation that can be accomplished in a .Net application within the context of an SSIS control flow.
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 4f1f668c0fca14c81173141df3767319f987c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8781a84bd3a96364930618db83f6900009540be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63142304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961064"
 ---
 # <a name="create-a-script-task-that-uses-ssis-parallel-data-warehouse-destination-adapter"></a>SSIS Parallel Data Warehouse 変換先アダプターを使用するスクリプト タスクを作成します。
 この SSIS パッケージのスクリプト コードは、SSIS PDW 変換先アダプターを使用するためのコード例です。  Integration Services のスクリプト タスクでは、SSIS の制御フローのコンテキスト内で .Net アプリケーションで実行できるほぼすべての操作を実行できます。 

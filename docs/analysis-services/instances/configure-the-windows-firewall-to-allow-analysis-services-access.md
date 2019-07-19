@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d5d4da4f1d01d0afb66c998fc2c782afe0c2e6ff
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53211581"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181929"
 ---
 # <a name="configure-the-windows-firewall-to-allow-analysis-services-access"></a>Analysis Services のアクセスを許可するための Windows ファイアウォールの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -83,7 +83,7 @@ ms.locfileid: "53211581"
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]** 、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
 2.  **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
@@ -136,7 +136,7 @@ ms.locfileid: "53211581"
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]** 、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
 2.  SQL Server Browser サービスへのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
@@ -160,7 +160,7 @@ ms.locfileid: "53211581"
   
 #### <a name="windows-firewall-with-advanced-security"></a>セキュリティが強化された Windows ファイアウォール  
   
-1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]**、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
+1.  Windows 7 または Windows Vista の場合、コントロール パネルの **[システムとセキュリティ]** をクリックした後、 **[Windows ファイアウォール]** 、 **[詳細設定]** の順にクリックします。 Windows Server 2008 または 2008 R2 の場合、管理ツールを開き、 **[セキュリティが強化された Windows ファイアウォール]** をクリックします。 Windows Server 2012 では、アプリケーション ページを開き、「 **Windows ファイアウォール**」と入力します。  
   
 2.  Analysis Services へのアクセスのブロックを解除するには、 **[受信の規則]** を右クリックし、 **[新しい規則]** をクリックします。  
   
@@ -227,7 +227,7 @@ ms.locfileid: "53211581"
   
  SharePoint 2010 を使用している場合は、Windows ファイアウォールのポートを開く必要はありません。 SharePoint は、自らが必要としているポートを開き、また [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のようなアドインは SharePoint 環境内で動作します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] For SharePoint 2010 のインストール、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]システム サービスが排他的に使用して、ローカルの SQL Server Analysis Services ( [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]) と同じコンピューターにインストールされているサービス インスタンス。 ローカルの Analysis Services エンジン サービスへのアクセスには、ネットワーク接続ではなくローカル接続が使用されます。このサービスは、SharePoint サーバー上の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データの読み込み、クエリ、および処理を行います。 要求に[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]要求、クライアント アプリケーションからのデータは、SharePoint セットアップによって開かれたポートを介してルーティングされます (SharePoint - 80 へのアクセスを許可する受信規則を定義する具体的には、SharePoint サーバーの全体管理 v4、SharePoint Webサービス、SPUserCodeV4)。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web サービスは SharePoint ファーム内で実行されるため、SharePoint ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データへのリモート アクセスには SharePoint のファイアウォール規則で十分です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server Browser サービス &#40;データベース エンジンと SSAS&#41;](../../database-engine/configure-windows/sql-server-browser-service-database-engine-and-ssas.md)   
  [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)   
  [データベース エンジン アクセスを有効にするための Windows ファイアウォールを構成する](../../database-engine/configure-windows/configure-a-windows-firewall-for-database-engine-access.md)  

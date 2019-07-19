@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 0bfb9ab7-9c15-4433-93bc-bad8b6c9d287
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbecd1d6db1d5ed77082253f6a6a57a96ceec4d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 131abdd4a401e336ccd78ca79fdf6666b1911fee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62628698"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915454"
 ---
 # <a name="dynamic-sql"></a>動的 SQL
 静的 SQL も多くの状況で動作しますが、クラスがあるアプリケーションをデータ アクセスを事前に決定することはできません。 たとえば、スプレッドシートでスプレッドシートは、DBMS にデータを取得する送信は、クエリを入力するユーザーができるようにします。 このクエリの内容をスプレッドシート プログラムが書き込まれるときに明らかに、プログラマが認識されることはできません。  

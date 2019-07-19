@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ad3d0d06016fe8684cacaf73286b229a423aa7c6
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.openlocfilehash: 1884bf191d842ba136165cf28aa14c23dd82b2e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52533662"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071073"
 ---
 # <a name="clusterdistance-dmx"></a>ClusterDistance (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -29,7 +28,7 @@ ClusterDistance([<ClusterID expression>])
 ```  
   
 ## <a name="applies-to"></a>適用対象  
- この関数は、基本となるデータ マイニング モデルがクラスターをサポートする場合にのみ使用できます。 この関数はどの種類のクラスター モデル (EM、K-Means など) でも使用できますが、アルゴリズムによって結果が異なります。  
+ この関数は、基本となるデータ マイニング モデルがクラスターをサポートする場合にのみ使用できます。 クラスタ リング モデルの種類を問わず、関数を使用できます (EM、K-means など)、結果はアルゴリズムによって異なりますが。  
   
 ## <a name="return-type"></a>戻り値の型  
  スカラー値です。  
@@ -37,29 +36,29 @@ ClusterDistance([<ClusterID expression>])
 ## <a name="remarks"></a>コメント  
  **ClusterDistance**関数が、入力したケースとその入力したケースの確率の高いクラスターとの間の距離を返します。  
   
- K-Means クラスタリングの場合、どのケースも所属できるのは、メンバーシップの重みが 1.0 のクラスター 1 つだけなので、クラスターの距離は常に 0 になります。 ただし、K-Means では、各クラスターに重心があると想定されています。 マイニング モデル コンテンツ内の入れ子になったテーブル NODE_DISTRIBUTION をクエリしたり参照したりして、重心の値を取得できます。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
+ K-means クラスタ リングが発生した場合に 1 つのみのクラスター メンバーシップの重みが 1.0 では、どのケースが属することができますので、クラスターの距離は常に 0 です。 ただし、K-Means では、各クラスターに重心があると想定されています。 クエリを実行するか、マイニング モデル内容を入れ子になった NODE_DISTRIBUTION テーブルを参照して、重心の値を取得できます。 詳細については、「 [クラスター モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/mining-model-content-for-clustering-models-analysis-services-data-mining.md)」を参照してください。  
   
- 既定の EM クラスタリング手法の場合、クラスター内のすべてのポイントは同程度であると見なされるため、仕様上、クラスターには重心がありません。 値**ClusterDistance**特定のケースと特定のクラスター間*N*は次のように計算されます。  
+ 既定の EM クラスタ リング手法の場合、クラスター内のすべてのポイントと見なされます同程度です。そのため、設計ではありません、クラスターの重心です。 値**ClusterDistance**特定のケースと特定のクラスター間*N*は次のように計算されます。  
   
  ClusterDistance(N) =1-(membershipWeight(N))  
   
- または。  
+ または:  
   
  ClusterDistance(N) = 1 ClusterProbability (N))  
   
 ## <a name="related-prediction-functions"></a>関連する予測関数  
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、クラスター モデルに対してクエリを実行するために、次に示す追加の関数が用意されています。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] クラスタ リング モデルを照会するためには、次の追加機能を提供します。  
   
 -   使用して、[クラスター &#40;DMX&#41; ](../dmx/cluster-dmx.md)関数可能性が最も高いクラスターを返します。  
   
--   使用して、 [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md)ケースが特定のクラスターに所属する確率を取得します。 この値は、クラスターとの距離とは逆の関係になります。  
+-   使用して、 [ClusterProbability &#40;DMX&#41; ](../dmx/clusterprobability-dmx.md)ケースが特定のクラスターに所属する確率を取得します。 この値は、クラスターの距離の逆関数として機能します。  
   
 -   使用して、 [PredictHistogram &#40;DMX&#41; ](../dmx/predicthistogram-dmx.md)関数をそれぞれのモデルのクラスターで、入力ケース既存の確率値のヒストグラムを返します。  
   
 -   使用して、 [PredictCaseLikelihood &#40;DMX&#41; ](../dmx/predictcaselikelihood-dmx.md)関数を入力したケース可能性を示す 1、0 からメジャーが考慮すると、モデルが存在するが返されませんが、アルゴリズムによって学習します。  
   
 ## <a name="example1-obtaining-cluster-distance-to-the-most-likely-cluster"></a>例 1:最も可能性の高いクラスターにクラスターの距離を取得します。  
- 次の例は、指定したケースから、そのケースが最も所属している可能性の高いクラスターまでの距離を返します。  
+ 次の例は、ほとんどのケースが属するクラスターに、指定したケースからの距離を返します。  
   
 ```  
 SELECT  
@@ -104,7 +103,7 @@ WHERE NODE_TYPE = 5
 |001|クラスター 1|  
 |002|Cluster 2|  
   
- 次の構文例では、Cluster 2 というラベルが付いたクラスターから、指定されたケースまでの距離が返されます。  
+ 次の構文例では、Cluster 2 というラベルの付いたクラスターから、指定したケースの距離を返します。  
   
 ```  
 SELECT  
@@ -125,7 +124,7 @@ NATURAL PREDICTION JOIN
 |------------------------|  
 |0.97008209236394|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [クラスター &#40;DMX&#41;](../dmx/cluster-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   

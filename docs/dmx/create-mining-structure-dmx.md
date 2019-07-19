@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ea04b08f98385755f006c1a67125a87dc71e41f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 457385a43c9f5b2864e5596f2da33f4ed38e7756
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62854339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070992"
 ---
 # <a name="create-mining-structure-dmx"></a>CREATE MINING STRUCTURE (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -41,10 +40,10 @@ CREATE [SESSION] MINING STRUCTURE <structure>
  *列定義リスト*  
  列定義のコンマ区切りのリストです。  
   
- *holdout-maxpercent*  
+ *提示された maxpercent*  
  テスト用に確保するデータの割合を示す 1 ～ 100 の整数です。  
   
- *holdout-maxcases*  
+ *提示された maxcases*  
  テストに使用するケースの最大数を示す整数です。  
   
  ケースの最大数に指定された値が入力ケース数を超える場合、すべての入力ケースがテストに使用され、警告が発生します。  

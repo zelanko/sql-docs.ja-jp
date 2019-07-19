@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 05d7a471-c5d5-4730-b903-e4edc8157bb4
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 9f0d8c0f371d4c2bfd1ba6ce4c0ea5a0361eb25a
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 7cfcc3f4d65901da34152a6fce21b436750c15fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59476658"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118513"
 ---
 # <a name="clr-integration-security"></a>CLR 統合のセキュリティ
 
@@ -59,7 +58,7 @@ ms.locfileid: "59476658"
  [アプリケーション ドメインと CLR 統合のセキュリティ](/sql/database-engine/dev-guide/allowing-partially-trusted-callers?view=sql-server-2014)  
  アセンブリがアプリケーション ドメインに読み込まれるしくみを説明します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR 統合アセンブリの管理](../../../relational-databases/clr-integration/assemblies/managing-clr-integration-assemblies.md)  
   
   

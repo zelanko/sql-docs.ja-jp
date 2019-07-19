@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e492498ee6e15866e7fe6fd96588480c914b0622
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: 0373bbda2d0c97946f15e048b7cc49175ca66669
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597518"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097173"
 ---
 # <a name="using-dimension-expressions"></a>ディメンション式の使用
 
@@ -61,7 +60,7 @@ ms.locfileid: "67597518"
   
  階層識別子*Dimension_Name.Hierarchy_Name* MDX ステートメントの記述に使用される BNF 表記でします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  
   
   

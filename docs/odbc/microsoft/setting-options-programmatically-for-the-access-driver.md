@@ -15,17 +15,16 @@ helpviewer_keywords:
 ms.assetid: 1690eb71-0cd3-4c00-9e15-f6a3ac5316dd
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57bc9dd31299a70c5c8a2272dd49b577f58b7bb0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 688716e9b7ba89500a4d2e8a579da42972e43d0c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63159298"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68063552"
 ---
 # <a name="setting-options-programmatically-for-the-access-driver"></a>プログラムで Access ドライバーのオプションの設定
 
-|オプション|説明|方法|  
+|OPTION|説明|メソッド|  
 |------------|-----------------|------------|  
 |バッファー サイズ|内部バッファーのキロバイト単位でディスクとデータの転送を Microsoft Access で使用されるサイズ。 既定のバッファー サイズは、2048 の KB (2048 として表示されますです)。 256 で割り切れる任意の整数値を入力することができます。|このオプションを動的に設定する呼び出しで MAXBUFFERSIZE キーワードを使用して、 [SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  
 |Data Source Name|給与または担当者など、データ ソースを識別する名前。|このオプションを動的に設定するには、使用、 **DSN**への呼び出しでキーワード[SQLConfigDataSource](../../odbc/microsoft/sqlconfigdatasource-access-driver.md)します。|  

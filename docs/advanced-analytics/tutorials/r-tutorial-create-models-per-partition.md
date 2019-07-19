@@ -8,14 +8,13 @@ ms.date: 03/27/2019
 ms.topic: tutorial
 ms.author: davidph
 author: dphansen
-manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f7b176cf4aa50292c3b3968107ded5fcdd3533d8
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: e2cbffcab6fd34d08e8338522e8dcc97ac50f4c5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961972"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル:SQL Server での R のパーティションに基づくモデルを作成します。
 [!INCLUDE[appliesto-ssvnex-xxxx-xxxx-xxx-md-winonly](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -34,7 +33,7 @@ SQL Server の 2019 でパーティション ベースのモデルを作成し�
 > * 作成し、各パーティションのモデルのトレーニングしデータベース オブジェクトに格納します。
 > * 目的のために予約されているサンプル データを使用して、各パーティション モデル経由でのヒントの結果の確率を予測します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
  
 このチュートリアルを完了するには、次の操作が必要です。
 
@@ -46,7 +45,7 @@ SQL Server の 2019 でパーティション ベースのモデルを作成し�
 
 + SQL Server 2019 プレビュー データベース エンジン インスタンス、Machine Learning サービスと R を統合します。
 
-実行してバージョンを確認して**`SELECT @@Version`** としてクエリ ツールでの T-SQL クエリ。 出力になります。"Microsoft SQL Server 2019 (CTP 2.4) - 15.0.x"。
+実行してバージョンを確認して **`SELECT @@Version`** としてクエリ ツールでの T-SQL クエリ。 出力になります。"Microsoft SQL Server 2019 (CTP 2.4) - 15.0.x"。
 
 データベース エンジンのインスタンスに現在インストールされているすべての R パッケージの適切な形式の一覧を返すことによって、R パッケージの可用性をチェック:
 
@@ -173,7 +172,7 @@ GO
 既定では、クエリ オプティマイザーは下で動作する傾向がある **@parallel= 1**場合を処理するこの明示的に設定が、256 個を超える行を持つテーブルで **@parallel= 1**これで示すようにスクリプトです。
 
 > [!Tip]
-> トレーニングの workoads を使用することができます**@parallel**任意のトレーニング スクリプトを使用しても含め、Microsoft rx ではないアルゴリズムを使用します。 通常、RevoScaleR のアルゴリズムのみ (rx プレフィックス) では、SQL Server のトレーニングのシナリオでの並列処理を提供します。 ただし、新しいパラメーターでその機能エンジニア リングは、オープン ソース R 関数を含む関数を呼び出すスクリプトを並列化できます。 これは、パーティションが特定のスレッド アフィニティに設定するため、特定のスレッドでのパーティションごとにスクリプトで呼び出されるすべての操作を実行するために機能します。
+> トレーニングの workoads を使用することができます **@parallel** 任意のトレーニング スクリプトを使用しても含め、Microsoft rx ではないアルゴリズムを使用します。 通常、RevoScaleR のアルゴリズムのみ (rx プレフィックス) では、SQL Server のトレーニングのシナリオでの並列処理を提供します。 ただし、新しいパラメーターでその機能エンジニア リングは、オープン ソース R 関数を含む関数を呼び出すスクリプトを並列化できます。 これは、パーティションが特定のスレッド アフィニティに設定するため、特定のスレッドでのパーティションごとにスクリプトで呼び出されるすべての操作を実行するために機能します。
 
 <a name="training-step"></a>
 
@@ -335,7 +334,7 @@ SELECT *
 FROM prediction_results;
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 このチュートリアルでは使用して[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)をパーティション分割されたデータの操作を反復処理します。 詳細のストアド プロシージャで外部のスクリプトを呼び出すことを確認し、次のチュートリアルでは、RevoScaleR 関数を使用して続行します。
 

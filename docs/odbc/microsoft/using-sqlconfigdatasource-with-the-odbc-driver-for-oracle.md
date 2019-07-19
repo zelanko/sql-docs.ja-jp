@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: e535d1ef-aff9-4ae7-a3ed-ef4ca2584289
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9edd9ae15e66a39abd84a8a6d8e50a83ed4a39ba
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa5f1ecf9f3100480081e3744fc7d280a4da282b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63259335"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088031"
 ---
 # <a name="using-sqlconfigdatasource-with-the-odbc-driver-for-oracle"></a>ODBC Driver for Oracle を使用した SQLConfigDatasource の使用
 > [!IMPORTANT]  
@@ -46,7 +45,7 @@ ms.locfileid: "63259335"
 |RDOSupport|2|""|0 または 1|RDO Oracle プロシージャを呼び出すことができます。|  
 |コメント|2|0|0 または 1|カタログ関数では、「解説」をが含まれます。|  
 |RowLimit|4|""|0 ~ 99 の範囲|SELECT ステートメントによって返される行の最大数。 長さ 0 の文字列では、制限を適用しないことを示します。|  
-|[サーバー]|128|""|A/N|Oracle サーバー名。|  
+|Server|128|""|A/N|Oracle サーバー名。|  
 |SynonymColumns|2|1|0 または 1|SQLColumns、シノニムがあります。|  
 |SystemTable|2|""|0 または 1|0 の場合、システム テーブルは表示されません。 1 の場合、システム テーブルが表示されます。|  
 |TranslationDLL|33|""|A/N|翻訳 .dll の名前。|  

@@ -9,12 +9,12 @@ ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 manager: jroth
 author: MightyPen
-ms.openlocfilehash: aff69606c81a1ee93a01a8467299ba2155da770d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
+ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801739"
+ms.lasthandoff: 07/09/2019
+ms.locfileid: "67680082"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,7 +58,12 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 
-接続に対して Always Encrypted を有効にすると、標準の ODBC API ([ODBC サンプルコード](https://code.msdn.microsoft.com/windowsapps/ODBC-sample-191624ae/sourcecode?fileId=51137&pathId=1980325953)に関するページまたは「[ODBC プログラマー リファレンス](https://msdn.microsoft.com/library/ms714177(v=vs.85).aspx)」を参照) を使用して、暗号化されたデータベース列内のデータを取得または変更することができます。 ご利用のアプリケーションが必要なデータベース権限を備えていて、列マスター キーにアクセスできると仮定すると、ドライバーによって、暗号化された列をターゲットとするクエリ パラメータが暗号化され、暗号化された列から取得したデータの暗号化が解除されます。これらの動作は列が暗号化されていないかのようにアプリケーションに対して透過的に行われます。
+接続で Always Encrypted を有効すると、標準の ODBC Api を使用できます。 ODBC Api では、取得したり、暗号化されたデータベース列のデータを変更することができます。 このドキュメントの次の項目が役立つ場合があります。
+
+- [ODBC サンプル コード](cpp-code-example-app-connect-access-sql-db.md)
+- [ODBC プログラマー リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)
+
+アプリケーションでは、必要なデータベース アクセス許可が必要し、列マスター_キーにアクセスできる必要があります。 次に、ドライバーは、暗号化された列をターゲットとするすべてのクエリ パラメーターを暗号化します。 ドライバーでは、暗号化された列から取得したデータも復号化します。 ドライバーは、すべてこの暗号化および暗号化のソース コードからの支援を受けることがなく実行します。 プログラムに列が暗号化されていないかのようになります。
 
 Always Encrypted が有効でない場合、暗号化された列をターゲットとするパラメーターを含むクエリは失敗します。 暗号化された列をターゲットとするパラメーターがクエリにない場合は、暗号化された列からデータを取得できます。 ただし、ドライバーによって暗号化の解除は試みられず、アプリケーションでは暗号化されたバイナリ データを (バイト配列として) 受け取ることになります。
 

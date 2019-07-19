@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: f4678a02-bbe9-4f21-9e32-627eae053fe7
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: cc92e04a39fce48c25362a5db61d004420f4e959
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6e34aad020117fffe598d9134276c280a05f549f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65484362"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079739"
 ---
 # <a name="copy-a-version-master-data-services"></a>バージョンをコピーする (マスター データ サービス)
 
@@ -27,7 +26,7 @@ ms.locfileid: "65484362"
 
   [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]でモデルのバージョンをコピーして、新しいバージョンを作成します。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  この手順を実行するには  
   
 -   **[バージョン管理]** 機能領域にアクセスする権限が必要です。  
@@ -53,7 +52,7 @@ ms.locfileid: "65484362"
   
 -   [バージョン名を変更する (マスター データ サービス)](../master-data-services/change-a-version-name-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バージョン (マスター データ サービス)](../master-data-services/versions-master-data-services.md)  
   
   

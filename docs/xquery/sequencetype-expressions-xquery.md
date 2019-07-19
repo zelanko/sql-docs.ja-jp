@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ad3573da-d820-4d1c-81c4-a83c4640ce22
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 59c6718ce034f8a0b9d37bc62591a7ffc44ce999
-ms.sourcegitcommit: bfa10c54e871700de285d7f819095d51ef70d997
-ms.translationtype: HT
+ms.openlocfilehash: e7c3cdf33b0765ba50e5553f3bc31fd5c69312e0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/14/2019
-ms.locfileid: "54255127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946283"
 ---
 # <a name="sequencetype-expressions-xquery"></a>SequenceType 式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ Expression instance of SequenceType[Occurrence indicator]
   
  場合、**でしょうか。** 出現インジケーターが指定されていない`sequence of`場合にのみ、True を返します、`Expression`入力と一致する、`Type`指定と`Expression`シングルトンを返します。  
   
- **注**プラス記号 (**+**) およびアスタリスク (**&#42;**) では、出現インジケーターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
+ **注**プラス記号 ( **+** ) およびアスタリスク ( **&#42;** ) では、出現インジケーターはサポートされていない[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]します。  
   
  次の例では、使用、**のインスタンス**XQuery 演算子。  
   
@@ -139,7 +138,7 @@ where ProductModelID=19
  クエリから True が返されます。  
   
 ### <a name="example-c"></a>例 C  
- 共用体の型を使用する場合、`instance of`式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]制限があります。具体的には、要素または属性の型が共用体型が場合`instance of`正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType に指定したアトミック型は、anySimpleType の直接の子である必要があります。 型階層については、[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)を参照してください。  
+ 共用体の型を使用する場合、`instance of`式[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]制限があります。具体的には、要素または属性の型が共用体型が場合`instance of`正確な型が判断されません。 したがって、SequenceType で使用されているアトミック型が、simpleType 階層内にある式の実際の型の最上位の親でない限り、クエリから False が返されます。 つまり、SequenceType に指定したアトミック型は、anySimpleType の直接の子である必要があります。 型階層については、次を参照してください。[型キャストの規則では、XQuery](../xquery/type-casting-rules-in-xquery.md)します。  
   
  次のクエリの例では、以下の操作を実行します。  
   
@@ -355,7 +354,7 @@ WHERE ProductModelID = 19
  明示的な使用**data()** このクエリでは必要ありません。 `cast as` 式により、入力式で暗黙のアトミック化が実行されます。  
   
 ### <a name="constructor-functions"></a>コンストラクター関数  
- アトミック型のコンストラクター関数を使用できます。 使用する代わりに、たとえば、`cast as`演算子、 `"2" cast as xs:integer?`、使用することができます、 **xs:integer()** コンストラクター関数を次の例。  
+ アトミック型のコンストラクター関数を使用できます。 使用する代わりに、たとえば、`cast as`演算子、 `"2" cast as xs:integer?`、使用することができます、 **xs:integer()** コンス トラクター関数を次の例。  
   
 ```  
 declare @x xml  
@@ -371,7 +370,7 @@ set @x=''
 select @x.query('xs:date("2000-01-01Z")')  
 ```  
   
- また、ユーザー定義アトミック型のコンストラクターを使用することもできます。 たとえば、XML スキーマ コレクションに関連付けられている XML データ型は 単純な型を定義、 **myType()** をその型の値を返すコンストラクターを使用できます。  
+ また、ユーザー定義アトミック型のコンストラクターを使用することもできます。 たとえば、XML スキーマ コレクションに関連付けられている XML データ型は 単純な型を定義、 **myType()** をその型の値を返すコンス トラクターを使用できます。  
   
 #### <a name="implementation-limitations"></a>実装の制限事項  
   

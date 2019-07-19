@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 6a34a7ef-50cc-4c3d-82f7-106b9a8f3caf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 207ac319852435d3d0178e4a0dcc78a1cc1a0c8e
-ms.sourcegitcommit: d9c5b9ab3c282775ed61712892eeb3e150ccc808
+ms.openlocfilehash: f15c5890300687a2d587a58a586d00bf2c8d0fd8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/05/2019
-ms.locfileid: "67597495"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926360"
 ---
 # <a name="absolute-and-relative-urls"></a>絶対 URL と相対 URL
 URL には、ローカルまたはネットワーク コンピューターに格納されているターゲットの場所を指定します。 ターゲットは、ファイル、ディレクトリ、HTML ページ、画像、プログラム、およびなどを使用できます。  
@@ -88,7 +87,7 @@ recordset.Open "", "URL=https://YourServer/Winnt/",,,adCmdTableDirect
   
  ADO では、独自の URL スキームを認識する OLE DB プロバイダーをサポートします。 たとえば、 [Microsoft OLE DB Provider for Internet Publishing](../../../ado/guide/appendixes/microsoft-ole-db-provider-for-internet-publishing.md) *、* 「公開」の Windows 2000 ファイルにアクセスする既存の HTTP スキームを認識します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [接続オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)   
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

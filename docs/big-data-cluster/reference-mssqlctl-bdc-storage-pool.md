@@ -5,19 +5,18 @@ description: Mssqlctl bdc の記憶域プール コマンドに関する参照�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bd1b32a725e1204a09e44b44c6576d24c67e3a0d
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 500a86c0a8a33bec781eb87ffc370d55b530d973
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957984"
 ---
-# <a name="mssqlctl-bdc-storage-pool"></a>mssqlctl bdc storage-pool
+# <a name="mssqlctl-bdc-storage-pool"></a>mssqlctl bdc 記憶域プール
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 

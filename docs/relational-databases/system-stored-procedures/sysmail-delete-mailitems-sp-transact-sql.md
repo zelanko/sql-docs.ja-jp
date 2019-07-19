@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 3a8549d33b000744f4d8430ee306e0083455894c
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 23ecda5fd8d91f20133eb2295d38dc9d9ace66f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68069101"
 ---
 # <a name="sysmaildeletemailitemssp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
  **0** (成功) または**1** (失敗)  
   
 ## <a name="remarks"></a>コメント  
- データベース メール メッセージと添付ファイルに格納されます、 **msdb**データベース。 メッセージを防ぐために定期的に削除する**msdb**が予想よりも大きくと、組織のドキュメント保有期間のプログラムに準拠するようにします。 使用して、 **sysmail_delete_mailitems_sp**ストアド プロシージャをデータベース メールのテーブルから電子メール メッセージを完全に削除します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 もう 1 つの省略可能な引数を使用すると、特定の種類、として指定した電子メールだけを削除、 **sent_status**引数。 いずれかの引数を指定する必要があります**@sent_before**または **@sent_status**します。 すべてのメッセージを削除する使用 **@sent_before = getdate()** します。  
+ データベース メール メッセージと添付ファイルに格納されます、 **msdb**データベース。 メッセージを防ぐために定期的に削除する**msdb**が予想よりも大きくと、組織のドキュメント保有期間のプログラムに準拠するようにします。 使用して、 **sysmail_delete_mailitems_sp**ストアド プロシージャをデータベース メールのテーブルから電子メール メッセージを完全に削除します。 日時を指定する引数を使用すると、古い電子メールだけを削除できます。 この場合、引数で指定した日時より前の電子メールが削除されます。 もう 1 つの省略可能な引数を使用すると、特定の種類、として指定した電子メールだけを削除、 **sent_status**引数。 いずれかの引数を指定する必要があります **@sent_before** または **@sent_status** します。 すべてのメッセージを削除する使用 **@sent_before = getdate()** します。  
   
  電子メールを削除すると、そのメッセージに関係する添付ファイルも削除されます。 電子メールを削除しても、対応するエントリは削除されません**sysmail_event_log**します。 使用[sysmail_delete_log_sp](../../relational-databases/system-stored-procedures/sysmail-delete-log-sp-transact-sql.md)ログからアイテムを削除します。  
   
@@ -86,7 +85,7 @@ EXECUTE msdb.dbo.sysmail_delete_mailitems_sp
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sysmail_allitems &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-allitems-transact-sql.md)   
  [sysmail_event_log &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-event-log-transact-sql.md)   
  [sysmail_mailattachments &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sysmail-mailattachments-transact-sql.md)   

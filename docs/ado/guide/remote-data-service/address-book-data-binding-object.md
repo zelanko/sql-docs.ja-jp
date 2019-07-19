@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 080c1925-d453-4b89-92ac-c93591490518
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 31efe56dcb5ae926d5da08aa00a1005597b17b91
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43623bc100fdfe071fcd00926117400a3c96eebe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718618"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922972"
 ---
 # <a name="address-book-data-binding-object"></a>アドレス帳のデータ バインディング オブジェクト
 アドレス帳アプリケーションを使用して、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)クライアント HTML ページで、アプリケーションの SQL Server データベースからデータを (この場合は、DHTML テーブル) 内のビジュアル オブジェクトにバインドするオブジェクト。 VBScript プログラムのイベント ドリブン ロジックを使用して、 [rds.DataControl](../../../ado/reference/rds-api/datacontrol-object-rds.md)に。  
@@ -65,7 +64,7 @@ Initial Catalog=AddrBookDb;Integrated Security=SSPI;">
 |[CONNECT](../../../ado/reference/rds-api/connect-property-rds.md)|必要な接続情報を提供、 **rds.DataControl** SQL サーバーに接続します。|  
 |[SQL](../../../ado/reference/rds-api/sql-property.md)|設定または取得するために使用するクエリ文字列を返します、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [アドレス帳のコマンド ボタン](../../../ado/guide/remote-data-service/address-book-command-buttons.md)
 
 

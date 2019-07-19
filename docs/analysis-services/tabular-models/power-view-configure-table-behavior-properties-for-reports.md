@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 9635dfd55e9ad78e70d849f46c7dafe880a1870d
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579612"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207528"
 ---
 # <a name="power-view---configure-table-behavior-properties-for-reports"></a>Power View - レポートのテーブル動作プロパティの構成
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "57579612"
   
 -   マトリックス レポートからの不要な小計の削除。 フィールド レベルでの既定のグループ化によって、各フィールドの小計が作成されます。 行レベルで計算された単一の小計のみ必要な場合は、行識別子 (ROWID) を設定するとこの結果が生成されます。  
   
- 日付テーブルとしてマークされているテーブルの行識別子 (ROWID) は設定できません。 日付テーブルの場合、行識別子 (ROWID) はテーブルをマークするときに指定します。 詳細については、[日付テーブル ダイアログ ボックスとしてマーク](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)を参照してください。  
+ 日付テーブルとしてマークされているテーブルの行識別子 (ROWID) は設定できません。 日付テーブルの場合、行識別子 (ROWID) はテーブルをマークするときに指定します。 詳細については、次を参照してください。[日付テーブル ダイアログ ボックスとしてマーク](http://msdn.microsoft.com/library/698b5ef1-b79b-4d76-9847-39669b4f5bb9)します。  
   
 ## <a name="setting-the-keep-unique-rows-property"></a>"一意の行を保持" プロパティの設定  
  このプロパティでは、行を区別できるような方法で識別情報 (従業員名や製品コード) を格納する列を指定できます。 行が同一に見える場合 (同じ名前の 2 人の顧客など)、このプロパティに対して指定する列はレポート テーブル内に繰り返し出現します。  

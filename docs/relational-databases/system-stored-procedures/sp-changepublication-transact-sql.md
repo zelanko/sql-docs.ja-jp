@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: c36e5865-25d5-42b7-b045-dc5036225081
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 45c61b33a7cc1669ae34f7888fda1450524b079b
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: f963aa920a1e783cfec5b467d1c57fdb2e805893
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124862"
 ---
 # <a name="spchangepublication-transact-sql"></a>sp_changepublication (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリケーションのプロパティを変更します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  パブリケーションのプロパティを変更します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,7 +45,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   
 `[ @property = ] 'property'` 変更するパブリケーションのプロパティです。 *プロパティ*は**nvarchar (255)** します。  
   
-`[ @value = ] 'value'` 新しいプロパティ値です。 *値*は**nvarchar (255)**、既定値は NULL です。  
+`[ @value = ] 'value'` 新しいプロパティ値です。 *値*は**nvarchar (255)** 、既定値は NULL です。  
   
  次の表に、変更可能なパブリケーションのプロパティと、プロパティの値に関する制限を示します。  
   
@@ -89,15 +88,15 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ||**false**|新しいサブスクリプションがある場合にのみ、同期ファイルが作成されます。 スナップショット エージェントが起動して完了するまで、サブスクライバーは、サブスクリプション後に同期ファイルを取得できません。|  
 |**independent_agent**|**true**|パブリケーションに専用のディストリビューション エージェントがあります。|  
 ||**false**|パブリケーションでは共有ディストリビューション エージェントが使用されます。パブリケーションおよびサブスクリプション データベースの各ペアには 1 つの共有エージェントがあります。|  
-|**p2p_continue_onconflict**|**true**|競合が検出されたときに変更を処理するディストリビューション エージェントを継続します。<br /> **注意が必要です。** 既定値の `FALSE` を使用することをお勧めします。 このオプションを設定すると`TRUE`、ディストリビューション エージェントが、最高の発信元 ID を持つノードから競合する行を適用してトポロジ内のデータを収束しようとしています。 このメソッドでは、収束が保証されません。 競合が検出された後、トポロジが一貫性のあることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
+|**p2p_continue_onconflict**|**true**|競合が検出されたときに変更を処理するディストリビューション エージェントを継続します。<br /> **注意:** 既定値を使用することをお勧めします。`FALSE`します。 このオプションを設定すると`TRUE`、ディストリビューション エージェントが、最高の発信元 ID を持つノードから競合する行を適用してトポロジ内のデータを収束しようとしています。 このメソッドでは、収束が保証されません。 競合が検出された後、トポロジが一貫性のあることを確認する必要があります。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。|  
 ||**false**|ディストリビューション エージェントは、競合が検出されたときに、変更の処理を停止します。|  
 |**post_snapshot_script**||ディストリビューション エージェントで実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの場所を指定します。このスクリプトの実行は、初期同期で、レプリケートされたすべてのオブジェクト スクリプトとデータが適用された後で行われます。|  
 |**pre_snapshot_script**||ディストリビューション エージェントで実行される [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト ファイルの場所を指定します。このスクリプトの実行は、初期同期で、レプリケートされたすべてのオブジェクト スクリプトとデータが適用される前に行われます。|  
-|**publish_to_ActiveDirectory**|**true**|このパラメーターは非推奨とされました、スクリプトの旧バージョンとの互換性でのみサポートされます。 パブリケーション情報を追加することが不要になった、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory。|  
+|**publish_to_ActiveDirectory**|**true**|このパラメーターは、旧バージョンのスクリプトとの互換性を保つために用意されており、非推奨とされます。 パブリケーション情報を追加することが不要になった、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Active Directory。|  
 ||**false**|Active Directory からパブリケーション情報を削除します。|  
 |**queue_type**|**sql**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トランザクションを格納します。 アクティブなサブスクリプションがない場合にのみ、このプロパティを変更できます。<br /><br /> 注:[!INCLUDE[msCoName](../../includes/msconame-md.md)] Message Queuing (MSMQ) の使用は現在サポートされていません。 値を指定する**msmq**の*値*エラーが発生します。|  
 |**repl_freq**|**継続的です**|ログ ベースのすべてのトランザクションの出力をパブリッシュします。|  
-||**snapshot**|スケジュールされた同期イベントのみをパブリッシュします。|  
+||**スナップショット**|スケジュールされた同期イベントのみをパブリッシュします。|  
 |**replicate_ddl**|**1**|データ定義言語 (DDL) ステートメントがパブリッシャーで実行がレプリケートされます。 このプロパティを変更することはできません以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーション。|  
 ||**0**|DDL ステートメントはレプリケートされません。 このプロパティを変更することはできません以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリケーション。 スキーマ変更のレプリケーションは、ピア ツー ピア レプリケーションを使用する場合は無効にできません。|  
 |**replicate_partition_switch**|**true**|ALTER TABLE…パブリッシュされたデータベースに対して実行される SWITCH ステートメントをサブスクライバーにレプリケートする必要があります。 このオプションは有効な場合にのみ*allow_partition_switch*が TRUE に設定します。 詳細については、「[パーティション テーブルとパーティション インデックスのレプリケート](../../relational-databases/replication/publish/replicate-partitioned-tables-and-indexes.md)」を参照してください。|  
@@ -105,11 +104,11 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 |**保有期間**||**int**保有期間を時間、サブスクリプションの利用状況を表します。 保有期間内のサブスクリプションがアクティブでない場合は削除されます。|  
 |**snapshot_in_defaultfolder**|**true**|スナップショット ファイルは、既定のスナップショット フォルダーに格納されます。 場合*alt_snapshot_folder*も指定、スナップショット ファイルは既定値と別の場所の両方に格納します。|  
 ||**false**|指定された別の場所にスナップショット ファイルが格納されている*alt_snapshot_folder*します。|  
-|**status**|**active**|パブリケーション データはパブリケーションが作成された直後にサブスクライバーで使用できます。 Oracle パブリッシャーに対してはサポートされていません。|  
+|**status**|**アクティブ**|パブリケーション データはパブリケーションが作成された直後にサブスクライバーで使用できます。 Oracle パブリッシャーに対してはサポートされていません。|  
 ||**非アクティブ**|パブリケーションが作成されたときに、パブリケーション データをサブスクライバーに使用できません。 Oracle パブリッシャーに対してはサポートされていません。|  
 |**sync_method**|**native**|サブスクリプションの同期時に、すべてのテーブルのネイティブ モード一括コピー出力を使用します。|  
 ||**character**|サブスクリプションの同期時に、すべてのテーブルのキャラクター モード一括コピー出力を使用します。|  
-||**concurrent**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショット レプリケーションでは無効です。|  
+||**同時実行**|すべてのテーブルについてネイティブ モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショット レプリケーションでは無効です。|  
 ||**concurrent_c**|すべてのテーブルについてキャラクター モード BCP 出力を使用しますが、スナップショット生成処理中にテーブルをロックしません。 スナップショット レプリケーションでは無効です。|  
 |**taskid**||このプロパティは非推奨とされました、現在サポートされていません。|  
 |**allow_drop**|**true**|により、`DROP TABLE`トランザクション レプリケーションの一部であるアーティクルの DLL をサポートします。 サポートされる最小バージョン。[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] Service Pack 2 以降および[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]Service Pack 1 以降。 その他の参照。[KB 3170123](https://support.microsoft.com/help/3170123/supports-drop-table-ddl-for-articles-that-are-included-in-transactional-replication-in-sql-server-2014-or-in-sql-server-2016-sp1)|
@@ -121,7 +120,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
   - **1**アーティクルへの変更は、無効になるスナップショットで発生する可能性がありますを指定します。 新しいスナップショットが必要となる既存のサブスクリプションがある場合、この値は、既存のスナップショットに設定して、新しいスナップショットを生成のアクセス許可を示します。   
 プロパティは、「解説」を参照してください、変更された場合、新しいスナップショットの生成が必要です。  
   
-[**@force_reinit_subscription =** ] *force_reinit_subscription*  
+[ **@force_reinit_subscription =** ]*更によって*  
  このストアド プロシージャが実行されるアクションでは、既存のサブスクリプションの再初期化される場合がありますかを確認します。 *更によって*は、**ビット**、既定値は**0**します。  
   - **0**アーティクルへの変更では、サブスクリプションを再初期化するのには発生しないことを指定します。 ストアド プロシージャは、変更が既存のサブスクリプションを再初期化する必要になることを検出する場合は、エラーが発生し、変更は行われません。  
   - **1**アーティクルへの変更が発生する、既存のサブスクリプションを再初期化されることを指定します。 サブスクリプションの再初期化を許可します。  
@@ -164,7 +163,7 @@ sp_changepublication [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_changepublication**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [パブリケーションとアーティクルのプロパティの変更](../../relational-databases/replication/publish/change-publication-and-article-properties.md)   
  [sp_addpublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   

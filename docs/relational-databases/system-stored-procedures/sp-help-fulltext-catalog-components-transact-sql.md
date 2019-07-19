@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fbd6a3d4-6a4c-42a2-bff8-2a5eb0745e47
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: cc3538ab8485b7fb9658c665d4ed7dddf53aba33
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 213cc6ea9be57590d52755fdbba3151882ac0a38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055169"
 ---
 # <a name="sphelpfulltextcatalogcomponents-transact-sql"></a>sp_help_fulltext_catalog_components (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ sp_help_fulltext_catalog_components
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**フルテキスト カタログ名**|**int**|フルテキスト カタログの名前。|  
-|**full-text catalog id**|**sysname**|フルテキスト カタログの ID。|  
+|**フルテキスト カタログ id**|**sysname**|フルテキスト カタログの ID。|  
 |**componenttype**|**sysname**|コンポーネントの型。 次のいずれかです。<br /><br /> Assert<br /><br /> プロトコル ハンドラー<br /><br /> ワード ブレーカー|  
 |**componentname**|**sysname**|コンポーネント名。|  
 |**clsid**|**uniqueidentifier**|コンポーネントのクラス ID。|  
@@ -58,7 +57,7 @@ sp_help_fulltext_catalog_components
 ## <a name="permissions"></a>アクセス許可  
  ロール **public** のメンバーシップが必要です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [フルテキスト検索およびセマンティック検索ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/full-text-search-and-semantic-search-stored-procedures-transact-sql.md)   
  [sys.fulltext_catalogs &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-catalogs-transact-sql.md)   
  [sp_help_fulltext_system_components &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-fulltext-system-components-transact-sql.md)   

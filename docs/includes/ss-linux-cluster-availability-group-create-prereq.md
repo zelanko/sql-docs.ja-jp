@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 75f5280a90efd1eea1882da99ce125a94cde17a8
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.openlocfilehash: 7d392ee6791c120243b304ab24b2f8268499617d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51716214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68215578"
 ---
 ## <a name="prerequisites"></a>前提条件
 
@@ -85,7 +85,7 @@ ALTER EVENT SESSION  AlwaysOn_health ON SERVER WITH (STARTUP_STATE=ON);
 GO
 ```
 
-この XE セッションの詳細については、[AlwaysOn の拡張イベント](https://msdn.microsoft.com/library/dn135324.aspx)を参照してください。
+この XE セッションの詳細については、次を参照してください。 [AlwaysOn の拡張イベント](https://msdn.microsoft.com/library/dn135324.aspx)します。
 
 ## <a name="create-a-certificate"></a>証明書を作成する
 

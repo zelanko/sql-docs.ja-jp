@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 0d9be0dd-638f-4dd4-92b2-253fda655455
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 91e6ab46cb0171f3e0c16deb5a494ed1f644a660
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce64900270fd1092320a12a6cc58a744eaadae7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085630"
 ---
 # <a name="staging-process-errors-master-data-services"></a>ステージング処理のエラー (Master Data Services)
 
@@ -26,7 +25,7 @@ ms.locfileid: "65488029"
 
   ステージング処理が完了すると、ステージング テーブル内のすべての処理済みレコードの [ErrorCode] 列に値が格納されます。 これらの値を次の表に示します。  
   
-|コード|[エラー]|発生時/詳細|テーブルへの適用|  
+|コード|Error|発生時/詳細|テーブルへの適用|  
 |----------|-----------|--------------------------|----------------------|  
 |210001|ステージング テーブルに同じメンバー コードが複数回出現します。|ステージング バッチに、同じメンバー コードが複数回含まれます。 メンバーは作成も更新もされません。|リーフ<br /><br /> [統合]<br /><br /> リレーションシップ|  
 |210003|属性値は、存在しないメンバーまたは非アクティブなメンバーを参照しています。|ドメイン ベースの属性をステージングするときは、名前ではなく、コードを使用する必要があります。 **ImportType0**、 **1**、および **2**に適用されます。|リーフ<br /><br /> [統合]|  
@@ -46,7 +45,7 @@ ms.locfileid: "65488029"
 |210047|Unused の兄弟をメンバーにすることはできません。|**RelationshipType** = **2** (兄弟) で、 **ParentCode** または **ChildCode** のどちらかが **Unused**の場合に、このエラーが発生します。 未使用ノードの子しかメンバーになれません。|リレーションシップ|  
 |210048|**ParentCode** と **ChildCode** を同じにすることはできません。|**ParentCode** の値は **ChildCode** の値と同じです。 これらの値は別にする必要があります。|リレーションシップ|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ステージング中に発生したエラーの表示 (マスター データ サービス)](../master-data-services/view-errors-that-occur-during-staging-master-data-services.md)   
  [概要:テーブルからデータをインポートする (マスター データ サービス)](../master-data-services/overview-importing-data-from-tables-master-data-services.md)  
   

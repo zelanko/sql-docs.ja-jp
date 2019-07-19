@@ -1,5 +1,5 @@
 ---
-title: ロジスティック回帰モデルのマイニング モデル コンテンツ |Microsoft ドキュメント
+title: ロジスティック回帰モデルのマイニング モデル コンテンツ |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8d5aab960b1987a0c076504b4e2858403a2ecb99
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34017599"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182723"
 ---
 # <a name="mining-model-content-for-logistic-regression-models"></a>Mining Model Content for Logistic Regression Models
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -36,7 +36,7 @@ ms.locfileid: "34017599"
 ## <a name="model-content-for-a-logistic-regression-model"></a>ロジスティック回帰モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、ロジスティック回帰に関連する列についてのみ詳細と例を紹介します。 このモデル コンテンツはニューラル ネットワーク モデルのものとほぼ同じなので、便宜上、この表にも、ニューラル ネットワーク モデルに当てはまる説明が記載されている場合があります。  
   
- ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「[マイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
+ ここに記載されていないスキーマ行セットの汎用の列 (MODEL_CATALOG や MODEL_NAME など) の詳細や、マイニング モデルの用語の説明については、「 [マイニング モデル コンテンツ (Analysis Services - データ マイニング)](../../analysis-services/data-mining/mining-model-content-analysis-services-data-mining.md)」を参照してください。  
   
  MODEL_CATALOG  
  モデルが格納されているデータベースの名前。  
@@ -47,7 +47,7 @@ ms.locfileid: "34017599"
  ATTRIBUTE_NAME  
  このノードに対応する属性の名前。  
   
-|ノード|コンテンツ|  
+|ノード|Content|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -68,7 +68,7 @@ ms.locfileid: "34017599"
  NODE_TYPE  
  ロジスティック回帰モデルでは、次のノードの種類が出力されます。  
   
-|ノードの種類の ID|Description|  
+|ノードの種類の ID|説明|  
 |------------------|-----------------|  
 |1|モデル。|  
 |17|サブネットワークのオーガナイザー ノード。|  
@@ -85,7 +85,7 @@ ms.locfileid: "34017599"
  CHILDREN_CARDINALITY  
  ノードの子の推定数。  
   
-|ノード|コンテンツ|  
+|ノード|Content|  
 |----------|-------------|  
 |モデル ルート|子ノードの数を示します。1 つ以上のネットワーク、1 つの必須マージナル ノード、および 1 つの必須入力層が含まれます。 たとえば、値が 5 の場合はサブネットワークが 3 つあります。|  
 |マージナル統計|常に 0 です。|  
@@ -103,7 +103,7 @@ ms.locfileid: "34017599"
  NODE_DESCRIPTION  
  ノードについてのわかりやすい説明。  
   
-|ノード|コンテンツ|  
+|ノード|Content|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -116,7 +116,7 @@ ms.locfileid: "34017599"
  NODE_RULE  
  ノードに埋め込まれたルールの XML による記述。  
   
-|ノード|コンテンツ|  
+|ノード|Content|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -147,7 +147,7 @@ ms.locfileid: "34017599"
  特定の値に対するトレーニング ケースでのサポートについて情報を得るには、マージナル統計ノードを参照してください。  
   
  MSOLAP_MODEL_COLUMN  
- |ノード|コンテンツ|  
+ |ノード|Content|  
 |----------|-------------|  
 |モデル ルート|空白|  
 |マージナル統計|空白|  
@@ -179,9 +179,9 @@ ms.locfileid: "34017599"
   
  出力属性が特定の入力層属性にどのように関連付けられているかをこれらの ID によって確認するには、出力ノードの NODE_DISTRIBUTION テーブルを表示します。 NODE_DISTRIBUTION テーブルの各行には、特定の入力属性ノードを指す ID が含まれています。 NODE_DISTRIBUTION テーブルには、その入力と出力のペアの係数も含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Microsoft ロジスティック回帰アルゴリズム](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm.md)   
- [ニューラル ネットワーク モデル のマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
+ [ニューラル ネットワーク モデルのマイニング モデル コンテンツ &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-model-content-for-neural-network-models-analysis-services-data-mining.md)   
  [ロジスティック回帰モデルのクエリ例](../../analysis-services/data-mining/logistic-regression-model-query-examples.md)   
  [Microsoft ロジスティック回帰アルゴリズム テクニカル リファレンス](../../analysis-services/data-mining/microsoft-logistic-regression-algorithm-technical-reference.md)  
   

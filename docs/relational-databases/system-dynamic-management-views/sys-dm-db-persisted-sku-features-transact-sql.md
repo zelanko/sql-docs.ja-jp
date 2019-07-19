@@ -19,20 +19,19 @@ helpviewer_keywords:
 ms.assetid: b4b29e97-b523-41b9-9528-6d4e84b89e09
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d9d8001765a06ce432ea8f5f7e3081e4a54e7efa
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f59d96f9a1aa6598c5acb4fe9a88ea57965ede5c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53202071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096269"
 ---
 # <a name="sysdmdbpersistedskufeatures-transact-sql"></a>sys.dm_db_persisted_sku_features (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   一部の機能、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]方法を変更する[!INCLUDE[ssDE](../../includes/ssde-md.md)]データベース ファイルの情報を格納します。 これらの機能は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の特定のエディションでのみ使用できます。 これらの機能を備えたデータベースを、それらをサポートしない [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエディションに移動することはできません。 現在のデータベースで有効なエディション固有の機能を一覧表示するのにには、sys.dm_db_persisted_sku_features 動的管理ビューを使用します。
   
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]を通じて[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -49,7 +48,7 @@ ms.locfileid: "53202071"
   
 -   **ChangeCapture**:変更データ キャプチャ機能がデータベースで有効になっていることを示します。 変更データ キャプチャを削除するには、使用、 [sys.sp_cdc_disable_db](../../relational-databases/system-stored-procedures/sys-sp-cdc-disable-db-transact-sql.md)ストアド プロシージャ。 詳細については、「[変更データ キャプチャについて &#40;SQL Server&#41;](../../relational-databases/track-changes/about-change-data-capture-sql-server.md)」を参照してください。  
   
--   **ColumnStoreIndex**:その 1 つ以上のテーブルが列ストア インデックスを示します。 エディションに移動するデータベースを有効にする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この機能をサポートしていないを使用して、 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)列ストア インデックスを削除するステートメント。 詳細については、[列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-overview.md)を参照してください。  
+-   **ColumnStoreIndex**:その 1 つ以上のテーブルが列ストア インデックスを示します。 エディションに移動するデータベースを有効にする[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]この機能をサポートしていないを使用して、 [DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)または[ALTER INDEX](../../t-sql/statements/alter-index-transact-sql.md)列ストア インデックスを削除するステートメント。 詳細については、次を参照してください。[列ストア インデックス](../../relational-databases/indexes/columnstore-indexes-overview.md)します。  
   
     **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。  
   

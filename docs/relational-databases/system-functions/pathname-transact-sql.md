@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6b95ad90-6c82-4a23-9294-a2adb74934a3
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: fe641df85802baab70efa514179f5abbeaea8951
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f79f9f94d56c900d879fce06646b401f735e0bd0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47852020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140577"
 ---
 # <a name="pathname-transact-sql"></a>PathName (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *@option*  
  整数[式](../../t-sql/language-elements/expressions-transact-sql.md)パスのサーバー コンポーネントの書式設定方法を定義します。 *@option* 次の値のいずれかを指定できます。 既定値は 0 です。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|サーバー名を BIOS 形式に変換して返します (例: `\\SERVERNAME\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F19F7-38EA-4AB0-BB89-E6C545DBD3F9`)。|  
 |1|たとえば、サーバー名を変換せずが返されます。 `\\ServerName\MSSQLSERVER\v1\Archive\dbo\Records\Chart\A73F1`|  
@@ -57,24 +56,24 @@ column_name.PathName ( @option [ , use_replica_computer_name ] )
  *use_replica_computer_name*  
  Always On 可用性グループで、サーバー名を返される方法を定義するビット値。  
   
- データベースは、Always On 可用性グループには属していない、ときにこの引数の値は無視されます。 コンピューター名は、パスで常に使用されます。  
+ データベースは、Always On 可用性グループには属していない、ときにこの引数の値は無視されます。 コンピューター名は常に、パスに使用します。  
   
  Always On 可用性データベースが属している場合にグループ化、しの値*use_replica_computer_name*の出力には、次の影響、 **PathName**関数。  
   
 |値|説明|  
 |-----------|-----------------|  
-|指定されていません。|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
-|0|関数は、パス内の仮想ネットワーク名 (VNN) を返します。|  
+|指定されていません。|関数は、パスに仮想ネットワーク名 (VNN) を返します。|  
+|0|関数は、パスに仮想ネットワーク名 (VNN) を返します。|  
 |1|関数は、パス内のコンピューター名を返します。|  
   
 ## <a name="return-type"></a>戻り値の型  
  **nvarchar(max)**  
   
 ## <a name="return-value"></a>戻り値  
- 戻り値は、BLOB の完全修飾論理パスまたは NETBIOS パスです。 PathName は IP アドレスを返しません。 FILESTREAM BLOB が作成されていない場合は、NULL が返されます。  
+ 返される値は完全修飾論理パスまたは BLOB の NETBIOS パスです。 パス名では、IP アドレスは返されません。 FILESTREAM BLOB が作成されていない場合は、NULL が返されます。  
   
 ## <a name="remarks"></a>コメント  
- ROWGUID 列は、PathName を呼び出す任意のクエリでアクセスできる必要があります。  
+ ROWGUID 列は、PathName を呼び出すクエリの表示である必要があります。  
   
  FILESTREAM BLOB は、[!INCLUDE[tsql](../../includes/tsql-md.md)] でのみ作成できます。  
   
@@ -92,8 +91,8 @@ SET @PathName = (
     );  
 ```  
   
-### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. FILESTREAM BLOB のパスをテーブルに表示する  
- 次の例では、3 つの FILESTREAM BLOB のパスを作成および表示します。  
+### <a name="b-displaying-the-paths-for-filestream-blobs-in-a-table"></a>B. テーブルに FILESTREAM Blob のパスを表示します。  
+ 次の例では、作成し、次の 3 つの FILESTREAM Blob のパスが表示されます。  
   
 ```sql  
 -- Create a FILESTREAM-enabled database.  
@@ -148,7 +147,7 @@ GO
 DROP DATABASE PathNameDB;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バイナリ ラージ オブジェクト &#40;Blob&#41; データ &#40;SQL Server&#41;](../../relational-databases/blob/binary-large-object-blob-data-sql-server.md)   
  [GET_FILESTREAM_TRANSACTION_CONTEXT &#40;TRANSACT-SQL&#41;](../../t-sql/functions/get-filestream-transaction-context-transact-sql.md)   
  [OpenSqlFilestream による FILESTREAM データへのアクセス](../../relational-databases/blob/access-filestream-data-with-opensqlfilestream.md)  

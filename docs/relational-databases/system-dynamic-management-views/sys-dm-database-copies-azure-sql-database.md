@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: d03d4657-86d1-4496-97e6-cc3bc292e0b1
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 6b5a0a656693d66e701642c9c2202c2862136a54
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0654bd9d15591d994b05ab2c01d9912bc0c56117
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62741963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005082"
 ---
 # <a name="sysdmdatabasecopies-azure-sql-database"></a>sys.dm_database_copies (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -50,11 +49,11 @@ ms.locfileid: "62741963"
 |**partner_database**|**sysname**|パートナー サーバー上のデータベース コピーの名前です。|  
 |**replication_state**|**tinyint**|このデータベースの連続コピー レプリケーションの状態。 値は次のとおりです。<br /><br /> 0 = 保留中です。 データベースのコピーの作成がスケジュールされているが、必要な準備手順がまだ完了していないまたはシード クォータによって一時的にブロックされます。<br /><br /> 1 = シード処理します。 データベースのコピーがシード中同期されていない場合完全ソース データベースとします。 この状態では、コピーに接続することはできません。 実行中のシード処理操作をキャンセルするには、データベースのコピーを削除する必要があります。|  
 |**replication_state_desc**|**nvarchar (256)**|Replication_state のいずれかの説明です。<br /><br /> PENDING<br /><br /> SEEDING<br />|  
-|**maximum_lag**|**int**|予約フィールドです。|  
+|**maximum_lag**|**int**|予約済みのフィールド。|  
 |**is_continuous_copy**|**bit**|0 = 0 を返します。|  
 |**is_target_role**|**bit**|0 = ソース データベース<br /><br /> 1 = データベースのコピー|  
-|**is_interlink_connected**|bit|予約フィールドです。|  
-|**is_offline_secondary**|bit|予約フィールドです。|  
+|**is_interlink_connected**|bit|予約済みのフィールド。|  
+|**is_offline_secondary**|bit|予約済みのフィールド。|  
   
 ## <a name="permissions"></a>アクセス許可  
  このビューはのみ利用可能、**マスター**データベース、サーバー レベル プリンシパル ログインをします。  

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: cb5e1e15-c5b4-44ab-892f-bf1ae601d0a5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8ae20bac37053c8eb70f2d1fda24a5a81fc1999
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe4c9a57dd8023561ea3d6d93bce424133a0d5dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695773"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67919542"
 ---
 # <a name="connection-ado-for-visual-c-syntax"></a>Connection (Visual C++ 構文用の ADO)
 ## <a name="methods"></a>メソッド  
@@ -77,5 +76,5 @@ WillConnect(BSTR *ConnectionString, BSTR *UserID, BSTR *Password, long *Options,
 WillExecute(BSTR *Source, CursorTypeEnum *CursorType, LockTypeEnum *LockType, long *Options, EventStatusEnum *adStatus, _ADOCommand *pCommand, _ADORecordset *pRecordset, _ADOConnection *pConnection)  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

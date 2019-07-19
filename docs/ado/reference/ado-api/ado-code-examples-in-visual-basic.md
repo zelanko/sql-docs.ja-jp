@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1152893e-b617-40f1-88b6-81e82e2234f1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 15e4643baed45b04bff003c6f0fcb25b2e8951a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2c21f18d403817acb536367df97c8b555a4c8b8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718179"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921198"
 ---
 # <a name="ado-code-examples-in-visual-basic"></a>Visual Basic での ADO のコード例
 次のコード例を使用して、ADO メソッド、プロパティ、および Visual Basic で記述するときにイベントを使用する方法について説明します。  
@@ -90,7 +89,7 @@ ms.locfileid: "66718179"
   
 -   [UpdateBatch および CancelBatch メソッドの例](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 -   [AbsolutePage、PageCount、PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vb.md)  
   
@@ -156,7 +155,7 @@ ms.locfileid: "66718179"
   
 -   [Version プロパティの例](../../../ado/reference/ado-api/version-property-example-vb.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO のコード例の VBScript](../../../ado/reference/ado-api/ado-code-examples-vbscript.md)   
  [Visual C で ADO のコード例](../../../ado/reference/ado-api/ado-code-examples-in-visual-c.md)   
  [付録 D: ADO のサンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md)

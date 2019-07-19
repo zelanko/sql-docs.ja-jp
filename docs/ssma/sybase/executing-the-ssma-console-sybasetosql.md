@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: ea8950b7-fabc-4aa4-89f8-9573a2617d70
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 6cbdd0a1394114e3fdef0511c7ed14658f7dd9b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 602bc0ac1584f9ff369efa8a2484a16a97a92285
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029153"
 ---
 # <a name="executing-the-ssma-console-sybasetosql"></a>SSMA コンソールの実行 (SybaseToSQL)
 Microsoft は、ファイルのコマンドを実行し、SSMA アクティビティを制御する堅牢なスクリプトのセットを提供します。 次のセクションでは、同じについて説明します。  
@@ -113,7 +112,7 @@ Microsoft は、ファイルのコマンドを実行し、SSMA アクティビ�
 > - **参照**コンソールで、UI の機能がサポートされていません。  
 > - スクリプト ファイルの作成 ' の詳細については、次を参照してください。[スクリプト ファイルの作成&#40;SybaseToSQL&#41;](../../ssma/sybase/creating-script-files-sybasetosql.md)します。  
   
-### <a name="connect-source-database"></a>connect-source-database  
+### <a name="connect-source-database"></a>接続ソース データベース  
 このコマンドは、ソース データベースへの接続を実行し、ソース データベースはすべてのメタデータの高レベルのメタデータを読み込みます。
   
 ソースへの接続を確立できない場合は、エラーが生成され、さらに実行を停止するコンソール アプリケーションです。

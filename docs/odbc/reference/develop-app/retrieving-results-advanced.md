@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: bc00c379-71a7-407a-975c-898243f39bb6
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5199fb82cbc6b2a9da644554db12dc525cc0be40
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22a88a96b856ba0976dcb8600d26f78b772654bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998901"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020504"
 ---
 # <a name="retrieving-results-advanced"></a>結果の取得 (詳細)
 アプリケーションがバインドされたデータ バッファーのアドレスおよび対応する長さ/インジケーターにオフセットを追加することを指定できますバッファー アドレスとき**SQLBulkOperations**、 **SQLFetch**、 **SQLFetchScroll**、または**SQLSetPos**が呼び出されます。 これらの追加の結果は、これらの操作で使用されるアドレスを決定します。  

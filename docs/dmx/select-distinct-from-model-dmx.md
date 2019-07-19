@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 95a8a1d40792c2993d44624a321bccf99030e181
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5906dc6d964603576831a5c7009cd0224f0ffb08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62658894"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928447"
 ---
 # <a name="select-distinct-from-ltmodel-gt-dmx"></a>SELECT DISTINCT FROM&lt;モデル&gt;(DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +32,7 @@ SELECT [FLATTENED] DISTINCT [TOP <n>] <expression list> FROM <model>
  *n*  
  任意。 返される行の数を指定する整数。  
   
- *expression list*  
+ *式リスト*  
  関連する列識別子 (モデルより抽出) または式のコンマ区切りリストです。  
   
  *model*  
@@ -135,7 +134,7 @@ FROM [TM Decision Tree]
 >  最小バケットの最小値および最大バケットの最大値は、計測された値のうちの最大値と最小値になります。 この計測された範囲に該当しないすべての値は、最小バケットおよび最大バケットに属していると見なされます。  
   
 ## <a name="see-also"></a>参照  
- [選択&AMP;#40;DMX&AMP;#41;](../dmx/select-dmx.md)   
+ [選択&#40;DMX&#41;](../dmx/select-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
   

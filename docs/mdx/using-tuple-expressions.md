@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: f5fae4c4351cc8e443523e54e2bc8b88f89ad098
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 55b55f2104e900104c051021fc02761d32c63e5e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68135128"
 ---
 # <a name="using-tuple-expressions"></a>組式の使用
 
@@ -26,7 +25,7 @@ ms.locfileid: "63251496"
   
  タプルの識別子の完全な式は 1 つ以上の明示的に指定されたメンバー、かっこで囲まれて構成されています。  
   
- (*Member_expression* [ ,*Member_expression* ... ] )  
+ (*メンバー式*[、*Member_expression* ...])  
   
  組は完全修飾すること、暗黙的なメンバーを含めることができます、または 1 つのメンバーを含めることができます。  
   
@@ -44,7 +43,7 @@ ms.locfileid: "63251496"
 ## <a name="one-member-tuples"></a>1 つのメンバーの組  
  組式に 1 つのメンバーがある場合は、MDX は、式を評価するための 1 つのメンバーの組にメンバーを変換します。 つまり、組式の代わりにメンバー式 `[Measures].[TestMeasure]` を使用することは、組式 `( [Measures].[TestMeasure] ).` と機能的に等価です。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  
   

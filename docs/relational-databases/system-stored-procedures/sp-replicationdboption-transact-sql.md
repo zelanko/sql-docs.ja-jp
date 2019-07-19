@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 153c2e2b8c75c21451dca3b673129a059d78e3a6
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: e8285713df1fb17b2e82dcfa6edac0fd6db5500a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527334"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950660"
 ---
 # <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +41,10 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@dbname=**] **'***dbname***'**  
+ [ **@dbname=** ] **'***dbname***'**  
  レプリケーション データベース オプションの設定対象のデータベースです。 *db_name*は**sysname**、既定値はありません。  
   
- [**@optname=**] **'***optname***'**  
+ [ **@optname=** ] **'***optname***'**  
  有効または無効にするレプリケーション データベース オプション。 *optname*は**sysname**、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -53,7 +52,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 |**マージ パブリッシュします。**|データベースは、マージ パブリケーションで使用できます。|  
 |**発行**|データベースは、他の種類のパブリケーションで使用できます。|  
 |**サブスクライブ**|データベースは、サブスクリプション データベースです。|  
-|**バックアップと同期します。**|データベースは、連携バックアップに対して有効になっています。 詳細については、[トランザクション レプリケーションの連携バックアップの有効化&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)を参照してください。|  
+|**バックアップと同期します。**|データベースは、連携バックアップに対して有効になっています。 詳細については、次を参照してください。[トランザクション レプリケーションの連携バックアップの有効化&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/administration/enable-coordinated-backups-for-transactional-replication.md)します。|  
   
 `[ @value = ] 'value'` 有効または、特定のレプリケーション データベース オプションを無効にするかどうかです。 *値*は**sysname**、でき、 **true**または**false**します。 この値が**false**と*optname*は**マージ パブリッシュ**、マージ パブリッシュされたデータベースへのサブスクリプションが削除されます。  
   

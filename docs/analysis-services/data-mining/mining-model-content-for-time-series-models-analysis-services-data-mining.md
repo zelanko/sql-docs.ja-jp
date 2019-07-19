@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 18013587c8c6eb23989f8f22150b8980d0e5afc1
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52513781"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182658"
 ---
 # <a name="mining-model-content-for-time-series-models-analysis-services---data-mining"></a>タイム シリーズ モデルのマイニング モデル コンテンツ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "52513781"
 >  式を表示するには、リーフ ノードのレベルで完全な回帰式を取得します。中間のノードやルート ノードでは取得できません。  
   
 ### <a name="structure-of-an-arima-model"></a>ARIMA モデルの構造  
- ARIMA アルゴリズムが 1 つのデータ系列の組み合わせごとの情報を作成します (など **[Region]**) と予測可能な属性 (など **[Sales Amount]**)-を表す式、時間の経過と共に、予測可能属性を変更します。  
+ ARIMA アルゴリズムが 1 つのデータ系列の組み合わせごとの情報を作成します (など **[Region]** ) と予測可能な属性 (など **[Sales Amount]** )-を表す式、時間の経過と共に、予測可能属性を変更します。  
   
  各系列の式は、複数の構成要素から導き出されます。これらの構成要素は、データ内で検出された周期構造ごとに 1 つずつあります。 たとえば、1 か月ごとに収集される売上データがある場合には、月、四半期、年などの周期構造がアルゴリズムによって検出される可能性があります。  
   
@@ -153,16 +153,16 @@ ms.locfileid: "52513781"
  NODE_DESCRIPTION  
  現在のノードのルール、分割、または式の説明テキスト。  
   
- **ARTXP:** 詳細については、[ARTXP ツリーについて](#bkmk_ARTXP_1)を参照してください。  
+ **ARTXP:** 詳細については、次を参照してください。 [ARTXP ツリーについて](#bkmk_ARTXP_1)します。  
   
- **ARIMA:** 詳細については、[ARIMA ツリーについて](#bkmk_ARIMA_1)を参照してください。  
+ **ARIMA:** 詳細については、次を参照してください。 [ARIMA ツリーについて](#bkmk_ARIMA_1)します。  
   
  NODE_RULE  
  現在のノードのルール、分割、または式の XML 記述。  
   
  **ARTXP:** 一般に、NODE_RULE は NODE_CAPTION に対応します。  
   
- **ARIMA:** 詳細については、[ARIMA ツリーについて](#bkmk_ARIMA_1)を参照してください。  
+ **ARIMA:** 詳細については、次を参照してください。 [ARIMA ツリーについて](#bkmk_ARIMA_1)します。  
   
  MARGINAL_RULE  
  そのノードに固有の分割またはコンテンツの XML 記述。  
@@ -193,7 +193,7 @@ ms.locfileid: "52513781"
  NODE_SUPPORT  
  このノードをサポートするケースの数。  
   
- **ARTXP:****(すべて)** ノードは、分岐に含まれるタイム スライスの合計数を示します。  
+ **ARTXP:** **(すべて)** ノードは、分岐に含まれるタイム スライスの合計数を示します。  
   
  末端のノードの場合は、NODE_CAPTION によって表される範囲に含まれるタイム スライスの数を表します。 末端のノードのタイム スライスの数を合計すると、常に分岐の **[(すべて)]** ノードの NODE_SUPPORT 値になります。  
   
@@ -240,14 +240,14 @@ ms.locfileid: "52513781"
  要するに、データ マイニングは、興味の対象になりうる現象がどこで発生しているかについてのヒントを得るのには役立ちますが、その情報の価値をコンテキストの中で正確に解釈するためには、詳細な調査と、ビジネス ユーザーの専門知識が必要になります。  
   
 ### <a name="elements-of-the-artxp-time-series-formula"></a>ARTXP のタイム シリーズ式の要素  
- ARTXP のツリーまたは分岐の完全な式を表示するには、 **Microsoft タイム シリーズ ビューアー** の [[マイニング凡例]](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)を使用することをお勧めします。これにより、すべての定数を判読可能な形式で表示できます。  
+ ARTXP のツリーまたは分岐の完全な式を表示するには、 **Microsoft タイム シリーズ ビューアー** の [マイニング凡例](../../analysis-services/data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)を使用することをお勧めします。これにより、すべての定数を判読可能な形式で表示できます。  
   
 -   [タイム シリーズ モデルの式の表示 &#40;データ マイニング&#41;](../../analysis-services/data-mining/view-the-formula-for-a-time-series-model-data-mining.md)  
   
  次のセクションで、式のサンプルを示して基本的な項について説明します。  
   
 #### <a name="mining-legend-for-an-artxp-formula"></a>ARTXP 式のマイニング凡例  
- 次の例は、 **[マイニング凡例]** に表示されたモデルの一部の ARTXP 式を示しています。 この式を表示するには、Microsoft タイム シリーズ ビューアーで基本的なデータ マイニング チュートリアルで作成した [Forecasting] モデルを開く] をクリックして、**モデル**タブをクリックし、R250 のツリーを選択します。Europe データ系列。  
+ 次の例は、 **[マイニング凡例]** に表示されたモデルの一部の ARTXP 式を示しています。 この式を表示するには、Microsoft タイム シリーズ ビューアーで基本的なデータ マイニング チュートリアルで作成した [Forecasting] モデルを開く をクリックして、**モデル**タブをクリックし、R250 のツリーを選択します。Europe データ系列。  
   
  この例で使用される式を表示するには、7/5/2003 以降のデータ系列を表すノードをクリックします。  
   

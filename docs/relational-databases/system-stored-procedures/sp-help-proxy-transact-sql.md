@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: a2fce164-2b64-40c2-8f35-6eeb7844abf1
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5e0bbf6e8befa751ee680cd97c2a29ad9f0fe084
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 904a694d73613bb1c40c671b18ca33e5d9b5d0e6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085285"
 ---
 # <a name="sphelpproxy-transact-sql"></a>sp_help_proxy (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ sp_help_proxy
   
  次の表では、各サブシステムの値を示します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |ActiveScripting|ActiveX スクリプト|  
 |CmdExec|オペレーティング システム (CmdExec)|  
@@ -66,7 +65,7 @@ sp_help_proxy
 |Dts|SSIS パッケージ実行|  
 |PowerShell|PowerShell スクリプト|  
   
-`[ @name = ] 'name'` 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン プロキシを一覧表示します。 名前は**nvarchar (256)**、既定値は NULL です。 ときに*名前*が指定されている*subsystem_name*も指定する必要があります。  
+`[ @name = ] 'name'` 名前、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログイン プロキシを一覧表示します。 名前は**nvarchar (256)** 、既定値は NULL です。 ときに*名前*が指定されている*subsystem_name*も指定する必要があります。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -78,11 +77,11 @@ sp_help_proxy
 |**proxy_id**|**int**|プロキシ識別番号。|  
 |**name**|**sysname**|プロキシの名前。|  
 |**credential_identity**|**sysname**|Microsoft Windows ドメインの名前と、プロキシに関連付けられている資格情報のユーザー名。|  
-|**enabled**|**tinyint**|プロキシが有効かどうか  { **0** = 無効、 **1** = 有効}|  
+|**enabled**|**tinyint**|プロキシが有効かどうか { **0** = 無効、 **1** = 有効}|  
 |**description**|**nvarchar(1024)**|このプロキシの説明です。|  
 |**user_sid**|**varbinary(85)**|プロキシに関する Windows ユーザーの Windows セキュリティ ID|  
 |**credential_id**|**int**|このプロキシに関連付けられている資格情報の識別子。|  
-|**credential_identity_exists**|**int**|credential_identity が存在するかどうか  {0 = 1 が存在しない = が存在する}|  
+|**credential_identity_exists**|**int**|credential_identity が存在するかどうか {0 = 1 が存在しない = が存在する}|  
   
 ## <a name="remarks"></a>コメント  
  パラメーターが指定されていないときに**sp_help_proxy**インスタンス内のすべてのプロキシ情報を一覧表示します。  
@@ -122,7 +121,7 @@ EXEC dbo.sp_help_proxy
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Server エージェント ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sql-server-agent-stored-procedures-transact-sql.md)   
  [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)   
  [sp_delete_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-proxy-transact-sql.md)  

@@ -15,14 +15,13 @@ helpviewer_keywords:
 ms.assetid: 87155bfa-3a73-4158-9d4d-cb7435dac201
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5032f6d038130fc78405949a171a39a6f0ec1842
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1badbeb3898850627a6a2735d584df25ea344348
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63014024"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130907"
 ---
 # <a name="bulk-copying-text-and-image-data"></a>テキスト データと画像データの一括コピー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "63014024"
   
  **bcp_moretext**列を識別するためにパラメーターがありません。 複数の場合**テキスト**、 **ntext**、または**イメージ**、行内の列**bcp_moretext**で動作、**テキスト**、 **ntext**、または**イメージ**列序数が最も低い、最高の序数の列に進みますから始まる列。 **bcp_moretext**送信されるデータの長さの合計が最新で指定された長さと等しい場合は、次 1 つの列からが**bcp_collen**または**bcp_bind**現在の列。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [一括コピー操作を実行する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   

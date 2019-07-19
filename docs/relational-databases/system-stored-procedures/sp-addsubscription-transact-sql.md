@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 61ddf287-1fa0-4c1a-8657-ced50cebf0e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6a0064787eee6c3ac267b3ababcd9881e794ff2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f2ca3505d952e1bffa68d23fe2de5b51c050640c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62998307"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68096225"
 ---
 # <a name="spaddsubscription-transact-sql"></a>sp_addsubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +81,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @article=] '*記事*'  
  パブリケーションがサブスクライブされるアーティクルを指定します。 *記事*は**sysname**、既定値は all です。 all に設定した場合は、そのパブリケーションのすべてのアーティクルに対してサブスクリプションが加えられます。 Oracle パブリッシャーの場合、サポートされている値は all と NULL だけです。  
   
- [ @subscriber=] '*subscriber*'  
+ [ @subscriber=] '*サブスクライバー*'  
  サブスクライバーの名前です。 *サブスクライバー* は **sysname** 、既定値は NULL です。  
   
  [ @destination_db=] '*destination_db*'  
@@ -91,9 +90,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @sync_type=] '*sync_type*'  
  サブスクリプションの同期型です。 *sync_type*は**nvarchar (255)** 値は次のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|なし|サブスクライバーでは、スキーマと初期データのパブリッシュされたテーブルを既に持っています。<br /><br /> 注:このオプションは非推奨とされました。 代わりに replication support only を使用してください。|  
+|none|サブスクライバーでは、スキーマと初期データのパブリッシュされたテーブルを既に持っています。<br /><br /> 注:このオプションは非推奨とされました。 代わりに replication support only を使用してください。|  
 |automatic (既定値)|スキーマと初期データのパブリッシュされたテーブルの」は最初に、サブスクライバーに転送されます。|  
 |replication support only|更新サブスクリプションをサポートするアーティクルのカスタム ストアド プロシージャとトリガーがサブスクライバー側で必要に応じて自動的に生成されます。 サブスクライバーに既にあるスキーマと初期データのパブリッシュされたテーブルの前提としています。 ピア ツー ピア トランザクション レプリケーション トポロジを構成するときに、トポロジ内のすべてのノードでデータが同じであることを確認します。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。<br /><br /> *SQL Server 以外のパブリケーションに対するサブスクリプションの場合はサポートされていません。*|  
 |バックアップを初期化します。|パブリッシュされたテーブルのスキーマと初期データは、パブリケーション データベースのバックアップから取得されます。 サブスクライバーがパブリケーション データベースのバックアップへのアクセスであると仮定します。 バックアップのバックアップとメディアの種類の場所がで指定された*backupdevicename*と*backupdevicetype*します。 このオプションを使用する場合、ピア ツー ピア トランザクション レプリケーション トポロジの構成中に停止必要はありません。<br /><br /> *SQL Server 以外のパブリケーションに対するサブスクリプションの場合はサポートされていません。*|  
@@ -102,7 +101,7 @@ sp_addsubscription [ @publication = ] 'publication'
 > [!NOTE]  
 >  システム テーブルとデータは常に転送されます。  
   
- [ @status=] '*status*'  
+ [ @status=] '*状態*'  
  サブスクリプションの状態です。 *ステータス*は**sysname**既定値は NULL です。 このパラメーターが明示的に設定されていない場合のレプリケーションが自動的に設定がこれらの値のいずれかにします。  
   
 |値|説明|  
@@ -119,9 +118,9 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @update_mode=] '*update_mode*'  
  更新プログラムの種類です。*update_mode*は**nvarchar (30)** 、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
-|read only (既定値)|サブスクリプションとは、読み取り専用です。 サブスクライバーの変更はパブリッシャーには送信されません。|  
+|read only (既定値)|サブスクリプションは読み取り専用です。 サブスクライバーの変更はパブリッシャーには送信されません。|  
 |sync tran|即時更新サブスクリプションのサポートを有効にします。 Oracle パブリッシャーに対してはサポートされていません。|  
 |キューに置かれた tran|サブスクリプションのキュー更新を有効にします。 データの変更は、サブスクライバーで行われた、キューに格納されているし、その後、パブリッシャーに反映されます。 Oracle パブリッシャーに対してはサポートされていません。|  
 |failover|キュー更新をフェールオーバーとするサブスクリプションの即時更新を有効にします。 サブスクライバーでデータを変更し、それを直ちにパブリッシャーに配信することができます。 パブリッシャーとサブスクライバーが接続されていない場合は、更新モードを変更することにより、サブスクライバーで加えられたデータの変更を、サブスクライバーとパブリッシャーが接続されるまで、キューに格納することができます。 Oracle パブリッシャーに対してはサポートされていません。|  
@@ -135,13 +134,13 @@ sp_addsubscription [ @publication = ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |true|ディストリビューション エージェントはサブスクライバーに戻す、サブスクライバーで発生したトランザクションを送信しません。 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
-|false|ディストリビューション エージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに戻します。|  
+|False|ディストリビューション エージェントは、サブスクライバーで発生したトランザクションをサブスクライバーに戻します。|  
 |NULL (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバーの場合は true、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 以外のサブスクライバーの場合は false に自動設定されます。|  
   
  [ @frequency_type=] *frequency_type*  
  ディストリビューション タスクをスケジュールする頻度です。 *frequency_type* int であり、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |1|指定日時|  
 |2|[要求時]|  
@@ -161,7 +160,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |1|First|  
-|2|第 2 週|  
+|2|Second|  
 |4|サードパーティ|  
 |8|4 番目|  
 |16|Last|  
@@ -176,7 +175,7 @@ sp_addsubscription [ @publication = ] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |1|1 回。|  
-|2|第 2 週|  
+|2|Second|  
 |4|Minute|  
 |8|Hour|  
 |NULL||  
@@ -199,7 +198,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @optional_command_line=] '*optional_command_line*'  
  省略可能なコマンド プロンプトが実行されます。 *optional_command_line*は**nvarchar (4000)** 、既定値は NULL です。  
   
- [ @reserved=] '*reserved*'  
+ [ @reserved=] '*予約*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
  [ @enabled_for_syncmgr=] '*enabled_for_syncmgr*'  
@@ -229,13 +228,13 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @distribution_job_name= ] '*distribution_job_name*'  
  [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
- [ @publisher= ] '*publisher*'  
+ [ @publisher=] '*パブリッシャー*'  
  以外を指定[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
 > [!NOTE]  
 >  *パブリッシャー*を指定しないで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。  
   
- [ @backupdevicetype= ] '*backupdevicetype*'  
+ [ @backupdevicetype=] '*backupdevicetype*'  
  バックアップからサブスクライバーを初期化する際に使用するバックアップ デバイスの種類を指定します。 *backupdevicetype*は**nvarchar (20)** 、これらの値のいずれかを指定できます。  
   
 |値|説明|  
@@ -249,7 +248,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @backupdevicename= ] '*backupdevicename*'  
  バックアップからサブスクライバーを初期化する際に使用するデバイスの名前を指定します。 *backupdevicename*は**nvarchar (1000)** 、既定値は NULL です。  
   
- [ @mediapassword= ] '*mediapassword*'  
+ [ @mediapassword=] '*mediapassword*'  
  メディア セットのパスワードを指定します (メディアをフォーマットしたときにパスワードを設定した場合)。 *mediapassword*は**sysname**既定値は NULL です。  
   
 > [!NOTE]  
@@ -276,7 +275,7 @@ sp_addsubscription [ @publication = ] 'publication'
  [ @subscriber_type=] *subscriber_type*  
  サブスクライバーの種類です。 *subscriber_type*は**tinyint**、これらの値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |0 (既定値)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サブスクライバー|  
 |1|ODBC データ ソース サーバー|  
@@ -316,7 +315,7 @@ sp_addsubscription [ @publication = ] 'publication'
 ## <a name="example"></a>例  
  [!code-sql[HowTo#sp_addtranpushsubscription_agent](../../relational-databases/replication/codesnippet/tsql/sp-addsubscription-trans_1.sql)]  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 以外のサブスクライバーのサブスクリプションの作成](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   

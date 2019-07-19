@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6362e35e-0ab3-4638-855b-1ce013f5fd6d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 09544c1e8735c3a6ad4fd6abfca430e84fabd775
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: de0325925bb1ad1626987361435056ff21a26be6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62910197"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072653"
 ---
 # <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -37,7 +36,7 @@ ms.locfileid: "62910197"
 |**パブリケーション**|**nvarchar(128)**|パブリケーションの名前を指定します。|  
 |**article**|**nvarchar(128)**|アーティクルの名前です。|  
 |**サブスクライバー**|**nvarchar(128)**|サブスクライバーの名前。|  
-|**subscriber_db**|**nvarchar(128)**|サブスクリプション データベースの名前。|  
+|**@subscriber_db**|**nvarchar(128)**|サブスクリプション データベースの名前。|  
 |**is_pub_range**|**bit**|Id 範囲がパブリッシャーに割り当てられているかどうかを示します。|  
 |**ranges_allocated**|**tinyint**|割り当てられている ID 範囲の数です。|  
 |**range_begin**|**numeric(38)**|範囲の開始値。|  
@@ -47,7 +46,7 @@ ms.locfileid: "62910197"
 |**max_used**|**numeric(38)**|使用されている最大 ID 値です。|  
 |**time_of_allocation**|**datetime**|時刻、割り当てが行われた場合。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

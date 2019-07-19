@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 195ffdef-cfde-4bf4-a3ae-e7402bb07972
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 664c2d3d4e1a1cea78bd93c748d9c17d2f1fe670
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73047e0741d4dee12ecec3e83df308e3f7abd343
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62667722"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021023"
 ---
 # <a name="running-test-cases-sybasetosql"></a>テスト ケースの実行 (SybaseToSQL)
 SSMA のテスト担当者がテスト_ケースを実行すると、テスト用に選択されたオブジェクトを実行し、検証結果に関するレポートを作成します。 結果が両方のプラットフォームで同一の場合、テストは成功しました。 Sybase の間でオブジェクトの対応と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]SSMA プロジェクトを現在のスキーマ マッピングの設定に従って決定されます。  
@@ -35,7 +34,7 @@ SSMA のテスト担当者がテスト_ケースを実行すると、テスト�
   
 ## <a name="test-case-execution-steps"></a>テスト_ケースの実行ステップ  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
 SSMA のテスト担当者は、テストの実行を開始する前に、テストのすべての前提条件が満たされたかどうかを確認します。 いくつかの条件が満たされない場合、エラー メッセージが表示されます。  
   
 ### <a name="initialization"></a>初期化  
@@ -47,8 +46,8 @@ SSMATESTER2005db または SSMATESTER2008db データベースと、Sybase で�
   
 |名前|型|説明|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
-|USER_TABLE$Aud|テーブル|テーブルな行を削除し、上書きを保存する場所です。|  
+|USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
+|USER_TABLE$ Aud|テーブル|テーブルな行を削除し、上書きを保存する場所です。|  
 |USER_TABLE$AudID|テーブル|追加または変更された行が保存されているテーブル。|  
 |USER_TABLE|表示|テーブルの変更の簡略化された表現。|  
 |USER_TABLE$new|表示|行の挿入と上書きの簡略化された表現。|  
@@ -59,7 +58,7 @@ SSMATESTER2005db または SSMATESTER2008db データベースと、Sybase で�
   
 |名前|型|説明|  
 |--------|--------|---------------|  
-|USER_TABLE$Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
+|USER_TABLE$ Trg|トリガー|検証済みのテーブルで変更の監査をトリガーします。|  
   
 ### <a name="test-object-calls"></a>オブジェクトの呼び出しをテストします。  
 この手順では、SSMA テスト担当者は、テスト用に選択した各オブジェクトを呼び出し、結果を比較しますをレポートが表示されます。  
@@ -70,7 +69,7 @@ SSMA のテスト担当者がで作成された補助オブジェクトをクリ
 ## <a name="next-step"></a>次の手順  
 [テスト_ケースのレポートを表示する&#40;SybaseToSQL&#41;](../../ssma/sybase/viewing-test-case-reports-sybasetosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [選択し、テストするオブジェクトを構成する&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-objects-to-test-sybasetosql.md)  
 [影響を受けるオブジェクトの選択と構成&#40;SybaseToSQL&#41;](../../ssma/sybase/selecting-and-configuring-affected-objects-sybasetosql.md)  
 [移行されたデータベース オブジェクトのテスト&#40;SybaseToSQL&#41;](../../ssma/sybase/testing-migrated-database-objects-sybasetosql.md)  

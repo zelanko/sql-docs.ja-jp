@@ -16,11 +16,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: f7045454dfd2d05e37e18cdc57f53090cf8b9e76
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52778354"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68212084"
 ---
 # <a name="set-the-expiration-period-for-subscriptions"></a>サブスクリプションの有効期限の設定
   このトピックでは、 [!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)] または [!INCLUDE[tsql](../../../includes/tsql-md.md)]を使用して、サブスクリプションの有効期限を設定する方法について説明します。 サブスクリプションの期限が切れて削除されるまでの時間は、サブスクリプションの有効期限によって決定されます。 詳しくは、「 [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)」をご覧ください。  
@@ -54,7 +54,7 @@ ms.locfileid: "52778354"
   
 #### <a name="to-set-the-expiration-period-for-subscriptions"></a>サブスクリプションの有効期限を設定するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[全般]** ページで、**[サブスクリプションの有効期限]** セクションに、サブスクリプションに有効期限を設定するかどうかを指定します。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[全般]** ページで、 **[サブスクリプションの有効期限]** セクションに、サブスクリプションに有効期限を設定するかどうかを指定します。  
   
 2.  有効期限を設定する場合、有効期限の期間を指定します。  
   
@@ -79,11 +79,11 @@ ms.locfileid: "52778354"
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショットまたはトランザクション パブリケーションのサブスクリプションに対して有効期限を変更するには  
   
-1.  パブリッシャーで [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を実行します。 **@property** に **retention** を、**@value** にサブスクリプションの新しい有効期限を時間単位で指定します。  
+1.  パブリッシャーで [sp_changepublication](/sql/relational-databases/system-stored-procedures/sp-changepublication-transact-sql)を実行します。 **@property** に **retention** を、 **@value** にサブスクリプションの新しい有効期限を時間単位で指定します。  
   
 #### <a name="to-change-the-expiration-period-for-a-subscription-to-a-merge-publication"></a>マージ パブリケーションのサブスクリプションに対して有効期限を変更するには  
   
-1.  パブリッシャーで [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)を実行します。引数には **@publication** と **@publisher**を使用して、サブスクリプションの有効期限を設定する方法について説明します。 結果セットの **retention_period_unit** の値 (次のいずれか) を確認します。  
+1.  パブリッシャーで [sp_helpmergepublication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)を実行します。引数には **@publication** と **@publisher** を使用して、サブスクリプションの有効期限を設定する方法について説明します。 結果セットの **retention_period_unit** の値 (次のいずれか) を確認します。  
   
     -   **0** = 日  
   
@@ -93,11 +93,11 @@ ms.locfileid: "52778354"
   
     -   **3** = 年  
   
-2.  パブリッシャーで [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 **@property** に **retention** を指定します。また、**@value** には、手順 1. の保有期間の単位に基づいて、サブスクリプションの新しい有効期限をテキストで指定します。  
+2.  パブリッシャーで [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 **@property** に **retention** を指定します。また、 **@value** には、手順 1. の保有期間の単位に基づいて、サブスクリプションの新しい有効期限をテキストで指定します。  
   
-3.  (省略可) パブリッシャーで [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 **@property** に **retention_period_unit** を、**@value** には、サブスクリプション有効期限に使用する新しい単位を指定します。  
+3.  (省略可) パブリッシャーで [sp_changemergepublication](/sql/relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql)を実行します。 **@property** に **retention_period_unit** を、 **@value** には、サブスクリプション有効期限に使用する新しい単位を指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Replication System Stored Procedures Concepts](../concepts/replication-system-stored-procedures-concepts.md)   
  [Subscription Expiration and Deactivation](../subscription-expiration-and-deactivation.md)  
   

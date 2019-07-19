@@ -11,13 +11,13 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: 449f86b80b93055bb23fe4cd32ace10e15724dbc
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56038343"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210992"
 ---
-# <a name="lesson-1-create-windows-azure-storage-objects"></a>レッスン 1:Windows Azure ストレージ オブジェクトを作成します。
+# <a name="lesson-1-create-windows-azure-storage-objects"></a>レッスン 1:Windows Azure ストレージ オブジェクトの作成
   クラウド記憶域に [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] バックアップを作成する前に、まず、ストレージ アカウントを作成してから BLOB コンテナーを作成する必要があります。 レッスン 1 では、ストレージ アカウントと BLOB コンテナーを作成して、Windows Azure 管理ポータルへのログイン手順について説明します。  
   
 ## <a name="create-a-storage-account"></a>ストレージ アカウントを作成します。  
@@ -34,7 +34,7 @@ ms.locfileid: "56038343"
      ![Windows Azure ストレージ アカウント キーのスクリーン ショット](../../2014/tutorials/media/manageaccesskeys-backuptocloud.gif "Windows Azure ストレージ アカウント キーのスクリーン ショット")  
   
     > [!NOTE]  
-    >  ストレージ アカウントは、REST API を使用してプログラムで作成することもできます。 詳細については、[ストレージ アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=271928)を参照してください。  
+    >  ストレージ アカウントは、REST API を使用してプログラムで作成することもできます。 詳細については、次を参照してください。[ストレージ アカウントの作成](https://go.microsoft.com/fwlink/?LinkId=271928)です。  
   
 ### <a name="create-a-blob-container"></a>BLOB コンテナーの作成  
  コンテナーには、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。  
@@ -54,7 +54,7 @@ ms.locfileid: "56038343"
     > [!NOTE]  
     >  ストレージ アカウントへの認証は、パブリック コンテナーの作成を選択した場合でも、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のバックアップと復元に必要です。  
     >   
-    >  コンテナーは、REST API を使用してプログラムで作成することもできます。 詳細については、[コンテナーの作成](https://go.microsoft.com/fwlink/?LinkId=271946)を参照してください。  
+    >  コンテナーは、REST API を使用してプログラムで作成することもできます。 詳細については、次を参照してください。[コンテナーの作成](https://go.microsoft.com/fwlink/?LinkId=271946)です。  
   
 ### <a name="next-lesson"></a>次のレッスン  
  [レッスン 2:SQL Server 資格情報を作成する](../../2014/tutorials/lesson-2-create-a-sql-server-credential.md)します。  

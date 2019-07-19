@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: ca9c5e1a3e110e1f1f2f14e9bd9b52e245d457a6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 52e0c140acb944a774f5ab167bb81c662e3e32d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68038054"
 ---
 # <a name="using-set-functions"></a>集合関数の使用
 
@@ -215,7 +214,7 @@ ms.locfileid: "63251589"
   
  `FROM [Adventure Works]`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Functions&#40;MDX 構文&#41;](../mdx/functions-mdx-syntax.md)   
  [メンバー関数の使用](../mdx/using-member-functions.md)   
  [組関数の使用](../mdx/using-tuple-functions.md)  

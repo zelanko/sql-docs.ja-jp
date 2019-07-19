@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ba2fdccc-5ed4-40ef-a479-79497b4d61aa
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 09af9a0190b8ba3b01c72cfa29e0647ad6d6b74d
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 9ba9e1f0757f23072b5e4f18f73fb5f7c69a005a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528434"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68037365"
 ---
 # <a name="sysmailupdateaccountsp-transact-sql"></a>sysmail_update_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +56,13 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @account_name = ] 'account_name'` 更新するアカウントの名前。 *account_name*は**sysname**、既定値は NULL です。 少なくとも 1 つの*account_id*または*account_name*指定する必要があります。 両方が指定されている場合、手順は、アカウントの名前を変更します。  
   
-`[ @email_address = ] 'email_address'` メッセージを送信する新しい電子メール アドレス。 このアドレスは、インターネットの電子メール アドレスを指定する必要があります。 アドレスでサーバー名とは、データベース メールを使用してこのアカウントからメールを送信するサーバーです。 *email_address*は**nvarchar (128)**、既定値は NULL です。  
+`[ @email_address = ] 'email_address'` メッセージを送信する新しい電子メール アドレス。 このアドレスは、インターネットの電子メール アドレスを指定する必要があります。 アドレスでサーバー名とは、データベース メールを使用してこのアカウントからメールを送信するサーバーです。 *email_address*は**nvarchar (128)** 、既定値は NULL です。  
   
-`[ @display_name = ] 'display_name'` このアカウントから電子メール メッセージで使用する新しい表示名。 *display_name*は**nvarchar (128)**、既定値はありません。  
+`[ @display_name = ] 'display_name'` このアカウントから電子メール メッセージで使用する新しい表示名。 *display_name*は**nvarchar (128)** 、既定値はありません。  
   
-`[ @replyto_address = ] 'replyto_address'` このアカウントから電子メール メッセージの返信先 ヘッダーで使用する新しいアドレス。 *replyto_address*は**nvarchar (128)**、既定値はありません。  
+`[ @replyto_address = ] 'replyto_address'` このアカウントから電子メール メッセージの返信先 ヘッダーで使用する新しいアドレス。 *replyto_address*は**nvarchar (128)** 、既定値はありません。  
   
-`[ @description = ] 'description'` アカウントの新しい説明します。 *説明*は**nvarchar (256)**、既定値は NULL です。  
+`[ @description = ] 'description'` アカウントの新しい説明します。 *説明*は**nvarchar (256)** 、既定値は NULL です。  
   
 `[ @mailserver_name = ] 'server_name'` このアカウントを使用する SMTP メール サーバーの新しい名前。 実行するコンピューター[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]解決できる必要があります、 *server_name* IP アドレス。 *server_name*は**sysname**、既定値はありません。  
   
@@ -77,7 +76,7 @@ sysmail_update_account_sp [ [ @account_id = ] account_id ] [ , ] [ [ @account_na
   
 `[ @password = ] 'password'` メール サーバーへのログオンに使用する新しいパスワード。 *パスワード*は**sysname**、既定値はありません。  
   
-`[ @use_default_credentials = ] use_default_credentials` 資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービス。 **use_default_credentials**ビットは、既定値はありません。 データベース メールでの資格情報を使用してこのパラメーターが 1 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 データベース メールを使用してこのパラメーターが 0 の場合、 **@username**と**@password** SMTP サーバーでの認証。 場合**@username**と**@password** NULL は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。  
+`[ @use_default_credentials = ] use_default_credentials` 資格情報を使用して SMTP サーバーにメールを送信するかどうかを指定します、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]サービス。 **use_default_credentials**ビットは、既定値はありません。 データベース メールでの資格情報を使用してこのパラメーターが 1 の場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。 データベース メールを使用してこのパラメーターが 0 の場合、 **@username** と **@password** SMTP サーバーでの認証。 場合 **@username** と **@password** NULL は、匿名認証が使用されます。 このパラメーターを指定する前に、SMTP 管理者に問い合わせてください。  
   
 `[ @enable_ssl = ] enable_ssl` データベース メールで Secure Sockets Layer (SSL) を使用して通信を暗号化するかどうかを指定します。 SMTP サーバーで SSL が必要な場合はこのオプションを使用します。 **enable_ssl**ビットは、既定値はありません。  
   
@@ -135,7 +134,7 @@ EXECUTE msdb.dbo.sysmail_update_account_sp
     ,@enable_ssl = 0;  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール アカウントを作成します。](../../relational-databases/database-mail/create-a-database-mail-account.md)   
  [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  

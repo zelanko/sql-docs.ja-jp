@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 8b9e23d6-da62-437a-8c05-8ad2628b9441
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7d265ea1bd3b2461219858d39fd0b9164999cc30
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c2f5bc6953ab0e96397ca728391cbe22a73dd50
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62650980"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910690"
 ---
 # <a name="assessing-access-database-objects-for-conversion-accesstosql"></a>変換 (AccessToSQL) のための Access データベース オブジェクトの評価
 オブジェクトを読み込むし、データを移行する前に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure、確認してどの程度の移行は成功するになります、変換にどのくらいの時間がかかります。 SSMA を正常に変換されたオブジェクトの割合を示す評価レポートを作成できます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure の構文と時刻の評価、移行を実行します。 SSMA では、変換エラーの原因となった特定の問題を表示することもできます。  
@@ -60,6 +59,6 @@ SSMA 変換を選択した Access データベース オブジェクトで、評
 ## <a name="next-step"></a>次の手順  
 [Access データベース オブジェクトの変換](converting-access-database-objects-accesstosql.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [SQL Server へのアクセス データベースの移行](migrating-access-databases-to-sql-server-azure-sql-db-accesstosql.md)  
   

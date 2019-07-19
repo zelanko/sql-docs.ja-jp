@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 237f9bad-636d-4262-9bfb-66c034a43e88
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ab2f2fcb07fb181fd32d5a60f9fd2d8f25725f96
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3ce9b0972bc95a927729f55e10e329cddb2993c8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535684"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896456"
 ---
 # <a name="sppurgejobhistory-transact-sql"></a>sp_purge_jobhistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -49,7 +48,7 @@ sp_purge_jobhistory
 > [!NOTE]  
 >  メンバー、 **sysadmin**固定サーバー ロールのメンバーや、 **SQLAgentOperatorRole**固定データベース ロールが実行できる**sp_purge_jobhistory** を指定せず*job_name*または*job_id*します。 ときに**sysadmin**ユーザーは、これらの引数を指定しない、によって指定された時間内のすべてのローカルおよびマルチ サーバー ジョブのジョブ履歴が削除された*oldest_date*します。 ときに**SQLAgentOperatorRole**ユーザーは、これらの引数を指定しない、によって指定された時間内のすべてのローカル ジョブのジョブ履歴が削除された*oldest_date*します。  
   
-`[ @job_id = ] job_id` 削除するレコードのジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 注の説明を参照してください**@job_name**について**sysadmin**または**SQLAgentOperatorRole**ユーザーは、この引数を使用できます。  
+`[ @job_id = ] job_id` 削除するレコードのジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。 いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。 注の説明を参照してください **@job_name** について**sysadmin**または**SQLAgentOperatorRole**ユーザーは、この引数を使用できます。  
   
 `[ @oldest_date = ] oldest_date` 履歴に保持する最も古いレコード。 *oldest_date*は**datetime**、既定値は NULL です。 ときに*oldest_date*が指定されている**sp_purge_jobhistory**のみに指定された値よりも古いレコードを削除します。  
   
@@ -67,7 +66,7 @@ sp_purge_jobhistory
   
  メンバーを含む、他のユーザー **SQLAgentUserRole**とメンバーの**SQLAgentReaderRole**、する必要があります明示的に EXECUTE アクセス許可で許可**sp_purge_jobhistory**. このストアド プロシージャに対する EXECUTE 権限が許可されていると、これらのユーザーは自分が所有しているジョブの履歴だけを削除できます。  
   
- **SQLAgentUserRole**、 **SQLAgentReaderRole**、および**SQLAgentOperatorRole**に固定データベース ロールがある、 **msdb**データベース。 詳細については、そのアクセス許可は、[SQL Server エージェント固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)を参照してください。  
+ **SQLAgentUserRole**、 **SQLAgentReaderRole**、および**SQLAgentOperatorRole**に固定データベース ロールがある、 **msdb**データベース。 詳細については、そのアクセス許可は、次を参照してください。 [SQL Server エージェント固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)します。  
   
 ## <a name="examples"></a>使用例  
   

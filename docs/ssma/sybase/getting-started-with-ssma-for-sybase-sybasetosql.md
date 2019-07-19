@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c4098516-f0fc-4690-97bb-3766dfd43156
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 7e308589ab565b5702bbf2cba939835a50c08d8e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f07f230f52fee5707084c01060e92220b35cb75c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63126638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029125"
 ---
 # <a name="getting-started-with-ssma-for-sap-ase-sybasetosql"></a>SSMA で SAP ASE (SybaseToSQL) の概要
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Migration Assistant (SSMA) の SAP ASE を使用する簡単に変換する SAP Adaptive Server Enterprise (ASE) のデータベース スキーマ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、Azure SQL Database スキーマへの結果として得られるスキーマのアップロードまたは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]や Azure SQL Database からデータを移行し、SAP ASE を[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または Azure SQL Database。  

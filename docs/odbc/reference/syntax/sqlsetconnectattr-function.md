@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 97fc7445-5a66-4eb9-8e77-10990b5fd685
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 53ab6ddfb8253b1df877c6e20df43f8327f0f2e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fd4acd7ce6a33665ce3d32e42328c906aaec3049
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537385"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67910382"
 ---
 # <a name="sqlsetconnectattr-function"></a>SQLSetConnectAttr 関数
 **準拠**  
@@ -132,12 +131,12 @@ SQLRETURN SQLSetConnectAttr(
 |---------------|-------------------------------------|  
 |SQL_ATTR_ACCESS_MODE|[1]|  
 |SQL_ATTR_ASYNC_DBC_EVENT|接続前/接続後|  
-|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|Either[4]|  
+|SQL_ATTR_ASYNC_DBC_FUNCTIONS_ENABLE|[4]|  
 |SQL_ATTR_ASYNC_DBC_PCALLBACK|接続前/接続後|  
 |SQL_ATTR_ASYNC_DBC_PCONTEXT|接続前/接続後|  
 |SQL_ATTR_ASYNC_ENABLE|[2]|  
 |SQL_ATTR_AUTO_IPD|接続前/接続後|  
-|SQL_ATTR_AUTOCOMMIT|Either[5]|  
+|SQL_ATTR_AUTOCOMMIT|[5]|  
 |SQL_ATTR_CONNECTION_DEAD|After|  
 |SQL_ATTR_CONNECTION_TIMEOUT|接続前/接続後|  
 |SQL_ATTR_CURRENT_CATALOG|[1]|  
@@ -152,7 +151,7 @@ SQLRETURN SQLSetConnectAttr(
 |SQL_ATTR_TRACEFILE|接続前/接続後|  
 |SQL_ATTR_TRANSLATE_LIB|After|  
 |SQL_ATTR_TRANSLATE_OPTION|After|  
-|SQL_ATTR_TXN_ISOLATION|Either[3]|  
+|SQL_ATTR_TXN_ISOLATION|[3]|  
   
  [前に、または、ドライバーによって、接続した後は、1] SQL_ATTR_ACCESS_MODE と SQL_ATTR_CURRENT_CATALOG を設定できます。 ただし、相互運用可能なアプリケーション設定に接続する前に一部のドライバーが接続した後は、これらの変更をサポートしていないためです。  
   

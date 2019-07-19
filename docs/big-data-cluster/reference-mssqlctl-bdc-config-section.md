@@ -1,23 +1,22 @@
 ---
-title: mssqlctl bdc config section reference
+title: mssqlctl bdc 構成セクションのリファレンス
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc 構成セクションのコマンドに関する参照記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 3ca96ddbbf64b04e8ccd8854a8338fe6e118debb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 3f3ba7854b4df63495926e4cc207de7cbe6a9378
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958194"
 ---
-# <a name="mssqlctl-bdc-config-section"></a>mssqlctl bdc config section
+# <a name="mssqlctl-bdc-config-section"></a>mssqlctl bdc 構成セクション
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -26,9 +25,9 @@ ms.locfileid: "67728695"
 ## <a name="commands"></a>コマンド
 |     |     |
 | --- | --- |
-[mssqlctl bdc config section show](#mssqlctl-bdc-config-section-show) | 構成プロファイルからのセクションを取得します。
-[mssqlctl bdc config section set](#mssqlctl-bdc-config-section-set) | 構成プロファイルのセクションを設定します。
-## <a name="mssqlctl-bdc-config-section-show"></a>mssqlctl bdc config section show
+[mssqlctl bdc 構成セクションの表示](#mssqlctl-bdc-config-section-show) | 構成プロファイルからのセクションを取得します。
+[mssqlctl bdc 構成セクションの設定](#mssqlctl-bdc-config-section-set) | 構成プロファイルのセクションを設定します。
+## <a name="mssqlctl-bdc-config-section-show"></a>mssqlctl bdc 構成セクションの表示
 指定された json パスに従って、選択した構成プロファイルから、指定されたセクションを取得します。
 ```bash
 mssqlctl bdc config section show --json-path -j 
@@ -66,7 +65,7 @@ BDC 構成プロファイルのパス。
 JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
 #### `--verbose`
 ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
-## <a name="mssqlctl-bdc-config-section-set"></a>mssqlctl bdc config section set
+## <a name="mssqlctl-bdc-config-section-set"></a>mssqlctl bdc 構成セクションの設定
 指定された json パスに従って、選択した構成プロファイルで指定されたセクションを設定します。  Bash では、すべて examplesbelow 与えられます。  別のコマンドラインを使用する場合は、必要になる escapequotations を適切を了承ください。  または、修正プログラム ファイルの機能を使用することがあります。
 ```bash
 mssqlctl bdc config section set --config-profile -c 

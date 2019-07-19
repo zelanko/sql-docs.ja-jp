@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 722803d0-cef5-4d4c-b79d-3f2f58052229
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b864f480542c7ff649bf9b830ba445517dafb91b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6d405113044d10244d8c4fc3483c6220bf630dc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698893"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921426"
 ---
 # <a name="actualsize-property-ado"></a>ActualSize プロパティ (ADO)
 フィールドの値をバイト単位の実際の長さを示します。  
@@ -37,7 +36,7 @@ ms.locfileid: "66698893"
 ## <a name="applies-to"></a>適用対象  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ActualSize および DefinedSize プロパティの例 (VB)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vb.md)   
  [ActualSize および DefinedSize プロパティの例 (vc++)](../../../ado/reference/ado-api/actualsize-and-definedsize-properties-example-vc.md)   
  [DefinedSize プロパティ](../../../ado/reference/ado-api/definedsize-property.md)

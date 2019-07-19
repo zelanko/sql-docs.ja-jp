@@ -1,5 +1,5 @@
 ---
-title: 処理の要件および考慮事項 (データ マイニング) |Microsoft ドキュメント
+title: 処理の要件および注意事項 (データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d4228f5ae90f7fdd2510787b6fca6ad10f7302e4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34016149"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68182470"
 ---
 # <a name="processing-requirements-and-considerations-data-mining"></a>処理の要件および注意事項 (データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "34016149"
   
  モデルの処理時に、モデルは、データ ソースからデータを再度読み取るのではなく、マイニング構造からデータの概要を取得します。 サーバーは、作成されたキューブと、キャッシュされたインデックス データとケース データを使用して、モデルのトレーニングを行うための独立したスレッドを作成します。  
   
- 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並列モデル処理をサポートするを参照してください[SQL Server 2012 の各エディションでサポートされる機能](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473)です。  
+ 各エディションの詳細については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]並列モデル処理をサポートするを参照してください[機能は、SQL Server 2012 の各エディションでサポートされている](http://go.microsoft.com/fwlink/?linkid=232473)(http://go.microsoft.com/fwlink/?linkid=232473) します。  
   
 ##  <a name="bkmk_ProcessStructures"></a> マイニング構造の処理  
  マイニング構造は、すべての依存モデルと一緒に処理することも、個別に処理することもできます。 処理に時間がかかると予想されるモデルがあり、その操作を保留する場合、モデルとは別にマイニング構造を処理すると便利です。  
@@ -58,13 +58,13 @@ ms.locfileid: "34016149"
   
  マイニング モデルは、以下のシナリオでも処理されます。  
   
- **プロジェクトの配置**: 通常は、プロジェクトの設定と現在の状態に応じて、プロジェクトの配置時にそのプロジェクトのマイニング モデルが完全処理されます。  
+ **プロジェクトの配置**:によっては、プロジェクトの設定とプロジェクトの現在の状態の場合は、プロジェクトが配置されると、プロジェクト内のマイニング モデルを完全に処理されます通常。  
   
  配置を開始すると、以前に処理されたバージョンが [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバーに存在して構造的に変更されていない場合を除き、処理が自動的に開始されます。 プロジェクトを配置するには、ドロップダウン リストから **[ソリューションの配置]** を選択するか、または F5 キーを押します。 次の操作を実行できます。  
   
  マイニング モデルの配置方法を制御する [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] の配置プロパティの設定方法の詳細については、「 [データ マイニング ソリューションの配置](../../analysis-services/data-mining/deployment-of-data-mining-solutions.md)」を参照してください。  
   
- **マイニング モデルの移動**: EXPORT コマンドを使用してマイニング モデルを移動する場合、モデルの定義だけがエクスポートされます。この定義には、モデルにデータを提供する予定のマイニング構造の名前が含まれます。  
+ **マイニング モデルの移動**:エクスポート コマンドを使用してマイニング モデルを移動すると、モデルにデータを提供する予定がマイニング構造の名前を含む、モデルの定義のみがエクスポートされます。  
   
  EXPORT コマンドと IMPORT コマンドを使用するシナリオとその再処理の要件を次に示します。  
   
@@ -82,9 +82,9 @@ ms.locfileid: "34016149"
   
  詳細については、「 [データ マイニング オブジェクトのエクスポートおよびインポート](../../analysis-services/data-mining/export-and-import-data-mining-objects.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [マイニング構造と #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
- [マイニング構造と #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+## <a name="see-also"></a>関連項目  
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)  
   
   

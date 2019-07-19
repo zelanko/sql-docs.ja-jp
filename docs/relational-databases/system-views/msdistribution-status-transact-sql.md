@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 90d447de-3a4a-4f3e-aeab-e8fff6348361
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5942bf485673ad484a58edc43176da4ae5c95965
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 8a589583eeef4974a1e3a59bdaec8b63cedb36bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52756725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129576"
 ---
 # <a name="msdistributionstatus-transact-sql"></a>MSdistribution_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -32,12 +31,12 @@ ms.locfileid: "52756725"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**article_id**|**int**|アーティクルの識別子です。|  
+|**article_id**|**int**|アーティクルを識別します。|  
 |**agent_id**|**int**|レプリケーション エージェントを識別します。|  
-|**UndelivCmdsInDistDB**|**int**|サブスクライバーへの配信を保留しているコマンド数です。|  
-|**DelivCmdsInDistDB**|**int**|サブスクライバーに配信されたコマンド数です。|  
+|**UndelivCmdsInDistDB**|**int**|保留中のサブスクライバーへの配信コマンド数です。|  
+|**DelivCmdsInDistDB**|**int**|サブスクライバーに配信されたコマンド数。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   

@@ -18,13 +18,13 @@ helpviewer_keywords:
 ms.assetid: 2e99f026-ceb2-42a2-a549-c71d31ed0cf4
 author: HeidiSteen
 ms.author: heidist
-manager: cgronlund
-ms.openlocfilehash: 8bdbaf1fdb0fb0c27127611ace0fac00d861838f
-ms.sourcegitcommit: c2322c1a1dca33b47601eb06c4b2331b603829f1
+manager: cgronlun
+ms.openlocfilehash: 06b8e29e9aaf02c8e82f541a9113d5943b829b3b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/01/2018
-ms.locfileid: "50743137"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68262158"
 ---
 # <a name="sysdmexternalscriptexecutionstats"></a>sys.dm_external_script_execution_stats
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "50743137"
 外部スクリプト要求の種類ごとに 1 つの行を返します。 外部スクリプト要求は、サポートされている外部スクリプト言語でグループ化されます。 登録されている外部スクリプト関数ごとに 1 つの行が生成されます。 `rxExec`など、任意の外部スクリプト関数は、親プロセスによって送信された場合を除き、記録されません。
   
 > [!NOTE]  
-> この動的管理ビュー (DMV) は、インストールして、外部スクリプトの実行をサポートする機能を有効になっている場合にのみ使用できます。 詳細については、[SQL Server 2016 R Services](../../advanced-analytics/r/sql-server-r-services.md)と[SQL Server 2017 での Machine Learning サービス (R、Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md)を参照してください。  
+> この動的管理ビュー (DMV) は、インストールして、外部スクリプトの実行をサポートする機能を有効になっている場合にのみ使用できます。 詳細については、次を参照してください。 [SQL Server 2016 R Services](../../advanced-analytics/r/sql-server-r-services.md)と[SQL Server 2017 での Machine Learning サービス (R、Python)](../../advanced-analytics/what-is-sql-server-machine-learning.md)します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

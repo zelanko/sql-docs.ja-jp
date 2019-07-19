@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 9eaa0ec2-2ad9-457c-ae48-8da92a03dcb0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 8d917f71d7cf7a36bb5d2c50b0cddd7893102a7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: eb2c193b975d46eedf5139771ffe261bd6bfe93d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62960100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68029989"
 ---
 # <a name="splock-transact-sql"></a>sp_lock (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,12 +57,12 @@ sp_lock [ [ @spid1 = ] 'session ID1' ] [ , [@spid2 = ] 'session ID2' ]
 |-----------------|---------------|-----------------|  
 |**spid**|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)]ロックを要求するプロセスのセッション ID 番号。|  
 |**dbid**|**smallint**|ロックが保持されているデータベースの ID 番号です。 DB_NAME() 関数を使用すると、データベースを識別します。|  
-|**ObjId**|**int**|ロックが保持されているオブジェクトの識別番号。 オブジェクトを識別するために、関連するデータベースで OBJECT_NAME() 関数を使用できます。 99 の値は、データベース内のページの割り当てを記録するために使用するシステム ページの 1 つのロックを示す特殊なケースです。|  
+|**オブジェクト Id**|**int**|ロックが保持されているオブジェクトの識別番号。 オブジェクトを識別するために、関連するデータベースで OBJECT_NAME() 関数を使用できます。 99 の値は、データベース内のページの割り当てを記録するために使用するシステム ページの 1 つのロックを示す特殊なケースです。|  
 |**IndId**|**smallint**|ロックが保持されているインデックスの識別番号。|  
 |**型**|**nchar(4)**|ロックの種類:<br /><br /> RID = 行識別子 (RID) によって識別されるテーブル内の単一行のロック。<br /><br /> KEY = シリアル化可能なトランザクションのキーの範囲を保護するインデックス内のロック。<br /><br /> PAG = データまたはインデックス ページのロック。<br /><br /> EXT = エクステントのロック。<br /><br /> TAB = すべてのデータとインデックスを含むテーブル全体のロック。<br /><br /> DB = データベースのロック。<br /><br /> FIL = データベース ファイルのロック。<br /><br /> APP = アプリケーションで指定されたリソースのロック。<br /><br /> MD = メタデータまたはカタログ情報のロック。<br /><br /> HBT = ヒープまたは B-Tree インデックスのロック。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの情報は不完全です。<br /><br /> AU = アロケーション ユニットのロック。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではこの情報は不完全です。|  
 |**リソース**|**nchar(32)**|ロックされているリソースを識別する値。 値の形式で識別されるリソースの種類に依存、**型**列。<br /><br /> **型**値。**リソース**値<br /><br /> RID:形式 fileid:pagenumber 内の識別子: pagenumber rid、fileid が、ページを含むファイルを識別する、行が含まれるページを識別および rid ページでは、特定の行を識別します。 fileid と一致する、 **file_id**内の列、 **sys.database_files**カタログ ビューです。<br /><br /> キー:によって内部的に使用される 16 進数、[!INCLUDE[ssDE](../../includes/ssde-md.md)]します。<br /><br /> PAG:Fileid:pagenumbe というフォーマット fileid はページを含むファイルを識別する、pagenumber はページを識別番号。<br /><br /> EXT:範囲の最初のページを識別する番号。 この番号は、fileid:pagenumber というフォーマットで指定します。<br /><br /> タブ:テーブルが既にで識別されるため、提供される情報はありません、 **ObjId**列。<br /><br /> DB:データベースが既にで識別されるため、提供される情報はありません、 **dbid**列。<br /><br /> FIL:一致すると、ファイルの識別子、 **file_id**内の列、 **sys.database_files**カタログ ビューです。<br /><br /> アプリ:ロックされているアプリケーションのリソースに固有の識別子。 DbPrincipleId の形式:\<リソース文字列の 16 文字に最初の 2 つ >\<ハッシュ値 >。<br /><br /> MD: は、リソースの種類によって異なります。 詳細については、の説明を参照して、 **resource_description**列[sys.dm_tran_locks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)します。<br /><br /> HBT:提供される情報はありません。 使用して、 **sys.dm_tran_locks**動的管理ビューを代わりにします。<br /><br /> AU:提供される情報はありません。 使用して、 **sys.dm_tran_locks**動的管理ビューを代わりにします。|  
 |**モード**|**nvarchar(8)**|要求されたロック モードです。 次の値をとります。<br /><br /> NULL = いいえ、リソースにアクセスを許可します。 プレースホルダーとしての役割を果たします。<br /><br /> Sch-S = スキーマ安定度。 スキーマ エレメントに対してスキーマ安定度ロックが保持されているセッションの中では、テーブルやインデックスなどのスキーマ エレメントは削除されません。<br /><br /> Sch-M = スキーマ修正。 特定のリソースのスキーマを変更するセッションで保持される必要があります。 他のセッションで目的のオブジェクトが参照されないようにします。<br /><br /> S = 共有。 保持しているセッションに、リソースへの共有アクセスが許可されます。<br /><br /> U = 更新。 リソース上で取得された更新ロックが、最終的に更新されることが許可されます。 一般的な形式の複数のセッションは後で潜在的な更新プログラムのリソースをロックするときに発生するデッドロックを防ぐために使用されます。<br /><br /> X = 排他。 保持しているセッションで、リソースへの排他アクセスが許可されます。<br /><br /> IS = インテント共有です。 ロック階層の下位のリソースに S ロックを設定するよう指定します。<br /><br /> IU = インテント更新。 ロック階層の下位のリソースに U ロックを設定するよう指定します。<br /><br /> IX = インテント排他。 ロック階層の下位のリソースに X ロックを設定するよう指定します。<br /><br /> SIU = 共有インテント更新。 ロック階層の下位のリソースに更新ロックを設定する目的で、リソースへの共有アクセスを指定します。<br /><br /> 6 = 共有インテント排他。 ロック階層の下位のリソースに排他ロックを設定する目的で、リソースへの共有アクセスを指定します。<br /><br /> UIX = 更新インテント排他。 ロック階層の下位のリソースに排他ロックを設定する目的で、リソースに保持する更新ロックを指定します。<br /><br /> BU = 一括更新します。 一括操作で使用します。<br /><br /> RangeS_S = 共有キー範囲と共有リソース ロック。 直列化可能な範囲スキャンを指定します。<br /><br /> RangeS_U = 共有キー範囲と更新リソース ロック。 直列化可能な更新スキャンを指定します。<br /><br /> RangeI_N = 挿入キー範囲と NULL リソース ロック。 新しいキーをインデックスに挿入する前に、範囲をテストするために使用します。<br /><br /> RangeI_S = キー範囲変換ロックです。 RangeI_N と S ロックの重なりによって作成されます。<br /><br /> RangeI_U = 範囲 I_n と U ロックの重なりによって作成されるキー範囲変換ロックです。<br /><br /> RangeI_X = 範囲 I_n と X ロックの重なりによって作成されるキー範囲変換ロックです。<br /><br /> RangeX_S = 範囲 I_n と範囲 S_s の重なりによって作成されるキー範囲変換ロックです。 ロックです。<br /><br /> RangeX_U = 範囲 I_N と範囲 S_U ロックの重複によって作成されるキー範囲変換ロックです。<br /><br /> RangeX_X = 排他キー範囲と排他リソース ロック。 範囲内のキーを更新する場合に使用する変換ロックです。|  
-|**ステータス**|**nvarchar(5)**|ロック要求の状態:<br /><br /> CNVRT:ロックは別のモードから変換されているが、変換は、競合するモードでロックを保持している別のプロセスによってブロックされます。<br /><br /> 許可:ロックが取得されました。<br /><br /> 待ってください。ロックは、競合するモードでロックを保持している別のプロセスによってブロックされます。|  
+|**状態**|**nvarchar(5)**|ロック要求の状態:<br /><br /> CNVRT:ロックは別のモードから変換されているが、変換は、競合するモードでロックを保持している別のプロセスによってブロックされます。<br /><br /> 許可:ロックが取得されました。<br /><br /> 待ってください。ロックは、競合するモードでロックを保持している別のプロセスによってブロックされます。|  
   
 ## <a name="remarks"></a>コメント  
  ユーザーは、読み取り操作でのロックを制御できます。  
@@ -99,7 +98,7 @@ EXEC sp_lock 53;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_tran_locks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-locks-transact-sql.md)   
  [DB_NAME &#40;Transact-SQL&#41;](../../t-sql/functions/db-name-transact-sql.md)   
  [KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md)   

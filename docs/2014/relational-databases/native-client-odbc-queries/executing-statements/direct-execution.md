@@ -16,11 +16,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: 4e912ac2dd63fa63ce57647f0c4e95e6702a22ed
-ms.sourcegitcommit: 3da2edf82763852cff6772a1a282ace3034b4936
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2018
-ms.locfileid: "48072334"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207074"
 ---
 # <a name="direct-execution"></a>直接実行
   直接実行はステートメントを実行する最も基本的な方法です。 含む文字列をアプリケーションで構築、[!INCLUDE[tsql](../../../includes/tsql-md.md)]ステートメントを使用して実行のために送信し、 **SQLExecDirect**関数。 ステートメントがサーバーに到達すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] がステートメントを実行プランにコンパイルしてから、すぐにその実行プランを実行します。  
@@ -33,7 +33,7 @@ ms.locfileid: "48072334"
   
  実行プランを再利用することで得られる利点は、複数のユーザーが同じ SQL ステートメントやバッチを実行しているときにのみ効果があります。 異なるクライアントが実行する SQL ステートメントを可能な限り統一の取れたステートメントにして、実行プランの再利用を可能にするために、次のコーディング規則に従ってください。  
   
--   SQL ステートメントには定数データを含めません。代わりにプログラム変数にバインドされるパラメーター マーカーを使用します。 詳細については、[ステートメントのパラメーターを使用して](../using-statement-parameters.md)を参照してください。  
+-   SQL ステートメントには定数データを含めません。代わりにプログラム変数にバインドされるパラメーター マーカーを使用します。 詳細については、次を参照してください。[ステートメントのパラメーターを使用して](../using-statement-parameters.md)します。  
   
 -   完全修飾オブジェクト名を使用します。 実行プランは、オブジェクト名が修飾されていないと再利用されません。  
   

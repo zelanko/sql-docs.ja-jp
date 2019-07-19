@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9d3001d9-8d0f-4e4a-8e04-4f666bf0df69
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: ecdbff5b071ae82fe8bd8322c1ef9d46f153b0cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 785d65d17f1f14cc7fb2e7b7ec80b609d2950fb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488903"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68092479"
 ---
 # <a name="change-the-attribute-type-mds-add-in-for-excel"></a>属性の型の変更 (Excel 用 MDS アドイン)
 
@@ -48,7 +47,7 @@ ms.locfileid: "65488903"
   
 4.  **[属性プロパティ]** ダイアログ ボックスで、必要に応じて設定を更新します。  
   
-5.  [**OK**] をクリックします。  
+5.  **[OK]** をクリックします。  
   
 ## <a name="what-happens-when-you-change-the-attribute-type"></a>属性の型を変更したときに実行される動作  
  属性が任意の MDS ビジネス ルールまたは派生階層によって参照されるなど、属性に関する依存関係が存在する場合、属性のデータ型を変更できません。 オブジェクトによって参照されているため属性の型を変更できないことを示すエラー メッセージが表示されます。  

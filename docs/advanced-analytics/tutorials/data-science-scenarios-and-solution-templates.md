@@ -6,13 +6,12 @@ ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 7511e630d88e23faa1f0141529e7425c3da882f1
-ms.sourcegitcommit: c60784d1099875a865fd37af2fb9b0414a8c9550
+ms.openlocfilehash: 83c659c3982225221c7ad262af925863c821c5ab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58645494"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962293"
 ---
 # <a name="data-science-scenarios-and-solution-templates"></a>データ サイエンスのシナリオとソリューション テンプレート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "58645494"
 > 
 > テンプレートのほとんどは、オンプレミスでもサポートしている複数のバージョンので、機械学習のためのプラットフォームをクラウドします。 たとえば、SQL サーバーのみを使用してソリューションをビルドすることができます。 または Microsoft R Server、または Azure Machine Learning ソリューションをビルドすることができます。
 
-+ ダウンロードとセットアップ手順については、[テンプレートを使用する方法](#bkmk_HowTo)を参照してください。
++ ダウンロードとセットアップ手順については、次を参照してください。[テンプレートを使用する方法](#bkmk_HowTo)します。
 
 ## <a name="fraud-detection"></a>不正行為の検出
 
@@ -80,7 +79,7 @@ ms.locfileid: "58645494"
 
 [エネルギー需要予測と SQL Server R Services のテンプレート](https://gallery.cortanaintelligence.com/Tutorial/Energy-Demand-Forecast-Template-with-SQL-Server-R-Services-1)
 
-**内容:**:需要予測は、エネルギー、製品、サービスなどのさまざまな分野で重要な問題です。 正確な需要予測と、計画、リソースの割り当てより優れた運用を実施し、その他の重要なビジネスの意思の企業が役立ちます。 エネルギー分野での需要予測はエネルギーのストレージ コストを削減し、需要と供給を分散重要です。
+**内容:** :需要予測は、エネルギー、製品、サービスなどのさまざまな分野で重要な問題です。 正確な需要予測と、計画、リソースの割り当てより優れた運用を実施し、その他の重要なビジネスの意思の企業が役立ちます。 エネルギー分野での需要予測はエネルギーのストレージ コストを削減し、需要と供給を分散重要です。
 
 **方法:** このテンプレートでは、SQL Server R Services を使用して電力需要を予測します。 予測に使用するモデルは、ランダム フォレスト回帰モデルに基づく**rxDForest**高性能な機械学習アルゴリズムの Microsoft R Server に含まれています。 このソリューションには、需要シミュレーター、モデルのトレーニングに必要なすべての R コードと T-SQL コード、予測の生成とレポートに使用できるストアド プロシージャが含まれています。 
 

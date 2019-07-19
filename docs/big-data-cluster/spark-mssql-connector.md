@@ -5,17 +5,16 @@ description: Spark で MSSQL Spark コネクタを使用して、SQL Server へ�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aaa9cd54c3540c17f9995f985f4537dafe05d5c2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727463"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957838"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>読み取りし、MSSQL Spark コネクタを使用して Spark から SQL Server への書き込み方法
 
@@ -40,9 +39,9 @@ SQL Server 2019 プレビューの提供、 **MSSQL Spark コネクタ**ビッ�
 
 次の表では、インターフェイスのパラメーターが変更されたかを初めて使用するについて説明します。
 
-| プロパティ名 | 省略可 | 説明 |
+| プロパティ名 | Optional | 説明 |
 |---|---|---|
-| **IsolationLevel** | [はい] | これには、接続の分離レベルについて説明します。 MSSQLSpark コネクタの既定値は**READ_COMMITTED** |
+| **IsolationLevel** | はい | これには、接続の分離レベルについて説明します。 MSSQLSpark コネクタの既定値は**READ_COMMITTED** |
 
 SQL Server の一括のコネクタで使用では、Api を記述します。 一括書き込みパラメーターは、ユーザーが省略可能なパラメーターとして渡すことができ、として渡される、基になる API をコネクタでは、します。 一括の詳細については、書き込み操作を参照してください[SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)します。
 

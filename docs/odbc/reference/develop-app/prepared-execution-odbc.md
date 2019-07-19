@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: f08c8a98-31ee-48b2-9dbf-6f31c2166dbb
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c7bd6bc8281dd6bdc3bcfbd437380b2d5269ee43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2107ca1eeecc6fad24311c5bce629784ae4ceff0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199101"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023284"
 ---
 # <a name="prepared-execution-odbc"></a>準備実行 ODBC
 準備実行は、ステートメントを複数回実行する効率的な方法です。 最初に、ステートメントがコンパイルされたまたは*準備、* アクセス プランにします。 アクセスの計画とは、いずれかを実行し、または後で他にもです。 アクセスの計画の詳細については、次を参照してください。 [SQL ステートメントの処理](../../../odbc/reference/processing-a-sql-statement.md)します。  

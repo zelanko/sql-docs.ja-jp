@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: b80bc5d5-78ca-4f75-956b-2ac658029cc7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4c1f772b041aa5f7be2c1fc0c7aeb7c69189b5d5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99a21cd5dd32af9e84877865cfe7c0fc92f6c087
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708333"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67967224"
 ---
 # <a name="append-method-adox-users"></a>Append メソッド (ADOX Users)
 新しく追加[ユーザー](../../../ado/reference/adox-api/user-object-adox.md)オブジェクトを[ユーザー](../../../ado/reference/adox-api/users-collection-adox.md)コレクション。  
@@ -35,7 +34,7 @@ Users.Append User[,Password]
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *ユーザー*  
+ *User*  
  A**バリアント**値を含む、**ユーザー**オブジェクトを追加するか、ユーザーを作成し、追加の名前。  
   
  *Password*  
@@ -52,7 +51,7 @@ Users.Append User[,Password]
 ## <a name="applies-to"></a>適用対象  
  [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Groups および Users Append、ChangePassword メソッドの例 (VB)](../../../ado/reference/adox-api/groups-and-users-append-changepassword-methods-example-vb.md)   
  [Append メソッド (ADOX Columns)](../../../ado/reference/adox-api/append-method-adox-columns.md)   
  [Append メソッド (ADOX Groups)](../../../ado/reference/adox-api/append-method-adox-groups.md)   

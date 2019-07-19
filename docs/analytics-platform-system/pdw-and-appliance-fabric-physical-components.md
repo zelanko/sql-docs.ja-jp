@@ -2,19 +2,18 @@
 title: Analytics Platform System のアプライアンス物理コンポーネント |Microsoft Docs
 description: 名前と PDW およびアプライアンス ファブリックの物理的なコンポーネントの説明。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 0adbd92d1a29a98a80de65268c53ea63e3941d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb7ad8715d3f7a885bc48f6bdcc7f1ec2842f269
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62639914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960426"
 ---
 # <a name="appliance-physical-components---analytics-platform-system"></a>Analytics Platform System のアプライアンス物理コンポーネント
 名前と PDW およびアプライアンス ファブリックの物理的なコンポーネントの説明。 
@@ -55,7 +54,7 @@ Analytics Platform System を使用する Windows 展開サービス (WDS)、こ
   
 *Appliance_domain*-WDS の仮想マシンが HST01 で実行し、HST02 にフェールオーバーできます。 WDS の仮想マシンと、VMM の仮想マシンは、アプライアンスのインストール中に物理ホストで Windows を展開します。 WDS と VMM は、アプライアンスのライフ サイクル中にホストを交換などの操作を実行します。  
   
-*appliance_domain*-VMM  
+*appliance_domain*VMM  
 Virtual Machine Manager (VMM) では、仮想マシンで実行され、HST02 にフェールオーバーできます。 VMM では、物理ホスト上のオペレーティング システムを展開する System Center をホストします。 VMM では、すべてのホストとバーチャル マシンでの Windows 更新プログラムの削除を適用または Windows Server Update Services (WSUS) も提供します。  
   
 *appliance_domain*-AD01、 *appliance_domain*-AD02  

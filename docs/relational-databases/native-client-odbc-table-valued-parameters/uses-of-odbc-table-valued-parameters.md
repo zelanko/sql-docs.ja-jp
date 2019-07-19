@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: f1b73932-4570-4a8a-baa0-0f229d9c32ee
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5421467aaf516ca3f1f153979916be01f9160d05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c806e506f7ee344268a63278fda455926d4ef9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62738223"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128996"
 ---
 # <a name="uses-of-odbc-table-valued-parameters"></a>ODBC テーブル値パラメーターの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,7 +66,7 @@ ms.locfileid: "62738223"
 ## <a name="retrieving-table-valued-parameter-metadata-from-the-system-catalog"></a>システム カタログからテーブル値パラメーターのメタデータを取得  
  アプリケーションで SQLProcedureColumns テーブル値パラメーターのパラメーターを持つプロシージャを呼び出すときに DATA_TYPE は SQL_SS_TABLE、TYPE_NAME はテーブル値パラメーターのテーブル型の名前と返されます。 SQLProcedureColumns から返される結果セットには、2 つの列が追加されます。SS_TYPE_CATALOG_NAME がテーブル値パラメーターのテーブル型が定義されているし、スキーマの名前を返します場所、カタログの名前を返します場所、where、テーブル値パラメーターのテーブル型が定義されています。 SS_TYPE_CATALOG_NAME および SS_TYPE_SCHEMA_NAME がの以前のバージョンで追加されたすべてのドライバーの特定列の前に、の表示には、ODBC 仕様に準拠[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]と後、すべての列が ODBC 自体によって指定します。  
   
- 新しい列は、テーブル値パラメーター用だけでなく、CLR ユーザー定義型パラメーター用にも作成されます。 UDT パラメーターの既存のスキーマ列とカタログ列も依然として作成されますが、共通のスキーマ列とカタログ列を必要とするデータ型にもそれらの列を含めておくと、今後アプリケーション開発が簡単になります  (XML スキーマ コレクションは多少異なり、この変更には含まれていないことに注意してください)。  
+ 新しい列は、テーブル値パラメーター用だけでなく、CLR ユーザー定義型パラメーター用にも作成されます。 UDT パラメーターの既存のスキーマ列とカタログ列も依然として作成されますが、共通のスキーマ列とカタログ列を必要とするデータ型にもそれらの列を含めておくと、今後アプリケーション開発が簡単になります (XML スキーマ コレクションは多少異なり、この変更には含まれていないことに注意してください)。  
   
  アプリケーションでは、SQLTables を使用して、テーブル型の名前は永続的なテーブル、システム テーブルおよびビューの場合と同じ方法を決定します。 アプリケーションでテーブル値パラメーターに関連付けられたテーブル型を識別できるように、新しいテーブル型として TABLE TYPE が導入されました。 テーブル型と通常のテーブルでは、異なる名前空間を使用します。 つまり、テーブル型と実際のテーブルに、同じ名前を使用できます。 これに対処するために、新しいステートメント属性として SQL_SOPT_SS_NAME_SCOPE が導入されました。 この属性は、かどうか SQLTables とテーブル名をパラメーターとして取る他のカタログ関数が解釈実際のテーブルの名前とテーブル名またはテーブル型の名前を指定します。  
   

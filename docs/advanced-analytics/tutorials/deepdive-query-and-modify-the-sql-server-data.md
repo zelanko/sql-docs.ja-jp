@@ -7,13 +7,12 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 6d2768399ecd3d504e5bc51d4c7cbd151488782a
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 35583815be7c89707efcf9bb31488cd80e3836e8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58513139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962189"
 ---
 # <a name="query-and-modify-the-sql-server-data-sql-server-and-revoscaler-tutorial"></a>クエリおよび SQL Server のデータ (SQL Server と RevoScaleR チュートリアル) を変更します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -58,7 +57,7 @@ Var 9: fraudRisk, Type: integer
 
 この手順で、省略形を含む文字列ベクトルを作成し、元の整数識別子をこれらのカテゴリ値をマップします。 新しい変数を使用して、 *colInfo*この列が係数として処理することを指定するための引数。 データを分析したり、移動したときに、省略形が使用され、列が係数として処理されます。
 
-列を略称にマップしてから要因として使用すると、パフォーマンスも改善されます。 詳細については、[R とデータの最適化](../r/r-and-data-optimization-r-services.md)を参照してください。
+列を略称にマップしてから要因として使用すると、パフォーマンスも改善されます。 詳細については、次を参照してください。 [R とデータの最適化](../r/r-and-data-optimization-r-services.md)します。
 
 1. R 変数を作成して開始*stateAbb*、し、次のように、追加する文字列のベクトルを定義します。
   

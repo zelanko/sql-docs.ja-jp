@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: a0d9c3f1-1fe9-497c-8e2f-5b74f47a7346
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 10a8184fdad0c25c2377c5ed9df0a318aba736a2
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 777e9b2afceb3e9a58030a225a0cbff34375165b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527774"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914963"
 ---
 # <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,13 +40,13 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publisher = ] 'publisher'` リモート サーバーの名前です。 *パブリッシャー*は**sysname**、既定値は**%**、すべてのパブリッシャーに対して情報が返されます。  
+`[ @publisher = ] 'publisher'` リモート サーバーの名前です。 *パブリッシャー*は**sysname**、既定値は **%** 、すべてのパブリッシャーに対して情報が返されます。  
   
-`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は**%**、すべてのパブリッシャー データベースが返されます。  
+`[ @publisher_db = ] 'publisher_db'` パブリッシャー データベースの名前です。 *publisher_db*は**sysname**、既定値は **%** 、すべてのパブリッシャー データベースが返されます。  
   
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、すべてのパブリケーションが返されます。 Independent_agent だけプル サブスクリプションをすべて、このパラメーターが等しい場合 = **0**が返されます。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、すべてのパブリケーションが返されます。 Independent_agent だけプル サブスクリプションをすべて、このパラメーターが等しい場合 = **0**が返されます。  
   
-`[ @show_push = ] 'show_push'` すべてのプッシュ サブスクリプションは返されるかどうか、です。 *show_push*は**nvarchar (5)**、既定値は FALSE を返さないプッシュ サブスクリプションです。  
+`[ @show_push = ] 'show_push'` すべてのプッシュ サブスクリプションは返されるかどうか、です。 *show_push*は**nvarchar (5)** 、既定値は FALSE を返さないプッシュ サブスクリプションです。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -92,7 +91,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 |**last_sync_summary**|**sysname**|最後の同期の結果の説明です。|  
 |**last_sync_time**|**datetime**|サブスクリプション情報が更新された時刻。 これは、ISO 日付 (114) + ODBC 時刻 (121) の UNICODE 文字列です。 形式は yyyymmdd hh:mi:sss.mmm 'yyyy' は、年 'mm は月、dd は日、'hh' は、'mi は分、sss は秒、および mmm はミリ秒です。|  
 |**job_login**|**nvarchar(512)**|形式で返されるディストリビューション エージェントを実行する Windows アカウントは、*ドメイン*\\*username*します。|  
-|**job_password**|**sysname**|セキュリティ上の理由の値"**\*\*\*\*\*\*\*\*\*\***"が常に返されます。|  
+|**job_password**|**sysname**|セキュリティ上の理由の値" **\*\*\*\*\*\*\*\*\*\*** "が常に返されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -103,7 +102,7 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helppullsubscription**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addpullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
  [sp_droppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

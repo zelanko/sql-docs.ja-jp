@@ -1,5 +1,5 @@
 ---
-title: データ フィード ライブラリ (Power Pivot for SharePoint) を使用してデータ フィードの共有 |Microsoft ドキュメント
+title: データ フィード ライブラリ (Power Pivot for SharePoint) を使用してデータ フィードの共有 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f262fe19ba39f217135908173189bf93a7e68817
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34030693"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163710"
 ---
 # <a name="share-data-feeds-using-a-data-feed-library-power-pivot-for-sharepoint"></a>データ フィード ライブラリを使用したデータ フィードの共有 (PowerPivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "34030693"
   
  [データ サービス ドキュメントの変更](#modifydsdoc)  
   
- [次の手順: データ サービス ドキュメントの使用](#usedsdoc)  
+ [次の手順:データ サービス ドキュメントを使用します。](#usedsdoc)  
   
 > [!NOTE]  
 >  データ フィードは [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] で作成した [!INCLUDE[ssGeminiClient](../../includes/ssgeminiclient-md.md)]データ ソースに Web データを追加するために使用されますが、データ サービス ドキュメントの処理は、Atom フィードを読み取ることができる任意のクライアント アプリケーションで実行できます。  
@@ -107,10 +107,10 @@ ms.locfileid: "34030693"
 > [!IMPORTANT]  
 >  データ サービス ドキュメントは一度しか読み取られませんが、実際のデータを提供するデータ サービスには、新しいフィードを取得するために定期的にアクセスできます。 データを更新する方法の詳細については、「 [Power Pivot データ更新](../../analysis-services/power-pivot-sharepoint/power-pivot-data-refresh.md)」を参照してください。  
   
-##  <a name="usedsdoc"></a> 次の手順: データ サービス ドキュメントの使用  
+##  <a name="usedsdoc"></a> 次の手順:データ サービス ドキュメントを使用します。  
  SharePoint ライブラリで作成したデータ サービス ドキュメントを使用するには、 **データ ソースで** [データ フィードから] [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] インポート オプションを使用します。 手順については、「[データ フィードの使用 (PowerPivot for SharePoint)](../../analysis-services/power-pivot-sharepoint/use-data-feeds-power-pivot-for-sharepoint.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power Pivot データ フィード](../../analysis-services/power-pivot-sharepoint/power-pivot-data-feeds.md)  
   
   

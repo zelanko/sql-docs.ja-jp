@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1fd7a374-587b-4ca9-9204-3a4019b67a71
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9bebbf4c89a04474cbf2d0c88704603cb4c3fef3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a78db07f5ba445c54108558b2ff222bd217c2bbe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700386"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924245"
 ---
 # <a name="service-providers-and-components"></a>サービス プロバイダーとコンポーネント
 サービス プロバイダーは、データ ストアによってネイティブでサポートされていない拡張インターフェイスを実装するデータ プロバイダーの機能を拡張するコンポーネントです。  

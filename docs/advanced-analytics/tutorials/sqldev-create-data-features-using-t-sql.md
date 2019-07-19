@@ -7,13 +7,12 @@ ms.date: 10/19/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 32f762de13a844f12144e89f4742409c3afcbab0
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 5d304bdf03eaea53ede0cf4b2f8d82f64c3d1021
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511969"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961922"
 ---
 # <a name="lesson-2-create-data-features-using-r-and-t-sql"></a>レッスン 2:R と T-SQL を使用してデータ機能を作成します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "58511969"
 
 関数は、 _fnCalculateDistance_する必要がありますをダウンロードして登録されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このチュートリアルの準備の一環として。 時間がかかるコードを確認します。
   
-1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]**、 **[関数]** 、 **[スカラー値関数]** の順に展開します。   
+1. [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]で、 **[プログラミング]** 、 **[関数]** 、 **[スカラー値関数]** の順に展開します。   
 
 2. _fnCalculateDistance_を右クリックし、 **[変更]** を選択し、新しいクエリ ウィンドウで [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを開きます。
   

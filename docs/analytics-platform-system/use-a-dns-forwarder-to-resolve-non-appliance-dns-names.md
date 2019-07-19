@@ -2,19 +2,18 @@
 title: Analytics Platform System で DNS フォワーダーの使用 |Microsoft Docs"
 description: Analytics Platform System で非アプライアンス DNS 名を解決するのにには、DNS フォワーダーを使用します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 6ce978d7b05382b1a02018f3d5022b0f8bfaf585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 841d2da521bada840c1298d3fb9cea28c2835b4a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63243791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959826"
 ---
 # <a name="use-a-dns-forwarder-to-resolve-non-appliance-dns-names-in-analytics-platform-system"></a>DNS フォワーダーを使用して、Analytics Platform System で非アプライアンス DNS 名を解決するのには
 Active Directory ドメイン サービス ノードで DNS フォワーダーを構成することができます ( **_アプライアンス\_ドメイン_-AD01** と **_アプライアンス\_ドメイン_-AD02** ) のスクリプトとソフトウェア アプリケーションの外部サーバーへのアクセスを許可する、Analytics Platform System appliance。  

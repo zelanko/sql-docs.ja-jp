@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 729ba55f-743b-4a04-8c39-ac0a9914211d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b0a81237eddd4836394cc9797a79690ba4b49a35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3bc4d8378c243edf9f01cca58ff8be11d675711a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68079000"
 ---
 # <a name="quoted-identifiers"></a>引用符で囲まれた識別子
 SQL ステートメント内で特殊文字または一致するキーワードを含む識別子を囲む必要が*識別子引用符文字*; このような文字で囲まれた識別子と呼ばれる*の識別子を引用符で囲まれた*(とも呼ばれます*区切られた識別子*sql-92 で)。 次に、Accounts Payable 識別子が引用符で囲まれたなど**選択**ステートメント。  

@@ -1,5 +1,5 @@
 ---
-title: 表形式モデル (Analysis Services) での翻訳 |Microsoft ドキュメント
+title: 表形式モデル (Analysis Services) での翻訳 |Microsoft Docs
 ms.date: 05/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: ddd49ce6d3edc3f1e2f72a3fe7f5ab61621eef62
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34044176"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162393"
 ---
 # <a name="translations-in-tabular-models-analysis-services"></a>表形式モデルでの翻訳 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -39,7 +39,7 @@ ms.locfileid: "34044176"
 ## <a name="create-an-empty-translation-file"></a>空の翻訳ファイルの作成  
  [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] を使用して翻訳を追加します。  
   
-1.  **[モデル]** > **[翻訳]** > **[翻訳の管理]** の順にクリックします。  
+1.  **[モデル]**  >  **[翻訳]**  >  **[翻訳の管理]** の順にクリックします。  
   
 2.  翻訳を提供している言語を選択して、 **[追加]** をクリックします。  
   
@@ -49,7 +49,7 @@ ms.locfileid: "34044176"
   
 4.  **[言語ファイルのエクスポート]** をクリックします。  ファイル名と場所を指定します。  
   
- ![ssas 表形式-変換-エクスポート](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas 表形式の変換のエクスポート")  
+ ![ssas-テーブル-変換-エクスポート](../../analysis-services/tabular-models/media/ssas-tabular-translate-export.png "ssas-テーブル-変換-エクスポート")  
   
 ## <a name="add-translations"></a>翻訳の追加  
  空の JSON 翻訳ファイルには、特定の言語の翻訳に対するメタデータが含まれます。 オブジェクト名と説明の翻訳のプレースホルダーは、モデル定義の最後の **Culture** セクションに指定されます。 次の翻訳を追加することができます。  
@@ -73,7 +73,7 @@ ms.locfileid: "34044176"
 ## <a name="import-a-translation-file"></a>翻訳ファイルのインポート  
  インポートする翻訳文字列は、モデル定義の一部として恒久的に保存されます。 文字列がインポートされると、翻訳ファイルが参照されなくなります。  
   
-1.  **[モデル]** > **[翻訳]** > **[翻訳のインポート]** の順にクリックします。  
+1.  **[モデル]**  >  **[翻訳]**  >  **[翻訳のインポート]** の順にクリックします。  
   
 2.  翻訳ファイルを検索して、 **[開く]** をクリックします。  
   
@@ -109,9 +109,9 @@ ms.locfileid: "34044176"
   
      ピボットテーブルを作成するときに、翻訳済みのテーブルおよび列名が表示されます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   
  [Analysis Services のグローバリゼーションのシナリオ](../../analysis-services/globalization-scenarios-for-analysis-services.md)   
- [Excel で分析します。](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
+ [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)  
   
   

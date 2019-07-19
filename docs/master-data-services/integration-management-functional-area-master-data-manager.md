@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 41ac0e62-860a-4905-a318-68d6f814fb59
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: f71df0d77792ecd96694d9a24ed9d4f1d1ea59ce
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f12e6246ac08be29c673514ad7f35dbaa74a820
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65487982"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68007210"
 ---
 # <a name="integration-management-functional-area-master-data-manager"></a>[統合管理] 機能領域 (マスター データ マネージャー)
 
@@ -38,7 +37,7 @@ ms.locfileid: "65487982"
   
  [サブスクリプション ビューを削除する (マスター データ サービス)](../master-data-services/delete-a-subscription-view-master-data-services.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ マネージャー Web アプリケーション](../master-data-services/master-data-manager-web-application.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: af45e2b2-57fb-4bcd-a58b-e61401fb3b26
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5458d7a7693c742768a9a8a5e0c2f8583f1ca9ba
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: cde6f00d16bcff4ee56513f515cf2ecac93a1b5b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58535614"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68002515"
 ---
 # <a name="spredirectpublisher-transact-sql"></a>sp_redirect_publisher (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -56,12 +55,12 @@ sp_redirect_publisher
 ## <a name="remarks"></a>コメント  
  **sp_redirect_publisher**パブリッシャー/データベース ペアを可用性グループのリスナーに関連付けることによって、Always On 可用性グループの現在のプライマリにリダイレクトされるレプリケーションのパブリッシャーを許可するために使用します。 実行**sp_redirect_publisher**パブリッシュされたデータベースを含む可用性グループに対して AG リスナーを構成した後。  
   
- 元のパブリッシャーでパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合は、実行**sp_redirect_publisher**の値を指定せず、 *@redirected_publisher*パブリッシャー/データベース ペアのリダイレクトを削除するパラメーター。 パブリッシャーのリダイレクトの詳細についてを参照してください[AlwaysOn パブリケーション データベースのメンテナンス&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)します。  
+ 元のパブリッシャーでパブリケーション データベースを可用性グループのプライマリ レプリカから削除する場合は、実行**sp_redirect_publisher**の値を指定せず、 *@redirected_publisher* パブリッシャー/データベース ペアのリダイレクトを削除するパラメーター。 パブリッシャーのリダイレクトの詳細についてを参照してください[AlwaysOn パブリケーション データベースのメンテナンス&#40;SQL Server&#41;](../../database-engine/availability-groups/windows/maintaining-an-always-on-publication-database-sql-server.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  呼び出し元する必要がありますいずれかのメンバーである、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロールには、ディストリビューション データベースまたは定義済みパブリケーションのパブリケーション アクセス リストのメンバーパブリッシャー データベースと関連付けられています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
  [sp_validate_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validate-redirected-publisher-transact-sql.md)   
  [sp_get_redirected_publisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-get-redirected-publisher-transact-sql.md)   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: faf3901c-a0e0-4e0c-8b1b-86d9f15f34dd
 author: pmasl
 ms.author: pelopes
-manager: craigg
-ms.openlocfilehash: 257d83e522b398cce8358c1e30f4966dd951739e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 21e5230e4f3efd86fe90382202f0b21a0187a214
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65945454"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67937062"
 ---
 # <a name="stretch-database---sysdmdbrdamigrationstatus"></a>Stretch Database - sys.dm_db_rda_migration_status
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ ms.locfileid: "65945454"
 |**error_severity**|**int**|バッチが失敗した場合は、発生したエラーの重大度それ以外の場合は null です。|  
 |**error_state**|**int**|バッチが失敗した場合は、発生したエラーの状態それ以外の場合は null です。<br /><br /> **Error_state**条件またはエラーが発生した場所を示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Stretch Database](../../sql-server/stretch-database/stretch-database.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 6d2b0472-0e1f-4005-833c-735d1940fe93
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0187853dcf0fc16fe88feb7e2731414a69fdd183
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 0d003cccfa6fdedd0610ea34f15acb6ee1833e5a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075735"
 ---
 # <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @article_resolver = ] 'article_resolver'` 登録されているカスタム ビジネス ロジックのフレンドリ名を指定します。 *article_resolver*は**nvarchar (255)**、既定値はありません。  
+`[ @article_resolver = ] 'article_resolver'` 登録されているカスタム ビジネス ロジックのフレンドリ名を指定します。 *article_resolver*は**nvarchar (255)** 、既定値はありません。  
   
-`[ @resolver_clsid = ] 'resolver_clsid'` 登録されている COM オブジェクトの CLSID 値を指定します。 カスタム ビジネス ロジック*resolver_clsid*は**nvarchar (50)**、既定値は NULL です。 このパラメーターの設定は有効な clsid またはビジネス ロジック ハンドラー アセンブリを登録するときに NULL に設定する必要があります。  
+`[ @resolver_clsid = ] 'resolver_clsid'` 登録されている COM オブジェクトの CLSID 値を指定します。 カスタム ビジネス ロジック*resolver_clsid*は**nvarchar (50)** 、既定値は NULL です。 このパラメーターの設定は有効な clsid またはビジネス ロジック ハンドラー アセンブリを登録するときに NULL に設定する必要があります。  
   
-`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 登録されているカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**nvarchar (50)**、既定値は FALSE。 **true**登録されているカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**false**は COM コンポーネントであることを示します。  
+`[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 登録されているカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**nvarchar (50)** 、既定値は FALSE。 **true**登録されているカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**false**は COM コンポーネントであることを示します。  
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` ビジネス ロジック ハンドラーを実装するアセンブリの名前です。 *@dotnet_assembly_name*は**nvarchar (255)** 既定値は NULL です。 マージ エージェントの実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、アセンブリの完全なパスを指定する必要があります。  
   
@@ -61,7 +60,7 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_registercustomresolver**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [マージ アーティクルのカスタム競合回避モジュールの実装](../../relational-databases/replication/implement-a-custom-conflict-resolver-for-a-merge-article.md)   
  [sp_lookupcustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lookupcustomresolver-transact-sql.md)   

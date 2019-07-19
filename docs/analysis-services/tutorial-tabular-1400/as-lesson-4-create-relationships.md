@@ -10,12 +10,12 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 16fcf8e5f85464dbba7666f0f4ebebba829405af
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 7f593dafc1a734cd5f3a0c9fde4f47987f0b92af
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685620"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207412"
 ---
 # <a name="create-relationships"></a>リレーションシップの作成
 
@@ -25,7 +25,7 @@ ms.locfileid: "57685620"
   
 このレッスンを完了するまでに時間を推定するには。**10 分**  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
 
 この記事では、順序で完了する必要があります、表形式モデルのチュートリアルの一部です。 このレッスンでは、タスクを実行する前に、前のレッスンを完了が必要があります。[レッスン 3:日付テーブルとしてマーク](../tutorial-tabular-1400/as-lesson-3-mark-as-date-table.md)します。 
   
@@ -60,10 +60,10 @@ ms.locfileid: "57685620"
   
     |Active|テーブル|関連する参照テーブル|  
     |----------|---------|------------------------|  
-    |はい|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
-    |はい|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
+    |[はい]|**DimCustomer [GeographyKey]**|**DimGeography [GeographyKey]**|  
+    |[はい]|**DimProduct [ProductSubcategoryKey]**|**DimProductSubcategory [ProductSubcategoryKey]**|  
     |はい|**DimProductSubcategory [ProductCategoryKey]**|**DimProductCategory [ProductCategoryKey]**|  
-    |はい|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
+    |[はい]|**FactInternetSales [CustomerKey]**|**DimCustomer [CustomerKey]**|  
     |はい|**FactInternetSales [ProductKey]**|**DimProduct [ProductKey]**|  
   
     リレーションシップのいずれかが存在しない場合は、モデルには、次の表が含まれることを確認します。DimCustomer、DimDate、DimGeography、DimProduct、DimProductCategory、DimProductSubcategory、および FactInternetSales します。 同じデータ ソース接続のテーブルが別々 の間のリレーションシップ時期にインポートされた場合、それらのテーブルは作成されず、手動で作成する必要があります。 リレーションシップが表示されない場合がデータ ソースに関係がないことを意味します。 その操作は、データ モデルに手動で作成できます。

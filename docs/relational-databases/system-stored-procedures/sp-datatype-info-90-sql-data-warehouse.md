@@ -10,14 +10,13 @@ dev_langs:
 ms.assetid: 1d043964-dc6e-4c3e-ab61-bc444d5e25ae
 author: ronortloff
 ms.author: rortloff
-manager: craigg
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 69d37727f321e4fd2f38ca30184baba6ab432fe9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7919dac422a0033d9bac02a928da2ff7445c6cc9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62507323"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68108321"
 ---
 # <a name="spdatatypeinfo90-sql-data-warehouse"></a>sp_datatype_info_90 (SQL データ ウェアハウス)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -62,7 +61,7 @@ sp_datatype_info_90 [ [ @data_type = ] data_type ]
 |LOCAL_TYPE_NAME|**sysname**|データ ソースに依存するデータ型のローカライズされた名前です。 たとえば、DECIMAL はフランス語で DECIMALE になります。 ローカライズされた名前がそのデータ ソースによってサポートされない場合は NULL が返されます。|  
 |MINIMUM_SCALE|**smallint**|データ ソースでのデータ型の最小小数点以下桁数です。 データ型の小数点以下桁数が固定されている場合は、MINIMUM_SCALE 列および MAXIMUM_SCALE 列の両方にこの値が入ります。 小数点以下桁数が適用されない場合は NULL が返されます。|  
 |MAXIMUM_SCALE|**smallint**|データ ソースでのデータ型の最大小数点以下桁数です。 最大の小数点以下桁数が、データ ソースでは別に定義されず、最大有効桁数と同じであると定義されている場合、この列には PRECISION 列と同じ値が含まれています。|  
-|SQL_DATA_TYPE|**smallint**|記述子の TYPE フィールドに表示される、SQL データ型の値です。 この列は、DATA_TYPE 列と同じ以外は、 **datetime**と ANSI**間隔**データ型。 このフィールドは、常に値を返します。|  
+|SQL_DATA_TYPE|**smallint**|記述子の TYPE フィールドでの SQL データ型の値です。 この列は、DATA_TYPE 列と同じ以外は、 **datetime**と ANSI**間隔**データ型。 このフィールドは、常に値を返します。|  
 |SQL_DATETIME_SUB|**smallint**|**datetime**または ANSI**間隔**SQL_DATA_TYPE の値が SQL_DATETIME または SQL_INTERVAL の場合のサブコードします。 型のデータ型以外**datetime**と ANSI**間隔**、このフィールドは NULL です。|  
 |NUM_PREC_RADIX|**int**|Bits または列が保持できる最大数を計算する桁の数字の数。 データ型が概数型である場合、この列に含まれる値は 2 で、複数のビットを示します。 正確な数値型では、この列に値 10 進数字をいくつかを示すために 10 にはが含まれます。 それ以外は、この列は NULL です。 アプリケーションは、基数と精度を組み合わせて、その列が保持できる最大数を計算できます。|  
 |INTERVAL_PRECISION|**smallint**|間隔の場合は先頭の有効桁数の値*data_type*は**間隔**null それ以外の場合。|  
@@ -84,7 +83,7 @@ EXEC sp_datatype_info_90 -9;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SQL Data Warehouse のストアド プロシージャ](../../relational-databases/system-stored-procedures/sql-data-warehouse-stored-procedures.md)   
  [データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)  
   

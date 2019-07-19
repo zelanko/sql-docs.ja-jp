@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8b2a9c43-40e0-48f7-a6a9-325beb9f27da
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: 4215753da5ef7f9bce51cd7bea8c87551e369da6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d256603927a4c717b1f5d3203ea1ce3939771cf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65488074"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68085654"
 ---
 # <a name="show-many-to-many-relationships-in-derived-hierarchies-master-data-services"></a>派生階層 (Master Data Services) の多対多リレーションシップを表示する
 
@@ -92,7 +91,7 @@ Customer サンプル モデルや、 [!INCLUDE[ssMDSshort_md](../includes/ssmds
  ![mds_hierarchies_dh_screenshot](../master-data-services/media/mds-hierarchies-dh-screenshot.png "mds_hierarchies_dh_screenshot")  
   
 ##  <a name="bkmk_member_security"></a> メンバーのセキュリティ  
- メンバーの重複を許可する (1 人のメンバーが複数の親を持つことを許可する) 階層を使用して、メンバーのセキュリティ アクセス許可を割り当てることはできません。 例 :  
+ メンバーの重複を許可する (1 人のメンバーが複数の親を持つことを許可する) 階層を使用して、メンバーのセキュリティ アクセス許可を割り当てることはできません。 以下に例を示します。  
   
 -   null 再帰をアンカーしない再帰的派生階層 (RDH) (再帰レベルの各メンバーは、ROOT と再帰的な親以下に出現します)。  
   
@@ -103,7 +102,7 @@ Customer サンプル モデルや、 [!INCLUDE[ssMDSshort_md](../includes/ssmds
 ## <a name="collections"></a>コレクション  
  コレクションと明示的階層は非推奨とされます。 変換ストアド プロシージャ (udpConvertCollectionAndConsolidatedMembersToLeaf) は、コレクション メンバーをリーフ メンバーに変換し、多対多の派生階層を作成し、コレクション メンバー情報をキャプチャします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [派生階層 (マスター データ サービス)](../master-data-services/derived-hierarchies-master-data-services.md)  
   
   

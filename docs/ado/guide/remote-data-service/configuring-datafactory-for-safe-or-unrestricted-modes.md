@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 8ff24805-dc7a-42ae-b600-5bad0e3f51b8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0ee24eb54db193aa16f15f550de66b92cf9b896c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 92e3b029d2b18065faf50dcd0343f64b7b01654e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66699786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67922940"
 ---
 # <a name="configuring-datafactory-for-safe-or-unrestricted-modes"></a>安全または無制限モード用の DataFactory の構成
 > [!IMPORTANT]
@@ -38,7 +37,7 @@ ms.locfileid: "66699786"
   
  Handsafe.reg を実行した後は、停止し、コマンド プロンプト ウィンドウで、次のコマンドを入力して、Web サーバー上の World Wide Web 発行サービスを再起動する必要があります。"NET STOP W3SVC"と"NET 開始 W3SVC"。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataFactory のカスタマイズ](../../../ado/guide/remote-data-service/datafactory-customization.md)   
  [RDS の基礎](../../../ado/guide/remote-data-service/rds-fundamentals.md)
 

@@ -10,18 +10,17 @@ ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-manager: jroth
-ms.openlocfilehash: be8683ae563e4e0676f53203cb40386cf8aa4840
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66778332"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959469"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: 接続し、PostgreSQL を使用したクエリ [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 このクイック スタートは、使用する方法を示しています。 [!INCLUDE[name-sos](../includes/name-sos-short.md)] Postgres、に接続し、データベースを作成する SQL ステートメントを使用する*tutorialdb*しクエリを実行します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 このクイック スタートを完了する必要があります[!INCLUDE[name-sos](../includes/name-sos-short.md)]、用の PostgreSQL 拡張機能 [!含める[名前 sos](../includes/name-sos-short.md)、および PostgreSQL サーバーへのアクセス。
 

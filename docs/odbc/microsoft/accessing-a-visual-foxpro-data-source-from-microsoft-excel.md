@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 2c143020-0403-4592-80e0-84229f3d40be
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 575ba4abf9ed20ffbc0f2602a91bee9776e42b05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 20d4c7d47f2d541efdb1afbb9d757642b5ac83ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63198202"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901504"
 ---
 # <a name="accessing-a-visual-foxpro-data-source-from-microsoft-excel"></a>Microsoft Excel から Visual FoxPro データ ソースへのアクセス
 インストールされている Microsoft のクエリがある場合は、Visual FoxPro データに接続する Microsoft Excel でデータ ソースを作成できます。  

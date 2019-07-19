@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 20f6bc9c-839a-4fa4-b3f3-a6c47d1b69af
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: d4323fd5542216550013624dc75a6428cd1a8cd0
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: c56eeab15da21b4c202cd217b0df009db1391616
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663591"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265671"
 ---
 # <a name="sysdmossysinfo-transact-sql"></a>sys.dm_os_sys_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-pdw-md.md)]
@@ -63,7 +62,7 @@ ms.locfileid: "51663591"
 |**deadlock_monitor_serial_number**|**int**|現在のデッドロック監視シーケンスの ID を指定します。 Null を許容しません。|  
 |**sqlserver_start_time_ms_ticks**|**bigint**|表す、 **ms_tick**数と[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]最後に起動します。 現在の ms_ticks 列と比較します。 Null を許容しません。|  
 |**sqlserver_start_time**|**datetime**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が最後に起動された日時を指定します。 Null を許容しません。|  
-|**affinity_type**|**int**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在使用中のサーバー CPU プロセス関係の種類を指定します。 Null を許容しません。 詳細については、[ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)を参照してください。<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
+|**affinity_type**|**int**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在使用中のサーバー CPU プロセス関係の種類を指定します。 Null を許容しません。 詳細については、次を参照してください。 [ALTER SERVER CONFIGURATION &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-server-configuration-transact-sql.md)します。<br /><br /> 1 = MANUAL<br /><br /> 2 = AUTO|  
 |**affinity_type_desc**|**varchar(60)**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> について説明します、 **affinity_type**列。 Null を許容しません。<br /><br /> MANUAL = 少なくとも 1 台の CPU に関係が設定されています。<br /><br /> AUTO = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は CPU 間で自由にスレッドを移動できます。|  
 |**process_kernel_time_ms**|**bigint**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドがカーネル モードで費やした合計時間 (ミリ秒)。 この値にはサーバー上のすべてのプロセッサの時間が含まれるため、単一のプロセッサ クロックより大きくなる場合があります。 Null を許容しません。|  
 |**process_user_time_ms**|**bigint**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] スレッドがユーザー モードで費やした合計時間 (ミリ秒)。 この値にはサーバー上のすべてのプロセッサの時間が含まれるため、単一のプロセッサ クロックより大きくなる場合があります。 Null を許容しません。|  
@@ -73,20 +72,20 @@ ms.locfileid: "51663591"
 |**virtual_machine_type_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> について説明します、 **virtual_machine_type**列。 Null を許容しません。<br /><br /> NONE =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が仮想マシン内で実行されていません。<br /><br /> HYPERVISOR = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ハードウェアの支援による仮想化を意味するハイパーバイザー内で実行されています。 Hyper_V ロールがインストールされている場合、ホストの OS で実行されているインスタンスが、ハイパーバイザーで実行されるように、ハイパーバイザーは、OS をホストします。<br /><br /> OTHER = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ハードウェアの支援を必要としない、Microsoft Virtual PC などの仮想マシン内で実行されています。|  
 |**softnuma_configuration**|**int**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 方法の NUMA ノードが構成されているを指定します。 Null を許容しません。<br /><br /> 0 = OFF ハードウェアの既定値を示します<br /><br /> 1 = 自動のソフト NUMA<br /><br /> 2 = レジストリを介して手動ソフト NUMA|  
 |**softnuma_configuration_desc**|**nvarchar(60)**|**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> ソフト NUMA をオフ = 機能はオフ<br /><br /> =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ソフト NUMA の NUMA ノードのサイズを自動的に決定します<br /><br /> 手動ソフト NUMA を手動で構成されているを =|
-|**process_physical_affinity**|**nvarchar(3072)** |**適用対象:** 以降[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]します。<br /><br />今後登場する情報です。 |
+|**process_physical_affinity**|**nvarchar(3072)** |**適用対象:** 以降で[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)]します。<br /><br />今後登場する情報です。 |
 |**sql_memory_model**|**int**|**適用対象:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP1[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br /><br />によって使用されるメモリ モデルを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリを割り当てることです。 Null を許容しません。<br /><br />1 = コンベンショナル メモリ モデル<br />2 = lock Pages in Memory<br /> 3 = メモリ内の大きなページ|
 |**sql_memory_model_desc**|**nvarchar(120)**|**適用対象:** [!INCLUDE[sssql11](../../includes/sssql11-md.md)] SP4、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]を通じて SP1[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。<br /><br />によって使用されるメモリ モデルを指定します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリを割り当てることです。 Null を許容しません。<br /><br />**従来** =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンベンショナル メモリ モデルを使用してメモリを割り当てることができます。 これは、既定の sql メモリ モデル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービス アカウントがページのロック メモリの特権で起動中にします。<br />**LOCK_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリを割り当てることのメモリ内のページのロックが使用されます。 これは、SQL Server サービス アカウントは、SQL Server の起動中に in Memory 特権のページのロックを所有しているときの既定の sql メモリ マネージャーです。<br /> **LARGE_PAGES**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]メモリを割り当てることで大きなページをメモリ内使用します。 SQL Server では、大きなページ アロケーターを使用して、サーバーの起動時に、トレース フラグ 834 をオンにすると、SQL Server サービス アカウントが in Memory 特権のページのロックを所有しているときは、Enterprise edition でのみメモリを割り当てます。|
 |**pdw_node_id**|**int**|**適用対象:** [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]、 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]<br /><br /> この配布であるノードの識別子。|  
-|**socket_count** |**int** | **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システムで使用可能なプロセッサ ソケットの数を指定します。 |  
-|**cores_per_socket** |**int** | **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システム上の 1 つのソケットの使用可能なプロセッサの数を指定します。 |  
-|**numa_node_count** |**int** | **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システムで使用可能な numa ノードの数を指定します。 この列には、ソフト numa ノードだけでなく、物理 numa ノードが含まれています。 |  
+|**socket_count** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システムで使用可能なプロセッサ ソケットの数を指定します。 |  
+|**cores_per_socket** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システム上の 1 つのソケットの使用可能なプロセッサの数を指定します。 |  
+|**numa_node_count** |**int** | **適用対象:** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]。<br /><br />システムで使用可能な numa ノードの数を指定します。 この列には、ソフト numa ノードだけでなく、物理 numa ノードが含まれています。 |  
   
 ## <a name="permissions"></a>アクセス許可
 
 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]、必要があります`VIEW SERVER STATE`権限。   
-[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]が必要です、`VIEW DATABASE STATE`データベースの権限。   
+[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Premium レベルでは、必要があります、`VIEW DATABASE STATE`データベースの権限。 [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] Standard および Basic 階層は、必要があります、**サーバー管理者**または**Azure Active Directory 管理者**アカウント。   
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [SQL Server オペレーティング システム関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sql-server-operating-system-related-dynamic-management-views-transact-sql.md)  
   

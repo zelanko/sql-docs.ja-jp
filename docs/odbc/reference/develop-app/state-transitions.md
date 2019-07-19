@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: fc741611-6535-43cc-8156-6d897d04664e
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 30c1db4f850e6f181757d974ae74bb475b0cc5cc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2512d277980b071523cfea6cbe132f2a3861b7d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63148990"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68107290"
 ---
 # <a name="state-transitions"></a>状態遷移
 ODBC 定義不連続*状態*環境はそれぞれ、接続ごとに、および各ステートメント。 たとえば、環境では、3 つの状態があります。(この環境が割り当てられていない) 内の未割り当て (を環境が割り当てられますが、接続が割り当てられていません) を割り当て、および接続 (この環境と 1 つまたは複数の接続が割り当てられます)。 接続がある 7 つの可能な状態です。ステートメントでは、13 の可能な状態があります。  

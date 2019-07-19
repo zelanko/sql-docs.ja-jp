@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: adc81283-fdc2-46c0-bb48-abe82bbf2459
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: f258d7e49f86ed8015d8e51f2373633b7d7f10c4
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: d25713ba8fb298ce465910eae786befb710961d7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51663141"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67899592"
 ---
 # <a name="sysdmoswindowsinfo-transact-sql"></a>sys.dm_os_windows_info (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -35,10 +34,10 @@ ms.locfileid: "51663141"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**windows_release**|**nvarchar (256)**|Windows では、リリース番号を返します。 値と説明の一覧は、[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)を参照してください。 NULL 値は許容されません。|  
+|**windows_release**|**nvarchar (256)**|Windows では、リリース番号を返します。 値と説明の一覧は、次を参照してください。[オペレーティング システムのバージョン (Windows)](/windows/desktop/SysInfo/operating-system-version)します。 NULL 値は許容されません。|  
 |**windows_service_pack_level**|**nvarchar (256)**| Windows では、サービス パック番号を返します。 NULL 値は許容されません。 |  
-|**windows_sku**|**int**|Windows、Windows 在庫管理単位 (SKU) ID を返します SKU Id と説明の一覧は、[GetProductInfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)を参照してください。 Null 値は。 |  
-|**os_language_version**|**int**| Windows では、オペレーティング システムの Windows ロケール識別子 (LCID) を返します。 LCID 値と説明の一覧は、[Microsoft によるロケール Id 割り当て](https://go.microsoft.com/fwlink/?LinkId=208080)を参照してください。 NULL 値は許容されません。|  
+|**windows_sku**|**int**|Windows、Windows 在庫管理単位 (SKU) ID を返します SKU Id と説明の一覧は、次を参照してください。 [GetProductInfo 関数](https://msdn.microsoft.com/library/ms724358.aspx)します。 Null 値は。 |  
+|**os_language_version**|**int**| Windows では、オペレーティング システムの Windows ロケール識別子 (LCID) を返します。 LCID 値と説明の一覧は、次を参照してください。 [Microsoft によるロケール Id 割り当て](https://go.microsoft.com/fwlink/?LinkId=208080)します。 NULL 値は許容されません。|  
   
   
 ## <a name="permissions"></a>アクセス許可  

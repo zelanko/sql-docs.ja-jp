@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3957197a-f543-4d6b-9e11-67a77c2063b7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8e83341a72e6864b6545a4ccbbc2262403f9b06
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 416aaefa95871e909a12117756ea59747c555650
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697496"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963492"
 ---
 # <a name="reset-method-rds"></a>Reset メソッド (RDS)
 クライアント側での並べ替えまたはフィルター処理を実行します**レコード セット**指定の並べ替えとフィルター処理のプロパティを基にします。  
@@ -74,7 +73,7 @@ ADC.Reset(FALSE)   ' Rowset now has all Last Names > "T".
 ## <a name="applies-to"></a>適用対象  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FilterColumn、FilterCriterion、FilterValue、SortColumn、SortDirection プロパティおよび Reset メソッドの例 (VBScript)](../../../ado/reference/rds-api/filter-column-criterion-value-sortcolumn-sortdirection-example-vbscript.md)   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

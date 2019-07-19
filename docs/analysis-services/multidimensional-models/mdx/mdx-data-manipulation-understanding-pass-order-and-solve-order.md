@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6a578537f5221fef314a4a732f00f99d82311bbe
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52545405"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68176570"
 ---
 # <a name="mdx-data-manipulation---understanding-pass-order-and-solve-order"></a>MDX データ操作 - パスの理解と解決順序の注文
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
@@ -204,7 +204,7 @@ FROM [Adventure Works]
 ## <a name="additional-considerations"></a>その他の注意点  
  解決順序の問題は、計算されるメンバー、カスタム ロールアップ式、または計算されるセルの関係するディメンションが多数あるキューブの場合は特に、非常に複雑になります。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が MDX クエリを評価するとき、 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] は、MDX クエリで指定されているキューブのディメンションも含め、特定のパスに関係するものすべての解決順序の値を考慮します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CalculationCurrentPass (MDX)](../../../mdx/calculationcurrentpass-mdx.md)   
  [CalculationPassValue (MDX)](../../../mdx/calculationpassvalue-mdx.md)   
  [CREATE MEMBER ステートメント (MDX)](../../../mdx/mdx-data-definition-create-member.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 62470d42-e511-494c-bec4-ad4591734b7b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: df6437e80ab746a7d6aa219fb3299cb54712b5c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 62b78b608526ae0d6943a7416a21687fd1e51412
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697906"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918782"
 ---
 # <a name="executecomplete-event-ado"></a>ExecuteComplete イベント (ADO)
 **ExecuteComplete**イベントは、コマンドの実行が完了した後に呼び出されます。  
@@ -58,6 +57,6 @@ ExecuteComplete RecordsAffected, pError, adStatus, pCommand, pRecordset, pConnec
 ## <a name="remarks"></a>コメント  
  **ExecuteComplete**ためにイベントが発生する、**接続**。[実行](../../../ado/reference/ado-api/execute-method-ado-connection.md)、**コマンド**。[実行](../../../ado/reference/ado-api/execute-method-ado-command.md)、**レコード セット**。[オープン](../../../ado/reference/ado-api/open-method-ado-recordset.md)、**レコード セット**。[Requery](../../../ado/reference/ado-api/requery-method.md)、または**レコード セット**。[NextRecordset](../../../ado/reference/ado-api/nextrecordset-method-ado.md)メソッド。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)

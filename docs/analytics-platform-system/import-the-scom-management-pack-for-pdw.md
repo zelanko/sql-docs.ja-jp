@@ -2,19 +2,18 @@
 title: Analytics Platform System の SCOM 管理パックのインポート |Microsoft Docs
 description: Analytics Platform System (APS)、System Center Operations Manager (SCOM) 管理パックをインポートする次の手順に従います。 管理パックは、SCOM から Parallel Data Warehouse を監視する必要があります。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c4280fb257147f3c401badc6eaec18929f6d69b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 070e7b73614f6884e45a5c91603d6086613d15ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63149588"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960859"
 ---
 # <a name="import-the-scom-management-pack---analytics-platform-system"></a>SCOM 管理パックでは、Analytics Platform System をインポートします。
 Analytics Platform System (APS)、System Center Operations Manager (SCOM) 管理パックをインポートする次の手順に従います。 管理パックは、SCOM から Parallel Data Warehouse を監視する必要があります。 
@@ -30,7 +29,7 @@ System Center Operations Manager 2007 R2 は、インストールして実行す
   
 1.  Operations Manager 2007 管理グループの Operations Manager 管理者ロールのメンバーであるアカウントを使用してコンピューターにログオンします。  
   
-2.  オペレーション コンソールで次のようにクリックします。**管理**します。  
+2.  オペレーション コンソールで、 **[管理]** をクリックします。  
   
 3.  右クリックし、**管理パック**ノード、およびクリック**管理パックのインポート**します。  
   

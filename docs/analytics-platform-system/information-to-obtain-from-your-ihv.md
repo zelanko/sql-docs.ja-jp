@@ -2,19 +2,18 @@
 title: IHV - Analytics Platform System から情報を取得 |Microsoft Docs
 description: Analytics Platform System appliance に関する IHV から取得する情報。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 57b61ed7741bc6d36b7531a62416893e7cc10fb7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 016a20567968e45456be79c8c67e77d7c3fbb2bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63150226"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960832"
 ---
 # <a name="information-to-obtain-from-your-ihv"></a>IHV から取得する情報
 独立系ハードウェア ベンダー (IHV) は、新しい SQL Server PDW アプライアンスを提供する、ときに、アプライアンス上の実行が完了、アプライアンスのハードウェアおよび構成情報は提供もします。 この情報をご使用のアプライアンスを管理する必要があります。  

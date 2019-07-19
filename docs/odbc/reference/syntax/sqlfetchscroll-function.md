@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: c0243667-428c-4dda-ae91-3c307616a1ac
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 20a1580503ad141817edcf8e01772dfcc8dc39a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f3d82cc11763722f552896a29bb3831d892054b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537355"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003035"
 ---
 # <a name="sqlfetchscroll-function"></a>SQLFetchScroll 関数
 **準拠**  
@@ -148,7 +147,7 @@ SQLRETURN SQLFetchScroll(
 ## <a name="cursor-positioning-rules"></a>カーソル位置の規則  
  次のセクションでは、FetchOrientation の各値に対して厳密な規則について説明します。 これらのルールは、次の表記を使用します。  
   
-|表記法|説明|  
+|Notation|説明|  
 |--------------|-------------|  
 |*開始する前に*|ブロック カーソルは結果セットの開始前に配置されます。 新しい行セットの最初の行は、結果セットの開始前に、する場合**SQLFetchScroll** sql_no_data が返されます。|  
 |*終了後*|ブロック カーソルは、結果の最後の設定後に配置されます。 場合、新しい行セットの最初の行は、結果セットの終了後**SQLFetchScroll** sql_no_data が返されます。|  
@@ -164,7 +163,7 @@ SQLRETURN SQLFetchScroll(
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
 |*開始する前に*|1|  
-|*CurrRowsetStart + RowsetSize*[1] *\<= LastResultRow*|*CurrRowsetStart + 複合カーソル*[1]|  
+|*CurrRowsetStart + 複合カーソル*[1]  *\<LastResultRow を =*|*CurrRowsetStart + 複合カーソル*[1]|  
 |*CurrRowsetStart + 複合カーソル*[1] *> LastResultRow*|*終了後*|  
 |*終了後*|*終了後*|  
   
@@ -178,7 +177,7 @@ SQLRETURN SQLFetchScroll(
 |*開始する前に*|*開始する前に*|  
 |*CurrRowsetStart = 1*|*開始する前に*|  
 |*1 < CurrRowsetStart < = 複合カーソル* <sup>[2]。</sup>|*1* <sup>[1]</sup>|  
-|*CurrRowsetStart > RowsetSize* <sup>[2]</sup>|*CurrRowsetStart - RowsetSize* <sup>[2]</sup>|  
+|*CurrRowsetStart > 複合カーソル* <sup>[2]</sup>|*CurrRowsetStart - 複合カーソル* <sup>[2]</sup>|  
 |*終了と LastResultRow 後 < 複合カーソル* <sup>[2]</sup>|*1* <sup>[1]</sup>|  
 |*終了と LastResultRow 後 > = 複合カーソル* <sup>[2]</sup>|*複合カーソルは + 1 - LastResultRow* <sup>[2]。</sup>|  
   
@@ -237,7 +236,7 @@ SQLRETURN SQLFetchScroll(
 |条件|新しい行セットの最初の行|  
 |---------------|-----------------------------|  
 |*複合カーソル* <sup>[1]</sup> < LastResultRow を =|*複合カーソルは + 1 - LastResultRow* <sup>[1]</sup>|  
-|*RowsetSize* <sup>[1]</sup> > LastResultRow|*1*|  
+|*複合カーソル* <sup>[1]</sup> > LastResultRow|*1*|  
   
  [1] 行をフェッチする前に呼び出した後、行セット サイズが変わっている場合は、新しい行セット サイズになります。  
   

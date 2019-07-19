@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 13b5b1c3-6af6-439e-bb65-976578ba6bc2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2bb7a08ab3159fa63024c7bc761c8ccec2563a78
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6873b964adfcfc5bffed5d093bed48f4fbd29a20
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706469"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965862"
 ---
 # <a name="keys-append-method-key-type-relatedcolumn-relatedtable-and-updaterule-properties-example-vb"></a>Keys Append メソッド、Key Type、RelatedColumn、RelatedTable、UpdateRule プロパティの例 (VB)
 次のコードは、という名前の 2 つの既存のテーブル間に新しい外部キー リレーションシップを作成する方法を示します**顧客**と**注文**します。  

@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 9a3b4f8b-982b-44b9-ade6-754ff026dc90
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 274451cdd2d1c3d811e4105a6d646044537999f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a86d958114a0755d8aead4470936115902f9c57a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024554"
 ---
 # <a name="sqlremovedriver-function"></a>SQLRemoveDriver 関数
 **準拠**  
  バージョンが導入されました。ODBC 3.0  
   
- **まとめ**  
+ **概要**  
  **SQLRemoveDriver**変更やシステム情報の Odbcinst.ini のエントリから、ドライバーに関する情報を削除します。  
   
 ## <a name="syntax"></a>構文  

@@ -2,19 +2,18 @@
 title: 'Analytics Platform System での TLS 1.2 の構成 |Microsoft Docs '
 description: APS で TLS 1.2 を構成する推奨事項
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 10/29/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 5b6ea2144fe333f87123abdf92e16aa7122e98b4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e77e1de7ccc3894d9356821a95139835ceb52caa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63239467"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961187"
 ---
 # <a name="configure-tls-12-in-aps"></a>AP で TLS 1.2 を構成します。
 

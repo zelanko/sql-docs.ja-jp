@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 7e80433c224f08b9074a8d1ef93ef96bdc157853
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147167"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68178847"
 ---
 # <a name="database-readwritemodes"></a>データベースの ReadWriteMode
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "50147167"
   
 |ReadOnly モード|制限される操作|  
 |-------------------|---------------------------|  
-|XML/A コマンド<br /><br /> <br /><br /> 注: これらのコマンドのいずれかを実行すると、エラーが発生します。|**作成**<br /><br /> **Alter**<br /><br /> **Del**<br /><br /> **[処理]**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **復元**<br /><br /> **Synchronize**<br /><br /> **Insert**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> 注: 読み取り専用に設定されているデータベースでは、セルの書き戻しは許可されていますが、変更はコミットできません。|  
-|MDX ステートメント<br /><br /> <br /><br /> 注: これらのステートメントのいずれかを実行すると、エラーが発生します。|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 注: Excel ユーザーは、ピボット テーブルのグループ化機能を使用できません。この機能は、 **CREATE SESSION CUBE** コマンドを使用して内部的に実装されているためです。|  
-|DMX ステートメント<br /><br /> <br /><br /> 注: これらのステートメントのいずれかを実行すると、エラーが発生します。|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
+|XML/A コマンド<br /><br /> <br /><br /> 注:これらのコマンドのいずれかを実行するときに、エラーが発生します。|**作成**<br /><br /> **Alter**<br /><br /> **Del**<br /><br /> **プロセス**<br /><br /> **MergePartitions**<br /><br /> **DesignAggregations**<br /><br /> **CommitTransaction**<br /><br /> **復元**<br /><br /> **Synchronize**<br /><br /> **[挿入]**<br /><br /> **Update**<br /><br /> **Drop**<br /><br /> <br /><br /> 注:読み取り専用設定されているデータベースでは、セルの書き戻しを許可してください。ただし、変更がコミットすることはできません。|  
+|MDX ステートメント<br /><br /> <br /><br /> 注:これらのステートメントのいずれかを実行するときに、エラーが発生します。|**COMMIT TRAN**<br /><br /> **CREATE SESSION CUBE**<br /><br /> **ALTER CUBE**<br /><br /> **ALTER DIMENSION**<br /><br /> **CREATE DIMENSION MEMBER**<br /><br /> **DROP DIMENSION MEMBER**<br /><br /> **ALTER DIMENSION**<br /><br /> <br /><br /> 注:Excel ユーザーはその機能を使用して内部的に実装されているため、ピボット テーブルのグループ化機能を使用できません**CREATE SESSION CUBE**コマンド。|  
+|DMX ステートメント<br /><br /> <br /><br /> 注:これらのステートメントのいずれかを実行するときに、エラーが発生します。|**CREATE [SESSION] MINING STRUCTURE**<br /><br /> **ALTER MINING STRUCTURE**<br /><br /> **DROP MINING STRUCTURE**<br /><br /> **CREATE [SESSION] MINING MODEL**<br /><br /> **DROP MINING MODEL**<br /><br /> **IMPORT**<br /><br /> **SELECT INTO**<br /><br /> **INSERT**<br /><br /> **UPDATE**<br /><br /> **DELETE**|  
 |バックグラウンド操作|データベースを変更するすべてのバックグラウンド処理は無効になっています。 これには、レイジー処理およびプロアクティブ キャッシュが含まれています。|  
   
 ## <a name="readwritemode-usage"></a>ReadWriteMode の使用方法  
@@ -42,7 +42,7 @@ ms.locfileid: "50147167"
 > [!NOTE]  
 >  ローカル キューブは、読み取り専用データベースから作成できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  <xref:Microsoft.AnalysisServices.Database.Detach%2A>   
  [Analysis Services データベースのインポートとデタッチ](../../analysis-services/multidimensional-models/attach-and-detach-analysis-services-databases.md)   
  [Analysis Services データベースの移動](../../analysis-services/multidimensional-models/move-an-analysis-services-database.md)   

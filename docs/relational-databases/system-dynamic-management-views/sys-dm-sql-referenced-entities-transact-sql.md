@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 077111cb-b860-4d61-916f-bac5d532912f
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4ed017d1b3571405127177bdb45857be7ccbf1b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64ddba95ec5c7fb8dfa6e6e685fcf9d5b6846fe9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66354405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68090671"
 ---
 # <a name="sysdmsqlreferencedentities-transact-sql"></a>sys.dm_sql_referenced_entities (Transact-SQL)
 
@@ -66,12 +65,12 @@ sys.dm_sql_referenced_entities (
 ```  
   
 ## <a name="arguments"></a>引数  
- [ *schema_name*. ] *referencing_entity_name*  
+ [ *schema_name*. *referencing_entity_name*  
  参照元エンティティの名前です。 *schema_name*が参照元のクラスが OBJECT の場合に必要です。  
   
  *schema_name.referencing_entity_name*は**nvarchar (517)** します。  
   
- *<referencing_class>* ::=  { OBJECT | DATABASE_DDL_TRIGGER   | SERVER_DDL_TRIGGER }  
+ *< Referencing_class >* :: = {オブジェクト |DATABASE_DDL_TRIGGER |SERVER_DDL_TRIGGER です。  
  指定された参照元エンティティのクラスです。 クラスは 1 つのステートメントに 1 つだけ指定できます。  
   
  *< referencing_class >* は**nvarchar (60)** します。  
@@ -335,7 +334,7 @@ SELECT
  Employee      Gender              0           1          0
  ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sys.dm_sql_referencing_entities &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)   
  [sys.sql_expression_dependencies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md)  
   

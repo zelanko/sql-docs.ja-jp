@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルのプロパティ |Microsoft ドキュメント
+title: マイニング モデルのプロパティ |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 8ba834b497950357b83a4ec052654b5a4998b928
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015809"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209793"
 ---
 # <a name="mining-model-properties"></a>マイニング モデルのプロパティ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -33,7 +33,7 @@ ms.locfileid: "34015809"
 ## <a name="properties-of-models"></a>モデルのプロパティ  
  次の表で、マイニング モデルに固有のプロパティについて説明します。 また、マイニング モデルの個々の列に設定できるプロパティもあります。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**アルゴリズム**|マイニング モデルのアルゴリズムの種類を設定します。|  
 |**AlgorithmParameters**|アルゴリズムの各種類で使用可能なアルゴリズム パラメーターの値を設定します。|  
@@ -44,21 +44,21 @@ ms.locfileid: "34015809"
 ## <a name="properties-of-model-columns"></a>モデル列のプロパティ  
  マイニング モデルの各列に対して、次のデータ マイニング固有のプロパティを設定できます。 これらのプロパティには、マイニング構造内のマイニング モデルごとに異なる値を設定できます。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
-|**Description**|マイニング列の目的について説明します。|  
+|**[説明]**|マイニング列の目的について説明します。|  
 |**名前**|マイニング モデル列の名前を設定します。 新しい名前を入力し、マイニング モデル列に別名を指定できます。|  
 |**ModelingFlags**|列に対してアルゴリズム固有のフラグを設定します。|  
 |**SourceColumnID**|モデル列の基になるマイニング構造列の名前を示します。<br /><br /> このプロパティは読み取り専用です。|  
 |**使用方法**|マイニング モデルによる列の使用方法を設定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)   
- [マイニング構造と #40 です。Analysis Services - データ マイニング & #41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
+ [マイニング構造 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/mining-structures-analysis-services-data-mining.md)   
  [マイニング モデル タスクと操作方法](../../analysis-services/data-mining/mining-model-tasks-and-how-tos.md)   
  [マイニング モデルのプロパティの変更](../../analysis-services/data-mining/change-the-properties-of-a-mining-model.md)   
  [データ マイニング ツール](../../analysis-services/data-mining/data-mining-tools.md)   
- [リレーショナル マイニング構造を作成します。](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
- [モデル列の別名を作成します。](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
+ [リレーショナル マイニング構造の作成](../../analysis-services/data-mining/create-a-relational-mining-structure.md)   
+ [モデル列の別名の作成](../../analysis-services/data-mining/create-an-alias-for-a-model-column.md)  
   
   

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7ce2dfc0-4b1f-4dcb-a979-2c4f95b4cb15
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 4415f3e0a6ebf773a3a781a5547a50a578d9d4f9
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: a4cd3b8f186f1ade85f4ed4533b0549bcd449a69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51671991"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68134951"
 ---
 # <a name="clr-integration-architecture----performance"></a>CLR 統合のアーキテクチャ - パフォーマンス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,14 +48,14 @@ ms.locfileid: "51671991"
   
  Stvf はマネージ関数を返す、 **IEnumerable**インターフェイス。 **IEnumerable** STVF が返した結果セット内を移動する方法があります。 STVF が呼び出されたときに、返された**IEnumerable**クエリ プランに直接接続されています。 クエリ プランの呼び出し**IEnumerable**メソッドの行をフェッチする必要があるとき。 このような反復的なモデルにより、テーブル全体に値が格納されるまで待たなくても、最初の行が生成された直後から結果を使用できます。 関数の呼び出しに伴うメモリの消費を大幅に抑えることもできます。  
   
-### <a name="arrays-vs-cursors"></a>配列とカーソル  
+### <a name="arrays-vs-cursors"></a>配列とします。カーソル  
  配列として簡単に表現できるデータを [!INCLUDE[tsql](../../includes/tsql-md.md)] カーソルでスキャンする必要がある場合、マネージド コードを使用するとパフォーマンスが大幅に向上します。  
   
 ### <a name="string-data"></a>文字列データ  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] など、データの文字**varchar**、マネージ関数で sqlstring 型または SqlChars 型の指定できます。 SqlString 変数は値全体のインスタンスをメモリに作成します。 SqlChars 変数には、ストリーミング インターフェイスが用意されており、これを使用すると、値全体のインスタンスをメモリに作成しないことでパフォーマンスおよびスケーラビリティを高めることができます。 このことは、特に LOB (ラージ オブジェクト) データにとって重要です。 によって返されるストリーミング インターフェイスをさらに、サーバーの XML データにアクセスできる**SqlXml.CreateReader()** します。  
   
-### <a name="clr-vs-extended-stored-procedures"></a>CLR と拡張ストアド プロシージャ  
- マネージド プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 さらに、System.Data.SqlServer Api のサポート データの種類など**xml**、 **varchar (max)**、 **nvarchar (max)**、および**varbinary(max)** で導入された、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、新しいデータ型をサポートするために、ODS Api が拡張されていません。  
+### <a name="clr-vs-extended-stored-procedures"></a>CLR とします。拡張ストアド プロシージャ  
+ マネージド プロシージャから結果セットをクライアントに返す Microsoft.SqlServer.Server API (アプリケーション プログラミング インターフェイス) は、拡張ストアド プロシージャにより使用される ODS (オープン データ サービス) API に比べパフォーマンスに優れています。 さらに、System.Data.SqlServer Api のサポート データの種類など**xml**、 **varchar (max)** 、 **nvarchar (max)** 、および**varbinary(max)** で導入された、 [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、新しいデータ型をサポートするために、ODS Api が拡張されていません。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではマネージド コードによってメモリ、スレッド、同期などのリソースの使用状況が管理されます。 これらのリソースを公開するマネージド API が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リソース マネージャーの上位に実装されるためです。 逆に、拡張ストアド プロシージャは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってリソースの使用状況が監視または制御されることがありません。 たとえば、拡張ストアド プロシージャで大量の CPU リソースまたはメモリ リソースが消費されていても、それを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出したり制御することはできません。 一方、マネージド コードでは、特定のスレッドが長期間リソースを占有していることを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で検出して、タスクからリソースを解放し、他の作業のスケジュールを設定できるようになります。 つまり、マネージド コードを使用すると、スケーラビリティやシステム リソースの使用状況が改善されます。  
   
@@ -78,7 +77,7 @@ ms.locfileid: "51671991"
 ### <a name="scalable-memory-usage"></a>スケーラビリティを確保するメモリの使用方法  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のマネージド ガベージ コレクションのパフォーマンスやスケーラビリティを高めるには、大量のメモリを 1 単位として割り当てないようにしてください。 88 KB を超える割り当てはラージ オブジェクト ヒープに配置されます。その結果、小規模の割り当てをいくつも行った場合に比べて、ガベージ コレクションのパフォーマンスやスケーラビリティが低下します。 たとえば、大きな多次元配列を割り当てる場合、ジャグ (散在した) 配列を割り当てることをお勧めします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CLR ユーザー定義型](../../relational-databases/clr-integration-database-objects-user-defined-types/clr-user-defined-types.md)  
   
   

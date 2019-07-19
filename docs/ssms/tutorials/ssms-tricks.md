@@ -1,6 +1,6 @@
 ---
-title: SQL Server Management Studio の使用に関するその他のヒントとテクニック
-description: SSMS の使用に関するその他のヒントとテクニックについてのチュートリアルです。
+title: SQL Server Management Studio (SSMS) の使用に関するヒントとテクニック
+description: コードのコメントとコメント解除、テキストのインデント、オブジェクト エクスプローラーでのオブジェクトのフィルター処理、SQL Server エラー ログへのアクセス、SQL Server Management Studio を使用した SQL Server インスタンス名の検索を行う方法を学習します。
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: ssms
@@ -8,7 +8,7 @@ ms.prod_service: sql-tools
 author: MashaMSFT
 ms.author: mathoma
 ms.reviewer: sstein
-manager: craigg
+manager: jroth
 helpviewer_keywords:
 - source controls [SQL Server Management Studio], tutorials
 - Help [SQL Server], SQL Server Management Studio
@@ -20,16 +20,16 @@ helpviewer_keywords:
 - find sql server instance name
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 4c6585e8e2c467c6e0a4a288107fd59cae64f84b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c31c8243ef74b69a5fe050e5487911138db76741
+ms.sourcegitcommit: 636c02bd04f091ece934e78640b2363d88cac28d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499420"
+ms.lasthandoff: 07/12/2019
+ms.locfileid: "67860644"
 ---
-# <a name="tutorial-additional-tips-and-tricks-for-using-ssms"></a>チュートリアル:SSMS を使用するための追加のヒントとテクニック
+# <a name="tips-and-tricks-for-using-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) の使用に関するヒントとテクニック
 
-このチュートリアルでは、SQL Server Management Studio (SSMS) の使用時に便利なその他のテクニックを紹介します。 この記事で取り上げるテクニック: 
+この記事では、SQL Server Management Studio (SSMS) の使用に関するいくつかのヒントとテクニックをご紹介します。 この記事で取り上げるテクニック: 
 
 > [!div class="checklist"]
 > * Transact-SQL (T-SQL) のテキストをコメント化する/コメント解除する
@@ -40,7 +40,7 @@ ms.locfileid: "66499420"
 
 ## <a name="prerequisites"></a>Prerequisites
 
-このチュートリアルを実行するには、SQL Server Management Studio、SQL Server へのアクセス、AdventureWorks データベースが必要です。 
+この記事に記載されている手順をテストするには、SQL Server Management Studio、SQL サーバーへのアクセス、AdventureWorks データベースが必要です。 
 
 * [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
 * [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールする。
@@ -267,7 +267,7 @@ SQL Server に接続しているとき、3 か所でサーバー名が見つか�
 
 ### <a name="if-youre-connected-to-an-alias-or-availability-group-listener"></a>別名または可用性グループ リスナーに接続している場合
 
-別名または可用性グループ リスナーに接続している場合、その情報がオブジェクト エクスプローラーとプロパティに表示されます。 その場合、SQL Server の名前はすぐにはわからないことがあり、クエリを行う必要があります。 
+別名または可用性グループ リスナーに接続している場合、その情報がオブジェクト エクスプローラーとプロパティに表示されます。 その場合、SQL Server の名前はすぐにはわからないことがあり、クエリを行う必要があります。
 
 1. SQL Server に接続します。
 
@@ -282,3 +282,12 @@ SQL Server に接続しているとき、3 か所でサーバー名が見つか�
 4. クエリの結果を見て、接続している SQL Server インスタンスの名前を確認します。 
 
     ![SQL Server 名を問い合わせる](media/ssms-tricks/queryservername.png)
+
+## <a name="next-steps"></a>次の手順
+
+SSMS に慣れ親しむには、実践的な経験を積むのが最も効果的です。 以下の "*チュートリアル*" と "*操作方法*" に関する記事は、SSMS 内で使用できるさまざまな機能を使用するのに役立ちます。  以下の記事では、SSMS のコンポーネントを管理する方法と、頻繁に使用する機能にアクセスする方法が説明されています。
+
+* [インスタンスに接続してクエリを実行する](connect-query-sql-server.md)
+* [スクリプトの作成](scripting-ssms.md)
+* [SSMS でテンプレートを使用する](../template/templates-ssms.md)
+* [SSMS を構成する](ssms-configuration.md)

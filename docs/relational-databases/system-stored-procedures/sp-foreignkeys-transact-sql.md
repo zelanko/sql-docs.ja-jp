@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 935fe385-19ff-41a4-8d0b-30618966991d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: af2441fadc30254871a5d74209d645fc93a99456
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2c1aaa12ed6ffb86b6e3f7979deac0e6f933dff8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533824"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124375"
 ---
 # <a name="spforeignkeys-transact-sql"></a>sp_foreignkeys (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  なし  
   
 ## <a name="result-sets"></a>結果セット  
- さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_カタログ_**.**_スキーマ_**.**_テーブル_)、これは、結果セットで表されます。  
+ さまざまな DBMS 製品は、3 つの部分がテーブルの名前付けをサポート (_カタログ_ **.** _スキーマ_ **.** _テーブル_)、これは、結果セットで表されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -86,7 +85,7 @@ sp_foreignkeys [ @table_server = ] 'table_server'
  結果セットの FK_NAME と pk_name の各列は常に NULL を返します。  
   
 ## <a name="remarks"></a>コメント  
- **sp_foreignkeys**の FOREIGN_KEYS 行セットのクエリ、 **IDBSchemaRowset**に対応する OLE DB プロバイダーのインターフェイス*table_server*します。 *Table_name*、 *、table_schema、*、 *table_catalog*、および*列*行を制限するには、このインターフェイスに渡されるパラメーター返されます。  
+ **sp_foreignkeys**の FOREIGN_KEYS 行セットのクエリ、 **IDBSchemaRowset**に対応する OLE DB プロバイダーのインターフェイス*table_server*します。 *Table_name*、 *、table_schema、* 、 *table_catalog*、および*列*行を制限するには、このインターフェイスに渡されるパラメーター返されます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
@@ -100,7 +99,7 @@ EXEC sp_foreignkeys @table_server = N'Seattle1',
    @pktab_catalog = N'AdventureWorks2012';  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_catalogs &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-catalogs-transact-sql.md)   
  [sp_column_privileges &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-column-privileges-transact-sql.md)   
  [sp_indexes &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-indexes-transact-sql.md)   

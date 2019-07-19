@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: bc158c0c5ba35da95fe3bf1af688e12a7b162045
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52413089"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181793"
 ---
 # <a name="database-consistency-checker-dbcc-for-analysis-services"></a>Analysis Services 用 database Consistency Checker (DBCC)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -102,7 +102,7 @@ ms.locfileid: "52413089"
  場合によっては、最後のサービスが再起動した後に発生した破損エラーを取得するために、サービスの再起動が必要です。 サーバーに再接続するだけでは、変更を取得できません。  
   
 ### <a name="run-dbcc-commands-in-management-studio"></a>Management Studio で DBCC コマンドを実行する  
- アドホック クエリの場合、SQL Server Management Studio で MDX または XMLA クエリ ウィンドウを開きます。 この操作を行うには、データベースをクリックし、 **[新しいクエリ]** | **[XMLA]** の順にクリックしてコマンドを実行し、出力を読み取ります。  
+ アドホック クエリの場合、SQL Server Management Studio で MDX または XMLA クエリ ウィンドウを開きます。 この操作を行うには、データベースをクリックし、 **[新しいクエリ]**  |  **[XMLA]** の順にクリックしてコマンドを実行し、出力を読み取ります。  
   
  ![Management Studio での DBCC XML コマンド](../../analysis-services/instances/media/ssas-dbcc-ssms.gif "Management Studio での XML の DBCC コマンド")  
   
@@ -186,13 +186,13 @@ Execution complete
 ### <a name="trace-dbcc-output-in-an-xevent-session-in-ssms"></a>SSMS の xEvent セッションで DBCC 出力をトレースする  
  拡張イベント セッションは、Profiler イベントまたは xEvents の両方を使用できます。 **Command** イベントと **Progress Report** イベントの追加に関するガイダンスについては、前のセクションを参照してください。  
   
-1.  セッションを開始するには、データベースを右クリックし、**[管理]** >**[拡張イベント]** >  **[セッション]** > **[新しいセッション]** の順にクリックします。 詳細については、「  [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 」を参照してください。  
+1.  セッションを開始するには、データベースを右クリックし、 **[管理]**  > **[拡張イベント]**  >   **[セッション]**  >  **[新しいセッション]** の順にクリックします。 詳細については、「  [Monitor Analysis Services with SQL Server Extended Events](../../analysis-services/instances/monitor-analysis-services-with-sql-server-extended-events.md) 」を参照してください。  
   
 2.  Profiler イベント カテゴリの **Progress Report** イベントのいずれかまたはすべて、または PureXevent カテゴリの **RequestProgress** イベントを選択します。  
   
 3.  前のセクションで説明した構文を使用して、Management Studio の XMLA または MDX クエリ ウィンドウで DBCC コマンドを実行します。  
   
-4.  SSMS で Sessions フォルダーを更新します。 セッション名を右クリックし、**[ライブ データの監視]** をクリックします。  
+4.  SSMS で Sessions フォルダーを更新します。 セッション名を右クリックし、 **[ライブ データの監視]** をクリックします。  
   
 5.  DBCC から返されたメッセージの TextData 値を確認します。  TextData は、event フィールドのプロパティです。イベントから返されたステータスとエラー メッセージを示します。  
   
@@ -224,7 +224,7 @@ Execution complete
 |テーブル|テーブルのセグメント マップ内のパーティション数が、テーブルに定義されているパーティション数と同じかどうかをチェックします。|格納層が破損しています。 '%{parent/}' テーブルのパーティションのコレクションが破損しています。|  
 |テーブル|Excel 2010 用 PowerPivot で作成またはインポートした表形式データベースで、パーティション数が 2 以上の場合、エラーが発生します。パーティションのサポートが以降のバージョンで追加され、それが破損を示すためです。|セグメント マップのチェック中に、データベース整合性チェック (DBCC) が失敗しました。|  
 |パーティション|各パーティションについて、データのセグメント数と、セグメントに含まれるデータの各セグメントのレコード数が、セグメントのインデックスに格納されている値と一致することを検証します。|セグメント マップのチェック中に、データベース整合性チェック (DBCC) が失敗しました。|  
-|パーティション|合計レコード、セグメント、またはセグメントごとのレコードの数が有効ではない場合 (0 未満)、またはセグメント数が、合計レコード数に基づいて必要と計算されたセグメント数と一致しない場合、エラーが発生します。|セグメント マップのチェック中に、データベース整合性チェック (DBCC) が失敗しました。|  
+|Partition|合計レコード、セグメント、またはセグメントごとのレコードの数が有効ではない場合 (0 未満)、またはセグメント数が、合計レコード数に基づいて必要と計算されたセグメント数と一致しない場合、エラーが発生します。|セグメント マップのチェック中に、データベース整合性チェック (DBCC) が失敗しました。|  
 |リレーションシップ|リレーションシップに関するデータの格納に使用される構造にレコードが含まれない場合、またはリレーションシップに使用されるテーブルの名前が空の場合は、エラーが発生します。|リレーションシップのチェック中に、データベース整合性チェック (DBCC) が失敗しました。|  
 |リレーションシップ|主テーブル、プライマリ列、外部テーブル、外部列の名前が設定され、リレーションシップに関係する列とテーブルにアクセスできることを検証します。<br /><br /> 関係する列の型が有効であり、主キーと外部キー値のインデックスが有効な参照構造になることを検証します。|リレーションシップのチェック中に、データベース整合性チェック (DBCC) が失敗しました。|  
 |Hieararchy|階層の並べ替え順序が認識可能な値ではない場合、エラーが発生します。|'%{hier/}' 階層のチェック中に、データベース整合性チェック (DBCC) が失敗しました。|  
@@ -259,7 +259,7 @@ Execution complete
 ## <a name="common-resolutions-for-error-conditions"></a>エラー条件の一般的な解決方法  
  次のエラーが SQL Server Management Studio または msmdsrv.log ファイルに表示されます。 このエラーは、1 つ以上のチェックが合格しなかった場合に発生します。 エラーによっては、オブジェクトを再処理する、ソリューションを削除して再配置する、またはデータベースを復元するという解決策が推奨されます。  
   
-|[エラー]|問題点|解決策|  
+|Error|問題|解決方法|  
 |-----------|-----------|----------------|  
 |**メタデータ マネージャーのエラー**<br /><br /> オブジェクト参照 '\<objectID >' が無効です。 オブジェクト参照がメタデータ クラス階層の構造と一致しません。|コマンドの形式が正しくない|コマンドの構文を確認します。 最も高い可能性として、1 つ以上の親オブジェクトを指定せず、下位のオブジェクトを含めました。|  
 |**メタデータ マネージャーのエラー**<br /><br /> いずれか、\<オブジェクト > の ID を持つ '\<objectID >' に存在しません、 \<parentobject > の ID を持つ'\<parentobjectID >'、か、ユーザーに、オブジェクトへのアクセス許可がありません。|インデックスの破損 (多次元)|オブジェクトと依存するすべてのオブジェクトを再処理します。|  
@@ -296,7 +296,7 @@ Execution complete
 > [!NOTE]  
 >  オンデマンドでコマンドを実行する場合、この設定は DBCC に影響がありません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース、テーブル、またはパーティションの処理 (Analysis Services)](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)   
  [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [Analysis Services での表形式モデルの互換性レベル](../../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)   

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: c2d2ae49-0808-46d8-8444-db69a69d0ec3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e8c1ee1b5bdf2796aa64159867389639496a4906
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: ccd72de184115929483a43fd69d133abe0e195af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492874"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117911"
 ---
 # <a name="spaddumpdevice-transact-sql"></a>sp_addumpdevice (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +47,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @devtype = ] 'device_type'` バックアップ デバイスの種類です。 *device_type*は**varchar (20)**, で、既定値はありませんは、次の値のいずれかを指定します。  
+`[ @devtype = ] 'device_type'` バックアップ デバイスの種類です。 *device_type*は**varchar (20)** , で、既定値はありませんは、次の値のいずれかを指定します。  
   
 |値|説明|  
 |-----------|-----------------|  
@@ -57,7 +56,7 @@ sp_addumpdevice [ @devtype = ] 'device_type'
   
 `[ @logicalname = ] 'logical_name'` BACKUP と RESTORE ステートメントで使用するバックアップ デバイスの論理名です。 *logical_name*は**sysname**、既定値はありません、NULL にすることはできません。  
   
-`[ @physicalname = ] 'physical_name'` 物理バックアップ デバイスの名前です。 物理名では、オペレーティング システムのファイル名の規則またはネットワーク デバイスの汎用の名前付け規則に従う必要があり、完全なパスを含める必要があります。 *physical_name*は**nvarchar (260)**、既定値はありません値に設定して、NULL にすることはできません。  
+`[ @physicalname = ] 'physical_name'` 物理バックアップ デバイスの名前です。 物理名では、オペレーティング システムのファイル名の規則またはネットワーク デバイスの汎用の名前付け規則に従う必要があり、完全なパスを含める必要があります。 *physical_name*は**nvarchar (260)** 、既定値はありません値に設定して、NULL にすることはできません。  
   
  リモート ネットワークの場所にバックアップ デバイスを作成するときにあることを確認する名前、[!INCLUDE[ssDE](../../includes/ssde-md.md)]が開始されたリモート コンピューター上の適切な書き込み機能を備えています。  
   
@@ -139,7 +138,7 @@ BACKUP DATABASE AdventureWorks2012
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [バックアップ デバイス &#40;SQL Server&#41;](../../relational-databases/backup-restore/backup-devices-sql-server.md)   
  [BACKUP &#40;Transact-SQL&#41;](../../t-sql/statements/backup-transact-sql.md)   
  [ディスク ファイルの論理バックアップ デバイスの定義 &#40;SQL Server&#41;](../../relational-databases/backup-restore/define-a-logical-backup-device-for-a-disk-file-sql-server.md)   

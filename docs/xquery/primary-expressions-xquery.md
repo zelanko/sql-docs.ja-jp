@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: d4183c3e-12b5-4ca0-8413-edb0230cb159
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 15a5b859b260288cccad5e0ed01640c3e070d6fb
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
-ms.translationtype: HT
+ms.openlocfilehash: e8704a01d810477fd0359196cb622984da357cf6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51674241"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946388"
 ---
 # <a name="primary-expressions-xquery"></a>原始式 (XQuery)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XQuery 原始式には、リテラル、変数参照、コンテキスト アイテム式、コンストラクター、および関数呼び出しが含まれます。  
+  XQuery 原始式には、リテラル、変数参照、コンテキスト アイテム式、コンス トラクター、および関数呼び出しが含まれます。  
   
 ## <a name="literals"></a>リテラル  
  XQuery リテラルには、数値型または文字列型のリテラルを使用できます。 文字列リテラルには、定義済みのエンティティ参照を含めることができます。エンティティ参照は文字のシーケンスです。 シーケンスは、構文上意味を持つことも考えられる 1 文字を表すアンパサンドで始まります。 XQuery の定義済みエンティティ参照を次に示します。  
@@ -94,7 +93,7 @@ Go
   
  `<a>I don't know</a>`  
   
- 組み込みの Boolean 関数**true()** と**false()**、ブール値を表す次の例に示すように使用できます。  
+ 組み込みの Boolean 関数**true()** と**false()** 、ブール値を表す次の例に示すように使用できます。  
   
 ```  
 DECLARE @var XML  
@@ -173,7 +172,7 @@ SELECT @var.query('/ROOT[1]/a[./@attr]')
  `<a attr="1">2</a>`  
   
 ## <a name="function-calls"></a>関数の呼び出し  
- 組み込みの XQuery 関数を呼び出すことができます、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql:variable() と sql:column() 関数。 実装済み関数の一覧は、[xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)を参照してください。  
+ 組み込みの XQuery 関数を呼び出すことができます、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] sql:variable() と sql:column() 関数。 実装済み関数の一覧は、次を参照してください。 [xml データ型に対する XQuery 関数](../xquery/xquery-functions-against-the-xml-data-type.md)します。  
   
 #### <a name="implementation-limitations"></a>実装の制限事項  
  次に、実装の制限事項を示します。  

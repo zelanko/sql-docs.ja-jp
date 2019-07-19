@@ -1,5 +1,5 @@
 ---
-title: マイニング モデルからケース データにドリルスルー |Microsoft ドキュメント
+title: マイニング モデルからケース データにドリルスルー |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: f7b5b2cbfd141642cb5d36d0ec67958ec7ae14ae
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34015129"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210056"
 ---
 # <a name="drill-through-to-case-data-from-a-mining-model"></a>マイニング モデルからケース データへのドリルスルー
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "34015129"
 |**Microsoft シーケンス クラスター ビューアー**|**[アイテムセット]** タブ|アイテムセットを含む行をクリックします。|  
   
 > [!NOTE]  
->  ドリルスルーを使用できないモデルもあります。 ドリルスルーを使用できるかどうかは、モデルの作成に使用したアルゴリズムによって異なります。 ドリルスルーをサポートするマイニング モデルの種類の一覧については、「[ドリルスルー クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)」を参照してください。  
+>  ドリルスルーを使用できないモデルもあります。 ドリルスルーを使用できるかどうかは、モデルの作成に使用したアルゴリズムによって異なります。 ドリルスルーをサポートするマイニング モデルの種類の一覧については、「 [ドリルスルー クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)に設定することで、既存のマイニング モデルにドリルスルー機能を追加できます。  
   
 ### <a name="to-view-drillthrough-data-from-a-mining-model"></a>マイニング モデルからのドリルスルー データを表示するには  
   
@@ -54,7 +54,7 @@ ms.locfileid: "34015129"
   
 6.  データをクリップボードにコピーするには、テーブル内の任意の行を右クリックして **[すべてコピー]** をクリックします。  
   
-## <a name="see-also"></a>参照  
- [ドリルスルー クエリ (&) #40";"データ マイニング"&"#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
+## <a name="see-also"></a>関連項目  
+ [ドリルスルー クエリ &#40;データ マイニング&#41;](../../analysis-services/data-mining/drillthrough-queries-data-mining.md)  
   
   

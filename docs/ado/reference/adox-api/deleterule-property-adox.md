@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 87bd4c0a-cae3-4007-a939-4193acaa00ac
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 19024aecd7061b1e1fdb66d766f3dfa704cd245c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e1e0b9a5cea798f9f8b6cc53404378d370276d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718888"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966424"
 ---
 # <a name="deleterule-property-adox"></a>DeleteRule プロパティ (ADOX)
 主キーが削除されたときに実行されるアクションを示します。  
@@ -39,5 +38,5 @@ ms.locfileid: "66718888"
 ## <a name="applies-to"></a>適用対象  
  [Key オブジェクト (ADOX)](../../../ado/reference/adox-api/key-object-adox.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DeleteRule プロパティの例 (VB)](../../../ado/reference/adox-api/deleterule-property-example-vb.md)

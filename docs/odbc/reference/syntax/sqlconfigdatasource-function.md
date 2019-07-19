@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: f8d6e342-c010-434e-b1cd-f5371fb50a14
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 59b5cae9075d9d3c692d56e74edebabda8884fe2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e7706d3a7dd05273b4608d49211a6eaab8927f2a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537589"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68118605"
 ---
 # <a name="sqlconfigdatasource-function"></a>SQLConfigDataSource 関数
 **準拠**  
@@ -51,7 +50,7 @@ BOOL SQLConfigDataSource(
  *hwndParent*  
  [入力]親ウィンドウ ハンドル。 関数では、ハンドルが null の場合、ダイアログ ボックスは表示されません。  
   
- *fRequest*  
+ *起こり*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
   
  ODBC_ADD_DSN:新しいユーザー データ ソースを追加します。  
@@ -98,7 +97,7 @@ BOOL SQLConfigDataSource(
   
  **SQLConfigDataSource**システム DSN のマップ*起こり*ユーザー DSN を*起こり*(ODBC_ADD_DSN に ODBC_ADD_SYS_DSN、ODBC_CONFIG_DSN、して ODBC_REMOVE_SYS_ ODBC_CONFIG_SYS_DSN sDSN ODBC_REMOVE_DSN)。 ユーザーとをシステム Dsn を区別するために**SQLConfigDataSource**インストーラーに次の表に従って構成モードを設定します。 を返す前に**SQLConfigDataSource** BOTHDSN 構成モードにリセットします。 **ConfigDSN** (ドライバーによって実装される) 呼び出す必要があります**SQLWriteDSNToIni**と**SQLWritePrivateProfileString**システム DSN をサポートします。 詳細については、次を参照してください。 [ConfigDSN 関数](../../../odbc/reference/syntax/configdsn-function.md)します。  
   
-|*fRequest*|構成モード|  
+|*起こり*|構成モード|  
 |----------------|------------------------|  
 |ODBC_ADD_DSN|USERDSN_ONLY|  
 |ODBC_CONFIG_DSN|USERDSN_ONLY|  

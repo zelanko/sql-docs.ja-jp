@@ -6,19 +6,18 @@ author: Dylan-MSFT
 ms.author: dygray
 ms.reviewer: vanto
 ms.date: 04/01/2019
-manager: jroth
 ms.topic: tutorial
 ms.prod: sql
 ms.custom: seodec18
 ms.technology: linux
 helpviewer_keywords:
 - Linux, AAD authentication
-ms.openlocfilehash: b99d4a7f6b246db75caf1d394d9a4670a574d6af
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 69bbeb31f8da4023bd0630ae0d944165407e2dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67833020"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68027328"
 ---
 # <a name="tutorial-use-active-directory-authentication-with-sql-server-on-linux"></a>チュートリアル:SQL Server on Linux で Active Directory 認証を使用します。
 
@@ -321,7 +320,7 @@ systemctl restart mssql-server
 
 AD ドメインに参加している場合、LDAPS を使用して、SSSD 経由ではこのホストが SSSD パッケージを使用して行われたと**disablesssd**が設定されていないを true にします。 場合**disablesssd**に設定されていると true **forcesecureldap** SQL Server によって行われた openldap ライブラリ呼び出し経由で LDAPS プロトコルを使って true に設定されています。
 
-### <a name="post-sql-server-2017-cu14"></a>Post SQL Server 2017 CU14
+### <a name="post-sql-server-2017-cu14"></a>SQL Server 2017 CU14 を投稿します。
 
 SQL Server がサード パーティ プロバイダーを使用して AD ドメイン コント ローラーに参加しているが、一般的な AD 参照を設定して openldap 呼び出しを使用する構成されている場合は、SQL Server 2017 の CU14 以降**disablesssd**に true の場合、使用することも**enablekdcfromkrb5**の KDC サーバーに対する逆引き DNS 参照ではなく KDC 検索 krb5 ライブラリを使用する SQL Server を強制的にするオプション。
 

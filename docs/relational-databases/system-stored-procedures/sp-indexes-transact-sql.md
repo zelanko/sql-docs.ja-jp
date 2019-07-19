@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 25469e72-9d95-463f-912a-193471c8f5e2
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 6b1a14d1cf8c9eac0ace93e3aac6e16219fd60eb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 625b1b5bca3c76a0433e0b887d2c291a714c6f54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62961914"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139920"
 ---
 # <a name="spindexes-transact-sql"></a>sp_indexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -57,13 +56,13 @@ sp_indexes [ @table_server = ] 'table_server'
  [ @table_catalog= ] '*table_db*'  
  データベースの名前を指定*table_name*が存在します。 *table_db*は**sysname**、既定値は NULL です。 NULL の場合、 *table_db*の既定値は**マスター**します。  
   
- [ @index_name= ] '*index_name*'  
+ [ @index_name=] '*index_name*'  
  情報を要求する対象のインデックスの名前です。 *インデックス*は**sysname**、既定値は NULL です。  
   
  [ @is_unique= ] '*is_unique*'  
  情報を返す対象のインデックスの種類です。 *is_unique*は**ビット**、既定値は null の場合、次の値のいずれかを指定できます。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |1|一意なインデックスに関する情報を返します。|  
 |0|一意でないインデックスに関する情報を返します。|  
@@ -80,7 +79,7 @@ sp_indexes [ @table_server = ] 'table_server'
 |INDEX_QUALIFER|**sysname**|インデックス所有者の名前。 一部の DBMS 製品は、インデックスを作成するテーブルの所有者以外のユーザーの許可します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、この列は常に同じ**TABLE_NAME**します。|  
 |INDEX_NAME|**sysname**|インデックスの名前です。|  
 |TYPE|**smallint**|インデックスの種類です。<br /><br /> 0 = テーブルの統計<br /><br /> 1 = クラスター化<br /><br /> 2 = Hashed<br /><br /> 3 = その他|  
-|ORDINAL_POSITION|**int**|インデックス内の列の序数です。 インデックスの最初の列には 1 です。 この列は常に値が返されます。|  
+|ORDINAL_POSITION|**int**|インデックス内の列の序数です。 インデックスの最初の列は 1 です。 この列は常に値が返されます。|  
 |COLUMN_NAME|**sysname**|返される TABLE_NAME の各列の対応する列の名前です。|  
 |ASC_OR_DESC|**varchar**|順序は、照合順序で使用されます。<br /><br /> A = 昇順<br /><br /> D = 降順<br /><br /> NULL = 適用なし<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に A を返します。|  
 |CARDINALITY|**int**|テーブル内の行数またはインデックス内の一意な値の個数です。|  

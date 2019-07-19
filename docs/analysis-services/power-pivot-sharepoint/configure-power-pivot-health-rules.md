@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: aae3b89c52f5d1d8524681a3a4fd2eda9ab73907
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52398065"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164232"
 ---
 # <a name="configure-power-pivot-health-rules"></a>Power Pivot の正常性ルールの構成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -42,7 +42,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
  [アプリケーションの安定性を評価する正常性ルールの構成 (Power Pivot サービス アプリケーション)](#bkmk_evaluate_application_stability)  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>必須コンポーネント  
  Analysis Services インスタンスおよび [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーションの構成プロパティを変更するには、サービス アプリケーションの管理者である必要があります。  
   
 ##  <a name="bkmk_view"></a> Power Pivot の正常性ルールの表示  
@@ -102,7 +102,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
 1.  サーバーの全体管理で、[アプリケーション構成の管理] の **[サービス アプリケーションの管理]** をクリックします。  
   
-2.  [サービス アプリケーション] ページで、**[既定の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション]** をクリックします。  
+2.  [サービス アプリケーション] ページで、 **[既定の [!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)] サービス アプリケーション]** をクリックします。  
   
      ![サービス アプリケーションのスクリーン ショット ページ](../../analysis-services/power-pivot-sharepoint/media/ssas-centraladmin-app.gif "ページの サービス アプリケーションのスクリーン ショット")  
   
@@ -127,7 +127,7 @@ Get-SPHealthAnalysisRule | select name, enabled, summary | where {$_.summary -li
   
      この構成設定がというルールの定義に対応して、**問題とソリューションの確認**ページ:  **[!INCLUDE[ssGemini_md](../../includes/ssgemini-md.md)]:使用状況データが必要な頻度で更新されません。**  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディスクの使用領域の構成 &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configure-disk-space-usage-power-pivot-for-sharepoint.md)   
  [Power Pivot 管理ダッシュボードと使用状況データ](../../analysis-services/power-pivot-sharepoint/power-pivot-management-dashboard-and-usage-data.md)  
   

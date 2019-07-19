@@ -1,5 +1,5 @@
 ---
-title: パースペクティブ |Microsoft ドキュメント
+title: パースペクティブ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d093d3991c41f35c16742c80e279754a1d650827
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34027339"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68180886"
 ---
 # <a name="perspectives"></a>パースペクティブ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "34027339"
   
  キューブを更新して処理するまで、パースペクティブは使用できません。  
   
- キューブはユーザーの探索するための非常に複雑なオブジェクトの場合[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 1 つのキューブで完全なデータ ウェアハウスのコンテンツを表現することができ、キューブ内の複数のメジャー グループで複数のファクト テーブルを表したり、複数のディメンション テーブルに基づいた複数のディメンションを伴うことがあります。 このようなキューブは非常に複雑で強力ですが、ビジネス インテリジェンス要件やレポート要件を満たすために、キューブのごく一部分しか操作する必要のないユーザーにとっては大きな負担になります。  
+ キューブ内を探索するユーザーには非常に複雑なオブジェクトを指定できます[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 1 つのキューブで完全なデータ ウェアハウスのコンテンツを表現することができ、キューブ内の複数のメジャー グループで複数のファクト テーブルを表したり、複数のディメンション テーブルに基づいた複数のディメンションを伴うことがあります。 このようなキューブは非常に複雑で強力ですが、ビジネス インテリジェンス要件やレポート要件を満たすために、キューブのごく一部分しか操作する必要のないユーザーにとっては大きな負担になります。  
   
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、パースペクティブを使用するには、キューブ内の見かけ上の複雑さを軽減する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]です。 パースペクティブを使用すると、ビジネス固有またはアプリケーション固有のビューポイントをキューブに対して的を絞って作成するための、表示可能なサブセットを定義できます。 パースペクティブにより、キューブに含まれるオブジェクトの表示設定が決定されます。 パースペクティブでは、次のオブジェクトの表示または非表示が可能です。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、パースペクティブを使用するには、キューブ内の見かけ上の複雑さを軽減する[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。 パースペクティブを使用すると、ビジネス固有またはアプリケーション固有のビューポイントをキューブに対して的を絞って作成するための、表示可能なサブセットを定義できます。 パースペクティブにより、キューブに含まれるオブジェクトの表示設定が決定されます。 パースペクティブでは、次のオブジェクトの表示または非表示が可能です。  
   
 -   ディメンション  
   
@@ -36,15 +36,15 @@ ms.locfileid: "34027339"
   
 -   メジャー グループ  
   
--   [メジャー]  
+-   メジャー  
   
 -   主要業績評価指標 (Kpi)  
   
 -   計算 (計算されるメンバー、名前付きセット、スクリプト コマンド)  
   
--   アクション  
+-   Actions  
   
- たとえば、 **Adventure Works**でキューブ、[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]サンプル[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースには、11 個のメジャー グループおよび売上、売上予測を表す、21 の別のキューブ ディメンションと財務のデータが含まれています。 クライアント アプリケーションは完全なキューブを直接参照できますが、基本的な売上予測情報を抽出しようとしているユーザーにとって、このビューポイントでは扱いづらい可能性があります。 代わりに、同じユーザーが使用できる、**売上目標**の表示を制限するためのパースペクティブ、 **Adventure Works**キューブ売上予測に関連するオブジェクトのみにします。  
+ たとえば、 **Adventure Works**キューブ、[!INCLUDE[ssAWDWsp](../../includes/ssawdwsp-md.md)]サンプル[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]データベースには、11 個のメジャー グループと売上、売上予測を表す、21 の別のキューブ ディメンションの財務データが含まれています。 クライアント アプリケーションは完全なキューブを直接参照できますが、基本的な売上予測情報を抽出しようとしているユーザーにとって、このビューポイントでは扱いづらい可能性があります。 代わりに、同じユーザーが使用できる、**販売対象**パースペクティブの表示を制限する、 **Adventure Works**売上予測に関連するオブジェクトのみにキューブ。  
   
  パースペクティブでユーザーに表示されないキューブ内のオブジェクトでも、XML for Analysis (XMLA)、多次元式 (MDX)、またはデータ マイニング式 (DMX) のステートメントを使用して、直接参照し取得することができます。 パースペクティブはキューブ内のオブジェクトへのアクセスを制限するものではありません。そのような目的で使用しないでください。パースペクティブは、キューブへのアクセスをより快適にするために使用するものです。  
   

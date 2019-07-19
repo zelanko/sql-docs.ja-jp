@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9469ba3a-5e4f-4a10-bbb8-a51a6c9660ea
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0f9efa743e6e5f9efe99e08001980ab87bf13247
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 18117be8dccc64f7ed2583170cf062145836f337
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66695225"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932874"
 ---
 # <a name="errorvalueenum"></a>ErrorValueEnum
 ADO の実行時エラーの種類を指定します。  
@@ -32,12 +31,12 @@ ADO の実行時エラーの種類を指定します。
   
 -   負の完全なエラーの数の 10 進数の 10 進数の変換。  
   
--   完全なエラー番号の 16 進数、16 進数表現。 Windows 機能のコードは 4 桁です。 ADO エラー番号の機能のコードは*A*します。例 :0x800***A***0e7b がその例です。  
+-   完全なエラー番号の 16 進数、16 進数表現。 Windows 機能のコードは 4 桁です。 ADO エラー番号の機能のコードは*A*します。以下に例を示します。0x800***A***0e7b がその例です。  
   
 > [!NOTE]
 >  OLE DB エラーは、ADO アプリケーションに渡すことがあります。 これらを識別しての Windows 機能のコードで通常、 *4*します。 たとえば、0x800***4***します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adErrBoundToCommand**|3707 -2146824581 0x800A0E7B|変更することはできません、 **ActiveConnection**のプロパティを**レコード セット**を持つオブジェクトを**コマンド**のソースとしてオブジェクト。|  
 |**adErrCannotComplete**|3732 -2146824556 0x800A0E94|サーバーは、操作を完了できません。|  
@@ -91,8 +90,8 @@ ADO の実行時エラーの種類を指定します。
 |**adErrURLNamedRowDoesNotExist**|3737 -2146824551 0x800A0E99|この URL でという名前のレコードが存在しません。|  
 |**adErrVolumeNotFound**|3733 -2146824555 0x800A0E95|プロバイダーは、URL で指定されたストレージ デバイスに見つかりません。 URL が正しく入力されていることを確認します。|  
 |**adErrWriteFile**|3004 -2146825284 0x800A0BBC|ファイルへ書き込めませんでした。|  
-|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|内部使用のみです。 使わないでください。|  
-|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|内部使用のみです。 使わないでください。|  
+|**adWrnSecurityDialog**|3717 -2146824571 0x800A0E85|内部使用専用。 使わないでください。|  
+|**adWrnSecurityDialogHeader**|3718 -2146824570 0x800A0E86|内部使用専用。 使わないでください。|  
   
 ## <a name="adowfc-equivalent"></a>ADO と WFC と同等  
  パッケージ: **com.ms.wfc.data**  
@@ -126,5 +125,5 @@ ADO の実行時エラーの種類を指定します。
 ## <a name="applies-to"></a>適用対象  
  [Number プロパティ (ADO)](../../../ado/reference/ado-api/number-property-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO エラー コード](../../../ado/guide/appendixes/ado-error-codes.md)

@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d4b908d1-b25b-4ad9-8478-9cd882e8c44e
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ee4f532954092bd7e969e666fe05dcbeb320b42c
-ms.sourcegitcommit: dfb1e6deaa4919a0f4e654af57252cfb09613dd5
+ms.openlocfilehash: cb7981be5bcb3885003e0fdd7adc367b28c9690c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/11/2019
-ms.locfileid: "56023043"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086861"
 ---
 # <a name="handling-database-concurrency-issues-in-updategrams-sqlxml-40"></a>アップデートグラムでのデータベース コンカレンシーに関する問題への対応 (SQLXML 4.0)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -104,7 +103,7 @@ ms.locfileid: "56023043"
   
 -   Timestamp 列を指定 (該当する場合)、 **\<する前に >** ブロックします。  
   
-     すべてのレコード列を指定する代わりに、 **\<する前に**> ブロックを指定するだけのタイムスタンプ列 (テーブルには 1 つ) の場合に主キー列と共に、 **\<する前に>** ブロックします。 データベースでは、レコードが更新されるたびにタイムスタンプ列が一意な値に更新されます。 この場合、アップデートグラムではタイムスタンプの値とデータベースの対応する値を比較します。 データベースに格納されているタイムスタンプ値はバイナリ値です。 スキーマでしたがって、timestamp 列を指定する必要があります**dt:type="bin.hex"**、 **dt:type="bin.base64"**、または**sql:datatype ="timestamp"** します。 (どちらかを指定することができます、 **xml**データ型、または[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型です)。  
+     すべてのレコード列を指定する代わりに、 **\<する前に**> ブロックを指定するだけのタイムスタンプ列 (テーブルには 1 つ) の場合に主キー列と共に、 **\<する前に>** ブロックします。 データベースでは、レコードが更新されるたびにタイムスタンプ列が一意な値に更新されます。 この場合、アップデートグラムではタイムスタンプの値とデータベースの対応する値を比較します。 データベースに格納されているタイムスタンプ値はバイナリ値です。 スキーマでしたがって、timestamp 列を指定する必要があります**dt:type="bin.hex"** 、 **dt:type="bin.base64"** 、または**sql:datatype ="timestamp"** します。 (どちらかを指定することができます、 **xml**データ型、または[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データ型です)。  
   
 #### <a name="to-test-the-updategram"></a>アップデートグラムをテストするには  
   
@@ -168,7 +167,7 @@ ms.locfileid: "56023043"
   
 5.  SQLXML 4.0 テスト スクリプト (sqlxml4test.vbs) を作成し、それを使用してテンプレートを実行します。  
   
-     詳細については、[SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)を参照してください。  
+     詳細については、次を参照してください。 [SQLXML 4.0 クエリの実行に ADO を使用する](../../../relational-databases/sqlxml/using-ado-to-execute-sqlxml-4-0-queries.md)します。  
   
  これは、同等の XDR スキーマです。  
   

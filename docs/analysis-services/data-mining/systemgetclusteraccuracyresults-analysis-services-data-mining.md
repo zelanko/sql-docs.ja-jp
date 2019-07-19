@@ -1,5 +1,5 @@
 ---
-title: SystemGetClusterAccuracyResults (Analysis Services - データ マイニング) |Microsoft ドキュメント
+title: SystemGetClusterAccuracyResults (Analysis Services - データ マイニング) |Microsoft Docs
 ms.date: 05/08/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: b9521cfd6e2b9ec0d08f290c60167c682c98e46f
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34019159"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209654"
 ---
 # <a name="systemgetclusteraccuracyresults-analysis-services---data-mining"></a>SystemGetClusterAccuracyResults (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -65,14 +65,14 @@ SystemGetClusterAccuracyResults(
  *テスト リスト (test list)*  
  テスト オプションを指定する文字列。 このパラメーターは将来使用するために予約されています。  
   
- (省略可能)  
+ (オプション)  
   
 ## <a name="return-type"></a>戻り値の型  
  テーブルには、個別のパーティションのスコアと、すべてのモデルの集計が含まれます。  
   
  次の表は、 **SystemGetClusterAccuracyResults**によって返される列の一覧です。 ストアド プロシージャによって返される情報を解釈する方法の詳細については、「 [相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」をご覧ください。  
   
-|列名|Description|  
+|列名|説明|  
 |-----------------|-----------------|  
 |ModelName|テストされたモデルの名前。 **All** は、結果がすべてのモデルの集計であることを示します。|  
 |AttributeName|クラスター モデルには適用されません。|  
@@ -83,10 +83,10 @@ SystemGetClusterAccuracyResults(
 |[メジャー]|テストから返されたメジャーの名前。 各モデルのメジャーは、モデルの種類と、予測可能な値の型によって異なります。<br /><br /> 予測可能な型ごとに返されるメジャーの一覧については、「[相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)」をご覧ください。<br /><br /> 各メジャーの定義については、「[相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)」をご覧ください。|  
 |値|クラスターのケースの確率値を示す確率スコア。|  
   
-## <a name="remarks"></a>解説  
+## <a name="remarks"></a>コメント  
  次の表は、クロス検証に使用されるマイニング構造のデータを指定するために使用できる値の例を示しています。 クロス検証にテスト ケースを使用する場合、マイニング構造には、既にテスト データセットが含まれている必要があります。 マイニング構造の作成時にテスト データセットを定義する方法の詳細については、「 [トレーニング データ セットとテスト データ セット](../../analysis-services/data-mining/training-and-testing-data-sets.md)」をご覧ください。  
   
-|整数値|Description|  
+|整数値|説明|  
 |-------------------|-----------------|  
 |1|トレーニング ケースのみが使用されます。|  
 |2|テスト ケースのみが使用されます。|  
@@ -119,7 +119,7 @@ CALL SystemGetClusterAccuracyResults (
 ## <a name="requirements"></a>必要条件  
  クロス検証は、 [!INCLUDE[ssEnterprise](../../includes/ssenterprise-md.md)] 以降の [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]でのみ使用できます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [SystemGetCrossValidationResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetcrossvalidationresults-analysis-services-data-mining.md)   
  [SystemGetAccuracyResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetaccuracyresults-analysis-services-data-mining.md)   
  [SystemGetClusterCrossValidationResults &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/systemgetclustercrossvalidationresults-analysis-services-data-mining.md)   

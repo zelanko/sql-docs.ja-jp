@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 4c7e010d-08cd-4e22-9b32-23c36f02f88c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7345f75d43d302c71db91aefa9097a4d34e72d94
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 22e63bad49586bbbc1a5616114055779cd3ea041
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67925548"
 ---
 # <a name="determining-edit-mode"></a>編集モードの決定
 ADO では、現在のレコードに関連付けられている編集のバッファーを保持します。 **EditMode**プロパティをこのバッファーに変更が加えられましたかどうか、または新しいレコードが作成されているかどうかを示します。 使用**EditMode**現在のレコードの編集状態を確認します。 編集プロセスが中断された場合は、保留中の変更をテストして使用する必要があるかどうかを判断、 **Update**または**CancelUpdate**メソッド。  

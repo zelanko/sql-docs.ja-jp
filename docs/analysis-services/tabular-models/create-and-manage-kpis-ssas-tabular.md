@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 1ae17e727367b702967ec879ed8469973ab3b812
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072089"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68207735"
 ---
 # <a name="create-and-manage-kpis"></a>作成して、Kpi の管理 
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -42,7 +42,7 @@ ms.locfileid: "53072089"
 5.  **[説明]** をクリックして KPI、値、状態、および対象の説明を入力します。  
   
 > [!TIP]  
->  Excel で分析機能を使用して、KPI をテストできます。 詳細については、[Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)を参照してください。  
+>  Excel で分析機能を使用して、KPI をテストできます。 詳細については、次を参照してください。 [Excel で分析](../../analysis-services/tabular-models/analyze-in-excel-ssas-tabular.md)します。  
   
 ###  <a name="bkmk_edit_KPI"></a> KPI を編集するには  
   

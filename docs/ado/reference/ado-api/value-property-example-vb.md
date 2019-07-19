@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 2d4fe651-ef09-461b-8884-a70b6af4362e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: db0fd5dca7768e5e75664c1247d916d27766bb9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ebc1b9fcd12f17679787985d5653de01ebbdd435
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710296"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67938783"
 ---
 # <a name="value-property-example-vb"></a>Value プロパティの例 (VB)
 この例では、[値](../../../ado/reference/ado-api/value-property-ado.md)プロパティ[フィールド](../../../ado/reference/ado-api/field-object.md)と[プロパティ](../../../ado/reference/ado-api/property-object-ado.md)オブジェクトのフィールドおよびプロパティの値を表示することによって、***従業員***テーブル。  
@@ -101,7 +100,7 @@ End Sub
 'EndValueVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Field オブジェクト](../../../ado/reference/ado-api/field-object.md)   
  [オブジェクトのプロパティ (ADO)](../../../ado/reference/ado-api/property-object-ado.md)   
  [Value プロパティ (ADO)](../../../ado/reference/ado-api/value-property-ado.md)

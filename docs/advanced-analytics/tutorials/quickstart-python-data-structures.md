@@ -7,15 +7,14 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 0105cf099bbee30d167c498646778520fcdbd805
-ms.sourcegitcommit: baca29731a1be4f8fa47567888278394966e2af7
+ms.openlocfilehash: ffbbd39c08221db4afa6427626ca618e04617166
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/04/2019
-ms.locfileid: "54046875"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962089"
 ---
-# <a name="quickstart-python-data-structures-in-sql-server"></a>クイック スタート:SQL Server での Python データ構造
+# <a name="quickstart-python-data-structures-in-sql-server"></a>クイック スタート: SQL Server での Python データ構造
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 このクイック スタートでは、SQL Server Machine Learning Services での Python を使用する場合は、データ構造を使用する方法を示します。
@@ -28,7 +27,7 @@ SQL Server が、Python 依存**pandas**パッケージで、表形式のデー�
 
 Data.frame には、表形式の構造が必要な場合、データ フレームとして、計算の 1 つの結果をどのようには公開しますか。 1 つの答えでは、データ フレームに変換が簡単にデータ系列として単一のスカラー値を表すためです。 
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 前のクイック スタート[SQL server が存在することを確認する Python](quickstart-python-verify.md)情報を提供し、このクイック スタートに必要な Python 環境を設定するためにリンクします。
 

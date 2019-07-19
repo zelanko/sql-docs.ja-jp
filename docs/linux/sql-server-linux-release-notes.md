@@ -3,18 +3,17 @@ title: Linux 上の SQL Server 2017 のリリース ノート
 description: この記事では、リリース ノートが含まれていて、Linux で実行されている SQL Server 2017 の機能がサポートされています。 リリース ノートは、この最新リリースと以前のリリースをいくつか含まれています。
 author: VanMSFT
 ms.author: vanto
-manager: jroth
 ms.date: 06/25/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 06c46a54f21c0397f4ee801349acbebafeedf7a1
-ms.sourcegitcommit: 93d1566b9fe0c092c9f0f8c84435b0eede07019f
+ms.openlocfilehash: 3f59495ffe4bc58ec673e643b0d011a501c51ba9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67834814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896172"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -49,11 +48,11 @@ ms.locfileid: "67834814"
 |-----------------------|---------------|--------------|
 | [CU15](#CU15)         | 14.0.3162.1   | 2019-05-23   |
 | [CU14](#CU14)         | 14.0.3076.1   | 2019-03-25   |
-| [CU13](#CU13)         | 14.0.3048.4   | 2018-12-18   |
+| [CU13](#CU13)         | 14.0.3048.4   | 2018-12 月 18 日   |
 | [CU12](#CU12)         | 14.0.3045.24  | 2018-10-24   |
 | [CU11](#CU11)         | 14.0.3038.14  | 2018-09-20   |
 | [CU10](#CU10)         | 14.0.3037.1   | 2018-08-27   |
-| [CU9-GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
+| [CU9 GDR2](#CU9-GDR2) | 14.0.3035.2   | 2018-08-18   |
 | [GDR2](#GDR2)         | 14.0.2002.14  | 2018-08-18   |
 | [CU9](#CU9)           | 14.0.3030.27  | 2018-07-18   |
 | [CU8](#CU8)           | 14.0.3029.16  | 2018-06-21   |

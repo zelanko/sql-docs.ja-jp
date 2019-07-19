@@ -1,23 +1,22 @@
 ---
-title: mssqlctl bdc endpoint reference
+title: mssqlctl bdc エンドポイント参照
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc のエンドポイントのコマンドに関する参照記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 74065a075e4a2a80e3ab5455b7ac99e5a055f66a
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae9a5ad79f388f260494c18448dd80e815b3ac02
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958086"
 ---
-# <a name="mssqlctl-bdc-endpoint"></a>mssqlctl bdc endpoint
+# <a name="mssqlctl-bdc-endpoint"></a>mssqlctl bdc エンドポイント
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -27,7 +26,7 @@ ms.locfileid: "67727462"
 |     |     |
 | --- | --- |
 [mssqlctl bdc エンドポイントの一覧](#mssqlctl-bdc-endpoint-list) | ビッグ データ クラスターのエンドポイントを示しています。
-## <a name="mssqlctl-bdc-endpoint-list"></a>mssqlctl bdc endpoint list
+## <a name="mssqlctl-bdc-endpoint-list"></a>mssqlctl bdc エンドポイントの一覧
 ビッグ データ クラスターのエンドポイントを示しています。
 ```bash
 mssqlctl bdc endpoint list [--endpoint-name -e] 

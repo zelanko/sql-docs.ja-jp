@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: f1a7fc0a-f4b4-47eb-9138-eebf930dc9ac
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: ed2f40b2ea4f711c36a3c17031047fef555ab12a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c12575ae2eb07b5984d1e4a383830ff6fb44573a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62645500"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68091863"
 ---
 # <a name="backupfile-transact-sql"></a>backupfile (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,8 +45,8 @@ ms.locfileid: "62645500"
 |**logical_name**|**nvarchar(128)**|バックアップされたファイルの論理名。 NULL にすることができます。|  
 |**physical_drive**|**nvarchar(260)**|物理ドライブまたはパーティションの名前。 NULL にすることができます。|  
 |**physical_name**|**nvarchar(260)**|残りの物理 (オペレーティング システム) ファイルの名前。 NULL にすることができます。|  
-|**state**|**tinyint**|ファイルのいずれかの状態:<br /><br /> 0 = ONLINE<br /><br /> 1 = を復元します。<br /><br /> 2 = 回復<br /><br /> 3 = RECOVERY PENDING <br /><br /> 4 = 問題あり<br /><br /> 6 = OFFLINE <br /><br /> 7 = DEFUNCT<br /><br /> 8 = 削除<br /><br /> 注:これらの値がデータベースの状態の値に対応するように、値 5 はスキップされます。|  
-|**state_desc**|**nvarchar(64)**|ファイルの状態のいずれかの説明です。<br /><br /> ONLINE RESTORING <br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING <br /><br /> SUSPECT OFFLINE DEFUNCT|  
+|**state**|**tinyint**|ファイルのいずれかの状態:<br /><br /> 0 = ONLINE<br /><br /> 1 = を復元します。<br /><br /> 2 = 回復<br /><br /> 3 = RECOVERY PENDING<br /><br /> 4 = 問題あり<br /><br /> 6 = OFFLINE<br /><br /> 7 = DEFUNCT<br /><br /> 8 = 削除<br /><br /> 注:これらの値がデータベースの状態の値に対応するように、値 5 はスキップされます。|  
+|**state_desc**|**nvarchar(64)**|ファイルの状態のいずれかの説明です。<br /><br /> ONLINE RESTORING<br /><br /> RECOVERING<br /><br /> RECOVERY_PENDING<br /><br /> SUSPECT OFFLINE DEFUNCT|  
 |**create_lsn**|**numeric(25,0)**|ファイルが作成されたときのログ シーケンス番号。|  
 |**drop_lsn**|**numeric(25,0)**|ファイルが削除されたときのログ シーケンス番号。 NULL にすることができます。<br /><br /> ファイルが削除されていない場合、この値は NULL です。|  
 |**file_guid**|**uniqueidentifier**|ファイルの一意の識別子。|  

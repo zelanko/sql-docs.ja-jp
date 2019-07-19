@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 10f07b04523aeafeb3166bb2e1dbf7072a7b53b5
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50147737"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208450"
 ---
 # <a name="tools-and-approaches-for-processing-analysis-services"></a>処理するためのツールと方法 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -43,7 +43,7 @@ ms.locfileid: "50147737"
  処理は、柔軟に構成できる操作で、オブジェクト レベルで発生する完全処理や増分処理の一連の処理オプションを使用して制御します。 オプションとオブジェクトの処理に関する詳細については、「[処理オプションと設定 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-options-and-settings-analysis-services.md)」および「[Analysis Services オブジェクトの処理](../../analysis-services/multidimensional-models/processing-analysis-services-objects.md)」を参照してください。  
   
 > [!NOTE]  
->  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、[データベースの処理、テーブル、またはパーティション&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する](../../analysis-services/tabular-models/process-data-ssas-tabular.md)を参照してください。  
+>  このトピックでは、多次元モデルを処理するためのツールと方法について説明します。 表形式モデルの処理に関する詳細については、次を参照してください。[データベースの処理、テーブル、またはパーティション&#40;Analysis Services&#41; ](../../analysis-services/tabular-models/process-database-table-or-partition-analysis-services.md)と[データを処理する](../../analysis-services/tabular-models/process-data-ssas-tabular.md)します。  
   
 ### <a name="processing-objects-in-sql-server-management-studio"></a>SQL Server Management Studio でのオブジェクトの処理  
   
@@ -135,13 +135,13 @@ ms.locfileid: "50147737"
   
 3.  次のイベントを選択します。  
   
-    -   処理の開始時刻と停止時刻を表示するには、**[コマンド開始]** と **Commと End** to show when processing starts と stops  
+    -   処理の開始時刻と停止時刻を表示するには、 **[コマンド開始]** と **Commと End** to show when processing starts と stops  
   
-    -   すべてのエラーをキャプチャするには、**[エラー]**   
+    -   すべてのエラーをキャプチャするには、 **[エラー]**  
   
-    -   処理の状態をレポートし、データを取得するために使用した SQL クエリを表示するには、**[進行状況レポートの開始]**, **[進行状況レポートの現在の状態]**、および **[進行状況レポートの終了]**   
+    -   処理の状態をレポートし、データを取得するために使用した SQL クエリを表示するには、 **[進行状況レポートの開始]** , **[進行状況レポートの現在の状態]** 、および **[進行状況レポートの終了]**  
   
-    -   キューブの計算を表示するには、**[MDX スクリプトの実行の開始]** および **[MDX スクリプトの実行の終了]**   
+    -   キューブの計算を表示するには、 **[MDX スクリプトの実行の開始]** および **[MDX スクリプトの実行の終了]**  
   
     -   処理に関連するパフォーマンスの問題を診断する場合は、必要に応じて、ロック イベントを追加する  
   

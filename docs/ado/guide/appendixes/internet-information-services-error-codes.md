@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 3c9223de-d953-436a-bddc-dbdd9dc3e685
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd25f6abf4c7cade7edbd35780cc191bce9c003d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aa425cd6035a51f7856cc27b5d53f3144854c5f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66702796"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926827"
 ---
 # <a name="internet-information-services-error-codes-for-remote-data-service"></a>インターネット インフォメーション サービスのリモート データ サービスのエラー コード
 次の表では、リモート データ サービスの使用に関連する Microsoft® インターネット インフォメーション サービス (IIS) のエラー コードを示します。 下位 2 バイトの正の 10 進変換、完全なエラー コードと 16 進数の値の負の値の 10 進数の翻訳が表示されます。

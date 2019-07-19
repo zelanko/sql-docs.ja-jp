@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 0093da0a4f69d8a1e4cf178959d28509eef15b75
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7a8c92a4b6a76cb9d15048d6f058038363970cb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208419"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68036593"
 ---
 # <a name="toppercent-mdx"></a>TopPercent (MDX)
 
@@ -70,10 +69,10 @@ WHERE([Product].[Product Categories].[Bikes])
   
 ||Reseller Sales Amount|  
 |-|---------------------------|  
-|Toronto|$3,508,904.84|  
-|London|$1,521,530.09|  
-|Seattle|$1,209,418.16|  
-|Paris|$1,170,425.18|  
+|Toronto|3,508,904.84 ドル|  
+|London|1,521,530.09 ドル|  
+|Seattle|1,209,418.16 ドル|  
+|Paris|1,170,425.18 ドル|  
   
  元のデータのセットは、次のクエリで取得でき、588 行を返します。  
   
@@ -105,12 +104,12 @@ FROM [Adventure Works]
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring 2000 青、50|$157,444.56|$163,112.57|($5,668.01)|  
-|Touring 2000 青、46|$321,027.03|$333,021.50|($11,994.47)|  
-|Touring-3000 Blue, 62|$87,773.61|$100,133.52|($12,359.91)|  
+|Touring 2000 青、50|157,444.56 ドル|163,112.57 ドル|(5,668.01 $)|  
+|Touring 2000 青、46|321,027.03 ドル|333,021.50 ドル|(11,994.47 $)|  
+|Touring-3000 Blue, 62|87,773.61 ドル|100,133.52 ドル|(12,359.91 $)|  
 |[...]|...|...|[...]|  
-|Touring 1000 の黄色の場合、46|$1,016,312.83|$1,234,454.27|($218,141.44)|  
-|Touring-1000 Yellow, 60|$1,184,363.30|$1,443,407.51|($259,044.21)|  
+|Touring 1000 の黄色の場合、46|1,016,312.83 ドル|1,234,454.27 ドル|(218,141.44 $)|  
+|Touring-1000 Yellow, 60|1,184,363.30 ドル|1,443,407.51 ドル|(259,044.21 $)|  
   
  このとき、利益で上位 100% の自転車を提示するように求められた場合、クエリは次のように記述されます。  
   
@@ -125,7 +124,7 @@ FROM [Adventure Works]
   
 ||Reseller Sales Amount|Reseller Total Product Cost|Reseller Gross Profit|  
 |-|---------------------------|---------------------------------|---------------------------|  
-|Touring 2000 青、50|$157,444.56|$163,112.57|($5,668.01)|  
+|Touring 2000 青、50|157,444.56 ドル|163,112.57 ドル|(5,668.01 $)|  
   
 ## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

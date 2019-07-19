@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: 211471aa-558a-475c-9b94-5913c143ed12
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8707cb6cfb4f535a634f501e9113406c26b7e4a8
-ms.sourcegitcommit: e4b241fd92689c2aa6e1f5e625874bd0b807dd01
+ms.openlocfilehash: e20bd7ecc783e0449a1deaa21c9f3db6e07abbc7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/04/2019
-ms.locfileid: "67564186"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122670"
 ---
 # <a name="sysindexcolumns-transact-sql"></a>sys.index_columns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -43,7 +42,7 @@ ms.locfileid: "67564186"
 |**partition_ordinal**|**tinyint**|パーティション分割列のセット内で (1 から始まる序数です。 クラスター化列ストア インデックスには、最大で 1 個のパーティション分割列を含めることができます。<br /><br /> 0 = パーティション分割列ではありません。|  
 |**is_descending_key**|**bit**|1 = インデックス キー列が降順の並べ替え方向。<br /><br /> 0 = インデックス キー列が昇順の並べ替え方向を持っているか、列は、列ストアまたはハッシュ インデックスの一部です。|  
 |**is_included_column**|**bit**|1 = 列は、CREATE INDEX INCLUDE 句を使用して、インデックスに追加の非キー列または列が列ストア インデックスの一部です。<br /><br /> 0 = 列は付加列ではありません。<br /><br /> 列のクラスター化キーの一部であるために、暗黙的に追加するように表示されていない**sys.index_columns**します。<br /><br /> パーティション分割列であるために暗黙的に追加された列は、0 として返されます。| 
-|**column_store_order_ordinal**</br> 適用対象Azure SQL Data Warehouse (プレビュー)|**tinyint**|(1 から始まる序数) 内では、順序付けされたクラスター化列ストア インデックスの列の順序のセット。|
+|**column_store_order_ordinal**</br> 適用対象:Azure SQL Data Warehouse (プレビュー)|**tinyint**|(1 から始まる序数) 内では、順序付けされたクラスター化列ストア インデックスの列の順序のセット。|
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -84,7 +83,7 @@ IX_BillOfMaterials_UnitMeasureCode                         UnitMeasureCode    1 
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   

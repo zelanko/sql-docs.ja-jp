@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: ed3d9678-5c28-4e61-8bb3-7dfb66d99cf5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0953b76ff642387679c907e6f0b3364cbac898df
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ec1601749b6537484cead17c50492de131932ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66711388"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931172"
 ---
 # <a name="save-method"></a>Save メソッド
 保存、[レコード セット](../../../ado/reference/ado-api/recordset-object-ado.md)ファイルまたは[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -35,7 +34,7 @@ recordset.Save Destination, PersistFormat
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *変換先*  
+ *Destination (公開先)*  
  任意。 A**バリアント**ファイルの完全なパス名を表す場所、 **Recordset**を保存するまたはへの参照、 **Stream**オブジェクト。  
   
  *PersistFormat*  
@@ -94,7 +93,7 @@ rsXML.Save xDOM, adPersistXML   'Save Recordset directly into a DOM tree.
 |-|-|  
 |[Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)|[Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Save および Open メソッドの例 (VB)](../../../ado/reference/ado-api/save-and-open-methods-example-vb.md)   
  [保存および開く方法の例 (vc++)](../../../ado/reference/ado-api/save-and-open-methods-example-vc.md)   
  [Open メソッド (ADO Recordset)](../../../ado/reference/ado-api/open-method-ado-recordset.md)   

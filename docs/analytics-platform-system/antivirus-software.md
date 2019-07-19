@@ -2,19 +2,18 @@
 title: ウイルス対策ソフトウェア、Analytics Platform System |Microsoft Docs
 description: データ センターには、ウイルス対策ソフトウェアが必要とする場合は、次のガイドラインを使用して、Analytics Platform System にウイルス対策ソフトウェアをインストールします。 データ センターの確実な要件である場合を除き、ウイルス対策ソフトウェアをインストールしないことをお勧めします。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/24/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: c5b9a1eddf8bf06a9d9e5b59754b2c6a34b94267
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1e52841ebe96d8aab84e4d09c91b590e8e4d7e2d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63199613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961602"
 ---
 # <a name="antivirus-software-for-analytics-platform-system"></a>Analytics Platform System のウイルス対策ソフトウェア
 データ センターには、ウイルス対策ソフトウェアが必要とする場合は、次のガイドラインを使用して、Analytics Platform System にウイルス対策ソフトウェアをインストールします。 データ センターの確実な要件である場合を除き、ウイルス対策ソフトウェアをインストールしないことをお勧めします。  
@@ -31,7 +30,7 @@ ms.locfileid: "63199613"
   
 **これらのディレクトリを除外するには。**  
   
--   C:\ProgramData\Microsoft\Windows\Hyper-V - Virtual machine configuration directory  
+-   C:\ProgramData\Microsoft\Windows\Hyper-V - 仮想マシンの構成ディレクトリ  
   
 -   C:\Users\Public\Documents\Hyper-V\Virtual のハード ディスクの既定の仮想ハード ディスク ドライブのディレクトリ  
   
@@ -74,6 +73,6 @@ Vm 上のウイルス対策ソフトウェアをインストールするには�
   
 -   C:\iscsitarget  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [アプライアンスの管理タスク&#40;Analytics Platform System&#41;](appliance-management-tasks.md)  
   

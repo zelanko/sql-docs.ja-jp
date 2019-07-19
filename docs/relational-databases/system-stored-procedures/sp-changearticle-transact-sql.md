@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 24c33ca5-f03a-4417-a267-131ca5ba6bb5
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cbfbb923a831901bd42724759372f8b1f7ccbc0c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6b74d52f21b056caa14b2ade7fca85426f877128
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62997951"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120207"
 ---
 # <a name="spchangearticle-transact-sql"></a>sp_changearticle (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -68,12 +67,12 @@ sp_changearticle [ [@publication= ] 'publication' ]
 |**identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
 |**ins_cmd**||INSERT ステートメントを実行します。それ以外の場合、これは、ログから作成します。|  
 |**pre_creation_cmd**||同期が適用される前に、レプリケーション先のテーブルを削除したり、切り捨てたりできる作成準備コマンドです。|  
-||**[なし]**|コマンドを使用しません。|  
+||**none**|コマンドを使用しません。|  
 ||**drop**|変換先テーブルを削除します。|  
 ||**delete**|変換先テーブルを削除します。|  
 ||**truncate**|変換先テーブルを切り捨てます。|  
-|**pub_identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
-|**schema_option**||指定されたアーティクルに対するスキーマ生成オプションのビットマップを指定します。 *schema_option*は**binary (8)** します。 詳細については、このトピックの後半の「解説」を参照してください。|  
+|**identity_range**||サブスクライバーで割り当てられた、割り当て済みの ID 範囲のサイズを管理します。 ピア ツー ピア レプリケーションではサポートされません。|  
+|**schema_option**||指定されたアーティクルに対するスキーマ生成オプションのビットマップを指定します。 *schema_option*は**binary (8)** します。 詳細については、このトピックで後述する「解説」を参照してください。|  
 ||**0x00**|スナップショット エージェントによるスクリプト作成を無効にします。|  
 ||**0x01**|オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。|  
 ||**0x02**|定義されている場合、アーティクルの変更を反映するストアド プロシージャを生成します。|  
@@ -94,7 +93,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**0x10000**|制約が同期中に適用されないように、CHECK 制約を NOT FOR REPLICATION としてレプリケートします。|  
 ||**0x20000**|制約が同期中に適用されないように、FOREIGN KEY 制約を NOT FOR REPLICATION としてレプリケートします。|  
 ||**0x40000**|パーティション テーブルまたはインデックスに関連付けられているファイル グループをレプリケートします。|  
-||**0x80000**|パーティション テーブルのパーティション構成をレプリケートします。|  
+||**これに対して、0x80000**|パーティション テーブルのパーティション構成をレプリケートします。|  
 ||**0x100000**|パーティション インデックスのパーティション構成をレプリケートします。|  
 ||**0x200000**|テーブルな統計をレプリケートします。|  
 ||**0x400000**|既定のバインドです。|  
@@ -124,7 +123,7 @@ sp_changearticle [ [@publication= ] 'publication' ]
 ||**列名を含める**|列名が、レプリケートされる INSERT ステートメントに含まれます。|  
 ||**列名がありません。**|列名は、レプリケートされる INSERT ステートメントに含まれません。|  
 ||**dts 水平パーティションのないです。**|アーティクルの行方向のパーティション分割は、変換可能なサブスクリプションによって定義されません。|  
-||**[なし]**|内のすべての状態オプションをクリア、 [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルが表示され、アーティクルを非アクティブとしてマークされます。|  
+||**none**|内のすべての状態オプションをクリア、 [sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md)テーブルが表示され、アーティクルを非アクティブとしてマークされます。|  
 ||**parameters**|パラメーター化コマンドを使用して、変更がサブスクライバーに反映されます。 これは新しいアーティクルに対する既定値です。|  
 ||**文字列リテラル**|変更は、文字列リテラルの値を使用してサブスクライバーに反映されます。|  
 |**sync_object**||テーブルまたは同期出力ファイルを生成するために使用されるビューの名前。 既定値は NULL です。 Oracle パブリッシャーに対してはサポートされていません。|  

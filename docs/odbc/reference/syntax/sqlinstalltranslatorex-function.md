@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: a0630602-53c1-4db0-98ce-70d160aedf8d
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 57a2fb53226af9aeb6e546f6109a3e182ffc754f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 43acc6708b5df71893c2c6b7658ca99bfb73f616
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536553"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68018997"
 ---
 # <a name="sqlinstalltranslatorex-function"></a>SQLInstallTranslatorEx 関数
 **準拠**  
@@ -56,7 +55,7 @@ BOOL SQLInstallTranslatorEx(
   
  **Translator**と**セットアップ**でキーワードを含める必要がある、 *lpszTranslator*文字列。 DLL が記載されている翻訳、 **Translator**キーワード、およびトランスレーター セットアップ DLL が記載されている、**セットアップ**キーワード。 各ペアは、NULL バイトで終了し、全体の一覧は NULL バイトで終了します。 (つまり、2 つの NULL バイトの末尾を示す一覧。)形式*lpszTranslator*のとおりです。  
   
- \0Translator=*translator-DLL-filename*\0[Setup=*setup-DLL-filename*\0]\0  
+ \0Translator=*translator-filename DLL*\0[Setup=*セットアップ-filename DLL*\0]\0  
   
  *lpszPathIn*  
  [入力]変換プログラムのインストールまたは null ポインターの完全パス。 場合*lpszPath* null ポインターの場合は、翻訳者は、システム ディレクトリにインストールされます。  
@@ -70,7 +69,7 @@ BOOL SQLInstallTranslatorEx(
  *pcbPathOut*  
  [出力]返される使用可能なバイトの合計数*lpszPathOut*します。 返される使用可能なバイト数がより大きいかに等しい場合*cbPathOutMax*、出力パス*lpszPathOut*に切り捨てられます*pcbPathOutMax*マイナス、null 終了文字です。 *PcbPathOut*引数が null ポインターを指定できます。  
   
- *fRequest*  
+ *起こり*  
  [入力]要求の種類。 *起こり*値は次のいずれかを含める必要があります。  
   
  ODBC_INSTALL_INQUIRY:翻訳者をインストールできる場所について照会します。  

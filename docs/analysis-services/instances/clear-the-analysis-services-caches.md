@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 0b9276d0a8684023d8e6dba1a890b5f1698a017a
-ms.sourcegitcommit: 50b60ea99551b688caf0aa2d897029b95e5c01f3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51700330"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181987"
 ---
 # <a name="clear-the-analysis-services-caches"></a>Analysis Services キャッシュのクリア
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -46,13 +46,13 @@ ms.locfileid: "51700330"
   
  キャッシュをクリアするには、XMLA クエリの **ClearCache** ステートメントに、オブジェクトの識別子を指定する必要があります。 このトピックの最初のステップでは、オブジェクト識別子を取得する方法を説明します。  
   
-#### <a name="step-1-get-the-object-identifier"></a>手順 1: オブジェクトの識別子を取得する  
+#### <a name="step-1-get-the-object-identifier"></a>手順 1:オブジェクト識別子を取得します。  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でオブジェクトを右クリックし、 **[プロパティ]** を選択して、 **[プロパティ]** ペインの ID プロパティの値をコピーします。 この方法は、データベース、キューブ、ディメンション、またはテーブルに使用できます。  
   
 2.  メジャー グループの ID を取得するには、メジャー グループを右クリックし、 **[メジャー グループをスクリプト化]** を選択します。 **[作成]** または **[変更]** のいずれかを選択し、クエリをウィンドウに送信します。 メジャー グループの ID は、オブジェクト定義に表示されます。 オブジェクト定義の ID をコピーします。  
   
-#### <a name="step-2-run-the-query"></a>手順 2: クエリを実行する  
+#### <a name="step-2-run-the-query"></a>手順 2:クエリを実行します。  
   
 1.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でデータベースを右クリックし、 **[新しいクエリ]** をポイントして、 **[XMLA]** を選択します。  
   

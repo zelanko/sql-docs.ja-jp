@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 0b20fbb8-6b83-48ec-b442-f96c8a4bafbb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e3035e8614dbe57d131ee77dc77fb85605499c15
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0343954f549f2cba4b535b8ab4ebafec5a842015
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694725"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918283"
 ---
 # <a name="lineseparator-property-ado"></a>LineSeparator プロパティ (ADO)
 テキストの行区切り記号として使用する文字をバイナリ示します[Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -37,5 +36,5 @@ ms.locfileid: "66694725"
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)

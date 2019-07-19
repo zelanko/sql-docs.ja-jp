@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: d36c20e0278a90bc5afcbd312afea2cb596e9c51
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.openlocfilehash: c1ca9d710ca0e87e69bcc237848c02b758c724cc
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072545"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210254"
 ---
 # <a name="comparing-tabular-and-multidimensional-solutions"></a>テーブルと多次元ソリューションのソリューションの比較
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -52,10 +52,10 @@ ms.locfileid: "53072545"
 |||| 
 |-|-|-|
 ||多次元|テーブル|
-|アクション|はい|いいえ|
+|Actions|はい|いいえ|
 |集計|はい|いいえ|
-|計算列|いいえ|はい|  
-|計算されるメジャー|はい|はい| 
+|計算列|いいえ|[はい]|  
+|計算されるメジャー|[はい]|はい| 
 |計算テーブル|いいえ|可<sup>1</sup>|  
 |カスタム アセンブリ|はい|いいえ|
 |カスタム ロールアップ|はい|いいえ| 
@@ -67,8 +67,8 @@ ms.locfileid: "53072545"
 |KPI|はい|はい| 
 |リンク オブジェクト|はい|○ (リンク テーブル)|
 |M 式|いいえ|可<sup>1</sup>|
-|多対多リレーションシップ|はい|いいえ (がある[双方向クロス フィルター](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 1200 以降の互換性レベル)| 
-|名前付きセット|はい|いいえ| 
+|多対多リレーションシップ|[はい]|いいえ (がある[双方向クロス フィルター](../analysis-services/tabular-models/bi-directional-cross-filters-tabular-models-analysis-services.md) 1200 以降の互換性レベル)| 
+|名前付きセット|[はい]|いいえ| 
 |不規則階層|はい|可<sup>1</sup>|  
 |親子階層|はい|○ (DAX 経由)|
 |[メジャー グループ]|はい|はい| 
@@ -77,8 +77,8 @@ ms.locfileid: "53072545"
 |オブジェクト レベルのセキュリティ|はい|可<sup>1</sup>|
 |準加法メジャー|はい|はい| 
 |翻訳|[可](../analysis-services/multidimensional-models/translations-in-multidimensional-models-analysis-services.md)|はい| 
-|ユーザー定義階層|はい|はい|
-|[書き戻し]|はい|いいえ| 
+|ユーザー定義階層|はい|[はい]|
+|[書き戻し]|[はい]|いいえ| 
   
  <sup>1</sup>を参照してください[Compatibility Level for Tabular が Analysis Services でモデル](../analysis-services/tabular-models/compatibility-level-for-tabular-models-in-analysis-services.md)互換性レベルの機能の違いについてはします。  
   
@@ -169,7 +169,7 @@ ms.locfileid: "53072545"
  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Analysis Services インスタンス管理](../analysis-services/instances/analysis-services-instance-management.md)   
  [Analysis Services の新機能](../analysis-services/what-s-new-in-analysis-services.md)     
 

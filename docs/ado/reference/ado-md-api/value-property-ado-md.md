@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 70dc5cff-0b05-456d-b86b-2686fe4e7ce6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9160ff14f331821415670fd1f0a6732e36caa728
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 74cebabb5fad4dc7e7f6719224324b243b40d206
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708688"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67913882"
 ---
 # <a name="value-property-ado-md"></a>Value プロパティ (ADO MD)
 現在の値を示す[セル](../../../ado/reference/ado-md-api/cell-object-ado-md.md)します。  
@@ -33,5 +32,5 @@ ms.locfileid: "66708688"
 ## <a name="applies-to"></a>適用対象  
  [Cell オブジェクト (ADO MD)](../../../ado/reference/ado-md-api/cell-object-ado-md.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FormattedValue プロパティ (ADO MD)](../../../ado/reference/ado-md-api/formattedvalue-property-ado-md.md)

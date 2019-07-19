@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: b8a26e05-3c82-4c5f-8f01-9de0edb645e9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: eeab20c5385b02a874908cc941c1c69910efa228
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 966962bdda79a57e83a0bce06b9254267efb474c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536670"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068657"
 ---
 # <a name="embedded-sql-example"></a>埋め込み SQL の例
 次のコードは c 言語で記述された単純な埋め込み SQL プログラムです。プログラムは、埋め込みのすべてではありませんが、ほとんどの SQL の方法を示しています。 プログラムは、注文番号のユーザーに求めます、顧客番号、別に販売員と注文の状態を取得し、画面に取得した情報を表示します。  

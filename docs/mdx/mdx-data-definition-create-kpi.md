@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 2a905c223418392ee9d3bd45dffbfe2ab821a298
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e2380f72fe8a5faf9dc5504e56941f724b1bd159
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181529"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098397"
 ---
 # <a name="mdx-data-definition---create-kpi"></a>MDX データ操作 - CREATE KPI
 
@@ -30,7 +29,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 ```  
   
 ## <a name="arguments"></a>引数  
- *KPI_Name*  
+ *Kpi 名*  
  KPI 名を指定する有効な文字列です。  
   
  *KPI_Value*  
@@ -56,7 +55,7 @@ CREATE KPI CURRENTCUBE | <Cube Name>.KPI_Name AS KPI_Value
 |傾向|数値の値を返す有効な MDX 式です。|  
 |TREND_GRAPHIC|クライアント アプリケーションが使用するグラフィック イメージのセットを定義する文字列です。|  
 |WEIGHT|数値の値を返す有効な MDX 式です。|  
-|CURRENT_TIME_MEMBER|時間ディメンションのメンバーを返す有効な MDX 式です。 CURRENT_TIME_MEMBER は、すべての相対時間関数の参照ポイントを設定します。|  
+|CURRENT_TIME_MEMBER は|時間ディメンションのメンバーを返す有効な MDX 式です。 CURRENT_TIME_MEMBER は、すべての相対時間関数の参照ポイントを設定します。|  
 |PARENT_KPI|親 KPI の名前を指定する文字列です。|  
 |キャプション|KPI のキャプションとしてクライアント アプリケーションが使用する文字列です。|  
 |DISPLAY_FOLDER|クライアント アプリケーションで表示される KPI が、表示フォルダーのパスを指定する文字列。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 ツールおよびクライアントによって提供される[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]、円記号 (\\) レベルの区切り記号です。 定義されたメンバーを複数の表示フォルダーを指定するには、セミコロン (;) を使用します。フォルダーを区切ります|  

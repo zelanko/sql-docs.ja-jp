@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: 8e3c717e-35e3-47ef-b5d3-3a96eeb7b869
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 70f459f60616e7edd77078a7e9653ab9dff097e9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd8d7a68e993aa6b35897ca14a7a87c08fc8763
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63248347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901365"
 ---
 # <a name="establishing-a-connection"></a>接続の確立
 環境と接続ハンドルの割り当てし、任意の接続属性を設定した後は、アプリケーションは、データ ソースまたはドライバーに接続する準備。 これを行うアプリケーションを使用できる 3 つの異なる関数があります。**SQLConnect** (Core インターフェイスへの準拠レベル)、 **SQLDriverConnect** (コア) と**SQLBrowseConnect** (レベル 1)。 さまざまなシナリオで使用するのには 3 つの各設計されています。 サポートがこれらの関数のうち、接続する前に、アプリケーションが判断できます、 **ConnectFunctions**キーワードによって返される**SQLDrivers**します。  

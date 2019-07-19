@@ -2,19 +2,18 @@
 title: テレメトリのフィードバック - Analytics Platform System |Microsoft Docs
 description: Analytics Platform System の Microsoft に製品利用統計情報のフィードバックを送信します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 442505d470d1c7b7a82a02610d650d9f0b8c8d07
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 347879cd468d67b3feee0c92dcd154334df4c237
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62678377"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960095"
 ---
 # <a name="send-telemetry-feedback-to-microsoft-for-analytics-platform-system"></a>Analytics Platform System のテレメトリのフィードバックをマイクロソフトに送信します。
 Analytics Platform System は、管理コンソールのデータを Microsoft に送信する省略可能な製品利用統計情報機能を持ちます。 
@@ -110,7 +109,7 @@ Analytics Platform System は、管理コンソールのデータを Microsoft �
   
 実行しても問題はありません、`Disable-RemoteMonitoring`複数回のコマンドします。  
   
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 詳細については、以下をご覧ください。
 - [アプライアンスの監視、管理コンソールを使用して&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-the-admin-console.md)  
 - [システム ビューを使用してアプライアンスの監視&#40;Analytics Platform System&#41;](monitor-the-appliance-by-using-system-views.md)  

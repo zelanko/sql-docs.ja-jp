@@ -7,13 +7,12 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 448322fc79f4a85256b1d0b5b682fcc5147263c5
-ms.sourcegitcommit: a91c3f4fe2587d474cd4d470bda93239ba2693bb
+ms.openlocfilehash: 6c302f7cc9830b15ed058c160618ea0e40705444
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/14/2019
-ms.locfileid: "67140634"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962732"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での Python 開発用のデータ サイエンス クライアントの設定します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -248,7 +247,7 @@ display.Image(data=image)
 
 次のスクリーン ショットでは、入力と散布図のプロットの出力を示します。
 
-  ![jupyter notebook showing scatter plot output](media/jupyter-notebook-scatterplot.png)
+  ![jupyter notebook の散布図のプロットの出力を表示](media/jupyter-notebook-scatterplot.png)
 
 
 <a name="install-ide"></a>

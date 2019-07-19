@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: ebfd4cda-4017-4873-9d28-38b1c7db12a8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e7ce25eda44c3581362bd145fa13efaa8359f20d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8883679a85d1e134b1759c90cde524bb97995130
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719258"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932862"
 ---
 # <a name="eventstatusenum"></a>EventStatusEnum
 イベントの実行の現在の状態を指定します。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adStatusCancel**|4|イベントの発生の原因となった操作のキャンセルを要求します。|  
 |**adStatusCantDeny**|3|操作が保留中の操作のキャンセルを要求できないことを示します。|  

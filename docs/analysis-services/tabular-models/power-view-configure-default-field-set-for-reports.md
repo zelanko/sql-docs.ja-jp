@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4b8549a384b8eb0e7625d354ccf4d5c4e8b5e664
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53072059"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162706"
 ---
 # <a name="power-view---configure-default-field-set-for-reports"></a>Power View - レポートの既定のフィールド セットの構成
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -41,6 +41,6 @@ ms.locfileid: "53072059"
 6.  ブックの他のテーブルについて、この手順を繰り返します。  
   
 ## <a name="next-step"></a>次の手順  
- 既定のフィールド セットを作成した後、既定のラベル、既定の画像、既定のグループ動作、または同じ値を含む行を 1 行にグループ化するか個別に表示するかを指定することによって、レポートのデザイン作業にさらに影響を与えることができます。 詳細については、[Power View レポート用のテーブル動作プロパティの構成](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)を参照してください。  
+ 既定のフィールド セットを作成した後、既定のラベル、既定の画像、既定のグループ動作、または同じ値を含む行を 1 行にグループ化するか個別に表示するかを指定することによって、レポートのデザイン作業にさらに影響を与えることができます。 詳細については、次を参照してください。 [Power View レポート用のテーブル動作プロパティの構成](../../analysis-services/tabular-models/power-view-configure-table-behavior-properties-for-reports.md)します。  
   
   

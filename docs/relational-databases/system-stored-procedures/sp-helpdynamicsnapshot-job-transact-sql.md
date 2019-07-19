@@ -21,18 +21,17 @@ helpviewer_keywords:
 ms.assetid: d6dfdf26-f874-495f-a8a6-8780699646d7
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cede3c4419f4e11d2110e7c3f735c3dec2474ec4
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 6b009fc8d08b9494a6ad3a33169fbb7d783b92be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58531484"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902901"
 ---
 # <a name="sphelpdynamicsnapshotjob-transact-sql"></a>sp_helpdynamicsnapshot_job (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  フィルター処理されたデータ スナップショットを生成するエージェント ジョブに関する情報を返します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  フィルター処理されたデータ スナップショットを生成するエージェント ジョブに関する情報を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,9 +45,9 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、指定された一致するすべてのフィルター選択されたデータ スナップショット ジョブに関する情報を返します*dynamic_snapshot_jobid*と*dynamic_snapshot_jobname*すべてのパブリケーション。  
+`[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、指定された一致するすべてのフィルター選択されたデータ スナップショット ジョブに関する情報を返します*dynamic_snapshot_jobid*と*dynamic_snapshot_jobname*すべてのパブリケーション。  
   
-`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` フィルター選択されたデータ スナップショット ジョブの名前です。 *dynamic_snapshot_jobname*は**sysname**、既定値は**%**'、パブリケーションの指定したすべての動的ジョブが返されます*dynamic_snapshot_jobid*します。 ジョブの作成時にジョブ名が明示的に指定されなかった場合、ジョブ名は次の形式になります。  
+`[ @dynamic_snapshot_jobname = ] 'dynamic_snapshot_jobname'` フィルター選択されたデータ スナップショット ジョブの名前です。 *dynamic_snapshot_jobname*は**sysname**、既定値は **%** '、パブリケーションの指定したすべての動的ジョブが返されます*dynamic_snapshot_jobid*します。 ジョブの作成時にジョブ名が明示的に指定されなかった場合、ジョブ名は次の形式になります。  
   
 ```  
 'dyn_' + <name of the standard snapshot job> + <GUID>  
@@ -88,7 +87,7 @@ sp_helpdynamicsnapshot_job [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner** 、パブリケーションが実行できるは、データベース ロール、およびパブリケーション アクセス リストを固定**sp_helpdynamicsnapshot_job**.  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9f7c0cdb-6d88-44c0-b049-29953ae75717
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: ec645ca897bb3760cb5ac866fbc28de5e2f6fcab
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3c22077de3bf41bc09864ac2c7f24dbdd4ecc3e7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47711810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032039"
 ---
 # <a name="creating-extended-stored-procedures"></a>拡張ストアド プロシージャの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -64,7 +63,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
 > [!NOTE]  
 >  __declspec(dllexport) は Microsoft 固有のコンパイラ拡張子です。 お使いのコンパイラでこのディレクティブがサポートされない場合は、DEF ファイルの EXPORTS セクションでこの関数をエクスポートする必要があります。  
   
- ときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トレースを使用して起動フラグ T260 またはシステム管理者特権を持つユーザーは、DBCC TRACEON (260) を実行している場合と、拡張ストアド プロシージャ DLL が _ _getxpversion()、警告メッセージをサポートしていないこと (エラー 8131: 拡張ストアド プロシージャDLL '%' はエクスポートされません\__GetXpVersion().) がエラー ログに出力されます。 (なお\__GetXpVersion() が 2 つのアンダー スコアで始まります)。  
+ ときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]トレースを使用して起動フラグ T260 またはシステム管理者特権を持つユーザーは、DBCC TRACEON (260) を実行している場合と、拡張ストアド プロシージャ DLL が _ _getxpversion()、警告メッセージをサポートしていないこと (エラー 8131。拡張ストアド プロシージャ DLL '%' ではエクスポートされません\__GetXpVersion().) がエラー ログに出力されます。 (なお\__GetXpVersion() が 2 つのアンダー スコアで始まります)。  
   
  拡張ストアド プロシージャ DLL により __GetXpVersion() がエクスポートされ、この関数によって返されるバージョンがサーバーで要求されるバージョンよりも低い場合、この関数によって返されたバージョンとサーバーが必要とするバージョンを示す警告メッセージがエラー ログに出力されます。 間違った値を返す場合、このメッセージが発生した場合\__GetXpVersion()、または以前のバージョンの srv.h をコンパイルします。  
   
@@ -73,7 +72,7 @@ __declspec(dllexport) ULONG __GetXpVersion()
   
  実行時間の長い拡張ストアド プロシージャの場合は、srv_got_attention を定期的に呼び出すことにより、接続が強制的に切断された場合やバッチが中断された場合に、その拡張ストアド プロシージャが自身を終了できるようにすることをお勧めします。  
   
- 拡張ストアド プロシージャ DLL をデバッグするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn ディレクトリにその拡張ストアド プロシージャをコピーします。 デバッグ セッションの実行可能ファイルを指定するには、パスとファイル名を入力してください、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行可能ファイル (たとえば、C:\Program files \microsoft SQL Server\MSSQL13 します。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)。 Sqlservr 引数については、[sqlservr アプリケーション](../../tools/sqlservr-application.md)を参照してください。  
+ 拡張ストアド プロシージャ DLL をデバッグするには、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]\Binn ディレクトリにその拡張ストアド プロシージャをコピーします。 デバッグ セッションの実行可能ファイルを指定するには、パスとファイル名を入力してください、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]実行可能ファイル (たとえば、C:\Program files \microsoft SQL Server\MSSQL13 します。MSSQLSERVER\MSSQL\Binn\Sqlservr.exe)。 Sqlservr 引数については、次を参照してください。 [sqlservr アプリケーション](../../tools/sqlservr-application.md)します。  
   
 ## <a name="see-also"></a>参照  
  [srv_got_attention&#40;拡張ストアド プロシージャ API&#41;](../../relational-databases/extended-stored-procedures-reference/srv-got-attention-extended-stored-procedure-api.md)  

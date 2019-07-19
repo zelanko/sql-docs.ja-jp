@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 52a2754a4c6410430042f2b31805db42def4ec1f
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52420283"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164147"
 ---
 # <a name="configure-usage-data-collection-for-power-pivot-for-sharepoint"></a>使用状況データ収集の構成 (対象は Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -48,7 +48,7 @@ ms.locfileid: "52420283"
   
 1.  サーバーの全体管理で **[監視]** をクリックします。  
   
-2.   **[レポート]** セクションで、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
+2.  **[レポート]** セクションで、 **[使用状況と正常性のデータ収集の構成]** をクリックします。  
   
 3.  **[利用状況データの収集を有効にする]** をオンにします。  
   
@@ -189,7 +189,7 @@ ms.locfileid: "52420283"
 |[想定される応答の上限]|3000 (ミリ秒単位)|Integer|想定される要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。|  
 |長い応答の上限|10,000 (ミリ秒)|Integer|長い要求と応答のやり取りが完了するまでの時間を定義する上限を設定します。 この上限を超えるすべての要求は、上限のしきい値がない超過カテゴリに分類されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [構成設定のリファレンス &#40;Power Pivot for SharePoint&#41;](../../analysis-services/power-pivot-sharepoint/configuration-setting-reference-power-pivot-for-sharepoint.md)   
  [Power Pivot 使用状況データ収集](../../analysis-services/power-pivot-sharepoint/power-pivot-usage-data-collection.md)  
   

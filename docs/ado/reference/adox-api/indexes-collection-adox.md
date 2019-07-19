@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 184cf536-455c-42be-bf1c-a5c25bade961
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6898c7fbf326209e7b2071b4bdedf383cefc0642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2e84f49d5ad2d88ebb88417ae01046c0bcfd8006
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706613"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966048"
 ---
 # <a name="indexes-collection-adox"></a>Indexes コレクション (ADOX)
 すべてを含む[インデックス](../../../ado/reference/adox-api/index-object-adox.md)テーブルのオブジェクト。  
@@ -46,6 +45,6 @@ ms.locfileid: "66706613"
   
 -   [Indexes コレクションのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/indexes-collection-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Indexes Append メソッドの例 (VB)](../../../ado/reference/adox-api/indexes-append-method-example-vb.md)   
  [Index オブジェクト (ADOX)](../../../ado/reference/adox-api/index-object-adox.md)

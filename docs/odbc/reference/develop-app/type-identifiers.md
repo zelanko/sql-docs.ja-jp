@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d9fdfa2-e378-44fe-ac66-9743d9bbdd5a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cbefab0f02f3229d8b4c0a62a568634ec222290b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 79aa4de5d722208195477f7ffef53cac6c61a2de
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63305668"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68093020"
 ---
 # <a name="type-identifiers"></a>型識別子
 ODBC SQL と C# のデータ型を記述するには 2 つのセットを定義します*タイプ id*します。 型識別子には、SQL 列または C バッファーの種類について説明します。 **#Define**値しは一般に関数の引数として渡されるまたはメタデータに返されます。  

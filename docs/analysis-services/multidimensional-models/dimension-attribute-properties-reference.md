@@ -1,5 +1,5 @@
 ---
-title: ディメンションの属性のプロパティのリファレンス |Microsoft ドキュメント
+title: ディメンションの属性のプロパティの参照 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,17 +10,17 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 26975562f3617742cbcc3bfb3a47e41af09ba8b3
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34026669"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208921"
 ---
 # <a name="dimension-attribute-properties-reference"></a>ディメンションの属性のプロパティの参照
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
   [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]には、ディメンションやディメンション属性の機能を決定する多くのプロパティがあります。 次の表に、このような属性のプロパティの一覧とその説明を示します。  
   
-|プロパティ|Description|  
+|プロパティ|説明|  
 |--------------|-----------------|  
 |**AttributeHierarchyDisplayFolder**|フォルダーを指定します。このフォルダー内で、関連付けられた属性階層をエンド ユーザーに対して表示します。|  
 |**AttributeHierarchyEnabled**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] で属性に対して属性階層を生成するかどうかを指定します。 属性階層が有効ではない場合、その属性をユーザー定義の階層で使用することも、属性階層を多次元式 (MDX) ステートメントで参照することもできません。|  
@@ -30,13 +30,13 @@ ms.locfileid: "34026669"
 |**CustomRollupColumn**|カスタム ロールアップ式を定義する列を指定します。|  
 |**CustomRollupPropertiesColumn**|カスタム ロールアップ式のプロパティを含む列を指定します。|  
 |**DefaultMember**|属性の既定のメジャーを定義する多次元式 (MDX) 式を指定します。|  
-|**Description**|属性の説明を示します。|  
+|**[説明]**|属性の説明を示します。|  
 |**DiscretizationBucketCount**|分離対象のバケット数を示します。|  
 |**DiscretizationMethod**|分離方法を定義します。|  
 |**EstimatedCount**|属性内の推定メンバー数を指定します。 集計のデザイン ウィザードを実行するまで、既定値はゼロになります。 このウィザードでは、レコード数をカウントすることも、推定値を入力することもできます。 メンバー数がわかっており、そのカウントについてデータベースをクエリする時間を節約する必要がある場合は、手動で値を入力します。 実稼働データのテスト用サブセットを使用して作業している場合、実稼働データのカウントを使用することにより、テスト データではなく実稼働データに対して集計デザインを最適化できます。|  
 |**GroupingBehavior**|クライアント アプリケーションに、属性のグループ化方法についてのヒントを提供するユーザー定義の値です。|  
 |**ID**|ディメンションの一意識別子 (ID) を示します。|  
-|**InstanceSelection**|一覧の推定項目数に基づいて、項目の一覧を表示する方法のヒントをクライアント アプリケーションに提供します。 次のオプションを使用できます。<br /><br /> **None** : クライアント アプリケーションにヒントは提供されません。 これが既定値です。<br /><br /> **DropDown** : 項目数が多すぎず、ドロップダウン リストに収まる場合に使用します。<br /><br /> **List** : 項目の数が多すぎてドロップダウン **リスト**に表示できないが、フィルター選択を必要としない場合に使用します。<br /><br /> **FilteredList** : 項目数が多いために、表示する項目をユーザーにフィルター選択させる必要がある場合に使用します。<br /><br /> **MandatoryFilter** : 常にフィルター選択する必要があるほど項目数が多い場合に使用します。|  
+|**InstanceSelection**|一覧の推定項目数に基づいて、項目の一覧を表示する方法のヒントをクライアント アプリケーションに提供します。 次のオプションを使用できます。<br /><br /> **None** : クライアント アプリケーションにヒントは提供されません。 これは既定値です。<br /><br /> **DropDown** : 項目数が多すぎず、ドロップダウン リストに収まる場合に使用します。<br /><br /> **List** : 項目の数が多すぎてドロップダウン **リスト**に表示できないが、フィルター選択を必要としない場合に使用します。<br /><br /> **FilteredList** : 項目数が多いために、表示する項目をユーザーにフィルター選択させる必要がある場合に使用します。<br /><br /> **MandatoryFilter** : 常にフィルター選択する必要があるほど項目数が多い場合に使用します。|  
 |**IsAggregatable**|属性メンバーの値を集計できるかどうかを指定します。 既定値は **True**(属性階層に (All) レベルがある) です。 このプロパティの値が **False**の場合、属性階層には (All) レベルがありません。|  
 |**[KeyColumns]**|属性のキーを表す 1 つ以上の列を示します。この列は、属性がバインドされるデータ ソース ビュー内の基になるリレーショナル テーブルにある列です。 この列の各メンバーに対応する値は、 **NameColumn** プロパティに値が指定されている場合を除き、ユーザーに対して表示されます。|  
 |**MemberNamesUnique**|属性階層内のメンバー名を一意にする必要があるかどうかを指定します。|  
@@ -50,7 +50,7 @@ ms.locfileid: "34026669"
 |**RootMemberIf**|親子階層のルート メンバー (最上位メンバー) を識別する方法を指定します。 このプロパティ値は、 **Usage** プロパティの値が Parent に設定されている場合にのみ使用されます。 これは、親子階層が定義されていることを意味します。 既定値は **ParentIsBlankSelfOrMissing**です。つまり、 **ParentIsBlank**、 **ParentIsSelf**、 **ParentIsMissing** の説明で示している条件を 1 つ以上満たすメンバーのみが、ルート メンバーとして扱われます。 また、次の値も指定できます。<br /><br /> **ParentIsBlank** : キー列が NULL、0、または空の文字列のメンバーだけがルート メンバーとして扱われます。<br /><br /> **ParentIsSelf** : そのメンバー自体を親とするメンバーだけがルート メンバーとして扱われます。<br /><br /> **ParentIsMissing** : 親が見つからないメンバーだけがルート メンバーとして扱われます。|  
 |**型**|属性の型を示します。 詳細については、「 [属性の種類の構成](../../analysis-services/multidimensional-models/attribute-properties-configure-attribute-types.md)」を参照してください。|  
 |**UnaryOperatorColumn**|単項演算子を含む列を指定します。 単項演算子を含む列の詳細を定義する DataItem 型のバインドです。|  
-|**Usage**|属性の使用方法を説明します。<br /><br /> 次のオプションを使用できます。<br /><br /> **Regular** : この属性は標準属性です。 これが既定値です。<br /><br /> **Key** : この属性はキー属性です。<br /><br /> **Parent** : この属性は親属性です。|  
+|**Usage**|属性の使用方法を説明します。<br /><br /> 次のオプションを使用できます。<br /><br /> **Regular** : この属性は標準属性です。 これは既定値です。<br /><br /> **Key** : この属性はキー属性です。<br /><br /> **Parent** : この属性は親属性です。|  
 |**ValueColumn**|属性の値を示す列を指定します。 属性の **NameColumn** 要素が指定されている場合は、同じ **DataItem** 値が **ValueColumn** 要素の既定値として使用されます。 属性の **NameColumn** 要素が指定されていないときに、属性の **KeyColumns** コレクションに、文字列データ型のキー列を表す 1 つの **KeyColumn** 要素が含まれている場合は、同じ **DataItem** 値が **ValueColumn** 要素の既定値として使用されます。|  
   
 > [!NOTE]  
@@ -59,7 +59,7 @@ ms.locfileid: "34026669"
 > [!NOTE]  
 >  クエリで階層のメンバーが明示的に指定されていない場合は、属性の既定のメンバーが式の評価に使用されます。 属性の既定のメンバーは、属性の **DefaultMember** プロパティによって指定されます。 ディメンションからの階層がクエリに含まれている場合は、階層内のレベルに対応する属性からのすべての既定のメンバーは無視されます。 ディメンションの階層がクエリに含まれていない場合は、既定のメンバーがディメンションのすべての属性に対して使用されます。 既定のメンバーの詳細については、「 [既定メンバーの定義](../../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性と属性階層](../../analysis-services/multidimensional-models-olap-logical-dimension-objects/attributes-and-attribute-hierarchies.md)  
   
   

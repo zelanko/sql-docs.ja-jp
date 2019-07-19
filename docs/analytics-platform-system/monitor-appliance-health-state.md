@@ -2,19 +2,18 @@
 title: アプライアンスの状態の監視 - Analytics Platform System
 description: 管理者コンソールを使用して、または Parallel Data Warehouse の動的管理ビューを直接照会して、Analytics Platform System appliance の状態を監視する方法。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: d8616d291dcaa8afadc01c9bd237903ca6c13573
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c69e46ad6a37a17a12c37f83625b5c7f6eaf8078
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62640019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960614"
 ---
 # <a name="monitor-appliance-health-state"></a>アプライアンス正常性状態の監視
 この記事では、管理者コンソールを使用して、または Parallel Data Warehouse の動的管理ビューを直接照会して、Analytics Platform System appliance の状態を監視する方法について説明します。 
@@ -90,7 +89,7 @@ Status プロパティの返される値は次のとおりです。
 > [!CAUTION]  
 > コンポーネントは 5 分以上; ポーリングされていないすると、問題を調査してください。ソフトウェアのハートビートの問題を示すアラートがあります。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

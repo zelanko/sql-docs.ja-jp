@@ -1,5 +1,5 @@
 ---
-title: 'サンプル: WMI プロバイダーでの SQL Server エージェント警告の作成 |Microsoft Docs'
+title: サンプル:WMI プロバイダーと SQL Server エージェントの警告を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -14,20 +14,19 @@ helpviewer_keywords:
 ms.assetid: d44811c7-cd46-4017-b284-c863ca088e8f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 03802fba0b2a36716fdac5674053a56061f26c85
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 875751bd4b2dffd0039ffb40aa884bb9731a75d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51215661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68139492"
 ---
-# <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>サンプル: WMI プロバイダーを使用した SQL Server エージェント警告の作成
+# <a name="sample-creating-a-sql-server-agent-alert-with-the-wmi-provider"></a>サンプル:WMI プロバイダーを使用した SQL Server エージェント警告の作成
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
   WMI イベント プロバイダーの標準的な使い方の 1 つは、特定のイベントに応答する SQL Server エージェントを作成することです。 次のサンプルでは、後で分析するために、テーブルに XML デッドロック グラフ イベントを保存する簡単な警告を提供しています。 SQL Server エージェントは、WQL 要求の送信、WMI イベントの受信、およびイベントに応答したジョブの実行を行います。 通知メッセージの処理に関連する Service Broker オブジェクトはいくつかありますが、WMI イベント プロバイダーはこれらのオブジェクトの作成および管理の詳細を処理します。  
   
 ## <a name="example"></a>例  
- まず、デッドロック グラフ イベントを格納するために、`AdventureWorks` データベースにテーブルが作成されます。 このテーブルには 2 つの列があります。`AlertTime` 列は警告が実行される時間、`DeadlockGraph` 列はデッドロック グラフが含まれる XML ドキュメントを格納します。  
+ まず、デッドロック グラフ イベントを格納するために、`AdventureWorks` データベースにテーブルが作成されます。 テーブルには、2 つの列が含まれています。`AlertTime`列は、警告が実行時間を保持し、`DeadlockGraph`列は、デッドロック グラフを含む XML ドキュメントを保持します。  
   
  次に警告が作成されます。 スクリプトは、まず、警告が実行するジョブを作成し、ジョブ ステップをジョブに追加し、そのジョブを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の現在のインスタンスに指定します。 次に、スクリプトは警告を作成します。  
   
@@ -104,7 +103,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 次のスクリプトを 2 つ目のクエリ タブで実行します。このスクリプトは、1 つの結果セットを生成し、次に処理をブロックして、`Production.Product` に対するロックの取得を待機します。  
+ 2 番目のクエリ タブで、次のスクリプトを実行します。このスクリプトは、1 つの結果セットを生成し、ブロック、に対するロックの取得を待機している`Production.Product`します。  
   
 ```  
 USE AdventureWorks ;  
@@ -120,7 +119,7 @@ SELECT TOP(1) Name FROM Production.Product WITH (XLOCK) ;
 GO  
 ```  
   
- 次のスクリプトを 1 つ目のクエリ タブで実行します。このスクリプトは処理をブロックし、`Production.Location` に対するロックの取得を待機します。 すぐにタイムアウトになった後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、このスクリプトとサンプル内のスクリプトのどちらかをデッドロックの対象として選択し、トランザクションを終了します。  
+ 最初のクエリ タブで、次のスクリプトを実行します。このスクリプト ブロックは、に対するロックの取得を待機している`Production.Location`します。 すぐにタイムアウトになった後、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、このスクリプトとサンプル内のスクリプトのどちらかをデッドロックの対象として選択し、トランザクションを終了します。  
   
 ```  
 SELECT TOP(1) Name FROM Production.Location WITH (XLOCK) ;  
@@ -136,7 +135,7 @@ GO
   
  `DeadlockGraph` 列には、デッドロック グラフ イベントのすべてのプロパティを示した XML ドキュメントが格納されているはずです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WMI Provider for Server Events の概念](../../relational-databases/wmi-provider-server-events/wmi-provider-for-server-events-concepts.md)  
   
   

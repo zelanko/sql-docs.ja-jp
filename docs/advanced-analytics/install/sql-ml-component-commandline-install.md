@@ -7,13 +7,12 @@ ms.date: 03/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: d852cc745578d852b2c8235ebcaf3614020a1bb8
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 6ffd4b13d5ab92187ac998fd983e8fa8416e4401
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511749"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962892"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>SQL Server の学習、コマンドラインからの R と Python のコンポーネントのインストールします。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -50,9 +49,9 @@ ms.locfileid: "58511749"
 |-----------|-------------|
 | /FEATURES = AdvancedAnalytics | データベースのバージョンがインストールされます。SQL Server 2017 Machine Learning サービス (In-database) または SQL Server 2016 R Services (In-database)。  |
 | /FEATURES = SQL_INST_MR | SQL Server 2017 のみに適用されます。 AdvancedAnalytics とは、これをペアリングします。 Microsoft R Open と独自の R パッケージを含む、(データベース内) R 機能をインストールします。 SQL Server 2016 R Services の機能は R のみ、そのリリース パラメーターがありません。|
-| /FEATURES = SQL_INST_MPY | SQL Server 2017 のみに適用されます。 AdvancedAnalytics とは、これをペアリングします。 Anaconda と独自の Python パッケージを含む、(データベース) の Python 機能をインストールします。 |
+| /機能 SQL_INST_MPY を = | SQL Server 2017 のみに適用されます。 AdvancedAnalytics とは、これをペアリングします。 Anaconda と独自の Python パッケージを含む、(データベース) の Python 機能をインストールします。 |
 | /FEATURES = SQL_SHARED_MR | スタンドアロン バージョンの R の機能をインストールします。SQL Server 2017 Machine Learning Server (スタンドアロン) または SQL Server 2016 R Server (スタンドアロン)。 スタンドアロン サーバーには、データベース エンジンのインスタンスにバインドされていない「共有機能」です。|
-| /FEATURES = SQL_SHARED_MPY | SQL Server 2017 のみに適用されます。 スタンドアロン バージョンの Python 機能がインストールされます。SQL Server 2017 Machine Learning Server (スタンドアロン)。 スタンドアロン サーバーには、データベース エンジンのインスタンスにバインドされていない「共有機能」です。|
+| /機能 SQL_SHARED_MPY を = | SQL Server 2017 のみに適用されます。 スタンドアロン バージョンの Python 機能がインストールされます。SQL Server 2017 Machine Learning Server (スタンドアロン)。 スタンドアロン サーバーには、データベース エンジンのインスタンスにバインドされていない「共有機能」です。|
 | /IACCEPTROPENLICENSETERMS  | オープン ソースの R コンポーネントを使用するためのライセンス条項を承諾したことを示します。 |
 | /IACCEPTPYTHONLICENSETERMS | Python コンポーネントを使用するためのライセンス条項を承諾したことを示します。 |
 | /IACCEPTSQLSERVERLICENSETERMS | SQL Server を使用するためのライセンス条項を承諾したことを示します。|
@@ -175,7 +174,7 @@ Python のコマンドを開くには、SQL Server\140\PYTHON_SERVER\bin\x64 \Pr
 
 * [SQL Server R Services 用のカスタム レポート](../r/monitor-r-services-using-custom-reports-in-management-studio.md)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 R 開発者は、簡単な例で作業を開始し、SQL Server での R の動作の基本を学習します。 次の手順で、次のリンクを参照してください。
 

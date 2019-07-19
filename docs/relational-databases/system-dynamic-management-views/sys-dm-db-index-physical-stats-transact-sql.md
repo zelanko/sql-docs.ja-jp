@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: d294dd8e-82d5-4628-aa2d-e57702230613
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 9330c41ccf23cdb03add4c15fc2160594c2ff7a7
-ms.sourcegitcommit: 0c049c539ae86264617672936b31d89456d63bb0
+ms.openlocfilehash: c6427f786de727f22c3dd74b0dcf91d63b36c4ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58618299"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004869"
 ---
 # <a name="sysdmdbindexphysicalstats-transact-sql"></a>sys.dm_db_index_physical_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -57,7 +56,7 @@ sys.dm_db_index_physical_stats (
   
 ## <a name="arguments"></a>引数  
  *database_id* | NULL | 0 | DEFAULT  
- データベースの ID です。 *database_id*は**smallint**します。 有効な値は null の場合、データベースの ID 番号を 0、または DEFAULT です。 既定値は 0 です。 NULL、0、および既定値はこのコンテキストで同じ値になります。  
+ データベースの ID です。 *database_id*は**smallint**します。 有効な入力値は、データベースの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスのすべてのデータベースに関する情報を返すには NULL を指定します。 NULL を指定する場合*database_id*の場合は NULL を指定することも必要があります。 *object_id*、 *index_id*、および*partition_number*します。  
   
@@ -66,7 +65,7 @@ sys.dm_db_index_physical_stats (
  *object_id* | NULL | 0 | DEFAULT  
  テーブルのオブジェクト id またはインデックス ビューをオンします。 *object_ID* は **int**です。  
   
- 有効な値は、テーブルおよびビュー、null の場合の ID 番号 0、または DEFAULT です。 既定値は 0 です。 NULL、0、および既定値はこのコンテキストで同じ値になります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、有効な入力値は、service broker のキュー名、またはキューの内部テーブル名にも含まれます。 既定のパラメーターが適用されます (つまりすべてのオブジェクト、すべてのインデックスなど)、結果セット内のすべてのキューの断片化情報が含まれています。  
+ 有効な入力値は、テーブルおよびビューの ID 番号、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、有効な入力値は、service broker のキュー名、またはキューの内部テーブル名にも含まれます。 既定のパラメーターが適用されます (つまりすべてのオブジェクト、すべてのインデックスなど)、結果セット内のすべてのキューの断片化情報が含まれています。  
   
  NULL を指定すると、指定されたデータベース内にあるすべてのテーブルとビューに関する情報が返されます。 NULL を指定する場合*object_id*の場合は NULL を指定することも必要があります。 *index_id*と*partition_number*します。  
   
@@ -76,7 +75,7 @@ sys.dm_db_index_physical_stats (
  ベース テーブルまたはビューのすべてのインデックスの情報を返す NULL を指定します。 NULL を指定する場合*index_id*の場合は NULL を指定することも必要があります。 *partition_number*します。  
   
  *partition_number* | NULL | 0 | DEFAULT  
- オブジェクトのパーティション番号です。 *partition_number*は**int**します。有効な値は、 *partion_number*のインデックスまたはヒープ、NULL、0、または DEFAULT です。 既定値は 0 です。 NULL、0、および既定値はこのコンテキストで同じ値になります。  
+ オブジェクトのパーティション番号です。 *partition_number*は**int**します。有効な値は、 *partion_number*のインデックスまたはヒープ、NULL、0、または DEFAULT です。 既定値は 0 です。 このコンテキストでは、NULL、0、および DEFAULT は同じ値になります。  
   
  NULL を指定すると、所有するオブジェクトのすべてのパーティションに関する情報が返されます。  
   
@@ -93,9 +92,9 @@ sys.dm_db_index_physical_stats (
 |object_id|**int**|テーブルまたはインデックスがビューのオブジェクト ID。|  
 |index_id|**int**|インデックスのインデックス ID。<br /><br /> 0 = ヒープ。|  
 |partition_number|**int**|所有するオブジェクト内の 1 から始まるパーティション番号テーブル、ビュー、またはインデックスです。<br /><br /> 1 = パーティション分割されていないインデックスまたはヒープ。|  
-|index_type_desc|**nvarchar(60)**|インデックスの種類の説明です。<br /><br /> ヒープ<br /><br /> クラスター化インデックス<br /><br /> NONCLUSTERED INDEX<br /><br /> プライマリ XML インデックス<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列ストア マッピング インデックス (内部)<br /><br /> 列ストアの DELETEBUFFER インデックス (内部)<br /><br /> 列ストアの DELETEBITMAP インデックス (内部)|  
+|index_type_desc|**nvarchar(60)**|インデックスの種類の説明です。<br /><br /> HEAP<br /><br /> クラスター化インデックス<br /><br /> NONCLUSTERED INDEX<br /><br /> プライマリ XML インデックス<br /><br /> EXTENDED INDEX<br /><br /> XML INDEX<br /><br /> 列ストア マッピング インデックス (内部)<br /><br /> 列ストアの DELETEBUFFER インデックス (内部)<br /><br /> 列ストアの DELETEBITMAP インデックス (内部)|  
 |hobt_id で|**bigint**|ヒープまたはインデックスまたはパーティションの B ツリー ID。<br /><br /> ユーザー定義のインデックスの hobt_id でを返すだけはこれも内部列ストア インデックスの hobt_id でを返します。|  
-|alloc_unit_type_desc|**nvarchar(60)**|アロケーション ユニットの種類の説明。<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA アロケーション ユニットには、型の列に格納されているデータが含まれています**テキスト**、 **ntext**、**イメージ**、 **varchar (max)**、 。**nvarchar (max)**、 **varbinary (max)**、および**xml**します。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。<br /><br /> ROW_OVERFLOW_DATA アロケーション ユニットには、型の列に格納されているデータが含まれています**varchar (n)**、 **nvarchar (n)**、 **varbinary (n)**、および**sql _。バリアント**行外に出されました。|  
+|alloc_unit_type_desc|**nvarchar(60)**|アロケーション ユニットの種類の説明。<br /><br /> IN_ROW_DATA<br /><br /> LOB_DATA<br /><br /> ROW_OVERFLOW_DATA<br /><br /> LOB_DATA アロケーション ユニットには、型の列に格納されているデータが含まれています**テキスト**、 **ntext**、**イメージ**、 **varchar (max)** 、 。**nvarchar (max)** 、 **varbinary (max)** 、および**xml**します。 詳細については、「[データ型 &#40;Transact-SQL&#41;](../../t-sql/data-types/data-types-transact-sql.md)」を参照してください。<br /><br /> ROW_OVERFLOW_DATA アロケーション ユニットには、型の列に格納されているデータが含まれています**varchar (n)** 、 **nvarchar (n)** 、 **varbinary (n)** 、および**sql _。バリアント**行外に出されました。|  
 |index_depth|**tinyint**|インデックス レベルの数です。<br /><br /> 1 = ヒープ、LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニット。|  
 |index_level|**tinyint**|インデックスの現在のレベル。<br /><br /> インデックスのリーフ レベルの場合は 0 がヒープ、LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニット。<br /><br /> 非リーフ インデックス レベルの場合は 0 より大きい。 *index_level*インデックスのルート レベルで最大になります。<br /><br /> インデックスの非リーフ レベルはのみ処理されるときに*モード*= 詳細。|  
 |avg_fragmentation_in_percent|**float**|インデックスの論理的な断片化、または IN_ROW_DATA アロケーション ユニットでのヒープのエクステントの断片化。<br /><br /> 値は、に対する比率として計測され、複数のファイルを考慮します。 論理的な断片化とエクステントの断片化の定義については、「解説」を参照してください。<br /><br /> LOB_DATA および ROW_OVERFLOW_DATA アロケーション ユニットは 0 です。<br /><br /> NULL の場合にヒープ*モード*= SAMPLED。|  
@@ -111,8 +110,8 @@ sys.dm_db_index_physical_stats (
 |avg_record_size_in_bytes|**float**|平均レコード サイズ (バイト単位)。<br /><br /> インデックスでは、IN_ROW_DATA アロケーション ユニットに含まれる B ツリーの現在のレベルでの平均レコード サイズになります。<br /><br /> ヒープの場合、IN_ROW_DATA アロケーション ユニットの平均レコード サイズ。<br /><br /> LOB_DATA または ROW_OVERFLOW_DATA アロケーション ユニット ユニット、完了のアロケーション ユニットの平均レコード サイズ。<br /><br /> ときに、NULL*モード*LIMITED を = です。|  
 |forwarded_record_count|**bigint**|別のデータの場所への転送ポインターを持つ、ヒープ内の転送されたレコード数 (この状態は、更新中に、新しい行を格納できる十分なスペースが元の場所にない場合に発生します)。<br /><br /> ヒープの IN_ROW_DATA アロケーション ユニット以外のアロケーション ユニットでは NULL になります。<br /><br /> NULL の場合にヒープ*モード*= LIMITED。|  
 |compressed_page_count|**bigint**|圧縮されたページ数。<br /><br /> ヒープの場合、新しく割り当てられたページはページ圧縮されません。 ヒープは、2 つの特殊な条件、つまりデータを一括インポートする場合、またはヒープを再構築する場合に、ページ圧縮されます。 ページ割り当てが発生する通常の DML 操作では、ページ圧縮されません。 compressed_page_count の値が目標のしきい値を超えた場合は、ヒープを再構築してください。<br /><br /> クラスター化インデックスを含むテーブルの場合、compressed_page_count の値はページ圧縮の効果を示します。|  
-|hobt_id で|BIGINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 列ストア インデックスの場合のみ、これは、パーティションの内部列ストア データを追跡する行セットの ID です。 行セットには、データがヒープとしてストアドまたはバイナリ ツリー。 親の列ストア インデックスと同じインデックス ID があります。 詳細については、[sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)を参照してください。<br /><br /> NULL の場合|  
-|column_store_delete_buffer_state|TINYINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN <br /><br /> 2 = のドレイン<br /><br /> 3 = フラッシュ<br /><br /> 4 = インベントリから削除<br /><br /> 5 = 準備完了|  
+|hobt_id で|BIGINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 列ストア インデックスの場合のみ、これは、パーティションの内部列ストア データを追跡する行セットの ID です。 行セットには、データがヒープとしてストアドまたはバイナリ ツリー。 親の列ストア インデックスと同じインデックス ID があります。 詳細については、次を参照してください。 [sys.internal_partitions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-internal-partitions-transact-sql.md)します。<br /><br /> NULL の場合|  
+|column_store_delete_buffer_state|TINYINT|**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 0 = NOT_APPLICABLE<br /><br /> 1 = OPEN<br /><br /> 2 = のドレイン<br /><br /> 3 = フラッシュ<br /><br /> 4 = インベントリから削除<br /><br /> 5 = 準備完了|  
 |column_store_delete_buff_state_desc||**適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [現在のバージョンまで](https://go.microsoft.com/fwlink/p/?LinkId=299658))、 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。<br /><br /> 無効です - 親インデックスは列ストア インデックスはありません。<br /><br /> Deleters を開くし、スキャナーは、これを使用します。<br /><br /> ドレイン中 - deleters ドレインが、スキャナーが引き続き使用します。<br /><br /> フラッシュのバッファーが閉じられ、バッファー内の行が削除のビットマップに書き込まれています。<br /><br /> 削除のビットマップに書き込まれた RETIRING - 閉じた削除バッファーの行が、バッファーが切り捨てられていないスキャナーによってまだ使用されています。 新しいスキャナーは、開いているバッファーが十分であるため、中止のバッファーを使用する必要はありません。<br /><br /> 準備ができたら、この削除バッファーが使用できるようにします。|  
   
 ## <a name="remarks"></a>コメント  
@@ -129,7 +128,7 @@ sys.dm_db_index_physical_stats (
   
  モードより多くの作業が各モードで実行されるため、詳細、LIMITED から段階的に遅くなります。 テーブルまたはインデックスの断片化レベルのサイズをすばやく計測するには、LIMITED モードを使用します。 最も高速でと、インデックスの IN_ROW_DATA アロケーション ユニット内の各非リーフ レベルの行は返されません。  
   
-## <a name="using-system-functions-to-specify-parameter-values"></a>システム関数を使用してパラメーター値を指定するには  
+## <a name="using-system-functions-to-specify-parameter-values"></a>システム関数によるパラメーター値の指定  
  使用することができます、[!INCLUDE[tsql](../../includes/tsql-md.md)]関数[DB_ID](../../t-sql/functions/db-id-transact-sql.md)と[OBJECT_ID](../../t-sql/functions/object-id-transact-sql.md)の値を指定する、 *database_id*と*object_id*パラメーター。 ただし、これらの関数に無効な値を渡すと、意図しない結果が生じる可能性があります。 たとえば、スペルが正しいか存在しないために、データベースまたはオブジェクト名が見つからない場合、どちらの関数は NULL を返します。 sys.dm_db_index_physical_stats 関数では、NULL 値はすべてのデータベースまたはすべてのオブジェクトを指定するワイルドカード値として解釈されます。  
   
  さらに、OBJECT_ID 関数が処理されるは、sys.dm_db_index_physical_stats 関数と呼びます。 そのため、現在のデータベースのコンテキストで評価する前に、データベースではなくで指定された*database_id*します。 この動作により、OBJECT_ID 関数で NULL 値が返される場合があります。または、オブジェクト名が現在のデータベースのコンテキストと指定したデータベースの両方に存在する場合は、エラー メッセージが返されることがあります。 次の例は、こうした意図しない結果を示すものです。  
@@ -169,7 +168,7 @@ GO
 ```  
   
 ### <a name="best-practice"></a>推奨事項  
- 常に DB_ID または OBJECT_ID を使用すると、有効な ID が返されることを確認します。 たとえば、OBJECT_ID を使用するときに名前を指定 3 部など`OBJECT_ID(N'AdventureWorks2012.Person.Address')`、または sys.dm_db_index_physical_stats 関数で使用する前に、関数によって返される値をテストします。 次の例 A と B は、データベースとオブジェクト Id を指定する安全な方法を示します。  
+ DB_ID または OBJECT_ID を使用する場合は、必ず有効な ID が返されるようにしてください。 たとえば、OBJECT_ID を使用するときに名前を指定 3 部など`OBJECT_ID(N'AdventureWorks2012.Person.Address')`、または sys.dm_db_index_physical_stats 関数で使用する前に、関数によって返される値をテストします。 次の例 A と B は、データベースとオブジェクト Id を指定する安全な方法を示します。  
   
 ## <a name="detecting-fragmentation"></a>断片化の検出  
  断片化は、テーブルとテーブルに定義されたインデックスに対して、INSERT、UPDATE、DELETE ステートメントによるデータ変更が行われる過程で発生します。 これらの変更がない均等に分散テーブルとインデックスの行、されるため、各ページのゆとりが時間の経過と共に変わることができます。 このような断片化があるときに、クエリでテーブルのインデックスの一部または全部をスキャンしようとすると、余分なページの読み取りが必要になり、 データの並列スキャンの妨げになります。  
@@ -184,7 +183,7 @@ GO
   
  これは、ヒープのリーフ ページでの順序不定なエクステントの割合です。 順序が無効なエクステントとは、ヒープの現在のページを含むエクステントの物理的な位置が、前のページを含むエクステントの直後でない状態のエクステントを指します。  
   
- 最大のパフォーマンスを得るには、avg_fragmentation_in_percent の値をできるだけ 0 に近くする必要があります。 ただし、0% から 10% から値許容される場合があります。 再構築、再構成、再作成など、断片化を解消するためのさまざまな手段を使用することによって、この値を下げることができます。 インデックスの断片化の程度を分析する方法の詳細については、[Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)を参照してください。  
+ 最大のパフォーマンスを得るには、avg_fragmentation_in_percent の値をできるだけ 0 に近くする必要があります。 ただし、0% から 10% から値許容される場合があります。 再構築、再構成、再作成など、断片化を解消するためのさまざまな手段を使用することによって、この値を下げることができます。 インデックスの断片化の程度を分析する方法の詳細については、次を参照してください。 [Reorganize and Rebuild Indexes](../../relational-databases/indexes/reorganize-and-rebuild-indexes.md)します。  
   
 ## <a name="reducing-fragmentation-in-an-index"></a>インデックスの断片化の解消  
  断片化がクエリのパフォーマンスの影響を与えることがある方法でインデックスが断片化されている場合は、断片化を削減するための 3 つの選択肢があります。  
@@ -203,7 +202,7 @@ GO
 >  DBCC SHRINKFILE または DBCC SHRINKDATABASE を実行している場合は、インデックスが部分的または完全に移動された場合、圧縮操作中に断片化が生じる可能性があります。 そのため場合、圧縮操作を実行する必要があります、行う必要があります、断片化が削除される前にします。  
   
 ## <a name="reducing-fragmentation-in-a-heap"></a>ヒープの断片化の解消  
- ヒープのエクステントの断片化を減らすためには、テーブルにクラスター化インデックスを作成し、インデックスを削除します。 これによって、クラスター化インデックスの作成中にデータが再分配されます。 この操作では、データベースの空き領域の分布を考慮に入れて、可能な限り最適化も行われます。 クラスター化インデックスがヒープを再作成し、削除されると、データは移動されませんし、最適位置のままになります。 これらの操作を実行する方法については、[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)と[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)を参照してください。  
+ ヒープのエクステントの断片化を減らすためには、テーブルにクラスター化インデックスを作成し、インデックスを削除します。 これによって、クラスター化インデックスの作成中にデータが再分配されます。 この操作では、データベースの空き領域の分布を考慮に入れて、可能な限り最適化も行われます。 クラスター化インデックスがヒープを再作成し、削除されると、データは移動されませんし、最適位置のままになります。 これらの操作を実行する方法については、次を参照してください。 [CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)と[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)します。  
   
 > [!CAUTION]  
 >  テーブルでクラスター化インデックスを作成して削除すると、そのテーブルのすべての非クラスター化インデックスが 2 回再構築されます。  
@@ -214,7 +213,7 @@ GO
  指定されたクラスター化インデックスを再構成するには、クラスター化インデックスに含まれているすべての LOB 列が圧縮されます。 非クラスター化インデックスを再構成すると、そのインデックス内で非キー列 (付加列) となっているすべての LOB 列が圧縮されます。 ステートメントで ALL を指定した場合は、指定したテーブルまたはビューに関連付けられているすべてのインデックスが再構成されます。 さらに、クラスター化インデックス、基になるテーブル、または付加列非クラスター化インデックスに関連付けられているすべての LOB 列が圧縮されます。  
   
 ## <a name="evaluating-disk-space-use"></a>ディスク領域の使用を評価します。  
- avg_page_space_used_in_percent 列には、ページのゆとりが示されます。 ディスク領域の使用を最適にするには、ランダムな挿入があまり行われないインデックスの場合はこの値を 100% に近づけます。 ただし、ランダムな挿入を備え、完全なページのインデックスは、ページ分割数の増加があります。 断片化が大きくなります。 そのため、ページ分割を軽減するために、値は 100% 未満を指定する必要があります。 FILLFACTOR オプションを指定してインデックスを再構築すると、ページのゆとりをインデックスのクエリ パターンに合わせて変更できます。 Fill factor の詳細については、[インデックスの Fill Factor の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)を参照してください。 また、ALTER INDEX REORGANIZE は最後に指定された FILLFACTOR までページが埋まるよう、インデックスを圧縮します。 これにより、avg_space_used_in_percent の値は増加します。 ALTER INDEX REORGANIZE はページのゆとりを調整できないことに注意してください。 代わりに、インデックスの再構築を実行する必要があります。  
+ avg_page_space_used_in_percent 列には、ページのゆとりが示されます。 ディスク領域の使用を最適にするには、ランダムな挿入があまり行われないインデックスの場合はこの値を 100% に近づけます。 ただし、ランダムな挿入を備え、完全なページのインデックスは、ページ分割数の増加があります。 断片化が大きくなります。 そのため、ページ分割を軽減するために、値は 100% 未満を指定する必要があります。 FILLFACTOR オプションを指定してインデックスを再構築すると、ページのゆとりをインデックスのクエリ パターンに合わせて変更できます。 Fill factor の詳細については、次を参照してください。[インデックスの Fill Factor の指定](../../relational-databases/indexes/specify-fill-factor-for-an-index.md)します。 また、ALTER INDEX REORGANIZE は最後に指定された FILLFACTOR までページが埋まるよう、インデックスを圧縮します。 これにより、avg_space_used_in_percent の値は増加します。 ALTER INDEX REORGANIZE はページのゆとりを調整できないことに注意してください。 代わりに、インデックスの再構築を実行する必要があります。  
   
 ## <a name="evaluating-index-fragments"></a>インデックスのフラグメントの評価  
  フラグメントは、アロケーション ユニットの同じファイル内の物理的に連続するリーフ ページの構成されます。 1 つのインデックスには少なくとも 1 つのフラグメントが含まれます。 インデックスが持つことのできるフラグメントの最大数は、インデックスのリーフ レベルのページ数と同じです。 フラグメントが大きいほど、同じ数のページの読み取りに必要なディスクの I/O が少なくなります。 したがって、avg_fragment_size_in_pages 値が大きいほど、範囲スキャンのパフォーマンスは向上します。 avg_fragment_size_in_pages と avg_fragmentation_in_percent の値は、互いに反比例します。 したがって、再構築またはインデックスを再構成する必要があります断片化の量を減らす、フラグメント サイズを増やします。  
@@ -223,7 +222,7 @@ GO
  クラスター化列ストア インデックスのデータは返されません。  
   
 ## <a name="permissions"></a>アクセス許可  
- 次のアクセス許可が必要です。  
+ 次の権限が必要です。  
   
 -   データベース内で指定したオブジェクトに対する CONTROL 権限。  
   
@@ -231,11 +230,11 @@ GO
   
 -   データベースのワイルドカード @ を使用して、すべてのデータベースに関する情報を返す VIEW SERVER STATE 権限*database_id* = NULL。  
   
- CONTROL 権限が特定のオブジェクトで拒否される、返されるデータベース内のすべてのオブジェクトを VIEW DATABASE STATE を許可できます。  
+ VIEW DATABASE STATE 権限を許可すると、特定のオブジェクトに対して CONTROL 権限が拒否されていたとしても、データベース内のすべてのオブジェクトを取得することができます。  
   
  VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 ときに、データベースのワイルドカード @*database_id*= NULL を指定すると、データベースを省略するとします。  
   
- 詳細については、[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)を参照してください。  
+ 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
   
 ## <a name="examples"></a>使用例  
   
@@ -295,7 +294,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdmdbindexphysicalstats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. スクリプトで sys.dm_db_index_physical_stats を使用するインデックスの再構成または再構築  
- 次の例は、自動的に再構成またはを 10% で、平均断片化を持つ、データベース内のすべてのパーティションを再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 エラーが、現在のデータベースの互換性レベルが 80 以下の場合に生成されます。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、[ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)を参照してください。  
+ 次の例は、自動的に再構成またはを 10% で、平均断片化を持つ、データベース内のすべてのパーティションを再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 エラーが、現在のデータベースの互換性レベルが 80 以下の場合に生成されます。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、次を参照してください。 [ALTER DATABASE 互換性レベル&#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)します。  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -428,7 +427,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [インデックス関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/index-related-dynamic-management-views-and-functions-transact-sql.md)   
  [sys.dm_db_index_operational_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-operational-stats-transact-sql.md)   
- [sys.dm_db_index_usage_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
+ [sys.dm_db_index_usage_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [sys.dm_db_partition_stats &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  

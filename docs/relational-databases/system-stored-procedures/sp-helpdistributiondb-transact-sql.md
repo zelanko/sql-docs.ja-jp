@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: a2917020-26d1-4011-99f8-9212d120fd2d
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 5d143889672754be353b5868e955841d9e2869bc
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 2c97fec403da1913f7f39f1da706d107cd964aa4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533339"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902918"
 ---
 # <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  指定したディストリビューション データベースのプロパティを返します。 このストアド プロシージャは、ディストリビューターのディストリビューション データベースで実行されます。  
+  指定したディストリビューション データベースのプロパティを返します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -38,7 +37,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @database = ] 'database_name'` プロパティが返されるデータベースの名前です。 *database_name*は**sysname**、既定値は**%** とをディストリビューターに関連付けられているすべてのデータベース、ユーザーがアクセス許可。  
+`[ @database = ] 'database_name'` プロパティが返されるデータベースの名前です。 *database_name*は**sysname**、既定値は **%** とをディストリビューターに関連付けられているすべてのデータベース、ユーザーがアクセス許可。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -67,7 +66,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバー、 **db_owner**固定データベース ロール、または**replmonitor**ディストリビューション データベースでロールと、ディストリビューション データベースを使用するパブリケーションのパブリケーション アクセス リスト内のユーザーが実行できます。**sp_helpdistributiondb**ファイル関連の情報を返します。 メンバー、**パブリック**実行できるロール**sp_helpdistributiondb**アクセスあるディストリビューション データベースのファイルには関連の情報を返します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
  [sp_changedistributiondb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   

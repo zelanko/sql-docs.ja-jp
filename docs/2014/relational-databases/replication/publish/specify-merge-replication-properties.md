@@ -14,11 +14,11 @@ author: MashaMSFT
 ms.author: mathoma
 manager: craigg
 ms.openlocfilehash: 22460851ce3136301beaf5d94e7b0a3b39f8217c
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582695"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68199294"
 ---
 # <a name="specify-merge-replication-properties"></a>マージ レプリケーションのプロパティを指定します
 このトピックでは、マージ レプリケーションのさまざまなプロパティを指定する方法について説明します。 
@@ -41,18 +41,18 @@ ms.locfileid: "59582695"
   
 #### <a name="to-specify-that-an-article-is-download-only-on-the-properties-tab-of-the-article-properties---article-dialog-box"></a>[アーティクルのプロパティ - \<Article>] ダイアログ ボックスの [プロパティ] タブでアーティクルをダウンロードのみに指定するには  
   
-1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、**[アーティクルのプロパティ]** をクリックします。    
+1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページ、または **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスでテーブルを選択し、 **[アーティクルのプロパティ]** をクリックします。    
 2.  **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]** をクリックします。    
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[対象オブジェクト]** セクションで、**[同期の方向]** に対して以下のいずれかの値を指定します。    
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブの **[対象オブジェクト]** セクションで、 **[同期の方向]** に対して以下のいずれかの値を指定します。    
     -   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を禁止する]**    
     -   **[サブスクライバーへのダウンロードのみを実行し、サブスクライバーの変更を許可する]**  
   
-4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。    
+4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。    
 
 ###  <a name="using-transact-sql"></a>Transact-SQL の使用  
   
 #### <a name="to-specify-that-a-new-merge-table-article-is-download-only"></a>新しいマージ テーブル アーティクルをダウンロード専用に指定するには    
-1.  パラメーター [@subscriber_upload_options](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)に **1** または **2** を指定し、 **@subscriber_upload_options**を使用して、マージ テーブル アーティクルをダウンロード専用に指定する方法について説明します。 各数値は次の動作に対応します。  
+1.  パラメーター [@subscriber_upload_options](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql)に **1** または **2** を指定し、 **@subscriber_upload_options** を使用して、マージ テーブル アーティクルをダウンロード専用に指定する方法について説明します。 各数値は次の動作に対応します。  
   
     -   **0** - 制限なし (既定)。 サブスクライバー側で行われた変更は、パブリッシャーにアップロードされます。    
     -   **1** - サブスクライバーでの変更は許可されますが、パブリッシャーにはアップロードされません。    
@@ -64,7 +64,7 @@ ms.locfileid: "59582695"
 #### <a name="to-modify-an-existing-merge-table-article-to-be-download-only"></a>既存のマージ テーブル アーティクルをダウンロード専用に変更するには  
   
 1.  アーティクルがダウンロード専用であるかどうかを確認するには、 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)を実行します。 結果セットのアーティクルの **upload_options** の値を確認します。    
-2.  手順 1. で返された値が **0**である場合は、 [@property](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)に **subscriber_upload_options** を、 **@property**および **1** を、 **@force_invalidate_snapshot** 」および「 **@force_reinit_subscription**には次の動作に対応する **1** または **2** を、 **@value**を実行します。  
+2.  手順 1. で返された値が **0**である場合は、 [@property](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)に **subscriber_upload_options** を、 **@property** および **1** を、 **@force_invalidate_snapshot** 」および「 **@force_reinit_subscription** には次の動作に対応する **1** または **2** を、 **@value** を実行します。  
   
     -   **1** - サブスクライバーでの変更は許可されますが、パブリッシャーにはアップロードされません。    
     -   **2** - サブスクライバーでの変更は許可されません。  
@@ -86,14 +86,14 @@ ms.locfileid: "59582695"
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、テーブルを選択します。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](create-a-publication.md)」および「[View and Modify Publication Properties](view-and-modify-publication-properties.md)」 (パブリケーション プロパティの表示および変更) を参照してください。    
 2.  **[アーティクルのプロパティ]** をクリックし、次に **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]** をクリックします。    
-3.  **[アーティクルのプロパティ - \<Article>]** または **[アーティクルのプロパティ - \<ArticleType>]** ページで、**[競合回避モジュール]** タブをクリックします。    
+3.  **[アーティクルのプロパティ - \<Article>]** または **[アーティクルのプロパティ - \<ArticleType>]** ページで、 **[競合回避モジュール]** タブをクリックします。    
 4.  **[要求時同期中にサブスクライバーが対話的に競合を解決することを許可する]** を選択します。    
 5.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]    
-6.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
+6.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 #### <a name="to-specify-that-a-subscription-should-use-interactive-conflict-resolution"></a>サブスクリプションでインタラクティブな競合解決を使用するように指定するには  
   
-1.  **[サブスクリプションのプロパティ - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[競合を対話的に解決]** オプションに **[True]** の値を指定します。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)」を参照してください。 
+1.  **[サブスクリプションのプロパティ - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[競合を対話的に解決]** オプションに **[True]** の値を指定します。 このダイアログ ボックスへのアクセスの詳細については、「 [View and Modify Push Subscription Properties](../view-and-modify-push-subscription-properties.md) 」および「 [View and Modify Pull Subscription Properties](../view-and-modify-pull-subscription-properties.md)」を参照してください。 
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ### <a name="using-transact-sql"></a>Transact-SQL の使用  
@@ -101,13 +101,13 @@ ms.locfileid: "59582695"
   
 #### <a name="create-a-merge-pull-subscription-that-uses-the-interactive-resolver"></a>インタラクティブ競合回避モジュールを使用するマージ プル サブスクリプションの作成  
   
-1.  パブリッシャー側のパブリケーション データベースに対し、 [@publication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)を指定して **@publication**を使用して、マージ アーティクルにインタラクティブな競合回避を指定する方法について説明します。 インタラクティブ競合回避モジュールが使用される結果セット内の各アーティクルに対する **allow_interactive_resolver** の値を確認します。    
+1.  パブリッシャー側のパブリケーション データベースに対し、 [@publication](/sql/relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql)を指定して **@publication** を使用して、マージ アーティクルにインタラクティブな競合回避を指定する方法について説明します。 インタラクティブ競合回避モジュールが使用される結果セット内の各アーティクルに対する **allow_interactive_resolver** の値を確認します。    
     -   この値が **1**の場合、インタラクティブ競合回避モジュールが使用されます。    
-    -   この値が **0**の場合は、最初に、各アーティクルに対してインタラクティブ競合回避モジュールを有効にする必要があります。 そのためには、 [@publication](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を指定して **@publication**を指定し、 **@article**に **allow_interactive_resolver** を、 **@property**に **true** を、 **@value**を使用して、マージ アーティクルにインタラクティブな競合回避を指定する方法について説明します。    
+    -   この値が **0**の場合は、最初に、各アーティクルに対してインタラクティブ競合回避モジュールを有効にする必要があります。 そのためには、 [@publication](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を指定して **@publication** を指定し、 **@article** に **allow_interactive_resolver** を、 **@property** に **true** を、 **@value** を使用して、マージ アーティクルにインタラクティブな競合回避を指定する方法について説明します。    
 2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_addmergepullsubscription](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql)を実行します。 詳細については、「 [プル サブスクリプションの作成](../create-a-pull-subscription.md)」をご覧ください。    
 3.  サブスクライバー側のサブスクリプション データベースに対し、次のパラメーターを指定して [sp_addmergepullsubscription_agent](/sql/relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql)を実行します。  
   
-    -   **@publisher**を指定し、 **@publisher_db** (パブリッシュされるデータベース)、および **@publication**を使用して、マージ アーティクルにインタラクティブな競合回避を指定する方法について説明します。    
+    -   **@publisher** を指定し、 **@publisher_db** (パブリッシュされるデータベース)、および **@publication** を使用して、マージ アーティクルにインタラクティブな競合回避を指定する方法について説明します。    
     -   **@enabled_for_syncmgr** には値 **true**。    
     -   **@use_interactive_resolver** には値 **true**。    
     -   マージ エージェントが必要とするセキュリティ アカウント情報。 詳細については、「 [Create a Pull Subscription](../create-a-pull-subscription.md)」を参照してください。    
@@ -134,14 +134,14 @@ ms.locfileid: "59582695"
   
 1.  パブリケーションの新規作成ウィザードの **[アーティクル]** ページまたは **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで、テーブルを選択します。    
 2.  **[アーティクルのプロパティ]** をクリックし、次に **[反転表示されたテーブル アーティクルのプロパティを設定]** または **[すべてのテーブル アーティクルのプロパティを設定]** をクリックします。   
-3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、**[追跡レベル]** プロパティの値として **[行レベルの追跡]** または **[列レベルの追跡]** のいずれかを選択します。    
-4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、**[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
+3.  **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで、 **[追跡レベル]** プロパティの値として **[行レベルの追跡]** または **[列レベルの追跡]** のいずれかを選択します。    
+4.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスが表示されている場合は、 **[OK]** をクリックして保存し、ダイアログ ボックスを閉じます。  
   
 ###  <a name="using-transact-sql"></a>Transact-SQL の使用  
   
 #### <a name="specify-conflict-tracking-options-for-a-new-merge-article"></a>新しいマージ アーティクルの競合追跡オプションを指定します。  
   
-1.  パブリッシャーのパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行し、次のいずれかの値を **@column_tracking**に指定します。  
+1.  パブリッシャーのパブリケーション データベースに対して、 [sp_addmergearticle](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行し、次のいずれかの値を **@column_tracking** に指定します。  
   
     -   **true** - アーティクルに対して列レベルの追跡を使用します。    
     -   **false** - 既定の行レベルの追跡を使用します。  
@@ -149,7 +149,7 @@ ms.locfileid: "59582695"
 #### <a name="change-conflict-tracking-options-for-a-merge-article"></a>マージ アーティクルの競合追跡オプションの変更  
   
 1.  マージ アーティクルの競合追跡オプションを定義するには、 [sp_helpmergearticle](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql)を実行します。 アーティクルの結果セットの **column_tracking** オプションの値を調べます。 値 **1** は、列レベルの追跡が使用されていることを示します。値 **0** は、行レベルの追跡が使用されていることを示します。    
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **column_tracking** の値を指定し、**@value** に次のいずれかの値を指定します。
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql)を実行します。 **@property** に **column_tracking** の値を指定し、 **@value** に次のいずれかの値を指定します。
     -   **true** - アーティクルに対して列レベルの追跡を使用します。
     -   **false** - 既定の行レベルの追跡を使用します。  
   
@@ -167,7 +167,7 @@ ms.locfileid: "59582695"
   
 ### <a name="specify-that-deletes-be-ignored-for-a-new-merge-article"></a>新しいマージ アーティクルで削除を無視する指定  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 値を指定`false`の **@delete_tracking**します。 詳しくは、「 [アーティクルを定義](../publish/define-an-article.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 値を指定`false`の **@delete_tracking** します。 詳しくは、「 [アーティクルを定義](../publish/define-an-article.md)」をご覧ください。  
   
     > [!NOTE]  
     >  アーティクルのソース テーブルが別のパブリケーションで既にパブリッシュされている場合、両方のアーティクルで **delete_tracking** の値を同じにする必要があります。  
@@ -175,7 +175,7 @@ ms.locfileid: "59582695"
 ### <a name="specify-that-deletes-be-ignored-for-an-existing-merge-article"></a>既存のマージ アーティクルで削除を無視する指定  
   
 1.  アーティクルでエラー補正が有効になっているかどうかを確認するために、[sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) を実行して、結果セット内の **delete_tracking** の値を確認します。 値が **0**の場合、削除は既に無視されています。    
-2.  手順 1. で得た値が **1** だった場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。 値を指定**delete_tracking**の **@property**の値と`false`の **@value**します。  
+2.  手順 1. で得た値が **1** だった場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。 値を指定**delete_tracking**の **@property** の値と`false`の **@value** します。  
   
     > [!NOTE]  
     >  アーティクルのソース テーブルが別のパブリケーションで既にパブリッシュされている場合、両方のアーティクルで **delete_tracking** の値を同じにする必要があります。  
@@ -196,7 +196,7 @@ ms.locfileid: "59582695"
 
 ### <a name="new-article"></a>新しい記事
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 アーティクルの処理順序を表す整数値を **@processing_order**」を参照してください。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql) を実行します。 アーティクルの処理順序を表す整数値を **@processing_order** 」を参照してください。 詳しくは、「 [アーティクルを定義](define-an-article.md)」をご覧ください。  
   
     > [!NOTE]  
     >  処理順序を指定してアーティクルを作成する場合は、アーティクルの順序を表す値の間に、ある程度の間隔を設けるようにしてください。 こうすることで、後で、新しい値を設定するときに作業が楽になります。 たとえば、処理順序を指定するアーティクルが 3 つある場合、 **@processing_order** の値を 1、2、3 とせずに、それぞれ、10、20、30 のように指定します。  
@@ -205,7 +205,7 @@ ms.locfileid: "59582695"
   
 1.  アーティクルの処理順序を指定するには、[sp_helpmergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql) を実行し、結果セットの **processing_order** の値を確認します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。 **@property** に **processing_order** の値を指定し、**@value** には処理順序を表す整数値を指定します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_changemergearticle &#40;Transact-SQL&#41;](/sql/relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql) を実行します。 **@property** に **processing_order** の値を指定し、 **@value** には処理順序を表す整数値を指定します。  
 
 
 

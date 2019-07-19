@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ee26082b-c0ed-40ff-b5ad-f5f6b00f0475
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 31afdbb14229fa7c0eaf13f1b3a215e31356945f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 7adc7ed5677fdc511f0c8801a5ab56b55d4b9cde
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528814"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950406"
 ---
 # <a name="spatial-index-stored-procedures---arguments-and-properties"></a>空間インデックス ストアド プロシージャの引数とプロパティ
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "58528814"
   
 -   [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
 -   [sp_help_spatial_geography_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="arguments"></a>引数  
 `[ @tabname = ] 'tabname'` 空間インデックスが指定されているテーブルの修飾付きまたは修飾なしの名前です。  
@@ -59,8 +58,8 @@ ms.locfileid: "58528814"
   
 `[ @xml_output = ] 'xml_output'` XML フラグメントで結果を返す出力パラメーターが設定されます。 *xml_output*は**xml**既定値はありません。  
   
-## <a name="properties"></a>[プロパティ]  
- 設定**@verboseoutput** = 0; 次の表に示すように、コア プロパティを返す**@verboseoutput** > 0 を空間インデックスのすべてのプロパティを返します。  
+## <a name="properties"></a>Properties  
+ 設定 **@verboseoutput** = 0; 次の表に示すように、コア プロパティを返す **@verboseoutput** > 0 を空間インデックスのすべてのプロパティを返します。  
   
  **Base_Table_Rows**  
  ベース テーブルの行の数。 値は**bigint**します。  
@@ -198,7 +197,7 @@ ms.locfileid: "58528814"
  テセレーション レベル 3 のグリッド セルの境界に接するオブジェクト セルの数。 (Cell_attribute 値は 0 です)。これはコア プロパティです。 値は**bigint**します。  
   
  **Total_Number_Of_Border_ObjectCells_In_Level4_In_Index**  
- テセレーション レベル 4 のグリッド セルの境界に接するオブジェクト セルの数  (Cell_attribute 値は 0 です)。これはコア プロパティです。 値は**bigint**します。  
+ テセレーション レベル 4 のグリッド セルの境界に接するオブジェクト セルの数 (Cell_attribute 値は 0 です)。これはコア プロパティです。 値は**bigint**します。  
   
  **Interior_To_Total_Cells_Normalized_To_Leaf_Grid_Percentage**  
  合計の割合リーフ セルを含むグリッドの領域 (リーフ セルの合計) がオブジェクトで対応します。  
@@ -309,15 +308,15 @@ ms.locfileid: "58528814"
   
 -   [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)  
   
--   [sp_help_spatial_geometry_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geometry_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-xml-transact-sql.md)  
   
 -   [sp_help_spatial_geography_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-transact-sql.md)  
   
--   [sp_help_spatial_geography_index_xml &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
+-   [sp_help_spatial_geography_index_xml &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geography-index-xml-transact-sql.md)  
   
 ## <a name="requirements"></a>必要条件  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [空間インデックス ストアド プロシージャ&#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/1be0f34e-3d5a-4a1f-9299-bd482362ec7a)   
  [sp_help_spatial_geometry_index &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-spatial-geometry-index-transact-sql.md)   
  [空間インデックスの概要](../../relational-databases/spatial/spatial-indexes-overview.md)   

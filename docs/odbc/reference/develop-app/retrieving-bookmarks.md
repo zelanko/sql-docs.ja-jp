@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: a34c8f09-b786-4835-a44b-b7294c970aff
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 9d7d4bd52a5f6e5b03a084cef4402e0a9044f97d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f18b87adf31f19d2a93bb3af3e14c265ae3940af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861402"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68020573"
 ---
 # <a name="retrieving-bookmarks"></a>ブックマークの取得
 アプリケーションでブックマークを使用する場合は、SQL_ATTR_USE_BOOKMARKS ステートメント属性を準備またはステートメントを実行する前に SQL_UB_VARIABLE に設定があります。 これは、機能は、それらのビルドとメンテナンス アプリケーションを適切に行うことができる場合にのみ、ブックマークを有効にするため、ブックマークは、コストのかかる操作を指定できますが使用するため必要です。  

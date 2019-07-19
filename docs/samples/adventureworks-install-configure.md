@@ -9,13 +9,12 @@ ms.reviewer: ''
 ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 474cc691a8adc0e022e10e52c766368e9f655d8a
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 99cdd6fdf5db075cc8fd46b738f468fd5d9a028d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56801786"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67894927"
 ---
 # <a name="adventureworks-installation-and-configuration"></a>AdventureWorks のインストールと構成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -67,12 +66,12 @@ AdventureWorks のダウンロード リンクとインストール手順につ�
 
 1. SQL Server Management Studio を開き、対象の SQL Server インスタンスに接続します。
 2. **データベース**ノードを右クリックし、**Restore Database** を選択します。
-3. 選択**デバイス**、省略記号ボタンをクリックします (**.**)
+3. 選択**デバイス**、省略記号ボタンをクリックします ( **.** )
 4. ダイアログ ボックスで**バックアップ デバイスの選択**、 をクリックして**追加**サーバーのファイル システム内のデータベースのバックアップに移動して、バックアップを選択します。 **[OK]** をクリックします。
 5. 必要に応じて、データのターゲットの場所を変更し、ログ ファイルで、**ファイル**ウィンドウ。 ベスト プラクティスとしてデータを配置し、ログ ファイルを別のドライブにあるに注意してください。
 6. **[OK]** をクリックします。 これにより、データベースの復元が開始されます。 完了した後、AdventureWorks データベースの SQL Server インスタンスにインストールされている必要があります。
 
-SQL Server データベースを復元する方法の詳細については、[SSMS を使用してデータベース バックアップを復元](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)を参照してください。
+SQL Server データベースを復元する方法の詳細については、次を参照してください。 [SSMS を使用してデータベース バックアップを復元](../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)します。
 
 
 ### <a name="attach-a-datafile"></a>データ ファイルをアタッチします。
@@ -82,11 +81,11 @@ SQL Server データベースを復元する方法の詳細については、[SS
 2. 右クリックし、**データベース**ノード、および選択**アタッチ**します。
 3. 選択**追加**に移動します。MDF ファイルがアタッチします。 
 1. ファイルを選択し、をクリックして**OK**します。 
-    1. 選択したデータベースは、下のウィンドウで表示する必要があります。 ファイルが表示されている場合は、"not found"として省略記号を選択します (**.**) 更新プログラムの正しいパスへのパスとファイルの名前の横にあります。 
+    1. 選択したデータベースは、下のウィンドウで表示する必要があります。 ファイルが表示されている場合は、"not found"として省略記号を選択します ( **.** ) 更新プログラムの正しいパスへのパスとファイルの名前の横にあります。 
     1. データ ファイル (.mdf) とログ ファイル (.ldf) ではなくをしかない場合、下のウィンドウに、.ldf を強調表示して選択**削除**します。 これにより、新しいログ ファイルが作成されます。 
 1. 選択**OK**ファイルを添付します。 ファイルがアタッチされた後に、AdventureWorks データベースの SQL Server インスタンスにインストールされている必要があります。  
 
-データベース ファイルのアタッチの詳細については、[データベースをアタッチする](../relational-databases/databases/attach-a-database.md)を参照してください。 
+データベース ファイルのアタッチの詳細については、次を参照してください。[データベースをアタッチする](../relational-databases/databases/attach-a-database.md)します。 
 
 ## <a name="install-to-azure-sql-database"></a>Azure SQL Database へのインストールします。
 

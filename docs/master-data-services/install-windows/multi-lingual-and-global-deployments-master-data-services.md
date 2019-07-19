@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: c3d485f8-867c-4aa2-a90d-f38fda192534
 author: lrtoyou1223
 ms.author: lle
-manager: craigg
-ms.openlocfilehash: d144a0ff4259b966d8e6a47db98dfb7aacf85629
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 30635148aa0110a4110398ecc8334e56a3634ebd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65480193"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67944925"
 ---
 # <a name="multi-lingual-and-global-deployments-master-data-services"></a>多言語配置とグローバル配置 (Master Data Services)
 
@@ -33,7 +32,7 @@ ms.locfileid: "65480193"
 |[!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)]|セットアップを英語で実行した場合、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] Web アプリケーションは、すべてのアプリケーション言語で使用でき、サポートされます。 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] は、これらのどのアプリケーション言語でも表示でき、クライアントの Web ブラウザーの言語設定に基づくロケール固有の入力を受け入れます。 言語設定が、サポートされないアプリケーション言語用に構成されている場合、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] は既定で英語に設定されます。<br /><br /> 英語以外の言語でセットアップを実行した場合、他のすべてのアプリケーション言語のリソースが含まれますが、クライアントでは、選択されたセットアップ言語以外の言語で [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] を使用することはできません。 セットアップの言語とは異なる言語で [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] にアクセスしようとすると、アプリケーションでデータ表示およびデータ入力に関する問題が発生することがあります。|  
 |[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベース (database)|[!INCLUDE[ssMDSshort](../../includes/ssmdsshort-md.md)] データベース内の情報は、ロケール固有のものではありません。 そのため、 [!INCLUDE[ssMDSmdm](../../includes/ssmdsmdm-md.md)] は、日付や数値などの情報の表示方法を、クライアントの Web ブラウザーの言語設定によって決められた形式で決定することができます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マスター データ サービスのインストール](../../master-data-services/install-windows/install-master-data-services.md)  
   
   

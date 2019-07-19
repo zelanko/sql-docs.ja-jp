@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 7a669048-13f4-4574-a2b1-985e089729d5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea485d3afaf5785cca18f76be9b093dcc051dffe
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 64b7d8fd3f2220562e3695d6e31c83261daa2e60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710010"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947494"
 ---
 # <a name="writetext-method"></a>WriteText メソッド
 指定したテキスト文字列を書き込みます、 [Stream](../../../ado/reference/ado-api/stream-object-ado.md)オブジェクト。  
@@ -35,7 +34,7 @@ Stream.WriteText Data, Options
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Data*  
+ *データ*  
  A**文字列**書き込まれる文字内のテキストを表す値です。  
   
  *[オプション]*  
@@ -54,5 +53,5 @@ Stream.WriteText Data, Options
 ## <a name="applies-to"></a>適用対象  
  [Stream オブジェクト (ADO)](../../../ado/reference/ado-api/stream-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Write メソッド](../../../ado/reference/ado-api/write-method.md)

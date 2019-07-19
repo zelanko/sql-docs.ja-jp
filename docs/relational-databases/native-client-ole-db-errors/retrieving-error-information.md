@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 687b3c27-1a00-4122-8276-ea0f8fed895a
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 69d06a360ebff666041b1201798ddbc117102aa1
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 8e3acfbdd970f6acc589129a00cec24f7cbf0c98
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47691340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68106848"
 ---
 # <a name="retrieving-error-information"></a>エラー情報の取得
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -221,7 +220,7 @@ void DumpErrorInfo
     }  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラー](../../relational-databases/native-client-ole-db-errors/errors.md)  
   
   

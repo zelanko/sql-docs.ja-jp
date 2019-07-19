@@ -5,17 +5,16 @@ description: この記事では、最新の更新プログラムと SQL Server 2
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2937734ad4543d9dc59e777ceaddfc597da148d2
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 10ba3b53e32f5809bf8b1bb1cd69266d4d43afd7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794086"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957872"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>ビッグ データ クラスターは、SQL Server のリリース ノート
 
@@ -228,7 +227,7 @@ ms.locfileid: "67794086"
 |:---|:---|
 | 展開プロファイル | ビッグ データ クラスターの展開には、環境変数の代わりに、既定およびカスタマイズした[展開構成 JSON ファイル](deployment-guidance.md#configfile)を使用します。 |
 | 入力が求められる展開 | `mssqlctl cluster create` では、既定の展開に必要な設定の入力が求められるようになりました。 |
-| サービス エンドポイントとのポッド名の変更 | 次の外部エンドポイントの名前が変更されました。<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-security** => **gateway-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-app-service-proxy** => **appproxy-svc-external**|
+| サービス エンドポイントとのポッド名の変更 | 次の外部エンドポイントの名前が変更されました。<br/>&nbsp;&nbsp;&nbsp;- **endpoint-master-pool** => **master-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-controller** => **controller-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **endpoint-service-proxy** => **mgmtproxy-svc-external**<br/>&nbsp;&nbsp;&nbsp;- **エンドポイント セキュリティ** => **svc 外部のゲートウェイ**<br/>&nbsp;&nbsp;&nbsp;- **エンドポイント アプリ サービス プロキシ** => **appproxy svc-外部**|
 | **mssqlctl** の機能強化 | **mssqlctl** を使用して[外部エンドポイントを一覧表示](deployment-guidance.md#endpoints)し、**mssqlctl** のバージョンを `--version` パラメーターを使用して確認します。 |
 | オフライン インストール | オフラインのビッグ データ クラスターの展開のガイダンスです。 |
 | HDFS 階層の機能強化 | ADLS Gen2 の S3 が階層化、マウントは、次のキャッシュ、および OAuth をサポートします。 |

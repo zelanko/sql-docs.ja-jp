@@ -1,5 +1,5 @@
 ---
-title: メジャーとメジャー グループ |Microsoft ドキュメント
+title: メジャーおよびメジャー グループ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,25 +10,25 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 04eb5a41bec6e9abb62cfde516f2dad2ff820521
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34024249"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165754"
 ---
 # <a name="measures-and-measure-groups"></a>メジャーおよびメジャー グループ
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  キューブには、 *メジャー グループ* 内の *メジャー*、ビジネス ロジック、およびディメンションのコレクション (メジャーが提供する数値のデータを評価するためのコンテキストを指定する) が含まれます。 メジャーおよびメジャー グループはどちらも、キューブに不可欠なコンポーネントです。 キューブは、それぞれが少なくとも 1 つないと存在できません。  
+  キューブには、*メジャー グループ*内の*メジャー*、ビジネス ロジック、およびディメンションのコレクション (メジャーが提供する数値のデータを評価するためのコンテキストを指定する) が含まれます。 メジャーおよびメジャー グループはどちらも、キューブに不可欠なコンポーネントです。 キューブは、それぞれが少なくとも 1 つないと存在できません。  
   
  このトピックでは、 [メジャー](#bkmk_measure) と [メジャー グループ](#bkmk_mg)について説明します。 また、メジャーおよびメジャー グループの作成と構成の手順にリンクされている次の表も含まれています。  
   
-|**リンク**|**Description**|  
+|**リンク**|**[説明]**|  
 |--------------|---------------------|  
-|[多次元モデル内のメジャーおよびメジャー グループを作成します。](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|メジャーとメジャー グループを作成するためのいくつかのアプローチのいずれかを選択します。|  
-|[メジャーのプロパティを構成します。](../../analysis-services/multidimensional-models/configure-measure-properties.md)|キューブを開始するためにキューブ ウィザードを使用した場合、集計方法を変更し、データ形式を適用し、クライアント アプリケーションでのメジャーの表示/非表示を設定し、場合によっては値の集計前にデータを操作するためのメジャー式を追加する必要があります。|  
-|[メジャー グループのプロパティを構成します。](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|多次元モデルでは、メジャー グループはソースのデータ ウェアハウス内のファクト テーブルに相当します。 メジャー グループでのプロパティにより、キャッシュの動作、記憶域、メジャー グループ レベルでまとめて動作する処理ディレクティブを指定することができます。 パーティション構成の一部は、メジャー グループ オブジェクトに設定するプロパティによって決まります。|  
-|[集計関数を使用します。](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|メジャーに割り当てることのできる集計メソッドを理解してください。|  
-|[準加法の動作を定義します。](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|準加法の動作は、一部のディメンションだけに有効な集計を表します。 一般的な例としては、銀行口座の残高があります。 時間は除外し、顧客と地域によって残高を集計したい場合があります。 たとえば、連続した日々にわたって、同じ口座から残高を加算することはしません。 準加法の動作を定義するには、ビジネス インテリジェンスの追加ウィザードを使用します。|  
+|[多次元モデル内のメジャーおよびメジャー グループの作成](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)|メジャーとメジャー グループを作成するためのいくつかのアプローチのいずれかを選択します。|  
+|[メジャーのプロパティの構成](../../analysis-services/multidimensional-models/configure-measure-properties.md)|キューブを開始するためにキューブ ウィザードを使用した場合、集計方法を変更し、データ形式を適用し、クライアント アプリケーションでのメジャーの表示/非表示を設定し、場合によっては値の集計前にデータを操作するためのメジャー式を追加する必要があります。|  
+|[メジャー グループのプロパティの構成](../../analysis-services/multidimensional-models/configure-measure-group-properties.md)|多次元モデルでは、メジャー グループはソースのデータ ウェアハウス内のファクト テーブルに相当します。 メジャー グループでのプロパティにより、キャッシュの動作、記憶域、メジャー グループ レベルでまとめて動作する処理ディレクティブを指定することができます。 パーティション構成の一部は、メジャー グループ オブジェクトに設定するプロパティによって決まります。|  
+|[集計関数の使用](../../analysis-services/multidimensional-models/use-aggregate-functions.md)|メジャーに割り当てることのできる集計メソッドを理解してください。|  
+|[準加法の動作の定義](../../analysis-services/multidimensional-models/define-semiadditive-behavior.md)|準加法の動作は、一部のディメンションだけに有効な集計を表します。 一般的な例としては、銀行口座の残高があります。 時間は除外し、顧客と地域によって残高を集計したい場合があります。 たとえば、連続した日々にわたって、同じ口座から残高を加算することはしません。 準加法の動作を定義するには、ビジネス インテリジェンスの追加ウィザードを使用します。|  
 |[リンク メジャー グループ](../../analysis-services/multidimensional-models/linked-measure-groups.md)|同じデータベース内、または別の Analysis Services データベース内の他のキューブで、既存のメジャー グループの用途を変更します。|  
   
 ##  <a name="bkmk_measure"></a> Measures  
@@ -46,7 +46,7 @@ ms.locfileid: "34024249"
   
  メジャーがクエリで使用されるディメンションに関連付けられていないと、どうなるでしょうか。 通常、Analysis Services は、既定のメジャーを表示し、値はすべてのメンバーで同じになります。 この例では、オンライン カタログを使用して顧客によって行われる直販を測定する **Internet Sales**は、販売組織に関連付けられていません。  
   
- ![繰り返し表示するピボット テーブルで値が測定](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "繰り返し表示するピボット テーブルのメジャーの値")  
+ ![メジャーの値を繰り返し表示するピボット テーブル](../../analysis-services/multidimensional-models/media/ssas-unrelatedmeasure.PNG "メジャーの値を繰り返し表示するピボット テーブル")  
   
  クライアント アプリケーションでこれらの動作が発生する可能性を最小限に抑えるには、複数のキューブまたはパースペクティブを同じデータベース内で構築し、各キューブまたはパースペクティブに、関連するオブジェクトのみが含まれるようにします。 確認する必要がある関係は、(ファクト テーブルにマップする) メジャー グループと、ディメンションの間の関係です。  
   
@@ -55,8 +55,8 @@ ms.locfileid: "34024249"
   
  単純な <xref:Microsoft.AnalysisServices.MeasureGroup> オブジェクトは、グループ名、ストレージ モード、および処理モードなどの基本情報で構成されます。 その構成要素として、メジャー、ディメンション、およびメジャー グループの構成を形成するパーティションも、それに含まれます。  
   
-## <a name="see-also"></a>参照  
- [多次元モデル内のキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
- [多次元モデル内のメジャーおよびメジャー グループを作成します。](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
+## <a name="see-also"></a>関連項目  
+ [多次元モデルのキューブ](../../analysis-services/multidimensional-models/cubes-in-multidimensional-models.md)   
+ [多次元モデル内のメジャーおよびメジャー グループの作成](../../analysis-services/multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)  
   
   

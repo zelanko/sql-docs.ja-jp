@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: a765f311-07fc-4af3-b74c-e9a027fbecce
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 870f12fa569eb0c6046377472a6122d69cd35d6e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1db3a16b8072df38937bb482ac85a75dec6e83b9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982962"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68124143"
 ---
 # <a name="spfulltexttable-transact-sql"></a>sp_fulltext_table (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-asdw-xxx-md.md)]
@@ -54,7 +53,7 @@ sp_fulltext_table
   
 `[ @action = ] 'action'` 実行する操作です。 *アクション*は**nvarchar (50)** , で、既定値はありませんはこれらの値のいずれかを指定します。  
   
-|値|説明|  
+|[値]|説明|  
 |-----------|-----------------|  
 |**作成**|によって参照されるテーブルのフルテキスト インデックスのメタデータを作成します。 *qualified_table_name*をこのテーブルのフルテキスト インデックス データに配置することを指定します。 *fulltext_catalog_name*します。 このアクションを使用することも指定*unique_index_name*フルテキスト キー列として。 この一意なインデックスは既に存在していて、テーブル内の列に定義しておく必要があります。<br /><br /> フルテキスト カタログが作成されるまで、このテーブルに対してフルテキスト検索を実行できません。|  
 |**Drop**|メタデータのフルテキスト インデックスを削除*qualified_table_name*します。 フルテキスト インデックスがアクティブである場合は自動的に非アクティブ化された削除される前にします。 フルテキスト インデックスを削除する前に、列を削除する必要はありません。|  

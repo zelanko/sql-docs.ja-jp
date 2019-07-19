@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 08fb61eb8c6b928b3690396abfef21d6f92c7c67
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788049"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184475"
 ---
 # <a name="analysis-services-samples"></a>Analysis Services のサンプル
 [!INCLUDE[ssas-appliesto-sqlas-aas](../includes/ssas-appliesto-sqlas-aas.md)]
@@ -36,7 +36,7 @@ SQL Server 2016 用のサンプル データは、Wide World Importers、新し�
 
 
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 *   [Analysis Services チュートリアル](../analysis-services/analysis-services-tutorials-ssas.md)
 
   

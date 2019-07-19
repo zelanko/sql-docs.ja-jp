@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: 3a41511f-6603-4b81-a815-7883874023c4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e3413cf3c0e316e25ad52cc35ba348cab1694ae4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5cd31a45ed891a8dc95f4f23981d4b626a6095b6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65537405"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024542"
 ---
 # <a name="sqlremovedrivermanager-function"></a>SQLRemoveDriverManager 関数
 **準拠**  
  バージョンが導入されました。ODBC 3.0:Windows XP Service Pack 2、Windows Server 2003 Service Pack 1 では、以降のオペレーティング システムでは、非推奨とされます。  
   
- **まとめ**  
+ **概要**  
  **SQLRemoveDriverManager**システム情報の Odbcinst.ini のエントリから ODBC コア コンポーネントに関する情報を削除または変更します。  
   
 ## <a name="syntax"></a>構文  
@@ -82,11 +81,11 @@ BOOL SQLRemoveDriverManager(
 |||  
 |-|-|  
 |ODBC32DLL|ODBCCP32 します。DLL|  
-|ODBCCR32 します。DLL|ODBC16GT.DLL|  
-|ODBCCU32.DLL|ODBC32GT.DLL|  
-|ODBCINT.DLL|DS16GT.DLL|  
-|ODBCTRAC します。DLL|DS32GT.DLL|  
-|MSVCRT40.DLL|ODBCAD32 します。実行可能ファイル|  
+|ODBCCR32 します。DLL|ODBC16GT します。DLL|  
+|ODBCCU32 します。DLL|ODBC32GT します。DLL|  
+|ODBCINT します。DLL|DS16GT します。DLL|  
+|ODBCTRAC します。DLL|DS32GT します。DLL|  
+|MSVCRT40 します。DLL|ODBCAD32 します。実行可能ファイル|  
 |ODBCCP32 します。CPL||  
   
  **SQLRemoveDriverManager**アップグレード プロセスの一部としても呼ばれます。 アプリケーションは、アップグレードを実行する必要があることと、ドライバーが既にインストールを検出した場合、ドライバーを削除して再インストールする必要があります。  

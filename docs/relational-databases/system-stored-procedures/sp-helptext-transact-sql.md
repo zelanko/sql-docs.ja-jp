@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 24135456-05f0-427c-884b-93cf38dd47a8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5b518c7b79ca6a054b5d6435ea7cb2fe10e419b7
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 160d52c8c145828f6a63c104aecb17e04867cee8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58536324"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048289"
 ---
 # <a name="sphelptext-transact-sql"></a>sp_helptext (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @objname = ] 'name'` ユーザー定義のスキーマ スコープ オブジェクトの修飾付きまたは修飾なしの名前です。 引用符は、修飾されたオブジェクトが指定されている場合にのみ必要です。 データベース名を含む、完全修飾名が指定されている場合、データベース名は、現在のデータベースの名前である必要があります。 オブジェクトは、現在のデータベースでなければなりません。 *名前*は**nvarchar (776)**、既定値はありません。  
+`[ @objname = ] 'name'` ユーザー定義のスキーマ スコープ オブジェクトの修飾付きまたは修飾なしの名前です。 引用符は、修飾されたオブジェクトが指定されている場合にのみ必要です。 データベース名を含む、完全修飾名が指定されている場合、データベース名は、現在のデータベースの名前である必要があります。 オブジェクトは、現在のデータベースでなければなりません。 *名前*は**nvarchar (776)** 、既定値はありません。  
   
 `[ @columnname = ] 'computed_column_name'` 定義情報を表示する計算列の名前です。 列を含むテーブルとして指定する必要があります*名前*します。 *column_name*は**sysname**、既定値はありません。  
   
@@ -58,7 +57,7 @@ sp_helptext [ @objname = ] 'name' [ , [ @columnname = ] computed_column_name ]
  sp_helptext は、複数の行でオブジェクトを作成するために使用される定義を表示します。 行ごとに 255 文字が含まれています、[!INCLUDE[tsql](../../includes/tsql-md.md)]定義します。 定義が存在する、**定義**内の列、 [sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md)カタログ ビューです。  
   
 ## <a name="permissions"></a>アクセス許可  
- ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者または次のアクセス許可のいずれかがある権限付与対象ユーザーに表示されます。ALTER、CONTROL、TAKE OWNERSHIP、または VIEW DEFINITION です。  
+ ロール **public** のメンバーシップが必要です。 システム オブジェクトの定義は、公開されます。 ユーザー オブジェクトの定義は、オブジェクトの所有者、または次のいずれかの権限を許可された人が表示できます。ALTER、CONTROL、TAKE OWNERSHIP、VIEW DEFINITION。  
   
 ## <a name="examples"></a>使用例  
   
@@ -90,7 +89,7 @@ GO
   
  `(isnull(([SubTotal]+[TaxAmt])+[Freight],(0)))`  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース エンジン ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-engine-stored-procedures-transact-sql.md)   
  [OBJECT_DEFINITION &#40;Transact-SQL&#41;](../../t-sql/functions/object-definition-transact-sql.md)   
  [sp_help &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)   

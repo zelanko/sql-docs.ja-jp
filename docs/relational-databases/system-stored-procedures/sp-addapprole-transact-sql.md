@@ -17,18 +17,17 @@ helpviewer_keywords:
 ms.assetid: 24200295-9a54-4cab-9922-fb2e88632721
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 11d0115c1f8bea82385d7c69365489a93351a5c5
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 74860a8f4c8dee263ea7ee0eea75679c721d1fa5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493134"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032982"
 ---
 # <a name="spaddapprole-transact-sql"></a>sp_addapprole (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  現在のデータベースには、アプリケーション ロールを追加します。  
+  アプリケーション ロールを現在のデータベースに追加します。  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[CREATE APPLICATION ROLE](../../t-sql/statements/create-application-role-transact-sql.md)代わりにします。  
@@ -81,7 +80,7 @@ EXEC sp_addapprole 'SalesApp', 'x97898jLJfcooFUYLKm387gf3' ;
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [CREATE APPLICATION ROLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-application-role-transact-sql.md)  
   
   

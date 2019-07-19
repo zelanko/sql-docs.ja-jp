@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 8abaa8c1-d99e-4788-970f-c4752246c577
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e10d4e46e01f4da5a36d7bdf59d7566f2a989e75
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: acbbd043080b107a5d545408fabe271d62015e54
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493154"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68105085"
 ---
 # <a name="sparticlecolumn-transact-sql"></a>sp_articlecolumn (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  パブリッシュされたテーブルでのデータを垂直方向にフィルター処理するアーティクルに含まれる列を指定するために使用します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  パブリッシュされたテーブルでのデータを垂直方向にフィルター処理するアーティクルに含まれる列を指定するために使用します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -54,7 +53,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
 `[ @column = ] 'column'` 追加または削除する列の名前です。 *列*は**sysname**、既定値は NULL です。 NULL の場合は、すべての列がパブリッシュされます。  
   
-`[ @operation = ] 'operation'` 追加またはアーティクルに列を削除するかどうかを指定します。 *操作*は**nvarchar (5)**、既定値は add です。 **追加**レプリケーションする列をマークします。 **drop**列のマークを解除します。  
+`[ @operation = ] 'operation'` 追加またはアーティクルに列を削除するかどうかを指定します。 *操作*は**nvarchar (5)** 、既定値は add です。 **追加**レプリケーションする列をマークします。 **drop**列のマークを解除します。  
   
 `[ @refresh_synctran_procs = ] refresh_synctran_procs` レプリケートされた列の数と一致する即時更新サブスクリプションをサポートするストアド プロシージャを再生成するかどうかを指定します。 *refresh_synctran_procs*は**ビット**、既定値は**1**します。 場合**1**、ストアド プロシージャが再生成します。  
   
@@ -68,7 +67,7 @@ sp_articlecolumn [ @publication = ] 'publication'
   
  **1**アーティクルへの変更はスナップショットが無効であることがあり、新しいスナップショットを必要とする既存のサブスクリプションがある場合は、アクセス許可を付与 obsolete としてマーク済みである既存のスナップショットを新しいスナップショットを生成を指定します。  
   
- [**@force_reinit_subscription =** ] *force_reinit_subscription*  
+ [ **@force_reinit_subscription =** ]*更によって*  
  このストアド プロシージャが実行されるアクションでは、既存のサブスクリプションの再初期化される場合がありますかを確認します。 *更によって*は、**ビット**、既定値は**0**します。  
   
  **0**アーティクルへの変更では、サブスクリプションを再初期化するのには発生しないことを指定します。 ストアド プロシージャが、変更がサブスクリプションの再初期化する必要になることを検出した場合は、エラーが発生し、変更は行われません。 **1**アーティクルへの変更が発生する既存のサブスクリプションを再初期化することを指定します。 サブスクリプションの再初期化を許可します。  
@@ -94,7 +93,7 @@ sp_articlecolumn [ @publication = ] 'publication'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_articlecolumn**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Define an Article](../../relational-databases/replication/publish/define-an-article.md)   
  [Define and Modify a Column Filter](../../relational-databases/replication/publish/define-and-modify-a-column-filter.md)   
  [パブリッシュされたデータのフィルター処理](../../relational-databases/replication/publish/filter-published-data.md)   

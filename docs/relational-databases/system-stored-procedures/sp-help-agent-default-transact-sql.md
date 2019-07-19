@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7ba55e39-05dd-43c7-b5da-b268ed8426dd
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 182f13347a1fdf4dc06e6d3276e481ce54f01e45
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 3a043c3cb8087ef7515860adec34044da89997f6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527974"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68055282"
 ---
 # <a name="sphelpagentdefault-transact-sql"></a>sp_help_agent_default (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -46,7 +45,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 |値|説明|  
 |-----------|-----------------|  
 |**1**|スナップショット エージェント。|  
-|**2**|ログ リーダー エージェント。|  
+|**2**|ログ リーダー エージェント|  
 |**3**|ディストリビューション エージェント。|  
 |**4**|マージ エージェントです。|  
 |**9**|キュー リーダー エージェント (Queue Reader Agent)|  
@@ -60,7 +59,7 @@ sp_help_agent_default [ @profile_id= ] profile_id OUTPUT
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**replmonitor**固定データベース ロールが実行できる**sp_help_agent_default**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

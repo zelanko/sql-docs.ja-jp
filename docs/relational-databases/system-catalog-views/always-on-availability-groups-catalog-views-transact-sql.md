@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff53e873-8ff6-4628-af84-4ec52fa4951c
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 75cab555eef1ffd53226f891a264fb1be3195de2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 729374505c322a0b62e762ef27c29f04bebf3c9c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47627480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68050885"
 ---
 # <a name="always-on-availability-groups-catalog-views-transact-sql"></a>Always On 可用性グループ カタログ ビュー (TRANSACT-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "47627480"
 |[sys.availability_groups](../../relational-databases/system-catalog-views/sys-availability-groups-transact-sql.md)||  
   
 > [!NOTE]  
->  参加している可用性データベースについては、、 **replica_id**と**group_database_id**列[sys.databases (TRANSACT-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)を参照してください。  
+>  参加している可用性データベースについては、次を参照してください。、 **replica_id**と**group_database_id**列[sys.databases (TRANSACT-SQL);](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)します。  
   
 ## <a name="see-also"></a>参照  
  [sys.databases (TRANSACT-SQL)](sys-databases-transact-sql.md)   

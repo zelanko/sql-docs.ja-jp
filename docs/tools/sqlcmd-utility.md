@@ -24,16 +24,16 @@ helpviewer_keywords:
 - RESET command
 - GO command
 ms.assetid: e1728707-5215-4c04-8320-e36f161b834a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
 manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 12a3fff2ff310f2aa096ec4bc49b76b9895cf3f7
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: afbb8ce321418cce7797b12b161bcef88b88183e
+ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974521"
+ms.lasthandoff: 07/10/2019
+ms.locfileid: "67728188"
 ---
 # <a name="sqlcmd-utility"></a>sqlcmd Utility
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -232,7 +232,7 @@ sqlcmd
    sqlcmd -S testsrv.database.windows.net -d Target_DB_or_DW -G -U joe@contoso.com  
    ```
  
-   ゲスト ユーザーが特定の Azure AD に存在、sqlcmd コマンドを実行するデータベース権限を持つ SQL DB に存在するグループの一部である場合は、ゲスト ユーザーのエイリアスが使用されます (たとえば、 *keith0@adventureworks.com*)。
+   ゲスト ユーザーが特定の Azure AD に存在、sqlcmd コマンドを実行するデータベース権限を持つ SQL DB に存在するグループの一部である場合は、ゲスト ユーザーのエイリアスが使用されます (たとえば、 *keith0@adventureworks.com* )。
 
   >[!IMPORTANT]
   >使用する場合は、既知の問題、`-G`と`-U`オプション、SQLCMD を使用した配置する場所、`-U`オプションの前に、`-G`オプション認証に失敗が発生する可能性があります。 必ず最初に、`-G`オプションの後に、`-U`オプション。
@@ -248,7 +248,7 @@ sqlcmd
  アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 現在サポートされている値は、 **ReadOnly**だけです。 **-K** を指定しない場合、sqlcmd ユーティリティでは AlwaysOn 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (AlwaysOn 可用性グループ)](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
 **-M** _multisubnet_failover_  
- SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、**-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)」、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)」をご覧ください。 
+ SQL Server 可用性グループまたは SQL Server フェールオーバー クラスター インスタンスの可用性グループ リスナーに接続する際には、必ず **-M** を指定してください。 **-M** を指定すると、(現在) アクティブなサーバーを迅速に検出して接続できます。 **-M** を指定しない場合、 **-M** は無効になります。 詳細については、「[リスナー、クライアント接続、アプリケーションのフェールオーバー](../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)」、「[可用性グループの作成と構成 &#40;SQL Server&#41;](../database-engine/availability-groups/windows/creation-and-configuration-of-availability-groups-sql-server.md)」、「[フェールオーバー クラスタリングと Always On 可用性グループ (SQL Server)](https://msdn.microsoft.com/library/ff929171.aspx)」、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ (Always On 可用性グループ)](https://msdn.microsoft.com/library/ff878253.aspx)」をご覧ください。 
   
  **-N**  
  クライアントでこのスイッチを使用して、暗号化された接続を要求できます。  
@@ -260,7 +260,7 @@ sqlcmd
 
 強力なパスワードを使用することをお勧めします。
  
-#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**強力なパスワードを使用してください。**](../relational-databases/security/strong-passwords.md)
+#### <a name="use-a-strong-passwordrelational-databasessecuritystrong-passwordsmd"></a>[**強力なパスワードを使用してください。** ](../relational-databases/security/strong-passwords.md)
   
   
  パスワード プロンプトは、次のようにパスワード プロンプトをコンソールに出力することによって表示されます。 `Password:`  
@@ -284,14 +284,14 @@ sqlcmd
   
  **-P** オプションの後に複数の引数があると、エラー メッセージが生成され、プログラムが終了します。  
   
- **-S** [*protocol*:]*server*[**\\**_instance\_name_][**,**_port_]  
+ **-S** [*protocol*:]*server*[ **\\** _instance\_name_][ **,** _port_]  
  接続先となる SQL Server のインスタンスを指定します。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDSERVER が設定されます。  
   
- そのサーバー コンピューター上の SQL Server の既定のインスタンスに接続するには、*server_name* を指定します。 そのサーバー コンピューター上の SQL Server の名前付きインスタンスに接続するには、*server_name* [ **\\**_instance\_name_ ] を指定します。 サーバー コンピューターを指定しない場合、**sqlcmd** は、ローカル コンピューター上にある SQL Server の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **sqlcmd** を実行するときは、このオプションが必要です。  
+ そのサーバー コンピューター上の SQL Server の既定のインスタンスに接続するには、*server_name* を指定します。 そのサーバー コンピューター上の SQL Server の名前付きインスタンスに接続するには、*server_name* [ **\\** _instance\_name_ ] を指定します。 サーバー コンピューターを指定しない場合、**sqlcmd** は、ローカル コンピューター上にある SQL Server の既定のインスタンスに接続します。 ネットワーク上のリモート コンピューターから **sqlcmd** を実行するときは、このオプションが必要です。  
   
  *protocol* には、 **tcp** (TCP/IP)、 **lpc** (共有メモリ)、または **np** (名前付きパイプ) を指定できます。  
   
- **sqlcmd** を実行するときに *server_name* [ **\\**_instance\_name_ ]を指定しなかった場合は、SQL Server により SQLCMDSERVER 環境変数がチェックされ、その値が使用されます。  
+ **sqlcmd** を実行するときに *server_name* [ **\\** _instance\_name_ ]を指定しなかった場合は、SQL Server により SQLCMDSERVER 環境変数がチェックされ、その値が使用されます。  
   
 > [!NOTE]  
 >  OSQLSERVER 環境変数は旧バージョンとの互換性を維持しています。 SQLCMDSERVER 環境変数は OSQLSERVER 環境変数よりも優先されます。これにより、 **sqlcmd** と **osql** を競合することなく組み合わせて使用でき、従来のスクリプトは引き続き機能を実行することができます。  
@@ -317,7 +317,7 @@ sqlcmd
  `sqlcmd -U someuser -P s0mep@ssword -Z a_new_p@a$$w0rd`  
   
  **入力または出力のオプション**  
-  **-f** _codepage_ | **i:**_codepage_[**,o:**_codepage_] | **o:**_codepage_[**,i:**_codepage_]  
+  **-f** _codepage_ | **i:** _codepage_[ **,o:** _codepage_] | **o:** _codepage_[ **,i:** _codepage_]  
  入力と出力のコード ページを指定します。 コード ページ番号は、インストールされた Windows コード ページを指定する数値です。  
   
  コード ページには次の変換規則があります。  
@@ -332,7 +332,7 @@ sqlcmd
   
  Cmd.exe のコード ページを確認するには、コマンド プロンプトに「 **chcp** 」と入力します。  
   
- **-i** _input_file_[**,**_input\_file2_...]  
+ **-i** _input_file_[ **,** _input\_file2_...]  
  SQL ステートメントまたはストアド プロシージャのバッチを含むファイルを指定します。 複数のファイルを指定すると、それらのファイルは順番に読み取られて処理されます。 ファイル名とファイル名の間には空白を使用しないでください。 **sqlcmd** により、最初に、指定したすべてのファイルが存在しているかどうかがチェックされます。 1 つ以上のファイルが存在していない場合は、 **sqlcmd** は終了します。 -i と -Q/-q オプションは同時に使用できません。  
   
  パスの例:  
@@ -414,7 +414,7 @@ sqlcmd
 >  実際のタイムアウト値は、指定した *time_out* 値より数秒異なる場合があります。  
   
  **-vvar =**  _value_[ **var =** _value_...]  
- **sqlcmd**スクリプトで使用できる **sqlcmd** スクリプト変数を作成します。 値に空白が含まれる場合は、値を引用符で囲みます。 複数の _**var**_=**"**_values_**"** の値を指定できます。 指定した値にエラーが生じた場合は、 **sqlcmd** は、エラー メッセージを生成してから終了します。  
+ **sqlcmd**スクリプトで使用できる **sqlcmd** スクリプト変数を作成します。 値に空白が含まれる場合は、値を引用符で囲みます。 複数の _**var**_ = **"** _values_ **"** の値を指定できます。 指定した値にエラーが生じた場合は、 **sqlcmd** は、エラー メッセージを生成してから終了します。  
   
  `sqlcmd -v MyVar1=something MyVar2="some thing"`  
   
@@ -425,7 +425,7 @@ sqlcmd
   
  **書式設定のオプション**  
   **-h** _headers_  
- 列ヘッダーの間に出力する行数を指定します。 既定では、各クエリの結果に対して、ヘッダーは 1 つだけ表示されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDHEADERS が設定されます。 ヘッダーを出力しない場合は、**-1** を指定します。 有効でない値があると、 **sqlcmd** はエラー メッセージを生成してから終了します。  
+ 列ヘッダーの間に出力する行数を指定します。 既定では、各クエリの結果に対して、ヘッダーは 1 つだけ表示されます。 このオプションにより、 **sqlcmd** スクリプト変数 SQLCMDHEADERS が設定されます。 ヘッダーを出力しない場合は、 **-1** を指定します。 有効でない値があると、 **sqlcmd** はエラー メッセージを生成してから終了します。  
   
  **-k** [**1** | **2**]  
  タブ、改行文字などのすべての制御文字を出力から削除します。 このパラメーターにより、データが返されたときの列の形式が維持されます。 1 を指定した場合、制御文字は 1 つの空白に置き換えられます。 2 を指定すると、連続する制御文字が 1 つの空白に置き換えられます。 **-k** は **-k1**と同じです。  
@@ -468,15 +468,15 @@ sqlcmd
  **-Y** _fixed_length_type_display_width_  
  **sqlcmd** スクリプト変数 `SQLCMDMAXFIXEDTYPEWIDTH`を設定します。 既定値は 0 (無制限) です。 次のデータ型に返される文字数を制限します。  
   
--   **char(** _n_ **)**、ここで 1<=n<=8000  
+-   **char(** _n_ **)** 、ここで 1<=n<=8000  
   
--   **nchar(n** _n_ **)**、ここで 1<=n<=4000  
+-   **nchar(n** _n_ **)** 、ここで 1<=n<=4000  
   
--   **varchar(n** _n_ **)**、ただし 1<=n<=8000  
+-   **varchar(n** _n_ **)** 、ただし 1<=n<=8000  
   
--   **nvarchar(n** _n_ **)**、ただし 1<=n<=4000  
+-   **nvarchar(n** _n_ **)** 、ただし 1<=n<=4000  
   
--   **varbinary(n** _n_ **)**、ただし 1<=n\<=4000  
+-   **varbinary(n** _n_ **)** 、ただし 1<=n\<=4000  
   
 -   **variant**  
   
@@ -501,7 +501,7 @@ sqlcmd
  **-c** _batch_terminator_  
  バッチ ターミネータを指定します。 既定では、"GO" だけが入力されている行があると、コマンドが終了したと見なされ、SQL Server に送られます。 バッチ ターミネータをリセットする場合、Transact-SQL の予約キーワードやオペレーティング システムで特別な意味を持つ文字は、先頭に円記号が付いているかどうかに関係なく、使用しないでください。  
   
- **-L****[c]**  
+ **-L** **[c]**  
  ローカルに構成されたサーバー コンピューターと、ネットワーク上でブロードキャストしているサーバー コンピューター名の一覧を表示します。 このパラメーターは、他のパラメーターと組み合わせて使用することはできません。 一覧表示できるサーバー コンピューターの最大数は 3,000 です。 バッファーのサイズが原因でサーバーの一覧が切り捨てられる場合は、警告メッセージが表示されます。  
   
 > [!NOTE]  
@@ -509,7 +509,7 @@ sqlcmd
   
  省略可能なパラメーター **c** を指定すると、出力結果には **Servers:** ヘッダー行が含まれません。このため、各サーバー行は、先頭に空白がない状態で一覧表示されます。 このプレゼンテーションは、クリーン アウトプットと呼ばれます。 クリーン アウトプットを使用すると、スクリプト言語の処理パフォーマンスが向上します。  
   
- **-p****[1]**  
+ **-p** **[1]**  
  すべての結果セットのパフォーマンス統計を出力します。 パフォーマンス統計の形式の例を次に示します。  
   
  `Network packet size (bytes): n`  
@@ -534,7 +534,7 @@ sqlcmd
   
  省略可能なパラメーターが **1**以外の値の場合は、エラーが生成され、 **sqlcmd** は終了します。  
   
- **-X****[1]**  
+ **-X** **[1]**  
  **sqlcmd** がバッチ ファイルから実行される場合に、システムのセキュリティを損なう可能性のあるコマンドを無効にします。 無効なコマンドも認識されます。 **sqlcmd** は警告メッセージを表示して継続します。 省略可能なパラメーターを **1** に指定すると、 **sqlcmd** はエラー メッセージを生成して終了します。 **-X** オプションを使用した場合に無効になるコマンドは次のとおりです。  
   
 -   **ED**  
@@ -595,7 +595,7 @@ sqlcmd
 |SQLCMDINI||R|""|
 |SQLCMDUSEAAD  | -G | R/W | "" |  
   
- SQLCMDUSER、SQLCMDPASSWORD、および SQLCMDSERVER は、**:Connect** が使用されるときに設定されます。  
+ SQLCMDUSER、SQLCMDPASSWORD、および SQLCMDSERVER は、 **:Connect** が使用されるときに設定されます。  
   
  R は、その値がプログラムの初期化時に一度だけ設定できることを示します。  
   
@@ -621,7 +621,7 @@ sqlcmd
 -   GO を除くすべての **sqlcmd** コマンドは、コロン (:) によってプレフィックス指定する必要があります。  
   
     > [!IMPORTANT]  
-    >  既存の **osql** スクリプトとの互換性を保つために、一部のコマンドはコロンなしで認識され、**[:]** によって示されます。
+    >  既存の **osql** スクリプトとの互換性を保つために、一部のコマンドはコロンなしで認識され、 **[:]** によって示されます。
   
 -   **sqlcmd** コマンドが認識されるのは、コマンドが行の先頭にある場合のみです。  
   
@@ -646,7 +646,7 @@ sqlcmd
  ステートメント キャッシュの内容を出力します。  
   
  **変数**  
-  **:Setvar** \<**var**> [ **"**_value_**"** ]  
+  **:Setvar** \<**var**> [ **"** _value_ **"** ]  
  **sqlcmd** スクリプト変数を定義します。 スクリプト変数は `$(VARNAME)`という形式になります。  
   
  変数名では大文字と小文字が区別されません。  
@@ -678,7 +678,7 @@ sqlcmd
   
  **出力コマンド**  
   **:Error**   
- _**\<**_  _filename_  **_>|_ STDERR|STDOUT**  
+ _ **\<**_  _filename_  ** _>|_ STDERR|STDOUT**  
  すべてのエラー出力を、 *file name*によって指定されたファイル、または **stderr** や **stdout**にリダイレクトします。 **Error** コマンドは、スクリプト内で複数回使用できます。 既定では、エラー出力は **stderr**に送られます。  
   
  *ファイル名*  
@@ -690,10 +690,10 @@ sqlcmd
  **STDOUT**  
  エラー出力を **stdout** ストリームに切り替えます。 ストリームがリダイレクトされている場合は、ストリームがリダイレクトされた対象がエラー出力を受信します。  
   
- **:Out \<** _filename_ **>**| **STDERR**| **STDOUT**  
+ **:Out \<** _filename_ **>** | **STDERR**| **STDOUT**  
  すべてのクエリ結果を、 *file name*によって指定されたファイル、または **stderr** や **stdout**に作成してリダイレクトします。 既定では、出力は **stdout**に送られます。 ファイルが既に存在している場合は、ファイルは 0 バイトに切り詰められます。 **Out** コマンドは、スクリプト内で複数回使用できます。  
   
- **:Perftrace \<** _filename_ **>**| **STDERR**| **STDOUT**  
+ **:Perftrace \<** _filename_ **>** | **STDERR**| **STDOUT**  
  すべてのパフォーマンス トレース情報を、 *file name*によって指定されたファイル、または **stderr** や **stdout**に作成してリダイレクトします。 既定では、パフォーマンス トレース出力は **stdout**に送られます。 ファイルが既に存在している場合は、ファイルは 0 バイトに切り詰められます。 **Perftrace** コマンドは、スクリプト内で複数回使用できます。  
   
  **実行制御コマンド**  
@@ -707,12 +707,12 @@ sqlcmd
  **[:]** **QUIT**  
  **sqlcmd** が終了します。  
   
- **[:]** **EXIT**[ **(**_statement_**)** ]  
+ **[:]** **EXIT**[ **(** _statement_ **)** ]  
  **sqlcmd**からの戻り値に、SELECT ステートメントの結果を使用できます。 数値の場合、結果行の最終行の第 1 列は、4 バイトの (長) 整数に変換されます。 MS-DOS は、下位バイトを親プロセスやオペレーティング システムのエラー レベルに渡します。 Windows 200x では、4 バイトの整数全体を渡します。 構文は次のとおりです。  
   
  `:EXIT(query)`  
   
- 例 :  
+ 例:  
   
  `:EXIT(SELECT @@ROWCOUNT)`  
   
@@ -738,7 +738,7 @@ sqlcmd
   
  クエリを含むバッチを実行し、クエリの結果を返して終了します。  
   
- RAISERROR を **sqlcmd** スクリプトの中で使用し、状態 127 が発生すると、 **sqlcmd** は終了し、メッセージ ID をクライアントに返します。 例 :  
+ RAISERROR を **sqlcmd** スクリプトの中で使用し、状態 127 が発生すると、 **sqlcmd** は終了し、メッセージ ID をクライアントに返します。 例:  
   
  `RAISERROR(50001, 10, 127)`  
   
@@ -757,7 +757,7 @@ sqlcmd
   
  **その他のコマンド**  
   **:r \<** _filename_ **>**  
- **\<**_filename_**>** によって指定されたファイルを基に、追加の Transact-SQL ステートメントと **sqlcmd** コマンドを解析し、ステートメント キャッシュ内に登録します。  
+ **\<** _filename_ **>** によって指定されたファイルを基に、追加の Transact-SQL ステートメントと **sqlcmd** コマンドを解析し、ステートメント キャッシュ内に登録します。  
   
  **GO** が最後に記述されていない Transact-SQL ステートメントがファイルに含まれている場合は、その行の **:r** の後に **GO** を入力する必要があります。  
   
@@ -772,7 +772,7 @@ sqlcmd
  **:Serverlist**  
  ローカルに構成されたサーバーと、ネットワーク上でブロードキャストしているサーバー名の一覧を表示します。  
   
- **:Connect**  _server_name_[**\\**_instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
+ **:Connect**  _server_name_[ **\\** _instance\_name_] [-l *timeout*] [-U *user_name* [-P *password*]]  
  SQL Server のインスタンスに接続します。 また、現在の接続を終了します。  
   
  タイムアウト オプション :  
@@ -798,8 +798,8 @@ sqlcmd
   
  `:connect $(myservername) $(myusername)`  
   
- **[:]** **!!**< *command*>  
- オペレーティング システムのコマンドを実行します。 オペレーティング システムのコマンドを実行するには、行頭に 2 つの感嘆符 (**!!**) を入力し、続けてオペレーティング システムのコマンドを入力します。 例 :  
+ **[:]** **!!** < *command*>  
+ オペレーティング システムのコマンドを実行します。 オペレーティング システムのコマンドを実行するには、行頭に 2 つの感嘆符 ( **!!** ) を入力し、続けてオペレーティング システムのコマンドを入力します。 例:  
   
  `:!! Dir`  
   
@@ -815,7 +815,7 @@ sqlcmd
 ### <a name="sqlcmd-file-names"></a>sqlcmd のファイル名  
  **sqlcmd** の入力ファイルは **-i** オプションまたは **:r** コマンドで指定できます。 出力ファイルは **-o** オプションまたは **:Error**、 **:Out** 、および **:Perftrace** コマンドで指定できます。 指定するファイルについてのガイドラインを次に示します。  
   
--   **:Error**、**:Out**、および **:Perftrace** を指定するときは、個別に **\<**_filename_**>** を指定します。 同じ **\<**_filename_**>** を使用すると、各コマンドからの入力が混在する場合があります。  
+-   **:Error**、 **:Out**、および **:Perftrace** を指定するときは、個別に **\<** _filename_ **>** を指定します。 同じ **\<** _filename_ **>** を使用すると、各コマンドからの入力が混在する場合があります。  
   
 -   ローカル コンピューターの **sqlcmd** からリモート サーバー上の入力ファイルが呼び出され、ファイルに :Out c:\OutputFile.txt のようにドライブ パスが含まれていると、 出力ファイルはリモート サーバーではなく、ローカル コンピューター上に作成されます。  
   

@@ -7,16 +7,15 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: markingmyname
 ms.author: maghan
-manager: jroth
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 07/11/2019
-ms.openlocfilehash: 9b6fa6e7ec82853e05070a1675154f06091e5092
-ms.sourcegitcommit: e366f702c49d184df15a9b93c2c6a610e88fa0fe
+ms.openlocfilehash: 8f19424b1e7946c7fb3d7a7056c1bda94b83b79b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67826517"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959383"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
@@ -360,7 +359,7 @@ _0.32.8 には 0.32.7 で見つかったいくつかの回帰の修正プログ�
 - 修正[発行 1724](https://github.com/Microsoft/azuredatastudio/issues/1724):ダイアログの拡張機能が動作を停止しました
 - 修正[発行 1749](https://github.com/Microsoft/azuredatastudio/issues/1749):バグ:列内の HTML データが解釈されます。
 - 修正[発行 1789](https://github.com/Microsoft/azuredatastudio/issues/1789):機能拡張: 接続プロバイダーを追加する場合アンインストールは決して一覧から削除、
-- 修正[発行 1791](https://github.com/Microsoft/azuredatastudio/issues/1791):Sqlops Extensions: queryeditor.connect() connects to the target database, but UI does not show the editor is connected
+- 修正[発行 1791](https://github.com/Microsoft/azuredatastudio/issues/1791):Sqlops 拡張機能: が queryeditor.connect() が、ターゲット データベースに接続しますが、UI は、エディターの接続を表示しません。
 - 修正[発行 1799](https://github.com/Microsoft/azuredatastudio/issues/1799):上位 10 個の DB サイズのグラフは、大文字小文字を区別するインスタンスでは動作しません
 - 修正[発行 1814](https://github.com/Microsoft/azuredatastudio/issues/1814): sqlops.d.ts 入力ミスが原因で暗黙的な 'any' 型の定義
 - 修正[発行 1817](https://github.com/Microsoft/azuredatastudio/issues/1817):エラー de Ortografia

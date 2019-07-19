@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: a8fcdd00-6cb3-4871-9489-6018b3d0d65f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: b4582a99797d5f6035f6d5d639514c5a6fdd572d
-ms.sourcegitcommit: 56b963446965f3a4bb0fa1446f49578dbff382e0
+ms.openlocfilehash: 74c9a97c2511bc9c9a738b9e63548a9179552489
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2019
-ms.locfileid: "67794065"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68086343"
 ---
 # <a name="new-features"></a>新機能
 ODBC では、次の新しい機能が導入されました*3.x*します。 ODBC *3.x* odbc 作業アプリケーション*2.x*ドライバーでは、この機能を使用できません。 ODBC *3.x* ODBC を使用する場合に、ドライバー マネージャーでこれらの機能がマップされていない*2.x*ドライバー。  

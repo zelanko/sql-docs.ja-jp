@@ -14,23 +14,22 @@ helpviewer_keywords:
 ms.assetid: 10996a2a-3be4-4f66-9fc4-815d43fc6e52
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e2f1b5f896c4a4884d4474c3c27c3435f7783292
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: e689eea8a641e42633d179d14e3b59d88dd3dec4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52823726"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941895"
 ---
-# <a name="replication-stored-procedures-transact-sql"></a>レプリケーション ストアド プロシージャ (Transact-SQL)
+# <a name="replication-stored-procedures-transact-sql"></a>レプリケーション ストアド プロシージャ (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  レプリケーション システム ストアド プロシージャの説明は、ドキュメントに記載されています。このストアド プロシージャは、レプリケーションの実装などの 1 回限りのタスクを実行するための手段として利用したり、バッチ ファイルやスクリプトの中で使用することができます。  
+  レプリケーション システム ストアド プロシージャは、文書化され、レプリケーションの実装など、1 回限りの作業を行うため、バッチ ファイルやスクリプトで使用するための手段として利用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックには、[!INCLUDE[tsql](../../includes/tsql-md.md)] ストアド プロシージャを使用したレプリケーション タスクのプログラミング例が、一般的なさまざまなタスクについて記載されています。 詳細については、「[Replication System Stored Procedures Concepts](../../relational-databases/replication/concepts/replication-system-stored-procedures-concepts.md)」 (レプリケーション システム ストアド プロシージャの概念) を参照してください。  
   
 > [!IMPORTANT]  
->  サポートされているのは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックに記載されているレプリケーション ストアド プロシージャのみです。 記載されていないストアド プロシージャは、内部レプリケーション コンポーネント専用です。レプリケーションの管理には使用しないでください。  
+>  レプリケーションのみストアド プロシージャに記載されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]オンライン ブックはサポートされています。 記載されていないストアド プロシージャは、内部レプリケーション コンポーネント専用です。レプリケーションの管理には使用しないでください。  
   
 |||  
 |-|-|  
@@ -149,7 +148,7 @@ ms.locfileid: "52823726"
 |[sp_helparticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)|[sp_vupgrade_replication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-vupgrade-replication-transact-sql.md)|  
 |[sp_helparticlecolumns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md)||  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Replication Management Objects Concepts](../../relational-databases/replication/concepts/replication-management-objects-concepts.md)   
  [レプリケーションのプログラミング概念](../../relational-databases/replication/concepts/replication-programming-concepts.md)  
   

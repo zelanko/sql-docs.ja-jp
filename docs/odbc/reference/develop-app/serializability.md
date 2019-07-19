@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 142e4ac0-2977-4a2b-96ae-c9e5bd2c448a
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 7e7972fb72607edca8c1599c2d028b073c184642
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 49552e7333d8cac2b55a9ae6e8dd7a41ff4c5955
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63251462"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68094334"
 ---
 # <a name="serializability"></a>シリアル化可能性
 理想的には、トランザクションをする必要があります*シリアル化可能な*します。 トランザクションといいます直列の実行の結果とは同時に実行されるトランザクションの結果が同じ場合、シリアル化可能で、もう一方の後に、1 つ。 トランザクションには最初に、実行、結果は、トランザクションの任意の混在が反映されませんするのみは重要はありません。  

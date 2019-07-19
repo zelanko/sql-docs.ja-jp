@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e3c1356a-5db7-4186-85fd-8b74633317e8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0dc0e57356c972797cbd72fa4ce3427a0e473dad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f33d55cc8ac5dab37ce200a5a654bcb4be7cc9ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65538001"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911361"
 ---
 # <a name="sqlgetdata-function"></a>SQLGetData 関数
 **準拠**  
@@ -139,7 +138,7 @@ SQLRETURN SQLGetData(
   
 -   SQL_GD_OUTPUT_PARAMS = **SQLGetData**出力パラメーターの値を返すを呼び出すことができます。 詳細については、次を参照してください。 [SQLGetData を使用して出力パラメーターを取得する](../../../odbc/reference/develop-app/retrieving-output-parameters-using-sqlgetdata.md)します。  
   
--   SQL_GD_ANY_COLUMN. このオプションが返された場合**SQLGetData**最後の列をバインドする前に含めて、任意のバインドされていない列を呼び出すことができます。  
+-   SQL_GD_ANY_COLUMN します。 このオプションが返された場合**SQLGetData**最後の列をバインドする前に含めて、任意のバインドされていない列を呼び出すことができます。  
   
 -   SQL_GD_ANY_ORDER します。 このオプションが返された場合**SQLGetData**任意の順序でバインドされていない列を呼び出すことができます。  
   

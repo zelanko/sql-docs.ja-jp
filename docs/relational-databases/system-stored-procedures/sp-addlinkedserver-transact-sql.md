@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: b4ff861015fc669defee69fece5c26ee45d66eaa
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: 8df629aa707e5c0f63ef5bdcb9c77d7f8f2e2aca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493913"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072680"
 ---
 # <a name="spaddlinkedserver-transact-sql"></a>sp_addlinkedserver (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -47,20 +46,20 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="arguments"></a>引数  
 `[ @server = ] 'server'` 作成するリンク サーバーの名前です。 *server* のデータ型は **sysname**で、既定値はありません。  
   
-`[ @srvproduct = ] 'product_name'` リンク サーバーとして追加する OLE DB データ ソースの製品名です。 *product_name*は**nvarchar (** 128 **)**、既定値は NULL です。 場合**SQL Server**、 *provider_name*、 *data_source*、*場所*、 *provider_string*と*カタログ*指定する必要はありません。  
+`[ @srvproduct = ] 'product_name'` リンク サーバーとして追加する OLE DB データ ソースの製品名です。 *product_name*は**nvarchar (** 128 **)** 、既定値は NULL です。 場合**SQL Server**、 *provider_name*、 *data_source*、*場所*、 *provider_string*と*カタログ*指定する必要はありません。  
   
-`[ @provider = ] 'provider_name'` このデータ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) です。 *provider_name*現在のコンピューターにインストールされている指定された OLE DB プロバイダーに対して一意である必要があります。 *provider_name*は**nvarchar (** 128 **)**、既定値は NULL です。 ただし、場合*provider_name*は省略すると、SQLNCLI が使用されます。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。OLE DB プロバイダーは、レジストリで指定した PROGID を登録することが必要です。  
+`[ @provider = ] 'provider_name'` このデータ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) です。 *provider_name*現在のコンピューターにインストールされている指定された OLE DB プロバイダーに対して一意である必要があります。 *provider_name*は**nvarchar (** 128 **)** 、既定値は NULL です。 ただし、場合*provider_name*は省略すると、SQLNCLI が使用されます。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。OLE DB プロバイダーは、レジストリで指定した PROGID を登録することが必要です。  
   
 `[ @datasrc = ] 'data_source'` OLE DB プロバイダーで解釈、データ ソースの名前です。 *data_source*は**nvarchar (** 4000 **)** します。 *data_source* OLE DB プロバイダーを初期化する DBPROP_INIT_DATASOURCE プロパティとして渡されます。  
   
-`[ @location = ] 'location'` OLE DB プロバイダーで解釈は、データベースの場所です。 *場所*は**nvarchar (** 4000 **)**、既定値は NULL です。 *場所*OLE DB プロバイダーを初期化する DBPROP_INIT_LOCATION プロパティとして渡されます。  
+`[ @location = ] 'location'` OLE DB プロバイダーで解釈は、データベースの場所です。 *場所*は**nvarchar (** 4000 **)** 、既定値は NULL です。 *場所*OLE DB プロバイダーを初期化する DBPROP_INIT_LOCATION プロパティとして渡されます。  
   
-`[ @provstr = ] 'provider_string'` 一意のデータ ソースを識別する OLE DB プロバイダーに固有の接続文字列です。 *provider_string*は**nvarchar (** 4000 **)**、既定値は NULL です。 *provstr*が IDataInitialize に渡されるまたは OLE DB プロバイダーを初期化する DBPROP_INIT_PROVIDERSTRING プロパティとして設定します。  
+`[ @provstr = ] 'provider_string'` 一意のデータ ソースを識別する OLE DB プロバイダーに固有の接続文字列です。 *provider_string*は**nvarchar (** 4000 **)** 、既定値は NULL です。 *provstr*が IDataInitialize に渡されるまたは OLE DB プロバイダーを初期化する DBPROP_INIT_PROVIDERSTRING プロパティとして設定します。  
   
  に対して、リンク サーバーが作成されたとき、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーでは、サーバーと、SERVER キーワードを使用して、インスタンスを指定することができます =*servername*\\*instancename*の特定のインスタンスを指定する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 *servername*となるコンピューターの名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されていると*instancename*の特定のインスタンスの名前を指定[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するユーザーを接続します。  
   
 > [!NOTE]
->  ミラー化されたデータベースにアクセスするには、接続文字列は、データベース名を含める必要があります。 この名前は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。 データベースを指定することができます、 **@provstr**または**@catalog**パラメーター。 必要に応じて、接続文字列では、フェールオーバー パートナー名が指定もできます。  
+>  ミラー化されたデータベースにアクセスするには、接続文字列は、データベース名を含める必要があります。 この名前は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。 データベースを指定することができます、 **@provstr** または **@catalog** パラメーター。 必要に応じて、接続文字列では、フェールオーバー パートナー名が指定もできます。  
   
 `[ @catalog = ] 'catalog'` OLE DB プロバイダーへの接続の確立時に使用されるカタログです。 *カタログ*は**sysname**、既定値は NULL です。 *カタログ*OLE DB プロバイダーを初期化する DBPROP_INIT_CATALOG プロパティとして渡されます。 インスタンスに対して、リンク サーバーが定義されている場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]カタログは、リンク サーバーがマップされている既定のデータベースを参照します。  
   
@@ -73,7 +72,7 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ## <a name="remarks"></a>コメント  
  次の表では、リンク サーバーは、OLE DB を介してアクセスできるデータ ソース設定できる方法を示します。 リンク サーバーは、特定のデータ ソースの複数の方法を設定できます。データ ソースの種類の 1 つ以上の行があります。 この表も示しています、 **sp_addlinkedserver**リンク サーバーを設定するために使用するパラメーター値。  
   
-|リモート OLE DB データ ソース|OLE DB プロバイダー|product_name|provider_name|data_source|場所|provider_string|catalog|  
+|リモート OLE DB データ ソース|OLE DB プロバイダー|product_name|provider_name|data_source|location|provider_string|カタログ|  
 |-------------------------------|---------------------|-------------------|--------------------|------------------|--------------|----------------------|-------------|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] <sup>1</sup> (既定値)||||||  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]|[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダー||**SQLNCLI**|ネットワーク名[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)](の既定のインスタンス)|||データベース名 (省略可能)|  
@@ -297,7 +296,7 @@ exec ('INSERT INTO t1tutut2 VALUES(1),(2),(3)') at myLinkedServer
 select * from myLinkedServer.myDatabase.dbo.myTable  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [分散クエリ ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/distributed-queries-stored-procedures-transact-sql.md)   
  [sp_addlinkedsrvlogin &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addlinkedsrvlogin-transact-sql.md)   
  [sp_addserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addserver-transact-sql.md)   

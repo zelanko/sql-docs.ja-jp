@@ -17,11 +17,11 @@ author: MightyPen
 ms.author: genemi
 manager: craigg
 ms.openlocfilehash: d030d4fb12ce9217bbdb88f501a0b0674c5a5828
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53360361"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68206751"
 ---
 # <a name="procedures"></a>手順
   ストアド プロシージャは、1 つ以上の [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントを含むプリコンパイルされた実行可能オブジェクトです。 ストアド プロシージャは、入力パラメーターと出力パラメーターを使用でき、整数のリターン コードを出力することもできます。 アプリケーションは、カタログ関数を使用することで、使用可能なストアド プロシージャを列挙できます。  
@@ -30,7 +30,7 @@ ms.locfileid: "53360361"
   
  ODBC アプリケーションでは、ストアド プロシージャの実行時に ODBC CALL 構文を使用する必要があります。 ドライバーは、ODBC CALL 構文の使用時に、リモート プロシージャ コールのメカニズムを使用してプロシージャを呼び出すように最適化されます。 これは、[!INCLUDE[tsql](../../../includes/tsql-md.md)] EXECUTE ステートメントをサーバーに送信するときに使用するメカニズムよりも効率的です。  
   
- 詳細については、[ストアド プロシージャを実行している](../../native-client-odbc-stored-procedures/running-stored-procedures.md)を参照してください。  
+ 詳細については、次を参照してください。[ストアド プロシージャを実行している](../../native-client-odbc-stored-procedures/running-stored-procedures.md)します。  
   
 ## <a name="see-also"></a>参照  
  [ステートメントを実行する&#40;ODBC&#41;](executing-statements-odbc.md)  

@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 6fb1bc0055748c711762d89ad2757a12d1161254
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 57ee0867373f67bfd0684734685ab39791bafc39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63181443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68098408"
 ---
 # <a name="mdx-data-definition---create-global-cube"></a>MDX データ操作 - CREATE GLOBAL CUBE
 
@@ -105,7 +104,7 @@ FROM source_cube_name (<param list>)
  dimension_name  
  ローカル キューブのディメンションの名前です。  
   
- FROM \<dim from clause>  
+ \<句から dim >  
  派生ディメンションの定義のみ有効な仕様。  
   
  NOT_RELATED_TO_FACTS  
@@ -197,7 +196,7 @@ MEMBER [Date].[Fiscal].[Fiscal Year].&[2005]
    )  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [MDX データ定義ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-statements-mdx.md)   
  [CREATE SESSION CUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-session-cube.md)  
   

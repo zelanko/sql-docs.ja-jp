@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 1dd74544-f4e9-46e1-9b5f-c11d84fdab4c
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 5664a4cb745a250aa8db6d98b92a275bb91c7a8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 673e3e53468780ef261a22b00a2ec1bb9df0e184
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65536578"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030605"
 ---
 # <a name="sqlinstalldriverex-function"></a>SQLInstallDriverEx 関数
 **準拠**  
@@ -68,7 +67,7 @@ BOOL SQLInstallDriverEx(
  *pcbPathOut*  
  [出力]\(Null 終了文字を除く) バイトの合計数で返される使用可能な*lpszPathOut*です。 返される使用可能なバイト数がより大きいかに等しい場合*cbPathOutMax*、出力パス*lpszPathOut*に切り捨てられます*cbPathOutMax*マイナス、null 終了文字です。 *PcbPathOut*引数が null ポインターを指定できます。  
   
- *fRequest*  
+ *起こり*  
  [入力]要求の種類。 *起こり*引数は、次の値のいずれかを含める必要があります。  
   
  ODBC_INSTALL_INQUIRY:ドライバーをインストールできる場所について照会します。  
@@ -102,7 +101,7 @@ BOOL SQLInstallDriverEx(
   
  _ドライバー desc_ **\\** 0Driver **=** _ドライバー-filename DLL_ **\\** 0 [セットアップ **=** _セットアップ-filename DLL_<b>\\</b>0]  
   
- [_driver-attr-keyword1_ **=** _value1_<b>\\</b>0][_driver-attr-keyword2_ **=** _value2_<b>\\</b>0]...<b>\\</b>0  
+ [_ドライバー-attr-keyword1_ **=** _value1_<b>\\</b>0] [_ドライバー-attr-keyword2_ **=** _value2_<b>\\</b>0].<b> \\ </b>0  
   
  \0 の null バイトがあると*ドライバー-attr-keywordn*ドライバー属性のいずれかのキーワードは、します。 キーワードは、指定した順序で表示する必要があります。 たとえば、書式設定されたテキスト ファイル用のドライバーが個別のドライバーと Dll のセットアップとし、.txt および .csv の拡張子を持つファイルを使用できます。 *LpszDriver*引数のこのドライバーで次のようにある可能性があります。  
   

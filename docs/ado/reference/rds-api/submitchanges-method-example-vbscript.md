@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 619bc7fd-ad0a-44ea-9678-ad40a662c258
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ea04456e4ef3ae0b35ef983df026ca92097af1b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a74f69947d6d1a1d730d39875f32a0cfc7286705
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66697509"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67963364"
 ---
 # <a name="submitchanges-method-example-vbscript"></a>SubmitChanges メソッドの例 (VBScript)
 > [!IMPORTANT]
@@ -117,7 +116,7 @@ End Sub
 <!-- EndCancelUpdateVBS -->  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DataControl オブジェクト (RDS)](../../../ado/reference/rds-api/datacontrol-object-rds.md)   
  [SubmitChanges メソッド (RDS)](../../../ado/reference/rds-api/submitchanges-method-rds.md)
 

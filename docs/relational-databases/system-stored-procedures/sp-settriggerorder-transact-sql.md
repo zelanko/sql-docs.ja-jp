@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 8b75c906-7315-486c-bc59-293ef12078e8
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b9dca1aca3883b16b13f4e0abdb842deaf5bbfdd
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 55fedd154195b4f5abf230120a0e16e6a41ce6e3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58537904"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68032929"
 ---
 # <a name="spsettriggerorder-transact-sql"></a>sp_settriggerorder (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -44,7 +43,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @triggername = ] '[ _triggerschema.] _triggername'` トリガーと、スキーマの名前は、それが属する、該当する場合、順序が設定または変更するのには。 [_triggerschema_**.**]*triggername*は**sysname**します。 名前がトリガーに対応していない場合、または名前が INSTEAD OF トリガーに対応している場合は、エラーが返されます。 *triggerschema* DDL トリガーまたはログオン トリガーを指定することはできません。  
+`[ @triggername = ] '[ _triggerschema.] _triggername'` トリガーと、スキーマの名前は、それが属する、該当する場合、順序が設定または変更するのには。 [_triggerschema_ **.** ]*triggername*は**sysname**します。 名前がトリガーに対応していない場合、または名前が INSTEAD OF トリガーに対応している場合は、エラーが返されます。 *triggerschema* DDL トリガーまたはログオン トリガーを指定することはできません。  
   
 `[ @order = ] 'value'` 新しいトリガー順序の設定です。 *値*は**varchar (10)** 値は次のいずれかを指定できます。  
   
@@ -61,8 +60,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  トリガーとして指定できる、**最初**または**最後**ステートメントの種類のトリガーとしてそのトリガーが定義した後にのみステートメントの種類のトリガー。 たとえば、トリガー **TR1**指定できるは**最初**テーブルに挿入**T1**場合**TR1** INSERT トリガーとして定義されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]エラーが返されます**TR1**、として設定されますが、INSERT トリガーとしてのみ定義されている、**最初**、または**最後**、UPDATE ステートメントをトリガーします。 詳細については、「解説」を参照してください。  
   
- **@namespace=** { **'DATABASE'** | **'SERVER'** | NULL }  
- ときに*triggername* 、DDL トリガーは、 **@namespace**を指定するかどうか*triggername*データベース スコープか、サーバー スコープで作成されました。 場合*triggername* 、ログオン トリガーは、サーバーを指定する必要があります。 DDL トリガーのスコープの詳細については、[DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)を参照してください。 指定しない場合、または NULL が指定されている場合*triggername* DML トリガーです。  
+ **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
+ ときに*triggername* 、DDL トリガーは、 **@namespace** を指定するかどうか*triggername*データベース スコープか、サーバー スコープで作成されました。 場合*triggername* 、ログオン トリガーは、サーバーを指定する必要があります。 DDL トリガーのスコープの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。 指定しない場合、または NULL が指定されている場合*triggername* DML トリガーです。  
   
 ||  
 |-|  

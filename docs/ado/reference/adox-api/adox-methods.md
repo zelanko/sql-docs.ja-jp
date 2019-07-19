@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 8de11ef7-034c-4613-91df-2244171f0b9a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 23a3bc56ad05f72875e86ee0c0d835f6c30118f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c96f28070fd06b48b4aeac40c3db6b8e7179830a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66708406"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928545"
 ---
 # <a name="adox-methods"></a>ADOX のメソッド
 
@@ -41,6 +40,6 @@ ms.locfileid: "66708406"
 |[SetObjectOwner](../../../ado/reference/adox-api/setobjectowner-method.md)|カタログ オブジェクトの所有者を指定します。|  
 |[SetPermissions](../../../ado/reference/adox-api/setpermissions-method-adox.md)|オブジェクトをグループまたはユーザーのアクセス許可を指定します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADOX の API リファレンス](../../../ado/reference/adox-api/adox-api-reference.md)   
  [データ定義言語とセキュリティの ADO 拡張機能 (ADOX)](../../../ado/guide/extensions/ado-extensions-for-data-definition-language-and-security-adox.md)

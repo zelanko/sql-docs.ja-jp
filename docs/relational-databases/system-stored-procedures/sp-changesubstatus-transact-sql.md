@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: 9370e47a-d128-4f15-9224-1c3642770c39
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 0040f986e5ff3b6de025761b32d2f40e2e127d39
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: fe75ffcf1e8cdcc387acb48c882e247b21889c06
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529619"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113816"
 ---
 # <a name="spchangesubstatus-transact-sql"></a>sp_changesubstatus (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  既存のサブスクライバーの状態を変更します。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して実行されます。  
+  既存のサブスクライバーの状態を変更します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -75,7 +74,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 |値|説明|  
 |-----------|-----------------|  
-|**active**|サブスクライバーが同期され、データを受信します。|  
+|**アクティブ**|サブスクライバーが同期され、データを受信します。|  
 |**非アクティブ**|サブスクライブはしていませんが、サブスクライバーのエントリが存在します。|  
 |**サブスクライブしています。**|サブスクライバーはデータを要求していますが、まだ同期はとられていません。|  
   
@@ -93,7 +92,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 |-----------|-----------------|  
 |**1**|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
 |NULL (既定値)||  
@@ -120,9 +119,9 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
   
 `[ @active_end_date = ] active_end_date` ディストリビューション タスクを停止した日付スケジュールに yyyymmdd です。 *active_end_date*は**int**、既定値は NULL です。  
   
-`[ @optional_command_line = ] 'optional_command_line'` オプションのコマンド プロンプトです。 *optional_command_line*は**nvarchar (4000)**、既定値は NULL です。  
+`[ @optional_command_line = ] 'optional_command_line'` オプションのコマンド プロンプトです。 *optional_command_line*は**nvarchar (4000)** 、既定値は NULL です。  
   
-`[ @distribution_jobid = ] distribution_jobid` サブスクリプションの状態を非アクティブからアクティブに変更するときに、サブスクリプションのディストリビューターでディストリビューション エージェントのジョブの ID です。 その他の場合は、定義されません。 このストアド プロシージャに 1 回の呼び出しでは、複数のディストリビューション エージェントが関係している場合、結果が定義されていません。 *distribution_jobid*は**binary (16)**、既定値は NULL です。  
+`[ @distribution_jobid = ] distribution_jobid` サブスクリプションの状態を非アクティブからアクティブに変更するときに、サブスクリプションのディストリビューターでディストリビューション エージェントのジョブの ID です。 その他の場合は、定義されません。 このストアド プロシージャに 1 回の呼び出しでは、複数のディストリビューション エージェントが関係している場合、結果が定義されていません。 *distribution_jobid*は**binary (16)** 、既定値は NULL です。  
   
 `[ @from_auto_sync = ] from_auto_sync` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   
@@ -165,7 +164,7 @@ sp_changesubstatus [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、またはサブスクリプションの作成者が実行できる**sp_changesubstatus**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
  [sp_helpdistributor &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributor-transact-sql.md)   

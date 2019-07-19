@@ -1,5 +1,5 @@
 ---
-title: パーティション ストレージ (Analysis Services - 多次元) の設定 |Microsoft ドキュメント
+title: パーティション ストレージ (Analysis Services - 多次元) の設定 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3410a8b26b9b9e26046a39f8ed5250ae9b82e67d
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34022899"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68165163"
 ---
 # <a name="set-partition-storage-analysis-services---multidimensional"></a>パーティション ストレージの設定 (Analysis Services - 多次元)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
-  [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]とキャッシュ オプションのストレージ モードにいくつかの標準的なストレージ構成を提供します。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] には、ストレージ モードおよびキャッシュ オプションの標準ストレージ構成がいくつか用意されています。 これにより、更新通知、待機時間、およびデータの再構築に一般的に使用される構成が提供されます。  
   
  パーティションのストレージは、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)]のキューブの [パーティション] タブ、または [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]のパーティション プロパティ ページで指定できます。  
   
@@ -39,7 +39,7 @@ ms.locfileid: "34022899"
   
 ## <a name="storage-settings-descriptions"></a>ストレージ設定の説明  
   
-|標準ストレージ設定|Description|  
+|標準ストレージ設定|説明|  
 |------------------------------|-----------------|  
 |リアルタイム ROLAP|OLAP はリアルタイムです。 詳細データと集計は、リレーショナル形式で格納されます。 サーバーはデータ変更時の通知をリッスンし、すべてのクエリにデータの現在の状態が反映されます (待機時間ゼロ)。<br /><br /> この設定は通常、最新のデータが常に必要とされている場合に、頻繁に継続して更新されるデータ ソースに対して使用します。 クライアント アプリケーションで生成されるクエリの種類によっては、この方法の応答時間が最も遅くなる場合があります。|  
 |リアルタイム HOLAP|OLAP はリアルタイムです。 詳細データはリレーショナル形式で格納され、集計は多次元形式で格納されます。 サーバーはデータ変更時の通知をリッスンし、必要に応じて多次元 OLAP (MOLAP) 集計を更新します。 MOLAP キャッシュは作成されません。 データ ソースが更新されるたびに、集計が更新されるまで、サーバーはリアルタイムのリレーショナル OLAP (ROLAP) に切り替わります。 すべてのクエリにデータの現在の状態が反映されます (待機時間ゼロ)。<br /><br /> この設定は通常、最新のデータが常に必要とされている場合に、リアルタイム ROLAP が必要なほどではないが、頻繁に継続して更新されるデータ ソースに対して使用します。 通常、この方法の全体的なパフォーマンスは ROLAP ストレージよりも優れています。 ある程度の期間にわたってデータ ソースが一定に保たれる場合は、この設定によって MOLAP のパフォーマンスを得ることができます。|  
@@ -62,7 +62,7 @@ ms.locfileid: "34022899"
   
  **[設定をディメンションに適用する]** チェック ボックスをオンにした場合は、メジャー グループに関連するディメンションに同じストレージ設定が適用されます。 ディメンションの値は、最初はパーティション値と同じになります。  
   
-## <a name="see-also"></a>参照  
- [多次元モデルではパーティション](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
+## <a name="see-also"></a>関連項目  
+ [多次元モデル内のパーティション](../../analysis-services/multidimensional-models/partitions-in-multidimensional-models.md)  
   
   

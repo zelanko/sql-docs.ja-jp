@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 88b6d05c-d4eb-4ab1-bbe2-95d146237f94
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a3e8d6252ffb405d7dfb28905cef06bb483d1c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7596f9728f7a51a5d28a3c1a19943efff783ac62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712543"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964000"
 ---
 # <a name="internettimeout-property-example-vc"></a>InternetTimeout プロパティの例 (VC++)
 > [!IMPORTANT]
@@ -156,7 +155,7 @@ void PrintComError(_com_error &e)
 // EndInternetTimeoutCpp  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [InternetTimeout プロパティ (RDS)](../../../ado/reference/rds-api/internettimeout-property-rds.md)
 
 

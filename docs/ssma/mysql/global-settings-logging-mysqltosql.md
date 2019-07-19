@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 0d033492-5ec3-473a-8de1-821894ec9518
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 225d0cd15aa170edc146eda0615a708ab0fe3ce2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3d5188d701cd7930ff93c37aab74e11bba949d9b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63195157"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896391"
 ---
 # <a name="global-settings-logging--mysqltosql"></a>グローバル設定 (ログ) (MySQLToSQL)
 使用して、**グローバル設定**SSMA のログ記録設定を指定 ダイアログ ボックス。 通常、製品サポートを使用する場合にのみ、これらの設定を変更するは。  
@@ -26,7 +25,7 @@ ms.locfileid: "63195157"
 **メッセージ レベル**  
 次のオプションが **メッセージ レベル**:  
   
-|オプション|説明|  
+|OPTION|説明|  
 |----------|---------------|  
 |**[すべてのカテゴリ]**|次のオプションのすべてのログ記録レベルを設定するために使用します。|  
 |**コレクター**|送信元スキーマに関するメタデータを収集し、プロジェクトに保存します。|  

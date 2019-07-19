@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 17277ab3-33ad-44d3-a81c-a26b5e338512
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 2c26aff8220d2ebaf4024a881e8b48f165999f8f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0f466d98d5d1edec2efa824ac644ad6bb49e990a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63208474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68022165"
 ---
 # <a name="using-sqlbindcol"></a>SQLBindCol の使用
 アプリケーションが呼び出すことによって列をバインド**SQLBindCol**します。 この関数は、一度に 1 つの列をバインドします。 アプリケーションは、次を指定します。  

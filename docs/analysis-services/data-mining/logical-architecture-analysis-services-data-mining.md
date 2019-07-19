@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 2fe6eb33c95c54f7762c8c5c0feb08db87c01df3
-ms.sourcegitcommit: 7fe14c61083684dc576d88377e32e2fc315b7107
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/26/2018
-ms.locfileid: "50145528"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68209933"
 ---
 # <a name="logical-architecture-analysis-services---data-mining"></a>論理アーキテクチャ (Analysis Services - データ マイニング)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -99,7 +99,7 @@ ms.locfileid: "50145528"
  新しいアルゴリズムはそれぞれ使用する前に登録する必要があります。 アルゴリズムを登録するには、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]インスタンスの .ini ファイルにアルゴリズムに必要なメタデータを追加します。 新しいアルゴリズムを使用する各インスタンスに情報を追加する必要があります。 アルゴリズムを追加したら、インスタンスを再起動し、MINING_SERVICES スキーマ行セットを使用して、新しいアルゴリズムを表示し、そのアルゴリズムでサポートされているオプション、プロバイダーなどを確認できます。  
   
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルの処理 (Analysis Services)](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)   
  [データ マイニング拡張機能 (DMX) リファレンス](../../dmx/data-mining-extensions-dmx-reference.md)  
   

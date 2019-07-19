@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: f216d1cd-997c-42f0-a737-abbdfcd88383
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 0b873a4d43d76fe27c7a807324c2fb60ce3d42fa
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 131cabc90680a9d1069802f4549c7c3754a78dec
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47719720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68053395"
 ---
 # <a name="syssyslanguages-transact-sql"></a>sys.syslanguages (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -36,15 +35,15 @@ ms.locfileid: "47719720"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|langid|**smallint**|一意な言語 ID。|  
-|dateformat|**nchar(3)**|日付の表示順序 (例 : DMY)。|  
-|datefirst|**tinyint**|週の最初の曜日。1 は月曜、2 は火曜のようになり、7 は日曜になります。|  
-|upgrade|**int**|システムでの使用のため予約済み。|  
+|langid|**smallint**|一意の言語 id です。|  
+|dateformat|**nchar(3)**|日付の表示順序たとえば、DMY をします。|  
+|datefirst|**tinyint**|週の最初の曜日:1 は月曜、7 の日曜日、火曜日の場合は 2 です。|  
+|アップグレード|**int**|システムの使用に予約されています。|  
 |NAME|**sysname**|たとえば、フランス語の公式言語名。|  
 |別名 (alias)|**sysname**|言語の別名 (例 : French)。|  
-|months|**nvarchar(372)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形ではなく、それぞれ 20 文字までです。|  
+|months|**nvarchar(372)**|各名前には 20 文字までに 12 の月、年 1 月から順に月の名のコンマ区切り一覧。|  
 |shortmonths|**nvarchar(132)**|1 月から 12 月の順に、コンマで区切った月の名前。月の名前は省略形で、それぞれ 9 文字までです。|  
-|日|**nvarchar(217)**|月曜から日曜の順に、コンマで区切った曜日の名前。曜日の名前はそれぞれ 30 文字までです。|  
+|日|**nvarchar(217)**|日曜日、月曜日から順に最大 30 文字を持つ名前はそれぞれの曜日名のコンマ区切りリスト。|  
 |lcid|**int**|この言語を使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows のロケール ID。|  
 |msglangid|**smallint**|[!INCLUDE[ssDE](../../includes/ssde-md.md)] メッセージ グループ id。|  
   
@@ -76,7 +75,7 @@ ms.locfileid: "47719720"
 |ロシア語|1049|1049|  
 |トルコ語|1055|1055|  
 |英語 (U.K.)|2057|1033|  
-|エストニア語|1061|1061|  
+|Estonian|1061|1061|  
 |ラトビア語|1062|1062|  
 |リトアニア語|1063|1063|  
 |ブラジル|1046|1046|  
@@ -86,7 +85,7 @@ ms.locfileid: "47719720"
 |アラビア語|1025|1025|  
 |タイ語|1054|1054|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [互換性ビュー &#40;TRANSACT-SQL&#41;](~/relational-databases/system-compatibility-views/system-compatibility-views-transact-sql.md)   
  [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)  
   

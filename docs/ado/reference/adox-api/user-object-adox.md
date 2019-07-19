@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f68e32ce-ef7c-407d-bdb5-d280947ae0e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6fb3ebf1921bf0e61fe9d5a8dcf9fc2cd0dce6c1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cf454e28e7a823eb643b5bbd92b0396fac15a028
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66705645"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67964974"
 ---
 # <a name="user-object-adox"></a>User オブジェクト (ADOX)
 セキュリティで保護されたデータベース内のアクセス許可を持つユーザー アカウントを表します。  
@@ -47,7 +46,7 @@ ms.locfileid: "66705645"
   
 -   [User オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/adox-api/user-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [GetPermissions および SetPermissions メソッドの例 (VB)](../../../ado/reference/adox-api/getpermissions-and-setpermissions-methods-example-vb.md)   
  [Groups コレクション (ADOX)](../../../ado/reference/adox-api/groups-collection-adox.md)   
  [Users コレクション (ADOX)](../../../ado/reference/adox-api/users-collection-adox.md)

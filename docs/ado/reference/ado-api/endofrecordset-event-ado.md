@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 475de5e2-f634-4954-9edf-0027a6ba38d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 414094da95076a7fb3781877645c5d43a03e6a7f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a83f101d46a94a4ea43a85424677fc1c8da08be
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66698219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67918939"
 ---
 # <a name="endofrecordset-event-ado"></a>EndOfRecordset イベント (ADO)
 **EndOfRecordset**イベントが呼び出されるは、行の末尾に移動する試みがあるときに、 [Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)します。  

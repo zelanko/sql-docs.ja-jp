@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dd755e46-f589-48a3-93a9-51ff998d44b5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 571c63e0b8e06c08fb066c3bb6b2d42a019895e5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0e7c29be102e9c5c7709816895a6647c95337c2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66710034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936614"
 ---
 # <a name="willexecute-event-ado"></a>WillExecute イベント (ADO)
 **WillExecute**接続で保留中のコマンドを実行する前に、イベントが呼び出されます。  
@@ -35,7 +34,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *Source*  
+ *ソース*  
  A**文字列**SQL コマンドまたはストアド プロシージャ名を格納しています。  
   
  *CursorType*  
@@ -69,7 +68,7 @@ WillExecute Source, CursorType, LockType, Options, adStatus, pCommand, pRecordse
   
  新しいソース文字列の言語が、元の設定と異なるかどうか、 [Dialect プロパティ](../../../ado/reference/ado-api/dialect-property.md)プロパティ (これに対応する、 **CommandStream**)、適切な言語を設定して指定する必要があります**言語**プロパティによって参照されるコマンド オブジェクトの*pCommand*します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ADO イベント モデルの例 (vc++)](../../../ado/reference/ado-api/ado-events-model-example-vc.md)   
  [ADO イベント ハンドラーの概要](../../../ado/guide/data/ado-event-handler-summary.md)   
  [Connection オブジェクト (ADO)](../../../ado/reference/ado-api/connection-object-ado.md)

@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: cce93ace-c4ed-4c6c-940c-28a50ff2fd12
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8337a6e93aba36e8b5838dcbf6d2e084fe022f1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 520c484bdaaa6eb59488900208993a607c5b0f7b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66700342"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67924115"
 ---
 # <a name="static-cursors"></a>静的カーソル
 静的カーソルは常に、カーソルが最初に開いたときと、結果セットを表示します。 静的カーソルでは、実装によっては、読み取り専用または読み取り/書き込みと前方と後方スクロールを指定します。 静的カーソルでは、メンバーシップ、順序、または、カーソルを開いた後に結果セットの値に加えられた変更は、通常は検出されません。 静的カーソルは、それ自体の更新、削除、挿入を検出してもかまいませんが、必ず行う必要はありません。  
@@ -28,7 +27,7 @@ ms.locfileid: "66700342"
   
  アプリケーションがデータの変更し、スクロールが必要なを検出する必要がない場合、最適な選択肢は、静的カーソル。 使用して、 **adOpenStatic CursorTypeEnum** ADO では静的カーソルを使用することを指定します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [順方向専用カーソル](../../../ado/guide/data/forward-only-cursors.md)   
  [Keyset カーソル](../../../ado/guide/data/keyset-cursors.md)   
  [動的カーソル](../../../ado/guide/data/dynamic-cursors.md)

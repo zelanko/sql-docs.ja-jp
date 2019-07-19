@@ -7,13 +7,12 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-manager: cgronlun
-ms.openlocfilehash: 4df9e266e16e2cc37ce527c19ba7be483e43d50a
-ms.sourcegitcommit: 46a2c0ffd0a6d996a3afd19a58d2a8f4b55f93de
+ms.openlocfilehash: 1672cdeb59dfe35e313c999549e46f3fd76b688e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/15/2019
-ms.locfileid: "59582685"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67962008"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-r-in-sql-server"></a>クイック スタート: 入力と SQL Server で R を使用する出力を処理します。
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -26,7 +25,7 @@ SQL Server で R コードを実行する場合は、ストアド プロシー�
 
 ストアド プロシージャが、出力として 1 つの R データ フレームを返しますが、スカラー、および変数としてモデルを出力することもできます。 たとえば、二項変数としてトレーニング済みモデルを出力し、そのモデルをテーブルに書き込む、T-SQL INSERT ステートメントに渡すできます。 (バイナリ形式) でのプロットまたはスカラーを生成することもできます (日付と時刻をなど、個々 の値、経過時間、モデルのトレーニングなど)。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 前のクイック スタート[SQL server が存在することを確認する R](quickstart-r-verify.md)情報を提供し、このクイック スタートに必要な R 環境を設定するためにリンクします。
 
@@ -72,7 +71,7 @@ SELECT * FROM RTestData
 
     ![テーブルからデータを返す R スクリプトからの出力](./media/r-output-rtestdata.png)
 
-2. 入力または出力変数の名前を変更してみましょう。 上記のスクリプトは既定の入力を使用し、出力変数名は、 _InputDataSet_と_OutputDataSet_します。 関連付けられている入力データを定義する_InputDatSet_を使用する、 *@input_data_1*変数。
+2. 入力または出力変数の名前を変更してみましょう。 上記のスクリプトは既定の入力を使用し、出力変数名は、 _InputDataSet_と_OutputDataSet_します。 関連付けられている入力データを定義する_InputDatSet_を使用する、 *@input_data_1* 変数。
 
     このスクリプトでは、ストアド プロシージャの出力と入力変数の名前に変更されましたが*SQL_out*と*SQL_in*:
 
@@ -92,7 +91,7 @@ SELECT * FROM RTestData
 
     `WITH RESULT SETS`ステートメントは、SQL Server で使用されるデータのスキーマを定義します。 R. から返す列ごとに SQL 互換のデータ型を提供する必要があります。スキーマ定義を使用して、新しい列名を提供するので、R データ フレームから列名を使用する必要はありません。
 
-3. また、R スクリプトを使用して値を生成し、入力クエリ文字列のままにできます_@input_data_1_空白。
+3. また、R スクリプトを使用して値を生成し、入力クエリ文字列のままにできます _@input_data_1_ 空白。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -107,7 +106,7 @@ SELECT * FROM RTestData
 
     ![使用してクエリ結果@script入力として](./media/r-data-generated-output.png)
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
 暗黙的な変換や表形式のデータで R と SQL の間の違いなど、R と SQL Server の間でデータを渡す場合に発生する可能性のある問題のいくつかを確認します。
 

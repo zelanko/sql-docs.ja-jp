@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bcebc635-c638-4ddb-924c-b9ccfef86388
 author: Shamikg
 ms.author: Shamikg
-manager: craigg
-ms.openlocfilehash: 2489442eb8de9d8d0ebfb5d8ed902dd2792e22f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff44d34e6c701c8d43260982d3117def4cb9530d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299152"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929455"
 ---
 # <a name="project-settings-conversion-accesstosql"></a>プロジェクトの設定 (変換) (AccessToSQL)
 変換のプロジェクト設定では、Access データベース オブジェクトからオブジェクトに変換する方法を構成できます。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]または SQL Azure データベースのオブジェクト。  
@@ -64,7 +63,7 @@ SSMA を主キーを許容する列を見つけたときに出力ウィンドウ
   
 -   **オプティミスティック モード**:メッセージはありません。  
   
--   **フル モード**:[エラー]  
+-   **フル モード**:Error  
   
 **外部キー列がさまざまなサイズの場合、メッセージの種類**  
 SSMA はテキスト外部のキーが正しくないを見つけたときに出力ウィンドウに表示するメッセージ (警告、エラー、または何も) の種類を指定します。  
@@ -73,7 +72,7 @@ SSMA はテキスト外部のキーが正しくないを見つけたときに出
   
 -   **オプティミスティック モード**:メッセージはありません。  
   
--   **フル モード**:[エラー]  
+-   **フル モード**:Error  
   
 **メッセージの種類はメモ列にインデックスを作成**  
 SSMA を含むインデックスを見つけたときに出力ウィンドウに表示するメッセージ (警告、エラー、または何も) の種類を指定します、**メモ**列。  
@@ -82,7 +81,7 @@ SSMA を含むインデックスを見つけたときに出力ウィンドウに
   
 -   **オプティミスティック モード**:メッセージはありません。  
   
--   **フル モード**:[エラー]  
+-   **フル モード**:Error  
   
 **複雑なクエリでワイルドカードを使用する場合に警告する (\&#42;)**  
 SELECT ステートメント内の列名がワイルドカード (*) である場合、出力ウィンドウおよびエラーの一覧で、警告が表示されます。  

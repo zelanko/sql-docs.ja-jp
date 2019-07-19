@@ -2,19 +2,18 @@
 title: ロック動作の Parallel Data Warehouse |Microsoft Docs
 description: Parallel Data Warehouse との使用方法のロック トランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するために説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 3f9862fed432036dcb4a3905fb3af1d3132349a5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d93743c83d6315e6ab9484445f344b06f80be845
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63280887"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960642"
 ---
 # <a name="locking-behavior-in-parallel-data-warehouse"></a>Parallel Data Warehouse でのロック動作
 Parallel Data Warehouse との使用方法のロック トランザクションの整合性を確保する複数のユーザーが同時にデータにアクセスするときに、データベースの一貫性を維持するために説明します。  
@@ -87,7 +86,7 @@ SQL Server では、次の種類のロックをサポートします。 すべ�
   
 -   I_u。 RangeI_N と U ロックの重なりによって作成されるキー範囲変換ロックです。  
   
--   RangeI_X. RangeI_N と X ロックの重なりによって作成されるキー範囲変換ロックです。  
+-   I_x。 RangeI_N と X ロックの重なりによって作成されるキー範囲変換ロックです。  
   
 -   RangeX_S します。 RangeI_N と RangeS_S ロックの重なりによって作成されるキー範囲変換 ロックです。  
   
@@ -95,7 +94,7 @@ SQL Server では、次の種類のロックをサポートします。 すべ�
   
 -   RangeX_X (排他キー範囲と排他リソース ロック)。 範囲内のキーを更新する場合に使用する変換ロックです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS 
 [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  
 -->

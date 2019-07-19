@@ -10,20 +10,20 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 31191e266b017400b8b8aceb2eb912f9bebca3d5
-ms.sourcegitcommit: 8a64c59c5d84150659a015e54f8937673cab87a0
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/08/2018
-ms.locfileid: "53071729"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68163480"
 ---
-# <a name="security-properties"></a>セキュリティのプロパティ
+# <a name="security-properties"></a>セキュリティ プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 次の表に示すセキュリティ サーバー プロパティがサポートされています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
  **適用対象:** 多次元および表形式サーバー モード  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  **RequireClientAuthentication**  
  クライアント認証が必要かどうかを示すブール型プロパティです。  
   

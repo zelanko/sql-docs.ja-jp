@@ -2,19 +2,18 @@
 title: ポーリング間隔 - Analytics Platform System の決定 |Microsoft Docs
 description: この記事では、Analytics Platform System appliance のアラートのポーリング頻度を決定する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: eec9e3e211c68b7f56fe6829a70064317b96e646
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2d305c766801ce27268e2d3bc873d9c361c034f0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221985"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961072"
 ---
 # <a name="determine-polling-frequency"></a>ポーリング間隔を決定します。
 この記事では、Analytics Platform System appliance のアラートのポーリング頻度を決定する方法について説明します。  
@@ -34,7 +33,7 @@ System Center によっても使用される一般的なアラートをポーリ
   
 頻繁にポーリングすることが許容されるが、煩雑になります。 ポーリング頻度が高すぎる、 [sys.dm_pdw_nodes_exec_requests](https://msdn.microsoft.com/library/ms177648(v=sql11).aspx) DMV。  ポーリング頻度が高すぎることが困難なユーザー クエリのパフォーマンスを診断する際に問題が非表示をすばやくロールします。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 <!-- MISSING LINKS [Common Metadata Query Examples &#40;SQL Server PDW&#41;](../sqlpdw/common-metadata-query-examples-sql-server-pdw.md)  -->  
 [アプライアンスの監視&#40;Analytics Platform System&#41;](appliance-monitoring.md)  
   

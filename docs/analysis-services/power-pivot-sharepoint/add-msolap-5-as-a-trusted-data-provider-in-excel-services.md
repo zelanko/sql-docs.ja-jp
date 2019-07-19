@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: d7576aadda3739709acdffcb1b2419c20d39ed4e
-ms.sourcegitcommit: c7a98ef59b3bc46245b8c3f5643fad85a082debe
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/12/2018
-ms.locfileid: "38979454"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164451"
 ---
 # <a name="add-msolap5-as-a-trusted-data-provider-in-excel-services"></a>Excel Services で信頼できるデータ プロバイダーとして MSOLAP.5 を追加
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -24,7 +24,7 @@ ms.locfileid: "38979454"
   
  この手順は、各 Excel Services サービス アプリケーションにつき 1 回実行するだけです。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーまたは Excel Services サーバーなど、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ要求を処理する物理サーバーでは、コンピューターに OLE DB プロバイダーをインストールする必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールには常に OLE DB プロバイダーが含まれていますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がないコンピューターで Excel Services が実行されている場合は、プロバイダーを手動でインストールする必要があります。 詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint サーバーまたは Excel Services サーバーなど、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ要求を処理する物理サーバーでは、コンピューターに OLE DB プロバイダーをインストールする必要があります。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールには常に OLE DB プロバイダーが含まれていますが、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint がないコンピューターで Excel Services が実行されている場合は、プロバイダーを手動でインストールする必要があります。 「 [SharePoint サーバーへの Analysis Services OLE DB プロバイダーのインストール](http://msdn.microsoft.com/2c62daf9-1f2d-4508-a497-af62360ee859)」を参照してください。  
   
 ## <a name="add-a-trusted-provider-to-excel-services"></a>Excel Services に信頼できるプロバイダーを追加する  
   
@@ -40,6 +40,6 @@ ms.locfileid: "38979454"
   
 6.  [プロバイダーの種類] では、OLE DB が選択されていることを確認します。  
   
-7.  [プロバイダーの説明] に、「 **Microsoft OLE DB プロバイダー (OLAP Services 11.0 用)**」と入力します。  
+7.  [プロバイダーの説明] に、「 **Microsoft OLE DB プロバイダー (OLAP Services 11.0 用)** 」と入力します。  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: f53cd4b5-0721-4562-a90f-4c55e6030cb9
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: cd2bc95e6fe5468e88fc61dd8ed4adcd985ec052
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 51619902398f0e3d0a8307a0c76a40ab898ce88d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62633017"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67912441"
 ---
 # <a name="text-file-format-text-file-driver"></a>テキスト ファイルの形式 (テキスト ファイル ドライバー)
 テキストの ODBC ドライバーでは、両方の区切りと固定幅テキスト ファイルをサポートします。 テキスト ファイルは、省略可能なヘッダー行と 0 個以上のテキスト行で構成されます。  
@@ -38,7 +37,7 @@ ms.locfileid: "62633017"
   
  次の文章では、プログラマにとっては、書き込まれるには、テキストの ODBC ドライバーで読み取ることができるテキスト ファイルの形式を定義します。  
   
-|形式|[表記]|  
+|Format|表現|  
 |------------|--------------------|  
 |非斜体|文字に示すように入力する必要があります。|  
 |*斜体*|文法で定義されている引数|  

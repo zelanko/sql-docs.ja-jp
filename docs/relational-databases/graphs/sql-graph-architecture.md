@@ -13,14 +13,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: shkale-msft
 ms.author: shkale
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ed234a487d5c382400b3a839820a4509c8b880f2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0124126556967800e37b296a73bd951a18d3936e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63026827"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035978"
 ---
 # <a name="sql-graph-architecture"></a>SQL グラフ アーキテクチャ  
 [!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
@@ -33,7 +32,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
  
 ![sql のアーキテクチャ グラフ](../../relational-databases/graphs/media/sql-graph-architecture.png "Sql グラフ データベース アーキテクチャ")   
 
-図 1:SQL グラフ データベース アーキテクチャ
+図 1: SQL グラフ データベース アーキテクチャ
  
 ## <a name="node-table"></a>ノード テーブル
 ノード テーブルでは、グラフのスキーマのエンティティを表します。 ノード テーブルが作成されるたびに、ユーザー定義の列と共に暗黙`$node_id`列を作成すると、データベース内の特定のノードを一意に識別します。 内の値`$node_id`の組み合わせは、自動的に生成される`object_id`のノード テーブルと内部的に生成された bigint 値。 ただし、ときに、`$node_id`列を選択すると、JSON 文字列の形式での計算値が表示されます。 また、`$node_id`は、16 進数の文字列と内部名にマップされる擬似列です。 選択すると`$node_id`として、テーブルから列名が表示されます`$node_id_<hex_string>`します。 内部クエリを実行する推奨される方法は、クエリで擬似列名を使用して`$node_id`列と 16 進文字列と内部名を使用を避ける必要があります。
@@ -58,7 +57,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 
 ![テーブル-人の友人](../../relational-databases/graphs/media/person-friends-tables.png "/people/person ノードや友人のエッジ テーブル")   
 
-図 2:ノードとエッジ テーブルの表現
+図 2: ノードとエッジ テーブルの表現
 
 
 

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: e598d4c8-3041-4965-b046-dce3a8e3d3e0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1ef80206f9ff82cf1ab2917e90f61432be15c190
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: f55025f8eec24925aec8661c46b81a1a40ed2aa6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47838430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67909072"
 ---
 # <a name="sysmailhelpconfiguresp-transact-sql"></a>sysmail_help_configure_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,26 +39,26 @@ sysmail_help_configure_sp  [ [ @parameter_name = ] 'parameter_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
- [**@parameter_name** =] **'***parameter_name***'**  
- 取得する構成設定の名前を指定します。 指定した場合、構成設定の値が返されます、 **@parameter_value**出力パラメーター。 ない場合**@parameter_name**を指定すると、このストアド プロシージャは、すべてのインスタンスでデータベース メール構成設定を含む結果セットを返します。  
+ [ **@parameter_name** =] **'***parameter_name***'**  
+ 取得する構成設定の名前。 指定した場合、構成設定の値が返されます、 **@parameter_value** 出力パラメーター。 ない場合 **@parameter_name** を指定すると、このストアド プロシージャは、すべてのインスタンスでデータベース メール構成設定を含む結果セットを返します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
 ## <a name="result-sets"></a>結果セット  
- ない場合**@parameter_name**が指定された場合、次の列を含む結果セットを返します。  
+ ない場合 **@parameter_name** が指定された場合、次の列を含む結果セットを返します。  
   
 ||||  
 |-|-|-|  
 |列名|データ型|説明|  
-|**paramname**|**nvarchar (256)**|構成パラメーターの名前|  
+|**paramname**|**nvarchar (256)**|構成パラメーターの名前。|  
 |**paramvalue**|**nvarchar (256)**|構成パラメーターの値|  
 |**description**|**nvarchar (256)**|構成パラメーターの説明|  
   
 ## <a name="remarks"></a>コメント  
  ストアド プロシージャ**sysmail_help_configure_sp**インスタンスの現在のデータベース メール構成設定を一覧表示されます。  
   
- ときに、 **@parameter_name**を指定の出力パラメーターが指定されていないが、 **@parameter_value**、このストアド プロシージャが出力を生成しません。  
+ ときに、 **@parameter_name** を指定の出力パラメーターが指定されていないが、 **@parameter_value** 、このストアド プロシージャが出力を生成しません。  
   
  ストアド プロシージャ**sysmail_help_configure_sp**では、 **msdb**が所有するデータベースにあり、 **dbo**スキーマ。 現在のデータベースがない場合は、3 つの部分の名前を持つプロシージャを起動する必要があります**msdb**します。  
   
@@ -88,7 +87,7 @@ ProhibitedExtensions            exe,dll,vbs,js  Extensions not allowed in outgoi
   
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベース メール ストアド プロシージャ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
   

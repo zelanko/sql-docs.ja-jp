@@ -11,11 +11,11 @@ author: minewiskan
 manager: kfile
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
 ms.openlocfilehash: d354aa64e8b6a1e98941011c30550a056f4c01c9
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685579"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68162788"
 ---
 # <a name="object-level-security"></a>オブジェクト レベルのセキュリティ
 [!INCLUDE[ssas-appliesto-sqlas-aas](../../includes/ssas-appliesto-sqlas-aas.md)]
@@ -89,7 +89,7 @@ ms.locfileid: "57685579"
 
 
 
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [Roles](../../analysis-services/tabular-models/roles-ssas-tabular.md)  
 [Roles オブジェクト (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/roles-object-tmsl)  
 [テーブル モデルのスクリプト言語 (TMSL)](https://docs.microsoft.com/bi-reference/tmsl/tabular-model-scripting-language-tmsl-reference)  

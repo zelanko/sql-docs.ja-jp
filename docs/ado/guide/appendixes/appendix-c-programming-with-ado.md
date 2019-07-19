@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 40af6e70-2a37-480f-aadc-92095d450af7
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 63dfa7de6bd952f86718b90ce446868c9d74be10
-ms.sourcegitcommit: f7fced330b64d6616aeb8766747295807c92dd41
+ms.openlocfilehash: d06cf8343bf100077fccc34645ccb14dbdbfaae6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/23/2019
-ms.locfileid: "63302325"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67926870"
 ---
 # <a name="appendix-c-programming-with-ado-in-development-environments"></a>付録 C開発環境での ADO を使用したプログラミング
 ADO は、Microsoft Visual Basic、VBScript、JScript、Visual C など、多くのプログラミング言語で使用できる COM オートメーション インターフェイス コンポーネントです。 ADO のバージョンは、これらのツールと Microsoft Office や Microsoft SQL Server などの他のアプリケーションの各と共にインストールされます。
@@ -33,5 +32,5 @@ ADO は、Microsoft Visual Basic、VBScript、JScript、Visual C など、多く
 
 -   [Microsoft Visual C++ での ADO の使用](../../../ado/guide/appendixes/using-ado-with-microsoft-visual-c.md)
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
  [ADO の API リファレンス](../../../ado/reference/ado-api/ado-api-reference.md)[付録 d:ADO サンプル](../../../ado/guide/appendixes/appendix-d-ado-samples.md) [RDS の構成](../../../ado/guide/remote-data-service/configuring-rds.md) [Microsoft ActiveX Data Objects (ADO)](../../../ado/microsoft-activex-data-objects-ado.md) [付録 a:プロバイダー](../../../ado/guide/appendixes/appendix-a-providers.md) [ADO 履歴](../../../ado/guide/ado-history.md)

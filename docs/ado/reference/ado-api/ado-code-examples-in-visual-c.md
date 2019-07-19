@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: af30b764-398f-4918-aaa7-3952226cf544
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5a727eaf511e65d46fb5c297c65bb1517cfb72c5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7741b6757cef08dcc4d5a05574f22c4f4538d97f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696885"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67921188"
 ---
 # <a name="ado-code-examples-in-visual-c"></a>Visual C++ での ADO のコード例
 次のコード例を使用して、ADO メソッド、プロパティ、および Microsoft Visual C で記述するときにイベントを使用する方法について説明します。  
@@ -76,7 +75,7 @@ ms.locfileid: "66696885"
   
 -   [UpdateBatch および CancelBatch メソッドの例](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)  
   
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
   
 -   [AbsolutePage、PageCount、PageSize プロパティの例](../../../ado/reference/ado-api/absolutepage-pagecount-and-pagesize-properties-example-vc.md)  
   
@@ -142,7 +141,7 @@ ms.locfileid: "66696885"
   
 -   [Version プロパティの例](../../../ado/reference/ado-api/version-property-example-vc.md)  
   
-## <a name="other"></a>その他  
+## <a name="other"></a>Other  
   
 -   [ADO イベント モデルの例](../../../ado/reference/ado-api/ado-events-model-example-vc.md)  
   

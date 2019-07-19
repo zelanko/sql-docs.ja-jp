@@ -2,19 +2,18 @@
 title: Analytics Platform System の修正プログラムの適用 |Microsoft Docs
 description: この記事では、Analytics Platform System のソフトウェアに修正プログラムを適用する方法について説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: b4b72017bb23ae44da9c5884f0ebf2a8b099fd3e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6af4a1eaf1e9891356fae40a3d3bb7f11e41dc6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63019047"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67961429"
 ---
 # <a name="apply-analytics-platform-system-hotfixes"></a>Analytics Platform System の修正プログラムの適用
 この記事では、Analytics Platform System のソフトウェアに修正プログラムを適用する方法について説明します。  
@@ -27,7 +26,7 @@ ms.locfileid: "63019047"
 > [!WARNING]  
 > アプライアンスを使用中に、Analytics Platform System の修正プログラムは適用されません。 修正プログラムを適用すると、アプライアンスのノードを再起動する可能性があります。 アプライアンスが使用されていないときに、メンテナンス期間中に、修正プログラムを適用する必要があります。  
   
-### <a name="prerequisites"></a>前提条件  
+### <a name="prerequisites"></a>必須コンポーネント  
 次の手順を実行するには、必要があります。  
   
 -   アプライアンスの状態を監視する管理コンソールにアクセスする権限を持つ、Analytics Platform System ログインします。 <!-- MISSING LINKS See [Grant Permissions to Use the Admin Console &#40;SQL Server PDW&#41;](../sqlpdw/grant-permissions-to-use-the-admin-console-sql-server-pdw.md).  -->  
@@ -61,7 +60,7 @@ Microsoft 更新プログラムとは異なり、Analytics Platform System の�
   
     4.  修正プログラム パッケージによって表される手順に従います。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
 [ダウンロードして Microsoft 更新プログラムを適用して&#40;Analytics Platform System&#41;](download-and-apply-microsoft-updates.md)  
 [Microsoft 更新プログラムのアンインストール&#40;Analytics Platform System&#41;](uninstall-microsoft-updates.md)  
 [Analytics Platform System の修正プログラムのアンインストール&#40;Analytics Platform System&#41;](uninstall-analytics-platform-system-hotfixes.md)  

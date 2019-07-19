@@ -18,22 +18,21 @@ helpviewer_keywords:
 ms.assetid: 9fe0d4fd-950a-4274-a493-85e776278045
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: d7e1c3534e510e2a18929331918db7b6cf3efa60
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 3ebcda61d95cc5131048ab32701d9d68228646ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51657461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68138409"
 ---
 # <a name="sysdmclrappdomains-transact-sql"></a>sys.dm_clr_appdomains (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サーバー内のアプリケーション ドメインごとに 1 行のデータを返します。 アプリケーション ドメイン (**AppDomain**) 内の構造では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]アプリケーションの分離の単位である共通言語ランタイム (CLR)。 このビューを使用するには理解やトラブルシューティングで実行されている CLR 統合オブジェクトに[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。  
   
- CLR 統合マネージド データベース オブジェクトにはいくつかの種類があります。 これらのオブジェクトについては、[共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)を参照してください。 これらのオブジェクトが実行されるたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成、 **AppDomain**下をロードして、必要なコードを実行します。 分離レベル、 **AppDomain**は 1 つ**AppDomain**データベースごとに所有者。 ユーザーによって所有されているすべての CLR オブジェクトは常に同じ実行は、 **AppDomain**データベースごと (場合、ユーザーは、CLR データベース オブジェクトが別のアプリケーション ドメインで実行が別のデータベース内の CLR データベース オブジェクトを登録)。 **AppDomain**コードの実行が終了した後は破棄されません。 代わりに、以降の実行に備えて、メモリ内にキャッシュされます。 これにより、パフォーマンスが向上します。  
+ CLR 統合マネージド データベース オブジェクトにはいくつかの種類があります。 これらのオブジェクトについては、次を参照してください。[共通言語ランタイム (CLR) 統合によるデータベース オブジェクトの構築](../../relational-databases/clr-integration/database-objects/building-database-objects-with-common-language-runtime-clr-integration.md)します。 これらのオブジェクトが実行されるたびに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]作成、 **AppDomain**下をロードして、必要なコードを実行します。 分離レベル、 **AppDomain**は 1 つ**AppDomain**データベースごとに所有者。 ユーザーによって所有されているすべての CLR オブジェクトは常に同じ実行は、 **AppDomain**データベースごと (場合、ユーザーは、CLR データベース オブジェクトが別のアプリケーション ドメインで実行が別のデータベース内の CLR データベース オブジェクトを登録)。 **AppDomain**コードの実行が終了した後は破棄されません。 代わりに、以降の実行に備えて、メモリ内にキャッシュされます。 これにより、パフォーマンスが向上します。  
   
- 詳細については、[アプリケーション ドメイン](https://go.microsoft.com/fwlink/p/?LinkId=299658)を参照してください。  
+ 詳細については、次を参照してください。[アプリケーション ドメイン](https://go.microsoft.com/fwlink/p/?LinkId=299658)します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

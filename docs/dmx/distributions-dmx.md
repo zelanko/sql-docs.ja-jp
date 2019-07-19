@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: e4ffd21a2b507e03af6534296715528d83aac0f6
-ms.sourcegitcommit: e77197ec6935e15e2260a7a44587e8054745d5c2
+ms.openlocfilehash: f4789a0e312decb2a46a9a1ba656fc5e4d3e9d47
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/11/2018
-ms.locfileid: "37992034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68070749"
 ---
 # <a name="distributions-dmx"></a>分布 (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -34,11 +33,11 @@ ms.locfileid: "37992034"
   
  詳細については[!INCLUDE[msCoName](../includes/msconame-md.md)]データ マイニング アルゴリズムを参照してください[データ マイニング アルゴリズム&#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)します。 サードパーティのアルゴリズム プロバイダーは、追加の分布の種類をサポートしている場合があります。 サポートする分布の種類のアルゴリズムを決定するを使用して、 **SUPPORTED_DISTRIBUTION_FLAGS**スキーマ行セット。  
   
- 分布の種類の詳細については、[列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)を参照してください。  
+ 分布の種類の詳細については、次を参照してください。[列の分布&#40;データ マイニング&#41;](../analysis-services/data-mining/column-distributions-data-mining.md)します。  
   
 ## <a name="see-also"></a>参照  
- [コンテンツの種類&#40;データ マイニング&#41;](../analysis-services/data-mining/content-types-data-mining.md)   
- [データ マイニング拡張機能&#40;DMX&#41;リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
+ [コンテンツの種類 &#40;です。 データ マイニング&#41;](../analysis-services/data-mining/content-types-data-mining.md)   
+ [データ マイニング拡張機能 &#40;DMX&#41; リファレンス](../dmx/data-mining-extensions-dmx-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;構文要素](../dmx/data-mining-extensions-dmx-syntax-elements.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [データ マイニング拡張機能&#40;DMX&#41;演算子リファレンス](../dmx/data-mining-extensions-dmx-operator-reference.md)   

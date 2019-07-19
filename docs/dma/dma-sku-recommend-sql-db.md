@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: HJToland3
 ms.author: jtoland
-manager: jroth
-ms.openlocfilehash: 5effd31d37af5fbe119f1ad23781b994fa89c240
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7d87df240d4b83e53ef8f670609d2c896df7fe62
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66794317"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68054673"
 ---
 # <a name="identify-the-right-azure-sql-databasemanaged-instance-sku-for-your-on-premises-database"></a>オンプレミス データベースの右側の Azure SQL Database/マネージ インスタンス SKU の識別します。
 
@@ -39,7 +38,7 @@ SKU の推奨事項機能では、Azure SQL Database の単一データベース
 
 Azure SQL データベースの SKU の推奨事項を特定し、対応する 1 つのデータベースまたは DMA を使用して Azure でのマネージ インスタンスをプロビジョニングするための手順を次に示します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>必須コンポーネント
 
 - 最新バージョンのインストールをダウンロードして[DMA](https://aka.ms/get-dma)します。 ツールの以前のバージョンが既にある、それを開いてし、DMA のアップグレードを求められます。
 - コンピューターにインストールすることを確認[PowerShell バージョン 5.1](https://www.microsoft.com/download/details.aspx?id=54616)または後で、すべてのスクリプトの実行に必要です。 コンピューターにどのバージョンの PowerShell がインストールされている findoug については、記事を参照してください。[をダウンロードして Windows PowerShell 5.1 をインストール](https://docs.microsoft.com/skypeforbusiness/set-up-your-computer-for-windows-powershell/download-and-install-windows-powershell-5-1)します。

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b9bbda36-a46a-4327-a01e-9cd632e4791b
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 47e1eec1aaa8162565f481b2d82982781e1a3c8c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9f144d9d896fb75af5f59850c249b9044d1b781
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62996100"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68046147"
 ---
 # <a name="spattachsubscription-transact-sql"></a>sp_attachsubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -56,7 +55,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="arguments"></a>引数  
 `[ @dbname = ] 'dbname'` 変換先のサブスクリプション データベースを名前を指定する文字列です。 *dbname*は**sysname**、既定値はありません。  
   
-`[ @filename = ] 'filename'` プライマリ mdf ファイルの物理的な場所と名前は、(**マスター**データ ファイル)。 *ファイル名*は**nvarchar (260)**、既定値はありません。  
+`[ @filename = ] 'filename'` プライマリ mdf ファイルの物理的な場所と名前は、(**マスター**データ ファイル)。 *ファイル名*は**nvarchar (260)** 、既定値はありません。  
   
 `[ @subscriber_security_mode = ] 'subscriber_security_mode'` 同期するサブスクライバーに接続するときに使用するサブスクライバーのセキュリティ モードです。 *subscriber_security_mode*は**int**、既定値は NULL です。  
   
@@ -91,7 +90,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。 可能であれば、実行時、ユーザーに対してセキュリティ資格情報の入力を要求します。 スクリプト ファイルに資格情報を格納する必要がある場合は、不正アクセスを防ぐために、ファイルを保護します。  
   
-`[ @job_login = ] 'job_login'` エージェントを実行する Windows アカウントのログインです。 *job_login*は**nvarchar (257)**、既定値はありません。 この Windows アカウントは常に、ディストリビューターへのエージェント接続で使用します。  
+`[ @job_login = ] 'job_login'` エージェントを実行する Windows アカウントのログインです。 *job_login*は**nvarchar (257)** 、既定値はありません。 この Windows アカウントは常に、ディストリビューターへのエージェント接続で使用します。  
   
 `[ @job_password = ] 'job_password'` エージェントを実行する Windows アカウントのパスワードです。 *job_password* は **sysname** 、既定値はありません。 値*job_password* 120 未満の Unicode 文字にする必要があります。  
   
@@ -114,7 +113,7 @@ sp_attachsubscription [ @dbname = ] 'dbname'
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_attachsubscription**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

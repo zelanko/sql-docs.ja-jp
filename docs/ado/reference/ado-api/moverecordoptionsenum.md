@@ -15,18 +15,17 @@ helpviewer_keywords:
 ms.assetid: f53c2ce4-1021-4a45-92b8-775e8bebad99
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8119b553ba7d85b9a3e1cabc49975967a0a751af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dcdb825073b267c3e3351001ecc7b11c969582e4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719188"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932044"
 ---
 # <a name="moverecordoptionsenum"></a>MoveRecordOptionsEnum
 動作を指定します、[レコード](../../../ado/reference/ado-api/record-object-ado.md)オブジェクト[MoveRecord](../../../ado/reference/ado-api/moverecord-method-ado.md)メソッド。  
   
-|定数|値|説明|  
+|定数|Value|説明|  
 |--------------|-----------|-----------------|  
 |**adMoveUnspecified**|-1|既定値です。 既定の移動操作を実行します。変換先ファイルまたはディレクトリが既に存在して、操作は、ハイパー テキスト リンクを更新する場合、操作は失敗します。|  
 |**adMoveOverWrite**|1|既に存在する場合でも、変換先ファイルまたはディレクトリを上書きします。|  

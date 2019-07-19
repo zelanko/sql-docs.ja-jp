@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 1d3f0ea6-87af-4836-807f-955e7df2b5df
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 8f4a32d9ab637de5b52466cfcb628a57ff6c044b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 53c091fd0b7a6cfdf390997fb5163fbc9d98e18c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62861729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023341"
 ---
 # <a name="pattern-value-arguments"></a>パターン値の引数
 などのいくつかの引数で、カタログ関数、 *TableName*引数**SQLTables**、検索パターンをそのまま使用します。 これらの引数は、検索パターンをそのまま使用する sql_false になります SQL_ATTR_METADATA_ID ステートメントの属性が設定されている場合。この属性が SQL_TRUE に設定されている場合、検索パターンを受け入れない識別子引数です。  
@@ -38,7 +37,7 @@ ms.locfileid: "62861729"
 |検索パターン|説明|  
 |--------------------|-----------------|  
 |%、%|文字 A を含むすべての識別子|  
-|ABC_|ABC で始まる 4 文字のすべての識別子|  
+|ABC _|ABC で始まる 4 文字のすべての識別子|  
 |ABC\\_|識別子のエスケープ文字と仮定した場合、abc _ は、円記号 (\\)|  
 |\\\\%|円記号で始まるすべての識別子 (\\)、エスケープ文字が円記号|  
   

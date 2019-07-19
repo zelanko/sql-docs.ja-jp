@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: dbdc2574-e44e-4d95-b03d-4a5d9e9adf3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 572738c966651e35f2980ea75c3770ddc4bd029d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f1c6a9f57d30b47641b9280e25a97336c28b0496
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66696181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67920169"
 ---
 # <a name="cancelbatch-method-ado"></a>CancelBatch メソッド (ADO)
 保留中のバッチ更新をキャンセルします。  
@@ -50,7 +49,7 @@ recordset.CancelBatchAffectRecords
 ## <a name="applies-to"></a>適用対象  
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [UpdateBatch および CancelBatch メソッドの例 (VB)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vb.md)   
  [UpdateBatch および CancelBatch メソッドの例 (vc++)](../../../ado/reference/ado-api/updatebatch-and-cancelbatch-methods-example-vc.md)   
  [Cancel メソッド (ADO)](../../../ado/reference/ado-api/cancel-method-ado.md)   

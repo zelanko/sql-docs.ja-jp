@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed09266-1547-4bda-9088-c254d81cc738
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5d0cd8a6196bdc0f933470a52dbb3567f64df05e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cc41c630b8201651e933f5d6538e6887e7933c95
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66718923"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67966501"
 ---
 # <a name="datemodified-property-adox"></a>DateModified プロパティ (ADOX)
 オブジェクトの最終更新日を示します。  
@@ -40,6 +39,6 @@ ms.locfileid: "66718923"
 |-|-|-|  
 |[Procedure オブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)|[Table オブジェクト (ADOX)](../../../ado/reference/adox-api/table-object-adox.md)|[View オブジェクト (ADOX)](../../../ado/reference/adox-api/view-object-adox.md)|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [DateCreated および DateModified プロパティの例 (VB)](../../../ado/reference/adox-api/datecreated-and-datemodified-properties-example-vb.md)   
  [DateCreated プロパティ (ADOX)](../../../ado/reference/adox-api/datecreated-property-adox.md)

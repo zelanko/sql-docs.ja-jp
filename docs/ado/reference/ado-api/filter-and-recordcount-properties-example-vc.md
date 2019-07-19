@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: b71346cb-3b09-4b8c-a600-976171a1c336
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45839834e25a94d584ac250503de153bf6fb0eb3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 38f7dc64507e79704a62f321d7513419cc3c15d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66694976"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67932668"
 ---
 # <a name="filter-and-recordcount-properties-example-vc"></a>Filter および RecordCount プロパティの例 (vc++)
 この例では、[フィルター](../../../ado/reference/ado-api/filter-property.md)プロパティを開き、新しい[Recordset](../../../ado/reference/ado-api/recordset-object-ado.md)既存に適用される指定した条件に基づいて**レコード セット**します。 使用して、 [RecordCount](../../../ado/reference/ado-api/recordcount-property-ado.md)プロパティを 2 つのレコードの数を表示する**レコード セット**します。 FilterField 関数は、この手順を実行する必要があります。  
@@ -287,7 +286,7 @@ void PrintComError(_com_error &e) {
 USA  
 ```  
   
-## <a name="sample-output"></a>サンプル出力  
+## <a name="sample-output"></a>出力例  
   
 ```  
 Orders in original recordset:  
@@ -303,7 +302,7 @@ Ramona Publishers, USA
 Scootney Books, USA  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [プロパティをフィルター処理します。](../../../ado/reference/ado-api/filter-property.md)   
  [RecordCount プロパティ (ADO)](../../../ado/reference/ado-api/recordcount-property-ado.md)   
  [Recordset オブジェクト (ADO)](../../../ado/reference/ado-api/recordset-object-ado.md)

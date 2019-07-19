@@ -1,5 +1,5 @@
 ---
-title: クロス検証の式 |Microsoft ドキュメント
+title: クロス検証の式 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 4776dffb30382c58ceb63ec0c2b55f8e4fcb42a4
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014969"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68210129"
 ---
 # <a name="cross-validation-formulas"></a>クロス検証の式
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -44,8 +44,8 @@ ms.locfileid: "34014969"
 |**Root mean squared error**|不連続属性。 対象の値を指定できますが、必須ではありません。|パーティション内のケースの数で割った、確率スコアの補数の 2 乗の平均の平方根。対象の属性の不足値がある行は除外されます。|  
 |**Root mean squared error**|不連続属性、対象の指定なし。|パーティション内のケースの数で割った、確率スコアの補数の 2 乗の平均の平方根。対象の属性の不足値があるケースは除外されます。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [テストおよび検証 &#40;データ マイニング&#41;](../../analysis-services/data-mining/testing-and-validation-data-mining.md)   
- [クロス検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
+ [相互検証 &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/data-mining/cross-validation-analysis-services-data-mining.md)  
   
   

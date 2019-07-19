@@ -19,19 +19,18 @@ helpviewer_keywords:
 ms.assetid: d69c2668-4260-4722-8c34-1c51caac307f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: bff2abca6d68e2de225bdbb2bb806c531b50804f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2f99078de7fccdd662fd0056b92453780da445d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63242348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68030668"
 ---
 # <a name="sqlgetstmtoption-function"></a>SQLGetStmtOption 関数
 **準拠**  
  バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
   
- **まとめ**  
+ **概要**  
  ODBC 3.*x* では、ODBC 2.0 の関数 **SQLGetStmtOption** が **SQLGetStmtAttr** に置き換えられました。 詳細については、次を参照してください。 [SQLGetStmtAttr](../../../odbc/reference/syntax/sqlgetstmtattr-function.md)します。  
   
 > [!NOTE]  

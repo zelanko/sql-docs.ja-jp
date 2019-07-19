@@ -8,13 +8,12 @@ ms.topic: conceptual
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 8e061269ebf864a93d6dde50455627cf8e2ea780
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12eddedce5d00c1bbc9e71995c2c9ceab34386d6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62659215"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68074725"
 ---
 # <a name="predictcaselikelihood-dmx"></a>PredictCaseLikelihood (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
@@ -50,7 +49,7 @@ PredictCaseLikelihood([NORMALIZED|NONNORMALIZED])
   
 -   y = トレーニング ケースの数に基づいたケースの対数尤度として計算周辺確率値の大文字と小文字  
   
--   Z = Exp( log(x) - Log(Y))  
+-   Z = Exp (log(x) - Log(Y))  
   
  正規化された = (z/(1 + z))  
   
@@ -80,7 +79,7 @@ NATURAL PREDICTION JOIN
   
  これらの結果の違いは、正規化の影響を示します。 生の値**CaseLikelihood**提案のケースの確率は約 20%; ただし、結果を正規化すると明らかになります、ケースの発生確率が非常に低いことです。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)   
  [データ マイニング拡張機能&#40;DMX&#41;関数リファレンス](../dmx/data-mining-extensions-dmx-function-reference.md)   
  [関数&#40;DMX&#41;](../dmx/functions-dmx.md)   

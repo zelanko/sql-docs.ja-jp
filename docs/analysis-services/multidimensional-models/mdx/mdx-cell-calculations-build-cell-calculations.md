@@ -1,5 +1,5 @@
 ---
-title: MDX (MDX) でのセル計算の作成 |Microsoft ドキュメント
+title: MDX (MDX) でのセル計算の構築 |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,13 +10,13 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: e2263ac667b65def1bd59745e3cfef711820b494
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34021649"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208787"
 ---
-# <a name="mdx-cell-calculations---build-cell-calculations"></a>ビルドのセル計算の MDX セル計算
+# <a name="mdx-cell-calculations---build-cell-calculations"></a>MDX セル計算 - ビルドのセル計算
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
   多次元式 (MDX) では、計算されるメンバー、カスタム ロールアップ、およびカスタム メンバーなど、計算値を生成するための多数のツールを使用できます。 しかし、これらの機能を使用して特定のセル セットや、さらには単一セルに影響を与えるのは困難です。  
   
@@ -34,10 +34,10 @@ ms.locfileid: "34021649"
   
      CREATE CELL CALCULATION または ALTER CUBE ステートメントを使用してセッションでの計算されるセルを作成する方法の詳細については、「 [セッション スコープの計算されるセルの作成](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-session-scoped-calculated-cells.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ALTER CUBE ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-definition-alter-cube.md)   
  [CREATE CELL CALCULATION ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-cell-calculation.md)   
- [クエリ スコープのセル計算 &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
+ [クエリ スコープのセル計算の作成 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-cell-calculations-query-scoped-cell-calculations.md)   
  [MDX クエリの基礎 &#40;Analysis Services&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-fundamentals-analysis-services.md)  
   
   

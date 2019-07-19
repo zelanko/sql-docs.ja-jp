@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 37b0983e-3b69-4f0f-977e-20efce0a0b97
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: c86f2b8ba6b9cc7223fa9fa16794ee69aa9cf46e
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: 42c350876037c83505860c65b26f4302d75b6eed
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58533264"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68122548"
 ---
 # <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -50,13 +49,13 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @distributor = ] 'distributor' OUTPUT` ディストリビューターの名前です。 ディストリビューターは**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @distributor = ] 'distributor' OUTPUT` ディストリビューターの名前です。 ディストリビューターは**sysname**、既定値は **%** 、これは、値だけを結果セットを返します。  
   
-`[ @distribdb = ] 'distribdb' OUTPUT` ディストリビューション データベースの名前です。 *distribdb*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @distribdb = ] 'distribdb' OUTPUT` ディストリビューション データベースの名前です。 *distribdb*は**sysname**、既定値は **%** 、これは、値だけを結果セットを返します。  
   
-`[ @directory = ] 'directory' OUTPUT` 作業ディレクトリです。 *ディレクトリ*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @directory = ] 'directory' OUTPUT` 作業ディレクトリです。 *ディレクトリ*は**nvarchar (255)** 、既定値は **%** 、これは、値だけを結果セットを返します。  
   
-`[ @account = ] 'account' OUTPUT` [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウント。 *アカウント*は**nvarchar (255)**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @account = ] 'account' OUTPUT` [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ユーザー アカウント。 *アカウント*は**nvarchar (255)** 、既定値は **%** 、これは、値だけを結果セットを返します。  
   
 `[ @min_distretention = ] _min_distretentionOUTPUT` ディストリビューションの最小保有期間を時間単位です。 *min_distretention*は**int**、既定値は **-1**します。  
   
@@ -64,17 +63,17 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 `[ @history_retention = ] _history_retentionOUTPUT` 時間の履歴の保有期間です。 *history_retention*は**int**、既定値は **-1**します。  
   
-`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 履歴クリーンアップ エージェントの名前です。 *history_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @history_cleanupagent = ] 'history_cleanupagent' OUTPUT` 履歴クリーンアップ エージェントの名前です。 *history_cleanupagent*は**nvarchar (100)** 、既定値は **%** 、これは、値だけを結果セットを返します。  
   
-`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` ディストリビューション クリーンアップ エージェントの名前です。 *distrib_cleanupagent*は**nvarchar (100)**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @distrib_cleanupagent = ] 'distrib_cleanupagent' OUTPUT` ディストリビューション クリーンアップ エージェントの名前です。 *distrib_cleanupagent*は**nvarchar (100)** 、既定値は **%** 、これは、値だけを結果セットを返します。  
   
 `[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**、既定値は NULL です。  
   
-`[ @local = ] 'local'` あるかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカル サーバーの値を取得する必要があります。 *ローカル*は**nvarchar (5)**、既定値は NULL です。  
+`[ @local = ] 'local'` あるかどうか[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ローカル サーバーの値を取得する必要があります。 *ローカル*は**nvarchar (5)** 、既定値は NULL です。  
   
-`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` リモート プロシージャ呼び出しを発行するサーバーの名前です。 *rpcsrvname*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @rpcsrvname = ] 'rpcsrvname' OUTPUT` リモート プロシージャ呼び出しを発行するサーバーの名前です。 *rpcsrvname*は**sysname**、既定値は **%** 、これは、値だけを結果セットを返します。  
   
-`[ @publisher_type = ] 'publisher_type' OUTPUT` 発行元のパブリッシャーの種類です。 *publisher_type*は**sysname**、既定値は**%**、これは、値だけを結果セットを返します。  
+`[ @publisher_type = ] 'publisher_type' OUTPUT` 発行元のパブリッシャーの種類です。 *publisher_type*は**sysname**、既定値は **%** 、これは、値だけを結果セットを返します。  
   
 ## <a name="result-sets"></a>結果セット  
   
@@ -82,15 +81,15 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |-----------------|---------------|-----------------|  
 |**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
 |**ディストリビューション データベース**|**sysname**|ディストリビューション データベースの名前です。|  
-|**directory**|**nvarchar (255)**|作業ディレクトリの名前です。|  
-|**account**|**nvarchar (255)**|Windows ユーザー アカウントの名前です。|  
+|**ディレクトリ**|**nvarchar (255)**|作業ディレクトリの名前です。|  
+|**アカウント**|**nvarchar (255)**|Windows ユーザー アカウントの名前です。|  
 |**min 配布 retention**|**int**|ディストリビューションの最小保有期間。|  
 |**max 配布 retention**|**int**|最大ディストリビューション保有期間。|  
 |**履歴の保有期間**|**int**|履歴の保有期間。|  
 |**履歴クリーンアップ エージェント**|**nvarchar(100)**|履歴クリーンアップ エージェントの名前です。|  
 |**ディストリビューション クリーンアップ エージェント**|**nvarchar(100)**|ディストリビューション クリーンアップ エージェントの名前です。|  
 |**rpc サーバー名**|**sysname**|リモートまたはローカルのディストリビューターの名前です。|  
-|**rpc login name**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
+|**rpc ログイン名**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
 |**パブリッシャーの種類**|**sysname**|パブリッシャーの種類次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -109,10 +108,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |account|**@account**|  
 |min 配布 retention|**@min_distretention**|  
 |max 配布 retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
+|履歴の保有期間|**@history_retention**|  
 |history cleanup agent|**@history_cleanupagent**|  
 |ディストリビューション クリーンアップ エージェント (distribution cleanup agent)|**@distrib_cleanupagent**|  
-|rpc ログイン名|なし|  
+|rpc ログイン名|none|  
   
  次の結果セット列は、ディストリビューターのパブリケーション用のパブリケーション アクセス リストのユーザーに返されます。  
   
@@ -124,10 +123,10 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |-----------------------|----------------------|  
 |ディストリビューター (distributor)|**@distributor**|  
 |ディストリビューション データベース (distribution database)|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
+|rpc サーバー名|**@rpcsrvname**|  
 |publisher type|**@publisher_type**|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
  [sp_adddistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistpublisher-transact-sql.md)   
  [sp_dropdistpublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)  

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 3bd5ddc549be0750d2476673511bab4de9cdf411
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52512761"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68164868"
 ---
 # <a name="work-with-diagrams-in-data-source-view-designer-analysis-services"></a>データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -81,7 +81,7 @@ ms.locfileid: "52512761"
   
  この問題を回避するには、最終的な調整を行う前に、最初にすべてのテーブルを追加します。 この場合は、後でダイアグラムを再度開くときに、オブジェクトは自らの位置を保持しています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [多次元モデルのデータ ソース ビュー](../../analysis-services/multidimensional-models/data-source-views-in-multidimensional-models.md)   
  [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](http://msdn.microsoft.com/library/6f40a074-761f-440b-a999-09b755bd86ce)  
   

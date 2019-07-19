@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 131395a5-cb18-4795-a7ae-fa09d8ff347f
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 1de46c12b0e05b592489e557a80138996ad9767f
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: b72a821c56f35e1ea7f3542b5746c234012c2da0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58528794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68137772"
 ---
 # <a name="sphelpmergeconflictrows-transact-sql"></a>sp_helpmergeconflictrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -73,7 +72,7 @@ sp_helpmergeconflictrows [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  メンバーだけ、 **sysadmin**固定サーバー ロール、 **db_owner**固定データベース ロール、および**replmonitor** を実行できるは、ディストリビューションデータベースでロール**sp_helpmergeconflictrows**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [マージ パブリケーションの競合情報の表示&#40;レプリケーション TRANSACT-SQL プログラミング&#41;](../../relational-databases/replication/view-conflict-information-for-merge-publications.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   

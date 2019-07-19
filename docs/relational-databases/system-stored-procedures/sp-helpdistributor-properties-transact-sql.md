@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ee267724-3244-49eb-84c9-f38dbefdd639
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: fe85b3e088e5ae39cdd70a599bdcf917aed00233
-ms.sourcegitcommit: ceb7e1b9e29e02bb0c6ca400a36e0fa9cf010fca
+ms.openlocfilehash: 61d11dd443e68d743b30cee890d33e4852c99b39
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/03/2018
-ms.locfileid: "52773744"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67902909"
 ---
 # <a name="sphelpdistributorproperties-transact-sql"></a>sp_helpdistributor_properties (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -41,7 +40,7 @@ sp_helpdistributor_properties
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**heartbeat_interval**|**int**|エージェントが進行状況のメッセージをログに記録せずに実行を継続できる最大時間 (分単位)。|  
+|**heartbeat_interval**|**int**|エージェントは、進行状況メッセージをログ記録しなくてもよい分の最大数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -52,7 +51,7 @@ sp_helpdistributor_properties
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**のメンバー、固定サーバー ロール、 **db_owner**または**replmonitor**内のユーザー、ディストリビューション データベースの固定データベース ロール、このディストリビューターを使用するパブリケーションのパブリケーション アクセス リスト (PAL) が実行できる**sp_helpdistributor_properties**します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_changedistributor_property &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributor-property-transact-sql.md)  
   
   

@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: e010e794-7f0f-4026-8b5b-37328e437d63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 152186c0bb1c2fb75197a920e06e0b6bb96dadd0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 15df27e3dc48decf743a78dd4d147a22dc7cf276
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66703319"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67931661"
 ---
 # <a name="parameter-object"></a>Parameter オブジェクト
 パラメーターまたはに関連付けられている引数を表します、[コマンド](../../../ado/reference/ado-api/command-object-ado.md)オブジェクトがパラメーター化クエリまたはストアド プロシージャに基づいています。  
@@ -51,7 +50,7 @@ ms.locfileid: "66703319"
   
 -   [パラメーター オブジェクトのプロパティ、メソッド、およびイベント](../../../ado/reference/ado-api/parameter-object-properties-methods-and-events.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [コマンド オブジェクト (ADO)](../../../ado/reference/ado-api/command-object-ado.md)   
  [CreateParameter メソッド (ADO)](../../../ado/reference/ado-api/createparameter-method-ado.md)   
  [Parameters コレクション (ADO)](../../../ado/reference/ado-api/parameters-collection-ado.md)   

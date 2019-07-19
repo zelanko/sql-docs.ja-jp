@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 6b7a630e-47f8-4ee1-b2a7-476bc1d0b0d4
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 256e964e556421db62dc8f52fdc6bc759c3a200a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 892fdabc319b1d495120cdce20d77f05cd232418
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63018352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67898829"
 ---
 # <a name="sqlgetinfo-text-file-driver"></a>SQLGetInfo (テキスト ファイル ドライバー)
 > [!NOTE]  

@@ -10,15 +10,15 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 5f0d49d6aeb8231dbffb56b42fe1151ae90d0e41
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52505220"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68181309"
 ---
 # <a name="upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013"></a>ブックのアップグレードと定期データ更新 (SharePoint 2013)
 [!INCLUDE[ssas-appliesto-sqlas](../../../includes/ssas-appliesto-sqlas.md)]
-  このトピックでは、以前の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックをアップグレードする方法について説明します。 新しい機能の詳細については、[Power Pivot で新](http://go.microsoft.com/fwlink/?LinkID=203917)を参照してください。  
+  このトピックでは、以前の [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 環境で作成されたブックのユーザー エクスペリエンスについて、およびこのリリースで導入された新機能を利用できるよう、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックをアップグレードする方法について説明します。 新しい機能の詳細については、次を参照してください。 [Power Pivot で新](http://go.microsoft.com/fwlink/?LinkID=203917)します。  
   
 > [!WARNING]  
 >  サーバーで自動的にアップグレードされるブックのアップグレードをロールバックすることはできません。 ブックのアップグレードが完了すると、アップグレードされた状態のままになります。 以前のバージョンを使用するには、以前のブックを SharePoint に再パブリッシュするか、以前のバージョンを復元するか、ブックを再利用します。 SharePoint でのドキュメントの復元または再利用の詳細については、「 [ごみ箱とバージョン管理を使用したコンテンツ保護を計画する](http://go.microsoft.com/fwlink/?LinkId=238669)」を参照してください。  
@@ -113,7 +113,7 @@ ms.locfileid: "52505220"
   
  **データ更新中に自動アップグレードを構成する方法**  
   
- 自動アップグレードを使用するには、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールで **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックを自動的にアップグレードして、サーバーからのデータ更新を有効にする]** チェック ボックスをオンにする必要があります。 ツールでこのチェック ボックスがあるのは、**[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] System サービスのアップグレード]** ページおよび新しいインストールを構成している場合の **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーションの作成]** ページです。  
+ 自動アップグレードを使用するには、[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールで **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] ブックを自動的にアップグレードして、サーバーからのデータ更新を有効にする]** チェック ボックスをオンにする必要があります。 ツールでこのチェック ボックスがあるのは、 **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] System サービスのアップグレード]** ページおよび新しいインストールを構成している場合の **[[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーションの作成]** ページです。  
   
  次のコマンドレットを実行して、自動アップグレードが有効かどうかを確認できます。  
   

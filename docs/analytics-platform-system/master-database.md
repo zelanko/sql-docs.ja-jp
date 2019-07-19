@@ -2,19 +2,18 @@
 title: Master データベースの Parallel Data Warehouse |Microsoft Docs
 description: Parallel Data Warehouse での master データベースについて説明します。
 author: mzaman1
-manager: craigg
 ms.prod: sql
 ms.technology: data-warehouse
 ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: bf07b9c27e08a49cb0866b177a0ec37fed4528a0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9f37c7a85baea3b41f6016a57e4f57579b427719
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63213297"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67960652"
 ---
 # <a name="master-database---parallel-data-warehouse"></a>Master データベースの Parallel Data Warehouse
 SQL Server PDW の master データベースには、アプライアンス レベルのログイン情報と、データベース カタログが格納されます。 コントロールのノード上に存在する SQL Server マスター データベースになります。 そのため、SQL Server PDW のような機能を提供マスターを SQL Server に提供します。  

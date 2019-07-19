@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: cc0286a3799aa56090fc6861b0a79b302b47aa26
-ms.sourcegitcommit: 2429fbcdb751211313bd655a4825ffb33354bda3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52544265"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208220"
 ---
 # <a name="deploy-power-pivot-solutions-to-sharepoint"></a>SharePoint への PowerPivot ソリューションの配置
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "52544265"
   
  このトピックには、次のセクションが含まれます。  
   
- [前提条件:Web アプリケーションがクラシック モード認証を使用することを確認します。](#bkmk_classic)  
+ [前提条件: Web アプリケーションがクラシック モード認証を使用することを確認します。](#bkmk_classic)  
   
  [ステップ 1: ファーム ソリューションを配置します。](#bkmk_farm)  
   
@@ -47,7 +47,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  戻り値が **false**になる必要があります。 **true**であれば、この Web アプリケーションで [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データにアクセスできません。  
   
-##  <a name="bkmk_farm"></a> 手順 1:ファーム ソリューションを配置します。  
+##  <a name="bkmk_farm"></a> ステップ 1:ファーム ソリューションを配置します。  
  このセクションでは、PowerShell を使用したソリューションの配置方法を紹介しますが、同じタスクを [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツールを使用して実行することもできます。 詳細については、「 [Power Pivot for SharePoint 2010 の構成または修復 (Power Pivot 構成ツール)](http://msdn.microsoft.com/d61f49c5-efaa-4455-98f2-8c293fa50046)」を参照してください。  
   
  このタスクは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint をインストールした後で、一度だけ実行する必要があります。  
@@ -68,7 +68,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
     Install-SPSolution -Identity PowerPivotFarm.wsp -GACDeployment -Force  
     ```  
   
-##  <a name="deployCA"></a> 手順 2:サーバーの全体管理の Power Pivot Web アプリケーション ソリューションをデプロイします。  
+##  <a name="deployCA"></a> ステップ 2:サーバーの全体管理の Power Pivot Web アプリケーション ソリューションをデプロイします。  
  ファーム ソリューションを配置した後で、サーバーの全体管理に Web アプリケーション ソリューションを配置する必要があります。 この手順によって、サーバーの全体管理に [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボードが追加されます。  
   
 1.  **[管理者として実行]** オプションを使用して SharePoint 2010 管理シェルを開きます。  
@@ -95,7 +95,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
   
  これで Web アプリケーション ソリューションがサーバーの全体管理に配置されたので、残りのすべての構成手順は、サーバーの全体管理を使用して実行できます。  
   
-##  <a name="deployUI"></a> 手順 3:その他の Web アプリケーションへの Power Pivot Web アプリケーション ソリューションを配置します。  
+##  <a name="deployUI"></a> ステップ 3:その他の Web アプリケーションへの Power Pivot Web アプリケーション ソリューションを配置します。  
  前のタスクでは、Powerpivotwebapp.wsp をサーバーの全体管理に配置しました。 ここでは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスをサポートする既存の各 Web アプリケーションに powerpivotwebapp.wsp を配置します。 後でさらに Web アプリケーションを追加する場合は、それらの追加の Web アプリケーションに対して、この手順を繰り返してください。  
   
 1.  サーバーの全体管理で、[システム設定] の **[ファーム ソリューションの管理]** をクリックします。  
@@ -147,7 +147,7 @@ Get-spwebapplication http://<top-level site name> | format-list UseClaimsAuthent
 |powerpivotfarm.wsp|Microsoft.AnalysisServices.SharePoint.Integration.dll をグローバル アセンブリに追加する。<br /><br /> Microsoft.AnalysisServices.ChannelTransport.dll をグローバル アセンブリに追加する。<br /><br /> 機能とリソース ファイルをインストールし、コンテンツ タイプを登録する。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリやデータ フィード ライブラリのライブラリ テンプレートを追加する。<br /><br /> サービス アプリケーションの構成、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 管理ダッシュボード、データ更新、および [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー用のアプリケーション ページを追加する。|  
 |[powerpivotwebapp.wsp]|Web フロントエンドの Web サーバー拡張機能フォルダーに Microsoft.AnalysisServices.SharePoint.Integration.dll リソース ファイルを追加する。<br /><br /> Web フロントエンドに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] Web サービスを追加する。<br /><br /> [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーのサムネイル画像生成を追加する。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Power Pivot for SharePoint のアップグレード](../../database-engine/install-windows/upgrade-power-pivot-for-sharepoint.md)   
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)   
  [Windows PowerShell を使用した Power Pivot の構成](../../analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell.md)  

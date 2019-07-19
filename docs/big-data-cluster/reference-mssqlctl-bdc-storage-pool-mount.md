@@ -1,21 +1,20 @@
 ---
-title: mssqlctl bdc storage-pool mount reference
+title: mssqlctl bdc 記憶域プールのマウントの参照
 titleSuffix: SQL Server big data clusters
 description: Mssqlctl bdc 記憶域プールのマウント コマンドに関する参照記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-manager: jroth
 ms.date: 06/26/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4204e87e96fd0d91a9bfbf64813583ef92d3202b
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: b6a412c6d7cab9fb869a9aa8ee1b62ae0ed3f717
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727480"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67958003"
 ---
 # <a name="mssqlctl-bdc-storage-pool-mount"></a>mssqlctl bdc 記憶域プールのマウント
 
@@ -27,9 +26,9 @@ ms.locfileid: "67727480"
 |     |     |
 | --- | --- |
 [mssqlctl bdc 記憶域プールのマウントを作成します。](#mssqlctl-bdc-storage-pool-mount-create) | HDFS では、リモートのストアのマウントを作成します。
-[mssqlctl bdc storage-pool mount delete](#mssqlctl-bdc-storage-pool-mount-delete) | HDFS 内の各店舗のマウントを削除します。
-[mssqlctl bdc storage-pool mount status](#mssqlctl-bdc-storage-pool-mount-status) | Mount(s) の状態です。
-## <a name="mssqlctl-bdc-storage-pool-mount-create"></a>mssqlctl bdc storage-pool mount create
+[mssqlctl bdc 記憶域プールのマウントの削除](#mssqlctl-bdc-storage-pool-mount-delete) | HDFS 内の各店舗のマウントを削除します。
+[mssqlctl bdc 記憶域プールのマウント状態](#mssqlctl-bdc-storage-pool-mount-status) | Mount(s) の状態です。
+## <a name="mssqlctl-bdc-storage-pool-mount-create"></a>mssqlctl bdc 記憶域プールのマウントを作成します。
 HDFS では、リモートのストアのマウントを作成します。 キーのコンマ区切りリストとして MOUNT_CREDENTIALS 環境変数を使用して、存在する場合に、リモートのストアにアクセスするための資格情報を指定する必要があります値のペアします。 キーまたは値のコンマをエスケープする必要があります。
 ```bash
 mssqlctl bdc storage-pool mount create --remote-uri 
@@ -62,7 +61,7 @@ mssqlctl bdc storage-pool mount create --remote-uri hdfs://namenode1:8080/ --mou
 JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
 #### `--verbose`
 ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
-## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>mssqlctl bdc storage-pool mount delete
+## <a name="mssqlctl-bdc-storage-pool-mount-delete"></a>mssqlctl bdc 記憶域プールのマウントの削除
 HDFS 内の各店舗のマウントを削除します。
 ```bash
 mssqlctl bdc storage-pool mount delete --mount-path 
@@ -87,7 +86,7 @@ mssqlctl bdc storage-pool mount delete --mount-path /mounts/adlsv2/data
 JMESPath クエリ文字列。 参照してください[ http://jmespath.org/ ](http://jmespath.org/])詳細と例。
 #### `--verbose`
 ログ記録を上げます。 完全なデバッグ ログのデバッグ - 使用します。
-## <a name="mssqlctl-bdc-storage-pool-mount-status"></a>mssqlctl bdc storage-pool mount status
+## <a name="mssqlctl-bdc-storage-pool-mount-status"></a>mssqlctl bdc 記憶域プールのマウント状態
 Mount(s) の状態です。
 ```bash
 mssqlctl bdc storage-pool mount status [--mount-path] 

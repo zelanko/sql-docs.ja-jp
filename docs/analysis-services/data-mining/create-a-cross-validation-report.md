@@ -1,5 +1,5 @@
 ---
-title: クロス検証レポートを作成 |Microsoft ドキュメント
+title: クロス検証レポートの作成 |Microsoft Docs
 ms.date: 05/01/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 88d3af205a1e92ac07a4c841c80f2abea463de9b
-ms.sourcegitcommit: c12a7416d1996a3bcce3ebf4a3c9abe61b02fb9e
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 05/10/2018
-ms.locfileid: "34014379"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68184115"
 ---
 # <a name="create-a-cross-validation-report"></a>クロス検証レポートの作成
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -85,7 +85,7 @@ ms.locfileid: "34014379"
   
 4.  選択した内容を、開いている Excel ブックに貼り付けます。 **[貼り付け]** オプションを使用すると、レポートが HTML として Excel に貼り付けられ、行と列の形式が維持されます。 **[形式を選択して貼り付け]** オプションを使用して、テキストまたは Unicode テキストとしてレポートを貼り付けると、行で区切られた形式でレポートが貼り付けられます。  
   
-## <a name="see-also"></a>参照  
- [クロス検証レポート内のメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
+## <a name="see-also"></a>関連項目  
+ [相互検証レポートのメジャー](../../analysis-services/data-mining/measures-in-the-cross-validation-report.md)  
   
   

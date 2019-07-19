@@ -20,19 +20,18 @@ helpviewer_keywords:
 ms.assetid: 580c03ae-57fc-4562-a6bb-5ec89521e38c
 author: stevestein
 ms.author: sstein
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 3b24b6b84e217cacf8146172ed09f21799df962f
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: b2027e284e40a28ed8636b9c4043c8ce4d49ca93
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47670830"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67896448"
 ---
 # <a name="spquerystoreflushdb-transact-sql"></a>sp_query_store_flush_db (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
-  クエリのストアのデータのメモリ内の部分をディスクにフラッシュします。  
+  クエリ ストアのデータのメモリ内の部分をディスクにフラッシュします。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -46,13 +45,13 @@ sp_query_store_flush_db [;]
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
   
-## <a name="remarks"></a>Remarks  
+## <a name="remarks"></a>コメント  
   
 ## <a name="permissions"></a>アクセス許可  
  必要があります、 **EXECUTE** 、データベースに対する権限と**削除**クエリ ストアのカタログ ビューに対する権限。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、クエリのストアのデータのメモリ内の部分をディスクにフラッシュします。  
+ 次の例では、クエリ ストアのデータのメモリ内の部分をディスクにフラッシュします。  
   
 ```  
 EXEC sp_query_store_flush_db;  

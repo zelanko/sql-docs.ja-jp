@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 773ef9b7-c993-4629-9516-70c47b9dcf65
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: cc1a800ff61bde8e4d446462143bf0d333a16fe7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45278a6d9501b75b624e11bbeb11d24d10e482c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62817132"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68056213"
 ---
 # <a name="iharticles-transact-sql"></a>IHarticles (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -51,7 +50,7 @@ ms.locfileid: "62817132"
 |**schema_option**|**binary(8)**|指定されたアーティクルに対するスキーマ生成オプションのビットマップです。次に示す 1 つ以上の値のビットごとの論理和演算をとります。<br /><br /> **0x00** = スナップショット エージェントによるスクリプト作成を無効にしては、指定されたいる creationscript を使用します。<br /><br /> **0x01** = オブジェクトの作成 (CREATE TABLE、CREATE PROCEDURE など) を生成します。<br /><br /> **0x10** = 対応するクラスター化インデックスを生成します。<br /><br /> **0x40**生成に対応する非クラスター化インデックスを = です。<br /><br /> **0x80** Include の主キーに関する宣言参照整合性を = です。<br /><br /> **0x1000** = 列レベルの照合順序をレプリケートします。 注:このオプションは、既定では大文字小文字を区別する比較を有効にする Oracle パブリッシャーに対して設定されます。<br /><br /> **0x4000** = テーブル アーティクルで定義されている場合、一意なキーをレプリケートします。<br /><br /> **0x8000** = ALTER TABLE ステートメントを使用して、制約として主キーと、テーブルの一意のキーの記事をレプリケートします。|  
 |**dest_owner**|**sysname**|目的のデータベースにおけるテーブルの所有者です。|  
 |**dest_table**|**sysname**|対象テーブルの名前です。|  
-|**tablespace_name**|**nvarchar (255)**|アーティクルのログ テーブルによって使用されるテーブルスペースを識別します。|  
+|**それには**|**nvarchar (255)**|アーティクルのログ テーブルによって使用されるテーブルスペースを識別します。|  
 |**objid**|**int**|このコラムでは使用されませんしするためだけに含まれている、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)の表示、 **IHarticles**と互換性のあるテーブル、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) SQL Server の記事 (使用するビュー[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
 |**sync_objid**|**int**|このコラムでは使用されませんしするためだけに含まれている、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md)の表示、 **IHarticles**と互換性のあるテーブル、 [sysarticles](../../relational-databases/system-views/sysarticles-system-view-transact-sql.md) SQL Server の記事 (使用するビュー[sysarticles](../../relational-databases/system-tables/sysarticles-transact-sql.md))。|  
 |**description**|**nvarchar (255)**|この記事の説明エントリします。|  
@@ -66,7 +65,7 @@ ms.locfileid: "62817132"
 |**instance_id**|**int**|パブリッシュされたテーブルに対するアーティクル ログの現在のインスタンスを識別します。|  
 |**use_default_datatypes**|**bit**|アーティクルが既定のデータ型マッピングを使用するかどうかを示す値**1**既定のデータ型マッピングを使用することを示します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   

@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 77ce3042-9ebc-44ba-a4ff-0f1b1fd4a9c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 644e9adf4537b3ac9b852131e010e4be9bfaa3c9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2a9c5f4f07b22f11869a21fc4855f4ae21b25c1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66719304"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67933062"
 ---
 # <a name="eos-and-lineseparator-properties-and-skipline-method-example-vb"></a>EOS および LineSeparator プロパティの SkipLine メソッドの例 (VB)
 この例では、一度に 1 つのテキスト ストリームの行を操作する方法を示します。 既定キャリッジ リターンとライン フィードから、行区切り記号を変更した効果 (**adCRLF**) を単にライン フィード (**adLF**) またはキャリッジ リターン (**adCR**) が表示されます。  
@@ -113,7 +112,7 @@ End Sub
 'EndSkipLineVB  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [EOS プロパティ](../../../ado/reference/ado-api/eos-property.md)   
  [LineSeparator プロパティ (ADO)](../../../ado/reference/ado-api/lineseparator-property-ado.md)   
  [SkipLine メソッド](../../../ado/reference/ado-api/skipline-method.md)

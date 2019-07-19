@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 4bbaeaab-8aca-4c9e-abc1-82ce73090bd3
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 54d96cf86b55a7c5a24917672bcae470a3bf7335
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: baecdca82d7edcb27196c7c43d9d071a82adf792
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58529574"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68084947"
 ---
 # <a name="spupdatealert-transact-sql"></a>sp_update_alert (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -75,7 +74,7 @@ sp_update_alert
   
 `[ @delay_between_responses = ] delay_between_responses` 新しい待機時間を秒単位の警告に応答します。 *delay_between_responses*は**int**、既定値は NULL です。  
   
-`[ @notification_message = ] 'notification_message'` 変更されたテキスト、電子メールの一部としてオペレーターに送信される追加メッセージの**net send**、またはポケットベル通知します。 *このパラメーター*は**nvarchar (512)**、既定値は NULL です。  
+`[ @notification_message = ] 'notification_message'` 変更されたテキスト、電子メールの一部としてオペレーターに送信される追加メッセージの**net send**、またはポケットベル通知します。 *このパラメーター*は**nvarchar (512)** 、既定値は NULL です。  
   
 `[ @include_event_description_in = ] include_event_description_in` 指定するかどうかの説明、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アプリケーション ログからのエラーは、通知メッセージに含める必要があります。 *include_event_description_in*は**tinyint**、既定値は null の場合、これらの値の 1 つ以上を指定できます。  
   
@@ -87,9 +86,9 @@ sp_update_alert
 |**4**|**net send**|  
 |**7**|All|  
   
-`[ @database_name = ] 'database'` 警告のエラーが発生する必要がある、データベースの名前。 *データベース*は**sysname です。** 角かっこ () で囲まれた名前を指定することはできません。 既定値は、NULL です。  
+`[ @database_name = ] 'database'` 警告のエラーが発生する必要がある、データベースの名前。 *データベース*は**sysname です。** 角かっこ () で囲まれた名前を指定することはできません。 既定値は NULL です。  
   
-`[ @event_description_keyword = ] 'event_description_keyword'` エラー メッセージのログのエラーの説明 で確認する必要がありますの文字のシーケンス。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のように、パターン検索文字を使用できます。 *event_description_keyword*は**nvarchar (100)**、既定値は NULL です。 このパラメーターはオブジェクト名をフィルター処理するために役立ちます (たとえば、 **%customer_table%**)。  
+`[ @event_description_keyword = ] 'event_description_keyword'` エラー メッセージのログのエラーの説明 で確認する必要がありますの文字のシーケンス。 [!INCLUDE[tsql](../../includes/tsql-md.md)] 式のように、パターン検索文字を使用できます。 *event_description_keyword*は**nvarchar (100)** 、既定値は NULL です。 このパラメーターはオブジェクト名をフィルター処理するために役立ちます (たとえば、 **%customer_table%** )。  
   
 `[ @job_id = ] job_id` ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。 場合*job_id*が指定されている*job_name*省略する必要があります。  
   
@@ -111,19 +110,19 @@ sp_update_alert
   
 `[ @raise_snmp_trap = ] raise_snmp_trap` 予約されています。  
   
-`[ @performance_condition = ] 'performance_condition'` 形式で表される値 **'***itemcomparatorvalue***'** します。 *performance_condition*は**nvarchar (512)**、既定値は null の場合、これらの要素で構成されています。  
+`[ @performance_condition = ] 'performance_condition'` 形式で表される値 **'***itemcomparatorvalue***'** します。 *performance_condition*は**nvarchar (512)** 、既定値は null の場合、これらの要素で構成されています。  
   
 |Format 要素|説明|  
 |--------------------|-----------------|  
 |*アイテム*|パフォーマンス オブジェクト、パフォーマンス カウンター、またはカウンターの名前付きインスタンス。|  
-|*比較演算子*|これらの演算子のいずれか: **>**、 **<**、 **=**|  
+|*比較演算子*|これらの演算子のいずれか: **>** 、 **<** 、 **=**|  
 |*[値]*|カウンターの数値|  
   
 `[ @category_name = ] 'category'` アラートのカテゴリの名前。 *カテゴリ*は**sysname**既定値は NULL です。  
   
 `[ @wmi_namespace = ] 'wmi_namespace'` イベントを照会する WMI 名前空間。 *wmi_namespace*は**sysname**、既定値は NULL です。  
   
-`[ @wmi_query = ] 'wmi_query'` このクエリは、警告に対する WMI イベントを指定します。 *wmi_query*は**nvarchar (512)**、既定値は NULL です。  
+`[ @wmi_query = ] 'wmi_query'` このクエリは、警告に対する WMI イベントを指定します。 *wmi_query*は**nvarchar (512)** 、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -149,7 +148,7 @@ EXEC dbo.sp_update_alert
 GO  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_add_alert &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-alert-transact-sql.md)   
  [sp_help_alert &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-help-alert-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  

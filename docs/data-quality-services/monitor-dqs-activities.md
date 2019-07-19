@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d4c76f3-0d7b-498e-b792-4db4a0349814
 author: lrtoyou1223
 ms.author: lle
-manager: jroth
-ms.openlocfilehash: 7f0532ad3d9822e3418a3642dd2109761187a2bc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 73c6f4e2c0aaac857ebf5d52079c9f1681077d3c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66776049"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67991908"
 ---
 # <a name="monitor-dqs-activities"></a>DQS アクティビティの監視
 
@@ -54,7 +53,7 @@ ms.locfileid: "66776049"
   
      **[ID]** :整数値。 アクティビティ監視のためにシステムによって生成された一意のアクティビティ番号です。  
   
-     **[名前]** :このアクティビティで使用されるナレッジ ベースまたはデータ品質プロジェクトの名前です。  
+     **名前**:このアクティビティで使用されるナレッジ ベースまたはデータ品質プロジェクトの名前です。  
   
      **[アクティブ]** :アクティビティが現在アクティブかどうかを示します。 次のいずれかの値になります。  
   

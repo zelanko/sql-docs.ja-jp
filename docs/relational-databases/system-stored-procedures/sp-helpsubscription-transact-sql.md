@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: ff96bcbf-e2b9-4da8-8515-d80d4ce86c16
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 07259854acfcad39a583b117a51bcda9de809486
-ms.sourcegitcommit: c44014af4d3f821e5d7923c69e8b9fb27aeb1afd
+ms.openlocfilehash: dd33fc16d399cc6d628eb4b3e80af98efca4ecc8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58527884"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048351"
 ---
 # <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -43,11 +42,11 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @publication = ] 'publication'` 関連付けられているパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は**%**、このサーバーのすべてのサブスクリプション情報が返されます。  
+`[ @publication = ] 'publication'` 関連付けられているパブリケーションの名前です。 *パブリケーション*は**sysname**、既定値は **%** 、このサーバーのすべてのサブスクリプション情報が返されます。  
   
-`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値は**%**、選択したパブリケーションとサブスクライバーに関するすべてのサブスクリプション情報が返されます。 場合**すべて**パブリケーションの完全版のサブスクリプションの 1 つのエントリが返されます。  
+`[ @article = ] 'article'` アーティクルの名前です。 *記事*は**sysname**、既定値は **%** 、選択したパブリケーションとサブスクライバーに関するすべてのサブスクリプション情報が返されます。 場合**すべて**パブリケーションの完全版のサブスクリプションの 1 つのエントリが返されます。  
   
-`[ @subscriber = ] 'subscriber'` サブスクリプション情報を取得するサブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は**%**、選択したパブリケーションとアーティクルに関するすべてのサブスクリプション情報が返されます。  
+`[ @subscriber = ] 'subscriber'` サブスクリプション情報を取得するサブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は **%** 、選択したパブリケーションとアーティクルに関するすべてのサブスクリプション情報が返されます。  
   
 `[ @destination_db = ] 'destination_db'` 転送先データベースの名前です。 *destination_db*は**sysname**、既定値は **%** します。  
   
@@ -84,16 +83,16 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|1 つは、サブスクリプションに割り当てられている場合、DTS パッケージの場所です。 パッケージの値がある場合**0**でパッケージの場所を指定します、**ディストリビューター**します。 値**1**を指定します、**サブスクライバー**します。|  
 |**subscriber_security_mode**|**smallint**|セキュリティ モードをサブスクライバーで、場所**1** Windows 認証では、ことを意味と**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名です。|  
-|**subscriber_password**||実際のサブスクライバー パスワードは返されません。 によってマスクされる結果は、"**&#42;&#42;&#42;&#42;&#42;&#42;**"文字列。|  
+|**@subscriber_password**||実際のサブスクライバー パスワードは返されません。 によってマスクされる結果は、" **&#42;&#42;&#42;&#42;&#42;&#42;** "文字列。|  
 |**job_login**|**sysname**|ディストリビューション エージェントを実行する Windows アカウントの名前。|  
-|**job_password**||実際のジョブ パスワードは返されません。 によってマスクされる結果は、"**&#42;&#42;&#42;&#42;&#42;&#42;**"文字列。|  
+|**job_password**||実際のジョブ パスワードは返されません。 によってマスクされる結果は、" **&#42;&#42;&#42;&#42;&#42;&#42;** "文字列。|  
 |**distrib_agent_name**|**nvarchar(100)**|サブスクリプションを同期するエージェント ジョブの名前。|  
 |**subscriber_type**|**tinyint**|サブスクライバーは、次のいずれかの種類です。<br /><br /> **0** = SQL Server サブスクライバー<br /><br /> **1** = ODBC データ ソース サーバー<br /><br /> **2** = Microsoft JET データベース (非推奨)<br /><br /> **3** = OLE DB プロバイダー|  
 |**subscriber_provider**|**sysname**|一意なプログラム識別子 (PROGID)、SQL Server 以外のデータ ソースの OLE DB プロバイダーが登録されています。|  
 |**subscriber_datasource**|**nvarchar (4000)**|OLE DB プロバイダーで認識されるデータ ソースの名前。|  
 |**subscriber_providerstring**|**nvarchar (4000)**|データ ソースを識別する OLE DB プロバイダーに固有の接続文字列。|  
 |**subscriber_location**|**nvarchar (4000)**|OLE DB プロバイダーで認識されるデータベースの場所|  
-|**subscriber_catalog**|**sysname**|OLE DB プロバイダーに接続するときに使用されるカタログします。|  
+|**対応します。**|**sysname**|OLE DB プロバイダーに接続するときに使用されるカタログします。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -104,7 +103,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 ## <a name="permissions"></a>アクセス許可  
  アクセス許可は既定の実行、**パブリック**ロール。 ユーザーに返されるのは、ユーザーが自分で作成したサブスクリプションの情報だけです。 メンバーにすべてのサブスクリプションに関する情報が返されます、 **sysadmin**固定サーバー ロールのメンバー、または発行元、 **db_owner**パブリケーション データベースの固定データベース ロール。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [sp_addsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)   
  [sp_changesubstatus &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
  [sp_dropsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   

@@ -10,11 +10,11 @@ ms.reviewer: owend
 author: minewiskan
 manager: kfile
 ms.openlocfilehash: 6fa6090a675326db06491d54b82a6844363ee3e9
-ms.sourcegitcommit: 1ab115a906117966c07d89cc2becb1bf690e8c78
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/27/2018
-ms.locfileid: "52409199"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68208309"
 ---
 # <a name="configure-disk-space-usage-power-pivot-for-sharepoint"></a>ディスクの使用領域の構成 (Power Pivot for SharePoint)
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -50,11 +50,11 @@ ms.locfileid: "52409199"
   
  システム レベルでは、ディスク領域が少なくなったときに通知する電子メールによる警告を作成できます。 Microsoft System Center には、電子メール警告機能があります。 また、ファイル サーバー リソース マネージャー、タスク スケジューラ、または PowerShell スクリプトを使用して、警告を設定することもできます。 次のリンクでは、ディスク領域不足に関する通知を設定するための有用な情報が提供されています。  
   
--   [新しいファイル サーバー リソース マネージャーでは](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx)します。  
+-   [新しいファイル サーバー リソース マネージャーでは](http://technet.microsoft.com/library/hh831746.aspx)(http://technet.microsoft.com/library/hh831746.aspx) します。  
   
--   [Windows Server 2008 R2 のファイル サーバー リソース マネージャーのステップ バイ ステップ ガイド](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875)します。  
+-   [Windows Server 2008 R2 のファイル サーバー リソース マネージャーのステップ バイ ステップ ガイド](http://go.microsoft.com/fwlink/?LinkID=204875)(http://go.microsoft.com/fwlink/?LinkID=204875) します。  
   
--   [Windows Server 2008 でディスクの空き領域のアラートの設定](http://go.microsoft.com/fwlink/?LinkID=204870)(http://go.microsoft.com/fwlink/?LinkID=204870)します。  
+-   [Windows Server 2008 でディスクの空き領域のアラートの設定](http://go.microsoft.com/fwlink/?LinkID=204870)(http://go.microsoft.com/fwlink/?LinkID=204870) します。  
   
 ## <a name="how-to-limit-the-amount-of-disk-space-used-for-storing-cached-files"></a>キャッシュされたファイルの格納に使用するディスク領域のサイズを制限する方法  
   
@@ -93,7 +93,7 @@ ms.locfileid: "52409199"
 ## <a name="next-steps"></a>次の手順  
  サーバーの状態、構成、または可用性の問題が検出された場合に修正措置を実行できるように、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint のインストールには正常性ルールが用意されています。 一部のルールでは、構成設定を使用して、正常性ルールがトリガーされる条件が決定されます。 サーバー パフォーマンスを積極的にチューニングしている場合は、これらの設定を確認して、既定値がシステムに最適であることを確認するようにします。 詳細については、「 [Power Pivot の正常性ルールの構成](../../analysis-services/power-pivot-sharepoint/configure-power-pivot-health-rules.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [サーバーの全体管理での Power Pivot サーバーの管理と構成](../../analysis-services/power-pivot-sharepoint/power-pivot-server-administration-and-configuration-in-central-administration.md)  
   
   

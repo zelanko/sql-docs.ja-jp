@@ -17,14 +17,13 @@ helpviewer_keywords:
 ms.assetid: 140d2cd8-9aa1-4cc5-870d-e1dbc873b3fe
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: = azuresqldb-current || = sqlallproducts-allversions
-ms.openlocfilehash: 5127dacf628231199c5ce5ac49fdb2377c82f270
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2be0d498da026f386c3a89002cca621b19a2a15d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62631626"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133989"
 ---
 # <a name="sysfirewallrules-azure-sql-database"></a>sys.firewall_rules (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "62631626"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**INT**|サーバー レベルのファイアウォール設定の識別子。|  
-|NAME|**NVARCHAR(128)**|説明し、区別、サーバー レベルのファイアウォール設定を選択した名前。|  
+|NAME|**NVARCHAR (128)**|説明し、区別、サーバー レベルのファイアウォール設定を選択した名前。|  
 |start_ip_address|**VARCHAR(45)**|サーバー レベルのファイアウォール設定の範囲の最下位の IP アドレス。 IP アドレスと等しいかそれへの接続にこれを試みるよりも大きい、[!INCLUDE[ssSDS](../../includes/sssds-md.md)]サーバー。 最下位の IP アドレスは`0.0.0.0`します。|  
 |end_ip_address|**VARCHAR(45)**|サーバー レベルのファイアウォール設定の範囲の最上位の IP アドレス。 これ以下の IP アドレスは、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] サーバーへの接続を試みることができます。 最上位の IP アドレスは`255.255.255.255`します。<br /><br /> 注:Windows Azure の接続試行が許可されますこの両方のフィールドと**start_ip_address** equals をフィールド`0.0.0.0`します。|  
 |create_date|**DATETIME**|UTC の日付と時刻のサーバー レベルのファイアウォール設定が作成された日時。<br /><br /> 注:UTC は、世界協定時刻の頭字語です。|  
@@ -50,7 +49,7 @@ ms.locfileid: "62631626"
 
  このビューに読み取り専用のアクセスに接続する権限を持つすべてのユーザーには、**マスター**データベース。  
   
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 [sp_set_firewall_rule &#40;Azure SQL データベース&#41;](../../relational-databases/system-stored-procedures/sp-set-firewall-rule-azure-sql-database.md)  
 [sp_delete_firewall_rule &#40;Azure SQL Database&#41;](../../relational-databases/system-stored-procedures/sp-delete-firewall-rule-azure-sql-database.md)   

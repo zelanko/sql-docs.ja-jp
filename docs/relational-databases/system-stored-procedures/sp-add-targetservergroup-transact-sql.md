@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: acb69343-d766-46ff-b771-0c7655c5231a
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: eeb5e013eb10d79300720899ec297b54474627f1
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: c268c356e41c957349f452d2f83fc4b807042d9e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58492764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67990501"
 ---
 # <a name="spaddtargetservergroup-transact-sql"></a>sp_add_targetservergroup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +48,7 @@ sp_add_targetservergroup [ @name = ] 'name'
  なし  
   
 ## <a name="remarks"></a>コメント  
- ターゲット サーバー グループを使用すると、ターゲット サーバーの集合に対してジョブを簡単に実行できます。 詳細については、[sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)を参照してください。  
+ ターゲット サーバー グループを使用すると、ターゲット サーバーの集合に対してジョブを簡単に実行できます。 詳細については、次を参照してください。 [sp_apply_job_to_targets](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)します。  
   
 ## <a name="permissions"></a>アクセス許可  
  メンバーのみ、 **sysadmin**固定サーバー ロールは、このプロシージャを実行できます。  

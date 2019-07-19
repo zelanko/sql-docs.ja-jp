@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 854f0bb4-17e9-489b-9595-eefffb8ba99f
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: a333aa44d0424c0fe612b7790ce77cabe6fca585
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 48e9c526f4045a4657d7942f3fabcace349cc3ad
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714019"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951785"
 ---
 # <a name="what39s-new-in-odbc-38"></a>どのような&#39;s ODBC 3.8 の新機能
 Windows 8 には、ODBC 3.8 の更新バージョンが含まれています。 Windows 8 で ODBC 3.8 には、次の機能が含まれています。  

@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: ffce19d9-d1d6-45b4-89fd-ad0f60822ba0
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: e20d30b63a1cc387c6b997c8a8a11bab835e21f8
-ms.sourcegitcommit: 2db83830514d23691b914466a314dfeb49094b3c
+ms.openlocfilehash: fb19fc3dc6b97e6381e9839c22a05ee71a93bfb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58493364"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078189"
 ---
 # <a name="spaddjobschedule-transact-sql"></a>sp_add_jobschedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -54,12 +53,12 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 ## <a name="arguments"></a>引数  
 `[ @job_id = ] job_id` スケジュールを追加するジョブのジョブ識別番号。 *job_id*は**uniqueidentifier**、既定値はありません。  
   
-`[ @job_name = ] 'job_name'` スケジュールを追加するジョブの名前。 *job_name*は**nvarchar (128)**、既定値はありません。  
+`[ @job_name = ] 'job_name'` スケジュールを追加するジョブの名前。 *job_name*は**nvarchar (128)** 、既定値はありません。  
   
 > [!NOTE]  
 >  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
   
-`[ @name = ] 'name'` スケジュールの名前。 *名前*は**nvarchar (128)**、既定値はありません。  
+`[ @name = ] 'name'` スケジュールの名前。 *名前*は**nvarchar (128)** 、既定値はありません。  
   
 `[ @enabled = ] enabled_flag` スケジュールの現在の状態を示します。 *enabled_flag*は**tinyint**、既定値は**1** (有効)。 場合**0**スケジュールが有効になっていません。 スケジュールを無効にすると、ジョブは実行されません。  
   
@@ -77,7 +76,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
   
 `[ @freq_interval = ] frequency_interval` ジョブを実行する日です。 *frequency_interval*は**int**、既定値は 0 の値に依存して*frequency_type*次の表に記載されています。  
   
-|値|結果|  
+|値|効果|  
 |-----------|------------|  
 |**1** (1 回)|*frequency_interval*は使用されません。|  
 |**4** (毎日)|すべて*frequency_interval*日。|  
@@ -105,7 +104,7 @@ sp_add_jobschedule [ @job_id = ] job_id, | [ @job_name = ] 'job_name', [ @name =
 |-----------|--------------------------|  
 |**1**|First|  
 |**2**|第 2 週|  
-|**4**|第 3 週|  
+|**4**|サードパーティ|  
 |**8**|4 番目|  
 |**16**|Last|  
   
@@ -159,7 +158,7 @@ EXEC msdb.dbo.sp_add_jobschedule
         @active_start_time = 20000 -- 2:00 AM
 ```
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [作成し、スケジュールをジョブにアタッチ](../../ssms/agent/create-and-attach-schedules-to-jobs.md)   
  [ジョブのスケジュール](../../ssms/agent/schedule-a-job.md)   
  [スケジュールを作成します。](../../ssms/agent/create-a-schedule.md)   

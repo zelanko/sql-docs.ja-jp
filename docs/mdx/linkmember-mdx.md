@@ -8,13 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-manager: kfile
-ms.openlocfilehash: 71235953f592572bd7ac0dcb2493d97dd509f8b7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8a00388e067878d9c2165cbae6844f8020b7c63e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63269943"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67905603"
 ---
 # <a name="linkmember-mdx"></a>LinkMember (MDX)
 
@@ -52,7 +51,7 @@ SELECT  Hierarchize
 FROM [Adventure Works]  
 ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Hierarchize &#40;MDX&#41;](../mdx/hierarchize-mdx.md)   
  [先祖&#40;MDX&#41;](../mdx/ascendants-mdx.md)   
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)  

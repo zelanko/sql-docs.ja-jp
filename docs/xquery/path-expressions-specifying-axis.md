@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: c44fb843-0626-4496-bde0-52ca0bac0a9e
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: d8f6c624427a8dc8c5a6c1828b9a48ff7f335cea
-ms.sourcegitcommit: 9c6a37175296144464ffea815f371c024fce7032
+ms.openlocfilehash: 07058816406ef6ac0d5a3356423e231a10ce6165
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/15/2018
-ms.locfileid: "51670330"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67946481"
 ---
 # <a name="path-expressions---specifying-axis"></a>パス式 - 軸の指定
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +39,7 @@ ms.locfileid: "51670330"
   
 -   [(省略可能) 0 個以上のステップ修飾子](../xquery/path-expressions-specifying-predicates.md)  
   
- 詳細については、[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)を参照してください。  
+ 詳細については、次を参照してください。[パス式&#40;XQuery&#41;](../xquery/path-expressions-xquery.md)します。  
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の XQuery 実装では、次の軸ステップがサポートされています。  
   
@@ -75,7 +74,7 @@ WHERE ProductModelID=19
   
 -   `query()`のメソッド、 **xml**データ型は、パス式を指定します。  
   
--   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノード テストについては、[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)を参照してください。  
+-   パス式の両方のステップが、`child` 軸およびノード名 (`ProductDescription`、`Features`) をノード テストとして指定しています。 ノード テストについては、次を参照してください。[パス式のステップでノード テストを指定する](../xquery/path-expressions-specifying-node-test.md)します。  
   
 ### <a name="b-specifying-descendant-and-descendant-or-self-axes"></a>B. descendant 軸と descendant-or-self 軸の指定  
  次の例では、descendant 軸と descendant-or-self 軸を使用します。 この例では、クエリがに対して指定されて、 **xml**型の変数。 XML インスタンスは、生成された結果の違いをわかりやすく示すために単純化してあります。  
@@ -187,7 +186,7 @@ WHERE  ProductModelID=19
 </ProductDescription>  
 ```  
   
- クエリでは、FLWOR ステートメントで反復子変数 `$f` を設定し、`<Features>` 要素の子要素を返します。 詳細については、[FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)を参照してください。 製品特徴ごとに、`return` 句によって次の形式で XML が構築されます。  
+ クエリでは、FLWOR ステートメントで反復子変数 `$f` を設定し、`<Features>` 要素の子要素を返します。 詳細については、次を参照してください。 [FLWOR ステートメントおよびイテレーション&#40;XQuery&#41;](../xquery/flwor-statement-and-iteration-xquery.md)します。 製品特徴ごとに、`return` 句によって次の形式で XML が構築されます。  
   
 ```  
 <Feature ProductModelID="...">...</Feature>  

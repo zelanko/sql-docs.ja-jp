@@ -12,16 +12,15 @@ helpviewer_keywords:
 ms.assetid: 522f6447-ba9e-45f5-a185-37b312e126d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 913cbb549632383c239d6f7049e448b5ba5de6f4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9bec9c19f406586136ce4181805cf5d1c4333fcf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66706164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67965469"
 ---
 # <a name="procedure-object-properties-methods-and-events"></a>Procedure オブジェクトのプロパティ、メソッド、およびイベント
-## <a name="properties"></a>プロパティ  
+## <a name="properties"></a>Properties  
  [Command プロパティ](../../../ado/reference/adox-api/command-property-adox.md)  
   
  [DateCreated プロパティ](../../../ado/reference/adox-api/datecreated-property-adox.md)  
@@ -36,5 +35,5 @@ ms.locfileid: "66706164"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Procedure オブジェクト (ADOX)](../../../ado/reference/adox-api/procedure-object-adox.md)

@@ -10,13 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-manager: jroth
-ms.openlocfilehash: 5866e70945e7a507c0a8887abf006858d37c2bf0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 012c2c880e81c095e90086cf26ebffd6117d534e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798007"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67959121"
 ---
 # <a name="sql-server-import-extension-preview"></a>SQL Server インポート拡張機能 (プレビュー)
 
@@ -59,6 +58,6 @@ SQL Server インポート拡張機能 (プレビュー) は、.txt、.csv フ�
     ![オープンのインポート ウィザード](media/sql-server-import-extension/import-wizard-summary.png)
 1. テーブルが、対象のデータベースを更新またはテーブル名で SELECT クエリを実行して正常にインポートを確認します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 - インポート ウィザードの詳細については、読み取り、[ブログの投稿](https://cloudblogs.microsoft.com/sqlserver/2018/08/30/the-august-release-of-sql-operations-studio-is-now-available/)します。
 - PROSE の詳細については、読み取り、[ドキュメント。](https://microsoft.github.io/prose/)
