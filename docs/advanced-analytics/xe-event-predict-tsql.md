@@ -1,49 +1,49 @@
 ---
-title: PREDICT ステートメント - SQL Server Machine Learning サービスを監視するための拡張イベント
+title: PREDICT ステートメントを監視するための拡張イベント
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8e8e2f43d176bb0f828545c5d7d0abcf5849a7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1c534681200abf056c8bc7dd3745d8098d59c146
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961622"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345657"
 ---
 # <a name="extended-events-for-monitoring-predict-statements"></a>PREDICT ステートメントを監視するための拡張イベント
 
-この記事では、SQL Server の監視し、分析に使用できるジョブで使用する指定された、拡張イベントをについて説明します[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) SQL Server でのリアルタイム スコアリングを実行します。
+この記事では、SQL Server で提供される拡張イベントについて説明します。このイベントを使用して、SQL Server でのリアルタイムのスコアリングを実行するために[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)を使用するジョブを監視および分析できます。
 
-リアルタイム スコアリングは、machine learning の SQL Server に格納されているモデルからスコアを生成します。 PREDICT 関数では、R や Python など、特定のバイナリ形式を使用して作成されたモデルのみなどに外部実行時は必要ありません。 詳細については、次を参照してください。[リアルタイム スコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)します。
+リアルタイムスコアリングは、SQL Server に格納されている機械学習モデルからスコアを生成します。 PREDICT 関数では、R や Python などの外部の実行時間は必要ありません。特定のバイナリ形式を使用して作成されたモデルのみです。 詳細については、「[リアルタイムスコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)」を参照してください。
 
 ## <a name="prerequisites"></a>前提条件
 
-拡張のイベント (XEvents とも呼ばれます) とのセッションでイベントを追跡する方法については、次の記事を参照してください。
+拡張イベント (Xevent とも呼ばれます) に関する一般的な情報と、セッションのイベントを追跡する方法については、次の記事を参照してください。
 
 + [拡張イベントの概念とアーキテクチャ](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [SSMS でのイベント キャプチャを設定します。](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [オブジェクト エクスプ ローラーで、イベント セッションを管理します。](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
++ [SSMS でのイベントキャプチャの設定](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
++ [オブジェクトエクスプローラーでのイベントセッションの管理](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
 
 ## <a name="table-of-extended-events"></a>拡張イベントの表
 
-次の拡張イベントがサポートする SQL Server のすべてのバージョンで使用可能な[T-SQL 予測](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)ステートメントでは、Linux、および Azure SQL Database での SQL Server を含むです。 
+次の拡張イベントは、SQL Server on Linux、Azure SQL Database など、 [T-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)ステートメントをサポートするすべてのバージョンの SQL Server で使用できます。 
 
-予測の T-SQL ステートメントは、SQL Server 2017 で導入されました。 
+T-sql PREDICT ステートメントは SQL Server 2017 で導入されました。 
 
 |NAME |object_type|description| 
 |----|----|----|
-|predict_function_completed |イベント  |組み込み実行時間の内訳|
-|predict_model_cache_hit |イベント|モデルが PREDICT 関数モデル キャッシュから取得されるときに発生します。 その他の predict_model_cache _ * イベントと共に、このイベントを使用すると、PREDICT 関数モデル キャッシュが原因の問題をトラブルシューティングできます。|
-|predict_model_cache_insert |イベント  |   モデルが PREDICT 関数モデル キャッシュに挿入するときに発生します。 その他の predict_model_cache _ * イベントと共に、このイベントを使用すると、PREDICT 関数モデル キャッシュが原因の問題をトラブルシューティングできます。    |
-|predict_model_cache_miss   |イベント|モデルが PREDICT 関数モデル キャッシュで見つからなかった場合に発生します。 このイベントの発生を頻繁に SQL Server がより多くのメモリを必要がある可能性があります。 その他の predict_model_cache _ * イベントと共に、このイベントを使用すると、PREDICT 関数モデル キャッシュが原因の問題をトラブルシューティングできます。|
-|predict_model_cache_remove |イベント| モデルが PREDICT 関数モデル キャッシュから削除されたときに発生します。 その他の predict_model_cache _ * イベントと共に、このイベントを使用すると、PREDICT 関数モデル キャッシュが原因の問題をトラブルシューティングできます。|
+|predict_function_completed |イベント  |組み込みの実行時間の内訳|
+|predict_model_cache_hit |イベント|モデルが PREDICT 関数モデルキャッシュから取得されたときに発生します。 このイベントを他の predict_model_cache_ * イベントと共に使用して、PREDICT 関数モデルキャッシュが原因で発生した問題のトラブルシューティングを行います。|
+|predict_model_cache_insert |イベント  |   モデルが PREDICT 関数モデルキャッシュに挿入されるときに発生します。 このイベントを他の predict_model_cache_ * イベントと共に使用して、PREDICT 関数モデルキャッシュが原因で発生した問題のトラブルシューティングを行います。    |
+|predict_model_cache_miss   |イベント|PREDICT 関数モデルキャッシュでモデルが見つからない場合に発生します。 このイベントが頻繁に発生するのは、SQL Server により多くのメモリが必要であることを示す可能性があります。 このイベントを他の predict_model_cache_ * イベントと共に使用して、PREDICT 関数モデルキャッシュが原因で発生した問題のトラブルシューティングを行います。|
+|predict_model_cache_remove |イベント| 予測関数のモデルキャッシュからモデルが削除されたときに発生します。 このイベントを他の predict_model_cache_ * イベントと共に使用して、PREDICT 関数モデルキャッシュが原因で発生した問題のトラブルシューティングを行います。|
 
-## <a name="query-for-related-events"></a>関連するイベントのクエリ
+## <a name="query-for-related-events"></a>関連イベントのクエリ
 
-これらのイベントに対して返されるすべての列の一覧を表示するには、SQL Server Management Studio で、次のクエリを実行します。
+これらのイベントに対して返されたすべての列の一覧を表示するには、SQL Server Management Studio で次のクエリを実行します。
 
 ```sql
 SELECT * FROM sys.dm_xe_object_columns WHERE object_name LIKE `predict%'
@@ -51,23 +51,23 @@ SELECT * FROM sys.dm_xe_object_columns WHERE object_name LIKE `predict%'
 
 ## <a name="examples"></a>使用例
 
-PREDICT を使用して、スコア付けのセッションのパフォーマンスに関する情報をキャプチャするには。
+PREDICT を使用してスコアリングセッションのパフォーマンスに関する情報を取得するには
 
-1. 拡張イベント セッションを Management Studio またはサポートされている別の使用を新規作成[ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)します。
-2. イベント追加`predict_function_completed`と`predict_model_cache_hit`セッションにします。
-3. 拡張イベント セッションを開始します。
+1. Management Studio またはサポートされている別の[ツール](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events-tools)を使用して、新しい拡張イベントセッションを作成します。
+2. イベント`predict_function_completed` と`predict_model_cache_hit`をセッションに追加します。
+3. 拡張イベントセッションを開始します。
 4. PREDICT を使用するクエリを実行します。
 
-結果で、これらの列を確認します。
+結果で、次の列を確認します。
 
-+ 値は、`predict_function_completed`示していますが、モデルの読み込みとスコア付けに費やされたクエリをどの程度時間します。
-+ ブール値`predict_model_cache_hit`かどうか、クエリがキャッシュされたモデルを使用するかどうかを示します。 
++ の`predict_function_completed`値は、クエリがモデルの読み込みとスコア付けに費やした時間を示します。
++ の`predict_model_cache_hit`ブール値は、クエリがキャッシュされたモデルを使用したかどうかを示します。 
 
-### <a name="native-scoring-model-cache"></a>ネイティブ スコアリング モデルのキャッシュ
+### <a name="native-scoring-model-cache"></a>ネイティブスコアリングモデルキャッシュ
 
-予測するのに特定のイベントだけでなく、キャッシュされたモデルとキャッシュの使用状況の詳細を取得するのに次のクエリを使用できます。
+予測に固有のイベントに加えて、次のクエリを使用して、キャッシュされたモデルとキャッシュの使用に関する詳細情報を取得できます。
 
-ネイティブのスコア付けモデルのキャッシュを参照してください。
+ネイティブスコアリングモデルキャッシュを表示します。
 
 ```sql
 SELECT *
@@ -75,7 +75,7 @@ FROM sys.dm_os_memory_clerks
 WHERE type = 'CACHESTORE_NATIVESCORING';
 ```
 
-モデル キャッシュでオブジェクトを表示します。
+モデルキャッシュ内のオブジェクトを表示します。
 
 ```sql
 SELECT *

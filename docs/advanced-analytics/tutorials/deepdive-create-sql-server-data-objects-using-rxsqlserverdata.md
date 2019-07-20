@@ -1,41 +1,41 @@
 ---
-title: RevoScaleR RxSqlServerData - SQL Server Machine Learning を使用した SQL Server のデータ オブジェクトを作成します。
-description: SQL Server で R 言語を使用してデータ オブジェクトを作成する方法のチュートリアル。
+title: RevoScaleR RxSqlServerData を使用して SQL Server データオブジェクトを作成する
+description: SQL Server で R 言語を使用してデータオブジェクトを作成する方法に関するチュートリアルチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: b29f8136e3394c5424233ac3f966d2b6c0ad7bc0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f78087e226f41c53555cf3356705f8b84a185392
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962250"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344697"
 ---
-# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData (SQL Server と RevoScaleR チュートリアル) を使用した SQL Server のデータ オブジェクトを作成します。
+# <a name="create-sql-server-data-objects-using-rxsqlserverdata-sql-server-and-revoscaler-tutorial"></a>RxSqlServerData を使用して SQL Server データオブジェクトを作成する (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法に関する[RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-レッスン 2 ではデータベースの作成の継続: テーブルを追加して、データを読み込んでいます。 DBA が作成したは、データベースとログインの場合[レッスン 1 つ](deepdive-work-with-sql-server-data-using-r.md)RStudio などの R IDE を使用してテーブルを追加するなどの組み込みツールや**Rgui**します。
+レッスン2は、データベースの作成 (テーブルの追加とデータの読み込み) の継続です。 DBA がデータベースを作成し、[レッスン 1](deepdive-work-with-sql-server-data-using-r.md)でログインした場合、rstudio などの R IDE または**rstudio**などの組み込みツールを使用してテーブルを追加できます。
 
-R から SQL Server に接続して**RevoScaleR**以下のタスクを実行する関数。
+R から SQL Server に接続し、 **RevoScaleR** functions を使用して、次のタスクを実行します。
 
 > [!div class="checklist"]
-> * トレーニング データと予測のテーブルを作成します。
-> * ローカルの .csv ファイルからテーブルにデータを読み込む
+> * トレーニングデータと予測用のテーブルを作成する
+> * ローカルの .csv ファイルのデータを使用してテーブルを読み込む
 
-サンプル データは、シミュレートされたクレジット_カード不正使用データ (ccFraud データセット) の場合は、トレーニング セットとデータセットをスコア付けにパーティション分割します。 データ ファイルが含まれている**RevoScaleR**します。
+サンプルデータは、トレーニングデータセットとスコアリングデータセットにパーティション分割されたクレジットカード不正データ (ccFraud データセット) をシミュレートしたものです。 データファイルは**RevoScaleR**に含まれています。
 
-R IDE を使用するか、 **Rgui**これらの検索を完了します。 この場所にある R 実行可能ファイルを使用することを確認するには。C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 (か Rgui.exe ツール、または C:\Program Files\Microsoft\R Client\R_SERVER を指す R IDE を使用している場合)。 [R クライアント ワークステーション](../r/set-up-a-data-science-client.md)これらの実行可能ファイルはこのチュートリアルの前提条件と見なされます。
+これらの手順を完了するには、R IDE または**Rgui**を使用します。 次の場所にある R 実行可能ファイルを使用してください。C:\Program Files\Microsoft\R Client\R_SERVER\bin\x64 (そのツールを使用している場合は Rgui、C:\Program Files\Microsoft\R Client\r _s を指す R IDE)。 これらの実行可能ファイルを持つ[R クライアントワークステーション](../r/set-up-a-data-science-client.md)を使用することは、このチュートリアルの前提条件と見なされます。
 
-## <a name="create-the-training-data-table"></a>トレーニング データのテーブルを作成します。
+## <a name="create-the-training-data-table"></a>トレーニングデータテーブルを作成する
 
-1. データベース接続文字列を R 変数に格納します。 SQL Server の有効な ODBC 接続文字列の 2 つの例を次に示します。 1 つの SQL ログインを使用して、Windows 統合認証用に 1 つ。 
+1. データベース接続文字列を R 変数に格納します。 SQL Server の有効な ODBC 接続文字列の2つの例を次に示します。1つは SQL ログインを使用し、もう1つは Windows 統合認証です。 
 
-   サーバー名、ユーザー名、および必要に応じてパスワードを変更してください。
+   必要に応じて、サーバー名、ユーザー名、およびパスワードを変更してください。
 
     **SQL ログイン**
     ```R
@@ -53,21 +53,21 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
     sqlFraudTable <- "ccFraudSmall"
     ```
   
-    サーバー インスタンスとデータベース名は既に指定されて、接続文字列の一部として 2 つの変数を結合する場合があるため、*の完全修飾*、新しいテーブルの名前になります*instance.database.schema.ccFraudSmall*します。
+    サーバーインスタンスとデータベース名は接続文字列の一部として既に指定されているので、2つの変数を組み合わせると、新しいテーブルの*完全修飾*名は*ccFraudSmall*になります。
   
-3.  必要に応じて指定*rowsPerRead*各バッチで読み取られるデータの行の数を制御します。
+3.  必要に応じて、[ *Rowsperread* ] を指定して、各バッチで読み取られるデータの行数を制御します。
   
     ```R
     sqlRowsPerRead = 5000
     ```
   
-    このパラメーターは省略可能ですが、設定されることがより効率的な計算します。 拡張分析関数のほとんど**RevoScaleR**と**MicrosoftML**のチャンク単位でデータを処理します。 *RowsPerRead*パラメーターは、各チャンク内の行の数を決定します。
+    このパラメーターは省略可能ですが、設定すると、より効率的な計算になる可能性があります。 **RevoScaleR**と**microsoft ml**の拡張分析関数の大部分は、データをチャンク単位で処理します。 *Rowsperread*パラメーターによって、各チャンク内の行の数が決まります。
   
-    適切なバランスを見つけるには、この設定を調整する必要があります。 値が大きすぎる場合は、データ アクセスがそのサイズのチャンク単位でデータを処理するための十分なメモリがない場合は低速可能性があります。 逆に、一部のシステムの場合の値*rowsPerRead*が小さすぎる、パフォーマンスも低速化することができます。
+    適切なバランスを見つけるために、この設定を試してみることが必要になる場合があります。 値が大きすぎる場合、そのサイズのチャンク単位でデータを処理するのに十分なメモリがないと、データアクセスの速度が低下する可能性があります。 逆に、一部のシステムでは、 *Rowsperread*の値が小さすぎる場合も、パフォーマンスが低下することがあります。
   
-    最初の値としては、各チャンク (5,000 行) 内の行の数を制御するのにデータベース エンジンのインスタンスで定義された既定のバッチ処理サイズを使用します。 その値を変数に保存*sqlRowsPerRead*します。
+    初期値として、データベースエンジンインスタンスによって定義された既定のバッチ処理サイズを使用して、各チャンク内の行の数 (5000 行) を制御します。 *Sqlrowsperread*変数にその値を保存します。
   
-4.  新しいデータ ソース オブジェクトの変数を定義し、以前に定義されている引数を渡す、 **RxSqlServerData**コンス トラクター。 ここではデータ ソース オブジェクトが作成されるだけで、設定は行われないことに注意してください。 データの読み込みとは別の手順です。
+4.  新しいデータソースオブジェクトの変数を定義し、以前に定義した引数を**RxSqlServerData**コンストラクターに渡します。 ここではデータ ソース オブジェクトが作成されるだけで、設定は行われないことに注意してください。 データの読み込みは別の手順です。
   
     ```R
     sqlFraudDS <- RxSqlServerData(connectionString = sqlConnString,
@@ -75,9 +75,9 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
        rowsPerRead = sqlRowsPerRead)
     ```
 
-## <a name="create-the-scoring-data-table"></a>スコア付けデータ テーブルを作成します。
+## <a name="create-the-scoring-data-table"></a>スコアリングデータテーブルを作成する
 
-同じ手順を使用して、スコア付けを同じプロセスを使用してデータを保持するテーブルを作成します。
+同じ手順を使用して、同じプロセスを使用してスコアリングデータを保持するテーブルを作成します。
 
 1. スコア付けで使用するテーブルの名前を格納するための新しい R 変数 *sqlScoreTable*を作成します。
   
@@ -92,29 +92,29 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
        table = sqlScoreTable, rowsPerRead = sqlRowsPerRead)
     ```
 
-接続文字列とその他のパラメーターは、既に R ワークスペース内の変数として定義した、ため、異なるテーブル、ビュー、またはクエリを表す、新しいデータ ソースの再利用できます。
+接続文字列とその他のパラメーターは、R ワークスペースの変数として既に定義されているため、異なるテーブル、ビュー、またはクエリを表す新しいデータソースに再利用できます。
 
 > [!NOTE]
-> 関数はクエリに基づいてデータ ソースのよりもテーブル全体に基づくデータ ソースを定義するためのさまざまな引数を使用します。 これはため、SQL Server データベース エンジンは異なる方法でクエリを準備する必要があります。 このチュートリアルの後半では、SQL クエリに基づくデータ ソース オブジェクトを作成する方法について説明します。
+> この関数では、クエリに基づくデータソースよりも、テーブル全体に基づいたデータソースの定義に異なる引数を使用します。 これは、SQL Server データベースエンジンがクエリを別々に準備する必要があるためです。 このチュートリアルの後半では、SQL クエリに基づいてデータソースオブジェクトを作成する方法について説明します。
 
 ## <a name="load-data-into-sql-tables-using-r"></a>R を使用して SQL テーブルにデータを読み込む
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブルが作成されましたので、それらのテーブルには、適切な **Rx** 関数を使用してデータを読み込むことができます。
 
-**RevoScaleR**パッケージには、データ ソースの種類に固有の関数が含まれています。 テキスト データを使用して[RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata)をデータ ソース オブジェクトを生成します。 その他に、Hadoop データや ODBC データなどからデータ ソース オブジェクトを作成するための関数もあります。
+**RevoScaleR**パッケージには、データソースの種類に固有の関数が含まれています。 テキストデータの場合は、 [RxTextData](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxtextdata)を使用してデータソースオブジェクトを生成します。 その他に、Hadoop データや ODBC データなどからデータ ソース オブジェクトを作成するための関数もあります。
 
 > [!NOTE]
-> このセクションでは、する必要があります**DDL 実行**データベースに対する権限。
+> このセクションでは、データベースに対する**DDL の実行**アクセス許可が必要です。
 
-### <a name="load-data-into-the-training-table"></a>トレーニング用のテーブルにデータを読み込む
+### <a name="load-data-into-the-training-table"></a>トレーニングテーブルにデータを読み込む
 
-1. R 変数では、作成*ccFraudCsv*、サンプル データを含む CSV ファイルのファイル パスを変数に割り当てます。 このデータセットに含まれる**RevoScaleR**します。 "SampleDataDir"は、キーワード、 **rxGetOption**関数。
+1. R 変数*ccFraudCsv*を作成し、サンプルデータを含む CSV ファイルのファイルパスを変数に割り当てます。 このデータセットは、 **RevoScaleR**で提供されています。 "SampleDataDir" は、 **rxGetOption**関数のキーワードです。
   
     ```R
     ccFraudCsv <- file.path(rxGetOption("sampleDataDir"), "ccFraudSmall.csv")
     ```
   
-    呼び出しに注意してください**rxGetOption**、これは、GET メソッドに関連付けられている[rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions)で**RevoScaleR**します。 このユーティリティを使用して設定し、オプションの一覧に関連する既定の共有ディレクトリ、計算で使用するプロセッサ (コア) の数など、ローカルおよびリモート計算コンテキスト。
+    **RxGetOption**の呼び出しに注意してください。これは、 **RevoScaleR**の[rxOptions](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxoptions)に関連付けられている GET メソッドです。 このユーティリティを使用して、ローカルおよびリモートの計算コンテキスト (既定の共有ディレクトリなど)、または計算に使用するプロセッサ数 (コア) に関連するオプションを設定および一覧表示します。
     
     この特定の呼び出しでは、コードを実行している場所に関係なく、正しいライブラリからサンプルを取得します。 たとえば、SQL Server で関数を実行し、開発用コンピューターでパスがどのように違うかを確認してください。
   
@@ -131,11 +131,11 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
   
     引数 *colClasses* は重要です。 この引数は、テキスト ファイルから読み込まれたデータの各列に割り当てるデータ型を指定するために使用します。 この例では、すべての列がテキストとして扱われます。例外として、名前付きの列は整数として扱われます。
   
-3. 一時停止するこの時点では、説明でデータベースを確認および[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 データベース内のテーブルの一覧を更新します。
+3. この時点で、しばらくしてから、で[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]データベースを表示することをお勧めします。 データベース内のテーブルの一覧を更新します。
   
-    ローカル ワークスペースには、R データ オブジェクトが作成されて、テーブルが作成されなかったでを参照してください、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 また、データが読み込まれていませんテキスト ファイルから R 変数にします。
+    これは、R データオブジェクトがローカルワークスペースに作成されているにもかかわらず、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースにテーブルが作成されていないことがわかります。 また、テキストファイルから R 変数にデータが読み込まれていません。
   
-4. 関数を呼び出すことによって、データを挿入[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)関数。
+4. 関数[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)関数を呼び出してデータを挿入します。
   
     ```R
     rxDataStep(inData = inTextData, outFile = sqlFraudDS, overwrite = TRUE)
@@ -143,13 +143,13 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
     
     接続文字列に問題がなければ、しばらくすると、次のような結果が表示されます。
   
-    *書き込まれた合計行数:以上 10000 以下、合計時間:0.466* *の読み取り行数。処理された合計行以上 10000 以下、:以上 10000 以下、チャンクの合計時間:0.577 秒*
+    *書き込まれた合計行数:1万、合計時間:* 0.466*行読み取り:1万、処理された行数の合計:1万、合計チャンク時間:0.577 秒*
   
-5. テーブルの一覧を更新します。 内のテーブルを右クリックすることも、各変数が適切なデータ型とが正常にインポートされたことを確認する[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]選択**上位 1000 行**します。
+5. テーブルの一覧を最新の状態に更新します。 各変数のデータ型が正しいことを確認し、正常にインポートされたことを確認するには[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 、でテーブルを右クリックし、 **[上位1000行の選択]** を選択します。
 
-### <a name="load-data-into-the-scoring-table"></a>スコア付け用のテーブルにデータを読み込む
+### <a name="load-data-into-the-scoring-table"></a>スコアリングテーブルにデータを読み込む
 
-1. データベースにスコア付けに使用するデータ セットを読み込む手順を繰り返します。
+1. 手順を繰り返して、スコアリングに使用されるデータセットをデータベースに読み込みます。
   
     まず、ソース ファイルへのパスを指定します。
   
@@ -177,18 +177,18 @@ R IDE を使用するか、 **Rgui**これらの検索を完了します。 こ�
   
     - *OutFile* 引数では、データを保存する、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内のテーブルを指定します。
   
-    - テーブルが既に存在し、使用しない場合、*上書き*オプション、切り捨てることがなく結果が挿入されます。
+    - テーブルが既に存在し、 *overwrite*オプションを使用しない場合、結果は切り捨てられずに挿入されます。
   
 ここでも、接続に成功した場合は、完了を示すメッセージと、テーブルへのデータ書き込みに要した時間が表示されます。
 
-*書き込まれた合計行数:以上 10000 以下、合計時間:0.384*
-*の読み取り行数。処理された合計行以上 10000 以下、:以上 10000 以下、チャンクの合計時間:0.456 秒*
+*書き込まれた合計行数:1万、合計時間:0.384*
+行読み取り *:1万、処理された行数の合計:1万、合計チャンク時間:0.456 秒*
 
 ## <a name="more-about-rxdatastep"></a>rxDataStep に関する詳細情報
 
-[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)は、R データ フレームに対して複数の変換を実行できる強力な関数です。 RxDataStep を使用してデータを変換先で必要とされる表現に変換する。 この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。
+[rxDataStep](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxdatastep)は、R データフレームに対して複数の変換を実行できる強力な関数です。 また、rxDataStep を使用して、変換先に必要な表現 (この場合は) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にデータを変換することもできます。
 
-引数の中で R 関数を使用して、データに対して変換を指定する必要に応じて、 **rxDataStep**します。 これらの操作の例については、このチュートリアルの後半で提供されます。
+必要に応じて、 **rxDataStep**の引数に R 関数を使用して、データの変換を指定できます。 これらの操作の例については、このチュートリアルの後半で説明します。
 
 ## <a name="next-steps"></a>次のステップ
 

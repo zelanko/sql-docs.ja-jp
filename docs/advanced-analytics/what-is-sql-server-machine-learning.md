@@ -1,36 +1,36 @@
 ---
-title: SQL Server Machine Learning サービスの SQL Server Machine Learning サービス (R、Python) - 概要
-description: データ サイエンスと統計のリレーショナル データと Python および R を統合できる、SQL server Machine Learning Services 機能の概要についてモデリング、機械学習モデル、予測分析やデータの視覚化。
+title: SQL Server Machine Learning Services の概要 (R、Python)
+description: SQL Server の Machine Learning Services 機能の概要。ここでは、Python と R を、データサイエンスと統計モデリング、機械学習モデル、予測分析、データ可視化などのためのリレーショナルデータと統合できます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2d05c48f1492509fe05272560dd3cf332b424cb2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2bea677d6b87d7baa78fed28be82252c52a74c9
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961674"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345819"
 ---
-# <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning サービス (R、Python)
+# <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R、Python)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Machine Learning サービスは、データベース内の R と Python スクリプトを実行するために使用される、SQL Server の機能です。 この機能が含まれています[Microsoft R と Python のパッケージ](#components)高パフォーマンスの予測分析と機械学習します。 含む T-SQL の R と Python コードまたはストアド プロシージャ、T-SQL スクリプトが R と Python のステートメントを含む R と Python スクリプトで、リレーショナル データを使用できます。
+Machine Learning Services は SQL Server の機能であり、データベース内の R および Python スクリプトの実行に使用されます。 この機能には、高パフォーマンスの予測分析と機械学習を行うための[Microsoft R と Python のパッケージ](#components)が含まれています。 リレーショナルデータは、ストアドプロシージャ、R および Python ステートメントを含む T-sql スクリプト、T-sql を含む R および Python コードを使用して、R および Python スクリプトで使用できます。
 
-使用していた場合[SQL Server 2016 R Services](r/sql-server-r-services.md)以降では、SQL Server 2017 の Machine Learning サービスは、基本の R、RevoScaleR、MicrosoftML の更新バージョンでの次世代の R のサポート、およびで導入されたその他のライブラリ2016。
+[SQL Server 2016 R Services](r/sql-server-r-services.md)を以前に使用していた場合は、SQL Server 2017 以降の Machine Learning Services が r サポートの次世代であり、base r、RevoScaleR、microsoft ml、および2016で導入されたその他のライブラリのバージョンが更新されています。
 
-Azure SQL Database で[(R) を使用した Machine Learning サービス](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)は現在パブリック プレビュー段階です。
+Azure SQL Database では、 [Machine Learning Services (R)](https://docs.microsoft.com/azure/sql-database/sql-database-machine-learning-services-overview)は現在パブリックプレビューの段階にあります。
 
-## <a name="bring-compute-power-to-the-data"></a>データにコンピューティング能力をもたらす
+## <a name="bring-compute-power-to-the-data"></a>データのコンピューティング能力を活用する
 
-Machine Learning サービスのキーの価値提案は、スケール、および計算と、データが存在する処理を統合する機能での高度な分析を提供する、企業の R と Python パッケージの電源間でデータをプルする必要はありませんネットワーク。 これは、複数の利点を提供します。
+Machine Learning Services の主な価値の提案は、高度な分析を大規模に提供し、データがどこにあるかを計算して処理する機能であり、データを何度もプルする必要がなくなるという、エンタープライズ R および Python パッケージの機能です。ネットワーク。 これには、次のような利点があります。
 
-+ データのセキュリティ。 R および Python のデータ ソースに近い実行は無駄や安全でないデータ移動を回避します。
-+ 速さ。 データベースは、セットベースの操作用に最適化されています。 インメモリ テーブルなどのデータベースの最新技術の概要と集計、処理が非常を行い、データ サイエンスを補完します。
-+ 展開との統合が容易。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] その他の多くのデータ管理タスクやアプリケーションの操作のサーバーの全体のポイントです。 レポート ウェアハウスまたはデータベースに存在するデータを使用すると、機械学習ソリューションによって使用されるデータが一貫して最新の状態であることを確認します。 
-+ クラウドとオンプレミス間の効率。 R または Python のセッションでデータの処理ではなくなどのエンタープライズ データ パイプラインに依存できます[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]と Azure Data Factory。 Power BI や [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用して、結果や分析を簡単にレポートできます。
++ データのセキュリティ。 R と Python の実行をデータソースの近くに置くことで、無駄や安全でないデータ移動を回避できます。
++ 速さ。 データベースは、セットベースの操作用に最適化されています。 インメモリテーブルなどのデータベースの最近のイノベーションによって、集計と集計が可能になり、データサイエンスを完全に補完することができます。
++ デプロイと統合の容易さ。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、他の多くのデータ管理タスクおよびアプリケーションにおける操作の中心となるポイントです。 データベースまたはレポートウェアハウスに格納されているデータを使用することにより、機械学習ソリューションで使用されるデータを確実に最新の状態に保つことができます。 
++ クラウドとオンプレミスの間の効率性。 R または Python セッションでデータを処理するのではなく、および Azure Data Factory を[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)]含むエンタープライズデータパイプラインを利用できます。 Power BI や [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] を使用して、結果や分析を簡単にレポートできます。
 
 さまざまなデータ処理や分析タスクで SQL と R を正しく組み合わて使用することで、データ サイエンティストと開発者の両方の生産性がさらに向上します。
 
@@ -38,117 +38,117 @@ Machine Learning サービスのキーの価値提案は、スケール、およ
 
 ## <a name="components"></a>コンポーネント
 
-SQL Server 2017 では、R と Python がサポートされています。 次の表では、コンポーネントについて説明します。
+SQL Server 2017 では、R と Python がサポートされています。 次の表で、コンポーネントについて説明します。
 
 | コンポーネント | 説明 |
 |-----------|-------------|
-| SQL Server スタート パッド サービス | 外部の R と Python のランタイムと、データベース エンジンのインスタンス間の通信を管理するサービス。 |
-| R パッケージ | [**RevoScaleR** ](r/ref-r-revoscaler.md)はこのライブラリでスケーラブルな R. 関数が最も広く使用されている間は、プライマリ ライブラリ。 データ変換と操作、統計の概要作成、視覚化、およびモデリングと分析の多くの形式は、これらのライブラリで表示されます。 さらに、これらのライブラリ内の関数は、並列処理、調整され、計算エンジンによって管理されるデータのチャンク上で動作する機能の使用可能なコア間でワークロードを自動的に配布します。  <br/>[**MicrosoftML (R)** ](r/ref-r-microsoftml.md)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。 <br/>[**sqlRUtils** ](r/ref-r-sqlrutils.md) T-SQL ストアド プロシージャに R スクリプトを配置すること、データベースでストアド プロシージャを登録すると、R 開発環境からストアド プロシージャを実行しているヘルパー関数を提供します。<br/>[**olapR** ](r/ref-r-olapr.md)の構築または MDX クエリを実行する R スクリプトでは、します。|
-| Microsoft R Open (MRO) | [**MRO** ](https://mran.microsoft.com/open)は r です Microsoft のオープン ソース ディストリビューションには。パッケージおよびインタープリターが含まれます。 常にセットアップによってインストールされている MRO のバージョンを使用します。 |
-| R ツール | R コンソール ウィンドウとコマンド プロンプトは、R のディストリビューションで標準的なツールです。  |
-| R のサンプルとスクリプト |  オープン ソースの R と RevoScaleR パッケージには、作成して事前インストールされているデータを使用してスクリプトを実行できるように、組み込みのデータ セットが含まれます。 |
-| Python パッケージ | [**revoscalepy** ](python/ref-py-revoscalepy.md)データ操作、変換、視覚エフェクトと分析のための関数での Python のスケーラブルなは、プライマリ ライブラリ。 <br/>[**microsoftml (Python)** ](python/ref-py-microsoftml.md)テキスト分析、画像分析、およびセンチメント分析のカスタム モデルを作成する機械学習アルゴリズムを追加します。  |
-| Python ツール | 組み込みの Python のコマンド ライン ツールは、アドホック テストとタスクに適しています。  |
-| Anaconda | Anaconda とは、Python と重要なパッケージのオープン ソース ディストリビューションです。 |
-| Python のサンプルとスクリプト | R と Python には、組み込みのデータ セットとスクリプトが含まれています。  |
-| R および Python で事前トレーニング済みモデル | 事前トレーニング済みモデルは特定のユース ケース用に作成し、microsoft データ サイエンスのエンジニア リング チームによって管理されます。 事前トレーニング済みモデルとして使用することができます-正、負のセンチメントをスコア付けで、テキストまたはイメージを提供する新しいデータの入力を使用して機能を検出します。 モデルでは、Machine Learning のサービスで実行しますが、SQL Server セットアップでインストールすることはできません。 詳細については、次を参照してください。[インストール事前トレーニング済みの機械学習では、SQL Server のモデル](install/sql-pretrained-models-install.md)します。 |
+| SQL Server Launchpad サービス | 外部 R および Python ランタイムとデータベースエンジンインスタンス間の通信を管理するサービス。 |
+| R パッケージ | [**RevoScaleR**](r/ref-r-revoscaler.md)はスケーラブルな R のプライマリライブラリです。このライブラリの関数は、最も広く使用されています。 これらのライブラリには、データの変換と操作、統計の概要作成、視覚化、モデリングと分析のさまざまな形式があります。 また、これらのライブラリの関数は、並列処理のために使用可能なコア間にワークロードを自動的に分散します。また、計算エンジンによって調整および管理されるデータのチャンクを操作できます。  <br/>[**Microsoft ml (R)** ](r/ref-r-microsoftml.md)は、機械学習アルゴリズムを追加して、テキスト分析、画像分析、およびセンチメント分析のためのカスタムモデルを作成します。 <br/>[**sqlRUtils**](r/ref-r-sqlrutils.md)には、r スクリプトを t-sql ストアドプロシージャに配置し、ストアドプロシージャをデータベースに登録し、r 開発環境からストアドプロシージャを実行するためのヘルパー関数が用意されています。<br/>[**Olapr**](r/ref-r-olapr.md)は、R スクリプトで MDX クエリを構築または実行するためのものです。|
+| Microsoft R Open (MRO) | [**Mro**](https://mran.microsoft.com/open)は、Microsoft の R のオープンソースディストリビューションです。パッケージとインタープリターが含まれています。 セットアップによってインストールされたバージョンの MRO を常に使用します。 |
+| R ツール | R コンソールのウィンドウとコマンドプロンプトは、R ディストリビューションの標準ツールです。  |
+| R のサンプルとスクリプト |  オープンソースの R パッケージと RevoScaleR パッケージには、事前にインストールされたデータを使用してスクリプトを作成して実行するための組み込みデータセットが含まれています。 |
+| Python パッケージ | [**revoscalepy**](python/ref-py-revoscalepy.md)は、データ操作、変換、視覚化、および分析を行うための機能を備えたスケーラブルな Python のプライマリライブラリです。 <br/>[**microsoft ml (Python)** ](python/ref-py-microsoftml.md)は、機械学習アルゴリズムを追加して、テキスト分析、画像分析、およびセンチメント分析のためのカスタムモデルを作成します。  |
+| Python ツール | 組み込みの Python コマンドラインツールは、アドホックテストやタスクに役立ちます。  |
+| Anaconda | Anaconda は、Python と必須パッケージのオープンソースディストリビューションです。 |
+| Python のサンプルとスクリプト | R と同様に、Python には組み込みのデータセットとスクリプトが含まれています。  |
+| R と Python の事前トレーニング済みのモデル | 事前トレーニング済みのモデルは、特定のユースケースに対して作成され、Microsoft のデータサイエンスエンジニアリングチームによって管理されます。 事前トレーニング済みのモデルを使用すると、指定した新しいデータ入力を使用して、テキスト内で肯定的なセンチメントをスコア付けしたり、画像の特徴を検出したりできます。 モデルは Machine Learning Services で実行されますが、SQL Server セットアップを使用してインストールすることはできません。 詳細については、「 [SQL Server で事前トレーニング済みの機械学習モデルをインストール](install/sql-pretrained-models-install.md)する」を参照してください。 |
 
-## <a name="using-sql-mls"></a>SQL MLS を使用します。
+## <a name="using-sql-mls"></a>SQL MLS の使用
 
-開発者およびアナリスト多くの場合、ローカルの SQL Server インスタンス上で実行されるコードがあります。 Machine Learning サービスを追加し、外部スクリプトの実行を有効にして、SQL Server のモダリティで R と Python のコードを実行することができますストアド プロシージャにスクリプトをラップする、モデルを格納する SQL Server テーブル、または T-SQL と R または Python 関数の組み合わせ。クエリ。
+多くの場合、開発者とアナリストは、ローカル SQL Server インスタンス上でコードを実行しています。 Machine Learning Services を追加し、外部スクリプトの実行を有効にすることにより、R と Python のコードを、ストアドプロシージャ内のラッピングスクリプト、SQL Server テーブルに格納する、または T-sql 関数と R 関数または Python 関数を組み合わせることによって、SQL Server 感覚様相で実行できるようになります。クエリ内。
 
-データのセキュリティ モデルの境界内にスクリプトの実行: リレーショナル データベースの権限は、スクリプト内のデータ アクセスの基礎です。 R または Python スクリプトを実行しているユーザーは、任意のデータを SQL クエリでは、そのユーザーにアクセスできませんでしたを使用する必要がありますできません。 標準的なデータベースの読み取りと書き込みのアクセス許可、および外部のスクリプトを実行する追加のアクセス許可必要があります。 モデルとリレーショナル データを記述するコードがラップ ストアド プロシージャ、またはバイナリ形式にシリアル化して、テーブルに格納または生のバイト ストリームをファイルにシリアル化する場合は、ディスクから読み込まれます。
+スクリプトの実行は、データセキュリティモデルの境界内にあります。リレーショナルデータベースに対する権限は、スクリプト内でのデータアクセスの基礎となります。 R または Python スクリプトを実行するユーザーは、SQL クエリでそのユーザーがアクセスできなかったデータを使用できないようにする必要があります。 標準のデータベースの読み取りと書き込みのアクセス許可に加え、外部スクリプトを実行するための追加のアクセス許可が必要です。 リレーショナルデータ用に記述したモデルとコードは、ストアドプロシージャにラップされるか、バイナリ形式にシリアル化されてテーブルに格納されるか、生のバイトストリームをファイルにシリアル化した場合はディスクから読み込まれます。
 
-データベース内分析の最も一般的なアプローチは、使用する[sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)、R または Python スクリプトを入力パラメーターとして渡します。
+データベース内分析の最も一般的な方法は、 [sp_execute_external_script](../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を使用して、R または Python スクリプトを入力パラメーターとして渡すことです。
 
-従来のクライアント サーバーのやり取りは別の方法です。 IDE のある任意のクライアント ワークステーションからインストールできます[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)または[Python ライブラリ](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)、実行をプッシュするコードを記述 (と呼ばれる、*リモート コンピューティングコンテキスト*) データとリモートの SQL Server を操作します。 
+従来のクライアントとサーバー間の対話は、もう1つの方法です。 IDE がインストールされている任意のクライアントワークステーションから、 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)または[Python ライブラリ](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)をインストールしてから、リモート SQL Server に対してデータおよび操作に対して実行 (*リモート計算コンテキスト*と呼ばれる) をプッシュするコードを記述することができます。 
 
-最後に、使用する場合、[スタンドアロン サーバー](r/r-server-standalone.md)と Developer edition では、同じライブラリとインタープリターを使用して、クライアント ワークステーションでソリューションを構築して SQL Server Machine Learning で運用環境のコードを配置することができます、Services (In-database)。 
+また、[スタンドアロンサーバー](r/r-server-standalone.md)と Developer edition を使用している場合は、同じライブラリおよびインタープリターを使用してクライアントワークステーションでソリューションをビルドし、SQL Server Machine Learning Services (データベース内) に運用コードをデプロイすることができます。 
 
 ## <a name="how-to-get-started"></a>開始する方法
 
-### <a name="step-1-install-the-software"></a>手順 1:ソフトウェアをインストールします。
+### <a name="step-1-install-the-software"></a>手順 1:ソフトウェアのインストール
 
-+ [SQL Server Machine Learning Services (In-database)](install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services (データベース内)](install/sql-machine-learning-services-windows-install.md)
  
-### <a name="step-2-configure-a-development-tool"></a>手順 2:開発ツールを構成します。
+### <a name="step-2-configure-a-development-tool"></a>手順 2:開発ツールの構成
 
-データ サイエンティスト通常 R または Python を使用、独自のラップトップ コンピューターや開発ワークステーションにデータを探索し、ビルド、適切な予測モデルを実現するまでは、予測モデルを調整します。 SQL server の in-database analytics では、このプロセスを変更する必要はありません。 インストールが完了したら、ローカルおよびリモートで、SQL Server で R または Python コードを実行します。
+データ科学者は、通常、独自のノート pc または開発ワークステーションで R または Python を使用し、データを探索し、適切な予測モデルが実現されるまで予測モデルを構築および調整します。 SQL Server でのデータベース内分析を使用する場合、このプロセスを変更する必要はありません。 インストールが完了したら、SQL Server で R または Python コードをローカルおよびリモートで実行できます。
 
 ![rsql_keyscenario2](r/media/rsql-keyscenario2.png) 
 
-+ **必要に応じて IDE を使用して**します。 任意の開発ツールには、R と Python ライブラリをリンクできます。 詳細については、次を参照してください。 [R tools セットアップ](r/set-up-a-data-science-client.md)と[Python ツールのセットアップ](python/setup-python-client-tools-sql.md)します。  
++ **好みの IDE を使用**します。 R と Python ライブラリを任意の開発ツールにリンクすることができます。 詳細については、「 [R ツールのセットアップ](r/set-up-a-data-science-client.md)」および「 [Python ツールの設定](python/setup-python-client-tools-sql.md)」を参照してください。  
 
-+ **リモートまたはローカルでの作業**します。 データ サイエンティストは、SQL Server に接続し、ローカルの分析のため、クライアントにデータを通常どおりさせます。 ただしより優れたソリューションは、使用する、 **RevoScaleR**または**revoscalepy** SQL Server コンピューターに計算をプッシュ Api にコストのかかる安全でないデータ移動を回避します。
++ **リモートまたはローカルで作業**します。 データ科学者は、SQL Server に接続し、通常どおり、ローカル分析のためにデータをクライアントに取り込むことができます。 ただし、より適切な解決策は、 **RevoScaleR** api または**revoscalepy** api を使用して SQL Server コンピューターに計算をプッシュすることです。これにより、コストのかかる安全でないデータ移動を回避できます。
 
-+ **SQL Server ストアド プロシージャで R または Python スクリプトを埋め込む**します。 コードを完全に最適化するときは、不要なデータ移動を回避し、データ処理タスクを最適化するストアド プロシージャでラップします。
++ **SQL Server ストアドプロシージャに R または Python スクリプトを埋め込み**ます。 コードが完全に最適化されたら、不要なデータ移動を回避し、データ処理タスクを最適化するために、ストアドプロシージャにラップします。
 
-### <a name="step-3-write-your-first-script"></a>手順 3:最初のスクリプトを作成します。
+### <a name="step-3-write-your-first-script"></a>手順 3:最初のスクリプトを作成する
 
-T-SQL スクリプト内で R または Python 関数を呼び出します。
+T-sql スクリプト内から R または Python 関数を呼び出す:
 
-+ [R:R を使用してデータベース内分析について説明します](tutorials/sqldev-in-database-r-for-sql-developers.md)
-+ [R:R を使用したエンド ツー エンド チュートリアル](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
-+ [Python:T-SQL を使用して Python を実行します。](tutorials/run-python-using-t-sql.md)
-+ [Python:Python を使用してデータベース内分析について説明します](tutorials/sqldev-in-database-python-for-sql-developers.md)
++ [\R\N\R\NR を使用したデータベース内分析の学習](tutorials/sqldev-in-database-r-for-sql-developers.md)
++ [\R\N\R\NR を使用したエンドツーエンドチュートリアル](tutorials/walkthrough-data-science-end-to-end-walkthrough.md)
++ [PythonT-sql を使用して Python を実行する](tutorials/run-python-using-t-sql.md)
++ [PythonPython を使用したデータベース内分析の学習](tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-タスクの最適な言語を選択します。 R は、SQL を使用して実装するが困難な統計の計算に最適です。 データのセット ベース操作では、最大のパフォーマンスを実現するために SQL Server のパワーを活用します。 列にわたって非常に高速計算、メモリ内データベース エンジンを使用します。
+タスクに最適な言語を選択します。 R は、SQL を使用して実装するのが困難な統計計算に最適です。 データに対するセットベースの操作の場合は、SQL Server の機能を活用して最大のパフォーマンスを実現します。 列を非常に高速に計算するには、メモリ内データベースエンジンを使用します。
 
-### <a name="step-4-optimize-your-solution"></a>手順 4:ソリューションを最適化します。
+### <a name="step-4-optimize-your-solution"></a>手順 4:ソリューションを最適化する
 
-モデルのエンタープライズ データを拡大縮小する準備ができたら、データ サイエンティストは多くの場合などのプロセスを最適化するために、データベース管理者または SQL の開発者で動作します。
+企業データに対してモデルを拡張する準備が整ったら、データサイエンスは DBA または SQL 開発者と協力して、次のようなプロセスを最適化します。
 
 + 機能エンジニアリング
-+ データの取り込みとデータ変換
++ データインジェストとデータ変換
 + ポイントの計算
 
-これまでは、データ サイエンティストが R を使用して問題がある両方のパフォーマンスとスケール、特に大規模なデータセットを使用する場合。 共通ランタイムの実装はシングル スレッドし、ローカル コンピューターの使用可能なメモリに収まるデータ セットのみに対応できるためです。 SQL Server Machine Learning Services との統合は、多くのデータをパフォーマンスの向上のための複数の機能を提供します。
+従来、R を使用するデータ科学者は、特に大規模なデータセットを使用する場合に、パフォーマンスとスケールの両方に問題がありました。 これは、共通のランタイム実装がシングルスレッドであり、ローカルコンピューター上の使用可能なメモリに収まるデータセットだけを格納できるためです。 SQL Server Machine Learning Services との統合により、パフォーマンス向上のための複数の機能が提供され、データが増えます。
 
-+ **RevoScaleR**:この R パッケージには、並列処理とスケールを提供する再設計された、最も一般的な R 関数のいくつかの実装が含まれています。 パッケージには、通常ははるかに大きなメモリと計算能力を持つ SQL Server コンピューターに計算をプッシュしてパフォーマンスとスケールをさらに向上させる機能も含まれています。
++ **RevoScaleR**:この R パッケージには、並列処理とスケールを提供するために再設計された、最も一般的ないくつかの R 関数の実装が含まれています。 このパッケージには、SQL Server コンピューターに計算をプッシュすることによってパフォーマンスとスケールをさらに向上させる機能も含まれています。通常、これにはメモリと計算能力が非常に大きくなります。
 
-+ **revoscalepy**します。 この Python ライブラリが、リモート計算コンテキストなどの revoscaler の最も人気のある関数を実装し、分散処理をサポートする多くのアルゴリズム。
++ **revoscalepy**。 この Python ライブラリは、リモート計算コンテキストなど、RevoScaleR の最も一般的な関数、および分散処理をサポートする多くのアルゴリズムを実装しています。
 
-パフォーマンスの詳細については、この参照してください[パフォーマンスのケース スタディ](r/performance-case-study-r-services.md)と[R とデータの最適化](r/r-and-data-optimization-r-services.md)します。
+パフォーマンスの詳細については、この[パフォーマンスのケーススタディ](r/performance-case-study-r-services.md)と[R とデータの最適化](r/r-and-data-optimization-r-services.md)に関する説明を参照してください。
 
-### <a name="step-5-deploy-and-consume"></a>手順 5:デプロイし、使用
+### <a name="step-5-deploy-and-consume"></a>手順 5:展開と使用
 
-スクリプトまたはモデルが運用環境で使用できる状態と、データベース開発者を埋め込むことがコードまたはモデルをストアド プロシージャで保存した R または Python コードをアプリケーションから呼び出すことができるようにします。 格納して、SQL Server から R コードの実行が多くの利点: 便利な SQL Server のインターフェイスを使用して、不要なデータ移動を回避、データベースで実行されるすべての計算。
+スクリプトまたはモデルを運用環境で使用する準備が整ったら、データベース開発者は、保存されている R または Python コードをアプリケーションから呼び出すことができるように、ストアドプロシージャにコードまたはモデルを埋め込むことができます。 SQL Server から R コードを格納して実行すると、多くの利点があります。便利な SQL Server インターフェイスを使用でき、すべての計算がデータベース内で行われるため、不要なデータ移動を回避できます。
 
 ![rsql_keyscenario1](r/media/rsql-keyscenario1.png)
 
-+ **セキュリティで保護されたで拡張可能な**します。 SQL Server では、状態、データベース エンジンをセキュリティで保護された R と Python のセッションを分離する新しい拡張可能アーキテクチャを使用します。 コードでアクセスできるデータベースを指定することができますおよびスクリプトを実行できるユーザーを制御もあります。 サーバーの全体のパフォーマンスを損なうから大量の計算を防ぐために、実行時に割り当てられたリソースの量を制御できます。
++ **セキュリティで保護された拡張**。 SQL Server は、データベースエンジンのセキュリティを維持し、R と Python のセッションを分離する新しい拡張機能アーキテクチャを使用します。 また、スクリプトを実行できるユーザーを制御したり、コードからアクセスできるデータベースを指定したりすることもできます。 大量の計算によってサーバー全体のパフォーマンスが低下するのを防ぐために、ランタイムに割り当てられるリソースの量を制御できます。
 
-+ **スケジュール設定と監査**します。 SQL Server の外部スクリプト ジョブの実行時に制御し、データ サイエンティストによって使用されるデータを監査できます。 ジョブと他の T-SQL ジョブまたはストアド プロシージャをスケジュールするのと同じように、外部の R または Python スクリプトを含むワークフローを作成をスケジュールすることもできます。
++ **スケジュールと監査**。 外部スクリプトジョブを SQL Server で実行すると、データ科学者によって使用されるデータを制御および監査できます。 また、他の T-sql ジョブまたはストアドプロシージャをスケジュールするのと同じように、外部の R または Python スクリプトを含むジョブをスケジュールし、ワークフローを作成することもできます。
 
-SQL Server で、リソース管理とセキュリティ機能の活用、展開プロセスにこれらのタスクが含まれます。
+SQL Server のリソース管理機能とセキュリティ機能を活用するために、展開プロセスには次のタスクが含まれる場合があります。
 
-+ ストアド プロシージャで最適に実行できる関数にコードを変換します。
-+ セキュリティを設定して、特定のタスクで使用されるパッケージのロックダウン
-+ リソース ガバナンスが (Enterprise edition が必要) を有効にします。
++ ストアドプロシージャで最適に実行できる関数にコードを変換する
++ セキュリティを設定し、特定のタスクで使用されるパッケージをロックダウンする
++ リソースガバナンスを有効にする (Enterprise edition が必要)
 
-詳細については、次を参照してください。 [R 用のリソース ガバナンス](r/resource-governance-for-r-services.md)と[SQL Server の R パッケージ管理](r/install-additional-r-packages-on-sql-server.md)します。
+詳細については、「 [r のリソースガバナンス](r/resource-governance-for-r-services.md)」および「 [SQL Server の r Package Management](r/install-additional-r-packages-on-sql-server.md)」を参照してください。
 
 ## <a name="version-history"></a>バージョン履歴
 
-SQL Server 2017 Machine Learning Services とは、Python 拡張により、SQL Server 2016 R Services の次世代です。 次の表では、現在のリリースに至るまで、すべての製品バージョンの完全な一覧を示します。 
+SQL Server 2017 Machine Learning Services は SQL Server 2016 R Services の次世代であり、Python を含むように強化されています。 次の表は、すべての製品バージョンの、開始から現在のリリースまでの完全な一覧です。 
 
 | [製品名] | エンジンのバージョン | リリース日 |
 |--------------|---------|--------------|
-| SQL Server 2017 Machine Learning サービス (データベース) | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
+| SQL Server 2017 Machine Learning Services (データベース内) | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
 | SQL Server 2017 Machine Learning Server (スタンドアロン) | R Server 9.2.1 <br/> Python Server 9.2 | 2017 年 10 月 |
-| SQL Server 2016 R Services (In-database) | R Server 9.1  | 2017 年 7 月  |
+| SQL Server 2016 R Services (データベース内) | R Server 9.1  | 2017 年 7 月  |
 | SQL Server 2016 R Server (スタンドアロン)  |  R Server 9.1 | 2017 年 7 月 |
 
-リリースでは、パッケージのバージョンのマップにバージョンを参照してください。[アップグレード R および Python コンポーネント](install/upgrade-r-and-python.md#version-map)します。
+リリース別のパッケージバージョンについては、「 [Upgrade R And Python components](install/upgrade-r-and-python.md#version-map)」の「バージョンマップ」を参照してください。
 
-## <a name="portability-and-related-products"></a>移植性および関連製品
+## <a name="portability-and-related-products"></a>移植性と関連製品
 
-パッケージの配布と複数の製品に組み込まれているインタープリターで、カスタムの R と Python コードの移植性が対処されます。 その他のいくつかの Microsoft 製品やと呼ばれる非 SQL バージョンを含むサービスで使用できる SQL Server に含まれている同じパッケージも[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)します。 
+カスタム R と Python コードの移植性は、パッケージの配布と、複数の製品に組み込まれているインタープリターによって解決されます。 SQL Server に同梱されているのと同じパッケージは、他のいくつかの Microsoft 製品およびサービス ( [Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)と呼ばれる SQL 以外のバージョンを含む) でも使用できます。 
 
-無料のクライアントを含む、R と Python インタープリターは[Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)と[Python ライブラリ](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)。
+R および Python インタープリターを含む無料のクライアントは、 [Microsoft R Client](https://docs.microsoft.com/machine-learning-server/r-client/what-is-microsoft-r-client)と[python ライブラリ](https://docs.microsoft.com/machine-learning-server/install/python-libraries-interpreter)です。
 
-Azure では、Microsoft の R と Python のパッケージおよびインタープリターも、Azure Machine Learning で使用できるなどの Azure サービスと[HDInsight](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview)、および[Azure 仮想マシン](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)します。 [データ サイエンス仮想マシン](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)から複数のベンダーだけでなく、ライブラリのツールと Microsoft からのインタープリターを使用してフル装備の開発ワークステーションが含まれています。
+Azure では、Microsoft の R および Python のパッケージとインタープリターは、Azure Machine Learning、および[HDInsight](https://docs.microsoft.com/azure/hdinsight/r-server/r-server-overview)や azure [virtual Machines](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-azure-vm-on-linux)などの azure サービスでも利用できます。 [Data Science Virtual Machine](https://azure.microsoft.com/services/virtual-machines/data-science-virtual-machines/)には、複数のベンダーからのツールと、Microsoft のライブラリやインタープリターを備えた、完全に装備された開発ワークステーションが含まれています。
 
 ## <a name="see-also"></a>関連項目
 
-[SQL Server Machine Learning サービスをインストールします。](install/sql-machine-learning-services-windows-install.md)
+[SQL Server Machine Learning Services のインストール](install/sql-machine-learning-services-windows-install.md)

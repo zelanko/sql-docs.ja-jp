@@ -1,5 +1,5 @@
 ---
-title: R と Python の machine learning のドキュメント - SQL Server Machine Learning サービス
+title: R と Python machine learning のドキュメント
 description: SQL Server での R および Python と大規模なエンタープライズ データ分析用の組み込みのデータ サイエンス モデリングおよび機械学習アルゴリズム。
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 16bf39172144b17b3ecb03969244f31ac4715400
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8eb391ac4b64c93de255214d748c77f44dccb1b3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962304"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344741"
 ---
 # <a name="sql-server-machine-learning-services"></a>SQL Server Machine Learning サービス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 ## <a name="sql-server-machine-learning-services-r-and-python-documentation"></a>SQL Server Machine Learning Services (R および Python) のドキュメント
 
-クイック スタート、チュートリアル、および操作方法に関する記事によって、常駐のリレーショナル データに対して R および Python 外部ライブラリおよび言語を使用する方法について説明します。 R と Python ライブラリ[SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md)基本ディストリビューション、データ サイエンス モデル、機械学習アルゴリズム、およびしなくても、大規模、高パフォーマンスの分析を実施するための関数を含めるネットワーク経由でデータを転送します。
+クイック スタート、チュートリアル、および操作方法に関する記事によって、常駐のリレーショナル データに対して R および Python 外部ライブラリおよび言語を使用する方法について説明します。 [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md)の R および Python ライブラリには、ベースディストリビューション、データサイエンスモデル、機械学習アルゴリズム、および大規模な高パフォーマンス分析を実行するための関数が含まれています。ネットワーク.
 
 ::: moniker range="=sql-server-ver15||=sqlallproducts-allversions"
 > [!NOTE]
-> Java のドキュメントについては、次を参照してください。、 [SQL Server の言語拡張機能ドキュメント](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)します。
+> Java に関するドキュメントについては、 [SQL Server 言語拡張機能に関するドキュメント](https://docs.microsoft.com/sql/language-extensions/language-extensions-overview)を参照してください。
 ::: moniker-end
 
 |   |   |
@@ -41,7 +41,7 @@ ms.locfileid: "67962304"
 
 ## <a name="step-by-step-tutorials"></a>ステップ バイ ステップ チュートリアル
 
-- [SQL Server への Machine Learning サービスをインストールする方法](install/sql-machine-learning-services-windows-install.md)
+- [SQL Server に Machine Learning Services をインストールする方法](install/sql-machine-learning-services-windows-install.md)
 
 - [T-SQL およびストアド プロシージャから R を実行する方法](tutorials/sqldev-in-database-r-for-sql-developers.md)
 

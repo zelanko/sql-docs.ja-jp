@@ -1,38 +1,38 @@
 ---
-title: T-SQL - SQL Server Machine Learning の"Hello World"基本的な R コード実行のクイック スタート
-description: SQL Server で R スクリプトのクイック スタートです。 Hello world の演習では、sp_execute_external_script のシステム ストアド プロシージャを使用して R スクリプトを呼び出すことの基礎について説明します。
+title: T-sql での "Hello World" 基本的な R コードの実行のクイックスタート
+description: SQL Server での R スクリプトのクイックスタート。 Hello world の演習で sp_execute_external_script システムストアドプロシージャを使用して R スクリプトを呼び出す方法の基本について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 331184f49918dbb17b7b97590b3155cbc8eb89ed
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 61b1959b9b3b0769e080a2a4a44b1d4d10ef2b61
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961984"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345975"
 ---
-# <a name="quickstart-hello-world-r-script-in-sql-server"></a>クイック スタート: SQL Server で R スクリプトの"hello world" 
+# <a name="quickstart-hello-world-r-script-in-sql-server"></a>クイック スタート: SQL Server の "Hello world" R スクリプト 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このクイック スタートでを"Hello World"R を実行して、主要な概念スクリプト inT SQL の概要を学習します、 **sp_execute_external_script**システム ストアド プロシージャ。 
+このクイックスタートでは、 **sp_execute_external_script**システムストアドプロシージャの概要と共に、"Hello World" R スクリプトを実行して、主要な概念について説明します。 
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-前のクイック スタート[SQL server が存在することを確認する R](quickstart-r-verify.md)情報を提供し、このクイック スタートに必要な R 環境を設定するためにリンクします。
+前のクイックスタート「 [SQL Server に r が存在することを確認](quickstart-r-verify.md)する」では、このクイックスタートに必要な r 環境を設定するための情報とリンクを提供しています。
 
-## <a name="basic-r-interaction"></a>基本的な R の対話
+## <a name="basic-r-interaction"></a>基本的な R の相互作用
 
-SQL Database での R コードを実行する 2 つの方法はあります。
+SQL Database で R コードを実行するには、次の2つの方法があります。
 
-+ R スクリプトをシステム ストアド プロシージャの引数として追加[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)します。
-+ [リモート R client](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client)SQL database に接続し、計算コンテキストとして SQL Database を使用してコードを実行します。
++ システムストアドプロシージャ[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)の引数として R スクリプトを追加します。
++ [リモート R クライアント](https://docs.microsoft.com/sql/advanced-analytics/r/set-up-a-data-science-client)から SQL database に接続し、SQL Database を計算コンテキストとして使用してコードを実行します。
 
-次の演習は最初の対話モデルに重点を置いて: ストアド プロシージャに R コードを渡す方法です。
+次の演習では、最初の相互作用モデル (R コードをストアドプロシージャに渡す方法) に重点を置いています。
 
-1. SQL database での R スクリプトの実行方法を表示する単純なスクリプトを実行します。
+1. 単純なスクリプトを実行して、SQL データベースで R スクリプトがどのように実行されるかを確認します。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -46,7 +46,7 @@ SQL Database での R コードを実行する 2 つの方法はあります。
     '
     ```
 
-2. すべての正しい結果正しくセットアップがある場合が計算され、R と`print`関数に結果を返す、**メッセージ**ウィンドウ。
+2. すべてが正しく設定されていることを前提として、正しい結果`print`が計算され、R 関数によって結果が**Messages**ウィンドウに返されます。
 
     **結果**
 
@@ -55,11 +55,11 @@ SQL Database での R コードを実行する 2 つの方法はあります。
     0.5 2
     ```
 
-    取得中に**stdout**メッセージは、コードをテストするときに有用ですより多くの場合する必要があるアプリケーションで使用したり、テーブルに書き込むように表形式で結果を返します。 参照してください[クイック スタート。ハンドルは、入力し、出力の SQL Server で R を使用して](rtsql-working-with-inputs-and-outputs.md)詳細についてはします。
+    コードをテストするときに**stdout**メッセージを取得すると便利ですが、多くの場合、アプリケーションで使用したり、テーブルに書き込んだりできるように、結果を表形式で返す必要があります。 クイック[スタートを参照:詳細については、SQL Server](rtsql-working-with-inputs-and-outputs.md)の R を使用した入力と出力の処理」を参照してください。
 
-内のすべての記憶、`@script`引数は有効な R コードである必要があります。
+引数内のすべてが`@script`有効な R コードである必要があることに注意してください。
 
-## <a name="run-a-hello-world-script"></a>Hello World スクリプトを実行します。
+## <a name="run-a-hello-world-script"></a>Hello World スクリプトを実行する
 
 次の演習では、別の単純な R スクリプトを実行します。
 
@@ -72,12 +72,12 @@ EXEC sp_execute_external_script
 GO
 ```
 
-このストアド プロシージャへの入力は次のとおりです。
+このストアドプロシージャへの入力は次のとおりです。
 
-+ *@language* パラメーターは、ここでは、R. を呼び出す言語拡張機能を定義します。
-+ *@script* パラメーターは、R ランタイムに渡されるコマンドを定義します。 Unicode テキストとして、この引数で R スクリプト全体を囲む必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます。
-+ *@input_data_1* データ フレームとして SQL Server へデータを返す R ランタイムに渡される、クエリによってデータが返されます。
-+ 句の結果セット列名として"Hello World"を追加する、SQL Server の返されたデータ テーブルのスキーマを定義します**int**データ型。
++ *@language* パラメーターでは、呼び出す言語拡張機能 (この場合は R) を定義します。
++ *@script* パラメーターでは、R ランタイムに渡されるコマンドを定義します。 Unicode テキストとして、この引数で R スクリプト全体を囲む必要があります。 **nvarchar** 型の変数にテキストを追加して、その変数を呼び出すこともできます。
++ *@input_data_1* クエリによって返されるデータです。 R ランタイムに渡され、データフレームとして SQL Server するデータが返されます。
++ WITH RESULT SETS 句では、SQL Server に対して返されるデータテーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に**int**を追加します。
 
 **結果**
 
@@ -87,7 +87,7 @@ GO
 
 ## <a name="next-steps"></a>次の手順
 
-これで、複数の単純な R スクリプトを実行すると、入力と出力の構成について詳しく見てを実行します。
+これで、いくつかの単純な R スクリプトを実行できました。次は、入力と出力の構成について詳しく見ていきます。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:入力と出力を処理します。](quickstart-r-inputs-and-outputs.md)
+> [クイック スタート:入力と出力の処理](quickstart-r-inputs-and-outputs.md)

@@ -1,37 +1,37 @@
 ---
-title: Azure の仮想マシンの SQL Server Machine Learning Services での R 言語と Python の機能をインストールします。
-description: R と Python のデータ サイエンスと機械学習、Azure クラウドで SQL Server 仮想マシンでソリューションを実行します。
+title: Azure の仮想マシンに R 言語と Python の機能をインストールする
+description: Azure クラウドの SQL Server 仮想マシンで、R と Python のデータサイエンスソリューションと機械学習ソリューションを実行できます。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/09/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 551d7c81220175efd1143323cce0a9bcdb4ad3f1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6f034f3a766e4f82bd1bcfd182f4eee285f7f829
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962902"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345035"
 ---
-# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>SQL Server Machine Learning サービスを Azure の仮想マシンで R と Python のインストールします。
+# <a name="install-sql-server-machine-learning-services-with-r-and-python-on-an-azure-virtual-machine"></a>Azure 仮想マシンに R と Python を使用して SQL Server Machine Learning Services をインストールする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Azure では、インストールおよび構成タスクを排除することで SQL Server 仮想マシンで、Machine Learning サービスで R と Python の統合をインストールできます。 仮想マシンをデプロイすると、機能が使用する準備ができます。
+Azure の SQL Server 仮想マシンに Machine Learning Services との R および Python 統合をインストールすると、インストールと構成のタスクが不要になります。 仮想マシンがデプロイされると、機能を使用する準備が整います。
  
-ステップ バイ ステップの手順については、次を参照してください。 [、Azure portal で Windows SQL Server 仮想マシンのプロビジョニング方法](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)します。
+詳細な手順については、「 [Azure portal で Windows SQL Server 仮想マシンをプロビジョニングする方法](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision)」を参照してください。
 
-[構成の SQL server の設定](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)の手順では、インスタンスに machine learning を追加します。
+[ [SQL server 設定の構成](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-server-provision#3-configure-sql-server-settings)] 手順では、インスタンスに machine learning を追加します。
 
 <a name="firewall"></a>
 
-## <a name="unblock-the-firewall"></a>ファイアウォールのブロックを解除します。
+## <a name="unblock-the-firewall"></a>ファイアウォールのブロックを解除する
 
-既定では、Azure の仮想マシン上のファイアウォールには、ネットワークのローカル ユーザー アカウントのアクセスをブロックするルールが含まれます。
+既定では、Azure 仮想マシンのファイアウォールには、ローカルユーザーアカウントのネットワークアクセスをブロックする規則が含まれています。
 
-アクセスできることを確認するには、このルールを無効にする必要があります、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモート データ サイエンス クライアントからのインスタンス。  それ以外の場合、仮想マシンのワークスペースを使用して、計算コンテキストで、機械学習のコードを実行できません。
+リモートデータサイエンスクライアントから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスにアクセスできるようにするには、このルールを無効にする必要があります。  そうしないと、仮想マシンのワークスペースを使用するコンピューティングコンテキストで machine learning コードを実行できなくなります。
 
-リモート データ サイエンス クライアントからのアクセスを有効にします。
+リモートデータサイエンスクライアントからのアクセスを有効にするには:
 
 1. 仮想マシン で、[セキュリティが強化された Windows ファイアウォール] を開きます。
 2. **[送信の規則]** を選択します
@@ -41,13 +41,13 @@ Azure では、インストールおよび構成タスクを排除すること�
   
 ## <a name="enable-odbc-callbacks-for-remote-clients"></a>リモート クライアントの ODBC コールバックを有効にする
 
-サーバーを呼び出すクライアントが、機械学習ソリューションの一部として ODBC クエリを実行する必要があることを期待する場合は、スタート パッドがリモート クライアントの代理としての ODBC 呼び出しを実行できることを確認します必要があります。 
+サーバーを呼び出すクライアントが machine learning ソリューションの一部として ODBC クエリを発行する必要があると予想される場合は、スタートパッドがリモートクライアントの代わりに ODBC 呼び出しを行うことができるようにする必要があります。 
 
-これを行うには、スタート パッドによって使用される SQL ワーカー アカウントがインスタンスにログインするできるようにする必要があります。 詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../security/create-a-login-for-sqlrusergroup.md)します。
+これを行うには、スタート パッドによって使用される SQL ワーカー アカウントがインスタンスにログインするできるようにする必要があります。 詳細については、「[データベースユーザーとしての SQLRUserGroup の追加](../security/create-a-login-for-sqlrusergroup.md)」を参照してください。
 
 <a name="network"></a>
 
-## <a name="add-network-protocols"></a>ネットワーク プロトコルを追加します。
+## <a name="add-network-protocols"></a>ネットワークプロトコルの追加
 
 + 名前付きパイプを有効にする
   
@@ -55,4 +55,4 @@ Azure では、インストールおよび構成タスクを排除すること�
   
 + TCP/IP を有効にする
 
-  TCP/IP は、ループバック接続に必要です。 "DBNETLIB; のエラーが発生する場合SQL Server が存在しないかアクセスが拒否されました"、インスタンスをサポートする仮想マシンで TCP/IP を有効にします。
+  ループバック接続には TCP/IP が必要です。 エラー "DBNETLIB;SQL Server が存在しないか、アクセスが拒否されました "という、インスタンスをサポートする仮想マシンで TCP/IP を有効にします。

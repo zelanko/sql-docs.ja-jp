@@ -1,37 +1,37 @@
 ---
-title: 入力と出力 - SQL Server Machine Learning の Python で使用するためのクイック スタート
-description: SQL Server での Python スクリプトのこのクイック スタートでは、入力と出力は、sp_execute_external_script のシステム ストアド プロシージャを構成する方法を説明します。
+title: Python での入力と出力を操作するためのクイックスタート
+description: SQL Server での Python スクリプトのこのクイックスタートでは、sp_execute_external_script システムストアドプロシージャに入力と出力を構成する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 80bb86beedf54c29fbe67e2362a4163cb489c05a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a23896f5242e0f1182b2864e426bbb20aeda763f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962078"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344808"
 ---
-# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>クイック スタート: 入力と出力を SQL Server での Python の使用を処理します。
+# <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>クイック スタート: SQL Server での Python を使用した入力と出力の処理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このクイック スタートでは、入力を処理する方法について説明し、SQL Server Machine Learning Services での Python を使用する場合に出力します。
+このクイックスタートでは、SQL Server Machine Learning Services で Python を使用するときに入力と出力を処理する方法を示します。
 
-既定では、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 1 つの入力データセットが有効な SQL クエリの形式で指定する通常を受け入れます。
+既定では、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)は単一の入力データセットを受け入れます。通常は、有効な SQL クエリの形式で指定します。
 
-他の種類の入力は、SQL 変数として渡すことができますたとえば、渡すことができます、トレーニング済みモデル変数としてシリアル化の関数を使用して[pickle](https://docs.python.org/3.0/library/pickle.html)または[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)でモデルを記述する、。バイナリ形式です。
+その他の種類の入力は SQL 変数として渡すことができます。たとえば、 [pickle](https://docs.python.org/3.0/library/pickle.html)や[rx_serialize_model](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-serialize-model)などのシリアル化関数を使用して、モデルをバイナリ形式で書き込むことで、トレーニング済みのモデルを変数として渡すことができます。
 
-ストアド プロシージャが返す 1 つの Python [pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)データ フレームの出力として、スカラー、および変数としてモデルを出力することもできます。 たとえば、二項変数としてトレーニング済みモデルを出力し、そのモデルをテーブルに書き込む、T-SQL INSERT ステートメントに渡すできます。 (バイナリ形式) でのプロットまたはスカラーを生成することもできます (日付と時刻をなど、個々 の値、経過時間、モデルのトレーニングなど)。
+このストアドプロシージャでは、出力として1つの Python[パンダ](https://pandas.pydata.org/pandas-docs/stable/index.html)データフレームが返されますが、スカラーおよびモデルを変数として出力することもできます。 たとえば、トレーニング済みのモデルをバイナリ変数として出力し、それを T-sql INSERT ステートメントに渡して、そのモデルをテーブルに書き込むことができます。 また、プロット (バイナリ形式) またはスカラー (日付と時刻、モデルのトレーニングに要した時間など) を生成することもできます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-前のクイック スタート[SQL server が存在することを確認する Python](quickstart-python-verify.md)情報を提供し、このクイック スタートに必要な Python 環境を設定するためにリンクします。
+前のクイックスタート「 [SQL Server に python が存在することを検証](quickstart-python-verify.md)する」では、このクイックスタートに必要な python 環境を設定するための情報とリンクを提供しています。
 
 ## <a name="create-the-source-data"></a>ソース データを作成する
 
-次の T-SQL ステートメントを実行してテスト データの小さなテーブルを作成します。
+次の T-sql ステートメントを実行して、テストデータの小さなテーブルを作成します。
 
 ```sql
 CREATE TABLE PythonTestData (col1 INT NOT NULL)
@@ -53,11 +53,11 @@ SELECT * FROM PythonTestData
 
 ## <a name="inputs-and-outputs"></a>[スクリプト変換エディター]
 
-既定値を見てみましょう sp_execute_external_script の入力と出力の変数:`InputDataSet`と`OutputDataSet`します。
+Sp_execute_external_script `InputDataSet`の既定の入力変数と出力変数、およびを`OutputDataSet`見てみましょう。
 
-1. Python スクリプトへの入力としてテーブルからデータを取得できます。 次のステートメントを実行します。 テーブルからデータを取得、ラウンド トリップを Python ランタイム、および列の名前で値を返します*NewColName*します。
+1. Python スクリプトへの入力として、テーブルからデータを取得できます。 次のステートメントを実行します。 このメソッドは、テーブルからデータを取得し、Python ランタイムを介してラウンドトリップを行い、列名*NewColName*を持つ値を返します。
 
-    クエリによって返されるデータは、pandas データ フレームとして SQL Database にデータを返す Python ランタイムに渡されます。 WITH RESULT SETS 句では、SQL Database の返されたデータ テーブルのスキーマを定義します。
+    クエリによって返されるデータは、データフレームとして SQL Database するデータを返す Python ランタイムに渡されます。 WITH RESULT SETS 句では、SQL Database に対して返されるデータテーブルのスキーマを定義します。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -69,11 +69,11 @@ SELECT * FROM PythonTestData
 
     **結果**
 
-    ![テーブルからデータを返す Python スクリプトの出力](./media/python-output-pythontestdata.png)
+    ![テーブルからデータを返す Python スクリプトからの出力](./media/python-output-pythontestdata.png)
 
-2. 入力または出力変数の名前を変更してみましょう。 上記のスクリプトは既定の入力を使用し、出力変数名は、 _InputDataSet_と_OutputDataSet_します。 関連付けられている入力データを定義する_InputDataSet_を使用する、 *@input_data_1* 変数。
+2. 入力変数または出力変数の名前を変更してみましょう。 上記のスクリプトでは、入力と出力の既定の変数名である_inputdataset_と_outputdataset_が使用されていました。 _Inputdataset_に関連付けられている入力データを定義 *@input_data_1* するには、変数を使用します。
 
-    このスクリプトでは、ストアド プロシージャの出力と入力変数の名前に変更されましたが*SQL_out*と*SQL_in*:
+    このスクリプトでは、ストアドプロシージャの出力変数と入力変数の名前が*SQL_out*および*SQL_in*に変更されています。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -85,13 +85,13 @@ SELECT * FROM PythonTestData
       WITH RESULT SETS (([NewColName] INT NOT NULL));
     ```
 
-    入力と出力の変数の大文字と小文字`@input_data_1_name`と`@output_data_1_name`での Python コードで使用されているのと一致する必要がある`@script`Python は大文字小文字を区別します。
+    Python では大文字と小文字が`@input_data_1_name`区別`@output_data_1_name`されるので、とでの入力変数と出力変数`@script`の大文字と小文字の区別は、の python コードの大文字と小文字の区別に一致する必要があります。
 
-    パラメーターとして渡すことができるのは、1 つの入力データセットのみです。また、1 つのデータセットのみを返すことができます。 ただし、Python コード内から他のデータセットを呼び出すことができ、データセットに加え、他の型の出力を返すことができます。 また、OUTPUT キーワードを任意のパラメーターに追加して、その結果を受け取ることもできます。 
+    パラメーターとして渡すことができるのは、1 つの入力データセットのみです。また、1 つのデータセットのみを返すことができます。 ただし、Python コード内から他のデータセットを呼び出すことができます。また、データセットに加えて他の型の出力を返すこともできます。 また、OUTPUT キーワードを任意のパラメーターに追加して、その結果を受け取ることもできます。 
 
-    `WITH RESULT SETS`ステートメントは、SQL Server で使用されるデータのスキーマを定義します。 Python から返す列ごとに SQL 互換のデータ型を提供する必要があります。 スキーマ定義を使用して、新しい列名を提供する Python data.frame の列名を使用する必要はありませんので。
+    `WITH RESULT SETS`ステートメントでは、SQL Server で使用されるデータのスキーマを定義します。 Python から返される各列に対して、SQL と互換性のあるデータ型を指定する必要があります。 スキーマ定義を使用すると、Python data. frame の列名を使用する必要がないため、新しい列名を指定することもできます。
 
-3. Python スクリプトを使用して値を生成し、入力クエリ文字列のままにできますも _@input_data_1_ 空白。
+3. Python スクリプトを使用して値を生成し、入力クエリ文字列を空白 _@input_data_1_ のままにすることもできます。
 
     ```sql
     EXECUTE sp_execute_external_script
@@ -106,11 +106,11 @@ SELECT * FROM PythonTestData
 
     **結果**
 
-    ![使用してクエリ結果@script入力として](./media/python-data-generated-output.png)
+    ![入力とし@scriptてを使用したクエリ結果](./media/python-data-generated-output.png)
 
 ## <a name="next-steps"></a>次の手順
 
-Python と SQL Server の間で表形式のデータを渡すときに発生する可能性のある問題のいくつかを確認します。
+Python と SQL Server 間で表形式のデータを渡すときに発生する可能性のある問題をいくつか確認します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server での Python データ構造](quickstart-python-data-structures.md)
+> [クイック スタート:SQL Server の Python データ構造](quickstart-python-data-structures.md)

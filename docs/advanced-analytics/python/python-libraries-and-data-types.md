@@ -1,37 +1,37 @@
 ---
-title: Python、SQL データ型の変換 - SQL Server Machine Learning
-description: 明示的および暗黙的なデータ型 converstions を Python と SQL Server の間でデータ サイエンスと機械学習ソリューションを確認します。
+title: Python から SQL へのデータ型の変換
+description: データサイエンスと機械学習ソリューションで、Python と SQL Server の間で暗黙的および明示的なデータ型がどのようになるかを確認します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 652824e4b038e629cf9b998dd6fae64465426d0b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 043a27cc53c2dca955eb0bea1ed07433bc9183b8
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962767"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345509"
 ---
 # <a name="data-type-mappings-between-python-and-sql-server"></a>Python と SQL Server 間のデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server Machine Learning Services での Python の統合機能を実行している Python ソリューションでは、サポートされていないデータ型、および Python と SQL Server 間のデータが渡されるときに暗黙的に実行することがあるデータ型変換の一覧を確認してください。
+SQL Server Machine Learning Services の Python 統合機能で実行される Python ソリューションの場合、サポートされていないデータ型の一覧と、Python と SQL Server 間でデータが渡されたときに暗黙的に実行される可能性のあるデータ型の変換を確認してください。
 
-## <a name="python-version"></a>Python バージョン
+## <a name="python-version"></a>Python のバージョン
 
-SQL Server 2017 の Anaconda 4.2 配布は、Python 3.6。
+SQL Server 2017 Anaconda 4.2 ディストリビューションと Python 3.6。
 
-RevoScaleR の機能のサブセット (rxLinMod、rxLogit、rxPredict、rxDTrees、rxBTrees、おそらく他のいくつか)、新しい Python パッケージを使用して、Python Api を使用して提供**revoscalepy**します。 このパッケージを使用して、Pandas データ フレーム、XDF ファイル、または SQL データのクエリを使用してデータを操作することができます。
+RevoScaleR 機能 (rxLinMod、rxLogit、rxPredict、rxDTrees、rxBTrees など) のサブセットは、Python Api を使用して、新しい Python パッケージ**revoscalepy**を使用して提供されます。 このパッケージを使用して、パンダのデータフレーム、XDF ファイル、または SQL データクエリを使用してデータを操作できます。
 
-詳細については、次を参照してください。 [SQL Server で revoscalepy モジュール](ref-py-revoscalepy.md)と[revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)します。
+詳細については、「 [revoscalepy module in SQL Server](ref-py-revoscalepy.md) and [revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)」を参照してください。
 
-Python では、SQL Server とのデータ型の数に制限をサポートします。 その結果、SQL Server からデータを Python スクリプトを使用するたびにデータ可能性があります暗黙的に型に変換を互換性のあるデータ。 ただし、実際の変換を自動的に実行できない多くの場合、エラーが返されます。
+Python では、SQL Server と比較して、限られた数のデータ型をサポートしています。 その結果、Python スクリプトで SQL Server のデータを使用する場合、データが互換性のあるデータ型に暗黙的に変換される可能性があります。 ただし、多くの場合、正確な変換を自動的に実行することはできず、エラーが返されます。
 
-## <a name="python-and-sql-data-types"></a>Python と SQL データ型
+## <a name="python-and-sql-data-types"></a>Python と SQL のデータ型
 
-このテーブルには、提供されている暗黙的な変換が一覧表示します。 他のデータ型はサポートされていません。
+次の表に、指定されている暗黙的な変換の一覧を示します。 その他のデータ型はサポートされていません。
 
 |SQLtype|Python の種類|
 |-------|-----------|

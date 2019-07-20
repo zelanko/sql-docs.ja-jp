@@ -1,7 +1,7 @@
 ---
 title: SQLParamOptions 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLParamOptions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLParamOptions
@@ -19,25 +20,25 @@ helpviewer_keywords:
 ms.assetid: ee08e987-0243-4060-ab21-64da11fe444f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 40b3f876993d8c7c334594f11b87cc5d2ed8ff0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3ebcd3da4f5e7d57bbc8883ebf7409ff5ea106f1
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947943"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343530"
 ---
 # <a name="sqlparamoptions-function"></a>SQLParamOptions 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
+**互換性**  
+ 導入されたバージョン:ODBC 1.0 標準準拠:非推奨  
   
  **概要**  
- ODBC 2.0 関数**SQLParamOptions** ODBC 3 では置き換えられました *。x*への呼び出しによって[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)します。  
+ Odbc 2.0 関数の**Sqlparamoptions**が odbc 3 で置き換えられました。*x*は[SQLSetStmtAttr](../../../odbc/reference/syntax/sqlsetstmtattr-function.md)を呼び出します。  
   
 > [!NOTE]  
->  詳細についてはどのようなドライバー マネージャーのときに、ODBC 2 には、この関数にマップします。*x*アプリケーションは、ODBC 3 の操作します *。x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)で付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
+>  ドライバーマネージャーが ODBC 2 の場合にこの関数をマップする方法の詳細については、「」を参照してください。*x*アプリケーションは ODBC 3 を使用して動作しています。*x*ドライバー、「付録 G:[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)」を参照してください。旧バージョンとの互換性のためのドライバーガイドライン。  
   
 ## <a name="remarks"></a>コメント  
- 参照してください[ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)場合、アプリケーションが 64 ビットのオペレーティング システムで実行します。  
+ アプリケーションが64ビットのオペレーティングシステムで実行される場合は、「 [ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

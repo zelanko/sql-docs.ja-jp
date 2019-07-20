@@ -1,108 +1,108 @@
 ---
-title: 管理し、machine learning ワークロードの SQL Server Machine Learning Services の統合
-description: SQL Server のデータベース管理者として、machine learning のデータベース エンジンのインスタンス上の R と Python のサブシステムの展開の管理タスクを確認します。
+title: Machine learning ワークロードの管理と統合
+description: SQL Server DBA として、データベースエンジンインスタンスに machine learning R と Python サブシステムをデプロイするための管理タスクを確認します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 10/10/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 02b74aa3fcb8a6526a59821c615ec421220e8608
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fab91e142fad3bcb1ce23816d6705f7a7d208851
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962608"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345320"
 ---
-# <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>管理し、SQL server machine learning ワークロードの統合
+# <a name="manage-and-integrate-machine-learning-workloads-on-sql-server"></a>SQL Server での machine learning ワークロードの管理と統合
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、複数のワークロードをサポートしているサーバー資産に効率的なデータ サイエンス インフラストラクチャのデプロイを担当する SQL Server データベース管理者向けです。 R の管理に関連する管理上の問題領域をフレームし、Python のコードは SQL Server で実行します。 
+この記事は、複数のワークロードをサポートするサーバー資産への効率的なデータサイエンスインフラストラクチャのデプロイを担当する SQL Server データベース管理者を対象としています。 ここでは、R の管理と、SQL Server での Python コードの実行に関連する管理上の問題領域をフレームにします。 
 
-## <a name="what-is-feature-integration"></a>新機能と機能の統合
+## <a name="what-is-feature-integration"></a>機能の統合とは
 
-R と Python の機械学習がによって提供される[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)データベース エンジンのインスタンスに拡張機能として。 統合は、主にセキュリティ レイヤーと次のとおり、データ定義言語では。
+R および Python machine learning は、データベースエンジンインスタンスの拡張機能として[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)によって提供されます。 統合は、主にセキュリティ層とデータ定義言語を通じて行われ、次のようにまとめられています。
 
-+ ストアド プロシージャに R をそのまま使用する機能が装備されてと Python コードの入力パラメーターとして。 開発者やデータ サイエンティストが使用できる、[システム ストアド プロシージャ](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017)か、コードをラップするカスタム プロシージャを作成します。
-+ T-SQL 関数 (つまり、 [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)) 以前にトレーニングしたデータ モデルを利用することができます。 この機能は、T-SQL を使用します。 そのためがない具体的には、機械学習の拡張機能がインストールされているシステム上で呼び出すことができます。
-+ 既存のデータベース ログインとロール ベースのアクセス許可には、同じデータを利用するユーザーが起動スクリプトがについて説明します。 一般的な規則として、クエリ、データにアクセスできない場合にアクセスできませんが、スクリプトか。
++ ストアドプロシージャは、入力パラメーターとして R および Python コードを受け入れる機能を備えています。 開発者やデータ科学者は、[システムストアドプロシージャ](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql?view=sql-server-2017)を使用したり、コードをラップするカスタムプロシージャを作成したりできます。
++ 以前にトレーニングされたデータモデルを使用できる t-sql 関数 (つまり、 [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql))。 この機能は、T-sql を通じて使用できます。 そのため、特に machine learning 拡張機能がインストールされていないシステムで呼び出すことができます。
++ 既存のデータベースログインおよびロールベースの権限は、その同じデータを使用するユーザーが呼び出したスクリプトに対応します。 一般的な規則として、ユーザーがクエリを使用してデータにアクセスできない場合は、スクリプトを使用してアクセスすることはできません。
 
-## <a name="feature-availability"></a>利用可能な機能
+## <a name="feature-availability"></a>機能の可用性
 
-R と Python の統合には、一連の手順で使用できるになります。 1 つ目は、セットアップ、する[を含めるか、追加、 **Machine Learning サービス**](../install/sql-machine-learning-services-windows-install.md)データベース エンジンのインスタンスに機能します。 後続の手順としては、(既定ではオフ)、データベース エンジン インスタンスに対する外部のスクリプトを有効にする必要があります。
+R と Python の統合は、一連の手順を通じて利用可能になります。 最初の設定は、データベースエンジンインスタンスに[ **Machine Learning Services**機能を含めたり、追加したり](../install/sql-machine-learning-services-windows-install.md)するときに設定します。 その後の手順として、データベースエンジンインスタンスで外部スクリプトを有効にする必要があります (既定ではオフになっています)。
 
-この時点では、データベース管理者だけでは、作成、外部スクリプトを実行し、追加、または、パッケージを削除する完全な権限を持っているし、ストアド プロシージャ、およびその他のオブジェクトを作成します。
+この時点で、外部スクリプトの作成と実行、パッケージの追加または削除、およびストアドプロシージャやその他のオブジェクトの作成を行うための完全な権限は、データベース管理者のみに与えられています。
 
-その他のすべてのユーザーに EXECUTE ANY EXTERNAL SCRIPT 権限を付与する必要があります。 追加[標準的なデータベース アクセス許可](../security/user-permission.md)できるか判断するかどうかユーザー オブジェクトを作成、スクリプトを実行する、シリアル化とトレーニング済みのモデルを使用し、などです。 
+他のすべてのユーザーには、EXECUTE ANY EXTERNAL SCRIPT 権限が許可されている必要があります。 追加の[標準データベース権限](../security/user-permission.md)により、ユーザーがオブジェクトを作成したり、スクリプトを実行したり、シリアル化およびトレーニング済みのモデルを使用したりできるかどうかなどが決まります。 
 
 ## <a name="resource-allocation"></a>リソース割り当て
 
-ストアド プロシージャと外部の処理の呼び出しの T-SQL クエリは、既定のリソース プールに使用可能なリソースを使用します。 既定の構成の一環として、R と Python のセッションなどの外部プロセスは、ホスト システムでメモリの合計の最大 20% が許可されます。 
+外部処理を呼び出すストアドプロシージャと T-sql クエリでは、既定のリソースプールで使用できるリソースが使用されます。 既定の構成の一部として、R や Python セッションなどの外部プロセスでは、ホストシステムの合計メモリの 20% までを使用できます。 
 
-リソースの割り当てを再調整する場合は、そのシステムで実行されているマシン ラーニング ワークロードに対応する影響で、既定のプールを変更できます。
+リソースを再調整する場合は、既定のプールを変更し、そのシステムで実行されている machine learning ワークロードに対応する効果を与えることができます。
 
-別のオプションでは、特定のプログラム、ホスト、または特定の時間間隔中に発生したアクティビティから送信されたセッションをキャプチャするカスタムの外部リソース プールを作成します。 詳細については、次を参照してください。 [R および Python 実行のためのリソース レベルを変更するリソース ガバナンス](../administration/resource-governance.md)と[リソース プールを作成する方法](../administration/how-to-create-a-resource-pool.md)詳しい手順についてはします。
+または、特定の期間に発生した特定のプログラム、ホスト、またはアクティビティからのセッションをキャプチャするカスタム外部リソースプールを作成する方法もあります。 詳細については、「 [R および Python の実行に関するリソースレベルを変更するためのリソースガバナンス](../administration/resource-governance.md)」と「[リソースプールを作成する方法](../administration/how-to-create-a-resource-pool.md)」を参照してください。
 
-## <a name="isolation-and-containment"></a>分離およびコンテインメント
+## <a name="isolation-and-containment"></a>分離とコンテインメント
 
-処理アーキテクチャは、コア エンジンの処理から外部のスクリプトを分離する設計されています。 R と Python スクリプトは、ローカルのワーカー アカウントの下の個別のプロセスとして実行します。 タスク マネージャーでは、プロセスを監視できます R と Python、SQL Server のサービス アカウントの異なる特権の低いローカル ユーザー アカウントで実行します。 
+処理アーキテクチャは、コアエンジン処理から外部スクリプトを分離するように設計されています。 R スクリプトと Python スクリプトは、ローカルワーカーアカウントで個別のプロセスとして実行されます。 タスクマネージャーでは、SQL Server サービスアカウントとは別に、低い特権のローカルユーザーアカウントで実行されている R および Python プロセスを監視することができます。 
 
-個々 の低特権アカウントで R と Python のプロセスを実行すると、次の利点があります。
+個々の低い特権のアカウントで R および Python プロセスを実行すると、次のような利点があります。
 
-+ コア データベース操作の影響を与えずに、R または Python のプロセスを終了する R と Python のセッションからのコア エンジンのプロセスを分離します。 
++ R と Python セッションからコアエンジンプロセスを分離することで、コアデータベース操作に影響を与えることなく R または Python プロセスを終了できます。 
 
-+ ホスト コンピューター上の外部スクリプトのランタイム プロセスの特権が減少します。
++ ホストコンピューター上の外部スクリプトのランタイムプロセスの特権を減らします。
 
-最小特権のアカウントがセットアップ中に作成され、Windows で*ユーザー アカウント プール*と呼ばれる**SQLRUserGroup**します。 既定では、R と SQL Server での Python のプログラム フォルダーで実行可能ファイル、ライブラリ、および組み込みのデータセットを使用するアクセス許可を持ちます。 
+最小特権のアカウントは、セットアップ時に作成され、 **SQLRUserGroup**という Windows*ユーザーアカウントプール*に配置されます。 既定では、このグループには、SQL Server の R および Python の program フォルダーにある実行可能ファイル、ライブラリ、および組み込みのデータセットを使用するためのアクセス許可があります。 
 
-Dba では、SQL Server データのセキュリティを使用するには、スクリプトを実行する権限を持っているユーザーを指定して、ジョブで使用されるデータは同じを制御するセキュリティ ロールの下で管理されていることに T-SQL クエリを通じてアクセスします。 システム管理者は、明示的に拒否できます**SQLRUserGroup** Acl を作成してローカル サーバー上の機密データにアクセスします。
+DBA は、SQL Server データセキュリティを使用して、スクリプトを実行するアクセス許可を持つユーザーを指定できます。また、ジョブで使用されるデータは、T-sql クエリを使用してアクセスを制御するのと同じセキュリティロールで管理されます。 システム管理者は、Acl を作成することによって、ローカルサーバー上の機微なデータへの**SQLRUserGroup**アクセスを明示的に拒否できます。
 
 >[!NOTE]
-> 既定で、 **SQLRUserGroup**が、ログインまたはアクセス許可では、SQL Server 自体。 ワーカー アカウントがデータ アクセスのログインを要求する必要があります、する必要があります、手動で作成します。 具体的には、ログインの作成を呼び出すシナリオは、ユーザー id が Windows ユーザーと信頼されたユーザーを指定する接続文字列のデータや、データベース エンジン インスタンスに対する操作の実行でスクリプトからの要求をサポートするためにです。 詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)します。
+> 既定では、 **SQLRUserGroup**には SQL Server 自体にログインまたはアクセス許可がありません。 ワーカーアカウントにデータアクセスのためのログインが必要な場合は、自分で作成する必要があります。 ログインの作成を明示的に呼び出すシナリオでは、ユーザー id が Windows ユーザーであり、接続文字列に信頼されたユーザーが指定されている場合に、データベースエンジンインスタンスでのデータまたは操作に対して実行中のスクリプトからの要求をサポートします。 詳細については、「[データベースユーザーとしての SQLRUserGroup の追加](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)」を参照してください。
 
-## <a name="disable-script-execution"></a>スクリプトの実行を無効にします。
+## <a name="disable-script-execution"></a>スクリプトの実行を無効にする
 
-ランナウェイのスクリプトが発生した場合に以前、最初に、外部スクリプトの実行を有効にするために行う手順を逆すべてスクリプトの実行を禁止できます。
+ランナウェイスクリプトが発生した場合は、すべてのスクリプトの実行を無効にして、前の手順を逆にして外部スクリプトを実行できるようにすることができます。
 
-1. SQL Server Management Studio または他のクエリ ツールでは、設定するには、このコマンドを実行`external scripts enabled`0 または FALSE にします。
+1. SQL Server Management Studio または別のクエリツールで、次のコマンド`external scripts enabled`を実行して0または FALSE に設定します。
 
     ```sql
     EXEC sp_configure  'external scripts enabled', 0
     RECONFIGURE WITH OVERRIDE
     ```
-2. データベース エンジン サービスを再起動します。
+2. データベースエンジンサービスを再起動します。
 
-この問題を解決した後は、R を再開して、データベース エンジン インスタンスに対する Python スクリプトをサポートする場合、インスタンス上のスクリプトの実行を再度有効に注意してください。 詳細については、次を参照してください[スクリプトの実行を有効にする。](../install/sql-machine-learning-services-windows-install.md#enable-script-execution)
+問題を解決したら、データベースエンジンインスタンスで R および Python スクリプトのサポートを再開する場合は、インスタンスでスクリプトの実行を再度有効にしてください。 詳細については、「[スクリプトの実行の有効化](../install/sql-machine-learning-services-windows-install.md#enable-script-execution)」を参照してください。
 
-## <a name="extend-functionality"></a>機能を拡張します。
+## <a name="extend-functionality"></a>機能の拡張
 
-多くの場合、データ サイエンスには、パッケージの展開と管理のための新しい要件が導入されています。 データ サイエンティストの場合は、カスタム ソリューションでのオープン ソースおよびサード パーティ製のパッケージを利用する一般的なプラクティスを勧めします。 他のパッケージに依存関係パッケージの一部が、この場合は、評価して、目標に到達する複数のパッケージをインストールする必要があります。
+データサイエンスでは、多くの場合、パッケージの配置と管理に関する新しい要件が導入されています。 データ科学者にとっては、オープンソースとサードパーティのパッケージをカスタムソリューションで利用するのが一般的です。 これらのパッケージの中には、他のパッケージに依存しているものもあります。その場合は、複数のパッケージを評価してインストールし、目標を達成する必要があります。
 
-サーバー資産の責任の dba 実稼働サーバー上に任意の R と Python パッケージの配置は未知のチャレンジを表します。 パッケージを追加する前に、外部のパッケージで提供される機能がないと等価の組み込みに本当に必要なかどうかを評価する必要があります[R 言語](r-libraries-and-data-types.md)と[Python ライブラリ](../python/python-libraries-and-data-types.md)インストールSQL Server のセットアップ。 
+サーバー資産を担当する DBA は、任意の R および Python パッケージを実稼働サーバーに配置することは、未知の課題を表します。 パッケージを追加する前に、外部パッケージによって提供される機能が本当に必要かどうかを評価し、SQL Server セットアップによってインストールされた組み込みの[R 言語](r-libraries-and-data-types.md)および[Python ライブラリ](../python/python-libraries-and-data-types.md)に相当するものはありません。 
 
-代替サーバー パッケージのインストール方法としては、データ サイエンティストでにできる可能性があります[ビルドし、外部のワークステーションでソリューションを実行](../r/set-up-a-data-science-client.md)、SQL Server からデータを取得するが、すべての分析でワークステーションをローカルで実行代わりに、サーバー自体にします。 
+サーバーパッケージのインストールの代わりに、データ科学者は、[外部ワークステーションでソリューションを構築して実行](../r/set-up-a-data-science-client.md)し、SQL Server からデータを取得することができますが、すべての分析をサーバーではなくワークステーションでローカルに実行することもできます。自分自身. 
 
-外部ライブラリ関数が必要なし、サーバー操作やデータ全体のリスクを引き起こすことはありませんを後で判断した場合は、パッケージを追加する複数の方法論から選択することができます。 ほとんどの場合は、SQL Server にパッケージを追加する管理者権限が必要です。 詳細についてを参照してください。 [SQL Server での Python のインストール パッケージ](../python/install-additional-python-packages-on-sql-server.md)と[SQL Server で R のインストール パッケージ](install-additional-r-packages-on-sql-server.md)します。
+その後、外部ライブラリ関数が必要であり、サーバーの操作やデータ全体に対するリスクがないと判断した場合は、複数の方法論を選択してパッケージを追加できます。 ほとんどの場合、SQL Server にパッケージを追加するには、管理者権限が必要です。 詳細については、「 [SQL Server での Python パッケージのインストール](../python/install-additional-python-packages-on-sql-server.md)」と「 [SQL Server での R パッケージのインストール](install-additional-r-packages-on-sql-server.md)」を参照してください。
 
 > [!NOTE]
-> R パッケージの代替メソッドを使用する場合は、サーバー管理者権限はパッケージのインストールの具体的には必要ありません。 参照してください[SQL Server で R のインストール パッケージ](install-additional-r-packages-on-sql-server.md)詳細についてはします。
+> R パッケージの場合、別の方法を使用すると、パッケージのインストールにサーバー管理者権限は特に必要ありません。 詳細については、「 [SQL Server での R パッケージのインストール](install-additional-r-packages-on-sql-server.md)」を参照してください。
 
-## <a name="monitoring-script-execution"></a>スクリプトの実行を監視します。
+## <a name="monitoring-script-execution"></a>スクリプトの実行の監視
 
-R と Python スクリプトで実行される[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]によって開始された、[!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]インターフェイス。 ただし、スタート パッドは、リソースの管理またはリソースを適切に管理する Microsoft によって提供されるセキュリティで保護されたサービスは個別に監視ではありません。
+で[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]実行される R および Python スクリプトは、 [!INCLUDE[rsql_launchpad_md](../../includes/rsql-launchpad-md.md)]インターフェイスによって開始されます。 ただし、スタートパッドは、リソースを適切に管理するために Microsoft によって提供されるセキュリティで保護されたサービスであるため、リソースを個別に管理または監視することはありません。
 
-スタート パッド サービスを実行する外部のスクリプトの管理を使用して、 [Windows ジョブ オブジェクト](/windows/desktop/ProcThread/job-objects)します。 ジョブ オブジェクトによって、プロセス グループをユニットとして管理できます。 各ジョブ オブジェクトは階層的であり、それに関連付けられているすべてのプロセスの属性を制御します。 ジョブ オブジェクトに対して実行される操作は、そのジョブ オブジェクトに関連付けられているすべてのプロセスに影響します。
+スタートパッドサービスで実行される外部スクリプトは、 [Windows ジョブオブジェクト](/windows/desktop/ProcThread/job-objects)を使用して管理されます。 ジョブ オブジェクトによって、プロセス グループをユニットとして管理できます。 各ジョブ オブジェクトは階層的であり、それに関連付けられているすべてのプロセスの属性を制御します。 ジョブ オブジェクトに対して実行される操作は、そのジョブ オブジェクトに関連付けられているすべてのプロセスに影響します。
 
 したがって、オブジェクトに関連付けられている 1 つのジョブを終了する必要がある場合は、関連するすべてのプロセスも終了されることに注意してください。 Windows ジョブ オブジェクトに割り当てられている R スクリプトを実行しているときに、終了する必要がある関連する ODBC ジョブをそのスクリプトが実行している場合は、親の R スクリプトのプロセスも終了します。
 
-並列処理を使用する外部のスクリプトを開始する場合、1 つの Windows ジョブ オブジェクトには、すべての並列の子プロセスが管理されます。
+並列処理を使用する外部スクリプトを開始すると、1つの Windows ジョブオブジェクトがすべての並列子プロセスを管理します。
 
 プロセスがジョブで実行されているかどうかを調べるには、`IsProcessInJob` 関数を使用します。
 
 ## <a name="next-steps"></a>次のステップ
 
-+ 概念とコンポーネントの確認、[拡張可能アーキテクチャ](../concepts/extensibility-framework.md)と[セキュリティ](../concepts/security.md)背景情報についてはします。
++ 詳細については、[機能拡張アーキテクチャ](../concepts/extensibility-framework.md)と[セキュリティ](../concepts/security.md)の概念とコンポーネントを確認してください。
 
-+ 機能のインストールの一環として、既に使い慣れていたかもしれないとエンド ユーザー データのアクセス制御がない場合を参照してください[SQL Server machine learning のユーザーのアクセス許可を付与](../security/user-permission.md)詳細についてはします。 
++ 機能のインストールの一環として、既にエンドユーザーのデータアクセス制御について理解しているかもしれませんが、詳細については、「 [machine learning を SQL Server するためのアクセス許可をユーザーに付与する](../security/user-permission.md)」を参照してください。 
 
-+ 計算処理を要する機械学習のワークロードのシステム リソースを調整する方法について説明します。 詳細については、次を参照してください。[リソース プールを作成する方法](../administration/how-to-create-a-resource-pool.md)します。
++ 計算集中型の機械学習ワークロードのためにシステムリソースを調整する方法について説明します。 詳細については、「[リソースプールを作成する方法](../administration/how-to-create-a-resource-pool.md)」を参照してください。

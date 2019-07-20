@@ -1,38 +1,38 @@
 ---
-title: R モデルを構築し、SQL Server (チュートリアル) - SQL Server Machine Learning に保存
-description: SQL Server データベース内分析で使用される R 言語モデルを構築する方法を示すチュートリアルです。
+title: R モデルを構築して SQL Server に保存する (チュートリアル)
+description: データベース内分析 SQL Server に使用される R 言語モデルを構築する方法を示すチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/26/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4ad8446f52f5bf85794e8444d8d1b53f53bc54dc
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eec6d165b8e3aa4130246aae6d4aaf5b4102fc0f
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961819"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345827"
 ---
-# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R モデルを構築し、SQL Server (チュートリアル) に保存
+# <a name="build-an-r-model-and-save-to-sql-server-walkthrough"></a>R モデルを構築して SQL Server に保存する (チュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この手順では、機械学習モデルを構築し、モデルを保存する方法を説明します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 モデルを保存してから直接呼び出すことができます[!INCLUDE[tsql](../../includes/tsql-md.md)]、システム ストアド プロシージャを使用して、コーディング[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)または[PREDICT (T-SQL) 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)します。
+この手順では、機械学習モデルを構築し、モデルをに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]保存する方法について説明します。 モデルを保存することにより、システムストアドプロシージャ[!INCLUDE[tsql](../../includes/tsql-md.md)] 、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) 、または[PREDICT (t-sql) 関数](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)を使用して、コードから直接呼び出すことができます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-この手順では、このチュートリアルで前の手順に基づいて継続的な R セッションを想定しています。 これらの手順で作成された接続文字列およびデータ ソース オブジェクトを使用します。 次のツールとパッケージは、スクリプトの実行に使用されます。
+この手順では、このチュートリアルの前の手順に基づいて、R セッションが継続的に実行されることを前提としています。 ここでは、これらの手順で作成した接続文字列とデータソースオブジェクトを使用します。 スクリプトの実行には、次のツールとパッケージが使用されます。
 
-+ Rgui.exe R コマンドを実行するには
-+ Management Studio を T-SQL の実行
++ R コマンドを実行するための rgui .exe
++ T-sql の実行 Management Studio
 + ROCR パッケージ
 + RODBC パッケージ
 
-### <a name="create-a-stored-procedure-to-save-models"></a>モデルを保存するストアド プロシージャを作成します。
+### <a name="create-a-stored-procedure-to-save-models"></a>モデルを保存するストアドプロシージャを作成する
 
-この手順では、ストアド プロシージャを使用して、SQL Server にトレーニング済みモデルを保存します。 この操作を実行するストアド プロシージャの作成により、タスクが容易にします。
+この手順では、ストアドプロシージャを使用して、トレーニング済みのモデルを SQL Server に保存します。 この操作を実行するストアドプロシージャを作成すると、タスクが簡単になります。
 
-ストアド プロシージャを作成する Management Studio でのクエリ ウィンドウで、次の T-SQL コードを実行します。
+Management Studio のクエリウィンドウで次の T-sql コードを実行して、ストアドプロシージャを作成します。
 
 ```sql
 USE [NYCTaxi_Sample]
@@ -59,11 +59,11 @@ GO
 ```
 
 > [!NOTE]
-> エラーが発生した場合、ログインがオブジェクトを作成する権限を持っていることを確認します。 このような T-SQL ステートメントを実行してオブジェクトを作成する明示的なアクセス許可を付与することができます:`exec sp_addrolemember 'db_owner', '<user_name>'`します。
+> エラーが発生した場合は、ログインにオブジェクトを作成する権限があることを確認してください。 オブジェクトを作成するための明示的なアクセス許可を付与するには、次`exec sp_addrolemember 'db_owner', '<user_name>'`のような t-sql ステートメントを実行します。
 
-## <a name="create-a-classification-model-using-rxlogit"></a>RxLogit を使用して、分類モデルを作成します。
+## <a name="create-a-classification-model-using-rxlogit"></a>RxLogit を使用して分類モデルを作成する
 
-モデルは、タクシー運転手がかどうかは、特定の乗車でチップを取得する可能性が高いかどうかを予測する二項分類器です。 ロジスティック回帰を使用してチップ分類子をトレーニングする前のレッスンで作成したデータ ソースを使用します。
+このモデルは、タクシードライバーが特定の乗り物でチップを取得する可能性が高いかどうかを予測するバイナリ分類器です。 前のレッスンで作成したデータソースを使用して、ロジスティック回帰を使用して tip 分類子をトレーニングします。
 
 1. [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxlogit) パッケージに含まれる **rxLogit** 関数を呼び出し、ロジスティック回帰モデルを作成します。 
 
@@ -73,7 +73,7 @@ GO
 
     モデルを構築する呼び出しは、system.time 関数で囲まれます。 これにより、モデルの構築に必要な時間を取得できます。
 
-2. モデルをビルドした後を使用してを検査、`summary`関数、および係数を表示します。
+2. モデルを作成した後、 `summary`関数を使用してモデルを検査し、係数を表示できます。
 
     ```R
     summary(logitObj);
@@ -107,7 +107,7 @@ GO
 
 モデルが構築されたので、そのモデルを使用して運転手が特定のドライブでチップを受け取る可能性が高いかどうかを予測できます。
 
-1. まず、使用して、 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)のスコア付けの結果を格納するデータ ソース オブジェクトを定義する関数。
+1. 最初に、 [RxSqlServerData](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxsqlserverdata)関数を使用して、スコアリング結果を格納するためのデータソースオブジェクトを定義します。
 
     ```R
     scoredOutput <- RxSqlServerData(
@@ -115,11 +115,11 @@ GO
       table = "taxiScoreOutput"  )
     ```
 
-    + この例を簡素化するには、ロジスティック回帰モデルへの入力には、同じ機能のデータ ソース (`sql_feature_ds`)、モデルをトレーニングするために使用することです。  多くの場合、スコアリングには新しいデータを使用したり、テスト用とトレーニング用のデータを別に確保したりします。
+    + この例を簡単にするために、ロジスティック回帰モデルへの入力は、モデルのトレーニング`sql_feature_ds`に使用したのと同じ特徴データソース () です。  多くの場合、スコアリングには新しいデータを使用したり、テスト用とトレーニング用のデータを別に確保したりします。
   
-    + 予測結果は、テーブルに保存されます_taxiscoreOutput_します。 このテーブルのスキーマが rxSqlServerData を使用して作成するときに定義されないことに注意してください。 スキーマは、rxPredict 出力から取得されます。
+    + 予測結果は、 _taxiscoreoutput という_テーブルに保存されます。 RxSqlServerData を使用して作成した場合、このテーブルのスキーマは定義されていないことに注意してください。 スキーマは、rxPredict 出力から取得されます。
   
-    + RxSqlServer データ関数を実行する SQL ログインは、予測された値を格納するテーブルを作成するには、データベースの DDL 特権が必要です。 ログインは、テーブルを作成できない場合、ステートメントは失敗します。
+    + 予測値を格納するテーブルを作成するには、rxSqlServer データ関数を実行している SQL ログインにデータベースの DDL 権限が必要です。 ログインでテーブルを作成できない場合、ステートメントは失敗します。
 
 2. [rxPredict](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxpredict) 関数を呼び出して結果を生成します。
 
@@ -132,30 +132,30 @@ GO
         writeModelVars = TRUE, overwrite = TRUE)
     ```
     
-    ステートメントが成功すると、実行すると時間がかかります。 完了するは、SQL Server Management Studio を開くし、テーブルが作成されたこと、および予想される出力のスコア列およびその他が含まれていることを確認します。
+    ステートメントが成功した場合は、実行に時間がかかることがあります。 完了したら、SQL Server Management Studio を開いて、テーブルが作成されたこと、およびそのテーブルにスコア列およびその他の予想される出力が含まれていることを確認できます。
 
-## <a name="plot-model-accuracy"></a>モデルの精度をプロットします。
+## <a name="plot-model-accuracy"></a>プロットモデルの精度
 
-モデルの精度のアイデアを取得するには、使用することができます、 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc)受信者操作特性曲線をプロットする関数。 RxRoc が RevoScaleR パッケージで提供される新しい関数のいずれかであるため、リモート計算コンテキストをサポートする、2 つのオプションがあります。
+モデルの精度を把握するには、 [rxRoc](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxroc)関数を使用して、受信側の操作曲線をプロットします。 RxRoc は、リモートコンピューティングコンテキストをサポートする RevoScaleR パッケージによって提供される新しい関数の1つであるため、次の2つのオプションがあります。
 
-+ RxRoc 関数を使用して、リモート コンピューティング コンテキストでプロットを実行し、ローカル クライアントに、プロットを返すことができます。
++ RxRoc 関数を使用して、リモート計算コンテキストでプロットを実行し、プロットをローカルクライアントに返すことができます。
 
 + また、R クライアント コンピューターにデータをインポートして、他の R プロット関数を使用してパフォーマンス グラフを作成することもできます。
 
-このセクションでは、両方の手法を確認してみます。
+このセクションでは、両方の手法を試してみます。
 
 ### <a name="execute-a-plot-in-the-remote-sql-server-compute-context"></a>リモート (SQL Server) コンピューティング コンテキストでプロットを実行する
 
-1. 関数 rxRoc を呼び出すし、入力として以前に定義されているデータを提供します。
+1. 関数 rxRoc を呼び出し、前の手順で定義したデータを入力として指定します。
 
     ```R
     scoredOutput = rxImport(scoredOutput);
     rxRoc(actualVarName= "tipped", predVarNames = "Score", scoredOutput);
     ```
 
-    この呼び出しは、コンピューティング、ROC グラフで使用する値を返します。 ラベル列が_tipped_、実際の結果を予測しようとしているときに、_スコア_列には、予測。
+    この呼び出しは、ROC チャートの計算に使用される値を返します。 [ラベル] 列には、予測しようとしている実際の結果が_表示され_、[_スコア_] 列には予測があります。
 
-2. 実際には、グラフをプロットするには、ROC オブジェクトを保存し、プロット関数を描画します。 グラフでは、リモート コンピューティング コンテキストで作成され、R 環境に返されます。
+2. グラフを実際にプロットするには、ROC オブジェクトを保存し、プロット関数を使用して描画します。 グラフは、リモートの計算コンテキストで作成され、R 環境に返されます。
 
     ```R
     scoredOutput = rxImport(scoredOutput);
@@ -163,28 +163,28 @@ GO
     plot(rocObjectOut);
     ```
 
-    R グラフィックス デバイスを開くときか、クリックして、グラフを表示、**プロット**RStudio でウィンドウ。
+    グラフを表示するには、R グラフィックスデバイスを開くか、RStudio の **[プロット]** ウィンドウをクリックします。
 
     ![モデルの ROC プロット](media/rsql-e2e-rocplot.png "モデルの ROC プロット")
 
 ### <a name="create-the-plots-in-the-local-compute-context-using-data-from-sql-server"></a>SQL Server のデータを使用して、ローカル コンピューティング コンテキストでプロットを作成する
 
-実行して、計算コンテキストはローカルを確認する`rxGetComputeContext()`コマンド プロンプトでします。 戻り値は「RxLocalSeq 計算コンテキスト」になります。
+コマンドプロンプトでを実行`rxGetComputeContext()`することで、計算コンテキストがローカルであることを確認できます。 戻り値は "RxLocalSeq Compute Context" にする必要があります。
 
-1. ローカル コンピューティング コンテキストのプロセスはほぼ同じは。 使用する、 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)ローカルの R 環境に指定されたデータを取り込む関数。
+1. ローカルコンピューティングコンテキストでは、プロセスはほぼ同じです。 [RxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)関数を使用して、指定されたデータをローカルの R 環境に移動します。
 
     ```R
     scoredOutput = rxImport(scoredOutput)
     ```
 
-2. ローカル メモリにデータを使用して、読み込む、 **ROCR**パッケージ化、およびそのパッケージの予測関数を使用して、いくつかの新しい予測を作成します。
+2. ローカルメモリ内のデータを使用して、 **Rocr**パッケージを読み込み、そのパッケージの予測関数を使用して新しい予測を作成します。
 
     ```R
     library('ROCR');
     pred <- prediction(scoredOutput$Score, scoredOutput$tipped);
     ```
 
-3. 出力変数に格納されている値に基づいて、ローカルのプロットを生成`pred`します。
+3. 出力変数`pred`に格納されている値に基づいて、ローカルプロットを生成します。
 
     ```R
     acc.perf = performance(pred, measure = 'acc');
@@ -197,23 +197,23 @@ GO
     ![R を使用したモデルのパフォーマンスのプロット](media/rsql-e2e-performanceplot.png "R を使用したモデルのパフォーマンスのプロット")
 
 > [!NOTE]
-> グラフは異なるために使用するデータ ポイントの数に応じて、これらになります。
+> 使用するデータポイントの数によっては、グラフの外観が異なる場合があります。
 
 ## <a name="deploy-the-model"></a>モデルの配置
 
-モデルを構築しても実行することを確認したら可能性がありますする、ユーザーまたは組織内ユーザーを利用する、モデルの使用またはおそらくの再トレーニングし、を定期的にモデルを再サイトにデプロイします。 このプロセスが呼ば*運用*モデル。 SQL server の運用化は、ストアド プロシージャに R コードを埋め込むことで実現されます。 の手順では、コードは、SQL Server に接続できる任意のアプリケーションから呼び出すことができます。
+モデルを構築し、それが正常に実行されていることを確かめるしたら、おそらく、組織内のユーザーまたはユーザーがモデルを利用できるサイトに配置したり、定期的にモデルを再トレーニングしたり再調整したりすることができます。 このプロセスは、モデルの*運用*と呼ばれることもあります。 SQL Server では、ストアドプロシージャに R コードを埋め込むことによって運用化が実現されます。 コードはプロシージャ内に存在するので、SQL Server に接続できる任意のアプリケーションから呼び出すことができます。
 
-外部アプリケーションからモデルを呼び出すことができます、前に、運用環境で使用するデータベースにモデルを保存する必要があります。 トレーニング済みモデル型の 1 つの列にバイナリ形式で格納**varbinary (max)** します。
+外部アプリケーションからモデルを呼び出すには、実稼働環境で使用されるデータベースにモデルを保存する必要があります。 トレーニング済みのモデルは、 **varbinary (max)** 型の1つの列にバイナリ形式で格納されます。
 
-一般的な展開ワークフローは、次の手順で構成されます。
+一般的な配置ワークフローは、次の手順で構成されています。
 
-1. 16 進数の文字列に、モデルをシリアル化します。
-2. データベースにシリアル化されたオブジェクトを転送します。
-3. Varbinary (max) 列でモデルを保存します。
+1. モデルを16進数文字列にシリアル化する
+2. シリアル化されたオブジェクトをデータベースに転送します。
+3. Varbinary (max) 列にモデルを保存する
 
-このセクションでは、ストアド プロシージャを使用して、モデルを永続化し、予測のために使用できるようにする方法を説明します。 このセクションで使用されるストアド プロシージャは、PersistModel です。 PersistModel の定義では、[の前提条件](#prerequisites)します。
+このセクションでは、ストアドプロシージャを使用してモデルを永続化し、予測に使用できるようにする方法について説明します。 このセクションで使用するストアドプロシージャは PersistModel です。 PersistModel の定義は[前提条件](#prerequisites)です。
 
-1. 既に使用しない場合、ローカルの R 環境に切り替える、モデル、シリアル化し、変数に保存します。
+1. まだ使用していない場合は、ローカルの R 環境に戻り、モデルをシリアル化して、変数に保存します。
 
     ```R
     rxSetComputeContext("local");
@@ -221,27 +221,27 @@ GO
     modelbinstr=paste(modelbin, collapse="");
     ```
 
-2. 使用して ODBC 接続を開く**RODBC**します。 読み込まれたパッケージが既にある場合は、RODBC への呼び出しを省略できます。
+2. **RODBC**を使用して ODBC 接続を開きます。 パッケージが既に読み込まれている場合は、RODBC への呼び出しを省略できます。
 
     ```R
     library(RODBC);
     conn <- odbcDriverConnect(connStr);
     ```
 
-3. プロシージャを呼び出し、PersistModel が格納されている SQL Server で transmite をデータベースにシリアル化されたオブジェクトを列に、モデルのバイナリ表現を格納します。 
+3. SQL Server に対して PersistModel ストアドプロシージャを呼び出して、シリアル化されたオブジェクトをデータベースに transmite し、モデルのバイナリ表現を列に格納します。 
 
     ```R
     q <- paste("EXEC PersistModel @m='", modelbinstr,"'", sep="");
     sqlQuery (conn, q);
     ```
 
-4. Management Studio を使用して、モデルの確認方法が存在します。 オブジェクト エクスプ ローラーを右クリックし、 **nyc_taxi_models**テーブルし、クリックして**上位 1000 行**します。 結果のバイナリ表現が表示されるはずの**モデル**列。
+4. Management Studio を使用して、モデルが存在することを確認します。 オブジェクトエクスプローラーで、 **nyc_taxi_models**テーブルを右クリックし、 **[上位1000行の選択]** をクリックします。 結果として、 **[モデル]** 列にバイナリ表現が表示されます。
 
-モデルをテーブルへの保存に必要なステートメントは、INSERT のみです。 ただしなどのストアド プロシージャでラップされたときに簡単には多くの場合、 *PersistModel*します。
+モデルをテーブルへの保存に必要なステートメントは、INSERT のみです。 ただし、多くの場合、 *Persistmodel*などのストアドプロシージャにラップすると、より簡単になります。
 
 ## <a name="next-steps"></a>次の手順
 
-では、最後のレッスンを使用して、保存済みのモデルに対してスコアリングを実行する方法を説明します。[!INCLUDE[tsql](../../includes/tsql-md.md)]します。
+次の最後のレッスンでは、を使用して、保存された[!INCLUDE[tsql](../../includes/tsql-md.md)]モデルに対してスコア付けを実行する方法について説明します。
 
 > [!div class="nextstepaction"]
-> [R モデルをデプロイし、SQL で使用](walkthrough-deploy-and-use-the-model.md)
+> [R モデルをデプロイして SQL で使用する](walkthrough-deploy-and-use-the-model.md)

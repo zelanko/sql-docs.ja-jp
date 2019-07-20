@@ -1,31 +1,31 @@
 ---
-title: R で SQL Server Machine Learning を使用してモデルから予測するクイック スタート
-description: このクイック スタートでは、R と SQL Server のデータの事前構築済みのモデルを使用してスコア付けについて説明します。
+title: R を使用してモデルから予測するクイックスタート
+description: このクイックスタートでは、R での構築済みモデルを使用したスコアリングと、データの SQL Server について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 00fdcb0c8c9c535645268a0212e52eef6f7c88f6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e81731683fb71b074ed754ab6ab4eaab40d08c20
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961996"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345406"
 ---
-# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>クイック スタート: SQL Server で R を使用して、モデルから予測します。
+# <a name="quickstart-predict-from-model-using-r-in-sql-server"></a>クイック スタート: SQL Server で R を使用してモデルから予測する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このクイック スタートでは、新しいデータに対して予測をスコア付けの前のクイック スタートで作成したモデルを使用します。 実行する_スコアリング_新しいデータを使用して、トレーニング済みモデルのいずれかをテーブルから取得し、予測の基になるデータの新しいセットを呼び出しています。 スコア付けは、データ サイエンスで使用されることの予測、確率、またはトレーニング済みのモデルに渡す新しいデータに基づくその他の値を生成することを意味する用語です。
+このクイックスタートでは、前のクイックスタートで作成したモデルを使用して、新しいデータに対する予測をスコア付けします。 新しいデータを使用して_スコア_付けを実行するには、テーブルからトレーニング済みのモデルの1つを取得し、予測の基になる新しいデータセットを呼び出します。 スコアリングは、トレーニング済みのモデルに取り込まれた新しいデータに基づいて予測、確率、またはその他の値を生成することを意味するためにデータサイエンスで使用されることがあります。
 
 ## <a name="prerequisites"></a>前提条件
 
-このクイック スタートの拡張機能は、[予測モデルの作成](quickstart-r-create-predictive-model.md)です。
+このクイックスタートは、[予測モデルを作成する](quickstart-r-create-predictive-model.md)ための拡張機能です。
 
-## <a name="create-the-table-of-new-data"></a>新しいデータのテーブルを作成します。
+## <a name="create-the-table-of-new-data"></a>新しいデータのテーブルを作成する
 
-最初に、新しいデータでテーブルを作成します。 
+最初に、新しいデータを含むテーブルを作成します。 
 
 ```sql
 CREATE TABLE dbo.NewMTCars(
@@ -49,17 +49,17 @@ VALUES (120, 2.800)
 GO
 ```
 
-## <a name="predict-manual-transmission"></a>手動の転送を予測します。
+## <a name="predict-manual-transmission"></a>手動による転送を予測する
 
-ここでは、によって、`dbo.GLM_models`テーブルの複数の R モデル、異なるパラメーターまたはアルゴリズムを使用してすべてのビルドを含む可能性がありますまたはデータのさまざまなサブセットでトレーニングします。
+現在、テーブルに`dbo.GLM_models`は複数の R モデルが含まれており、さまざまなパラメーターまたはアルゴリズムを使用して構築されているか、データの異なるサブセットに対してトレーニングされています。
 
-特定の 1 つのモデルに基づく予測を取得するには、は、次の SQL スクリプトを記述する必要があります。
+1つの特定のモデルに基づいて予測を取得するには、次を実行する SQL スクリプトを記述する必要があります。
 
 1. 必要なモデルを取得します。
 2. 新しい入力データを取得します。
 3. そのモデルと互換性がある R 予測関数を呼び出します。
 
-この例では、という名前のモデルを使用しました`default model`します。
+この例では、という名前`default model`のモデルを使用します。
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -81,7 +81,7 @@ EXEC sp_execute_external_script
 WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3)));
 ```
 
-上記のスクリプトは、次の手順を実行します。
+上記のスクリプトでは、次の手順を実行します。
 
 + SELECT ステートメントを使用して、テーブルから 1 つのモデルを取得し、それを入力パラメーターとして渡します。
 
@@ -89,21 +89,21 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 + 適切な引数を使用して `predict` 関数をモデルに適用し、新しい入力データを提供します。
 
-+ この例で、 `str` R. から返されるデータのスキーマを確認する、テスト フェーズ中に関数を追加後でステートメントを削除することができます。
++ この例`str`では、関数はテストフェーズ中に追加され、R から返されるデータのスキーマを確認します。このステートメントは後で削除できます。
 
-+ R スクリプトで使用される列名は、ストアド プロシージャの出力に必ずしもは渡されません。 ここでいくつかの新しい列名を定義するのに、WITH RESULTS 句を使用しました。
++ R スクリプトで使用される列名は、ストアドプロシージャの出力に必ずしも渡されるとは限りません。 ここでは、WITH RESULTS 句を使用して、新しい列名を定義しました。
 
 **結果**
 
-![結果セットの手動転送 properbility を予測します。](./media/r-predict-am-resultset.png)
+![Properbility の手動送信を予測するための結果セット](./media/r-predict-am-resultset.png)
 
-使用することも、 [TRANSACT-SQL の PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)予測された値または格納されたモデルに基づいてスコアを生成します。
+また、 [transact-sql で PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)を使用して、格納されているモデルに基づいて予測値またはスコアを生成することもできます。
 
 ## <a name="next-steps"></a>次の手順
 
 R と SQL Server の統合により、規模を拡大して R ソリューションを配置しやすくなり、高パフォーマンスのデータ処理および高速 R 分析のために、R とリレーショナル データベースの優れた機能を活用できます。 
 
-Microsoft データ サイエンスと R Services の開発チームによって作成されたエンド ツー エンドのシナリオを SQL Server で R を使用するソリューションについて学習を続行します。
+Microsoft のデータサイエンスおよび R サービスの開発チームによって作成されたエンドツーエンドのシナリオを通じて、SQL Server で R を使用したソリューションについて学習を続けます。
 
 > [!div class="nextstepaction"]
 > [SQL Server R チュートリアル](sql-server-r-tutorials.md)

@@ -1,39 +1,39 @@
 ---
-title: RevoScaleR のチュートリアル - SQL Server Machine Learning のデータベースとアクセス許可を作成します。
-description: R のチュートリアルについては、SQL Server データベースを作成する方法のチュートリアル.
+title: RevoScaleR チュートリアル用のデータベースとアクセス許可の作成
+description: R チュートリアル用の SQL Server データベースを作成する方法に関するチュートリアルチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 84f78219bf4bb188f7a29e79718e107d7fa43347
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 88a8bb4ab81f3e7c18bcafce70488583fa0421fa
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962166"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344641"
 ---
-# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>データベースとアクセス許可 (SQL Server と RevoScaleR チュートリアルを) 作成します。
+# <a name="create-a-database-and-permissions-sql-server-and-revoscaler-tutorial"></a>データベースとアクセス許可の作成 (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法に関する[RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-レッスン 1 では、このチュートリアルを完了するために必要な SQL Server データベースとアクセス許可を設定する方法についてはします。 使用[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)または別のクエリ エディターで、次のタスクを完了します。
+レッスン1では、SQL Server データベースの設定と、このチュートリアルを完了するために必要なアクセス許可について説明します。 [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)または別のクエリエディターを使用して、次のタスクを実行します。
 
 > [!div class="checklist"]
-> * トレーニングと 2 つの R モデルをスコア付けのデータを格納する新しいデータベースを作成します。
-> * 作成およびデータベース オブジェクトを使用するためのアクセス許可を持つデータベース ユーザー ログインを作成します。
+> * 2つの R モデルのトレーニングとスコア付けのためのデータを格納する新しいデータベースを作成する
+> * データベースオブジェクトを作成および使用するための権限を持つデータベースユーザーログインを作成する
   
 ## <a name="create-the-database"></a>データベースの作成
 
-このチュートリアルでは、データやコードを格納するため、データベースが必要です。 管理者でない場合は、データベースとログインを作成する、データベース管理者に問い合わせてください。 アクセス許可を記述し、データの読み取り、および R スクリプトを実行する必要があります。
+このチュートリアルでは、データとコードを格納するデータベースが必要です。 管理者でない場合は、DBA にデータベースを作成し、ログインするように依頼してください。 データの書き込みと読み取り、および R スクリプトの実行を行うためのアクセス許可が必要です。
 
-1. SQL Server Management studio では、R が有効なデータベース インスタンスに接続します。
+1. SQL Server Management Studio で、R が有効なデータベースインスタンスに接続します。
 
-2. 右クリック**データベース**、選び**新しいデータベース**します。
+2. **[データベース]** を右クリックし、 **[新しいデータベース]** をクリックします。
   
-2. 新しいデータベースの名前を入力します。RevoDeepDive します。
+2. 新しいデータベースの名前を入力します:RevoDeepDive.
   
 
 ## <a name="create-a-login"></a>ログインを作成します
@@ -42,7 +42,7 @@ ms.locfileid: "67962166"
   
 2. 新しい **[クエリ]** ウィンドウで、次のコマンドを実行してユーザー アカウントを作成し、このチュートリアルで使用するデータベースに割り当てます。 必要に応じてデータベースの名前を変更します。
 
-3. ログインを確認する新しいデータベースを選択、展開**セキュリティ**、展開と**ユーザー**します。
+3. ログインを確認するには、新しいデータベースを選択し、 **[セキュリティ]** 、 **[ユーザー]** の順に展開します。
   
 **Windows ユーザー**
   
@@ -72,11 +72,11 @@ GO
 CREATE USER [DDUser01] FOR LOGIN [DDUser01] WITH DEFAULT_SCHEMA=[db_datareader]
 ```
 
-## <a name="assign-permissions"></a>アクセス許可を割り当てる
+## <a name="assign-permissions"></a>アクセス許可の割り当て
 
-このチュートリアルでは、R スクリプトなどを作成してテーブルおよびストアド プロシージャを削除し、SQL Server の外部プロセスに R スクリプトを実行して DDL 操作を示します。 この手順では、これらのタスクを許可するアクセス許可を割り当てます。
+このチュートリアルでは、R スクリプトと DDL 操作について説明します。これには、テーブルとストアドプロシージャの作成と削除、および SQL Server での外部プロセスでの R スクリプトの実行が含まれます。 このステップでは、アクセス許可を割り当ててこれらのタスクを許可します。
 
-この例では SQL ログイン (DDUser01) が、Windows ログインを作成した場合は、代わりに使用します。
+この例では、SQL ログイン (DDUser01) が想定されていますが、Windows ログインを作成した場合は、代わりにを使用します。
 
 ```sql
 USE RevoDeepDive
@@ -87,7 +87,7 @@ GRANT EXECUTE ANY EXTERNAL SCRIPT TO DDUser01
 GO
 ```
 
-## <a name="troubleshoot-connections"></a>接続をトラブルシューティングします。
+## <a name="troubleshoot-connections"></a>接続のトラブルシューティング
 
 このセクションでは、データベースを設定する過程で発生する可能性がある一般的な問題を示します。
 
@@ -97,25 +97,25 @@ GO
   
     新しいデータベース管理ツールをインストールしたくない場合は、コントロール パネルの [ODBC データ ソース アドミニストレーター](https://docs.microsoft.com/sql/odbc/admin/odbc-data-source-administrator?view=sql-server-2017) を使用して、SQL Server インスタンスへのテスト接続を作成できます。 データベースが正しく構成されていて、正しいユーザー名とパスワードを入力した場合は、先に作成したデータベースを表示し、既定のデータベースとして選択することができます。
   
-    接続エラーの一般的な理由は、リモート サーバーの接続が有効でないと、名前付きパイプ プロトコルが有効になっていません。 この記事ではその他のトラブルシューティングのヒントをご覧ください。[SQL Server データベース エンジンへの接続のトラブルシューティングを行う](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)します。
+    接続エラーの一般的な理由として、サーバーのリモート接続が有効になっておらず、名前付きパイププロトコルが有効になっていないことが挙げられます。 この記事では、その他のトラブルシューティングのヒントを確認できます。[SQL Server データベースエンジンへの接続に関するトラブルシューティングを](https://docs.microsoft.com/sql/database-engine/configure-windows/troubleshoot-connecting-to-the-sql-server-database-engine)行います。
   
 - **テーブル名に datareader というプレフィックスが付くのはなぜですか。**
   
-    このユーザーとしての既定のスキーマを指定すると**db_datareader**、すべてのテーブルとその他の新しいオブジェクトがこのユーザーによって作成されたプレフィックスが付きます、*スキーマ*名。 スキーマは、オブジェクトを整理するためにデータベースに追加できるフォルダーのようなものです。 スキーマでは、データベース内でのユーザーの権限も定義されています。
+    このユーザーの既定のスキーマを**db_datareader**として指定すると、このユーザーによって作成されるすべてのテーブルとその他の新しいオブジェクトには、*スキーマ*名が付加されます。 スキーマは、オブジェクトを整理するためにデータベースに追加できるフォルダーのようなものです。 スキーマでは、データベース内でのユーザーの権限も定義されています。
   
-    スキーマは、1 つの特定のユーザー名に関連付けられたが、ユーザーに対して、_スキーマの所有者_します。 オブジェクトを作成するときは、別のスキーマに作成することを明示的に要求しない限り、常に自分用のスキーマに作成されます。
+    スキーマが1つの特定のユーザー名に関連付けられている場合、ユーザーは_スキーマの所有者_になります。 オブジェクトを作成するときは、別のスキーマに作成することを明示的に要求しない限り、常に自分用のスキーマに作成されます。
   
-    名前のテーブルを作成する場合など**TestData**、既定のスキーマは、 **db_datareader**、名前のテーブルが作成された`<database_name>.db_datareader.TestData`。
+    たとえば、 **TestData**という名前のテーブルを作成し、既定のスキーマが**db_datareader**の場合、テーブルはという名前`<database_name>.db_datareader.TestData`で作成されます。
   
     このため、テーブルが異なるスキーマに属していれば、1 つのデータベースに同じ名前の複数のテーブルを含めることができます。
    
-    テーブルを検索し、スキーマを指定しない場合、データベース サーバーを所有するスキーマを探します。 そのため、自分のログインに関連付けられているスキーマ内のテーブルにアクセスするときは、スキーマ名を指定する必要はありません。
+    テーブルを検索するときにスキーマを指定しない場合、データベースサーバーは自分が所有するスキーマを探します。 そのため、自分のログインに関連付けられているスキーマ内のテーブルにアクセスするときは、スキーマ名を指定する必要はありません。
   
 - **DDL 特権を持っていません。それでもチュートリアルを実行できますか。**
   
-    [はい] に、他のユーザーにデータの事前読み込みを要求する必要が、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブル、および次のレッスンに進んでをスキップします。 DDL 特権を必要とする関数は、可能であれば、チュートリアルでは呼び出されます。
+    はい。ただし、データを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに事前に読み込むように依頼するか、次のレッスンに進んでください。 DDL 特権を必要とする関数は、可能な限りチュートリアルで呼び出されます。
 
-    また、EXECUTE ANY EXTERNAL SCRIPT、アクセス許可を付与する管理者を依頼します。 リモートかどうか、またはを使用して R スクリプトの実行に必要な`sp_execute_external_script`します。
+    また、アクセス許可を付与するか、外部スクリプトを実行するかを管理者に依頼してください。 リモートまたはを使用`sp_execute_external_script`して R スクリプトを実行する場合に必要です。
 
 ## <a name="next-steps"></a>次の手順
 

@@ -1,57 +1,57 @@
 ---
-title: ストアド プロシージャの SQL Server Machine Learning のトレーニングと予測を使用して Python のモデルのクイック スタート
-description: SQL Server ストアド プロシージャを作成、トレーニング、および Python モデルを使用してクラシックあやめデータ セットでの Python コードを埋め込みます。 SQL Server にトレーニング済みモデルを保存し、予測結果の生成に使用すること。
+title: ストアドプロシージャを使用したトレーニングと予測のための Python モデルのクイックスタート
+description: 従来の虹彩データセットを使用して Python モデルを作成、トレーニング、使用するために SQL Server ストアドプロシージャに Python コードを埋め込みます。 トレーニング済みのモデルを SQL Server に保存し、それを使用して予測結果を生成します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 9bbdaa2d23b5e605eb9e36490536a25ab344c8a2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962057"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345766"
 ---
-# <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>クイック スタート: 作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用
+# <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>クイック スタート: ストアドプロシージャを使用した Python モデルの作成、トレーニング、および使用 SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-Python を使用してこのクイック スタートでは、作成し、2 つのストアド プロシージャを実行します。 1 つ目は、クラシックあやめデータ セットを使用し、単純ベイズ花の特性に基づき、Iris species を予測するモデルを生成します。 2 番目の手順では、スコア付けします。 予測のセットを出力する最初の手順で生成されたモデルを呼び出します。 ストアド プロシージャのコードを配置すると、操作は他のストアド プロシージャおよびクライアント アプリケーションによっては包含、再利用可能なおよび呼び出し可能です。 
+Python を使用したこのクイックスタートでは、2つのストアドプロシージャを作成して実行します。 最初の例では、クラシック虹彩花のデータセットを使用して、花の特性に基づいて虹彩を予測するための、単純な Bayes モデルを生成します。 2番目の手順はスコアリング用です。 最初の手順で生成されたモデルを呼び出して、一連の予測を出力します。 ストアドプロシージャにコードを配置することで、操作が含まれ、再利用可能になり、他のストアドプロシージャやクライアントアプリケーションから呼び出すことができます。 
 
-このクイック スタートを完了すると、学習内容。
+このクイックスタートを完了すると、次のことが学習されます。
 
 > [!div class="checklist"]
-> * ストアド プロシージャで Python コードを埋め込む方法
-> * ストアド プロシージャの入力を通じたコードへの入力を渡す方法
-> * モデルを運用するストアド プロシージャの使用方法
+> * ストアドプロシージャに Python コードを埋め込む方法
+> * ストアドプロシージャの入力を使用してコードに入力を渡す方法
+> * ストアドプロシージャを使用してモデルを運用化する方法
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-前のクイック スタート[SQL server が存在することを確認する Python](quickstart-python-verify.md)情報を提供し、このクイック スタートに必要な Python 環境を設定するためにリンクします。
+前のクイックスタート「 [SQL Server に python が存在することを検証](quickstart-python-verify.md)する」では、このクイックスタートに必要な python 環境を設定するための情報とリンクを提供しています。
 
-この演習で使用するサンプル データは、 [ **irissql** ](demo-data-iris-in-sql.md)データベース。
+この演習で使用するサンプルデータは、 [**irissql**](demo-data-iris-in-sql.md)データベースです。
 
-## <a name="create-a-stored-procedure-that-generates-models"></a>モデルを生成するストアド プロシージャを作成します。
+## <a name="create-a-stored-procedure-that-generates-models"></a>モデルを生成するストアドプロシージャを作成する
 
-SQL Server 開発の一般的なパターンでは、個別のストアド プロシージャにプログラミング可能な操作を整理します。 この手順では、結果を予測するモデルを生成するストアド プロシージャを作成します。 
+SQL Server 開発の一般的なパターンは、プログラミング可能な操作を個別のストアドプロシージャに整理することです。 この手順では、結果を予測するためのモデルを生成するストアドプロシージャを作成します。 
 
-1. Management Studio で、新しいクエリ ウィンドウに接続を開いて、 **irissql**データベース。 
+1. **Irissql**データベースに接続して Management Studio で新しいクエリウィンドウを開きます。 
 
     ```sql
     USE irissql
     GO
     ```
 
-2. 新しいストアド プロシージャを作成する次のコードにコピーします。 
+2. 次のコードをコピーして、新しいストアドプロシージャを作成します。 
 
-   実行すると、このプロシージャを呼び出す[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) Python セッションを開始します。 
+   このプロシージャを実行すると、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)が呼び出されて Python セッションが開始されます。 
    
-   Python コードで必要な入力は、このストアド プロシージャに対する入力パラメーターとして渡されます。 出力は、Python に基づくトレーニング済みのモデルになります**scikit-学習**機械学習アルゴリズムのライブラリです。 
+   Python コードで必要な入力は、このストアドプロシージャの入力パラメーターとして渡されます。 機械学習アルゴリズムの Python **scikit-learn-** learning ライブラリに基づいて、出力はトレーニング済みのモデルになります。 
 
-   このコードを使用して[ **pickle** ](https://docs.python.org/2/library/pickle.html)モデルをシリアル化します。 データの列 0 ~ 4 を使用して、モデルがトレーニングされます、 **iris_data**テーブル。 
+   このコードでは、 [**pickle**](https://docs.python.org/2/library/pickle.html)を使用してモデルをシリアル化します。 モデルは、 **iris_data**テーブルの列 0 ~ 4 のデータを使用してトレーニングされます。 
    
-   プロシージャの 2 番目の部分に表示パラメーターのデータ入力を明示して、モデルが出力されます。 可能な限り、入力を明確に定義するストアド プロシージャで実行されている Python コードしてにマップするストアド プロシージャの入力と出力の実行時に渡されたを出力します。 
+   プロシージャの2番目の部分に表示されるパラメーターは、データ入力とモデル出力を明確にします。 可能な限り、ストアドプロシージャで実行されている Python コードでは、実行時に渡されたストアドプロシージャの入力と出力にマップされる入力と出力を明確に定義する必要があります。 
 
     ```sql
     CREATE PROCEDURE generate_iris_model (@trained_model varbinary(max) OUTPUT)
@@ -72,17 +72,17 @@ SQL Server 開発の一般的なパターンでは、個別のストアド プ�
     GO
     ```
 
-3. ストアド プロシージャが存在することを確認します。 
+3. ストアドプロシージャが存在することを確認します。 
 
-   新しいストアド プロシージャと呼ばれる場合は、前の手順から T-SQL スクリプトの実行エラーが発生せず、 **generate_iris_model**が作成され、追加、 **irissql**データベース。 Management studio のストアド プロシージャを見つけることができます**オブジェクト エクスプ ローラー** **プログラミング**します。
+   前の手順の T-sql スクリプトがエラーなしで実行された場合は、 **generate_iris_model**という名前の新しいストアドプロシージャが作成され、 **irissql**データベースに追加されます。 ストアドプロシージャは、Management Studio の**オブジェクトエクスプローラー**の **[プログラミング]** で見つけることができます。
 
-## <a name="execute-the-procedure-to-create-and-train-models"></a>作成し、モデルをトレーニングする手順を実行します。
+## <a name="execute-the-procedure-to-create-and-train-models"></a>手順を実行してモデルを作成およびトレーニングする
 
-この手順では、出力としてシリアル化し、トレーニング済みモデルを作成する、埋め込みコードを実行する手順を実行します。 SQL Server で再利用するために格納されているモデルでは、バイト ストリームとしてシリアル化され、データベース テーブル内の varbinary (max) 列に格納されています。 モデルは、作成、トレーニング、シリアル化、およびデータベースに保存されますが、一度呼び出すことができるその他のプロシージャまたは、[予測 T-SQL](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)でワークロードをスコア付け関数。
+このステップでは、プロシージャを実行して埋め込みコードを実行し、トレーニング済みの、シリアル化されたモデルを出力として作成します。 SQL Server で再利用するために格納されているモデルは、バイトストリームとしてシリアル化され、データベーステーブルの VARBINARY (MAX) 列に格納されます。 モデルの作成、トレーニング、シリアル化、およびデータベースへの保存が完了すると、他のプロシージャ、またはスコアリングワークロードの[t-sql の予測](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)関数で呼び出すことができます。
 
-1. プロシージャを実行する次のコードをコピーします。 ストアド プロシージャを実行するための特定のステートメントは`EXEC`5 番目の行にします。
+1. 次のコードをコピーして、プロシージャを実行します。 ストアドプロシージャを実行するための特定の`EXEC`ステートメントは、5行目にあります。
 
-   このスクリプトは、("Naive Bayes") と同じ手順を再実行によって作成された新しいものを確保するために同じ名前の既存のモデルを削除します。 モデルの削除せずに、オブジェクトが既に存在することを示すエラーが発生しました。 という名前のテーブルで、モデルが格納されている**iris_models**、作成時にプロビジョニング、 **irissql**データベース。
+   この特定のスクリプトは、同じ名前の既存のモデル ("Naive Bayes") を削除して、同じプロシージャを再実行することによって作成された新しいものを確保します。 モデルを削除しないと、オブジェクトが既に存在することを示すエラーが発生します。 このモデルは、 **irissql**データベースを作成したときにプロビジョニングされた**iris_models**という名前のテーブルに格納されます。
 
     ```sql
     DECLARE @model varbinary(max);
@@ -94,7 +94,7 @@ SQL Server 開発の一般的なパターンでは、個別のストアド プ�
     GO
     ```
 
-2. モデルが挿入されたことを確認するモデルの一覧を返すこともできます
+2. モデルの一覧を返すための別の方法が挿入されたことを確認します。
 
     ```sql
     SELECT * FROM dbo.iris_models
@@ -104,13 +104,13 @@ SQL Server 開発の一般的なパターンでは、個別のストアド プ�
 
     | model_name  | model |
     |---|-----------------|
-    | Naive Bayes | 0x800363736B6C6561726E2E6E616976655F62617965730A. | 
+    | Naive Bayes | 0x800363736B6C6561726E2E6E616976655F62617965730A... | 
 
-## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>作成して予測を生成するためのストアド プロシージャの実行
+## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>予測を生成するためのストアドプロシージャを作成および実行する
 
-作成し、トレーニング、モデルを保存したが、これで、次の手順移動します。 予測を生成するストアド プロシージャを作成します。 これを行うには、Python を開始し、前回の演習で作成し、スコア付けへのデータ入力にシリアル化されたモデルを読み込みます Python スクリプトに渡すを呼び出し元の sp_execute_external_script でします。
+モデルの作成、トレーニング、保存が完了したので、次の手順「予測を生成するストアドプロシージャの作成」に進みます。 これを行うには、sp_execute_external_script を呼び出して Python を起動してから、最後の練習で作成したシリアル化されたモデルを読み込む Python スクリプトを渡して、スコアを入力します。
 
-1. スコア付けを実行するストアド プロシージャを作成する次のコードを実行します。 実行時に、このプロシージャはバイナリ モデルを読み込み、列を使用して`[1,2,3,4]`として入力し、列を指定`[0,5,6]`として出力します。
+1. 次のコードを実行して、スコアリングを実行するストアドプロシージャを作成します。 実行時に、このプロシージャはバイナリモデルを読み込み、入力と`[1,2,3,4]`して列を使用し`[0,5,6]`て、列を出力として指定します。
 
     ```sql
     CREATE PROCEDURE predict_species (@model varchar(100))
@@ -135,37 +135,37 @@ SQL Server 開発の一般的なパターンでは、個別のストアド プ�
     GO
     ```
 
-2. プロシージャを使用するモデルを認識できるように、"Naive Bayes"モデルの名前を与える、ストアド プロシージャを実行します。 
+2. 使用するモデルをプロシージャが認識できるように、ストアドプロシージャを実行して、モデル名 "Naive Bayes" を指定します。 
 
     ```sql
     EXEC predict_species 'Naive Bayes';
     GO
     ```
 
-    ストアド プロシージャを実行すると、Python data.frame を返します。 T-SQL の行が返される結果のスキーマを指定します:`WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`します。 結果を新しいテーブルに挿入またはアプリケーションに戻すことができます。
+    ストアドプロシージャを実行すると、Python データフレームが返されます。 T-sql の次の行は、返される結果`WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`のスキーマを指定します。 結果を新しいテーブルに挿入するか、アプリケーションに返すことができます。
 
-    ![ストアド プロシージャの実行からの結果セット](media/train-score-using-python-NB-model-results.png)
+    ![実行中のストアドプロシージャからの結果セット](media/train-score-using-python-NB-model-results.png)
 
-    結果は、150 species フローラル特性を入力として使用する予測です。 観測のほとんどは、予測の種は実際の種と一致します。
+    結果は、フローラル特性を入力として使用している動物に関する150予測です。 観測の大部分については、予測された動物が実際の条件に一致します。
 
-    この例を作成できます簡単な Python iris データセットをトレーニングとスコア付けの両方を使用しています。 一般的な方法は必要に応じて、新しいデータを取得する SQL クエリを実行してとして Python に渡す`InputDataSet`します。 
+    この例は、トレーニングとスコアリングの両方に Python の虹彩データセットを使用することによって単純になっています。 より一般的な方法では、SQL クエリを実行して新しいデータを取得し、それを Python `InputDataSet`にとして渡します。 
 
 ## <a name="conclusion"></a>まとめ
 
-この演習でさまざまなタスクを各ストアド プロシージャが、システム ストアド プロシージャを使用する専用のストアド プロシージャを作成する方法を学習しました[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md) Python プロセスを開始します。 Python プロセスへの入力は、パラメーターとして sp_execute_external スクリプトに渡されます。 Python スクリプト自体と SQL Server データベースのデータの変数は、入力として渡されます。
+この演習では、各ストアドプロシージャがシステムストアドプロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を使用して Python プロセスを開始する、さまざまなタスクに専用のストアドプロシージャを作成する方法について学習しました。 Python プロセスへの入力は、パラメーターとして sp_execute_external スクリプトに渡されます。 SQL Server データベースの Python スクリプト自体とデータ変数は両方とも入力として渡されます。
 
-一般に、Python コードの光沢のある、またはを行ベースの出力を返す単純な Python コードで SSMS を使用する予定する必要がありますのみ。 ツールでは、SSMS は、T SQL に似たクエリ言語をサポートし、フラットな行セットを返します。 コードでは、ヒストグラム、散布図のようなビジュアルの出力を生成する場合、イメージをレンダリングするツールやエンドユーザー アプリケーション必要があります。
+一般に、SSMS は洗練された Python コードと共に使用するか、行ベースの出力を返す単純な Python コードでのみ計画する必要があります。 ツールとして、SSMS は T-sql などのクエリ言語をサポートし、フラット化された行セットを返します。 コードで散布図やヒストグラムなどのビジュアル出力を生成する場合は、イメージをレンダリングできるツールまたはエンドユーザーアプリケーションが必要です。
 
-操作の範囲を処理する包括的なスクリプトを記述するために使用するいくつかの Python 開発者向け別々 のプロシージャにタスクを整理することがありますないように思われます。 トレーニングとスコア付けがさまざまなユース ケース。 、分離して、別のスケジュールと操作へのスコープ アクセス許可の各タスクを配置できます。
+さまざまな操作を処理するすべての包括的なスクリプトを記述するために使用される Python 開発者によっては、タスクを個別の手順で整理する必要がない場合があります。 しかし、トレーニングとスコアリングにはさまざまなユースケースがあります。 これらを分離することにより、各タスクを異なるスケジュールに設定し、アクセス許可を操作に適用できます。
 
-同様に、リソースや並列処理、リソースの管理などのアルゴリズムを使用するようにスクリプトを記述することで、SQL Server の機能を利用しても[revoscalepy](../python/ref-py-revoscalepy.md)または[microsoftml](../python/ref-py-microsoftml.md)ですストリーミングと並列実行をサポートします。 トレーニングとスコア付け、分離して特定のワークロードの最適化を対象にすることができます。
+同様に、並列処理やリソースガバナンスなどの SQL Server のリソース機能を活用したり、ストリーミングと並列実行をサポートする[revoscalepy](../python/ref-py-revoscalepy.md)または[microsoft ml](../python/ref-py-microsoftml.md)のアルゴリズムを使用するようにスクリプトを記述したりすることもできます。 トレーニングとスコア付けを分離することにより、特定のワークロードの最適化を対象にすることができます。
 
-最終的な利点は、パラメーターを使用してプロセスを変更できることです。 この演習では、(この例では"Naive Bayes"という名前)、モデルを作成した Python コードは、スコア付けプロセスでモデルを呼び出す 2 番目のストアド プロシージャへの入力として渡されました。 この演習は、1 つのモデルのみを使用しますが、方法、モデルのスコア付けのタスクのパラメーター化すればスクリプトをさらに便利な想像してみてください。
+最終的な利点は、パラメーターを使用してプロセスを変更できることです。 この演習では、モデルを作成した Python コード (この例では "Naive Bayes" という名前) が、スコア付けプロセスでモデルを呼び出す2番目のストアドプロシージャに入力として渡されました。 この演習では1つのモデルのみを使用しますが、スコア付けタスクでモデルをパラメーター化することによってスクリプトの有用性が向上することを想像できます。
 
 ## <a name="next-steps"></a>次の手順
 
-Python を新しい SQL developer の場合は、ローカル セッションからリモートの SQL Server インスタンスの実行をシフトすることができますと Python コードをローカルで使用するためのツールを確認します。
+Python を初めて使用する場合は、ローカルセッションからリモート SQL Server インスタンスに実行をシフトする機能を使用して、Python コードをローカルで操作するための手順とツールを確認してください。
 
 > [!div class="nextstepaction"]
-> [Python クライアント ワークステーションをセットアップ](../python/setup-python-client-tools-sql.md)します。
+> [Python クライアントワークステーションを設定](../python/setup-python-client-tools-sql.md)します。
 

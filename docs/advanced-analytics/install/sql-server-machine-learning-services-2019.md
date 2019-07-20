@@ -1,6 +1,6 @@
 ---
-title: SQL Server 2019 - SQL Server Machine Learning サービスの違い
-description: R と Python の SQL Server machine learning 拡張機能の SQL Server 2019 のプレビュー リリースでは新機能について説明します。
+title: SQL Server 2019 の相違点
+description: SQL Server 2019 preview リリースの R および Python SQL Server machine learning extensions の新機能について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 05/22/2019
@@ -8,60 +8,60 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 017dd29a8dc3077ea7c91b6cd3e49699855f987e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8996d47c58841f668813c8ff344683150e456fb3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962834"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344995"
 ---
-# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 で SQL Server Machine Learning Services のインストールの違い  
+# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 での SQL Server Machine Learning Services インストールの相違点  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-、Windows では、SQL Server 2019 セットアップは、外部プロセス用の分離メカニズムを変更します。 この変更でローカルのワーカー アカウントが置き換えられます[AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)Windows で実行されているクライアント アプリケーションの分離テクノロジ。 
+Windows では、SQL Server 2019 セットアップにより、外部プロセスの分離メカニズムが変更されます。 この変更により、ローカルワーカーアカウントは、Windows で実行されているクライアントアプリケーションの分離テクノロジである[Appcontainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)に置き換えられます。 
 
-変更の結果として、管理者の特定のアクション アイテムはありません。 新規またはアップグレードされたサーバーでは、すべての外部スクリプトおよびから実行されるコード[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)自動的に新しい分離モデルに従います。 
+変更の結果、管理者には特定のアクション項目がありません。 新規またはアップグレードされたサーバーでは、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)から実行されるすべての外部スクリプトとコードが、自動的に新しい分離モデルに従います。 
 
-このリリースでの主な相違点は、集計。
+要約すると、このリリースの主な違いは次のとおりです。
 
-+ ローカル ユーザー アカウント。 対象**SQL 制限されたユーザー グループ (SQLRUserGroup)** が不要になった作成または外部プロセスを実行するために使用します。 AppContainers を交換します。
-+ **SQLRUserGroup**メンバーシップが変更されました。 複数のローカル ユーザー アカウントではなく、メンバーシップは、SQL Server スタート パッド サービス アカウントだけで構成されます。 R と Python のプロセスは、今すぐスタート パッド サービス id、AppContainers を通じて分離で実行されます。
++ **SQL 制限ユーザーグループ (SQLRUserGroup)** の下にあるローカルユーザーアカウントは、外部プロセスを実行するために作成または使用されなくなりました。 AppContainers によって置き換えられます。
++ **SQLRUserGroup**のメンバーシップが変更されました。 メンバーシップは、複数のローカルユーザーアカウントの代わりに、SQL Server Launchpad サービスアカウントだけで構成されます。 R と Python のプロセスは、AppContainers を通じて分離されたスタートパッドサービス id で実行されるようになりました。
 
-分離モデルが変更されていますが、インストール ウィザードとコマンド ライン パラメータが SQL Server 2019 で同じになります。 インストールについては、次を参照してください。 [SQL Server Machine Learning のサービスをインストール](sql-machine-learning-services-windows-install.md)します。
+分離モデルは変更されていますが、SQL Server 2019 ではインストールウィザードとコマンドラインパラメーターは同じままです。 のインストールについては、「 [Install SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)」を参照してください。
 
-## <a name="about-appcontainer-isolation"></a>AppContainer 分離について
+## <a name="about-appcontainer-isolation"></a>AppContainer の分離について
 
-以前のリリースで**SQLRUserGroup**ローカル Windows ユーザー アカウント (MSSQLSERVER00 MSSQLSERVER20) を分離し、外部プロセスを実行するためのプールに含まれています。 外部プロセスが必要なときに SQL Server スタート パッド サービスが使用可能なアカウントを取得して、プロセスを実行します。 
+以前のリリースでは、 **SQLRUserGroup**には、外部プロセスの分離と実行に使用されるローカル Windows ユーザーアカウント (MSSQLSERVER00-MSSQLSERVER20) のプールが含まれていました。 外部プロセスが必要な場合、SQL Server Launchpad サービスは使用可能なアカウントを取得し、それを使用してプロセスを実行します。 
 
-SQL Server 2019、セットアップは不要になったローカル ワーカー アカウントを作成します。 によって分離を実現する代わりに、 [AppContainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)します。 埋め込まれたスクリプトまたはコードが検出された場合、ストアド プロシージャまたはクエリで、実行時に、SQL Server は、要求で拡張機能に固有の起動ツールのスタート パッドを呼び出します。 スタート パッドは、その id でのプロセスで適切なランタイム環境を呼び出し、そのを含む、AppContainer をインスタンス化します。 ローカル アカウントとパスワードの管理が必要になるために、この変更の使用をお勧めします。 また、ローカル ユーザー アカウントは禁止されている、インストールでローカル ユーザー アカウントの依存関係をなくすこと、この機能を使用するようになりました。
+SQL Server 2019 では、セットアップでローカルワーカーアカウントが作成されなくなりました。 代わりに、 [Appcontainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)によって分離が実現されます。 実行時に、ストアドプロシージャまたはクエリで埋め込みスクリプトやコードが検出されると、SQL Server は、拡張機能固有の起動ツールの要求を使用してスタートパッドを呼び出します。 スタートパッドは、id の下にあるプロセスで適切なランタイム環境を呼び出し、それを含むように AppContainer をインスタンス化します。 この変更は、ローカルアカウントとパスワードの管理が不要になったため、有益です。 また、ローカルユーザーアカウントが禁止されているインストールでは、ローカルユーザーアカウントの依存関係を削除することで、この機能を使用できるようになります。
 
-、SQL Server で実装された AppContainers は、内部のメカニズムです。 プロセス モニターで AppContainers の物理的な証拠が表示されなくなります、中には、プロセスがネットワーク呼び出しを行うことを防ぐためにセットアップによって作成された送信ファイアウォール規則で見つけることができます。
+SQL Server によって実装された AppContainers は内部メカニズムです。 プロセスモニターに AppContainers の物理的な証拠が表示されることはありませんが、プロセスがネットワーク呼び出しを行わないように、セットアップによって作成された送信ファイアウォールルールで見つけることができます。
 
 ## <a name="firewall-rules-created-by-setup"></a>セットアップによって作成されたファイアウォール規則
 
-既定では、SQL Server には、ファイアウォール ルールを作成して送信接続が無効にします。 以前は、これらの規則は、セットアップでの 1 つの送信規則を作成する場所のローカル ユーザー アカウントに基づくされた**SQLRUserGroup**そのメンバーへのネットワーク アクセスを拒否する (各ワーカー アカウントはローカルの原則、rule_ の対象として表示されました。 
+既定では、SQL Server は、ファイアウォール規則を作成することによって送信接続を無効にします。 以前は、これらの規則はローカルユーザーアカウントに基づいていました。セットアップでは、メンバーへのネットワークアクセスを拒否する**SQLRUserGroup**の送信規則が1つ作成されました (各ワーカーアカウントは rule_ のサブジェクトとしてローカルプリンシパルとして一覧表示されていました。 
 
-AppContainer Sid に基づいて、新しいファイアウォール規則がある AppContainers への移行の一環として、: SQL Server セットアップによって作成された 20 AppContainers ごとに 1 つ。 ファイアウォール規則の名前の名前付け規則は**AppContainer 00 の SQL Server インスタンス MSSQLSERVER でネットワーク アクセスをブロック**00 (00-20 既定)、AppContainer の数には、MSSQLSERVER が、SQL の名前サーバー インスタンスです。 
+AppContainers への移行の一環として、AppContainer Sid に基づく新しいファイアウォールルールがあります。これは SQL Server セットアップによって作成された20の AppContainers それぞれに1つです。 ファイアウォール規則名の名前付け規則は、 **SQL Server インスタンス MSSQLSERVER の appcontainer-00 のネットワークアクセスをブロック**します。ここで、00は appcontainer の番号 (既定では 00-20)、MSSQLSERVER は SQL Server インスタンスの名前です。 
 
 > [!Note]
-> ネットワーク呼び出しが必要な場合は、Windows ファイアウォールの送信の規則を無効にできます。
+> ネットワーク呼び出しが必要な場合は、Windows ファイアウォールで送信ルールを無効にすることができます。
 
-## <a name="program-file-permissions"></a>プログラム ファイルのアクセス許可
+## <a name="program-file-permissions"></a>プログラムファイルのアクセス許可
 
-以前のリリースと同様、 **SQLRUserGroup**読み取りを行い、実行可能ファイルの SQL Server を実行する権限は引き続き**Binn**、 **R_SERVICES**、および**PYTHON_SERVICES**ディレクトリ。 このリリースでは、唯一のメンバーで**SQLRUserGroup**は、SQL Server スタート パッド サービス アカウントです。  スタート パッド サービスには、R または Python の実行環境が起動するときに、スタート パッド サービスとして、プロセスが実行されます。
+以前のリリースと同様に、 **SQLRUserGroup**は、 **Binn**、 **R_SERVICES**、 **PYTHON_SERVICES**の各ディレクトリ SQL Server 内の実行可能ファイルに対する読み取りおよび実行のアクセス許可を引き続き提供します。 このリリースでは、 **SQLRUserGroup**の唯一のメンバーは SQL Server Launchpad サービスアカウントです。  スタートパッドサービスが R または Python の実行環境を開始すると、プロセスはスタートパッドサービスとして実行されます。
 
 ## <a name="implied-authentication"></a>暗黙の認証
 
-前に、追加の構成は引き続き必要ですが、*暗黙の認証*内にスクリプトまたはコードが信頼済みの認証を使用して、データやリソースを取得する SQL Server に接続する場合。 追加の構成では、データベース ログインを作成する必要があります**SQLRUserGroup**、その唯一のメンバーは、複数のワーカー アカウントではなく、1 つの SQL Server スタート パッド サービス アカウントではようになりました。 このタスクの詳細については、次を参照してください。[データベース ユーザーとしての SQLRUserGroup の追加](../security/create-a-login-for-sqlrusergroup.md)します。
+以前と同様に、スクリプトまたはコードでは、信頼された認証を使用して SQL Server に接続してデータまたはリソースを取得する必要がある場合に、*暗黙的な認証*に対して追加の構成が必要になります。 追加の構成では、 **SQLRUserGroup**のデータベースログインを作成する必要があります。この場合、その唯一のメンバーは、複数のワーカーアカウントではなく、1つの SQL Server Launchpad サービスアカウントになります。 このタスクの詳細については、「[データベースユーザーとしての SQLRUserGroup の追加](../security/create-a-login-for-sqlrusergroup.md)」を参照してください。
 
 
-## <a name="symbolic-link-created-by-setup"></a>セットアップによって作成されたシンボリック リンク
+## <a name="symbolic-link-created-by-setup"></a>セットアップによって作成されたシンボリックリンク
 
-現在の既定値にシンボリック リンクが作成された**R_SERVICES**と**PYTHON_SERVICES** SQL Server セットアップの一部として。 このリンクを作成しない場合は、代替策は、フォルダーに至るまで、階層に 'all application packages' の読み取りアクセス許可を付与します。
+SQL Server セットアップの一部として、現在の既定の**R_SERVICES**と**PYTHON_SERVICES**にシンボリックリンクが作成されます。 このリンクを作成しない場合は、"すべてのアプリケーションパッケージ" の読み取りアクセス許可をフォルダーまでの階層に付与することをお勧めします。
 
 
 ## <a name="see-also"></a>関連項目
 
-+ [SQL Server Machine Learning では、Windows サービスをインストールします。](sql-machine-learning-services-windows-install.md)
++ [Windows に SQL Server Machine Learning Services をインストールする](sql-machine-learning-services-windows-install.md)
 
-+ [Linux 上の SQL Server 2019 Machine Learning Services をインストールします。](../../linux/sql-server-linux-setup-machine-learning.md)
++ [Linux に SQL Server 2019 Machine Learning Services をインストールする](../../linux/sql-server-linux-setup-machine-learning.md)

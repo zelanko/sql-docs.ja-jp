@@ -1,41 +1,41 @@
 ---
-title: Python、SQL Server Machine Learning でのデータ構造を操作するためのクイック スタート
-description: このクイック スタートでは、SQL Server での Python スクリプトの学習の使用方法データ構造 sp_execute_external_script のシステム ストアド プロシージャで。
+title: Python でデータ構造を操作するためのクイックスタート
+description: SQL Server での Python スクリプトのこのクイックスタートでは、sp_execute_external_script システムストアドプロシージャでのデータ構造の使用方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ffbbd39c08221db4afa6427626ca618e04617166
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d841314bd2bf167c4c40f5786a116b7bc8f73c0
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962089"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344556"
 ---
-# <a name="quickstart-python-data-structures-in-sql-server"></a>クイック スタート: SQL Server での Python データ構造
+# <a name="quickstart-python-data-structures-in-sql-server"></a>クイック スタート: SQL Server の Python データ構造
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このクイック スタートでは、SQL Server Machine Learning Services での Python を使用する場合は、データ構造を使用する方法を示します。
+このクイックスタートでは、SQL Server Machine Learning Services で Python を使用するときのデータ構造の使用方法を示します。
 
-SQL Server が、Python 依存**pandas**パッケージで、表形式のデータの操作に適しています。 ただし、Python から SQL Server にはスカラーを渡すし、「とにかく動作する」を想定できません。 このクイック スタートでは、Python と SQL Server の間で表形式のデータを渡すときに間で実行する可能性のあるその他の問題についての準備に、一部の基本的なデータ型定義を確認します。
+SQL Server は、表形式のデータを操作するのに最適な Python**パンダ**パッケージに依存しています。 ただし、スカラーを Python から SQL Server に渡すことはできません。 このクイックスタートでは、いくつかの基本的なデータ型の定義を確認し、Python と SQL Server の間で表形式のデータを渡すときに発生する可能性のある追加の問題を準備します。
 
-+ データ フレームを持つテーブルは、_複数_列。
-+ 1 つの列、データ フレームは、系列と呼ばれるリストのようなオブジェクトです。
-+ 1 つの値は、データ フレームのセルし、インデックスを使用して呼び出す必要があります。
++ データフレームは、_複数_の列を含むテーブルです。
++ データフレームの1つの列は、系列と呼ばれるリストのようなオブジェクトです。
++ 1つの値はデータフレームのセルであり、インデックスによって呼び出す必要があります。
 
-Data.frame には、表形式の構造が必要な場合、データ フレームとして、計算の 1 つの結果をどのようには公開しますか。 1 つの答えでは、データ フレームに変換が簡単にデータ系列として単一のスカラー値を表すためです。 
+データフレームにテーブル構造が必要な場合、計算の1つの結果をデータフレームとして公開するにはどうすればよいでしょうか。 1つの答えは、単一のスカラー値を系列として表すことです。これは、データフレームに簡単に変換できます。 
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-前のクイック スタート[SQL server が存在することを確認する Python](quickstart-python-verify.md)情報を提供し、このクイック スタートに必要な Python 環境を設定するためにリンクします。
+前のクイックスタート「 [SQL Server に python が存在することを検証](quickstart-python-verify.md)する」では、このクイックスタートに必要な python 環境を設定するための情報とリンクを提供しています。
 
-## <a name="scalar-value-as-a-series"></a>一連のスカラー値
+## <a name="scalar-value-as-a-series"></a>系列としてのスカラー値
 
-この例では、単純な算術計算には、系列をスカラーに変換します。
+この例では、単純な数値演算を行い、スカラーを系列に変換します。
 
-1. 系列には、インデックスは、次に示すように、手動またはプログラムによって割り当てることができますが必要です。
+1. 系列にはインデックスが必要です。このインデックスは、次に示すように手動で割り当てることも、プログラムで割り当てることもできます。
 
     ```sql
     execute sp_execute_external_script 
@@ -50,7 +50,7 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     '
     ```
 
-2. 系列は、data.frame に変換されていない、ためメッセージ ウィンドウで、値が返されますが、結果がより表形式であることを確認できます。
+2. 系列はデータフレームに変換されていないため、[メッセージ] ウィンドウに値が返されますが、結果がより表形式になっていることがわかります。
 
     **結果**
 
@@ -61,7 +61,7 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     dtype: float64
     ```
 
-3. 系列の長さを増やすには配列を使用して新しい値を追加できます。 
+3. 系列の長さを増やすには、配列を使用して新しい値を追加します。 
 
     ```sql
     execute sp_execute_external_script 
@@ -76,7 +76,7 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     '
     ```
 
-    インデックスを指定しない場合は、0 から始まる配列の長さで終わる値を持つインデックスが生成されます。
+    インデックスを指定しない場合は、0から始まり、配列の長さで終わる値を持つインデックスが生成されます。
 
     **結果**
 
@@ -87,7 +87,7 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     dtype: float64
     ```
 
-4. 数を増やす場合**インデックス**値、新規に追加しないで**データ**値、連続データを作成するデータ値が繰り返されます。
+4. **インデックス**値の数を増やしても、新しい**データ**値を追加しない場合、データ値は系列に合わせて繰り返されます。
 
     ```sql
     execute sp_execute_external_script 
@@ -111,11 +111,11 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     dtype: float64
     ```
 
-## <a name="convert-series-to-data-frame"></a>系列をデータ フレームに変換します。
+## <a name="convert-series-to-data-frame"></a>系列をデータフレームに変換します
 
-表形式の構造体に、数学のスカラー結果を変換すること、SQL Server が処理できる形式に変換する必要います。 
+スカラー数値演算の結果を表形式構造に変換した後も、SQL Server が処理できる形式に変換する必要があります。 
 
-1. 一連を data.frame に変換する、pandas を呼び出す[データ フレーム](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)メソッド。
+1. 系列をデータフレームに変換するには、パンダの[データフレーム](https://pandas.pydata.org/pandas-docs/stable/dsintro.html#dataframe)メソッドを呼び出します。
 
     ```sql
     execute sp_execute_external_script 
@@ -134,7 +134,7 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-2. 結果は、以下に示します。 Data.frame から特定の値を取得するインデックスを使用する場合でも、出力の一部ではないインデックス値。
+2. 結果は次のようになります。 インデックスを使用してデータフレームから特定の値を取得する場合でも、インデックス値は出力の一部ではありません。
 
     **結果**
 
@@ -143,11 +143,11 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     |0.5|
     |2|
 
-## <a name="output-values-into-dataframe"></a>Data.frame に出力値
+## <a name="output-values-into-dataframe"></a>値をデータフレームに出力します。
 
-単純な算術演算の結果を含む、2 つの系列を data.frame への変換のしくみを見てみましょう。 最初には、Python によって生成される連続した値のインデックスがあります。 2 つ目は、文字列値の任意のインデックスを使用します。
+データへの変換方法を見てみましょう。フレームは、単純な算術演算の結果を含む2つの系列と連携して動作します。 最初のには、Python によって生成される連続する値のインデックスがあります。 2番目の例では、文字列値の任意のインデックスを使用します。
 
-1. この例では、整数インデックスを使用する系列の値を取得します。
+1. この例では、整数インデックスを使用する系列から値を取得します。
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -166,9 +166,9 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     WITH RESULT SETS (( ResultValue float ))
     ```
 
-    自動生成されたインデックスは 0 から始まることに注意してください。 範囲のインデックス値を使用してお試しくださいし、動作を確認します。
+    自動生成されたインデックスは0から始まることに注意してください。 範囲外のインデックス値を使用して、何が起こるかを確認してください。
 
-2. これで、文字列のインデックスを持つその他のデータ フレームから 1 つの値を取得しましょう。 
+2. 次に、文字列インデックスを持つ他のデータフレームから1つの値を取得します。 
 
     ```sql
     EXECUTE sp_execute_external_script 
@@ -192,11 +192,11 @@ Data.frame には、表形式の構造が必要な場合、データ フレー�
     |------|
     |0.5|
 
-    数値インデックスを使用して、このシリーズから値を取得しようとすると、エラーが表示されます。
+    数値インデックスを使用してこの系列から値を取得しようとすると、エラーが発生します。
 
 ## <a name="next-steps"></a>次の手順
 
-次に、SQL Server で Python を使用して、予測モデルを構築します。
+次に、SQL Server で Python を使用して予測モデルを作成します。
 
 > [!div class="nextstepaction"]
-> [作成、トレーニング、および SQL Server でのストアド プロシージャで Python モデルを使用](quickstart-python-train-score-in-tsql.md)
+> [ストアドプロシージャを使用した Python モデルの作成、トレーニング、および使用 SQL Server](quickstart-python-train-score-in-tsql.md)

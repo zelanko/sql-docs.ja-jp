@@ -1,25 +1,25 @@
 ---
-title: R モデルの RevoScaleR チュートリアル - SQL Server Machine Learning の作成します。
-description: SQL Server で R 言語を使用して、モデルを構築する方法のチュートリアル。
+title: R モデルの作成 RevoScaleR のチュートリアル
+description: SQL Server で R 言語を使用してモデルを構築する方法に関するチュートリアルチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 4d7fc66f844b1a0aac48b520257ed8f18e0696de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7df044c641da5d8605e5bb25fafed9ea02af77f4
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962275"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344687"
 ---
-# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R モデル (SQL Server と RevoScaleR チュートリアル) を作成します。
+# <a name="create-r-models-sql-server-and-revoscaler-tutorial"></a>R モデルの作成 (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法に関する[RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-これで、トレーニング データを拡充しました、回帰モデリングを使用してデータを分析する時間を勧めします。 線形モデルは予測分析の世界で重要なツールと**RevoScaleR**パッケージには、ワークロードを分割したり、並列で実行する回帰アルゴリズムが含まれています。
+トレーニングデータを強化したので、今度は回帰モデリングを使用してデータを分析します。 線形モデルは、予測分析の世界において重要なツールです。 **RevoScaleR**パッケージには、ワークロードを分割して並列で実行できる回帰アルゴリズムが含まれています。
 
 > [!div class="checklist"]
 > * 線形回帰モデルを作成する
@@ -27,17 +27,17 @@ ms.locfileid: "67962275"
 
 ## <a name="create-a-linear-regression-model"></a>線形回帰モデルを作成する
 
-この手順で、独立変数としての値を使用して顧客のクレジット_カード残高を推定する単純な線形モデルを作成、*性別*と*creditLine*列。
+この手順では、[*性別*] 列と [ *creditLine* ] 列の値を独立変数として使用する顧客のクレジットカード残高を推定する単純な線形モデルを作成します。
   
-これを行うには、使用、 [rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)関数で、リモート コンピューティング コンテキストをサポートします。
+これを行うには、リモート計算コンテキストをサポートする[rxLinMod](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlinmod)関数を使用します。
   
-1. 完成したを格納する R 変数を作成するモデル、および呼び出し**rxLinMod**、適切な数式を渡します。
+1. 完成したモデルを格納する R 変数を作成し、適切な式を渡して**rxLinMod**を呼び出します。
   
     ```R
     linModObj <- rxLinMod(balance ~ gender + creditLine,  data = sqlFraudDS)
     ```
   
-2. 結果の概要を表示する標準の R を呼び出す**概要**モデル オブジェクトに対して関数。
+2. 結果の概要を表示するには、モデルオブジェクトに対して標準の R **summary**関数を呼び出します。
   
      ```R
      summary(linModObj)
@@ -73,9 +73,9 @@ Condition number: 1.0184
 
 ## <a name="create-a-logistic-regression-model"></a>ロジスティック回帰モデルを作成する
 
-次に、特定の顧客が不正行為のリスクであるかどうかを示すロジスティック回帰モデルを作成します。 使用して、 **RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)関数の場合、リモートでロジスティック回帰モデルの計算コンテキスト。
+次に、特定の顧客が不正行為のリスクであるかどうかを示すロジスティック回帰モデルを作成します。 リモート計算コンテキストでのロジスティック回帰モデルの継ぎ手をサポートする**RevoScaleR** [rxLogit](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxlogit)関数を使用します。
 
-計算コンテキストはそのまま保持します。 同じデータ ソースを使用することも引き続きします。
+計算コンテキストはそのまま保持します。 また、同じデータソースも引き続き使用します。
 
 1. **rxLogit** 関数を呼び出して、モデルの定義に必要な数式を渡します。
 

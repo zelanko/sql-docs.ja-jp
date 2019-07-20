@@ -1,110 +1,110 @@
 ---
-title: 既定の R と Python ライブラリの SQL Server Machine Learning サービスをパッケージ化
-description: SQL Server R Services で R Server では、Machine Learning サービス (In-database)、および Machine Learning Server (スタンドアロン) によってインストールされた R と Python のパッケージ
+title: 既定の R および Python パッケージライブラリ
+description: R Services、R Server、Machine Learning Services (データベース内)、および Machine Learning Server (スタンドアロン) 用の SQL Server によってインストールされる r および Python パッケージ
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 887bae28ffe35ad006bceb08a1b62b824795be0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f6cf66725ae15b2b738c020258142576ede734ec
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962794"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345081"
 ---
-# <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server の既定の R と Python のパッケージ
+# <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server の既定の R および Python パッケージ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL Server とパッケージ ライブラリを検索する場所にインストールされている R と Python のパッケージを一覧表示します。  
+この記事では、SQL Server と共にインストールされる R および Python パッケージと、パッケージライブラリを検索する場所の一覧を示します。  
 
 ## <a name="r-package-list-for-sql-server"></a>SQL Server の R パッケージの一覧
 
-R パッケージがインストールされている[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)と[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)セットアップ中に、R の機能を選択するとします。 
+R パッケージは、セットアップ時に R 機能を選択したときに[SQL Server 2016 r Services](../install/sql-r-services-windows-install.md)と[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)と共にインストールされます。 
 
 |パッケージ         | 2016 | 2017 | 説明 |
 |----------------|--------------|--------------|-------------|
-| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | リモート計算コンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚エフェクトと分析の rx 関数を並列実行に使用されます。 |
-| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |ストアド プロシージャで R スクリプトを含めるために使用します。 |
-| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | R での機械学習アルゴリズムを追加します。 | 
-| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | R での MDX ステートメントを記述するために使用 |
+| [RevoScaleR](https://docs.microsoft.com/r-server/r-reference/revoscaler/revoscaler)  | 8.0.3 | 9.2 | リモートの計算コンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析のための rx 関数の並列実行に使用されます。 |
+| [sqlrutils](https://docs.microsoft.com/machine-learning-server/r-reference/sqlrutils/sqlrutils) | 8.0.3 | 9.2 |ストアドプロシージャに R スクリプトを含めるために使用されます。 |
+| [MicrosoftML](https://docs.microsoft.com/r-server/r-reference/microsoftml/microsoftml-package)| n.a. | 9.2 | R に機械学習アルゴリズムを追加します。 | 
+| [olapR](https://docs.microsoft.com/machine-learning-server/r-reference/olapr/olapr) | n.a.  | 9.2 | R で MDX ステートメントを記述するために使用されます。 |
 
-MicrosoftML、olapR を既定では SQL Server 2017 Machine Learning Services で利用できます。 これらのパッケージを追加する、SQL Server 2016 R Services のインスタンスで、[コンポーネントのアップグレード](../install/upgrade-r-and-python.md)します。 コンポーネントのアップグレードも取得するパッケージの新しいバージョン (たとえば、SQL Server のパッケージ管理の機能を含む RevoScaleR の新しいバージョン)。
+SQL Server 2017 Machine Learning Services では、既定で Microsoft Ml と olapR を使用できます。 SQL Server 2016 R Services インスタンスでは、[コンポーネントをアップグレード](../install/upgrade-r-and-python.md)することで、これらのパッケージを追加できます。 コンポーネントのアップグレードでは、パッケージの新しいバージョンも取得されます (たとえば、新しいバージョンの RevoScaleR には、SQL Server でのパッケージ管理用の関数が含まれています)。
 
-## <a name="python-package-list-for-sql-server"></a>SQL Server 用の Python パッケージの一覧
+## <a name="python-package-list-for-sql-server"></a>SQL Server の Python パッケージ一覧
 
-インストールするときに、Python パッケージは SQL Server 2017 でのみ使用可能な[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) Python 機能を選択します。
+Python パッケージは、 [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)をインストールし、python 機能を選択した場合に SQL Server 2017 でのみ使用できます。
 
 | パッケージ         | 2017    |  説明 |
 | -----------------|-------------|------------|
-| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | リモート計算コンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚エフェクトと分析の rx 関数を並列実行に使用されます。 |
-| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Python での機械学習アルゴリズムを追加します。 |
+| [revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) | 9.2 | リモートの計算コンテキスト、ストリーミング、データのインポートと変換、モデリング、視覚化、および分析のための rx 関数の並列実行に使用されます。 |
+| [microsoftml](https://docs.microsoft.com/machine-learning-server/python-reference/microsoftml/microsoftml-package) | 9.2 | Python で機械学習アルゴリズムを追加します。 |
 
-## <a name="open-source-r-in-your-installation"></a>オープン ソースでの R のインストール
+## <a name="open-source-r-in-your-installation"></a>インストールでのオープンソース R
 
-R のサポートには、オープン ソースが含まれていますがされるため、基本の R 関数を呼び出すし、追加のオープン ソースとサード パーティ製のパッケージをインストールできます。 R 言語サポートなどのコア機能を含む**基本**、 **stats**、 **utils**、およびその他。 R の基本インストールは、多数のサンプル データセット、および標準の R ツールにも含まれます**RGui** (軽量の対話型エディター) と**RTerm** (R コマンド プロンプト)。 
+R サポートにはオープンソースが含まれているので、base R 関数を呼び出して、追加のオープンソースおよびサードパーティパッケージをインストールできます。 R 言語サポートには、**ベース**、**統計**、**ユーティリティ**などのコア機能が含まれています。 R の基本インストールには、多くのサンプルデータセットと、 **Rgui** (軽量対話型エディター) や**Rgui** (R コマンドプロンプト) などの標準の r ツールも含まれています。 
 
-インストールに含まれているオープン ソース R の配布が[Microsoft R を開きます (MRO)](https://mran.microsoft.com/open)します。 MRO 基本 r などその他のオープン ソース パッケージを含めることで値を追加する、 [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library)します。
+インストールに含まれるオープンソース R のディストリビューションは、 [Microsoft R open (MRO)](https://mran.microsoft.com/open)です。 MRO は、 [Intel Math Kernel Library](https://en.wikipedia.org/wiki/Math_Kernel_Library)などの追加のオープンソースパッケージを含めることによって、base R に値を追加します。
 
-次の表は、SQL Server セットアップを使用して MRO によって提供される R のバージョンをまとめたものです。
+次の表は、SQL Server セットアップを使用して MRO で提供される R のバージョンをまとめたものです。
 
-|リリース             | R のバージョン       |
+|リリース             | R バージョン       |
 |--------------------|-----------------|
 | [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md) | 3.2.2   | 
-| [SQL Server 2017 の Machine Learning サービス](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
+| [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md) | 3.3.3 |
 
-Web 上の新しいバージョンに SQL Server セットアップによってインストールされている R のバージョンを上書きする必要があります手動でことはありません。 Microsoft R パッケージが基づく R. 変更の特定のバージョンで、インストールが不安定になることです。
+新しいバージョンの web で SQL Server セットアップによってインストールされた R のバージョンを手動で上書きすることは避けてください。 Microsoft R パッケージは、R の特定のバージョンに基づいています。インストールを変更すると、それが不安定になる可能性があります。
 
-## <a name="open-source-python-in-your-installation"></a>インストールでの Python のオープン ソース
+## <a name="open-source-python-in-your-installation"></a>インストールにおけるオープンソースの Python
 
-SQL Server 2017 では、Python コンポーネントを追加します。 Python 言語のオプションを選択すると 4.2 の Anaconda ディストリビューションがインストールされています。 Python のコード ライブラリだけでなく、標準的なインストールには、サンプル データ、単体テスト、およびサンプル スクリプトが含まれています。 
+SQL Server 2017 は Python コンポーネントを追加します。 [Python 言語] オプションを選択すると、Anaconda 4.2 distribution がインストールされます。 Python コードライブラリに加えて、標準インストールには、サンプルデータ、単体テスト、およびサンプルスクリプトが含まれています。 
 
-SQL Server 2017 の Machine Learning は、R と Python の両方をサポートする最初のリリースです。
+SQL Server 2017 Machine Learning は、R と Python の両方をサポートするための最初のリリースです。
 
-|リリース             | Anaconda バージョン| Microsoft パッケージ    |
+|リリース             | Anaconda のバージョン| Microsoft パッケージ    |
 |--------------------|-----------------|-----------------------|
-| SQL Server 2017 Machine Learning サービス  | Python 3.5 経由で 4.2 | revoscalepy、microsoftml |
+| SQL Server 2017 Machine Learning サービス  | 4.2 over Python 3.5 | revoscalepy、microsoft ml |
 
-Web 上の新しいバージョンに SQL Server セットアップによってインストールされている Python のバージョンを上書きする必要があります手動でことはありません。 Microsoft Python パッケージは、Anaconda の特定のバージョンに基づいています。 インストールの変更が不安定になることです。
+新しいバージョンの web で SQL Server セットアップによってインストールされた Python のバージョンを手動で上書きすることは避けてください。 Microsoft Python パッケージは、Anaconda の特定のバージョンに基づいています。 インストールを変更すると、それが不安定になる可能性があります。
 
 ## <a name="component-upgrades"></a>コンポーネントのアップグレード
 
-最初のインストール後、サービス パックと累積的更新プログラムは、R と Python のパッケージが更新されるが、完全なバージョンのアップグレードはのみによって可能*バインド*モダン ライフ サイクル サポート ポリシーにします。 バインディングは、サービス モデルを変更します。 既定では、最初のインストール後の R パッケージは更新サービス パックと累積的更新プログラムです。 追加のパッケージと R のコア コンポーネントの完全なバージョンのアップグレード (SQL Server 2017 への SQL Server 2016) から製品アップグレードによってのみ可能ですか、R をバインドすることによって、Microsoft Machine Learning Server をサポートします。 詳細については、次を参照してください。 [SQL Server のアップグレードの R と Python コンポーネント](../install/upgrade-r-and-python.md)します。
+最初のインストール後、R および Python パッケージはサービスパックと累積更新プログラムによって更新されますが、完全バージョンのアップグレードは、最新のライフサイクルサポートポリシーに*バインド*することによってのみ可能です。 バインドによってサービスモデルが変更されます。 既定では、最初のインストール後に、サービスパックと累積更新プログラムによって R パッケージが更新されます。 コア R コンポーネントの追加パッケージと完全バージョンアップグレードは、製品のアップグレード (SQL Server 2016 から SQL Server 2017) を通じて、または R サポートを Microsoft Machine Learning Server にバインドすることによってのみ可能です。 詳細については、「 [SQL Server での R および Python コンポーネントのアップグレード](../install/upgrade-r-and-python.md)」を参照してください。
 
-## <a name="package-library-location"></a>パッケージ ライブラリの場所
+## <a name="package-library-location"></a>パッケージライブラリの場所
 
-SQL server machine learning をインストールするときに、各言語をインストールするのインスタンス レベルで 1 つのパッケージ ライブラリが作成されます。 、Windows では、インスタンス ライブラリは、SQL Server に登録されているセキュリティで保護されたフォルダーです。
+SQL Server を使用して machine learning をインストールすると、インストールする言語ごとに1つのパッケージライブラリがインスタンスレベルで作成されます。 Windows では、インスタンスライブラリは SQL Server に登録されているセキュリティで保護されたフォルダーです。
 
-すべてのスクリプトまたはコードを実行での SQL Server データベースは、インスタンスのライブラリから関数を読み込む必要があります。 SQL Server は、その他のライブラリにインストールされているパッケージにアクセスできません。 これは、リモート クライアントにも適用されます。 リモート クライアントからサーバーへの接続、ときに server コンピューティング コンテキストで実行する R または Python のコードはのみインスタンス ライブラリにインストールされているパッケージを使用できます。
+SQL Server でデータベース内で実行されるすべてのスクリプトまたはコードは、インスタンスライブラリから関数を読み込む必要があります。 SQL Server は、他のライブラリにインストールされているパッケージにアクセスできません。 これは、リモートクライアントにも当てはまります。 リモートクライアントからサーバーに接続する場合、サーバーコンピューティングコンテキストで実行するすべての R または Python コードでは、インスタンスライブラリにインストールされているパッケージのみを使用できます。
 
-サーバー資産を保護するには、インスタンスの既定のライブラリは、コンピューターの管理者によってのみ変更できます。 コンピューターの所有者でない場合は、このライブラリにパッケージをインストールする管理者からアクセス許可を取得する必要があります。 
+サーバー資産を保護するために、既定のインスタンスライブラリは、コンピューターの管理者のみが変更できます。 コンピューターの所有者でない場合は、このライブラリにパッケージをインストールするために、管理者からアクセス許可を取得する必要がある場合があります。 
 
-#### <a name="file-path-for-in-database-engine-instances"></a>エンジンのインスタンスをデータベース内のファイル パス
+#### <a name="file-path-for-in-database-engine-instances"></a>データベース内エンジンインスタンスのファイルパス
 
-次の表は、ファイルの場所を R と Python のバージョンとデータベース エンジン インスタンスの組み合わせを示します。 MSSQL13 が SQL Server 2016 に示しは R のみです。 MSSQL14 は、SQL Server 2017 を示しは R と Python のフォルダーがあります。 
+次の表は、バージョンとデータベースエンジンのインスタンスの組み合わせに関する R と Python のファイルの場所を示しています。 MSSQL13.MSSQLSERVER は SQL Server 2016 を示し、は R のみです。 MSSQL14. は SQL Server 2017 を示し、R および Python フォルダーを持っています。 
 
-ファイル パスには、インスタンス名も含まれます。 SQL Server インストール[データベース エンジン インスタンス](../../database-engine/configure-windows/database-engine-instances-sql-server.md)既定のインスタンス (MSSQLSERVER)、またはユーザー定義の名前付きインスタンスとして。 SQL Server は、名前付きインスタンスとしてインストールする場合は、次のように追加されます。 その名前が表示されます:`MSSQL13.<instance_name>`します。
+ファイルパスには、インスタンス名も含まれます。 SQL Server は、[データベースエンジンインスタンス](../../database-engine/configure-windows/database-engine-instances-sql-server.md)を既定のインスタンス (MSSQLSERVER) として、またはユーザー定義の名前付きインスタンスとしてインストールします。 SQL Server が名前付きインスタンスとしてインストールされている場合は、のよう`MSSQL13.<instance_name>`に名前が追加されます。
 
-|バージョンおよび言語  | 既定のパス|
+|バージョンと言語  | 既定のパス|
 |----------------------|------------|
-| SQL Server 2016 |C:\Program files \microsoft SQL Server\MSSQL13 します。MSSQLSERVER\R_SERVICES\library|
+| SQL Server 2016 |C:\Program Server\MSSQL13. SQLMSSQLSERVER\R_SERVICES\library|
 | R を使用した SQL Server 2017|C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\library |
-| SQL Server 2017 の Python の使用 |C:\Program files \microsoft SQL Server\MSSQL14 します。MSSQLSERVER\PYTHON_SERVICES\Lib\site パッケージ |
+| Python を使用した2017の SQL Server |C:\Program Server\MSSQL14. SQLMSSQLSERVER\PYTHON_SERVICES\Lib\site-packages |
 
 
-#### <a name="file-path-for-standalone-server-installations"></a>スタンドアロン サーバーのインストール ファイルのパス
+#### <a name="file-path-for-standalone-server-installations"></a>スタンドアロンサーバーインストールのファイルパス
 
-次の表は、SQL Server 2016 R Server (スタンドアロン) または SQL Server 2017 の Machine Learning Server (スタンドアロン) サーバーがインストールされている場合、バイナリの既定のパスを示します。 
+次の表は、SQL Server 2016 R Server (スタンドアロン) または SQL Server 2017 Machine Learning Server (スタンドアロン) サーバーがインストールされている場合の、バイナリの既定のパスを示しています。 
 
 |バージョン| インストール|既定のパス|
 |-------|-------------|------------|
-| SQL Server 2016|R Server (スタンドアロン)| C:\Program files \microsoft SQL server \130\r_server|
-|SQL Server 2017|Machine Learning Server、R の使用 |C:\Program files \microsoft SQL Server\140\R_SERVER|
-|SQL Server 2017|Machine Learning Server、Python の使用 |C:\Program files \microsoft SQL Server\140\PYTHON_SERVER|
+| SQL Server 2016|R Server (スタンドアロン)| C:\Program 130@ SERVER @ _s|
+|SQL Server 2017|R を使用した Machine Learning Server |C:\Program 140@ SERVER @ _s|
+|SQL Server 2017|Machine Learning Server、Python |C:\Program 140SQL (_s) \ python SERVER|
 
 > [!NOTE]
-> Microsoft R Server のスタンドアロン インストール可能性があるようなサブフォルダー名とファイルを持つその他のフォルダーを検索する場合または[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)します。 これらのサーバー製品では、別のインストーラーとパス (つまり、C:\Program Files\Microsoft\R Server\R_SERVER または C:\Program Files\Microsoft\ML SERVER\R_SERVER) があります。 詳細については、次を参照してください。 [Machine Learning Server を Windows にインストール](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)または[Windows のインストールの R Server 9.1](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)します。
+> サブフォルダーの名前とファイルが類似している他のフォルダーがある場合は、Microsoft R Server または[Machine Learning Server](https://docs.microsoft.com/machine-learning-server/)のスタンドアロンインストールを使用している可能性があります。 これらのサーバー製品には、異なるインストーラーとパスがあります (つまり、C:\Program Files\Microsoft\R Server\r _s または C:\Program Files\Microsoft\ML SERVER\R _s)。 詳細については、「 [windows 用の Machine Learning Server のインストール](https://docs.microsoft.com/machine-learning-server/install/machine-learning-server-windows-install)」または「 [Windows 用 R Server 9.1 のインストール](https://docs.microsoft.com/machine-learning-server/install/r-server-install-windows)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

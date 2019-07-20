@@ -1,66 +1,66 @@
 ---
-title: 有効にするか、リモート R パッケージの管理 - SQL Server Machine Learning サービスを無効にします。
-description: リモート SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) での R パッケージの管理を有効にします。
+title: リモート R パッケージの管理を有効または無効にする
+description: SQL Server 2016 R Services または SQL Server 2017 Machine Learning Services (データベース内) でリモート R パッケージ管理を有効にする
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ea567d8fbe3f6bbd9b51133ec015768cd4c6e893
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 245358dcdc6bb166e49f963f67754f864e1a96b6
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962527"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344918"
 ---
-# <a name="enable-or-disable-remote-package-management-for-sql-server"></a>有効にするか、SQL Server のリモート パッケージの管理を無効にします。
+# <a name="enable-or-disable-remote-package-management-for-sql-server"></a>SQL Server のリモートパッケージ管理を有効または無効にする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、クライアント ワークステーションまたは別の Machine Learning Server から R パッケージのリモート管理を有効にする方法について説明します。 SQL Server で、パッケージの管理機能を有効にすると、SQL Server にパッケージをインストールするのにクライアントで RevoScaleR コマンドを使用できます。
+この記事では、クライアントワークステーションまたは別の Machine Learning Server から R パッケージのリモート管理を有効にする方法について説明します。 SQL Server でパッケージ管理機能が有効になったら、クライアントで RevoScaleR コマンドを使用して、SQL Server にパッケージをインストールできます。
 
 > [!NOTE]
-> 現在の R ライブラリの管理がサポートされています。ロードマップが Python をサポートします。
+> 現在、R ライブラリの管理はサポートされています。Python のサポートはロードマップにあります。
 
-既定では、SQL Server の外部のパッケージ管理機能は無効になります。 次のセクションで説明した機能を有効に個別のスクリプトを実行する必要があります。
+既定では、SQL Server の外部パッケージ管理機能は無効になっています。 次のセクションで説明するように、別のスクリプトを実行して機能を有効にする必要があります。
 
 ## <a name="overview-of-process-and-tools"></a>プロセスとツールの概要
 
-を有効にするまたは SQL Server 上のパッケージ管理を無効にするには、コマンド ライン ユーティリティを使用して**RegisterRExt.exe**、に含まれている、 **RevoScaleR**パッケージ。
+SQL Server でパッケージ管理を有効または無効にするには、 **RevoScaleR**パッケージに含まれているコマンドラインユーティリティの**registerrext**を使用します。
 
-[有効にする](#bkmk_enable)この機能は、データベース管理者が必要とする、2 段階のプロセス: (SQL Server インスタンスごと)、SQL Server インスタンス上のパッケージ管理を有効にし、パッケージ管理 (SQL Server ごとに SQL database を有効にします。データベースの場合)。
+この機能を[有効](#bkmk_enable)にするには、データベース管理者が必要な2段階のプロセスを実行します。 SQL Server インスタンスでパッケージ管理を有効にし (SQL Server インスタンスごとに1回)、SQL データベースでパッケージ管理を有効にします (SQL Server データベースごとに1回)。).
 
-[無効にすると](#bkmk_disable)パッケージの管理機能では、multipel 手順も必要です。 データベース レベルのパッケージと (データベース) ごとのアクセス許可を削除し (1 回あたりのインスタンス) サーバーから役割を削除します。
+パッケージ管理機能を[無効](#bkmk_disable)にするには、multipel の手順も必要です。データベースレベルのパッケージと権限を (データベースごとに1回) 削除し、サーバーからロールを削除します (インスタンスごとに1回)。
 
-## <a name="bkmk_enable"></a> パッケージの管理を有効にします。
+## <a name="bkmk_enable"></a>パッケージ管理を有効にする
 
-1. SQL Server で、管理者特権のコマンド プロンプトを開くし、ユーティリティでは、RegisterRExt.exe を含むフォルダーに移動します。 既定の場所は`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`します。
+1. SQL Server で、管理者特権でのコマンドプロンプトを開き、ユーティリティが格納されているフォルダーに移動します。 既定の場所は`<SQLInstancePath>\R_SERVICES\library\RevoScaleR\rxLibs\x64\RegisterRExe.exe`です。
 
-2. 環境内の適切な引数を指定して、次のコマンドを実行します。
+2. 次のコマンドを実行して、環境に適した引数を指定します。
 
     `RegisterRExt.exe /install pkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    このコマンドは、パッケージの管理に必要な SQL Server コンピューターのインスタンス レベルのオブジェクトを作成します。 また、インスタンスのスタート パッドを再起動します。
+    このコマンドは、パッケージ管理に必要な SQL Server コンピューター上にインスタンスレベルのオブジェクトを作成します。 また、インスタンスのスタートパッドも再起動します。
 
-    インスタンスを指定しない場合は、既定のインスタンスが使用されます。 ユーザーを指定しない場合は、現在のセキュリティ コンテキストが使用されます。 たとえば、次のコマンドでは、RegisterRExt.exe、コマンド プロンプトを開いたユーザーの資格情報のパスのインスタンスでパッケージの管理が有効。 にします。
+    インスタンスを指定しない場合は、既定のインスタンスが使用されます。 ユーザーを指定しない場合は、現在のセキュリティコンテキストが使用されます。 たとえば、次のコマンドは、コマンドプロンプトを開いたユーザーの資格情報を使用して、RegisterRExt のパスにあるインスタンスのパッケージ管理を有効にします。
 
     `REgisterRExt.exe /install pkgmgmt`
 
-3. 特定のデータベースにパッケージの管理を追加するには、管理者特権でコマンド プロンプトから次のコマンドを実行します。
+3. 特定のデータベースにパッケージ管理を追加するには、管理者特権のコマンドプロンプトから次のコマンドを実行します。
 
     `RegisterRExt.exe /install pkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
    
-    このコマンドは、ユーザーのアクセス許可を制御するために使用される次のデータベース ロールを含む、一部のデータベース アイテムを作成します: `rpkgs-users`、 `rpkgs-private`、および`rpkgs-shared`します。
+    次のコマンドでは、ユーザーのアクセス許可`rpkgs-users`を制御するために使用される、 `rpkgs-private`、、および`rpkgs-shared`のデータベースロールを含む、いくつかのデータベースアーティファクトを作成します。
 
-    たとえば、次のコマンドは、RegisterRExt が実行されているインスタンス上のデータベース、パッケージの管理を使用できます。 ユーザーを指定しない場合は、現在のセキュリティ コンテキストが使用されます。
+    たとえば、次のコマンドは、RegisterRExt が実行されているインスタンスで、データベースのパッケージ管理を有効にします。 ユーザーを指定しない場合は、現在のセキュリティコンテキストが使用されます。
 
     `RegisterRExt.exe /install pkgmgmt /database:TestDB`
 
-4. パッケージをインストールする必要がありますデータベースごとに、コマンドを繰り返します。
+4. パッケージをインストールする必要がある各データベースに対して、このコマンドを繰り返します。
 
-5. 新しいロールが正常に作成されたことを確認するには、SQL Server Management studio でデータベースをクリックします。 を展開**セキュリティ**、展開と**データベース ロール**します。
+5. 新しいロールが正常に作成されたことを確認するには、SQL Server Management Studio でデータベースをクリックし、 **[セキュリティ]** 、 **[データベースロール]** の順に展開します。
 
-    Sys.database_principals、次のようにクエリを実行することもできます。
+    次のように、database_principals でクエリを実行することもできます。
 
     ```sql
     SELECT pr.principal_id, pr.name, pr.type_desc,   
@@ -75,26 +75,26 @@ ms.locfileid: "67962527"
         ON o.schema_id = s.schema_id;
     ```
 
-この機能を有効にした後は、インストールまたはリモート R クライアントからのパッケージをアンインストールする RevoScaleR 関数を使用できます。
+この機能を有効にした後、RevoScaleR 関数を使用して、リモート R クライアントからパッケージをインストールまたはアンインストールすることができます。
 
-## <a name="bkmk_disable"></a> パッケージの管理を無効にします。
+## <a name="bkmk_disable"></a>パッケージ管理を無効にする
 
-1. 管理者特権でコマンド プロンプトでは、もう一度、RegisterRExt ユーティリティを実行し、データベース レベルでのパッケージ管理を無効にします。
+1. 管理者特権でのコマンドプロンプトで、RegisterRExt ユーティリティをもう一度実行し、データベースレベルでのパッケージ管理を無効にします。
 
     `RegisterRExt.exe /uninstall pkgmgmt /database:databasename [/instance:name] [/user:username] [/password:*|password]`
 
-    このコマンドは、指定されたデータベースからパッケージの管理に関連するデータベース オブジェクトを削除します。 SQL Server コンピューターのセキュリティで保護されたファイル システムの場所からインストールされたすべてのパッケージも削除されます。
+    このコマンドは、指定されたデータベースから、パッケージ管理に関連するデータベースオブジェクトを削除します。 また、SQL Server コンピューターのセキュリティで保護されたファイルシステムの場所からインストールされたすべてのパッケージを削除します。
 
-2. パッケージの管理が使用された各データベースでは、このコマンドを繰り返します。
+2. パッケージ管理が使用された各データベースで、このコマンドを繰り返します。
 
-3.  (省略可能)前の手順を使用してパッケージのすべてのデータベースが消去された後、管理者特権でコマンド プロンプトから、次のコマンドを実行します。
+3.  Optional前の手順を使用してすべてのデータベースを消去した後、管理者特権でのコマンドプロンプトから次のコマンドを実行します。
 
     `RegisterRExt.exe /uninstall pkgmgmt [/instance:name] [/user:username] [/password:*|password]`
 
-    このコマンドは、インスタンスからパッケージの管理機能を削除します。 手動で変更を表示するには、もう一度、スタート パッド サービスを再起動する必要があります。
+    このコマンドは、インスタンスからパッケージ管理機能を削除します。 変更を表示するには、スタートパッドサービスを手動で再起動する必要がある場合があります。
 
 ## <a name="next-steps"></a>次の手順
 
-+ [RevoScaleR を使用して、新しい R パッケージをインストールするには](use-revoscaler-to-manage-r-packages.md)
-+ [R パッケージをインストールするためのヒント](packages-installed-in-user-libraries.md)
++ [RevoScaleR を使用して新しい R パッケージをインストールする](use-revoscaler-to-manage-r-packages.md)
++ [R パッケージのインストールに関するヒント](packages-installed-in-user-libraries.md)
 + [既定のパッケージ](../package-management/default-packages.md)

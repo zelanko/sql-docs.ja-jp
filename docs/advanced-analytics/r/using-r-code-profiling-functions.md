@@ -1,34 +1,34 @@
 ---
-title: R コード プロファイル関数の SQL Server Machine Learning サービスの使用します。
-description: パフォーマンスが向上し、内部関数呼び出しに関する情報を返す R 関数のプロファイルを使用して SQL Server で R 計算をより迅速に結果を取得します。
+title: R コード プロファイル関数の使用
+description: R プロファイリング関数を使用して内部関数呼び出しに関する情報を返すことによって、パフォーマンスを向上させ、SQL Server での R 計算の結果を高速化します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 12/12/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8d58125cc8e6ffe4378759d4ceb4bdd0354e2e6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f4a68c19813b31164947f6d04a8c54c2a54eec34
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962368"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345690"
 ---
-# <a name="use-r-code-profiling-functions-to-improve-performance"></a>R コード プロファイル関数を使用して、パフォーマンスを向上させる
+# <a name="use-r-code-profiling-functions-to-improve-performance"></a>R コードプロファイル関数を使用してパフォーマンスを向上させる
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 SQL Server のリソースとツールを使用して R スクリプトの実行を監視できるほか、他の R パッケージが提供するパフォーマンス ツールを使用して、内部関数の呼び出しに関する情報を取得できます。 
 
 > [!TIP]
-> この記事では、開始するための基本的なリソースを提供します。 専門家によるガイダンスをお勧め、*パフォーマンス*セクション[Hadley Wickham 著"R の高度な"](http://adv-r.had.co.nz)します。
+> この記事では、作業を開始するための基本的なリソースについて説明します。 専門家によるガイダンスについては、 [Hadley Wickham による "Advanced R"](http://adv-r.had.co.nz)の*パフォーマンス*セクションをお勧めします。
 
 ## <a name="using-rprof"></a>rprof の使用
 
-[*rprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof)基本パッケージに含まれる関数は、 [ **utils**](https://www.rdocumentation.org/packages/utils/versions/3.5.1)既定で読み込まれます。 
+[*rprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/Rprof)は、既定で読み込まれる基本パッケージ[**ユーティリティ**](https://www.rdocumentation.org/packages/utils/versions/3.5.1)に含まれている関数です。 
 
-一般に *rprof* 関数は、指定した間隔でファイルに呼び出し履歴を記述することで機能します。 使用することができますし、 [ *summaryRprof* ](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof)出力ファイルを処理する関数。 *rprof* の利点の 1 つは、サンプリングを実行するため、監視によるパフォーマンスの負荷を軽減することです。
+一般に *rprof* 関数は、指定した間隔でファイルに呼び出し履歴を記述することで機能します。 その後、 [*summaryRprof*](https://www.rdocumentation.org/packages/utils/versions/3.5.1/topics/summaryRprof)関数を使用して、出力ファイルを処理できます。 *rprof* の利点の 1 つは、サンプリングを実行するため、監視によるパフォーマンスの負荷を軽減することです。
 
-コードで R プロファイルを使用するには、この関数を呼び出してパラメーター (書き込まれるログ ファイルの場所の名前など) を指定します。 コードでプロファイルをオンまたはオフにできます。 次の構文は、基本的な使用方法を示しています。 
+コードで R プロファイルを使用するには、この関数を呼び出してパラメーター (書き込まれるログ ファイルの場所の名前など) を指定します。 コードでプロファイルをオンまたはオフにできます。 基本的な使用法を次の構文に示します。 
 
 ```R
 # Specify profiling output file.
@@ -58,9 +58,9 @@ help("Sys.time")
 
 ## <a name="debugging-and-profiling-in-r"></a>R のデバッグとプロファイル
 
-Microsoft R Open、既定でインストールされるマニュアルには、拡張機能について説明している R 言語の開発に関するマニュアルが含まれています。[プロファイリングとデバッグ](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)詳しく説明します。 C:\Program files \microsoft SQL Server\MSSQL13 にコンピューターに、同じドキュメントが表示されます。MSSQLSERVER\R_SERVICES\doc\manual します。
+既定でインストールされる Microsoft R Open のドキュメントには、[プロファイリングとデバッグ](https://cran.r-project.org/doc/manuals/r-release/R-exts.html#Debugging)の詳細について説明する r 言語用の拡張機能の開発に関するマニュアルが含まれています。 同じドキュメントは、C:\Program Server\MSSQL13. SQL のコンピューターにあります。MSSQLSERVER\R_SERVICES\doc\manual.
 
 ## <a name="see-also"></a>関連項目
 
-+ [R ユーティリティ パッケージ](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
-+ [Hadley Wickham 著"高度な R"](http://adv-r.had.co.nz)
++ [ユーティリティ R パッケージ](https://www.rdocumentation.org/packages/utils/versions/3.5.1)
++ [Hadley Wickham による "Advanced R"](http://adv-r.had.co.nz)

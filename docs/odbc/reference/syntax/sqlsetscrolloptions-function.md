@@ -1,7 +1,7 @@
 ---
 title: SQLSetScrollOptions 関数 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 07/18/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -11,6 +11,7 @@ apiname:
 - SQLSetScrollOptions
 apilocation:
 - sqlsrv32.dll
+- odbc32.dll
 apitype: dllExport
 f1_keywords:
 - SQLSetScrollOptions
@@ -19,28 +20,28 @@ helpviewer_keywords:
 ms.assetid: 2a825ba7-7942-4c23-bcdb-c80dc12f8c86
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7ad13ef3d443e2c99a44ad1cbefbf9f08fa2e742
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a85caefadb54c3db2716c4db18b504e02da996
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68039671"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68342941"
 ---
 # <a name="sqlsetscrolloptions-function"></a>SQLSetScrollOptions 関数
-**準拠**  
- バージョンが導入されました。ODBC 1.0 規格に準拠します。非推奨  
+**互換性**  
+ 導入されたバージョン:ODBC 1.0 標準準拠:非推奨  
   
  **概要**  
- ODBC で*3.x*、ODBC 2.0 関数**SQLSetScrollOptions**への呼び出しによって置き換えられました**SQLGetInfo**と**SQLSetStmtAttr**します。  
+ *Odbc 3.x*では、odbc 2.0 関数**SQLSetScrollOptions**は**SQLGetInfo**と**SQLSetStmtAttr**の呼び出しに置き換えられています。  
   
 > [!NOTE]
->  どのようなドライバー マネージャーは、ときに、マッピングするには、この関数、ODBC の詳細については*2.x* odbc アプリケーションが動作*3.x*ドライバーを参照してください[非推奨の関数のマッピング](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)付録 g:旧バージョンとの互換性のためのガイドラインをドライバーです。  
+>  Odbc *2.x アプリケーションが*odbc *2.x ドライバーで*動作しているときに、ドライバーマネージャーがこの関数をマップする方法の詳細については[、「付録](../../../odbc/reference/appendixes/mapping-deprecated-functions.md)G:旧バージョンとの互換性のためのドライバーガイドライン。  
 > 
 > [!NOTE]
->  ドライバー マネージャーがマップされます**SQLSetScrollOptions** ODBC を使用するアプリケーションの*3.x*がサポートされていないドライバー **SQLSetScrollOptions**、ドライバーマネージャーに SQL_ROWSET_SIZE ステートメントのオプション、not、SQL_ATTR_ROW_ARRAY_SIZE ステートメント属性を設定、*複合カーソル*引数**SQLSetScrollOption**します。 その結果、 **SQLSetScrollOptions**への呼び出しで複数の行をフェッチするときに、アプリケーションでは使用できません**SQLFetch**または**SQLFetchScroll**します。 フェッチの複数の行への呼び出しで場合にのみ使用できます**SQLExtendedFetch**します。  
+>  ドライバーマネージャーが、 **SQLSetScrollOptions**をサポートしていない ODBC 3.x ドライバーを使用しているアプリケーションの**SQLSetScrollOptions**をマップする場合、ドライバーマネージャーは SQL_ATTR_ROW_ ではなく SQL_ROWSET_SIZE ステートメントオプションを設定し*ます。* ARRAY_SIZE statement 属性を**SQLSetScrollOption**の*RowsetSize*引数に指定します。 結果として、 **Sqlfetch**または**sqlfetchscroll**の呼び出しによって複数の行をフェッチするときに、アプリケーションで**SQLSetScrollOptions**を使用することはできません。 **SQLExtendedFetch**の呼び出しによって複数の行をフェッチする場合にのみ使用できます。  
   
 ## <a name="remarks"></a>コメント  
- アプリケーションは、64 ビットのオペレーティング システムで実行される場合は、次を参照してください。 [ODBC 64 ビットの情報](../../../odbc/reference/odbc-64-bit-information.md)します。  
+ アプリケーションが64ビットオペレーティングシステムで実行される場合は、「 [ODBC 64 ビット情報](../../../odbc/reference/odbc-64-bit-information.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [ODBC API リファレンス](../../../odbc/reference/syntax/odbc-api-reference.md)   

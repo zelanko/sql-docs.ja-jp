@@ -1,51 +1,51 @@
 ---
-title: T-SQL (CREATE EXTERNAL LIBRARY) を使用して、SQL Server Machine Learning Services の R パッケージをインストールするには
-description: SQL Server 2016 R Services または SQL Server 2017 の Machine Learning Services (In-database) するには、新しい R パッケージを追加します。
+title: T-sql (EXTERNAL LIBRARY の作成) を使用して R パッケージをインストールする
+description: SQL Server 2016 R Services または SQL Server 2017 Machine Learning Services (データベース内) に新しい R パッケージを追加します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 7d858cbc34ef614c5b84ed7543ceaa837d136a4e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f681634b9f57a5fd459e3f6452c04aba024bd297
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962614"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345305"
 ---
-# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-SQL (CREATE EXTERNAL LIBRARY) を使用して、SQL Server に R パッケージをインストールするには
+# <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-sql (CREATE EXTERNAL LIBRARY) を使用して SQL Server に R パッケージをインストールする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、機械学習が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。 選択できる複数の方法はあります。 サーバー管理者が R. に慣れていない T-SQL を使用して最適します。
+この記事では、machine learning が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。 選択する方法は複数あります。 T-sql の使用は、R に慣れていないサーバー管理者に最適です。
 
-**適用対象します。**  [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)] [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
+**適用対象:** [!INCLUDE[sssql17-md](../../includes/sssql17-md.md)]  [!INCLUDE[rsql-productnamenew-md](../../includes/rsql-productnamenew-md.md)]
 
-[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)ステートメントでは、R を実行することがなく、インスタンスまたは特定のデータベースにパッケージまたはパッケージのセットを追加する、Python コードを直接またはします。 ただし、このメソッドは、パッケージの準備と追加のデータベースのアクセス許可が必要です。
+[CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)ステートメントを使用すると、R または Python コードを直接実行することなく、インスタンスまたは特定のデータベースにパッケージまたはパッケージのセットを追加できます。 ただし、この方法では、パッケージの準備と追加のデータベースアクセス許可が必要です。
 
-+ すべてのパッケージには、インターネットからオンデマンドでダウンロードしたのではなく、ローカルの zip ファイルとして利用可能なをする必要があります。
++ すべてのパッケージは、インターネットからの要求に応じてダウンロードするのではなく、ローカルの zip 形式のファイルとして使用できる必要があります。
 
-+ すべての依存関係の名前とバージョンで識別され、zip ファイルに含まれる必要があります。 パッケージが使用可能なダウン ストリームのパッケージの依存関係を含む必要な場合、ステートメントが失敗します。 
++ すべての依存関係を名前とバージョンで識別し、zip ファイルに含める必要があります。 ダウンストリームパッケージの依存関係など、必要なパッケージが使用できない場合、ステートメントは失敗します。 
 
-+ 必要があります**db_owner**またはデータベース ロールの外部ライブラリの作成の権限があります。 詳細については、次を参照してください。 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)します。
++ **Db_owner**であるか、データベースロールで CREATE EXTERNAL LIBRARY 権限を持っている必要があります。 詳細については、「 [CREATE EXTERNAL LIBRARY](https://docs.microsoft.com/sql/t-sql/statements/create-external-library-transact-sql)」を参照してください。
 
-## <a name="download-packages-in-archive-format"></a>アーカイブ形式でパッケージをダウンロードします。
+## <a name="download-packages-in-archive-format"></a>アーカイブ形式でパッケージをダウンロードする
 
-1 つのパッケージをインストールする場合は、zip 形式でパッケージをダウンロードします。
+1つのパッケージをインストールする場合は、パッケージを zip 形式でダウンロードします。
 
-パッケージの依存関係のための複数のパッケージをインストールする方が一般的です。 パッケージには、他のパッケージが必要とする場合は、それらのすべてがインストール時に互いにアクセス可能であることを確認する必要があります。 お勧め[ローカル リポジトリを作成する](create-a-local-package-repository-using-minicran.md)を使用して[miniCRAN](https://andrie.github.io/miniCRAN/) 、パッケージの完全なコレクションをアセンブルするだけでなく[igraph](https://igraph.org/r/)パッケージの依存関係を分析するためです。 間違ったバージョンのパッケージをインストールまたはパッケージの依存関係を省略するには、CREATE EXTERNAL LIBRARY ステートメントが失敗する可能性があります。 
+パッケージの依存関係により、複数のパッケージをインストールする方が一般的です。 パッケージに他のパッケージが必要な場合は、インストール中にすべてのパッケージが相互にアクセスできることを確認する必要があります。 パッケージの完全なコレクションと、パッケージの依存関係を分析するための[igraph](https://igraph.org/r/)をアセンブルするために、 [miniCRAN](https://andrie.github.io/miniCRAN/)を使用して[ローカルリポジトリを作成](create-a-local-package-repository-using-minicran.md)することをお勧めします。 間違ったバージョンのパッケージをインストールしたり、パッケージの依存関係を省略したりすると、CREATE EXTERNAL LIBRARY ステートメントが失敗する可能性があります。 
 
-## <a name="copy-the-file-to-a-local-folder"></a>ファイルをローカル フォルダーにコピーします。
+## <a name="copy-the-file-to-a-local-folder"></a>ローカルフォルダーにファイルをコピーする
 
-サーバー上のローカル フォルダーにすべてのパッケージを含む zip 形式のファイルをコピーします。 サーバー上のファイル システムへのアクセスがない、渡すこともできます完全なパッケージ変数としてバイナリ形式を使用します。 詳細については、次を参照してください。 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)します。
+すべてのパッケージを含む zip 形式のファイルをサーバー上のローカルフォルダーにコピーします。 サーバー上のファイルシステムへのアクセス権がない場合は、バイナリ形式を使用して完全なパッケージを変数として渡すこともできます。 詳細については、「 [CREATE EXTERNAL LIBRARY](../../t-sql/statements/create-external-library-transact-sql.md)」を参照してください。
 
-## <a name="run-the-statement-to-upload-packages"></a>パッケージをアップロードするステートメントを実行します。
+## <a name="run-the-statement-to-upload-packages"></a>ステートメントを実行してパッケージをアップロードする
 
-開く、**クエリ**ウィンドウで、管理者特権を持つアカウントを使用します。
+管理者特権を持つアカウントを使用して**クエリ**ウィンドウを開きます。
 
-T-SQL ステートメントを実行して`CREATE EXTERNAL LIBRARY`圧縮されたパッケージのコレクションをデータベースにアップロードします。
+T-sql ステートメント`CREATE EXTERNAL LIBRARY`を実行して、圧縮されたパッケージコレクションをデータベースにアップロードします。
 
-たとえば、次のステートメント名、パッケージ ソースとして、miniCRAN リポジトリを含む、 **randomForest**パッケージ、その依存関係とします。 
+たとえば、次のステートメント名は、パッケージソースとして、 **randomForest**パッケージを含む miniCRAN リポジトリとその依存関係を含んでいます。 
 
 ```sql
 CREATE EXTERNAL LIBRARY randomForest
@@ -53,11 +53,11 @@ FROM (CONTENT = 'C:\Temp\Rpackages\randomForest_4.6-12.zip')
 WITH (LANGUAGE = 'R');
 ```
 
-任意の名前を使用することはできません。外部ライブラリ名の読み込みや、パッケージを呼び出すときに使用すると思われる同じ名前が必要です。
+任意の名前を使用することはできません。外部ライブラリ名には、パッケージの読み込み時または呼び出し時に使用するものと同じ名前を指定する必要があります。
 
-## <a name="verify-package-installation"></a>パッケージのインストールを確認します。
+## <a name="verify-package-installation"></a>パッケージのインストールの確認
 
-ライブラリが正常に作成すると場合、は、ストアド プロシージャ内で呼び出して、SQL Server でパッケージを実行できます。
+ライブラリが正常に作成された場合は、ストアドプロシージャ内でパッケージを呼び出すことによって、SQL Server でパッケージを実行できます。
     
 ```sql
 EXEC sp_execute_external_script
@@ -68,4 +68,4 @@ EXEC sp_execute_external_script
 ## <a name="see-also"></a>関連項目
 
 + [パッケージ情報の取得](../package-management/installed-package-information.md)
-+ [R のチュートリアル](../tutorials/sql-server-r-tutorials.md)
++ [R チュートリアル](../tutorials/sql-server-r-tutorials.md)

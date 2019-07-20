@@ -1,87 +1,87 @@
 ---
-title: SQL Server の R と Python のチュートリアル - SQL Server Machine Learning
-description: 例と、R と Python の SQL Server Machine Learning Services でのスクリプト作成に関するチュートリアル。
+title: R と Python のチュートリアルの SQL Server
+description: SQL Server Machine Learning Services での R および Python スクリプトの例とチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 03/29/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8c8e8ad13ddc34148f1718b7843e00545cd758c0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9a212160c17e4cc3c8322af6026c9e2e4df97254
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962096"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343613"
 ---
-# <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R および Python での SQL Server Machine Learning のチュートリアル
+# <a name="sql-server-machine-learning-tutorials-in-r-and-python"></a>R と Python での Machine Learning チュートリアルの SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では包括的な一連のチュートリアルと、機械学習の機能を示すコード サンプル[SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)または[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)します。 
+この記事では、 [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)または[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)の機械学習機能をデモンストレーションするチュートリアルとコードサンプルの包括的な一覧を示します。 
 
-+ クイック スタートでは、最小限の労力で高速な探索の組み込みのデータまたはデータのないを使用します。
-+ チュートリアルに進むと詳細のタスク、さらに大きなデータセット、および長い説明。
-+ サンプルとソリューションは、コードを開始する概念およびサポート技術情報のギャップを埋めるためのレッスンを下位の操作を使用する開発者です。
++ クイックスタートは、組み込みデータを使用するか、最小限の労力で迅速な探索を行うためのデータを使用しません。
++ チュートリアルでは、より多くのタスク、大規模なデータセット、さらに詳しい説明をより深く掘り下げていきます。
++ サンプルとソリューションは、コードから開始し、概念とレッスンにさかのぼって知識のギャップを埋める開発者を対象としています。
 
-高パフォーマンスのデータの同じ操作のコンテキスト、実行し、カスタム コードをデプロイするための SQL Server ストアド プロシージャを使用する方法、および Microsoft R を呼び出す方法で常駐のリレーショナル データを R と Python ライブラリと Python ライブラリを使用する方法について説明しますサイエンスと機械学習タスク。
+ここでは、R と Python ライブラリを、同じ操作コンテキストで常駐するリレーショナルデータと共に使用する方法、カスタムコードを実行および配置するために SQL Server ストアドプロシージャを使用する方法、および高パフォーマンスデータ用に Microsoft R と Python ライブラリを呼び出す方法について説明します。サイエンスおよび機械学習のタスク。
 
-最初の手順としてバックアップする Microsoft の基本概念を確認して SQL Server と R と Python の統合。
+最初の手順として、Microsoft の R および Python と SQL Server の統合に関する基本概念を確認します。
 
 ## <a name="concepts"></a>概念
 
-データベース内分析は、データベース エンジンへのアドオンとして SQL Server Machine Learning Services または SQL Server 2016 R Services (R の場合のみ) をインストールすると、SQL Server の R と Python のネイティブ サポートを参照します。 R と Python の統合には、基本のオープン ソース ディストリビューションと高パフォーマンスの分析用の Microsoft 固有のライブラリが含まれます。
+データベース内分析とは、SQL Server Machine Learning Services をインストールするとき、またはデータベースエンジンへのアドオンとして 2016 R Services (R のみ) を SQL Server するときに SQL Server での R および Python のネイティブサポートを指します。 R と Python の統合には、基本のオープンソースディストリビューションに加え、高性能分析用の Microsoft 固有のライブラリが含まれています。
 
-コードは、アーキテクチャ観点から、データベース エンジンの整合性を保持するために、ボックスに、外部プロセスとして実行されます。 ただし、すべてのデータ アクセスしセキュリティは、SQL Server データベース ロールを介してとアクセス許可は、SQL Server にアクセス権を持つ任意のアプリケーションのことを意味は、ストアド プロシージャとしてデプロイまたはシリアル化し、トレーニング済みモデルを SQL に保存するときに、R と Python スクリプトにアクセスできます。サーバーのデータベースです。
+アーキテクチャのスタンドポイントでは、データベースエンジンの整合性を維持するために、コードがボックス上で外部プロセスとして実行されます。 ただし、すべてのデータアクセスとセキュリティは SQL Server データベースのロールとアクセス許可を使用します。つまり、SQL Server にアクセスできるアプリケーションは、ストアドプロシージャとしてデプロイするときに R および Python スクリプトにアクセスできます。また、トレーニング済みのモデルをシリアル化して SQL に保存することもできます。サーバーデータベース。
 
-他の Microsoft 製品での同等の言語サポートと SQL Server で R と Python 間の主な相違点をサポートし、サービスが含まれます。
+SQL Server での R と Python のサポートの主な相違点と、他の Microsoft 製品およびサービスでの同等の言語サポートには、次のようなものがあります。
 
-+ ストアド プロシージャまたは二項モデルとして「パッケージ」のコードに機能します。
-+ SQL Server プログラム ファイルをローカルにインストールされている Microsoft R と Python ライブラリを呼び出すコードを記述します。
-+ SQL Server のデータベースのセキュリティ アーキテクチャを R と Python のソリューションに適用されます。
-+ SQL Server インフラストラクチャを活用して、カスタム ソリューションの管理をサポートします。
++ ストアドプロシージャまたはバイナリモデルとしてコードを "パッケージ化" できます。
++ SQL Server プログラムファイルと共にローカルにインストールされた Microsoft R および Python ライブラリを呼び出すコードを記述します。
++ R および Python ソリューションに SQL Server のデータベースセキュリティアーキテクチャを適用します。
++ カスタムソリューションの SQL Server インフラストラクチャと管理サポートを活用します。
 
 ## <a name="quickstarts"></a>クイック スタート
 
-ここで T-SQL から R または Python を実行する方法と、SQL の運用環境用の R と Python コードを操作する方法について説明します。
+ここから開始して、T-sql から R または Python を実行する方法と、SQL 運用環境の R および Python コードを運用化する方法を学習してください。
 
-+ [Python:T-SQL を使用して Python を実行します。](run-python-using-t-sql.md)
-+ [R:R と SQL での hello World](rtsql-using-r-code-in-transact-sql-quickstart.md)
-+ [R:入力と出力を処理します。](rtsql-working-with-inputs-and-outputs.md)
-+ [R:データ型とオブジェクトを処理します。](rtsql-r-and-sql-data-types-and-data-objects.md)
-+ [R:R 関数の使用](rtsql-using-r-functions-with-sql-server-data.md)
-+ [R:予測モデルを作成します。](rtsql-create-a-predictive-model-r.md)
-+ [R:予測し、プロットをモデルから](rtsql-predict-and-plot-from-model.md)
++ [PythonT-sql を使用して Python を実行する](run-python-using-t-sql.md)
++ [\R\N\R\NR と SQL の Hello World](rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [\R\N\R\N入力と出力の処理](rtsql-working-with-inputs-and-outputs.md)
++ [\R\N\R\Nデータ型とオブジェクトの処理](rtsql-r-and-sql-data-types-and-data-objects.md)
++ [\R\N\R\NR 関数の使用](rtsql-using-r-functions-with-sql-server-data.md)
++ [\R\N\R\N予測モデルを作成する](rtsql-create-a-predictive-model-r.md)
++ [\R\N\R\Nモデルからの予測とプロット](rtsql-predict-and-plot-from-model.md)
 
 ## <a name="tutorials"></a>チュートリアル
 
-について詳しく見て、マイクロソフトのパッケージとローカルからリモート コンピューティング コンテキストに移行より専門的な操作を実行して、R、Python、T-SQL での最初の経験をビルドします。
+Microsoft のパッケージと、ローカルからリモートの計算コンテキストへの移行など、その他の特殊な操作について詳しく説明することにより、R、Python、T-sql を使用した最初の経験を基に構築できます。
 
 + [Python のチュートリアル](sql-server-python-tutorials.md)
-+ [R のチュートリアル](sql-server-r-tutorials.md)
++ [R チュートリアル](sql-server-r-tutorials.md)
 
 <a name ="bkmk_samples"></a>
 
 ## <a name="samples"></a>サンプル
 
-これらのサンプルとデモの SQL Server と R Server 開発チームによって提供されることは、実際のアプリケーションで埋め込み分析を使用する方法を選択します。
+SQL Server および R Server 開発チームが提供するこれらのサンプルとデモは、実際のアプリケーションで埋め込み分析を使用する方法を示しています。
 
 | リンク | 説明 | 
 |------|-------------|
-| [顧客を実行する R と SQL Server を使用してクラスタ リング](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 売上データに基づき顧客をセグメントの教師なし学習を使用します。 この例では、Microsoft R からスケーラブルな rxKmeans アルゴリズムを使用して、クラスタ リング モデルを構築します。 |
-| [顧客を実行する Python と SQL Server を使用してクラスタ リング](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | K-平均法アルゴリズムを使用して、顧客の教師なしのクラスタ リングを実行する方法について説明します。 この例では、Python 言語でのデータベースを使用します。| SQL Server 2017 |
-| [R と SQL Server を使用して予測モデルを構築します。](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | スキー レンタル ビジネスを予測する機械学習、今後のレンタルを今後の需要を満たすためには、ビジネスの計画と人員配置を一層使用方法について説明します。 この例では、Microsoft のアルゴリズムを使用して、ロジスティック回帰、デシジョン ツリー モデルを構築します。 | 
-| [Python と SQL Server を使用して予測モデルを構築します。](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 今後の需要を計画するために、Python を使用して、スキー レンタル分析アプリケーションをビルドします。 この例は、新しい Python ライブラリを使用して**revoscalepy**、線形回帰モデルを作成します。 | 
+| [R と SQL Server を使用して顧客のクラスタリングを実行する](https://microsoft.github.io/sql-ml-tutorials/R/customerclustering/) | 教師なし learning を使用して、売上データに基づいて顧客をセグメント化します。 この例では、Microsoft R のスケーラブルな rxKmeans アルゴリズムを使用して、クラスターモデルを構築します。 |
+| [Python と SQL Server を使用して顧客のクラスタリングを実行する](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Kmeans アルゴリズムを使用して顧客のクラスタリングを実行する方法について説明します。 この例では、データベース内の Python 言語を使用します。| SQL Server 2017 |
+| [R と SQL Server を使用した予測モデルの作成](https://microsoft.github.io/sql-ml-tutorials/R/rentalprediction) | Ski レンタル企業が機械学習を使用して将来のレンタルを予測する方法について説明します。これにより、ビジネスプランやスタッフが将来の需要に対応できるようになります。 この例では、Microsoft アルゴリズムを使用して、ロジスティック回帰モデルとデシジョンツリーモデルを作成します。 | 
+| [Python と SQL Server を使用した予測モデルの作成](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | 将来の需要に対応するために、Python を使用して ski レンタル分析アプリケーションを構築します。 この例では、新しい Python ライブラリ**revoscalepy**を使用して、線形回帰モデルを作成します。 | 
 
 <a name="bkmk_solutions"></a>
 
-## <a name="solution-templates"></a>ソリューション テンプレート
+## <a name="solution-templates"></a>ソリューションテンプレート
 
-Microsoft データ サイエンス チームは、一般的なシナリオ ソリューションをすぐに使用できるカスタマイズ可能なソリューション テンプレートを提供しています。 各ソリューションは、特定のタスクまたは業界の問題にお応えします。 SQL server、または Azure Machine Learning などのクラウド環境で実行するほとんどのソリューションが設計されています。 他のソリューションは、Microsoft R Server または Machine Learning Server を使用して、または Spark や Hadoop のクラスターで linux を実行できます。
+Microsoft データサイエンスチームは、カスタマイズ可能なソリューションテンプレートを提供しています。このテンプレートを使用して、一般的なシナリオに対応するソリューションをすぐに開始できます。 各ソリューションは、特定のタスクまたは業界の問題に合わせて調整されています。 ほとんどのソリューションは、SQL Server、または Azure Machine Learning などのクラウド環境で実行するように設計されています。 その他のソリューションは、Microsoft R Server または Machine Learning Server を使用して、Linux または Spark または Hadoop クラスターで実行できます。
 
-すべてのコードは、トレーニングおよび SQL Server のストアド プロシージャを使用してスコア付けのモデルをデプロイする方法の指示と共に提供されます。
+すべてのコードが提供されます。また、SQL Server ストアドプロシージャを使用してスコアリングのためのモデルをトレーニングしてデプロイする方法についても説明しています。
 
 + [不正行為の検出](https://gallery.cortanaanalytics.com/Tutorial/Online-Fraud-Detection-Template-with-SQL-Server-R-Services-1)
 + [顧客離れ予測](https://gallery.cortanaanalytics.com/Tutorial/Customer-Churn-Prediction-Template-with-SQL-Server-R-Services-1)
 + [予測メンテナンス](https://gallery.cortanaanalytics.com/Tutorial/Predictive-Maintenance-Template-with-SQL-Server-R-Services-1)
-+ [病院入院を予測します。](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
++ [病院の医療の長さを予測する](https://gallery.cortanaintelligence.com/Solution/Predicting-Length-of-Stay-in-Hospitals-1)
 

@@ -1,31 +1,31 @@
 ---
-title: RevoScaleR rxImport - SQL Server Machine Learning を使用してメモリにデータを読み込む
-description: SQL Server で R 言語を使用してデータを読み込む方法のチュートリアル。
+title: RevoScaleR rxImport を使用したメモリへのデータの読み込み
+description: SQL Server で R 言語を使用してデータを読み込む方法についてのチュートリアルチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 53d13c0771fd06ae8e91f4ad69fe4646a01fc770
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fb98887d9cfd3f1997ce82620eeff5df98ba6b1e
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962227"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344672"
 ---
-# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>RxImport (SQL Server と RevoScaleR チュートリアル) を使用してメモリにデータを読み込む
+# <a name="load-data-into-memory-using-rximport-sql-server-and-revoscaler-tutorial"></a>RxImport を使用したメモリへのデータの読み込み (SQL Server と RevoScaleR のチュートリアル)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-このレッスンの一部である、 [RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)を使用する方法の[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)と SQL Server。
+このレッスンは、SQL Server で[RevoScaleR 関数](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)を使用する方法に関する[RevoScaleR チュートリアル](deepdive-data-science-deep-dive-using-the-revoscaler-packages.md)の一部です。
 
-[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)セッションのメモリ内のデータ フレームに、またはディスク上の XDF ファイルには、データ ソースからデータを移動する関数を使用できます。 移動先としてファイルを指定しない場合、データはデータ フレームとしてメモリに格納されます。
+[RxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)関数を使用すると、データソースのデータを、セッションメモリ内のデータフレームまたはディスク上の xdf ファイルに移動できます。 移動先としてファイルを指定しない場合、データはデータ フレームとしてメモリに格納されます。
 
-この手順でデータを取得する方法を学習します[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、しを使用して、 **rxImport**ローカル ファイルに関心のあるデータを格納する関数。 この方法を利用すると、データベースに対して再クエリすることなく、ローカルの計算コンテキストでデータを繰り返し分析できます。
+この手順では、から[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データを取得し、 **rxImport**関数を使用して、関心のあるデータをローカルファイルに格納する方法について説明します。 この方法を利用すると、データベースに対して再クエリすることなく、ローカルの計算コンテキストでデータを繰り返し分析できます。
 
-## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server からローカル メモリにデータのサブセットを抽出します。
+## <a name="extract-a-subset-of-data-from-sql-server-to-local-memory"></a>SQL Server からローカルメモリにデータのサブセットを抽出する
 
-さらに詳しく危険度の高い個人のみを確認すると判断しました。 ソース テーブル[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サイズが大きいので、危険度の高い顧客のみに関する情報を取得します。 そのデータは、ローカル ワークステーションのメモリ内のデータ フレームに読み込みます。
+リスクの高い個人だけを調べることをお勧めします。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ソーステーブルは大きくなるため、危険度の高い顧客に関する情報のみを取得する必要があります。 その後、そのデータをローカルワークステーションのメモリ内のデータフレームに読み込みます。
 
 1. 計算コンテキストをローカル ワークステーションにリセットします。
 
@@ -42,15 +42,15 @@ ms.locfileid: "67962227"
         connectionString = sqlConnString)
     ```
 
-3. 関数を呼び出す[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)をローカルの R セッションでデータ フレームにデータを読み取る。
+3. 関数[rxImport](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rximport)を呼び出して、ローカル R セッションのデータフレームにデータを読み込みます。
 
     ```R
     highRisk <- rxImport(sqlServerProbDS)
     ```
 
-    操作が成功した場合は、次のようなステータス メッセージが表示されます。"の読み取り行数。処理された合計行は、35:35、チャンクの合計時間:0.036 seconds"
+    操作が成功した場合は、次のようなステータスメッセージが表示されます。"読み取られる行:35、処理された行数の合計:35、合計チャンク時間:0.036 秒 "
 
-4. これで、危険度の高い観察では、インメモリ データ フレームには、データ フレームを操作するのにさまざまな R 関数を使用できます。 たとえば、リスク スコアで顧客を並べ替えおよび、高いリスクをもたらしている顧客の一覧を印刷できます。
+4. これで、危険度の高い観測がインメモリデータフレームに含まれるようになったので、さまざまな R 関数を使用してデータフレームを操作できます。 たとえば、リスクスコアで顧客を注文し、リスクの高い顧客の一覧を印刷することができます。
 
     ```R
     orderedHighRisk <- highRisk[order(-highRisk$ccFraudProb),]
@@ -74,7 +74,7 @@ ccFraudLogitScore   state gender cardholder balance numTrans numIntlTrans credit
 
 **rxImport** は、データの移動だけでなく、読み取りプロセスでデータを変換する場合にも使用できます。 たとえば、幅が固定された列の文字数を指定する、変数の説明を指定する、要素列のレベルを設定する、さらにはインポート後に使用する新しいレベルを作成することもできます。
 
-**RxImport**関数は、インポート プロセス中に、列を変数名を割り当てますを使用して新しい変数名を指定することができます、 *colInfo*パラメーター、または、を使用してデータ型を変更*colClasses*パラメーター。
+**RxImport**関数は、インポート処理中に変数名を列に割り当てますが、 *colinfo*パラメーターを使用して新しい変数名を指定することも、 *colclasses*パラメーターを使用してデータ型を変更することもできます。
 
 *transforms* パラメーターで追加の操作を指定すると、読み取り対象の各データ群に対して基本的な処理を実行できます。
 

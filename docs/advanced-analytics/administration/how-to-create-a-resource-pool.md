@@ -1,35 +1,35 @@
 ---
-title: R と Python の SQL Server Machine Learning Services のリソース プールを作成する方法
-description: SQL Server 2016 または SQL Server 2017 データベース エンジン インスタンス上の R または Python のプロセス用の SQL Server リソース プールを定義します。
+title: R および Python 用のリソースプールを作成する方法
+description: SQL Server 2016 または SQL Server 2017 データベースエンジンインスタンス上の R または Python プロセスの SQL Server リソースプールを定義します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3f032a9e2a60a0428a2aac76ae8c3ee6baa62775
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b58c2a42334352d64aa2cea61a75585f29996c3
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67963153"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68344071"
 ---
-# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>SQL Server で機械学習用リソース プールを作成する方法
+# <a name="how-to-create-a-resource-pool-for-machine-learning-in-sql-server"></a>SQL Server で machine learning 用のリソースプールを作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、作成して、SQL Server で R と Python の machine learning ワークロードの管理専用のリソース プールを使用する方法について説明します。 既にインストールしている、機械学習の機能を有効になっていると想定して R や Python などの外部プロセスによって使用されるリソースのより細かい管理をサポートするためにインスタンスを再構成するとします。
+この記事では、SQL Server で R および Python machine learning ワークロードの管理専用のリソースプールを作成して使用する方法について説明します。 Machine learning の機能が既にインストールされ、有効になっていることを前提としています。また、R や Python などの外部プロセスで使用されるリソースの詳細な管理をサポートするようにインスタンスを再構成する必要があります。
 
-プロセスには、複数のステップが含まれています。
+このプロセスには、次の複数の手順が含まれます。
 
-1.  既存のリソース プールの状態を確認します。 どのようなサービスは、既存のリソースを使用しているかを理解することが重要です。
-2.  サーバー リソース プールを変更します。
-3.  外部プロセス用の新しいリソース プールを作成します。
-4.  外部スクリプト要求を識別する分類子関数を作成します。
-5.  新しい外部リソース プールが指定したクライアントまたはアカウントから R または Python のジョブをキャプチャすることを確認します。
+1.  既存のリソースプールの状態を確認します。 既存のリソースを使用しているサービスを理解することが重要です。
+2.  サーバーリソースプールを変更します。
+3.  外部プロセス用の新しいリソースプールを作成します。
+4.  外部スクリプト要求を識別する分類関数を作成します。
+5.  新しい外部リソースプールが、指定されたクライアントまたはアカウントから R ジョブまたは Python ジョブをキャプチャしていることを確認します。
 
 ##  <a name="bkmk_ReviewStatus"></a>既存のリソース プールの状態を確認する
   
-1.  次のようなステートメントを使用すると、サーバーの既定のプールに割り当てられたリソースをチェックできます。
+1.  次のようなステートメントを使用して、サーバーの既定のプールに割り当てられているリソースを確認します。
   
     ```sql
     SELECT * FROM sys.resource_governor_resource_pools WHERE name = 'default'
@@ -53,11 +53,11 @@ ms.locfileid: "67963153"
     |-|-|-|-|-|-|
     |2|既定値 (default)|100|20|0|2|
  
-3.  これらのサーバー既定の設定で、外部のランタイムをリソース不足のため、ほとんどのタスクを完了するがあります。 これを変更するには、サーバーのリソース使用率を次のように変更する必要があります。
+3.  これらのサーバーの既定の設定では、ほとんどのタスクを完了するために、外部ランタイムのリソースが不足している可能性があります。 これを変更するには、サーバーのリソース使用率を次のように変更する必要があります。
   
-    -   データベース エンジンで使用できる最大のコンピューター メモリの量を減らします。
+    -   データベースエンジンで使用できる最大コンピューターメモリを減らします。
   
-    -   外部プロセスで使用できるコンピューターの最大メモリを増やします。
+    -   外部プロセスで使用できる最大コンピューターメモリを増やします。
 
 ## <a name="modify-server-resource-usage"></a>サーバーのリソース使用率を変更する
 
@@ -80,13 +80,13 @@ ms.locfileid: "67963153"
     ```
   
     > [!NOTE]
-    >  これらは; を開始するだけの推奨設定です。機械学習、環境やワークロードに適したバランスを判断するには、他のサーバー プロセスからタスクを評価する必要があります。
+    >  これらは、最初は推奨される設定にすぎません。他のサーバープロセスの中で機械学習タスクを評価して、環境とワークロードの適切なバランスを判断する必要があります。
 
 ## <a name="create-a-user-defined-external-resource-pool"></a>ユーザー定義の外部リソース プールを作成する
   
 1.  リソース ガバナーの構成に対する変更はサーバー全体に適用され、サーバーの既定のプールを使用するワークロードだけではなく、外部プールを使用するワークロードにも影響します。
   
-     そのため、優先するワークロードを細かく制御するために、新しいユーザー定義の外部リソース プールを作成できます。 さらに、分類子関数を定義して、外部リソース プールに割り当てる必要があります。 **外部**キーワードは新しいです。
+     そのため、優先するワークロードを細かく制御するために、新しいユーザー定義の外部リソース プールを作成できます。 さらに、分類子関数を定義して、外部リソース プールに割り当てる必要があります。 **EXTERNAL**キーワードは new です。
   
      新しい "*ユーザー定義の外部リソース プール*" の作成から始めます。 次の例では、プールに **ds_ep** という名前を付けています。
   
@@ -104,11 +104,11 @@ ms.locfileid: "67963153"
   
      詳細については、「[Resource Governor Workload Group (リソース ガバナー ワークロード グループ)](../../relational-databases/resource-governor/resource-governor-workload-group.md)」と「[CREATE WORKLOAD GROUP &#40;Transact-SQL&#41; (ワークロード グループの作成 (TRANSACT-SQL))](../../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。
   
-## <a name="create-a-classification-function-for-machine-learning"></a>機械学習の分類子関数を作成します。
+## <a name="create-a-classification-function-for-machine-learning"></a>Machine learning の分類関数を作成する
   
 分類子関数は、受信タスクを検査して、タスクが現在のリソース プールを使用して実行できるかどうかを決定します。 分類子関数の条件を満たしていないタスクは、サーバーの既定のリソース プールに割り当てられます。
   
-1. 分類子関数を使用することによってリソース ガバナー リソース プールを決定するを指定することで開始します。 割り当てることができます、 **null**分類子関数のプレース ホルダーとして。
+1. まず、Resource Governor が分類子関数を使用してリソースプールを決定するように指定します。 分類子関数のプレースホルダーとして**null**を割り当てることができます。
   
     ```sql
     ALTER RESOURCE GOVERNOR WITH (classifier_function = NULL);
@@ -117,7 +117,7 @@ ms.locfileid: "67963153"
   
      詳細については、「[ALTER RESOURCE GOVERNOR &#40;Transact-SQL&#41;](../../t-sql/statements/alter-resource-governor-transact-sql.md)」を参照してください。
   
-2.  各リソース プールの分類子関数では、ステートメントまたはリソース プールに割り当てる必要がある受信要求の種類を定義します。
+2.  各リソースプールの分類子関数で、リソースプールに割り当てる必要があるステートメントまたは受信要求の種類を定義します。
   
      たとえば、次の関数は、要求を送信したアプリケーションが 'Microsoft R Host' または 'RStudio' の場合は、ユーザー定義の外部リソース プールに割り当てられたスキーマの名前を返します。それ以外の場合は既定のリソース プールを返します。
   
@@ -145,13 +145,13 @@ ms.locfileid: "67963153"
 
 ## <a name="verify-new-resource-pools-and-affinity"></a>新しいリソース プールとアフィニティを確認する
 
-変更が行われたことを確認するには、これらのインスタンスのリソース プールに関連付けられているワークロード グループのそれぞれのサーバーのメモリと CPU の構成を参照してください。
+変更が加えられたことを確認するには、これらのインスタンスリソースプールに関連付けられている各ワークロードグループについて、サーバーのメモリと CPU の構成を確認する必要があります。
 
-+ 既定のプール、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバー
-+ 外部プロセス用の既定のリソース プール
++ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サーバーの既定のプール
++ 外部プロセスの既定のリソースプール
 + 外部プロセス用のユーザー定義プール
 
-1. すべてのワークロード グループを表示するのには、次のステートメントを実行します。
+1. すべてのワークロードグループを表示するには、次のステートメントを実行します。
 
     ```sql
     SELECT * FROM sys.resource_governor_workload_groups;
@@ -165,7 +165,7 @@ ms.locfileid: "67963153"
     |2|既定値 (default)|Medium|25|0|0|0|0|2|2|
     |256|ds_wg|Medium|25|0|0|0|0|2|256|
   
-2.  新しいカタログ ビューを使用して[sys.resource_governor_external_resource_pools &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)、すべての外部リソース プールを表示します。
+2.  新しいカタログビュー [resource_governor_external_resource_pools &#40;&#41;](../../relational-databases/system-catalog-views/sys-resource-governor-external-resource-pools-transact-sql.md)を使用して、すべての外部リソースプールを表示します。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pools;
@@ -180,7 +180,7 @@ ms.locfileid: "67963153"
   
      詳細については、「[Resource Governor Catalog Views &#40;Transact-SQL&#41; (リソース ガバナーのカタログ ビュー (Transact-SQL))](../../relational-databases/system-catalog-views/resource-governor-catalog-views-transact-sql.md)」を参照してください。
   
-3.  該当する場合に、外部リソース プールに関係付けられているコンピューターのリソースに関する情報を返すには、次のステートメントを実行します。
+3.  次のステートメントを実行して、外部リソースプールに関連付けられているコンピューターリソースに関する情報を返します (該当する場合)。
   
     ```sql
     SELECT * FROM sys.resource_governor_external_resource_pool_affinity;
@@ -190,11 +190,11 @@ ms.locfileid: "67963153"
 
 ## <a name="see-also"></a>関連項目
 
-サーバー リソースの管理の詳細についてを参照してください。
+サーバーリソースの管理の詳細については、以下を参照してください。
 
 +  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md) 
-+ [リソース ガバナー関連の動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
++ [関連する動的管理ビュー &#40;の Resource Governor transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
-リソース ガバナンスの machine learning の概要についてを参照してください。
+Machine learning のリソースガバナンスの概要については、次を参照してください。
 
-+  [Machine Learning サービスのリソース ガバナンス](../../advanced-analytics/r/resource-governance-for-r-services.md)
++  [Machine Learning Services のリソースガバナンス](../../advanced-analytics/r/resource-governance-for-r-services.md)

@@ -1,6 +1,6 @@
 ---
-title: SQL Server Machine Learning サービス - R および Python のパッケージ情報を取得します。
-description: R と Python のパッケージ バージョンを確認するのインストールを確認し、SQL Server R Services または Machine Learning サービスでインストールされているパッケージの一覧を取得します。
+title: R と Python のパッケージ情報の取得
+description: SQL Server R Services または Machine Learning Services で、R と Python のパッケージバージョンを確認し、インストールを確認し、インストールされているパッケージの一覧を取得します。
 ms.custom: ''
 ms.prod: sql
 ms.technology: machine-learning
@@ -8,23 +8,23 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 961d55237af75c0ef169332068c91e7d2341a542
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dec0fe7147eab6a4b6545decf99e1731d773957c
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962784"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68343418"
 ---
-#  <a name="get-r-and-python-package-information"></a>R と Python のパッケージ情報を取得します。
+#  <a name="get-r-and-python-package-information"></a>R と Python のパッケージ情報の取得
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-場合によって複数の環境または R または Python のインストールを扱う場合は、必要があります R 向けの Python、または適切なワークスペースを実行しているコードは、予想される環境を使って確認するにはある場合など[R または Python アップグレード](../install/upgrade-r-and-python.md)、既定値は異なるフォルダーで、R ライブラリへのパスがあります。 また、R クライアントまたはスタンドアロン サーバーのインスタンスをインストールする場合は、コンピューターに複数の R ライブラリがあります。
+場合によっては、複数の環境または R または Python のインストールを使用しているときに、実行しているコードが Python に期待される環境を使用しているか、R の適切なワークスペースを使用していることを確認する必要があります。たとえば、 [r または Python をアップグレード](../install/upgrade-r-and-python.md)した場合、r ライブラリへのパスは、既定とは異なるフォルダーに存在する可能性があります。 また、R Client またはスタンドアロンサーバーのインスタンスをインストールする場合は、コンピューターに複数の R ライブラリがある可能性があります。
 
-この記事では R と Python スクリプトの例では、SQL Server で使用されるパッケージのバージョンとパスを取得する方法を示します。
+この記事の R および Python スクリプトの例では、SQL Server によって使用されるパッケージのパスとバージョンを取得する方法について説明します。
 
-## <a name="get-the-r-library-location"></a>R ライブラリの場所を取得します。
+## <a name="get-the-r-library-location"></a>R ライブラリの場所を取得する
 
-SQL Server の任意のバージョンでは、現在のインスタンスの既定の R パッケージ ライブラリを確認する次のステートメントを実行します。
+任意のバージョンの SQL Server について、次のステートメントを実行して、現在のインスタンスの既定の R パッケージライブラリを確認します。
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -34,7 +34,7 @@ WITH RESULT SETS (([DefaultLibraryName] VARCHAR(MAX) NOT NULL));
 GO
 ```
 
-必要に応じて、使用[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths) RevoScaleR SQL Server 2017 Machine Learning Services での新しいバージョンでまたは[R Services は、R を少なくともアップグレード RevoScaleR 9.0.1](../install/upgrade-r-and-python.md)します。 このストアド プロシージャには、インスタンスのライブラリのパスと SQL Server で使用される RevoScaleR のバージョンが返されます。
+必要に応じて、SQL Server 2017 Machine Learning Services の新しいバージョンの RevoScaleR、または r [Services で r が RevoScaleR 9.0.1 以上にアップグレード](../install/upgrade-r-and-python.md)された[rxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)を使用できます。 このストアドプロシージャは、SQL Server によって使用されるインスタンスライブラリとバージョンの RevoScaleR のパスを返します。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -47,7 +47,7 @@ EXECUTE sp_execute_external_script
 ```
 
 > [!NOTE]
-> [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)関数をローカル コンピューター上でのみ実行できます。 関数は、リモート接続のライブラリ パスを返すことはできません。
+> [RxSqlLibPaths](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxsqllibpaths)関数は、ローカルコンピューター上でのみ実行できます。 関数は、リモート接続のライブラリパスを返すことはできません。
 
 **結果**
 
@@ -57,9 +57,9 @@ STDOUT message(s) from external script:
 [1] '9.3.0'
 ```
 
-## <a name="get-the-python-library-location"></a>Python ライブラリの場所を取得します。
+## <a name="get-the-python-library-location"></a>Python ライブラリの場所を取得する
 
-**Python**で SQL Server 2017 では、現在のインスタンスの既定のライブラリを確認する次のステートメントを実行します。 この例は、Python に含まれるフォルダーの一覧を返します`sys.path`変数。 一覧には、現在のディレクトリと標準ライブラリのパスが含まれています。
+SQL Server 2017 の**Python**の場合は、次のステートメントを実行して、現在のインスタンスの既定のライブラリを確認します。 この例では、Python `sys.path`変数に含まれるフォルダーの一覧を返します。 一覧には、現在のディレクトリと標準ライブラリパスが含まれています。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -82,15 +82,15 @@ C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\si
 C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\setuptools-27.2.0-py3.5.egg
 ```
 
-変数の詳細については`sys.path`とモジュールのインタープリターの検索パスを設定するために、方法を参照してください、 [Python のドキュメント](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)
+変数の詳細と、その`sys.path`変数を使用してモジュールのインタープリターの検索パスを設定する方法の詳細については、 [Python のドキュメント](https://docs.python.org/2/tutorial/modules.html#the-module-search-path)を参照してください。
 
-## <a name="list-all-packages"></a>すべてのパッケージを一覧表示します。
+## <a name="list-all-packages"></a>すべてのパッケージを一覧表示する
 
-現在インストールされているパッケージの完全な一覧を取得する複数の方法はあります。 Sp_execute_external_script からパッケージ一覧のコマンドを実行する利点の 1 つは、あるインスタンス ライブラリにインストールされているパッケージを取得することが保証されます。
+現在インストールされているパッケージの完全な一覧を取得するには、いくつかの方法があります。 Sp_execute_external_script からパッケージ一覧コマンドを実行する利点の1つは、インスタンスライブラリにパッケージがインストールされていることが保証されることです。
 
 ### <a name="r"></a>R
 
-次の例では、R 関数を使用して`installed.packages()`で、[!INCLUDE[tsql](../../includes/tsql-md.md)]ストアド プロシージャを現在のインスタンスの R_SERVICES ライブラリにインストールされているパッケージの行列を取得します。 このスクリプトは、DESCRIPTION ファイル内のパッケージの名前とバージョンのフィールドを返します、名だけが返されます。
+次の例では、 `installed.packages()` [!INCLUDE[tsql](../../includes/tsql-md.md)]ストアドプロシージャで R 関数を使用して、現在のインスタンスの R_SERVICES ライブラリにインストールされているパッケージのマトリックスを取得します。 このスクリプトでは、説明ファイル内のパッケージ名とバージョンフィールドが返されます。名前だけが返されます。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -104,11 +104,11 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 ```
 
-詳細と、R パッケージの説明フィールドの既定のフィールド オプションについては、次を参照してください。 [ https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)します。
+[R パッケージの説明] フィールドのオプションフィールドおよび既定フィールドの詳細につい[https://cran.r-project.org](https://cran.r-project.org/doc/manuals/R-exts.html#The-DESCRIPTION-file)ては、「」を参照してください。
 
 ### <a name="python"></a>Python
 
-`pip`モジュールが既定では、インストールされているし、標準的な Python でサポートされているものに加えて、一覧がインストールされているパッケージの多くの操作をサポートしています。 実行することができます`pip`、Python からコマンド プロンプト、もちろんですが、呼び出すこともできますから一部の pip 関数`sp_execute_external_script`します。
+`pip`モジュールは既定でインストールされ、標準の Python でサポートされているパッケージに加えて、インストールされているパッケージを一覧表示するための多くの操作をサポートします。 もちろん、Python `pip`コマンドプロンプトからを実行できますが、から`sp_execute_external_script`一部の pip 関数を呼び出すこともできます。
 
 ```sql
 EXECUTE sp_execute_external_script 
@@ -124,15 +124,15 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (( PackageVersion nvarchar (150) ))
 ```
 
-実行しているときに`pip`、コマンドラインからは、その他の多数の役立つ機能があります:`pip list`がインストールされているすべてのパッケージを取得`pip freeze`によってインストールされるパッケージを一覧表示`pip`、および自体の pip パッケージを一覧表示しません依存します。 使用することも`pip freeze`依存関係ファイルを生成します。
+コマンドライン`pip`から実行する場合、他にも多くの便利な関数があります。には、 `pip freeze`インストールされているすべてのパッケージが含まれます。一方、によっ`pip`てインストールされたパッケージの一覧が表示されます。 `pip list`はに依存します。 また、を使用`pip freeze`して、依存関係ファイルを生成することもできます。
 
-## <a name="find-a-single-package"></a>1 つのパッケージを検索します。
+## <a name="find-a-single-package"></a>1つのパッケージを検索する
 
-パッケージがインストールされている特定の SQL Server インスタンスに使用可能なであるかどうかを確認する場合、パッケージの読み込みし、メッセージのみを返すには、次のストアド プロシージャ呼び出しを実行できます。
+パッケージをインストールし、特定の SQL Server インスタンスで使用できるようにする必要がある場合は、次のストアドプロシージャ呼び出しを実行して、パッケージを読み込み、メッセージのみを返すことができます。
 
 ### <a name="r"></a>R
 
-この例では、検索され、使用可能な場合は、RevoScaleR ライブラリを読み込みます。
+この例では、RevoScaleR ライブラリを検索して読み込みます (使用可能な場合)。
 
 ```sql
 EXECUTE sp_execute_external_script  
@@ -141,13 +141,13 @@ EXECUTE sp_execute_external_script
 GO
 ```
 
-+ パッケージが見つかった場合は、メッセージが返されます。「コマンドは正常に完了しました。」
++ パッケージが見つかった場合は、次のメッセージが返されます。"コマンドは正常に完了しました。"
 
-+ テキストを含むエラーが発生した場合は、パッケージの配置または読み込まれることはできません、:「'MissingPackageName' という名前のパッケージはありません」
++ パッケージが見つからないか、または読み込めない場合は、"MissingPackageName ' という名前のパッケージがありません" というテキストを含むエラーが表示されます。
 
 ### <a name="python"></a>Python
 
-Python の同等のチェックを実行するには、Python からシェルを使用して`conda`または`pip`コマンド。 または、ストアド プロシージャでこのステートメントを実行します。
+Python の同等のチェックは、コマンドまたは`conda` `pip`コマンドを使用して python シェルから実行できます。 または、ストアドプロシージャで次のステートメントを実行します。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -163,13 +163,13 @@ EXECUTE sp_execute_external_script
 
 <a name="get-package-vers"></a>
 
-## <a name="get-package-version"></a>パッケージのバージョンを取得します。
+## <a name="get-package-version"></a>パッケージのバージョンを取得する
 
-すれば、R と Python package Management Studio を使用してバージョン情報。
+Management Studio を使用して、R および Python パッケージのバージョン情報を取得できます。
 
 ### <a name="r-package-version"></a>R パッケージのバージョン
 
-このステートメントは、RevoScaleR パッケージのバージョンと基本の R のバージョンを返します。
+このステートメントは、RevoScaleR パッケージバージョンと base R バージョンを返します。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -182,7 +182,7 @@ print(packageDescription("base"))
 
 ### <a name="python-package-version"></a>Python パッケージのバージョン
 
-このステートメントは、revoscalepy パッケージのバージョンと Python のバージョンを返します。
+このステートメントは、revoscalepy パッケージバージョンと Python のバージョンを返します。
 
 ```sql
 EXECUTE sp_execute_external_script
