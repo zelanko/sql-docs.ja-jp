@@ -34,13 +34,13 @@ Set_Expression.Current
 ## <a name="remarks"></a>コメント  
  反復処理中に各ステップでは、操作対象の組は、Currentの組が。 **Current**関数は、その組を返します。 この関数はのみ有効な反復処理中に、セットに対して。  
   
- セットを反復処理する MDX 関数を含める、[生成](../mdx/generate-mdx.md)関数。  
+ セットを反復処理するMDX関数には、[Generate](../mdx/generate-mdx.md)関数があります。  
   
 > [!NOTE]  
 >  この関数は、セットの別名を使用するか名前付きセットを定義することによって名前が付けられたセットに対してのみ使用できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、使用する方法を示します、**Current**関数**生成**:  
+ 次の例は、**Generate**内で**Current**関数使用する方法を示します:  
   
  `WITH`  
   
