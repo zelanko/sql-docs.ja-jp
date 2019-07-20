@@ -30,7 +30,7 @@ ms.locfileid: "62743954"
 # <a name="sysserversqlmodules-transact-sql"></a>sys.server_sql_modules (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  TR の種類のサーバー レベル トリガー用の SQL モジュールのセットが含まれています。 このリレーションは sys.server_triggers に結合できます。 組 (object_id) はリレーションのキーです。  
+  TR の種類のサーバー レベル トリガー用の SQL モジュールのセットが含まれています。 このリレーションは sys.server_triggers に結合できます。 タプル (object_id) はリレーションのキーです。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
