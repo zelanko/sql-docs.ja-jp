@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 24f5b85d-d6f9-415f-b09f-933b78dc0b67
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b566905aa6814d10c1551b9d96562a28b11da944
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c4008d88a2a353ead1ddd16f678c4167ff6714d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099651"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035090"
 ---
 # <a name="how-to-run-sql-server-unit-tests-from-team-foundation-build"></a>方法:Team Foundation ビルドから SQL Server の単体テストを実行する
 Team Foundation ビルドを使用すると、SQL Server の単体テストをビルド確認テスト (BVT) の一環として実行できます。 データベースを配置し、テスト データを生成して、選択したテストを実行するように単体テストを構成できます。 Team Foundation ビルドを使い慣れていない場合は、このトピックの手順を実行する前に、次の情報を確認してください。  
@@ -264,7 +263,7 @@ x64 ビルド エージェントで単体テストを実行するには、事前
   
 10. **[基本]** グループの **[自動テスト]** で、実行するテストを指定します。 既定では、ソリューションの \*test\*.dll という名前のファイルに含まれているテストが実行されます。  
   
-11. **[ファイル]** メニューの ** *[ProjectName* の保存]** をクリックします。  
+11. **[ファイル]** メニューの ***[ProjectName* の保存]** をクリックします。  
   
     ビルド定義が作成されました。 次に、テスト プロジェクトを変更します。  
   

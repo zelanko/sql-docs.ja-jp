@@ -1,6 +1,6 @@
 ---
-title: データ ソースへの接続を確立する |Microsoft Docs
-description: SQL Server の OLE DB ドライバーを使用してデータ ソースへの接続を確立します。
+title: データソースへの接続を確立する |Microsoft Docs
+description: OLE DB Driver for SQL Server を使用したデータソースへの接続の確立
 ms.custom: ''
 ms.date: 06/14/2018
 ms.prod: sql
@@ -16,20 +16,19 @@ helpviewer_keywords:
 - OLE DB data sources [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: d4a01b560c5612df2db873728747fa2481a2760f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 268c81f98a46174aa09df80e8459529e0f854bfc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769185"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994998"
 ---
 # <a name="establishing-a-connection-to-a-data-source"></a>データ ソースへの接続の確立
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server にアクセスするには、コンシューマーは、まず、**CoCreateInstance** メソッドを呼び出してデータ ソース オブジェクトのインスタンスを作成する必要があります。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 OLE DB Driver for SQL Server、CLSID_MSOLEDBSQL はクラス id です。 参照されている msoledbsql.h で使用されている SQL Server 用の OLE DB ドライバーを解決する MSOLEDBSQL_CLSID シンボルを使用することもできます。  
+  OLE DB Driver for SQL Server にアクセスするには、コンシューマーは、まず、**CoCreateInstance** メソッドを呼び出してデータ ソース オブジェクトのインスタンスを作成する必要があります。 一意のクラス ID (CLSID) で、各 OLE DB プロバイダーが識別されます。 OLE DB Driver for SQL Server の場合、クラス識別子は CLSID_MSOLEDBSQL です。 参照する MSOLEDBSQL で使用される SQL Server の OLE DB ドライバーに解決されるシンボル MSOLEDBSQL_CLSID を使用することもできます。  
   
  データ ソース オブジェクトは、**IDBProperties** インターフェイスを公開します。コンシューマーは、このインターフェイスを使用して、サーバー名、データベース名、ユーザー ID、パスワードなどの基本的な認証情報を提供します。 **IDBProperties::SetProperties** メソッドが呼び出されて、これらのプロパティが設定されます。  
   
@@ -47,7 +46,7 @@ CoCreateInstance(CLSID_MSOLEDBSQL,
   
  この **CoCreateInstance** の呼び出しにより、CLSID_MSOLEDBSQL に関連付けられているクラスのオブジェクトが 1 つ作成されます。CLSID_MSOLEDBSQL は、オブジェクトの作成に使用されるデータとコードに関連付けられている CSLID です。 IID_IDBInitialize は、オブジェクトとの通信に使われるインターフェイス (**IDBInitialize**) の ID への参照です。  
   
- 次の例では、初期化し、データ ソースへの接続を確立する方法を示します。
+ 次の例は、データソースへの接続を初期化して確立する方法を示しています。
   
 ```cpp
 #include "msoledbsql.h"
