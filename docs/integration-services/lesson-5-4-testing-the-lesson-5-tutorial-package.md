@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 5215b77d-c2ec-4b25-a3de-ca49ea197d74
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: fc67c0a145b1ec32dc14cae8d56e538f14c2808e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 660c2ee9f09bcd3e8a4c883247bdded124561509
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65721538"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911470"
 ---
 # <a name="lesson-5-4-test-the-lesson-5-package"></a>レッスン 5-4:レッスン 5 のパッケージをテストする
 
@@ -43,7 +42,7 @@ ms.locfileid: "65721538"
   
 1.  **[デバッグ]** メニューの **[デバッグの開始]** を選択します。  
   
-2.  パッケージの実行が完了したら、**[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
+2.  パッケージの実行が完了したら、 **[デバッグ]** メニューの **[デバッグの停止]** を選択します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
 [レッスン 6:SSIS でプロジェクト配置モデルを持つパラメーターを使用する](../integration-services/lesson-6-using-parameters-with-the-project-deployment-model-in-ssis.md)  

@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2e51ea06-81cb-4454-b111-da02808468e6
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: a0f114c9e2783c8989a2bb4682d488eaea087814
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 700deff13eba1ce6320a49f997c20a9b40769eee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53369984"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67915202"
 ---
 # <a name="performance-improvements-using-dta-recommendations"></a>DTA 推奨を利用したパフォーマンスの強化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,8 +30,8 @@ ms.locfileid: "53369984"
 ワークロード パフォーマンスに関する DTA 推奨の長所を示すために、実際のお客様のワークロードで実験しました。 お客様のワークロードごとに、DTA に個々のクエリとクエリの完全ワークロードを分析させました。 3 つの選択肢を考慮します。
   
   1. **列ストアのみ**:DTA を使用せず、すべてのテーブルに関して列ストア インデックスのみを作成します。 
-  2. **DTA (行ストアのみ)**:行ストア インデックスのみを推奨するオプションを指定して DTA を実行します。
-  3. **DTA (行ストア + 列ストア)**:行ストア インデックスと列ストア インデックスの両方を推奨するオプションを指定して DTA を実行します。  
+  2. **DTA (行ストアのみ)** :行ストア インデックスのみを推奨するオプションを指定して DTA を実行します。
+  3. **DTA (行ストア + 列ストア)** :行ストア インデックスと列ストア インデックスの両方を推奨するオプションを指定して DTA を実行します。  
    
 この場合、推奨されたインデックスを実装しました。 クエリまたはワークロードを複数回実行し、その平均 CPU 時間をミリ秒単位で報告します。 次の図は、2 つの異なる顧客データベースを対象にワークロードの CPU 時間をミリ秒単位で描画したものです。 y 軸 (CPU 時間) では対数スケールが使用されています。   
 
