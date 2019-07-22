@@ -26,7 +26,7 @@ ms.locfileid: "68208757"
  書き込み可能なディメンションのデータを変更するには、 [ALTER CUBE ステートメント (MDX)](../../../mdx/mdx-data-definition-alter-cube.md) を使用します。属性値の削除、作成、更新を反映するには、 [REFRESH CUBE ステートメント (MDX)](../../../mdx/mdx-data-definition-refresh-cube.md) を使用します。 ALTER CUBE ステートメントを使用すると、階層内のサブツリー全体を削除したり、削除されたメンバーの子を昇格させるなど、複雑な操作を実行することもできます。  
   
  **キューブの書き戻し**  
- 書き込み可能なキューブに対する更新を実行するには、 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) ステートメントを使用します。 UPDATE CUBE ステートメントを使用すると、特定の値で組を更新できます。 サーバーにある更新されたデータをクライアント セッションのデータに適用するには、[REFRESH CUBE ステートメント (MDX)](../../../mdx/mdx-data-definition-refresh-cube.md) を使用します。  
+ 書き込み可能なキューブに対する更新を実行するには、 [UPDATE CUBE](../../../mdx/mdx-data-manipulation-update-cube.md) ステートメントを使用します。 UPDATE CUBE ステートメントを使用すると、特定の値でタプルを更新できます。 サーバーにある更新されたデータをクライアント セッションのデータに適用するには、[REFRESH CUBE ステートメント (MDX)](../../../mdx/mdx-data-definition-refresh-cube.md) を使用します。  
   
  詳細については、「[キューブの書き戻しの使用 (MDX)](../../../analysis-services/multidimensional-models/mdx/mdx-data-modification-using-cube-writebacks.md)」を参照してください。  
   
