@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 248ce233-4342-42c5-bf26-f4387ea152cf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: dfe740bfa0ec25d577565f310ebeb3ea5e5d9274
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cafb198c7d38c3a03562d6fda39f2b9c4f3b2418
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727764"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003568"
 ---
 # <a name="data-profiling-task"></a>データ プロファイル タスク
 
@@ -138,7 +137,7 @@ ms.locfileid: "65727764"
  データ プロファイル タスクを構成するには、 **[データ プロファイル タスク エディター]** を使用します。 このエディターには、次の 2 つのページがあります。  
   
  [[全般] ページ](../../integration-services/control-flow/data-profiling-task-editor-general-page.md)  
- **[全般]** ページでは、出力ファイルまたは変数を指定します。 また、**[クイック プロファイル]** を選択し、既定の設定を使用してプロファイルを計算するようにタスクをすばやく構成することもできます。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」を参照してください。  
+ **[全般]** ページでは、出力ファイルまたは変数を指定します。 また、 **[クイック プロファイル]** を選択し、既定の設定を使用してプロファイルを計算するようにタスクをすばやく構成することもできます。 詳細については、「 [単一テーブル クイック プロファイル フォーム &#40;データ プロファイル タスク&#41;](../../integration-services/control-flow/single-table-quick-profile-form-data-profiling-task.md)」を参照してください。  
   
  [[プロファイル要求] ページ](../../integration-services/control-flow/data-profiling-task-editor-profile-requests-page.md)  
  **[プロファイル要求]** ページでは、データ ソースを指定して、計算するデータ プロファイルを選択および構成します。 構成できる各種プロファイルの詳細については、次のトピックを参照してください。  

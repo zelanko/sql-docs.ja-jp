@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: da983c0a-06c5-4cf8-a6a4-7f9d66f34f2c
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 70102127d7d48160c5320e02a97113cdd903fb0b
-ms.sourcegitcommit: 670082cb47f7d3d82e987b549b6f8e3a8968b5db
+ms.openlocfilehash: 51bb7288f620e479d818598cf28d357b6e4e479d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/05/2019
-ms.locfileid: "57334649"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948248"
 ---
 # <a name="top-transact-sql"></a>TOP (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -87,7 +86,7 @@ TOP 式は、トリガーによって実行される可能性があるステー�
   
 MERGE ステートメントで指定した TOP 句は、ソース テーブル全体とターゲット テーブル全体が結合された "*後*" で適用されます。 また、結合された行で挿入、更新、または削除操作の対象にならないものは削除されます。 TOP 句を使用すると、結合された行の数が指定の値まで減少し、挿入、更新、または削除操作が残りの結合された行に順序付けなしで適用されます。 つまり、WHEN 句に定義された操作に行が割り当てられる順序は決まっていません。 たとえば、TOP (10) と指定して 10 行が影響を受けた場合、そのうちの 7 行は更新されたもので、3 行は挿入されたものかもしれません。 または、1 行が削除され、5 行が更新され、4 行が挿入されている場合もあります。 MERGE ステートメントではソース テーブルとターゲット テーブルの両方のフル テーブル スキャンが行われるので、TOP 句を使用し、複数のバッチを作成して大きなテーブルを変更すると、I/O パフォーマンスが影響を受ける場合があります。 このシナリオでは、連続するすべてのバッチで確実に新しい行が対象になっていることが重要です。  
   
-UNION、UNION ALL、EXCEPT、または INTERSECT 演算子を含む TOP 句をクエリで指定する場合は注意が必要です。 これらの演算子を選択操作で使用するとき、TOP 句および ORDER BY 句が論理的に処理される順序は必ずしも直感的ではないため、記述したクエリによって予期しない結果が返される場合があります。 たとえば、次のテーブルとデータがある場合に、最も安価な赤色の自動車と青色の自動車  (つまり赤色のセダンと青色のバン) を取得する必要があるとします。  
+UNION、UNION ALL、EXCEPT、または INTERSECT 演算子を含む TOP 句をクエリで指定する場合は注意が必要です。 これらの演算子を選択操作で使用するとき、TOP 句および ORDER BY 句が論理的に処理される順序は必ずしも直感的ではないため、記述したクエリによって予期しない結果が返される場合があります。 たとえば、次のテーブルとデータがある場合に、最も安価な赤色の自動車と青色の自動車 (つまり赤色のセダンと青色のバン) を取得する必要があるとします。  
   
 ```sql  
 CREATE TABLE dbo.Cars(Model varchar(15), Price money, Color varchar(10));  
