@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cb241e94-d81c-40e9-a7ae-127762a6b855
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ded1e5f6aeace66f4be991b192e601c455871c26
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8c1a9bf666ac79b76d94cfbd04c88bde6eafd85b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099556"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68119879"
 ---
 # <a name="how-to-write-a-sql-server-unit-test-that-runs-within-the-scope-of-a-single-transaction"></a>方法:単一のトランザクションのスコープ内で実行する SQL Server の単体テストを作成する
 単体テストは、単一のトランザクションのスコープ内で実行されるように変更できます。 この方法を使用すると、テストの終了後、テストによって行われた変更をロールバックできます。 次の手順では、以下の操作方法について説明します。  
@@ -61,13 +60,13 @@ ms.locfileid: "65099556"
   
 #### <a name="to-create-a-transaction-for-a-single-test-method"></a>単一のテスト メソッドのトランザクションを作成するには  
   
-1.  **ソリューション エクスプローラー**で、テスト プロジェクトの **[参照設定]** ノードを右クリックし、**[参照の追加]** をクリックします。  
+1.  **ソリューション エクスプローラー**で、テスト プロジェクトの **[参照設定]** ノードを右クリックし、 **[参照の追加]** をクリックします。  
   
     **[参照の追加]** ダイアログ ボックスが表示されます。  
   
 2.  **[.NET]** タブをクリックします。  
   
-3.  アセンブリの一覧で、**[System.Transactions]** をクリックし、**[OK]** をクリックします。  
+3.  アセンブリの一覧で、 **[System.Transactions]** をクリックし、 **[OK]** をクリックします。  
   
 4.  単体テストの Visual Basic ファイルまたは C# ファイルを開きます。  
   
@@ -166,7 +165,7 @@ ms.locfileid: "65099556"
   
 3.  **[管理ツール]** の **[サービス]** を開きます。  
   
-4.  **[サービス]** ウィンドウで、**[分散トランザクション コントローラー]** サービスを右クリックし、**[開始]** をクリックします。  
+4.  **[サービス]** ウィンドウで、 **[分散トランザクション コントローラー]** サービスを右クリックし、 **[開始]** をクリックします。  
   
     サービスの状態が **[開始]** に更新されます。 これで、System.Transactions を使用する単体テストを実行できるようになります。  
   

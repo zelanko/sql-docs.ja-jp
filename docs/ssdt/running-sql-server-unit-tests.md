@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: febcc87f-eb18-4c12-ba30-82ef0d49aaa3
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ddc31964a018bec7dc0829d21e85283db5f069e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a36cfa888b5a00e8f69404db3989cf9852f0d47e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101879"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110749"
 ---
 # <a name="running-sql-server-unit-tests"></a>SQL Server の単体テストの実行
 コードの品質を向上および維持するために、データベース オブジェクトの動作を検証する SQL Server 単体テストを作成して実行した後、そのテストをバージョン管理にチェックインできます。 データベース スキーマを変更するときは、SQL Server 単体テストとソフトウェア単体テストの両方を実行し、変更によって既存の機能が損なわれないことを確認します。 個々のテストを実行することも、テスト リストと呼ばれるテストのグループを実行することもできます。 詳しくは、「[Using Test Lists](https://msdn.microsoft.com/library/ms182461(VS.100).aspx)」(テスト リストの使用) (Visual Studio 2010) をご覧ください。  
