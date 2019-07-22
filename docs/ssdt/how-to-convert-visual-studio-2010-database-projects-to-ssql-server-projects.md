@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 7e5acf94-5c46-44c7-9ff5-ca7926f5332a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 93c4e141dc48c87214fc6de764d0b2ff33ebe9b9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 84815176ca9b32614e851800a59ea2951010ce4c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098236"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897321"
 ---
 # <a name="how-to-convert-a-visual-studio-2010-database-projects-to-sql-server-database-projects-and-retarget-to-a-different-platform"></a>方法:Visual Studio 2010 のデータベース プロジェクトを SQL Server のデータベース プロジェクトに変換してターゲットを別のプラットフォームに変更する
 SQL Server Data Tools (SSDT) では、Visual Studio 2010 で作成された SQL Server データベース、CLR、およびデータ層アプリケーションの各既存プロジェクトを新しい SQL Server データベース プロジェクトに変換できます。 そうすることにより、新しくなった Transact\-SQL 編集機能や、プロジェクトのターゲットを Microsoft SQL Server 2012 や SQL Azure にコード検証付きで変更できる機能など、SSDT で提供される新しいデータベース開発機能を利用できるようになります。 変換プロセスでは、対応する型が SSDT にあるオブジェクト (テーブル、ビュー、ストアド プロシージャ、プロパティ ファイル、またはスクリプト) が、アクセス許可および DAC ポリシー ファイルを含めて変換されます。 変換できない成果物は、変換ログ レポート内で強調表示されます。  

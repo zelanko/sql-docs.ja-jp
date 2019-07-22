@@ -16,11 +16,11 @@ author: pmasl
 ms.author: pelopes
 manager: amitban
 ms.openlocfilehash: e0f23ceb75856db921e4c6303a8013d351f364e8
-ms.sourcegitcommit: 60739bcb48ccce17bca4e11a85df443e93ca23e3
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/28/2018
-ms.locfileid: "52439914"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68219592"
 ---
 # <a name="analyze-an-actual-execution-plan"></a>実際の実行プランの分析
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,9 +38,9 @@ ms.locfileid: "52439914"
   
 ## <a name="to-analyze-an-execution-plan-for-a-query"></a>クエリの実行プランを分析するには  
   
-1.  **[ファイル]** メニューを使用し、**[ファイルを開く]** をクリックするか、プラン ファイルを [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] ウィンドウにドラッグすることで、前に保存したクエリ実行プラン ファイル (.sqlplan) を開きます。 あるいは、クエリを実行し、その実行プランの表示を選択したところであれば、結果ウィンドウの **[実行プラン]** タブに移動します。 
+1.  **[ファイル]** メニューを使用し、 **[ファイルを開く]** をクリックするか、プラン ファイルを [!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] ウィンドウにドラッグすることで、前に保存したクエリ実行プラン ファイル (.sqlplan) を開きます。 あるいは、クエリを実行し、その実行プランの表示を選択したところであれば、結果ウィンドウの **[実行プラン]** タブに移動します。 
 
-2.  実行プランの何もない領域を右クリックし、**[実際の実行プランの分析]** をクリックします。 
+2.  実行プランの何もない領域を右クリックし、 **[実際の実行プランの分析]** をクリックします。 
 
     ![[実際の実行プランの分析] の右クリック](../../relational-databases/performance/media/plananalysismenuoption.png "[実際の実行プランの分析] の右クリック")   
 

@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: a4e3226a-3917-4ec8-bdf0-472879d231c9
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 749f94658d03828b30de3b328df1abfc8c932d43
-ms.sourcegitcommit: 334cae1925fa5ac6c140e0b2c38c844c477e3ffb
+ms.openlocfilehash: 4da908b06e467e1c80ce528ec95f1a5af0db7638
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/13/2018
-ms.locfileid: "53351061"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68113314"
 ---
 # <a name="start-and-use-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーの起動および使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +46,7 @@ ms.locfileid: "53351061"
   
 #### <a name="to-start-database-engine-tuning-advisor-from-the-windows-start-menu"></a>Windows の [スタート] メニューからデータベース エンジン チューニング アドバイザーを起動するには  
   
-1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[パフォーマンス ツール]** の順にポイントし、 **[データベース エンジン チューニング アドバイザー]** をクリックします。  
+1.  **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[パフォーマンス ツール]** の順にポイントし、 **[データベース エンジン チューニング アドバイザー]** をクリックします。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-management-studio"></a>SQL Server Management Studio からデータベース エンジン チューニング アドバイザーを起動するには  
   
@@ -57,7 +56,7 @@ ms.locfileid: "53351061"
   
 1.  [!INCLUDE[tsql](../../includes/tsql-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] スクリプト ファイルを開きます。 詳細については、「[クエリおよびテキスト エディター &#40;SQL Server Management Studio&#41;](../../relational-databases/scripting/query-and-text-editors-sql-server-management-studio.md)」を参照してください。  
   
-2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト内のクエリを選択するか、スクリプト全体を選択します。選択範囲を右クリックし、**[データベース エンジン チューニング アドバイザーでのクエリの分析]** をクリックします。 データベース エンジン チューニング アドバイザー GUI が表示され、そのスクリプトが XML ファイル ワークロードとしてインポートされます。 セッション名とチューニング オプションを指定して、選択した [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを自分のワークロードとしてチューニングできます。  
+2.  [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプト内のクエリを選択するか、スクリプト全体を選択します。選択範囲を右クリックし、 **[データベース エンジン チューニング アドバイザーでのクエリの分析]** をクリックします。 データベース エンジン チューニング アドバイザー GUI が表示され、そのスクリプトが XML ファイル ワークロードとしてインポートされます。 セッション名とチューニング オプションを指定して、選択した [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリを自分のワークロードとしてチューニングできます。  
   
 #### <a name="to-start-the-database-engine-tuning-advisor-in-sql-server-profiler"></a>SQL Server Profiler からデータベース エンジン チューニング アドバイザーを起動するには  
   
@@ -98,7 +97,7 @@ ms.locfileid: "53351061"
   
 1.  次の方法のいずれかを使用して、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動します。  
   
-    -   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]**、 **[パフォーマンス ツール]** の順にポイントして、 **[SQL Server Profiler]** をクリックします。  
+    -   **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** 、 **[パフォーマンス ツール]** の順にポイントして、 **[SQL Server Profiler]** をクリックします。  
   
     -   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で **[ツール]** メニューをクリックし、次に **[SQL Server Profiler]** をクリックします。  
   
@@ -245,7 +244,7 @@ ms.locfileid: "53351061"
     dta -E -D DatabaseName -ip -s SessionName  
     ```  
   
-2.  分析に使用するイベントの数を変更するには、**-n** オプションを指定します。 次の例では、キャッシュ エントリの数を 2,000 に増やします。  
+2.  分析に使用するイベントの数を変更するには、 **-n** オプションを指定します。 次の例では、キャッシュ エントリの数を 2,000 に増やします。  
   
     ```  
     dta -E -D DatabaseName -ip -n 2000-s SessionName1  
@@ -454,7 +453,7 @@ database_name.owner_name.table_name
  インデックス付きビューを追加するための推奨設定のみが含まれます。 クラスター化インデックスおよび非クラスター化インデックスは、推奨されません。  
   
  **フィルター選択されたインデックスを含める**  
- フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、**[インデックスおよびインデックス付きビュー]**、**[インデックス]**、または **[非クラスター化インデックス]** のいずれかの物理デザイン構造を選択した場合に使用できます。  
+ フィルター選択されたインデックスを追加するための推奨設定が含まれます。 このオプションは、 **[インデックスおよびインデックス付きビュー]** 、 **[インデックス]** 、または **[非クラスター化インデックス]** のいずれかの物理デザイン構造を選択した場合に使用できます。  
   
  **[インデックス]**  
  クラスター化インデックスおよび非クラスター化インデックスを追加するための推奨設定のみが含まれます。 インデックス付きビューは推奨されません。  

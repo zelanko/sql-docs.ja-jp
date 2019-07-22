@@ -19,14 +19,13 @@ ms.assetid: d4bdd16b-a2db-4101-a946-583d1c674229
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ac9725fc1b261b1c5fc204936c6eab68d1ddc860
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 2d071c934e5ebf6cb08b649bc33735cf39f4f0cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57974071"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048954"
 ---
 # <a name="configure-and-manage-word-breakers-and-stemmers-for-search"></a>検索用のワード ブレーカーとステミング機能の構成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "57974071"
 
 -   **単語の境界 (単語区切り) の検出**。 *ワード ブレーカー* が、言語の語彙の規則に基づいて単語の境界を検出し、個々の単語を識別します。 各単語 ( *トークン*ともいいます) は、サイズを縮小するために圧縮された表現でフルテキスト インデックスに挿入されます。
 
--   **動詞の活用 (ステミング)**。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。
+-   **動詞の活用 (ステミング)** 。 *ステミング機能* はその言語の規則に基づいて特定の語の変化形を生成します (たとえば、"running"、"ran"、"runner" は、"run" という語の変化形です)。
 
 ## <a name="word-breakers-and-stemmers-are-language-specific"></a>言語固有のワード ブレーカーとステマー
 

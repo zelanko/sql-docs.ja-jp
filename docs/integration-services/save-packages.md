@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 17c1de2c-637f-45c2-a148-79294bae0af4
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 48d6db7b2c68fac233dbc585ddbcf4ffb795ca8d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b2184475ac3da6629a70b5013277686636a6fc8b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65718955"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897075"
 ---
 # <a name="save-packages"></a>パッケージを保存する
 
@@ -63,7 +62,7 @@ ms.locfileid: "65718955"
   
 2.  **[ファイル]** メニューの **[\<パッケージ ファイル> のコピーに名前を付けて保存]** をクリックします。  
   
-3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、**[パッケージの場所]** 一覧からパッケージの保存場所を選択します。 使用できるオプションは以下のとおりです。  
+3.  **[パッケージのコピーの保存]** ダイアログ ボックスで、 **[パッケージの場所]** 一覧からパッケージの保存場所を選択します。 使用できるオプションは以下のとおりです。  
     -   SQL Server
     -   [ファイル システム] 
     -   [SSIS パッケージ ストア] 
@@ -82,13 +81,13 @@ ms.locfileid: "65718955"
   
 7.  パッケージの保護レベルを確認します。  
   
-8.  必要に応じて、**[保護レベル]** ボックスの近くの参照ボタン **[...]** をクリックし、保護レベルを変更します。  
+8.  必要に応じて、 **[保護レベル]** ボックスの近くの参照ボタン **[...]** をクリックし、保護レベルを変更します。  
   
     -   **[パッケージの保護レベル]** ダイアログ ボックスで、別の保護レベルを選択します。  
   
-    -   [**OK**] をクリックします。  
+    -   **[OK]** をクリックします。  
   
-9. [**OK**] をクリックします。  
+9. **[OK]** をクリックします。  
 
 ## <a name="save-a-package-as-a-package-template"></a>パッケージをパッケージ テンプレートとして保存する
  このセクションでは、[!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で新しい Integration Services パッケージを作成するときに、カスタム パッケージをテンプレートとして指定および使用する方法について説明します。 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] では、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトに新しいパッケージを追加する場合に、既定で、新しいパッケージを作成するパッケージ テンプレートを使用します。 この既定のテンプレートを置き換えることはできませんが、新しいテンプレートを追加することはできます。  
@@ -109,7 +108,7 @@ ms.locfileid: "65718955"
   
 1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]で、パッケージを作成する [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを開きます。  
   
-2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]** をポイントし、**[新しい項目]** をクリックします。  
+2.  ソリューション エクスプローラーで、プロジェクトを右クリックして **[追加]** をポイントし、 **[新しい項目]** をクリックします。  
   
 3.  **[新しい項目の追加 - \<プロジェクト名>]** ダイアログ ボックスで、テンプレートとして使うパッケージをクリックします。  
   

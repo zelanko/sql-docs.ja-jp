@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 787f0e9c-09dd-438a-bc04-5b8f99c127b8
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 8d4557c8b7c47904267b7bd4d203e3b4641baee2
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 910402b059f602d68428f5348ce35921942d918e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47843430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68128262"
 ---
 # <a name="distributor"></a>ディストリビューター
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "47843430"
   
  ディストリビューターとして指定するサーバーには、サーバー上でさまざまな機能を果たしながら、レプリケーションの処理を実行できるだけの十分なディスク容量とプロセッサ パワーが必要です。  
   
-## <a name="options"></a>[変数]  
+## <a name="options"></a>オプション  
  **['\<ServerName>' を独自のディストリビューターとする (SQL Server はディストリビューション データベースとログを作成します)]**  
  このオプションを選択すると、ディストリビューターとして接続するサーバーを構成できます。  
   

@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: bc1218eb-ffff-44ce-8122-6e4fa7d68a79
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 4e0bdec7737c98b8b28267344dd9b8e2acb86f1c
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: b1d4cfe23511175ab794cc505509133b4dfb745a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68102135"
 ---
 # <a name="dbcc-checkalloc-transact-sql"></a>DBCC CHECKALLOC (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -151,7 +150,7 @@ DBCC CHECKALLOC では、各ファイルのインデックスとパーティシ�
 |Partition ID|内部使用のみです。|  
 |Alloc Unit ID|内部使用のみです。|  
 |In-row data|インデックスまたはヒープ データが含まれるページ。|  
-|LOB データ|ページには、**varchar(max)**、**nvarchar(max)**、**varbinary(max)**、**text**、**ntext**、**xml**、**image** データが含まれています。|  
+|LOB データ|ページには、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、**text**、**ntext**、**xml**、**image** データが含まれています。|  
 |Row-overflow data|行外に移動した可変長の列のデータが含まれるページ。|  
   
 DBCC CHECKALLOC では、ESTIMATEONLY または NO_INFOMSGS を指定した場合を除き、次の結果セットが返されます。値は変化することがあります。

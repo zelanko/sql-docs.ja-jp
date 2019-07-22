@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: abeadfa4-a14d-469a-bacf-75812e48fac1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 2865144d47dd316204d088cb98c9c0c99b71334e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea6d737dcb45a1b300b53c0b232b2b6565e6e750
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767716"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012533"
 ---
 # <a name="configure-the-max-worker-threads-server-configuration-option"></a>max worker threads サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,7 +41,7 @@ ms.locfileid: "66767716"
   
      [Transact-SQL](#TsqlProcedure)  
   
--   **補足情報:**[max worker threads オプションを構成した後](#FollowUp)  
+-   **補足情報:** [max worker threads オプションを構成した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> はじめに  
   
@@ -128,7 +127,7 @@ ms.locfileid: "66767716"
   
 2.  [標準] ツール バーの **[新しいクエリ]** をクリックします。  
   
-3.  次の例をコピーしてクエリ ウィンドウに貼り付け、**[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `max worker threads` オプションを `900`に設定する方法を示します。  
+3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 この例では、 [sp_configure](../../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を使用して、 `max worker threads` オプションを `900`に設定する方法を示します。  
   
 ```sql  
 USE AdventureWorks2012 ;  

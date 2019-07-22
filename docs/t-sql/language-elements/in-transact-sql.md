@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: 4419de73-96b1-4dfe-8500-f4507915db04
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3e6bead506a9e7b84aba4f5ec2cee1668e6483e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 99d179218e52801da593eaba6ef9ff5c7dde5ee0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982159"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68075064"
 ---
 # <a name="in-transact-sql"></a>IN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,7 +56,7 @@ test_expression [ NOT ] IN
  一致するかどうかのテストに使用する式のリストです。 すべての式は、*test_expression* と同じ型である必要があります。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
  *test_expression* の値が *subquery* によって返される値と等しい場合、またはコンマ区切りの一覧内の任意の*式*と等しい場合、結果の値は TRUE です。それ以外の場合、結果の値は FALSE です。  
