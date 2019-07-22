@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: fe2064bb-e01e-4a12-9f12-a99aa9a5203f
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3952706cebfd5f26f68e2dd103de1cb19c46bd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: aa22592bbe86707ec4efa43ba0c188c21a07351e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65101957"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68110571"
 ---
 # <a name="customize-database-build-and-deployment-by-using-build-and-deployment-contributors"></a>ビルド コントリビューターと配置コントリビューターを使用してデータベースのビルドと配置をカスタマイズする
 Visual Studio には、データベース プロジェクトのビルド操作および配置操作の動作を変更するための拡張ポイントが用意されています。  

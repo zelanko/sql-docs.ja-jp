@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0d504e00-4ff0-4fdf-b874-85280bbd8668
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6ef6cb6bce9173a849dbe406971028e3f452767c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ba41850e214de60da9a7e64f328939e4660a9367
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090246"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035169"
 ---
 # <a name="how-to-fix-errors"></a>方法:エラーを修正する
 エラー一覧ペインには、配置エラーおよびビルド エラーが表示されます。 データベース エンティティおよびその定義を編集する際に、Transact\-SQL エディターまたはテーブル デザイナーでの編集によって生じた構文エラーおよびセマンティック エラーも、この一覧に表示されます。 各タブでスクリプトの編集を行うと、エラー一覧は動的に更新されます。 特定されたエラーを追跡することにより、トラブルシューティングを進めることができます。  
