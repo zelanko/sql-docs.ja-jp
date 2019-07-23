@@ -1,5 +1,5 @@
 ---
-title: getPooledConnection () メソッド |Microsoft Docs
+title: getPooledConnection メソッド () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: aad6c325-3398-462c-aa6e-201dc89fa5ef
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d7cfea06130ffadc08c179db96f8167d860b52b4
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 89b0379d9708a0f0d8809362afed6e64fe19f052
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771266"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980822"
 ---
 # <a name="getpooledconnection-method-"></a>getPooledConnection () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public javax.sql.PooledConnection getPooledConnection()
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この getPooledConnection メソッドは、javax.sql.ConnectionPoolDataSource インターフェイスで getPooledConnection メソッドによって指定されます。  
+ この getPooledConnection メソッドは、javax.mail インターフェイスの getPooledConnection メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [getPooledConnection](../../../connect/jdbc/reference/getpooledconnection-method-sqlserverconnectionpooldatasource.md)   

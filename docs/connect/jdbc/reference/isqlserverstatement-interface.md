@@ -1,5 +1,5 @@
 ---
-title: ISQLServerStatement インターフェイス |Microsoft Docs
+title: ISQLServerStatement Interface |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f83b514-6e76-4f37-baf3-a10db2010e7c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7a49ef95ac7e6ee122252577ccff9ec535c912fe
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b736ed84e0fed6794b036d22af84912f240539fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977339"
 ---
 # <a name="isqlserverstatement-interface"></a>ISQLServerStatement インターフェイス
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -35,7 +34,7 @@ public interface ISQLServerStatement
 ```  
   
 ## <a name="remarks"></a>Remarks  
- このインターフェイスによって実装されます[SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)します。  
+ このインターフェイスは、 [SQLServerStatement クラス](../../../connect/jdbc/reference/sqlserverstatement-class.md)によって実装されます。  
   
  このインターフェイスでは、次の [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] 固有のメソッドが公開されます。  
   

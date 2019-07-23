@@ -1,5 +1,5 @@
 ---
-title: OLE DB の操作方法に関するトピック |Microsoft Docs
+title: OLE DB 方法に関するトピック |Microsoft Docs
 description: OLE DB の使用法に関するトピック
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB, how-to topics
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 829ced1eb0fc37a773f67e4fea9834d9c22205de
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5e1a6ea1debfb4a432ef63395e3e8b7fd476d891
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791417"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015620"
 ---
 # <a name="ole-db-how-to-topics"></a>OLE DB の使用法に関するトピック
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66791417"
   
 -   [結果を処理する方法に関するトピック &#40;OLE DB&#41;](../../oledb/ole-db-how-to/results/processing-results-how-to-topics-ole-db.md)  
   
--   [大きなデータを設定&#40;OLE DB&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
+-   [Large Data &#40;OLE DB の設定&#41;](../../oledb/ole-db-how-to/set-large-data-ole-db.md)  
   
 -   [OLE DB データ ソースの列挙 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/enumerate-ole-db-data-sources-ole-db.md)  
   
@@ -53,7 +52,7 @@ ms.locfileid: "66791417"
   
 -   [IROWSETFASTLOAD と ISEQUENTIALSTREAM を使用した SQL SERVER への BLOB データの送信 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/send-blob-data-to-sql-server-using-irowsetfastload-and-isequentialstream-ole-db.md)  
   
--   [大きな CLR Udt を使用して、 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
+-   [大きな CLR Udt &#40;を使用 OLE DB&#41;](../../oledb/ole-db-how-to/use-large-clr-udts-ole-db.md)  
   
 -   [スパース列に対する列およびカタログ メタデータの表示 &#40;OLE DB&#41;](../../oledb/ole-db-how-to/display-column-and-catalog-metadata-for-sparse-columns-ole-db.md)  
   
