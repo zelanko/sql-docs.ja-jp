@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c0fce3fe-5b16-4f60-9b0e-e9b30a90525e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5475726e2905909515003cefc4aba19c1a4b86cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3918215f40a77fa5288dd345715856829b607dae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796461"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977526"
 ---
 # <a name="isnullable-method-sqlserverresultsetmetadata"></a>isNullable メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int isNullable(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isNullable メソッドは、java.sql.ResultSetMetaData インターフェイスの isNullable メソッドによって指定されます。  
+ この isNullable メソッドは、java. ResultSetMetaData インターフェイスの isNullable メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

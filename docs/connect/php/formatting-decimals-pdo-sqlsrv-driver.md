@@ -10,35 +10,35 @@ helpviewer_keywords:
 - formatting, decimal types, money values
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 35626c192c3d74ad0201cee3c5e97adbce92a3aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 76c314159faf15e63bf77b17a8a45abf217b205c
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62669697"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265149"
 ---
 # <a name="formatting-decimal-strings-and-money-values-pdosqlsrv-driver"></a>10 進数文字列と金額の書式設定 (PDO_SQLSRV ドライバー)
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-精度を保持するために[decimal 型または numeric 型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)が常に、正確な精度と小数点を含む文字列としてフェッチします。 任意の値が 1 未満の場合は、先行ゼロがありません。 固定桁数が 4 に等しい 10 進数のフィールドは money と smallmoney フィールドと同じです。
+精度を維持するために、 [decimal 型または numeric 型](https://docs.microsoft.com/sql/t-sql/data-types/decimal-and-numeric-transact-sql)は常に正確な有効桁数とスケールを使用して文字列としてフェッチされます。 値が1未満の場合は、先頭のゼロがありません。 Money フィールドと smallmoney フィールドは、固定小数点以下桁数が4に設定された10進数フィールドであるため、これと同じです。
 
-## <a name="add-leading-zeroes-if-missing"></a>不足している場合は、先頭のゼロを追加します。
-以降では、バージョン 5.6.0、接続、またはステートメント属性`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`により、ユーザーは、10 進数値文字列の形式を指定します。 この属性は、ブール値を (true または false) が必要ですが、フェッチされた結果の 10 進数または数値の値の書式設定にのみ影響します。 つまり、この属性は、挿入や更新などその他の操作に影響を与えません。
+## <a name="add-leading-zeroes-if-missing"></a>先頭に0がない場合は追加します
+バージョン5.6.0 以降では、ユーザーは接続属性`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`またはステートメント属性を使用して、10進数の文字列を書式設定できます。 この属性は、ブール値 (true または false) を想定しており、フェッチされた結果の10進数値または数値の書式設定にのみ影響します。 言い換えると、この属性は、挿入や更新などの他の操作には影響しません。
 
-既定では、`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` は **false** です。 場合は true、10 進数値文字列に先頭のゼロに設定は、1 未満の 10 進値に対する追加されます。
+既定では、`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` は **false** です。 True に設定すると、1未満の10進値に対して先頭のゼロが追加されます。
 
-## <a name="configure-number-of-decimal-places"></a>小数点以下桁数を構成します。
-`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`有効で、もう 1 つの接続やステートメント属性`PDO::SQLSRV_ATTR_DECIMAL_PLACES`money と smallmoney データを表示するときに、小数点以下桁数を構成することができます。 範囲の整数値を受け取って [0, 4] に表示するときに発生する可能性があります丸め処理を行うとします。 ただし、基になるの money 型データは同じです。
+## <a name="configure-number-of-decimal-places"></a>小数点以下桁数の構成
+で`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`は、別の接続`PDO::SQLSRV_ATTR_DECIMAL_PLACES`属性またはステートメント属性であるが有効になっているため、ユーザーは money および smallmoney データを表示するときに小数点以下の桁数を構成できます。 [0, 4] の範囲で整数値を許容し、表示されると丸めが発生する場合があります。 ただし、基になる money データは変わりません。
 
-ステートメント属性は、常に対応する接続設定をオーバーライドします。 なお、`PDO::SQLSRV_ATTR_DECIMAL_PLACES`オプション**のみ**money のデータと`PDO::SQLSRV_ATTR_FORMAT_DECIMALS`設定する必要がありますを true にします。 それ以外の場合、書式設定がオフに関係なく`PDO::SQLSRV_ATTR_DECIMAL_PLACES`設定します。
+ステートメント属性は、常に対応する接続設定より優先されます。 このオプションは`PDO::SQLSRV_ATTR_DECIMAL_PLACES` money データに**のみ**影響し`PDO::SQLSRV_ATTR_FORMAT_DECIMALS` 、true に設定する必要があることに注意してください。 それ以外の`PDO::SQLSRV_ATTR_DECIMAL_PLACES`場合は、設定に関係なく、書式設定は無効になります。
 
 > [!NOTE]
-> 設定するため、money または smallmoney フィールドがあるスケール 4 は、`PDO::SQLSRV_ATTR_DECIMAL_PLACES`を負の数値またはその値を超えるを設定すると 4 は無視されます。 すべての計算を入力として書式設定されたコスト データを使用することは推奨されません。
+> Money または smallmoney のフィールドには小数点`PDO::SQLSRV_ATTR_DECIMAL_PLACES`以下桁数が4であるため、負の数値または4より大きい値に設定しても無視されます。 書式設定された money データを任意の計算の入力として使用することはお勧めしません。
 
 ### <a name="to-set-the-connection-attributes"></a>接続属性を設定するには
 
--   接続の時点での属性を設定します。
+-   接続ポイントで属性を設定します。
 
     ```php
     $attrs = array(PDO::SQLSRV_ATTR_FORMAT_DECIMALS => true,
@@ -47,7 +47,7 @@ ms.locfileid: "62669697"
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password, $attrs);
     ```
 
--   Post 接続属性を設定します。
+-   接続後の属性の設定:
 
     ```php
     $conn = new PDO("sqlsrv:Server = myServer; Database = myDB", $username, $password);
@@ -55,8 +55,8 @@ ms.locfileid: "62669697"
     $conn->setAttribute(PDO::SQLSRV_ATTR_DECIMAL_PLACES, 2);
     ```
 
-## <a name="example---format-money-data"></a>Money 型データの形式の使用例
-次の例を使用してコスト データをフェッチする方法を示しています[pdostatement::bindcolumn](../../connect/php/pdostatement-bindcolumn.md):。
+## <a name="example---format-money-data"></a>例-money データの書式を設定する
+次の例は、 [PDOStatement:: bindColumn](../../connect/php/pdostatement-bindcolumn.md)を使用して money データをフェッチする方法を示しています。
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---override-connection-attributes"></a>例 - 接続属性のオーバーライド
-次の例では、接続属性をオーバーライドする方法を示します。
+## <a name="example---override-connection-attributes"></a>例-接続属性をオーバーライドする
+次の例は、接続属性をオーバーライドする方法を示しています。
 
 ```php
 <?php

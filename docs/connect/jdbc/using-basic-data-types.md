@@ -1,5 +1,5 @@
 ---
-title: 基本的なデータ型の使用 |Microsoft Docs
+title: 基本データ型を使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 07/19/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d7044936-5b8c-4def-858c-28a11ef70a97
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58948717ce5d9d3600bef865f75231faa1e5dea1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83bbe2c28e9b353e5a82fa630660756174ad0dab
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66790090"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916359"
 ---
 # <a name="using-basic-data-types"></a>基本データ型の使用
 
@@ -69,7 +68,7 @@ ms.locfileid: "66790090"
   
 (1) 時刻の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型を持つ java.sql.Time を使用する場合は、**sendTimeAsDatetime** 接続プロパティを false に設定します。  
   
-(値をプログラムでアクセスできます 2) **datetimeoffset**で[DateTimeOffset クラス](../../connect/jdbc/reference/datetimeoffset-class.md)します。  
+(2) **datetimeoffset の値**には、 [datetimeoffset クラス](../../connect/jdbc/reference/datetimeoffset-class.md)を使用してプログラムでアクセスできます。  
   
 以下のセクションでは、JDBC ドライバーと基本データ型の使用方法の例を示します。 Java アプリケーションの基本データ型の使用方法の詳細例については、「[基本データ型のサンプル](../../connect/jdbc/basic-data-types-sample.md)」をご覧ください。  
   
@@ -86,11 +85,11 @@ ms.locfileid: "66790090"
 [!code[JDBC#UsingBasicDataTypes2](../../connect/jdbc/codesnippet/Java/using-basic-data-types_2.java)]  
   
 > [!NOTE]  
-> GetUnicodeStream とスケールの方法で getBigDecimal は非推奨し、は、JDBC ドライバーでサポートされていません。
+> Scale メソッドを使用した getUnicodeStream および getBigDecimal は非推奨とされており、JDBC ドライバーではサポートされていません。
 
 ## <a name="updating-data-by-data-type"></a>データ型によるデータの更新
 
-データ ソースのフィールドの値を更新した場合、更新プログラムのいずれかを使用して、\<型 >、SQLServerResultSet クラスのメソッド。 次の例では、[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) メソッドを [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドと組み合わせて使用し、データ ソース内のデータを更新します。  
+データソースのフィールドの値を更新する必要がある場合は、SQLServerResultSet クラスのいずれか\<の更新の種類 > メソッドを使用します。 次の例では、[updateInt](../../connect/jdbc/reference/updateint-method-sqlserverresultset.md) メソッドを [updateRow](../../connect/jdbc/reference/updaterow-method-sqlserverresultset.md) メソッドと組み合わせて使用し、データ ソース内のデータを更新します。  
   
 [!code[JDBC#UsingBasicDataTypes3](../../connect/jdbc/codesnippet/Java/using-basic-data-types_3.java)]  
   
@@ -103,7 +102,7 @@ ms.locfileid: "66790090"
   
 [!code[JDBC#UsingBasicDataTypes4](../../connect/jdbc/codesnippet/Java/using-basic-data-types_4.java)]  
   
-パラメーター化クエリの詳細については、次を参照してください。[パラメーターの SQL ステートメントを使って](../../connect/jdbc/using-an-sql-statement-with-parameters.md)します。  
+パラメーター化されたクエリの詳細については、「パラメーターを使用し[た SQL ステートメントの使用](../../connect/jdbc/using-an-sql-statement-with-parameters.md)」を参照してください。  
 
 ## <a name="passing-parameters-to-a-stored-procedure"></a>ストアド プロシージャにパラメーターを渡す
 
@@ -114,7 +113,7 @@ ms.locfileid: "66790090"
 > [!NOTE]  
 > この例では、結果セットはストアド プロシージャの実行結果で返されます。
 
-JDBC ドライバーでストアド プロシージャと入力パラメーターの使用に関する詳細については、次を参照してください。[ストアド プロシージャを使用して、入力パラメーターを持つ](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)します。  
+ストアドプロシージャおよび入力パラメーターと共に JDBC ドライバーを使用する方法の詳細については、「[入力パラメーターを](../../connect/jdbc/using-a-stored-procedure-with-input-parameters.md)使用したストアドプロシージャの使用」を参照してください。  
 
 ## <a name="retrieving-parameters-from-a-stored-procedure"></a>ストアド プロシージャからのパラメーターの取得
 
@@ -125,7 +124,7 @@ JDBC ドライバーでストアド プロシージャと入力パラメータ�
 > [!NOTE]  
 > out パラメーターが返されるだけでなく、ストアド プロシージャの実行結果により作成された結果セットが返されることもあります。  
   
-JDBC driver を使用して、ストアド プロシージャと出力パラメーターを使用する方法の詳細については、次を参照してください。[ストアド プロシージャを使用して、出力パラメーターを持つ](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)します。  
+JDBC driver とストアドプロシージャおよび出力パラメーターを使用する方法の詳細については、「 [Output パラメーターを](../../connect/jdbc/using-a-stored-procedure-with-output-parameters.md)使用したストアドプロシージャの使用」を参照してください。  
 
 ## <a name="see-also"></a>参照
 

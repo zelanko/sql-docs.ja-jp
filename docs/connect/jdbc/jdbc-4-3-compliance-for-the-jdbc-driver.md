@@ -1,5 +1,5 @@
 ---
-title: JDBC 4.3 JDBC Driver のコンプライアンス |Microsoft Docs
+title: Jdbc Driver の JDBC 4.3 への準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/24/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 36025ec0-3c72-4e68-8083-58b38e42d03b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 02aef28bb40c4d4f48b28630d1752c9e5f88c3e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 20cefb029a126b0a262d86a2dc0a0791959085bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781552"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956365"
 ---
 # <a name="jdbc-43-compliance-for-the-jdbc-driver"></a>JDBC Driver の JDBC 4.3 への準拠
 
@@ -25,11 +24,11 @@ ms.locfileid: "66781552"
 > [!NOTE]  
 > Microsoft JDBC Driver 6.4 for SQL Server より前のバージョンは、Java Database Connectivity (JDBC) API 4.2 仕様にのみ準拠しています。 このセクションは、6.4 リリースより前のバージョンには適用されません。
 
-Microsoft JDBC Driver for SQL Server バージョン 6.4 では、JAVA 9 の互換性をスローします`SQLFeatureNotSupportedException`の新しい JDBC 4.3 Api メソッドが実装されていません。
+バージョン6.4 では、Microsoft jdbc Driver for SQL Server は JAVA 9 と互換性が`SQLFeatureNotSupportedException`あり、実装されていないメソッドを持つ新しい jdbc 4.3 api に対してスローされます。
 
-SQL Server リリースの Microsoft JDBC Driver 7.0、ドライバーが現在 JAVA 10 の互換性のあるにあり、以下をサポートする Api の説明になります。 ドライバーをスロー `SQLFeatureNotSupportedException` JDBC 4.3 仕様から実装されていない他のメソッド。
+Microsoft JDBC Driver 7.0 for SQL Server リリースでは、ドライバーは JAVA 10 と互換性があり、以下の Api をサポートしています。 このドライバーは`SQLFeatureNotSupportedException` 、JDBC 4.3 仕様の他の実装されていないメソッドに対してをスローします。
 
 |新しい API|[説明]|注目に値する実装|  
 |-----------------|-----------------|-------------------------------|  
-|void java.sql.connection.beginRequest()|この接続での作業の独立した単位の要求を開始しているドライバーへのヒント。 詳細については、「[java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)」を参照してください。|API のパブリック メソッドを変更することは接続のフィールドの値を保存します: `databaseAutoCommitMode`、 `transactionIsolationLevel`、 `networkTimeout`、 `holdability`、 `sendTimeAsDatetime`、 `statementPoolingCacheSize`、 `disableStatementPooling`、 `serverPreparedStatementDiscardThreshold`、 `enablePrepareOnFirstPreparedStatementCall`、`catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
-|void java.sql.connection.endRequest()|要求、独立した単位の作業が完了したドライバーへのヒント。 詳細については、「[java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--)」を参照してください。|作業単位間に作成されたステートメントを終了し、開いているトランザクションをロールバックします。 メソッドには、上記の接続フィールドへの変更も元に戻します。|
+|void java.sql.connection.beginRequest()|要求 (独立した作業単位) がこの接続から開始されることをドライバーにヒントします。 詳細については、「[java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#beginRequest--)」を参照してください。|パブリック API メソッド`databaseAutoCommitMode` `transactionIsolationLevel` `holdability` (、`sendTimeAsDatetime`、 、`networkTimeout` 、、`enablePrepareOnFirstPreparedStatementCall`、、、、) によって変更可能な接続フィールドの値を保存します。 `statementPoolingCacheSize` `disableStatementPooling` `serverPreparedStatementDiscardThreshold``catalogName`, `sqlWarnings`, `useBulkCopyForBatchInsert`.|
+|void java.sql.connection.endRequest()|要求 (独立した作業単位) が完了したことをドライバーに示すヒント。 詳細については、「[java.sql.Connection](https://docs.oracle.com/javase/9/docs/api/java/sql/Connection.html#endRequest--)」を参照してください。|作業単位中に作成されたステートメントを閉じ、開いているトランザクションをロールバックします。 また、メソッドは、上に示した接続フィールドに変更を戻します。|

@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: 9cf6c5ff-4548-401a-b3ec-084f47ff0eb8
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 052293944d820a13d8457f0b122733858b62e874
-ms.sourcegitcommit: e2d65828faed6f4dfe625749a3b759af9caa7d91
+ms.openlocfilehash: c05ef1b9807e6786e73c2e772703463adf6818c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/17/2019
-ms.locfileid: "59671278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67951084"
 ---
 # <a name="calling-natively-compiled-stored-procedures-from-data-access-applications"></a>データ アクセス アプリケーションからのネイティブ コンパイル ストアド プロシージャの呼び出し
 
@@ -49,9 +48,9 @@ ms.locfileid: "59671278"
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client で ODBC ドライバーを使用したネイティブ コンパイル ストアド プロシージャの呼び出しに関して、次の推奨事項が適用されます。
 
-"*呼び出しが 1 回のみ:*"1 回だけストアド プロシージャを呼び出すのに最も効率的な方法は、 **SQLExecDirect** と ODBC CALL 句を使用して直接 RPC を呼び出す方法です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** ステートメントを使用しないでください。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。
+"*呼び出しが 1 回のみ:* "1 回だけストアド プロシージャを呼び出すのに最も効率的な方法は、 **SQLExecDirect** と ODBC CALL 句を使用して直接 RPC を呼び出す方法です。 [!INCLUDE[tsql](../../includes/tsql-md.md)] **EXECUTE** ステートメントを使用しないでください。 ストアド プロシージャを複数回呼び出す場合は、準備実行が効率的です。
 
-"*呼び出しが複数回:*"[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャを複数回呼び出すのに最も効率的な方法は、準備された RPC プロシージャ呼び出しを使用する方法です。 準備された RPC 呼び出しは、次のように、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーを使用して実行されます。
+"*呼び出しが複数回:* "[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ストアド プロシージャを複数回呼び出すのに最も効率的な方法は、準備された RPC プロシージャ呼び出しを使用する方法です。 準備された RPC 呼び出しは、次のように、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client の ODBC ドライバーを使用して実行されます。
 
 1. データベースへの接続を開きます。
 2. **SQLBindParameter** を使用してパラメーターをバインドします。

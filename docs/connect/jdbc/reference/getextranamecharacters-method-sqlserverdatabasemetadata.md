@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a22becfe-0f07-4a15-8d11-06d4054b2369
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ef2a0cdaef33ef1797133d9da2bd858eb8d18d66
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 6a4aada79019aad4ae01729de8e018edd728b473
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767120"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983320"
 ---
 # <a name="getextranamecharacters-method-sqlserverdatabasemetadata"></a>getExtraNameCharacters メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public java.lang.String getExtraNameCharacters()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getExtraNameCharacters メソッドは、java.sql.DatabaseMetaData インターフェイスで getExtraNameCharacters メソッドによって指定されます。  
+ この getExtraNameCharacters メソッドは、getExtraNameCharacters メソッドによって、java メタデータインターフェイスで指定されます。  
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースで [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を使用している場合、このメソッドは $、#、および \@ の特殊文字を返します。  
   

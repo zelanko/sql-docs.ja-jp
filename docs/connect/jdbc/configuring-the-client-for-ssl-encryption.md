@@ -1,5 +1,5 @@
 ---
-title: SSL 暗号化用のクライアントの構成 |Microsoft Docs
+title: SSL 暗号化用にクライアントを構成する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9f5ec4a56beb5595353671c0f2aab18bf30e5f87
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956896"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>SSL 暗号化のためのクライアントの構成
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]またはクライアントでは、サーバーは、正しいサーバーと、その証明書が、クライアントが信頼している証明機関によって発行されたことを検証します。 サーバー証明書を検証するためには、接続時にトラスト マテリアルを指定する必要があります。 また、サーバー証明書の発行者が、クライアントによって信頼されている証明機関である必要があります。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]またはクライアントは、サーバーが正しいサーバーであること、およびクライアントが信頼する証明機関によって証明書が発行されていることを検証する必要があります。 サーバー証明書を検証するには、接続時に信頼マテリアルを指定する必要があります。 また、サーバー証明書の発行者が、クライアントによって信頼されている証明機関である必要があります。  
   
  このトピックでは、まず、クライアント コンピューターのトラスト マテリアルを提供する方法を説明します。 次に、SQL Server のインスタンスの SSL (Secure Sockets Layer) 証明書が民間の証明機関によって発行されている場合にサーバー証明書をクライアント コンピューターのトラスト ストアにインポートする方法を説明します。  
   

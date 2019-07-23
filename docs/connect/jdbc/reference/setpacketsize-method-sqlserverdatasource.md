@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 5d490edc-a223-4870-a838-784952497e5f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d102885fc235a66f5d42b7ae5100bc8905d895d2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8e3affcbb2181cf8979196c65a0bcd81e58c541e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788117"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67973285"
 ---
 # <a name="setpacketsize-method-sqlserverdatasource"></a>setPacketSize メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public void setPacketSize(int packetSize)
   
  また、SSL 暗号化を要求せずにアプリケーションで packetSize プロパティを設定する場合もあります。 この場合、クライアントによる SSL 暗号化のサポートをサーバーで必要としているときは、JVM における既定のセキュリティ プロバイダーの SSL レコード サイズが、ドライバーによってチェックされます。 packetSize プロパティが JVM における既定のセキュリティ プロバイダーの SSL レコード サイズを超えるときは、ドライバーでエラーが発生して接続が終了します。  
   
- SSL の使用方法の詳細については、次を参照してください。 [Using SSL Encryption](../../../connect/jdbc/using-ssl-encryption.md)します。  
+ SSL の使用方法の詳細については、「 [Ssl 暗号化の使用](../../../connect/jdbc/using-ssl-encryption.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

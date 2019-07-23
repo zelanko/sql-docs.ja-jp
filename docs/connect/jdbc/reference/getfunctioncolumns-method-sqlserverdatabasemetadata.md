@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e2b0e0f7-717c-48e6-bcd2-a325d938a833
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cd4958db78e2e35d29bcc47428295db50f7e5678
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6c25349d6fbf9495647ae73773d984dfcd269f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982963"
 ---
 # <a name="getfunctioncolumns-method-sqlserverdatabasemetadata"></a>getFunctionColumns メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -72,7 +71,7 @@ public ResultSet getFunctionColumns(java.lang.String catalog,
 |COLUMN_TYPE|**short**|**列の型。次のいずれかの値を指定できます。**<br /><br /> functionColumnUnknown (0): 不明な型です。<br /><br /> functionColumnIn (1): 入力パラメーターです。<br /><br /> functionColumnInOut (2): 入力/出力パラメーターです。<br /><br /> functionColumnOut (3): 出力パラメーターです。<br /><br /> functionReturn (4): 関数の戻り値です。<br /><br /> functionColumnResult (5): パラメーターまたは列は結果セット内の列です。|  
 |DATA_TYPE|**smallint**|Java.sql.Types からの SQL データ型値です。|  
 |TYPE_NAME|**String**|データ型の名前です。|  
-|PRECISION|**int**|有効桁数の合計数。|  
+|PRECISION|**int**|有効桁数の合計。|  
 |LENGTH|**int**|データの長さです (バイト)。|  
 |SCALE|**short**|小数点以下の桁数です。|  
 |RADIX|**short**|数値型の基数です。|  
