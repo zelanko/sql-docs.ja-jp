@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 437cab6e91e7fe607eea88370c654ad9848824b4
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: e132bea4e0926719092d9a7055735210e2b5908b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47778000"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67942755"
 ---
 # <a name="manage-oracle-tablespaces"></a>Oracle テーブルスペースの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,21 +26,21 @@ ms.locfileid: "47778000"
   
  Oracle パブリケーションの一部としてテーブルを構成する場合、必要に応じて、レプリケーション ログ情報を格納するときに既存の Oracle テーブルスペースを使用するように指定できます。 指定しない場合、レプリケーション オブジェクトのテーブルスペースは、パブリッシャーの構成時に構成したレプリケーション管理ユーザー スキーマに関連付けられた既定のテーブルスペースとなります。  
   
- **アーティクルのログ テーブルのテーブルスペースを指定するには**   
+ **アーティクルのログ テーブルのテーブルスペースを指定するには**  
   
 -   **[アーティクルのプロパティ]** ダイアログ ボックスでテーブルスペースを指定します。 このダイアログ ボックスへのアクセス方法の詳細については、「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
   
 -   [sp_changearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を使用します。 **sp_changearticle**を使用するには、以下を指定します。  
   
-    -   パラメーター **@publisher**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@publisher** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
-    -   パラメーター **@publication**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@publication** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
-    -   パラメーター **@article**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@article** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
-    -   パラメーター **@property**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@property** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
-    -   パラメーター **@value**のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **@value** のファイル グループにほぼ等しいデータベース領域の単位です。  
   
 ## <a name="see-also"></a>参照  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   
