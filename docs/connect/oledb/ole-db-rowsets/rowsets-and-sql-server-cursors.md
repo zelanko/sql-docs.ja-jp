@@ -16,13 +16,12 @@ helpviewer_keywords:
 - cursors [OLE DB]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 503e0f8fcc7cac9a3001ec00fb872642c1fcecd8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9ba062c9718203c52659dd0c35fa7bcb76b1a40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67994178"
 ---
 # <a name="rowsets-and-sql-server-cursors"></a>行セットと SQL Server カーソル
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -61,9 +60,9 @@ ms.locfileid: "66803788"
   
     -   複数の結果セットを返す [!INCLUDE[tsql](../../../includes/tsql-md.md)] ステートメントはサポートしません。  
   
- コンシューマーは、特定の行セット プロパティを設定することで、行セットでのカーソルの動作を変更できます。 コンシューマーでそれらの行セット プロパティがまったく設定されないか、またはすべてのプロパティが既定値に設定された場合、OLE DB Driver for SQL Server では既定の結果セットを使用して行セットが実装されます。 これらのプロパティのいずれかが、既定以外の値に設定されている場合、OLE DB Driver for SQL Server は、サーバー カーソルを使用して行セットを実装します。  
+ コンシューマーは、特定の行セット プロパティを設定することで、行セットでのカーソルの動作を変更できます。 コンシューマーでそれらの行セット プロパティがまったく設定されないか、またはすべてのプロパティが既定値に設定された場合、OLE DB Driver for SQL Server では既定の結果セットを使用して行セットが実装されます。 これらのプロパティのいずれかが既定値以外の値に設定されている場合、SQL Server の OLE DB ドライバーは、サーバーカーソルを使用して行セットを実装します。  
   
- 次の行セット プロパティは、OLE DB Driver for SQL Server を使用するを直接[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]カーソル。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
+ 次の行セットプロパティは、カーソルを使用[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]するように SQL Server の OLE DB ドライバーに指示します。 プロパティによっては、他のプロパティと組み合わせて使用できるものもあります。 たとえば、DBPROP_IRowsetScroll プロパティと DBPROP_IRowsetChange プロパティを備えた行セットは、即時更新動作を表すブックマーク行セットになります。 同時に指定できないプロパティもあります。 たとえば、DBPROP_OTHERINSERT を備えた行セットにはブックマークを含めることはできません。  
   
 |プロパティ ID|[値]|行セットの動作|  
 |-----------------|-----------|---------------------|  
