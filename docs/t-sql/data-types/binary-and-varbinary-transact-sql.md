@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: bcce65f9-10db-4b3e-bfaf-dfc06c6f820f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 374a32ab01e201a093702469a4e03445045203d9
-ms.sourcegitcommit: b3d84abfa4e2922951430772c9f86dce450e4ed1
+ms.openlocfilehash: f844874da3ba4c7a644331f521293e1c0f94fed5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/22/2019
-ms.locfileid: "56662776"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67940247"
 ---
 # <a name="binary-and-varbinary-transact-sql"></a>binary と varbinary (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -66,7 +65,7 @@ ms.locfileid: "56662776"
   
 データの **binary** データ型と **varbinary** データ型への変換は、データ間を移動するもっとも簡単な方法が**binary** データである場合に便利です。 ある時点で、値の型をサイズが十分に大きなバイナリ値に変換し、その後、元に戻すことがあります。 両方の変換が同じバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で行われる場合、この変換では常に結果的に同じ値が生成されます。 値の 2 進表現は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のバージョン間で異なる場合があります。
   
-**int**、**smallint**、**tinyint** を **binary** または **varbinary** に変換できます。 **binary** 型の値を再度 integer 型の値に戻した場合、切り捨てが行われていると、この値は元の integer の値とは同じになりません。 たとえば、次の SELECT ステートメントは整数値 `123456` をbinary値 `0x0001e240` として格納することを示しています。
+**int**、**smallint**、**tinyint** を **binary** または **varbinary** に変換できます。 **binary** 型の値を再度 integer 型の値に戻した場合、切り捨てが行われていると、この値は元の integer の値とは同じになりません。 たとえば、次の SELECT ステートメントは整数値 `123456` をバイナリ値 `0x0001e240` として格納することを示しています。
   
 ```sql
 SELECT CAST( 123456 AS BINARY(4) );  
