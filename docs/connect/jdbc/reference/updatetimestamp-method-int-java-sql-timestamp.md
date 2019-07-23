@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: db83d9d7-137b-4a28-a2ca-d4782e0a256e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 33eba5d0795d81893aba1cb8687de1fd8649175e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 00e170e0366d5ed785a4b27053f3805c13f2c54c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788937"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998157"
 ---
 # <a name="updatetimestamp-method-int-javasqltimestamp"></a>updateTimestamp (int, java.sql.Timestamp) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateTimestamp(int index,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateTimestamp メソッドは、java.sql.ResultSet インターフェイスの updateTimestamp メソッドによって指定されます。  
+ この updateTimestamp メソッドは、java. ResultSet インターフェイスの updateTimestamp メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [updateTimestamp メソッド (SQLServerResultSet)](../../../connect/jdbc/reference/updatetimestamp-method-sqlserverresultset.md)   

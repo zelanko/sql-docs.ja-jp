@@ -1,78 +1,78 @@
 ---
-title: ユーザー ライブラリ - SQL Server Machine Learning Services にインストールされている R パッケージの使用に関するヒント
+title: ユーザーライブラリにインストールされている R パッケージの使用に関するヒント
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e1aea5bd9166386662fc090a7a6d41737a9eecb9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a03d78e5d3100105f74e2efe361391a6bcfaf7ac
+ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962564"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68345280"
 ---
-# <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server で R パッケージを使用するためのヒント
+# <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server での R パッケージの使用に関するヒント
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、R と SQL Server インスタンスで未知のパッケージ アクセス経験豊富な R 開発者に慣れていない Dba の個別のセクションがあります。
+この記事では、SQL Server インスタンスでのパッケージアクセスに慣れていない R および経験豊富な R 開発者向けの個別のセクションについて説明します。
 
-## <a name="new-to-r"></a>新しい r
+## <a name="new-to-r"></a>R の新規作成
 
-R のインストールに管理者として R パッケージの管理について、いくつかの基本的なことができますを知ることの最初のパッケージを開始します。
+管理者が最初に R パッケージをインストールするときに、R パッケージ管理についていくつかの基本事項を理解しておくと、作業の開始に役立ちます。
 
 ### <a name="package-dependencies"></a>パッケージの依存関係
 
-R パッケージは、頻繁に他のうちいくつか使用できないインスタンスによって使用される既定の R ライブラリに複数のパッケージに依存します。 場合があります、パッケージには、既にインストールされている依存パッケージの別のバージョンが必要です。 パッケージの依存関係は、パッケージに埋め込まれた記述ファイルに記録されますが不完全な場合があります。 という名前のパッケージを使用する[iGraph](https://igraph.org/r/)完全に依存関係グラフを明確にします。
+R パッケージは、他の複数のパッケージに頻繁に依存しており、その一部は、インスタンスで使用される既定の R ライブラリでは使用できない可能性があります。 パッケージには、既にインストールされている依存パッケージの別のバージョンが必要な場合があります。 パッケージの依存関係は、パッケージに埋め込まれている説明ファイルに記載されていますが、不完全な場合もあります。 [Igraph](https://igraph.org/r/)というパッケージを使用して、依存関係グラフを完全に明確にすることができます。
 
-使用することをお勧めを確実に適切なパッケージの種類とバージョンを取得、組織内のすべてのユーザーを複数のパッケージをインストールする必要がある場合、 [miniCRAN](https://mran.microsoft.com/package/miniCRAN)完全な依存関係チェーンを分析するパッケージ。 minicRAN は、複数のユーザーまたはコンピューター間で共有できるローカル リポジトリを作成します。 詳細については、次を参照してください。 [miniCRAN を使用してローカル パッケージ リポジトリを作成する](create-a-local-package-repository-using-minicran.md)します。
+複数のパッケージをインストールする必要がある場合、または組織内のすべてのユーザーが正しいパッケージの種類とバージョンを取得できるようにする場合は、 [miniCRAN](https://mran.microsoft.com/package/miniCRAN)パッケージを使用して完全な依存関係チェーンを分析することをお勧めします。 minicRAN は、複数のユーザーまたはコンピューター間で共有できるローカルリポジトリを作成します。 詳細については、「 [miniCRAN を使用してローカルパッケージリポジトリを作成する](create-a-local-package-repository-using-minicran.md)」を参照してください。
 
-### <a name="package-sources-versions-and-formats"></a>パッケージ ソース、バージョン、およびフォーマット
+### <a name="package-sources-versions-and-formats"></a>パッケージのソース、バージョン、および形式
 
-R パッケージの複数のソースとして[CRAN](https://cran.r-project.org/)と[Bioconductor](https://www.bioconductor.org/)します。 R 言語の公式サイト (<https://www.r-project.org/>) これらのリソースを一覧表示されます。 Microsoft は[MRAN](https://mran.microsoft.com/)のオープン ソース R の配布 ([MRO](https://mran.microsoft.com/open)) と他のパッケージ。 多くのパッケージは、GitHub、開発者がソース コードを取得する場所に発行されます。
+[Cran](https://cran.r-project.org/)や[Bioconductor](https://www.bioconductor.org/)など、R パッケージには複数のソースがあります。 R 言語の公式サイト (<https://www.r-project.org/>) では、これらのリソースの多くが一覧表示されます。 Microsoft では、オープンソース R ([mran](https://mran.microsoft.com/open)) およびその他のパッケージの配布に [mran](https://mran.microsoft.com/) を提供しています。 多くのパッケージは、開発者がソースコードを入手できる GitHub に発行されます。
 
-R パッケージは、複数のコンピューティング プラットフォームで実行します。 インストールするバージョンが Windows バイナリであることを確認します。
+R パッケージは、複数のコンピューティングプラットフォームで実行されます。 インストールするバージョンが Windows バイナリであることを確認してください。
 
-### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>ライブラリをインストールして、既にインストールされているパッケージを確認します。
+### <a name="know-which-library-you-are-installing-to-and-which-packages-are-already-installed"></a>インストール先のライブラリと、既にインストールされているパッケージを確認します。
 
-何もインストールする前に以前のコンピューター上の R 環境を変更した場合は必ず、R 環境変数`.libPath`は 1 つのパスを使用します。
+コンピューター上の r 環境を以前に変更したことがある場合は、何かをインストールする`.libPath`前に、r 環境変数が1つのパスのみを使用するようにしてください。
 
-このパスは、インスタンスの R_SERVICES フォルダーを指定する必要があります。 詳細については、どのパッケージが既にインストールされているかを決定する方法などを参照してください。 [SQL Server の既定の R と Python のパッケージ](../package-management/default-packages.md)します。
+このパスは、インスタンスの R_SERVICES フォルダーを指している必要があります。 既にインストールされているパッケージを確認する方法など、詳細については、「 [SQL Server の既定の R および Python パッケージ](../package-management/default-packages.md)」を参照してください。
 
-## <a name="new-to-sql-server"></a>SQL server
+## <a name="new-to-sql-server"></a>SQL Server の新規作成
 
-SQL Server で実行中のコードに取り組んで、R 開発者としては、サーバーを保護するセキュリティ ポリシーは、R 環境を制御する機能を制限します。
+SQL Server で実行されているコードを操作する R 開発者は、サーバーを保護するセキュリティポリシーによって、R 環境を制御する機能が制限されます。
 
-### <a name="r-user-libraries-not-supported-on-sql-server"></a>R ユーザー ライブラリ: SQL Server でサポートされていません
+### <a name="r-user-libraries-not-supported-on-sql-server"></a>R ユーザーライブラリ: SQL Server ではサポートされていません
 
-新しい R パッケージをインストールする必要のある R 開発者は、プライベート、ユーザー ライブラリを使用して、既定のライブラリが使用できない場合、または開発者が、コンピューターの管理者でない場合は、パッケージのインストールに慣れています。 など、一般的な R 開発環境で、ユーザーは、パッケージの場所、R 環境変数に追加`libPath`、または、次のように、パッケージの完全なパスを参照します。
+新しい R パッケージをインストールする必要がある r 開発者は、既定のライブラリを使用できないとき、または開発者がコンピューターの管理者でない場合に、プライベートのユーザーライブラリを使用して、パッケージをインストールすることに慣れています。 たとえば、一般的な r 開発環境では、ユーザーはパッケージの場所を r 環境変数`libPath`に追加するか、完全なパッケージパスを参照します。次に例を示します。
 
 ```R
 library("c:/Users/<username>/R/win-library/packagename")
 ```
 
-これは機能しません、SQL Server で R ソリューションを実行しているため、インスタンスに関連付けられている特定の既定のライブラリに R パッケージをインストールする必要があります。 既定のライブラリでパッケージを利用できない場合、パッケージを呼び出すしようとするときにこのエラーが発生します。
+これは、SQL Server で R ソリューションを実行する場合は機能しません。 R パッケージは、インスタンスに関連付けられている特定の既定のライブラリにインストールする必要があるためです。 パッケージを既定のライブラリで利用できない場合、パッケージを呼び出そうとすると、次のエラーが表示されます。
 
-*ライブラリ (xxx) でエラー: 'パッケージ名' という名前のパッケージはありません*
+*ライブラリ (xxx) にエラーがあります: ' package name ' という名前のパッケージはありません*
 
-### <a name="avoid-package-not-found-errors"></a>「パッケージが見つかりません」エラーを回避します。
+### <a name="avoid-package-not-found-errors"></a>"パッケージが見つかりません" エラーを回避する
 
-+ ユーザー ライブラリへの依存を排除します。 
++ ユーザーライブラリへの依存関係を排除します。 
 
-    ソリューションは、ライブラリの場所にアクセスできない他のユーザーによって実行される場合のエラーにつながるよう、カスタム ユーザー ライブラリに必要な R パッケージをインストールするの不適切な開発手法を勧めします。
+    必要な R パッケージをカスタムユーザーライブラリにインストールするのは不適切な開発方法です。ライブラリの場所にアクセスできない他のユーザーによってソリューションが実行されるとエラーが発生する可能性があるためです。
 
-    また、既定のライブラリでパッケージをインストールすると場合、R ランタイム パッケージを読み込みます既定のライブラリから R コードで、別のバージョンを指定した場合でも。
+    また、パッケージが既定のライブラリにインストールされている場合、r コードで別のバージョンを指定した場合でも、R ランタイムは既定のライブラリからパッケージを読み込みます。
 
-+ 共有環境で実行するコードを変更します。
++ 共有環境で実行するようにコードを変更します。
 
-+ ソリューションの一部としてパッケージをインストールしないでください。 パッケージをインストールするアクセス許可を持っていない場合、コードは失敗します。 パッケージをインストールするアクセス許可を持っている場合でもを実行する他のコードからとは別にこれを行う必要があります。
++ ソリューションの一部としてパッケージをインストールしないようにします。 パッケージをインストールするアクセス許可がない場合、コードは失敗します。 パッケージをインストールするアクセス許可を持っている場合でも、実行する他のコードとは別に行う必要があります。
 
 + インストールされていないパッケージへの呼び出しがないよう、コードを確認します。
 
-+ R パッケージまたは R ライブラリのパスへの直接参照を削除するコードを更新します。 
++ R パッケージまたは R ライブラリのパスへの直接参照を削除するようにコードを更新します。 
 
-+ パッケージ ライブラリは、インスタンスに関連付けられています。 詳細については、次を参照してください。 [SQL Server の既定の R と Python のパッケージ](../package-management/default-packages.md)します。
++ インスタンスに関連付けられているパッケージライブラリを把握します。 詳細については、「 [SQL Server の既定の R および Python パッケージ](../package-management/default-packages.md)」を参照してください。
 
 ## <a name="see-also"></a>関連項目
 
