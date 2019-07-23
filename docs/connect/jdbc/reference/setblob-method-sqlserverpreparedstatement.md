@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 218ff486-3f31-49e4-ad81-a423246a8307
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bde9ef88bf129de03f47751261f8641d63ced95b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dd2208d2a82a9376438b61e144665cbda5152bb8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975049"
 ---
 # <a name="setblob-method-sqlserverpreparedstatement"></a>setBlob メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,7 +42,7 @@ public final void setBlob(int i,
   
  *x*  
   
- Blob オブジェクト。  
+ Blob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

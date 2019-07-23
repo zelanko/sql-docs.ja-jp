@@ -28,13 +28,12 @@ helpviewer_keywords:
 ms.assetid: edeced03-decd-44c3-8c74-2c02f801d3e7
 author: CarlRabeler
 ms.author: carlrab
-manager: craigg
-ms.openlocfilehash: 737f337369b04c59d34bb8ab4335a2491e843927
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: 900d91223aea28d0809c3d3aab9acd574c3d2df2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68130126"
 ---
 # <a name="create-trigger-transact-sql"></a>CREATE TRIGGER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -206,7 +205,7 @@ SCHEMABINDING
   
 このオプションは、メモリ最適化テーブルのトリガーで必要であり、従来のテーブルのトリガーではサポートされていません。  
   
-FOR | AFTER   
+FOR | AFTER  
 AFTER を指定した場合は、トリガー元の SQL ステートメントで指定したすべての処理が正常に開始された場合のみ、DML トリガーが起動されます。 このトリガーの実行前に、すべての連鎖参照操作と制約チェックも成功している必要があります。  
   
 指定したキーワードが FOR だけの場合は、AFTER が既定値になります。  
@@ -220,7 +219,7 @@ INSTEAD OF
   
 INSTEAD OF トリガーは、WITH CHECK OPTION を使用する更新可能なビューには定義できません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] これを行うと、WITH CHECK OPTION が指定されている更新可能なビューに INSTEAD OF トリガーを追加した場合にエラーが発生します。 INSTEAD OF トリガーを定義する前に、ALTER VIEW を使用してそのオプションを削除する必要があります。  
   
-{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }   
+{ [ DELETE ] [ , ] [ INSERT ] [ , ] [ UPDATE ] }  
 テーブルまたはビューに対して試行されたときに、DML トリガーをアクティブにするデータ変更ステートメントを指定します。 少なくとも 1 つのオプションを指定します。 これらのオプションを任意の順序で組み合わせて、トリガー定義内で使用できます。  
   
 INSTEAD OF トリガーでは、ON DELETE 連鎖操作を指定する参照関係があるテーブルで、DELETE オプションを使用することはできません。 同様に、ON UPDATE 連鎖操作を指定する参照関係があるテーブルで、UPDATE オプションを使用することはできません。  
@@ -263,7 +262,7 @@ DDL トリガーおよびログオン トリガーでは、[EVENTDATA &#40;Trans
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、テーブルまたはビューに対する INSTEAD OF トリガーによって、**text**、**ntext**、または **image** 型の列を更新できます。  
   
 > [!IMPORTANT]
->  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(MAX)**、 **nvarchar(MAX)**、および **varbinary(MAX)** 型のデータがサポートされます。  
+>  **ntext**、**text**、および **image** データ型は、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の将来のバージョンで削除される予定です。 新しい開発作業では、これらのデータ型の使用は避け、現在これらのデータ型を使用しているアプリケーションは修正するようにしてください。 代わりに、 [nvarchar(max)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md)、 [varchar(max)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、 [varbinary(max)](../../t-sql/data-types/binary-and-varbinary-transact-sql.md) を使用してください。 AFTER トリガーと INSTEAD OF トリガーでは両方とも、inserted テーブルおよび deleted テーブルで **varchar(MAX)** 、 **nvarchar(MAX)** 、および **varbinary(MAX)** 型のデータがサポートされます。  
   
 メモリ最適化テーブルのトリガーの場合、最上位レベルで許可される唯一の *sql_statement* は ATOMIC ブロックです。 ATOMIC ブロック内で使用できる T-SQL は、ネイティブ プロシージャ内で使用できる T-SQL によって制限されます。  
   
@@ -355,7 +354,7 @@ DDL トリガーは、ローカルまたはグローバルの一時テーブル�
 DML トリガーと異なり、DDL トリガーのスコープはスキーマではありません。 このため、DDL トリガーに関するメタデータのクエリに、OBJECT_ID、OBJECT_NAME、OBJECTPROPERTY、OBJECTPROPERTYEX などの関数を使用することはできません。 代わりに、カタログ ビューを使用してください。 詳しくは、「[DDL トリガーに関する情報の取得](../../relational-databases/triggers/get-information-about-ddl-triggers.md)」をご覧ください。  
   
 > [!NOTE]  
->  サーバー スコープの DDL トリガーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーの **[トリガー]** フォルダーに表示されます。 このフォルダーは、 **[Server Objects]** フォルダーにあります。 データベース スコープの DDL トリガーは、**[データベース トリガー]** フォルダーに表示されます。 このフォルダーは対応するデータベースの **[Programmability]** フォルダーにあります。  
+>  サーバー スコープの DDL トリガーは、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] オブジェクト エクスプローラーの **[トリガー]** フォルダーに表示されます。 このフォルダーは、 **[Server Objects]** フォルダーにあります。 データベース スコープの DDL トリガーは、 **[データベース トリガー]** フォルダーに表示されます。 このフォルダーは対応するデータベースの **[Programmability]** フォルダーにあります。  
   
 ## <a name="logon-triggers"></a>ログオン トリガー  
 ログオン トリガーは、LOGON イベントに応答してストアド プロシージャを実行します。 このイベントは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでユーザー セッションが確立されるときに発生します。 ログオン トリガーは、ログインの認証段階が終了した後、ユーザー セッションが確立される前に発生します。 したがって、通常は、エラー メッセージや PRINT ステートメントからのメッセージはユーザーに表示されますが、このトリガー内で発生したすべてのメッセージは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のエラー ログに記録されます。 詳細については、「[ログオン トリガー](../../relational-databases/triggers/logon-triggers.md)」を参照してください。  

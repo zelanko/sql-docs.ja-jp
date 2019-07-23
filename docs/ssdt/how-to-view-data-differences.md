@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: f88d3350-2eaf-44cc-96a8-84008b6cd071
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 935a2671c2496cb6cbb996d25cddc123bc4d782d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ec641fc027bae18a09e81d5cf14eee1bd8ab3ee3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095924"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67930340"
 ---
 # <a name="how-to-view-data-differences"></a>方法:データの差異を表示する
 2 つのデータベースのデータを比較すると、比較した各*データベース オブジェクト*とその状態が一覧表示されます。 各オブジェクト内のレコードの結果を状態別にグループ化して表示することもできます。  

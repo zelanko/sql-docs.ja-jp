@@ -57,7 +57,7 @@ ms.locfileid: "68038014"
   
  このセットは 3 つのタプルで構成されており、それぞれのタプルには、Product ディメンションの Product Categories 階層のメンバーと Date ディメンションの Calendar 階層のメンバーへの、2 つの明示的な参照が含まれています。  
   
- セットを返す関数の例については、次を参照してください。[メンバー、組、およびセットの操作&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)します。  
+ セットを返す関数の例については、次を参照してください。[メンバー、タプル、およびセットの操作&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/working-with-members-tuples-and-sets-mdx.md)します。  
   
 ## <a name="see-also"></a>関連項目  
  [式&#40;MDX&#41;](../mdx/expressions-mdx.md)  

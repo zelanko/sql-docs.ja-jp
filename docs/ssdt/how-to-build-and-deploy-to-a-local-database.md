@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ebca8ff8-9a09-4207-8979-9d577af7c1d5
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 3dddd702582cdc8b2baea11838b0ad7e0ccd8cc9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 612ed6750946dfa5e77970bf6e3a4859cbb0045b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67911873"
 ---
 # <a name="how-to-build-and-deploy-to-a-local-database"></a>方法:ローカル データベースでビルドおよび配置を行う
 Microsoft SQL Server 2012 では、ローカルのオンデマンド サーバー インスタンスが提供されます。これは SQL Server Express Local Database Runtime と呼ばれるもので、SQL Server データベース プロジェクトをデバッグする際にアクティブ化されます。 このローカル サーバー インスタンスは、プロジェクトのビルド、テスト、およびデバッグ用のサンドボックスとして使用できます。 インストールされているどの SQL Server インスタンスからも独立しており、SQL Server Data Tools (SSDT) の外ではアクセスできません。 運用データベースへのアクセスが制限または禁止されている開発者が、許可されたユーザーによってプロジェクトが運用環境に配置される前に、ローカルでプロジェクトをテストする場合、このような環境が最適です。 これに加えて、SQL Azure 用にデータベース ソリューションを開発する場合、このローカル サーバーで提供される便利さを利用して、データベース プロジェクトをクラウドに配置する前に、ローカルで開発およびテストできます。  
