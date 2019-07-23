@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8d1c3848-bdb7-452a-862f-6421e1a7ce8b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3e2431a61089f2128fa73feea8893a3a1c82bffa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e6b38d58ddf81f0b8439912b865b1d94a7b15ecf
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981277"
 ---
 # <a name="getnumericfunctions-method-sqlserverdatabasemetadata"></a>getNumericFunctions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

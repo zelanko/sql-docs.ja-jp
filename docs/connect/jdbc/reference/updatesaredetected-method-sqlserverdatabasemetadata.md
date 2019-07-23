@@ -1,5 +1,5 @@
 ---
-title: updatesAreDetected メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: SQLServerDatabaseMetaData (検出) メソッドのアップデートMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb541175-d3a5-4bca-b327-64e2270c0df1
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: bb0ae2f27ad3f8a575d1f4260496ae12c601b6ba
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 93b9fa705f7d3ed00431db9ca5ff507beffc890d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798689"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998339"
 ---
 # <a name="updatesaredetected-method-sqlserverdatabasemetadata"></a>updatesAreDetected メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -65,7 +64,7 @@ public boolean updatesAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updatesAreDetected メソッドは、java.sql.DatabaseMetaData インターフェイスで updatesAreDetected メソッドによって指定されます。  
+ このように検出されたこのメソッドは、java メタデータインターフェイスの、アップデートを検出したメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

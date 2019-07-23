@@ -1,5 +1,5 @@
 ---
-title: createSQLXML メソッド (SQLServerConnection) |Microsoft Docs
+title: SQLServerConnection (Xml) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: cf5bfcdd-bc03-4c5b-b554-d8a8a4067e93
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f44520d6d6a060bb323436d23fa7335e25551883
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0d1265a48fbe07bdf59616026a069fda05723f10
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800661"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955331"
 ---
 # <a name="createsqlxml-method-sqlserverconnection"></a>createSQLXML メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  作成、 **SQLXML**オブジェクトをデータなし。  
+  データを指定せずに**SQLXML**オブジェクトを作成します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -37,7 +36,7 @@ public java.sql.SQLXML createSQLXML()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この createSQLXML メソッドは、java.sql.Connection インターフェイスの createSQLXML メソッドによって指定されます。  
+ このため、この Xml メソッドは、java. .sql. 接続インターフェイスの のためののために指定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -12,13 +12,12 @@ ms.assetid: 895d220c-6749-4954-9dd3-2ea4c6a321ff
 author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
-manager: craigg
-ms.openlocfilehash: f9ac78de3ea95d7cace9a32001db1fddda9bab50
-ms.sourcegitcommit: 03870f0577abde3113e0e9916cd82590f78a377c
+ms.openlocfilehash: 849cd64d336cf9289e04cd770eb51175c5cbebbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/18/2019
-ms.locfileid: "57973571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68082899"
 ---
 # <a name="enable-semantic-search-on-tables-and-columns"></a>テーブルおよび列に対するセマンティック検索の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -259,16 +258,16 @@ GO
   
 |[言語]|LCID (LCID)|  
 |--------------|----------|  
-|ドイツ語|1031|  
+|German|1031|  
 |英語 (米国)|1033|  
-|フランス語|1036|  
+|French|1036|  
 |イタリア語|1040|  
 |ポルトガル語 (ブラジル)|1046|  
 |ロシア語|1049|  
-|スウェーデン語|1053|  
+|Swedish|1053|  
 |英語 (英国)|2057|  
 |ポルトガル語 (ポルトガル)|2070|  
-|スペイン語|3082|  
+|Spanish|3082|  
   
 ###  <a name="doctypes"></a> どのドキュメントの種類でインデックス作成ができるかを判断する  
  カタログ ビュー [sys.fulltext_document_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-fulltext-document-types-transact-sql.md) のクエリを実行します。  
