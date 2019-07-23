@@ -4,18 +4,17 @@ description: このページでは、リレーショナル データ ソース�
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-manager: craigg
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bd59fc668009fbb367f282c1c2d4ac3296ad41
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67730269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68041109"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>リレーショナル データ ソースで外部テーブル ウィザードを使用する
 
