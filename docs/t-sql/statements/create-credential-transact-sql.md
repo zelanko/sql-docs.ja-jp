@@ -23,14 +23,13 @@ helpviewer_keywords:
 ms.assetid: d5e9ae69-41d9-4e46-b13d-404b88a32d9d
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e9fba374be6a12a440138e3fa6a70975c5d3fdd7
-ms.sourcegitcommit: 134a91ed1a59b9d57cb1e98eb1eae24f118da51e
+ms.openlocfilehash: 875b66df7f2788d253bad98b92f19c7d63393885
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57556164"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68061027"
 ---
 # <a name="create-credential-transact-sql"></a>CREATE CREDENTIAL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -56,19 +55,19 @@ WITH IDENTITY = 'identity_name'
  *credential_name*  
  作成する資格情報の名前を指定します。 *credential_name* はシャープ (#) 記号で始めることはできません。 システム資格情報は ## で始まります。  共有アクセス署名 (SAS) を使用する場合、この名前はコンテナー パスと一致し、https で始まる必要があります。スラッシュを含めることはできません。 後述の D の例を参照してください。  
   
- IDENTITY **='**_identity\_name_**'**  
+ IDENTITY **='** _identity\_name_ **'**  
  サーバーの外部に接続するときに使用するアカウントの名前を指定します。 Azure Key Vault へのアクセスに資格情報を使うときは、**IDENTITY** はキー コンテナーの名前です。 後述の C の例を参照してください。 資格情報で Shared Access Signature (SAS) を使っているときは、**IDENTITY** は *SHARED ACCESS SIGNATURE* です。 後述の D の例を参照してください。  
  
 > [!IMPORTANT]
 > Azure SQL Database でサポートされるのは、Azure Key Vault と Shared Access Signature の ID のみです。 Windows ユーザー ID はサポートされません。
  
- SECRET **='**_secret_**'**  
+ SECRET **='** _secret_ **'**  
  送信の認証に必要なシークレットを指定します。  
   
  Azure Key Vault へのアクセスに資格情報を使うときは、**CREATE CREDENTIAL** の **SECRET** 引数に、Azure Active Directory の**サービス プリンシパル**の \<*クライアント ID*> (ハイフンなし) と \<*シークレット*> を間のスペースなしで渡す必要があります。 後述の C の例を参照してください。 資格情報が Shared Access Signature を使っている場合は、**SECRET** は Shared Access Signature トークンです。 後述の D の例を参照してください。  Azure コンテナーで格納済みアクセス ポリシーと Shared Access Signature を作成する方法について詳しくは、「[レッスン 1:Azure コンテナーに格納済みアクセス ポリシーと Shared Access Signature を作成する](../../relational-databases/lesson-1-create-stored-access-policy-and-shared-access-signature.md)」をご覧ください。  
   
  FOR CRYPTOGRAPHIC PROVIDER *cryptographic_provider_name*  
- "*拡張キー管理プロバイダー (EKM)*" の名前を指定します。 キーの管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
+ "*拡張キー管理プロバイダー (EKM)* " の名前を指定します。 キーの管理について詳しくは、「[拡張キー管理 &#40;EKM&#41;](../../relational-databases/security/encryption/extensible-key-management-ekm.md)」をご覧ください。  
   
 ## <a name="remarks"></a>Remarks  
 

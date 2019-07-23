@@ -21,14 +21,13 @@ helpviewer_keywords:
 ms.assetid: 1c321680-562e-41f1-8eb1-e7fa5ae45cc5
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: e48239d521ed82c5bcfe2920c36b89e82cc1e193
-ms.sourcegitcommit: 2663063e29f2868ee6b6d596df4b2af2d22ade6f
+ms.openlocfilehash: aea91d8ed791809296a924d10aab176f16ebe82f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/04/2019
-ms.locfileid: "57305380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68117141"
 ---
 # <a name="create-server-audit-transact-sql"></a>CREATE SERVER AUDIT (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -86,7 +85,7 @@ CREATE SERVER AUDIT audit_name
  MAXSIZE = { *max_size }*  
  監査ファイルのサイズの上限を指定します。 *max_size* の値は、整数の後に MB、GB、TB を付けて指定するか、または UNLIMITED を指定します。 *max_size* に指定できる最小サイズは 2 MB、最大サイズは 2,147,483,647 TB です。 UNLIMITED を指定した場合、ファイルはディスクがいっぱいになるまで拡張されます。 0 も UNLIMITED を示します。2 MB 未満の値を指定すると、エラー MSG_MAXSIZE_TOO_SMALL が発生します。 既定値は UNLIMITED です。  
   
- MAX_ROLLOVER_FILES =*{ integer* | UNLIMITED }  
+ MAX_ROLLOVER_FILES = *{ integer* | UNLIMITED }  
  現在のファイルに加えてファイル システム内に保持するファイルの最大数を指定します。 *MAX_ROLLOVER_FILES* 値には整数値または UNLIMITED を指定してください。 既定値は UNLIMITED です。 監査が再開されるたび ([!INCLUDE[ssDE](../../includes/ssde-md.md)] のインスタンスの再起動時や、監査をオフにして再度オンにしたとき)、または MAXSIZE に達して新しいファイルが必要になった場合に、このパラメーターが評価されます。 *MAX_ROLLOVER_FILES* の評価時にファイル数が *MAX_ROLLOVER_FILES* の設定を超えている場合、最も古いファイルが削除されます。 そのため、*MAX_ROLLOVER_FILES* の設定が 0 の場合、*MAX_ROLLOVER_FILES* 設定が評価されるたびに新しいファイルが作成されます。 *MAX_ROLLOVER_FILES* 設定の評価時に自動的に削除されるファイルは 1 つだけです。したがって、*MAX_ROLLOVER_FILES* の値を下げても、古いファイルを手動で削除しない限り、ファイル数は少なくなりません。 指定できるファイルの最大数は 2,147,483,647 です。  
   
  MAX_FILES =*integer*  
