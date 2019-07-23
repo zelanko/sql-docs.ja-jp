@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1ff4dcff-89b3-4b99-a725-5f7963e98abf
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 2272183b648d22db604d63326974c1b3c4686c0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 708982797ef56d05325969711fe1edfa14167ed0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722430"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68120637"
 ---
 # <a name="lesson-2-1---building-the-deployment-utility"></a>レッスン 2-1 - 配置ユーティリティの構築
 
@@ -31,7 +30,7 @@ ms.locfileid: "65722430"
   
 ### <a name="to-set-the-deployment-utility-properties"></a>配置ユーティリティのプロパティを設定するには  
   
-1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]**、 **[Microsoft SQL Server]** の順にポイントして、 **[Business Intelligence Development Studio]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] がまだ開いていない場合は、 **[スタート]** ボタンをクリックし、 **[すべてのプログラム]** 、 **[Microsoft SQL Server]** の順にポイントして、 **[Business Intelligence Development Studio]** をクリックします。  
   
 2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "65722430"
   
 5.  **[Deployment Tutorial プロパティ ページ]** ダイアログ ボックスの右側のペインで、 **AllowConfigurationChanges** が **true**に設定されていることを確認し、 **CreateDeploymentUtility** を **true**に設定し、 **DeploymentOutputPath**の既定値を必要に応じて更新します。  
   
-6.  [**OK**] をクリックします。  
+6.  **[OK]** をクリックします。  
   
 ### <a name="to-build-the-deployment-utility"></a>配置ユーティリティを構築するには  
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 543e7ce7-8639-4281-8a91-85314755e5de
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 842fb0e2b111b5bcd17b26d13db15e47aa5c1ad1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ab757cac0622c5674bb2008b5bafbbc07c182c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65099665"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68035120"
 ---
 # <a name="how-to-outline-and-add-snippets-to-transact-sql-script"></a>方法:スニペットをアウトライン表示し、Transact-SQL スクリプトに追加する
 SQL Server Data Tools には、コード スニペットから成るコード ライブラリが含まれており、作成するアプリケーションに挿入できるようになっています。 各スニペットは、関数、テーブル、トリガー、インデックス、ビュー、ユーザー定義データ型などを作成する完全なスクリプト タスクを実行します。スニペットは、数回のマウス クリックでソース コードに挿入できます。 スニペットを使用すると、入力の時間を短縮できるため、生産性が向上します。  

@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 0dbbc956-15b1-427b-812c-618a044d07fa
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 177ef5d128bc14ee112e2b0a19e05a10f174bbc9
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: 8cb3c1c0eba5c39083b6a6b39b4040639909808c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685659"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68101976"
 ---
 # <a name="dbcc-cleantable-transact-sql"></a>DBCC CLEANTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -66,7 +65,7 @@ DBCC CLEANTABLE
  すべての情報メッセージを表示しないようにします。  
   
 ## <a name="remarks"></a>Remarks  
-DBCC CLEANTABLE は、可変長列の削除後に残る領域の返還を要求します。 可変長列には、**varchar**、**nvarchar**、**varchar(max)**、**nvarchar(max)**、**varbinary**、**varbinary(max)**、**text**、**ntext**、**image**、**sql_variant**、**xml** のいずれかのデータ型を使用できます。 固定長列の削除後に残る領域の返還は要求しません。
+DBCC CLEANTABLE は、可変長列の削除後に残る領域の返還を要求します。 可変長列には、**varchar**、**nvarchar**、**varchar(max)** 、**nvarchar(max)** 、**varbinary**、**varbinary(max)** 、**text**、**ntext**、**image**、**sql_variant**、**xml** のいずれかのデータ型を使用できます。 固定長列の削除後に残る領域の返還は要求しません。
 削除された列が行内にあった場合、DBCC CLEANTABLE は、テーブルの IN_ROW_DATA アロケーション ユニットからの領域の返還を要求します。 削除された列が行外にあった場合、その列のデータ型に応じて、ROW_OVERFLOW_DATA または LOB_DATA アロケーション ユニットからの領域の返還を要求します。 ROW_OVERFLOW_DATA または LOB_DATA ページから領域が返還され空のページとなった場合、ページは削除されます。
 DBCC CLEANTABLE は 1 つ以上のトランザクションとして実行されます。 バッチ サイズを指定しない場合は、テーブル全体が 1 つのトランザクションで処理され、その間テーブルが排他ロックされます。 テーブルの規模が大きくなると、シングル トランザクションが長すぎたり必要なログ領域が大きすぎたりする可能性があります。 バッチ サイズを指定すると、コマンドは指定した数の行の一連のトランザクションで処理されるようになります。 DBCC CLEANTABLE は、他のトランザクション内のトランザクションとして実行することはできません。
 この操作はすべてログに記録されます。
