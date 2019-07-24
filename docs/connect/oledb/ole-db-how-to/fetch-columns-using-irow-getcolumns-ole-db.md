@@ -1,5 +1,5 @@
 ---
-title: Irow::getcolumns (OLE DB) を使用して列をフェッチ |Microsoft Docs
+title: 'IRow:: GetColumns (OLE DB) を使用して列をフェッチします。Microsoft Docs'
 description: IRow::GetColumns を使用した列のフェッチ (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - IRow interface
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: cbc97de598e05d6045a5f7f142a67b39dcb9dd05
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 336b5b12eaf0744afd63510ce287edbb5439c3ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66791557"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015583"
 ---
 # <a name="fetch-columns-using-irowgetcolumns-ole-db"></a>IRow::GetColumns を使用した列のフェッチ (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

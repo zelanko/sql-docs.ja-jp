@@ -1,5 +1,5 @@
 ---
-title: setBytes (long, byte) メソッド |Microsoft Docs
+title: setBytes (long, byte) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ffb8f107-0f9d-4410-957f-62b718e1e872
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f0d47be46aac25807fd9f97bb3ee40cf96ffd4fd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 02c8e541b237cbf72fc2b3da3ed5c2b0759b0eb2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797642"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974910"
 ---
 # <a name="setbytes-method-long-byte"></a>setBytes (long, byte) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -37,7 +36,7 @@ public int setBytes(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *pos*  
+ *po*  
   
  データの書き込みを開始する BLOB 内の位置 (1 から開始) です。  
   

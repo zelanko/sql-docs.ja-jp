@@ -10,28 +10,28 @@ helpviewer_keywords:
 - date and time types, retrieving as datetime objects
 author: yitam
 ms.author: v-yitam
-manager: mbarwin
-ms.openlocfilehash: 54e5b5c9c1ba59ed64db740fbbb1a643e7cb1b2c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 165e91cee3b0b4592f9b746f8b35b46bc73bce50
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63210435"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264573"
 ---
 # <a name="how-to-retrieve-date-and-time-types-as-php-datetime-objects-using-the-pdosqlsrv-driver"></a>方法: PDO_SQLSRV ドライバーを使用して日付/時刻型を PHP DateTime オブジェクトとして取得する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-バージョン 5.6.0 で追加された、この機能は、PDO_SQLSRV ドライバーを使用する場合にのみ有効です、[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]します。
+バージョン5.6.0 で追加されたこの機能は、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]の PDO_SQLSRV ドライバーを使用している場合にのみ有効です。
 
-### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>DateTime オブジェクトとして型を日付と時刻を取得するには
+### <a name="to-retrieve-date-and-time-types-as-datetime-objects"></a>日付/時刻型を DateTime オブジェクトとして取得するには
 
-PDO_SQLSRV を使用するときに日付と時刻型 (**smalldatetime**、 **datetime**、**日付**、**時間**、 **datetime2**、および**datetimeoffset**) は、既定の文字列として返されます。 PDO::ATTR_STRINGIFY_FETCHES も PDO::SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性は、任意の影響です。 日付と時刻の型として取得するために[PHP DateTime](http://php.net/manual/en/class.datetime.php)オブジェクト、接続やステートメント属性を設定する`PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE`に**true** (は**false**既定で)。
+PDO_SQLSRV を使用する場合、日付と時刻の型 (**smalldatetime**、 **datetime**、 **date**、 **time**、 **datetime2**、および**datetimeoffset**) は、既定で文字列として返されます。 PDO:: ATTR_STRINGIFY_FETCHES と PDO:: SQLSRV_ATTR_FETCHES_NUMERIC_TYPE 属性のいずれにも影響はありません。 日付と時刻の型を[PHP DateTime](http://php.net/manual/en/class.datetime.php)オブジェクトとして取得するには、接続また`PDO::SQLSRV_ATTR_FETCHES_DATETIME_TYPE`はステートメントの属性を**true** (既定では**false** ) に設定します。
 
 > [!NOTE]
-> この接続またはステートメント属性は、DateTime オブジェクトを出力パラメーターとして指定することはできませんので、日付と時刻型の定期的なフェッチにのみ適用されます。
+> この接続属性またはステートメント属性は、DateTime オブジェクトを出力パラメーターとして指定できないため、日付と時刻の型の通常のフェッチにのみ適用されます。
 
-## <a name="example---use-the-connection-attribute"></a>例 - 接続属性を使用して、
-次の例では、わかりやすくするためのエラー チェックを省略します。 この 1 つは、接続属性を設定する方法を示します。
+## <a name="example---use-the-connection-attribute"></a>例-接続属性を使用する
+次の例では、わかりやすくするためにエラーチェックを省略しています。 これは、接続属性を設定する方法を示しています。
 
 ```php
 <?php
@@ -58,8 +58,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-attribute"></a>例 - ステートメント属性を使用して、
-この例では、ステートメント属性を設定する方法を示します。
+## <a name="example---use-the-statement-attribute"></a>例-ステートメント属性を使用する
+次の例では、ステートメントの属性を設定する方法を示します。
 
 ```php
 <?php
@@ -80,8 +80,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---use-the-statement-option"></a>例 - ステートメント オプションを使用
-また、オプションとして、ステートメント属性を設定できます。
+## <a name="example---use-the-statement-option"></a>例-ステートメントオプションを使用する
+または、ステートメントの属性をオプションとして設定することもできます。
 
 ```php
 <?php
@@ -103,8 +103,8 @@ unset($conn);
 ?>
 ```
 
-## <a name="example---retrieve-datetime-types-as-strings"></a>例 - datetime 型を文字列として取得
-次の例では、(これは本当に必要な既定値があるためです)、その逆を実現する方法を示します。
+## <a name="example---retrieve-datetime-types-as-strings"></a>例-datetime 型を文字列として取得する
+次の例では、逆のを実現する方法を示しています (これは、既定では false であるため、実際には必要ありません)。
 
 ```php
 <?php

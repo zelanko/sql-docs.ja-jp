@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: bbb74a1d-9278-401f-9530-7b5f45aa79de
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b555568ae93936c1f8659b52ba6bb731e8398e0f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f5e9d6902733ea8a9cca91b4bd33adcb66708672
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781656"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956474"
 ---
 # <a name="international-features-of-the-jdbc-driver"></a>JDBC ドライバーの国際対応機能」を参照してください。
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -34,7 +33,7 @@ ms.locfileid: "66781656"
 ## <a name="handling-of-character-data"></a>文字データの処理  
  Java の文字データは、既定で Unicode として処理されます。Java **String** オブジェクトは Unicode 文字データを表します。 JDBC ドライバーにおいてこの規則の唯一の例外となるのは、ASCII ストリームの getter メソッドと setter メソッドです。暗黙の仮定で既知のコード ページの 1 つ (ASCII) によるバイト ストリームが使用されるため、これは特殊なケースです。  
   
- また、JDBC ドライバーには、 **sendStringParametersAsUnicode**接続文字列プロパティ。 このプロパティを使用して、文字データに対して準備されたパラメーターを Unicode ではなく ASCII またはマルチバイト文字セット (MBCS) で送信するように指定できます。 **sendStringParametersAsUnicode** 接続文字列プロパティについて詳しくは、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」をご覧ください。  
+ さらに、JDBC driver には、 **sendStringParametersAsUnicode**接続文字列プロパティが用意されています。 このプロパティを使用して、文字データに対して準備されたパラメーターを Unicode ではなく ASCII またはマルチバイト文字セット (MBCS) で送信するように指定できます。 **sendStringParametersAsUnicode** 接続文字列プロパティについて詳しくは、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」をご覧ください。  
   
 ### <a name="driver-incoming-conversions"></a>ドライバーの受信変換  
  サーバーから受信する Unicode テキスト データは、変換する必要はありません。 データは Unicode として直接渡されます。 サーバーから受信する Unicode 以外のデータは、データベースまたは列レベルでデータのコード ページから Unicode に変換されます。 JDBC ドライバーは、Java 仮想マシン (JVM) 変換ルーチンを使用してこのような変換を実行します。 変換は、あらゆる型の文字列および文字のストリームの getter メソッドで実行されます。  
@@ -47,7 +46,7 @@ ms.locfileid: "66781656"
  一方で、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスと [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの setString、setCharacterStream、setClob メソッドのような非 National Character の API メソッドでは、**sendStringParametersAsUnicode** プロパティが既定値である "true" に設定されているときにのみ、値がサーバーに Unicode で送信されます。  
   
 ## <a name="non-unicode-parameters"></a>Unicode 以外のパラメーター  
- パフォーマンスを最適化**CHAR**、 **VARCHAR**または**LONGVARCHAR** Unicode 以外のパラメーターの型、設定、 **sendStringParametersAsUnicode**接続文字列を"false"のプロパティと非 national character メソッドを使用します。  
+ Unicode 以外のパラメーターの**CHAR**、 **VARCHAR** 、または**longvarchar**型で最適なパフォーマンスを得るには、 **sendStringParametersAsUnicode**接続文字列プロパティを "false" に設定し、national character メソッドを使用します。  
   
 ## <a name="formatting-issues"></a>書式設定に関する問題  
  日付、時刻、および通貨の場合、ローカライズされたデータのすべての書式設定は、Locale オブジェクトや、**Date**、**Calendar**、**Number** データ型用のさまざまな書式設定メソッドを使用して、Java 言語レベルで実行されます。 JDBC ドライバーがロケールに依存するデータをローカライズされた書式で渡す必要があることはまれですが、このような場合は既定の JVM ロケールを使用して適切なフォーマッタが使用されます。  

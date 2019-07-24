@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: aff8fbc234efdb76af1a66fd14367865f918f1ea
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b6f9962be0fa138786af425ab24bf9608bf3264f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957240"
 ---
 # <a name="sql-data-discovery-and-classification"></a>SQL データの検出と分類
 
@@ -31,7 +30,7 @@ ms.locfileid: "66770075"
 
 ## <a name="requirements"></a>必要条件  
 
-このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスを設定する方法の詳細については、次を参照してください。 [JDBC ドライバーを使用して](../../jdbc/using-the-jdbc-driver.md)します。
+このサンプル アプリケーションを実行するには、クラスパスを設定して mssql-jdbc jar ファイルを含める必要があります。 クラスパスの設定方法の詳細については、「 [JDBC ドライバーの使用](../../jdbc/using-the-jdbc-driver.md)」を参照してください。
 
 ```java
 import java.sql.Connection;

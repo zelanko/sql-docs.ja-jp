@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d07944b8-7001-49b5-b3b3-0676f71e17cf
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1e6d06f40f87464e032563158ed7331bfd85b08b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 843cb16fab8b05ae72c502fecd171f9af2886779
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788572"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68213657"
 ---
 # <a name="updateasciistream-method-int-javaioinputstream-int"></a>updateAsciiStream (int, java.io.InputStream, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

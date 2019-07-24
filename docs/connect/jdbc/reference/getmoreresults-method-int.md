@@ -1,5 +1,5 @@
 ---
-title: getMoreResults (int) メソッド |Microsoft Docs
+title: getMoreResults (int) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6419e5a8-8b3a-4d5b-8226-95865c52c723
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad7363db0cb1de986273e59d698e2f1b00d50deb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 08760680774b2e760b66d9e210c4ef939872444e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779096"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981770"
 ---
 # <a name="getmoreresults-method-int"></a>getMoreResults (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -53,7 +52,7 @@ public final boolean getMoreResults(int mode)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMoreResults メソッドは、java.sql.Statement インターフェイスで、getMoreResults メソッドによって指定されます。  
+ この getMoreResults メソッドは、java. .sql. ステートメントインターフェイスの getMoreResults メソッドによって指定されます。  
   
  結果を取得する前に getMoreResults メソッドを呼び出した場合、このメソッドは引数 *mode* で指定されたとおりに動作し、次の結果に移動します。  
   

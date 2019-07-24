@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2910453562cf78c4b88140de15885d4ddca5fe3a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 5843deb0b1d598525efcc657b16fe0b610048a35
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776867"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983623"
 ---
 # <a name="getdiscardedserverpreparedstatementcount-method-sqlserverconnection"></a>getDiscardedServerPreparedStatementCount メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 準備された現在未解決の数を返すステートメント unprepare アクション。
+ 現在未処理の準備されたステートメント unprepare アクションの数を返します。
 
 ## <a name="syntax"></a>構文  
   
@@ -36,13 +35,13 @@ public int getDiscardedServerPreparedStatementCount()
 ```  
 
 ## <a name="return-value"></a>戻り値
- **Int**現在未解決の準備されたステートメントの数を格納しているアクションを解除します。
+ 現在未処理の準備されたステートメント unprepare アクションの数を含む**int**です。
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- このメソッドは、JDBC driver 6.4 から利用できるとは。
+ このメソッドは、JDBC driver バージョン6.4 以降で使用できます。
  
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

@@ -1,5 +1,5 @@
 ---
-title: Isscommandwithparameters::setparameterproperties (OLE DB) |Microsoft Docs
+title: 'ISSCommandWithParameters:: SetParameterProperties (OLE DB) |Microsoft Docs'
 description: ISSCommandWithParameters::SetParameterProperties (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - SetParameterProperties method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 1dd2184a859f3bb6c0b961ac8596cdbea48d2d25
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b9f5a3251b05453d01b2ef984c6a9ea7bde1c115
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783869"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015392"
 ---
 # <a name="isscommandwithparameterssetparameterproperties-ole-db"></a>ISSCommandWithParameters::SetParameterProperties (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -74,7 +73,7 @@ HRESULT SetParameterProperties(
   
  `};`  
   
- 以降では、データベース エンジンの機能強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)]isscommandwithparameters::setparameterproperties 期待どおりの結果のより正確な記述を取得できるようにします。 これらのより正確な結果の以前のバージョンの isscommandwithparameters::setparameterproperties によって返される値が異なる場合があります[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]します。 詳細については、次を参照してください。[メタデータ検出](../../oledb/features/metadata-discovery.md)します。  
+ で始まるデータベースエンジンの機能強化[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] isscommandwithparameters:: setparameterproperties を使用すると、予期される結果についてより正確な説明を取得できます。 これらのより正確な結果は、以前のバージョンの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で ISSCommandWithParameters:: setparameterproperties によって返される値とは異なる場合があります。 詳細については、「[メタデータの検出](../../oledb/features/metadata-discovery.md)」を参照してください。  
   
 |メンバー|[説明]|  
 |------------|-----------------|  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1d16672f-1515-4255-8b20-e7911c999f60
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fec14aa519dfcc5539005321f0110c25146ce6e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4c9fa67d11e07e52980c165745b806aaca042163
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796348"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977244"
 ---
 # <a name="issigned-method-sqlserverresultsetmetadata"></a>isSigned メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isSigned(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isSigned メソッドは、java.sql.ResultSetMetaData インターフェイスで isSigned メソッドによって指定されます。  
+ この isSigned メソッドは、java. ResultSetMetaData インターフェイスの isSigned メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

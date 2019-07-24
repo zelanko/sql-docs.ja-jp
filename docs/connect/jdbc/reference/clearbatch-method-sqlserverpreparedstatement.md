@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6e5cda26-e24d-4637-8dfd-8135ba126e3b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ae1b6ebe8bd49b686a8b27b603c52fd68f333043
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 12ac8ff4ab9e066d9d0c24b95290e0d86674eec0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66803638"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955824"
 ---
 # <a name="clearbatch-method-sqlserverpreparedstatement"></a>clearBatch メソッド (SQLServerPreparedStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public final void clearBatch()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この clearBatch メソッドは、java.sql.Statement インターフェイスの clearBatch メソッドによって指定されます。  
+ この clearBatch メソッドは、java. .sql. ステートメントインターフェイスの clearBatch メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerPreparedStatement のメンバー](../../../connect/jdbc/reference/sqlserverpreparedstatement-members.md)   

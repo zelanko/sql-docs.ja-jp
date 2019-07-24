@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: b66c301d-3d20-45b8-a112-225d8f01c0bd
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01f611e0c11d6a2f3671c8911d41b4c0cfeef83c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 11026bcb372759f62aa0b0d5f406a6721b65c135
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801474"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993668"
 ---
 # <a name="default-php-data-types"></a>既定の PHP データ型
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -46,7 +45,7 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 |FLOAT|float|8 ビット文字<sup>1</sup>|  
 |geography|Stream|バイナリ<sup>3</sup>|  
 |geometry|Stream|バイナリ<sup>3</sup>|  
-|イメージ<sup>5</sup>|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
+|画像<sup>5</sup>|Stream<sup>2</sup>|バイナリ<sup>3</sup>|  
 |INT|Integer|8 ビット文字<sup>1</sup>|  
 |money|String|8 ビット文字<sup>1</sup>|  
 |NCHAR|String|8 ビット文字<sup>1</sup>|  
@@ -84,13 +83,13 @@ PDO_SQLSRV ドライバーを使用してデータが返される場合、デー
 
 6. これは、nvarchar(max) 型にマップされる従来の型です。
 
-7.  sql_variant は双方向または出力パラメーターではサポートされていません。
+7.  sql_variant は、双方向パラメーターまたは出力パラメーターではサポートされていません。
 
 8.  これは、varchar(max) 型にマップされる従来の型です。  
   
 9.  UNIQUEIDENTIFIER は、次の正規表現によって表される GUID です。  
   
-    [0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-f]{4}-[0-9a-fA-f]{4}-[0-9a-fA-F]{12}  
+    [0-9a-z]-[0-9a-z{4}]-[0-9a-z{4}]-[0-9a-z{4}-f]-[0-9a-z-f] を右に入力します。 {8}{12}  
  
  
 ## <a name="other-new-sql-server-2008-data-types-and-features"></a>SQL Server 2008 でのその他の新しいデータ型と機能  

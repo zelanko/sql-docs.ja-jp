@@ -1,5 +1,5 @@
 ---
-title: '方法: データを Stream として送信 |Microsoft Docs'
+title: '方法: データをストリームとして送信する |Microsoft Docs'
 ms.custom: ''
 ms.date: 02/28/2019
 ms.prod: sql
@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: ab6b95d6-b6e6-4bd7-a18c-50f2918f7532
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 73b30ff0ed4f4173f13fff518b6578e3d041f3b1
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d524e7c7f00b08ce636f8a3b7b945f3e8b349af0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780733"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936406"
 ---
 # <a name="how-to-send-data-as-a-stream"></a>方法: ストリームとしてデータを送信する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66780733"
   
 3 番目の例では、PDO_SQLSRV ドライバーを使用して、サーバーにストリーム データを送信する方法を示します。  
   
-## <a name="example-sending-stream-data-at-execution"></a>例: 実行時の Stream データの送信
+## <a name="example-sending-stream-data-at-execution"></a>例: 実行時にストリームデータを送信する
 次の例では、AdventureWorks データベースの *Production.ProductReview* テーブルに行を挿入します。 顧客のコメント ( *$comments*) は、PHP の [fopen](https://php.net/manual/en/function.fopen.php) 関数でストリームとして開かれ、クエリの実行時にサーバーにストリームされます。  
   
 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 すべての出力がコンソールに書き込まれます。  
@@ -80,7 +79,7 @@ sqlsrv_close( $conn);
 ?>  
 ```  
   
-## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>例: を使用して Stream データ sqlsrv_send_stream_data を送信します。
+## <a name="example-sending-stream-data-using-sqlsrvsendstreamdata"></a>例: sqlsrv_send_stream_data を使用してストリームデータを送信する
 次の例は前の例と同じですが、実行時にすべてのストリーム データを送信する既定の動作は無効になっています。 この例では、 [sqlsrv_send_stream_data](../../connect/php/sqlsrv-send-stream-data.md) を使用して、ストリーム データをサーバーに送信します。 最大 8 キロバイト (8 KB) のデータが、**sqlsrv_send_stream_data** の呼び出しごとに送信されます。 スクリプトでは、 **sqlsrv_send_stream_data** によって行われた呼び出しの数をカウントし、カウントをコンソールに表示します。  
   
 この例では、ローカル コンピューターに SQL Server および [AdventureWorks](https://github.com/Microsoft/sql-server-samples/tree/master/samples/databases/adventure-works) データベースがインストールされていることを前提にしています。 すべての出力がコンソールに書き込まれます。  
@@ -144,7 +143,7 @@ sqlsrv_close( $conn);
   
 このトピックの例では文字データをサーバーに送信し、任意の形式のデータをストリームとして送信できます。 たとえば、このトピックで紹介されている手法を使用し、ストリームとしてバイナリ形式で画像を送信することもできます。  
   
-## <a name="example-sending-an-image-as-a-stream"></a>例: Stream としてイメージを送信します。 
+## <a name="example-sending-an-image-as-a-stream"></a>例: ストリームとしてイメージを送信する 
   
 ```  
 <?php  

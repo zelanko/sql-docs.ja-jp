@@ -6,14 +6,14 @@ ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 description: この記事では、ブランド パッケージを利用してビジネスのブランドを設定することで Web ポータルの外観を変更する方法について説明します。 CSS (カスケーディング スタイル シート) に詳しくなくても作成できるようにブランド パッケージは設計されています。
 ms.topic: conceptual
-author: markingmyname
-ms.author: maghan
-ms.openlocfilehash: d7117aa94aa2b91573f9cd3b6443bed2d212bd00
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+author: maggiesMSFT
+ms.author: maggies
+ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "59506509"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68221725"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 

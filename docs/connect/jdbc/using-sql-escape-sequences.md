@@ -1,5 +1,5 @@
 ---
-title: SQL エスケープ シーケンスの使用 |Microsoft Docs
+title: SQL エスケープシーケンスの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d029bf6b0a1e50bec104879a64d9411774ffeda5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68005937"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL エスケープ シーケンスの使用
 
@@ -112,7 +111,7 @@ JDBC ドライバーでは、ストアド プロシージャ呼び出しにつ�
 
 `procedure-name` にはストアド プロシージャの名前を指定し、`parameter` にはストアド プロシージャのパラメーターを指定します。  
   
-使用しての詳細については、`call`エスケープ シーケンスがストアド プロシージャでは、「[ストアド プロシージャを使用してステートメント](../../connect/jdbc/using-statements-with-stored-procedures.md)します。  
+ストアドプロシージャでのエスケープシーケンス`call`の使用の詳細については、「[ストアドプロシージャでのステートメントの使用](../../connect/jdbc/using-statements-with-stored-procedures.md)」を参照してください。  
 
 ## <a name="outer-joins"></a>外部結合
 

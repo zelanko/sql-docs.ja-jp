@@ -1,5 +1,5 @@
 ---
-title: SQLServerResource のメンバー |Microsoft Docs
+title: SQLServerResource Members |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 34b4b2e7-ec00-42aa-82ec-9cb01b538998
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 427bee6c3a70238dcfc1abede9d6afb0b86aa088
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d673cf36e3b9ed4d3012e49c620aed8c8e34eb94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801541"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970635"
 ---
 # <a name="sqlserverresource-members"></a>SQLServerResource のメンバー
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -27,7 +26,7 @@ ms.locfileid: "66801541"
   
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md) クラスの新しいインスタンスを初期化します。 このコンス トラクターは内部でのみ使用されます。|  
+|[SQLServerResource ()](../../../connect/jdbc/reference/sqlserverresource-constructor.md)|[SQLServerResource](../../../connect/jdbc/reference/sqlserverresource-class.md) クラスの新しいインスタンスを初期化します。 このコンストラクターは内部でのみ使用されます。|  
   
 ## <a name="fields"></a>フィールド  
  [なし] :  

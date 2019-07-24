@@ -1,123 +1,123 @@
 ---
 title: クラスターの状態を表示する
 titleSuffix: SQL Server big data clusters
-description: この記事では、Azure Data Studio、ノートブック、および mssqlctl コマンドを使用してビッグ データ クラスターの状態を表示する方法について説明します。
+description: この記事では、Azure Data Studio、notebook、および azdata コマンドを使用して、ビッグデータクラスターの状態を表示する方法について説明します。
 author: yualan
 ms.author: alayu
 ms.reviewer: mikeray
-ms.date: 06/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a8d04ab43adac77a534a82626cc4a018c24b68f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6dca94b8bd7547222394d7809cb003b9e936982
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957678"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419290"
 ---
-# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>ビッグ データ クラスターの状態を表示する方法
+# <a name="how-to-view-the-status-of-a-big-data-cluster"></a>ビッグデータクラスターの状態を表示する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、サービス エンドポイントにアクセスして、SQL Server のビッグ データ クラスター (プレビュー) の状態を表示する方法について説明します。 両方の Azure Data Studio を使用して**mssqlctl**、この記事では、両方の方法を説明しています。
+この記事では、サービスエンドポイントにアクセスして SQL Server ビッグデータクラスター (プレビュー) の状態を表示する方法について説明します。 Azure Data Studio と**azdata**の両方を使用できます。この記事では、両方の手法について説明します。
 
-## <a id="datastudio"></a> Azure Data Studio を使用して、
+## <a id="datastudio"></a>Azure Data Studio を使用する
 
-最新のダウンロード後に**insider ビルド**の[Azure Data Studio](https://aka.ms/azdata-insiders)ビッグ データの状態がクラスターで SQL Server のビッグ データ クラスター ダッシュ ボード、サービス エンドポイントを表示することができます。 以下の機能の一部がのみ最初の Azure Data Studio insider ビルドで使用できるに注意してください。
+[Azure Data Studio](https://aka.ms/azdata-insiders)の最新の**insider ビルド**をダウンロードした後、SQL Server ビッグデータクラスターダッシュボードを使用して、サービスエンドポイントとビッグデータクラスターの状態を表示できます。 以下の機能の一部は、Azure Data Studio の insider ビルドでのみ使用できます。
 
-1. 最初に、Azure Data Studio で、ビッグ データ クラスターへの接続を作成します。 詳細については、次を参照してください。 [Azure データ Studio を使用した SQL Server クラスターのビッグ データへの接続](connect-to-big-data-cluster.md)します。
+1. まず、Azure Data Studio でビッグデータクラスターへの接続を作成します。 詳細については、「Azure Data Studio を使用した[SQL Server ビッグデータクラスターへの接続](connect-to-big-data-cluster.md)」を参照してください。
 
-1. ビッグ データ クラスターのエンドポイントを右クリックし、をクリックして**管理**します。
+1. ビッグデータクラスターエンドポイントを右クリックし、 **[管理]** をクリックします。
 
-   ![右クリックを管理します。](media/view-cluster-status/right-click-manage.png)
+   ![[管理] を右クリック](media/view-cluster-status/right-click-manage.png)
 
-1. 選択、 **SQL Server のビッグ データ クラスター**ビッグ データ クラスター ダッシュ ボードにアクセスするには、タブ。
+1. ビッグデータクラスターのダッシュボードにアクセスするには、 **[ビッグデータクラスターの SQL Server]** タブを選択します。
 
-   ![ビッグ データ クラスター ダッシュ ボード](media/view-cluster-status/bdc-dashboard.png)
+   ![ビッグデータクラスターダッシュボード](media/view-cluster-status/bdc-dashboard.png)
 
-### <a name="service-endpoints"></a>サービス エンドポイント
+### <a name="service-endpoints"></a>サービスエンドポイント
 
-ビッグ データ クラスター内のさまざまなサービスを簡単にアクセスできるようにする重要です。 ビッグ データ クラスター ダッシュ ボードを表示し、サービス エンドポイントをコピーできるようにするサービス エンドポイントのテーブルを提供します。
+ビッグデータクラスター内のさまざまなサービスに簡単にアクセスできるようにすることが重要です。 ビッグデータクラスターダッシュボードには、サービスエンドポイントを表示してコピーできるサービスエンドポイントテーブルが用意されています。
 
-![サービス エンドポイント](media/view-cluster-status/service-endpoints.png)
+![サービスエンドポイント](media/view-cluster-status/service-endpoints.png)
 
-最初のいくつかの行では、次のサービスを公開します。
+最初のいくつかの行では、次のサービスが公開されています。
 
-- アプリケーション プロキシ
-- Cluster Management Service
+- アプリケーションプロキシ
+- クラスタ管理サービス
 - HDFS と Spark
-- プロキシの管理
+- 管理プロキシ
 
-これらのサービスには、コピーおよびそれらのサービスに接続するため、エンドポイントが必要なときの貼り付け可能なエンドポイントが一覧表示します。 など、エンドポイントの右側にコピー アイコンをクリックして、そのエンドポイントを要求するテキスト ウィンドウに貼り付けます。 Cluster Management Service のエンドポイントが実行に必要な[クラスター状態 notebook](#notebook)します。
+これらのサービスには、これらのサービスに接続するためのエンドポイントが必要な場合に、コピーして貼り付けることができるエンドポイントが一覧表示されます。 たとえば、エンドポイントの右側にあるコピーアイコンをクリックして、そのエンドポイントを要求しているテキストウィンドウに貼り付けることができます。 クラスターの[状態 notebook](#notebook)を実行するには、クラスター管理サービスエンドポイントが必要です。
 
 ### <a name="dashboards"></a>ダッシュボード
 
-サービス エンドポイントのテーブルには、監視するためのいくつかのダッシュ ボードも公開します。
+サービスエンドポイントテーブルでは、監視用の複数のダッシュボードも公開されます。
 
 - メトリック (Grafana)
 - ログ (Kibana)
 - Spark ジョブの監視
-- Spark のリソースの管理
+- Spark リソース管理
 
-これらのリンクを直接クリックできます。 サービスに接続する前に、ユーザー名とパスワードを指定するには、2 回求められます。
+これらのリンクを直接クリックできます。 サービスに接続する前に、ユーザー名とパスワードを入力するように求められます。
 
-### <a id="notebook"></a> クラスターの状態のノートブック
+### <a id="notebook"></a>クラスターの状態の notebook
 
-1. クラスターの状態の notebook を起動することで、ビッグ データ クラスターのクラスターの状態を表示することもできます。 Notebook を起動する をクリックして、**クラスター状態**タスク。
+1. クラスターの状態の notebook を起動して、ビッグデータクラスターのクラスターの状態を表示することもできます。 Notebook を起動するには、 **[クラスターの状態]** タスクをクリックします。
 
-    ![起動](media/view-cluster-status/cluster-status-launch.png)
+    ![開い](media/view-cluster-status/cluster-status-launch.png)
 
-2. 開始する前に、次のものを必要となります。
+2. 開始する前に、次の項目が必要です。
 
-    - ビッグ データ クラスター名
-    - コント ローラーのユーザー名
-    - コント ローラーのパスワード
-    - コント ローラー エンドポイント
+    - ビッグデータクラスター名
+    - コントローラーのユーザー名
+    - コントローラーパスワード
+    - コントローラーエンドポイント
 
-    既定のビッグ データ クラスター名は**mssql クラスター**の展開時にカスタマイズした場合を除き、します。 サービス エンドポイントの表に、ビッグ データ クラスター ダッシュ ボードからエンドポイントをコント ローラーが表示されます。 エンドポイントがになっている**Cluster Management Service**します。 資格情報がわからない場合は、クラスターをデプロイした管理者に問い合わせてください。
+    既定のビッグデータクラスター名は、展開時にカスタマイズしない限り、 **mssql クラスター**になります。 コントローラーエンドポイントは、サービスエンドポイントテーブルのビッグデータクラスターダッシュボードから見つけることができます。 エンドポイントが**クラスター管理サービス**として一覧表示されます。 資格情報がわからない場合は、クラスターをデプロイした管理者に問い合わせてください。
 
-3. クリックして**セルの実行**上部のツールバー。
+3. 上部のツールバーで **[セルの実行]** をクリックします。
 
-4. 資格情報のプロンプトに従います。 キーを押して ENTER キーを押してした後は、ビッグ データ クラスター名、コント ローラーのユーザー名およびコント ローラーのパスワードの各資格情報を入力します。
+4. プロンプトに従って資格情報を確認します。 ビッグデータクラスター名、コントローラーのユーザー名、およびコントローラーパスワードの各資格情報を入力したら、enter キーを押します。
 
     > [!Note]
-    > 場合は、ビッグ データと構成ファイルのセットアップがない、コント ローラー エンドポイントになります。 入力または貼り付けし、続行するには ENTER キーを押します。
+    > ビッグデータが設定された構成ファイルがない場合は、コントローラーエンドポイントの指定を求められます。 入力するか貼り付け、enter キーを押して続行します。
 
-5. 正常に接続されている場合、notebook の残りの部分には、ビッグ データ クラスターの各コンポーネントの出力が表示されます。 特定のコード セルを再実行する場合は、コード セルをポイントし、をクリックして、**実行**アイコン。
+5. 正常に接続している場合、ノートブックの残りの部分には、ビッグデータクラスターの各コンポーネントの出力が表示されます。 特定のコードセルを再実行する場合は、コードセルの上にマウスポインターを移動し、 **[実行]** アイコンをクリックします。
 
-## <a name="use-mssqlctl"></a>mssqlctl を使用する
+## <a name="use-azdata"></a>Azdata を使用する
 
-使用することも[mssqlctl](deploy-install-mssqlctl.md)両方のエンドポイントおよびクラスターの状態を表示するコマンド。
+[Azdata](deploy-install-azdata.md)コマンドを使用して、エンドポイントとクラスターの状態の両方を表示することもできます。
 
-### <a name="service-endpoints"></a>サービス エンドポイント
+### <a name="service-endpoints"></a>サービスエンドポイント
 
-次の手順を使用してビッグ データ クラスターの外部エンドポイントの IP アドレスを取得することができます。
+ビッグデータクラスターの外部エンドポイントの IP アドレスを取得するには、次の手順に従ってください。
 
-1. 次の外部 IP の出力を調べることで、コント ローラー エンドポイントの IP アドレスを見つける**kubectl**コマンド。
+1. 次の**kubectl**コマンドの外部 ip 出力を参照して、コントローラーエンドポイントの ip アドレスを見つけます。
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
    > [!TIP]
-   > デプロイ時に既定の名前を変更しなかった場合は、使用`-n mssql-cluster`前のコマンド。 **mssql クラスター**はビッグ データ クラスターの既定の名前です。
+   > デプロイ中に既定の名前を変更しなかった場合`-n mssql-cluster`は、前のコマンドでを使用します。 " **mssql クラスター** " は、ビッグデータクラスターの既定の名前です。
 
-1. 使用して、ビッグ データ クラスターにログイン[mssqlctl ログイン](reference-mssqlctl.md)します。 設定、 **-コント ローラー エンドポイント**コント ローラーのエンドポイントの外部 IP アドレスへのパラメーター。
-
-   ```bash
-   mssqlctl login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
-   ```
-
-   デプロイ時にユーザー名とコント ローラー (CONTROLLER_USERNAME および CONTROLLER_PASSWORD) 用に構成したパスワードを指定します。
-
-1. 実行[mssqlctl bdc エンドポイント リスト](reference-mssqlctl-bdc-endpoint.md)の各エンドポイントと対応する IP アドレスとポート値の説明の一覧を取得します。 
+1. [Azdata ログイン](reference-azdata.md)を使用してビッグデータクラスターにログインします。 **--Controller-endpoint**パラメーターをコントローラーエンドポイントの外部 IP アドレスに設定します。
 
    ```bash
-   mssqlctl bdc endpoint list -o table
+   azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
    ```
 
-   このコマンドからの出力例を次に示します。
+   デプロイ中にコントローラー (CONTROLLER_USERNAME と CONTROLLER_PASSWORD) に対して構成したユーザー名とパスワードを指定します。
+
+1. [Azdata bdc エンドポイントリスト](reference-azdata-bdc-endpoint.md)を実行して、各エンドポイントの説明とそれに対応する IP アドレスとポート値を一覧表示します。 
+
+   ```bash
+   azdata bdc endpoint list -o table
+   ```
+
+   次の一覧に、このコマンドからの出力例を示します。
 
    ```output
    Description                                             Endpoint                                                   Ip              Name               Port    Protocol
@@ -137,14 +137,14 @@ ms.locfileid: "67957678"
 
 ### <a name="view-cluster-status"></a>クラスターの状態を表示する
 
-クラスターの状態を表示することができます、 [mssqlctl bdc ステータス表示](reference-mssqlctl-bdc-status.md)コマンド。
+[Azdata bdc status show](reference-azdata-bdc-status.md)コマンドを使用して、クラスターの状態を表示できます。
 
 ```bash
-mssqlctl bdc status show -o table
+azdata bdc status show -o table
 ```
 
 > [!TIP]
-> 状態のコマンドを実行する必要があります最初でログインする、 **mssqlctl ログイン**エンドポイントの前のセクションで示したコマンド。
+> Status コマンドを実行するには、最初に、前の「エンドポイント」セクションで示した**azdata login**コマンドを使用してログインする必要があります。
 
 このコマンドからの出力例を次に示します。
 
@@ -161,18 +161,18 @@ Storage  default        Ready
 
 ### <a name="view-pool-status"></a>プールの状態の表示
 
-使用して、クラスター内のプールの状態を表示することができます、 [mssqlctl bdc プール状態表示](reference-mssqlctl-bdc-pool-status.md)コマンド。 このコマンドを使用するには、プールの種類を指定、`--kind`パラメーター。 プールの種類は次のとおりです。
+[Azdata bdc pool status show](reference-azdata-bdc-pool-status.md)コマンドを使用して、クラスター内のプールの状態を表示できます。 このコマンドを使用するには、 `--kind`パラメーターを使用してプールの種類を指定します。 プールの種類は次のとおりです。
 
-- コンピューティング
+- 判定
 - data
 - master
-- Spark
-- ストレージ
+- 浮かぶ
+- ・
 
 たとえば、次のコマンドは、記憶域プールのプールの状態を表示します。
 
 ```bash
-mssqlctl bdc pool status show --kind storage
+azdata bdc pool status show --kind storage
 ```
 
 次の出力のようなテキストが表示されます。
@@ -198,20 +198,20 @@ mssqlctl bdc pool status show --kind storage
 ]
 ```
 
-`logsUrl`ログ情報を kibana ダッシュ ボードへのリンクの値します。
+値`logsUrl`は、ログ情報を含む kibana ダッシュボードにリンクされます。
 
-![Kibana ダッシュ ボード](./media/view-cluster-status/kibana-dashboard.png)
+![Kibana ダッシュボード](./media/view-cluster-status/kibana-dashboard.png)
 
-`nodeMetricsUrl`と`sqlMetricsUrl`値は、ノードの正常性と SQL のメトリックを監視するための grafana ダッシュ ボードにリンクします。
+`nodeMetricsUrl` と`sqlMetricsUrl`の値は、ノードの正常性と SQL のメトリックを監視するための grafana ダッシュボードにリンクします。
 
-![Grafana ダッシュ ボード](./media/view-cluster-status/grafana-dashboard.png)
+![Grafana ダッシュボード](./media/view-cluster-status/grafana-dashboard.png)
 
 ![SQL](./media/view-cluster-status/grafana-sql-status.png)
 
-### <a name="view-controller-status"></a>ビュー コント ローラーの状態
+### <a name="view-controller-status"></a>コントローラーの状態の表示
 
-コント ローラーの状態を表示することができます、 [mssqlctl bdc コントロールの状態表示](reference-mssqlctl-bdc-control-status.md)コマンド。 ビッグ データ クラスターのコント ローラーのノードに関連する監視ダッシュ ボードへのようなリンクを提供します。
+[Azdata bdc control status show](reference-azdata-bdc-control-status.md)コマンドを使用して、コントローラーの状態を表示できます。 ビッグデータクラスターのコントローラーノードに関連する監視ダッシュボードへのリンクも表示されます。
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server のビッグ データ クラスターは](big-data-cluster-overview.md)します。
+ビッグデータクラスターの詳細については、「 [SQL Server ビッグデータクラスターとは](big-data-cluster-overview.md)」を参照してください。

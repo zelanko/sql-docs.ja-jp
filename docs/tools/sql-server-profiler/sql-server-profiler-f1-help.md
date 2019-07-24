@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler ダイアログ ボックス |Microsoft Docs
+title: SQL Server プロファイラーダイアログボックス |Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -41,17 +41,16 @@ helpviewer_keywords:
 ms.assetid: e57b9160-4b78-4353-abb2-bfdbdf523d7a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e042e9d81d389a323e092b2f370b03cb66c2921c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 32cc19df636f6e0fa98dca0ab45dd8142d9db54f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729771"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059699"
 ---
 # <a name="sql-server-profiler-dialog-boxes"></a>SQL Server Profiler ダイアログ ボックス
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、サーバーから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントをキャプチャするツールです。 キャプチャされたイベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。 コマンドとのダイアログ ボックスで使用可能な設定を次に[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]します。  
+Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、サーバーから [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] イベントをキャプチャするツールです。 キャプチャされたイベントはトレース ファイルに保存され、後で分析したり、問題の発生したステップを厳密に再現して診断する際に利用できます。 の[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]ダイアログボックスで使用できるコマンドと設定を次に示します。  
 ## <a name="trace-properties"></a>トレースのプロパティ
 ### <a name="general-tab"></a>[全般] タブ
 **[トレースのプロパティ]** ダイアログ ボックスの **[全般]** タブを使用すると、トレースのプロパティを表示したり指定したりできます。  
@@ -87,7 +86,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、�
 |**[列の構成]**|トレースとグループ化の結果で、1 つ以上の列を使用して列の順序を変更します。  
 
 ## <a name="trace-template-properties"></a>トレース テンプレートのプロパティ 
-### <a name="new-general-tab"></a>新しい ([全般] タブ)
+### <a name="new-general-tab"></a>新規 ([全般] タブ)
 **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで次のオプションを使用すると、新しいトレース テンプレートを作成できます。 このダイアログ ボックスにアクセスするには、[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の **[ファイル]** メニューで **[テンプレート]** をポイントし、 **[新規]** をクリックします。
 
 |アイテム|[説明]
@@ -97,7 +96,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、�
 |**[既存のテンプレートを基に新しいテンプレートを作成する]**|このテンプレートのベースとして一覧のテンプレートを使用します。 選択されているすべてのイベント、データ列、およびフィルターは、最初は既存のテンプレートに一致していますが、後から必要に応じて変更できます。  
 |**[選択したサーバーの種類に対する既定のテンプレートとして使用する]**|このサーバーの種類に対して作成されたトレースには、既定でこのテンプレートを使用します。  
 
-### <a name="edit-general-tab"></a>編集 ([全般] タブ)
+### <a name="edit-general-tab"></a>[編集] ([全般] タブ)
  **[トレース テンプレートのプロパティ]** ダイアログ ボックスの **[全般]** タブで以下のオプションを使用すると、既存のトレース テンプレートを表示または編集できます。 このダイアログ ボックスにアクセスする、 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] **ファイル**メニューで、**テンプレート**、 をクリックし、**テンプレートの編集**。  
 
 |アイテム|[説明]
@@ -171,7 +170,7 @@ Microsoft [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] は、�
 2.  [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] トレース ファイルと相関させる対象カウンターをオンにします。  
 
 パフォーマンス オブジェクトに対してすべてのカウンターを選択する場合は、パフォーマンス オブジェクトの横にあるボックスをオンにします。 コンピューターを示している最上位ノードをオンにすると、パフォーマンス ログ ファイル内のすべてのパフォーマンス オブジェクトおよびカウンターが選択されます。 
-## <a name="toolsoptions-general-options-page"></a>[ツール] メニュー ([全般オプション] ページ)
+## <a name="toolsoptions-general-options-page"></a>[ツール]/[オプション] ([全般オプション] ページ)
 **[全般オプション]** ダイアログ ボックスを使用すると、以下のオプションを確認または指定できます。  
 ### <a name="display-options"></a>表示オプション  
 

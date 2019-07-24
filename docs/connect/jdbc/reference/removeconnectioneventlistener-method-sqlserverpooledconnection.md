@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 46902e89-f512-40af-a2d9-a896f03d1200
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a0714a5a0067aff66407cd340ed147b0553a3368
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b9d2980b86704efe7e611878d373e0dd9b5cb7fa
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765526"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975749"
 ---
 # <a name="removeconnectioneventlistener-method-sqlserverpooledconnection"></a>removeConnectionEventListener メソッド (SQLServerPooledConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
