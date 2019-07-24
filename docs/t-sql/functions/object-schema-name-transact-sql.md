@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 5ba90bb9-d045-4164-963e-e9e96c0b1e8b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 7f46e00be95d751629325a6b7c54160bf00e44be
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 70556dd6365c6c3b204456db2877fdbc61e53d44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65948963"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914751"
 ---
 # <a name="objectschemaname-transact-sql"></a>OBJECT_SCHEMA_NAME (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -84,7 +83,7 @@ FROM master.sys.objects;
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-returning-the-object-schema-name-and-object-name"></a>A.  オブジェクト スキーマ名とオブジェクト名を取得する  
+### <a name="a-returning-the-object-schema-name-and-object-name"></a>A. オブジェクト スキーマ名とオブジェクト名を取得する  
  この例では、アドホック ステートメントでも準備されたステートメントでもない、キャッシュされたすべてのクエリ プランについて、オブジェクト スキーマ名、オブジェクト名、SQL テキストを返します。  
   
 ```sql
