@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6076d800c84b25d587eb73120a0e675ee1ae6ee0
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d38f87d8aab3db18f7c4306c73769219f080a1e1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801630"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974325"
 ---
 # <a name="setdisablestatementpooling-method-sqlserverdatasource"></a>setDisableStatementPooling メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  値を設定、 **disableStatementPooling**接続プロパティです。 False の場合は、プーリング statementPoolingCacheSize 値 > 0 の結合で使用するステートメントを使用できます。  
+  **DisableStatementPooling** connection プロパティの値を設定します。 False の場合、statementPoolingCacheSize 値 > 0 との結合でステートメントプールを使用できます。  
 
 ## <a name="syntax"></a>構文  
   
@@ -32,13 +31,13 @@ public void setDisableStatementPooling(boolean disableStatementPooling);
 #### <a name="parameters"></a>パラメーター  
  *disableStatementPooling*  
   
- 新しい値、 **disableStatementPooling**接続プロパティです。  
+ **DisableStatementPooling** connection プロパティの新しい値です。  
 
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- このメソッドは、JDBC driver 6.4 から利用できるとは。
+ このメソッドは、JDBC driver バージョン6.4 以降で使用できます。
  
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

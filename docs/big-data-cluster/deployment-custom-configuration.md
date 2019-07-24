@@ -1,40 +1,40 @@
 ---
-title: 展開を構成します。
+title: デプロイの構成
 titleSuffix: SQL Server big data clusters
-description: 構成ファイルでビッグ データ クラスターのデプロイをカスタマイズする方法について説明します。
+description: 構成ファイルを使用してビッグデータクラスターの展開をカスタマイズする方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccd7b0955cbeaa22f10a2b81515d7afd892e135e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d7559ecf9c7b17ca21c088ed531a347f88e89ee2
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958444"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419440"
 ---
-# <a name="configure-deployment-settings-for-big-data-clusters"></a>ビッグ データ クラスターのデプロイ設定を構成します。
+# <a name="configure-deployment-settings-for-big-data-clusters"></a>ビッグデータクラスターの展開設定を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-クラスター展開の構成ファイルをカスタマイズするには、VSCode など、任意の JSON 形式エディターを使用できます。 これらの編集自動化のため、スクリプトを使用して、 **mssqlctl bdc 構成セクション**コマンド。 この記事では、展開構成ファイルを変更することでビッグ データ クラスターのデプロイを構成する方法について説明します。 これは、さまざまなシナリオの構成を変更する方法の例を示します。 展開構成ファイルを使用する方法の詳細については、次を参照してください。、[デプロイ ガイダンス](deployment-guidance.md#configfile)します。
+クラスターの配置構成ファイルをカスタマイズするには、VSCode などの任意の JSON 形式エディターを使用できます。 自動化のためにこれらの編集をスクリプト化するには、 **azdata bdc config**コマンドを使用します。 この記事では、展開構成ファイルを変更してビッグデータクラスターの展開を構成する方法について説明します。 さまざまなシナリオの構成を変更する方法の例を示します。 配置での構成ファイルの使用方法の詳細については、「[展開のガイダンス](deployment-guidance.md#configfile)」を参照してください。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [インストール mssqlctl](deploy-install-mssqlctl.md)します。
+- [Azdata をインストール](deploy-install-azdata.md)します。
 
-- このセクションの例のそれぞれは、標準の構成ファイルの 1 つのコピーを作成したと仮定します。 詳細については、次を参照してください。[カスタム構成ファイルを作成](deployment-guidance.md#customconfig)です。 たとえば、次のコマンドはというディレクトリを作成します。`custom`既定値に基づく JSON の展開構成ファイルを格納している**aks dev/test**構成。
+- このセクションの各例では、標準構成のいずれかのコピーが作成されていることを前提としています。 詳細については、「[カスタム構成を作成する](deployment-guidance.md#customconfig)」を参照してください。 たとえば、次のコマンドは、 `custom`既定の**aks**構成を基にしたという名前のディレクトリを作成します。このディレクトリには、**クラスター**の json と**control. json**が含まれています。
 
    ```bash
-   mssqlctl bdc config init --source aks-dev-test --target custom
+   azdata bdc config init --source aks-dev-test --target custom
    ```
 
-## <a id="clustername"></a> クラスター名の変更
+## <a id="clustername"></a>クラスター名の変更
 
-クラスター名は、ビッグ データ クラスターのデプロイで作成される Kubernetes 名前空間名の両方です。 これは、展開構成ファイルの次の部分で指定されます。
+クラスター名は、ビッグデータクラスターの名前と、デプロイ時に作成される Kubernetes 名前空間の両方です。 これは、**クラスターの json**展開構成ファイルの次の部分で指定されています。
 
 ```json
 "metadata": {
@@ -43,18 +43,18 @@ ms.locfileid: "67958444"
 },
 ```
 
-次のコマンドにキー/値ペアの送信、 **- json 値**ビッグ データ クラスター名を変更するパラメーター**テスト クラスター**:
+次のコマンドは、 **--json-values**パラメーターにキーと値のペアを送信して、ビッグデータクラスター名を**テストクラスター**に変更します。
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-cluster"
+azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
 ```
 
 > [!IMPORTANT]
-> ビッグ データ クラスターの名前は小文字英数字文字、空白のみである必要があります。 すべての Kubernetes ・ アーティファクト (コンテナー、ポッド、ステートフルのセット、サービスなど)、クラスターのクラスターと同じ名前を持つ名前空間に作成されます名を指定します。
+> ビッグデータクラスターの名前は、アルファベットの小文字のみで、スペースは使用できません。 クラスターのすべての Kubernetes アーティファクト (コンテナー、ポッド、ステートフル sets、services) は、指定したクラスター名と同じ名前の名前空間に作成されます。
 
-## <a id="ports"></a> エンドポイントのポートを更新します。
+## <a id="ports"></a>エンドポイントポートを更新する
 
-エンドポイントは、コントロール プレーンは、個々 のプールの場合と同様に定義されます。 構成ファイルの次の部分は、コントロール プレーンのエンドポイントの定義を示しています。
+エンドポイントは、コントローラーに対して定義されてい**ます。** また、ゲートウェイの場合は、**クラスター**の対応するセクションにある SQL Server マスターインスタンスです。 **コントロールの json**構成ファイルの次の部分は、コントローラーのエンドポイント定義を示しています。
 
 ```json
 "endpoints": [
@@ -71,92 +71,133 @@ mssqlctl bdc config section set --config-profile custom -j "metadata.name=test-c
 ]
 ```
 
-次の例では、インライン JSON を使用して、用のポートを変更する、**コント ローラー**エンドポイント。
+次の例では、インライン JSON を使用して、**コントローラー**エンドポイントのポートを変更します。
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.endpoints[?(@.name==""Controller"")].port=30000"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.endpoints[?(@.name==""Controller"")].port=30000"
 ```
 
-## <a id="replicas"></a> プールのレプリカを構成します。
+## <a id="replicas"></a>プールレプリカの構成
 
-プールごとに、記憶域プールなどの特性は、構成ファイルで定義されます。 たとえば、次の部分は、記憶域プールの定義を示しています。
+各プールの特性 (記憶域プールなど) は、**クラスターの json**構成ファイルで定義されています。 たとえば、クラスターの次の部分は、記憶域プールの定義を示して**います。**
 
 ```json
 "pools": [
-    {
-        "metadata": {
-            "kind": "Pool",
-            "name": "default"
-        },
-        "spec": {
-            "type": "Storage",
-            "replicas": 2,
-            "storage": {
-               "data": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "15Gi"
-               },
-               "logs": {
-                  "className": "default",
-                  "accessMode": "ReadWriteOnce",
-                  "size": "10Gi"
-               }
-           },
-        }
-    }
+   {
+       "metadata": {
+           "kind": "Pool",
+           "name": "default"
+       },
+       "spec": {
+           "type": "Storage",
+           "replicas": 2
+       }
+   }
 ]
 ```
 
-プールのインスタンスの数を構成するには変更することによって、**レプリカ**各プールの値。 次の例では、インライン JSON を使用して、ストレージとデータのプールをこれらの値を変更する`10`と`4`それぞれ。
+プール内のインスタンスの数を構成するには、各プールの**レプリカ**の値を変更します。 次の例では、インライン JSON を使用して、ストレージとデータプール`10`の`4`これらの値をそれぞれとに変更します。
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Storage"")].spec.replicas=10"
+azdata bdc config replace --config-file custom/cluster.json --json-values "$.spec.pools[?(@.spec.type == ""Data"")].spec.replicas=4"
 ```
 
-## <a id="storage"></a> 記憶域を構成します。
+## <a id="storage"></a>ストレージの構成
 
-ストレージ クラスと各プールに使用される特徴を変更することもできます。 次の例では、カスタム ストレージ クラスを記憶域プールに割り当てられ、100 gb のデータを格納するため、永続ボリューム要求のサイズを更新します。 このセクションを使用して設定を更新する構成ファイルである、 *mssqlctl bdc 構成セット*コマンドで、以下の修正プログラム ファイルを使用して、このセクションを追加する方法を参照してください。
+また、各プールに使用されるストレージクラスと特性を変更することもできます。 次の例では、カスタムストレージクラスを記憶域プールに割り当て、データを 100 Gb に格納するための永続ボリューム要求のサイズを更新します。 まず、*種類*と*レプリカ*に加えて、新しい*ストレージ*セクションを含む patch. json ファイルを作成します。
 
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "storage":{
+        "data":{
+                "size": "100Gi",
+                "className": "myStorageClass",
+                "accessMode":"ReadWriteOnce"
+                },
+        "logs":{
+                "size":"32Gi",
+                "className":"myStorageClass",
+                "accessMode":"ReadWriteOnce"
+                }
+                },
+        "type":"Storage",
+        "replicas":2
+      }
+    }
+  ]
+}
+```
+
+その後、 **azdata bdc**の構成パッチコマンドを使用して、**クラスターの json**構成ファイルを更新できます。
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.className=storage-pool-class"
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=32Gi"
+azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 ```
 
 > [!NOTE]
-> 構成ファイルに基づいて**kubeadm-開発/テスト**、各プールが、これは手動で追加する必要な場合のストレージの定義を持たない。
+> **Kubeadm**に基づく構成ファイルには、各プールのストレージ定義がありませんが、必要に応じて上記のプロセスを使用して追加することができます。
 
-記憶域の構成の詳細については、次を参照してください。[を Kubernetes クラスターのビッグ データ、SQL Server でのデータ永続化](concept-data-persistence.md)します。
+ストレージ構成の詳細については、「Kubernetes でのデータの永続化」を参照してください。 [SQL Server ビッグデータクラスターを使用](concept-data-persistence.md)してください。
 
-## <a id="sparkstorage"></a> Spark なしの記憶域を構成します。
+## <a id="sparkstorage"></a>Spark を使用せずに記憶域プールを構成する
 
-Spark せずに実行し、個別の spark プールを作成するには、記憶域プールを構成することもできます。 ストレージのスケール spark コンピューティング パワー独立にできます。 Spark のプールを構成する方法を確認するには、次を参照してください。、[修正プログラム ファイルの例の JSON](#jsonpatch)この記事の最後にします。
+また、spark なしで実行するように記憶域プールを構成し、別の spark プールを作成することもできます。 これにより、ストレージに依存せずに spark コンピューティングの機能を拡張することができます。 Spark プールを構成する方法については、この記事の最後にある[JSON 修正プログラムファイルの例](#jsonpatch)を参照してください。
 
-このセクションを使用して設定を更新する構成ファイルである、`mssqlctl cluster config set command`します。 次の JSON の修正プログラム ファイルは、これを追加する方法を示します。
 
-既定で、 **includeSpark**設定は、追加する必要がありますので、true に、記憶域プールが設定されて、 **includeSpark**フィールドを変更するには、記憶域の構成。
 
-```bash
-mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].includeSpark=false"
+既定では、記憶域プールの [含まれている**駐車**] 設定は [true] に設定されているため、変更を行うには、[**格納] フィールド**をストレージ構成に追加する必要があります。 次の JSON 修正プログラムファイルは、このを追加する方法を示しています。
+
+```json
+{
+  "patch": [
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+        "type":"Storage",
+        "replicas":2,
+        "includeSpark":false
+      }
+    }
+  ]
+}
 ```
 
-## <a id="podplacement"></a> Kubernetes ラベルを使用してポッドの配置を構成します。
+```bash
+azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
+```
 
-さまざまな種類のワークロード要件に対応するために特定のリソースがある Kubernetes ノード上のポッドの配置を制御できます。 たとえば、記憶域プールのポッドは多くのストレージをノードに配置されますか、master の SQL Server インスタンスは以上の CPU とメモリ リソースを持つノードに配置されてことを確認します。 さまざまな種類のハードウェアの異種 Kubernetes クラスターを最初に構築するこの例では、し[ノード ラベルを割り当てる](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)それに応じて。 ビッグ データ クラスターの展開時に、クラスターの展開構成ファイルでプール レベルで同じラベルを指定できます。 Kubernetes の指定されたラベルに一致するノードにポッド関係付けることができますが処理します。
+## <a id="podplacement"></a>Kubernetes ラベルを使用してポッド配置を構成する
 
-次の例では、SQL Server のマスター インスタンスのノードのラベル設定に含めるカスタム構成ファイルを編集する方法を示します。 あることに注意してくださいありません*nodeLabel*カスタム構成ファイルを手動で編集するか、または修正プログラム ファイルを作成し、カスタム構成ファイルに適用する必要があります組み込みの構成のキー。
+さまざまな種類のワークロード要件に対応するために、特定のリソースを持つ Kubernetes ノードでポッド配置を制御できます。 たとえば、記憶域プールポッドがより多くの記憶域を持つノードに配置されていること、また SQL Server は CPU とメモリリソースが高いノードにマスターインスタンスが配置されていることを確認する必要がある場合があります。 この場合は、まず異なる種類のハードウェアで異種混在の Kubernetes クラスターを構築し、それに応じて[ノードラベルを割り当て](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)ます。 ビッグデータクラスターを展開するときに、クラスター展開構成ファイルのプールレベルで同じラベルを指定できます。 Kubernetes は、指定されたラベルに一致するノード上のポッドを関連付けに処理します。
 
-という名前のファイルを作成する**patch.json**次の内容の現在のディレクトリ。
+次の例では、カスタム構成ファイルを編集して、SQL Server マスターインスタンスのノードラベル設定を含める方法を示します。 組み込みの構成に*Nodelabel*キーがないことに注意してください。カスタム構成ファイルを手動で編集するか、修正プログラムファイルを作成してカスタム構成ファイルに適用する必要があります。
+
+次の内容を使用して、現在のディレクトリに**patch. json**という名前のファイルを作成します。
 
 ```json
 {
   "patch": [
      {
-      "op": "add",
+      "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
-      "nodeLabel": "<yourNodeLabel>"
+           "type": "Master",
+         "replicas": 1,
+         "hadrEnabled": false,
+         "endpoints": [
+            {
+             "name": "Master",
+             "serviceType": "NodePort",
+             "port": 31433
+            }
+          ],
+         "nodeLabel": "<yourNodeLabel>"
        }
     }
   ]
@@ -164,35 +205,36 @@ mssqlctl cluster config section set --config-profile custom -j "$.spec.pools[?(@
 ```
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
-## <a id="jsonpatch"></a> JSON の修正プログラム ファイル
+## <a id="jsonpatch"></a>JSON 修正プログラムファイル
 
-JSON の修正プログラム ファイルは、一度に複数の設定を構成します。 JSON パッチの詳細については、次を参照してください。 [Python での JSON パッチ](https://github.com/stefankoegl/python-json-patch)と[JSONPath オンライン エバリュエーター](https://jsonpath.com/)します。
+JSON 修正プログラムファイルは、一度に複数の設定を構成します。 JSON 修正プログラムの詳細については、「 [Python の Json 修正プログラム](https://github.com/stefankoegl/python-json-patch)」および「 [Jsonpath Online エバリュエーター](https://jsonpath.com/)」を参照してください。
 
-次**patch.json**ファイルは、次の変更を実行します。
+次の**更新プログラムの json**ファイルでは、次の変更が実行されます。
 
-- 1 つのエンドポイントのポートを更新します。
-- すべてのエンドポイントを更新 (**ポート**と**serviceType**)。
-- コントロール プレーンの記憶域を更新します。 これらの設定は、プール レベルでオーバーライドされない限り、すべてのクラスター コンポーネントに適用されます。
-- コントロール プレーンの記憶域内のストレージ クラス名を更新します。
-- 記憶域プールのプール ストレージの設定を更新します。
-- 記憶域プールの Spark の設定を更新します。
-- 2 つのレプリカのクラスターで spark プールを作成します。
-
-```json
-{
-  "patch": [
+- コントロールの1つのエンドポイントのポートを更新し**ます。**
+    ```json
     {
-      "op": "replace",
-      "path": "$.spec.controlPlane.spec.endpoints[?(@.name=='Controller')].port",
-      "value": 30000
-    },
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.endpoints[?(@.name=='Controller')].port",
+          "value": 30000
+        }   
+      ]
+    }
+    ```
+
+- コントロールのすべてのエンドポイント (**ポート**と**serviceType**) を更新し**ます**。
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.endpoints",
-      "value": [
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.endpoints",
+          "value": [
         {
           "serviceType": "LoadBalancer",
           "port": 30001,
@@ -203,12 +245,20 @@ JSON の修正プログラム ファイルは、一度に複数の設定を構�
             "port": 30778,
             "name": "ServiceProxy"
         }
+          ]
+        }
       ]
-    },
+    }
+    ```
+
+- **Control. json**のコントローラーのストレージ設定を更新します。 これらの設定は、プールレベルでオーバーライドされない限り、すべてのクラスターコンポーネントに適用されます。
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.controlPlane",
-      "value": {
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.storage",
+          "value": {
           "data": {
             "className": "managed-premium",
             "accessMode": "ReadWriteOnce",
@@ -220,44 +270,80 @@ JSON の修正プログラム ファイルは、一度に複数の設定を構�
             "size": "32Gi"
           }
         }
-    },
+        }   
+      ]
+    }
+    ```
+
+- **Control. json**でストレージクラス名を更新します。
+    ```json
     {
-      "op": "replace",
-      "path": "spec.controlPlane.spec.storage.data.className",
-      "value": "managed-premium"
-    },
+      "patch": [
+        {
+          "op": "replace",
+          "path": "spec.storage.data.className",
+          "value": "managed-premium"
+        }   
+      ]
+    }
+    ```
+
+- **クラスター**の記憶域プールのプール記憶域設定を更新します。
+    ```json
     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
-      "value": {
-          "data": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "100Gi"
-          },
-          "logs": {
-            "className": "managed-premium",
-            "accessMode": "ReadWriteOnce",
-            "size": "32Gi"
-          }
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+          "value": {
+        "type":"Storage",
+        "replicas":2,
+        "storage":{
+        "data":{
+            "size": "100Gi",
+            "className": "myStorageClass",
+            "accessMode":"ReadWriteOnce"
+            },
+        "logs":{
+            "size":"32Gi",
+            "className":"myStorageClass",
+            "accessMode":"ReadWriteOnce"
+            }
+            }
+         }
         }
-    },
+      ]
+    }
+    ```
+
+- **クラスター**の記憶域プールの Spark 設定を更新します。
+    ```json
     {
-      "op": "replace",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
-      "value": {
+      "patch": [
+        {
+          "op": "replace",
+          "path": "$.spec.pools[?(@.spec.type == 'Storage')].hadoop.spark",
+          "value": {
         "driverMemory": "2g",
         "driverCores": 1,
         "executorInstances": 3,
         "executorCores": 1,
         "executorMemory": "1536m"
-      }
-    },
+          }
+        }   
+      ]
+    }
+    ```
+
+- **クラスター**内に2つのインスタンスを持つ spark プールを作成します。
+    ```json
     {
-      "op": "add",
-      "path": "spec.pools/-",
-      "value":
-      {
+      "patch": [
+        {
+          "op": "add",
+          "path": "spec.pools/-",
+          "value":
+          {
         "metadata": {
           "kind": "Pool",
           "name": "default"
@@ -288,21 +374,23 @@ JSON の修正プログラム ファイルは、一度に複数の設定を構�
             "executorCores": 1
           }
         }
-      }
-    }   
-  ]
-}
-```
+          }
+        } 
+      ]
+    }
+    ```
+
+
 
 > [!TIP]
-> 構造体と、展開構成ファイルを変更するためのオプションの詳細については、次を参照してください。[ビッグ データ クラスターの展開構成ファイル リファレンス](reference-deployment-config.md)します。
+> 展開構成ファイルを変更するための構造とオプションの詳細については、「[ビッグデータクラスターの展開構成ファイルリファレンス](reference-deployment-config.md)」を参照してください。
 
-使用**mssqlctl bdc 構成セクション セット**パッチの JSON ファイルの変更を適用します。 次の例では、適用、 **patch.json**ファイル ターゲットの展開構成ファイルを**custom.json**します。
+**Azdata bdc の構成**コマンドを使用して、JSON 修正プログラムファイルに変更を適用します。 次の例では、**修正プログラムの json**ファイルをターゲットの配置構成ファイルの**カスタム/クラスター**に適用します。
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスター展開で構成ファイルの使用についての詳細については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md#configfile)します。
+ビッグデータクラスターの展開における構成ファイルの使用方法の詳細については、「 [Kubernetes でビッグデータクラスターを SQL Server デプロイする方法](deployment-guidance.md#configfile)」を参照してください。

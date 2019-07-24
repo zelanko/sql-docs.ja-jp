@@ -1,5 +1,5 @@
 ---
-title: JDBC ドライバーの概要 |Microsoft Docs
+title: JDBC Driver | の概要Microsoft Docs
 ms.custom: ''
 ms.date: 01/18/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 939a8773-2583-49a4-bf00-6b892fbe39dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9e9e7c7c6c29847fef54ac3e484e7ed7b1821f4d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 770352acd95fd2fb947e29f79230dedab575602b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801799"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956234"
 ---
 # <a name="overview-of-the-jdbc-driver"></a>JDBC ドライバーの概要
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "66801799"
 |[Microsoft JDBC Driver の再配布](../../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md)|Microsoft JDBC ドライバーの再配布を登録する方法について説明しています。|  
 |[JDBC ドライバーの追加情報の検索](../../connect/jdbc/finding-additional-jdbc-driver-information.md)|外部リソースへのリンクを含む、Microsoft JDBC ドライバーに関する追加リソースの取得先について説明しています。|  
 |[Microsoft SQL Server 用 JDBC Driver のサポート表](../../connect/jdbc/microsoft-jdbc-driver-for-sql-server-support-matrix.md)|Microsoft SQL Server 用 JDBC Driver のサポート表とサポート ライフサイクル ポリシー。|  
-|[よく寄せられる質問&#40;FAQ&#41; JDBC driver](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC ドライバーのよく寄せられる質問。|  
+|[JDBC Driver に&#40;関し&#41;てよく寄せられる質問に関する faq](../../connect/jdbc/frequently-asked-questions-faq-for-jdbc-driver.md)|Microsoft JDBC ドライバーのよく寄せられる質問。|  
 |[Microsoft JDBC Driver for SQL Server の機能依存関係](../../connect/jdbc/feature-dependencies-of-microsoft-jdbc-driver-for-sql-server.md)|Microsoft JDBC Driver for SQL Server の機能依存関係。|
 
 ## <a name="see-also"></a>参照  

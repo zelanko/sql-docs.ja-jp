@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fe29aa5f-4cc5-413f-8bbd-a58064993d87
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 37fa8f723b9d008651d98e850c794955a54b0c1c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 1c43d503fafba7d6dad8f7d982ad2f51542c61c4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801934"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980179"
 ---
 # <a name="getscale-method-sqlserverresultsetmetadata"></a>getScale メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getScale(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getScale メソッドは、java.sql.ResultSetMetaData インターフェイスで getScale メソッドによって指定されます。  
+ この getScale メソッドは、java. ResultSetMetaData インターフェイスの getScale メソッドによって指定されます。  
   
  [!INCLUDE[msCoName](../../../includes/msconame_md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] JDBC Driver 3.0 では、DECIMAL_DIGITS 列の動作が変更されています。 詳細については、[SQLServerDatabaseMetaData.getColumns](../../../connect/jdbc/reference/getcolumns-method-sqlserverdatabasemetadata.md) を参照してください。  
   

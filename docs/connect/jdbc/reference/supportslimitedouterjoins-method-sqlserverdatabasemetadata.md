@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 06225a1a-a58d-4bff-b2ef-be303f051644
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 58d7cc10464098c6ae2c628819a05211236190aa
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e8e1b235a8c779c652a8678802bbb91a1de83f38
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66764217"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969306"
 ---
 # <a name="supportslimitedouterjoins-method-sqlserverdatabasemetadata"></a>supportsLimitedOuterJoins メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsLimitedOuterJoins()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsLimitedOuterJoins メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsLimitedOuterJoins メソッドによって指定されます。  
+ この supportsLimitedOuterJoins メソッドは、supportsLimitedOuterJoins メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

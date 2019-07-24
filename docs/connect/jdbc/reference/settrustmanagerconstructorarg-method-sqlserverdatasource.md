@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 640c0a4fb5c34deb3eb2fd58fdcafa11fa897117
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13eb5b436bc813ae448fd88045e2726ab6a0ebcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66783497"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67972221"
 ---
 # <a name="settrustmanagerconstructorarg-method-sqlserverdatasource"></a>setTrustManagerConstructorArg メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  独自の接続プロパティの文字列値を設定します。
+  TrustManagerConstructorArg connection プロパティの文字列値を設定します。
   
 ## <a name="syntax"></a>構文  
   
@@ -38,7 +37,7 @@ public void setTrustManagerConstructorArg(java.lang.String trustManagerClass)
 #### <a name="parameters"></a>パラメーター  
  *trustManagerClass*  
   
- A**文字列**カスタム javax.net.ssl.TrustManager の完全修飾クラス名を格納しています。
+ カスタム javax.mail の完全修飾クラス名を格納している**文字列**。信頼マネージャー。
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

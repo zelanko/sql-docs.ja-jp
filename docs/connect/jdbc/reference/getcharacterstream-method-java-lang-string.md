@@ -1,5 +1,5 @@
 ---
-title: getCharacterStream (java.lang.String) メソッド |Microsoft Docs
+title: Get文字ストリームメソッド (java lang.ini) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cdddc572-05c1-480d-b3e5-28270001575c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a818783c51f2629464f650c2985eb20d5f320c95
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 174deb24d78821e30d69dc899c5657909241ad3d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784862"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953280"
 ---
 # <a name="getcharacterstream-method-javalangstring"></a>getCharacterStream (java.lang.String) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.io.Reader getCharacterStream(java.lang.String columnName)
  列名を含む**文字列**です。  
   
 ## <a name="return-value"></a>戻り値  
- リーダー オブジェクト。  
+ リーダーオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

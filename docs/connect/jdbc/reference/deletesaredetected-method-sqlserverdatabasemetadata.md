@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 73f3d994-bbd7-43d2-8b64-50057e278983
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d6e0fc0bad10ad67c549a3ab3d505af899f67c45
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aef2ebd78b1aed2d03ba56ef3371d7f0dbfade31
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786366"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955129"
 ---
 # <a name="deletesaredetected-method-sqlserverdatabasemetadata"></a>deletesAreDetected メソッド (SQLServerDatabaseMetaData)
 
@@ -59,7 +58,7 @@ public boolean deletesAreDetected(int type)
  TYPE_SS_SCROLL_DYNAMIC  
   
 ## <a name="return-value"></a>戻り値  
- **true**ギャップが削除された行を置き換える場合。 **false**削除された行が削除された場合。  
+ 削除された行がギャップに置き換わる場合は**true** 。 削除された行が削除された場合は**false** 。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドは TYPE_SS_SCROLL_KEYSET カーソルに対して **true** を返し、それ以外のすべての結果セットの種類に対して **false** が返されます。  
   
@@ -67,7 +66,7 @@ public boolean deletesAreDetected(int type)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この deletesAreDetected メソッドは、java.sql.DatabaseMetaData インターフェイスで deletesAreDetected メソッドによって指定されます。  
+ この deletesAreDetected メソッドは、deletesAreDetected メソッドによって、java メタデータインターフェイスで指定されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は更新可能なすべてのカーソルの種類の削除された行を検出しますが、順方向カーソルと動的カーソルについては、検出は一時的です。  

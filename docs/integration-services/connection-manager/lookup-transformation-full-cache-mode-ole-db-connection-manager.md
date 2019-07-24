@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: c4150e1b-bdff-4f7a-af4c-3401c34def83
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 280351a1f4703c8b04138e70ddacbea2ef5d5122
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2ea8d17c11c47c4a31f21a2e538bcc9918ad0fea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65728181"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67904644"
 ---
 # <a name="lookup-transformation-full-cache-mode---ole-db-connection-manager"></a>フル キャッシュ モードの参照変換 - OLE DB 接続マネージャー
 
@@ -56,11 +55,11 @@ ms.locfileid: "65728181"
   
     -   **[テーブルまたはビューを使用する]** をクリックし、テーブルまたはビューを選択するか、 **[新規作成]** をクリックしてテーブルまたはビューを作成します。  
   
-         - または -  
+         \- または -  
   
     -   **[SQL クエリの結果を使用する]** をクリックし、 **[SQL コマンド]** ウィンドウでクエリを作成するか、 **[クエリの作成]** をクリックし、 **[クエリ ビルダー]** に用意されているグラフィック ツールを使用してクエリを作成します。  
   
-         - または -  
+         \- または -  
   
     -   **[参照]** をクリックして、ファイルから SQL ステートメントをインポートします。  
   
