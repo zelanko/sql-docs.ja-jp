@@ -1,6 +1,6 @@
 ---
 title: プログラムによるパスワードの変更 |Microsoft Docs
-description: OLE DB ドライバーを使用してプログラムで SQL Server のパスワードを変更します。
+description: OLE DB Driver for SQL Server を使用したプログラムによるパスワードの変更
 ms.custom: ''
 ms.date: 06/12/2018
 ms.prod: sql
@@ -20,20 +20,19 @@ helpviewer_keywords:
 - modifying passwords
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fdf5afb7cc9eea9beed43726d3c107c9fde9b6e2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a6c9e52dc46818d3d188f2fa742e2bccad769cf8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66777886"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989131"
 ---
 # <a name="changing-passwords-programmatically"></a>プログラムによるパスワードの変更
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降で[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]、OLE DB Driver for SQL Server のサポートへの変更と OLE DB ドライバーを通じてプログラムによってパスワードの有効期限の処理、 **SQL Server ログイン** ダイアログ ボックス。  
+  [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] より前のリリースでは、ユーザーのパスワードの有効期限が切れたとき、そのパスワードをリセットできるのは管理者だけでした。 以降では、OLE DB driver for SQL Server は、OLE DB ドライバーを通じてプログラムによってパスワードの有効期限を処理したり、 **SQL Server ログイン** ダイアログボックスに変更を加えたりすることをサポートしています。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]  
   
 > [!NOTE]  
 >  可能であれば、実行時にユーザーの資格情報を入力し、それらの資格情報を永続的な形式で保存しないように求めるメッセージが表示されます。 資格情報を保持する必要がある場合は、[Win32 Crypto API](https://go.microsoft.com/fwlink/?LinkId=64532) を使用して暗号化してください。 パスワードの使用に関する詳細については、「[強力なパスワード](../../../relational-databases/security/strong-passwords.md)」を参照してください。  
@@ -54,7 +53,7 @@ ms.locfileid: "66777886"
 |18488|ユーザー '%.*ls' はログインできませんでした。 理由: このアカウントのパスワードを変更する必要があります。|  
   
 ## <a name="ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server  
- OLE DB Driver for SQL Server がユーザー インターフェイスのパスワードの有効期限をサポートしていると、プログラムを使用します。  
+ SQL Server の OLE DB ドライバーは、ユーザーインターフェイスとプログラムを使用してパスワードの有効期限をサポートします。  
   
 ### <a name="ole-db-user-interface-password-expiration"></a>OLE DB ユーザー インターフェイスによるパスワード期限切れの処理  
  OLE DB Driver for SQL Server では、 **[SQL Server ログイン]** ダイアログ ボックスに行われた変更によって、パスワードの期限切れの処理がサポートされます。 DBPROP_INIT_PROMPT の値を DBPROMPT_NOPROMPT に設定すると、パスワードの有効期限が切れている場合に、最初の接続試行が失敗します。  
@@ -90,7 +89,7 @@ ms.locfileid: "66777886"
   
  パスワード変更の試行が予期せず失敗すると、サーバーからエラー コード 18468 が返されます。 接続試行からは標準の OLE DB エラーが返されます。  
   
- DBPROPSET_SQLSERVERDBINIT プロパティ セットの詳細については、次を参照してください。[初期化プロパティと承認プロパティ](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)します。  
+ DBPROPSET_SQLSERVERDBINIT プロパティセットの詳細については、「[初期化プロパティと承認プロパティ](../../oledb/ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
 
   
 ## <a name="see-also"></a>参照  
