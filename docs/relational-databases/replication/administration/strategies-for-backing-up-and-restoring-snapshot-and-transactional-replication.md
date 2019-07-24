@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a8afcdbc-55db-4916-a219-19454f561f9e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 148fdfd642c18a2cc4e583edab73778cffa5c71e
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 695839b7687fb649ffd529ecb3fde7b78d65f3ae
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54125272"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948683"
 ---
 # <a name="strategies-for-backing-up-and-restoring-snapshot-and-transactional-replication"></a>スナップショット レプリケーションおよびトランザクション レプリケーションのバックアップと復元の方式
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -215,7 +214,7 @@ ms.locfileid: "54125272"
   
 9. 復元後、データベース **A** の各テーブルに割り当てた ID 範囲は、データベース **B** でも使用されます。データベース **B** の障害発生後、データベース **A** およびデータベース **C** に反映されたすべての変更を復元されたデータベース **B** に適用し、その後、各テーブルの ID 範囲を再作成します。  
   
-    1.  データベース [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) のバックアップをデータベース **B** を実行し、出力パラメーター **@request_id**」を参照してください。 手順 b. に進みます。  
+    1.  データベース [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) のバックアップをデータベース **B** を実行し、出力パラメーター **@request_id** 」を参照してください。 手順 b. に進みます。  
   
     2.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 詳細については、「[レプリケーション エージェント実行可能ファイルの概念](../../../relational-databases/replication/concepts/replication-agent-executables-concepts.md)」または「[レプリケーション エージェントを起動および停止する &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/agents/start-and-stop-a-replication-agent-sql-server-management-studio.md)」を参照してください。 手順 c. に進みます。  
   
@@ -231,7 +230,7 @@ ms.locfileid: "54125272"
   
     1.  ピア ツー ピア トポロジ内のパブリッシュされたテーブルの処理をすべて停止します。 手順 b. に進みます。  
   
-    2.  データベース [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) のバックアップをデータベース **B** を実行し、出力パラメーター **@request_id**」を参照してください。 手順 c. に進みます。  
+    2.  データベース [B](../../../relational-databases/system-stored-procedures/sp-requestpeerresponse-transact-sql.md) のバックアップをデータベース **B** を実行し、出力パラメーター **@request_id** 」を参照してください。 手順 c. に進みます。  
   
     3.  既定では、ディストリビューション エージェントが連続的に実行されるように設定されているため、すべてのノードに自動的にトークンが送信されます。 ディストリビューション エージェントが連続モードで実行されていない場合は、エージェントを実行します。 手順 d. に進みます。  
   

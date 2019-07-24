@@ -1,5 +1,5 @@
 ---
-title: ': _ _Construct |Microsoft Docs'
+title: 'PDO:: __ コンストラクト |Microsoft Docs'
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 3ee53aff-6fe4-44cd-a15b-51770c98c712
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2822c0f80aa342881e820b2edce2f99388efdc68
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a5a181d6e8b9a3ffbf9d65dc74cae967d6a1f40c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66772787"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936255"
 ---
 # <a name="pdoconstruct"></a>PDO::__construct
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -37,7 +36,7 @@ PDO::__construct($dsn [,$username [,$password [,$driver_options ]]] )
   
 *$password*: 省略可です。 ユーザー パスワードを含む文字列です。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用して接続する場合、パスワードを指定します。 Windows 認証を使用して接続するには、 `""`を指定します。  
   
-*$ を指定する*: 省略可能です。 PDO ドライバー マネージャーの属性および [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] に固有のドライバー属性 (PDO::SQLSRV_ATTR_ENCODING、PDO::SQLSRV_ATTR_DIRECT_QUERY) を指定できます。 無効な属性では、例外は生成されません。 無効な属性を [PDO::setAttribute](../../connect/php/pdo-setattribute.md)と共に指定すると、例外が生成されます。  
+*$driver オプション (_s)* : 省略可能。 PDO ドライバー マネージャーの属性および [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] に固有のドライバー属性 (PDO::SQLSRV_ATTR_ENCODING、PDO::SQLSRV_ATTR_DIRECT_QUERY) を指定できます。 無効な属性では、例外は生成されません。 無効な属性を [PDO::setAttribute](../../connect/php/pdo-setattribute.md)と共に指定すると、例外が生成されます。  
   
 ## <a name="return-value"></a>戻り値  
 PDO オブジェクトを返します。 失敗した場合は、PDOException オブジェクトを返します。  
@@ -48,7 +47,7 @@ PDOException
 ## <a name="remarks"></a>Remarks  
 インスタンスを null に設定して、接続オブジェクトを閉じることができます。  
   
-接続後、pdo::errorcode には 00000 の代わりに 01000 が表示されます。  
+接続後、PDO:: errorCode は、00000ではなく01000を表示します。  
   
 何らかの理由で PDO::__construct が失敗する場合、PDO::ATTR_ERRMODE が PDO::ERRMODE_SILENT に設定されていても例外がスローされます。  
   
