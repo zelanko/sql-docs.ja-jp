@@ -1,25 +1,24 @@
 ---
 title: Reporting Services で KPI を使用する | Microsoft Docs
-author: markingmyname
-ms.author: maghan
-manager: kfile
+author: maggiesMSFT
+ms.author: maggies
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: reporting-services
 ms.topic: conceptual
 ms.date: 07/02/2017
-ms.openlocfilehash: 4e6a5bbf2d744475ca49e3917f6539e81e6439ea
-ms.sourcegitcommit: d6ef87a01836738b5f7941a68ca80f98c61a49d4
+ms.openlocfilehash: dd8dc50b9885bb33df66d152b432092b6ac9868d
+ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57572805"
+ms.lasthandoff: 07/19/2019
+ms.locfileid: "68329362"
 ---
 # <a name="working-with-kpis-in-reporting-services"></a>Reporting Services で KPI を使用する
 
 [!INCLUDE[ssrs-appliesto](../includes/ssrs-appliesto.md)] [!INCLUDE[ssrs-appliesto-2016-and-later](../includes/ssrs-appliesto-2016-and-later.md)] [!INCLUDE[ssrs-appliesto-pbirsi](../includes/ssrs-appliesto-pbirs.md)]
 
-"*主要業績評価指標 (KPI)*" は、目標に対する達成度の伝達を視覚化したものです。  主要業績評価指標は、チーム、マネージャー、およびビジネスにとって、測定可能な目標に対する進捗度をすばやく評価するうえで重要です。
+"*主要業績評価指標 (KPI)* " は、目標に対する達成度の伝達を視覚化したものです。  主要業績評価指標は、チーム、マネージャー、およびビジネスにとって、測定可能な目標に対する進捗度をすばやく評価するうえで重要です。
   
 SQL Server Reporting Services で KPI を使用することで、以下の質問に対する回答を簡単に視覚化できます。  
   
@@ -27,8 +26,11 @@ SQL Server Reporting Services で KPI を使用することで、以下の質問
   
 - どの程度進んでいるか、または遅れているか。  
   
-- 完了した最小容量とは  
-  
+- 完了した最小金額を確認できます。  
+
+> [!NOTE]
+> Kpi にアクセスできるのは、SSRS ポータルの Enterprise (Developer) エディションのみです。
+
 ## <a name="creating-a-dataset"></a>データセットの作成
 
 KPI は、共有データセットの最初の行のデータのみを使用します。 使用したいデータがその最初の行にあることを確認します。 共有データセットを作成するには、レポート ビルダーまたは SQL Server Data Tools のいずれかを使用することができます。  
@@ -44,7 +46,7 @@ KPI の場所を決定したら、そのフォルダーに移動して、トッ�
   
 ![rsCreateKPI1](../reporting-services/media/rscreatekpi1.png)  
   
-これにより、**[新しい KPI]** 画面が表示されます。  
+これにより、 **[新しい KPI]** 画面が表示されます。  
   
 ![rsCreateKPI2](../reporting-services/media/rscreatekpi2.png)  
   
@@ -57,11 +59,11 @@ KPI の場所を決定したら、そのフォルダーに移動して、トッ�
 | [目標] | 数値との比較として使用され、比率の差として表示されます。 |
 | 状態 | KPI タイルの色を決定するために使用される数値。 有効な値は 1 (緑)、0 (黄色) および-1 (赤です)。 |
 | トレンド セット | グラフを視覚化するために使用されるコンマ区切りの数値。 これは、傾向を表す値を含むデータセットの列にも設定できます。 |
-| 関連コンテンツ | ドリルスルー リンクを設定する機能。 このリンクでは、モバイル レポートをパブリッシュする、ポータルまたはカスタム URL を指定できますか。 |
+| 関連コンテンツ | ドリルスルーリンクを設定する機能。 このリンクは、ポータルまたはカスタム URL で公開されているモバイルレポートのいずれかになります。 |
   
 > **警告**: 設計時には **[ステータス]** フィールドに文字値を使用できますが、データセットを更新する場合、数値を使用する必要があります。 数値ではなく文字値を含むデータセットを更新すると、サーバー上の KPI が破損する可能性があります。  
 >
-> **注**: **[値]**、**[目標]**、**[状態]** の各フィールドの値は、データセットの結果の最初の行からのみ選択できます。 ただし、**[トレンド セット]** フィールドでは、傾向を反映する列を選択できます。  
+> **注**: **[値]** 、 **[目標]** 、 **[状態]** の各フィールドの値は、データセットの結果の最初の行からのみ選択できます。 ただし、 **[トレンド セット]** フィールドでは、傾向を反映する列を選択できます。  
   
 共有データセットのデータを使用するには、次の手順を実行します。
   
@@ -69,7 +71,7 @@ KPI の場所を決定したら、そのフォルダーに移動して、トッ�
   
     ![rsCreateKPI3](../reporting-services/media/rscreatekpi3.png)  
   
-2. データ ボックスで**省略記号 [...]** を選択します。 これにより、**[データセットの選択]** 画面が表示されます。  
+2. データ ボックスで**省略記号 [...]** を選択します。 これにより、 **[データセットの選択]** 画面が表示されます。  
   
     ![rsCreateKPI4](../reporting-services/media/rscreatekpi4.png)  
   
@@ -87,21 +89,21 @@ KPI の場所を決定したら、そのフォルダーに移動して、トッ�
   
     ![rsCreateKPI7](../reporting-services/media/rscreatekpi7.png)
 
-## <a name="configuring-related-content"></a>関連するコンテンツを構成します。
+## <a name="configuring-related-content"></a>関連するコンテンツの構成
 
-選択すると**モバイル レポート**、ダイアログ ボックスで、変換先を選択することができます。
+**[モバイルレポート]** を選択すると、ダイアログボックスで送信先を選択できます。
 
    ![モバイル レポート](media/rscreatekpi-related-content-mobile-report.png)
 
-ポータルで KPI を今すぐクリックすると、関連のドロップダウン リストでコンテンツ、モバイル レポートのサムネイルが表示されます。 このサムネイルをクリックするとに直接移動できますをこのレポートします。
+ポータルで KPI をクリックすると、[関連するコンテンツ] ボックスの一覧にモバイルレポートのサムネイルが表示されます。 このサムネイルをクリックすると、このレポートに直接移動できます。
 
-カスタム URL を指定することもできます。 このタスクは何もすることができます。 web サイト、SharePoint のサイトでは、(これは、ハードコードされたパラメーターを渡すことにより) が SSRS レポートの URL。
+カスタム URL を指定することもできます。 このタスクは、web サイト、SharePoint サイト、SSRS レポートの URL (ハードコードされたパラメーターに沿って渡すことができる) のいずれかになります。
 
 ![カスタム URL](media/rscreatekpi-related-content-custom-url.png)
 
-KPI にする] をクリックして、[関連コンテンツの URL が表示されます。
+KPI をクリックすると、[関連コンテンツ] の下に URL が表示されます。
 
-1 つのモバイル レポートまたは 1 つのカスタム URL を追加することはできます。
+モバイルレポートを1つだけ追加することも、1つのカスタム URL を追加することもできます。
   
 ## <a name="removing-a-kpi"></a>KPI を削除する  
   

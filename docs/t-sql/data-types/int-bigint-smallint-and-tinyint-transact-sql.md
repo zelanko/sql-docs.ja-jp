@@ -27,14 +27,13 @@ helpviewer_keywords:
 ms.assetid: 9bda5b0b-2380-4931-a1c8-f362fdefa99b
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 758b31fc070c78e4129447cd02ef5c3360c9fc5e
-ms.sourcegitcommit: a13256f484eee2f52c812646cc989eb0ce6cf6aa
+ms.openlocfilehash: c61ca9f853f851bb531abdbcba66773f9e9d9e1e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/25/2019
-ms.locfileid: "56802576"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68077897"
 ---
 # <a name="int-bigint-smallint-and-tinyint-transact-sql"></a>int、bigint、smallint、および tinyint (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -58,7 +57,7 @@ ms.locfileid: "56802576"
 > [!CAUTION]  
 >  +、-、\*、/、または % の算術演算子を使用して、**int**、**smallint**、**tinyint**、または **bigint** の定数値の暗黙的または明示的変換を実行して **float**、**real**、**decimal**、または **numeric** データ型にした場合、データ型と式の精度を計算するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が適用する規則は、クエリが自動パラメーター化されているかどうかに応じて異なります。  
 >   
->  したがって、クエリで同じ式を使用しても異なる結果が得られることがあります。 クエリが自動でないと、定数の値が最初に変換 **数値**, の有効桁数が十分な指定のデータ型に変換する前に、定数の値を保持するためにします。 定数の値 1 に変換するなど、 **numeric (1, 0)**, 、定数値 250 に変換し、 **numeric (3, 0)** です。  
+>  したがって、クエリで同じ式を使用しても異なる結果が得られることがあります。 クエリが自動でないと、定数の値が最初に変換 **数値**, の有効桁数が十分な指定のデータ型に変換する前に、定数の値を保持するためにします。 定数の値 1 に変換するなど、 **numeric (1, 0)** , 、定数値 250 に変換し、 **numeric (3, 0)** です。  
 >   
 >  クエリが自動パラメーター、定数の値が常に変換されます **numeric (10, 0)** から最終的なデータ型に変換します。 / 演算子を使用すると、同様のクエリで結果の型の有効桁数が異なるだけでなく、結果の値も異なる場合があります。 たとえば、`SELECT CAST (1.0 / 7 AS float)` という式が含まれる自動パラメーター化されたクエリの結果値と、自動パラメーター化されない同じクエリの結果値は異なります。これは、自動パラメーター化されたクエリの場合、**numeric (10, 0)** データ型に収まるように結果が切り捨てられるためです。  
   

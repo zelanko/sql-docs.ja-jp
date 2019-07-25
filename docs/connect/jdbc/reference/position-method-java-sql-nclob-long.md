@@ -1,5 +1,5 @@
 ---
-title: position (java.sql.NClob, long) メソッド |Microsoft Docs
+title: position メソッド (NClob, long) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: f2354278-d128-4cf4-a170-22c05fcb763b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 35d8a3903cc18ce371b2d6c333747710ac6efc7e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ea868190b635a9471bfad424d6fc74572970799b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66802422"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976363"
 ---
 # <a name="position-method-javasqlnclob-long"></a>position (java.sql.NClob, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  文字位置を取得します。 指定した**NClob**オブジェクト*searchstr*でこれが表示されます**NClob**オブジェクト。  
+  指定された**NClob** object *searchstr*がこの**NClob**オブジェクトに含まれる文字位置を取得します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -47,7 +46,7 @@ long position(java.sql.NClob searchstr,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この位置のメソッドは、java.sql.NClob インターフェイス内の位置のメソッドによって指定されます。  
+ この位置メソッドは、NClob インターフェイスの position メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [position メソッド&#40;SQLServerNClob&#41;](../../../connect/jdbc/reference/position-method-sqlservernclob.md)   

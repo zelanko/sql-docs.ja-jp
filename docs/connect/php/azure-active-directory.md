@@ -10,39 +10,39 @@ helpviewer_keywords:
 - azure active directory, authentication, access token
 author: david-puglielli
 ms.author: v-dapugl
-manager: mbarwin
-ms.openlocfilehash: 30423cd7c15a920d99fad4c0ea08e074beaece0b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+manager: v-mabarw
+ms.openlocfilehash: 8712681a244e969d230b0b7099acd4aa56334f11
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62522800"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68265176"
 ---
 # <a name="connect-using-azure-active-directory-authentication"></a>Azure Active Directory 認証を使用して接続する
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis) (Azure AD) は、サーバーの全体のユーザー ID 管理テクノロジの代替として動作する[SQL Server 認証](../../connect/php/how-to-connect-using-sql-server-authentication.md)します。 Azure AD は、ユーザー名とパスワード、Windows 統合認証、または Azure AD アクセス トークンを使用して Azure AD でフェデレーション id を持つ Microsoft Azure SQL Database と SQL Data Warehouse への接続を許可します。 SQL Server 用 PHP ドライバーでは、これらの機能の部分的なサポートを提供します。
+[Azure Active Directory](https://docs.microsoft.com/azure/active-directory/active-directory-whatis)(Azure AD) は、 [SQL Server 認証](../../connect/php/how-to-connect-using-sql-server-authentication.md)の代わりに動作する、中央のユーザー ID 管理テクノロジです。 Azure AD を使用すると、ユーザー名とパスワード、Windows 統合認証、または Azure AD アクセストークンを使用して Azure AD のフェデレーション id で Microsoft Azure SQL Database と SQL Data Warehouse に接続できます。 SQL Server 用の PHP ドライバーは、これらの機能に対して部分的なサポートを提供します。
 
-Azure AD を使用する、**認証**または**AccessToken**キーワード (相互に排他的は)、次の表に示すようにします。 技術的な詳細についてを参照してください[を使用して Azure Active Directory と ODBC ドライバー](../../connect/odbc/using-azure-active-directory.md)します。
+Azure AD を使用するには、次の表に示すように、 **Authentication**キーワードまたは**AccessToken**キーワードを使用します (これらは相互に排他的です)。 技術的な詳細については、「 [ODBC ドライバーでの Azure Active Directory の使用](../../connect/odbc/using-azure-active-directory.md)」を参照してください。
 
 |Keyword|値|[説明]|
 |-|-|-|
-|**AccessToken**|(既定) の設定します。|認証モードがその他のキーワードによって決定されます。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。 |
-||バイトの文字列|Azure AD アクセス トークンを OAuth JSON 応答から抽出します。 ユーザー ID、パスワード、または認証キーワードが、接続文字列に含まれていない必要があります (ODBC Driver 17 が必要です以降では、Linux または macOS)。 |
-|**[認証]**|(既定) の設定します。|認証モードがその他のキーワードによって決定されます。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。 |
-||`SqlPassword`|(これは、Azure インスタンスである可能性があります)、SQL Server インスタンスへの直接認証ユーザー名とパスワードを使用します。 ユーザー名とパスワードを使用して、接続文字列に渡す必要がある、 **UID**と**PWD**キーワード。 |
-||`ActiveDirectoryPassword`|ユーザー名とパスワードを使用して id を Azure Active Directory で認証します。 ユーザー名とパスワードを使用して、接続文字列に渡す必要がある、 **UID**と**PWD**キーワード。 |
-||`ActiveDirectoryMsi`|システムによって割り当てられた管理対象 id またはユーザー割り当て管理対象 id のいずれかを使用して認証 (ODBC ドライバー バージョン 17.3.1.1 必要がありますまたはそれ以降)。 概要とチュートリアルを参照してください[Azure リソースの管理対象の id とは何ですか?](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)します。|
+|**AccessToken**|未設定 (既定値)|他のキーワードによって決定される認証モード。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。 |
+||バイト文字列|OAuth JSON 応答から抽出された Azure AD アクセストークン。 接続文字列には、ユーザー ID、パスワード、または Authentication キーワードを含めることができません (Linux または macOS では、ODBC Driver バージョン17以降が必要です)。 |
+|**[認証]**|未設定 (既定値)|他のキーワードによって決定される認証モード。 詳細については、「 [Connection Options](../../connect/php/connection-options.md)」を参照してください。 |
+||`SqlPassword`|ユーザー名とパスワードを使用して、(Azure インスタンスである可能性がある) SQL Server インスタンスに直接認証します。 **UID**キーワードと**PWD**キーワードを使用して、ユーザー名とパスワードを接続文字列に渡す必要があります。 |
+||`ActiveDirectoryPassword`|ユーザー名とパスワードを使用して Azure Active Directory id で認証します。 **UID**キーワードと**PWD**キーワードを使用して、ユーザー名とパスワードを接続文字列に渡す必要があります。 |
+||`ActiveDirectoryMsi`|システムによって割り当てられたマネージド id またはユーザーが割り当てられたマネージド id を使用して認証します (ODBC ドライバーバージョン17.3.1.1 以上が必要です)。 概要とチュートリアルについては、「 [Azure リソースのマネージド id とは](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)」を参照してください。|
 
-**認証**キーワードが接続のセキュリティ設定に影響します。 既定ではその後、接続文字列に設定されている場合、 **Encrypt**キーワードは、クライアントの暗号化を要求することを意味する true に設定します。 さらに、サーバー証明書が暗号化の設定に関係なく検証する場合を除き、 **TrustServerCertificate**設定を true に (**false**既定)。 この機能は、暗号化は、接続文字列で明確に要求された場合にのみのサーバー証明書を検証、セキュリティで保護されたログイン メソッドより、古いと区別されます。
+**Authentication**キーワードは、接続のセキュリティ設定に影響します。 接続文字列で設定されている場合は、既定で**Encrypt**キーワードが true に設定されます。これは、クライアントが暗号化を要求することを意味します。 また、 **Trustservercertificate**が true (既定では**false** ) に設定されていない限り、暗号化の設定に関係なくサーバー証明書が検証されます。 この機能は、暗号化が特に接続文字列で要求された場合にのみサーバー証明書が検証される、古い、セキュリティの低いログイン方法と区別されます。
 
-Windows 上の SQL Server 用 PHP ドライバーと共に Azure AD を使用している場合が求められることをインストールする、 [Microsoft Online Services サインイン アシスタント](https://www.microsoft.com/download/details.aspx?id=41950)(ODBC 17 + は必要ありません)。
+Windows で SQL Server 用の PHP ドライバーで Azure AD を使用する場合は、 [Microsoft Online Services サインインアシスタント](https://www.microsoft.com/download/details.aspx?id=41950)をインストールするように求められることがあります (ODBC 17 以降では不要)。
 
 #### <a name="limitations"></a>制限事項
 
-、Windows では、基になる ODBC ドライバーは、1 つ以上の値をサポートしています、**認証**キーワード、 **ActiveDirectoryIntegrated**、が PHP ドライバーが任意のプラットフォームでこの値をサポートしません。
+Windows では、基になる ODBC ドライバーが**Authentication**キーワード**ActiveDirectoryIntegrated**に対してもう1つの値をサポートしていますが、PHP ドライバーは、どのプラットフォームでもこの値をサポートしていません。
 
-## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>例 - SqlPassword ActiveDirectoryPassword を使用して接続
+## <a name="example---connect-using-sqlpassword-and-activedirectorypassword"></a>例-SqlPassword と ActiveDirectoryPassword を使用して接続する
 
 ```php
 <?php
@@ -82,7 +82,7 @@ if ($conn === false) {
 ?>
 ```
 
-## <a name="example---connect-using-the-pdosqlsrv-driver"></a>例 - PDO_SQLSRV ドライバーを使用して接続
+## <a name="example---connect-using-the-pdosqlsrv-driver"></a>例-PDO_SQLSRV ドライバーを使用して接続する
 
 ```php
 <?php
@@ -120,7 +120,7 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-azure-ad-access-token"></a>例 - Azure AD アクセス トークンを使用して接続
+## <a name="example---connect-using-azure-ad-access-token"></a>例-Azure AD アクセストークンを使用して接続する
 
 ### <a name="sqlsrv-driver"></a>SQLSRV ドライバー
 
@@ -159,11 +159,11 @@ try {
 ?>
 ```
 
-## <a name="example---connect-using-managed-identities-for-azure-resources"></a>例 - Azure リソースの管理対象 id を使用して接続
+## <a name="example---connect-using-managed-identities-for-azure-resources"></a>例-Azure リソースの管理対象 id を使用して接続する
 
-### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>SQLSRV ドライバーを使用したシステムによって割り当てられた管理対象 id を使用します。
+### <a name="using-the-system-assigned-managed-identity-with-sqlsrv-driver"></a>SQLSRV ドライバーでシステム割り当て済みマネージド id を使用する
 
-システムによって割り当てられたを使用して接続する管理対象 id、ときに、UID、PWD またはオプションを使わないでください。
+システム割り当て済みマネージド id を使用して接続する場合は、UID または PWD オプションを使用しないでください。
 
 ```php
 <?php
@@ -198,11 +198,11 @@ if ($conn === false) {
 ?>
 ```
 
-### <a name="using-the-user-assigned-managed-identity-with-pdosqlsrv-driver"></a>PDO_SQLSRV ドライバーでユーザー割り当て管理対象 id を使用
+### <a name="using-the-user-assigned-managed-identity-with-pdosqlsrv-driver"></a>PDO_SQLSRV driver でユーザー割り当てのマネージド id を使用する
 
-ユーザー割り当て管理対象 id は、スタンドアロン Azure リソースとして作成されます。 Azure では、使用中のサブスクリプションによって信頼されている Azure AD テナントで id を作成します。 Id が作成されると、id は、1 つまたは複数の Azure サービスのインスタンスに割り当てることができます。 コピー、`Object ID`この id とセットの接続文字列で名前をユーザーとして。 
+ユーザー割り当てのマネージド id は、スタンドアロンの Azure リソースとして作成されます。 Azure では、使用中のサブスクリプションによって信頼されている Azure AD テナントに id が作成されます。 Id を作成したら、1つまたは複数の Azure サービスインスタンスに id を割り当てることができます。 この id `Object ID`のをコピーし、接続文字列のユーザー名として設定します。 
 
-そのため、ユーザー割り当てを使用して接続する管理対象 id、ユーザー名とオブジェクト ID を提供が、パスワードを省略します。
+そのため、ユーザー割り当てのマネージド id を使用して接続する場合は、ユーザー名としてオブジェクト ID を指定しますが、パスワードは省略します。
 
 ```php
 <?php
@@ -239,4 +239,4 @@ try {
 ## <a name="see-also"></a>参照
 [ODBC ドライバーでの Azure Active Directory の使用](https://docs.microsoft.com/sql/connect/odbc/using-azure-active-directory)
 
-[Azure リソースの管理対象の id とは何ですか。](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)
+[Azure リソースの管理対象 id とは](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)

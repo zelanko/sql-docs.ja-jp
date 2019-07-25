@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 86223cb5-3bf4-489a-8c82-669a91764f2b
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21da83dd2ca7c5c85c2d98fe8d69061f0b3abc11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4fdf49c68acd2ef1b1544ad02efcb4079ceeac67
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792305"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981872"
 ---
 # <a name="getmetadata-method-sqlserverconnection"></a>getMetaData メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

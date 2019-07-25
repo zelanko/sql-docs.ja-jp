@@ -23,13 +23,12 @@ helpviewer_keywords:
 ms.assetid: e2478d26-dea4-428d-98c5-aad2d2a30da8
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: 0bcc98052bf076515ff3d961fee24e6550830118
-ms.sourcegitcommit: 258c32f7e85a38aaf674da3478ae3ed10648d1f1
+ms.openlocfilehash: b921ed801297659b02a8f8cb2d22dcf1b498502e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/14/2018
-ms.locfileid: "53414167"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024892"
 ---
 # <a name="manage-partition-wizard-f1-help"></a>パーティションの管理ウィザードの F1 ヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +99,7 @@ ms.locfileid: "53414167"
  現在パーティション テーブル内にあるパーティションを含む、すべてのパーティションを表示します。  
   
  **[パーティション グリッド]**  
- 選択したパーティションのパーティション名、 **[左側の境界]**、 **[右側の境界]**、 **[ファイル グループ]**、および **[行数]** を表示します。  
+ 選択したパーティションのパーティション名、 **[左側の境界]** 、 **[右側の境界]** 、 **[ファイル グループ]** 、および **[行数]** を表示します。  
   
  **[切り替え先テーブル]**  
  パーティション テーブルに追加するパーティションを含んでいるステージング テーブルを選択します。 **パーティションの管理ウィザード**でパーティションを切り替える前に、このステージング テーブルを作成する必要があります。  
@@ -112,7 +111,7 @@ ms.locfileid: "53414167"
   
 ## <a name="uielement-list"></a>UI 要素の一覧  
  **[パーティション グリッド]**  
- 選択したパーティションのパーティション名、 **[左側の境界]**、 **[右側の境界]**、 **[ファイル グループ]**、および **[行数]** を表示します。  
+ 選択したパーティションのパーティション名、 **[左側の境界]** 、 **[右側の境界]** 、 **[ファイル グループ]** 、および **[行数]** を表示します。  
   
  **[切り替え元テーブル]**  
  データの切り替え元となる新しいテーブルまたは既存のテーブルを選択します。  
@@ -180,7 +179,7 @@ ms.locfileid: "53414167"
 ### <a name="options"></a>オプション  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブに必要なスケジュールの種類を選択します。  
   
- **名前**  
+ **[名前]**  
  スケジュールの新しい名前を入力します。  
   
  **[スケジュール済みのジョブ]**  

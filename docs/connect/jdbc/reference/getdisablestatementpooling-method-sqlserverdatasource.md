@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 607d729726c421030f4f77247b4e0090c900744c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 108bc70b3ff4a3fb03d332def79f9ceebeffd94a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66776825"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983646"
 ---
 # <a name="getdisablestatementpooling-method-sqlserverdatasource"></a>getDisableStatementPooling メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  値を返します**disableStatementPooling**接続プロパティです。 この設定は、ステートメントのプールが有効になっているかどうか、またはこの接続ではなくを制御します。
+  **DisableStatementPooling** connection プロパティの値を返します。 この設定は、この接続に対してステートメントプールを有効にするかどうかを制御します。
 
   
 ## <a name="syntax"></a>構文  
@@ -31,13 +30,13 @@ public boolean getDisableStatementPooling();
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**ブール**の値を格納している**disableStatementPooling**接続プロパティです。
+ **DisableStatementPooling** connection プロパティの値を含む**ブール**値です。
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- このメソッドは、JDBC driver 6.4 から利用できるとは。
+ このメソッドは、JDBC driver バージョン6.4 以降で使用できます。
  
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

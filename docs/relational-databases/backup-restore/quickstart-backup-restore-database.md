@@ -4,7 +4,6 @@ titleSuffix: SQL Server
 description: このクイック スタートでは、任意のクラウドで SQL Server on Linux を実行する方法を示します。
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
 ms.date: 05/25/2019
 ms.topic: conceptual
 ms.prod: sql
@@ -12,12 +11,12 @@ ms.custom: ''
 ms.technology: backup-restore
 ms.prod_service: backup-restore
 ms.assetid: ''
-ms.openlocfilehash: 8453d74227e1007a42adfbd8ac1f91bf1a6d86da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dedadc89cd10da6f00ac768c3e15e151d0028e23
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66499672"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68033622"
 ---
 # <a name="quickstart-backup-and-restore-a-sql-server-database-on-premises"></a>クイック スタート: SQL Server データベースのオンプレミスでのバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,9 +72,9 @@ GO
 データベースのバックアップを取得するには、次の操作を行います。 
 
 1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) を起動し、SQL Server インスタンスに接続します。
-1. **オブジェクト エクスプローラー**で、**[データベース]** ノードを展開します。  
-1. データベースを右クリックし、**[タスク]** にポインターを合わせ、**[バックアップ]** を選択します。 
-1. **[同期先]** の下の、バックアップのパスが正しいことを確認します。 これを変更する必要がある場合は、**[削除]** を選択して既存のパスを削除してから、**[追加]** で新しいパスを入力します。 省略記号を使用すると、特定のファイルに移動できます。 
+1. **オブジェクト エクスプローラー**で、 **[データベース]** ノードを展開します。  
+1. データベースを右クリックし、 **[タスク]** にポインターを合わせ、 **[バックアップ]** を選択します。 
+1. **[同期先]** の下の、バックアップのパスが正しいことを確認します。 これを変更する必要がある場合は、 **[削除]** を選択して既存のパスを削除してから、 **[追加]** で新しいパスを入力します。 省略記号を使用すると、特定のファイルに移動できます。 
 1. **[OK]** を選択すると、データベースのバックアップが取得されます。 
 
 ![SQL のバックアップを取得する](media/quickstart-backup-restore-database/backup-db-ssms.png)
@@ -95,12 +94,12 @@ GO
 データベースを復元するには、次の操作を行います。 
 
 1. [SQL Server Management Studio (SSMS)](../../ssms/download-sql-server-management-studio-ssms.md) を起動し、SQL Server インスタンスに接続します。
-1. **オブジェクト エクスプローラー**の **[データベース]** ノードを右クリックして、**[データベースの復元]** をクリックします。
+1. **オブジェクト エクスプローラー**の **[データベース]** ノードを右クリックして、 **[データベースの復元]** をクリックします。
 
     ![データベースを復元する](media/quickstart-backup-restore-database/restore-db-ssms1.png)
 
 1. **[デバイス]** を選択し、省略記号 (...) を選択してバックアップ ファイルを探します。 
-1. **[追加]** を選択して `.bak` ファイルが配置されている場所に移動します。 `.bak` ファイルを選択して、**[OK]** を選択します。 
+1. **[追加]** を選択して `.bak` ファイルが配置されている場所に移動します。 `.bak` ファイルを選択して、 **[OK]** を選択します。 
 1. **[OK]** を選択すると **[バックアップ デバイスの選択]** ダイアログ ボックスが閉じます。 
 1. **[OK]** を選択すると、データベースのバックアップが復元されます。 
 

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 88f5919c1bd36b912c2205da2032413ec39150f1
-ms.sourcegitcommit: 8bc5d85bd157f9cfd52245d23062d150b76066ef
+ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/07/2019
-ms.locfileid: "57579536"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68087112"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>レッスン 1:"既定でオフ" ポリシーの作成と適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,13 +29,13 @@ ms.locfileid: "57579536"
   
 ## <a name="create-the-mail-off-condition"></a>メールをオフ条件の作成
 
-1.  オブジェクト エクスプローラーで、 **[管理]**、 **[ポリシー管理]**、 **[ファセット]** の順に展開し、 **[セキュリティ構成]** を右クリックして **[新しい条件]** をクリックします。  
+1.  オブジェクト エクスプローラーで、 **[管理]** 、 **[ポリシー管理]** 、 **[ファセット]** の順に展開し、 **[セキュリティ構成]** を右クリックして **[新しい条件]** をクリックします。  
 
     ![新しい条件](Media/lesson-1-create-and-apply-an-off-by-default-policy/new-surface-area-condition.png)
   
 2.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **メールをオフ**」と入力します。   
     1. **[ファセット]** ボックスで、 **[セキュリティ構成]** ファセットが選択されていることを確認します。
-    1. **[式]** 領域の **[フィールド]** ボックスで **@DatabaseMailEnabled** を選択し、**[演算子]** ボックスで **=** を選択し、**[値]** ボックスで **[False]** を選択します。  
+    1. **[式]** 領域の **[フィールド]** ボックスで **@DatabaseMailEnabled** を選択し、 **[演算子]** ボックスで **=** を選択し、 **[値]** ボックスで **[False]** を選択します。  
     1. **[説明]** ページで条件の説明を入力し、 **[OK]** をクリックして条件を作成します。  
 
     ![メールをオフ条件](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 

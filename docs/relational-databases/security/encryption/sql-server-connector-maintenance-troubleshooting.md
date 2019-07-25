@@ -11,13 +11,12 @@ helpviewer_keywords:
 ms.assetid: 7f5b73fc-e699-49ac-a22d-f4adcfae62b1
 author: aliceku
 ms.author: aliceku
-manager: craigg
-ms.openlocfilehash: 67716270a13f71e23a0294db632ef0b0d51ca76e
-ms.sourcegitcommit: aa4f594ec6d3e85d0a1da6e69fa0c2070d42e1d8
+ms.openlocfilehash: f06a2fd1b8734701fe261cba42d66ca1652e06fc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/08/2019
-ms.locfileid: "59241380"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68140697"
 ---
 # <a name="sql-server-connector-maintenance-amp-troubleshooting"></a>SQL Server コネクタのメンテナンスとトラブルシューティング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -96,13 +95,13 @@ ms.locfileid: "59241380"
   
 ### <a name="upgrade-of-includessnoversionincludesssnoversion-mdmd-connector"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのアップグレード  
 
-1.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 バージョン 1.0.1.0 以降は実稼働環境でサポートされます。 以下の手順を使用して、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)で利用可能な最新バージョンにアップグレードしてください。
+1\.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 バージョン 1.0.1.0 以降は実稼働環境でサポートされます。 以下の手順を使用して、 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)で利用可能な最新バージョンにアップグレードしてください。
 
 現在、バージョン 1.0.1.0 以降を使用している場合は、以下の手順に従って最新バージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタに更新します。 以下の手順では、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスを再起動する必要はありません。
  
 1. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Microsoft ダウンロード センター [から最新バージョンの](https://www.microsoft.com/download/details.aspx?id=45344)コネクタをインストールします。 インストーラー ウィザードで、元の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタ DLL のファイル パスとは異なるファイル パスの下に新しい DLL ファイルを保存します。 たとえば、新しいファイル パスは次のようになります。 `C:\Program Files\SQL Server Connector for Microsoft Azure Key Vault\<latest version number>\Microsoft.AzureKeyVaultService.EKM.dll`
  
-2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスで、次の Transact-SQ コマンドを実行し、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが新しいバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをポイントするようにします。
+2. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンスで、次の Transact-SQ コマンドを実行し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが新しいバージョンの [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタをポイントするようにします。
 
     ``` 
     ALTER CRYPTOGRAPHIC PROVIDER AzureKeyVault_EKM_Prov   
@@ -139,7 +138,7 @@ ms.locfileid: "59241380"
 8.  更新が正常に行われたことを確認したら、古い [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタ フォルダーは削除してかまいません (手順 3. で、アンインストールの代わりに名前を変更した場合)。  
   
 ### <a name="rolling-the-includessnoversionincludesssnoversion-mdmd-service-principal"></a>[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] Service プリンシパルのローリング  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Azure Active Directory で作成されたサービス プリンシパルを資格情報に使用して、Key Vault にアクセスします。  サービス プリンシパルにはクライアント ID と認証キーが含まれます。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の資格情報は **VaultName**、 **クライアント ID**、 **認証キー**で設定されます。  **認証キー** は一定期間 (1 ～ 2 年間) 有効です。   期限が切れる前に Azure AD でサービス プリンシパルの新しいキーを生成する必要があります。  その後、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] で資格情報を変更する必要があります。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)]  では現在のセッションで資格情報のキャッシュを保持するため、資格情報に変更があった場合は [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を再起動する必要があります。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は、Azure Active Directory で作成されたサービス プリンシパルを資格情報に使用して、Key Vault にアクセスします。  サービス プリンシパルにはクライアント ID と認証キーが含まれます。  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の資格情報は **VaultName**、 **クライアント ID**、 **認証キー**で設定されます。  **認証キー** は一定期間 (1 ～ 2 年間) 有効です。   期限が切れる前に Azure AD でサービス プリンシパルの新しいキーを生成する必要があります。  その後、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]で資格情報を変更する必要があります。    [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] では現在のセッションで資格情報のキャッシュを保持するため、資格情報に変更があった場合は [!INCLUDE[ssManStudio](../../../includes/ssmanstudio-md.md)] を再起動する必要があります。  
   
 ### <a name="key-backup-and-recovery"></a>キーのバックアップと回復  
 Key Vault は定期的にバックアップする必要があります。 資格情報コンテナー内の非対称キーが失われた場合は、バックアップから復元できます。 このキーは、以前と同じ名前で復元する必要があります。復元は Restore PowerShell コマンドで行います (以下の手順を参照)。  
@@ -159,7 +158,7 @@ Key Vault は定期的にバックアップする必要があります。 資格
 ### <a name="on-azure-key-vault"></a>Azure Key Vault について  
   
 **Azure Key Vault との間でキーの処理はどのように行われますか。**  
- Key Vault 内の非対称キーは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護するために使用されます。 資格情報コンテナーから出て行くのは非対称キーの公開部分だけで、秘密の部分がコンテナーからエクスポートされることはありません。 非対称キーを使用するすべての暗号化操作は、Azure Key Vault サービス内で実行され、このサービスのセキュリティによって保護されます。  
+ Key Vault 内の非対称キーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の暗号化キーを保護するために使用されます。 資格情報コンテナーから出て行くのは非対称キーの公開部分だけで、秘密の部分がコンテナーからエクスポートされることはありません。 非対称キーを使用するすべての暗号化操作は、Azure Key Vault サービス内で実行され、このサービスのセキュリティによって保護されます。  
   
  **キーの URI とは何ですか。**  
  Azure Key Vault 内のすべてのキーに、Uniform Resource Identifier (URI) が割り当てられます。アプリケーションからこの URI を使用してキーを参照できます。 常に最新のバージョンを取得するには `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey` の形式、特定のバージョンを取得するには `https://ContosoKeyVault.vault.azure.net/keys/ContosoFirstKey/cgacf4f763ar42ffb0a1gca546aygd87` の形式を使用します。  
@@ -168,10 +167,10 @@ Key Vault は定期的にバックアップする必要があります。 資格
 
 **SQL Server コネクタがアクセスする必要のあるエンドポイントは何ですか。** コネクタは 2 つのエンドポイントと通信し、これらをホワイトリストに登録する必要があります。 これらの他のサービスへの送信通信に必要な唯一のポートは、Https 用の 443 です。
 -  login.microsoftonline.com/*:443
--  *.vault.azure.net/*:443
+-  *.vault.azure.net/* :443
   
-**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の各構成手順で最低限必要な権限レベルを教えてください。**  
- すべての構成手順は sysadmin 固定サーバー ロールのメンバーとして実行することもできますが、[!INCLUDE[msCoName](../../../includes/msconame-md.md)] では使用する権限を最小限に抑えることをお勧めします。 次の一覧に、各操作の最小アクセス許可レベルを定義します。  
+**[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の各構成手順で最低限必要な権限レベルを教えてください。**  
+ すべての構成手順は sysadmin 固定サーバー ロールのメンバーとして実行することもできますが、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] では使用する権限を最小限に抑えることをお勧めします。 次の一覧に、各操作の最小アクセス許可レベルを定義します。  
   
 -   暗号化サービス プロバイダーを作成するには、 `CONTROL SERVER` 権限、または **sysadmin** 固定サーバー ロールのメンバーシップが必要です。  
   
@@ -202,7 +201,7 @@ Active Directory の詳細については、「 [Azure サブスクリプショ�
 ##  <a name="AppendixC"></a> C. [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] コネクタのエラー コードの説明  
  **プロバイダーのエラー コード:**  
   
-エラー コード  |記号  |説明    
+エラー コード  |Symbol  |[説明]    
 ---------|---------|---------  
 0 | scp_err_Success | 操作は成功しました。    
 1 | scp_err_Failure | 操作は失敗しました。    
@@ -291,7 +290,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
 -   [Azure Key Vault の使用を開始する](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)  
   
--   PowerShell の [Azure Key Vault コマンドレット](/powershell/module/azurerm.keyvault/)のリファレンス  
+-   PowerShell の [Azure Key Vault コマンドレット](/powershell/module/azurerm.keyvault/) のリファレンス  
   
 ## <a name="see-also"></a>参照  
  [Azure Key Vault を使用する拡張キー管理](../../../relational-databases/security/encryption/extensible-key-management-using-azure-key-vault-sql-server.md)  [SQL 暗号化機能への SQL Server コネクタの使用](../../../relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md)   

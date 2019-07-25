@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 8bd79484-bab6-423b-978f-d7ec7132ebeb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4f7959476f092389f22f2d7720927907b8f59d69
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b0c6b7d8c69e1cc6bc4a9e8d239c3a47c24573d9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66771352"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980781"
 ---
 # <a name="getprecision-method-sqlserverparametermetadata"></a>getPrecision メソッド (SQLServerParameterMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getPrecision(int param)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getPrecision メソッドは、java.sql.ParameterMetaData インターフェイスで getPrecision メソッドによって指定されます。  
+ この getPrecision メソッドは、java の ParameterMetaData インターフェイスの getPrecision メソッドによって指定されます。  
   
  数値型の場合、このメソッドは 10 進の桁数を取得します。 文字型の場合は、最大文字列長を取得します。 バイナリ型の場合は、最大長をバイト単位で取得します。 桁数が不明である場合、このメソッドは "0" を返します。  
   

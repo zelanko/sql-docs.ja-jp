@@ -1,5 +1,5 @@
 ---
-title: 接続 URL の構築 |Microsoft Docs
+title: 接続 URL を作成する |Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c0d9d79d6462300df8b96fa3ec58349c39e751cf
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66770271"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957372"
 ---
 # <a name="building-the-connection-url"></a>接続 URL の構築
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -31,7 +30,7 @@ ms.locfileid: "66770271"
   
 -   **serverName** (省略可能) は、接続先のサーバーのアドレスです。 接続先のサーバーのアドレスには DNS または IP アドレスを指定するか、またはローカル コンピューターを表す localhost あるいは 127.0.0.1 を指定できます。 接続 URL で指定されていない場合、プロパティのコレクションでサーバー名を指定する必要があります。  
   
--   **instanceName** (省略可能) は、serverName 上にある接続先のインスタンスです。 指定しない場合、既定のインスタンスへの接続が表示されます。  
+-   **instanceName** (省略可能) は、serverName 上にある接続先のインスタンスです。 指定しない場合、既定のインスタンスへの接続が確立されます。  
   
 -   **portNumber** (省略可能) は、serverName 上にある接続先のポートです。 既定では 1433 です。 既定のポートを使用する場合は、URL でポートおよびその前の ':' を指定する必要はありません。  
   
@@ -41,7 +40,7 @@ ms.locfileid: "66770271"
 -   **property** (省略可能) は、1 つ以上の接続プロパティ オプションです。 詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。 リストに含まれる任意のプロパティを指定できます。 プロパティを区切るには必ずセミコロン (';') を使用します。またプロパティを重複して指定することはできません。  
   
 > [!CAUTION]  
->  セキュリティ上の理由から、ユーザー入力に基づく接続 URL の作成は避ける必要があります。 URL では、サーバー名とドライバーだけを指定するようにします。 ユーザー名とパスワードの値には、接続プロパティのコレクションを使用します。 JDBC アプリケーションにおけるセキュリティの詳細については、次を参照してください。 [JDBC ドライバー アプリケーションをセキュリティで保護する](../../connect/jdbc/securing-jdbc-driver-applications.md)します。  
+>  セキュリティ上の理由から、ユーザー入力に基づく接続 URL の作成は避ける必要があります。 URL では、サーバー名とドライバーだけを指定するようにします。 ユーザー名とパスワードの値には、接続プロパティのコレクションを使用します。 JDBC アプリケーションのセキュリティの詳細については、「 [Jdbc Driver アプリケーション](../../connect/jdbc/securing-jdbc-driver-applications.md)のセキュリティ保護」を参照してください。  
   
 ## <a name="connection-examples"></a>接続の例  
  ユーザー名とパスワードを使用して、ローカル コンピューター上の既定のデータベースに接続します。  
@@ -99,7 +98,7 @@ jdbc:sqlserver://;servername=server_name;integratedSecurity=true;authenticationS
   
  \<"*インストール ディレクトリ*">\sqljdbc_\<"*バージョン*">\\<"*言語*">\auth\  
   
- サポートされている任意のオペレーティング システムの[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]を参照してください[を使用した Kerberos 統合認証を SQL Server への接続](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)で追加された機能の説明の[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]アプリケーションに接続できるようにする、データベース タイプ 4 の Kerberos 統合認証を使用します。  
+ でサポートされ[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]ているすべてのオペレーティングシステムについては、「 [Kerberos 統合認証を使用して SQL Server に接続する](../../connect/jdbc/using-kerberos-integrated-authentication-to-connect-to-sql-server.md)」を参照して、アプリケーションが統合を使用してデータベースに接続できるようにするに[!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)]追加された機能について説明します。種類が4の Kerberos の認証。  
   
 > [!NOTE]  
 >  32 ビットの Java 仮想マシン (JVM) を実行している場合は、オペレーティング システムのバージョンが x64 であっても、x86 フォルダーの sqljdbc_auth.dll ファイルを使用してください。 64 ビットの JVM を x64 プロセッサ上で実行している場合は、x64 フォルダーの sqljdbc_auth.dll ファイルを使用してください。  

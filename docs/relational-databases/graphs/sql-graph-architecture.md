@@ -140,8 +140,8 @@ SQL グラフを構築する方法について説明します。 基本事項を
 |CREATE TABLE |[CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-sql-graph.md)|`CREATE TABLE` AS ノードまたは AS エッジ テーブルの作成をサポートするために拡張されています。 エッジ テーブルは可能性がありますか、任意のユーザー定義の属性がない可能性がありますに注意してください。  |
 |ALTER TABLE    |[ALTER TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-table-transact-sql.md)|ノードとエッジ テーブルには、リレーショナル テーブルを使用して、同じ方法を変更できる、`ALTER TABLE`します。 ユーザーでは、追加したり、ユーザー定義の列、インデックスまたは制約を変更することができます。 ただし、内部グラフ列を変更するには、ような`$node_id`または`$edge_id`エラーになります。  |
 |CREATE INDEX   |[CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)  |ユーザーは、擬似列およびノードとエッジ テーブル内のユーザー定義の列にインデックスを作成できます。 非クラスター化列ストア インデックスを含むすべてのインデックスの種類がサポートされます。  |
-|エッジの制約を作成します。    |[エッジ制約&#40;TRANSACT-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |ユーザーが特定のセマンティクスを適用するエッジ テーブルでのエッジの制約を作成およびもデータの整合性を維持  |
-|DROP TABLE |[DROP TABLE (Transact-SQL)](../../t-sql/statements/drop-table-transact-sql.md)  |同様のリレーショナル テーブルを使用して、ノードとエッジ テーブルを削除することができます、`DROP TABLE`します。 ただし、このリリースではありません制約を十分に削除されたノードにエッジがポイントありませんし、ノードまたはノード テーブルの削除時に、エッジの連鎖削除がサポートされていません。 ノード テーブルが削除された場合は、ユーザー、グラフの整合性を維持するために手動でそのノード テーブル内のノードに接続されている、エッジと削除することをお勧めします。  |
+|CREATE EDGE CONSTRAINTS    |[エッジ制約 &#40;Transact-SQL&#41;](../../relational-databases/tables/graph-edge-constraints.md)  |ユーザーが特定のセマンティクスを適用するエッジ テーブルでのエッジの制約を作成およびもデータの整合性を維持  |
+|DROP TABLE |[DROP TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/drop-table-transact-sql.md)  |同様のリレーショナル テーブルを使用して、ノードとエッジ テーブルを削除することができます、`DROP TABLE`します。 ただし、このリリースではありません制約を十分に削除されたノードにエッジがポイントありませんし、ノードまたはノード テーブルの削除時に、エッジの連鎖削除がサポートされていません。 ノード テーブルが削除された場合は、ユーザー、グラフの整合性を維持するために手動でそのノード テーブル内のノードに接続されている、エッジと削除することをお勧めします。  |
 
 
 ### <a name="data-manipulation-language-dml-statements"></a>データ操作言語 (DML) ステートメント
@@ -159,7 +159,7 @@ SQL グラフを構築する方法について説明します。 基本事項を
 |タスク   |関連記事  |メモ
 |---  |---  |---  |
 |SELECT |[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)|ノードとエッジ テーブルとして内部的に格納されます、ノードとエッジ テーブルでの SQL Server または Azure SQL Database のテーブルでサポートされている操作のほとんどをサポートするため  |
-|MATCH  | [一致&#40;TRANSACT-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|一致の組み込みは、パターン マッチングとグラフをトラバースをサポートするために導入されました。  |
+|MATCH  | [MATCH& &#40;Transact-SQL&#41;](../../t-sql/queries/match-sql-graph.md)|一致の組み込みは、パターン マッチングとグラフをトラバースをサポートするために導入されました。  |
 
 
 

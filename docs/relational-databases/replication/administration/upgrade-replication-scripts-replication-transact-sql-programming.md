@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 0b8720bd-f339-4842-bc8f-b35a46f6d3ee
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 5eb62be6ce7966ed7e04d2117895f215a1e842e0
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 7f5416534c7e8ef1b787f046a27310abcad93ade
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47787490"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67948663"
 ---
 # <a name="upgrade-replication-scripts-replication-transact-sql-programming"></a>レプリケーション スクリプトのアップグレード (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,11 +41,11 @@ ms.locfileid: "47787490"
   
 -   **sp_addpushsubscription_agent**  
   
-     [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行して、ジョブを明示的に追加し、ディストリビューション エージェント ジョブをディストリビューターで実行するときに Windows 資格情報 (**@job_login** および **@job_password**) を指定することが必要になりました。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、プッシュ サブスクリプションが作成されるときにこの操作が自動的に実行されました。  
+     [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行して、ジョブを明示的に追加し、ディストリビューション エージェント ジョブをディストリビューターで実行するときに Windows 資格情報 ( **@job_login** および **@job_password** ) を指定することが必要になりました。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、プッシュ サブスクリプションが作成されるときにこの操作が自動的に実行されました。  
   
 -   **sp_addmergepushsubscription_agent**  
   
-     [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行して、ジョブを明示的に追加し、マージ エージェント ジョブをディストリビューターで実行するときに Windows 資格情報 (**@job_login** および **@job_password**) を指定することが必要になりました。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、プッシュ サブスクリプションが作成されるときにこの操作が自動的に実行されました。  
+     [sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行して、ジョブを明示的に追加し、マージ エージェント ジョブをディストリビューターで実行するときに Windows 資格情報 ( **@job_login** および **@job_password** ) を指定することが必要になりました。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] よりも前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、プッシュ サブスクリプションが作成されるときにこの操作が自動的に実行されました。  
   
 -   **sp_addpullsubscription_agent**  
   
@@ -71,19 +70,19 @@ ms.locfileid: "47787490"
   
 ### <a name="to-upgrade-scripts-that-configure-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションを構成するスクリプトをアップグレードするには  
   
-1.  既存のスクリプトで、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の前に、パブリッシャー側のパブリケーション データベースに [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) を実行します。 ログ リーダー エージェントの実行に使用される Windows 資格情報を **@job_name** @job_login **@job_password**」をご覧ください。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @publisher_login **@publisher_login** @job_login **@publisher_password**」をご覧ください。 これにより、パブリケーション データベース用のログ リーダー エージェント ジョブが作成されます。  
+1.  既存のスクリプトで、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の前に、パブリッシャー側のパブリケーション データベースに [sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) を実行します。 ログ リーダー エージェントの実行に使用される Windows 資格情報を **@job_name** @job_login **@job_password** 」をご覧ください。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @publisher_login **@publisher_login** @job_login **@publisher_password** 」をご覧ください。 これにより、パブリケーション データベース用のログ リーダー エージェント ジョブが作成されます。  
   
     > [!NOTE]  
     >  この手順はトランザクション パブリケーションにのみ適用されます。スナップショット パブリケーションの場合は不要です。  
   
-2.  (省略可能) [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の前に、ディストリビューター側のディストリビューション データベースに [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) を実行します。 キュー リーダー エージェントの実行に使用される Windows 資格情報を **@job_name** @job_login **@job_password**」をご覧ください。 これにより、ディストリビューター用のキュー リーダー エージェント ジョブが作成されます。  
+2.  (省略可能) [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の前に、ディストリビューター側のディストリビューション データベースに [sp_addqreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addqreader-agent-transact-sql.md) を実行します。 キュー リーダー エージェントの実行に使用される Windows 資格情報を **@job_name** @job_login **@job_password** 」をご覧ください。 これにより、ディストリビューター用のキュー リーダー エージェント ジョブが作成されます。  
   
     > [!NOTE]  
     >  この手順は、キュー更新サブスクライバーをサポートするトランザクション パブリケーションでのみ必要です。  
   
 3.  (省略可) [sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の実行を更新して、新しいレプリケーション機能を実装するパラメーターに既定以外の値を設定します。  
   
-4.  パブリッシャー側のパブリケーション データベースに対して、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の後に、[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 **@publication** を指定し、スナップショット エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+4.  パブリッシャー側のパブリケーション データベースに対して、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の後に、[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 **@publication** を指定し、スナップショット エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password** 」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
 5.  (省略可) [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) の実行を更新して、新しいレプリケーション機能を実装するパラメーターに既定以外の値を設定します。  
   
@@ -93,13 +92,13 @@ ms.locfileid: "47787490"
   
     -   プル サブスクリプションの場合、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) の実行を更新して、サブスクライバーでディストリビューション エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 この操作は、 [sp_addpullsubscription](../../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行します。 **@subscriber**、**@subscriber_db**、**@publication** を指定し、ディストリビューション エージェントをディストリビューターで実行するときの Windows 資格情報を **@job_name** および **@job_password** に指定します。さらに、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
+    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md) を実行します。 **@subscriber** 、 **@subscriber_db** 、 **@publication** を指定し、ディストリビューション エージェントをディストリビューターで実行するときの Windows 資格情報を **@job_name** および **@job_password** に指定します。さらに、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addsubscription](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
 ### <a name="to-upgrade-scripts-that-configure-a-merge-publication"></a>マージ パブリケーションを構成するスクリプトをアップグレードするには  
   
 1.  (省略可) 既存のスクリプトで、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の実行を更新して、新しいレプリケーション機能を実装するパラメーターに既定以外の値を設定します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の後に、[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 **@publication** を指定し、スナップショット エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password**」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の後に、[sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 **@publication** を指定し、スナップショット エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 エージェントがパブリッシャーに接続する際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する場合、さらに **@publisher_security_mode** @allow_subscriber_initiated_snapshot **@publisher_security_mode** に指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password** 」をご覧ください。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
 3.  (省略可) [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) の実行を更新して、新しいレプリケーション機能を実装するパラメーターに既定以外の値を設定します。  
   
@@ -109,7 +108,7 @@ ms.locfileid: "47787490"
   
     -   プル サブスクリプションの場合、[sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) の実行を更新して、サブスクライバーでマージ エージェントを実行するときの Windows 資格情報を **@job_name** と **@job_password** に指定します。 この操作は、 [sp_addmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)の実行後に行われます。 詳細については、「 [プル サブスクリプションの作成](../../../relational-databases/replication/create-a-pull-subscription.md)」をご覧ください。  
   
-    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行します。 **@subscriber**、**@subscriber_db**、**@publication** を指定し、マージ エージェントをディストリビューターで実行するときの Windows 資格情報を **@job_name** および **@job_password** に指定します。さらに、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
+    -   プッシュ サブスクリプションの場合、パブリッシャーで、[sp_addmergepushsubscription_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md) を実行します。 **@subscriber** 、 **@subscriber_db** 、 **@publication** を指定し、マージ エージェントをディストリビューターで実行するときの Windows 資格情報を **@job_name** および **@job_password** に指定します。さらに、このエージェント ジョブのスケジュールを指定します。 詳細については、「 [Specify Synchronization Schedules](../../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。 この操作は、 [sp_addmergesubscription](../../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)の実行後に行われます。 詳しくは、「 [Create a Push Subscription](../../../relational-databases/replication/create-a-push-subscription.md)」をご覧ください。  
   
 ## <a name="example"></a>例  
  次に、Product テーブルに関するトランザクション パブリケーションを作成する [!INCLUDE[ssVersion2000](../../../includes/ssversion2000-md.md)] スクリプトの例を示します。 このパブリケーションでは、フェールオーバーとしてキュー更新を使用する即時更新がサポートされます。 読みやすくするために、既定のパラメーターは削除されています。  

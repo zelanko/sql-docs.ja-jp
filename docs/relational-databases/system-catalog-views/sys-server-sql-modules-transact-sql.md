@@ -19,18 +19,17 @@ helpviewer_keywords:
 ms.assetid: 9ef9a8b9-c470-4a61-b0c4-ee24ad871d63
 author: stevestein
 ms.author: sstein
-manager: craigg
-ms.openlocfilehash: 95583de206841bb3ed3ccff42809c028443c63ab
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 254be7cdd5e26422a27262b963d48908777d616b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62743954"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68133018"
 ---
 # <a name="sysserversqlmodules-transact-sql"></a>sys.server_sql_modules (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  TR の種類のサーバー レベル トリガー用の SQL モジュールのセットが含まれています。 このリレーションは sys.server_triggers に結合できます。 組 (object_id) はリレーションのキーです。  
+  TR の種類のサーバー レベル トリガー用の SQL モジュールのセットが含まれています。 このリレーションは sys.server_triggers に結合できます。 タプル (object_id) はリレーションのキーです。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
@@ -43,7 +42,7 @@ ms.locfileid: "62743954"
 ## <a name="permissions"></a>アクセス許可  
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)  
   
   

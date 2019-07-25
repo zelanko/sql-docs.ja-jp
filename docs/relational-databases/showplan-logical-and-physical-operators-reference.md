@@ -136,14 +136,13 @@ helpviewer_keywords:
 ms.assetid: e43fd0fe-5ea7-4ffe-8d52-759ef6a7c361
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2fb9b4f90b40b70c67e27233f84ee7b2a99635cf
-ms.sourcegitcommit: 15b780aa5abe3f42cd70b6edf7d5a645e990b618
+ms.openlocfilehash: 46578b4795bc02b0d426564b357dea580665ceeb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/07/2019
-ms.locfileid: "54069092"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68048844"
 ---
 # <a name="showplan-logical-and-physical-operators-reference"></a>プラン表示の論理操作と物理操作のリファレンス
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -159,11 +158,11 @@ ms.locfileid: "54069092"
   
  物理操作では、初期化、データの収集が行われた後に終了されます。 具体的には、物理操作は次の 3 つのメソッド呼び出しに応答できます。  
   
--   **Init()**:**Init()** メソッドは、物理操作自体を初期化し、必要なデータ構造を設定します。 通常、物理操作が受け取る **Init()** 呼び出しは 1 つだけですが、多くの Init() 呼び出しを受け取る場合もあります。  
+-   **Init()** :**Init()** メソッドは、物理操作自体を初期化し、必要なデータ構造を設定します。 通常、物理操作が受け取る **Init()** 呼び出しは 1 つだけですが、多くの Init() 呼び出しを受け取る場合もあります。  
   
--   **GetNext()**:**GetNext()** メソッドにより、物理操作がデータの最初の行または後続の行を取得します。 物理操作が受け取る **GetNext()** 呼び出しは、多数の場合もゼロの場合もあります。  
+-   **GetNext()** :**GetNext()** メソッドにより、物理操作がデータの最初の行または後続の行を取得します。 物理操作が受け取る **GetNext()** 呼び出しは、多数の場合もゼロの場合もあります。  
   
--   **Close()**:**Close()** メソッドにより、物理操作はクリーンアップ操作を実行し、物理操作自体がシャットダウンされます。 物理操作は、 **Close()** 呼び出しを 1 つだけ受け取ります。  
+-   **Close()** :**Close()** メソッドにより、物理操作はクリーンアップ操作を実行し、物理操作自体がシャットダウンされます。 物理操作は、 **Close()** 呼び出しを 1 つだけ受け取ります。  
   
 **GetNext()** メソッドは、データ行を 1 行返します。このメソッドが呼び出された回数は、SET STATISTICS PROFILE ON または SET STATISTICS XML ON を使用して生成されるプラン表示出力で **ActualRows** として表示されます。 これらの SET オプションの詳細については、「[SET STATISTICS PROFILE &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-profile-transact-sql.md)」および「[SET STATISTICS XML &#40;Transact-SQL&#41;](../t-sql/statements/set-statistics-xml-transact-sql.md)」を参照してください。  
   
@@ -224,9 +223,9 @@ ms.locfileid: "54069092"
 |![Filter (データベース エンジン) 操作アイコン](../relational-databases/media/filter-32x.gif "Filter (データベース エンジン) 操作アイコン")|**Assert**|**Filter** 操作は、入力をスキャンし、 **Argument** 列にあるフィルター式 (述語) に適合する行だけを返します。| 
 |なし|**Flow Distinct**|**Flow Distinct** 論理操作は入力をスキャンし、重複部分を削除します。 **Distinct** 操作はすべての入力を取得してから出力を行いますが、 **FlowDistinct** 操作は入力から各行を取得するたびに行を返します。ただし、行が重複する場合は破棄されます。| 
 |![Foreign Key References Check 操作アイコン](../relational-databases/media/fk-references-32x.gif "Foreign Key References Check 操作アイコン")|**Foreign Key References Check**|**Foreign Key References Check** 操作は、変更された行を参照テーブルの行と比較して、変更によって参照整合性が損なわれないことを確認することで、参照整合性チェックを適切に実行します。 **Foreign Key References Check** 操作は、同じプライマリ キーまたは一意のキーに 253 を超える外部キー参照が存在する場合に使用されます。 **Foreign Key References Check** は論理操作でもあり、物理操作でもあります。| 
-|なし|**Full Outer Join**|**Full Outer Join** 論理操作は、最初 (上部) の入力で結合述語に適合し、2 番目 (下部) の入力の各行と結合された各行を返します。 また、以下の行も返します。<br /><br /> - 2 番目の入力に一致する行がない最初の入力の行。<br /><br /> - 最初の入力に一致する行がない 2 番目の入力の行。<br /><br /> 一致する値がない入力は NULL 値として返されます。 **Full Outer Join** は論理操作です。| 
+|なし|**Full Outer Join**|**Full Outer Join** 論理操作は、最初 (上部) の入力で結合述語に適合し、2 番目 (下部) の入力の各行と結合された各行を返します。 また、以下の行も返します。<br /><br /> \- 2 番目の入力に一致する行がない最初の入力の行。<br /><br /> \- 最初の入力に一致する行がない 2 番目の入力の行。<br /><br /> 一致する値がない入力は NULL 値として返されます。 **Full Outer Join** は論理操作です。| 
 |![Gather Streams 並列操作アイコン](../relational-databases/media/parallelism-32x.gif "Gather Streams 並列操作アイコン")|**Gather Streams**|**Gather Streams** 操作は、並列クエリ プランでのみ使用されます。 **Gather Streams** 操作は複数の入力ストリームを使用し、入力ストリームを組み合わせてレコードの単一出力ストリームを作成します。 レコードの内容と形式は変更されません。 この操作で順序を保持する場合は、すべての入力ストリームが並べ替えられている必要があります。 出力を並べ替える場合、 **Argument** 列には ORDER BY:() 述語および並べ替える列の名前が表示されます。 **Gather Streams** は論理操作です。| 
-|![Hash Match 操作アイコン](../relational-databases/media/hash-match-32x.gif "Hash Match 操作アイコン")|**Hash Match**|**Hash Match** 操作は、ビルド入力の行ごとにハッシュ値を計算してハッシュ テーブルを作成します。 **Argument** 列に、ハッシュ値の作成に使用される列リストが指定された HASH:() 述語が入ります。 次に、該当するプローブ行ごとに同じハッシュ関数を使用してハッシュ値が計算され、ハッシュ テーブル内で一致検索が行われます。 残余述語がある場合 ( **Argument** 列内の RESIDUAL:() で特定できます)、行が一致すると見なすには、その残余述語の条件も満たす必要があります。 動作は、次に示すように、実行している論理操作によって異なります。<br /><br /> - すべての結合では、最初 (上部) の入力を使用してハッシュ テーブルを作成し、2 番目 (下部) の入力を使用してハッシュ テーブルを探索します。 出力は、結合の種類で指定されているとおりに一致します (または一致しません)。 複数の結合が同じ結合列を使用する場合、これらの操作はハッシュ チームにグループ化されます。<br /><br /> - Distinct 操作または Aggregate 操作の場合、入力を使用してハッシュ テーブルを作成します (重複部分を削除し、集計式を計算します)。 ハッシュ テーブルを作成したら、テーブルをスキャンしすべてのエントリを出力します。<br /><br /> - Union 操作の場合、最初の入力を使用してハッシュ テーブルを作成します (重複部分は削除します)。 2 番目の入力 (重複部分はありません) を使用して、ハッシュ テーブルを探索して一致しないすべての行を返します。次に、ハッシュ テーブルをスキャンし、すべてのエントリを返します。<br /><br /> **Hash Match** は物理操作です。| 
+|![Hash Match 操作アイコン](../relational-databases/media/hash-match-32x.gif "Hash Match 操作アイコン")|**Hash Match**|**Hash Match** 操作は、ビルド入力の行ごとにハッシュ値を計算してハッシュ テーブルを作成します。 **Argument** 列に、ハッシュ値の作成に使用される列リストが指定された HASH:() 述語が入ります。 次に、該当するプローブ行ごとに同じハッシュ関数を使用してハッシュ値が計算され、ハッシュ テーブル内で一致検索が行われます。 残余述語がある場合 ( **Argument** 列内の RESIDUAL:() で特定できます)、行が一致すると見なすには、その残余述語の条件も満たす必要があります。 動作は、次に示すように、実行している論理操作によって異なります。<br /><br /> \- すべての結合では、最初 (上部) の入力を使用してハッシュ テーブルを作成し、2 番目 (下部) の入力を使用してハッシュ テーブルを探索します。 出力は、結合の種類で指定されているとおりに一致します (または一致しません)。 複数の結合が同じ結合列を使用する場合、これらの操作はハッシュ チームにグループ化されます。<br /><br /> \- Distinct 操作または Aggregate 操作の場合、入力を使用してハッシュ テーブルを作成します (重複部分を削除し、集計式を計算します)。 ハッシュ テーブルを作成したら、テーブルをスキャンしすべてのエントリを出力します。<br /><br /> \- Union 操作の場合、最初の入力を使用してハッシュ テーブルを作成します (重複部分は削除します)。 2 番目の入力 (重複部分はありません) を使用して、ハッシュ テーブルを探索して一致しないすべての行を返します。次に、ハッシュ テーブルをスキャンし、すべてのエントリを返します。<br /><br /> **Hash Match** は物理操作です。| 
 |![If 言語要素アイコン](../relational-databases/media/if-32x.gif "If 言語要素アイコン")|**状況**|**If** 操作では、式に基づく条件処理を実行します。 **If** は言語要素です。| 
 |なし|**Inner Join**|**Inner Join** 論理操作は、最初 (上部) の入力と 2 番目 (下部) の入力の結合に適合する各行を返します。| 
 |![Insert (データベース エンジン) 操作アイコン](../relational-databases/media/insert-32x.gif "Insert (データベース エンジン) 操作アイコン")|**Insert**|**Insert** 論理操作は、 **Argument** 列に指定されたオブジェクトに入力から各行を挿入します。 物理操作は、 **Table Insert**操作、 **Index Insert**操作、または **Clustered Index Insert** 操作のいずれかです。| 

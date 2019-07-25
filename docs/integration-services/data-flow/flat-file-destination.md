@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: e0d6e356-8db4-48aa-ba66-029397f98f61
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 5c432741bd8ba3d369230ac72e26ee5516d21d97
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c62f746d13fdc818ed9caf8010be84065ffe8fbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65726806"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67941511"
 ---
 # <a name="flat-file-destination"></a>フラット ファイル変換先
 
@@ -92,7 +91,7 @@ ms.locfileid: "65726806"
  使用できる変換先列の一覧を表示します。 ドラッグ アンド ドロップ操作により、使用できる変換先列を入力列にマップします。  
   
  **入力列**  
- このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。 出力から列を除外するには、**[\<無視>]** を選択します。  
+ このトピックの前の手順で選択した入力列を表示します。 **[使用できる入力列]** ボックスの一覧を使用して、マッピングを変更できます。 出力から列を除外するには、 **[\<無視>]** を選択します。  
   
  **変換先列**  
  マップされているかどうかに関係なく、使用できる変換先列を表示します。  

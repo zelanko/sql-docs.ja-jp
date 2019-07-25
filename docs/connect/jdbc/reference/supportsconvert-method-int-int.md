@@ -1,5 +1,5 @@
 ---
-title: supportsConvert (int, int) メソッド |Microsoft Docs
+title: supportsConvert (int, int) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 54741cfd-32ac-46c5-8b09-fd60fd8833d7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dd517154b1390ae7c4ba7e4c13ce030df926958c
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ae22b0f4149536977dd3ee7c9cc21758e7dcc980
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766326"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969605"
 ---
 # <a name="supportsconvert-method-int-int"></a>supportsConvert (int, int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,18 +40,18 @@ public boolean supportsConvert(int fromType,
   
  変換前の JDBC 型。  
   
- *入力*  
+ *Iconvertible.totype*  
   
  変換後の JDBC 型。  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsConvert メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsConvert メソッドによって指定されます。  
+ この supportsConvert メソッドは、java メタデータインターフェイスの supportsConvert メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [supportsConvert メソッド (SQLServerDatabaseMetaData)](../../../connect/jdbc/reference/supportsconvert-method-sqlserverdatabasemetadata.md)   

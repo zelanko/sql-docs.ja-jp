@@ -1,5 +1,5 @@
 ---
-title: 'Issasynchstatus: (OLE DB) |Microsoft Docs'
+title: 'ISSAsynchStatus:: Abort (OLE DB) |Microsoft Docs'
 description: ISSAsynchStatus::Abort (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,13 +15,12 @@ helpviewer_keywords:
 - Abort method
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 36a8f97580176b4999d8429fb18c9b20da9285d1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4cb57bfac5af957bd9f2f539b025f32b5f481d66
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015428"
 ---
 # <a name="issasynchstatusabort-ole-db"></a>ISSAsynchStatus::Abort (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -62,7 +61,7 @@ HRESULT Abort(
  プロバイダー固有のエラーが発生しました。  
   
  E_INVALIDARG  
- *HChapter*パラメーターのない DB_NULL_HCHAPTER または*eOperation* DBASYNCH_OPEN はありません。  
+ *Hchapter*パラメーターが DB_NULL_HCHAPTER ではないか、 *EOPERATION*が DBASYNCH_OPEN ではありません。  
   
  E_UNEXPECTED  
  **IDBInitialize::Initialize** が呼び出されていないか、完了していないデータ ソース オブジェクトに対して **ISSAsynchStatus::Abort** が呼び出されました。  

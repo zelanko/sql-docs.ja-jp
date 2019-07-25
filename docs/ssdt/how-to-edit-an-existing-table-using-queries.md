@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 58f4de8e-97b4-4bcb-953f-f3d428432491
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 2c988efd63982b2dc5ebd8e73f2291a19b3b9b76
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 69a3486c837959cf4a92a7ee663225df16918928
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090234"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929606"
 ---
 # <a name="how-to-edit-an-existing-table-using-queries"></a>方法:クエリを使用して既存のテーブルを編集する
 Transact\-SQL クエリを記述することによって、テーブルまたはそのデータの定義を編集することができます。 テーブルの表示またはテーブルへのデータ入力を視覚的に行うには、データ エディターを使用します。データ エディターの詳細については、「[接続されているデータベース開発](../ssdt/connected-database-development.md)」を参照してください。  

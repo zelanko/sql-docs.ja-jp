@@ -27,22 +27,21 @@ helpviewer_keywords:
 ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 53f25408fd487e265647eb2464aebacf8338ebbe
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
-ms.translationtype: HT
+ms.openlocfilehash: 612132eec023e3497344c01bd34947bb49195385
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67727798"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010432"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-> Linux では、bcp を使用して、参照してください[sqlcmd および bcp を Linux にインストール](../linux/sql-server-linux-setup-tools.md)します。
+> Linux で bcp を使用する方法については、「 [linux での sqlcmd と bcp のインストール](../linux/sql-server-linux-setup-tools.md)」を参照してください。
 >
-> Azure SQL Data Warehouse での bcp の使用に関する詳細については、次を参照してください。 [bcp を使用したデータを読み込む](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)します。
+> Bcp を Azure SQL Data Warehouse と共に使用する方法の詳細については、「bcp を使用し[たデータの読み込み](https://docs.microsoft.com/azure/sql-data-warehouse/sql-data-warehouse-load-with-bcp)」を参照してください。
 
   **b**ulk **c**opy **p**rogram ユーティリティ (**bcp**) では、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスと、ユーザー指定の形式のデータ ファイルとの間でデータの一括コピーを行います。 **bcp** ユーティリティを使うと、多数の新規行を [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] テーブルにインポートしたり、データをテーブルからデータ ファイルにエクスポートしたりできます。 このユーティリティでは **の知識は必要ありません。ただし、** queryout [!INCLUDE[tsql](../includes/tsql-md.md)]オプションと同時に使う場合はその知識が必要になります。 データをテーブルにインポートするには、そのテーブル用に作成されたフォーマット ファイルを使用するか、テーブルの構造およびテーブルの列に有効なデータの型を理解しておく必要があります。  
   
@@ -51,12 +50,12 @@ ms.locfileid: "67727798"
 > [!NOTE]
 > **bcp** を使ってデータをバックアップする場合、フォーマット ファイルを作成してデータ形式を記録します。 **bcp** データ ファイルには、スキーマ情報やフォーマット情報が **含まれない** ので、テーブルまたはビューが削除され、フォーマット ファイルがない場合は、データをインポートできないことがあります。
 
-## <a name="download-the-latest-version-of-bcp-utility"></a>最新バージョンの bcp ユーティリティをダウンロードします。
+## <a name="download-the-latest-version-of-bcp-utility"></a>最新バージョンの bcp ユーティリティをダウンロードする
 
 **[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x64) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2043518)**
 <br>**[![ダウンロード](../ssdt/media/download.png) Microsoft Command Line Utilities 15.0 for SQL Server (x86) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2043622)**
 
-コマンド ライン ツールは一般公開 (GA) のインストーラー パッケージでリリースされる[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]します。
+コマンドラインツールは一般公開 (GA) ですが、の[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]インストーラーパッケージと共にリリースされます。
 
 **バージョン情報**
 
@@ -64,12 +63,12 @@ ms.locfileid: "67727798"
 ビルド番号: 15.0.1000.34<br>
 リリース日: 2018 年 10 月 18 日
 
-SQLCMD の新しいバージョンでは、SQL Database、SQL Data Warehouse、および Always Encrypted 機能の多要素認証 (MFA) のサポートを含む、Azure AD の認証をサポートします。
-新しい BCP では、SQL Database と SQL Data Warehouse 用の Multi-factor Authentication (MFA) のサポートなど、Azure AD の認証をサポートします。
+新しいバージョンの SQLCMD では Azure AD 認証がサポートされています。これには、SQL Database、SQL Data Warehouse、および Always Encrypted の機能に対する多要素認証 (MFA) のサポートが含まれます。
+新しい BCP では、SQL Database と SQL Data Warehouse の Multi-factor Authentication (MFA) のサポートなど、Azure AD 認証をサポートしています。
 
-**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントには、 [Windows インストーラー4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[SQL Server 用 Microsoft ODBC Driver 17.3](https://www.microsoft.com/download/details.aspx?id=56567)します。
+**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows server 2008、Windows Server 2008 R2、Windows server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントでは、 [Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[Microsoft ODBC Driver 17.3 の両方が必要です。SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
 
-BCP のバージョンの実行をチェックする`bcp /v`コマンドしその 15.0.1000.34 を確認または以降が使用されます。
+BCP バージョンの execute `bcp /v`コマンドを確認し、15.0.1000.34 以上が使用されていることを確認します。
 
 <table><th>構文</th><tr><td><pre>
 bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a href="#tbl_name">table_name</a> | <a href="#vw_name">view_name</a> | <a href="#query">"query"</a>}
@@ -203,25 +202,25 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
  *first_row* には、2^63-1 以下の正の整数を指定できます。 **-F** *first_row* is 1-based.  
 
 **-G**<a name="G"></a>  
- このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチが必要です[14.0.3008.27 バージョンまたはそれ以降](https://go.microsoft.com/fwlink/?LinkID=825643)します。 バージョンを判断するには、bcp -v を実行します。 詳細については、次を参照してください。[使用して Azure Active Directory 認証では、SQL Database または SQL Data Warehouse の認証に](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)します。 
+ このスイッチは、Azure SQL Database または Azure SQL Data Warehouse に接続し、Azure Active Directory 認証を使用してユーザーを認証するように指定する場合に、クライアントによって使用されます。 -G スイッチに[はバージョン 14.0.3008.27](https://go.microsoft.com/fwlink/?LinkID=825643)以降が必要です。 バージョンを判断するには、bcp -v を実行します。 詳細については、「 [SQL Database または SQL Data Warehouse での認証に Azure Active Directory 認証を使用する](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication)」を参照してください。 
 
 > [!IMPORTANT]
 > **-G** オプションは、Azure SQL Database と Azure Data Warehouse にのみ適用されます。
-> AAD 統合と対話型認証は現在サポートされていません Linux または macOS でします。
+> AAD 統合認証および対話型認証は、現在、Linux または macOS ではサポートされていません。
 
 > [!TIP]
->  Bcp のバージョンが Azure Active Directory 認証 (AAD) の型のサポートが含まれますかどうかをチェックする**bcp--** (bcp\<領域 >\<dash >\<dash >)-g の一覧に表示されることを確認使用可能な引数。
+>  お使いのバージョンの bcp に Azure Active Directory Authentication (AAD) 型の**bcp**がサポートされている\<かどうかを\<確認するには (bcp space >\<ダッシュ > ダッシュ >)、使用可能な引数の一覧に-G が表示されていることを確認します。
 
 - **Azure Active Directory のユーザー名とパスワード:** 
 
     Azure Active Directory のユーザー名とパスワードを使用には、 **-G** オプションを指定します。ユーザー名とパスワードは、 **-U** オプションと **-P** オプションを指定する方法でも使用できます。 
 
-    次の例では、Azure AD のユーザー名を使用してデータをエクスポートして、ユーザー名とパスワードは、AAD の資格情報のパスワード。 例では、テーブルをエクスポートします`bcptest`データベースから`testdb`Azure サーバーから`aadserver.database.windows.net`ファイルでデータを格納および`c:\last\data1.dat`:
+    次の例では、ユーザーとパスワードが AAD 資格情報である Azure AD のユーザー名とパスワードを使用してデータをエクスポートします。 この例では`bcptest` 、Azure `testdb`サーバー `aadserver.database.windows.net`からテーブルをエクスポートし、そのデータ`c:\last\data1.dat`をファイルに格納します。
     ``` 
     bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ``` 
 
-    次の例では、Azure AD のユーザー名を使用してデータをインポートして、ユーザー名とパスワードは、AAD の資格情報のパスワード。 例では、ファイルからデータをインポートする`c:\last\data1.dat`テーブルに`bcptest`データベース`testdb`Azure サーバーで`aadserver.database.windows.net`Azure AD ユーザーとパスワードを使用します。
+    次の例では Azure AD ユーザー名とパスワードを使用してデータをインポートします。ユーザーとパスワードは AAD 資格情報です。 この例では、Azure AD `c:\last\data1.dat`ユーザー/パスワードを`testdb`使用して`aadserver.database.windows.net` 、Azure サーバー上のデータベースのテーブル`bcptest`にデータをインポートします。
     ```
     bcp bcptest in "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com -P xxxxx
     ```
@@ -230,15 +229,15 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 統合** 
  
-    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。 この構成では、現在の Windows ユーザー アカウント (bcp コマンドを実行しているアカウント) が Azure AD とフェデレーションすることを前提としています。 
+    Azure Active Directory 統合認証の場合、ユーザー名とパスワードなしで **-G** オプションを指定します。 この構成は、現在の Windows ユーザーアカウント (bcp コマンドが実行されているアカウント) が Azure AD とフェデレーションされていることを前提としています。 
 
-    次の例では、Azure AD の統合アカウントを使用してデータをエクスポートします。 例では、テーブルをエクスポートします`bcptest`データベースから`testdb`Azure サーバーから Azure AD の統合を使用して`aadserver.database.windows.net`ファイルでデータを格納および`c:\last\data2.dat`:
+    次の例では、Azure AD 統合アカウントを使用してデータをエクスポートします。 この例では`bcptest` 、Azure `testdb`サーバー `aadserver.database.windows.net`から統合された Azure AD を使用してデータベース`c:\last\data2.dat`からテーブルをエクスポートし、そのデータをファイルに格納します。
 
     ```
     bcp bcptest out "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
     ```
 
-    次の例では、Azure AD の統合認証を使用してデータをインポートします。この例では、ファイルからデータをインポート`c:\last\data2.txt`テーブルに`bcptest`データベース`testdb`Azure サーバーで`aadserver.database.windows.net`Azure AD の統合認証を使用して。
+    次の例では Azure AD 統合認証を使用してデータをインポートします。この例では Azure AD 統合`c:\last\data2.txt`認証を`bcptest`使用し`testdb`て、Azure `aadserver.database.windows.net`サーバー上のデータベースのテーブルにデータをインポートします。
 
     ```
     bcp bcptest in "c:\last\data2.dat" -S aadserver.database.windows.net -d testdb -G -c -t
@@ -246,29 +245,29 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
 
 - **Azure Active Directory 対話型**  
 
-   Azure SQL Database と SQL Data Warehouse、Azure AD の対話型認証を使用すると、多要素認証をサポートする対話型のメソッドを使用できます。 詳細については、次を参照してください。 [Active Directory 対話型認証](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)します。 
+   Azure AD Azure SQL Database および SQL Data Warehouse の対話型認証を使用すると、多要素認証をサポートする対話的な方法を使用できます。 詳細については、「 [Active Directory Interactive Authentication](../ssdt/azure-active-directory.md#active-directory-interactive-authentication)」を参照してください。 
 
-   Azure AD の対話が必要です**bcp** [バージョン 15.0.1000.34](#download-the-latest-version-of-bcp-utility)以降だけでなく[ODBC バージョン 17.2 以降](https://www.microsoft.com/download/details.aspx?id=56567)します。  
+   Azure AD interactive には、 **bcp** [バージョン 15.0.1000.34](#download-the-latest-version-of-bcp-utility)以降、および[ODBC バージョン 17.2](https://www.microsoft.com/download/details.aspx?id=56567)以降が必要です。  
 
-   対話型認証を有効にするユーザー名と-g オプションを提供します (-U) のみ、パスワードなし。   
+   対話型認証を有効にするには、パスワードを指定せずに、-G オプションにユーザー名 (-U) のみを指定します。   
 
-   次の例では、ユーザーが AAD アカウントを表すユーザー名を示す、Azure AD の対話型モードを使用してデータをエクスポートします。 これは、前のセクションで使用される同じ例: *Azure Active Directory ユーザー名とパスワード*します。  
+   次の例では Azure AD 対話型モードを使用してデータをエクスポートします。ユーザー名は AAD アカウントを表します。 これは、前のセクションで使用したのと同じ例です。 *Azure Active Directory ユーザー名とパスワード*です。  
 
-   対話モードを手動で入力されたパスワードが必要または有効にすると、multi-factor authentication でアカウントが、構成された MFA 認証メソッドを完了します。 
+   対話モードでは、パスワードを手動で入力するか、multi-factor authentication が有効になっているアカウントに対して、構成された MFA 認証方法を完了する必要があります。 
 
    ``` 
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U alice@aadtest.onmicrosoft.com 
    ``` 
 
-   ドメイン フェデレーションいずれかの場合は、Azure AD ユーザーが Windows アカウントを使用して、コマンドラインで必要なユーザー名には、ドメイン アカウントが含まれます (たとえば、joe@contoso.com以下を参照)。   
+   Azure AD ユーザーが Windows アカウントを使用してドメインにフェデレーションされている場合、コマンドラインで必要なユーザー名にはドメインアカウントが含まjoe@contoso.comれます (例: 以下を参照)。   
 
    ```
    bcp bcptest out "c:\last\data1.dat" -c -t -S aadserver.database.windows.net -d testdb -G -U joe@contoso.com 
    ```
 
-   ゲスト ユーザーのエイリアスが使用される場合、ゲスト ユーザーは、特定の Azure AD に存在し、bcp コマンドを実行するデータベース権限を持つ SQL DB 内に存在するグループの一部である、(たとえば、 *keith0@adventureworks.com* )。
+   ゲストユーザーが特定の Azure AD に存在し、bcp コマンドを実行するためのデータベースアクセス許可を持つ SQL DB に存在するグループの一部である場合は、ゲストユーザーエイリアスが *keith0@adventureworks.com* 使用されます (たとえば、)。
   
-**-h** _ **"load hints**_ [ ,... *n*] **"** <a name="h"></a> データをテーブルまたはビューに一括インポートするときに使用するヒントを指定します。  
+**-h** _**"load hints**_ [ ,... *n*] **"** <a name="h"></a> データをテーブルまたはビューに一括インポートするときに使用するヒントを指定します。  
   
 * **ORDER**( **_column_[ASC | DESC] [** , **..._n_])**  
 データ ファイルのデータの並べ替え順序です。 インポートするデータをテーブル上のクラスター化インデックスに従って並べ替えると、一括インポートのパフォーマンスが向上します。 データ ファイルが異なる順序で並べ替えられている場合、つまり、クラスター化インデックス キーの順序以外で並べ替えられている場合、またはテーブルにクラスター化インデックスが存在しない場合、ORDER 句は無視されます。 指定する列の名前は、インポート先のテーブル内で有効な列の名前であることが必要です。 既定では、 **bcp** はデータ ファイルの並べ替えが行われていないことを前提としています。 最適な一括インポートのため、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、インポートするデータが並べ替えられているかどうかも検証されます。  
@@ -378,7 +377,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
  **-S** _**server\_name**_ [\\ _**instance\_name**_ ]<a name="S"></a> 接続先となる [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のインスタンスを指定します。 サーバーを指定しない場合、 **bcp** ユーティリティは、ローカル コンピューター上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続されます。 ネットワーク上のリモート コンピューターまたはローカルの名前付きインスタンスから **bcp** コマンドを実行するときは、このオプションが必要です。 サーバー上にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の既定のインスタンスに接続するには、 *server_name*のみを指定します。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の名前付きインスタンスに接続するには、_server\_name_ **\\** _instance\_name_ を指定します。  
   
- **-t** _**フィールド\_用語**_ <a name="t"></a>  
+ **-t** _**フィールドの\_用語**_ <a name="t"></a>  
  フィールド ターミネータを指定します。 既定値は **\t** (タブ文字) です。 既定のフィールド ターミネータをオーバーライドする場合、このパラメーターを使用します。 詳細については、「[フィールド ターミネータと行ターミネータの指定 &#40;SQL Server&#41;](../relational-databases/import-export/specify-field-and-row-terminators-sql-server.md)」をご覧ください。  
   
  bcp.exe コマンドでは、フィールド ターミネータを 16 進数表記で指定すると、値が 0x00 で切り捨てられます。 たとえば、0x410041 を指定した場合、使用されるのは 0x41 になります。  
@@ -548,7 +547,7 @@ bcp ユーティリティは、[Microsoft SQL Server 2016 Feature Pack](https://
 
 ### <a name="example-test-conditions"></a>**テスト条件の例**
 
-以下の例では、SQL Server (2016 以降) および Azure SQL Database 用の `WideWorldImporters` サンプル データベースを利用しています。  `WideWorldImporters` ダウンロードできます[ https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)します。  サンプル データベースを復元する構文については、「 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 」を参照してください。  特記していない場合、この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  多くの例では、 `D:\BCP` というディレクトリを使用します。
+以下の例では、SQL Server (2016 以降) および Azure SQL Database 用の `WideWorldImporters` サンプル データベースを利用しています。  `WideWorldImporters`から[https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/wide-world-importers-v1.0)ダウンロードできます。  サンプル データベースを復元する構文については、「 [RESTORE (Transact-SQL)](../t-sql/statements/restore-statements-transact-sql.md) 」を参照してください。  特記していない場合、この例では、Windows 認証を使用していること、および **bcp** コマンドを実行しているサーバー インスタンスへのセキュリティ接続があることを前提としています。  多くの例では、 `D:\BCP` というディレクトリを使用します。
 
 以下のスクリプトでは、`WideWorldImporters.Warehouse.StockItemTransactions` テーブルの空のコピーを作成し、主キー制約を追加します。  SQL Server Management Studio (SSMS) で、次の T-SQL スクリプトを実行します。
 

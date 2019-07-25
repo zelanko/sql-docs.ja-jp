@@ -1,5 +1,5 @@
 ---
-title: Count (組) (MDX) |Microsoft Docs
+title: Count (タプル) (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -15,10 +15,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68047269"
 ---
-# <a name="count-tuple-mdx"></a>Count (組) (MDX)
+# <a name="count-tuple-mdx"></a>Count (タプル) (MDX)
 
 
-  組の次元数を返します。  
+  タプルの次元数を返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,13 +29,13 @@ Tuple_Expression.Count
   
 ## <a name="arguments"></a>引数  
  *Tuple_Expression*  
- 組を返す有効な多次元式 (MDX) 式です。  
+ タプルを返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
- 組の次元数を返します。  
+ タプルの次元数を返します。  
   
 ## <a name="example"></a>例  
- 次のクエリで計算されるメジャーが、組にある階層の数は、値 2 を返します`([Measures].[Internet Sales Amount], [Date].[Calendar].[Calendar Year].&[2001])`:  
+ 次のクエリで計算されるメジャーが、タプルにある階層の数は、値 2 を返します`([Measures].[Internet Sales Amount], [Date].[Calendar].[Calendar Year].&[2001])`:  
   
 ```  
 WITH MEMBER MEASURES.COUNTTUPLE AS  

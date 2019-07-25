@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: c9e7b904-2e98-459f-9173-382919d741e2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3d45536588b4870f688fc0f8256233f6037c3987
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 189b35b98c6b604563d056f286b9640ee47637a8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801340"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980457"
 ---
 # <a name="getreference-method-sqlserverxadatasource"></a>getReference メソッド (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public javax.naming.Reference getReference()
  参照オブジェクト。  
   
 ## <a name="remarks"></a>Remarks  
- この getReference メソッドは、javax.naming.Referenceable インターフェイスの getReference メソッドによって指定されます。  
+ この getReference メソッドは、参照可能インターフェイスの getReference メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXADataSource のメソッド](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

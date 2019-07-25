@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: fb31c2b1-ca4f-4e11-a0b6-5c26430f1c8c
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd4b8ab01b2b9f16938e9493d5e762cae59a6446
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ae25dbc584e564130348507e5aef657823502923
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68026613"
 ---
 # <a name="how-to-delete-objects-and-resolve-dependencies"></a>方法:オブジェクトを削除し、依存関係を解決する
 **SQL Server オブジェクト エクスプローラー** でオブジェクトの名前変更または削除を行うと、SQL Server Data Tools によって自動的に、依存関係オブジェクトがすべて検出され、必要に応じて名前の変更または依存関係の削除を行うための ALTER スクリプトが用意されます。  

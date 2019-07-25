@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aebe3dc6-3ee4-4d11-8e43-5d32b3f91490
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3ceea73eba8f1c01590218c106f3b2b10237408e
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 743eab241fa9feb4a622054b3be48b887b804813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770571"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957616"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-adonet"></a>ステップ 3: ADO.NET を使用した SQL への接続を概念実証する
 
@@ -28,7 +27,7 @@ ms.locfileid: "66770571"
   
 ## <a name="step-1-connect"></a>手順 1: 接続する
   
-メソッド**SqlConnection.Open** SQL database に接続するために使用します。  
+このメソッドは、SQL データベースへの接続に使用されます **。**  
 
 
 ```csharp
@@ -67,10 +66,10 @@ ms.locfileid: "66770571"
 
 ## <a name="step-2--execute-a-query"></a>手順 2: クエリを実行する  
   
-SqlCommand.ExecuteReader メソッド:  
+ExecuteReader メソッド:  
   
-- SQL システムには、SQL SELECT ステートメントを発行します。  
-- 結果の行へのアクセスを提供する SqlDataReader のインスタンスを返します。  
+- Sql の SELECT ステートメントを SQL システムに発行します。  
+- 結果行へのアクセスを提供する SqlDataReader のインスタンスを返します。  
   
   
   
@@ -156,8 +155,8 @@ SqlCommand.ExecuteReader メソッド:
   
 この例では、次の方法を示します。  
   
-- パラメーターを渡すことによって、SQL の INSERT ステートメントを安全に実行します。  
-  - パラメーターの使用は、SQL インジェクション攻撃から保護します。  
+- パラメーターを渡すことにより、SQL INSERT ステートメントを安全に実行します。  
+  - パラメーターを使用すると、SQL インジェクション攻撃を防ぐことができます。  
 - 自動生成された値を取得します。  
   
   

@@ -1,5 +1,5 @@
 ---
-title: getXAConnection () メソッド |Microsoft Docs
+title: getXAConnection メソッド () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b2710613-78b1-438f-b996-c7ae6f34381a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 75d45c751cc9350392fac7e6234ba13d294d6550
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3c53cbcc5abcb9fb08999b1d171645b45097eb34
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977972"
 ---
 # <a name="getxaconnection-method-"></a>getXAConnection () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public javax.sql.XAConnection getXAConnection()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- XAConnection オブジェクト。  
+ Javax.sql.xaconnection オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  java.sql.SQLException  
   
 ## <a name="remarks"></a>Remarks  
- この getXAConnection メソッドは、javax.sql.XADataSource インターフェイスで getXAConnection メソッドによって指定されます。  
+ この getXAConnection メソッドは、javax.mail インターフェイスの getXAConnection メソッドによって指定されます。  
   
 > [!NOTE]  
 >  このメソッドは、通常 XA 接続プール実装によって呼び出され、標準の JDBC アプリケーション コードからは呼び出されません。  

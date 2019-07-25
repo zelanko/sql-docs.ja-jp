@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 76c68fc2-5af6-4b8d-baee-245716fdc5cc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b6cb9ce098a57d3378ca0ae2d6a4718185221852
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 48f3861991aa56ed79f753acedd4dbd9f27b5744
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788607"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969283"
 ---
 # <a name="supportsmixedcasequotedidentifiers-method-sqlserverdatabasemetadata"></a>supportsMixedCaseQuotedIdentifiers メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean supportsMixedCaseQuotedIdentifiers()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsMixedCaseQuotedIdentifiers メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsMixedCaseQuotedIdentifiers メソッドによって指定されます。  
+ この supportsMixedCaseQuotedIdentifiers メソッドは、supportsMixedCaseQuotedIdentifiers メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

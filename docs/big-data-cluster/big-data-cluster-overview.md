@@ -1,108 +1,112 @@
 ---
-title: ビッグ データ クラスターとは
+title: ビッグデータクラスターとは
 titleSuffix: SQL Server big data clusters
-description: Kubernetes で実行して、リレーショナルの両方でスケール アウト オプションおよび HDFS データを提供する SQL Server 2019 ビッグ データ クラスター (プレビュー) について説明します。
+description: Kubernetes で実行され、リレーショナルデータと HDFS データの両方にスケールアウトオプションを提供する SQL Server 2019 ビッグデータクラスター (プレビュー) について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 166fa1d5b736720b8bab7dff6a8ea56c63a702fb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0beb4ea57ba6c2591e5b2c06a7775fc2d7e8b26c
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958855"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419498"
 ---
 # <a name="what-are-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターとは
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-以降で[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]、ビッグ データの SQL Server クラスターでは、Kubernetes で実行されている SQL Server、Spark、および HDFS のコンテナーの拡張性の高いクラスターをデプロイできます。 これらのコンポーネントを使用すると、読み取り、書き込み、および TRANSACT-SQL または Spark からビッグ データの処理、結合および価値の高いリレーショナル データを大量のビッグ データ分析を簡単にすることができますを並行して実行されます。
+[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]以降 SQL Server ビッグデータクラスターを使用すると、Kubernetes で実行されている SQL Server、Spark、および HDFS コンテナーのスケーラブルなクラスターをデプロイできます。 これらのコンポーネントは並行して実行されているため、Transact-sql または Spark からのビッグデータの読み取り、書き込み、処理を行うことができます。これにより、大量のビッグデータを使用して、価値の高いリレーショナルデータを簡単に組み合わせて分析することができます。
 
-新機能と最新のリリースの既知の問題の詳細については、次を参照してください。、[リリース ノート](release-notes-big-data-cluster.md)します。
+最新リリースの新機能と既知の問題の詳細については、[リリースノート](release-notes-big-data-cluster.md)を参照してください。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
 ## <a name="scenarios"></a>シナリオ
 
-SQL Server のビッグ データ クラスターでは、ビッグ データと対話する方法の柔軟性を提供します。 外部データ ソースのクエリ、SQL Server、またはクラスターを複数の外部データ ソースからデータを照会して管理されている HDFS のビッグ データを格納できます。 AI、機械学習、およびその他の分析タスクに、このデータを使用できます。 次のセクションでは、これらのシナリオに関する詳細を提供します。
+ビッグデータクラスターを SQL Server と、ビッグデータを柔軟に操作することができます。 外部データソースに対してクエリを実行したり、SQL Server によって管理される HDFS にビッグデータを格納したり、クラスターを介して複数の外部データソースからデータを照会したりすることができます。 その後、AI、machine learning、およびその他の分析タスクにデータを使用できます。 以下のセクションでは、これらのシナリオの詳細について説明します。
 
 ### <a name="data-virtualization"></a>データの仮想化
 
-利用して[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)、ビッグ データの SQL Server クラスターは移動またはデータをコピーすることがなく外部データ ソースを照会できます。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] データ ソースには、新しいコネクタが導入されています。
+[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)SQL Server を利用することで、ビッグデータクラスターはデータを移動またはコピーせずに外部データソースにクエリを実行できます。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)]では、データソースへの新しいコネクタが導入されています。
 
 ![データの仮想化](media/big-data-cluster-overview/data-virtualization.png)
 
 ### <a name="data-lake"></a>Data lake
 
-SQL Server のビッグ データ クラスターには、スケーラブルな HDFS が含まれています。*記憶域プール*します。 複数の外部ソースから取り込まれる可能性のあるビッグ データを格納するために使用できます。 ビッグ データ クラスターで HDFS のビッグ データが保存されると、分析、データのクエリし、リレーショナル データと組み合わせることとことができます。
+SQL Server ビッグデータクラスターには、スケーラブルな HDFS*記憶域プール*が含まれています。 これは、複数の外部ソースから取り込まれた可能性があるビッグデータを格納するために使用できます。 ビッグデータクラスターの HDFS にビッグデータが格納されると、データを分析してクエリを実行し、リレーショナルデータと組み合わせることができます。
 
 ![Data lake](media/big-data-cluster-overview/data-lake.png)
 
-### <a name="scale-out-data-mart"></a>スケール アウト データ マート
+### <a name="scale-out-data-mart"></a>スケールアウトデータマート
 
-SQL Server のビッグ データ クラスターは、スケール アウトのコンピューティングとデータの分析のパフォーマンスを向上させるためにストレージを提供します。 さまざまなソースからデータを取り込みし、分散*データ プール*さらに詳しい分析のキャッシュとしてのノード。
+ビッグデータクラスター SQL Server は、データの分析のパフォーマンスを向上させるためにスケールアウトコンピューティングとストレージを提供します。 さまざまなソースからのデータを取り込まれたして、さらに分析するためにキャッシュとして*データプール*ノード間で分散することができます。
 
-![データ マート](media/big-data-cluster-overview/data-mart.png)
+![データマート](media/big-data-cluster-overview/data-mart.png)
 
-### <a name="integrated-ai-and-machine-learning"></a>統合された AI と機械学習
+### <a name="integrated-ai-and-machine-learning"></a>AI と Machine Learning の統合
 
-SQL Server のビッグ データ クラスターには、AI と機械学習タスクに HDFS の記憶域プールおよびデータ プールに格納されたデータが有効にします。 R、Python、Scala、または Java を使用して、SQL Server では、組み込みの AI ツールと同様に Spark を使用できます。
+ビッグデータクラスター SQL Server、HDFS ストレージプールとデータプールに格納されているデータに対して AI および機械学習のタスクを有効にします。 SQL Server では、R、Python、スケール a、または Java を使用して、Spark および組み込みの AI ツールを使用できます。
 
 ![AI と ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
 ### <a name="management-and-monitoring"></a>管理と監視
 
-管理と監視は、コマンド ライン ツール、Api、ポータル、および動的管理ビューの組み合わせを通じて提供されます。
+管理と監視は、コマンドラインツール、Api、ポータル、および動的管理ビューの組み合わせによって提供されます。
 
-Azure Data Studio を使用して、ビッグ データ クラスター上のさまざまなタスクを実行することができます。 これは、オプションが有効で、新しい**SQL Server 2019 拡張機能 (プレビュー)** します。 この拡張機能を提供します。
+Azure Data Studio を使用すると、ビッグデータクラスターでさまざまなタスクを実行できます。 これは、新しい**SQL Server 2019 拡張機能 (プレビュー)** によって有効になります。 この拡張機能は次を提供します。
 
-- 一般的な管理タスクの組み込みのスニペットです。
-- HDFS を参照する機能は、ファイルのアップロード、ファイルをプレビューし、ディレクトリを作成します。
-- 機能を作成するには、開くと互換性のある Jupyter notebook を実行します。
-- データの仮想化ウィザード外部データ ソースの作成を簡略化します。
+- 一般的な管理タスク用の組み込みスニペットです。
+- HDFS の参照、ファイルのアップロード、ファイルのプレビュー、およびディレクトリの作成を行うことができます。
+- Jupyter 互換ノートブックを作成、開いて、実行する機能。
+- データ仮想化ウィザード。外部データソースの作成を簡略化します。
 
 ## <a id="architecture"></a> アーキテクチャ
 
-SQL Server のビッグ データ クラスターはクラスターによって調整される Linux コンテナーの場合、 [Kubernetes](https://kubernetes.io/docs/concepts/)します。
+SQL Server ビッグデータクラスターは、 [Kubernetes](https://kubernetes.io/docs/concepts/)によって調整された Linux コンテナーのクラスターです。
 
 ### <a name="kubernetes-concepts"></a>Kubernetes の概念
 
-Kubernetes は、ニーズに合わせてコンテナーのデプロイでスケールできる、オープン ソース コンテナー オーケストレーターです。 次の表では、Kubernetes の重要な用語を定義します。
+Kubernetes はオープンソースのコンテナー orchestrator であり、必要に応じてコンテナーのデプロイを拡張できます。 次の表では、重要な Kubernetes 用語をいくつか定義します。
 
 |||
 |:--|:--|
-| **Cluster** | Kubernetes クラスターは、一連のノードと呼ばれるマシンです。 1 つのノードがクラスターを制御し、マスター ノードが指定されます。残りのノードは、ワーカー ノードです。 Kubernetes マスターは、ワーカー間の作業を配布して、クラスターの正常性を監視します。 |
-| **[Node]** | ノードには、コンテナー化されたアプリケーションが実行されます。 物理マシンまたは仮想マシンのいずれかを指定できます。 Kubernetes クラスターには、物理マシンと仮想マシン ノードの組み合わせを含めることができます。 |
-| **pod 型** | ポッドは、Kubernetes のデプロイのアトミック単位です。 ポッドは、1 つまたは複数のコンテナーの論理グループ-リソース必要なアプリケーションの実行に関連付けられているとします。 それぞれのポッドが; ノードで実行します。ノードには、1 つまたは複数のポッドを実行できます。 Kubernetes マスターは、クラスター内のノードにポッドを自動的に割り当てます。 |
+| **Cluster** | Kubernetes クラスターは、ノードと呼ばれる一連のコンピューターです。 1つのノードがクラスターを制御し、マスターノードとして指定されます。残りのノードは worker ノードです。 Kubernetes マスターは、ワーカー間で作業を分散し、クラスターの正常性を監視する役割を担います。 |
+| **[Node]** | ノードは、コンテナー化されたアプリケーションを実行します。 物理マシンまたは仮想マシンのいずれかを指定できます。 Kubernetes クラスターには、物理マシンと仮想マシンの両方のノードを含めることができます。 |
+| **ポッド** | ポッドは、Kubernetes のアトミックデプロイ単位です。 ポッドは、アプリケーションを実行するために必要な1つ以上のコンテナーと関連リソースの論理グループです。 各ポッドはノード上で実行されます。ノードは、1つまたは複数のポッドを実行できます。 Kubernetes マスターは、クラスター内のノードにポッドを自動的に割り当てます。 |
 | &nbsp; ||
 
-ビッグ データの SQL Server クラスター、Kubernetes は SQL Server のビッグ データ クラスター; の状態を担当Kubernetes で、ビルド、クラスター ノードを構成およびノードにポッドを割り当てます、および、クラスターの正常性を監視します。
+SQL Server ビッグデータクラスターでは、Kubernetes は SQL Server ビッグデータクラスターの状態を担います。Kubernetes は、クラスターノードの構築と構成を行い、ポッドをノードに割り当て、クラスターの正常性を監視します。
 
-### <a name="big-data-clusters-architecture"></a>ビッグ データ クラスターのアーキテクチャ
+### <a name="big-data-clusters-architecture"></a>ビッグデータクラスターのアーキテクチャ
 
-クラスター内のノードが 3 つの論理面に配置されます: コントロール プレーン、コンピューティング、プレーンとデータ プレーンです。 各プレーンでは、クラスターにさまざまな役割を持っています。 SQL Server のビッグ データ クラスター内のすべての Kubernetes ノードが少なくとも 1 つの平面のコンポーネントのポッドをホストしています。
+次の図は、SQL Server 用のビッグデータクラスターのコンポーネントを示しています。
 
-![アーキテクチャの概要](media/big-data-cluster-overview/architecture-diagram-planes.png)
+![アーキテクチャの概要](media/big-data-cluster-overview/architecture-diagram-overview.png)
 
-### <a id="controlplane"></a> コントロール プレーン
+### <a id="controlplane"></a>コントロール
 
-コントロール プレーンでは、管理とクラスターのセキュリティを提供します。 Kubernetes マスターが含まれている、*マスター インスタンスの SQL Server*、および Hive メタストアと Spark ドライバーなどの他のクラスター レベル サービス。
+コントローラーは、クラスターの管理とセキュリティを提供します。 これには、cntrol サービス、構成ストア、およびその他のクラスターレベルサービス (Kibana、Grafana、エラスティック検索など) が含まれています。
 
-### <a id="computeplane"></a> 平面を計算します。
+### <a id="computeplane"></a>コンピューティングプール
 
-コンピューティングの面では、クラスターにコンピューティング リソースを提供します。 SQL Server を Linux のポッドで実行されるノードが含まれています。 コンピューティング平面のポッドが分割*プールのコンピューティング*特定のタスクを処理します。 コンピューティング プールが果たすことができる、 [PolyBase](../relational-databases/polybase/polybase-guide.md)ソースなどさまざまなデータとして HDFS、Oracle、MongoDB、または Teradata に対する分散クエリのスケール アウト グループ。
+コンピューティングプールは、クラスターにコンピューティングリソースを提供します。 SQL Server on Linux ポッドを実行するノードが含まれています。 コンピューティングプール内のポッドは、特定の処理タスクのために*SQL コンピューティングインスタンス*に分割されます。 
 
-### <a id="dataplane"></a> データ プレーン
+### <a id="dataplane"></a>データプール
 
-データ プレーンは、データの永続化とキャッシュに使用されます。 SQL データのプールと記憶域プールが含まれています。  SQL のデータ プールは、Linux 上の SQL Server を実行している 1 つまたは複数のポッドで構成されます。 SQL クエリまたは Spark ジョブからデータを取り込むために使用されます。 ビッグ データの SQL Server クラスターのデータ マートは、データのプールに保存されます。 記憶域プールは、Linux、Spark、および HDFS 上の SQL Server から成る記憶域プールのポッドで構成されます。 SQL Server のビッグ データ クラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
+データプールは、データの永続化とキャッシュに使用されます。 データプールは、SQL Server on Linux を実行している1つ以上のポッドで構成されます。 これは、SQL クエリまたは Spark ジョブからデータを取り込むために使用されます。 SQL Server ビッグデータクラスターのデータマートは、データプールに保持されます。 
+
+### <a name="storage-pool"></a>記憶域プール
+
+記憶域プールは、SQL Server on Linux、Spark、および HDFS で構成される記憶域プールポッドで構成されます。 SQL Server ビッグデータクラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
 
 > [!TIP]
-> ビッグ データ クラスターのアーキテクチャとインストールの詳細については、次を参照してください。[ワーク ショップ。Microsoft SQL Server のビッグ データ クラスター アーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)します。
+> ビッグデータクラスターのアーキテクチャとインストールの詳細については、「 [ワークショップ:ビッグデータクラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)を Microsoft SQL Server します。
 
 ## <a name="next-steps"></a>次のステップ
 
-SQL Server のビッグ データ クラスターは、SQL Server 2019 Early Adoption Program を通じて限定パブリック プレビューとして利用可能なは first です。 アクセス権を要求するには、登録[ここ](https://aka.ms/eapsignup)、ビッグ データ クラスターに関心を指定します。 Microsoft はすべての要求をトリアージし、できるだけ早く対応します。
+SQL Server ビッグデータクラスターは、SQL Server 2019 早期導入プログラムを通じて、限られたパブリックプレビューとして最初に利用できます。 アクセスを要求するには、[ここ](https://aka.ms/eapsignup)に登録し、ビッグデータクラスターを試すための関心を指定します。 Microsoft は、すべての要求をトリアージし、できるだけ早く対応します。

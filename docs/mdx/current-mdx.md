@@ -41,6 +41,7 @@ Set_Expression.Current
   
 ## <a name="examples"></a>使用例  
  次の例は、**Generate** 内で **Current** 関数を使用する方法を示します: 
+
   
  `WITH`  
   

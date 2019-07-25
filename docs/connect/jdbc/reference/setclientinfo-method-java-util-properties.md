@@ -1,5 +1,5 @@
 ---
-title: setClientInfo (java.util.Properties) メソッド |Microsoft Docs
+title: setClientInfo メソッド (java. util. Properties) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: b2a8ec0b-40a2-44d1-90d9-a810d4132e56
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e09d4cba23c87bdcaaa0503dffe73e65dfaf82b3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a332f42c8193c851a33036af214ac31366986023
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795671"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974741"
 ---
 # <a name="setclientinfo-method-javautilproperties"></a>setClientInfo (java.util.Properties) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void setClientInfo (java.util.Properties properties)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setClientInfo メソッドは、java.sql.Connection インターフェイスの setClientInfo メソッドによって指定されます。  
+ この setClientInfo メソッドは、java. .sql. 接続インターフェイスの setClientInfo メソッドによって指定されます。  
   
  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] ではクライアント情報のプロパティをサポートしていません。 *properties* 入力パラメーターが空のプロパティ セットを参照しない場合、このメソッドは警告を生成します。 つまり、このメソッドはアプリケーションが設定しようとするプロパティへの警告を生成します。 アプリケーションは、[SQLServerConnection](../../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [getWarnings](../../../connect/jdbc/reference/getwarnings-method-sqlserverconnection.md) メソッドを使用して各警告を取得する必要があります。  
   

@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: e3c8707f-0f6b-4265-8a5a-81f079330b52
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 727117a31fd1a2fc5f5a807de824a8ff61ebb5bd
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3f1cc7e8213f9282680f652512fe78c7bc5e8b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090207"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67929622"
 ---
 # <a name="how-to-debug-stored-procedures"></a>方法:ストアド プロシージャをデバッグする
 Transact\-SQL デバッガーでは、SQL ストアド プロシージャの SQL 呼び出し履歴、ローカル変数、およびパラメーターが表示され、ストアド プロシージャをインタラクティブにデバッグできます。 他のプログラミング言語でのデバッグと同様、Transact\-SQL スクリプトのデバッグでも、ローカル変数とパラメーターの表示と修正、グローバル変数の表示、およびブレークポイントの制御と管理を行うことができます。  

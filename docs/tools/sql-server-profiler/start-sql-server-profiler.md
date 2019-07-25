@@ -1,5 +1,5 @@
 ---
-title: SQL Server Profiler の実行 |Microsoft Docs
+title: 実行 SQL Server プロファイラー |Microsoft Docs
 ms.custom: ''
 ms.date: 07/07/2017
 ms.prod: sql
@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 22e57ffa-63b0-4de3-b92e-df297dda1226
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: b3ccffd3ad298d6c9a6bacca3e060d4fc7a5ed24
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 697905061bb60e91884d8844a103ba1302c5c4ca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67729679"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68059619"
 ---
 # <a name="run-sql-server-profiler"></a>SQL Server Profiler の実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,13 +30,13 @@ ms.locfileid: "67729679"
   
 最初に [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動し、 **[ファイル]** メニューから **[新しいトレース]** を選択すると、 **[サーバーへの接続]** ダイアログ ボックスが表示されるので、接続先の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを指定できます。  
 ## <a name="to-start-sql-server-profiler-from-the-windows-10-start-menu"></a>Windows 10 の [スタート] メニューから SQL Server Profiler を起動するには  
--  Windows をクリックします。**開始**アイコンまたはキーを押して、Windows キーと"SQL Server Profiler 17"の入力を開始します。 ときに、 **SQL Server Profiler の 17**タイルが表示されたら、それをクリックします。   
+-  Windows の **[スタート]** アイコンをクリックするか、windows キーを押して、「SQL Server プロファイラー17」と入力します。 **[SQL Server プロファイラー 17]** タイルが表示されたら、それをクリックします。   
 
 ## <a name="to-start-sql-server-profiler-in-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーで SQL Server Profiler を起動するには  
 -  [!INCLUDE[ssDE](../../includes/ssde-md.md)] チューニング アドバイザーで、 **[ツール]** メニューの **[SQL Server Profiler]** をクリックします。  
 
-## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>SQL Server Management Studio で SQL Server Profiler を起動するには  
- 開始することができます[!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]複数の場所から[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動すると、その時点の接続コンテキスト、トレース テンプレート、およびフィルター コンテキストが読み込まれます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] 独自のインスタンスで各 SQL Server Profiler セッションを開始して、Profiler がシャット ダウンした場合の実行を継続[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]します。  
+## <a name="to-start-sql-server-profiler-in-sql-server-management-studio"></a>SQL Server Management Studio で SQL Server プロファイラーを開始するには  
+ [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] の[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]複数の場所から開始できます。 [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)] を起動すると、その時点の接続コンテキスト、トレース テンプレート、およびフィルター コンテキストが読み込まれます。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]は、それぞれのインスタンスで各 SQL Server プロファイラーセッションを開始し、シャットダウン[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]した場合はプロファイラーを実行し続けます。  
 ### <a name="to-start-sql-server-profiler-from-the-tools-menu"></a>[ツール] メニューから SQL Server Profiler を起動するには  
 -  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **チューニング アドバイザーの** メニューの **[SQL Server Profiler]** から起動することもできます。  
 
@@ -58,5 +57,5 @@ ms.locfileid: "67729679"
 - [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]でトレースを実行するには、ユーザーが ALTER TRACE 権限も持っている必要があります。  
 
 ## <a name="next-steps"></a>次の手順  
- [SQL Server Profiler の概要](../../tools/sql-server-profiler/sql-server-profiler.md)   
+ [SQL Server プロファイラーの概要](../../tools/sql-server-profiler/sql-server-profiler.md)   
  [SQL Server Management Studio の使用 [SQL Server]](https://msdn.microsoft.com/library/f289e978-14ca-46ef-9e61-e1fe5fd593be)  

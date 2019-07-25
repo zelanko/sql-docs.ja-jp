@@ -1,5 +1,5 @@
 ---
-title: ドライバー バージョンの取得 |Microsoft Docs
+title: ドライバーのバージョンを取得する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5e241d72-16da-4ada-ac67-e6308394108f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cfe90d0a38cf5e599d82a6208a145daa3a3d1c7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c75f14ca3f24a97240d7430210ab79c70e0bac85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956550"
 ---
 # <a name="getting-the-driver-version"></a>ドライバー バージョンの取得
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66781817"
   
  また、SQLServerDatabaseMetaData クラスの [getDriverName](../../connect/jdbc/reference/getdrivername-method-sqlserverdatabasemetadata.md) メソッドを呼び出すと、JDBC ドライバー名が返されます。 たとえば、返されるドライバー名は "Microsoft JDBC Driver 6.4 for SQL Server" です。  
   
- SQLServerDatabaseMetaData クラスのメソッドの呼び出しから出力の例を次に示します。  
+ SQLServerDatabaseMetaData クラスのメソッドの呼び出しからの出力の例を次に示します。  
   
  `getDriverName = Microsoft JDBC Driver 6.4 for SQL Server`  
   

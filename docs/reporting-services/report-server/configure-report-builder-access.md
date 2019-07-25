@@ -6,14 +6,13 @@ ms.technology: report-server
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-manager: kfile
 ms.date: 06/06/2019
-ms.openlocfilehash: a6383eb6bf9c00f6158e0e7adc77605cfc226d9f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 724fac17abf7f5da45101a6ff22d3185a7ade93b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66826908"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68255174"
 ---
 # <a name="configure-report-builder-access"></a>レポート ビルダーへのアクセスの構成
 レポート ビルダーは、ネイティブ モードまたは SharePoint 統合モード用に構成される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーに付属しているカスタム レポート ツールです。  
@@ -30,15 +29,15 @@ ms.locfileid: "66826908"
 
 レポート ビルダーは、 [!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各エディションでサポートされる機能の一覧については、「[SQL Server 2017 の各エディションとサポートされている機能](../../sql-server/editions-and-components-of-sql-server-2017.md)」をご覧ください。  
 
-クライアント コンピューターが必要、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6、または 4.6.1 がそれぞれ SSRS 2016 および 2017 をインストールします。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
+クライアントコンピューターには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] SSRS 2016 と2017用に4.6 または4.6.1 がインストールされている必要があります。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] は、 [!INCLUDE[ndptecclick](../../includes/ndptecclick-md.md)] アプリケーションを実行するためのインフラストラクチャを提供します。  
 
-使用する必要があります[!INCLUDE[msCoName](../../includes/msconame-md.md)]Internet Explorer 11 以降、または他の最新ブラウザー。  
+Internet Explorer 11 [!INCLUDE[msCoName](../../includes/msconame-md.md)]以降、または他の最新のブラウザーを使用する必要があります。  
 
 レポート ビルダーは、常に完全信頼モードで実行されます。部分信頼モードで実行されるように構成することはできません。 以前のリリースでは、レポート ビルダーを部分信頼モードで実行できましたが、 [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降のバージョンではこのオプションはサポートされていません。  
 
 ## <a name="enabling-and-disabling-report-builder"></a>レポート ビルダーの有効化と無効化  
 
-レポート ビルダーは既定で有効になっています。 レポート サーバー管理者は、レポート サーバーのシステム プロパティ **ShowDownloadMenu** を **false** に設定することで、レポート ビルダー機能を無効にすることができます。 このプロパティを設定すると、レポート ビルダーでは、Mobile Report Publisher が無効になり、そのレポート サーバーの Power BI Mobile をダウンロードします。  
+レポート ビルダーは既定で有効になっています。 レポート サーバー管理者は、レポート サーバーのシステム プロパティ **ShowDownloadMenu** を **false** に設定することで、レポート ビルダー機能を無効にすることができます。 このプロパティを設定すると、そのレポートサーバーのレポートビルダー、Mobile Report Publisher、および Power BI Mobile のダウンロードが無効になります。  
 
  レポート サーバーのシステム プロパティを設定するには、Management Studio またはスクリプトを使用します。   
 
@@ -110,7 +109,7 @@ ms.locfileid: "66826908"
 
 1. Web ポータルを起動します。  
 
-2. 上にある歯車アイコンをクリックし、web ポータルのホーム ページの右**サイト設定**ドロップ ダウン メニューから。  
+2. Web ポータルのホームページの右上にある歯車アイコンをクリックし、ドロップダウンメニューから **[サイトの設定]** を選択します。  
 ![web ポータルの歯車アイコンとメニュー](../../reporting-services/report-builder/media/configure-report-builder-access/ssrswebportal-site-settings-gear-icon-and-menu.png)
 
 3. **[セキュリティ]** をクリックします。  

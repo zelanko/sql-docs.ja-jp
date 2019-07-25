@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 15af39bf-6285-44cc-a021-7341e7a055c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f816cab36fbed46dbf25c83df3063a024e4abbbb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e92087315c468f435cf9eb22b56b587cb1743a3f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780078"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978116"
 ---
 # <a name="getwarnings-method-sqlserverconnection"></a>getWarnings メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public java.sql.SQLWarning getWarnings()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- 行いませんオブジェクト。  
+ SQLWarning オブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getWarnings メソッドは、java.sql.Connection インターフェイスの getWarnings メソッドによって指定されます。  
+ この getWarnings メソッドは、getWarnings インターフェイスのメソッドによって指定されます。  
   
- 後続の警告は最初を行いませんにチェーンされているし、getNextWarning メソッドを使用して呼び出されます。 閉じている接続に対して呼び出すと、例外がスローされます。  
+ 後続の警告は、最初の SQLWarning にチェーンされ、getNextWarning メソッドを使用して呼び出されます。 閉じている接続に対して呼び出すと、例外がスローされます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

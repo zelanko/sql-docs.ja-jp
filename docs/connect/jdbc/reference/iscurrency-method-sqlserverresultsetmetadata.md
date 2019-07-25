@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7fe25d90-693c-4d3b-9dd2-0f8351c5a9ed
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cf38e568d723f72c673a85d31093ffe7e1bae26f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 33d21e8bfe8a774d8b5b21584ba9fd3f02246f4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796546"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977686"
 ---
 # <a name="iscurrency-method-sqlserverresultsetmetadata"></a>isCurrency メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isCurrency(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isCurrency メソッドは、java.sql.ResultSetMetaData インターフェイスで isCurrency メソッドによって指定されます。  
+ この isCurrency メソッドは、isCurrency メソッドによって指定されます。  
   
  このメソッドは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の money データ型と smallmoney データ型の場合にのみ **true** が返されます。  
   

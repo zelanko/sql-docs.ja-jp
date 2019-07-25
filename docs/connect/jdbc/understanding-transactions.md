@@ -1,5 +1,5 @@
 ---
-title: トランザクションの概要 |Microsoft Docs
+title: トランザクションについて |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d3e0414c-6809-4bb1-93b1-4960507faecc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ad6ccc7f65d6d4c65fb1bb63b58e0b13269ea351
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 090597e3afcf335aba674cd11e603067892819b0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66788387"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916584"
 ---
 # <a name="understanding-transactions"></a>トランザクションについて
 
@@ -24,7 +23,7 @@ ms.locfileid: "66788387"
 
 トランザクションは、一連の操作を結合した論理的な作業単位です。 トランザクションを使用すると、エラーが発生した場合でも、トランザクションの各操作の一貫性と整合性を制御および維持できます。
 
-[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用すると、トランザクションをローカルにすることも、分散することもできます。 トランザクションで分離レベルを使用することもできます。 JDBC ドライバーでサポートされる分離レベルの詳細については、次を参照してください。[分離レベルの理解](../../connect/jdbc/understanding-isolation-levels.md)します。
+[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用すると、トランザクションをローカルにすることも、分散することもできます。 トランザクションで分離レベルを使用することもできます。 JDBC ドライバーでサポートされる分離レベルの詳細については、「[分離レベル](../../connect/jdbc/understanding-isolation-levels.md)について」を参照してください。
 
 アプリケーションからトランザクションを制御する際には、Transact-SQL ステートメントか、JDBC ドライバーに備わっているメソッドのどちらかを使用します。両方を使用することはできません。 同じトランザクションで Transact-SQL ステートメントと JDBC API メソッドの両方を使用した場合、トランザクションを適切なタイミングでコミットできない、突然トランザクションがコミットまたはロールバックされて新しいトランザクションが開始される、"トランザクションを再開できませんでした" という例外が発生するなどの問題が生じる可能性があります。
 
@@ -42,7 +41,7 @@ ms.locfileid: "66788387"
 
 JDBC ドライバーは、[!INCLUDE[msCoName](../../includes/msconame_md.md)] 分散トランザクション コーディネーター (MS DTC) とシームレスに統合することで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] による真の分散トランザクション サポートを提供します。 MS DTC は、[!INCLUDE[msCoName](../../includes/msconame_md.md)] によって [!INCLUDE[msCoName](../../includes/msconame_md.md)] Windows システム用に提供される分散トランザクション機能です。 MS DTC は、[!INCLUDE[msCoName](../../includes/msconame_md.md)] の実証済みのトランザクション処理技術を使用して、完全な 2 フェーズ分散コミット プロトコルや分散トランザクションの回復などの XA 機能をサポートします。
 
-分散トランザクションを使用する方法の詳細については、次を参照してください。 [XA トランザクションの概要](../../connect/jdbc/understanding-xa-transactions.md)します。
+分散トランザクションの使用方法の詳細については、「 [XA トランザクション](../../connect/jdbc/understanding-xa-transactions.md)について」を参照してください。
 
 ## <a name="see-also"></a>参照
 

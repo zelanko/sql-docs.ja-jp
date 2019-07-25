@@ -1,5 +1,5 @@
 ---
-title: 分離レベルを理解する |Microsoft Docs
+title: 分離レベルについて |Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 2c41e23a-da6c-4650-b5fc-b5fe53ba65c3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 432da51055d0a9f250c342338770103fbe8fe4b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6cfbc099d88a96574439fa8c178b12629d92782c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66800166"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916642"
 ---
 # <a name="understanding-isolation-levels"></a>分離レベルについて
 

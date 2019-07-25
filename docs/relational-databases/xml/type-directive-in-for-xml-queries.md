@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: a3df6c30-1f25-45dc-b5a9-bd0e41921293
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: e99b9c4fbfa9b0d20a78a9d76e4730ce46966d3b
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 1948f42f5a572a7a7737b58afab8f407932660d1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511809"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68078029"
 ---
 # <a name="type-directive-in-for-xml-queries"></a>FOR XML クエリの TYPE ディレクティブ
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -52,7 +51,7 @@ FOR XML AUTO, TYPE;
  `...`  
   
 ### <a name="assigning-for-xml-query-results-to-an-xml-type-variable"></a>FOR XML クエリ結果の xml 型の変数への代入  
- 次の例では、FOR XML の結果が **xml** 型の変数 `@x`に代入されます。 このクエリでは、 `BusinessEntityID`xml `FirstName`の `LastName`列から、 `AdditionalContactInfo` 、 **、**`TYPE`、追加の電話番号など、連絡先に関する情報を取得します。 `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は **xml** 型として返され、変数に代入されます。  
+ 次の例では、FOR XML の結果が **xml** 型の変数 `@x`に代入されます。 このクエリでは、 `BusinessEntityID`xml `FirstName`の `LastName`列から、 `AdditionalContactInfo` 、 **、** `TYPE`、追加の電話番号など、連絡先に関する情報を取得します。 `FOR XML` 句に `TYPE` ディレクティブを指定するので、この XML は **xml** 型として返され、変数に代入されます。  
   
 ```  
 USE AdventureWorks2012;  

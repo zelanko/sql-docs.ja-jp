@@ -1,5 +1,5 @@
 ---
-title: getSchemas () メソッド |Microsoft Docs
+title: getSchemas メソッド () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: adba0ee6-ff6d-4215-b646-62c735be3fe9
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0209c50b19e46e90db3738fc94f5927f8aa619ef
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0a5f453e6300258cacffa6606259f85cdd25977
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66792127"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980082"
 ---
 # <a name="getschemas-method-"></a>getSchemas () メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

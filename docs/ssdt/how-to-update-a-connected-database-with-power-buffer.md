@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 4048b7f8-71a9-47ad-b812-3fc1e8066240
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 9663829f679eeb0c829a94be00c86a7f1e0544af
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bad8fd64e0242d4dbe965b91d8d8be5ab9796591
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098416"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034988"
 ---
 # <a name="how-to-update-a-connected-database-with-power-buffer"></a>方法:接続されているデータベースを Power Buffer で更新する
 SQL Server Data Tools Power Buffer テクノロジを使用すると、現在のセッションでの編集内容をすべて保存することにより、接続されているデータベースに変更を容易に適用できます。 Transact\-SQL エディターまたはテーブル デザイナーの Power Buffer ウィンドウでの編集によってエラーが生じた場合は、直ちに **[エラー一覧]** ペインに表示されるため、特定されたエラーを追跡してトラブルシューティングを進めることができます。 保留中の変更は、データベースに適用する準備ができるまでの間に、確認することができます。 更新プロセスでは、編集内容に基づいて自動的に ALTER スクリプトが作成され、問題が生じる可能性があれば警告が表示されます。 開いているすべての Power Buffer ウィンドウで累積されたすべての変更を同じデータベースに適用することも、後で使用できるように ALTER スクリプトを保存することもできます。  

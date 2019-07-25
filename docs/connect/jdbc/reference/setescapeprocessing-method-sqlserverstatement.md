@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 6ac0682e-e04c-4fdb-893b-92408d42051e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ddd79fe975905baa5fb8cab945d6069be611adc3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 17df08b401c7e1ae4e1f5d3b386808f11e3bb180
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802983"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974300"
 ---
 # <a name="setescapeprocessing-method-sqlserverstatement"></a>setEscapeProcessing メソッド (SQLServerStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public final void setEscapeProcessing(boolean enable)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setEscapeProcessing メソッドは、java.sql.Statement インターフェイスの setEscapeProcessing メソッドによって指定されます。  
+ この setEscapeProcessing メソッドは、setEscapeProcessing インターフェイスのメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

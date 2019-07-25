@@ -1,6 +1,6 @@
 ---
-title: Analysis Services の [全般] プロパティ |Microsoft Docs
-ms.date: 04/04/2019
+title: Analysis Services 全般プロパティ |Microsoft Docs
+ms.date: 07/24/2019
 ms.prod: sql
 ms.technology: analysis-services
 ms.custom: ''
@@ -9,19 +9,19 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 0683a8eb03cb0d5d17072825cfc90f8c9ba2500e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d0d2a1fd8a83c4b181dfc182f5fb5630e29c9efb
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62714699"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419521"
 ---
 # <a name="general-properties"></a>全般プロパティ
 [!INCLUDE[ssas-appliesto-sqlas-all-aas](../../includes/ssas-appliesto-sqlas-all-aas.md)]
 
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] では、次の表に示すサーバー プロパティがサポートされています。 このトピックでは、Security、Network、ThreadPool など、個別のセクションで取り上げることのできなかった、msmdsrv.ini ファイル内のサーバー プロパティについて説明しています。 その他のサーバー プロパティとその設定方法の詳細については、「 [Analysis Services のサーバー プロパティ](../../analysis-services/server-properties/server-properties-in-analysis-services.md)」を参照してください。  
   
- **適用対象:** 多次元および表形式サーバー モードでは、それ以外の場合に記載されていない場合  
+ これらのプロパティは、特に明記されていない限り、多次元および表形式サーバーモードに適用されます。  
   
 ## <a name="non-specific-category"></a>不特定カテゴリ  
  **AdminTimeout**  
@@ -33,11 +33,11 @@ ms.locfileid: "62714699"
  Analysis Services のダイアログ ボックスでファイルを保存、開く、および検索するときに参照できるフォルダーを区切り記号で区切った一覧で指定する文字列プロパティです。 Analysis Services のサービス アカウントには、リストに追加するすべてのフォルダーの読み取り権限と書き込み権限が必要です。  
   
  **BackupDir**  
- バックアップ コマンドの一部として、パスが指定されていない場合に、既定では、バックアップのファイルが格納されるディレクトリの名前を指定する文字列プロパティ。  
+ Backup コマンドの一部としてパスが指定されていない場合に、既定でバックアップファイルが格納されるディレクトリの名前を指定する文字列プロパティです。  
  
-**ClientCacheRefreshPolicy** Azure Analysis Services のみに適用されます。 オーバーライド、**スケジュールされたキャッシュの更新**のすべての Power BI データセットを設定します。 Live Connect のすべてのレポートに設定すると、データセット レベルに関係なく、サーバー レベルの設定が観察するか、上に存在するワークスペース。
+**ClientCacheRefreshPolicy**SSAS および Azure Analysis Services の表形式モデルの場合、このプロパティは、すべての Power BI データセットのスケジュールされた**キャッシュ更新**設定よりも優先されます。 すべての Live Connect レポートは、データセットレベルの設定、またはそれらが存在するワークスペースに関係なく、サーバーレベルの設定を観察します。
 
-このプロパティの既定値は、-1 でスケジュールされたキャッシュの更新が、データセットの設定で指定されているすべてのバック グラウンドのキャッシュを更新します。 バック グラウンドのすべてのキャッシュを防ぐためには、更新、ゼロ (0) を指定します。
+このプロパティの既定値は-1 です。これにより、データセットのスケジュール済みキャッシュ更新設定で指定されたすべてのバックグラウンドキャッシュ更新が許可されます。 すべてのバックグラウンドキャッシュを更新しないようにするには、ゼロ (0) を指定します。
 
   
  **CollationName**  
@@ -52,7 +52,7 @@ ms.locfileid: "62714699"
  パーティション インデックスの作成に割り当てられるスレッドの最大数を定義する、符号付き 32 ビット整数のプロパティです。 パーティション インデックスの作成時間を短縮するには、この値を大きくしてください。ただし、メモリの使用量は増えます。 このプロパティの詳細については、「 [SQL Server 2008 R2 Analysis Services 操作ガイド](http://go.microsoft.com/fwlink/?LinkID=225539)」を参照してください。  
   
  **CoordinatorCancelCount**  
- キャンセル イベントが発生したかどうかを内部反復カウントに基づいてサーバーがチェックする頻度を定義する、符号付き 32 ビット整数のプロパティです。 キャンセルのチェック頻度を多くするには、この値を小さくしてください。ただし、全体的なパフォーマンスは低下します。 表形式サーバー モードでは、このプロパティが無視されます。  
+ キャンセル イベントが発生したかどうかを内部反復カウントに基づいてサーバーがチェックする頻度を定義する、符号付き 32 ビット整数のプロパティです。 キャンセルのチェック頻度を多くするには、この値を小さくしてください。ただし、全体的なパフォーマンスは低下します。 このプロパティは、表形式サーバーモードでは無視されます。  
   
  **CoordinatorExecutionMode**  
  処理操作やクエリ操作など、サーバーによって試行される並列操作の最大数を定義する、符号付き 32 ビット整数のプロパティです。 0 を指定すると、サーバーの内部アルゴリズムに基づいて決定されます。 正の数値は、操作の最大総数を示します。 負の数値 (反対の符号) は、プロセッサあたりの操作の最大数を示します。  
@@ -69,11 +69,11 @@ ms.locfileid: "62714699"
  データを保存するディレクトリの名前を指定する文字列プロパティです。  
   
  **DeploymentMode**  
- Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログ ボックス、メッセージ、およびドキュメントの「サーバー モード」と呼ばれます。 このプロパティは、Analysis Services のインストール時に選択したサーバー モードに基づいて、SQL Server セットアップによって構成されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
+ Analysis Services サーバー インスタンスの操作コンテキストを指定します。 このプロパティは、ダイアログボックス、メッセージ、およびドキュメントでは "サーバーモード" と呼ばれます。 このプロパティは、Analysis Services のインストール時に選択したサーバー モードに基づいて、SQL Server セットアップによって構成されます。 このプロパティは内部使用のみと見なしてください。常にセットアップによって指定された値が使用されます。  
   
  このプロパティの有効値を以下に示します。  
   
-|値|Description|  
+|値|説明|  
 |-----------|-----------------|  
 |0|これが既定値です。 MOLAP、HOLAP、ROLAP の各ストレージ、およびデータ マイニング モデルを使用する多次元データベースの処理に使用される多次元モードを指定します。|  
 |1|[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint 配置の一部としてインストールされた Analysis Services インスタンスを指定します。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint インストールの一部である Analysis Services インスタンスの配置モード プロパティは変更しないでください。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データは、モードを変更するとサーバー上で実行されなくなります。|  

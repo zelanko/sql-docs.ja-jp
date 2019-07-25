@@ -1,5 +1,5 @@
 ---
-title: 行セット、およびパラメーター内のデータ型マッピング |Microsoft Docs
+title: 行セットとパラメーターでのデータ型のマッピング |Microsoft Docs
 description: 行セットとパラメーターでのデータ型マッピング
 ms.custom: ''
 ms.date: 06/14/2018
@@ -21,13 +21,12 @@ helpviewer_keywords:
 - OLE DB, data types
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: de02099f7d54682b96713d861843b2cf5bd87ffb
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 529c3189676ce704d10a90902bd44f7f2c8e8f6c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769654"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995211"
 ---
 # <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -68,7 +67,7 @@ ms.locfileid: "66769654"
 |**varchar**|DBTYPE_STR|  
 |**XML**|DBTYPE_XML|  
   
- OLE DB Driver for SQL Server には、図のように、コンシューマーから要求されたデータ変換がサポートしています。  
+ OLE DB Driver for SQL Server は、図に示すように、コンシューマーによって要求されたデータ変換をサポートしています。  
   
  **sql_variant** オブジェクトは、text、ntext、image、varchar(max)、nvarchar(max)、varbinary(max)、xml、timestamp、および Microsoft .NET Framework 共通言語ランタイム (CLR) のユーザー定義型を除く、任意の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データ型のデータを保持できます。 また、sql_variant データのインスタンスは、その基になる基本データ型として sql_variant を保持できません。 たとえば、一部の行の列に **smallint** 型の値を格納し、他の行の列に **float** 型の値を格納して、残りの行の列に **char**/**nchar** 型の値を格納できます。  
   

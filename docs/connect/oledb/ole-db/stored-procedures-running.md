@@ -1,5 +1,5 @@
 ---
-title: ストアド プロシージャ (OLE DB) の実行 |Microsoft Docs
+title: ストアドプロシージャの実行 (OLE DB) |Microsoft Docs
 description: ストアド プロシージャの実行 (OLE DB)
 ms.custom: ''
 ms.date: 06/12/2018
@@ -14,13 +14,12 @@ helpviewer_keywords:
 - OLE DB Driver for SQL Server, stored procedures
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 0059c7c6e03c9abb9edf4cb3db35f8435174d8fc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4297feae08376871c68ffab2aa9b977e034c6364
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993797"
 ---
 # <a name="stored-procedures---running"></a>ストアド プロシージャ - 実行
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -29,7 +28,7 @@ ms.locfileid: "66795902"
 
   ステートメントの実行時、データ ソースに対して (クライアント アプリケーション内で直接ステートメントを実行または準備せずに) ストアド プロシージャを呼び出すと、次のような利点があります。  
   
--   高いパフォーマンス。  
+-   パフォーマンスの向上。  
   
 -   ネットワーク オーバーヘッドの軽減。  
   
@@ -39,7 +38,7 @@ ms.locfileid: "66795902"
   
 -   機能の追加。  
   
- OLE DB Driver for SQL Server は 3 つのメカニズムをサポートしているを[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すストアド プロシージャを使用します。  
+ OLE DB Driver for SQL Server では、ストアドプロシージャが[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]データを返すために使用する3つのメカニズムがサポートされています。  
   
 -   プロシージャ内のすべての SELECT ステートメントで結果セットを生成する。  
   

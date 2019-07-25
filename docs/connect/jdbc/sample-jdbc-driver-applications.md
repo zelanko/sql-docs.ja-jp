@@ -1,5 +1,5 @@
 ---
-title: JDBC ドライバー アプリケーションのサンプル |Microsoft Docs
+title: サンプル JDBC Driver Applications |Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: e136b87c-a138-45d6-8c3e-bcef94b7e483
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 385a5d46129aac81125e29b182cb5a9fdde13897
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3227aa1fc886c72b1655fc8ef9770be2c914af3a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797844"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945834"
 ---
 # <a name="sample-jdbc-driver-applications"></a>サンプル JDBC Driver アプリケーション
 
@@ -40,7 +39,7 @@ ms.locfileid: "66797844"
 | [データ型の処理 &#40;JDBC&#41;](../../connect/jdbc/working-with-data-types-jdbc.md)                 | これらのサンプル アプリケーションは、JDBC ドライバーのデータ型のメソッドを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のデータを処理する方法を示します。                                                                                           |
 | [結果セットの処理](../../connect/jdbc/working-with-result-sets.md)                                   | これらのサンプル アプリケーションは、結果セットを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに含まれるデータを処理する方法を示します。                                                                                                         |
 | [大きなデータの処理](../../connect/jdbc/working-with-large-data.md)                                     | これらのサンプル アプリケーションは、アダプティブ バッファリングを使用して、サーバー カーソルのオーバーヘッドを発生させることなく、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースから大きな値のデータを取得する方法を示します。                                                      |
-| [SQL データの検出と分類](../../connect/jdbc/data-discovery-classification-sample.md) | このサンプル アプリケーションはどのように取得するデータの検出と分類の情報に含まれている、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] JDBC ドライバーを使用して結果セット オブジェクトからのデータベース。                                      |
+| [SQL データの検出と分類](../../connect/jdbc/data-discovery-classification-sample.md) | このサンプルアプリケーションは、JDBC ドライバーを使用して、ResultSet オブジェクトから[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベースに含まれているデータ検出と分類情報を取得する方法を示しています。                                      |
   
 ## <a name="see-also"></a>参照
 

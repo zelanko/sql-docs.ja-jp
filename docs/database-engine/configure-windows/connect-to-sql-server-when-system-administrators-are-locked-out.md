@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: c0c0082e-b867-480f-a54b-79f2a94ceb67
 author: MikeRayMSFT
 ms.author: mikeray
-manager: jroth
-ms.openlocfilehash: 6d493629c8b0564467155c3eae6ac05e25c5105c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 573ddefa33c1e021c16359f0164f0eda49d329fb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767965"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68012115"
 ---
 # <a name="connect-to-sql-server-when-system-administrators-are-locked-out"></a>システム管理者がロックアウトされた場合の SQL Server への接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -58,9 +57,9 @@ ms.locfileid: "66767965"
   
 3.  [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]を終了します。  
   
-4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの左ペインで、 **[SQL Server のサービス]** を選択します。 右ペインで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを探します ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスには、コンピューター名の後に **(MSSQLSERVER)** が付いています。 名前付きインスタンスは、[登録済みサーバー] に表示されているものと同じ名前が大文字表記で表示されます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを右クリックし、**[プロパティ]** をクリックします。  
+4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの左ペインで、 **[SQL Server のサービス]** を選択します。 右ペインで、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスを探します ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のインスタンスには、コンピューター名の後に **(MSSQLSERVER)** が付いています。 名前付きインスタンスは、[登録済みサーバー] に表示されているものと同じ名前が大文字表記で表示されます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを右クリックし、 **[プロパティ]** をクリックします。  
   
-5.  **[起動時のパラメーター]** タブの **[起動時のパラメーターの指定]** ボックスに、「`-m`」と入力し、**[追加]** をクリックします  (入力文字はダッシュの後に小文字の m です)。  
+5.  **[起動時のパラメーター]** タブの **[起動時のパラメーターの指定]** ボックスに、「`-m`」と入力し、 **[追加]** をクリックします (入力文字はダッシュの後に小文字の m です)。  
   
     > [!NOTE]  
     >  以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、 **[起動時のパラメーター]** タブがない場合があります。その場合は、 **[詳細設定]** タブで、 **[起動時のパラメーター]** をダブルクリックします。 パラメーターが小さいウィンドウに表示されます。 既存のパラメーターは、いずれも変更しないように注意してください。 最後に、新しいパラメーター `;-m` を追加し、 **[OK]** をクリックします (入力文字はセミコロンの後に小文字の m です)。  
@@ -76,9 +75,9 @@ ms.locfileid: "66767965"
   
      構成によっては、SSMS が複数の接続の確立を試みます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はシングル ユーザー モードなので、複数の接続は失敗します。 次のいずれかの操作を選択して実行できます。 次のいずれかの操作を行います。  
   
-    1.  Windows 認証 (管理者の資格情報を含む) を使用してオブジェクト エクスプローラーと接続します。 **[セキュリティ]**、 **[ログイン]** の順に展開し、自身のログインをダブルクリックします。 **[サーバー ロール]** ページで、 **[sysadmin]** を選択し、 **[OK]** をクリックします。  
+    1.  Windows 認証 (管理者の資格情報を含む) を使用してオブジェクト エクスプローラーと接続します。 **[セキュリティ]** 、 **[ログイン]** の順に展開し、自身のログインをダブルクリックします。 **[サーバー ロール]** ページで、 **[sysadmin]** を選択し、 **[OK]** をクリックします。  
   
-    2.  オブジェクト エクスプローラーではなく、Windows 認証 (管理者の資格情報を含む) を使用してクエリ ウィンドウと接続します  (この方法で接続できるのは、オブジェクト エクスプローラーと接続していない場合のみです)。**sysadmin** 固定サーバー ロールのメンバーである新しい Windows 認証ログインを追加するには、次のようなコードを実行します。 次の例では、`CONTOSO\PatK` という名前のドメイン ユーザーを追加します。  
+    2.  オブジェクト エクスプローラーではなく、Windows 認証 (管理者の資格情報を含む) を使用してクエリ ウィンドウと接続します (この方法で接続できるのは、オブジェクト エクスプローラーと接続していない場合のみです)。**sysadmin** 固定サーバー ロールのメンバーである新しい Windows 認証ログインを追加するには、次のようなコードを実行します。 次の例では、`CONTOSO\PatK` という名前のドメイン ユーザーを追加します。  
   
         ```  
         CREATE LOGIN [CONTOSO\PatK] FROM WINDOWS;  

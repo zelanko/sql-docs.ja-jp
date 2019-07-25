@@ -1,79 +1,79 @@
 ---
 title: 新しいリリースにアップグレードする
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) を新しいリリースにアップグレードする方法について説明します。
+description: SQL Server 2019 ビッグデータクラスター (プレビュー) を新しいリリースにアップグレードする方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 67ca9b09db398538b4adeedc9008dcb2f14f258f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7bdb1eb59fd36d065df9dba0f6d6879c1a294914
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958407"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419387"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>ビッグ データの SQL Server クラスターをアップグレードする方法
+# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>ビッグデータクラスター SQL Server アップグレードする方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、ビッグ データの SQL Server クラスターを新しいリリースにアップグレードする方法のガイダンスを提供します。 この記事の手順では、具体的には、プレビュー リリース間でアップグレードする方法に適用されます。
+この記事では、SQL Server ビッグデータクラスターを新しいリリースにアップグレードする方法に関するガイダンスを提供します。 この記事の手順は、プレビューリリース間でアップグレードする方法に特に当てはまります。
 
-## <a name="backup-and-delete-the-old-cluster"></a>バックアップして、以前のクラスターの削除
+## <a name="backup-and-delete-the-old-cluster"></a>以前のクラスターをバックアップして削除する
 
-現時点では、ビッグ データ クラスターを新しいリリースにアップグレードする唯一の方法は、手動で削除してクラスターを再作成します。 各リリースでは、一意のバージョンの**mssqlctl**ですが、以前のバージョンと互換性がありません。 また、古いクラスターを新しいノードにイメージをダウンロードする場合は、最新のイメージ可能性がありますと互換性がない、クラスター上で古いイメージ。 最新のリリースにアップグレードするには、次の手順を使用します。
+現時点では、ビッグデータクラスターを新しいリリースにアップグレードする唯一の方法は、クラスターを手動で削除して再作成することです。 各リリースには、以前のバージョンと互換性のない**azdata**の一意のバージョンがあります。 また、古いクラスターで新しいノードのイメージをダウンロードする必要があった場合は、最新のイメージがクラスター上の古いイメージと互換性がない可能性があります。 最新のリリースにアップグレードするには、次の手順を使用します。
 
-1. 以前のクラスターを削除する前に、HDFS と SQL Server のマスター インスタンスにデータをバックアップします。 使用することができます、SQL Server のマスター インスタンスの[SQL Server のバックアップと復元](data-ingestion-restore-database.md)します。 HDFS のする[を使用してデータをコピーできます**curl**](data-ingestion-curl.md)します。
+1. 以前のクラスターを削除する前に、SQL Server マスターインスタンスと HDFS にデータをバックアップします。 SQL Server master インスタンスでは、 [SQL Server のバックアップと復元](data-ingestion-restore-database.md)を使用できます。 HDFS の場合は、 [ **curl**を使用してデータをコピーでき](data-ingestion-curl.md)ます。
 
-1. 以前のクラスターを削除、`mssqlctl delete cluster`コマンド。
+1. `azdata delete cluster`コマンドを使用して、古いクラスターを削除します。
 
    ```bash
-    mssqlctl bdc delete --name <old-cluster-name>
+    azdata bdc delete --name <old-cluster-name>
    ```
 
    > [!Important]
-   > バージョンを使用して、 **mssqlctl**クラスターに一致します。 新しいバージョンので、古いクラスターを削除しないでください**mssqlctl**します。
+   > クラスターに一致する**azdata**のバージョンを使用します。 古いクラスターは、新しいバージョンの**azdata**では削除しないでください。
 
-1. 以前のリリースがあれば**mssqlctl**をインストールすることが重要アンインストール**mssqlctl**最初、最新バージョンをインストールする前にします。
+1. CTP 3.2 より前では、 **azdata**は**mssqlctl**と呼ばれていました。 以前のリリースの**mssqlctl**または**azdata**がインストールされている場合は、 **azdata**の最新バージョンをインストールする前に、まずをアンインストールすることが重要です。
 
-   CTP 2.3 以降、次のコマンドを実行します。 置換`ctp3.0`のバージョンでのコマンドで**mssqlctl**アンインストールします。 CTP 3.0 より前のバージョンの場合は、追加のバージョン番号の前にダッシュ (たとえば、 `ctp-2.5`)。
-
-   ```powershell
-   pip3 uninstall -r  https://private-repo.microsoft.com/python/ctp3.0/mssqlctl/requirements.txt
-   ```
-
-1. 最新バージョンのインストール**mssqlctl**します。 次のコマンド インストール**mssqlctl** CTP 3.1 用。
-
-   **Windows:**
+   CTP 2.3 以降の場合は、次のコマンドを実行します。 コマンド`ctp3.1`内のを、アンインストールする**mssqlctl**のバージョンに置き換えます。 バージョンが CTP 3.1 より前である場合は、バージョン番号の前にダッシュ ( `ctp-2.5`など) を追加します。
 
    ```powershell
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://mcr.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
-   **Linux の場合:**
+1. **Azdata**の最新バージョンをインストールします。 次のコマンドを実行すると、CTP 3.2 の**azdata**がインストールされます。
+
+   **ウィンドウ**
+
+   ```powershell
+   pip3 install -r https://aka.ms/azdata
+   ```
+
+   **マシン**
 
    ```bash
-   pip3 install -r  https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt --user
+   pip3 install -r https://aka.ms/azdata --user
    ```
 
    > [!IMPORTANT]
-   > 各リリースへのパス**mssqlctl**変更します。 以前にインストールした場合でも**mssqlctl**、新しいクラスターを作成する前に最新のパスから再インストールする必要があります。
+   > 各リリースで、 **azdata**へのパスが変更されます。 **Azdata**または**mssqlctl**を以前にインストールした場合でも、新しいクラスターを作成する前に、最新のパスからを再インストールする必要があります。
 
-## <a id="mssqlctlversion"></a> Mssqlctl バージョンを確認します。
+## <a id="azdataversion"></a>Azdata バージョンを確認する
 
-新しいビッグ データ クラスターをデプロイする前に、最新バージョンを使用していることを確認します**mssqlctl**で、`--version`パラメーター。
+新しいビッグデータクラスターをデプロイする前に、パラメーターを指定し`--version`て最新バージョンの**azdata**を使用していることを確認します。
 
 ```bash
-mssqlctl --version
+azdata --version
 ```
 
-## <a name="install-the-new-release"></a>新しいリリースをインストールします。
+## <a name="install-the-new-release"></a>新しいリリースをインストールする
 
-前のビッグ データ クラスターを削除して、最新版のインストール後に**mssqlctl**、現在のデプロイの手順を使用して新しいビッグ データ クラスターをデプロイします。 詳細については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md)します。 次に、任意の必要なデータベースまたはファイルを復元します。
+前のビッグデータクラスターを削除し、最新の**azdata**をインストールしたら、現在のデプロイ手順に従って、新しいビッグデータクラスターをデプロイします。 詳細については、「 [How to deploy SQL Server big data クラスター on The Kubernetes](deployment-guidance.md)」を参照してください。 次に、必要なデータベースまたはファイルを復元します。
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server のビッグ データ クラスターは](big-data-cluster-overview.md)します。
+ビッグデータクラスターの詳細については、「 [SQL Server ビッグデータクラスターとは](big-data-cluster-overview.md)」を参照してください。

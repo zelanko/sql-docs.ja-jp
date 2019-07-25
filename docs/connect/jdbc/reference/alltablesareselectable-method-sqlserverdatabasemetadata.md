@@ -1,5 +1,5 @@
 ---
-title: allTablesAreSelectable メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: AllSQLServerDatabaseMetaData (選択可能) メソッド () |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eb340450-45a7-49c8-84bc-1b9dd5ee842f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: fbc609140cf15e90e409cf123f59ae3409d15a26
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f2fa61d7239858cb3479e7eeaa730e4197bf6bc5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803686"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955867"
 ---
 # <a name="alltablesareselectable-method-sqlserverdatabasemetadata"></a>allTablesAreSelectable メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean allTablesAreSelectable()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この allTablesAreSelectable メソッドは、java.sql.DatabaseMetaData インターフェイスで allTablesAreSelectable メソッドによって指定されます。  
+ この Alltablesareselectable 可能なメソッドは、java メタデータインターフェイスの allTablesAreSelectable 可能なメソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

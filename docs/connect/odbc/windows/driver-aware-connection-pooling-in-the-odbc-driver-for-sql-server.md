@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 455ab165-8e4d-4df9-a1d7-2b532bfd55d6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d920d15bb633828dd2ad614c6789f397e229f0b5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 97ddd5aa4abf926ecd4e68e89bef63b8f25ce323
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66797794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68009973"
 ---
 # <a name="driver-aware-connection-pooling-in-the-odbc-driver-for-sql-server"></a>OLE DB Provider for SQL Server のドライバー対応接続プール
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -25,12 +24,12 @@ ms.locfileid: "66797794"
   
 -   `SQLDriverConnect` を使用する接続は、接続のプロパティに関係なく、`SQLConnect` を使用する接続とは別のプールに移動されます。
 - [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証とドライバー対応接続プールを使用する場合、ドライバーでは、現在のスレッドでプール内の接続を分離するために Windows ユーザーのセキュリティ コンテキストが使用されません。 つまり、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証での Windows での権限借用シナリオでの接続と、接続パラメーターが同じで、バックエンドとの接続に同じ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証資格証明を使用する場合、別の Windows ユーザーが同じプール接続を使用できる可能性があります。 Windows 認証とドライバー対応接続プールを使用する場合、ドライバーでは、プール内の接続を分離するために現在の Windows ユーザーのセキュリティ コンテキストが使用されます。 つまり、Windows での権限借用のシナリオでは、接続で同じパラメーターを使用していても、別の Windows ユーザーは同じ接続を使用しません。
-- Azure Active Directory とドライバー対応接続プールを使用する場合、ドライバーも、接続プールのメンバーシップを決定する認証の値を使用します。
+- Azure Active Directory とドライバー対応の接続プールを使用する場合、ドライバーは、認証値を使用して接続プールのメンバーシップを決定します。
   
 -   ドライバー対応接続プールは、無効な接続がプールから返されないようにします。  
   
--   ドライバー対応接続プールは、ドライバーに固有の接続属性を認識します。 したがって、接続で使用する場合`SQL_COPT_SS_APPLICATION_INTENT`その接続を取得する読み取り専用に設定すると、独自の接続プール。
--   設定、`SQL_COPT_SS_ACCESS_TOKEN`属性によって個別にプールへの接続 
+-   ドライバー対応接続プールは、ドライバーに固有の接続属性を認識します。 そのため、接続`SQL_COPT_SS_APPLICATION_INTENT`が読み取り専用に設定されている場合、その接続は独自の接続プールを取得します。
+-   属性を`SQL_COPT_SS_ACCESS_TOKEN`設定すると、接続が個別にプールされます。 
   
 次のいずれかの接続属性 ID または接続文字列キーワードが、接続文字列と、プールされた接続文字列の間で異なる場合、ドライバーはプールされた接続を使用します。 ただし、すべての接続属性 ID または接続文字列キーワードが一致する場合、パフォーマンスは向上します。 (プール内で接続を一致させるために、ドライバーは属性をリセットします。 次のパラメーターをリセットする場合、ネットワーク呼び出しを追加で実行する必要があるので、パフォーマンスは低下します。  
   

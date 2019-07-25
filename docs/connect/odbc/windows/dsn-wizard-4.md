@@ -1,5 +1,5 @@
 ---
-title: データ ソース ウィザード画面 4 (ODBC Driver for SQL Server) |Microsoft Docs
+title: データソースウィザードの画面 4 (SQL Server 用 ODBC ドライバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 09/27/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76326eeb-1144-4b9f-85db-50524c655d30
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 93145892c96d2b255dca758e7028d2884cec359b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 177888dd1034bb1edcb870db38b00bbc418cb261
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797769"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67989459"
 ---
 # <a name="data-source-wizard-screen-4"></a>データ ソース ウィザード画面 4
 
@@ -34,7 +33,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="trust-server-certificate"></a>[サーバー証明書を信頼する]
 
-このオプションは、該当する場合にのみ**強力な暗号化を使用して、データの**を有効にします。 選択した場合、サーバーの証明書は、サーバーの適切なホスト名があり、信頼された証明書機関から発行するのには検証されません。 
+このオプションは **、[データに強力な暗号化を使用**する] が有効になっている場合にのみ適用されます。 この設定を選択した場合、サーバーの証明書は、サーバーの正しいホスト名を持っているか検証されず、信頼された証明機関によって発行されます。 
 
 ### <a name="perform-translation-for-character-data"></a>[文字データを変換する]
 
@@ -62,11 +61,11 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="connect-retry-count"></a>接続再試行回数
 
-失敗した接続の試行を再試行する回数を指定します。
+失敗した接続試行を再試行する回数を指定します。
 
 ### <a name="connect-retry-interval-seconds"></a>接続再試行間隔(秒)
 
-各接続の再試行間隔 (秒) の数を指定します。 この操作の詳細については、**接続再試行回数**オプションを参照してください[Windows ODBC ドライバーの接続レジリエンシー](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)。
+各接続再試行の間隔を秒数で指定します。 この操作と **[接続の再試行回数]** オプションの詳細については、「 [Windows ODBC ドライバーの接続の回復性](../../../connect/odbc/windows/connection-resiliency-in-the-windows-odbc-driver.md)」を参照してください。
 
 ### <a name="back"></a>戻る
 
@@ -74,7 +73,7 @@ SQL Server の各インスタンスには、システム メッセージの複�
 
 ### <a name="finish"></a>[完了]
 
-クリックすることができる場合、この画面で指定した情報が完了したら、**完了**します。 ウィザードの他の画面に指定されたすべての属性を使用して DSN が作成され、新しく作成した DSN をテストする機会が提供されます。
+この画面で指定された情報が完了したら、 **[完了]** をクリックします。 このウィザードの他の画面で指定されたすべての属性を使用して DSN が作成され、新しく作成された DSN をテストする機会が与えられます。
 
 ## <a name="next-steps"></a>次の手順
 

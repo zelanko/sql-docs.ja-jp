@@ -1,5 +1,5 @@
 ---
-title: getBinaryStream (int) メソッド |Microsoft Docs
+title: getBinaryStream (int) メソッドMicrosoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: de22a6c4-1ba3-4ed0-91a2-bf235c2ceec3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d45d0ce6b5d6509ffd7b561352a41c69592f86b0
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e0add171861f2ea9e021b9f9342968baf1601557
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66799813"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953707"
 ---
 # <a name="getbinarystream-method-int"></a>getBinaryStream (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5a8028bc-c877-4668-b662-0746d462040e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 96fbaf14a04203e08c620b5173bcc2df6d03cb7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 10cd57cff29c73a2b99d1489eb122eed37859768
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953275"
 ---
 # <a name="getcharacterstream-method-long-long-sqlservernclob"></a>getCharacterStream (long, long) メソッド (SQLServerNClob)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -32,7 +31,7 @@ public java.io.Reader getCharacterStream(long pos,
 ```  
   
 #### <a name="parameters"></a>パラメーター  
- *pos*  
+ *po*  
   
  取得する部分的な値の最初の文字へのオフセットを示す **long** です。  
   

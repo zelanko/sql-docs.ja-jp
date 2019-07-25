@@ -10,18 +10,17 @@ ms.topic: conceptual
 ms.assetid: de170a1a-fd06-4b70-8749-d86e2e0fb286
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a7cbd53d1757033e13f7fe8c8c157447c60bda34
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bdb999935069a2ae3bd941442c443ced4f289dbd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799609"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67970342"
 ---
 # <a name="sqlserverstatement-methods"></a>SQLServerStatement メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  SQLServerStatement のメンバーについては、次を参照してください。 [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)します。  
+  SQLServerStatement のメンバーの詳細については、「 [SQLServerStatement members](../../../connect/jdbc/reference/sqlserverstatement-members.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerStatement のメンバー](../../../connect/jdbc/reference/sqlserverstatement-members.md)   

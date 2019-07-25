@@ -1,5 +1,5 @@
 ---
-title: getMaxTablesInSelect メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: Getmaxobjects Inselect メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: f5291217-2a0c-4daa-9e39-9f348fc911f7
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 51db61a1ea139878269e90291d27b2acce778d86
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d125e9dad6d5c6f82ff177abdaced9d784295c11
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981925"
 ---
 # <a name="getmaxtablesinselect-method-sqlserverdatabasemetadata"></a>getMaxTablesInSelect メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxTablesInSelect()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getMaxTablesInSelect メソッドは、java.sql.DatabaseMetaData インターフェイスで getMaxTablesInSelect メソッドによって指定されます。  
+ この Getmaxobjects Inselect メソッドは、java メタデータインターフェイスの Getmaxobjects Inselect メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

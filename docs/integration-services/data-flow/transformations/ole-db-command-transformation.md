@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: baa6735c-5acf-4759-b077-1216aca16c6c
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 91ea18d66129f5450e20bf7e9412380aeb47611e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ff3a7b7c39eb8f161621b22315ad5ff8e8f6f807
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725936"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928231"
 ---
 # <a name="ole-db-command-transformation"></a>OLE DB コマンド変換
 
@@ -71,7 +70,7 @@ ms.locfileid: "65725936"
   
 6.  **[接続マネージャー]** タブで、 **[接続マネージャー]** 一覧から OLE DB 接続マネージャーを選択します。 詳細については、「 [OLE DB 接続マネージャー](../../../integration-services/connection-manager/ole-db-connection-manager.md)」を参照してください。  
   
-7.  **[コンポーネントのプロパティ]** タブをクリックし、**[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
+7.  **[コンポーネントのプロパティ]** タブをクリックし、 **[SQL コマンド]** ボックスの参照ボタン ( **[...]** ) をクリックします。  
   
 8.  **[文字列値エディター]** で、各パラメーターのパラメーター マーカーとして疑問符 (?) を使用して、パラメーター化 SQL ステートメントを入力します。  
   
@@ -101,7 +100,7 @@ ms.locfileid: "65725936"
   
     -   **[列マッピング]** をクリックし、 **[使用できる入力列]** 一覧の列を **[使用できる変換先列]** 一覧のパラメーターにマップします。  
   
-14. [**OK**] をクリックします。  
+14. **[OK]** をクリックします。  
   
 15. 更新したパッケージを保存するには、 **[ファイル]** メニューの **[保存]** をクリックします。  
   
