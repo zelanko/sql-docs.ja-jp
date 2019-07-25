@@ -1,7 +1,6 @@
 ---
 title: DMV を使用してビューの使用統計とパフォーマンスを確認する
 description: DMV を使用してビューの使用統計とパフォーマンスを確認する
-manager: craigg
 author: julieMSFT
 ms.author: jrasnick
 ms.date: 09/27/2018
@@ -9,12 +8,12 @@ ms.prod: sql
 ms.reviewer: ''
 ms.technology: performance
 ms.topic: conceptual
-ms.openlocfilehash: 75563b5dcceead80b5b4d55c07413b37c9d0c278
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 944ba06bc1ccf590e8d02a4fd6e44e6c57ec9001
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63299487"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986665"
 ---
 # <a name="use-dmvs-to-determine-usage-statistics-and-performance-of-views"></a>DMV を使用してビューの使用統計とパフォーマンスを確認する
 この記事では、**ビューを使用するクエリのパフォーマンス**に関する情報を取得するために使用する方法とスクリプトについて説明します。 これらのスクリプトの目的は、データベース内のさまざまなビューの使用とパフォーマンスのインジケーターを提供することです。 

@@ -19,14 +19,13 @@ helpviewer_keywords:
 ms.assetid: b730a256-4a63-4880-9906-65b05cd9caf2
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: fea8af37696162a78c1711e68a98392d8b9c1bbb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78e19aa69d5d5141be7b142074a1c4d120ea8519
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980477"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121867"
 ---
 # <a name="or-transact-sql"></a>OR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -46,7 +45,7 @@ boolean_expression OR boolean_expression
  TRUE、FALSE または、UNKNOWN を返す有効な[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
  OR では、いずれかの条件が TRUE の場合に TRUE を返します。  

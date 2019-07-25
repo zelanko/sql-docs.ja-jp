@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: ec9225ce-e20f-4b03-8b3a-7bcad8a649df
 author: pmasl
 ms.author: umajay
-manager: craigg
-ms.openlocfilehash: 52ef837c789d9fd33c357cd5013549b7c47f48be
-ms.sourcegitcommit: 0a7beb2f51e48889b4a85f7c896fb650b208eb36
+ms.openlocfilehash: f3142f2474dbf00e165878d20fbdda53528fa930
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/09/2019
-ms.locfileid: "57685622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040625"
 ---
 # <a name="dbcc-sqlperf-transact-sql"></a>DBCC SQLPERF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -58,10 +57,10 @@ LOGSPACE
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以降のトランザクション ログの容量利用情報については、このトピックの「[注釈](#Remarks)」セクションを参照してください。
   
-**"sys.dm_os_latch_stats"**, CLEAR  
+**"sys.dm_os_latch_stats"** , CLEAR  
 ラッチ統計をリセットします。 詳細については、「[sys.dm_os_latch_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-latch-stats-transact-sql.md)」を参照してください。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、このオプションは使用できません。  
   
-**"sys.dm_os_wait_stats"**, CLEAR  
+**"sys.dm_os_wait_stats"** , CLEAR  
 待機統計をリセットします。 詳細については、「[sys.dm_os_wait_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 [!INCLUDE[ssSDS](../../includes/sssds-md.md)]では、このオプションは使用できません。  
   
 WITH NO_INFOMSGS  

@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: de46c96e-6ad6-4946-883e-807123658500
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 32b428f217fa15c5dba7304b4d2aabfd16b52553
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 332b230730d9f9bb53a8e06856d1f2d7308401fe
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66771279"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67980772"
 ---
 # <a name="getprecision-method-sqlserverresultsetmetadata"></a>getPrecision メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public int getPrecision(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getPrecision メソッドは、java.sql.ResultSetMetaData インターフェイスで getPrecision メソッドによって指定されます。  
+ この getPrecision メソッドは、java. ResultSetMetaData インターフェイスの getPrecision メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

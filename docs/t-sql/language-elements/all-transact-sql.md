@@ -18,13 +18,12 @@ helpviewer_keywords:
 ms.assetid: 4b0c002e-1ffd-4425-a980-11fdc1f24af7
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 6901a6eb93ad2374eaf6d613e9eada21dea3cc55
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf40ce38bf96ae4d31c9102290e74d5db2230240
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65983233"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67927383"
 ---
 # <a name="all-transact-sql"></a>ALL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -53,10 +52,10 @@ scalar_expression { = | <> | != | > | >= | !> | < | <= | !< } ALL ( subquery )
  制限された SELECT ステートメントです。ORDER BY 句および INTO キーワードは使用できません。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
- 指定された比較が (_scalar_expression_**,**_x)_ の任意の組で TRUE の場合、TRUE を返します。ここで、*x* は単一列セットの中の値です。 それ以外の場合は、FALSE を返します。  
+ 指定された比較が (_scalar_expression_ **,** _x)_ の任意の組で TRUE の場合、TRUE を返します。ここで、*x* は単一列セットの中の値です。 それ以外の場合は、FALSE を返します。  
   
 ## <a name="remarks"></a>Remarks  
  ALL の場合、*scalar_expression* ではサブクエリによって返されるすべての値に対し肯定的な比較を行う必要があります。 たとえば、サブクエリによって値 2 と 3 が返される場合、*scalar_expression* <= ALL (subquery) は、*scalar_expression* が 2 の場合、TRUE と評価されます。 サブクエリによって値 2 と値 3 が返される場合、*scalar_expression* = ALL (subquery) は FALSE と評価されます。これは、サブクエリのいくつかの値 (値 3) が式の条件を満たさないためです。  

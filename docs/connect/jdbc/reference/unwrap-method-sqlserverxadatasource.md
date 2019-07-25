@@ -1,5 +1,5 @@
 ---
-title: unwrap メソッド (SQLServerXADataSource) |Microsoft Docs
+title: ラップ解除メソッド (SQLServerXADataSource) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: d97c99b3-2224-4abb-8b32-40aff49fe759
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ceb80e7929ab3e36e6818d724c7ffe48a613a827
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3f7406bce05278cad83b28b14f95a241b3eff026
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790034"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67986047"
 ---
 # <a name="unwrap-method-sqlserverxadatasource"></a>unwrap メソッド (SQLServerXADataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public <T> T unwrap(Class<T> iface)
   
  [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) クラスは、[SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスから拡張された [SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md) クラスを拡張します。 このメソッドが呼び出されると、オブジェクトは [SQLServerDataSource](../../../connect/jdbc/reference/sqlserverdatasource-class.md)、[SQLServerConnectionPoolDataSource](../../../connect/jdbc/reference/sqlserverconnectionpooldatasource-class.md)、および [SQLServerXADataSource](../../../connect/jdbc/reference/sqlserverxadatasource-class.md) の各クラスにアンラップされます。  
   
- 詳細については、次を参照してください。[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)します。  
+ 詳細については、「[ラッパーとインターフェイス](../../../connect/jdbc/wrappers-and-interfaces.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerXADataSource のメソッド](../../../connect/jdbc/reference/sqlserverxadatasource-methods.md)   

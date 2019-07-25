@@ -15,13 +15,12 @@ helpviewer_keywords:
 ms.assetid: 7dd79a6a-e066-4028-a385-1d40f31056f8
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: d0d67f8d826f20006ff0b01dbf32e8bd5383d026
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 31f0febc7bcf4a4a8ee646d9a3d90e3eef95a813
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727691"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67988256"
 ---
 # <a name="file-system-task"></a>ファイル システム タスク
 
@@ -145,13 +144,13 @@ ms.locfileid: "65727691"
   
 #### <a name="isdestinationpathvariable--true"></a>[IsDestinationPathVariable] = [True]  
  **[DestinationVariable]**  
- 一覧から変数名を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
+ 一覧から変数名を選択するか、\< **[新しい変数...]** をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="isdestinationpathvariable--false"></a>[IsDestinationPathVariable] = [False]  
  **DestinationConnection**  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
@@ -159,13 +158,13 @@ ms.locfileid: "65727691"
   
 #### <a name="issourcepathvariable--true"></a>[IsSourcePathVariable] = [True]  
  **[SourceVariable]**  
- 一覧から変数名を選択するか、\<**[新しい変数...]** をクリックして新しい変数を作成します。  
+ 一覧から変数名を選択するか、\< **[新しい変数...]** をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   
 #### <a name="issourcepathvariable--false"></a>[IsSourcePathVariable] = [False]  
  **SourceConnection**  
- ファイル接続マネージャーを一覧から選択するか、\<**[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、\< **[新しい接続...]** をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)  
   

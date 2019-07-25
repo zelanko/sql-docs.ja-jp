@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 1f717ad6-f67b-4980-9397-577ecb0e5789
 author: rothja
 ms.author: jroth
-manager: craigg
-ms.openlocfilehash: 44dfbf2ce8c11bea93420d1222ae08d1eef3b00e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a5b722f37fb6a5e30a50307a5d7828868ecd1fba
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65981600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68072262"
 ---
 # <a name="some--any-transact-sql"></a>SOME | ANY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -58,7 +57,7 @@ scalar_expression { = | < > | ! = | > | > = | ! > | < | < = | ! < }
  1 列の結果セットを返すサブクエリです。 返される列のデータ型は、*scalar_expression* のデータ型と同じである必要があります。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
  指定された比較が (_scalar_expression_ **,** _x_) の任意の組で **TRUE** の場合、SOME または ANY から TRUE が返されます。ここで、*x* は単一列セットの中の値です。それ以外の場合は、**FALSE** が返されます。  

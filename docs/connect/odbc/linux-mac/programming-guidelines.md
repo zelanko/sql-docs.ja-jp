@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45d1fc9d06dd814e4ee6d80ec5ecbbe9e58d09c3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
+ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66798753"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68264149"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -130,6 +129,8 @@ ODBC Driver 13 および 13.1 では、UTF-8 マルチバイト文字または U
     > DAC 接続では、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用する必要があります。  
     
 2.  UnixODBC ドライバー マネージャーは、すべてのステートメント属性に対し、それらが SQLSetConnectAttr 経由で渡される場合に、「属性またはオプション識別子が無効です」を返します。 Windows で、SQLSetConnectAttr がステートメント属性値を受け取ると、ドライバーは接続ハンドルの子であるすべてのアクティブなステートメントにその値を設定します。  
+
+3.  高度なマルチスレッドアプリケーションでドライバーを使用すると、unixODBC のハンドル検証がパフォーマンスのボトルネックになることがあります。 このようなシナリオでは、 `--enable-fastvalidate`オプションを使用して unixODBC をコンパイルすることで、大幅にパフォーマンスを向上させることができます。 ただし、これにより、エラーを返す`SQL_INVALID_HANDLE`のではなく、ODBC api に無効なハンドルを渡すアプリケーションがクラッシュする可能性があることに注意してください。
 
 ## <a name="see-also"></a>参照  
 [よく寄せられる質問](../../../connect/odbc/linux-mac/frequently-asked-questions-faq-for-odbc-linux.md)

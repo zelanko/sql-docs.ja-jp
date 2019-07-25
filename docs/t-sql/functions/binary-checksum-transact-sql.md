@@ -18,14 +18,13 @@ helpviewer_keywords:
 ms.assetid: 07fece4d-58e3-446e-a3b5-92fe24d2d1fb
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: ddffd56aae2f1ee2e9e6a550cf3436df1c014be7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 506f3f0e79501b16ea5455ab1ff4d4ee83a7abff
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942818"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68040208"
 ---
 # <a name="binarychecksum--transact-sql"></a>BINARY_CHECKSUM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -43,7 +42,7 @@ BINARY_CHECKSUM ( * | expression [ ,...n ] )
 ## <a name="arguments"></a>引数  
 *\**  
 計算がすべてのテーブルの列に対して行われることを指定します。 BINARY_CHECKSUM の計算では、比較できないデータ型の列は無視されます。 比較できないデータ型は次のとおりです。  
-* **カーソル (cursor)**  
+* **cursor**  
 * **image**  
 * **ntext**  
 * **text**  

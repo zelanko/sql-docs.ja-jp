@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: 640e6a19-49ae-4ee8-ac07-008370158f0e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 504c05882d1e7c690b8ddbd46c331073f63bbb7c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d06e1b4ea0302bc8da4d7ad7a95927593c199d40
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727004"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68049411"
 ---
 # <a name="data-streaming-destination"></a>Data Streaming Destination
 
@@ -37,7 +36,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="data-feed-publishing-components"></a>データ フィード パブリッシング コンポーネント  
  データ フィード パブリッシング コンポーネントにはコンポーネントとして、OLE DB Provider for SSIS、Data Streaming Destination、SSIS パッケージ パブリッシュ ウィザードが含まれています。 このウィザードでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース インスタンスで SSIS パッケージを SQL ビューとして公開できます。 このウィザードでは、OLE DB Provider for SSIS を利用するリンク サーバーとリンク サーバーでクエリを表示する SQL ビューを作成できます。 ビューを実行し、表形式のデータ セットとなっている SSIS パッケージからの結果にクエリを実行します。  
   
- SSISOLEDB プロバイダーがインストールされていることを確認するには、SQL Server Management Studio で、 **[サーバー オブジェクト]**、 **[リンク サーバー]**、 **[プロバイダー]** の順に展開し、 **SSISOLEDB** プロバイダーが表示されていることを確認します。 **[SSISOLEDB]** をダブルクリックし、有効になっていなければ、 **[InProcess 許可]** を有効にして **[OK]** をクリックします。  
+ SSISOLEDB プロバイダーがインストールされていることを確認するには、SQL Server Management Studio で、 **[サーバー オブジェクト]** 、 **[リンク サーバー]** 、 **[プロバイダー]** の順に展開し、 **SSISOLEDB** プロバイダーが表示されていることを確認します。 **[SSISOLEDB]** をダブルクリックし、有効になっていなければ、 **[InProcess 許可]** を有効にして **[OK]** をクリックします。  
   
 ## <a name="publish-an-ssis-package-as-a-sql-view"></a>SQL ビューとして SSIS パッケージを公開する  
  以下では、SQL ビューとして SSIS パッケージを公開する手順について説明します。  
@@ -56,7 +55,7 @@ SELECT * FROM OPENQUERY([Default Linked Server for Integration Services], N'Fold
 ## <a name="configure-data-streaming-destination"></a>Data Streaming Destination を構成する
   **[Data Streaming Destination の詳細エディター]** ダイアログ ボックスを使用して、Data Streaming Destination を構成します。 このダイアログ ボックスを開くには、コンポーネントをダブルクリックするか、データ フロー デザイナーでコンポーネントを右クリックしてから **[編集]** をクリックします。  
   
- このダイアログ ボックスには、**[コンポーネントのプロパティ]**、**[入力列]**、**[入力プロパティと出力プロパティ]** という 3 つのタブがあります。  
+ このダイアログ ボックスには、 **[コンポーネントのプロパティ]** 、 **[入力列]** 、 **[入力プロパティと出力プロパティ]** という 3 つのタブがあります。  
   
 ## <a name="component-properties-tab"></a>[コンポーネントのプロパティ] タブ  
  このタブには、次の編集可能なフィールドがあります。  

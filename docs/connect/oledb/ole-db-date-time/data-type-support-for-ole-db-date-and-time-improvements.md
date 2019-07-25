@@ -13,20 +13,19 @@ helpviewer_keywords:
 - OLE DB, date/time improvements
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 5b8f304d7681d3df4ae4c6f065a6128beb5822d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 0e6ceaa3fae1efd04490932dd1fdc42a9805b2f3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66769395"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67995117"
 ---
 # <a name="data-type-support-for-ole-db-date-and-time-improvements"></a>OLE DB の日付/時刻の強化に対するデータ型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  この記事では、OLE DB (OLE DB Driver for SQL Server) に関する情報の種類をサポートする[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]日付/時刻データ型。  
+  この記事では、日付/時刻データ型をサポート[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]する OLE DB (OLE DB Driver for SQL Server) の種類に関する情報を提供します。  
   
 ## <a name="data-type-mapping-in-rowsets-and-parameters"></a>行セットとパラメーターでのデータ型マッピング  
  OLE DB には、新しいサーバーの種類をサポートする 2 つの新しいデータ型 (DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET) が用意されています。 次の表に、完全なサーバーの型マッピングを示します。  
@@ -36,8 +35,8 @@ ms.locfileid: "66769395"
 |DATETIME|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |smalldatetime|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
 |date|DBTYPE_DBDATE|133 (oledb.h)|  
-|time|DBTYPE_DBTIME2|145 (msoledbsql.h)|  
-|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql.h)|  
+|time|DBTYPE_DBTIME2|145 (msoledbsql)|  
+|datetimeoffset|DBTYPE_DBTIMESTAMPOFFSET|146 (msoledbsql)|  
 |datetime2|DBTYPE_DBTIMESTAMP|135 (oledb.h)|  
   
 ## <a name="data-formats-strings-and-literals"></a>データ形式 : 文字列とリテラル  
@@ -114,7 +113,7 @@ typedef struct tagDBTIMESTAMPOFFSET {
     } DBTIMESTAMPOFFSET;  
 ```  
   
- 場合`timezone_hour`が負の値、`timezone_minute`負の値である必要がありますまたは 0。 場合`timezone_hour`が正の値、`timezone minute`正である必要がありますまたは 0。 `timezone_hour` が 0 の場合、`timezone minute` は -59 ～ +59 の値を保持できます。  
+ が`timezone_hour`負の値`timezone_minute`の場合は、負の値または0である必要があります。 が`timezone_hour`正の値`timezone minute`の場合は、正の値または0である必要があります。 `timezone_hour` が 0 の場合、`timezone minute` は -59 ～ +59 の値を保持できます。  
   
 ### <a name="ssvariant"></a>SSVARIANT  
  この構造体は、新しい構造体 DBTYPE_DBTIME2 と DBTYPE_DBTIMESTAMPOFFSET を含み、適切な型に対しては秒の小数部の桁数が追加されています。  
@@ -161,7 +160,7 @@ enum SQLVARENUM {
 };  
 ```  
   
- SQL Server の OLE DB ドライバーへの移行を使用するアプリケーション**sql_variant**の制限された有効桁数に依存し、 **datetime** を使用する基になるスキーマが更新された場合に、更新する必要があります**datetime2**なく**datetime**します。  
+ **Sql_variant**を使用し、 **datetime**の制限された有効桁数に依存する SQL Server の OLE DB ドライバーに移行するアプリケーションは、基になるスキーマが**datetime**ではなく**datetime2**を使用するように更新された場合に更新する必要があります。  
   
  また、SSVARIANT へのアクセス マクロが拡張され、次の部分が追加されました。  
   
@@ -173,16 +172,16 @@ enum SQLVARENUM {
 ```  
   
 ## <a name="data-type-mapping-in-itabledefinitioncreatetable"></a>ITableDefinition::CreateTable でのデータ型マッピング  
- Itabledefinition::createtable で使用される DBCOLUMNDESC 構造体で、次の型マッピングが使用されます。  
+ ITableDefinition:: CreateTable で使用される DBCOLUMNDESC 構造体では、次の型マッピングが使用されます。  
   
-|OLE DB データ型 (*wType*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|注|  
+|OLE DB データ型 (*Wtype*)|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のデータ型|注|  
 |----------------------------------|-----------------------------------------|-----------|  
 |DBTYPE_DBDATE|date||  
-|DBTYPE_DBTIMESTAMP|**datetime2**(p)|OLE DB Driver for SQL Server の検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
-|DBTYPE_DBTIME2|**time**(p)|OLE DB Driver for SQL Server の検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
-|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB Driver for SQL Server の検査、DBCOLUMDESC *bScale*メンバーに秒の小数部の精度を確認します。|  
+|DBTYPE_DBTIMESTAMP|**datetime2**irtran-p|OLE DB Driver for SQL Server では、秒の小数部の有効桁数を決定するために DBBFILE DESC *Bscale*メンバーを検査します。|  
+|DBTYPE_DBTIME2|**time**(p)|OLE DB Driver for SQL Server では、秒の小数部の有効桁数を決定するために DBBFILE DESC *Bscale*メンバーを検査します。|  
+|DBTYPE_DBTIMESTAMPOFFSET|**datetimeoffset**(p)|OLE DB Driver for SQL Server では、秒の小数部の有効桁数を決定するために DBBFILE DESC *Bscale*メンバーを検査します。|  
   
- アプリケーションに DBTYPE_DBTIMESTAMP を指定するときに*wType*へのマッピングをオーバーライドできます**datetime2**で型名を指定することによって*pwszTypeName*します。 場合**datetime**が指定されている*bScale* 3 である必要があります。 場合**smalldatetime**が指定されている*bScale* 0 にする必要があります。 場合*bScale*と整合性がありません*wType*と*pwszTypeName*DB_E_BADSCALE が返されます。  
+ アプリケーションが*Wtype*で DBTYPE_DBTIMESTAMP を指定する場合、 *pwszTypeName*に型名を指定することで、 **datetime2**へのマッピングをオーバーライドできます。 **Datetime**が指定されている場合、 *bscale*は3である必要があります。 **Smalldatetime**を指定する場合、 *bscale*は0にする必要があります。 *Bscale*が*Wtype*および*pwszTypeName*と一致しない場合、DB_E_BADSCALE が返されます。  
   
 ## <a name="see-also"></a>参照  
  [日付と時刻の強化機能 &#40;OLE DB&#41;](../../oledb/ole-db-date-time/date-and-time-improvements-ole-db.md)  

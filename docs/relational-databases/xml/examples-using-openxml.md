@@ -26,13 +26,12 @@ helpviewer_keywords:
 ms.assetid: 689297f3-adb0-4d8d-bf62-cfda26210164
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: c072fc97536259b16938cc36dcbc21dbbbb97b57
-ms.sourcegitcommit: 2827d19393c8060eafac18db3155a9bd230df423
+ms.openlocfilehash: 4ea3ad1c2f7cb482888f0cd4d31a91f9975745b7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/27/2019
-ms.locfileid: "58511269"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67943385"
 ---
 # <a name="examples-using-openxml"></a>例 :OPENXML の使用
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -476,7 +475,7 @@ EXEC sp_xml_removedocument @docHandle
   
  WITH 句の *SchemaDeclaration* では、 *ColName* パラメーターと *ColType* パラメーターを使用して *ColPattern* も指定されています。 省略可能な *ColPattern* は、次のことを示すために指定する XPath パターンです。  
   
--   行セット内の **ProdID** 列の *ColPattern* に指定された XPath パターン (**.**) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
+-   行セット内の **ProdID** 列の *ColPattern* に指定された XPath パターン ( **.** ) により、コンテキスト ノード (現在のノード) が識別されます。 指定された *rowpattern* によって、これは、<`OrderDetail`> 要素の **ProductID** 属性となります。  
   
 -   行セット内の **Qty** 列に指定された *ColPattern* である **../\@Quantity** により、コンテキスト ノード \<ProductID> の親ノードである <`OrderDetail`> の **Quantity** 属性が識別されます。  
   

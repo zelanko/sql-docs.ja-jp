@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 16def64ceaf9f6387dacc0486bd125f6999df6e5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003787"
 ---
 # <a name="working-with-statements-and-result-sets"></a>ステートメントおよび結果セットの操作
 
@@ -28,9 +27,9 @@ ms.locfileid: "66780794"
 
 JDBC ドライバーの Statement オブジェクト、たとえば [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトなどのいずれかを使用するときは、必ずジョブに対して適切なオブジェクトを使用します。
 
-- OUT パラメーターがあるない場合は、SQLServerCallableStatement オブジェクトを使用する必要はありません。 代わりに、SQLServerStatement、SQLServerPreparedStatement オブジェクトまたはを使用します。
+- OUT パラメーターがない場合は、SQLServerCallableStatement オブジェクトを使用する必要はありません。 代わりに、SQLServerStatement または SQLServerPreparedStatement オブジェクトを使用してください。
 
-- OUT パラメーターまたはがないか、ステートメントを複数回実行する予定がない場合は、SQLServerCallableStatement または SQLServerPreparedStatement オブジェクトを使用する必要はありません。 代わりに、SQLServerStatement オブジェクトを使用します。
+- ステートメントを複数回実行する予定がない場合、または IN または OUT パラメーターがない場合は、SQLServerCallableStatement または SQLServerPreparedStatement オブジェクトを使用する必要はありません。 代わりに、SQLServerStatement オブジェクトを使用します。
 
 ## <a name="use-the-appropriate-concurrency-for-resultset-objects"></a>ResultSet オブジェクトに対する適切なコンカレンシーの使用
 
@@ -38,7 +37,7 @@ JDBC ドライバーの Statement オブジェクト、たとえば [SQLServerSt
 
 ## <a name="limit-the-size-of-your-result-sets"></a>結果セットのサイズの制限
 
-[setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) メソッド (あるいは SET ROWCOUNT または SELECT TOP N SQL 構文) を使用して、大きな結果セットから返される可能性がある場合に、返される行数を制限することを検討してください。 大きな結果セットを処理する必要がある場合は、接続文字列プロパティを responseBuffering=adaptive に設定して、既定のアダプティブ応答バッファリング モードを使用することを検討してください。 この方法を使用すると、アプリケーションで大きな結果セットを処理する際にサーバー側のカーソルを必要とせず、アプリケーション メモリの使用量を最小限に抑えることができます。 詳細については、次を参照してください。[アダプティブ バッファリングを使用して](../../connect/jdbc/using-adaptive-buffering.md)します。
+[setMaxRows](../../connect/jdbc/reference/setmaxrows-method-sqlserverstatement.md) メソッド (あるいは SET ROWCOUNT または SELECT TOP N SQL 構文) を使用して、大きな結果セットから返される可能性がある場合に、返される行数を制限することを検討してください。 大きな結果セットを処理する必要がある場合は、接続文字列プロパティを responseBuffering=adaptive に設定して、既定のアダプティブ応答バッファリング モードを使用することを検討してください。 この方法を使用すると、アプリケーションで大きな結果セットを処理する際にサーバー側のカーソルを必要とせず、アプリケーション メモリの使用量を最小限に抑えることができます。 詳細については、「[アダプティブバッファリングの使用](../../connect/jdbc/using-adaptive-buffering.md)」を参照してください。
 
 ## <a name="use-the-appropriate-fetch-size"></a>適切なフェッチ サイズの使用
 

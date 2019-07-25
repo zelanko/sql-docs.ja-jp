@@ -10,14 +10,13 @@ ms.topic: conceptual
 ms.assetid: e3f8009c-319d-4d7b-8993-828e55ccde11
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5023d29379ab254e85c38e0b9e0b6ae3c8772133
-ms.sourcegitcommit: 37310da0565c2792aae43b3855bd3948fd13e044
+ms.openlocfilehash: e39f991982fbde13259039e8794218819f366b89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/18/2018
-ms.locfileid: "53590766"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081832"
 ---
 # <a name="transact-sql-constructs-not-supported-by-in-memory-oltp"></a>インメモリ OLTP でサポートされていない Transact-SQL の構造
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -55,7 +54,7 @@ ms.locfileid: "53590766"
 |機能|ON|メモリ最適化テーブルをファイル グループまたはパーティション構成に配置できません。 **CREATE TABLE** ステートメントから ON 句を削除します。<br /><br /> すべてのメモリ最適化テーブルは、メモリ最適化ファイル グループにマップされます。|  
 |データ型|*データ型名*|指示されたデータ型はサポートされていません。 サポートされているデータ型に置き換えます。 詳細については、「 [サポートされるデータ型](../../relational-databases/in-memory-oltp/supported-data-types-for-in-memory-oltp.md)」を参照してください。|  
 |機能|計算列|**適用対象:** [!INCLUDE[ssSQL14-md](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15-md](../../includes/sssql15-md.md)]<br/>計算列は、メモリ最適化テーブルではサポートされていません。 **CREATE TABLE** ステートメントから計算列を削除します。<br/><br/>[!INCLUDE[ssSDSFull_md](../../includes/ssSDSFull-md.md)] および [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] 以降の SQL Server では、メモリ最適化テーブルでの計算列およびインデックスをサポートしています。|  
-|機能|のレプリケーション|レプリケーションはメモリ最適化テーブルではサポートされていません。|  
+|機能|レプリケーション|レプリケーションはメモリ最適化テーブルではサポートされていません。|  
 |機能|FILESTREAM|FILESTREAM ストレージは、メモリ最適化テーブルのサポートされた列ではありません。 列定義から **FILESTREAM** キーワードを削除します。|  
 |機能|SPARSE|メモリ最適化テーブルの列を SPARSE として定義することはできません。 列定義から **SPARSE** キーワードを削除します。|  
 |機能|ROWGUIDCOL|ROWGUIDCOL オプションはメモリ最適化テーブルの列ではサポートされていません。 列定義から **ROWGUIDCOL** キーワードを削除します。|  

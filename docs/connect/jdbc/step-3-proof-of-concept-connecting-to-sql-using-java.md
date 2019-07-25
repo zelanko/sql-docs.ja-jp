@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1504a348-1774-47ab-8967-288ec3985ae4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: af6fc51c3aba34e8118d5519b5acf2fc9583738f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: a801afabe78625f7914d5fc5accfb6a97084c183
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798316"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68004289"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-java"></a>ステップ 3: Java を使用した SQL への接続を概念実証する
   
@@ -24,7 +23,7 @@ ms.locfileid: "66798316"
   
 ## <a name="step-1--connect"></a>手順 1: 接続する  
   
-接続クラスを使用すると、SQL Database に接続します。   
+接続クラスを使用して SQL Database に接続します。   
   
 ```java  
 import java.sql.Connection;
@@ -56,7 +55,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-2-execute-a-query"></a>手順 2: クエリの実行  
-このサンプルでは、Azure SQL Database に接続する、SELECT ステートメントを実行し、選択した行を返します。   
+このサンプルでは、Azure SQL Database に接続し、SELECT ステートメントを実行して、選択した行を返します。   
   
 ```java  
 import java.sql.Connection;
@@ -101,7 +100,7 @@ public class SQLDatabaseConnection {
 ```  
   
 ## <a name="step-3-insert-a-row"></a>手順 3: 行を挿入する  
-この例で INSERT ステートメントを実行、パラメーターを渡して、主キーの自動生成された値を取得します。   
+この例では、INSERT ステートメントを実行し、パラメーターを渡して、自動生成された主キー値を取得します。   
   
 ```java  
 import java.sql.Connection;

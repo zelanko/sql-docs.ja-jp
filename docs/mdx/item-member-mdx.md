@@ -18,7 +18,7 @@ ms.locfileid: "67905908"
 # <a name="item-member-mdx"></a>Item (メンバー) (MDX)
 
 
-  指定された組からメンバーを返します。  
+  指定されたタプルからメンバーを返します。  
   
 ## <a name="syntax"></a>構文  
   
@@ -29,16 +29,16 @@ Tuple_Expression.Item( Index )
   
 ## <a name="arguments"></a>引数  
  *Tuple_Expression*  
- 組を返す有効な多次元式 (MDX) 式です。  
+ タプルを返す有効な多次元式 (MDX) 式です。  
   
  *Index*  
- 返される組内の位置によって、特定のメンバーを指定する有効な数値式です。  
+ 返されるタプル内の位置によって、特定のメンバーを指定する有効な数値式です。  
   
 ## <a name="remarks"></a>コメント  
- **項目**関数が、指定された組からメンバーを返します。 指定した 0 から始まる位置にあるメンバーを返します*インデックス*します。  
+ **Item**関数が、指定されたタプルからメンバーを返します。 指定した 0 から始まる位置にあるメンバーを返します*インデックス*します。  
   
 ## <a name="example"></a>例  
- 次の例では、列の `[2003]` 組に含まれる最初のアイテムである `[Date].[Calendar Year].&[2003], [Measures].[Internet Sales Amount] ).` メンバーを返します。  
+ 次の例では、列の `[2003]` タプルに含まれる最初のアイテムである `[Date].[Calendar Year].&[2003], [Measures].[Internet Sales Amount] ).` メンバーを返します。  
   
  `SELECT`  
   

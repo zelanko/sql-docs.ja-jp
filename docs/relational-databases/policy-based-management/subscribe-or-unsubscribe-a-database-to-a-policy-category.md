@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: d2c31769-7098-428e-ad9c-ef56541b7c52
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: f10691cf1bfe8802612324a11927c661f7ffce81
-ms.sourcegitcommit: ef6e3ec273b0521e7c79d5c2a4cb4dcba1744e67
+ms.openlocfilehash: d653db8d1fcc6b2344763ed6f3988a33a297fd69
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/10/2018
-ms.locfileid: "51512457"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68021552"
 ---
 # <a name="subscribe-or-unsubscribe-a-database--to-a-policy-category"></a>ポリシー カテゴリへのデータベースのサブスクライブまたはアンサブスクライブ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "51512457"
   
 -   **作業を開始する準備:**  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **ポリシー カテゴリにデータベースをサブスクライブまたはアンサブスクライブするために使用するもの:**  
   
@@ -58,7 +57,7 @@ ms.locfileid: "51512457"
      [列の展開]  
      クリックすると、ポリシー カテゴリが展開され、 カテゴリに含まれているすべてのポリシーが一覧表示されます。  
   
-     **名前**  
+     **[名前]**  
      ポリシー カテゴリの名前です。  
   
      **[サブスクライブ済み]**  

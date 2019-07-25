@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: cf8ee392-8a10-40a3-ae32-31c7b1efdd04
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d4e49d0ee7ccc62ab9e253436b5763ac4bdd1763
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: fa216c6fb20ab5881865e2baf283d233b4abbfca
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66761624"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67916080"
 ---
 # <a name="working-with-a-connection"></a>接続の操作
 
@@ -94,7 +93,7 @@ String url = "jdbc:sqlserver://209.196.43.19;instanceName=INSTANCE1;integratedSe
 String url = "jdbc:sqlserver://172.31.255.255;database=AdventureWorks;integratedSecurity=true;"
 ```
 
-複数の接続 URL の例では、次を参照してください。[接続 URL の構築](../../connect/jdbc/building-the-connection-url.md)します。
+接続 URL の例については、「[接続 url を作成する](../../connect/jdbc/building-the-connection-url.md)」を参照してください。
 
 ## <a name="creating-a-connection-with-a-custom-login-time-out"></a>カスタムのログイン タイムアウトを持つ接続の作成
 

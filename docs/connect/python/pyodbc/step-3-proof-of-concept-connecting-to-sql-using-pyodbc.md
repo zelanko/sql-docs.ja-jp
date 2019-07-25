@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e8f4c34c1b6b945c28193a549a06546ec952a5d9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 87faa60456dd6d03f23d45346ab0dd103dc07c82
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780372"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992506"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>ステップ 3: pyodbc を使用した SQL への接続を概念実証する
 
 この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。  
 
-**次のサンプル スクリプトを実行**である test.py という名前のファイルを作成し、移動すると、各コード スニペットを追加します。 
+**サンプルスクリプトを次**のように実行する Test.py という名前のファイルを作成し、各コードスニペットを追加します。 
 
 ```
 > python test.py
@@ -46,9 +45,9 @@ cursor = cnxn.cursor()
 ```  
   
   
-## <a name="step-2--execute-query"></a>手順 2: クエリを実行します。  
+## <a name="step-2--execute-query"></a>手順 2: クエリを実行する  
   
-SQL Database に対するクエリのセットの結果を取得する、cursor.executefunction を使用できます。 この関数は、基本的に任意のクエリを受け入れるし、cursor.fetchone() の使用に反復処理できる結果セットを返します
+Executefunction を使用すると、SQL Database に対するクエリから結果セットを取得できます。 この関数は基本的に任意のクエリを受け取り、カーソルを使用して反復処理できる結果セットを返します。 fetch one ()
   
   
 ```python
@@ -79,4 +78,4 @@ while row:
   `      
   ## <a name="next-steps"></a>次の手順  
   
-詳細については、次を参照してください。、 [Python デベロッパー センター](https://azure.microsoft.com/develop/python/)します。
+詳細については、 [Python デベロッパーセンター](https://azure.microsoft.com/develop/python/)を参照してください。

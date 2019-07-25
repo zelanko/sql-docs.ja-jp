@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 131c2d0c-2e33-4785-94af-ada5c049821e
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: a67c3c406c5375e32ed2e49fe59b7f362f421e0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7e65aa1624874b976002e8a9bd5f3cfa8932e365
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65725910"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67928199"
 ---
 # <a name="script-component"></a>スクリプト コンポーネント
 
@@ -119,7 +118,7 @@ ms.locfileid: "65725910"
  スクリプト コンポーネントの詳細については、「[スクリプト コンポーネント エディターでのスクリプト コンポーネントの構成](../../../integration-services/extending-packages-scripting/data-flow-script-component/configuring-the-script-component-in-the-script-component-editor.md)」を参照してください。 スクリプト コンポーネントのプログラミングの詳細については、「 [スクリプト コンポーネントによるデータ フローの拡張](../../../integration-services/extending-packages-scripting/data-flow-script-component/extending-the-data-flow-with-the-script-component.md)」を参照してください。  
   
 ### <a name="options"></a>および  
- **[変換元]**、 **[変換先]**、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
+ **[変換元]** 、 **[変換先]** 、または **[変換]** のどれを選択するかに応じて、スクリプト変換の構成とスクリプト変換エディターのページが変わります。  
   
 ## <a name="script-transformation-editor-connection-managers-page"></a>[スクリプト変換エディター] ([接続マネージャー] ページ)
   **[スクリプト変換エディター]** の **[接続マネージャー]** ページを使用すると、スクリプトで使用される接続を指定できます。  
@@ -134,7 +133,7 @@ ms.locfileid: "65725910"
  接続を表す一意な名前を入力します。  
   
  **接続マネージャー**  
- 使用できる接続マネージャーの一覧から選択するか、[**\<新しい接続>**] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
+ 使用できる接続マネージャーの一覧から選択するか、[ **\<新しい接続>** ] を選択して **[SSIS 接続マネージャーの追加]** ダイアログ ボックスを開きます。  
   
  **[説明]**  
  接続の説明を入力します。  
@@ -218,7 +217,7 @@ ms.locfileid: "65725910"
 |**[UserComponentTypeName]**|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インフラストラクチャをサポートする <xref:Microsoft.SqlServer.Dts.Pipeline.ScriptComponentHost> クラスと **Microsoft.SqlServer.TxScript** アセンブリを指定します。|  
   
  **[スクリプトの編集]**  
-  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用して、スクリプトを作成または変更します。  
+ [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[vsprvs](../../../includes/vsprvs-md.md)] Tools for Applications (VSTA) を使用して、スクリプトを作成または変更します。  
   
 ## <a name="related-content"></a>関連コンテンツ  
  [Integration Services の変換](../../../integration-services/data-flow/transformations/integration-services-transformations.md)  

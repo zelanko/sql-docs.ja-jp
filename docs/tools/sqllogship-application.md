@@ -12,19 +12,18 @@ helpviewer_keywords:
 ms.assetid: 8ae70041-f3d9-46e4-8fa8-31088572a9f8
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: ca6a9765c7813fd0fbece4d8c392c23e2f784ec2
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 0e59ba2473ce58caebcb76521dcc191479abdb92
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67728075"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68065450"
 ---
 # <a name="sqllogship-application"></a>sqllogship アプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   **sqllogship** アプリケーションは、ログ配布構成のバックアップ、コピー、復元操作、および関連するクリーンアップ作業を行います。 操作は、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の特定のインスタンスで特定のデータベースに対して行われます。  
   
- ![トピック リンク アイコン](../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン")構文表記規則についてを参照してください。[コマンド プロンプト ユーティリティ リファレンス&#40;データベース エンジン&#41;](../tools/command-prompt-utility-reference-database-engine.md)します。  
+ ![トピックリンクアイコン](../database-engine/configure-windows/media/topic-link.gif "トピックリンクアイコン")構文表記規則については、「[コマンド&#40;プロンプト&#41;ユーティリティリファレンスデータベースエンジン](../tools/command-prompt-utility-reference-database-engine.md)」を参照してください。  
   
 ## <a name="syntax"></a>構文  
   

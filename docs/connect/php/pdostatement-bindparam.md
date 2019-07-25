@@ -1,5 +1,5 @@
 ---
-title: Pdostatement::bindparam |Microsoft Docs
+title: 'PDOStatement:: bindParam |Microsoft Docs'
 ms.custom: ''
 ms.date: 05/22/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 65212058-2632-47a4-ba7d-2206883abf09
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: d8186b87e5dde50b07aa69e4dde870d8474265bd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: cd3332f9dc12d1cf7df22c097ab9370606985a68
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795591"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936155"
 ---
 # <a name="pdostatementbindparam"></a>PDOStatement::bindParam
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -39,7 +38,7 @@ $*data_type*: 省略可能な (整数の) PDO::PARAM_* 定数。 既定値は PD
   
 $*length*: データ型の省略可能な (整数の) 長さ。 $*data_type* で PDO::PARAM_INT または PDO::PARAM_BOOL を使用している場合は、既定のサイズを示すように PDO::SQLSRV_PARAM_OUT_DEFAULT_SIZE を指定できます。  
   
-$*指定する*: 省略可能な (混合の) ドライバー固有のオプション。 たとえば、PDO::SQLSRV_ENCODING_UTF8 と指定すると、UTF-8 でエンコードされた文字列として列を変数にバインドできます。  
+$*driver_options*: オプションの (mixed) ドライバー固有のオプション。 たとえば、PDO::SQLSRV_ENCODING_UTF8 と指定すると、UTF-8 でエンコードされた文字列として列を変数にバインドできます。  
   
 ## <a name="return-value"></a>戻り値  
 成功した場合は TRUE、それ以外の場合は FALSE です。  
@@ -100,7 +99,7 @@ echo $input1;
 ```  
   
 > [!NOTE]
-> 場合の範囲外の値が最終的には bigint 型に出力パラメーターをバインドするときに、[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)、「値が範囲外」例外ように pdo::sqlsrv_param_out_default_size で:param_int の使用があります。 そのため、代わりに既定の pdo::param_str と 21 では最大で結果の文字列のサイズを指定します。 任意の bigint 値、負の符号を含め、桁の最大数になります。 
+> 出力パラメーターを bigint 型にバインドするときに、値が[整数](../../t-sql/data-types/int-bigint-smallint-and-tinyint-transact-sql.md)の範囲外になる可能性がある場合は、pdo::P ARAM_INT with pdo:: SQLSRV_PARAM_OUT_DEFAULT_SIZE を使用すると、"値が範囲を超えています" という例外が発生する可能性があります。 そのため、代わりに既定の PDO::P ARAM_STR を使用して、結果の文字列のサイズを最大で21インチに指定します。 任意の bigint 値の最大桁数 (負の符号を含む) です。 
 
 ## <a name="example"></a>例  
 このコード サンプルは、入力/出力パラメーターを使用する方法を示しています。  

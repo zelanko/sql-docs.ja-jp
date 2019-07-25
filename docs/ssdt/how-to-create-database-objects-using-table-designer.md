@@ -13,13 +13,12 @@ f1_keywords:
 ms.assetid: 9c9479c1-9bfc-4039-837e-e53fce67723d
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 6c48efccdb4d32d9b471aae758e31084c7b87a7b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cab6b6114dd7ea7364df890be67579f91bee4339
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65098139"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67897173"
 ---
 # <a name="how-to-create-database-objects-using-table-designer"></a>方法:テーブル デザイナーを使用してデータベース オブジェクトを作成する
 **SQL Server オブジェクト エクスプローラー**の新しい **[SQL Server]** ノードは視覚的に SSMS とよく似ていますが、それだけではなく、SSMS で提供されるものとよく似た機能を持つコンテキスト メニューを使用して、新しいオブジェクトを作成することもできます。  
@@ -63,18 +62,18 @@ ms.locfileid: "65098139"
   
     |[オブジェクト名]|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
-    |Id|int|オフ|  
+    |Id|INT|オフ|  
     |[オブジェクト名]|nvarchar (128)|オフ|  
   
 7.  もう 1 つ、**Products** という名前のテーブルを作成します。 列グリッドを使用して、以下に示す列を Products テーブルに追加します。 さらに、テーブルの名前が `[dbo].[Products]` になるようにスクリプトを変更します。  
   
     |[オブジェクト名]|データ型|**[NULL を許容]**|  
     |--------|-------------|-------------------|  
-    |Id|int|オフ|  
+    |Id|INT|オフ|  
     |[オブジェクト名]|nvarchar (128)|オフ|  
-    |ShelfLife|int|オン|  
-    |SupplierId|int|オン|  
-    |CustomerId|int|オン|  
+    |ShelfLife|INT|オン|  
+    |SupplierId|INT|オン|  
+    |CustomerId|INT|オン|  
   
 ### <a name="to-create-a-new-check-constraint-using-the-table-designer"></a>テーブル デザイナーを使用して新しい CHECK 制約を作成するには  
   

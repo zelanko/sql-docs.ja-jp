@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 10e7bac7-4121-48c2-be01-10083a8c65af
 author: MashaMSFT
 ms.author: mathoma
-manager: jroth
-ms.openlocfilehash: 6e25840a2dfe52bb6d6c9e1584e12aceaa862f0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8764ffb829f684b996d22c6ea604fad970a1a30f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781055"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67934844"
 ---
 # <a name="differences-between-availability-modes-for-an-always-on-availability-group"></a>Always On 可用性グループの可用性モードの違い
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

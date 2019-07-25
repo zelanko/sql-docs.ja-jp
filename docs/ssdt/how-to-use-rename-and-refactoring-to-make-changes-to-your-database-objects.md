@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: f35520e6-8e6e-47b1-87a3-22c0cf2cabdb
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: a9da86a5e15f1b683a0e7c040cd4e6d906d54f47
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0897d9498ca93e915dba5df9c32c4544fe08767d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65090093"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097472"
 ---
 # <a name="how-to-use-rename-and-refactoring-to-make-changes-to-your-database-objects"></a>方法:名前の変更とリファクタリングを使用して、データベース オブジェクトを変更する
 Transact\-SQL エディターの [リファクター] コンテキスト メニューを使用すると、オブジェクトの名前を変更することも別のスキーマに移動することもできます。また、変更をコミットする前に、影響を受ける領域をすべてプレビューすることもできます。 [リファクター] メニューでは、データベース オブジェクトへのすべての参照を完全修飾することも、データベース プロジェクト内の `SELECT` ステートメントに含まれるワイルドカード文字を展開することもできます。  

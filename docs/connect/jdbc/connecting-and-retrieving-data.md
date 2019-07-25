@@ -1,5 +1,5 @@
 ---
-title: 接続およびデータの取得 |Microsoft Docs
+title: データの接続と取得 |Microsoft Docs
 ms.custom: ''
 ms.date: 07/31/2018
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f76b740c9ba64439719a12d016cadaa7db2a7cc3
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2c7e642879c095dd4d9dca4f51a936ab72c523e2
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66778250"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956885"
 ---
 # <a name="connecting-and-retrieving-data"></a>接続およびデータの取得
 
@@ -25,7 +24,7 @@ ms.locfileid: "66778250"
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用する場合は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの接続を確立する 2 つの主な方法があります。 1 つは、接続 URL の接続プロパティを設定してから、DriverManager クラスの getConnection メソッドが呼び出され、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) オブジェクトが返される方法です。  
   
 > [!NOTE]  
-> JDBC ドライバーでサポートされる接続のプロパティの一覧は、次を参照してください。[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)します。  
+> JDBC ドライバーでサポートされる接続プロパティの一覧については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。  
   
 2 つ目の方法では、[SQLServerDataSource](../../connect/jdbc/reference/sqlserverdatasource-class.md) クラスの setter メソッドを使用して接続プロパティを設定してから、[getConnection](../../connect/jdbc/reference/getconnection-method-sqlserverdatasource.md) メソッドが呼び出され、SQLServerConnection オブジェクトが返されます。  
   

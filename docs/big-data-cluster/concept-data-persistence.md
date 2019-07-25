@@ -1,34 +1,34 @@
 ---
-title: Kubernetes でのデータ永続化
+title: Kubernetes でのデータの永続化
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 のビッグ データ クラスター内のデータ永続化のしくみについて説明します。
+description: SQL Server 2019 ビッグデータクラスターでのデータ永続化のしくみについて説明します。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 754477bc8e88bb5c687fe2b15d23460fea7ee23f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9142836032acc5e302c947e1619d17b07faff683
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67958752"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419472"
 ---
-# <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server のビッグ データ クラスターでのデータ永続化
+# <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server ビッグデータクラスターでのデータ永続化
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[永続ボリューム](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)の記憶域の Kubernetes プラグイン モデルを提供します。 消費用途から、記憶域を提供する方法を抽象化されています。 そのため、独自の高可用性記憶域を移動し、SQL Server のビッグ データ クラスターに接続できます。 これにより、ストレージ、可用性、および必要なパフォーマンスの種類を完全に制御できるようにします。 Kubernetes では、さまざまな種類の Azure ディスク/ファイル、NFS、ローカルのストレージなどの記憶域ソリューションをサポートします。
+[永続ボリューム](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)は、Kubernetes のストレージのプラグインモデルを提供します。 ストレージの提供方法は、その使用方法から抽象化されています。 そのため、独自の高可用性記憶域を使用して、SQL Server ビッグデータクラスターに接続することができます。 これにより、必要なストレージ、可用性、およびパフォーマンスの種類を完全に制御できます。 Kubernetes は、Azure ディスク/ファイル、NFS、ローカルストレージなどのさまざまな種類のストレージソリューションをサポートしています。
 
-## <a name="configure-persistent-volumes"></a>永続ボリュームを構成します。
+## <a name="configure-persistent-volumes"></a>永続ボリュームの構成
 
-使用してビッグ データの SQL Server クラスターは、これらの永続的なボリュームを使用する方法は、[ストレージ クラス](https://kubernetes.io/docs/concepts/storage/storage-classes/)します。 異なる種類のストレージ用のさまざまなストレージ クラスを作成し、ビッグ データ クラスターのデプロイ時にそれらを指定できます。 どのストレージ クラスと、プール レベルでは、どの目的に使用する永続ボリューム要求サイズを構成することができます。 ビッグ データの SQL Server クラスターを作成します[永続ボリューム要求](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)永続ボリュームを必要とする各コンポーネントの指定されたストレージ クラスの名前を使用します。 ポッドに対応する永続的なボリュームをマウントします。 
+SQL Server ビッグデータクラスターがこれらの永続ボリュームを消費する方法は、[ストレージクラス](https://kubernetes.io/docs/concepts/storage/storage-classes/)を使用することです。 ストレージの種類ごとに異なるストレージクラスを作成し、ビッグデータクラスターの展開時に指定することができます。 プールレベルの目的に使用するストレージクラスと永続ボリューム要求のサイズを構成できます。 SQL Server ビッグデータクラスターは、永続ボリュームを必要とする各コンポーネントについて、指定されたストレージクラス名を持つ[永続ボリューム要求](https://kubernetes.io/docs/concepts/storage/persistent-volumes/#persistentvolumeclaims)を作成します。 次に、対応する永続ボリュームをポッドにマウントします。 
 
-## <a name="configure-big-data-cluster-storage-settings"></a>ビッグ データ クラスター記憶域の設定を構成します。
+## <a name="configure-big-data-cluster-storage-settings"></a>ビッグデータクラスターのストレージ設定を構成する
 
-その他のカスタマイズと同様に、する設定を指定できます記憶域クラスターの構成ファイルに各プールとコントロール プレーンのデプロイ時にします。 場合は、コントロール プレーンのストレージ設定が使用され、プールの仕様では、記憶域の構成設定はありません。 これは、仕様に含めることができる記憶域の構成セクションのサンプルを示します。
+他のカスタマイズと同様に、各プールとコントロールプレーンのデプロイ時に、クラスター構成ファイルでストレージ設定を指定できます。 プールの仕様にストレージ構成設定がない場合は、コントロールプレーンのストレージ設定が使用されます。 これは、仕様に含めることができるストレージ構成セクションのサンプルです。
 
 ```json
     "storage": 
@@ -45,79 +45,74 @@ ms.locfileid: "67958752"
     }
 ```
 
-ビッグ データ クラスターのデプロイでは、永続的なストレージを使用して、データ、メタデータ、およびさまざまなコンポーネントのログを格納します。 展開の一部として作成された永続ボリューム要求のサイズをカスタマイズできます。 ストレージ クラスを使用するために推奨ベスト プラクティスとして、*保持*[回収ポリシー](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)します。
+ビッグデータクラスターのデプロイでは、永続ストレージを使用して、さまざまなコンポーネントのデータ、メタデータ、およびログを格納します。 デプロイの一部として作成された永続的なボリューム要求のサイズをカスタマイズできます。 ベストプラクティスとして、ストレージクラスは、[回収ポリシー](https://kubernetes.io/docs/concepts/storage/storage-classes/#reclaim-policy)を*保持*して使用することをお勧めします。
 
 > [!NOTE]
-> CTP 3.1 では、記憶域の構成設定の投稿の展開を変更できません。 また、のみ`ReadWriteOnce`クラスター全体のアクセス モードがサポートされています。
+> CTP 3.2 では、配置後にストレージ構成設定を変更することはできません。 また、クラスター `ReadWriteOnce`全体のアクセスモードのみがサポートされています。
 
 > [!WARNING]
-> 永続的な記憶域のない実行中は、テスト環境で作業できますが、非機能的なクラスターになる可能性があります。 ポッドが再起動するとクラスター メタデータ、またはユーザー データは完全に失われます。 この構成で実行をお勧めしません。 
+> 永続的なストレージを使用せずに実行することは、テスト環境で動作しますが、機能しないクラスターになる可能性があります。 ポッドの再起動時に、クラスターのメタデータやユーザーデータが完全に失われます。 この構成ではを実行しないことをお勧めします。 
 
-[記憶域構成](#config-samples)ストレージの SQL Server ビッグ データ クラスター デプロイの設定を構成する方法の例についてを説明します。
+「[ストレージの構成](#config-samples)」セクションでは、SQL Server ビッグデータクラスターの展開で使用するストレージ設定を構成する方法の例を示します。
 
-## <a name="aks-storage-classes"></a>AKS のストレージ クラス
+## <a name="aks-storage-classes"></a>AKS ストレージクラス
 
-AKS が付属して[2 つの組み込みストレージ クラス](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)**既定**と**管理されている premium**に動的プロビジョナーと共にします。 これらのいずれかを指定するか、永続的なストレージが有効になっているとビッグ データ クラスターをデプロイするため、独自のストレージ クラスを作成します。 既定で組み込みの aks クラスターの構成ファイルに*aks、開発、テスト*を使用する永続的なストレージ構成が付属して**既定**ストレージ クラスです。
+AKS には、 [2 つの組み込みストレージクラス](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)の**既定**と**管理 premium**と、それらの動的プロビジョナーが付属しています。 これらのいずれかを指定することも、永続ストレージが有効になっているビッグデータクラスターをデプロイするための独自のストレージクラスを作成することもできます。 既定では、aks *aks*の組み込みのクラスター構成ファイルには、**既定**のストレージクラスを使用するための永続的なストレージ構成が付属しています。
 
 > [!WARNING]
-> 組み込みストレージ クラスで作成された永続ボリューム**既定**と**管理されている premium**回収ポリシーを持つ*削除*します。 時に、SQL Server のビッグ データ クラスターも、削除、永続ボリューム要求は削除され、永続的なボリュームもを取得します。 使用してカスタムのストレージ クラスを作成する**azure ディスク**で privioner、*保持*ように、ポリシーを再利用[この](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)記事。
+> 組み込みのストレージクラスを使用して作成された永続ボリュームでは、**既定**と管理された**Premium**が、*削除*のポリシーを回収します。 そのため、SQL Server ビッグデータクラスターを削除すると、永続ボリュームの要求が削除され、永続ボリュームも保持されます。 [この](https://docs.microsoft.com/en-us/azure/aks/concepts-storage#storage-classes)記事に示されているように、 **azure-disk** privioner と "回収を*保持*する" ポリシーを使用して、カスタムストレージクラスを作成できます。
 
 
-## <a name="minikube-storage-class"></a>Minikube ストレージ クラス
+## <a name="minikube-storage-class"></a>Minikube ストレージクラス
 
-呼ばれる組み込みストレージ クラスが付属して Minikube**標準**その動的プロビジョナーと共にします。 組み込みの構成ファイルを minikube *minikube dev/test*に記憶域の構成設定、コントロール プレーンの仕様の。すべてのプール仕様には、同じ設定が適用されます。 またこのファイルのコピーをカスタマイズし、minikube でビッグ データ クラスターのデプロイに使用できます。 手動で、カスタムのファイルを編集しを実行する特定のプール、ワークロードに対応するために、永続ボリューム要求のサイズを変更することができます。 または、[記憶域構成](#config-samples)を使用して行う方法の例のセクションを編集します*mssqlctl*コマンド。
+Minikube には、**標準**と呼ばれる組み込みのストレージクラスと、それに動的なプロビジョナーが付属しています。 Minikube *minikube*の組み込み構成ファイルには、コントロールプレーン仕様のストレージ構成設定が含まれています。すべてのプールの仕様に同じ設定が適用されます。 また、このファイルのコピーをカスタマイズし、minikube でのビッグデータクラスターのデプロイに使用することもできます。 カスタムファイルを手動で編集し、特定のプールに対する永続的なボリューム要求のサイズを変更して、実行するワークロードに対応することができます。 または、 *azdata*コマンドを使用して編集する方法の例については、「[ストレージの構成](#config-samples)」セクションを参照してください。
 
-## <a name="kubeadm-storage-classes"></a>Kubeadm ストレージ クラス
+## <a name="kubeadm-storage-classes"></a>Kubeadm ストレージクラス
 
-Kubeadm は、組み込みストレージ クラスが付属していません。 独自のストレージ クラスとローカル ストレージまたは、優先のプロビジョナーをなどを使用して永続的なボリュームを作成する必要があります[ルーク](https://github.com/rook/rook)します。 その場合は、設定、 **className**構成した記憶域クラスへ。 
+Kubeadm には、組み込みのストレージクラスが付属していません。 ローカルストレージまたは[ルーク](https://github.com/rook/rook)などの優先プロビジョナーを使用して、独自のストレージクラスと永続ボリュームを作成する必要があります。 その場合は、構成したストレージクラスに**className**を設定します。 
 
 > [!NOTE]
->  組み込みの展開構成ファイルで*kubeadm kubeadm-開発/テスト*データとログの記憶域の指定されたストレージ クラス名はありません。 、展開前に、構成ファイルをカスタマイズし、className それ以外の場合は、配置前の検証の失敗の値を設定する必要があります。 展開では、必要な永続的なボリュームではなく、ストレージ クラスの存在をチェックする検証の手順もあります。 に応じて、クラスターのスケールのための十分なボリュームを作成することを確認する必要があります。 既定のクラスター サイズの CTP 3.1 で 23 以上でボリュームを作成する必要があります。 [ここで](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)ローカル プロビジョナーを使用して永続的なボリュームを作成する方法の例を示します。
+>  *Kubeadm kubeadm*の組み込みの配置構成ファイルでは、データとログストレージにストレージクラス名が指定されていません。 デプロイする前に、構成ファイルをカスタマイズして className の値を設定する必要があります。そうしないと、配置前検証は失敗します。 また、デプロイには、ストレージクラスが存在するかどうかを確認する検証手順もありますが、必要な永続ボリュームには含まれません。 クラスターのスケールに応じて、十分な量のボリュームを作成しておく必要があります。 CTP 3.1 では、既定のクラスターサイズとして、少なくとも23個のボリュームを作成する必要があります。 ローカルプロビジョナーを使用して永続ボリュームを作成する方法の例を[次](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu)に示します。
 
 
-## <a name="customize-storage-configurations-for-each-pool"></a>各プールの記憶域構成をカスタマイズします。
+## <a name="customize-storage-configurations-for-each-pool"></a>各プールのストレージ構成をカスタマイズする
 
-すべてのカスタマイズの組み込みのコピーを作成する必要があります最初に使用する構成ファイルにします。 次のコマンドでのコピーを作成するなど、 *aks dev/test*という名前のサブディレクトリの展開構成ファイル`custom`:
-
-```bash
-mssqlctl bdc config init --source aks-dev-test --target custom
-```
-
-次に、いずれか、手動で編集して、構成ファイルをカスタマイズできますか、使用することができます**mssqlctl bdc 構成セクション セット**コマンド。 このコマンドのセットは jsonpath および jsonpatch ライブラリの組み合わせを使用して、構成ファイルを編集する方法を提供します。
-
-### <a name="configure-size"></a>サイズを構成します。
-
-既定では、各クラスターのプロビジョニングのポッドのプロビジョニングされた永続ボリューム要求のサイズは、10 GB が。 クラスターを展開する前に、カスタム構成ファイルで実行するワークロードに対応するためには、この値を更新することができます。
-
-次の例は、100 Gi に記憶域プールに格納されたデータの永続ボリューム要求のサイズのみを更新します。 [ストレージ] セクションは、このコマンドを実行する前に、記憶域プールの構成ファイルに存在する必要がありますに注意してください。
+すべてのカスタマイズでは、最初に、使用する組み込み構成ファイルのコピーを作成する必要があります。 たとえば、次のコマンドは、 *aks*展開構成ファイルのコピーをという名前`custom`のサブディレクトリに作成します。
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.pools[?(@.spec.type == ""Storage"")].spec.storage.data.size=100Gi"
+azdata bdc config init --source aks-dev-test --target custom
 ```
 
-次の例は、永続ボリューム要求のすべてのプールのサイズを 32 Gi に更新します。
+これにより、**クラスター**を手動で編集するか、 **azdata bdc config**コマンドを使用することによってカスタマイズできる2つのファイルが作成されます。 Jsonpath と jsonpath ライブラリの組み合わせを使用して、構成ファイルを編集する方法を提供できます。
+
+
+### <a id="config-samples"></a>ストレージクラス名と要求サイズのいずれかまたは両方を構成します
+
+既定では、クラスターでプロビジョニングされた各ポッドに対してプロビジョニングされた永続的なボリューム要求のサイズは 10 GB です。 この値は、クラスターの展開前にカスタム構成ファイルで実行しているワークロードに合わせて更新できます。
+
+次の例では、永続的なボリューム要求サイズのサイズを、コントロールの32Gi に更新し**ます。 jsaon**。 プールレベルで上書きされない場合、この設定はすべてのプールに適用されます。
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.size=32Gi"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.size=100Gi"
 ```
 
-### <a id="config-samples"></a> ストレージ クラスを構成します。
-
-次の例では、コントロール プレーンのストレージ クラスを変更する方法を示します。
+次の例は、**コントロールの json**ファイルのストレージクラスを変更する方法を示しています。
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.spec.storage.data.className=<yourStorageClassName>"
+azdata bdc config replace --config-file custom/control.json --json-values "$.spec.storage.data.className=<yourStorageClassName>"
 ```
 
-別のオプションは、カスタム構成ファイルを手動で編集や記憶域プールのストレージ クラスを変更する次の例のような jsonpatch を使用します。 作成、 *patch.json*にこのコンテンツのファイル。
+別の方法として、カスタム構成ファイルを手動で編集するか、次の例のように、記憶域プールのストレージクラスを変更する json パッチを使用することもできます。 次の内容を含む*patch. json*ファイルを作成します。
 
 ```json
 {
   "patch": [
     {
-      "op": "add",
-      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage",
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec.storage"
       "value": {
+          "type":"Storage",
+          "replicas":2,
           "data": {
             "className": "default",
             "accessMode": "ReadWriteOnce",
@@ -134,15 +129,15 @@ mssqlctl bdc config section set --config-profile custom -j "$.spec.controlPlane.
 }
 ```
 
-修正プログラム ファイルを適用します。 使用**mssqlctl bdc 構成セクション セット**の JSON の修正プログラム ファイルの変更を適用するコマンド。 次の例では、ターゲット展開構成ファイルの custom.json に patch.json ファイルが適用されます。
+修正プログラムファイルを適用します。 **Azdata bdc の構成パッチ**コマンドを使用して、JSON 修正プログラムファイルに変更を適用します。 次の例では、修正プログラムの json ファイルを、ターゲットの配置構成ファイルのカスタム json に適用します。
 
 ```bash
-mssqlctl bdc config section set --config-profile custom -p ./patch.json
+azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.json
 ```
 
 ## <a name="next-steps"></a>次の手順
 
-Kubernetes でのボリュームに関する詳細なドキュメントを参照してください、[ボリューム上の Kubernetes のドキュメント](https://kubernetes.io/docs/concepts/storage/volumes/)します。
+Kubernetes のボリュームに関する詳細なドキュメントについては、[ボリュームに関する Kubernetes のドキュメント](https://kubernetes.io/docs/concepts/storage/volumes/)を参照してください。
 
-ビッグ データの SQL Server クラスターの展開に関する詳細については、次を参照してください。[を Kubernetes クラスターのビッグ データ、SQL Server をデプロイする方法](deployment-guidance.md)します。
+SQL Server ビッグデータクラスターのデプロイの詳細については、「 [Kubernetes で SQL Server ビッグデータクラスターをデプロイする方法](deployment-guidance.md)」を参照してください。
 

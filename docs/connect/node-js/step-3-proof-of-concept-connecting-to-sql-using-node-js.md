@@ -10,25 +10,24 @@ ms.topic: conceptual
 ms.assetid: 5d5b41b6-129a-40b1-af8b-7e8fbd4a84bb
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7f4ebdc95ec105b4905ae9886abc59afe68a1f40
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
-ms.translationtype: MTE75
+ms.openlocfilehash: 7a462fcb1e8fe91cc2a140716968bd6b6f188ac1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66800499"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003745"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-nodejs"></a>ステップ 3: Node.js を使用した SQL への接続を概念実証する
 
-![ダウンロード下方向丸](../../ssdt/media/download.png)[Node.js SQL ドライバーのダウンロード](../sql-connection-libraries.md#anchor-20-drivers-relational-access)
+![ダウンロード-ダウン矢印-](../../ssdt/media/download.png)[NODE.JS SQL ドライバーをダウンロードするため](../sql-connection-libraries.md#anchor-20-drivers-relational-access)の丸
 
-この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。 重要な同じ関数を使用するその他の例は、Github で入手できます。
+この例は概念実証としてのみ検討してください。  わかりやすさのためにサンプル コードは簡略化されており、Microsoft が推奨するベスト プラクティスを表しているとは限りません。 同じ重要な機能を使用するその他の例については、Github を参照してください。
 
 - [https://github.com/tediousjs/tedious/blob/master/examples/](https://github.com/tediousjs/tedious/blob/master/examples/)
   
 ## <a name="step-1-connect"></a>手順 1: 接続する  
   
-**新しい接続**関数を使用して、SQL Database に接続します。  
+**新しい接続**関数は、SQL Database に接続するために使用されます。  
   
 ```javascript  
     var Connection = require('tedious').Connection;  
@@ -49,7 +48,7 @@ ms.locfileid: "66800499"
 ## <a name="step-2--execute-a-query"></a>手順 2: クエリを実行する  
   
   
-使用してすべての SQL ステートメントが実行される、**新しい Request()** 関数。 ステートメントは、select ステートメントなどの行を返す場合取得するを使用して、 **request.on()** 関数。 行が存在しない場合、request.on() 関数は空のリストを返します。  
+すべての SQL ステートメントは、**新しい Request ()** 関数を使用して実行されます。 ステートメントによって、select ステートメントなどの行が返された場合は、 **request. on ()** 関数を使用して取得できます。 行が存在しない場合、on () 関数は空のリストを返します。  
   
   
 ```javascript  

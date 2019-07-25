@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: a0b210ce-9b58-4709-80cb-9363b68a1f5a
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4c5f6df2e302b96d5f49785ee835650a2ef2f788
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ca26b36501052323553eb2c5a2a25557492eec85
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732213"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132770"
 ---
 # <a name="dta-utility"></a>dta ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -178,7 +177,7 @@ dta -d AdventureWorks2012 ...
  フィルター選択されたインデックスが新しい推奨設定用と見なされるように指定します。 詳細については、「 [Create Filtered Indexes](../../relational-databases/indexes/create-filtered-indexes.md)」を参照してください。  
   
 **-fc**  
- 列ストア インデックスが新しい推奨設定用と見なされるように指定します。 DTA では、両方のクラスター化と非クラスター化列ストア インデックスを検討します。 詳細については、「    
+ 列ストア インデックスが新しい推奨設定用と見なされるように指定します。 DTA は、クラスター化列ストアインデックスと非クラスター化列ストアインデックスの両方を考慮します。 詳細については、「    
 「[データベース エンジン チューニング アドバイザー (DTA) での列ストア インデックスの推奨事項](../../relational-databases/performance/columnstore-index-recommendations-in-database-engine-tuning-advisor-dta.md)」を参照してください。
  ||  
 |-|  
@@ -217,7 +216,7 @@ dta -d AdventureWorks2012 ...
  プラン キャッシュをワークロードとして使用することを指定します。 明示的に選択したデータベースの上位 1,000 個のプラン キャッシュ イベントが分析されます。 この値は **-n** オプションを使用して変更できます。  
  
 **-iq**  
- クエリ ストアをワークロードとして使用することを指定します。 明示的に選択したデータベースのクエリ ストアから上位 1,000 個のイベントが分析されます。 この値は **-n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
+ クエリストアワークロードとして使用することを指定します。 明示的に選択されたデータベースのクエリストアから上位の1000イベントが分析されます。 この値は **-n** オプションを使用して変更できます。  詳細については、[クエリ ストア](../../relational-databases/performance/how-query-store-collects-data.md)に関するページと、「[クエリ ストアのワークロードを使用してデータベースをチューニングする](../../relational-databases/performance/tuning-database-using-workload-from-query-store.md)」を参照してください。
  ||  
 |-|  
 |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  
@@ -267,11 +266,11 @@ dta -n number_of_events -A 0
  この場合、チューニング時間を無制限 (`-A 0`) に指定することが重要です。 無制限に指定しない場合、データベース エンジン チューニング アドバイザーでは、既定の 8 時間のチューニング時間が前提となります。
  
  **-I** _time_window_in_hours_   
-   時間枠 (時間) を指定するときに、DTA チューニングを使用する場合の考慮のクエリを実行する必要がありますが **-iq**オプション (クエリ ストアからワークロード)。 
+   **-Iq**オプション (ワークロードクエリストア) を使用する場合に、クエリを実行して、DTA によってチューニングする必要がある時間枠 (時間単位) を指定します。 
 ```  
 dta -iq -I 48  
 ```  
-ここでは、DTA はクエリ ストアのワークロードのソースとして使用し、過去 48 時間で実行したクエリのみが考慮されます。  
+この場合、DTA はクエリストアをワークロードのソースとして使用し、過去48時間に実行されたクエリのみを検討します。  
   ||  
 |-|  
 |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]|  

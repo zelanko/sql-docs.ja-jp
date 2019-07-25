@@ -1,5 +1,5 @@
 ---
-title: 結果の操作方法に関するトピック (OLE DB) の処理 |Microsoft Docs
+title: 結果の処理方法に関するトピック (OLE DB) |Microsoft Docs
 description: 結果を処理する方法に関するトピック (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -12,13 +12,12 @@ helpviewer_keywords:
 - OLE DB, processing results
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: 82fc2fa7c026c62999131513d9ec44dd98940168
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3cda281e8ce5bc276ff8baab6887754ba56e43a3
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66791199"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015559"
 ---
 # <a name="processing-results-how-to-topics-ole-db"></a>結果を処理する方法に関するトピック (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]

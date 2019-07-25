@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 327dcad497c934c787d509a41f0068691bf5588a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 567f5e7e3aca87b875e4f93c26d7caa5535a8c75
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66786219"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978602"
 ---
 # <a name="gettrustmanagerclass-method-sqlserverdatasource"></a>getTrustManagerClass メソッド (SQLServerDataSource)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,10 +35,10 @@ public java.lang.String getTrustManagerClass()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- A**文字列**値が設定されていない場合、TrustManagerClass 接続のプロパティの値を格納します。  
+ TrustManagerClass 接続プロパティの値を含む**文字列**。値が設定されていない場合は null。  
   
 ## <a name="remarks"></a>Remarks  
- TrustManagerClass プロパティが設定されていない場合、 [getTrustManagerClass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)メソッドは null を返します。  
+ TrustManagerClass プロパティが設定されていない場合、 [Gettrustmanagerclass](../../../connect/jdbc/reference/gettrustmanagerclass-method-sqlserverdatasource.md)メソッドは null を返します。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDataSource のメンバー](../../../connect/jdbc/reference/sqlserverdatasource-members.md)   

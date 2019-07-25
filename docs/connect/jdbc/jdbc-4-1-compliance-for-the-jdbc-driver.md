@@ -1,5 +1,5 @@
 ---
-title: JDBC 4.1 準拠、JDBC ドライバーの |Microsoft Docs
+title: Jdbc Driver の JDBC 4.1 への準拠 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: f087fd40-8451-478e-b465-43112c711515
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 7c21c548b113e9da03661ca3beb04b6757c92697
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6bf37b74c06ac03ef135eab7a09d275bde78b867
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781643"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956377"
 ---
 # <a name="jdbc-41-compliance-for-the-jdbc-driver"></a>JDBC Driver の JDBC 4.1 への準拠
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ ms.locfileid: "66781643"
   
 |新しいメソッド|[説明]|JDBC ドライバーの実装|  
 |----------------|-----------------|--------------------------------|  
-|boolean generatedKeyAlwaysReturned()|生成されたキーの取得をドライバーがサポートしているので true を返します|Java. sql の説明に従って実装されています。 DatabaseMetaData インターフェイスです。 詳細については、「[java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html)」をご覧ください。|  
+|boolean generatedKeyAlwaysReturned()|生成されたキーの取得をドライバーがサポートしているので true を返します|「」で説明されているように実装されています。 DatabaseMetaData インターフェイス。 詳細については、「[java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html)」をご覧ください。|  
 |ResultSet getPseudoColumns(String catalog, String schemaPattern,String tableNamePattern,String columnNamePattern)|擬似/非表示の列の説明を取得します。|SQL Server には擬似列の正式な概念がないので、空の結果セットを返します。 詳細については、「[java.sql.DatabaseMetaData](https://docs.oracle.com/javase/7/docs/api/java/sql/DatabaseMetaData.html)」をご覧ください。|  
   
  **SQLServerStatement クラス**  
@@ -53,7 +52,7 @@ ms.locfileid: "66781643"
   
 |新機能|[説明]|  
 |-----------------|-----------------|  
-|新しいエスケープ関数<br /><br /> 制限された戻り行エスケープ|部分的にサポートされています。<br /><br /> エスケープ構文: 制限\<行 >[オフセット < row_offset >](using-sql-escape-sequences.md)します。|  
+|新しいエスケープ関数<br /><br /> 制限された戻り行エスケープ|部分的にサポートされています。<br /><br /> エスケープ構文: \< [row_offset > < オフセット](using-sql-escape-sequences.md)> 行を制限します。|  
   
  Java Database Connectivity API 4.1 仕様は Microsoft JDBC Driver 4.2 for SQL Server によってサポートされ、以下のようにデータ型がマッピングされています。  
   

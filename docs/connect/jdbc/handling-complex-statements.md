@@ -10,20 +10,19 @@ ms.topic: conceptual
 ms.assetid: 6b807a45-a8b5-4b1c-8b7b-d8175c710ce0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b2b6dd6bb5fb3a0d7b2e9b78dee87f90f05147df
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7adee47147a8aad153bc323470f1711426d92350
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66781791"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956543"
 ---
 # <a name="handling-complex-statements"></a>複雑なステートメントの処理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用するときは、実行時に動的に生成されるステートメントなど、複雑なステートメントに対処しなければならないことがあります。 複雑なステートメントは、更新、挿入、および削除などのさまざまなタスクを頻繁に実行します。 これらの種類のステートメントは、複数の結果セットや出力パラメーターを返すこともあります。 こうした状況では、ステートメントを実行する Java コードが、返されるデータやオブジェクトの型および数について事前に知らない場合があります。  
   
- 複雑なステートメントを効率的に処理するため、JDBC ドライバーでは、返されるオブジェクトやデータをクエリし、アプリケーションがそれらを正しく処理するための多くのメソッドが用意されています。 複雑なステートメントを処理するために重要となるのは、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドです。 このメソッドが戻る、**ブール**値。 値が true の場合、ステートメントから返される最初の結果は結果セットです。 値が false の場合、返される最初の結果は更新数です。  
+ 複雑なステートメントを効率的に処理するため、JDBC ドライバーでは、返されるオブジェクトやデータをクエリし、アプリケーションがそれらを正しく処理するための多くのメソッドが用意されています。 複雑なステートメントを処理するために重要となるのは、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md) クラスの [execute](../../connect/jdbc/reference/execute-method-sqlserverstatement.md) メソッドです。 このメソッドは、**ブール**値を返します。 値が true の場合、ステートメントから返される最初の結果は結果セットです。 値が false の場合、返される最初の結果は更新数です。  
   
  返されたオブジェクトまたはデータの型がわかっている場合、[getResultSet](../../connect/jdbc/reference/getresultset-method-sqlserverstatement.md) メソッドまたは [getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) メソッドのいずれかを使用してそのデータを処理することができます。 複雑なステートメントから返された次のオブジェクトまたはデータへ進むため、[getMoreResults](../../connect/jdbc/reference/getmoreresults-method.md) メソッドを呼び出すことができます。  
   

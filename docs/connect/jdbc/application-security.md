@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 940879b4-aa0f-41ce-a369-6cfc0e78e01d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 832cb6991ad095ba13226f80408fbd919db00623
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: aa7681890b09647cb554ef6c80e8646fb69c9f42
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66770443"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67957467"
 ---
 # <a name="application-security"></a>アプリケーション セキュリティ
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -62,7 +61,7 @@ permission java.net.SocketPermission "*", "listen, connect, accept";
 ## <a name="protecting-server-communication"></a>サーバーとの通信の保護  
  JDBC ドライバーを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースと通信する場合、インターネット プロトコル セキュリティ (IPSec) または SSL (Secure Sockets Layer) を使用して、通信チャネルをセキュリティで保護できます。また、IPSec と SSL の両方を使用することも可能です。  
   
- SSL のサポートは、IPSec 以外の追加の保護レベルを提供するために使用できます。 SSL の使用方法の詳細については、次を参照してください。 [Using SSL Encryption](../../connect/jdbc/using-ssl-encryption.md)します。  
+ SSL のサポートは、IPSec 以外の追加の保護レベルを提供するために使用できます。 SSL の使用方法の詳細については、「 [Ssl 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)  

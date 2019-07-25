@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 027edab7-9b5c-4f5f-9469-fe00cf7798b6
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5856879a8391a942859ff287e8e127d28a80e509
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 7439a62f8bdb987bf50d76c12277c5341c0dd354
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792933"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982424"
 ---
 # <a name="getmajorversion-method-sqlserverdriver"></a>getMajorVersion メソッド (SQLServerDriver)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public int getMajorVersion()
  JDBC ドライバーのメジャー バージョン番号を含む **int** です。  
   
 ## <a name="remarks"></a>Remarks  
- この getMajorVersion メソッドは、java.sql.Driver インターフェイスで getMajorVersion メソッドによって指定されます。  
+ この getMajorVersion メソッドは、java. .sql. Driver インターフェイスの getMajorVersion メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDriver のメソッド](../../../connect/jdbc/reference/sqlserverdriver-methods.md)   

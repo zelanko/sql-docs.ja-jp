@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 770668d9-2e52-4ff0-be2f-ebf78fd41644
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 39d50008ac35e592b97ad17726a419c61b2a30e7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f2f77ce20c948623322b328c52d3f40db812551d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66767412"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978760"
 ---
 # <a name="gettimestamp-method-javalangstring-javautilcalendar"></a>getTimestamp (java.lang.String, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public java.sql.Timestamp getTimestamp(java.lang.String name,
   
  パラメーターの名前を含む**文字列**です。  
   
- *cal*  
+ *カレンダー*  
   
- 暦オブジェクト。  
+ Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- タイムスタンプのオブジェクト。  
+ タイムスタンプオブジェクト。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

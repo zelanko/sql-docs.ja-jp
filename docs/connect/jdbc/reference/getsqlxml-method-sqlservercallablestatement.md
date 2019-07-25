@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8bcf9eda-b36c-480c-8bf2-91c392d5a0ee
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 6b4e087643240ce6e47231ed3c15f7350f5fd271
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0596c93f17b2a5179e51055152cc2e126ade1e1f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66774029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67979652"
 ---
 # <a name="getsqlxml-method-sqlservercallablestatement"></a>getSQLXML メソッド (SQLServerCallableStatement)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

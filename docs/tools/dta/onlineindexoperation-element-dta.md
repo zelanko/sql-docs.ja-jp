@@ -1,5 +1,5 @@
 ---
-title: OnlineIndexOperation 要素 (DTA) |Microsoft Docs
+title: オンラインの Indexoperation 要素 (DTA) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/01/2017
 ms.prod: sql
@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7c5614cd-09aa-4a59-9591-347aa7d36473
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: f852149379edc74e36de09b01a60e0ec73f41fdb
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: a6e5df8b512d19959a3edd818fed2022cd801fe0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733512"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68034601"
 ---
 # <a name="onlineindexoperation-element-dta"></a>OnlineIndexOperation 要素 (DTA)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

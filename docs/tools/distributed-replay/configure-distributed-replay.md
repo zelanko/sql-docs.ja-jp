@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: aee11dde-daad-439b-b594-9f4aeac94335
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: 4255b78991e557ab36d7d0f97ab9be0fed5194a3
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: 092b08697580d79f800dcc539ed90559262ff44f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732106"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023768"
 ---
 # <a name="configure-distributed-replay"></a>Configure Distributed Replay
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -165,20 +164,20 @@ ms.locfileid: "67732106"
 </Options>  
 ```  
 
-### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>同期シーケンス モードで実行するときに、考えられる問題
- 再生の機能が表示される「停止」、または再生イベントを非常に遅くなります現象が発生する可能性があります。 この現象は、データまたは復元先データベースに存在しないイベントが再生されるトレースが依存する場合に発生することができます。 
+### <a name="possible-issue-when-running-with-synchronization-sequencing-mode"></a>同期シーケンスモードで実行するときに発生する可能性のある問題
+ 再生機能が "停止" と表示されたり、イベントの再生が非常に遅くなったりする症状が発生する可能性があります。 この現象は、再生中のトレースが、復元されたターゲットデータベースに存在しないデータやイベントに依存している場合に発生する可能性があります。 
  
- 1 つの例は、キャプチャされたワークロードなど、Service Broker の受信の WAITFOR ステートメントで、WAITFOR を使用します。 同期シーケンス モードを使用して、バッチが順番に再生されます。 データベースのバックアップ後にソース データベースに対して挿入が発生した場合は、トレースを開始する再生キャプチャする前に、WAITFOR 受信再生中に発行された、WAITFOR の期間全体を待機する必要があります。 イベントは、WAITFOR の受信が停止している後に再生するのに設定します。 これにより、再生のデータベース ターゲットをゼロに削除するには、バッチ要求/秒パフォーマンス モニター カウンターで、WAITFOR が完了するまでです。 
+ 1つの例として、Service Broker の WAITFOR RECEIVE ステートメントなど、WAITFOR を使用するキャプチャされたワークロードがあります。 同期シーケンスモードを使用する場合、バッチは直列に再生されます。 データベースのバックアップ後、再生キャプチャトレースが開始される前にソースデータベースに対して挿入が行われた場合、再生中に実行された WAITFOR RECEIVE は WAITFOR の全期間を待機する必要があります。 WAITFOR RECEIVE が停滞した後に再生されるように設定されたイベント。 これにより、replay データベースターゲットに対する Batch Requests/sec パフォーマンスモニターカウンターが、WAITFOR が完了するまで0に削除される可能性があります。 
  
- 同期モードでありを使用して、この動作を回避する必要がある場合は、次の操作を行う必要があります。
+ 同期モードを使用する必要があり、この動作を回避する必要がある場合は、次の操作を行う必要があります。
  
-1.  休止再生ターゲットとして使用するデータベース。
+1.  再生ターゲットとして使用するデータベースを停止します。
 
-2.  完了する保留中のすべてのアクティビティを許可します。
+2.  すべての保留中のアクティビティの完了を許可します。
 
-3.  データベースをバックアップし、バックアップの完了を許可します。
+3.  データベースをバックアップし、バックアップを完了できるようにします。
 
-4.  分散再生のトレース キャプチャを開始し、標準的なワークロードを再開します。 
+4.  分散再生トレースのキャプチャを開始し、通常のワークロードを再開します。 
  
  
 ## <a name="see-also"></a>参照  

@@ -31,14 +31,13 @@ helpviewer_keywords:
 ms.assetid: cdc45cd8-e9b6-4648-8417-892fbeab15af
 author: VanMSFT
 ms.author: vanto
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 294a5db85ba0cee826341e0ddd86f572040d78c7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 90a62fed8292a5d5cbb1945cdfe8b2cee2502235
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62506644"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67901944"
 ---
 # <a name="is-null-transact-sql"></a>IS NULL (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ expression IS [ NOT ] NULL
  ブール値の結果を否定するよう指定します。 この述語によって返される値は反転されるので、値が NULL でない場合は TRUE、NULL の場合は FALSE が返されます。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  *式*の値が NULL の場合、IS NULL では TRUE が返されます。それ以外の場合は FALSE が返されます。  

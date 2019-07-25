@@ -1,5 +1,5 @@
 ---
-title: その他の Reporting Services のアップグレードに関する問題 |Microsoft Docs
+title: その他の Reporting Services のアップグレードに関する問題 \|Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014

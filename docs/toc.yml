@@ -61,8 +61,8 @@
           items:
             - name: ビッグ データ ツールをインストールする
               href: big-data-cluster/deploy-big-data-tools.md
-            - name: mssqlctl をインストールする
-              href: big-data-cluster/deploy-install-mssqlctl.md
+            - name: azdata をインストールする
+              href: big-data-cluster/deploy-install-azdata.md
         - name: 配置
           items:
             - name: 展開のガイダンス
@@ -87,6 +87,8 @@
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
+                - name: Azure Data Studio ノートブックを使用してデプロイする
+                  href: big-data-cluster/deploy-notebooks.md
     - name: 概念
       items:
         - name: アプリケーションの展開
@@ -137,7 +139,7 @@
               href: big-data-cluster/data-ingestion-restore-database.md
         - name: 展開および使用するアプリ
           items:
-            - name: mssqlctl を使用した展開
+            - name: azdata を使用した配置
               href: big-data-cluster/big-data-cluster-create-apps.md
             - name: VS Code を使用した展開
               href: big-data-cluster/app-deployment-extension.md
@@ -161,6 +163,8 @@
               href: big-data-cluster/view-cluster-status.md
             - name: Kubernetes のトラブルシューティング
               href: big-data-cluster/cluster-troubleshooting-commands.md
+            - name: ノートブックを使用して管理する
+              href: big-data-cluster/manage-notebooks.md
         - name: ノートブック
           items:
             - name: ノートブックの概要
@@ -175,6 +179,8 @@
               href: big-data-cluster/spark-submit-job.md
             - name: IntelliJ で Spark ジョブを送信する
               href: big-data-cluster/spark-submit-job-intellij-tool-plugin.md
+            - name: Visual Studio Code で Spark ジョブを送信する
+              href: big-data-cluster/spark-hive-tools-vscode.md
             - name: 拡張された Spark History Server を使用する
               href: big-data-cluster/spark-history-server.md
     - name: リファレンス
@@ -183,50 +189,56 @@
           items:
             - name: 展開構成フォーム
               href: big-data-cluster/reference-deployment-config.md
-        - name: mssqlctl リファレンス
+        - name: azdata リファレンス
           items:
-            - name: mssqlctl
-              href: big-data-cluster/reference-mssqlctl.md
+            - name: azdata
+              href: big-data-cluster/reference-azdata.md
             - name: アプリ配置
               items:
                 - name: アプリ
-                  href: big-data-cluster/reference-mssqlctl-app.md
+                  href: big-data-cluster/reference-azdata-app.md
                 - name: アプリ テンプレート
-                  href: big-data-cluster/reference-mssqlctl-app-template.md
+                  href: big-data-cluster/reference-azdata-app-template.md
             - name: クラスター
               items:
                 - name: bdc
-                  href: big-data-cluster/reference-mssqlctl-bdc.md
+                  href: big-data-cluster/reference-azdata-bdc.md
                 - name: bdc の構成
-                  href: big-data-cluster/reference-mssqlctl-bdc-config.md
-                - name: bdc の構成セクション
-                  href: big-data-cluster/reference-mssqlctl-bdc-config-section.md
+                  href: big-data-cluster/reference-azdata-bdc-config.md
                 - name: bdc コントロール
-                  href: big-data-cluster/reference-mssqlctl-bdc-control.md
+                  href: big-data-cluster/reference-azdata-bdc-control.md
                 - name: bdc コントロールの状態
-                  href: big-data-cluster/reference-mssqlctl-bdc-control-status.md
+                  href: big-data-cluster/reference-azdata-bdc-control-status.md
                 - name: bdc のデバッグ
-                  href: big-data-cluster/reference-mssqlctl-bdc-debug.md
+                  href: big-data-cluster/reference-azdata-bdc-debug.md
                 - name: bdc エンドポイント
-                  href: big-data-cluster/reference-mssqlctl-bdc-endpoint.md
+                  href: big-data-cluster/reference-azdata-bdc-endpoint.md
+                - name: bdc hdfs
+                  href: big-data-cluster/reference-azdata-bdc-hdfs.md
+                - name: bdc hdfs のマウント
+                  href: big-data-cluster/reference-azdata-bdc-hdfs-mount.md
                 - name: bdc プール
-                  href: big-data-cluster/reference-mssqlctl-bdc-pool.md
+                  href: big-data-cluster/reference-azdata-bdc-pool.md
                 - name: bdc プールの状態
-                  href: big-data-cluster/reference-mssqlctl-bdc-pool-status.md
+                  href: big-data-cluster/reference-azdata-bdc-pool-status.md
+                - name: bdc spark
+                  href: big-data-cluster/reference-azdata-bdc-spark.md
+                - name: bdc spark バッチ
+                  href: big-data-cluster/reference-azdata-bdc-spark-batch.md
+                - name: bdc spark セッション
+                  href: big-data-cluster/reference-azdata-bdc-spark-session.md
+                - name: bdc spark ステートメント
+                  href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: bdc の状態
-                  href: big-data-cluster/reference-mssqlctl-bdc-status.md
-            - name: ストレージ
+                  href: big-data-cluster/reference-azdata-bdc-status.md
+            - name: ノートブック
               items:
-                - name: bdc ストレージ
-                  href: big-data-cluster/reference-mssqlctl-bdc-storage-pool.md
-                - name: bdc ストレージのマウント
-                  href: big-data-cluster/reference-mssqlctl-bdc-storage-pool-mount.md
-                - name: hdfs
-                  href: big-data-cluster/reference-mssqlctl-hdfs.md
+                - name: ノートブック
+                  href: big-data-cluster/reference-azdata-notebook.md
             - name: SQL
               items:
                 - name: sql
-                  href: big-data-cluster/reference-mssqlctl-sql.md
+                  href: big-data-cluster/reference-azdata-sql.md
 - name: ビジネス継続性
   items:
     - name: 概要
@@ -15964,6 +15976,8 @@
                   href: t-sql/functions/filegroupproperty-transact-sql.md
                 - name: FILEPROPERTY
                   href: t-sql/functions/fileproperty-transact-sql.md
+                - name: FILEPROPERTYEX
+                  href: t-sql/functions/filepropertyex-transact-sql.md
                 - name: FULLTEXTCATALOGPROPERTY
                   href: t-sql/functions/fulltextcatalogproperty-transact-sql.md
                 - name: FULLTEXTSERVICEPROPERTY

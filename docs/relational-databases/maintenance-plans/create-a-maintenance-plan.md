@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: a945cb65-ba7a-42f4-bbd9-6ec675745523
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: fb094e4b31cdb70f7f9950ae7a82cc884e5fce9a
-ms.sourcegitcommit: 6c9d35d03c1c349bc82b9ed0878041d976b703c6
+ms.openlocfilehash: 1a9b34362f95f6450afaec77370f8876f76d4f07
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/06/2018
-ms.locfileid: "51217966"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083854"
 ---
 # <a name="create-a-maintenance-plan"></a>メンテナンス プランの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "51217966"
      
      [前提条件](#Prerequisite)  
   
-     [Security](#Security)  
+     [セキュリティ](#Security)  
   
 -   **メンテナンス プランを作成するために使用するもの:**  
   
@@ -71,7 +70,7 @@ ms.locfileid: "51217966"
   
 2.  プラス記号をクリックして **[管理]** フォルダーを展開します。  
   
-3.  **[メンテナンス プラン]** フォルダーを右クリックし、**[新しいメンテナンス プラン]** をクリックします。  
+3.  **[メンテナンス プラン]** フォルダーを右クリックし、 **[新しいメンテナンス プラン]** をクリックします。  
   
 4.  「[メンテナンス プランの作成 &#40;メンテナンス プラン デザイン画面&#41;](../../relational-databases/maintenance-plans/create-a-maintenance-plan-maintenance-plan-design-surface.md)」の手順に従って、メンテナンス プランを作成します。  
   

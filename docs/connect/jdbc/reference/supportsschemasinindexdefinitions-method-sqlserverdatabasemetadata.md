@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 55ce9e4f-6e3f-482a-93a5-b9ae1b91d7a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1cd00994d21113a8b8470738bdabc54562095846
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: b472c7df1b0bade87dad979421636cb8a386c3bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797347"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67968902"
 ---
 # <a name="supportsschemasinindexdefinitions-method-sqlserverdatabasemetadata"></a>supportsSchemasInIndexDefinitions メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsSchemasInIndexDefinitions()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsSchemasInIndexDefinitions メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsSchemasInIndexDefinitions メソッドによって指定されます。  
+ この supportsSchemasInIndexDefinitions メソッドは、java メタデータインターフェイスの supportsSchemasInIndexDefinitions メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

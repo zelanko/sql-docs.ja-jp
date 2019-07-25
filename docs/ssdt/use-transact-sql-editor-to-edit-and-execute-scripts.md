@@ -12,13 +12,12 @@ f1_keywords:
 ms.assetid: fa78e2cf-3c64-49f5-93cc-a3d50b1e7d05
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: e348fba8c391b438c0429c8a32e167fd810b53d8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 2c2b84cb9f75987995e9e0cdbf92165fa28f61a9
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65102073"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68006034"
 ---
 # <a name="use-transact-sql-editor-to-edit-and-execute-scripts"></a>Transact-SQL エディターを使用したスクリプトの編集と実行
 Transact\-SQL エディターには、スクリプトの編集およびデバッグに役立つ豊富な機能が用意されています。 このエディターは、 **[コードの表示]** コンテキスト メニューを使用して、接続されているデータベースまたはプロジェクトのデータベース エンティティを開くと起動します。 SQL Server オブジェクト エクスプローラーの **[新しいクエリ]** コンテキスト メニューを使用するときと、データベース プロジェクトに新しいスクリプト オブジェクトを追加するときにも、このエディターが自動的に開きます。  

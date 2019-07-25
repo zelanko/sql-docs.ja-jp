@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 39be659b50c7cc068c3887a0c0139b312c46cf0b
-ms.sourcegitcommit: 706f3a89fdb98e84569973f35a3032f324a92771
+ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 03/29/2019
-ms.locfileid: "58657986"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984753"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -60,7 +59,7 @@ SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づ�
 - 新しい **Database Consistency Checker (DBCC)** は、潜在的なデータの破損の問題を検出するために、内部的に実行されます。
 - **直接クエリ**は、最初に外部データをインポートするのではなく、ライブの外部データにクエリを実行します。直接クエリでは、Azure SQL、Oracle、Teradata を含む、より多くのデータ ソースがサポートされるようになりました。 
 - 多数の新しい **DAX (Data Access Expressions) 関数**が追加されています。
-- 新しい**[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 名前空間は、表形式モードのインスタンスとモデルを管理します。 
+- 新しい **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 名前空間は、表形式モードのインスタンスとモデルを管理します。 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) は、2 つ目のアセンブリ (**Microsoft.AnalysisServices.Core.dll**) を含めるためにリファクタリングされます。
 
 [Analysis Services エンジン (SSAS)](../analysis-services/what-s-new-in-analysis-services.md) に関する記事を参照してください。 

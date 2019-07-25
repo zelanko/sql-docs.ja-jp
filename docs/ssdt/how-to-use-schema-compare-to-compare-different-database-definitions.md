@@ -16,13 +16,12 @@ f1_keywords:
 ms.assetid: 7f0905a4-081c-46e2-bd7d-325b63e5c675
 author: markingmyname
 ms.author: maghan
-manager: craigg
-ms.openlocfilehash: cd48c91bee175e3cc2bdb0031d70a9d8e68d95c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ce83808ac5953902f8f655c619f87feeffa4e8c6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65095929"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68097509"
 ---
 # <a name="how-to-use-schema-compare-to-compare-different-database-definitions"></a>方法:スキーマ比較を使用して各種のデータベース定義を比較する
 SQL Server Data Tools (SSDT) に付属しているスキーマ比較ユーティリティを使用して、2 つのデータベース定義を比較できます。  比較のソースとターゲットには、接続されているデータベース、SQL Server データベース プロジェクトまたはスナップショット、または .dacpac ファイルを指定できます。  比較結果は、ターゲットをソースと同じにするためにターゲットに実行する必要があるアクションのセットとして表示されます。  比較が完了したら、ターゲットを直接更新するか (ターゲットがプロジェクトまたはデータベースの場合)、同じ効果がある更新スクリプトを生成することができます。  

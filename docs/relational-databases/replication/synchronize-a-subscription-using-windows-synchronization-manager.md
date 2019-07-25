@@ -13,13 +13,12 @@ helpviewer_keywords:
 ms.assetid: 80f15dd6-e84d-4f96-9866-5b34ea531f1e
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 12fbfd6c6e6ba6e6a3bb015aed5375553fcd735f
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 8e5d686d0028b871fa163b3e1e4a1c71647ede60
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54131902"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129798"
 ---
 # <a name="synchronize-a-subscription-using-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したサブスクリプションの同期
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,7 +35,7 @@ ms.locfileid: "54131902"
   
 ### <a name="to-enable-the-synchronization-of-pull-subscriptions-with-windows-synchronization-manager"></a>Windows 同期マネージャーを使用したプル サブスクリプションの同期を有効化するには  
   
-1.  **** **[サブスクリプションのプロパティ - \<サブスクライバー>:\<SubscriptionDatabase>]** ダイアログ ボックスの [全般] ページで、**[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
+1.  **[** **サブスクリプションのプロパティ - \<サブスクライバー>:\<SubscriptionDatabase>]** ダイアログ ボックスの [全般] ページで、 **[Windows 同期マネージャーを使用]** オプションの値として **[有効化]** を選択します。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
   
@@ -48,7 +47,7 @@ ms.locfileid: "54131902"
   
     -   **[スタート]** ボタンをクリックし、 **[プログラム]** または **[すべてのプログラム]** をポイントします。 **[アクセサリ]** をポイントし、 **[同期]** をクリックします。  
   
-    -    **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。 **[ファイル名を指定して実行]** ダイアログ ボックスで、 **[名前]** in the **ボックスに「** 」と入力し、 **[OK]**」を参照してください。  
+    -   **[スタート]** メニューの **[ファイル名を指定して実行]** をクリックします。 **[ファイル名を指定して実行]** ダイアログ ボックスで、 **[名前]** in the **ボックスに「** 」と入力し、 **[OK]** 」を参照してください。  
   
 2.  **[同期する項目]** ダイアログ ボックスで、同期するサブスクリプションを選択します。 サブスクリプションは、そのコンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスの下に表示されます。  
   
@@ -77,7 +76,7 @@ ms.locfileid: "54131902"
   
     -   **[識別]**  
   
-    -   **[サブスクライバー ログイン]**、 **[ディストリビューター ログイン]**、および **[パブリッシャー ログイン]** (マージ レプリケーションの場合のみ)  
+    -   **[サブスクライバー ログイン]** 、 **[ディストリビューター ログイン]** 、および **[パブリッシャー ログイン]** (マージ レプリケーションの場合のみ)  
   
     -   **[Web サーバー情報]** (SQL Server 2005 以降を実行しているサブスクライバー上のマージ サブスクリプションの場合)  
   

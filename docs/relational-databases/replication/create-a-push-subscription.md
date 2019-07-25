@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: adfbbc61-58d1-4330-9ad6-b14ab1142e2b
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 419f8c12e3716d295440dae887591b547af54f32
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: 4ab4102c477a8904dd99eb2717f2c5e31c38b9bd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53208247"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903035"
 ---
 # <a name="create-a-push-subscription"></a>プッシュ サブスクリプションの作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "53208247"
   
 3.  **[ローカル サブスクリプション]** フォルダーを右クリックし、 **[新しいサブスクリプション]** をクリックします。  
   
-4.  サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、**[パブリッシャー]** ボックスの一覧から **[\<SQL Server パブリッシャーの検索>]** または **[\<Oracle パブリッシャーの検索>]** を選択します。  
+4.  サブスクリプションの新規作成ウィザードの **[パブリケーション]** ページで、 **[パブリッシャー]** ボックスの一覧から **[\<SQL Server パブリッシャーの検索>]** または **[\<Oracle パブリッシャーの検索>]** を選択します。  
   
 5.  **[サーバーへの接続]** ダイアログ ボックスでパブリッシャーに接続します。  
   
@@ -91,19 +90,19 @@ ms.locfileid: "53208247"
   
     -   **allow_push** の値が **1**の場合、プッシュ サブスクリプションがサポートされます。  
   
-    -   **allow_push** の値が **0**の場合は、**@property** に **allow_push** を、**@value** に **true** を指定して、 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。  
+    -   **allow_push** の値が **0**の場合は、 **@property** に **allow_push** を、 **@value** に **true** を指定して、 [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **@publication**、 **@subscriber**、および **@destination_db**を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションの更新方法の詳細については、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addsubscription](../system-stored-procedures/sp-addsubscription-transact-sql.md)を実行します。 **@publication** 、 **@subscriber** 、および **@destination_db** を指定します。 **@subscription_type** に **push** を指定します。 サブスクリプションの更新方法の詳細については、「 [トランザクション パブリケーションの更新可能なサブスクリプションの作成](publish/create-an-updatable-subscription-to-a-transactional-publication.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addpushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)を実行します。 次の指定を行います。  
   
-    -   ディストリビューターで実行されるディストリビューション エージェントが使用する **@subscriber**、 **@subscriber_db**パラメーター、および **@publication** パラメーター。  
+    -   ディストリビューターで実行されるディストリビューション エージェントが使用する **@subscriber** 、 **@subscriber_db** パラメーター、および **@publication** パラメーター。  
   
-    -   ディストリビューターで実行されるディストリビューション エージェントが使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報。 **@job_login** に **@job_password**」を参照してください。  
+    -   ディストリビューターで実行されるディストリビューション エージェントが使用する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 資格情報。 **@job_login** に **@job_password** 」を参照してください。  
   
-        > **注:** Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password**」を参照してください。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
+        > **注:** Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password** 」を参照してください。 ディストリビューション エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
-    -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password**」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
+    -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password** 」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
   
     -   このサブスクリプションでのディストリビューション エージェント ジョブのスケジュール。 詳細については、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
@@ -115,29 +114,29 @@ ms.locfileid: "53208247"
   
     -   **allow_push** の値が **1**の場合、パブリケーションでプッシュ サブスクリプションがサポートされます。  
   
-    -   **allow_push** の値が **1** ではない場合は、 **@property** に **allow_push** を、**@value** に **true** を指定して、 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。  
+    -   **allow_push** の値が **1** ではない場合は、 **@property** に **allow_push** を、 **@value** に **true** を指定して、 [sp_changemergepublication](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。  
   
 2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)を実行します。次のパラメーターを指定します。  
   
-    -   **@publication**」を参照してください。 これはパブリケーションの名前です。  
+    -   **@publication** 」を参照してください。 これはパブリケーションの名前です。  
   
-    -   **@subscriber_type**」を参照してください。 クライアント サブスクリプションの場合は **local** を指定し、サーバー サブスクリプションの場合は **global**を指定します。  
+    -   **@subscriber_type** 」を参照してください。 クライアント サブスクリプションの場合は **local** を指定し、サーバー サブスクリプションの場合は **global**を指定します。  
   
-    -   **@subscription_priority**」を参照してください。 サーバー サブスクリプションの場合、サブスクリプションの優先度 (**0.00** ～ **99.99**) を指定します。  
+    -   **@subscription_priority** 」を参照してください。 サーバー サブスクリプションの場合、サブスクリプションの優先度 (**0.00** ～ **99.99**) を指定します。  
   
          詳細については、「 [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepushsubscription_agent](../../relational-databases/system-stored-procedures/sp-addmergepushsubscription-agent-transact-sql.md)を実行します。 次の指定を行います。  
   
-    -   手順 1. で作成した、サブスクライバーに対する **@subscriber**、 **@subscriber_db**、 **@publication** の各パラメーター。  
+    -   手順 1. で作成した、サブスクライバーに対する **@subscriber** 、 **@subscriber_db** 、 **@publication** の各パラメーター。  
   
-    -   ディストリビューターで実行されるマージ エージェントが使用する Windows 資格情報。 **@job_login** に **@job_password**」を参照してください。  
+    -   ディストリビューターで実行されるマージ エージェントが使用する Windows 資格情報。 **@job_login** に **@job_password** 」を参照してください。  
   
-        > **注:** Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password**」を参照してください。 マージ エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
+        > **注:** Windows 統合認証を使用して行われる接続では、常に **@job_login** @value **@job_password** 」を参照してください。 マージ エージェントは、常に Windows 統合認証を使用してディストリビューターにローカル接続します。 既定では、エージェントは Windows 統合認証を使用してサブスクライバーに接続します。  
   
-    -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password**」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
+    -   (省略可) **0** を、 **@subscriber_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@subscriber_login** に **@subscriber_password** 」を参照してください。 サブスクライバーに接続するときに SQL Server 認証を使用する必要がある場合、これらのパラメーターを指定します。  
   
-    -   (省略可) **0** を、 **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@publisher_login** に **@publisher_password**」を参照してください。 パブリッシャーに接続するときに SQL Server 認証を使用する必要がある場合、これらの値を指定します。  
+    -   (省略可) **0** を、 **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および **@publisher_login** に **@publisher_password** 」を参照してください。 パブリッシャーに接続するときに SQL Server 認証を使用する必要がある場合、これらの値を指定します。  
   
     -   このサブスクリプションでのマージ エージェント ジョブのスケジュール。 詳細については、「 [Specify Synchronization Schedules](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   
@@ -165,7 +164,7 @@ ms.locfileid: "53208247"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と**|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&** 、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
 5.  サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   
@@ -203,7 +202,7 @@ ms.locfileid: "53208247"
   
 3.  <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 このメソッドが **false**を返す場合、手順 2. で指定したプロパティが誤っているか、サーバーにパブリケーションが存在していません。  
   
-4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&**、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と**|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
+4.  <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> プロパティと <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush> のビットごとの論理 AND 演算 (Visual C# では **&** 、Visual Basic では **And**) を実行します。 結果が <xref:Microsoft.SqlServer.Replication.PublicationAttributes.None>の場合、 <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> と **|** プロパティと **Or** 、Visual Basic では <xref:Microsoft.SqlServer.Replication.Publication.Attributes%2A> に <xref:Microsoft.SqlServer.Replication.PublicationAttributes.AllowPush>」を参照してください。 次に、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A> を呼び出してプッシュ サブスクリプションを有効にします。  
   
 5.  サブスクリプション データベースが存在しない場合は、 <xref:Microsoft.SqlServer.Management.Smo.Database> クラスを使用して作成します。 詳細については、「[データベースの作成、変更、および削除](../../relational-databases/server-management-objects-smo/tasks/creating-altering-and-removing-databases.md)」を参照してください。  
   

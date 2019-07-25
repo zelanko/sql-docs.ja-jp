@@ -13,20 +13,19 @@ ms.assetid: 6e909911-39a6-469b-b22a-3afdfd08a30b
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 2610106e0ab691af885bb8eb3c1d62555db7f56f
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: fa579e072ffdddc70e10d3ad1e9a205840374aee
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67733187"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68024087"
 ---
 # <a name="sql-server-configuration-manager-help"></a>SQL Server 構成マネージャーのヘルプ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種サービスやネットワーク接続を構成します。 データベース オブジェクトの作成または管理、セキュリティの構成、 [!INCLUDE[tsql](../../includes/tsql-md.md)] クエリの作成には、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]ツールを使用します。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]の詳細については、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックを参照してください。  
 
  > [!TIP]
- > 構成する必要がある場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]linux では、使用、 **mssql conf**ツール。 詳細については、次を参照してください。 [mssql-conf ツールを使った Linux 上の SQL Server の構成](../../linux/sql-server-linux-configure-mssql-conf.md)します。
+ > Linux でを構成[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]する必要がある場合は、 **mssql-conf**ツールを使用します。 詳細については、「 [mssql-conf ツールを使用した SQL Server on Linux の構成](../../linux/sql-server-linux-configure-mssql-conf.md)」を参照してください。
 
  ここでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの各ダイアログ ボックスの F1 ヘルプ トピックについて紹介します。  
   

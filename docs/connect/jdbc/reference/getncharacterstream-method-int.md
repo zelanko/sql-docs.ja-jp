@@ -1,5 +1,5 @@
 ---
-title: getNCharacterStream (int) メソッド |Microsoft Docs
+title: Getnキャラクターストリームメソッド (int) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6ae704f5-823c-4dfe-8c08-07b547c61a3c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 21cfd942fe43dedcbe19e8d0fe88a831bae76872
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6ed91df645edd7083e0d91346dfdf6d39bebd91d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66784600"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67981655"
 ---
 # <a name="getncharacterstream-method-int"></a>getNCharacterStream (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,15 +35,15 @@ public final java.io.Reader getNCharacterStream(int parameterIndex)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- AReaderobject します。  
+ AReaderobject。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- アクセスする場合、このメソッドを使用する必要があります**NCHAR**、 **NVARCHAR**と**LONGNVARCHAR**パラメーター。  
+ **NCHAR**、 **NVARCHAR** 、および**LONGNVARCHAR**パラメーターにアクセスするときは、このメソッドを使用する必要があります。  
   
- この getNCharacterStream メソッドは、java.sql.CallableStatement インターフェイスの getNCharacterStream メソッドによって指定されます。  
+ この Getn; Stream メソッドは、java. sql. CallableStatement インターフェイスの getNCharacterStream メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [getNCharacterStream メソッド &#40;SQLServerCallableStatement&#41;](../../../connect/jdbc/reference/getncharacterstream-method-sqlservercallablestatement.md)   

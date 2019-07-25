@@ -1,5 +1,5 @@
 ---
-title: SQLServerException コンス トラクター |Microsoft Docs
+title: SQLServerException コンストラクター |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2018
 ms.prod: sql
@@ -10,19 +10,18 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8d0173778acb15fe9588eb5959b7fd03c5391767
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 963eb40a05206125fe6d941af4af6b4fade2197e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66773695"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67971036"
 ---
 # <a name="sqlserverexception-constructors"></a>SQLServerException コンストラクター
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
-  新しいインスタンスを初期化、 [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラス。
+  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)クラスの新しいインスタンスを初期化します。
 
-  メンバーに関する情報の[SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)を参照してください[SQLServerException のメンバー](../../../connect/jdbc/reference/sqlserverexception-members.md)します。  
+  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)のメンバーの詳細については、「 [SQLServerException members](../../../connect/jdbc/reference/sqlserverexception-members.md)」を参照してください。  
   
   

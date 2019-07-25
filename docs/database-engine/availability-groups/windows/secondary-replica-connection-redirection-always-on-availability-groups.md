@@ -16,14 +16,13 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e64768dcfaf4342c3ea52f1b01c29940fb1c8cf0
-ms.sourcegitcommit: 1f53b6a536ccffd701fc87e658ddac714f6da7a2
+ms.openlocfilehash: 181dd36096daacc5a1c3787cdd21cb9619d87491
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/10/2019
-ms.locfileid: "54206308"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014202"
 ---
 # <a name="secondary-to-primary-replica-readwrite-connection-redirection-always-on-availability-groups"></a>セカンダリ レプリカからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)
 
@@ -35,7 +34,7 @@ ms.locfileid: "54206308"
 
 ## <a name="use-cases"></a>ユース ケース
 
-[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] より前のバージョンでは、プライマリ レプリカへのユーザー トラフィックは、AG リスナーおよび対応するクラスター リソースによってリダイレクトされ、フェールオーバー後に再接続されるようになっています。 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、この AG リスナー機能は引き続きサポートされますが、リスナーを含めることができないシナリオのためにレプリカの接続のリダイレクトが追加されています。 例 :
+[!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] より前のバージョンでは、プライマリ レプリカへのユーザー トラフィックは、AG リスナーおよび対応するクラスター リソースによってリダイレクトされ、フェールオーバー後に再接続されるようになっています。 [!INCLUDE[sssqlv15-md](../../../includes/sssqlv15-md.md)] では、この AG リスナー機能は引き続きサポートされますが、リスナーを含めることができないシナリオのためにレプリカの接続のリダイレクトが追加されています。 例:
 
 * SQL Server の可用性グループに統合されているクラスター テクノロジでは、リスナーに似た機能が提供されない 
 * 構成が複雑になり、エラーが発生しがちであり、複数のコンポーネントが関係するせいでトラブルシューティングが困難な、クラウドや Pacemaker を使用するマルチサブネット フローティング IP のようなマルチサブネット構成である
@@ -137,7 +136,7 @@ CREATE AVAILABILITY GROUP MyAg
 GO  
 ```
    - `<domain>.<tld>`
-      - 完全修飾ドメイン名のドメインと最上位ドメイン。 たとえば、`corporation.com` のようにします。
+      - 完全修飾ドメイン名のドメインと最上位ドメイン。 たとえば、`corporation.com` のようになります。
 
 
 ### <a name="connection-behaviors"></a>接続動作

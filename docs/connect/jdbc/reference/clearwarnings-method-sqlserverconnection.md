@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: cb911adf-4691-4e57-8fb3-bdd11bef7a2e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 47c3d8362f555f1663c98b6394ed887fbfcb91dd
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: f0ba102c6afe398ac2680595e4a21c249358ebe4
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803622"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67955756"
 ---
 # <a name="clearwarnings-method-sqlserverconnection"></a>clearWarnings メソッド (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -39,7 +38,7 @@ public void clearWarnings()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この clearWarnings メソッドは、java.sql.Connection インターフェイスの clearWarnings メソッドによって指定されます。  
+ この clearWarnings メソッドは、java. .sql. 接続インターフェイスの clearWarnings メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

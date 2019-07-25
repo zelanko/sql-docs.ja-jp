@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 614fa0b4-e9fd-4c68-aab3-183f9b9df143
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 94845da5a211c1f5b3ebf9f27a8a7ba780bc4b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: eecf4868791a9dcd963a31963f742f90a2cf3843
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797815"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68008434"
 ---
 # <a name="connection-resiliency-in-the-windows-odbc-driver"></a>Windows ODBC ドライバーの接続レジリエンシー
 [!INCLUDE[Driver_ODBC_Download](../../../includes/driver_odbc_download.md)]
@@ -72,7 +71,7 @@ ms.locfileid: "66797815"
 |IMC06|接続が切断され、復旧は不可能です。 クライアント ドライバーは接続を復旧不可能としてマークしています。 接続復旧は試行されませんでした。|  
   
 ## <a name="example"></a>例  
- 次の例には、2 つの関数が含まれています。 **func1** は、Windows の場合に、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用するデータ ソース名 (DSN) で接続する方法を示しています。 DSN は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用し、ユーザー ID を指定します。 **func1**で接続再試行回数を取得し、 **SQL_COPT_SS_CONNECT_RETRY_COUNT**します。  
+ 次の例には、2 つの関数が含まれています。 **func1** は、Windows の場合に、ODBC Driver for [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] を使用するデータ ソース名 (DSN) で接続する方法を示しています。 DSN は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証を使用し、ユーザー ID を指定します。 **func1**は、 **SQL_COPT_SS_CONNECT_RETRY_COUNT**による接続再試行の回数を取得します。  
   
  **func2** は **SQLDriverConnect**、 **ConnectRetryCount** 接続文字列キーワード、接続属性を使用し、接続再試行と再試行間隔の設定を取得します。  
   

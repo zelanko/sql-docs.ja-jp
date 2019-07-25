@@ -15,18 +15,17 @@ apitype: Assembly
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c8458961cbd73f712b158d82c31c84372c00cde6
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 187a195a831955b65f4af113fb80e5f99308e1a5
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801602"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974446"
 ---
 # <a name="setenableprepareonfirstpreparedstatementcall-method-sqlserverconnection"></a>setEnablePrepareOnFirstPreparedStatementCall Method (SQLServerConnection)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
 
- 特定の接続のインスタンスの動作を指定します。 値は false の最初の実行が sp_executesql を呼び出すし、2 番目の実行発生 sp_prepexec を呼び出すし、準備されたステートメント ハンドルを実際に設定すると、ステートメントを準備できません。 場合、 次の実行は sp_execute を呼び出します。 これによって準備されたステートメントで sp_unprepare の必要性閉じる場合は、ステートメントは 1 回だけ実行します。
+ 特定の接続インスタンスの動作を指定します。 Value が false の場合、最初の実行では sp_executesql が呼び出され、ステートメントは準備されません。2回目の実行が行われると、sp_prepexec が呼び出され、実際には準備されたステートメントハンドルが設定されます。 次の実行では、sp_execute を呼び出します。 これにより、ステートメントが1回だけ実行された場合に、準備されたステートメントを閉じる必要がなくなります。
 
 ## <a name="syntax"></a>構文  
   
@@ -38,13 +37,13 @@ public void setEnablePrepareOnFirstPreparedStatementCall(boolean enablePrepareOn
 #### <a name="parameters"></a>パラメーター  
  *enablePrepareOnFirstPreparedStatementCall*  
   
- 新しい値、 **enablePrepareOnFirstPreparedStatementCall**接続プロパティです。  
+ **EnablePrepareOnFirstPreparedStatementCall** connection プロパティの新しい値です。  
  
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
  
 ## <a name="remarks"></a>Remarks  
- このメソッドは、JDBC driver 6.4 から利用できるとは。
+ このメソッドは、JDBC driver バージョン6.4 以降で使用できます。
  
 ## <a name="see-also"></a>参照  
  [SQLServerConnection のメンバー](../../../connect/jdbc/reference/sqlserverconnection-members.md)   

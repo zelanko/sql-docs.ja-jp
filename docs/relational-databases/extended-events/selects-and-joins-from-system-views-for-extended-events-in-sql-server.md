@@ -10,14 +10,13 @@ ms.topic: tutorial
 ms.assetid: 04521d7f-588c-4259-abc2-1a2857eb05ec
 author: MightyPen
 ms.author: genemi
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7bfaaca6a0f3c35814264d404ceaae9daebc34d4
-ms.sourcegitcommit: 323d2ea9cb812c688cfb7918ab651cce3246c296
+ms.openlocfilehash: 4194c869574812d9035a9b51ed44b6aa62efdbcc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 04/18/2019
-ms.locfileid: "58788029"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67903454"
 ---
 # <a name="selects-and-joins-from-system-views-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN
 
@@ -114,33 +113,33 @@ ms.locfileid: "58788029"
 ### <a name="b1-ssms-ui-perspective"></a>B.1 SSMS UI パースペクティブ
 
 
-SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 **[拡張イベント]** > **[セッション]** を右クリックして **[新しいセッション]** > **[管理]**」をご覧ください。
+SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 **[拡張イベント]**  >  **[セッション]** を右クリックして **[新しいセッション]**  >  **[管理]** 」をご覧ください。
 
 大きい **[新しいセッション]** ダイアログの最初の **[全般]** セクションで、 **[サーバーの起動時にイベント セッションを開始する]** がオンになっています。
 
 ![[新しいセッション] > [全般]、[サーバーの起動時にイベント セッションを開始する]](../../relational-databases/extended-events/media/xevents-ssms-ac105-eventname-startup.png)
 
 
-次に、**[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
+次に、 **[イベント]** セクションでは **[lock_deadlock]** イベントが選択されています。 このイベントに対して、3 つの **アクション** が選択されています。 これは **[構成]** ボタンがクリックされたことを意味し、クリックされた後でボタンはグレーになっています。
 
 ![[新しいセッション] > [イベント]、[グローバル フィールド (アクション)]](../../relational-databases/extended-events/media/xevents-ssms-ac110-actions-global.png)
 
 
 <a name="resource_type_PAGE_cat_view"></a>
 
-次に、同じ **[イベント]** > **[構成]** セクションでは、[**resource_type** が **PAGE**](#resource_type_dmv_actual_row) に設定されています。 これは、**resource_type** の値が **PAGE** 以外の場合はイベント データがイベント エンジンからターゲットに送信されないことを意味します。
+次に、同じ **[イベント]**  >  **[構成]** セクションでは、[**resource_type** が **PAGE**](#resource_type_dmv_actual_row) に設定されています。 これは、**resource_type** の値が **PAGE** 以外の場合はイベント データがイベント エンジンからターゲットに送信されないことを意味します。
 
 データベース名とカウンターの述語フィルターを確認します。
 
 ![[新しいセッション] > [イベント]、[フィルター (述語)] フィールド (アクション)](../../relational-databases/extended-events/media/xevents-ssms-ac115-predicate-db.png)
 
 
-次に、**[データ ストレージ]** セクションでは、**[event_file]** がターゲットとして選択されています。 さらに、**[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
+次に、 **[データ ストレージ]** セクションでは、 **[event_file]** がターゲットとして選択されています。 さらに、 **[ファイル ロールオーバーを有効にする]** オプションがオンになっています。
 
 ![[新しいセッション] > [データ ストレージ]、eventfile_enablefileroleover](../../relational-databases/extended-events/media/xevents-ssms-ac120-target-eventfile.png)
 
 
-最後に、**[詳細]** セクションでは、**[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
+最後に、 **[詳細]** セクションでは、 **[ディスパッチの最大待機時間]** の値が 4 秒に短縮されています。
 
 ![[新しいセッション] > [詳細]、[ディスパッチの最大待機時間]](../../relational-databases/extended-events/media/xevents-ssms-ac125-latency4.png)
 
@@ -155,7 +154,7 @@ SSMS の **オブジェクト エクスプローラー**で、 **[管理]** 、 
 
 イベント セッション定義の作成方法にかかわらず、SSMS UI では、セッションを完全に一致する Transact-SQL スクリプトにリバース エンジニアリングできます。 前に示した [新しいセッション] のスクリーンショットで示されている指定と、次に示す生成された T-SQL **CREATE EVENT SESSION** スクリプトの句を比較してください。
 
-イベント セッションをリバース エンジニアリングするには、 **オブジェクト エクスプローラー** でセッション ノードを右クリックし、 **[セッションをスクリプト化]** > **[CREATE]** > **[クリップボード]**」をご覧ください。
+イベント セッションをリバース エンジニアリングするには、 **オブジェクト エクスプローラー** でセッション ノードを右クリックし、 **[セッションをスクリプト化]**  >  **[CREATE]**  >  **[クリップボード]** 」をご覧ください。
 
 SSMS でリバース エンジニアリングすることにより、次の T-SQL スクリプトが作成されます。 次のスクリプトは空白のみを使用して手作業で整形されています。
 

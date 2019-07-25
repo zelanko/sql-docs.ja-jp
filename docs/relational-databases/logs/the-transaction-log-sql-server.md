@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: d7be5ac5-4c8e-4d0a-b114-939eb97dac4d
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: d85c61376992e22488b4ddddffc227e2a371ac76
-ms.sourcegitcommit: c7febcaff4a51a899bc775a86e764ac60aab22eb
+ms.openlocfilehash: fb0aef082375ebc3c278e982232b7a69fe41d187
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 11/30/2018
-ms.locfileid: "52711593"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68083940"
 ---
 # <a name="the-transaction-log-sql-server"></a>トランザクション ログ (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -110,10 +109,10 @@ ms.locfileid: "52711593"
 |3|ACTIVE_BACKUP_OR_RESTORE|データ バックアップまたは復元が実行中である (すべての復旧モデル)。<br /><br /> データ バックアップによってログの切り捨てが妨げられる場合、バックアップ操作を取り消すと、当面の問題には対処できます。|  
 |4|ACTIVE_TRANSACTION|トランザクションがアクティブである (すべての復旧モデル):<br /><br /> 実行時間の長いトランザクションがログ バックアップの先頭に存在する可能性がある。 この場合、領域を解放するには再度ログ バックアップが必要になります。 単純復旧モデルを含むすべての復旧モデルでは、実行時間の長いトランザクションによってログの切り捨てが妨げられます。この場合、通常は自動チェックポイントのたびにトランザクション ログが切り捨てられます。<br /><br /> トランザクションが遅延している。 *遅延トランザクション* は、一部リソースが確保できないためにロールバックがブロックされている、実質的にはアクティブなトランザクションです。 遅延トランザクションの原因、およびトランザクションの遅延を解決する方法については、「[遅延トランザクション &#40;SQL Server&#41;](../../relational-databases/backup-restore/deferred-transactions-sql-server.md)」を参照してください。<br /> <br /> 実行時間の長いトランザクションも、tempdb のトランザクション ログをいっぱいにする可能性があります。 tempdb は、並べ替えの作業テーブル、ハッシュの作業ファイル、カーソル作業テーブル、行のバージョン管理といった、内部オブジェクトに対するユーザー トランザクションで暗黙的に使用されます。 ユーザー トランザクションにデータ読み取り (`SELECT`クエリ) だけが含まれる場合でも、ユーザー トランザクションで内部オブジェクトが作成され使用されることがあります。 その結果 tempdb のトランザクション ログがいっぱいになる可能性があります。|  
 |5|DATABASE_MIRRORING|データベース ミラーリングが一時中断されるか、高パフォーマンス モードでは、ミラー データベースがプリンシパル データベースに大幅に遅れる (完全復旧モデルのみ)。<br /><br /> 詳細については、「[データベース ミラーリング &#40;SQL Server&#41;](../../database-engine/database-mirroring/database-mirroring-sql-server.md)」を参照してください。|  
-|6|REPLICATION|トランザクション レプリケーション中、パブリケーションに関連するトランザクションがディストリビューション データベースにまだ配信されていない  (完全復旧モデルのみ)。<br /><br /> トランザクション レプリケーションの詳細については、「 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)」を参照してください。|  
+|6|REPLICATION|トランザクション レプリケーション中、パブリケーションに関連するトランザクションがディストリビューション データベースにまだ配信されていない (完全復旧モデルのみ)。<br /><br /> トランザクション レプリケーションの詳細については、「 [SQL Server Replication](../../relational-databases/replication/sql-server-replication.md)」を参照してください。|  
 |7|DATABASE_SNAPSHOT_CREATION|データベース スナップショットが作成されている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
 |8|LOG_SCAN|ログ スキャンが行われている (すべての復旧モデル)。<br /><br /> これは、通常、短い時間ログの切り捨てが遅れる一般的な原因となります。|  
-|9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である  (完全復旧モデル)。<br /><br /> 詳細については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。|  
+|9|AVAILABILITY_REPLICA|可用性グループのセカンダリ レプリカが、このデータベースのトランザクション ログ レコードを対応するセカンダリ データベースに適用中である (完全復旧モデル)。<br /><br /> 詳細については、「 [Always On 可用性グループの概要 &#40;SQL Server&#41;](../../database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md)」を参照してください。|  
 |10|-|内部使用のみ|  
 |11|-|内部使用のみ|  
 |12|-|内部使用のみ|  

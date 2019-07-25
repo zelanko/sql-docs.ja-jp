@@ -12,13 +12,12 @@ helpviewer_keywords:
 - table-valued parameters (OLE DB), API support (OLE DB)
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: fd7b37d6f23aeecc9c9405cd2e31f23173db7809
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: abff9abb82ad0ff54d9b1126541b98babbd6bd76
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801129"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015306"
 ---
 # <a name="ole-db-table-valued-parameter-type-support"></a>OLE DB テーブル値パラメーターの型のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +27,7 @@ ms.locfileid: "66801129"
   この記事では、テーブル値パラメーターに対する OLE DB 型のサポートについて説明します。  
   
 ## <a name="table-valued-parameter-rowset-object"></a>テーブル値パラメーターの行セット オブジェクト  
- テーブル値パラメーターの特殊な行セット オブジェクトを作成できます。 ITableDefinitionWithConstraints::CreateTableWithConstraints または iopenrowset::openrowset を使用して、テーブル値パラメーター行セット オブジェクトを作成します。 そのためには、*pTableID* パラメーターの *eKind* メンバーに DBKIND_GUID_NAME を設定し、CLSID_ROWSET_INMEMORY を *guid* メンバーとして指定します。 テーブル値パラメーターのサーバーの型名を指定する必要があります、 *pwszName*のメンバー *pTableID* iopenrowset::openrowset を使用する場合。 テーブル値パラメーター行セット オブジェクトは、標準 OLE DB Driver for SQL Server オブジェクトのように動作します。  
+ テーブル値パラメーターの特殊な行セット オブジェクトを作成できます。 テーブル値パラメーターの行セットオブジェクトを作成するには、ITableDefinitionWithConstraints:: CreateTableWithConstraints または IOpenRowset:: OpenRowset を使用します。 そのためには、*pTableID* パラメーターの *eKind* メンバーに DBKIND_GUID_NAME を設定し、CLSID_ROWSET_INMEMORY を *guid* メンバーとして指定します。 IOpenRowset:: OpenRowset を使用する場合は、テーブル値パラメーターのサーバーの型名を*Ptableid*の*pwszName*メンバーに指定する必要があります。 テーブル値パラメーターの行セットオブジェクトは、SQL Server オブジェクトの通常の OLE DB ドライバーのように動作します。  
   
 ```  
 const GUID CLSID_ROWSET_TVP =   
@@ -59,10 +58,10 @@ CoType RowsetTVP
  DBTYPE_TABLE とその他の型との間の変換はサポートされません。 IConvertType::CanConvert は、DBTYPE_TABLE から DBTYPE_TABLE への変換以外の要求に対するサポートされない変換について、S_FALSE を返します。 これは、Command オブジェクトの DBCONVERTFLAGS_PARAMETER を想定します。  
   
 ## <a name="methods"></a>メソッド  
- テーブル値パラメーターをサポートする OLE DB メソッドについては、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;メソッド&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)します。  
+ テーブル値パラメーターをサポートする OLE DB メソッドの詳細については、「[テーブル値パラメーターの&#40;型&#41;のサポートメソッドの OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-methods.md)」を参照してください。  
   
 ## <a name="properties"></a>Properties  
- テーブル値パラメーターをサポートする OLE DB プロパティについては、次を参照してください。 [OLE DB Table-Valued パラメーター型のサポート&#40;プロパティ&#41;](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)します。  
+ テーブル値パラメーターをサポートする OLE DB プロパティの詳細については、「[テーブル値パラメーターの&#40;型&#41;サポートプロパティの OLE DB](../../oledb/ole-db-table-valued-parameters/ole-db-table-valued-parameter-type-support-properties.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [テーブル値パラメーター &#40;OLE DB&#41;](../../oledb/ole-db-table-valued-parameters/table-valued-parameters-ole-db.md)   

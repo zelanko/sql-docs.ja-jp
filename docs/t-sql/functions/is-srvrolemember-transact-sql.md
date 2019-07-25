@@ -19,13 +19,12 @@ helpviewer_keywords:
 ms.assetid: 3241a44a-6958-415b-b8b7-2a1207c36ab3
 author: VanMSFT
 ms.author: vanto
-manager: craigg
-ms.openlocfilehash: 3ddd94836db559fe56cf6b7443b7dac69643a5a2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 68a3a2b030ef5b731fa437b8c9f4b57f3eedaa4e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65942810"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68132811"
 ---
 # <a name="issrvrolemember-transact-sql"></a>IS_SRVROLEMEMBER (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -87,7 +86,7 @@ IS_SRVROLEMEMBER ( 'role' [ , 'login' ] )
  この関数で評価されるのはロールのメンバーシップであって、基になる権限ではありません。 たとえば、**sysadmin** 固定サーバー ロールには **CONTROL SERVER** 権限があります。 **CONTROL SERVER** 権限を持っていても、**sysadmin** ロールに所属していなければ、そのユーザーはロールのメンバーではないと、この関数によって正確に報告されます。そのロールと同じ権限をユーザーが持っているとしても結果は変わりません。  
   
 ## <a name="related-functions"></a>関連する関数  
- 現在のユーザーが指定された Windows グループのメンバーであるかどうかを判断するまたは  を使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース ロールを [IS_MEMBER (& a) #40 です。TRANSACT-SQL と #41;](../../t-sql/functions/is-member-transact-sql.md). [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインがデータベース ロールのメンバーであるかどうかを判断するには、[IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) を使用します。  
+ 現在のユーザーが指定された Windows グループまたは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース ロールのメンバーであるかどうかを判断するには、[IS_MEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-member-transact-sql.md) を使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインがデータベース ロールのメンバーであるかどうかを判断するには、[IS_ROLEMEMBER &#40;Transact-SQL&#41;](../../t-sql/functions/is-rolemember-transact-sql.md) を使用します。  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバー ロールに対する VIEW DEFINITION 権限が必要です。  

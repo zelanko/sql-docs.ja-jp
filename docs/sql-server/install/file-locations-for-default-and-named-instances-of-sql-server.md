@@ -9,13 +9,12 @@ ms.topic: conceptual
 ms.assetid: 463c570e-9f75-4653-b3b8-4d61753b0013
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: f55234fc277a9dcbdf3b687e44f54500400591ce
-ms.sourcegitcommit: 6443f9a281904af93f0f5b78760b1c68901b7b8d
+ms.openlocfilehash: f6e34fbab18c987a635250bba5557a4d3a214b44
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 12/11/2018
-ms.locfileid: "53213431"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68126211"
 ---
 # <a name="file-locations-for-default-and-named-instances-of-sql-server"></a>SQL Server の既定のインスタンスおよび名前付きインスタンスのファイルの場所
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -38,7 +37,7 @@ ms.locfileid: "53213431"
 ## <a name="shared-files-for-all-instances-of-includessnoversionincludesssnoversion-mdmd"></a>のすべてのインスタンスで共有されるファイル [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]  
  1 台のコンピューター上のすべてのインスタンスで使用される共通ファイルはフォルダー [!INCLUDE[ssInstallPathVar](../../includes/ssinstallpathvar-md.md)] にインストールされます。 \<*drive*> はコンポーネントがインストールされるドライブ文字です。 既定値は通常はドライブ C です。\<*nnn*> は、バージョンを識別します。 次の表では、パスのバージョンを識別します。 
 
-|\<*nnn*>|[バージョンのオプション]
+|\<*nnn*>|バージョン
 |-----|-----
 |140|[!INCLUDE[ssqlv14](../../includes/sssqlv14-md.md)]
 |130|[!INCLUDE[ssqlv13](../../includes/sssql15-md.md)]

@@ -1,5 +1,5 @@
 ---
-title: 場所句の制限事項 |Microsoft Docs
+title: WHERE 句の制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

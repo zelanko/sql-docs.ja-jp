@@ -1,5 +1,5 @@
 ---
-title: データ ソースのプロパティ (OLE DB) |Microsoft Docs
+title: データソースのプロパティ (OLE DB) |Microsoft Docs
 description: データ ソースのプロパティ (OLE DB)
 ms.custom: ''
 ms.date: 06/14/2018
@@ -15,20 +15,19 @@ helpviewer_keywords:
 - OLE DB data source properties [OLE DB Driver for SQL Server]
 author: pmasl
 ms.author: pelopes
-manager: jroth
-ms.openlocfilehash: c97c85eaeafd7d811b3f513f7f9cccc30c873b71
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13dd6afde96d42ac1fcc82b6fb24c721997b951d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768647"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015933"
 ---
 # <a name="data-source-properties-ole-db"></a>データ ソースのプロパティ (OLE DB)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 [!INCLUDE[Driver_OLEDB_Download](../../../includes/driver_oledb_download.md)]
 
-  OLE DB Driver for SQL Server では、次のように、データ ソースのプロパティを実装します。  
+  SQL Server の OLE DB ドライバーは、次のようにデータソースプロパティを実装します。  
   
 |プロパティ ID|[説明]|  
 |-----------------|-----------------|  
@@ -43,6 +42,6 @@ ms.locfileid: "66768647"
 |SSPROP_ENABLEBULKCOPY|R/W : 読み取り/書き込み&lt;br&gt;&lt;/br&gt;既定値 : VARIANT_FALSE<br /><br /> 説明 : ファイルからの一括コピーを有効にするには、SSPROP_ENABLEBULKCOPY プロパティを VARIANT_TRUE に設定する必要があります。 データ ソースにこのプロパティを設定すると、コンシューマーから IBCPSession インターフェイスにセッションと同じレベルでアクセスできるようになります。<br /><br /> また、SSPROP_IRowsetFastLoad を VARIANT_TRUE に設定する必要があります。|  
   
 ## <a name="see-also"></a>参照  
- [データ ソース オブジェクト&#40;OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
+ [データソースオブジェクト&#40;の OLE DB&#41;](../../oledb/ole-db-data-source-objects/data-source-objects-ole-db.md)  
   
   

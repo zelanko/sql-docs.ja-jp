@@ -16,13 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: 51b083073e38c44708f4d017ee1fd1eb86278f24
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54129312"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68121334"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>ピア ツー ピア トランザクション レプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -140,7 +139,7 @@ ms.locfileid: "54129312"
   
 -   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ **@destination_owner** 」および「 **@destination_table**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。
+-   アーティクルのプロパティ **@destination_owner** 」および「 **@destination_table** ) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。
 
 -   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません   
   
@@ -150,7 +149,7 @@ ms.locfileid: "54129312"
   
 -   アーティクルのプロパティ **@replicate_ddl** には値 **true**が必要です。 **@identityrangemanagementoption** には値 **manual**が必要です。 **@status** にはオプション **24** を設定する必要があります。  
   
--   アーティクルのプロパティ **@ins_cmd**、 **@del_cmd**、および **@upd_cmd** の値は **SQL**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   アーティクルのプロパティ **@ins_cmd** 、 **@del_cmd** 、および **@upd_cmd** の値は **SQL**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
   
 -   サブスクリプションのプロパティ **@sync_type** には値 **none** または **automatic**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
   

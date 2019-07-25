@@ -10,13 +10,12 @@ ms.topic: tutorial
 ms.assetid: 88a973cc-0f23-4ecf-adb6-5b06279c2df6
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 0c865c00eb1020aa6128cdd7a40d61a191bad2a3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4d4e570f5dda2531ddb7ef5f3089c1bb1c4c05f8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65722736"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68088790"
 ---
 # <a name="lesson-2-2-add-and-configure-the-foreach-loop-container"></a>レッスン 2-2:Foreach ループ コンテナーを追加して構成する
 
@@ -47,21 +46,21 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
   
 2.  **SSIS ツールボックス**で **[コンテナー]** を展開し、 **[ForEach ループ コンテナー]** を **[制御フロー]** タブのデザイン画面にドラッグします。  
   
-3.  新しい **ForEach ループ コンテナー**を右クリックし、**[編集]** を選択します。  
+3.  新しい **ForEach ループ コンテナー**を右クリックし、 **[編集]** を選択します。  
   
-4.  **[Foreach ループ エディター]** ダイアログの **[全般]** ページで、**[名前]** に「**Foreach File in Folder**」と入力します。 [ **OK**] を選択します。  
+4.  **[Foreach ループ エディター]** ダイアログの **[全般]** ページで、 **[名前]** に「**Foreach File in Folder**」と入力します。 **[OK]** を選択します。  
   
-5.  Foreach ループ コンテナーを右クリックして **[プロパティ]** を選択し、**[プロパティ]** ウィンドウで **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
+5.  Foreach ループ コンテナーを右クリックして **[プロパティ]** を選択し、 **[プロパティ]** ウィンドウで **LocaleID** プロパティが **[英語 (米国)]** に設定されていることを確認します。  
   
 ## <a name="configure-the-enumerator-for-the-foreach-loop-container"></a>ForEach ループ コンテナーの列挙子を構成する  
   
-1.  **Foreach File in Folder** をダブルクリックして、**[Foreach ループ エディター]** をもう一度開きます。  
+1.  **Foreach File in Folder** をダブルクリックして、 **[Foreach ループ エディター]** をもう一度開きます。  
   
 2.  **[コレクション]** を選択します。  
   
 3.  **[コレクション]** ページで、 **[Foreach File 列挙子]** を選択します。  
   
-4.  **[列挙子の構成]** で、**[参照]** を選択します。  
+4.  **[列挙子の構成]** で、 **[参照]** を選択します。  
   
 5.  **[フォルダーの参照]** ダイアログ ボックスで、サンプル データに含まれる Currency_*.txt ファイルが保存されている、コンピューター上のフォルダーに移動します。
 
@@ -71,16 +70,16 @@ Foreach ループ コンテナーを追加したら、フォルダー内の各�
   
 1.  **[変数のマッピング]** を選択します。  
   
-2.  **[変数のマッピング]** ページで、**[変数]** 列の空いているセルをクリックし、**[\<新しい変数...>]** を選択します。  
+2.  **[変数のマッピング]** ページで、 **[変数]** 列の空いているセルをクリックし、 **[\<新しい変数...>]** を選択します。  
   
-3.  **[変数の追加]** ダイアログ ボックスで、**[名前]** ボックスに「**varFileName**」と入力します。  
+3.  **[変数の追加]** ダイアログ ボックスで、 **[名前]** ボックスに「**varFileName**」と入力します。  
   
     > [!NOTE]  
     > 変数名の大文字と小文字は区別されます。  
   
-4.  [ **OK**] を選択します。  
+4.  **[OK]** を選択します。  
   
-5.  再び **[OK]** を選択し、**[Foreach ループ エディター]** ダイアログを閉じます。  
+5.  再び **[OK]** を選択し、 **[Foreach ループ エディター]** ダイアログを閉じます。  
   
 ## <a name="add-the-data-flow-task-to-the-loop"></a>データ フロー タスクをループに追加する  
   

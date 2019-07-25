@@ -20,14 +20,13 @@ helpviewer_keywords:
 ms.assetid: fafc0dba-f8a8-4aad-9b7f-908e34b74d88
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: b44f7d9d37efaac80f018ce2b1c1497230e66e3c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 085972109c9b19173e46c97cc5cef239a454dcb7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65982683"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67950291"
 ---
 # <a name="coalesce-transact-sql"></a>COALESCE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -53,7 +52,7 @@ _式_のデータ型のうち、最も優先順位が高いものを返します
 すべての引数が `NULL` である場合、`COALESCE` は `NULL` を返します。 NULL 値の少なくとも 1 つは、型指定された `NULL` である必要があります。  
   
 ## <a name="comparing-coalesce-and-case"></a>COALESCE と CASE の比較  
-`COALESCE` 式は `CASE` 式を簡単にした構文です。  つまり、`COALESCE`(_expression1_,_...n_) というコードは、次の `CASE` 式としてクエリ オプティマイザーによって書き換えられます。  
+`COALESCE` 式は `CASE` 式を簡単にした構文です。  つまり、`COALESCE`(_expression1_, _...n_) というコードは、次の `CASE` 式としてクエリ オプティマイザーによって書き換えられます。  
   
 ```sql  
 CASE  

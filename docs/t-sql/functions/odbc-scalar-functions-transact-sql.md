@@ -51,14 +51,13 @@ helpviewer_keywords:
 ms.assetid: a0df1ac2-6699-4ac0-8f79-f362f23496f1
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f27a13116e1b0e393917c99c30039dce374019b3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0a58f211c1a838cb0089cbc2f3e5e156936d1c7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65944909"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67914740"
 ---
 # <a name="odbc-scalar-functions-transact-sql"></a>ODBC スカラー関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -93,7 +92,7 @@ ms.locfileid: "65944909"
 |CURDATE( ) (ODBC 3.0)|現在の日付を返します。|  
 |CURRENT_TIME`[( time-precision )]` (ODBC 3.0)|現在のローカル時間を返します。 time-precision 引数には、返される値の秒の有効桁数を指定します|  
 |CURTIME() (ODBC 3.0)|現在のローカル時間を返します。|  
-|DAYNAME(date_exp) (ODBC 2.0)|date_exp の日の部分に対するデータ ソース固有の曜日名を含む文字列を返します。 たとえば、名前 Sunday - Saturday、または Sun. - Sat. は、英語を使用するデータ ソースの場合です。 ドイツ語を使用するデータ ソースの場合の名前は、Sonntag - Samstag などです。|
+|DAYNAME(date_exp) (ODBC 2.0)|date_exp の日の部分に対するデータ ソース固有の曜日名を含む文字列を返します。 たとえば、名前 Sunday - Saturday、または Sun. \- Sat. は、英語を使用するデータ ソースの場合です。 ドイツ語を使用するデータ ソースの場合の名前は、Sonntag - Samstag などです。|
 |DAYOFMONTH(date_exp) (ODBC 1.0)|date_exp の月部分に基づき、月初から数えた日を整数値として返します。 戻り値の範囲は、1 - 31 です。|  
 |DAYOFWEEK(date_exp) (ODBC 1.0)|date_exp の週部分に基づき、週初から数えた日を整数値として返します。 戻り値の範囲は 1 - 7 で、1 は日曜日を表します。|  
 |HOUR(time_exp) (ODBC 1.0)|time_exp の時部分に基づき、対応する時刻を 0 から 23 の整数値として返します。|  

@@ -1,5 +1,5 @@
 ---
-title: SSL 暗号化を使用して |Microsoft Docs
+title: SSL 暗号化を使用する |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 8e566243-2f93-4b21-8065-3c8336649309
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 2cb0e7789e5b75aeed1f8e7bcbe50e25925606da
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 98c9cd99d8fd8a54c96a9301ac3a050b54614c17
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798579"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68003968"
 ---
 # <a name="using-ssl-encryption"></a>SSL 暗号化の使用
 
@@ -33,7 +32,7 @@ SSL 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 このセクションの各トピックでは、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] が SSL 暗号化をサポートするしくみについて説明します。これには、新しい接続プロパティと、クライアント側でトラスト ストアを構成する方法についての説明が含まれます。  
   
 > [!NOTE]  
-> **HostNameInCertificate** SSL 証明書を検証する接続プロパティをお勧めします。  
+> SSL 証明書を検証するには、 **hostNameInCertificate**接続プロパティをお勧めします。  
 
 ## <a name="in-this-section"></a>このセクションの内容  
 

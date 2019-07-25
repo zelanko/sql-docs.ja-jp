@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: a3fffc08-7254-4af7-bbae-8ff591fbd5ec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: b0f95d11bf053e3bf41fe66c8e19acff6a5dd65b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 85e7f1781fe6b42cdd8057978ed22456fe60382b
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66766604"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67969843"
 ---
 # <a name="supportsansi92entrylevelsql-method-sqlserverdatabasemetadata"></a>supportsANSI92EntryLevelSQL メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,13 +35,13 @@ public boolean supportsANSI92EntryLevelSQL()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**サポートされている場合。 それ以外の場合は、 **false**です。  
+ サポートされている場合は**true** 。 それ以外の場合は、 **false**です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この supportsANSI92EntryLevelSQL メソッドは、java.sql.DatabaseMetaData インターフェイスで supportsANSI92EntryLevelSQL メソッドによって指定されます。  
+ この supportsANSI92EntryLevelSQL メソッドは、supportsANSI92EntryLevelSQL メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

@@ -1,5 +1,5 @@
 ---
-title: JDBC ドライバー アプリケーションのセキュリティ保護 |Microsoft Docs
+title: JDBC Driver アプリケーションのセキュリティ保護 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 90724ec6-a9cb-43ef-903e-793f89410bc0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3a7a8079f60336bbdfe7b837afa2313f5fda2691
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c539e94b9fdcd3d1cd281e1a0f1043eec55739bc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797842"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67945742"
 ---
 # <a name="securing-jdbc-driver-applications"></a>JDBC ドライバー アプリケーションのセキュリティ保護
 
@@ -34,7 +33,7 @@ ms.locfileid: "66797842"
 | [ユーザー入力の検証](../../connect/jdbc/validating-user-input.md)             | ユーザー入力を検証する方法について説明します。                                                                                                                          |
 | [アプリケーション セキュリティ](../../connect/jdbc/application-security.md)               | Java のポリシー アクセス許可を使用して、JDBC ドライバー アプリケーションをセキュリティで保護する方法について説明します。                                                                                |
 | [SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)               | SSL (Secure Sockets Layer) を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースとの通信チャネルを確立する方法について説明します。 |
-| [FIPS モード](../../connect/jdbc/fips-mode.md)                                     | FIPS 準拠モードでは、JDBC ドライバーを使用する方法について説明します。                                                                                                              |
+| [FIPS モード](../../connect/jdbc/fips-mode.md)                                     | FIPS 準拠モードで JDBC driver を使用する方法について説明します。                                                                                                              |
   
 ## <a name="see-also"></a>参照  
 

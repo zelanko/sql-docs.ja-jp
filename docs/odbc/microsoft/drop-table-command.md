@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: bc50459b-8861-4889-84a9-129ae9065aa8
 author: MightyPen
 ms.author: genemi
-manager: craigg
-ms.openlocfilehash: 0865502928e98329764ae6085ab2b67aa26f0517
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 278950bac7589b8a6b02d894c8133a699c3bd1ef
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63128027"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68071804"
 ---
 # <a name="drop-table-command"></a>DROP TABLE コマンド
 データ ソースで指定されたデータベースからテーブルを削除し、ディスクから削除されます。  
@@ -50,5 +49,5 @@ DROP TABLE TableName | FileName | ?
   
 |ODBC 構文|データ ソース|Visual FoxPro 構文|  
 |-----------------|-----------------|--------------------------|  
-|DROP TABLE *base-table-name*|データベース (.dbc ファイル)|REMOVE TABLE *TableName* DELETE|  
-||無料のテーブル (.dbf ファイル) のディレクトリ|ERASE *dbfName*<br /><br /> ERASE *cdxName*<br /><br /> ERASE *fptName*|
+|DROP TABLE*ベース テーブル名*|データベース (.dbc ファイル)|テーブルの削除*TableName*削除|  
+||無料のテーブル (.dbf ファイル) のディレクトリ|消去*dbfName*<br /><br /> 消去*cdxName*<br /><br /> 消去*fptName*|

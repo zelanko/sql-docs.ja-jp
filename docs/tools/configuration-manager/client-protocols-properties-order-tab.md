@@ -1,5 +1,5 @@
 ---
-title: クライアント プロトコルのプロパティ ([順序] タブ) |Microsoft Docs
+title: クライアントプロトコルのプロパティ ([順序] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -13,13 +13,12 @@ ms.assetid: 64fd7135-1756-4885-bed9-9ab8997ecc6c
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-manager: craigg
-ms.openlocfilehash: 97f01ac26519b6334495530e5a454b0f423acf5c
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: bbf7795da30f2a274201ce51e9774390b7611b48
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67732794"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68010240"
 ---
 # <a name="client-protocols-properties-order-tab"></a>[クライアント プロトコルのプロパティ] ダイアログ ボックス ([順序] タブ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -34,10 +33,10 @@ ms.locfileid: "67732794"
   
 ## <a name="options"></a>オプション  
  **[無効なプロトコル]**  
- インストールされているが、現在使用されていないプロトコルが一覧表示します。  
+ インストールされているが現在使用されていないプロトコルが一覧表示されます。  
   
  **[有効なプロトコル]**  
- 使用可能なプロトコルが一覧表示[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このコンピューター上のクライアント。  
+ このコンピューターの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントが使用できる[!INCLUDE[msCoName](../../includes/msconame-md.md)]プロトコルの一覧を表示します。  
   
  **>**  
  **[無効なプロトコル]** ボックス内で現在強調表示されているプロトコルを有効にし、 **[有効なプロトコル]** ボックスに移動します。  

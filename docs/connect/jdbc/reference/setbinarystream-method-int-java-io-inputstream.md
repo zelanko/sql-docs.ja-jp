@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c32b904-c44b-472e-a084-38f008a742b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 97de855dd6f80b044ec8a72d30a3041aa5990705
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 483588eee0a5d1baaf7f2eda4a88372c45836d2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66764721"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975315"
 ---
 # <a name="setbinarystream-method-int-javaioinputstream"></a>setBinaryStream (int, java.io.InputStream) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -38,13 +37,13 @@ public final void setAsciiStream(int parameterIndex,
   
  *x*  
   
- Java.io.InputStream オブジェクト。  
+ InputStream オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setBinaryStream メソッドは、java.sql.PreparedStatement インターフェイスの setBinaryStream メソッドによって指定されます。  
+ この setBinaryStream メソッドは、PreparedStatement インターフェイスの setBinaryStream メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [setBinaryStream メソッド &#40;SQLServerPreparedStatement&#41;](../../../connect/jdbc/reference/setbinarystream-method-sqlserverpreparedstatement.md)   

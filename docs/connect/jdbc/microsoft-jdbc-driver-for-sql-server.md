@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: baf420ab-c058-4cec-a673-d7cb6397210e
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f55ff68ff0e3e4fca63fa284e25fa0c4c0ae4d86
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a12209cc5782c0134c4e14723d7ce73049db1ddd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66801839"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956320"
 ---
 # <a name="microsoft-jdbc-driver-for-sql-server"></a>Microsoft SQL Server 用 JDBC Driver
 
@@ -41,7 +40,7 @@ Microsoft JDBC Driver for SQL Server は、IBM WebSphere や SAP NetWeaver な�
 * [パフォーマンスと信頼性](improving-performance-and-reliability-with-the-jdbc-driver.md)  
 * [トラブルシューティング](diagnosing-problems-with-the-jdbc-driver.md)
 * [コード サンプル](sample-jdbc-driver-applications.md)
-* [準拠と法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
+* [コンプライアンスと法律](compliance-and-legal-for-the-jdbc-sql-driver.md)  
   
 ## <a name="community"></a>コミュニティ
 
@@ -49,13 +48,13 @@ Microsoft JDBC Driver for SQL Server は、IBM WebSphere や SAP NetWeaver な�
   
 ## <a name="download"></a>ダウンロード
 
-[SQL Server 用 Microsoft JDBC Driver のダウンロード](download-microsoft-jdbc-driver-for-sql-server.md)-Maven プロジェクトでは、その他に関する情報が追加されます。
+[MICROSOFT JDBC Driver for SQL Server のダウンロード](download-microsoft-jdbc-driver-for-sql-server.md)-Maven プロジェクトに関する追加情報が含まれています。
   
 ## <a name="samples"></a>サンプル  
 
 * [サンプル JDBC Driver アプリケーション](sample-jdbc-driver-applications.md)  
-* [Windows 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
-* [MacOS で Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
-* [Ubuntu 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
-* [Red Hat Enterprise Linux (RHEL) 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
-* [SUSE Linux Enterprise Server (SLES) 上の Java の概要](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)
+* [Windows での Java でのはじめに](https://www.microsoft.com/sql-server/developer-get-started/java/windows/)
+* [MacOS で Java を使用するはじめに](https://www.microsoft.com/sql-server/developer-get-started/java/mac/)
+* [Ubuntu 上の Java でのはじめに](https://www.microsoft.com/sql-server/developer-get-started/java/ubuntu/)
+* [Red Hat Enterprise Linux (RHEL) での Java でのはじめに](https://www.microsoft.com/sql-server/developer-get-started/java/rhel/)
+* [SUSE Linux Enterprise Server (SLES) での Java でのはじめに](https://www.microsoft.com/sql-server/developer-get-started/java/sles/)

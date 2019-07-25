@@ -20,13 +20,12 @@ helpviewer_keywords:
 ms.assetid: fe0b7cbc-fe8e-4fe2-95b4-2953efff5869
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: 18150e08b06e1b8f919df98e8e10b4eb43cc4b64
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a247a49aa35d4291e7f7d0f3dec978227df06ad1
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65727471"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68011345"
 ---
 # <a name="send-mail-task"></a>メール送信タスク
 
@@ -106,7 +105,7 @@ ms.locfileid: "65727471"
   
 ### <a name="options"></a>オプション  
  **[SMTPConnection]**  
- 一覧で SMTP 接続マネージャーを選択するか、[**\<新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
+ 一覧で SMTP 接続マネージャーを選択するか、[ **\<新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
   
 > [!IMPORTANT]  
 >  SMTP 接続マネージャーでは、匿名認証と Windows 認証のみがサポートされています。 基本認証はサポートされていません。  
@@ -154,13 +153,13 @@ ms.locfileid: "65727471"
   
 #### <a name="messagesourcetype--file-connection"></a>[MessageSourceType] = [ファイル接続]  
  **[MessageSource]**  
- ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...>**] をクリックして新しい接続マネージャーを作成します。  
+ ファイル接続マネージャーを一覧から選択するか、[\<**新しい接続...>** ] をクリックして新しい接続マネージャーを作成します。  
   
  **関連トピック:** [ファイル接続マネージャー](../../integration-services/connection-manager/file-connection-manager.md)、[ファイル接続マネージャー エディター](../../integration-services/connection-manager/file-connection-manager-editor.md)  
   
 #### <a name="messagesourcetype--variable"></a>[MessageSourceType] = [変数]  
  **[MessageSource]**  
- 一覧で変数を選択するか、[\<**新しい変数...**>] をクリックして新しい変数を作成します。  
+ 一覧で変数を選択するか、[\<**新しい変数...** >] をクリックして新しい変数を作成します。  
   
  **関連トピック:** [Integration Services &#40;SSIS&#41; の変数](../../integration-services/integration-services-ssis-variables.md)、[変数の追加](https://msdn.microsoft.com/library/d09b5d31-433f-4f7c-8c68-9df3a97785d5)  
   

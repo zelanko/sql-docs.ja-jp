@@ -10,13 +10,12 @@ ms.topic: language-reference
 ms.assetid: 91ed017b-6567-4bf2-b9f1-e2b5c70a5343
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: b6e6ae0fc2e0f9949bfac6b4043c581dd0921efb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 83dea4c55a06aa139a561e9e5c7f99e0c5559f4d
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65716948"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68023497"
 ---
 # <a name="catalogcreateenvironmentvariable-ssisdb-database"></a>catalog.create_environment_variable (SSISDB データベース)
 
@@ -97,14 +96,14 @@ catalog.create_environment_variable [@folder_name =] folder_name
   
 |Integration Services データ型|SQL Server データ型|  
 |------------------------------------|--------------------------|  
-|**ブール値**|**bit**|  
+|**Boolean**|**bit**|  
 |**Byte**|**binary**、**varbinary**|  
 |**DateTime**|**datetime**、**datetime2**、**datetimeoffset**、**smalldatetime**|  
 |**Double**|真数型: **decimal**、**numeric**。概数値: **float**、**real**|  
 |**Int16**|**smallint**|  
 |**Int32**|**int**|  
 |**Int64**|**bigint**|  
-|**単一**|真数型: **decimal**、**numeric**。概数値: **float**、**real**|  
+|**Single**|真数型: **decimal**、**numeric**。概数値: **float**、**real**|  
 |**String**|**varchar**、**nvarchar**、**char**|  
 |**UInt32**|**int** (**int** は、使用可能なマッピングに最も近い **Uint32**)|  
 |**UInt64**|**bigint** (**int** は、使用可能なマッピングに最も近い **Uint64**)|  

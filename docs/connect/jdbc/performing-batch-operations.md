@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1a576d95-7da6-4b7b-8b32-59e5b4d354c4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 4923354c5f6dc013d9fee0284279bb5b6b887556
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 244c20b2fb7721d117557581068791e1a2d99d14
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66801817"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67956222"
 ---
 # <a name="performing-batch-operations"></a>バッチ操作の実行
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -25,7 +24,7 @@ ms.locfileid: "66801817"
   
  [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスはすべて、バッチ更新を送信するために使用できます。 [addBatch](../../connect/jdbc/reference/addbatch-method-sqlserverpreparedstatement.md) メソッドは、コマンドを追加するために使用します。 [clearBatch](../../connect/jdbc/reference/clearbatch-method-sqlserverpreparedstatement.md) メソッドは、コマンドのリストをクリアするために使用します。 [executeBatch](../../connect/jdbc/reference/executebatch-method-sqlserverstatement.md) メソッドは、すべてのコマンドを送信して処理するために使用します。 バッチの一部として実行できるのは、単純に更新数を返すデータ操作言語 (DML) ステートメントおよびデータ定義言語 (DDL) ステートメントだけです。  
   
- executeBatch メソッドは、各コマンドの更新数に対応する **int** 値の配列を返します。 コマンドのいずれかが失敗した場合を BatchUpdateException がスローされ、BatchUpdateException クラスの getUpdateCounts メソッドを使用して、更新数の配列を取得する必要があります。 いずれかのコマンドが失敗した場合、JDBC ドライバーでは残りのコマンドの処理は続行されます。 ただし、コマンドに構文エラーがある場合は、バッチ内のステートメントが失敗します。  
+ executeBatch メソッドは、各コマンドの更新数に対応する **int** 値の配列を返します。 いずれかのコマンドが失敗した場合は、BatchUpdateException がスローされます。そのため、BatchUpdateException クラスの getUpdateCounts メソッドを使用して、更新数の配列を取得する必要があります。 いずれかのコマンドが失敗した場合、JDBC ドライバーでは残りのコマンドの処理は続行されます。 ただし、コマンドに構文エラーがある場合は、バッチ内のステートメントが失敗します。  
   
 > [!NOTE]  
 >  更新数を使用する必要がない場合は、最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に対して SET NOCOUNT ON ステートメントを発行できます。 これによりネットワーク トラフィックが減少し、アプリケーションのパフォーマンスがさらに強化されます。  

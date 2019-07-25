@@ -14,13 +14,12 @@ f1_keywords:
 ms.assetid: 552ff592-eeef-46e8-b4a2-9b2384c869aa
 author: janinezhang
 ms.author: janinez
-manager: craigg
-ms.openlocfilehash: db042dd5722b2b1bc034364878ebf3cfb550e27c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 030a3d080f7f02669201160bf1546f25bcd59b45
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65717278"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68068734"
 ---
 # <a name="ssis-toolbox"></a>SSIS ツールボックス
 
@@ -42,7 +41,7 @@ ms.locfileid: "65717278"
 ## <a name="toolbox-categories"></a>ツールボックス カテゴリ
  **SSIS ツールボックス**では、制御フローとデータ フローのコンポーネントがカテゴリ別にまとめられています。  カテゴリを展開したり折りたたんだり、コンポーネントを再配置することができます。  ツールボックスの内側を右クリックして **[既定のツールボックスの復元]** をクリックして、既定の編成に戻します。  
   
- **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブを選択すると、 **[お気に入り]** カテゴリおよび **[共通]** カテゴリがツールボックスに表示されます。 **[制御フロー]** タブまたは **[イベント ハンドラー]** タブを選択すると、 **[その他のタスク]** カテゴリがツールボックスに表示されます。**[データ フロー]** タブを選択すると、 **[その他の変換]**、 **[その他の変換元]** 、 **[その他の変換先]** の各カテゴリがツールボックスに表示されます。  
+ **[制御フロー]** タブ、 **[データ フロー]** タブ、および **[イベント ハンドラー]** タブを選択すると、 **[お気に入り]** カテゴリおよび **[共通]** カテゴリがツールボックスに表示されます。 **[制御フロー]** タブまたは **[イベント ハンドラー]** タブを選択すると、 **[その他のタスク]** カテゴリがツールボックスに表示されます。 **[データ フロー]** タブを選択すると、 **[その他の変換]** 、 **[その他の変換元]** 、 **[その他の変換先]** の各カテゴリがツールボックスに表示されます。  
 
  ## <a name="add-azure-components-to-the-toolbox"></a>Azure のコンポーネントをツールボックスに追加する  
  Integration Services 用の Azure Feature Pack には、Azure データソースとタスクに接続して、Azure の一般的な操作を実行するための接続マネージャーが含まれています。 これらのアイテムをツールボックスに追加するには機能パックをインストールします。 詳細については、「[Azure Feature Pack for Integration Services &#40;SSIS&#41; (Integration Services 用の Azure Feature Pack &#40;SSIS&#41;)](../integration-services/azure-feature-pack-for-integration-services-ssis.md)」を参照してください。  

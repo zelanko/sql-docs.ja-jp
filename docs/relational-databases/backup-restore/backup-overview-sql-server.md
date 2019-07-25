@@ -22,13 +22,12 @@ helpviewer_keywords:
 ms.assetid: 09a6e0c2-d8fd-453f-9aac-4ff24a97dc1f
 author: MikeRayMSFT
 ms.author: mikeray
-manager: craigg
-ms.openlocfilehash: 02a844a9a4d498db367ee5ad91a02f07699aa95d
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 81df6387bf6744e436922c5b031d01fb86bc50dc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47606420"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68081439"
 ---
 # <a name="backup-overview-sql-server"></a>Backup Overview (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,7 +53,7 @@ ms.locfileid: "47606420"
  **[コピーのみのバックアップ (copy-only backup)](../../relational-databases/backup-restore/copy-only-backups-sql-server.md)**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の通常のバックアップ シーケンスから独立した特殊な用途のバックアップ。  
   
-**データ バックアップ (data backup)**   
+**データ バックアップ (data backup)**    
  データのバックアップ。データベース全体 (データベース バックアップ)、データベースの一部 (部分バックアップ)、または一連のデータ ファイルやファイルグループ (ファイル バックアップ) の形式で存在します。  
   
 **[データベース バックアップ (database backup)](../../relational-databases/backup-restore/full-database-backups-sql-server.md)**  

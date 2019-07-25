@@ -14,13 +14,12 @@ helpviewer_keywords:
 ms.assetid: 92e28a07-d6a7-461b-a0b3-bd9bc6afcbe5
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
-ms.openlocfilehash: e7045a909af200ee51da89d4309b94b1437fdf99
-ms.sourcegitcommit: 7aa6beaaf64daf01b0e98e6c63cc22906a77ed04
+ms.openlocfilehash: cc7cb345bd79ff38d2ed2512a50e1962a68eeada
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54136318"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68111067"
 ---
 # <a name="view-information-and-perform-tasks-using-replication-monitor"></a>レプリケーション モニターを使用して情報を表示し、タスクを実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,14 +31,14 @@ ms.locfileid: "54136318"
 ### <a name="view-information"></a>情報の表示
 レプリケーション モニターには、選択したパブリケーションについての情報を含む以下のタブが用意されています。  
   
--   **[すべてのサブスクリプション]**: このタブには、選択したパブリケーションのすべてのサブスクリプションの情報が表示されます。  
+-   **[すべてのサブスクリプション]** : このタブには、選択したパブリケーションのすべてのサブスクリプションの情報が表示されます。  
   
--   **[エージェント]**: このタブには、パブリケーションで使用されるすべてのエージェントの情報が表示されます。   
+-   **[エージェント]** : このタブには、パブリケーションで使用されるすべてのエージェントの情報が表示されます。   
     -   すべてのパブリケーションで使用されるスナップショット エージェント   
     -   すべてのトランザクション パブリケーションで使用されるログ リーダー エージェント   
     -   キュー更新サブスクリプションを持つトランザクション パブリケーションで使用されるキュー リーダー エージェント  
   
--   **[警告]**: このタブでは、エージェントに対する警告とアラートを指定できます。  
+-   **[警告]** : このタブでは、エージェントに対する警告とアラートを指定できます。  
   
 -   **[トレーサー トークン]** (トランザクション レプリケーションのみ): このタブでは、待機時間、つまりパブリッシャーでトランザクションがコミットされてから、対応するトランザクションがサブスクライバーでコミットされるまでの経過時間を測定できます。  
   
@@ -48,18 +47,18 @@ ms.locfileid: "54136318"
 ### <a name="perform-tasks"></a>タスクの実行
   
 1.  左ウィンドウでパブリッシャー グループを展開し、パブリッシャーを展開して、パブリケーションを選択します。   
-2.  パブリケーションのプロパティを表示および変更するには、パブリケーションを右クリックし、**[プロパティ]** を選択します。    
-3.  サブスクリプションの情報を表示するには、**[すべてのサブスクリプション]** タブを選択し、サブスクリプションを右クリックし、**[プロパティ]** を選択します。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 
-4.  エージェントの情報を表示するには、**[エージェント]** タブを選択します。このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 
-5.  エージェントの警告としきい値の情報を表示するには、**[警告]** タブを選択します。詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
-6.  トレーサー トークンの情報を表示するには、**[トレーサー トークン]** タブを選択します。トレーサー トークンの使用方法の詳細については、「 [トランザクション レプリケーションの待機時間の計測および接続の検証](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
+2.  パブリケーションのプロパティを表示および変更するには、パブリケーションを右クリックし、 **[プロパティ]** を選択します。    
+3.  サブスクリプションの情報を表示するには、 **[すべてのサブスクリプション]** タブを選択し、サブスクリプションを右クリックし、 **[プロパティ]** を選択します。 このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 
+4.  エージェントの情報を表示するには、 **[エージェント]** タブを選択します。このタブで、さらに詳しい情報を表示したり、タスクを実行したりできます。 
+5.  エージェントの警告としきい値の情報を表示するには、 **[警告]** タブを選択します。詳細については、「 [Set Thresholds and Warnings in Replication Monitor](../../../relational-databases/replication/monitor/set-thresholds-and-warnings-in-replication-monitor.md)」を参照してください。  
+6.  トレーサー トークンの情報を表示するには、 **[トレーサー トークン]** タブを選択します。トレーサー トークンの使用方法の詳細については、「 [トランザクション レプリケーションの待機時間の計測および接続の検証](../../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)」を参照してください。  
   
 ## <a name="for-a-publisher"></a>パブリッシャー 
 
 ### <a name="view-information"></a>情報の表示
 レプリケーション モニターには、選択したパブリッシャーに関する情報を表示する次のタブがあります。   
--   **[パブリケーション]**: 選択したパブリッシャーのすべてのパブリケーションの情報が表示されます。   
--   **[サブスクリプション ウォッチ リスト]**: エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。    
+-   **[パブリケーション]** : 選択したパブリッシャーのすべてのパブリケーションの情報が表示されます。   
+-   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。    
 -   **[エージェント]** タブ: すべての種類のレプリケーションで使用されるエージェントおよびジョブの詳細情報が表示されます。 また、各エージェントとジョブを開始および停止することもできます。 それぞれのタブのオプションの詳細を表示するには、右ペインでタブをクリックしてから、メニュー バーの **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 ### <a name="perform-tasks"></a>タスクの実行
@@ -83,8 +82,8 @@ ms.locfileid: "54136318"
 
 ### <a name="view-information"></a>情報の表示
   レプリケーション モニターには、サブスクリプションについての情報を含む以下のタブが用意されています。    
--   **[すべてのサブスクリプション]**: 選択したパブリケーションのすべてのサブスクリプションの情報が表示されます。   
--   **[サブスクリプション ウォッチ リスト]**: エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。 それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+-   **[すべてのサブスクリプション]** : 選択したパブリケーションのすべてのサブスクリプションの情報が表示されます。   
+-   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。 それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 ### <a name="perform-tasks"></a>タスクの実行
   
@@ -125,9 +124,9 @@ ms.locfileid: "54136318"
 ## <a name="for-subscription-agents"></a>サブスクリプション エージェント
 
 ### <a name="view-information"></a>情報の表示
--   **[すべてのサブスクリプション]**: 選択したパブリケーションのすべてのサブスクリプションの情報が表示されます。  
+-   **[すべてのサブスクリプション]** : 選択したパブリケーションのすべてのサブスクリプションの情報が表示されます。  
   
--   **[サブスクリプション ウォッチ リスト]**: エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。 それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
+-   **[サブスクリプション ウォッチ リスト]** : エラーや警告がある、またはパフォーマンスが最低である選択したパブリッシャーで、利用可能なすべてのパブリケーションから、サブスクリプションの情報が表示されます。 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]より前のバージョンを実行しているディストリビューターでは、このタブが表示されません。 それぞれのタブのオプションの詳細については、右ペインでタブをクリックしてから、メニュー バーで **[ヘルプ]** をクリックします。 レプリケーション モニターの起動の詳細については、「[Start the Replication Monitor](../../../relational-databases/replication/monitor/start-the-replication-monitor.md)」 (レプリケーション モニターの開始) を参照してください。  
   
 ### <a name="perform-tasks"></a>タスクの実行
   

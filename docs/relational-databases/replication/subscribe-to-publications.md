@@ -24,14 +24,13 @@ helpviewer_keywords:
 ms.assetid: 088ee30a-05ab-47c4-92ed-316b93e12445
 author: MashaMSFT
 ms.author: mathoma
-manager: craigg
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 139bcebb2f4e92d3cc9e25a3460a6283a93fc4f6
-ms.sourcegitcommit: 61381ef939415fe019285def9450d7583df1fed0
+ms.openlocfilehash: 3a15256be44ace579c6dcc9aa74bf55fdc319e7e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2018
-ms.locfileid: "47635550"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68129931"
 ---
 # <a name="subscribe-to-publications"></a>パブリケーションのサブスクライブ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -75,14 +74,14 @@ ms.locfileid: "47635550"
   
  **プッシュ サブスクリプションを削除するには**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [プッシュ サブスクリプションの削除](../../relational-databases/replication/delete-a-push-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[プッシュ サブスクリプションの削除](../../relational-databases/replication/delete-a-push-subscription.md)  
   
 > [!NOTE]  
 >  サブスクリプションを削除しても、パブリッシュされたオブジェクトはサブスクライバーから削除されません。  
   
  **プル サブスクリプションを作成するには**  
   
- [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]: [プル サブスクリプションの作成](../../relational-databases/replication/create-a-pull-subscription.md)  
+ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]:[Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md)  
   
  **プル サブスクリプションのプロパティを表示または変更するには**  
   

@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: 6f35a38f-b260-44cb-a8ac-0a979aa2c218
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: dc3a6edb0d1108123b5ea22ca717a06409582cbc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: e0b7054a390f8318b3c4c2db39eda3d2bd2fb842
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66803945"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68014857"
 ---
 # <a name="support-resources-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server リソースをサポート
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -47,12 +46,12 @@ SQL Server と Transact-SQL のドキュメントは、「[SQL Server のドキ�
 ## <a name="php-support-resources"></a>PHP サポート リソース  
 [PHP for Windows のドキュメント](https://windows.php.net/)  
   
-PHP に関する最新情報については、次を参照してください。 [ http://www.php.net/](http://www.php.net)します。  
+PHP に関する最新情報について[http://www.php.net/](http://www.php.net)は、「」を参照してください。  
   
-PHP に関するドキュメントを参照してください。 [ http://www.php.net/docs.php](http://www.php.net/docs.php)します。  
+PHP ドキュメントについて[http://www.php.net/docs.php](http://www.php.net/docs.php)は、「」を参照してください。  
   
 ## <a name="microsoft-customer-support"></a>マイクロソフト カスタマー サポート  
-サポートに関する質問に関連する、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、連絡先[Microsoft サポート](https://support.microsoft.com/contactus/)で求めるまたは、 [Github プロジェクト ページ](https://github.com/Microsoft/msphpsql/issues)。  
+に[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]関連するサポートの質問については、 [Microsoft サポート](https://support.microsoft.com/contactus/)に問い合わせるか、 [Github プロジェクトのページ](https://github.com/Microsoft/msphpsql/issues)で問い合わせてください。  
   
 ## <a name="see-also"></a>参照  
 [Microsoft SQL Server 用 Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)

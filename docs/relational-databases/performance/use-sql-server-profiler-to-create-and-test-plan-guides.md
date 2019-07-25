@@ -21,13 +21,12 @@ helpviewer_keywords:
 ms.assetid: 7018dbf0-1a1a-411a-88af-327bedf9cfbd
 author: julieMSFT
 ms.author: jrasnick
-manager: craigg
-ms.openlocfilehash: bc1fb5a5d5c397c8d7eb1a3d784394b46ca5a6fe
-ms.sourcegitcommit: dd794633466b1da8ead9889f5e633bdf4b3389cd
+ms.openlocfilehash: 3137bffef524faf061322224e92941687bb16046
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 01/09/2019
-ms.locfileid: "54143432"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67987274"
 ---
 # <a name="use-sql-server-profiler-to-create-and-test-plan-guides"></a>SQL Server Profiler を使用したプラン ガイドの作成とテスト
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -67,7 +66,7 @@ WHERE h.OrderDate BETWEEN '20000101' and '20050101';
   
 7.  メモ帳でバッチ テキスト ファイルを開き、テキストをクリップボードにコピーします。  
   
-8.  プラン ガイドを作成し、**@stmt**引数に指定する引用符 ( **@stmt** ') 内にコピーしたテキストを貼り付けます。 **@stmt** 引数内に単一引用符がある場合は、その前にもう 1 つ単一引用符を追加してエスケープする必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'** 20000101 **'** は、 **''** 20000101 **''** として区切る必要があります。  
+8.  プラン ガイドを作成し、 **@stmt**引数に指定する引用符 ( **@stmt** ') 内にコピーしたテキストを貼り付けます。 **@stmt** 引数内に単一引用符がある場合は、その前にもう 1 つ単一引用符を追加してエスケープする必要があります。 単一引用符を挿入する際は、別の文字を追加したり削除したりしないように注意してください。 たとえば、日付リテラル **'** 20000101 **'** は、 **''** 20000101 **''** として区切る必要があります。  
   
  次に、このプラン ガイドを示します。  
   

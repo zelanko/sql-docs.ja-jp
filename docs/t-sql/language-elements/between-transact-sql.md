@@ -22,14 +22,13 @@ helpviewer_keywords:
 ms.assetid: a5d5b050-203e-4355-ac85-e08ef5ca7823
 author: rothja
 ms.author: jroth
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6ff89056c2e96a815312314e84b5118b7b48726f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d835e68c767866a130ebb62c26fd315f5448416e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65980087"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67947763"
 ---
 # <a name="between-transact-sql"></a>BETWEEN (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -61,7 +60,7 @@ test_expression [ NOT ] BETWEEN begin_expression AND end_expression
  *begin_expression* と *end_expression* で表される範囲内で *test_expression* をテストする必要があることを示すプレースホルダーとして動作します。  
   
 ## <a name="result-types"></a>戻り値の型  
- **ブール値**  
+ **Boolean**  
   
 ## <a name="result-value"></a>結果の値  
  *test_expression* の値が *begin_expression* の値以上で *end_expression* の値以下の場合、BETWEEN は **TRUE** を返します。  
