@@ -40,7 +40,8 @@ Set_Expression.Current
 >  この関数は、セットの別名を使用するか名前付きセットを定義することによって名前が付けられたセットに対してのみ使用できます。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、**Generate** 内で **Current** 関数を使用する方法を示します:  
+ 次の例は、**Generate** 内で **Current** 関数を使用する方法を示します: 
+
   
  `WITH`  
   
