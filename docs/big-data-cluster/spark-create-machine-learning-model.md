@@ -1,7 +1,7 @@
 ---
-title: 作成し、Spark の machine learning MLeap を使用したモデルのエクスポート
+title: MLeap を使用した Spark machine learning モデルの作成とエクスポート
 titleSuffix: SQL Server big data clusters
-description: PySpark を使用して、SQL Server のビッグ データ クラスター (プレビュー) で Spark を使用した機械学習モデルを作成します。 MLeap、と共にエクスポートし、SQL Server で Java を使って、モデル、スコア付けします。
+description: PySpark を使用して、SQL Server ビッグデータクラスター (プレビュー) で Spark を使用して機械学習モデルをトレーニングし、作成します。 MLeap でエクスポートし、SQL Server で Java でモデルをスコア付けします。
 author: lgongmsft
 ms.author: lgong
 ms.reviewer: mikeray
@@ -10,62 +10,62 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67727377"
 ---
-# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>作成、エクスポート、および SQL Server のビッグ データ クラスターで Spark 機械学習モデルをスコア付け
+# <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>SQL Server ビッグデータクラスターで Spark machine learning モデルを作成、エクスポート、およびスコア付けする
 
-次の例は、使用してモデルを構築する方法を示します[Spark ML](https://spark.apache.org/docs/latest/ml-guide.html)、モデルをエクスポート[MLeap](http://mleap-docs.combust.ml/)、SQL Server で、モデルのスコア付けとその[Java 言語の拡張機能](../language-extensions/language-extensions-overview.md)します。 これは、SQL Server 2019 のビッグ データ クラスターのコンテキストで行います。
+次のサンプルは、 [SPARK ML](https://spark.apache.org/docs/latest/ml-guide.html)でモデルを構築し、そのモデルを[mleap](http://mleap-docs.combust.ml/)にエクスポートし、その[Java 言語拡張機能](../language-extensions/language-extensions-overview.md)を使用して SQL Server でモデルをスコア付けする方法を示しています。 これは、SQL Server 2019 ビッグデータクラスターのコンテキストで行われます。
 
 次の図は、このサンプルで実行される作業を示しています。
 
-![Spark を使用したトレーニング スコアのエクスポート](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
+![Spark を使用してスコアエクスポートをトレーニングする](./media/spark-create-machine-learning-model/train-score-export-with-spark.png)
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-このサンプルのすべてのファイルは、 [ https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml)します。
+このサンプルのすべてのファイルは、 [https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml](https://github.com/microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/spark/sparkml)にあります。
 
-サンプルを実行するには、次の前提条件も必要です。
+このサンプルを実行するには、次の前提条件も満たされている必要があります。
 
-- A[ビッグ データの SQL Server クラスター](deploy-get-started.md)
+- [SQL Server ビッグデータクラスター](deploy-get-started.md)
 
-- [ビッグ データ ツール](deploy-big-data-tools.md)
+- [ビッグデータツール](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
    - **Azure Data Studio**
 
-## <a name="model-training-with-spark-ml"></a>Spark ML を使用したモデルのトレーニング
+## <a name="model-training-with-spark-ml"></a>Spark ML を使用したモデルトレーニング
 
-このサンプルでは、国勢調査データ (**AdultCensusIncome.csv**)、Spark ML パイプライン モデルを構築するために使用します。
+このサンプルでは、国勢調査 data (**AdultCensusIncome**) を使用して Spark ML パイプラインモデルを作成します。
 
-1. 使用して、 [mleap_sql_test/setup.sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh)データ セットをインターネットからダウンロードして、SQL Server のビッグ データ クラスターで HDFS に保存するファイル。 これにより、Spark がアクセスすることができます。
+1. [Mleap_sql_test/setup. sh](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/setup.sh)ファイルを使用して、インターネットからデータセットをダウンロードし、SQL Server ビッグデータクラスターの HDFS に配置します。 これにより、Spark からアクセスできるようになります。
 
-1. サンプルの notebook をダウンロードし、 [train_score_export_ml_models_with_spark.ipynb](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb)します。 PowerShell または bash のコマンド ラインからは、notebook のダウンロードには、次のコマンドを実行します。
+1. 次に、サンプル notebook [train_score_export_ml_models_with_spark](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb)をダウンロードします。 PowerShell または bash コマンドラインから、次のコマンドを実行して notebook をダウンロードします。
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/sparkml/train_score_export_ml_models_with_spark.ipynb"
    ```
 
-   この notebook には、サンプルのこのセクションの必要なコマンドを持つセルが含まれています。
+   このノートブックには、サンプルのこのセクションに必要なコマンドを含むセルが含まれています。
 
-1. Azure Data Studio でノートブックを開き、各コード ブロックを実行します。 Notebook の使用方法の詳細については、次を参照してください。 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
+1. Azure Data Studio で notebook を開き、各コードブロックを実行します。 ノートブックの操作の詳細については、「 [SQL Server 2019 プレビューでノートブックを使用する方法](notebooks-guidance.md)」を参照してください。
 
-データは最初に Spark に読み取られ、トレーニング セットとテスト データ セットに分割します。 コードは、トレーニング データでのパイプライン モデルをトレーニングします。 最後に、MLeap バンドルにモデルをエクスポートします。
+データはまず Spark に読み取られ、トレーニングデータセットとテストデータセットに分割されます。 次に、トレーニングデータを使用してパイプラインモデルをトレーニングします。 最後に、モデルを MLeap バンドルにエクスポートします。
 
 > [!TIP]
-> 確認の notebook の外部でこれらの手順に関連付けられている Python コードを実行したり、 [mleap_sql_test/mleap_pyspark.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py)ファイル。
+> また、これらの手順に関連付けられている Python コードを、 [mleap_sql_test/mleap_pyspark](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_pyspark.py)ファイルの notebook の外部で確認または実行することもできます。
 
-## <a name="model-scoring-with-sql-server"></a>SQL Server でのスコア付けモデル
+## <a name="model-scoring-with-sql-server"></a>SQL Server を使用したモデルのスコアリング
 
-これで、Spark ML パイプライン モデルが共通のシリアル化で[MLeap バンドル](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html)形式、Spark がなくても Java でのモデル スコア付けすることができます。 
+Spark ML パイプラインモデルが共通のシリアル化[Mleap バンドル](http://mleap-docs.combust.ml/core-concepts/mleap-bundles.html)形式であるため、spark がなくても、Java でモデルをスコア付けすることができます。 
 
-このサンプルでは、 [Java 言語の拡張機能](../language-extensions/language-extensions-overview.md)SQL server。 SQL Server で、モデルのスコア付けをするためには、まず、Java にモデルを読み込むことができ、スコアを付けている Java アプリケーションを構築する必要があります。 場合は、この Java アプリケーションのサンプル コードを見つけることができます、 [mssql mleap-アプリ フォルダー](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app)します。
+このサンプルでは、SQL Server の[Java 言語拡張機能](../language-extensions/language-extensions-overview.md)を使用します。 SQL Server でモデルをスコア付けするには、まず、Java にモデルを読み込んでスコアを付けることができる Java アプリケーションを構築する必要があります。 この Java アプリケーションのサンプルコードについては、 [mssql-mleap アプリフォルダー](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mssql-mleap-app)を参照してください。
 
-サンプルをビルドした後は TRANSACT-SQL を使用して Java アプリケーションを呼び出すし、データベースのテーブル モデルのスコア付けすることができます。 これは、次で確認できます[mleap_sql_test/mleap_sql_tests.py](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py)ソース ファイル。
+サンプルをビルドした後、Transact-sql を使用して Java アプリケーションを呼び出し、データベーステーブルを使用してモデルをスコア付けすることができます。 これは、 [mleap_sql_test/mleap_sql_tests](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/sql-big-data-cluster/spark/sparklm/mleap_sql_test/mleap_sql_tests.py)ソースファイルに表示されます。
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターに関する詳細については、次を参照してください[で Kubernetes クラスターのビッグ データの SQL Server をデプロイする方法。](deployment-guidance.md)
+ビッグデータクラスターの詳細については、「 [Kubernetes でビッグデータクラスターを SQL Server デプロイする方法](deployment-guidance.md)」を参照してください。

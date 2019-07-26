@@ -1,7 +1,7 @@
 ---
-title: RStudio から sparklyr を使用して、
+title: RStudio から sparklyr を使用する
 titleSuffix: SQL Server big data clusters
-description: RStudio から sparklyr を使用してビッグ データ クラスターに接続します。
+description: RStudio から sparklyr を使用してビッグデータクラスターに接続します。
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
@@ -10,31 +10,31 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f346fed17e4c79214a7eba43f70767fc80b98a07
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67728376"
 ---
-# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>Sparklyr を使用して、SQL Server のビッグ データ クラスター内
+# <a name="use-sparklyr-in-sql-server-big-data-cluster"></a>SQL Server ビッグデータクラスターでの sparklyr の使用
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Sparklyr では、Apache Spark 用 R インターフェイスを提供します。 Sparklyr は、Spark を使用して、R 開発者向けの一般的な方法です。 この記事では、RStudio を使用して SQL Server 2019 ビッグ データ クラスター (プレビュー) で、sparklyr を使用する方法について説明します。
+Sparklyr には、Apache Spark 用の R インターフェイスが用意されています。 Sparklyr は、R 開発者が Spark を使用する一般的な方法です。 この記事では、RStudio を使用して SQL Server 2019 ビッグデータクラスター (プレビュー) で sparklyr を使用する方法について説明します。
 
 ## <a name="prerequisites"></a>前提条件
 
-- [SQL Server 2019 のビッグ データ クラスター デプロイ](quickstart-big-data-cluster-deploy.md)します。
+- [SQL Server 2019 ビッグデータクラスターをデプロイ](quickstart-big-data-cluster-deploy.md)します。
 
-### <a name="install-rstudio-desktop"></a>RStudio Desktop をインストールします。
+### <a name="install-rstudio-desktop"></a>RStudio Desktop のインストール
 
-インストールし、構成**RStudio Desktop**で、次の手順。
+次の手順で**Rstudio Desktop**をインストールして構成します。
 
-1. Windows クライアントで実行している場合[をダウンロードしてインストール R 3.4.4](https://cran.rstudio.com/bin/windows/base/old/3.4.4)します。
+1. Windows クライアントで実行している場合は、 [R 3.4.4 をダウンロードしてインストール](https://cran.rstudio.com/bin/windows/base/old/3.4.4)します。
 
-1. [ダウンロードしてインストール RStudio Desktop](https://www.rstudio.com/products/rstudio/download/)します。
+1. [RStudio Desktop をダウンロードしてインストール](https://www.rstudio.com/products/rstudio/download/)します。
 
-1. インストールの完了後、必要なパッケージをインストールする RStudio Desktop 内で、次のコマンドを実行します。
+1. インストールが完了したら、RStudio Desktop 内で次のコマンドを実行して、必要なパッケージをインストールします。
 
    ```RStudioDesktop
    install.packages("DBI", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
@@ -42,14 +42,14 @@ Sparklyr では、Apache Spark 用 R インターフェイスを提供します�
    install.packages("sparklyr", repos = "https://cran.microsoft.com/snapshot/2019-01-01")
    ```
 
-## <a name="connect-to-spark-in-a-big-data-cluster"></a>ビッグ データ クラスターで Spark に接続します。
+## <a name="connect-to-spark-in-a-big-data-cluster"></a>ビッグデータクラスターで Spark に接続する
 
-Sparklyr を使用して、Livy と HDFS/Spark ゲートウェイを使用してビッグ データ クラスターにクライアントから接続することができます。 
+Sparklyr を使用して、Livy と HDFS/Spark ゲートウェイを使用してクライアントからビッグデータクラスターに接続できます。 
 
-Rstudio に、R スクリプトを作成し、次の例のように Spark に接続します。
+RStudio で、次の例のように R スクリプトを作成し、Spark に接続します。
 
 > [!TIP]
-> `<USERNAME>`と`<PASSWORD>`(ルート) などのユーザー名を使用して、値、およびビッグ データ クラスターのデプロイ時に設定したパスワード。 `<IP>`と`<PORT>`値でドキュメントを参照して[ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)します。
+> `<USERNAME>` および`<PASSWORD>`の値には、ビッグデータクラスターのデプロイ時に設定したユーザー名 (root など) とパスワードを使用します。 およびの値については、[ビッグデータクラスターへの接続](connect-to-big-data-cluster.md)に関するドキュメントを参照してください。 `<PORT>` `<IP>`
 
 ```r
 library(sparklyr)
@@ -66,9 +66,9 @@ sc <- spark_connect(master = "https://<IP>:<PORT>/gateway/default/livy/v1",
                     config = config)
 ```
 
-## <a name="run-sparklyr-queries"></a>Sparklyr クエリを実行します。
+## <a name="run-sparklyr-queries"></a>Sparklyr クエリの実行
 
-Spark に接続したら、sparklyr を実行することができます。 次の例では、sparklyr を使用して、あやめデータセットに対してクエリを実行します。
+Spark に接続した後、sparklyr を実行できます。 次の例では、sparklyr を使用して、虹彩データセットに対してクエリを実行します。
 
 ```r
 iris_tbl <- copy_to(sc, iris)
@@ -80,9 +80,9 @@ iris_count
 
 ## <a name="distributed-r-computations"></a>分散 R 計算
 
-Sparklyr の 1 つの機能に機能が[分散 R 計算](https://spark.rstudio.com/guides/distributed-r/)で[spark_apply](https://spark.rstudio.com/reference/spark_apply/)します。
+Sparklyr の1つの機能は、 [spark_apply](https://spark.rstudio.com/reference/spark_apply/)を使用して[R 計算を配布](https://spark.rstudio.com/guides/distributed-r/)する機能です。
 
-設定する必要がありますので、ビッグ データ クラスターは、Livy の接続を使用して、`packages = FALSE`への呼び出しで**spark_apply**します。 詳細については、次を参照してください。、 [Livy セクション](https://spark.rstudio.com/guides/distributed-r/#livy)の分散 R 計算に sparklyr ドキュメント。 この設定に渡された R コードで、Spark クラスターに既にインストールされている R パッケージを使用することができますのみ**spark_apply**します。 次の例では、この機能を示しています。
+ビッグデータクラスターは Livy 接続を使用するため、 `packages = FALSE` **spark_apply**の呼び出しでを設定する必要があります。 詳細については、分散 R 計算に関する sparklyr ドキュメントの[Livy セクション](https://spark.rstudio.com/guides/distributed-r/#livy)を参照してください。 この設定では、 **spark_apply**に渡された r コードで、Spark クラスターに既にインストールされている r パッケージのみを使用できます。 この機能の例を次に示します。
 
 ```r
 iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Species", packages = FALSE)
@@ -90,4 +90,4 @@ iris_tbl %>% spark_apply(function(e) nrow(e), names = "nrow", group_by = "Specie
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターは](big-data-cluster-overview.md)します。
+ビッグデータクラスターの詳細については、「 [SQL Server 2019 ビッグデータクラスターとは](big-data-cluster-overview.md)」を参照してください。
