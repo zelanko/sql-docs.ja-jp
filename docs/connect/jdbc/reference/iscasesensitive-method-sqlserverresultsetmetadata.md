@@ -1,5 +1,5 @@
 ---
-title: isCaseSensitive メソッド (SQLServerResultSetMetaData) |Microsoft Docs
+title: isCaseSensitive メソッド (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 4db67eb7-7ff2-4fb8-8052-39f699de53ff
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0d91d6eae96ed5a12043a2698d2b3f94c7d77ae7
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bf300da4bf6425028552d5507737cf2495bb402f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799720"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977762"
 ---
 # <a name="iscasesensitive-method-sqlserverresultsetmetadata"></a>isCaseSensitive メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isCaseSensitive(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isCaseSensitive メソッドは、java.sql.ResultSetMetaData インターフェイスで isCaseSensitive メソッドによって指定されます。  
+ この isCaseSensitive メソッドは、isCaseSensitive メソッドによって、メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

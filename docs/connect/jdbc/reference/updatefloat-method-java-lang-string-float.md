@@ -1,5 +1,5 @@
 ---
-title: updateFloat メソッド (java.lang.String, float) |Microsoft Docs
+title: updateFloat メソッド (java. System.string, float) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 19a6164f-f560-4304-8466-e55f0667a3d4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e348f9c51b68063867a13b9d9bfe6db3e7053645
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 74df5537849daddf09d9edbb10f1baa4d8808e41
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66804173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998950"
 ---
 # <a name="updatefloat-method-javalangstring-float"></a>updateFloat (java.lang.String, float) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateFloat(java.lang.String columnName,
   
  *x*  
   
- A **float**値。  
+ **浮動小数点**値です。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateFloat メソッドは、java.sql.ResultSet インターフェイスの updateFloat メソッドによって指定されます。  
+ この updateFloat メソッドは、java.sql.ResultSet インターフェイスの updateFloat メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateFloat メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updatefloat-method-sqlserverresultset.md)   

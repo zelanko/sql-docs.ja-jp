@@ -1,5 +1,5 @@
 ---
-title: 次のメソッド (SQLServerResultSet) |Microsoft Docs
+title: next メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 60248447-6908-4036-a779-a501453cd553
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8fcd3125f45622ddd167acf06ed91ccffb02a3b5
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: c83fe6aa33d77db98fcdfc757b9bf219a45a9b15
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779525"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976764"
 ---
 # <a name="next-method-sqlserverresultset"></a>next メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean next()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**新しい現在の行が有効な場合。 **false**を処理する行がない場合。  
+ 新しい現在の行が有効な場合は**true**を指定します。 処理する行がなくなった場合は**false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

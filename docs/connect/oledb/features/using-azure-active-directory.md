@@ -1,5 +1,5 @@
 ---
-title: Azure Active Directory を使用して |SQL Server 用 Microsoft Docs
+title: Azure Active Directory | を使用するSQL Server の Microsoft Docs
 ms.custom: ''
 ms.date: 01/28/2019
 ms.prod: sql
@@ -10,11 +10,11 @@ ms.topic: reference
 author: bazizi
 ms.author: v-beaziz
 ms.openlocfilehash: 44f92e782a497005ea47847301279e4341722d36
-ms.sourcegitcommit: 958cffe9288cfe281280544b763c542ca4025684
+ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 02/23/2019
-ms.locfileid: "56744863"
+ms.lasthandoff: 06/15/2019
+ms.locfileid: "68213556"
 ---
 # <a name="using-azure-active-directory"></a>Azure Active Directory の使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -23,109 +23,109 @@ ms.locfileid: "56744863"
 
 ## <a name="purpose"></a>用途
 
-18.2.1 バージョン以降、Microsoft OLE DB Driver for SQL Server、OLE DB アプリケーション Azure SQL Database のインスタンスに接続するフェデレーション id を使用できます。 新しい認証方法は次のとおりです。
+バージョン18.2.1 以降では、Microsoft OLE DB Driver for SQL Server によって、OLE DB アプリケーションはフェデレーション id を使用して Azure SQL Database のインスタンスに接続できるようになります。 新しい認証方法は次のとおりです。
 - Azure Active Directory ログイン ID とパスワード
 - Azure Active Directory のアクセス トークン
 - Azure Active Directory 統合認証
 - SQL ログイン ID とパスワード
 
 > [!NOTE]  
-> OLE DB ドライバーを使用した、次の Azure Active Directory オプションを使用している場合ことを確認します。、 [for SQL Server の Active Directory 認証ライブラリ](https://go.microsoft.com/fwlink/?LinkID=513072)がインストールされています。
+> OLE DB ドライバーで次の Azure Active Directory オプションを使用する場合は、 [SQL Server の Active Directory 認証ライブラリ](https://go.microsoft.com/fwlink/?LinkID=513072)がインストールされていることを確認します。
 > - Azure Active Directory ログイン ID とパスワード
 > - Azure Active Directory 統合認証
 >
-> ADAL は、他の認証方法または OLE DB の操作の必要はありません。
+> ADAL は、他の認証方法や OLE DB 操作には必要ありません。
 
 > [!NOTE]
-> 次の認証モードを使用して`DataTypeCompatibility`(またはその対応するプロパティ) に設定`80`は**いない**サポートします。
-> - ログイン ID とパスワードを使用して、azure Active Directory 認証
-> - アクセス トークンを使用して、azure Active Directory 認証
+> 次の認証モード`DataTypeCompatibility` (またはそれに対応するプロパティ) をに設定する`80`ことはサポートされて**いません**。
+> - ログイン ID とパスワードを使用して認証を Azure Active Directory する
+> - アクセストークンを使用した認証の Azure Active Directory
 > - Azure Active Directory 統合認証
 
 ## <a name="connection-string-keywords-and-properties"></a>接続文字列のキーワードとプロパティ
-Azure Active Directory 認証をサポートするために、次の接続文字列キーワードが採用されました。
+Azure Active Directory 認証をサポートするために、次の接続文字列キーワードが導入されました。
 
 |接続文字列キーワード|接続プロパティ|[説明]|
 |---               |---                |---        |
-|Access Token|SSPROP_AUTH_ACCESS_TOKEN|Azure Active Directory への認証アクセス トークンを指定します。 |
+|Access Token|SSPROP_AUTH_ACCESS_TOKEN|Azure Active Directory に対して認証するアクセストークンを指定します。 |
 |[認証]|SSPROP_AUTH_MODE|使用する認証方法を指定します。|
 
-新しいキーワード/プロパティの詳細については、次のページを参照してください。
+新しいキーワードおよびプロパティの詳細については、次のページを参照してください。
 - [OLE DB Driver for SQL Server での接続文字列キーワードの使用](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)
 - [初期化プロパティと承認プロパティ](../ole-db-data-source-objects/initialization-and-authorization-properties.md)
 
 ## <a name="encryption-and-certificate-validation"></a>暗号化と証明書の検証
-このセクションでは、暗号化と証明書の検証動作の変更について説明します。 これらの変更は**のみ**新しい認証またはアクセス トークンの接続文字列キーワード (または対応するプロパティ) を使用する場合に有効です。
+このセクションでは、暗号化と証明書検証の動作の変更について説明します。 これらの変更は、新しい認証またはアクセストークンの接続文字列キーワード (またはそれに対応するプロパティ) を使用する場合に**のみ**有効です。
 
 ### <a name="encryption"></a>暗号化
-ドライバー設定することで既定の暗号化値をオーバーライド、新しい接続のプロパティ/キーワードを使用する場合は、セキュリティを強化、`yes`します。 オーバーライドすると、データ ソース オブジェクトの初期化時に発生します。 暗号化は、任意の方法で初期化する前に設定されている場合、値が適用されるため、オーバーライドされていません。
+セキュリティを強化するために、新しい接続プロパティ/キーワードを使用すると、ドライバーはをに設定する`yes`ことによって既定の暗号化値を上書きします。 オーバーライドは、データソースオブジェクトの初期化時に行われます。 暗号化が何らかの方法で初期化する前に設定されている場合、値は尊重され、オーバーライドされません。
 
 > [!NOTE]   
-> 取得するアプリケーションと ADO アプリケーションで、`IDBInitialize`インターフェイスを通じて`IDataInitialize::GetDataSource`、インターフェイスを明示的に実装するコア コンポーネントの既定値に暗号化を設定する`no`します。 新しい認証プロパティ/キーワードがこの設定や、暗号化の値を尊重する結果として、**いない**オーバーライドします。 そのため、**推奨**これらのアプリケーションが明示的に設定する`Use Encryption for Data=true`既定値を上書きします。
+> ADO アプリケーションや、を通じてインターフェイスを`IDBInitialize`取得する`IDataInitialize::GetDataSource`アプリケーションでは、インターフェイスを実装するコアコンポーネントによって、暗号化`no`が明示的に既定値のに設定されます。 このため、新しい認証プロパティ/キーワードはこの設定を尊重し、暗号化値は上書きされ**ません**。 したがって、これらのアプリケーションは、既定値`Use Encryption for Data=true`をオーバーライドするように明示的に設定することを**お勧め**します。
 
 ### <a name="certificate-validation"></a>証明書の検証
-セキュリティを強化する新しい接続のプロパティ/キーワードを尊重、`TrustServerCertificate`設定 (とその対応する接続文字列キーワード/プロパティ)**クライアントの暗号化の設定とは無関係に**します。 その結果、既定でサーバー証明書が検証されます。
+セキュリティを強化するために、新しい接続プロパティ/キーワード`TrustServerCertificate`は、**クライアントの暗号化設定**とは関係なく、設定 (および対応する接続文字列のキーワードとプロパティ) を尊重します。 その結果、サーバー証明書は既定で検証されます。
 
 > [!NOTE]   
-> 証明書の検証を制御することも、`Value`のフィールド、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2`レジストリ エントリ。 有効な値は `0` または `1`です。 OLE DB driver は、レジストリと接続のプロパティ/キーワード設定間で最も安全なオプションを選択します。 ドライバーは、少なくとも 1 つのレジストリ/接続の設定により、サーバー証明書の検証として、サーバー証明書を検証は。
+> 証明書`Value` `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\MSSQLServer\Client\SNI18.0\GeneralFlags\Flag2`の検証は、レジストリエントリのフィールドを介して制御することもできます。 有効な値は `0` または `1`です。 OLE DB ドライバーは、レジストリと接続プロパティ/キーワード設定の間で最も安全なオプションを選択します。 つまり、少なくとも1つのレジストリ/接続設定でサーバー証明書の検証が有効になっている限り、ドライバーはサーバー証明書を検証します。
 
 ## <a name="gui-additions"></a>GUI の追加
-Azure Active Directory 認証を許可するには、ドライバーのグラフィカル ユーザー インターフェイスを拡張されています。 詳細については、以下をご覧ください。
+ドライバーのグラフィカルユーザーインターフェイスが拡張され、Azure Active Directory 認証が可能になりました。 詳細については、以下をご覧ください。
 - [SQL Server のログイン ダイアログ](../help-topics/sql-server-login-dialog.md)
-- [Universal Data Link (UDL) の構成](../help-topics/data-link-pages.md)
+- [ユニバーサル データ リンク (UDL) の構成](../help-topics/data-link-pages.md)
 
 ## <a name="example-connection-strings"></a>接続文字列の例
-このセクションでは新規および既存の接続の例で使用する文字列のキーワード`IDataInitialize::GetDataSource`と`DBPROP_INIT_PROVIDERSTRING`プロパティ。
+このセクションでは、および`IDataInitialize::GetDataSource` `DBPROP_INIT_PROVIDERSTRING`プロパティで使用される新規および既存の接続文字列キーワードの例を示します。
 
 ### <a name="sql-authentication"></a>SQL 認証
 - `IDataInitialize::GetDataSource`の使用
     - 新規:
         > Provider=MSOLEDBSQL;Data Source=[サーバー];Initial Catalog=[データベース];**Authentication=SqlPassword**;User ID=[ユーザー名];Password=[パスワード];Use Encryption for Data=true
-    - 非推奨: 
-        > プロバイダー = MSOLEDBSQL; データ ソース [server] を =; Initial Catalog [データベース] を = です。ユーザー ID [username] を = です。パスワード [password] を = です。データの暗号化を使用して、true を =
+    - 非推奨:
+        > Provider=MSOLEDBSQL;Data Source=[サーバー];Initial Catalog=[データベース];User ID=[ユーザー名];Password=[パスワード];Use Encryption for Data=true
 - `DBPROP_INIT_PROVIDERSTRING`の使用
     - 新規:
         > Server=[サーバー];Database=[データベース];**Authentication=SqlPassword**;UID=[ユーザー名];PWD=[パスワード];Encrypt=yes
-    - 非推奨: 
+    - 非推奨:
         > Server=[サーバー];Database=[データベース];UID=[ユーザー名];PWD=[パスワード];Encrypt=yes
 
-### <a name="integrated-windows-authentication-using-security-support-provider-interface--sspi"></a>セキュリティ サポート プロバイダー インターフェイス (SSPI) を使用して、統合 Windows 認証
+### <a name="integrated-windows-authentication-using-security-support-provider-interface--sspi"></a>セキュリティサポートプロバイダインターフェイス (SSPI) を使用した統合 Windows 認証
 
 - `IDataInitialize::GetDataSource`の使用
     - 新規:
         > Provider=MSOLEDBSQL;Data Source=[サーバー];Initial Catalog=[データベース];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true
-    - 非推奨: 
-        > プロバイダー = MSOLEDBSQL; データ ソース [server] を =; Initial Catalog [データベース] を = です。**Integrated Security = SSPI**;データの暗号化を使用して、true を =
+    - 非推奨:
+        > Provider = MSOLEDBSQL; Data Source = [server]; Initial Catalog = [database];**Integrated Security = SSPI**データの暗号化を使用する = true
 - `DBPROP_INIT_PROVIDERSTRING`の使用
     - 新規:
         > Server=[サーバー];Database=[データベース];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes
-    - 非推奨: 
-        > サーバー [server] を = です。 データベース [データベース] を = です。**Trusted_Connection = yes**;暗号化 = [はい]
+    - 非推奨:
+        > Server = [server];D データベース = [データベース];**Trusted_Connection = はい**。Encrypt = はい
 
-### <a name="aad-username-and-password-authentication-using-adal"></a>ADAL を使用して、AAD のユーザー名とパスワードの認証
+### <a name="aad-username-and-password-authentication-using-adal"></a>ADAL を使用した AAD のユーザー名とパスワードの認証
 
 - `IDataInitialize::GetDataSource`の使用
-    > プロバイダー = MSOLEDBSQL; データ ソース [server] を =; Initial Catalog [データベース] を = です。**Authentication = ActiveDirectoryPassword**;ユーザー ID [username] を = です。パスワード [password] を = です。データの暗号化を使用して、true を =
+    > Provider=MSOLEDBSQL;Data Source=[サーバー];Initial Catalog=[データベース];**Authentication=ActiveDirectoryPassword**;User ID=[ユーザー名];Password=[パスワード];Use Encryption for Data=true
 - `DBPROP_INIT_PROVIDERSTRING`の使用
     > Server=[サーバー];Database=[データベース];**Authentication=ActiveDirectoryPassword**;UID=[ユーザー名];PWD=[パスワード];Encrypt=yes
 
-### <a name="integrated-azure-active-directory-authentication-using-adal"></a>ADAL を使用して Azure Active Directory 認証の統合
+### <a name="integrated-azure-active-directory-authentication-using-adal"></a>ADAL を使用した統合 Azure Active Directory 認証
 
 - `IDataInitialize::GetDataSource`の使用
     > Provider=MSOLEDBSQL;Data Source=[サーバー];Initial Catalog=[データベース];**Authentication=ActiveDirectoryIntegrated**;Use Encryption for Data=true
 - `DBPROP_INIT_PROVIDERSTRING`の使用
     > Server=[サーバー];Database=[データベース];**Authentication=ActiveDirectoryIntegrated**;Encrypt=yes
 
-### <a name="azure-active-directory-authentication-using-an-access-token"></a>アクセス トークンを使用して、azure Active Directory 認証
+### <a name="azure-active-directory-authentication-using-an-access-token"></a>アクセストークンを使用して認証を Azure Active Directory する
 
 - `IDataInitialize::GetDataSource`の使用
-    > プロバイダー = MSOLEDBSQL; データ ソース [server] を =; Initial Catalog [データベース] を = です。**アクセス トークン = [アクセス トークン]**;データの暗号化を使用して、true を =
+    > Provider = MSOLEDBSQL; Data Source = [server]; Initial Catalog = [database];**アクセストークン = [アクセストークン]** ;データの暗号化を使用する = true
 - `DBPROP_INIT_PROVIDERSTRING`の使用
-    > 使用して提供するアクセス トークン`DBPROP_INIT_PROVIDERSTRING`はサポートされていません
+    > を介し`DBPROP_INIT_PROVIDERSTRING`たアクセストークンの提供はサポートされていません
 
 ## <a name="code-samples"></a>コード サンプル
 
-次のサンプルでは、Azure Active Directory の接続キーワードに接続するために必要なコードを示します。 
+次のサンプルは、接続キーワードを使用して Azure Active Directory に接続するために必要なコードを示しています。 
 
 ### <a name="access-token"></a>Access Token
 ```cpp
@@ -243,4 +243,4 @@ Cleanup:
 
 - SQL Server への [Azure Active Directory 認証](https://go.microsoft.com/fwlink/?linkid=2073783)について学習します。
 
-- 使用してドライバーの接続を構成する[接続文字列キーワード](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)OLE DB ドライバーがサポートされます。
+- OLE DB ドライバーがサポートしている[接続文字列キーワード](../applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)を使用してドライバー接続を構成します。

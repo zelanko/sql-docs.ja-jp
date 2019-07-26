@@ -1,5 +1,5 @@
 ---
-title: rowInserted メソッド (SQLServerResultSet) |Microsoft Docs
+title: rowInserted メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: e7c10372-0be8-4baa-87f7-ed6b66003357
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: da746533231983d67bbfe3689d0df63086d678bc
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2b52007528ee5c3d3caaabc83b158e50156b664e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66765376"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67975688"
 ---
 # <a name="rowinserted-method-sqlserverresultset"></a>rowInserted メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean rowInserted()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この rowUpdated メソッドは、java.sql.ResultSet インターフェイスの rowUpdated メソッドによって指定されます。  
+ この rowUpdated メソッドは、rowUpdated インターフェイスのメソッドによって指定されます。  
   
  返される値は、この [SQLServerResultSet](../../../connect/jdbc/reference/sqlserverresultset-class.md) オブジェクトが、表示される挿入を検出できるかどうかによって異なります。  
   

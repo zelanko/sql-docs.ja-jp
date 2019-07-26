@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 2c118790-5dd2-4b10-93b6-7f065ee324ce
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9c32ebf23d54b9cf284d38f76c846eebbc16d735
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 37c791c80c679afd70f4f1d2f3f2770fb0f38a16
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763558"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67952994"
 ---
 # <a name="getcolumnclassname-method-sqlserverresultsetmetadata"></a>getColumnClassName メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public java.lang.String getColumnClassName(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getColumnClassName メソッドは、java.sql.ResultSetMetaData インターフェイスで getColumnClassName メソッドによって指定されます。  
+ この getColumnClassName メソッドは、java.sql.ResultSetMetaData インターフェイスの getColumnClassName メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerResultSetMetaData メソッド](../../../connect/jdbc/reference/sqlserverresultsetmetadata-methods.md)   

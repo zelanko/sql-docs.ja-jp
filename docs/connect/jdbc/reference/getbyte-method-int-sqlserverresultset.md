@@ -1,5 +1,5 @@
 ---
-title: getByte (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getByte メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b22ba097-6cb8-4c5d-916b-6360dd01d2c5
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a00f2c9f9e0b59e0e77f765d08b8e57709c33729
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bf00138e512b966614a19adaf152f038c516f9fd
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66765694"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953491"
 ---
 # <a name="getbyte-method-int-sqlserverresultset"></a>getByte (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

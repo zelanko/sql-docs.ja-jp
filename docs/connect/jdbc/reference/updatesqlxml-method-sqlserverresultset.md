@@ -1,5 +1,5 @@
 ---
-title: updateSQLXML メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateSQLXML メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: abe8ff37-72e5-4ec1-a226-6b68dbf2c1b4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e9219e8e3742253525c4242fa5be08e944cf2174
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ac6e2d368e39bc5a40cc40f7509fbf0b715e4f94
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66782214"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998258"
 ---
 # <a name="updatesqlxml-method-sqlserverresultset"></a>updateSQLXML メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

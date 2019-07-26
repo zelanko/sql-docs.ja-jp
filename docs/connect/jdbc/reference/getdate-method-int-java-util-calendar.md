@@ -1,5 +1,5 @@
 ---
-title: getDate (int, java.util.Calendar) メソッド |Microsoft Docs
+title: getDate メソッド (int, java.util.Calendar) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 38ce7b75-2623-4eff-bc18-8cf7193adec8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c3106b0ada53fe2ccc096d789538dfea4cfc3e7a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2ff7567d85800969eeb5c450bbe0a59753491e2f
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66785705"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67984065"
 ---
 # <a name="getdate-method-int-javautilcalendar"></a>getDate (int, java.util.Calendar) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,12 +40,12 @@ public java.sql.Date getDate(int index,
   
  パラメーターのインデックスを示す **int** です。  
   
- *cal*  
+ *カレンダー*  
   
- 暦オブジェクト。  
+ Calendar オブジェクト。  
   
 ## <a name="return-value"></a>戻り値  
- Date オブジェクト。  
+ Date オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

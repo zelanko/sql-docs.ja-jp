@@ -1,5 +1,5 @@
 ---
-title: getBlob (int) メソッド |Microsoft Docs
+title: getBlob メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: bef3ef12-cdda-4a18-90d6-4a501b8e30f0
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 452ab23f278ed0c7c3f25af5d1be38d35681c230
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: d4ed9b8f6e4b29d5609ced88592b96de9c196d89
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66799729"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953813"
 ---
 # <a name="getblob-method-int"></a>getBlob (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -41,7 +40,7 @@ public java.sql.Blob getBlob(int index)
  パラメーターのインデックスを示す **int** です。  
   
 ## <a name="return-value"></a>戻り値  
- Blob オブジェクト。  
+ Blob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

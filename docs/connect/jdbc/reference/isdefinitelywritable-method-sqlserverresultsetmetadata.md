@@ -1,5 +1,5 @@
 ---
-title: isDefinitelyWritable メソッド (SQLServerResultSetMetaData) |Microsoft Docs
+title: isDefinitelyWritable メソッド (SQLServerResultSetMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7650e89a-dc8e-43ca-8eb2-f962f1a4b4ae
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ab19ad0c8b02d8a2c1d931b2986f16afcfce45ff
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 49ca65fc7fd2c7768db81460e331d960bad1c5ea
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796530"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977638"
 ---
 # <a name="isdefinitelywritable-method-sqlserverresultsetmetadata"></a>isDefinitelyWritable メソッド (SQLServerResultSetMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -47,7 +46,7 @@ public boolean isDefinitelyWritable(int column)
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isDefinitelyWritable メソッドは、java.sql.ResultSetMetaData インターフェイスで isDefinitelyWritable メソッドによって指定されます。  
+ この Isていぎ Itely書き込み可能メソッドは、java. ResultSetMetaData インターフェイスの Isていぎ Itely書き込み可能メソッドによって指定されます。  
   
 > [!NOTE]  
 >  [!INCLUDE[jdbcNoVersion](../../../includes/jdbcnoversion_md.md)] を [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースと共に使用している場合、このメソッドでは常に false が返されます。  

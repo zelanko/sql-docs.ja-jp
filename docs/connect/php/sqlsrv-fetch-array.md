@@ -17,13 +17,12 @@ helpviewer_keywords:
 ms.assetid: 69270b9e-0791-42f4-856d-412da39dea63
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: cb76c3498be69a9a29525bbe96a26b94ba954af2
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 02b4311348ebbd52e5e8382048449072c84d2e46
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66802276"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015035"
 ---
 # <a name="sqlsrvfetcharray"></a>sqlsrv_fetch_array
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -188,5 +187,5 @@ sqlsrv_close( $conn);
 
 [ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)
 
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
   

@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 54fb2f13-f8d8-47b5-bec1-4a5af3e86a84
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ac9d1db25dd06b83a20c98c0fe6f6bc3a4c57e1a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2d5200ba88b259e75d1417bcb876de9bdbd20899
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66795701"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67974681"
 ---
 # <a name="setcharacterstream-method-javalangstring-javaioreader-long"></a>setCharacterStream (java.lang.String, java.io.Reader, long) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public final void setCharacterStream(java.lang.String parameterName
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この setCharacterStream メソッドは、java.sql.CallableStatement インターフェイスの setCharacterStream メソッドによって指定されます。  
+ この setCharacterStream メソッドは、java.sql.CallableStatement インターフェイスの setCharacterStream メソッドで規定されています。  
   
  ストリームの長さが、*length* パラメーターで指定された長さと異なる場合は、行の更新または挿入時に JDBC ドライバーが例外をスローします。  
   

@@ -10,15 +10,14 @@ ms.topic: conceptual
 ms.assetid: a7acb507-670b-4a97-92df-90f0c0b3dd32
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 10269896b8c145293d5733a3fb34b2ac645a5e43
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9470b5e4a9e7283930a38c393a4117333fb0fb08
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66781003"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992932"
 ---
-# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド
+# <a name="programming-guide-for-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
 このセクションには、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を使用してアプリケーションを開発するために役立つトピックが含まれています。  
@@ -35,8 +34,8 @@ ms.locfileid: "66781003"
 |[データ型の変換](../../connect/php/converting-data-types.md)|データ型を指定する方法と、既定のデータ型で詳細を提供する方法を説明します。|  
 |[エラーおよび警告の処理](../../connect/php/handling-errors-and-warnings.md)|エラーと警告を処理する方法を説明します。|  
 |[アクティビティのログ記録](../../connect/php/logging-activity.md)|エラーと警告のログ記録に関する情報を提供します。|  
-|[Microsoft SQL Server 用 Drivers for PHP と共に Always Encrypted を使用する](../../connect/php/using-always-encrypted-php-drivers.md)|PHP ドライバーと共に Always Encrypted 機能を使用する方法について説明します。|  
-|[セキュリティに関する考慮事項、Microsoft Drivers for PHP for SQL Server](../../connect/php/security-considerations-for-php-sql-driver.md)|アプリケーションの開発、配置、および実行に関するセキュリティの考慮事項を説明します。|  
+|[Microsoft SQL Server 用 Drivers for PHP と共に Always Encrypted を使用する](../../connect/php/using-always-encrypted-php-drivers.md)|PHP ドライバーでの Always Encrypted 機能の使用について説明します。|  
+|[Microsoft Drivers for PHP for SQL Server のセキュリティに関する考慮事項](../../connect/php/security-considerations-for-php-sql-driver.md)|アプリケーションの開発、配置、および実行に関するセキュリティの考慮事項を説明します。|  
   
 ## <a name="see-also"></a>参照  
 [Microsoft SQL Server 用 Drivers for PHP の概要](../../connect/php/overview-of-the-php-sql-driver.md)

@@ -1,5 +1,5 @@
 ---
-title: getExportedKeys メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getExportedKeys メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 26888e61-b243-4a1b-922c-c0a451dcff4d
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f0298e3c933db4887f1270ff60254103a965c7c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e89d65955c5637bcd566d48b6e54bcae50397d88
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66767144"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67983303"
 ---
 # <a name="getexportedkeys-method-sqlserverdatabasemetadata"></a>getExportedKeys メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -57,7 +56,7 @@ public java.sql.ResultSet getExportedKeys(java.lang.String cat,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この getExportedKeys メソッドは、java.sql.DatabaseMetaData インターフェイスで getExportedKeys メソッドによって指定されます。  
+ この getExportedKeys メソッドは、getExportedKeys メソッドによって、java メタデータインターフェイスで指定されます。  
   
  getExportedKeys メソッドによって返される結果セットには、次の情報が含まれます。  
   

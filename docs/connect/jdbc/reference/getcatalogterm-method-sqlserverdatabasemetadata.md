@@ -1,5 +1,5 @@
 ---
-title: getCatalogTerm メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getCatalogTerm メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 0aa5d372-16aa-4790-a8f6-f8b742798f8f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 9a99453f869167a3804643baac750cf91dd82266
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0c0c718524b8800df02625e6392de1f9d4600291
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796788"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953323"
 ---
 # <a name="getcatalogterm-method-sqlserverdatabasemetadata"></a>getCatalogTerm メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

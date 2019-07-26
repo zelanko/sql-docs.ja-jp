@@ -9,13 +9,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 5442e564d7b085c144ffe98a4b67eb74499bf975
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 13da9b638f117bc84700b044c6c2e8e70ada8518
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796206"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "68015090"
 ---
 # <a name="download-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft SQL Server 用 Drivers for PHP をダウンロードする
 
@@ -23,7 +22,7 @@ ms.locfileid: "66796206"
 
 ## <a name="windows"></a>Windows
 
-次のバージョンの Windows での PHP 用のドライバーはダウンロードできます。
+次のバージョンの Windows 上の PHP 用ドライバーをダウンロードできます。
 
 - [Microsoft SQL Server 用 Drivers 5.6 for PHP](https://www.microsoft.com/download/details.aspx?id=57916)
 - [Microsoft SQL Server 用 Drivers 5.3 for PHP](https://www.microsoft.com/download/details.aspx?id=57163)
@@ -33,7 +32,7 @@ ms.locfileid: "66796206"
 
 ## <a name="linux-and-macos"></a>Linux と macOS
 
-PHP 用のドライバーでは、簡単にダウンロードされ、PECL を使用して、Linux と macOS でインストールします。 参照してください、 [Linux と macOS のインストールのチュートリアル](installation-tutorial-linux-mac.md)詳細についてはします。 Linux と macOS での PHP のドライバーを手動でインストールする必要がある場合は、次のバージョンをダウンロードできます。
+PHP 用のドライバーは、Linux と macOS で PECL を使用して簡単にダウンロードしてインストールできます。 詳細については、 [Linux と macOS のインストール](installation-tutorial-linux-mac.md)に関するチュートリアルを参照してください。 Linux および macOS で PHP 用のドライバーを手動でインストールする必要がある場合は、次のバージョンをダウンロードできます。
 
 - [Microsoft SQL Server 用 Drivers 5.6 for PHP](https://github.com/Microsoft/msphpsql/releases/tag/v5.6.0)
 - [Microsoft SQL Server 用 Drivers 5.3 for PHP](https://github.com/Microsoft/msphpsql/releases/tag/v5.3.0)
@@ -46,7 +45,7 @@ PHP 用のドライバーでは、簡単にダウンロードされ、PECL を�
 
 [Microsoft SQL Server 用 Drivers for PHP のシステム要件](system-requirements-for-the-php-sql-driver.md)
 
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](programming-guide-for-php-sql-driver.md)
 
 [SQLSRV ドライバー API リファレンス](sqlsrv-driver-api-reference.md)
 

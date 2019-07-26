@@ -1,5 +1,5 @@
 ---
-title: isReadOnly メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: isReadOnly メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: d1569e03-b7bd-486a-af0b-d3f108f712dc
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: c9d557bf62961a02c24564a6f32516b4b98ef425
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 97a95d60a6679a8d5c660fc40a67d680a7a62571
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66796398"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67977308"
 ---
 # <a name="isreadonly-method-sqlserverdatabasemetadata"></a>isReadOnly メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public boolean isReadOnly()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この isReadOnly メソッドは、java.sql.DatabaseMetaData インターフェイスで、isReadOnly メソッドによって指定されます。  
+ この isReadOnly メソッドは、isReadOnly メソッドによって、java メタデータインターフェイスで指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

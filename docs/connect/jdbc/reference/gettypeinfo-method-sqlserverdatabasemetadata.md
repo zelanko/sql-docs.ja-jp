@@ -1,5 +1,5 @@
 ---
-title: getTypeInfo メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getTypeInfo メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 23208f01-c1bf-4235-b29c-9051d3df59a3
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 246f38d757015dbc2a27bea8f9d783b4fbb1d545
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: cb9b1b632d5a17b7c8f497e30a4f033932f09b33
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66788628"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978517"
 ---
 # <a name="gettypeinfo-method-sqlserverdatabasemetadata"></a>getTypeInfo メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -50,7 +49,7 @@ public java.sql.ResultSet getTypeInfo()
 |----------|----------|-----------------|  
 |TYPE_NAME|**String**|データ型の名前です。|  
 |DATA_TYPE|**short**|java.sql.Types の SQL データ型です。|  
-|PRECISION|**int**|有効桁数の合計数。|  
+|PRECISION|**int**|有効桁数の合計。|  
 |LITERAL_PREFIX|**String**|定数の先頭に記述する文字または文字列です。|  
 |LITERAL_SUFFIX|**String**|定数の末尾に記述する文字または文字列です。|  
 |CREATE_PARAMS|**String**|データ型の作成パラメーターの記述です。|  

@@ -1,5 +1,5 @@
 ---
-title: updateLong メソッド (SQLServerResultSet) |Microsoft Docs
+title: updateLong メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 9566d8ea-ab28-440c-bcd6-a9af0aafe8a2
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 1a66c0aff804a869d58ecca46cc5144425ce4aa9
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 2d6d978861f8f321d5c4aaaa3580b2e05a8c6310
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66798458"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67999013"
 ---
 # <a name="updatelong-method-sqlserverresultset"></a>updateLong メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

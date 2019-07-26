@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 66b042c6-479f-4a89-92c8-8c5dce67643f
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 0c09cd551932eb9297112a7436111cdab18232f9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f10888f25413a7e8637498466e80a0864a7de95c
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66796173"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67993577"
 ---
 # <a name="getting-started-with-the-microsoft-drivers-for-php-for-sql-server"></a>SQL Server 用 Microsoft Drivers for PHP の概要
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
@@ -32,7 +31,7 @@ ms.locfileid: "66796173"
 ## <a name="see-also"></a>参照  
 [サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)
 
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [SQLSRV ドライバー API リファレンス](../../connect/php/sqlsrv-driver-api-reference.md)  
   

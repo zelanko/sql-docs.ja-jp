@@ -10,27 +10,26 @@ ms.topic: conceptual
 ms.assetid: 66559249-34c0-409d-b919-9b5bf0c4c9ec
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 45cb553dc1f83e42afee5d54951e598fc6df8d1a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 25519d06df8b948d5cfc5d387029cf09beafc856
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66768111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67936270"
 ---
 # <a name="overview-of-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server の概要
 
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、Azure SQL Database を含む SQL Server 2005 以降のバージョンにデータ アクセスを提供する、PHP 拡張機能です。 拡張機能は、SQLSRV ドライバーを使用した手順に従ったインターフェイス、Express、SQL Server 2005 以降を含む、SQL Server のすべてのバージョンのデータにアクセスするため、PDO_SQLSRV ドライバーでのオブジェクト指向のインターフェイスを提供します。 3\.1 とドライバーの以降のバージョンのサポートは、SQL Server 2008 で開始します。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] API には、Windows 認証、トランザクション、パラメーター バインディング、ストリーミング、メタデータ アクセス、およびエラー処理のサポートが含まれています。  
+[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] は、Azure SQL Database を含む SQL Server 2005 以降のバージョンにデータ アクセスを提供する、PHP 拡張機能です。 拡張機能は、SQLSRV ドライバーとオブジェクト指向インターフェイスを備えたプロシージャインターフェイスを提供します。また、Express など、SQL Server のすべてのバージョンのデータにアクセスするための PDO_SQLSRV ドライバーと共に、SQL Server 2005 以降を使用します。 ドライバーのバージョン3.1 以降のサポートは SQL Server 2008 から始まります。 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)] API には、Windows 認証、トランザクション、パラメーター バインディング、ストリーミング、メタデータ アクセス、およびエラー処理のサポートが含まれています。  
   
-使用する、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]、SQL Server Native Client の正しいバージョンが必要または PHP の同じコンピューターにインストールされている Microsoft ODBC ドライバーが実行されています。  詳細については、次を参照してください。 [Microsoft Drivers for PHP for SQL Server のシステム要件](../../connect/php/system-requirements-for-the-php-sql-driver.md)します。  
+を使用[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]するには、PHP が実行されているのと同じコンピューターに、SQL Server Native Client または Microsoft ODBC ドライバーの正しいバージョンがインストールされている必要があります。  詳細については、「 [Microsoft Drivers FOR PHP for SQL Server のシステム要件](../../connect/php/system-requirements-for-the-php-sql-driver.md)」を参照してください。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
   
 |トピック|[説明]|  
 |---------|---------------|  
-| ![ダウンロード下方向丸](../../ssdt/media/download.png)[for PHP for SQL Server ドライバーをダウンロードするには](download-drivers-php-sql-server.md) | Microsoft Drivers for PHP for SQL Server をダウンロードするためのリンクです。 |
+| ![ダウンロード-ダウン矢印-](../../ssdt/media/download.png)[SQL Server FOR PHP のドライバーをダウンロードするため](download-drivers-php-sql-server.md)の丸 | Microsoft Drivers for PHP for SQL Server をダウンロードするためのリンクです。 |
 |[Microsoft Drivers for PHP for SQL Server リリース ノート](../../connect/php/release-notes-php-sql-driver.md)|バージョン 4.0、3.2、3.1、3.0、および 2.0 で追加された機能を示します。|  
 |[Microsoft Drivers for PHP for SQL Server 向けのサポート リソース](../../connect/php/support-resources-for-the-php-sql-driver.md)|[!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を使用するアプリケーションを開発するときに役立つリソースへのリンクを示します。|  
 |[ドキュメントのコード例について](../../connect/php/about-code-examples-in-the-documentation.md)|このドキュメントのコード例を実行するときに役立つ情報を提供します。|  
@@ -46,6 +45,6 @@ ms.locfileid: "66768111"
 
 [Microsoft Drivers for PHP for SQL Server の概要](../../connect/php/getting-started-with-the-php-sql-driver.md)
 
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
 
 [サンプル アプリケーション &#40;SQLSRV ドライバー&#41;](../../connect/php/example-application-sqlsrv-driver.md)

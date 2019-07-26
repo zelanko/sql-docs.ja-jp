@@ -1,5 +1,5 @@
 ---
-title: getLong (int) メソッド |Microsoft Docs
+title: getLong メソッド (int) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: b7078ca7-fd2a-4474-ab29-989ae28c77e8
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 904c3d1f1138cdffb338c9d4ed8d42f8875db3c8
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: b19807b810605a42b0036e9ee2cee57da4d20b2e
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66793111"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982520"
 ---
 # <a name="getlong-method-int"></a>getLong (int) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

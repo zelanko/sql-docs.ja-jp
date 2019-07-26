@@ -1,5 +1,5 @@
 ---
-title: getURL メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getURL メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: fcb66851-db5f-4ae8-b728-d129480b6f42
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f170e15ec0096d02fd98acb16e15a6ac05257f31
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 4aa608851ddbe00c8d7c09523c0f3b8f9ec95ff6
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66779739"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67978215"
 ---
 # <a name="geturl-method-sqlserverdatabasemetadata"></a>getURL メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -48,7 +47,7 @@ public java.lang.String getURL()
   
 -   URL 値の "jdbc:sqlserver://"  
   
--   省略可能な接続のプロパティなど**serverName**、 **instanceName**、および**portNumber**  
+-   **ServerName**、 **InstanceName**、および**ポート**番号などのオプションの接続プロパティ  
   
 -   ユーザーにより設定されるその他の接続プロパティと、ドライバーの既定値が空または null ではないすべての接続プロパティ (ただし、**userName**、**password**、**integratedSecurity** を除きます)。  
   

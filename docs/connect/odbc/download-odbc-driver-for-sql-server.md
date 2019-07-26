@@ -10,13 +10,12 @@ ms.topic: conceptual
 ms.assetid: 53b09784-bb9d-4fd4-99d3-0492b3308ac4
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 8aea7a5a74ae85563234c1f40f5faae1213e75de
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8dcc8c4cd9908f6904d54d1d8a6f3affb1f5b6d8
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66789952"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67996623"
 ---
 # <a name="download-odbc-driver-for-sql-server"></a>ODBC Driver for SQL Server のダウンロード
 
@@ -29,8 +28,8 @@ ms.locfileid: "66789952"
 ### <a name="linux-and-macos"></a>Linux と macOS
 
 #### <a name="debian"></a>Debian
-- [Debian 9 .deb パッケージ](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
-- [Debian 8 .deb パッケージ](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
+- [Debian 9. deb パッケージ](https://packages.microsoft.com/debian/9/prod/pool/main/m/msodbcsql17/)
+- [Debian 8. deb パッケージ](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql17/)
 
 #### <a name="redhat"></a>RedHat
 - [RedHat 7 .rpm パッケージ (msodbcsql17-*)](https://packages.microsoft.com/rhel/7/prod/)
@@ -41,15 +40,15 @@ ms.locfileid: "66789952"
 - [SuSE 11 .rpm パッケージ (msodbcsql17-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
-- [Ubuntu 18.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 17.10 .deb パッケージ](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 16.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
-- [Ubuntu 14.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
+- [Ubuntu 18.04 パッケージ](https://packages.microsoft.com/ubuntu/18.04/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 17.10 パッケージ](https://packages.microsoft.com/ubuntu/17.10/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 16.04 パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql17/)
+- [Ubuntu 14.04 パッケージ](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql17/) 
 
 #### <a name="macos"></a>macOS
-- [OS X 10.11 および macOS 10.12、10.13 Homebrew の式](https://github.com/Microsoft/homebrew-mssql-release)
+- [OS X 10.11 および macOS 10.12、10.13 Homebrew 式](https://github.com/Microsoft/homebrew-mssql-release)
 
-参照してください[ドライバーをインストールする](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。
+「[ドライバーのインストール](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)」も参照してください。
 
 ## <a name="microsoft-odbc-driver-131-for-sql-server"></a>Microsoft ODBC Driver 13.1 for SQL Server
 
@@ -61,27 +60,27 @@ ms.locfileid: "66789952"
 ### <a name="linux-and-macos"></a>Linux と macOS
 
 #### <a name="debian"></a>Debian
-- [Debian 8 .deb パッケージ](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
+- [Debian 8. deb パッケージ](https://packages.microsoft.com/debian/8/prod/pool/main/m/msodbcsql/)
 
 #### <a name="redhat"></a>RedHat
 - [RedHat 7 .rpm パッケージ (msodbcsql-*)](https://packages.microsoft.com/rhel/7/prod/)
 - [RedHat 6 .rpm パッケージ (msodbcsql-*)](https://packages.microsoft.com/rhel/6.8/prod/)
 
 #### <a name="suse"></a>Suse
-- [SuSE 12 .rpm パッケージ (移動-*)](https://packages.microsoft.com/sles/12/prod/)
-- [SuSE 11 .rpm パッケージ (移動-*)](https://packages.microsoft.com/sles/11/prod/)
+- [SuSE 12 .rpm パッケージ (msodbcsql-*)](https://packages.microsoft.com/sles/12/prod/)
+- [SuSE 11 .rpm パッケージ (msodbcsql-*)](https://packages.microsoft.com/sles/11/prod/)
 
 #### <a name="ubuntu"></a>Ubuntu
-- [Ubuntu 17.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 16.10 .deb パッケージ](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 15.10 .deb パッケージ](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
-- [Ubuntu 14.04 .deb パッケージ](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
+- [Ubuntu 17.04 パッケージ](https://packages.microsoft.com/ubuntu/17.04/prod/pool/main/m/msodbcsql/)
+- [Ubuntu 16.04 パッケージ](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql/)
+- [Ubuntu 16.10 パッケージ](https://packages.microsoft.com/ubuntu/16.10/prod/pool/main/m/msodbcsql/)
+- [Ubuntu 15.10 パッケージ](https://packages.microsoft.com/ubuntu/15.10/prod/pool/main/m/msodbcsql/)
+- [Ubuntu 14.04 パッケージ](https://packages.microsoft.com/ubuntu/14.04/prod/pool/main/m/msodbcsql/) 
 
 #### <a name="macos"></a>macOS
-- [OS X 10.11 および macOS 10.12、10.13 Homebrew の式](https://github.com/Microsoft/homebrew-mssql-release)
+- [OS X 10.11 および macOS 10.12、10.13 Homebrew 式](https://github.com/Microsoft/homebrew-mssql-release)
 
-参照してください[ドライバーをインストールする](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)します。
+「[ドライバーのインストール](linux-mac/installing-the-microsoft-odbc-driver-for-sql-server.md)」も参照してください。
 
 ## <a name="microsoft-odbc-driver-13-for-sql-server"></a>Microsoft ODBC Driver 13 for SQL Server  
 

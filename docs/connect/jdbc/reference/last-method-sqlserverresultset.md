@@ -1,5 +1,5 @@
 ---
-title: 最後のメソッド (SQLServerResultSet) |Microsoft Docs
+title: last メソッド (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: ac9bef59-8c31-437b-a183-619cc778fe7a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: f97a3d27deeb4a51663cb108ab3adc77b75e29e8
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: bf176794b2fac5a241c14ee494d08ddd4aa98dbc
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66790033"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67976892"
 ---
 # <a name="last-method-sqlserverresultset"></a>last メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -36,7 +35,7 @@ public boolean last()
 ```  
   
 ## <a name="return-value"></a>戻り値  
- **true**新しい現在の行が有効な場合。 **false**を処理する行がない場合。  
+ 新しい現在の行が有効な場合は**true**を指定します。 処理する行がなくなった場合は**false** 。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  

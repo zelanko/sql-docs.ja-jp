@@ -1,5 +1,5 @@
 ---
-title: getMaxIndexLength メソッド (SQLServerDatabaseMetaData) |Microsoft Docs
+title: getMaxIndexLength メソッド (SQLServerDatabaseMetaData) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 7c85d021-d466-4732-85f9-53903d297041
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 3c92158c28ab8e5023300f561667a1e41415c909
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: ecff900e23021bf04d2f9c8c10d7e8ab310cd1c7
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66792575"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67982083"
 ---
 # <a name="getmaxindexlength-method-sqlserverdatabasemetadata"></a>getMaxIndexLength メソッド (SQLServerDatabaseMetaData)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -42,7 +41,7 @@ public int getMaxIndexLength()
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- GetMaxIndexLength メソッドは getMaxIndexLength、java.sql.DatabaseMetaData インターフェイスのメソッドで規定します。  
+ この getMaxIndexLength メソッドは、java メタデータインターフェイスの getMaxIndexLength メソッドによって指定されます。  
   
 ## <a name="see-also"></a>参照  
  [SQLServerDatabaseMetaData のメソッド](../../../connect/jdbc/reference/sqlserverdatabasemetadata-methods.md)   

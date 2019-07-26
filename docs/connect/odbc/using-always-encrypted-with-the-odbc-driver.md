@@ -7,14 +7,13 @@ ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
-manager: jroth
 author: MightyPen
-ms.openlocfilehash: 0a187f83939ec9758db8ca688a074de530d6cf0d
-ms.sourcegitcommit: 5d839dc63a5abb65508dc498d0a95027d530afb6
+ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
+ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/09/2019
-ms.locfileid: "67680082"
+ms.lasthandoff: 07/16/2019
+ms.locfileid: "68231856"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -58,12 +57,12 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 
-接続で Always Encrypted を有効すると、標準の ODBC Api を使用できます。 ODBC Api では、取得したり、暗号化されたデータベース列のデータを変更することができます。 このドキュメントの次の項目が役立つ場合があります。
+接続で Always Encrypted を有効にすると、標準の ODBC Api を使用できるようになります。 ODBC Api では、暗号化されたデータベース列のデータを取得または変更できます。 次のドキュメントは、このような場合に役立ちます。
 
-- [ODBC サンプル コード](cpp-code-example-app-connect-access-sql-db.md)
+- [ODBC サンプルコード](cpp-code-example-app-connect-access-sql-db.md)
 - [ODBC プログラマー リファレンス](../../odbc/reference/odbc-programmer-s-reference.md)
 
-アプリケーションでは、必要なデータベース アクセス許可が必要し、列マスター_キーにアクセスできる必要があります。 次に、ドライバーは、暗号化された列をターゲットとするすべてのクエリ パラメーターを暗号化します。 ドライバーでは、暗号化された列から取得したデータも復号化します。 ドライバーは、すべてこの暗号化および暗号化のソース コードからの支援を受けることがなく実行します。 プログラムに列が暗号化されていないかのようになります。
+アプリケーションには、必要なデータベース権限が必要であり、列マスターキーにアクセスできる必要があります。 次に、ドライバーは、暗号化された列を対象とするすべてのクエリパラメーターを暗号化します。 ドライバーは、暗号化された列から取得したデータの暗号化も解除します。 ドライバーは、ソースコードからの支援を受けずに、すべての暗号化と復号化を実行します。 プログラムに対しては、列が暗号化されていないかのようになります。
 
 Always Encrypted が有効でない場合、暗号化された列をターゲットとするパラメーターを含むクエリは失敗します。 暗号化された列をターゲットとするパラメーターがクエリにない場合は、暗号化された列からデータを取得できます。 ただし、ドライバーによって暗号化の解除は試みられず、アプリケーションでは暗号化されたバイナリ データを (バイト配列として) 受け取ることになります。
 
@@ -363,9 +362,10 @@ ODBC Driver for SQL Server には、次の組み込みのキーストア プロ�
 
 ### <a name="using-the-azure-key-vault-provider"></a>Azure Key Vault プロバイダーを使用する
 
-Azure Key Vault は、特にアプリケーションが Azure でホストされている場合、Always Encrypted の列マスター キーの格納と管理に便利なオプションです。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、[Key Vault の概要](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および [Azure Key Vault での列マスター キーの作成](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)に関するページを参照してください。
+Azure Key Vault (AKV) は、Always Encrypted の列マスター キーを格納および管理するための便利なオプションです (特にアプリケーションが Azure でホストされている場合)。 Linux、macOS、および Windows 向けの ODBC Driver for SQL Server には、Azure Key Vault 用の組み込みの列マスター キーストア プロバイダーが含まれています。 Always Encrypted に対して Azure Key Vault を構成する方法の詳細については、[Azure Key Vault の操作手順](https://blogs.technet.microsoft.com/kv/2015/06/02/azure-key-vault-step-by-step/)、[Key Vault の概要](https://azure.microsoft.com/documentation/articles/key-vault-get-started/)、および [Azure Key Vault での列マスター キーの作成](https://msdn.microsoft.com/library/mt723359.aspx#Anchor_2)に関するページを参照してください。
 
 > [!NOTE]
+> ODBC ドライバーは、AKV 認証の Active Directory フェデレーションサービス (AD FS) をサポートしていません。 AKV に対して Azure Active Directory 認証を使用していて、Active Directory 構成にフェデレーションサービスが含まれている場合、認証が失敗する可能性があります。
 > Linux および macOS 用のドライバー バージョン 17.2 以降の場合、`libcurl` は、このプロバイダーを使用する上で必要ですが、明示的な依存関係にはありません。ドライバーを使用した他の操作ではそれを必要としないからです。 `libcurl` に関するエラーが発生する場合は、それがインストールされていることを確認してください。
 
 ドライバーでは、次の資格情報の種類を使用して Azure Key Vault への認証がサポートされます。

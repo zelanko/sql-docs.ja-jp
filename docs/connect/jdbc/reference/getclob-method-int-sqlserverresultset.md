@@ -1,5 +1,5 @@
 ---
-title: getClob (int) メソッド (SQLServerResultSet) |Microsoft Docs
+title: getClob メソッド (int) (SQLServerResultSet) | Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 91020fad-a9e2-4ea4-9c72-c63cf6b1051c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: e5650d900cd4cf4bcbb8a33501ad49c3f1a8607c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: dedfec8f5d6f04f4bb9b564dd3dbe0dab3d26b1a
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66763792"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67953094"
 ---
 # <a name="getclob-method-int-sqlserverresultset"></a>getClob (int) メソッド (SQLServerResultSet)
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]

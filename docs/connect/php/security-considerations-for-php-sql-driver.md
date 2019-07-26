@@ -1,5 +1,5 @@
 ---
-title: セキュリティに関する考慮事項、Microsoft Drivers for PHP for SQL Server |Microsoft Docs
+title: Microsoft Drivers for PHP for SQL Server | のセキュリティに関する考慮事項Microsoft Docs
 ms.custom: ''
 ms.date: 03/26/2018
 ms.prod: sql
@@ -12,18 +12,17 @@ helpviewer_keywords:
 ms.assetid: a8c1a570-9204-454f-b94c-ba34f54d487c
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 50c0d6bf2b9c413e6085451383f2ae4a6791442a
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 1fecf1add70a7b3bd96484cbd3634db2cfda01cb
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66797054"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67992892"
 ---
-# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>セキュリティに関する考慮事項、Microsoft Drivers for PHP for SQL Server
+# <a name="security-considerations-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server のセキュリティに関する考慮事項
 [!INCLUDE[Driver_PHP_Download](../../includes/driver_php_download.md)]
 
-このトピックでは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を使用するアプリケーションの開発、配置、および実行に固有のセキュリティの考慮事項について説明します。 詳細については、SQL Server のセキュリティについてを参照してください。 [SQL Server のセキュリティの概要](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)します。  
+このトピックでは、 [!INCLUDE[ssDriverPHP](../../includes/ssdriverphp_md.md)]を使用するアプリケーションの開発、配置、および実行に固有のセキュリティの考慮事項について説明します。 SQL Server セキュリティの詳細については、「 [SQL Server セキュリティの概要](https://docs.microsoft.com/dotnet/framework/data/adonet/sql/overview-of-sql-server-security)」を参照してください。  
   
 ## <a name="connect-using-windows-authentication"></a>Windows 認証を使用した接続  
 次の理由のために可能な場合は、SQL Server への接続に Windows 認証を使用する必要があります。  
@@ -54,5 +53,5 @@ SQL インジェクション攻撃および関連するセキュリティの考�
 展開済みアプリケーションでは、ログがセキュリティで保護された場所に書き込まれること、またはログ記録がオフになっていることを確認します。 この確認を行うと、エンドユーザーがログ ファイルに書き込まれた情報にアクセスすることを防ぐことができます。 詳細については、「 [Logging Activity](../../connect/php/logging-activity.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
-[For PHP for SQL Server のプログラミング、Microsoft ドライバーのガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
+[SQL Server 用 Microsoft Drivers for PHP のためのプログラミング ガイド](../../connect/php/programming-guide-for-php-sql-driver.md)
   

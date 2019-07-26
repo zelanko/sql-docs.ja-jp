@@ -1,5 +1,5 @@
 ---
-title: updateBlob (int, java.sql.Blob) メソッド |Microsoft Docs
+title: updateBlob (int, java. Blob) メソッド |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: 1e86f588-1365-4011-9412-f0acf7009880
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: 01b7e30b72fdd41c5397aebee92c7cb9aeecec1f
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 3ce5c1c2e8ce635e5b53f5b5e609666e39e36bc0
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66787142"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67997141"
 ---
 # <a name="updateblob-method-int-javasqlblob"></a>updateBlob (int, java.sql.Blob) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -43,13 +42,13 @@ public void updateBlob(int index,
   
  *x*  
   
- Blob オブジェクト。  
+ Blob オブジェクトです。  
   
 ## <a name="exceptions"></a>例外  
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateBlob メソッドは、java.sql.ResultSet インターフェイスの updateBlob メソッドによって指定されます。  
+ この updateBlob メソッドは、java.sql.ResultSet インターフェイスの updateBlob メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateBlob メソッド &#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateblob-method-sqlserverresultset.md)   

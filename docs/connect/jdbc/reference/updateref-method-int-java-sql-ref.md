@@ -1,5 +1,5 @@
 ---
-title: updateRef (int, java.sql.Ref) メソッド |Microsoft Docs
+title: updateRef メソッド (int, java .sql. Ref) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -15,13 +15,12 @@ apitype: Assembly
 ms.assetid: eab3ebae-3f68-4303-869a-fee06e3a9c71
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: a47a16b5424a342c1b9630cf2175e1c39c95f37b
-ms.sourcegitcommit: ad2e98972a0e739c0fd2038ef4a030265f0ee788
+ms.openlocfilehash: 174be7f4e4a9a693a3beaac51d69ad40569bdf64
+ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/07/2019
-ms.locfileid: "66780437"
+ms.lasthandoff: 07/15/2019
+ms.locfileid: "67998405"
 ---
 # <a name="updateref-method-int-javasqlref"></a>updateRef (int, java.sql.Ref) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -49,7 +48,7 @@ public void updateRef(int columnIndex,
  [SQLServerException](../../../connect/jdbc/reference/sqlserverexception-class.md)  
   
 ## <a name="remarks"></a>Remarks  
- この updateRef メソッドは、java.sql.ResultSet インターフェイスの updateRef メソッドによって指定されます。  
+ この updateRef メソッドは、java.sql.ResultSet インターフェイスの updateRef メソッドで規定されています。  
   
 ## <a name="see-also"></a>参照  
  [updateRef メソッド&#40;SQLServerResultSet&#41;](../../../connect/jdbc/reference/updateref-method-sqlserverresultset.md)   
