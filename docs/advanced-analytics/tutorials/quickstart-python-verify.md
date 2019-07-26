@@ -1,40 +1,40 @@
 ---
-title: Python を検証するためのクイック スタートは、SQL Server に存在します
-description: Python と Machine Learning サービスが SQL server が存在するかを確認するためのクイック スタートです。
+title: SQL Server に Python が存在することを確認するためのクイックスタート
+description: Python と Machine Learning Services が SQL Server に存在することを確認するためのクイックスタートです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 0a2c525c89a70f4a36749d7b9c6fb769362d517b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0dd5714f47c90c0091daacbd792b80c05ec68675
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962042"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469696"
 ---
 # <a name="quickstart-verify-python-exists-in-sql-server"></a>クイック スタート: SQL Server に Python が存在することを確認する 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server には、常駐の SQL Server データでのデータ科学分析用の Python 言語サポートが含まれています。 スクリプトの実行は、次の方法のいずれかを使用して、ストアド プロシージャです。
+SQL Server には、常駐 SQL Server データに対するデータサイエンス分析のための Python 言語サポートが含まれています。 スクリプトの実行は、次のいずれかの方法を使用して、ストアドプロシージャを使用します。
 
-+ 組み込み[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)ストアド プロシージャでの Python スクリプトを入力パラメーターとして渡します。
-+ Python スクリプトをラップする[カスタム ストアド プロシージャ](sqldev-in-database-r-for-sql-developers.md)作成します。
++ 組み込みの[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)ストアドプロシージャ。入力パラメーターとして Python スクリプトを渡します。
++ 作成した[カスタムストアドプロシージャ](sqldev-in-database-r-for-sql-developers.md)に Python スクリプトをラップします。
 
-このクイック スタートで、ことを確認は[SQL Server 2017 Machine Learning Services](../what-is-sql-server-machine-learning.md)をインストールして構成します。
+このクイックスタートでは、 [SQL Server 2017 Machine Learning Services](../what-is-sql-server-machine-learning.md)がインストールおよび構成されていることを確認します。
 
 ## <a name="prerequisites"></a>前提条件
 
-この演習で SQL Server のインスタンスへのアクセスを必要と[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)をインストールします。
+この演習では、 [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)がインストールされている SQL Server のインスタンスにアクセスする必要があります。
 
-SQL Server インスタンスは、Azure の仮想マシンまたはオンプレミスにできます。 注意する必要がありますので、既定で外部のスクリプト機能は無効にされる[外部スクリプトを有効に](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)ことを確認します**SQL Server スタート パッド サービス**が実行されているは、開始する前にします。
+SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっているため、[外部スクリプトを有効](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)にし、開始する前に**SQL Server Launchpad サービス**が実行されていることを確認する必要がある場合があることに注意してください。
 
-SQL クエリを実行するためのツールも必要です。 任意のデータベース管理を使用して Python スクリプトを実行したり、ツール、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行する限りのクエリを実行できます。 このクイック スタートを使用して[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)します。
+また、SQL クエリを実行するためのツールも必要です。 SQL Server インスタンスに接続し、T-sql クエリまたはストアドプロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリツールを使用して Python スクリプトを実行できます。 このクイックスタートでは、 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)を使用します。
 
-## <a name="verify-python-exists"></a>Python の存在を確認します。
+## <a name="verify-python-exists"></a>Python の存在を確認する
 
-確認できます (は、SQL Server インスタンスと Python のバージョンがインストールされている有効その Machine Learning サービスです。 次の手順に従います。
+Machine Learning Services (が SQL Server インスタンスで有効になっていること、およびインストールされている Python のバージョンを確認できます。 次の手順に従います。
 
 1. SQL Server Management Studio を開き、SQL Server インスタンスに接続します。
 
@@ -48,7 +48,7 @@ SQL クエリを実行するためのツールも必要です。 任意のデー
     GO
     ```
 
-3. Python`print`にバージョンを返します、**メッセージ**ウィンドウ。 次の例の出力で確認できます SQL Server がここで Python バージョン 3.5.2 インストールであります。
+3. Python `print`関数は、バージョンを **[メッセージ]** ウィンドウに返します。 次の出力例では、SQL Server に Python バージョン3.5.2 がインストールされていることがわかります。
 
     **結果**
 
@@ -57,19 +57,19 @@ SQL クエリを実行するためのツールも必要です。 任意のデー
     3.5.2 |Continuum Analytics, Inc.| (default, Jul  5 2016, 11:41:13) [MSC v.1900 64 bit (AMD64)]
     ```
 
-エラーが発生する場合のさまざまなインスタンスと Python が通信できるようにすることがあります。
+エラーが発生した場合は、インスタンスと Python が通信できるように、さまざまなことが可能です。
 
-最初に、インストールの問題を排除します。 インストール後の構成は、外部コード ライブラリの使用を有効にする必要があります。 参照してください[SQL Server 2017 の Machine Learning サービスをインストール](../install/sql-machine-learning-services-windows-install.md)します。 同様に、スタート パッド サービスが実行されていることを確認します。
+まず、インストールに関する問題をすべて除外します。 外部コードライブラリを使用できるようにするには、インストール後の構成が必要です。 「 [Install SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)」を参照してください。 同様に、スタートパッドサービスが実行されていることを確認します。
 
-Windows ユーザー グループを追加することも必要があります。`SQLRUserGroup`スタート パッドで Python と SQL Server 間の通信を提供できることを確認する、インスタンス上のログインとして。 (同じグループが両方の R の使用し、Python コードの実行)。詳細については、次を参照してください。 [SQLRUserGroup のログインの作成](../security/create-a-login-for-sqlrusergroup.md)です。
+また、スタートパッドが Python と SQL Server `SQLRUserGroup`間の通信を確実に提供できるように、インスタンスでログインとして Windows ユーザーグループを追加する必要があります。 (R と Python の両方のコードの実行に同じグループが使用されます)。詳細については、「 [Create a login For SQLRUserGroup](../security/create-a-login-for-sqlrusergroup.md)」を参照してください。
 
-さらに、無効になっているネットワーク プロトコルを有効にまたは SQL Server が外部クライアントと通信できるようにファイアウォールを開く必要があります。 詳細については、次を参照してください。[セットアップのトラブルシューティング](../common-issues-external-script-execution.md)します。
+また、無効になっているネットワークプロトコルを有効にしたり、SQL Server が外部クライアントと通信できるようにファイアウォールを開いたりすることが必要になる場合があります。 詳細については、「[セットアップのトラブルシューティング](../common-issues-external-script-execution.md)」を参照してください。
 
-## <a name="call-revoscalepy-functions"></a>Revoscalepy 関数を呼び出す
+## <a name="call-revoscalepy-functions"></a>Revoscalepy 関数の呼び出し
 
-確認する**revoscalepy**を含むスクリプトの例を実行する使用可能な[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)統計概要データを生成します。 次のスクリプトでは、revoscalepy に含まれている組み込みのサンプルからサンプル .xdf データ ファイルを取得する方法を示します。 RxOptions 関数は、提供、 **sampleDataDir**サンプル ファイルの場所を返すパラメーターです。
+**Revoscalepy**が使用可能であることを確認するには、統計概要データを生成する[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)を含むサンプルスクリプトを実行します。 次のスクリプトは、revoscalepy に含まれている組み込みサンプルからサンプルの xdf データファイルを取得する方法を示しています。 RxOptions 関数は、サンプルファイルの場所を返す**sampleDataDir**パラメーターを提供します。
 
-Rx_summary 型のオブジェクトを返すため`class revoscalepy.functions.RxSummary.RxSummaryResults`、複数の要素が含まれています、pandas を使用して表形式でデータ フレームだけを抽出することができます。
+Rx_summary は、複数の要素を`class revoscalepy.functions.RxSummary.RxSummaryResults`含む型のオブジェクトを返すため、パンダを使用して、データフレームだけを表形式で抽出することができます。
 
 ```sql
 EXEC sp_execute_external_script @language = N'Python', 
@@ -92,11 +92,11 @@ OutputDataSet = dfsummary
 WITH RESULT SETS  ((ColName nvarchar(25) , ColMean float, ColStdDev  float, ColMin  float,   ColMax  float, Col_ValidObs  float, Col_MissingObs int))
 ```
 
-## <a name="list-python-packages"></a>Python パッケージを一覧表示します。
+## <a name="list-python-packages"></a>Python パッケージの一覧表示
 
-Microsoft は、多くの SQL Server インスタンスで Machine Learning サービスと共にプレインストール Python パッケージを提供します。 バージョンを含め、パッケージがインストールされている Python の一覧を表示するには、次の手順に従います。
+Microsoft では、SQL Server インスタンスに Machine Learning Services と共にプレインストールされた多数の Python パッケージを提供しています。 インストールされている Python パッケージの一覧 (バージョンなど) を表示するには、次の手順に従います。
 
-1. SQL Server インスタンスでは、以下のスクリプトを実行します。
+1. SQL Server インスタンスで次のスクリプトを実行します。
 
     ```SQL
     EXECUTE sp_execute_external_script
@@ -107,7 +107,7 @@ Microsoft は、多くの SQL Server インスタンスで Machine Learning サ�
     GO
     ```
 
-2. 出力は`pip.get_installed_distributions()`python として返されると`STDOUT`メッセージ。
+2. 出力は Python の`pip.get_installed_distributions()`からのものであり`STDOUT` 、メッセージとして返されます。
 
     **結果**
 
@@ -142,7 +142,7 @@ Microsoft は、多くの SQL Server インスタンスで Machine Learning サ�
 
 ## <a name="next-steps"></a>次のステップ
 
-これで、インスタンスは、Python を使用する準備が確認した後、基本的な Python の対話について詳しく見てを実行します。
+これで、インスタンスが Python で使用する準備ができたことを確認できたので、基本的な Python の相互作用について詳しく見ていきましょう。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server での Python スクリプトの"hello world"](quickstart-python-run-using-t-sql.md)
+> [クイック スタート:SQL Server の "Hello world" Python スクリプト](quickstart-python-run-using-t-sql.md)

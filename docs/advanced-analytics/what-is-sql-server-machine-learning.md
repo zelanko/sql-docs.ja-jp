@@ -7,15 +7,16 @@ ms.date: 06/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f2bea677d6b87d7baa78fed28be82252c52a74c9
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: ead0dd3d9ba69a4bf0079fe8065a2d5aa7a11d3e
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345819"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495396"
 ---
 # <a name="sql-server-machine-learning-services-r-python"></a>SQL Server Machine Learning Services (R、Python)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Machine Learning Services は SQL Server の機能であり、データベース内の R および Python スクリプトの実行に使用されます。 この機能には、高パフォーマンスの予測分析と機械学習を行うための[Microsoft R と Python のパッケージ](#components)が含まれています。 リレーショナルデータは、ストアドプロシージャ、R および Python ステートメントを含む T-sql スクリプト、T-sql を含む R および Python コードを使用して、R および Python スクリプトで使用できます。
 

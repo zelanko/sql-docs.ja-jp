@@ -7,15 +7,15 @@ ms.date: 10/31/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1b0eea71105cb22cce81ac482c8ad6df50e63fa0
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d5d74090713666a2da6058d9eccee1e33e4d7cb
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343433"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469743"
 ---
 # <a name="nyc-taxi-demo-data-for-sql-server-python-and-r-tutorials"></a>SQL Server Python および R チュートリアル用の NYC タクシーデモデータ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、[ニューヨーク市のタクシーと & リムジンの歩合](http://www.nyc.gov/html/tlc/html/about/trip_record_data.shtml)からのパブリックデータで構成されるサンプルデータベースを設定する方法について説明します。 このデータは、SQL Server でのデータベース内分析のために、いくつかの R および Python のチュートリアルで使用されています。 サンプルコードの実行速度を高めるために、データの代表的な 1% サンプリングを作成しました。 システムでは、データベースバックアップファイルが 90 MB をわずかに上回り、プライマリデータテーブルに170万行が提供されます。
 

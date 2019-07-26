@@ -7,15 +7,15 @@ ms.date: 12/10/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 255342113a17b0fb2af58eb6bc173cb6c50aac6d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344927"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470055"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server 間のデータ型マッピング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server Machine Learning Services の R 統合機能で実行される R ソリューションの場合、サポートされていないデータ型の一覧、および R ライブラリと SQL Server 間でデータが渡されたときに暗黙的に実行される可能性のあるデータ型変換を確認してください。
 

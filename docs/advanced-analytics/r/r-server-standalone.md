@@ -7,15 +7,15 @@ ms.date: 12/18/2018
 ms.topic: overview
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f50049b1b93068748da84342d68ab6cb319c5d98
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 84ef5d684e767016491baa6e47e37d1402fc6879
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344890"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470046"
 ---
 # <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>SQL Server の R Server (スタンドアロン) と Machine Learning Server (スタンドアロン)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server では、スタンドアロンの R サーバーまたは SQL Server とは別に実行される Machine Learning Server のインストールがサポートされます。 SQL Server のバージョンに応じて、スタンドアロンサーバーにはオープンソースの R と、場合によっては Python の基盤があり、Microsoft の高パフォーマンスのライブラリを使用して、大規模な統計分析や予測分析を追加します。 ライブラリは、R または Python でスクリプト化された機械学習タスクも有効にします。 
 

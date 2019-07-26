@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: c2c36c5aa81da098064885fd5b006d78494cd962
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 47ee23d945ded9fac97fe3eddc2137eeead00ae1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345766"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469509"
 ---
 # <a name="quickstart-create-train-and-use-a-python-model-with-stored-procedures-in-sql-server"></a>クイック スタート: ストアドプロシージャを使用した Python モデルの作成、トレーニング、および使用 SQL Server
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Python を使用したこのクイックスタートでは、2つのストアドプロシージャを作成して実行します。 最初の例では、クラシック虹彩花のデータセットを使用して、花の特性に基づいて虹彩を予測するための、単純な Bayes モデルを生成します。 2番目の手順はスコアリング用です。 最初の手順で生成されたモデルを呼び出して、一連の予測を出力します。 ストアドプロシージャにコードを配置することで、操作が含まれ、再利用可能になり、他のストアドプロシージャやクライアントアプリケーションから呼び出すことができます。 
 

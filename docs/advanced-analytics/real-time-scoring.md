@@ -7,15 +7,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2e9c9353acdc0a2641203788c8e4883a9accb021
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: b4284d77464597857eca500b4a8ad29e1f4d06ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345681"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469967"
 ---
 # <a name="real-time-scoring-with-sprxpredict-in-sql-server-machine-learning"></a>SQL Server machine learning での sp_rxPredict を使用したリアルタイムのスコアリング
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 リアルタイムスコアリングでは、 [sp_rxPredict](https://docs.microsoft.com//sql/relational-databases/system-stored-procedures/sp-rxpredict-transact-sql)システムストアドプロシージャと CLR 拡張機能を使用して、高パフォーマンスの予測や予測ワークロードのスコアを SQL Server します。 リアルタイムのスコアリングは言語に依存せず、R や Python の実行時間に依存せずに実行されます。 モデルが Microsoft functions を使用して作成およびトレーニングされた後、SQL Server でバイナリ形式にシリアル化された場合は、リアルタイムスコアリングを使用して、R または Python アドオンのない SQL Server インスタンスの新しいデータ入力に対して予測される結果を生成できます。ら.
 

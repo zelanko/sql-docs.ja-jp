@@ -7,15 +7,15 @@ ms.date: 11/27/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: cfbd5417106d8e6ddd0ab5c76c2c05dae07c0605
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: d90e2d4887154d3545884a77d0290e632f04a569
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345987"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470599"
 ---
 # <a name="run-custom-r-functions-on-sql-server-using-rxexec"></a>RxExec を使用して SQL Server でカスタム R 関数を実行する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 [RxExec](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxexec)を使用して関数を渡すことによって、カスタム r 関数を SQL Server のコンテキストで実行できます。スクリプトで必要なライブラリがサーバーにもインストールされており、これらのライブラリが R の基本ディストリビューションと互換性があることを前提としています。 
 

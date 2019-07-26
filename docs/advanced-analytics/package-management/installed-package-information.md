@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f6cf66725ae15b2b738c020258142576ede734ec
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 2a149b4a98ec6c3a1d35cb499dcd391d87216752
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345081"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470270"
 ---
 # <a name="default-r-and-python-packages-in-sql-server"></a>SQL Server の既定の R および Python パッケージ
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、SQL Server と共にインストールされる R および Python パッケージと、パッケージライブラリを検索する場所の一覧を示します。  
 

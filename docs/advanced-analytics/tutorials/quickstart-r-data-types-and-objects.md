@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: e8c8ccd60417d4c1d492d53041280ab0c8e318af
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 686ba69425dc9bc6554b369be3d5fadd24b5a234
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345427"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469396"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>クイック スタート: SQL Server で R を使用してデータ型とオブジェクトを処理する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 このクイックスタートでは、R と SQL Server 間でデータを移動するときに発生する一般的な問題について、実践的な概要を説明します。 この演習を通じて得られる経験により、独自のスクリプトでデータを操作するときに必要な背景情報を得ることができます。
 

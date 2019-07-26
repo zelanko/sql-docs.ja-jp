@@ -1,37 +1,37 @@
 ---
-title: グラフやプロットの SQL と R 関数の SQL Server Machine Learning を使用して作成します。
-description: グラフや SQL Server で R 言語の関数を使用してプロットを作成する方法を示すチュートリアルです。
+title: SQL と R の関数を使用したグラフとプロットの作成-SQL Server Machine Learning
+description: SQL Server で R 言語関数を使用してグラフやプロットを作成する方法を示すチュートリアルです。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 06/13/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 542e36e01565ab454cce8beae9a4fa65279d8fa6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f14005b8ba9d6f05d2b69deba29d83af5695f657
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961782"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470511"
 ---
-# <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>グラフやプロットの SQL と R (チュートリアル) を使用して作成します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+# <a name="create-graphs-and-plots-using-sql-and-r-walkthrough"></a>SQL と R を使用したグラフとプロットの作成 (チュートリアル)
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このチュートリアルでは、SQL Server データと R を使用して、マップとプロットを生成する方法について説明します。 単純なヒストグラムを作成しより複雑なマップ プロットを作成します。
+このチュートリアルのパートでは、R を使用して SQL Server データでプロットとマップを生成する方法について説明します。 単純なヒストグラムを作成し、より複雑なマッププロットを開発します。
 
 ## <a name="prerequisites"></a>前提条件
 
-この手順では、このチュートリアルで前の手順に基づいて継続的な R セッションを想定しています。 これらの手順で作成された接続文字列およびデータ ソース オブジェクトを使用します。 次のツールとパッケージは、スクリプトの実行に使用されます。
+この手順では、このチュートリアルの前の手順に基づいて、R セッションが継続的に実行されることを前提としています。 ここでは、これらの手順で作成した接続文字列とデータソースオブジェクトを使用します。 スクリプトの実行には、次のツールとパッケージが使用されます。
 
-+ Rgui.exe R コマンドを実行するには
-+ Management Studio を T-SQL の実行
++ R コマンドを実行するための rgui .exe
++ T-sql の実行 Management Studio
 + googMap
 + ggmap パッケージ
 + mapproj パッケージ
 
-## <a name="create-a-histogram"></a>ヒストグラムを作成します。
+## <a name="create-a-histogram"></a>ヒストグラムを作成する
 
-1. [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 関数を利用し、最初のプロットを生成します。  RxHistogram 関数は、オープン ソース R パッケージと同様の機能を提供しますが、リモート実行コンテキストで実行できます。
+1. [rxHistogram](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxdatasource) 関数を利用し、最初のプロットを生成します。  RxHistogram 関数は、オープンソース R パッケージの場合と同様の機能を提供しますが、リモート実行コンテキストで実行できます。
 
     ```R
     # Plot fare amount on SQL Server and return the plot
@@ -46,16 +46,16 @@ ms.locfileid: "67961782"
     ![rxHistogram を使用した料金の金額のプロット](media/rsql-e2e-rxhistogramresult.png "rxHistogram を使用した料金の金額のプロット")
 
     > [!NOTE]
-    > グラフが異なるようでしょうか。
+    > グラフの外観が異なるか。
     >  
-    > だ_inDataSource_上位 1000 行のみを使用します。 TOP を使用して行の順序は、データと、結果のグラフを異なる場合がありますが必要ですが、最初の ORDER BY 句がない場合は、決定的です。
+    > これは、 _Indatasource_では上位の1000行のみを使用するためです。 ORDER BY 句がない場合、TOP を使用した行の順序は非決定的であるため、データと結果のグラフが異なる可能性があります。
     > この画像は約 10,000 行のデータを利用して生成されました。 行数を変えて、実験してみることをお勧めします。お使いの環境で結果を得るためにかかった時間をメモしてください。
 
-## <a name="create-a-map-plot"></a>マップ プロットを作成します。
+## <a name="create-a-map-plot"></a>マッププロットを作成する
 
-通常、データベース サーバーは、インターネットへのアクセスをブロックします。 これは不都合マップまたはプロットを生成する他のイメージをダウンロードする必要がある R パッケージを使用する場合。 ただし、役に立つ、独自のアプリケーションを開発する際にする回避策があります。 基本的に、クライアントでは、マップ表示を生成し、SQL Server テーブルの属性として格納されているポイントのマップをオーバーレイします。
+通常、データベースサーバーはインターネットアクセスをブロックします。 これは、マップまたはその他のイメージをダウンロードしてプロットを生成する必要がある R パッケージを使用する場合に、不便な場合があります。 ただし、独自のアプリケーションを開発する場合に役立つ回避策があります。 基本的に、クライアントでマップ表現を生成し、SQL Server テーブルに属性として格納されているポイントをマップ上でオーバーレイします。
 
-1. R プロット オブジェクトを作成する関数を定義します。 カスタム関数*mapPlot*がタクシーの乗車場所を使用し、各場所から開始した乗車の数をプロットする散布図を作成します。 使用して、 **ggplot2**と**ggmap**パッケージは既にこの[インストールされ、読み込まれた](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)します。
+1. R プロットオブジェクトを作成する関数を定義します。 カスタム関数*Mライド ot*は、タクシーの集配地点を使用する散布図を作成し、各場所から開始された職務の数をプロットします。 **Ggplot2**パッケージと**ggmap**パッケージを使用します。これらのパッケージは既にインストールさ[れ、読み込ま](walkthrough-data-science-end-to-end-walkthrough.md#add-packages)れています。
 
     ```R
     mapPlot <- function(inDataSource, googMap){
@@ -69,11 +69,11 @@ ms.locfileid: "67961782"
     }
     ```
 
-    + *MapPlot*関数は 2 つの引数を受け取ります。 RxSqlServerData、を使用して定義すると、クライアントから渡されたマップ表示を、既存のデータ オブジェクト。
-    + 始まる行で、 *ds*変数 rxImport を使って、以前に作成したデータ ソースからデータをメモリに読み込む*inDataSource*します。 (そのデータ ソースには、1000 を超える行が含まれています。 データ ポイントを詳細マップを作成する場合は、別のデータ ソースを置き換えることができます)。
-    + オープン ソース R 関数を使用するたびにデータをローカル メモリ内のデータ フレームに読み込む必要があります。 ただしを呼び出して、 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)関数の場合、リモート コンピューティング コンテキストのメモリで実行することができます。
+    + *MRxSqlServerData*関数は、2つの引数を受け取ります。これは、以前にを使用して定義した既存のデータオブジェクトと、クライアントから渡されたマップ表現です。
+    + *Ds*変数で始まる行では、rxImport を使用して、以前に作成したデータソース ( *indatasource*) からメモリデータに読み込むことができます。 (このデータソースには1000行しか含まれていません。より多くのデータポイントを含むマップを作成する場合は、別のデータソースに置き換えることができます)。
+    + オープンソースの R 関数を使用する場合は常に、データをローカルメモリ内のデータフレームに読み込む必要があります。 ただし、 [rxImport](https://docs.microsoft.com/r-server/r-reference/revoscaler/rximport)関数を呼び出すことによって、リモートの計算コンテキストのメモリ内でを実行できます。
 
-2. ローカル コンピューティング コンテキストを変更し、マップを作成するために必要なライブラリを読み込みます。
+2. コンピューティングコンテキストをローカルに変更し、マップの作成に必要なライブラリを読み込みます。
 
     ```R
     rxSetComputeContext("local")
@@ -87,7 +87,7 @@ ms.locfileid: "67961782"
 
     + `googmap` で始まる行により、指定した座標を中心に据えるマップが生成されます。
 
-3. SQL Server 計算コンテキストに切り替えるしでプロット関数をラップすることによって、結果をレンダリング[rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec)次のようにします。 RxExec 関数の一部である、 **RevoScaleR**パッケージ、およびリモート コンピューティング コンテキストで任意の R 関数の実行をサポートします。
+3. 次に示すように、 [rxExec](https://docs.microsoft.com/r-server/r-reference/revoscaler/rxexec)でプロット関数をラップして、SQL Server 計算コンテキストに切り替え、結果を表示します。 RxExec 関数は、 **RevoScaleR**パッケージの一部であり、リモートの計算コンテキストで任意の R 関数の実行をサポートします。
 
     ```R
     rxSetComputeContext(sqlcc)
@@ -95,18 +95,18 @@ ms.locfileid: "67961782"
     plot(myplots[[1]][["myplot"]]);
     ````
 
-    + マップ データを`googMap`、リモートで実行される関数に引数として渡される*mapPlot*します。 マップは、ローカル環境で生成されたためする必要があります渡すことが関数に SQL Server のコンテキストでプロットを作成するためにします。
+    + の`googMap`マップデータは、リモートで実行される関数*mot*に引数として渡されます。 マップはローカル環境で生成されたため、SQL Server のコンテキストでプロットを作成するためには、関数に渡す必要があります。
 
-    + で始まる行`plot`R クライアントを表示できるように、実行、表示されたデータがローカルの R 環境にシリアル化します。
+    + で`plot`始まる行を実行すると、レンダリングされたデータはローカルの r 環境にシリアル化され、r クライアントで表示できるようになります。
 
     > [!NOTE]
-    > Azure の仮想マシンで SQL Server を使用する場合は、この時点でエラーを取得可能性があります。 Azure での既定のファイアウォール規則は、R コードでネットワーク アクセスをブロックした場合、エラーが発生します。 このエラーを解決する方法の詳細については、次を参照してください。 [Azure VM での Machine Learning のインストール (R) サービス](../install/sql-machine-learning-azure-virtual-machine.md)します。
+    > Azure 仮想マシンで SQL Server を使用している場合は、この時点でエラーが発生する可能性があります。 Azure の既定のファイアウォール規則によって R コードによるネットワークアクセスがブロックされると、エラーが発生します。 このエラーを修正する方法の詳細については、「 [AZURE VM に Machine Learning (R) サービスをインストール](../install/sql-machine-learning-azure-virtual-machine.md)する」を参照してください。
 
-4. 出力プロットは次の図のようになります。 乗車場所が赤い点でマップ上に追加されます。 イメージは異なる場所の数が使用したデータ ソースによってになります。
+4. 出力プロットは次の図のようになります。 乗車場所が赤い点でマップ上に追加されます。 使用したデータソースに格納されている場所の数によっては、イメージが異なる場合があります。
 
     ![カスタムの R 関数を使用したタクシーの乗車のプロット](media/rsql-e2e-mapplot.png "カスタムの R 関数を使用したタクシーの乗車のプロット")
 
 ## <a name="next-steps"></a>次のステップ
 
 > [!div class="nextstepaction"]
-> [R と SQL を使用してデータ機能を作成します。](walkthrough-create-data-features.md)
+> [R と SQL を使用したデータ機能の作成](walkthrough-create-data-features.md)

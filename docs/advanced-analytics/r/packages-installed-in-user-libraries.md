@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a03d78e5d3100105f74e2efe361391a6bcfaf7ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 07993b982b5c79e3814aa29730fb1849075f5667
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345280"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470072"
 ---
 # <a name="tips-for-using-r-packages-in-sql-server"></a>SQL Server での R パッケージの使用に関するヒント
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、SQL Server インスタンスでのパッケージアクセスに慣れていない R および経験豊富な R 開発者向けの個別のセクションについて説明します。
 

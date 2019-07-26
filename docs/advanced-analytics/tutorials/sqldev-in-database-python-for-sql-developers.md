@@ -7,15 +7,15 @@ ms.date: 10/29/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: ed8008bbda76bfc8a194897e9389c9d5dc6bb031
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 6147c4670dace104c2c33c19e1fd29cbf2d4f2ee
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345939"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468859"
 ---
 # <a name="tutorial-python-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向けの Python Data Analytics
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL プログラマー向けのこのチュートリアルでは、SQL Server 上の[NYCTaxi_sample](demo-data-nyctaxi-in-sql.md)データベースを使用して python ベースの機械学習ソリューションを構築してデプロイすることで、python 統合について説明します。 T-sql、SQL Server Management Studio、および[Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)と Python 言語サポートを備えたデータベースエンジンインスタンスを使用します。
 

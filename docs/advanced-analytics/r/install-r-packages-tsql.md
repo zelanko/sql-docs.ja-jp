@@ -7,15 +7,15 @@ ms.date: 06/12/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f681634b9f57a5fd459e3f6452c04aba024bd297
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 80af3f93eb84c7b78c5cb1e5395175501931e24c
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345305"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470089"
 ---
 # <a name="use-t-sql-create-external-library-to-install-r-packages-on-sql-server"></a>T-sql (CREATE EXTERNAL LIBRARY) を使用して SQL Server に R パッケージをインストールする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、machine learning が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。 選択する方法は複数あります。 T-sql の使用は、R に慣れていないサーバー管理者に最適です。
 

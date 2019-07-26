@@ -7,15 +7,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 8de02f679af1bbeed8f65f4e4dc5456cd414e75e
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 1a6459d45d36ff69bdafb62a712e18937bf8eb30
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345548"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470110"
 ---
 # <a name="install-new-r-packages-on-sql-server"></a>SQL Server に新しい R パッケージをインストールする
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、machine learning が有効になっている SQL Server のインスタンスに新しい R パッケージをインストールする方法について説明します。 新しい R パッケージをインストールするには、使用している SQL Server のバージョン、およびサーバーがインターネットに接続されているかどうかによって、複数の方法があります。 新しいパッケージをインストールするには、次の方法を使用できます。
 

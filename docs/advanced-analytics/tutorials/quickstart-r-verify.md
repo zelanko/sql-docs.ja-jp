@@ -1,45 +1,45 @@
 ---
-title: SQL Server に R を検証するためのクイック スタートが存在します
-description: SQL Server で R と Machine Learning サービスが存在していることを検証するためのクイック スタートです。
+title: SQL Server に R が存在することを確認するためのクイックスタート
+description: R と Machine Learning Services が SQL Server に存在することを確認するためのクイックスタート。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: f294f5f12e3efd734d1e54ace3041702c39d390a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 951ffc07a32434b2f8d333140445f12c2971b811
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67961962"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470615"
 ---
 # <a name="quickstart-verify-r-exists-in-sql-server"></a>クイック スタート: SQL Server に R が存在することを確認する 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-SQL Server には、常駐の SQL Server データでのデータ サイエンス分析のための R 言語サポートが含まれています。 R スクリプトで構成できますのオープン ソース R 関数、サード パーティ製の R ライブラリ、または Microsoft R の組み込みライブラリなど[RevoScaleR](../r/revoscaler-overview.md)規模で予測分析用です。
+SQL Server には、データサイエンス分析のための R 言語サポートが常駐 SQL Server データに含まれています。 R スクリプトは、オープンソース R 関数、サードパーティ製 R ライブラリ、または大規模な予測分析のための[RevoScaleR](../r/revoscaler-overview.md)などの組み込みの Microsoft R ライブラリで構成されています。
 
-スクリプトの実行は、次の方法のいずれかを使用して、ストアド プロシージャです。
+スクリプトの実行は、次のいずれかの方法を使用して、ストアドプロシージャを使用します。
 
-+ 組み込み[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)ストアド プロシージャで R スクリプトを入力パラメーターとして渡します。
-+ R スクリプトをラップする[カスタム ストアド プロシージャ](sqldev-in-database-r-for-sql-developers.md)作成します。
++ 組み込みの[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)ストアドプロシージャ。入力パラメーターとして R スクリプトを渡します。
++ 作成した[カスタムストアドプロシージャ](sqldev-in-database-r-for-sql-developers.md)に R スクリプトをラップします。
 
-このクイック スタートで、ことを確認は[SQL Server 2017 Machine Learning Services](../what-is-sql-server-machine-learning.md)または[SQL Server 2016 R Services](../r/sql-server-r-services.md)をインストールして構成します。
+このクイックスタートでは、 [SQL Server 2017 Machine Learning Services](../what-is-sql-server-machine-learning.md)または[SQL Server 2016 R Services](../r/sql-server-r-services.md)がインストールおよび構成されていることを確認します。
 
 ## <a name="prerequisites"></a>前提条件
 
-この演習では、既にインストールされている、次のいずれかの SQL Server のインスタンスへのアクセスが必要です。
+この演習では、次のいずれかが既にインストールされている SQL Server のインスタンスにアクセスする必要があります。
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)、R 言語がインストールされています。
++ R 言語がインストールされている[SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [SQL Server 2016 R Services](../install/sql-r-services-windows-install.md)
 
-SQL Server インスタンスは、Azure の仮想マシンまたはオンプレミスにできます。 注意する必要がありますので、既定で外部のスクリプト機能は無効にされる[外部スクリプトを有効に](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)ことを確認します**SQL Server スタート パッド サービス**が実行されているは、開始する前にします。
+SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっているため、[外部スクリプトを有効](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)にし、開始する前に**SQL Server Launchpad サービス**が実行されていることを確認する必要がある場合があることに注意してください。
 
-SQL クエリを実行するためのツールも必要です。 任意のデータベース管理を使用して R スクリプトを実行したり、ツール、SQL Server インスタンスに接続し、T-SQL クエリまたはストアド プロシージャを実行する限りのクエリを実行できます。 このクイック スタートを使用して[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)します。
+また、SQL クエリを実行するためのツールも必要です。 SQL Server インスタンスに接続し、T-sql クエリまたはストアドプロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリツールを使用して R スクリプトを実行できます。 このクイックスタートでは、 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)を使用します。
 
-## <a name="verify-r-exists"></a>R の存在を確認します。
+## <a name="verify-r-exists"></a>R の存在を確認する
 
-SQL Server インスタンスと R のバージョンがインストールされている (R) を使用した Machine Learning サービスが有効になっていることを確認できます。 次の手順に従います。
+SQL Server インスタンスで Machine Learning Services (R) が有効になっていること、およびインストールされている R のバージョンを確認できます。 次の手順に従います。
 
 1. SQL Server Management Studio を開き、SQL Server インスタンスに接続します。
 
@@ -52,7 +52,7 @@ SQL Server インスタンスと R のバージョンがインストールされ
     GO
     ```
 
-3. R`print`にバージョンを返します、**メッセージ**ウィンドウ。 次の例の出力で確認できます SQL Server がここで R 3.3.3 がインストールされているバージョンであります。
+3. R `print`関数は、バージョンを **[メッセージ]** ウィンドウに返します。 次の出力例では、SQL Server に R バージョン3.3.3 がインストールされていることがわかります。
 
     **結果**
 
@@ -73,15 +73,15 @@ SQL Server インスタンスと R のバージョンがインストールされ
     nickname       Another Canoe               
     ```
 
-このクエリからすべてのエラーが発生した場合のインストール問題を排除します。 インストール後の構成は、外部コード ライブラリの使用を有効にする必要があります。 参照してください[SQL Server 2017 の Machine Learning サービスをインストール](../install/sql-machine-learning-services-windows-install.md)または[SQL Server 2016 R Services のインストール](../install/sql-r-services-windows-install.md)します。 同様に、スタート パッド サービスが実行されていることを確認します。
+このクエリからエラーが発生した場合は、インストールの問題をすべて除外します。 外部コードライブラリを使用できるようにするには、インストール後の構成が必要です。 [SQL Server 2017 Machine Learning Services をインストール](../install/sql-machine-learning-services-windows-install.md)するか、 [SQL Server 2016 R Services をインストール](../install/sql-r-services-windows-install.md)してください。 同様に、スタートパッドサービスが実行されていることを確認します。
 
-環境によっては、SQL Server に接続するための R ワーカー アカウントの有効化、追加のネットワーク ライブラリのインストール、リモートでのコード実行の有効化、すべてを構成した後のインスタンスの再起動が必要な場合があります。 詳細については、次を参照してください。 [R Services のインストールとアップグレードに関する FAQ](../r/upgrade-and-installation-faq-sql-server-r-services.md)します。
+環境によっては、SQL Server に接続するための R ワーカー アカウントの有効化、追加のネットワーク ライブラリのインストール、リモートでのコード実行の有効化、すべてを構成した後のインスタンスの再起動が必要な場合があります。 詳細については、「 [R Services のインストールとアップグレード](../r/upgrade-and-installation-faq-sql-server-r-services.md)に関する FAQ」を参照してください。
 
-## <a name="list-r-packages"></a>リストの R パッケージ
+## <a name="list-r-packages"></a>R パッケージの一覧表示
 
-Microsoft では、さまざまな SQL Server インスタンスで Machine Learning サービスで事前インストールされている R パッケージを提供します。 どの R のパッケージをインストールのバージョン、依存関係、ライセンス、およびライブラリのパス情報を含む一覧を表示するには、次の手順に従います。
+Microsoft では、SQL Server インスタンスに Machine Learning Services と共に事前にインストールされた多数の R パッケージを提供しています。 バージョン、依存関係、ライセンス、ライブラリパスの情報など、インストールされている R パッケージの一覧を表示するには、次の手順に従います。
 
-1. SQL Server インスタンスでは、以下のスクリプトを実行します。
+1. SQL Server インスタンスで次のスクリプトを実行します。
 
     ```SQL
     EXECUTE sp_execute_external_script @language = N'R'
@@ -91,15 +91,15 @@ Microsoft では、さまざまな SQL Server インスタンスで Machine Lear
         , License NVARCHAR(1000), LibPath NVARCHAR(2000)));
     ```
 
-2. 出力は`installed.packages()`R で、その結果セットが返されます。
+2. 出力は R の`installed.packages()`からのものであり、結果セットとして返されます。
 
     **結果**
 
-    ![インストールされている r パッケージ](./media/rsql-installed-packages.png)
+    ![R でインストールされたパッケージ](./media/rsql-installed-packages.png)
 
 ## <a name="next-steps"></a>次のステップ
 
-インスタンスが R を使用する準備が確認した後、これで、詳しく見て基本的な R 対話します。
+これで、インスタンスが R を使用する準備ができたことを確認できました。基本的な R の相互作用について詳しく見ていきましょう。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server で R スクリプトの"hello world"](quickstart-r-run-using-tsql.md)
+> [クイック スタート:SQL Server の "Hello world" R スクリプト](quickstart-r-run-using-tsql.md)

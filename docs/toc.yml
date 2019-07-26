@@ -75,7 +75,7 @@
               href: big-data-cluster/concept-data-persistence.md
             - name: オフライン展開
               href: big-data-cluster/deploy-offline.md
-            - name: 展開ターゲット
+            - name: Kubernetes クラスター
               items:
                 - name: Azure Kubernetes Service
                   href: big-data-cluster/deploy-on-aks.md
@@ -85,9 +85,11 @@
                   href: big-data-cluster/deploy-on-minikube.md
             - name: 展開スクリプト
               items:
-                - name: Azure Kubernetes Service
+                - name: AKS Python スクリプト
                   href: big-data-cluster/quickstart-big-data-cluster-deploy.md
-                - name: Azure Data Studio ノートブックを使用してデプロイする
+                - name: 単一ノードの Kubeadm スクリプト
+                  href: big-data-cluster/deployment-script-single-node-kubeadm.md
+                - name: ノートブックを使用したデプロイ
                   href: big-data-cluster/deploy-notebooks.md
     - name: 概念
       items:
@@ -6670,6 +6672,8 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: SQL Server ユーティリティ
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
+        - name: SQL Assessment API
+          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -7500,7 +7504,7 @@
 - name: レポートと分析
   items:
     - name: 高度な分析と機械学習 >>
-      href: advanced-analytics/index.md
+      href: advanced-analytics/
     - name: 分析プラットフォーム システム >>
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md

@@ -7,15 +7,15 @@ ms.date: 11/01/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1d421d4fc3ed28276b950f797529f089f94aaf6a
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: f1e07ffa4423ccfc2cc0082910a2ca8aff8fd087
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345920"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468678"
 ---
 # <a name="create-data-features-using-t-sql"></a>T-sql を使用してデータ機能を作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 データ探索の後、データからいくつかの洞察を収集し、*特徴エンジニアリング*に進む準備ができました。 生データから機能を作成するこのプロセスは、高度な分析モデリングの重要な手順になります。
 

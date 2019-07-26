@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39310d935ddefe463b81af495f63304822035818
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 7de37b16c04cf2f972e36c11ba5dfb53721e6094
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345476"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469441"
 ---
 # <a name="quickstart-create-a-predictive-model-using-r-in-sql-server"></a>クイック スタート: SQL Server で R を使用して予測モデルを作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 このクイックスタートでは、R を使用してモデルをトレーニングし、SQL Server のテーブルにモデルを保存する方法について説明します。 モデルは、車両が手動で転送された確率を予測する単純な汎用線形モデル (GLM) です。 R に含まれる`mtcars`データセットを使用します。
 

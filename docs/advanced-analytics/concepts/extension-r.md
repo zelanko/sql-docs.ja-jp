@@ -7,15 +7,15 @@ ms.date: 09/05/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3bf8e77cec92cde0e5a8adf4d3e1e36f1689b917
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 300b5d25d62be24c1e5590f5cd9795d08da7f2c1
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68343412"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470496"
 ---
 # <a name="r-language-extension-in-sql-server"></a>SQL Server の R 言語拡張機能
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R 拡張機能は、リレーショナルデータベースエンジンにアドオン Machine Learning Services SQL Server の一部です。 R 実行環境、標準ライブラリとツールを使用した base R ディストリビューション、および Microsoft R ライブラリが追加されます。[RevoScaleR](../r/ref-r-revoscaler.md)は、大規模な分析、機械学習アルゴリズム用の[microsoft ml](../r/ref-r-microsoftml.md) 、SQL Server のデータまたは R コードにアクセスするためのその他のライブラリを対象としています。
 

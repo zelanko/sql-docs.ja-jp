@@ -6,15 +6,15 @@ ms.date: 03/29/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: feb59ac529b0a66603d9e8b901e9755588ac0379
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 88d9a5098752b0c5f0935b400c400c2ae2ff97af
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344848"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469914"
 ---
 # <a name="sql-server-configuration-for-use-with-r"></a>R で使用するための SQL Server 構成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事は、2つのケーススタディに基づく R Services のパフォーマンスの最適化について説明するシリーズの2番目の記事です。  この記事では、SQL Server R Services を実行するために使用されるコンピューターのハードウェアおよびネットワーク構成に関するガイダンスを提供します。 また、ソリューションで使用される SQL Server インスタンス、データベース、またはテーブルを構成する方法についても説明します。 SQL Server で NUMA を使用すると、ハードウェアとデータベースの最適化の間に線がぼかします。3番目のセクションでは、CPU affinitization とリソースガバナンスの詳細について説明します。
 

@@ -1,33 +1,33 @@
 ---
-title: R の機能-SQL Server Machine Learning を示すクイック スタート
-description: このクイック スタートでは、高度な統計計算用 R 関数を作成する方法について説明します。
+title: R 関数を示すクイックスタート-SQL Server Machine Learning
+description: このクイックスタートでは、高度な統計計算用に R 関数を記述する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: fa2d47729641e8efd13e9e30be7a61186a892b5c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f43709f563d1dc5838cdd6636bcac4dc5664a6da
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67962013"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469280"
 ---
 # <a name="quickstart-using-r-functions"></a>クイック スタート: R 関数の使用
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-前のクイック スタートを完了すると場合の基本的な操作についてよく理解し、統計関数などのより複雑なものの準備ができました。 T-SQL で実装が複雑である高度な統計関数は、1 行のコードを R で実行できます。
+前のクイックスタートを完了している場合は、基本的な操作について理解し、統計関数など、より複雑な作業を行うことができます。 T-sql で実装するのが複雑な高度な統計関数は、1行のコードだけを使用して R で実行できます。
 
-このクイック スタートでは、R の数学を埋め込み、ストアド プロシージャを SQL Server のユーティリティ関数。
+このクイックスタートでは、R の数学関数とユーティリティ関数を SQL Server ストアドプロシージャに埋め込みます。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-前のクイック スタート[SQL server が存在することを確認する R](quickstart-r-verify.md)情報を提供し、このクイック スタートに必要な R 環境を設定するためにリンクします。
+前のクイックスタート「 [SQL Server に r が存在することを確認](quickstart-r-verify.md)する」では、このクイックスタートに必要な r 環境を設定するための情報とリンクを提供しています。
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>乱数を生成するストアド プロシージャを作成する
 
-わかりやすくするため、R を使用してみましょう`stats`パッケージがインストールされ、SQL Server に R 機能のサポートをインストールすると、既定で読み込まれます。 パッケージには、一般的な統計タスク用の数百の関数が含まれますが、その中の `rnorm` 関数は、指定された標準偏差と平均に対し、正規分布を使用して、指定された個数の乱数を生成します。
+わかりやすくするために、SQL Server で`stats` r 機能サポートをインストールするときに既定でインストールされ、読み込まれる r パッケージを使用してみましょう。 パッケージには、一般的な統計タスク用の数百の関数が含まれますが、その中の `rnorm` 関数は、指定された標準偏差と平均に対し、正規分布を使用して、指定された個数の乱数を生成します。
 
 たとえば、次の R コードは、指定された 3 の標準偏差で、平均 50 の 100 個の数値を返します。
 
@@ -48,7 +48,7 @@ EXEC sp_execute_external_script
 
 別の乱数のセットをもっと簡単に生成するにはどうすればよいでしょうか。
 
-SQL Server と組み合わせたときに簡単です。 ユーザーから引数を取得するストアド プロシージャを定義します。 次に、R スクリプトにそれらの引数を変数として渡します。
+これは、SQL Server と組み合わせて簡単に行うことができます。ユーザーから引数を取得するストアドプロシージャを定義します。 次に、R スクリプトにそれらの引数を変数として渡します。
 
 ```sql
 CREATE PROCEDURE MyRNorm (@param1 int, @param2 int, @param3 int)
@@ -79,7 +79,7 @@ EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>トラブルシューティングのための R ユーティリティ関数の使用
 
-既定では、R のインストールが含まれます、`utils`パッケージで、現在の R 環境を調査するためのさまざまなユーティリティ関数を提供します。 これは、SQL Server と外部環境で R コードが実行する方法に不一致が見つかった場合に役立つ可能性があります。
+既定では、r のインストールには`utils` 、現在の r 環境を調査するためのさまざまなユーティリティ機能を提供するパッケージが含まれています。 これは、SQL Server と外部環境で R コードが実行する方法に不一致が見つかった場合に役立つ可能性があります。
 
 たとえば、R `memory.limit()` 関数を使用して、現在の R 環境のメモリを取得できます。 `utils` パッケージはインストールされていますが既定で読み込まれていないため、最初に `library()` 関数を使用して読み込む必要があります。
 
@@ -94,13 +94,13 @@ EXECUTE sp_execute_external_script
 WITH RESULT SETS (([Col1] int not null));
 ```
 
-など、R でのシステム タイミング関数を使用するなどの多くのユーザー`system.time`と`proc.time`R プロセスによって使用される時間をキャプチャすると、パフォーマンスの問題を分析します。
+`system.time` や`proc.time`などのシステムタイミング関数を使用して、r プロセスによって使用される時間をキャプチャし、パフォーマンスの問題を分析する多くのユーザー。
 
-例については、このチュートリアルを参照してください。[データ機能を作成する](../tutorials/walkthrough-create-data-features.md)します。 このチュートリアルでは、R タイミング関数はデータから機能を作成するための 2 つのメソッドのパフォーマンスを比較するソリューションに埋め込まれます。R 関数とします。T-SQL 関数します。
+例については、次のチュートリアルを参照してください。[データ機能を作成](../tutorials/walkthrough-create-data-features.md)します。 このチュートリアルでは、R タイミング関数をソリューションに埋め込んで、データから機能を作成する2つの方法のパフォーマンスを比較します。R 関数とT-sql 関数。
 
 ## <a name="next-steps"></a>次の手順
 
 次に、SQL Server で R を使用して予測モデルを作成します。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:予測モデルを作成します。](quickstart-r-create-predictive-model.md)
+> [クイック スタート:予測モデルを作成する](quickstart-r-create-predictive-model.md)

@@ -7,15 +7,15 @@ ms.date: 10/25/2018
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 3fe398a6210936553fc40b10cc9a42f395a98785
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 11a155a9c679a18fefc7b3c91434a0ca241c23f7
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345809"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68468508"
 ---
 # <a name="use-python-with-revoscalepy-to-create-a-model-that-runs-remotely-on-sql-server"></a>Python と revoscalepy を使用して、SQL Server でリモートで実行されるモデルを作成します。
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 Microsoft の[revoscalepy](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/revoscalepy-package) Python ライブラリには、データの探索、視覚化、変換、分析のためのデータサイエンスアルゴリズムが用意されています。 このライブラリは、SQL Server の Python 統合シナリオにおいて、戦略的な重要度を持ちます。 マルチコアサーバーでは、 **revoscalepy**関数を並列で実行できます。 中央サーバーとクライアントワークステーションを使用した分散アーキテクチャ (すべて同じ**revoscalepy**ライブラリを持つ) では、ローカルで起動する Python コードを作成できますが、実行はリモートの SQL Server インスタンスに移ります。データが存在する場所。
 

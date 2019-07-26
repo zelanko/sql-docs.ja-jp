@@ -6,15 +6,15 @@ ms.date: 06/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 547a567b00474f0c1538d907d70d8a808bebf851
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: be55e779f335277a1c0f03fe871b8dcb952e088f
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344941"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470403"
 ---
 # <a name="known-issues-in-machine-learning-services"></a>Machine Learning Services の既知の問題
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、既知の問題またはオプションとして提供される machine learning コンポーネントと制限事項について説明します[SQL Server 2016 R Services](install/sql-r-services-windows-install.md)と[SQL Server マシン 2017 Learning Services の R と Python](install/sql-machine-learning-services-windows-install.md)。
 

@@ -7,15 +7,15 @@ ms.date: 04/15/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 1c51691ad55ac8aa340eb71257489bd14c0099a5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 5d3e03e718aea725267a2251768ef040905b020e
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345541"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470182"
 ---
 # <a name="creating-multiple-models-using-rxexecby"></a>rxExecBy を使用して複数のモデルを作成する
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 RevoScaleR の**rxExecBy**関数は、複数の関連モデルの並列処理をサポートしています。 データ科学者は、類似した複数のエンティティのデータに基づいて1つの大きなモデルをトレーニングするのではなく、1つのエンティティに固有のデータを使用して、多数の関連モデルをすばやく作成できます。 
 

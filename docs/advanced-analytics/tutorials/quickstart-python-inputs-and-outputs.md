@@ -7,15 +7,15 @@ ms.date: 01/04/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: a23896f5242e0f1182b2864e426bbb20aeda763f
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 0259a4695ab1ee6f42b92e12b47f81e9aa851469
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344808"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469604"
 ---
 # <a name="quickstart-handle-inputs-and-outputs-using-python-in-sql-server"></a>クイック スタート: SQL Server での Python を使用した入力と出力の処理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 このクイックスタートでは、SQL Server Machine Learning Services で Python を使用するときに入力と出力を処理する方法を示します。
 

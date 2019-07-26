@@ -8,15 +8,15 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: e849140125ba39c7c1d8601c5ef32880a9d633ac
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 32487d8c1a6c87c9ad916e4cfd517f9ba4cba6e2
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344835"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68469906"
 ---
 # <a name="r-services-in-sql-server-2016"></a>SQL Server 2016 の R Services
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 R Services は、SQL Server で R コードと関数を実行するために使用される、SQL Server 2016 データベースエンジンインスタンスへのアドオンです。 コードは、コアエンジンプロセスから分離された機能拡張フレームワークで実行されますが、リレーショナルデータをストアドプロシージャとして完全に利用できます。また、R ステートメントを含む T-sql スクリプトとして、または T-sql を含む R コードとして使用することもできます。 
 
