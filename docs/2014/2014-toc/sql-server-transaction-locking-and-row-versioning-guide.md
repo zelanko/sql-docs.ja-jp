@@ -1944,7 +1944,7 @@ GO
   
 #### <a name="stopping-a-transaction"></a>トランザクションの停止  
 
- KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、[KILL & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/kill-transact-sql)。  
+ KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、[KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql)を参照してください。 
   
  ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
   
