@@ -57,31 +57,31 @@ ms.locfileid: "68118528"
   
 |カタログ ビュー|説明|  
 |------------------|-----------------|  
-|[sys.assemblies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|データベースに登録されているアセンブリに関する情報を返します。|  
-|[sys.assembly_references &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|他のアセンブリを参照するアセンブリを示します。|  
+|[sys.assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assemblies-transact-sql.md)|データベースに登録されているアセンブリに関する情報を返します。|  
+|[sys.assembly_references &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-references-transact-sql.md)|他のアセンブリを参照するアセンブリを示します。|  
 |[sys.assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-modules-transact-sql.md)|アセンブリで定義されている関数、ストアド プロシージャ、およびトリガーに関する情報を返します。|  
-|[sys.assembly_files &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|データベースに登録されているアセンブリ ファイルに関する情報を返します。|  
-|[sys.assembly_types &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|アセンブリで定義されているユーザー定義型 (UDT) を示します。|  
-|[sys.module_assembly_usages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|CLR モジュールを定義しているアセンブリを示します。|  
+|[sys.assembly_files &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-files-transact-sql.md)|データベースに登録されているアセンブリ ファイルに関する情報を返します。|  
+|[sys.assembly_types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-assembly-types-transact-sql.md)|アセンブリで定義されているユーザー定義型 (UDT) を示します。|  
+|[sys.module_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-module-assembly-usages-transact-sql.md)|CLR モジュールを定義しているアセンブリを示します。|  
 |[sys.parameter_type_usages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-parameter-type-usages-transact-sql.md)|ユーザー定義型のパラメーターに関する情報を返します。|  
 |[sys.server_assembly_modules &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-assembly-modules-transact-sql.md)|CLR トリガーを定義しているアセンブリを示します。|  
 |[sys.server_triggers &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-server-triggers-transact-sql.md)|CLR トリガーなど、サーバー上にあるサーバーレベル DDL トリガーを示します。|  
-|[sys.type_assembly_usages &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|ユーザー定義型を定義しているアセンブリを示します。|  
+|[sys.type_assembly_usages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-type-assembly-usages-transact-sql.md)|ユーザー定義型を定義しているアセンブリを示します。|  
 |[sys.types &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-types-transact-sql.md)|データベースに登録されているシステム定義型およびユーザー定義型を返します。|  
   
 ## <a name="dynamic-management-views"></a>動的管理ビュー  
- 動的管理ビューと動的管理関数では、サーバーの状態情報が返されます。返された情報は、サーバー インスタンスのヘルス状態の監視、問題の診断、パフォーマンスのチューニングに使用できます。 詳細については、次を参照してください。[動的管理ビューおよび関数&#40;TRANSACT-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
+ 動的管理ビューと動的管理関数では、サーバーの状態情報が返されます。返された情報は、サーバー インスタンスのヘルス状態の監視、問題の診断、パフォーマンスのチューニングに使用できます。 詳細については、次を参照してください。[動的管理ビューおよび関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)します。  
   
 |DMV (DMV)|説明|  
 |---------|-----------------|  
-|[sys.dm_clr_appdomains &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|サーバー内の各アプリケーション ドメインに関する情報を提供します。|  
-|[sys.dm_clr_loaded_assemblies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|サーバー上に登録されている各マネージド アセンブリを示します。|  
-|[sys.dm_clr_properties &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|ホストされている CLR に関する情報を返します。|  
-|[sys.dm_clr_tasks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|実行中のすべての CLR タスクを示します。|  
-|[sys.dm_exec_cached_plans &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|クエリ実行を高速化するため [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャッシュされたクエリ実行プランに関する情報を返します。|  
+|[sys.dm_clr_appdomains &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-appdomains-transact-sql.md)|サーバー内の各アプリケーション ドメインに関する情報を提供します。|  
+|[sys.dm_clr_loaded_assemblies &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-loaded-assemblies-transact-sql.md)|サーバー上に登録されている各マネージド アセンブリを示します。|  
+|[sys.dm_clr_properties &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-properties-transact-sql.md)|ホストされている CLR に関する情報を返します。|  
+|[sys.dm_clr_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-clr-tasks-transact-sql.md)|実行中のすべての CLR タスクを示します。|  
+|[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)|クエリ実行を高速化するため [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャッシュされたクエリ実行プランに関する情報を返します。|  
 |[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)|キャッシュされたクエリ プランの集計パフォーマンス統計を返します。|  
-|[sys.dm_exec_requests (&) #40 です。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行中の各要求に関する情報を返します。|  
-|[sys.dm_os_memory_clerks &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|CLR メモリ クラークなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内でアクティブになっているすべてのメモリ クラークを返します。|  
+|[sys.dm_exec_requests  &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行中の各要求に関する情報を返します。|  
+|[sys.dm_os_memory_clerks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)|CLR メモリ クラークなど、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス内でアクティブになっているすべてのメモリ クラークを返します。|  
   
 ## <a name="see-also"></a>参照  
  [CLR &#40;共通言語ランタイム&#41; 統合のプログラミング概念](../../relational-databases/clr-integration/common-language-runtime-clr-integration-programming-concepts.md)  
