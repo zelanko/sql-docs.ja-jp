@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM&lt;モデル&gt;します。SAMPLE_CASES (DMX) |Microsoft Docs
+title: SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67928317"
 ---
-# <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM&lt;モデル&gt;します。SAMPLE_CASES (DMX)
+# <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   データ マイニング モデルの学習に使用されるケースを表すサンプル ケースを返します。  
@@ -52,7 +52,7 @@ SELECT [FLATTENED] [TOP <n>] <expression list> FROM <model>.SAMPLE_CASES
  ですが、[!INCLUDE[msCoName](../includes/msconame-md.md)]シーケンス クラスター アルゴリズムは、唯一[!INCLUDE[msCoName](../includes/msconame-md.md)]選択から使用をサポートするアルゴリズム\<モデル >。SAMPLE_CASES、サード パーティのアルゴリズム可能性がありますもサポートします。  
   
 ## <a name="examples"></a>使用例  
- 次の例では、Target Mail マイニング モデルの学習に使用されるサンプル ケースを返しています。 使用して、 [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)で機能、**場所**句は 000000003 ノードに関連付けられているケースのみを返します。 ノード文字列は、スキーマ行セットの NODE_UNIQUE_NAME 列にあります。  
+ 次の例では、Target Mail マイニング モデルの学習に使用されるサンプル ケースを返しています。 使用して、 [IsInNode &#40;DMX&#41; ](../dmx/isinnode-dmx.md)で機能、**WHERE**句は 000000003 ノードに関連付けられているケースのみを返します。 ノード文字列は、スキーマ行セットの NODE_UNIQUE_NAME 列にあります。  
   
 ```  
 Select * from [Sequence Clustering].SAMPLE_Cases  
@@ -60,7 +60,7 @@ WHERE IsInNode('000000003')
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [選択&#40;DMX&#41;](../dmx/select-dmx.md)   
+ [SELECT&#40;DMX&#41;](../dmx/select-dmx.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ定義ステートメント](../dmx/dmx-statements-data-definition.md)   
  [データ マイニング拡張機能&#40;DMX&#41;データ操作ステートメント](../dmx/dmx-statements-data-manipulation.md)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](../dmx/data-mining-extensions-dmx-statements.md)  
