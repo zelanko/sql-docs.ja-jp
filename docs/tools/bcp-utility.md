@@ -28,12 +28,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 612132eec023e3497344c01bd34947bb49195385
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 504e0978e37e5c550985e40b7f68e0323a9dc187
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010432"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476323"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
@@ -88,6 +88,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
     [<a href="#K">-K application_intent</a>]
+    [<a href="#l">-l login_timeout</a>]
     [<a href="#L">-L last_row</a>]
     [<a href="#m">-m max_errors</a>]
     [<a href="#n">-n</a>]
@@ -313,6 +314,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 **-K** _**application\_intent**_ <a name="K"></a>   
 アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は、 **ReadOnly**だけです。 **-K** を指定しない場合、bcp ユーティリティでは Always On 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+  
+**-l** _**login\_timeout**_ <a name="l"></a>  
+ログインのタイムアウトを指定します。 -l オプションでは、サーバーへの接続の試行時に、SQL Server へのログインがタイムアウトするまでの秒数を指定します。 既定のログインタイムアウトは15秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、bcp はエラー メッセージを生成します。 値が0の場合は、タイムアウトが無制限であることを示します。
   
 **-L** _**last\_row**_ <a name="L"></a>  
 テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。 このパラメーターには、0 より大きく (> 0)、最後の行の番号以下 (< または =) となる値が必要です。 このパラメーターがない場合、既定ではファイルの最後の行となります。  
