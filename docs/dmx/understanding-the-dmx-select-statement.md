@@ -18,9 +18,9 @@ ms.locfileid: "68065342"
 # <a name="understanding-the-dmx-select-statement"></a>DMX SELECTステートメントについて
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [SELECT](../dmx/select-dmx.md)ステートメントでデータ マイニング拡張機能 (DMX) で作成するほとんどのクエリの基礎となる[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 このステートメントでは、データ マイニング モデルの参照や予測などのさまざまなタスクを実行することができます。  
+  [SELECT](../dmx/select-dmx.md)ステートメントは、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ マイニング拡張機能 (DMX) で作成するほとんどのクエリの基礎になります。このステートメントでは、データ マイニング モデルの参照や予測などのさまざまなタスクを実行することができます。   
   
- 使用して実行できるタスクを次に、**SELECT**ステートメント。  
+ **SELECT**ステートメントを使用して実行できるタスクは次のとおりです: 
   
 -   データ マイニング モデルを参照します。 スキーマ行セットは、モデルの構造を定義します。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "68065342"
   
      この場合は、データ ドメインであるマイニング構造にドリルスルーして、Gender、Bike Buyer などの列の各行を確認します。  
   
- **重要:** または、式の一覧に含まれているもの、**WHERE**句で定義されているデータ ドメインから取得する必要があります、 **FROM**句。 データ ドメインを混在させることはできません。  
+ **重要:** 式の一覧または **WHERE**句に含まれているものは全て、**FROM**句で定義されているデータ ドメインから取得する必要があります。データ ドメインを混在させることはできません。 
   
 ##  <a name="Select_Types"></a> SELECT型
  **SELECT**ステートメントの構文は、さまざまなタスクをサポートしています。 これらのタスクを実行するには、以下のパターンを使用します。  
