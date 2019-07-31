@@ -15,12 +15,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68065342"
 ---
-# <a name="understanding-the-dmx-select-statement"></a>DMX 選択ステートメントについて
+# <a name="understanding-the-dmx-select-statement"></a>DMX SELECTステートメントについて
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [選択](../dmx/select-dmx.md)ステートメントでデータ マイニング拡張機能 (DMX) で作成するほとんどのクエリの基礎となる[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]します。 このステートメントでは、データ マイニング モデルの参照や予測などのさまざまなタスクを実行することができます。  
+  [SELECT](../dmx/select-dmx.md)ステートメントは、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ マイニング拡張機能 (DMX) で作成するほとんどのクエリの基礎になります。 このステートメントでは、データ マイニング モデルの参照や予測などのさまざまなタスクを実行することができます。  
   
- 使用して実行できるタスクを次に、**選択**ステートメント。  
+ **SELECT**ステートメントを使用して実行できるタスクは次のとおりです:  
   
 -   データ マイニング モデルを参照します。 スキーマ行セットは、モデルの構造を定義します。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "68065342"
  **重要:** または、式の一覧に含まれているもの、**場所**句で定義されているデータ ドメインから取得する必要があります、 **FROM**句。 データ ドメインを混在させることはできません。  
   
 ##  <a name="Select_Types"></a> 型を選択します。  
- 構文**選択**ステートメントは、さまざまなタスクをサポートしています。 このようなタスクを実行するには、次のパターンを使用します。  
+ **SELECT**ステートメントの構文は、さまざまなタスクをサポートしています。 これらのタスクを実行するには、以下のパターンを使用します。  
   
--   [予測します。](#Predicting)  
+-   [予測](#Predicting)  
   
 -   [参照](#Browsing)  
   
@@ -58,7 +58,7 @@ ms.locfileid: "68065342"
 ###  <a name="Predicting"></a> 予測します。  
  次のクエリの種類を使用してマイニング モデルに基づく予測を行うことができます。  
   
- 参照または予測のいずれかを含めることができます**選択**内のステートメント、 **FROM**と**場所**句では、予測結合**を選択します**ステートメント。  
+ 予測結合**SELECT**ステートメントの**FROM**句と**WHERE**句の中に、ブラウズまたは予測**SELECT**ステートメントのいずれかを含めることができます。  
   
 |クエリの型|説明|  
 |----------------|-----------------|  
