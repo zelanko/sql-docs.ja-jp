@@ -15,12 +15,12 @@ ms.assetid: ''
 author: HJToland3
 ms.author: rajpo
 manager: jroth
-ms.openlocfilehash: 262e7e125069216dc4e719b02def07da58f35f73
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
-ms.translationtype: HT
+ms.openlocfilehash: 0d01e210ad319d0043e70cedbca8522ea89d4e5c
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661156"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670513"
 ---
 # <a name="assess-the-readiness-of-a-sql-server-data-estate-migrating-to-azure-sql-database-using-the-data-migration-assistant"></a>Data Migration Assistant を使用して Azure SQL Database に移行する SQL Server のデータ資産の準備状況を評価する
 
@@ -28,7 +28,7 @@ ms.locfileid: "68661156"
 
 この記事では、 [Data Migration Assistant](https://docs.microsoft.com/sql/dma/dma-overview?view=sql-server-2017)を利用して準備結果を要約し、 [Azure Migrate](https://portal.azure.com/?feature.customPortal=false#blade/Microsoft_Azure_Migrate/AmhResourceMenuBlade/overview)ハブに表示するための詳細な手順について説明します。
 
-[!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player]
+> [!VIDEO https://channel9.msdn.com/Shows/Data-Exposed/Data-Migration-Assistant/player]
 
 ## <a name="create-a-project-and-add-a-tool"></a>プロジェクトを作成してツールを追加する
 
