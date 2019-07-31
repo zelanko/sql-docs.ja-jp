@@ -18,8 +18,6 @@ ms.locfileid: "68065342"
 # <a name="understanding-the-dmx-select-statement"></a>DMX SELECTステートメントについて
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [SELECT](../dmx/select-dmx.md)ステートメントは、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ マイニング拡張機能 (DMX) で作成するほとんどのクエリの基礎になります。 このステートメントでは、データ マイニング モデルの参照や予測などのさまざまなタスクを実行することができます。  
-  
  **SELECT**ステートメントを使用して実行できるタスクは次のとおりです:  
   
 -   データ マイニング モデルを参照します。 スキーマ行セットは、モデルの構造を定義します。  
@@ -42,9 +40,9 @@ ms.locfileid: "68065342"
   
      この場合は、データ ドメインであるマイニング構造にドリルスルーして、Gender、Bike Buyer などの列の各行を確認します。  
   
- **重要:** または、式の一覧に含まれているもの、**場所**句で定義されているデータ ドメインから取得する必要があります、 **FROM**句。 データ ドメインを混在させることはできません。  
+ **重要:** 式の一覧または **WHERE**句に含まれているものは全て、**FROM**句で定義されているデータ ドメインから取得する必要があります。データ ドメインを混在させることはできません。 
   
-##  <a name="Select_Types"></a> 型を選択します。  
+##  <a name="Select_Types"></a> SELECT型
  **SELECT**ステートメントの構文は、さまざまなタスクをサポートしています。 これらのタスクを実行するには、以下のパターンを使用します。  
   
 -   [予測](#Predicting)  
@@ -55,7 +53,7 @@ ms.locfileid: "68065342"
   
 -   [ドリル スルー](#Drillthrough)  
   
-###  <a name="Predicting"></a> 予測します。  
+###  <a name="Predicting"></a> 予測  
  次のクエリの種類を使用してマイニング モデルに基づく予測を行うことができます。  
   
  予測結合**SELECT**ステートメントの**FROM**句と**WHERE**句の中に、ブラウズまたは予測**SELECT**ステートメントのいずれかを含めることができます。  
