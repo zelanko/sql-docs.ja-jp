@@ -18,9 +18,7 @@ ms.locfileid: "68065342"
 # <a name="understanding-the-dmx-select-statement"></a>DMX SELECTステートメントについて
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
-  [SELECT](../dmx/select-dmx.md)ステートメントは、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のデータ マイニング拡張機能 (DMX) で作成するほとんどのクエリの基礎になります。このステートメントでは、データ マイニング モデルの参照や予測などのさまざまなタスクを実行することができます。   
-  
- **SELECT**ステートメントを使用して実行できるタスクは次のとおりです: 
+ **SELECT**ステートメントを使用して実行できるタスクは次のとおりです:  
   
 -   データ マイニング モデルを参照します。 スキーマ行セットは、モデルの構造を定義します。  
   
