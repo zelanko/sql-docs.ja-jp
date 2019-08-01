@@ -1,5 +1,5 @@
 ---
-title: sp_stored_procedures (TRANSACT-SQL) |Microsoft Docs
+title: sp_stored_procedures (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: fe52dd83-000a-4665-83fb-7a0024193dec
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 9d670c1dbfc94e80394cf34733b8a91aeb6cb056
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 554b9317d6b474b23e9dbbc10dea03156ccc6287
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68032703"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702782"
 ---
-# <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (TRANSACT-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+# <a name="spstoredprocedures-transact-sql"></a>sp_stored_procedures (Transact-sql)
+
+[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   現在の環境内にあるストアド プロシージャの一覧を返します。  
   
@@ -42,25 +43,25 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @sp_name = ] 'name'` カタログ情報を返すために使用するプロシージャの名前です。 *名前*は**nvarchar (390)** 、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。  
+`[ @sp_name = ] 'name'`カタログ情報を返すために使用するプロシージャの名前を指定します。 *名前*は**nvarchar (390)** ,、既定値は NULL です。 ワイルドカードパターンマッチングがサポートされています。  
   
-`[ @sp_owner = ] 'schema'` プロシージャが所属するスキーマの名前です。 *スキーマ*は**nvarchar (384)** 、既定値は NULL です。 ワイルドカードによるパターン照合はサポートされています。 場合*所有者*が指定されていない、基になる DBMS の既定のプロシージャの可視性規則が適用されます。  
+`[ @sp_owner = ] 'schema'`プロシージャが属しているスキーマの名前を指定します。 *スキーマ*は**nvarchar (384)** ,、既定値は NULL です。 ワイルドカードパターンマッチングがサポートされています。 *Owner*が指定されていない場合、基になる DBMS の既定のプロシージャ可視性ルールが適用されます。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、指定した名前のプロシージャが現在のスキーマに含まれている場合、そのプロシージャが返されます。 修飾名なしでストアド プロシージャを指定した場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]では次の順序でプロシージャが検索されます。  
   
 -   現在のデータベースの **sys** スキーマ。  
   
--   バッチまたは動的 sql を実行する場合、呼び出し元の既定のスキーマまたは、そのプロシージャを含むスキーマが次に検索して別のプロシージャ定義の本体内で、プロシージャの非修飾名が表示された場合。  
+-   バッチまたは動的 SQL で実行された場合は、呼び出し元の既定のスキーマ。または、修飾されていないプロシージャ名が別のプロシージャ定義の本文内にある場合は、その他のプロシージャを含むスキーマが次に検索されます。  
   
 -   現在のデータベースの **dbo** スキーマ。  
   
-`[ @qualifier = ] 'qualifier'` プロシージャ修飾子の名前です。 *修飾子*は**sysname**、既定値は NULL です。 さまざまな DBMS 製品は、3 つの部分は、フォーム内のテーブルの名前付けをサポート (_修飾子_ **.** _スキーマ_ **.** _名前_します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、*修飾子*データベース名を表します。 一部の製品で、テーブルのデータベース環境のサーバー名を表します。  
+`[ @qualifier = ] 'qualifier'`プロシージャ修飾子の名前を指定します。 *修飾子*は**sysname**,、既定値は NULL です。 さまざまな DBMS 製品で、3つの要素で構成されるテーブル名 (_修飾子_) がサポートさ**れています。** _スキーマ_ **.** _名前_。 で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、*修飾子*はデータベース名を表します。 一部の製品では、テーブルのデータベース環境のサーバー名を表します。  
   
-`[ @fUsePattern = ] 'fUsePattern'` 決定かどうか、アンダー スコア (_)、パーセント (%)、または角かっこ) はワイルドカード文字として解釈されます。 *fUsePattern*は**ビット**、既定値は 1 です。  
+`[ @fUsePattern = ] 'fUsePattern'`アンダースコア (_)、パーセント (%)、または角かっこ []) をワイルドカード文字として解釈するかどうかを決定します。 *Fusepattern*は**ビット**,、既定値は1です。  
   
- **0** = パターン照合はオフです。  
+ **0** = パターンマッチングは無効です。  
   
- **1** = パターン一致がオン。  
+ **1** = パターンマッチングはオンです。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  なし  
@@ -69,28 +70,28 @@ sp_stored_procedures [ [ @sp_name = ] 'name' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**PROCEDURE_QUALIFIER**|**sysname**|プロシージャ修飾子の名前。 この列は NULL を指定できます。|  
+|**PROCEDURE_QUALIFIER**|**sysname**|プロシージャ修飾子の名前。 この列は NULL にすることができます。|  
 |**PROCEDURE_OWNER**|**sysname**|プロシージャ所有者の名前。 この列は常に値が返されます。|  
 |**PROCEDURE_NAME**|**nvarchar(134)**|プロシージャの名前。 この列は常に値が返されます。|  
 |**NUM_INPUT_PARAMS**|**int**|将来使用するために予約されています。|  
 |**NUM_OUTPUT_PARAMS**|**int**|将来使用するために予約されています。|  
 |**NUM_RESULT_SETS**|**int**|将来使用するために予約されています。|  
-|**「解説」**|**varchar(254)**|プロシージャの説明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] この列の値は返されません。|  
+|**」**|**varchar(254)**|プロシージャの説明。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]はこの列の値を返しません。|  
 |**PROCEDURE_TYPE**|**smallint**|プロシージャの種類。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は常に 2.0 を返します。 この値には、次のいずれかを指定できます。<br /><br /> 0 = SQL_PT_UNKNOWN<br /><br /> 1 = SQL_PT_PROCEDURE<br /><br /> 2 = SQL_PT_FUNCTION|  
   
 ## <a name="remarks"></a>コメント  
  相互運用性を最大限に高めるために、ゲートウェイのクライアントでは、SQL 標準のパターン照合 (パーセント (%) とアンダースコア (_) ワイルドカード文字) のみを前提としています。  
   
- アクセス許可については、現在のユーザーは、必ずしもチェックされない; の特定のストアド プロシージャへのアクセスを実行します。そのため、アクセスは保証されません。 3 つの部分の名前のみが使用されることに注意してください。 つまり、ローカル ストアド プロシージャのみ必要とする 4 部構成の名前付け) リモート ストアド プロシージャが返されるに対して実行したときに[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 かどうか、サーバー属性 ACCESSIBLE_SPROC が Y の結果セットで**sp_server_info**、現在のユーザーによって実行できるストアド プロシージャのみが返されます。  
+ 現在のユーザーに対する特定のストアドプロシージャへの実行アクセスに関する権限情報は必ずしもチェックされません。そのため、アクセスは保証されません。 3部構成の名前付けのみが使用されていることに注意してください。 これは、リモートストアドプロシージャ (4 つの部分で構成される名前を必要とする) ではなく、ローカルストアドプロシージャ[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]だけが返されることを意味します。 **Sp_server_info**の結果セットで SERVER 属性 ACCESSIBLE_SPROC が Y の場合、現在のユーザーが実行できるストアドプロシージャのみが返されます。  
   
- **sp_stored_procedures**と等価**SQLProcedures** ODBC にします。 返される結果は並べ**PROCEDURE_QUALIFIER**、 **PROCEDURE_OWNER**、および**PROCEDURE_NAME**します。  
+ **sp_stored_procedures**は、ODBC の**sqlprocedures**と同じです。 返される結果は、 **PROCEDURE_QUALIFIER**、 **PROCEDURE_OWNER**、および**PROCEDURE_NAME**の順序で並べ替えられます。  
   
 ## <a name="permissions"></a>アクセス許可  
  スキーマに対する SELECT 権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>A. 現在のデータベース内のすべてのストアド プロシージャを返す  
+### <a name="a-returning-all-stored-procedures-in-the-current-database"></a>A. 現在のデータベース内のすべてのストアドプロシージャを返す  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内のすべてのストアド プロシージャを返します。  
   
 ```  
@@ -100,7 +101,7 @@ EXEC sp_stored_procedures;
 ```  
   
 ### <a name="b-returning-a-single-stored-procedure"></a>B. 1 つのストアド プロシージャを返す  
- 次の例は、結果のセットを返します、`uspLogError`ストアド プロシージャ。  
+ 次の例では、 `uspLogError`ストアドプロシージャの結果セットが返されます。  
   
 ```  
 USE AdventureWorks2012;  
@@ -109,7 +110,7 @@ sp_stored_procedures N'uspLogError', N'dbo', N'AdventureWorks2012', 1;
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [ストアド プロシージャ カタログ&#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
+ [カタログストアドプロシージャ&#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/catalog-stored-procedures-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
