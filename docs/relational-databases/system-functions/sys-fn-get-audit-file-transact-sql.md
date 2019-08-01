@@ -51,9 +51,9 @@ fn_get_audit_file ( file_pattern,
     
     この引数には、パス (ドライブ文字またはネットワーク共有) とファイル名の両方を含める必要があります。ファイル名にはワイルドカードを使用できます。 監査ファイル セットから複数のファイルを収集する 1 つのアスタリスク (*) を使用できます。 以下に例を示します。  
   
-    -   **\<path>\\ \*** 収集 - すべての監査ファイルが指定された場所にします。  
+    -   **\<パス >\\ \*** 収集 - すべての監査ファイルが指定された場所にします。  
   
-    -   **\<path> \LoginsAudit_{GUID}** 収集 - すべての監査を指定した名前と GUID のペアを持つファイル。  
+    -   **\<パス > \LoginsAudit_{GUID}** 収集 - すべての監査を指定した名前と GUID のペアを持つファイル。  
   
     -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   
@@ -61,9 +61,9 @@ fn_get_audit_file ( file_pattern,
  
     この引数は、blob の URL を (ストレージ エンドポイントとコンテナーを含む) を指定するに使用されます。 アスタリスクのワイルドカードはサポートされません、中には、このプレフィックスで始まる複数のファイル (blob) を収集する (完全な blob 名) ではなく、部分的なファイル (blob) 名のプレフィックスを使用できます。 以下に例を示します。
  
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\> /**  -特定のデータベースのすべての監査ファイル (blob) を収集します。    
+      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\> /**  -特定のデータベースのすべての監査ファイル (blob) を収集します。    
       
-      - **\<Storage_endpoint\>/\<Container\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -特定の監査ファイル (blob) を収集します。
+      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -特定の監査ファイル (blob) を収集します。
   
 > [!NOTE]  
 >  ファイル名のパターンがないパスを渡すとエラーが発生します。  
