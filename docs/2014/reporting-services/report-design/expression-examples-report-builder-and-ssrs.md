@@ -9,16 +9,16 @@ manager: kfile
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 03/08/2017
-ms.openlocfilehash: 456dd8e4e232f77e7cc7709a997fdd8ae5ef0e5b
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: 77aca108aa3acae73dfb3fa226aa0530b6a9b8b5
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67413000"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661283"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 
-レポートでは、内容と外観を制御するために式をよく使用します。 式が記述されて[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]、および組み込み関数のカスタム コード、レポートとグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
+レポートでは、内容と外観を制御するために式をよく使用します。 式はで[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]記述され、組み込み関数のカスタムコード、レポート変数、グループ変数、およびユーザー定義変数を使用できます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
 
 > [!IMPORTANT]  
 >  RDL サンドボックスが有効になっている場合は、レポートのパブリッシュ時に式のテキストで使用できる型およびメンバーが特定の型およびメンバーに制限されます。 詳細については、「 [RDL サンドボックスの有効化と無効化](../enable-and-disable-rdl-sandboxing.md)」を参照してください。  
@@ -51,7 +51,7 @@ ms.locfileid: "67413000"
 
 多数の関数および演算子がこのトピックでも式の例に使用されていますが、これらを使用して式を作成する方法をレポート作成のコンテキストで学習するには、「[チュートリアル:式の概要](../tutorial-introducing-expressions.md)」を参照してください。  
 
-式エディターには、組み込み関数を階層形式で表示できるビューが用意されています。 特定の関数を選択すると、[値] ペインにコード例が表示されます。 詳細については、次を参照してください。、[式 ダイアログ ボックス](../expression-dialog-box.md)または[式 ダイアログ ボックス&#40;レポート ビルダー&#41;](../expression-dialog-box-report-builder.md)します。  
+式エディターには、組み込み関数を階層形式で表示できるビューが用意されています。 特定の関数を選択すると、[値] ペインにコード例が表示されます。 詳細については、[レポートビルダー &#40;&#41;](../expression-dialog-box-report-builder.md)[[式] ダイアログボックス](../expression-dialog-box.md)または [式] ダイアログボックスを参照してください。  
 
 ## <a name="functions"></a>関数  
 
@@ -176,9 +176,9 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Format(Parameters!StartDate.Value, "D") & " through " &  Format(Parameters!EndDate.Value, "D")    
 ```  
 
-テキスト ボックスに日付または数値のみが含まれる場合の代わりに書式設定を適用するテキスト ボックスの Format プロパティを使用する必要があります、`Format`テキスト ボックス内の関数。  
+テキストボックスに日付または数字のみが含まれている場合は、テキストボックス内の`Format`関数の代わりに書式を適用するために、テキストボックスの [書式] プロパティを使用する必要があります。  
 
--   `Right`、 `Len`、および`InStr`関数は、サブストなどを返すに便利*ドメイン*\\*username*ユーザー名だけです。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (* ) より右側の部分のみが返されます。  
+-   `Right`、`Len`、 `InStr` の各関数は、サブストリングを返す場合に役立ちます。たとえば、 *DOMAIN*\\*username* の文字列からユーザー名だけを返します。 次の式では、\\User *というパラメーターで取得できる文字列のうち、円記号 (* ) より右側の部分のみが返されます。  
 
 ```  
 =Right(Parameters!User.Value, Len(Parameters!User.Value) - InStr(Parameters!User.Value, "\"))  
@@ -190,7 +190,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 =Parameters!User.Value.Substring(Parameters!User.Value.IndexOf("\")+1, Parameters!User.Value.Length-Parameters!User.Value.IndexOf("\")-1)  
 ```  
 
--   複数の値を持つパラメーターから選択した値を表示します。 次の例では、`Join`関数パラメーターの選択した値を連結する*MySelection*レポート アイテム内のテキスト ボックスの値を表す式として設定できる 1 つの文字列に。  
+-   複数の値を持つパラメーターから選択した値を表示します。 次の例では`Join` 、関数を使用して、 *myselection*パラメーターの選択した値を1つの文字列に連結します。この文字列は、レポートアイテムのテキストボックスの値を表す式として設定できます。  
 
 ```  
 = Join(Parameters!MySelection.Value)  
@@ -203,7 +203,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 
 ```  
 
--   `Regex`から関数、 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] <xref:System.Text.RegularExpressions>は、既存の文字列の形式、たとえば、電話番号の書式設定を変更するために役立ちます。 次の式を使用して、`Replace`からフィールドの 10 桁の電話番号の形式を変更する関数"*nnn*-*nnn*-*nnnn*"を"(*nnn*) *nnn*-*nnnn*"。  
+-   の`Regex` 関数は、<xref:System.Text.RegularExpressions>電話番号の書式設定など、既存の文字列の書式を変更する場合に便利です。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 次の式では`Replace` 、関数を使用して、フィールド内の10桁の電話番号の形式を "*nnn*-*nnn*-*nnnn*" から "(*nnn*) *nnn* -に変更します。*nnnn*":  
 
 ```  
 =System.Text.RegularExpressions.Regex.Replace(Fields!Phone.Value, "(\d{3})[ -.]*(\d{3})[ -.]*(\d{4})", "($1) $2-$3")  
@@ -217,7 +217,7 @@ Month(Fields!MyDate.Value),1), Fields!FullDateAlternateKey.Value)/7)+1).ToString
 -   キー フィールドを指定することで、`Lookup` 関数を使用し、1 対 1 のリレーションシップ (キーと値のペアなど) の値をデータセットから取得することができます。 次の式では、入力された製品識別子に一致する製品名をデータセット ("Product") から取得し、表示します。  
 
 ```  
-=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+=Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
 ```  
 
 #### <a name="lookupset"></a>LookupSet  
@@ -433,7 +433,7 @@ IIF(Fields!Month.Value=0,"NA",MonthName(IIF(Fields!Month.Value=0,1,Fields!Month.
 =IIF(CountRows()>12,false,true)  
 ```  
 
--   次の式を設定すると、`Hidden`列のプロパティは、データがデータ ソースから取得された後に、レポート データセットにフィールドが存在するかどうかのみの列を示します。  
+-   次の式は、列の`Hidden`プロパティで設定した場合、データソースからデータが取得された後にレポートデータセットにフィールドが存在する場合にのみ、列を表示します。  
 
 ```  
 =IIF(Fields!Column_1.IsMissing, true, false)  
@@ -524,7 +524,7 @@ End Function
 
 実行時例外の発生はこのようにして防ぐことができます。 テキスト ボックスの `Color` プロパティで `=IIF(Me.Value < 0, "red", "black")` のような式を使用し、その値が 0 より大きいか小さいかの条件に基づいて、テキストを表示できるようになりました。  
 
-## <a name="see-also"></a>参照
+## <a name="see-also"></a>関連項目
 
 - [フィルター式の例 &#40;レポート ビルダーおよび SSRS&#41;](filter-equation-examples-report-builder-and-ssrs.md)
 - [グループ式の例 &#40;レポート ビルダーおよび SSRS&#41;](expression-examples-report-builder-and-ssrs.md)

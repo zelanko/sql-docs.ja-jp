@@ -7,12 +7,12 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 6e4d1eace0be8d00d536d1ab3782685da9512ab5
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
-ms.translationtype: HT
+ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68344171"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68470451"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows に SQL Server Machine Learning Services をインストールする
 
@@ -107,7 +107,7 @@ SQL Server 2017 以降では、データベース内分析のための R およ�
 
 R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)、Intel MATH Kernel Library (MKL) 計算からの一貫した出力を確保する必要があります。
 
-1. コントロールパネルで、[**システムとセキュリティ** >  > ] [システム] [システム**設定** > ] [**環境変数**] をクリックします。
+1. コントロールパネルで、[**システムとセキュリティ** >  **] [システム]**  >  [システム**設定** > ] [**環境変数**] をクリックします。
 
 2. 新しいユーザー変数またはシステム変数を作成します。 
 
@@ -196,21 +196,13 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
     GO
     ```
 
- **結果**
+    **結果**
 
     スクリプトの実行には、最初に外部スクリプトランタイムが読み込まれるときに少し時間がかかります。 結果は次のようになります。
 
     | hello |
     |----|
     | 1|
-
-
-<!--  The preceding 'hello' table is NOT rendering properly on live Docs.
-Instead, the RAW markdown for the table is being displayed.  Probable bug in this markdown source,
-due to stricter rules imposed by 'markdig' engine (replaced 'DFM').
-I will inform HeidiSteen  [GeneMi, 2019/01/17]
--->
-
 
 > [!NOTE]
 > Python スクリプトで使用される列または見出しは、設計上、返されません。 出力の列名を追加するには、戻り値のデータセットのスキーマを指定する必要があります。 これを行うには、ストアドプロシージャの WITH RESULTS パラメーターを使用して、列に名前を付け、SQL データ型を指定します。
