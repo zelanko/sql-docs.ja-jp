@@ -6672,8 +6672,6 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: SQL Server ユーティリティ
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
-        - name: SQL Assessment API
-          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -6709,6 +6707,8 @@
               href: relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md
             - name: ユーティリティ エクスプローラーの F1 ヘルプ
               href: relational-databases/manage/utility-explorer-f1-help.md
+        - name: SQL Assessment API
+          href: sql-assessment-api/sql-assessment-api-overview.md
     - name: モニター
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -7532,6 +7532,8 @@
               href: master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
             - name: マスター データ サービスの開発者向けドキュメント
               href: master-data-services/develop/master-data-services-developer-documentation.md
+            - name: マネージド インスタンス上でデータベースをホストする
+              href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
         - name: Excel のアドイン
           href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
           items:
@@ -7972,8 +7974,6 @@
               href: relational-databases/security/sql-vulnerability-assessment.md
             - name: データの検出と分類
               href: relational-databases/security/sql-data-discovery-and-classification.md
-            - name: SQL Server コネクタのトラブルシューティング
-              href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
         - name: 認証アクセス
           items:
             - name: 有効な権限の決定
@@ -8021,8 +8021,16 @@
                   href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: TDE で保護されたデータベースの移動
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-            - name: EKM で TDE を有効にする
-              href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: 拡張キー管理
+              items:
+                - name: EKM で TDE を有効にする
+                  href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+                - name: 暗号化を使用する SQL Server コネクタ
+                  href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
+                - name: Azure Key Vault を使用した EKM
+                  href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+                - name: SQL Server コネクタのトラブルシューティング
+                  href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
             - name: サービス マスター キーをバックアップする
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: サービス マスター キーを復元する
@@ -8039,16 +8047,12 @@
               href: relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: Azure SQL Database のセキュリティ保護
           items:
-            - name: 暗号化を使用する SQL Server コネクタ
-              href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
             - name: Bring Your Own Key >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
             - name: TDE BYOK キーの交換 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
             - name: TDE の保護機能の削除 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
-            - name: Azure Key Vault を使用した EKM
-              href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
         - name: 監査
           items:
             - name: サーバー監査の仕様の作成
