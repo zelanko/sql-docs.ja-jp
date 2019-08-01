@@ -50,7 +50,9 @@ SELECT FLATTENED <select list> FROM ...
  式を使用してクエリの結果を並べ替えてから、**ORDER BY** 句と **TOP** 句の組み合わせを使用して結果のサブセットを返すことができます。 これは、最も可能性の高い回答者にのみ結果を配信するような配信先指定メーリングなどのシナリオで役に立ちます。 ターゲットメーリング予測クエリの結果を予測確率順に並べてから、上位の\<n >個の結果のみを返すことができます。  
   
 ## <a name="select-list"></a>SELECTリスト  
+
  *\<SELECTリスト >* スカラー列参照、予測関数、および式に含めることができます。 使用できるオプションは、アルゴリズムと以下のコンテキストに依存します。  
+
   
 -   クエリの対象がマイニング構造であるかマイニング モデルであるか  
   
@@ -82,7 +84,9 @@ JOIN <source data query>
 WHERE < condition expression >  
 ```  
   
+
  **SELECT**ステートメントの SELECTリストと**WHERE**句は、次の規則に従う必要があります。
+
   
 -   SELECTリストには、ブール型の結果を返さない式が含まれている必要があります。 この式は変更することができますが、式はブール型ではない結果を返す必要があります。  
   
@@ -108,7 +112,9 @@ SELECT FROM PREDICTION JOIN (<SELECT statement>) AS t, WHERE <SELECT statement>
  予測クエリの作成の詳細については、次を参照してください。[構造と DMX 予測クエリの使用状況](../dmx/structure-and-usage-of-dmx-prediction-queries.md)します。  
   
 ## <a name="clause-syntax"></a>句の構文  
+
  **SELECT** ステートメントを使用した参照は複雑なため、詳細な構文要素と引数は句ごとに示されます。それぞれの句の詳細については、次のリストのトピックをクリックしてください。 
+
   
  [SELECT DISTINCT FROM&#60;モデル&#62; &#40;DMX&#41;](../dmx/select-distinct-from-model-dmx.md)  
   

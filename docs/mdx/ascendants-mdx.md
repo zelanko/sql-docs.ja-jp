@@ -1,5 +1,5 @@
 ---
-title: 先祖 (MDX) |Microsoft Docs
+title: Ascendants (MDX) |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -35,7 +35,7 @@ Ascendants(Member_Expression)
  **先祖**関数がメンバーの階層の最上位までメンバーからすべてのメンバーの先祖を返します具体的には、指定されたメンバーの階層の逆順にたどってを実行し、。セット自体も含めたメンバーに関連するすべての先祖メンバーを返します。 これとは対照的に、[先祖](../mdx/ancestor-mdx.md)関数で、特定の先祖メンバー、または特定のレベルの先祖を返します。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、再販業者の注文の数を返します、`[Sales Territory].[Northwest]`メンバーとそのメンバーからのすべての先祖、 **Adventure Works**キューブ。 **先祖**関数を含むセットを構築します、`[Sales Territory].[Northwest]`メンバーとその先祖 ROWS 軸。  
+ 次の例は、再販業者の注文の数を返します、`[Sales Territory].[Northwest]`メンバーとそのメンバーからのすべての先祖、 **Adventure Works**キューブ。 **Ascendants**関数を含むセットを構築します、`[Sales Territory].[Northwest]`メンバーとその先祖 ROWS 軸。  
   
 ```  
 SELECT  

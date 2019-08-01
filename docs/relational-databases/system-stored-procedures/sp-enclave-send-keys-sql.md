@@ -1,5 +1,5 @@
 ---
-title: sp_enclave_send_keys (TRANSACT-SQL) |Microsoft Docs
+title: sp_enclave_send_keys (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
@@ -19,17 +19,17 @@ helpviewer_keywords:
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: b3d5ed50ac407beebfb54370cf91f0f3b8ba3101
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b4ced2feee2227ba1db492f721f57907069c5d99
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68124694"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661359"
 ---
-# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys (TRANSACT-SQL)
+# <a name="spenclavesendkeys----transact-sql"></a>sp_enclave_send_keys (Transact-sql)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-使用されるエンクレーブにデータベースのエンクレーブが有効な列暗号化キーを送信[セキュリティで保護された enclaves で Always Encrypted&#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)します。
+データベース内のエンクレーブが有効なすべての列暗号化キーを、 [secure enclaves &#40;&#41;データベースエンジンの Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)によって使用されるエンクレーブに送信します。
 
 ## <a name="syntax"></a>構文  
   
@@ -40,26 +40,26 @@ sp_enclave_send_keys
 
 ## <a name="arguments"></a>引数
 
-このストアド プロシージャに引数がありません。
+このストアドプロシージャには引数がありません。
 
 ## <a name="return-value"></a>戻り値
 
-このストアド プロシージャには、戻り値はありません。
+このストアドプロシージャには戻り値がありません。
   
 ## <a name="result-sets"></a>結果セット
 
-このストアド プロシージャには、結果セットがありません。
+このストアドプロシージャには結果セットがありません。
   
 ## <a name="remarks"></a>コメント
 
-**sp_enclave_send_keys**のすべての次の条件が満たされた場合、エンクレーブ対応の列暗号化キーをエンクレーブに送信します。
+次のすべての条件が満たされている場合、 **sp_enclave_send_keys**はエンクレーブが有効な列暗号化キーをエンクレーブに送信します。
 
-- エンクレーブは、SQL Server インスタンスで有効です。
-- **sp_enclave_send_keys**を使用して、アプリケーションから呼び出されていますが、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアント ドライバーで Always Encrypted のサポートを有効になっている Always Encrypted とエンクレーブ計算を持つデータベース接続を使用してセキュリティで保護された enclaves でします。
+- エンクレーブは、SQL Server インスタンスで有効になっています。
+- **sp_enclave_send_keys**は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]クライアントドライバーを使用してアプリケーションから呼び出され、Always Encrypted とエンクレーブの両方の計算が有効になっているデータベース接続を使用して、secure enclaves の Always Encrypted をサポートしています。
 
 ## <a name="permissions"></a>アクセス許可
 
- 必要な**VIEW ANY COLUMN ENCRYPTION KEY DEFINITION**と**VIEW ANY COLUMN MASTER KEY DEFINITION**データベースのアクセス許可。  
+ データベースで、 **VIEW ANY COLUMN ENCRYPTION KEY definition**および**VIEW ANY COLUMN MASTER key definition**権限が必要です。  
   
 ## <a name="examples"></a>使用例  
   
@@ -69,8 +69,8 @@ EXEC sp_enclave_send_keys;
 
 ## <a name="see-also"></a>関連項目
 
- [セキュリティで保護された enclaves で always Encrypted&#40;データベース エンジン&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
- [チュートリアル: 作成して、ランダム化された暗号化を使用して、エンクレーブ対応の列にインデックスを使用](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
- [キャッシュされた列暗号化キーを使用してインデックス作成操作を呼び出す](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
- [ランダムな暗号化を使用して、エンクレーブ対応の列のインデックス](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
- [AlwaysOn とデータベースの移行に関する考慮事項](../security/encryption/always-encrypted-enclaves.md#considerations-for-alwayson-and-database-migration)
+ [Secure enclaves &#40;データベースエンジンでの Always Encrypted&#41;](../../relational-databases/security/encryption/always-encrypted-enclaves.md)   
+ [チュートリアル: ランダム化された暗号化を使用したエンクレーブ対応列でのインデックスの作成と使用](../security/tutorial-creating-using-indexes-on-enclave-enabled-columns-using-randomized-encryption.md#step-3-create-an-index-with-role-separation)   
+ [キャッシュされた列暗号化キーを使用したインデックス作成操作の呼び出し](../security/encryption/configure-always-encrypted-enclaves.md#invoke-indexing-operations-using-cached-column-encryption-keys)   
+ [ランダム化される暗号化を使用したエンクレーブ対応列のインデックス](../security/encryption/always-encrypted-enclaves.md#indexes-on-enclave-enabled-columns-using-randomized-encryption)   
+ [AlwaysOn とデータベースの移行に関する考慮事項](../security/encryption/always-encrypted-enclaves.md#anchorname-1-considerations-availability-groups-db-migration)

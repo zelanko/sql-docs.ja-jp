@@ -1,7 +1,7 @@
 ---
-title: SQL Server 2016 のインストールに必要なハードウェアおよびソフトウェア | Microsoft Docs
+title: SQL Server のインストールに必要なハードウェアおよびソフトウェア | Microsoft Docs
 ms.custom: sqlfreshmay19
-ms.date: 05/15/2019
+ms.date: 07/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -44,27 +44,26 @@ helpviewer_keywords:
 ms.assetid: 09bcf20b-0a40-4131-907f-b61479d5e4d8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c578a0b022e484c24c1ea035ce5e8561dce79d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 54f2bdb3d844a8e5aab947f19f7905173b2cb04f
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68019867"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419572"
 ---
 # <a name="hardware-and-software-requirements-for-installing-sql-server"></a>SQL Server のインストールに必要なハードウェアおよびソフトウェア
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
 この記事では、Windows オペレーティング システムでの [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] のインストールと実行に必要な最低限のハードウェア要件とソフトウェア要件について説明します。 
 
-[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] では、Linux での [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] が新たにサポートされています。 詳細については、[Linux での [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに必要なハードウェアおよびソフトウェア](../../linux/sql-server-linux-setup.md#system)に関するページを参照してください。 
+[!INCLUDE[sscurrent](../../includes/sssqlv14-md.md)] では、Linux での [!INCLUDE[ssNoVer](../../includes/ssnoversion-md.md)] が新たにサポートされました。 詳細については、[Linux での [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストールに必要なハードウェアおよびソフトウェア](../../linux/sql-server-linux-setup.md#system)に関するページを参照してください。 
 
-> この記事は、[!INCLUDE[ss2016](../../includes/sssql15-md.md)] 以降に適用されます。 
   
 **お試しください:**  
   
 -   [**Evaluation Center**](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)から SQL Server をダウンロードします。 
   
--   [**SQL Server 2016**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) がインストール済みの Virtual Machine をすぐにご利用いただけます。  
+-   [**SQL Server 2017**](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm) がインストール済みの仮想マシンをすぐにご利用いただけます。  
   
 **すべてのエディションに次の考慮事項が適用されます。**  
   
@@ -89,7 +88,7 @@ ms.locfileid: "68019867"
   
 |コンポーネント|要件|  
 |---------------|-----------------|  
-|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 以降では、データベース エンジン、マスター データ サービス、レプリケーションのために [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 が必要になります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] セットアップにより [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]が自動的にインストールされます。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft .NET Framework 4.6 (Web Installer) for Windows [から](https://support.microsoft.com/kb/3045560)を手動でインストールすることもできます。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] では .NET Framework 4.6.2 が必要です。 [ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53344)から入手できます<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 の詳細、推奨事項、ガイダンスについては、「 [.NET Framework 配置ガイド (開発者向け)](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)」を参照してください。<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 をインストールするには、[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] と [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] に [KB2919355](https://support.microsoft.com/kb/2919355) が必要になります。|  
+|.NET Framework|[!INCLUDE[sql2016](../../includes/sssql15-md.md)] RC1 以降では、データベース エンジン、マスター データ サービス、レプリケーションのために [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 が必要になります。 SQL Server セットアップで [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] が自動的にインストールされます。 [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] Microsoft .NET Framework 4.6 (Web Installer) for Windows [から](https://support.microsoft.com/kb/3045560)を手動でインストールすることもできます。<br/><br/>[!INCLUDE[sql2019](../../includes/sssqlv15-md.md)] では .NET Framework 4.6.2 が必要です。 [ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53344)から入手できます<br/><br/> [!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 の詳細、推奨事項、ガイダンスについては、「 [.NET Framework 配置ガイド (開発者向け)](https://msdn.microsoft.com/library/ee942965\(v=vs.110\).aspx)」を参照してください。<br/><br/>[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)] 4.6 をインストールするには、[!INCLUDE[winblue_client_2](../../includes/winblue-client-2-md.md)] と [!INCLUDE[winblue_server_2](../../includes/winblue-server-2-md.md)] に [KB2919355](https://support.microsoft.com/kb/2919355) が必要になります。|  
 |ネットワーク ソフトウェア|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] でサポートされるオペレーティング システムにはネットワーク ソフトウェアが組み込まれています。 スタンドアロン インストールの名前付きおよび既定のインスタンスでは、次のネットワーク プロトコルがサポートされています。共有メモリ、名前付きパイプ、TCP/IP、および VIA。<br/><br/> **注:** VIA プロトコルはフェールオーバー クラスターではサポートされません。 SQL Server インスタンスと同じフェールオーバー クラスターのノード上で実行されているクライアントまたはアプリケーションは、そのローカル パイプ アドレスを使用して SQL Server に接続するために、共有メモリ プロトコルを使用することができます。 ただし、この種の接続はクラスターに対応しないため、インスタンスのフェールオーバー後に失敗します。 したがって、これは非推奨であり、非常に限られたシナリオでのみ使用する必要があります。<br/><br/> **重要:** VIA プロトコルは非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]<br/><br/> ネットワーク プロトコルとネットワーク ライブラリの詳細については、「 [Network Protocols and Network Libraries](../../sql-server/install/network-protocols-and-network-libraries.md)」を参照してください。|  
 |ハード ディスク|[!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] では 6 GB 以上のハード ディスク空き容量が必要です。<br/><br/> 必要となるディスク空き容量は、インストールする [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] のコンポーネントに応じて異なります。 詳細については、この記事で後述する「[必要なハード ディスク空き容量](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#HardDiskSpace)」を参照してください。 データ ファイルでサポートされているストレージの種類の詳細については、「 [Storage Types for Data Files](../../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md#StorageTypes)」を参照してください。|  
 |ドライブ|ディスクからインストールする場合は、DVD ドライブが必要です。|  
@@ -120,13 +119,24 @@ ms.locfileid: "68019867"
   
  WOW64 (Windows 32-bit on Windows 64-bit) は 64 ビット版 Windows の機能で、32 ビット アプリケーションをネイティブの 32 ビット モードで実行することができます。 つまり、基盤となるオペレーティング システムが 64 ビット オペレーティング システムであっても、アプリケーションは 32 ビット モードで動作します。 WOW64 は、 [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] インストールではサポートされていません。 ただし、管理ツールは WOW64 でサポートされています。  
 
- 
 
 **Server Core サポート:**
 
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] は Windows Server 2008 R2、Windows Server 2012、Windows Server 2012 R2、Windows Server 2016、および Windows Server 2019 の Server Core インストールでサポートされています。 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
 
-[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストールは、次のエディションの Windows Server の Server Core モードでサポートされます。
+SQL Server 2019 の Server Core モードでのインストールは、次のエディションの Windows Server でサポートされます。
+
+|                              |                                |
+| :------------------------    | :------------------------------|
+| Windows Server 2019 Standard | Windows Server 2019 Datacenter |
+| Windows Server 2016 Standard | Windows Server 2016 Datacenter |
+   | &nbsp; | &nbsp; |
+
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+SQL Server 2016 および 2017 の Server Core モードでのインストールは、次のエディションの Windows Server でサポートされます。
 
 |                              |                                |
 | :------------------------    | :------------------------------|
@@ -137,40 +147,48 @@ ms.locfileid: "68019867"
 | Windows Server 2008 R2 SP1 Standard | Windows Server 2008 R2 SP1 Datacenter |
 | Windows Server 2008 R2 SP1 Enterprise | Windows Server 2008 R2 SP1 Web|
    | &nbsp; | &nbsp; |
+::: moniker-end
 
-Server Core への [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のインストールの詳細については、「[Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
+Server Core への SQL Server のインストールの詳細については、「[Server Core への SQL Server のインストール](../../database-engine/install-windows/install-sql-server-on-server-core.md)」を参照してください。  
 
   
 ### <a name="features-supported-on-32-bit-client-operating-systems"></a>32 ビット クライアント オペレーティング システムでサポートされている機能  
  Windows 10 や Windows 8.1 など、Windows クライアント オペレーティング システムは 32 ビットまたは 64 ビットのアーキテクチャとして利用できます。   すべての SQL Server 機能は 64 ビット クライアント オペレーティング システムでサポートされています。 サポートされている 32 ビット クライアント オペレーティング システムでは、マイクロソフトは次の機能をサポートします。  
   
--   Data Quality クライアント  
-  
--   クライアント ツール接続  
-  
--   Integration Services  
-  
--   クライアント ツールの旧バージョンとの互換性  
-  
--   クライアント ツール SDK  
-  
--   Documentation コンポーネント  
-  
--   分散再生コンポーネント  
-  
--   分散再生コントローラー  
-  
--   分散再生クライアント  
-  
--   SQL クライアント接続 SDK  
+-   Data Quality クライアント
+-   クライアント ツール接続
+-   Integration Services
+-   クライアント ツールの旧バージョンとの互換性
+-   クライアント ツール SDK
+-   Documentation コンポーネント
+-   分散再生コンポーネント
+-   分散再生コントローラー
+-   分散再生クライアント
+-   SQL クライアント接続 SDK
   
  [!INCLUDE[winserver2008r2](../../includes/winserver2008r2-md.md)] 以降のサーバー オペレーティング システムは 32 ビットのアーキテクチャとして利用できません。 サポートされているサーバー オペレーティング システムはすべて 64 ビットのみを利用できます。 すべての機能は 64 ビット サーバー オペレーティング システムでサポートされています。  
   
 ###  <a name="TOP_Principal"></a> OS の互換性   
 
- 次の表では、Windows のバージョンと SQL Server のエディションとの互換性を示します。  
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions" 
+次の表では、Windows のバージョンと SQL Server 2019 のエディションとの互換性を示します。  
   
 
+| SQL Server のエディション:               | Enterprise | Developer | Standard | Web | Express |  
+| :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
+| Windows Server 2019 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2019 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2019 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Standard      |    はい     |    はい    |    はい   | はい |   はい   |
+| Windows Server 2016 Essentials    |    はい     |    はい    |    はい   | はい |   はい   |
+| &nbsp; | &nbsp; |
+::: moniker-end
+
+::: moniker range=">=sql-server-2016 <=sql-server-2017||=sqlallproducts-allversions"
+
+次の表では、Windows のバージョンと SQL Server 2016 と 2017 のエディションとの互換性を示します。  
+  
 | SQL Server のエディション:               | Enterprise | Developer | Standard | Web | Express |  
 | :------------------------         | :--------- | :-------- | :------- | :-- | :------ | 
 | Windows Server 2019 Datacenter    |    はい     |    はい    |    はい   | はい |   はい   |
@@ -196,14 +214,14 @@ Server Core への [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のイ�
 | Windows 8.1 Enterprise            |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
 | Windows 8 Pro                     |    いいえ      |    はい    |    はい   | いいえ  |   はい   |
 | Windows 8                         |    いいえ      |    はい    |    はい   | いいえ  |   はい   | 
-| &nbsp; | &nbsp; |
-
 
 > [!NOTE]  
 > このセクションで注記されているオペレーティング システム サポートの例外は、以下の [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以前の Business Intelligence 機能です。これは Windows Server 2008 R2 SP1 以降にインストールできます。  
 >  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] - SharePoint  
 >-   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint 製品用アドイン  
+::: moniker-end
+
 
   
 ##  <a name="CrossLanguageSupport"></a> 言語間サポート  
