@@ -36,7 +36,7 @@ ms.locfileid: "67950872"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**CONSTRAINT_CATALOG**|**nvarchar(** 128 **)**|制約修飾子です。|  
-|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|制約が所属するスキーマの名前です。<br /><br /> **&#42;&#42;重要な&#42; &#42;** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
+|**CONSTRAINT_SCHEMA**|**nvarchar(** 128 **)**|制約が所属するスキーマの名前です。<br /><br /> **重要** オブジェクトのスキーマを決定 INFORMATION_SCHEMA ビューを使用しないでください。 オブジェクトのスキーマを調べる唯一の信頼性のある方法は、sys.objects カタログ ビューに対するクエリを実行する方法です。|  
 |**CONSTRAINT_NAME**|**sysname**|制約の名前。|  
 |**CHECK_CLAUSE**|**nvarchar(** 4000 **)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] 定義ステートメントの実際のテキスト|  
   
