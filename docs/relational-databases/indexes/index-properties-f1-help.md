@@ -19,12 +19,12 @@ ms.assetid: 45efd81a-3796-4b04-b0cc-f3deec94c733
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 40fff511c9ff69ce6da9de9cf7bcaf21cb4d9ef3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6d84af2893cc535717c2785d35875ca2b0d5550
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909711"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476300"
 ---
 # <a name="index-properties-f1-help"></a>[インデックスのプロパティ] の F1 ヘルプ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -133,7 +133,76 @@ ms.locfileid: "67909711"
   
  **Allow Nulls**  
  テーブル定義において列の NULL 値が許容される場合は **[はい]** が表示されます。 テーブル定義において列の NULL 値が許容されない場合は **[いいえ]** が表示されます。  
+
+##  <a name="Options"></a> オプション ページのオプション
+ このページを使用すると、さまざまなインデックス オプションを表示または変更できます。
+
+### <a name="general-options"></a>[全般] のオプション
+**[自動的に統計値を再計算する]**<br>
+分布統計を自動的に再計算するかどうかを指定します。 既定値は **True** です。これは、STATISTICS_NORECOMPUTE をオフに設定することと同じです。 これを **False** に設定すると、STATISTICS_NORECOMPUTE がオンに設定されます。
+
+**[重複した値を無視する]** <br>
+挿入操作で、一意のインデックスに重複するキー値を挿入しようとした場合のエラー応答を指定します。
+
+True<br>
+重複したキー値が一意のインデックスに挿入されると、警告メッセージが表示されます。 一意性制約に違反する行のみが失敗します。
+
+False<br>
+重複したキー値が一意のインデックスに挿入されると、エラー メッセージが表示されます。 INSERT 操作全体がロールバックされます。
+
+### <a name="locks-options"></a>ロック オプション
+
+**[行のロックを許可する]**<br>
+行ロックを許可するかどうかを指定します。
+
+**[ページのロックを許可する]**<br>
+ページ ロックを許可するかどうかを指定します。
+
+### <a name="operation-options"></a>操作オプション
+
+ **[DML のオンライン処理を許可する]**  
+ インデックス操作 (CREATE や ALTER など) 中に、基本となるテーブルやクラスター化インデックス データ、および関連する非クラスター化インデックスにユーザーがアクセスできるようにします。 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
   
+> [!NOTE]  
+>  XML インデックスの場合、またはインデックスが無効なクラスター化インデックスの場合、このオプションは使用できません。  
+  
+ **[並列処理の最大限度]**  
+ 並列実行プランの実行中に使用されるプロセッサ数を制限します。 既定値は 0 です。0 の場合、実際に使用可能な CPU 数が使用されます。 値を 1 に設定すると、並列実行プランが生成されなくなります。値を 1 よりも大きな数値に設定すると、1 つのクエリ実行で使用されるプロセッサの最大数が限定されます。 このオプションは、ダイアログ ボックスが **再構築** または **再作成** 状態のときにのみ使用できます。 詳しくは、「 [最適なパフォーマンスを実現するための max degree of parallelism オプションの設定](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)」をご覧ください。  
+  
+> [!NOTE]  
+>  使用可能な CPU 数よりも多い値を指定すると、実際に使用可能な CPU 数が使用されます。  
+
+
+**シーケンシャル キーの最適化**<br>
+最終ページ挿入競合に対して最適化するかどうかを指定します。 詳細については、「[シーケンシャル キー](../../t-sql/statements/create-index-transact-sql.md#sequential-keys)」を参照してください。
+
+### <a name="storage-options"></a>ストレージ オプション
+
+**[tempdb の並べ替え]**<br>
+tempdb に一時的な並べ替え結果を格納するかどうかを指定します。
+
+True<br>
+インデックスの構築に使用される並べ替えの中間結果が、tempdb に格納されます。 tempdb がユーザー データベースとは異なるディスク セットにある場合は、インデックスの作成に要する時間が短縮されます。 インデックスの構築中に使用されるディスク領域のサイズは増加します。
+
+False<br>
+中間の並べ替え結果はインデックスと同じデータベースに格納されます。 詳細については、「[インデックスの SORT_IN_TEMPDB オプション](./sort-in-tempdb-option-for-indexes.md)」を参照してください。
+
+**[FILL FACTOR]**<br>
+インデックスの作成または再ビルド中、データベース エンジンが各インデックス ページのリーフ レベルを作成するための深度を示すパーセンテージを指定します。 fillfactor 値には、1 から 100 の整数値を指定してください。 fillfactor が 100 の場合、データベース エンジンでは全容量を使用するリーフ ページでインデックスが作成されます。
+FILLFACTOR 設定は、インデックスが作成または再構築されるときのみ適用されます。 データベース エンジンでは、ページ内で指定されたパーセント分の空き領域は動的に保持されません。
+
+詳細については、「 [インデックスの FILL FACTOR の指定](./specify-fill-factor-for-an-index.md)」を参照してください。
+
+**インデックスを埋め込む (Pad index)**<br>
+インデックスの埋め込みを指定します。
+
+True<br>
+fillfactor で指定される空き領域のパーセンテージが、インデックスの中間レベルのページに適用されます。
+
+False または fillfactor が指定されていません<br>
+中間レベルのページはほぼ全容量が使用されます。ただし、中間ページにあるキーのセットを考慮して、インデックスに割り当てることのできる、少なくとも 1 行の最大サイズが収まる分の領域は残されます。
+
+
 ##  <a name="Storage"></a> [ストレージ] ページのオプション  
  このページを使用すると、選択したインデックスのファイル グループ プロパティやパーティション構成プロパティを表示または変更できます。 インデックスの種類に関連するオプションだけが表示されます。  
   
@@ -164,18 +233,6 @@ ms.locfileid: "67909711"
   
 > [!NOTE]  
 >  テーブルの列が計算列の場合、 **[列データ型]** には "計算列" と表示されます。  
-  
- **[インデックスの移動中に DML ステートメントのオンライン処理を許可する]**  
- インデックス操作中に、基本となるテーブルやクラスター化インデックス データ、および関連する非クラスター化インデックスにユーザーがアクセスできるようにします。 詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
-  
-> [!NOTE]  
->  XML インデックスの場合、またはインデックスが無効なクラスター化インデックスの場合、このオプションは使用できません。  
-  
- **[並列処理の最大限度の設定]**  
- 並列実行プランの実行中に使用されるプロセッサ数を制限します。 既定値は 0 です。0 の場合、実際に使用可能な CPU 数が使用されます。 値を 1 に設定すると、並列実行プランが生成されなくなります。値を 1 よりも大きな数値に設定すると、1 つのクエリ実行で使用されるプロセッサの最大数が限定されます。 このオプションは、ダイアログ ボックスが **再構築** または **再作成** 状態のときにのみ使用できます。 詳しくは、「 [最適なパフォーマンスを実現するための max degree of parallelism オプションの設定](../../relational-databases/policy-based-management/set-the-max-degree-of-parallelism-option-for-optimal-performance.md)」をご覧ください。  
-  
-> [!NOTE]  
->  使用可能な CPU 数よりも多い値を指定すると、実際に使用可能な CPU 数が使用されます。  
   
 ##  <a name="Spatial"></a> [空間] ページのインデックス オプション  
  **[空間]** ページを使用して、空間プロパティの値を表示または指定します。 詳細については、「[空間データ &#40;SQL Server&#41;](../../relational-databases/spatial/spatial-data-sql-server.md)」を参照してください。  

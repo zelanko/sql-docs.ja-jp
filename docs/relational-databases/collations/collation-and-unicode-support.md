@@ -24,17 +24,20 @@ helpviewer_keywords:
 - SQL Server collations
 - UTF-8
 - UTF-16
+- UTF8
+- UTF16
+- UCS2
 - server-level collations [SQL Server]
 ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: af749bdb7050d9e71fdfe698fe295255a4603add
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5807b8ae9c3b074068d0422a91b1dc1711c4067a
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118485"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471042"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -272,7 +275,7 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 
 > [!TIP]   
 > [CHAR(*n*) および VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md)、または[NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では *n* は文字数を定義すると考えるのが一般的です。 これは、CHAR (10) 列の例では、0 から 127 の範囲の 10 個の ASCII 文字を Latin1_General_100_CI_AI などの照合順序を使用して格納できるためで、この範囲内の各文字が 1 バイトのみを使用するためです。    
-> ただし、[CHAR(*n*) および VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) では、*n* は **bytes** (0-8,000) の文字列サイズを定義し、[NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では *n* は**byte-pairs** (0-4,000) の文字列の長さを定義します。 *n* は、格納できる文字数を定義しません。
+> ただし、[CHAR(*n*) および VARCHAR(*n*)](../../t-sql/data-types/char-and-varchar-transact-sql.md) では、*n* は **bytes** で文字列のサイズ (0 から 8,000) を定義し、[NCHAR(*n*) および NVARCHAR(*n*)](../../t-sql/data-types/nchar-and-nvarchar-transact-sql.md) では *n* は **byte-pairs** で文字列のサイズ (0 から 4,000) を定義します。 *n* は、格納できる文字数を定義しません。
 
 上記のように、使われている文字セットによっては、適切な Unicode エンコードとデータ型を選択することで、ストレージを大幅に節約したり、現在のストレージの占有領域を増やしたりする可能性があります。 たとえば、Latin1_General_100_CI_AI_SC_UTF8 など、UTF-8 対応のラテン語の照合順序を使用する場合、`CHAR(10)` 列に 10 バイトが格納され、0-127 の範囲に 10 個の ASCII 文字を保持できますが、128-2047 の範囲では 5 文字のみ、2048-65535 の範囲には 3 文字のみ保持できます。 これに対して、`NCHAR(10)` 列には 10 バイトペア (20 バイト) が格納されるため、0-65535 の範囲に 10 文字を保持できます。  
 
@@ -301,7 +304,9 @@ Unicode Consortium では、各文字に一意のコード ポイント (000000 
 [国際化に対応した Transact-SQL ステートメントの記述](../../relational-databases/collations/write-international-transact-sql-statements.md)     
 [SQL Server ベスト プラクティス Unicode への移行](https://go.microsoft.com/fwlink/?LinkId=113890) - 今後は維持されません   
 [Unicode コンソーシアムの Web サイト](https://go.microsoft.com/fwlink/?LinkId=48619)   
-[Unicode 標準](http://www.unicode.org/standard/standard.html)      
+[Unicode 標準](http://www.unicode.org/standard/standard.html)     
+[OLE DB Driver for SQL Server の UTF-8 のサポート](../../connect/oledb/features/utf-8-support-in-oledb-driver-for-sql-server.md)  
+[SQL Server 用の UTF-8 サポートの概要](https://techcommunity.microsoft.com/t5/SQL-Server/Introducing-UTF-8-support-for-SQL-Server/ba-p/734928)を示すブログ記事       
     
 ## <a name="see-also"></a>参照    
 [包含データベースの照合順序](../../relational-databases/databases/contained-database-collations.md)     
