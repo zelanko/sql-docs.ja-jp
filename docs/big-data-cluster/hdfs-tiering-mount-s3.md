@@ -5,22 +5,22 @@ description: この記事では、HDFS 階層制御を構成して、外部の S
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 28c80d6076f07c8a4f1605149f4b5c730c8349a1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419337"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702877"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための S3 をマウントする方法
 
 次のセクションでは、S3 ストレージ データ ソースを使用して HDFS 階層制御を構成する方法の例を示します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [デプロイ済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -77,13 +77,13 @@ ms.locfileid: "68419337"
 ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 HDFS で指定されたパスのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>マウントを更新する
@@ -99,9 +99,9 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 マウントを削除するには、**azdata bdc storage-pool mount delete** コマンドを使用して、HDFS で次のマウント パスを指定します。
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server 2019 ビッグデータ クラスターの詳細については、「[What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)」(SQL Server 2019 ビッグ データ クラスターとは) を参照してください。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。

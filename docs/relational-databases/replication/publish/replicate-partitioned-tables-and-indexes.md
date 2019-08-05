@@ -16,15 +16,16 @@ helpviewer_keywords:
 ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1962546b83926f1ff189ece6757ebbf3659976ec
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 9750e85aefab0db07978cbba6a98a845888cec3d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073577"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769792"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   大きなテーブルやインデックスをパーティション分割すると、データのサブセットに対するアクセスや管理を迅速かつ効率的に行うと同時に、データ コレクションの整合性を維持することができるので、大きなテーブルやインデックスを管理しやすくなります。 詳細については、「 [Partitioned Tables and Indexes](../../../relational-databases/partitions/partitioned-tables-and-indexes.md)」を参照してください。 レプリケーションでは、パーティション テーブルとパーティション インデックスを扱う方法を指定するプロパティ セットによって、パーティション分割をサポートします。  
   
 ## <a name="article-properties-for-transactional-and-merge-replication"></a>トランザクション レプリケーションおよびマージ レプリケーションのアーティクルのプロパティ  

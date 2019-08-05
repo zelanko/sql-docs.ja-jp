@@ -9,18 +9,18 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d7d8a6dd53452700853dca9774ed0196ed7546fe
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419348"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742734"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
 次のセクションでは、Azure Data Lake Storage Gen2 データソースを使用して HDFS 階層制御を構成する方法の例を示します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [デプロイ済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -110,10 +110,10 @@ Azure portal で ADLS アカウント用に取得できるアクセス キーを
    ```
 1. 環境変数 MOUNT_CREDENTIALS を設定する (手順については上へスクロール)
 
-1. **azdata bdc storage-pool mount create** を使用して、Azure でリモート HDFS ストレージをマウントします。 次のコマンドを実行する前に、プレースホルダーの値を置き換えます。
+1. **Azdata bdc HDFS mount create**を使用して、Azure にリモート HDFS ストレージをマウントします。 次のコマンドを実行する前に、プレースホルダーの値を置き換えます。
 
    ```bash
-   azdata bdc storage-pool mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
+   azdata bdc hdfs mount create --remote-uri abfs://<blob-container-name>@<storage-account-name>.dfs.core.windows.net/ --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
@@ -126,13 +126,13 @@ Azure portal で ADLS アカウント用に取得できるアクセス キーを
 ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
 HDFS で指定されたパスのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>マウントを更新する
@@ -145,12 +145,12 @@ azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 
 ## <a id="delete"></a> マウントを削除する
 
-マウントを削除するには、**azdata bdc storage-pool mount delete** コマンドを使用して、HDFS で次のマウント パスを指定します。
+マウントを削除するには、 **azdata bdc hdfs mount delete**コマンドを使用し、hdfs でマウントパスを指定します。
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server 2019 ビッグデータ クラスターの詳細については、「[What are SQL Server 2019 big data clusters?](big-data-cluster-overview.md)」(SQL Server 2019 ビッグ データ クラスターとは) を参照してください。
+SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。
