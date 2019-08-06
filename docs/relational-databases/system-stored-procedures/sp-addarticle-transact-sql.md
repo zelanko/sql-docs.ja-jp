@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 0483a157-e403-4fdb-b943-23c1b487bef0
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 7be448918599918bdf638b43178030703da724a9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e337e04714b0d8dcc9a8227ca48ad9dc33dcc3dc
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771367"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811386"
 ---
-# <a name="spaddarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
+# <a name="sp_addarticle-transact-sql"></a>sp_addarticle (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   アーティクルを作成し、パブリケーションに追加します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -211,7 +211,7 @@ sp_addarticle [ @publication = ] 'publication'
 |**0x40000000000**|サブスクライバーにメモリ最適化テーブルを作成するには、スナップショットエージェントによるスクリプト作成を有効にします。|  
 |**0x80000000000**|メモリ最適化アーティクルのクラスター化インデックスを非クラスター化インデックスに変換します。|  
 |**0x400000000000**|テーブルの非クラスター化列ストアインデックスをレプリケートします。|  
-|**0x800000000000**|テーブルのクラスター化されていない列ストアインデックスをレプリケートします。|  
+|**0x800000000000**|テーブルのすべての flitered リングされた非クラスター化列ストアインデックスをレプリケートします。|  
 |NULL|レプリケーションでは、 *schema_option*が既定値に自動的に設定されます。この値は、他のアーティクルのプロパティによって異なります。 「解説」の「既定のスキーマオプション」の表は、アーティクルの種類とレプリケーションの種類に基づく既定のスキーマオプションを示しています。<br /><br /> 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のパブリケーションの既定値は**0x050d3**です。|  
   
  すべての*schema_option*値がすべての種類のレプリケーションとアーティクルの種類に対して有効であるとは限りません。 「解説」の**有効なスキーマオプション**の表は、アーティクルの種類とレプリケーションの種類の組み合わせに基づいて選択できる有効なスキーマオプションを示しています。  

@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 71b3f839326bec0a8b5606e2c7de3f25584b4ff1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 71355cfe5341af74083e21cb786b441c71c48c80
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62802706"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811311"
 ---
 # <a name="understanding-incremental-generation"></a>増分生成の理解
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -58,7 +58,7 @@ ms.locfileid: "62802706"
  ディメンション、キューブ、属性などの新しいオブジェクトの追加  
  スキーマ生成ウィザードは、新しいオブジェクトのマップ先となる、基になるオブジェクトを追加します。  
   
- ユーザー オブジェクトがサブジェクト領域データベースに存在し、データベース エンジンによってエラーが返されるために、スキーマ生成ウィザードで必要な変更を行うことができない場合、スキーマ生成ウィザードは実行に失敗し、データベース エンジンによって返されたエラーを表示します。 たとえば、ウィザードによって生成されたテーブルに、主キー制約または非クラスター化インデックスを作成した場合、スキーマ生成ウィザードはそのテーブルを破棄しません。この制約やインデックスはスキーマ生成ウィザードによって作成されたものではないためです。  
+ ユーザー オブジェクトがサブジェクト領域データベースに存在し、データベース エンジンによってエラーが返されるために、スキーマ生成ウィザードで必要な変更を行うことができない場合、スキーマ生成ウィザードは実行に失敗し、データベース エンジンによって返されたエラーを表示します。 たとえば、テーブルを生成した後にテーブルに primary key 制約または非クラスター化インデックスを作成した場合、スキーマ生成ウィザードでは、制約またはインデックスを作成しなかったため、そのテーブルは削除されません。  
   
 ## <a name="supporting-schema-changes"></a>スキーマの変更のサポート  
  サブジェクト領域データベースまたは関連するデータ ソース ビュー内のテーブルまたは列のプロパティを変更すると、スキーマ生成ウィザードは、次の表に説明する方法で、これらの変更を取り扱います。  
@@ -79,7 +79,7 @@ ms.locfileid: "62802706"
   
  一方、データ ソース接続文字列を以前の生成後に別のデータベースに変更した場合は、エラーは発生しません。 この場合は新しいデータベースが使用され、以前のデータベースには変更は行われません。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [データ ソース ビューおよびデータ ソースへの変更の管理](../../analysis-services/multidimensional-models/manage-changes-to-data-source-views-and-data-sources.md)   
  [スキーマ生成ウィザード (Analysis Services)](../../analysis-services/multidimensional-models/schema-generation-wizard-analysis-services.md)  
   

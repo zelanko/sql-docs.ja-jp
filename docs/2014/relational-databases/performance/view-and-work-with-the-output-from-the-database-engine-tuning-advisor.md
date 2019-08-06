@@ -26,12 +26,12 @@ ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 29dac7e1636026da3f77ac832a148a832abe240a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4e767348fb5bc01bcdb2aaaa3fad1dd4f461eb6c
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63151458"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811023"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
   データベース エンジン チューニング アドバイザーによってデータベースをチューニングすると、サマリー、推奨設定、レポート、およびチューニング ログが作成されます。 チューニング ログ出力を使用すると、データベース エンジン チューニング アドバイザーのチューニング セッションをトラブルシューティングできます。 サマリー、推奨設定、およびレポートを使用すると、チューニングに関する推奨設定を実装するか、または [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に必要なクエリのパフォーマンスを向上させるまでチューニングを継続するかを判断できます。 データベース チューニング アドバイザーを使用してワークロードを作成およびデータベースをチューニングする方法については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」を参照してください。  
@@ -163,7 +163,7 @@ ms.locfileid: "63151458"
   
 2.  [ユーザー指定の構成を指定した XML 入力ファイルのサンプル &#40;DTA&#41;](../../tools/dta/xml-input-file-sample-with-user-specified-configuration-dta.md) をコピーして、XML エディターまたはテキスト エディターに貼り付けます。 このサンプルを使用して、チューニング セッションの XML 入力ファイルを作成します。 このタスクの実行については、「 [データベース エンジン チューニング アドバイザーの起動および使用](database-engine-tuning-advisor.md)」の「XML 入力ファイルの作成」を参照してください。  
   
-3.  サンプルの XML 入力ファイルで、`TuningOptions` 要素と `Configuration` 要素を編集します。 `TuningOptions` 要素で、データベース エンジン チューニング アドバイザーでチューニング セッション中に考慮される物理デザイン構造を指定します。 `Configuration` 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 使用できる属性と子要素の詳細については、`TuningOptions`と`Configuration`要素の親を参照してください[XML 入力ファイル リファレンス&#40;データベース エンジン チューニング アドバイザー&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)します。  
+3.  サンプルの XML 入力ファイルで、`TuningOptions` 要素と `Configuration` 要素を編集します。 `TuningOptions` 要素で、データベース エンジン チューニング アドバイザーでチューニング セッション中に考慮される物理デザイン構造を指定します。 `Configuration` 要素で、データベース エンジン チューニング アドバイザーで分析される、物理データベース デザイン構造の仮定の構成に一致する物理デザイン構造を指定します。 および親要素と共[ &#40;&#41;](../../tools/dta/xml-input-file-reference-database-engine-tuning-advisor.md)に使用できる属性と子要素の詳細については、「XML 入力ファイルのリファレンスデータベースエンジンチューニングアドバイザー」を参照してください。 `Configuration` `TuningOptions`  
   
 4.  **.xml** 拡張子を付けて、入力ファイルを保存します。  
   
@@ -282,7 +282,7 @@ ms.locfileid: "63151458"
  推奨設定の影響を受けるインデックスまたはビューです。 この列のアイコンは、 **[推奨される対象]** を削除または追加する推奨設定を表します。  
   
  **詳細**  
- **[推奨される対象]** の説明です。 表示される値は、クラスター化インデックス、インデックス付きビュー、または空白 (非クラスター化インデックスを示す) です。 さらに、インデックスが一意かどうかも示されます。  
+ **[推奨される対象]** の説明です。 使用可能な値には、クラスター化インデックス、インデックス付きビュー、または非クラスター化インデックスを示す空白があります。 さらに、インデックスが一意かどうかも示されます。  
   
  **パーティション構成**  
  パーティションが推奨される場合、この列にパーティション構成が表示されます。  

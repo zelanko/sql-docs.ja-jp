@@ -12,14 +12,14 @@ ms.assetid: e5906a76-9511-4c47-8826-8c765b58a39d
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: b29b1df0ed0d86cff33461bdd298c0634505af00
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 3a249f5536846507996da4a7478a32dbe68e4dcd
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63191570"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811255"
 ---
-# <a name="mssqleng014117"></a>MSSQL_ENG014117
+# <a name="mssql_eng014117"></a>MSSQL_ENG014117
     
 ## <a name="message-details"></a>メッセージの詳細  
   
@@ -52,7 +52,7 @@ ms.locfileid: "63191570"
   
      10.193.17.129 inst1  
   
--   ディストリビューションを無効化し、インスタンスを登録して、ディストリビューションを再設定してください。 @@SERVERNAME の値が、クラスター化されていないインスタンスに対して適切でない場合は、次の手順を実行してください。  
+-   ディストリビューションを無効化し、インスタンスを登録して、ディストリビューションを再設定してください。 クラスター化されて@SERVERNAMEいないインスタンスに対して @ の値が正しくない場合は、次の手順を実行します。  
   
     ```  
     sp_dropserver '<old_name>', 'droplogins'  
@@ -71,7 +71,7 @@ ms.locfileid: "63191570"
   
 2.  ディストリビューションを無効化してから、再度有効化します。 詳しくは、「 [Configure Distribution](configure-distribution.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [エラーとイベントのリファレンス &#40;レプリケーション&#41;](errors-and-events-reference-replication.md)  
   
   

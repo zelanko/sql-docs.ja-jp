@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 4da3fa07c4cdcdf2f3666c3bf85ba3669eb7e5bf
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: b0284d0a562578e8b27f492e79e9662a240f8ccb
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632058"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811439"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE の新機能 (SybaseToSQL)
 この記事では、各リリースでの SAP ASE (旧称 SSMA for Sybase) の変更 (SSMA) の SQL Server Migration Assistant を示します。
@@ -33,7 +33,7 @@ SSMA for SAP ASE の v2.0 リリースは、品質と変換のメトリックを
 
 SSMA for SAP ASE の v2.0 リリースは、品質と変換のメトリックを向上するように設計された修正プログラムのセットと、次のような修正によって強化されています。
 
-* データ移行後の無効化されていない非クラスター化インデックスに関する問題。
+* データ移行後の非クラスター化インデックスが無効になっている問題。
 * サイレントインストール中の .NET Framework の検出。
 * 新しいバージョンがダウンロードされると発生する断続的なクラッシュ。
 

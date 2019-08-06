@@ -20,17 +20,17 @@ ms.assetid: a5d70064-0330-48b9-b853-01eba50755d0
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 343acc1c284027dc6faf4eb08fc93e2cd528df05
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 30c3a5d7358e49c1e1762fbb9851066bdaf30871
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67937100"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809905"
 ---
-# <a name="spatial-data---sysdmdbobjectsdisabledoncompatibilitylevelchange"></a>空間データの sys.dm_db_objects_disabled_on_compatibility_level_change
+# <a name="spatial-data---sysdm_db_objects_disabled_on_compatibility_level_change"></a>空間データ-_db_objects_disabled_on_compatibility_level_change
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
-  インデックスとの互換性レベルを変更した結果として無効になる制約一覧[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 アップグレードするか、互換性レベルを変更した後は、式を持つ空間 Udt を使用して、保存される計算列を格納するインデックスと制約を無効化されます。 この動的管理関数を使用して、互換性レベルでの変更の影響を判断します。  
+  で[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]互換性レベルを変更した結果として無効になるインデックスと制約の一覧を示します。 更新または互換性レベルの変更後に、式が空間 Udt を使用する、保存される計算列を含むインデックスおよび制約は無効になります。 互換性レベルの変更の影響を判断するには、この動的管理関数を使用します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -42,23 +42,23 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 ##  <a name="Arguments"></a> 引数  
  *compatibility_level*  
- **int**を設定する互換性レベルを識別します。  
+ 設定を計画している互換性レベルを識別する**int** 。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**class**|**int**|1 = 制約<br /><br /> 7 = インデックスとヒープ|  
-|**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスのインデックスとヒープ|  
-|**major_id**|**int**|制約の OBJECT ID<br /><br /> インデックスとヒープを含んでいるテーブルのオブジェクト ID|  
-|**minor_id**|**int**|制約の場合は NULL<br /><br /> インデックスとヒープの場合は Index_id|  
-|**dependency**|**nvarchar(60)**|制約またはインデックスを無効にする原因となっている依存関係の説明です。 同じの値は、アップグレード中に発生した警告にも使用されます。 具体的には次のものがあります。<br /><br /> 組み込みの「領域」<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
+|**class_desc**|**nvarchar(60)**|制約の場合は OBJECT または COLUMN<br /><br /> インデックスとヒープのインデックス|  
+|**major_id**|**int**|制約の OBJECT ID<br /><br /> インデックスとヒープを含むテーブルのオブジェクト ID|  
+|**minor_id**|**int**|制約の場合は NULL<br /><br /> インデックスとヒープの Index_id|  
+|**dependency**|**nvarchar(60)**|制約またはインデックスが無効になる原因となっている依存関係の説明。 アップグレード中に発生した警告にも同じ値が使用されます。 具体的には次のものがあります。<br /><br /> 組み込み用の "space"<br /><br /> システム UDT の場合は "geometry"<br /><br /> システム UDT のメソッドの場合は "geography::Parse"|  
   
 ## <a name="general-remarks"></a>全般的な解説  
  互換性レベルを変更すると、一部の組み込み関数を使用している保存される計算列が無効になります。 データベースをアップグレードすると、Geometry メソッドまたは Geography メソッドを使用している保存される計算列も無効になります。  
   
-### <a name="which-functions-cause-persisted-computed-columns-to-be-disabled"></a>どの関数保存される計算列を無効にするか。  
- 保存される計算列の式で、次の関数を使用している場合、互換性レベルが 80 からを 90 に変更されたときに無効にする列を参照するインデックスと制約をが。  
+### <a name="which-functions-cause-persisted-computed-columns-to-be-disabled"></a>保存された計算列が無効になる関数を教えてください。  
+ 保存される計算列の式で次の関数を使用すると、互換性レベルが80から90に変更されたときに、これらの列を参照するインデックスと制約が無効になります。  
   
 -   **IsNumeric**  
   
@@ -66,58 +66,58 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
   
 -   **Soundex**  
   
--   **Geography:。GeomFromGML**  
+-   **Geography::GeomFromGML**  
   
--   **Geography:。STGeomFromText**  
+-   **Geography::STGeomFromText**  
   
--   **Geography:。STLineFromText**  
+-   **Geography::STLineFromText**  
   
--   **Geography:。STPolyFromText**  
+-   **Geography::STPolyFromText**  
   
--   **Geography:。STMPointFromText**  
+-   **Geography::STMPointFromText**  
   
--   **Geography:。STMLineFromText**  
+-   **Geography::STMLineFromText**  
   
--   **Geography:。STMPolyFromText**  
+-   **Geography::STMPolyFromText**  
   
--   **Geography:。STGeomCollFromText**  
+-   **Geography::STGeomCollFromText**  
   
--   **Geography:。STGeomFromWKB**  
+-   **Geography::STGeomFromWKB**  
   
--   **Geography:。STLineFromWKB**  
+-   **Geography::STLineFromWKB**  
   
--   **Geography:。STPolyFromWKB**  
+-   **Geography::STPolyFromWKB**  
   
--   **Geography:。STMPointFromWKB**  
+-   **Geography::STMPointFromWKB**  
   
--   **Geography:。STMLineFromWKB**  
+-   **Geography::STMLineFromWKB**  
   
--   **Geography:。STMPolyFromWKB**  
+-   **Geography::STMPolyFromWKB**  
   
--   **Geography:。STUnion**  
+-   **Geography::STUnion**  
   
--   **Geography:。STIntersection**  
+-   **Geography::STIntersection**  
   
--   **Geography:。STDifference**  
+-   **Geography::STDifference**  
   
--   **Geography:。STSymDifference**  
+-   **Geography::STSymDifference**  
   
--   **Geography:。STBuffer**  
+-   **Geography::STBuffer**  
   
--   **Geography:。BufferWithTolerance**  
+-   **Geography::BufferWithTolerance**  
   
--   **Geography:。解析**  
+-   **Geography::分解**  
   
--   **Geography:。削減**  
+-   **Geography::落とし**  
   
-### <a name="behavior-of-the-disabled-objects"></a>無効になったオブジェクトの動作  
+### <a name="behavior-of-the-disabled-objects"></a>無効なオブジェクトの動作  
  **[インデックス]**  
   
- クラスター化インデックスが無効になっている場合、または非クラスター化インデックスが強制された場合は、次のエラーが発生します。"、クエリ プロセッサはプランを作成することは、インデックス ' % です。\*ls' テーブルまたはビュー ' % です。\*ls' が無効になっています"。 これらのオブジェクトを再度有効にするには、呼び出すことによってアップグレード後に、インデックスをリビルドします**ALTER INDEX ON しています.。REBUILD** を使用して変更するときに選択できます。  
+ クラスター化インデックスが無効になっている場合、または非クラスター化インデックスが強制されている場合は、次のエラーが発生します。"インデックス '% のため、クエリプロセッサはプランを作成できません。\*ls ' テーブルまたはビュー '%。\*ls ' は無効になっています。 " これらのオブジェクトを再度有効にするには、アップグレード**後に ALTER INDEX ON...REBUILD** を使用して変更するときに選択できます。  
   
- **ヒープ**  
+ **頻繁**  
   
- 無効になったヒープが含まれているテーブルを使用すると、次のエラーが発生します。 呼び出してアップグレード後に再構築すると、これらのオブジェクトを再度有効にするには、**インデックスのすべての変更.REBUILD** を使用して変更するときに選択できます。  
+ 無効になったヒープが含まれているテーブルを使用すると、次のエラーが発生します。 これらのオブジェクトを再度有効にするには、アップグレード**後に ALTER INDEX ALL を呼び出すことによって再構築します...REBUILD** を使用して変更するときに選択できます。  
   
 ```  
 // ErrorNumber: 8674  
@@ -130,11 +130,11 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
 // ErrorFirstProduct: SQL11  
 ```  
   
- オンライン操作中に、ヒープを再構築しようとすると、エラーが発生します。  
+ オンライン操作中にヒープを再構築しようとすると、エラーが発生します。  
   
  **Check 制約と外部キー**  
   
- Check 制約を無効になっていると、外部キーにはエラーは発生しません。 ただし、行が変更されても、制約は適用されません。 これらのオブジェクトを再度有効にするには、呼び出すことによってアップグレードした後、制約を確認します**ALTER TABLE.。CHECK 制約**します。  
+ 無効になっている check 制約と外部キーでは、エラーは発生しません。 ただし、行が変更されても、制約は適用されません。 これらのオブジェクトを再度有効にするには、アップグレード後に**ALTER TABLE... を呼び出して、制約を確認します。CHECK 制約**。  
   
  **保存される計算列**  
   
@@ -146,7 +146,7 @@ sys.dm_db_objects_disabled_on_compatibility_level_change ( compatibility_level )
  VIEW DATABASE STATE 権限が必要です。  
   
 ## <a name="example"></a>例  
- 次の例ではクエリを示します**sys.dm_db_objects_disabled_on_compatibility_level_change**互換性レベル 120 に変更によって影響を受けるオブジェクトを検索します。  
+ 次の例では、互換性レベルを120に変更することによって影響を受けるオブジェクトを検索するための、 **_db_objects_disabled_on_compatibility_level_change**に対するクエリを示します。  
   
 ```sql  
 SELECT * FROM sys.dm_db_objects_disabled_on_compatibility_level_change(120);  
