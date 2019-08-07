@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: a115ba95-17ae-45df-91bd-5a1a35f3745f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 34e0bc66497d789e13005b1bdaa85e50bb062234
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: e4ec223179bf7fdb2e2fae250f95ab241ed1acf7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68120283"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68770014"
 ---
 # <a name="publication-information-tracer-tokens-sql-server-2005-and-later"></a>パブリケーション情報、トレーサー トークン (SQL Server 2005 以降)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[トレーサー トークン]** タブを使用すると、接続の検証と、トランザクション レプリケーションを使用するシステムの待機時間を測定できます。 トークン (小さなデータ) は、通常のレプリケートされたトランザクションのようにマークが付けられてパブリケーション データベースのトランザクション ログに書き込まれ、システムを介して送信されることで、次の計算が可能になります。  
   
 -   パブリッシャーでコミットされるトランザクションと、ディストリビューターでディストリビューション データベース内に挿入される対応するコマンドの間での経過時間。  

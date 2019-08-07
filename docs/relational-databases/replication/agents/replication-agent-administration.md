@@ -22,15 +22,16 @@ helpviewer_keywords:
 ms.assetid: f27186b8-b1b2-4da0-8b2b-91f632c2ab7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5bbb131ef95949d2739c859ecd24b32c4ef25397
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 93527accb44bd192e1468ea4176702173bf74114
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990556"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768221"
 ---
 # <a name="replication-agent-administration"></a>レプリケーション エージェントの管理
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   レプリケーション エージェントは、レプリケーションに関連した数多くのタスクを実行します。たとえば、スキーマとデータのコピーの作成、パブリッシャーまたはサブスクライバーでの更新の検出、およびサーバー間での変更の反映などを行います。 既定では、レプリケーション エージェントは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェントのジョブ ステップで実行されます。 エージェントは単なる実行可能ファイルであるため、コマンド ラインやバッチ スクリプトから直接呼び出すこともできます。 各レプリケーション エージェントでは、ランタイム パラメーターのセットを使用して実行方法を制御できます。このパラメーターはエージェント プロファイルまたはコマンド ラインで指定します。  
   
 > [!IMPORTANT]  

@@ -13,16 +13,28 @@ ms.assetid: f78b81ed-5214-43ec-a600-9bfe51c5745a
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 096c11c018294cbc92b2be13801d6cd953548fff
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 9aba2495e5f4661c7c042125608f34d577cddfe3
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264008"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702808"
 ---
 # <a name="list-of-bugs-fixed"></a>修正済みバグの一覧
 
 このページには、各リリースで修正されたバグの[!INCLUDE[msCoName](../../includes/msconame_md.md)]一覧が含まれます。 ODBC Driver 17 for[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-174-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC ドライバー17.4 でのバグ修正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
+
+- 複数のアクティブな結果セット (MARS) が有効になっている場合に断続的にハングするように修正
+- 非同期通知が有効になっているときに接続の復元がハングする問題を修正する
+- マルチスレッド接続試行の診断レコードを取得するときのクラッシュを修正します
+- SQL_USER_NAME および SQL_DATA_SOURCE_READ_ONLY で SQLGetInfo () を呼び出した後、再接続時に ' 暗号化がサポートされていない ' を修正します。
+- Azure Active Directory 対話型認証の実行中の COM 初期化エラーを修正します
+- 複数バイトの UTF8 データの SQLGetData () を修正します。
+- SQLGetData () を使用した sql_variant 列の長さの取得を修正しています
+- Bcp を使用して、7992バイトを超える sql_variant 列のインポートを修正します。
+- ナロー文字データの正しいエンコードをサーバーに送信することを修正しています
 
 ### <a name="bug-fixes-in-the-includemsconameincludesmsconamemdmd-odbc-driver-173-for-includessnoversionincludesssnoversion-mdmd"></a>[!INCLUDE[msCoName](../../includes/msconame_md.md)] ODBC ドライバー17.3 でのバグ修正[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]
 

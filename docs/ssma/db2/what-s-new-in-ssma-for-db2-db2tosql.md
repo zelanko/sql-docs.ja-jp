@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 1cc38f85-3caa-42d0-8c76-a380c1d15c67
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 6c456334d9d77424c1955f392e8c8a5d16261234
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: e41cd9e244a39f5ec2e84d6f3512a709319acb24
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632033"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811458"
 ---
 # <a name="whats-new-in-ssma-for-db2-db2tosql"></a>SSMA for DB2 の新機能 (DB2ToSQL)
 
@@ -43,7 +43,7 @@ SSMA for DB2 の v2.0 リリースは、品質と変換のメトリックを向�
 
 SSMA for DB2 の v2.0 リリースは、SSMA コンソールツールから Azure SQL Database への接続に関する問題を解決し、変換時にビュー宣言の COUNT_BIG 列が欠落している問題に対処するために、で強化されています。 さらに、このバージョンには、品質と変換のメトリックを改善するために設計された修正プログラムのセットと、次のような修正が含まれています。
 
-* データ移行後の無効化されていない非クラスター化インデックスに関する問題。
+* データ移行後の非クラスター化インデックスが無効になっている問題。
 * サイレントインストール中の .NET Framework の検出。
 * 新しいバージョンがダウンロードされると発生する断続的なクラッシュ。
 

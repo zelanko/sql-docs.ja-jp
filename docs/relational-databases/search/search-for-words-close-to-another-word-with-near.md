@@ -20,12 +20,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0bc8f21427d5b104ef663d266b4a6b7eb281b8b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0e94bdcf4770190d3d84986b511996213fac17f9
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912964"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702830"
 ---
 # <a name="search-for-words-close-to-another-word-with-near"></a>NEAR による他の単語の近くにある単語の検索
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -136,7 +136,7 @@ CONTAINS(column_name, 'NEAR((term1, term2), 5, TRUE) AND term3')
      すべての近接検索は、重複しない語句だけを常に検索します。 検索語句で重複する語句は、一致とは認識されません。 たとえば、最大距離が 2 語で`A`および`AA`をこの順序で検索する次の近接語句について検討してみます。  
   
     ```  
-    CONTAINS(column_name, 'NEAR((A,AA),2, TRUE')  
+    CONTAINS(column_name, 'NEAR((A,AA), 2, TRUE)')
     ```  
   
      一致する語句としては、`AAA`、`A.AA`、および`A..AA`が考えられます。 `AA`だけを含む行は一致しません。  

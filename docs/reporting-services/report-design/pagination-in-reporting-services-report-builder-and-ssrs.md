@@ -1,6 +1,6 @@
 ---
 title: Reporting Services の改ページ (レポート ビルダーおよび SSRS) | Microsoft Docs
-ms.date: 03/01/2017
+ms.date: 07/26/2019
 ms.prod: reporting-services
 ms.prod_service: reporting-services-native
 ms.technology: report-design
@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: e0894b0d-dc5b-4a75-8142-75092972a034
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 93ba4ad975c940979cd1e5604de51e92f2c441cb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 507aeab666f1849b9216b22e90dfee3d21f92694
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65582211"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632027"
 ---
 # <a name="pagination-in-reporting-services-report-builder--and-ssrs"></a>Reporting Services の改ページ (レポート ビルダーおよび SSRS)
   ページ割り付けとは、レポートに含まれるページ数と、ページ上でのレポート アイテムの配置方法をいいます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] での改ページは、レポートの閲覧と作成に使用する表示拡張機能によって異なります。 レポート サーバーでレポートを実行した場合は HTML レンダラーが使用されます。 HTML には、特定の改ページ規則が適用されます。 たとえば、同じレポートを PDF にエクスポートした場合は、PDF レンダラーが使用され、異なる規則が適用されるため、レポートの改ページも異なります。 レポート作成に使用するレンダラーに最適化された、ユーザーにとって見やすいレポートをデザインするには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]における改ページの制御規則を理解しておく必要があります。  
@@ -36,7 +36,7 @@ ms.locfileid: "65582211"
   
  既定のページ サイズは 8.5 x 11 インチですが、 **[レポートのプロパティ]** ペインまたは **[ページ設定]** ダイアログ ボックスを使用するか、 **[プロパティ]** ペインで PageHeight プロパティや PageWidth プロパティを変更することによって、このサイズを変更できます。 ページ サイズがレポート本文のコンテンツに合わせて拡大または縮小されることはありません。 レポートを 1 ページに表示させたい場合は、レポート本文のすべてのコンテンツを、特定の物理ページに収まるように配置する必要があります。 ハード改ページ形式を使用していて、物理ページに収まりきらない場合は、ページを追加する必要があります。 レポート本文が物理ページの右端からはみ出た場合、改ページが水平方向に挿入されます。 レポート本文が物理ページの下端からはみ出た場合、改ページが垂直方向に挿入されます。  
   
- レポートで定義されている物理ページ サイズは、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の物理ページ サイズを指定することによりオーバーライドできます。 詳細については、「 [Reporting Services デバイス情報設定](https://go.microsoft.com/fwlink/?LinkId=102515)」を参照してください。  
+ レポートで定義されている物理ページ サイズは、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の物理ページ サイズを指定することによりオーバーライドできます。 詳細については、「 [Reporting Services デバイス情報設定](../device-information-settings-for-rendering-extensions-reporting-services.md)」を参照してください。  
   
 ### <a name="margins"></a>余白  
  余白は、物理ページの寸法の端を基準とし、指定された余白設定に達するまで内側に向かって描画されます。 余白領域にはみ出たレポート アイテムはクリッピングされ、重なり合う領域はレンダリングされません。 ページの水平方向または垂直方向の幅がゼロになるような余白サイズを指定した場合は、余白設定が既定でゼロに設定されます。 余白は、 **[レポートのプロパティ]** ペインまたは **[ページ設定]** ダイアログ ボックスを使用して指定できるほか、 **[プロパティ]** ペインで TopMargin、BottomMargin、LeftMargin、RightMargin の各プロパティを変更することによって指定できます。 レポートで定義されている余白サイズは、レポートのエクスポートに使用している特定のレンダラーのデバイス情報設定で目的の余白サイズを指定することによりオーバーライドできます。  

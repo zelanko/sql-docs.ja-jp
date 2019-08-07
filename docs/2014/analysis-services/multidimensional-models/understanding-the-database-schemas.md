@@ -1,5 +1,5 @@
 ---
-title: データベース スキーマの理解 |Microsoft Docs
+title: データベーススキーマについてMicrosoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -17,17 +17,17 @@ ms.assetid: 51e411f9-ee3f-4b92-9833-c2bce8c6b752
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b3439fff5e3bba68f01c24a0979434e21a01ded6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5aebada2f962e2b90f96a9822dbbe76e796f23e5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66072704"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811048"
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
   スキーマ生成ウィザードでは、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]のディメンションおよびメジャー グループに基づいて、サブジェクト領域のデータベース用の非正規化されたリレーショナル スキーマを生成します。 このウィザードでは、ディメンション データを格納するための各ディメンション用のリレーショナル テーブル (ディメンション テーブル)、およびファクト データを格納するための各メジャー グループ用のリレーショナル テーブル (ファクト テーブル) が生成されます。 このウィザードを使用してこれらのリレーショナル テーブルを生成する場合、リンク ディメンション、リンク メジャー グループ、およびサーバー時間ディメンションは無視されます。  
   
-## <a name="validation"></a>検証  
+## <a name="validation"></a>［確認］  
  基になるリレーショナル スキーマの生成を開始する前に、スキーマ生成ウィザードによって、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] キューブおよびディメンションが検証されます。 ウィザードによってエラーが検出された場合には、ウィザードは停止し、 [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)]の [タスク一覧] ウィンドウにエラー レポートが表示されます。 スキーマの生成を妨げるエラーには次のようなものがあります。  
   
 -   ディメンションに複数のキー属性がある。  
@@ -71,7 +71,7 @@ ms.locfileid: "66072704"
  リレーションシップ  
  このウィザードでは、ファクト テーブルからディメンション テーブルの粒度属性への標準のディメンション リレーションシップごとに 1 つのリレーションシップが生成されます。 粒度がディメンション テーブルのキー属性に基づいている場合には、リレーションシップはデータベース内およびデータ ソース ビュー内に作成されます。 粒度がその他の属性に基づいている場合には、リレーションシップはデータ ソース ビュー内のみに作成されます。  
   
- ウィザードでインデックスの生成を選択すると、これらのリレーションシップ列のそれぞれに対して非クラスター化インデックスが生成されます。  
+ ウィザードでインデックスを生成することを選択した場合は、これらのリレーションシップ列ごとに非クラスター化インデックスが生成されます。  
   
  制約  
  主キーはファクト テーブル上では生成されません。  
@@ -94,7 +94,7 @@ ms.locfileid: "66072704"
 |CustomRollupPropertiesColumn|500|  
 |UnaryOperatorColumn|1|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [増分生成の理解](understanding-incremental-generation.md)   
  [データ ソース ビューおよびデータ ソースへの変更の管理](manage-changes-to-data-source-views-and-data-sources.md)  
   

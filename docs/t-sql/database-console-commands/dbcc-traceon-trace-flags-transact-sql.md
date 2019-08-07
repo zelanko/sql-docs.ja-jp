@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 4b6b05436f85fa96a164f6e86733c5bc4bf95f0d
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
+ms.openlocfilehash: 21c43f2780f555b9cabd0ec84b47f80ff0284764
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345467"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388442"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -138,7 +138,7 @@ ms.locfileid: "68345467"
 |**7412**|軽量のクエリ実行統計プロファイリング インフラストラクチャを有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3170113)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 以降のビルドに適用されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降、軽量プロファイリングが既定で有効になるため、このトレース フラグには効果はありません。<br /><br />**スコープ**: グローバルのみ|
 |**7471**|1 つのテーブルの異なる統計情報に対して複数の [UPDATE STATISTICS](../../t-sql/statements/update-statistics-transact-sql.md) を同時に実行できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/3156157)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] SP1 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|
 |**7745**|データベースのシャットダウン時にクエリ ストアがデータをディスクにフラッシュしないように強制します。<br /><br />**注:** このトレースを使うと、以前にディスクにフラッシュされていないクエリ ストアのデータが、シャットダウン時に失われる可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のシャットダウンでは、このトレース フラグの代わりに SHUTDOWN WITH NOWAIT コマンドを使って、即時シャットダウンを強制できます。<br /><br />**スコープ**: グローバルのみ|
-|**7752**|クエリ ストアの非同期読み込みを有効にします。<br /><br />**注:** クエリ ストアの同期読み込み (データベース復旧時の既定の動作) に関連して、[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] で多数の QDS_LOADDB 待機が発生している場合は、このトレース フラグを使います。<br /><br />**スコープ**: グローバルのみ|
+|**7752**|クエリ ストアの非同期読み込みを有効にします。<br /><br />**注:** クエリ ストアの同期読み込み (データベース復旧時の既定の動作) に関連して、[!INCLUDE[ssNoVersion](../../includes/ssNoVersion-md.md)] で多数の QDS_LOADDB 待機が発生している場合は、このトレース フラグを使います。<br /><br />**注:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 7752 に効力はありません。<br /><br />**スコープ**: グローバルのみ|
 |**7806**|[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)]で専用管理者接続 (DAC) を有効にします。 既定では、[!INCLUDE[ssExpress](../../includes/ssexpress-md.md)] で予約されている DAC リソースはありません。 詳細については、「 [データベース管理者用の診断接続](../../database-engine/configure-windows/diagnostic-connection-for-database-administrators.md)」を参照してください。<br /><br />**スコープ**: グローバルのみ|  
 |**8011**|リソース モニターのリング バッファーを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバル、セッション|
 |**8012**|スケジューラのリング バッファーを無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/kb/920093)をご覧ください。<br /><br />**スコープ**: グローバルのみ|

@@ -14,16 +14,16 @@ helpviewer_keywords:
 ms.assetid: 75c8c1f8-60bc-44a8-944b-d18d1f6bda11
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fe907a62279c819c227772d70008ee96d172e229
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: aeee5d947a2af0f58030ce6ba94091df10d56c49
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127886"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767774"
 ---
 # <a name="initialize-a-transactional-subscription-without-a-snapshot"></a>スナップショットを使用しないトランザクション サブスクリプションの初期化
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   トランザクション パブリケーションへのサブスクリプションは、既定ではスナップショットを使用して初期化されます。このスナップショットはスナップショット エージェントによって生成され、ディストリビューション エージェントによって適用されます。 初期データセットが大規模な場合など、状況によっては、別の方法でサブスクリプションを初期化するのが望ましい場合があります。 サブスクライバーを初期化する他の方法としては、以下のものがあります。  
   
 -   バックアップを指定する方法。 サブスクライバー上でバックアップを復元してから、ディストリビューション エージェントにより、必要なレプリケーション メタデータとシステム プロシージャがコピーされます。 バックアップを使用した初期化は、サブスクライバーにデータを配信する最も高速な方法であり便利です。バックアップを使用した初期化をパブリケーションで有効にした後で取得したバックアップであれば、どのバックアップでも使用できます。  

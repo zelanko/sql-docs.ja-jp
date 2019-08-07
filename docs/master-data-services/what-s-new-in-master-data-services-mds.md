@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ad530f60-d480-4457-ba7a-93a10c8a1695
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 4fdb279d47fd182d3196e760e19723715debbb7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c6b68e5643686d71e24726d44ece35e284f40c3a
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017217"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810502"
 ---
 # <a name="what39s-new-in-master-data-services-mds"></a>マスター データ サービス (MDS) の新機能
 
@@ -177,7 +177,7 @@ ms.locfileid: "68017217"
     
  **カスタム インデックス**  
   
- 1 つの属性 (シングル インデックス) または属性の一覧 (複合インデックス) に 1 つのエンティティとして非クラスター化インデックスを作成して、クエリ パフォーマンスを高めることができます。 詳細については、「[カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)」を参照してください。  
+ 1つの属性 (単一のインデックス) または属性の一覧 (複合インデックス) で、エンティティ内の非クラスター化インデックスを作成して、クエリのパフォーマンスを向上させることができます。 詳細については、「[カスタム インデックス (マスター データ サービス)](../master-data-services/custom-index-master-data-services.md)」を参照してください。  
  
   **属性フィルター**  
   

@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_column_distribution_properties (TRANSACT-SQL) |Microsoft Docs
+title: システム pdw _materialized_view_column_distribution_properties (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,17 +9,17 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 19acc92475716b219485b9366e6facbc89268909
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8713f0728f7afb8e86b693fe5f1e50652bbddf43
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059455"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811426"
 ---
-# <a name="syspdwmaterializedviewcolumndistributionproperties-transact-sql-preview"></a>sys.pdw_materialized_view_column_distribution_properties (TRANSACT-SQL) (プレビュー)
+# <a name="syspdw_materialized_view_column_distribution_properties-transact-sql-preview"></a>sys. pdw _materialized_view_column_distribution_properties (Transact-sql) (プレビュー)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
@@ -29,7 +29,7 @@ ms.locfileid: "68059455"
 |-----------------|---------------|-----------------|  
 |object_id|**int**|列が所属するオブジェクトの ID。 |  
 |column_id|**int**|列の ID。|  
-|distribution_ordinal|**tinyint**|0 = ディストリビューション列ではありません。</br> 1 = SQL Data Warehouse には、具体化されたビューを配布するこの列を使用しています。|
+|distribution_ordinal|**tinyint**|0 = ディストリビューション列ではありません。</br> 1 = SQL Data Warehouse は、この列を使用して具体化されたビューを分散しています。|
  
 ## <a name="permissions"></a>アクセス許可 
 

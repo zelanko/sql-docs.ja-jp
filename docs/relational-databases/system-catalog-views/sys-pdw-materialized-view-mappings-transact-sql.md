@@ -1,5 +1,5 @@
 ---
-title: sys.pdw_materialized_view_mappings (TRANSACT-SQL) |Microsoft Docs
+title: システム pdw _materialized_view_mappings (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 07/03/2019
 ms.prod: sql
@@ -9,28 +9,28 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: d62b0e25-3226-4f87-a10a-b3a0d9555e19
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: f4e286a335ca6668c81e6b959bd61605c0ea398a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 919b55fe869a77bf27acd8a14820c63dd82eb968
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059395"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811502"
 ---
-# <a name="syspdwmaterializedviewmappings-transact-sql-preview"></a>sys.pdw_materialized_view_mappings (TRANSACT-SQL) (プレビュー)
+# <a name="syspdw_materialized_view_mappings-transact-sql-preview"></a>sys. pdw _materialized_view_mappings (Transact-sql) (プレビュー)
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-Object_id で内部オブジェクト名に具体化されたビューに結び付いています。
+具体化されたビューを、object_id で内部オブジェクト名に結び付けます。
 
-列 physical_name および object_id は、このカタログ ビューのキーを形成します。
+列 physical_name と object_id は、このカタログビューのキーを形成します。
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |physical_name |**nvarchar(36)**|具体化されたビューの物理名。|  
-|object_id  |**int**|具体化されたビューのオブジェクト ID。 参照してください[sys.objects (TRANSACT-SQL)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)します。| 
+|object_id  |**int**|具体化されたビューのオブジェクト ID。 「 [Sys (transact-sql)](/sql/relational-databases/system-catalog-views/sys-objects-transact-sql?view=azure-sqldw-latest)」を参照してください。| 
 
 ## <a name="permissions"></a>アクセス許可
 

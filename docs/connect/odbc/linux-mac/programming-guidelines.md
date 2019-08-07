@@ -7,14 +7,14 @@ ms.prod_service: connectivity
 ms.reviewer: ''
 ms.technology: connectivity
 ms.topic: conceptual
-author: MightyPen
+author: v-makouz
 ms.author: genemi
-ms.openlocfilehash: f4ab43eb8fce50513ae5d9dd726a15223f0f722b
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: d87e39bcabeabe5c0ea5d5648456eded8ea75510
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264149"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742789"
 ---
 # <a name="programming-guidelines"></a>プログラミング ガイドライン
 
@@ -64,7 +64,7 @@ macOS と Linux でのこのリリースの ODBC ドライバーでは、次の�
     -   SQL_COPT_SS_PERF_QUERY  
     -   SQL_COPT_SS_PERF_QUERY_INTERVAL  
     -   SQL_COPT_SS_PERF_QUERY_LOG  
--   SQLBrowseConnect  
+-   SQLBrowseConnect (バージョン17.2 以前)
 -   SQL_C_INTERVAL_YEAR_TO_MONTH などの C 時間隔型 (「[Data Type Identifiers and Descriptors](https://msdn.microsoft.com/library/ms716351(VS.85).aspx)」(データ型識別子と記述子) を参照)
 -   SQLSetConnectAttr 関数の SQL_ATTR_ODBC_CURSORS 属性の SQL_CUR_USE_ODBC 値。
 
@@ -116,6 +116,12 @@ SQLWCHAR データは UTF 16LE (リトル エンディアン) である必要が
 Windows と、Linux および macOS 上の iconv ライブラリの一部のバージョンとの間には、エンコード変換の違いがいくつかあります。 コードページ 1255 (ヘブライ語) のテキスト データには、Unicode への変換時に動作が異なる 1 つのコード ポイント (0xCA) があります。 Windows 上では、この文字は 0x05BA の UTF-16 コード ポイントに変換されます。 libiconv のバージョンが 1.15 より前の macOS および Linux 上では、0x00CA に変換されます。 iconv ライブラリが Big5/CP950 の 2003 リビジョン (名称は `BIG5-2003`) をサポートしていない Linux 上では、そのリビジョンで追加された文字が正しく変換されません。 コードページ 932 (日本語、Shift-JIS) では、元のエンコード規格で定義されていない文字のデコード結果も異なります。 たとえば、Windows 上ではバイト 0x80 は U+0080 に変換されますが、Linux および macOS 上では iconv のバージョンによっては U+30FB に変換される場合があります。
 
 ODBC Driver 13 および 13.1 では、UTF-8 マルチバイト文字または UTF-16 サロゲートが SQLPutData バッファー間で分割されている場合、データの破損が発生します。 部分文字エンコーディングで終了していないストリーミング SQLPutData にバッファーを使用します。 この制限は、ODBC Driver 17 で削除されました。
+
+## <a name="bkmk-openssl"></a>OpenSSL
+バージョン17.4 以降では、ドライバーは OpenSSL を動的に読み込みます。これにより、個別のドライバーファイルを必要とせずにバージョン1.0 または1.1 のシステムで実行できます。 OpenSSL の複数のバージョンが存在する場合、ドライバーは最新のバージョンを読み込もうとします。 このドライバーは、現在 OpenSSL 1.0. x と 1.1. x をサポートしています。
+
+> [!NOTE]  
+> ドライバー (またはそのコンポーネントの1つ) を使用するアプリケーションが、別のバージョンの OpenSSL にリンクされているか、動的に読み込まれる場合、競合が発生する可能性があります。 システムに複数のバージョンの OpenSSL が存在し、アプリケーションで使用されている場合は、エラーによってメモリが破損している可能性があるため、アプリケーションとドライバーによって読み込まれたバージョンが一致しないことを確認することを強くお勧めします。必ずしも明確または一貫した方法でマニフェストになるとは限りません。
 
 ## <a name="additional-notes"></a>追加情報  
 

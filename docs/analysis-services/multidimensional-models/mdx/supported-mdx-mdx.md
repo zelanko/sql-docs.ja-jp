@@ -41,7 +41,7 @@ ms.locfileid: "68165774"
   
  [CREATE SET ステートメント &#40;MDX&#41;](../../../mdx/mdx-data-definition-create-set.md)  
   
- [EXISTING キーワード &#40;MDX&#41](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
+ [EXISTING キーワード &#40;MDX&#41;](../../../analysis-services/multidimensional-models/mdx/mdx-query-existing-keyword.md)  
   
  [FREEZE ステートメント &#40;MDX&#41;](../../../mdx/mdx-scripting-freeze.md)  
   

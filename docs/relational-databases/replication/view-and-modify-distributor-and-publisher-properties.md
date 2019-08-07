@@ -15,15 +15,16 @@ helpviewer_keywords:
 ms.assetid: 5dae1d59-c377-4c6e-adc9-b68c5b328f79
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5d654627a3e35aacfebe4b3c69573eff83beaa39
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: a2d9e5b04164b3e8aab8c8d0a2fa50d154b10345
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115229"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769264"
 ---
 # <a name="view-and-modify-distributor-and-publisher-properties"></a>ディストリビューターとパブリッシャーのプロパティの表示および変更
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、またはレプリケーション管理オブジェクト (RMO) を使用して、ディストリビューターとパブリッシャーのプロパティを表示および変更する方法について説明します。  
   
  **このトピックの内容**  

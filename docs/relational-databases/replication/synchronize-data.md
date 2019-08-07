@@ -21,16 +21,16 @@ helpviewer_keywords:
 ms.assetid: 724802f7-7d69-46d3-a330-bd8aa7f53114
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: aa4bf39868593b7d43d54b90774ef4a40060d02d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 84f684484423090430ff8e3fe09051b1e19fd2a6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927898"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769370"
 ---
 # <a name="synchronize-data"></a>データの同期
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   データの同期とは、初期スナップショットをサブスクライバーで適用した後に、パブリッシャーとサブスクライバーの間でデータとスキーマ変更を反映する処理のことです。 同期は、次のように実行されます。  
   
 -   連続して実行。これは通常、トランザクション レプリケーションの場合です。  

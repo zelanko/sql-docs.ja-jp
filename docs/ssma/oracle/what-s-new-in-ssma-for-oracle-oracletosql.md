@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 27e1e0ee06f343c63240c1155601b2eab5e8c6cc
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: da0a047b0ae20fbc191a61e1c9eb96660eac035e
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68631998"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811450"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle の新機能 (OracleToSQL)
 この記事では、各リリースでの Oracle の変更の SQL Server Migration Assistant (SSMA) を示します。
@@ -43,7 +43,7 @@ SSMA for Oracle の v2.0 リリースは次のように強化されています�
 
 さらに、このバージョンには、品質と変換のメトリックを改善するために設計された修正プログラムのセットと、次のような修正が含まれています。
 
-* データ移行後の無効化されていない非クラスター化インデックスに関する問題。
+* データ移行後の非クラスター化インデックスが無効になっている問題。
 * サイレントインストール中の .NET Framework の検出。
 * 新しいバージョンがダウンロードされると発生する断続的なクラッシュ。
 

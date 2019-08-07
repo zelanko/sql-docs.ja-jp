@@ -1,39 +1,39 @@
 ---
 title: HDFS の階層制御の S3 のマウント
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグデータクラスター (プレビュー) 上の HDFS に外部 S3 ファイルシステムをマウントするように HDFS 階層を構成する方法について説明します。
+description: この記事では、HDFS 階層制御を構成して、外部の S3 ファイル システムを SQL Server 2019 ビッグ データ クラスター (プレビュー) 上の HDFS にマウントする方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 28c80d6076f07c8a4f1605149f4b5c730c8349a1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419337"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702877"
 ---
-# <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグデータクラスターで HDFS 階層化に S3 をマウントする方法
+# <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための S3 をマウントする方法
 
-次のセクションでは、S3 ストレージデータソースで HDFS 階層を構成する方法の例について説明します。
+次のセクションでは、S3 ストレージ データ ソースを使用して HDFS 階層制御を構成する方法の例を示します。
 
 ## <a name="prerequisites"></a>必須コンポーネント
 
-- [デプロイされたビッグデータクラスター](deployment-guidance.md)
-- [ビッグデータツール](deploy-big-data-tools.md)
+- [デプロイ済みのビッグ データ クラスター](deployment-guidance.md)
+- [ビッグ データ ツール](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
 - S3 バケットにデータを作成してアップロードする 
-  - CSV または Parquet ファイルを S3 バケットにアップロードします。 これは、ビッグデータクラスターの HDFS にマウントされる外部 HDFS データです。
+  - CSV または Parquet ファイルを S3 バケットにアップロードします。 これは、ビッグ データ クラスターの HDFS にマウントされる外部 HDFS データです。
 
 ## <a name="access-keys"></a>アクセス キー
 
-### <a name="set-environment-variable-for-access-key-credentials"></a>アクセスキー資格情報の環境変数を設定する
+### <a name="set-environment-variable-for-access-key-credentials"></a>アクセス キー資格情報の環境変数を設定する
 
-ビッグデータクラスターにアクセスできるクライアントコンピューターでコマンドプロンプトを開きます。 次の形式を使用して環境変数を設定します。 資格情報はコンマ区切りのリストに含まれている必要があることに注意してください。 Windows では ' set ' コマンドが使用されています。 Linux を使用している場合は、代わりに ' export ' を使用してください。
+ビッグ データ クラスターにアクセスできるクライアント マシンでコマンド プロンプトを開きます。 次の形式を使用して環境変数を設定します。 資格情報はコンマ区切りの一覧に含まれている必要があります。 Windows では 'set' コマンドが使用されます。 Linux を使用している場合は、代わりに 'export' を使用してください。
 
    ```text
     set MOUNT_CREDENTIALS=fs.s3a.access.key=<Access Key ID of the key>,
@@ -41,65 +41,65 @@ ms.locfileid: "68419337"
    ```
 
    > [!TIP]
-   > S3 アクセスキーを作成する方法の詳細については、「 [s3 アクセスキー](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)」を参照してください。
+   > S3 アクセスキーを作成する方法の詳細については、[S3 アクセス キー](https://docs.aws.amazon.com/general/latest/gr/aws-sec-cred-types.html#access-keys-and-secret-access-keys)に関する記事を参照してください。
 
-## <a id="mount"></a>リモート HDFS ストレージをマウントする
+## <a id="mount"></a> リモート HDFS ストレージをマウントする
 
-アクセスキーを使用して資格情報ファイルを準備したので、マウントを開始できます。 次の手順では、リモート HDFS ストレージを S3 にマウントして、ビッグデータクラスターのローカルの HDFS ストレージに格納します。
+アクセス キーを使用して資格情報ファイルを準備したので、マウントを開始することができます。 次の手順では、S3 のリモート HDFS ストレージを、ビッグ データ クラスターのローカル HDFS ストレージにマウントします。
 
-1. **Kubectl**を使用して、ビッグデータクラスター内のエンドポイント**コントローラー-svc-外部**サービスの IP アドレスを検索します。 **外部 IP**を探します。
+1. **kubectl** を使用して、ビッグ データ クラスター内のエンドポイント **controller-svc-external** サービスの IP アドレスを検索します。 **External-IP** を検索します。
 
    ```bash
    kubectl get svc controller-svc-external -n <your-big-data-cluster-name>
    ```
 
-1. クラスターのユーザー名とパスワードを使用して、コントローラーエンドポイントの外部 IP アドレスを使用して**azdata**でログインします。
+1. クラスターのユーザー名とパスワードによるコントローラー エンドポイントの外部 IP アドレスを使用して **azdata** でログインします。
 
    ```bash
    azdata login -e https://<IP-of-controller-svc-external>:30080/
    ```
    
-1. 上記の手順に従って、環境変数 MOUNT_CREDENTIALS を設定します。
+1. 上の手順に続けて環境変数 MOUNT_CREDENTIALS を設定する
 
-1. **Azdata bdc ストレージプールマウント作成**を使用して、Azure にリモート HDFS ストレージをマウントします。 次のコマンドを実行する前に、プレースホルダーの値を置き換えます。
+1. **azdata bdc storage-pool mount create** を使用して、Azure でリモート HDFS ストレージをマウントします。 次のコマンドを実行する前に、プレースホルダーの値を置き換えます。
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
    ```
 
    > [!NOTE]
-   > Mount create コマンドは非同期です。 現時点では、マウントが成功したかどうかを示すメッセージはありません。 マウントの状態を確認するには、[[状態](#status)] セクションを参照してください。
+   > mount create コマンドは非同期です。 現時点では、マウントが成功したかどうかを示すメッセージはありません。 [[状態]](#status) セクションで、マウントの状態を確認してください。
 
-正常にマウントされていれば、HDFS データに対してクエリを実行し、そのデータに対して Spark ジョブを実行できます。 これは、によって`--mount-path`指定された場所にあるビッグデータクラスターの HDFS に表示されます。
+正常にマウントされていれば、HDFS データに対してクエリを実行し、そのデータに対して Spark ジョブを実行できます。 これは、`--mount-path` によって指定された場所にあるビッグ データ クラスターの HDFS に表示されます。
 
-## <a id="status"></a>マウントの状態を取得する
+## <a id="status"></a> マウントの状態を取得する
 
-ビッグデータクラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
+ビッグ データ クラスター内のすべてのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-azdata bdc storage-pool mount status
+azdata bdc hdfs mount status
 ```
 
-HDFS の特定のパスにあるマウントの状態を一覧表示するには、次のコマンドを使用します。
+HDFS で指定されたパスのマウントの状態を一覧表示するには、次のコマンドを使用します。
 
 ```bash
-azdata bdc storage-pool mount status --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="refresh-a-mount"></a>マウントを更新する
 
-次の例では、マウントを更新します。
+次の例では、マウントを更新しています。
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>
 ```
 
-## <a id="delete"></a>マウントの削除
+## <a id="delete"></a> マウントを削除する
 
-マウントを削除するには、 **azdata bdc ストレージプールのマウント削除**コマンドを使用し、HDFS でマウントパスを指定します。
+マウントを削除するには、**azdata bdc storage-pool mount delete** コマンドを使用して、HDFS で次のマウント パスを指定します。
 
 ```bash
-azdata bdc storage-pool mount delete --mount-path <mount-path-in-hdfs>
+azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 ```
 
 ## <a name="next-steps"></a>次の手順

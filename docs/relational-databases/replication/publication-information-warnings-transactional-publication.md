@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 4d4baf1d-d0a1-4d09-bec7-137811f43f09
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3a904ec698311effe100e28a8d8e129c1adc1a80
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 886a9066102fd25498b974caca73085b59c8594f
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67908135"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769961"
 ---
 # <a name="publication-information-warnings-transactional-publication"></a>パブリケーション情報、[警告] (トランザクション パブリケーション)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **以降を実行しているディストリビューターでは、** [警告] [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] タブを使用できます。 **[警告]** タブでは、選択されているパブリケーションに対して次の操作を実行できます。  
   
 -   レプリケーション モニターに警告を表示します。  

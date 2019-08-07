@@ -13,15 +13,16 @@ helpviewer_keywords:
 ms.assetid: 850e8a87-b34c-4934-afb5-a1104f118ba8
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 32e8e55d24ebd1ff27ef5e87e1da46a69feadb02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 04cfff3e2772f945d01093bab15246924a104b2b
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939432"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768839"
 ---
 # <a name="best-practices-for-replication-administration"></a>レプリケーション管理の推奨事項
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   レプリケーションを構成したら、レプリケーション トポロジの管理方法について理解することが重要です。 このトピックでは、さまざまな分野における推奨事項について説明し、また各分野の詳細情報へのリンクも提供します。 このトピックで説明するベスト プラクティスのガイダンスに従うだけでなく、次のよく寄せられる質問のトピックに目を通し、一般的な疑問や問題について理解することをお勧めします: 「[レプリケーションの管理者に関してよく寄せられる質問](../../../relational-databases/replication/administration/frequently-asked-questions-for-replication-administrators.md)」。  
   
  推奨事項について理解するには、以下の 2 つの分野に分けて行うのが効果的です。  

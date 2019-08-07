@@ -1,5 +1,5 @@
 ---
-title: データベース スキーマの理解 |Microsoft Docs
+title: データベーススキーマについてMicrosoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,12 +9,12 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 91a54be06727a674a16f12295fa886f869b188e4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ab70f8c3f7bd788214ce6ed27f2e02ea6a0b43ac
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68164971"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811303"
 ---
 # <a name="understanding-the-database-schemas"></a>データベース スキーマの理解
 [!INCLUDE[ssas-appliesto-sqlas](../../includes/ssas-appliesto-sqlas.md)]
@@ -64,7 +64,7 @@ ms.locfileid: "68164971"
  リレーションシップ  
  このウィザードでは、ファクト テーブルからディメンション テーブルの粒度属性への標準のディメンション リレーションシップごとに 1 つのリレーションシップが生成されます。 粒度がディメンション テーブルのキー属性に基づいている場合には、リレーションシップはデータベース内およびデータ ソース ビュー内に作成されます。 粒度がその他の属性に基づいている場合には、リレーションシップはデータ ソース ビュー内のみに作成されます。  
   
- ウィザードでインデックスの生成を選択すると、これらのリレーションシップ列のそれぞれに対して非クラスター化インデックスが生成されます。  
+ ウィザードでインデックスを生成することを選択した場合は、これらのリレーションシップ列ごとに非クラスター化インデックスが生成されます。  
   
  制約  
  主キーはファクト テーブル上では生成されません。  

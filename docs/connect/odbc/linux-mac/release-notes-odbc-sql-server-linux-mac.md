@@ -7,15 +7,15 @@ ms.prod_service: connectivity
 ms.reviewer: MightyPen
 ms.technology: connectivity
 ms.topic: conceptual
-author: karinazhou
+author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: 6f6cdc23073585f5a9a6a8cee0c3fc779f7ca27a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 5d2587a6150807841edc9773478f1b798ee60d84
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63190576"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742812"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 
@@ -35,10 +35,19 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="174-august-2019"></a>17.4、8月2019
+
+| 追加された機能 | 詳細 |
+| :------------ | :------ |
+| セキュリティで保護されたエンクレーブが設定された Always Encrypted。 | [ODBC ドライバーでの Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページをご覧ください。 |
+| OpenSSL の動的読み込み | [プログラミング ガイドライン](programming-guidelines.md#bkmk-openssl)に関するページをご覧ください。 |
+| 構成可能な TCP キープアライブ設定。 | 「[SQL Server への接続](connection-string-keywords-and-data-source-names-dsns.md)」をご覧ください。 |
+| バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="173-february-2019"></a>17.3、2019 年 2 月
 
-| 新しい項目 | 詳細 |
+| [新しい項目] | 詳細 |
 | :------- | :------ |
 | 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; SuSE 15<br/>&bull; &nbsp; &nbsp; Ubuntu 18.10<br/>&bull; &nbsp; &nbsp; macOS 10.14 |
 | Azure Active Directory マネージド サービス ID (システムおよびユーザー割り当て) 認証モード。 | 「[ODBC ドライバーでの Azure Active Directory の使用](../using-azure-active-directory.md)」を参照してください。 |
@@ -48,7 +57,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="172-july-2018"></a>17.2、2018 年 7 月
 
-| 新しい項目 | 詳細 |
+| [新しい項目] | 詳細 |
 | :------- | :------ |
 | 新しいディストリビューションのサポート。 | &bull; &nbsp; &nbsp; Ubuntu 18.04 |
 | Azure SQL Database と SQL Server のデータ分類。 | 「[データ分類](../data-classification.md)」を参照してください。 |
@@ -61,7 +70,7 @@ GeneMi.  2019/04/03.
 
 ## <a name="171-march-2018"></a>17.1、2018 年 3 月
 
-| 新しい項目 | 詳細 |
+| [新しい項目] | 詳細 |
 | :------- | :------ |
 | `SQL_COPT_SS_CEKCACHETTL` および `SQL_COPT_SS_TRUSTEDCMKPATHS` 接続属性のサポート。 | &bull; &nbsp; &nbsp; `SQL_COPT_SS_CEKCACHETTL` を使用すると、列暗号化キーのローカル キャッシュが存在する時間の制御とフラッシュを行うことができます。<br/><br/>&bull; &nbsp; &nbsp; `SQL_COPT_SS_TRUSTEDCMKPATHS` を使用すると、アプリケーションで、指定したリストの列マスター キーのみを使用するように Always Encrypted 操作を制限できます。<br/><br/>「[SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する](../using-always-encrypted-with-the-odbc-driver.md)」を参照してください。 |
 | 既定の場所から `.rll` を読み込む処理のサポート。 | [インストール ドキュメントの「リソース ファイルの読み込み」セクション](installing-the-microsoft-odbc-driver-for-sql-server.md#resource-file-loading)を参照してください。 |

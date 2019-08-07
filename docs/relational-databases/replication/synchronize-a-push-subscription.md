@@ -14,28 +14,20 @@ helpviewer_keywords:
 ms.assetid: 0cfa7ae5-91d3-4a4f-9edf-a852d45783b5
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 30af8f6d0a5ba1e96d86fc3dae5ad9460e30b677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 791864168d216a3cb498b89c2e45ec4384fcdd27
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927908"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769380"
 ---
 # <a name="synchronize-a-push-subscription"></a>プッシュ サブスクリプションの同期
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [レプリケーション エージェント](../../relational-databases/replication/agents/replication-agents-overview.md)、またはレプリケーション管理オブジェクト (RMO) を使用して、プッシュ サブスクリプションを同期する方法について説明します。  
   
- **このトピックの内容**  
-  
--   **プッシュ サブスクリプションを同期するために使用するもの:**  
-  
-     [SQL Server Management Studio](#SSMSProcedure)  
-  
-     [Replication Agents](#ReplProg)  
-  
-     [レプリケーション管理オブジェクト (RMO)](#RMOProcedure)  
-  
+[!INCLUDE[azure-sql-db-replication-supportability-note](../../includes/azure-sql-db-replication-supportability-note.md)]
+
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  サブスクリプションは、ディストリビューション エージェント (スナップショット レプリケーションおよびトランザクション レプリケーションの場合) またはマージ エージェント (マージ レプリケーションの場合) で同期されます。 エージェントは継続的に実行、要求時に実行、またはスケジュールで実行できます。 同期スケジュールの指定の詳細については、「[同期スケジュールの指定](../../relational-databases/replication/specify-synchronization-schedules.md)」を参照してください。  
   

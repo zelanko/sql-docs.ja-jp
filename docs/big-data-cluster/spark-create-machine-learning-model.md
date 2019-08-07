@@ -2,19 +2,19 @@
 title: MLeap を使用した Spark machine learning モデルの作成とエクスポート
 titleSuffix: SQL Server big data clusters
 description: PySpark を使用して、SQL Server ビッグデータクラスター (プレビュー) で Spark を使用して機械学習モデルをトレーニングし、作成します。 MLeap でエクスポートし、SQL Server で Java でモデルをスコア付けします。
-author: lgongmsft
-ms.author: lgong
+author: RogPodge
+ms.author: roliu
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aa4c31eca725e8e662937259f078cf00a3441915
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 9e139e76e5f5f756b57a9366cc896716cda58959
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "67727377"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811207"
 ---
 # <a name="create-export-and-score-spark-machine-learning-models-on-sql-server-big-data-clusters"></a>SQL Server ビッグデータクラスターで Spark machine learning モデルを作成、エクスポート、およびスコア付けする
 
@@ -32,7 +32,7 @@ ms.locfileid: "67727377"
 
 - [SQL Server ビッグデータクラスター](deploy-get-started.md)
 
-- [ビッグデータツール](deploy-big-data-tools.md)
+- [ビッグ データ ツール](deploy-big-data-tools.md)
    - **kubectl**
    - **curl**
    - **Azure Data Studio**

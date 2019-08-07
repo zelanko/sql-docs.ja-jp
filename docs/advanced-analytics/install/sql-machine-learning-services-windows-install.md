@@ -1,30 +1,29 @@
 ---
 title: Windows に SQL Server Machine Learning Services (データベース内) をインストールする
-description: SQL Server または Python での R は、Windows 上の SQL Server 2017 Machine Learning Services のインストール手順 SQL Server ます。
+description: SQL Server または Python での R は、Windows 上の SQL Server Machine Learning Services のインストール手順 SQL Server ます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 2bc932a16155472f7dfa5cfa22eba6a4a5c59cd0
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470451"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715225"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows に SQL Server Machine Learning Services をインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-SQL Server 2017 以降では、データベース内分析のための R および Python のサポートは**SQL Server Machine Learning Services**で提供されています。これは SQL Server 2016 で導入された[SQL Server R Services](../r/sql-server-r-services.md)の後継です。 関数ライブラリは、R および Python で使用でき、データベースエンジンインスタンスで外部スクリプトとして実行されます。 
-
 この記事では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップウィザードを実行し、画面の指示に従って、machine learning コンポーネントをインストールする方法について説明します。
 
 ## <a name="bkmk_prereqs"></a>インストール前のチェックリスト
 
-+ R または Python 言語サポートを使用して Machine Learning Services をインストールする場合は、SQL Server 2017 (またはそれ以降) のセットアップが必要です。 SQL Server 2016 のインストールメディアを使用している場合は、 [SQL Server 2016 r Services (データベース内)](sql-r-services-windows-install.md)をインストールして、r 言語のサポートを受けることができます。
++ R または Python 言語サポートを使用して Machine Learning Services をインストールする場合は、SQL Server 2017 (またはそれ以降) のセットアップが必要です。 SQL Server 2016 のインストールメディアを使用している場合は、 [SQL Server R Services (データベース内)](sql-r-services-windows-install.md)をインストールして、R 言語のサポートを受けることができます。
 
 + データベースエンジンのインスタンスが必要です。 R または Python の機能だけをインストールすることはできませんが、既存のインスタンスに段階的に追加することはできます。
 
@@ -107,7 +106,7 @@ SQL Server 2017 以降では、データベース内分析のための R およ�
 
 R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)、Intel MATH Kernel Library (MKL) 計算からの一貫した出力を確保する必要があります。
 
-1. コントロールパネルで、[**システムとセキュリティ** >  **] [システム]**  >  [システム**設定** > ] [**環境変数**] をクリックします。
+1. コントロールパネルで、[**システムとセキュリティ** >  **] [システム** > ] [システム**設定** > ] [**環境変数**] をクリックします。
 
 2. 新しいユーザー変数またはシステム変数を作成します。 
 
@@ -283,8 +282,7 @@ SQL Server 用に作成する R ソリューションでは、基本的な R 関
 
 SQL Server で使用するパッケージは、インスタンスによって使用される既定のライブラリにインストールする必要があります。 コンピューターに R が別途インストールされている場合、またはユーザーライブラリにパッケージをインストールした場合は、これらのパッケージを T-sql から使用することはできません。
 
-R パッケージのインストールと管理のプロセスは SQL Server 2016 と SQL Server 2017 で異なります。 SQL Server 2016 では、データベース管理者は、ユーザーが必要とする R パッケージをインストールする必要があります。 SQL Server 2017 では、データベースレベルでパッケージを共有するようにユーザーグループを設定したり、ユーザーが独自のパッケージをインストールできるようにデータベースロールを構成したりすることができます。 詳細については、「 [SQL Server での新しい R パッケージのインストール](../r/install-additional-r-packages-on-sql-server.md)」を参照してください。
-
+R パッケージをインストールして管理するには、データベースレベルでパッケージを共有するようにユーザーグループを設定するか、ユーザーが独自のパッケージをインストールできるようにデータベースロールを構成します。 詳細については、「 [SQL Server での新しい R パッケージのインストール](../r/install-additional-r-packages-on-sql-server.md)」を参照してください。
 
 ## <a name="next-steps"></a>次のステップ
 

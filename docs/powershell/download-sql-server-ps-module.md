@@ -11,12 +11,12 @@ keywords:
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b7c49c25e1594657c3855aca1d50aac0fc47316f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 622d086c110bbf321534371d6b5547cadf9cbfd8
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67951710"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697283"
 ---
 # <a name="install-sql-server-powershell-module"></a>SQL Server PowerShell モジュールのインストール
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -28,7 +28,6 @@ ms.locfileid: "67951710"
 > * **SqlServer**: このモジュールには、最新の SQL 機能をサポートする新しいコマンドレットが含まれています。 モジュールには、**SQLPS** 内のコマンドレットの更新バージョンも含まれています。 
 
 SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを [PowerShell ギャラリー](https://www.powershellgallery.com/packages/Sqlserver)からインストールする必要があります。
-**SqlServer** モジュールの現在のバージョンは 21.1.18080 です。 これは、Microsoft.SQLServer.SMO のバージョン v150 に基づいており、SQL Server の次のバージョンをサポートします。 Microsoft.SQLServer.SMO のバージョン v140 に基づくモジュールの最後のバージョンは、21.0.17279 です。
 
 モジュールのプレリリース版は、より頻繁に利用できるようになる可能性があります。モジュールのこのようなバージョンを取得する方法については、このページの下部のセクションを参照してください。
 

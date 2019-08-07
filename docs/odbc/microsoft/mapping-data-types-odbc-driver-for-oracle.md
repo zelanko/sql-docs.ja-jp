@@ -32,8 +32,8 @@ ms.locfileid: "68080735"
 |Oracle サーバーのデータ型|ODBC SQL データ型|  
 |-----------------------------|------------------------|  
 |CHAR|SQL_CHAR|  
-|[DATE]|SQL_TIMESTAMP|  
-|[FLOAT]|SQL_DOUBLE|  
+|DATE|SQL_TIMESTAMP|  
+|FLOAT|SQL_DOUBLE|  
 |INTEGER|SQL_DECIMAL|  
 |LONG|SQL_LONGVARCHAR|  
 |LONG RAW|SQL_LONGVARBINARY|  

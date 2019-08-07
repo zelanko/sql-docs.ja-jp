@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: d43bebc8-e83a-457a-b7f4-a61a735f1904
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b4964789fb69af676a84f049183a88df183d6e82
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: f428510cbc2ddaed72567cd26a42a48556a72639
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67948644"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768250"
 ---
 # <a name="administrative-password"></a>管理パスワード
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このウィザードの **[ディストリビューター]** ページで、このパブリッシャーに対してリモート ディストリビューターを選択した場合、レプリケーションがパブリッシャーとディストリビューターの間に作成した接続に対するパスワードを、 **distributor_admin** ログインを使用して入力する必要があります。 入力するパスワードは、ディストリビューションの構成ウィザードの **[ディストリビューター パスワード]** ページまたは **[ディストリビューターのプロパティ]** ダイアログ ボックスの **[パブリッシャー]** ページで指定されたパスワードと一致する必要があります。  
   
 ## <a name="options"></a>オプション  

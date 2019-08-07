@@ -12,15 +12,16 @@ f1_keywords:
 ms.assetid: 2346c00d-c269-45a1-af14-68e7fd7ebd7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f7594aa07bf4b193a9bea6ac0ebede78cd10eda
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: b006eac4981866bbadadaf47bc6d895e3abd0f9e
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68113857"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769734"
 ---
 # <a name="publisher-information-agents"></a>パブリッシャー情報、[エージェント]
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   **[エージェント]** タブには、パブリッシャーに関連するエージェントおよびメンテナンス ジョブに関する詳細情報が表示されます。  
   
 -   すべてのパブリケーションで表示されるスナップショット エージェント  

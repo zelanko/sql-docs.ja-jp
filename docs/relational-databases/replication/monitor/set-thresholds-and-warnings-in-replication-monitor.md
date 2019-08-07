@@ -17,15 +17,16 @@ helpviewer_keywords:
 ms.assetid: 3a409c2c-b77e-4001-b81a-1dcd918618ec
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e4866e0878411f6e81718df4184c1e5f2ac57f06
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: fcc0e1482d3b38a395724f090805767291b609d7
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111152"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68767603"
 ---
 # <a name="set-thresholds-and-warnings-in-replication-monitor"></a>レプリケーション モニターのしきい値と警告の設定
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] レプリケーション モニターには、パブリケーションおよびサブスクリプションの状態情報が表示されます。 既定で表示される警告は、初期化されていないサブスクリプションに対する警告だけですが、その他の条件に対する警告を有効にすることもできます。 トポロジに対する警告を有効にすることをお勧めします。この警告を有効にすると、状態やパフォーマンスに関する情報をタイムリーに受け取ることができます。  
   
  警告を有効にする際には、しきい値を指定します。 指定したしきい値に達したり、それを超えると、警告が表示されます (それより優先度の高い問題がない場合)。 しきい値に到達した場合は、レプリケーション モニターに警告を表示でき、さらに通知を発行することができます。 以下のような条件について、警告を有効にすることができます。  

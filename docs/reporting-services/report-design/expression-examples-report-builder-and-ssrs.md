@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 87ddb651-a1d0-4a42-8ea9-04dea3f6afa4
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 888d46c7c03b9665c64e54ddffed9d29c67afcad
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3becfd5ede4ddd1ca7bfd7d12a6c88db225ced3
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65579151"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661340"
 ---
 # <a name="expression-examples-report-builder-and-ssrs"></a>式の例 (レポート ビルダーおよび SSRS)
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のページ分割されたレポートでは、内容と外観を制御するために式をよく使用します。 式は [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[vbprvb](../../includes/vbprvb-md.md)]で記述し、組み込み関数、カスタム コード、レポート変数とグループ変数、およびユーザー定義変数を使用することができます。 式は等号 (=) で始まります。 式エディターと使用できる参照の種類の詳細については、「[レポートでの式の使用 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/expression-uses-in-reports-report-builder-and-ssrs.md)」および「[式の追加 &#40;レポート ビルダーおよび SSRS&#41;](../../reporting-services/report-design/add-an-expression-report-builder-and-ssrs.md)」を参照してください。  
@@ -247,7 +247,7 @@ ms.locfileid: "65579151"
 -   キー フィールドを指定することで、 **Lookup** 関数を使用し、1 対 1 のリレーションシップ (キーと値のペアなど) の値をデータセットから取得することができます。 次の式では、入力された製品識別子に一致する製品名をデータセット ("Product") から取得し、表示します。  
   
     ```  
-    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields.ProductName.Value, "Product")  
+    =Lookup(Fields!PID.Value, Fields!ProductID.Value, Fields!ProductName.Value, "Product")  
     ```  
   
 ### <a name="lookupset"></a>LookupSet  

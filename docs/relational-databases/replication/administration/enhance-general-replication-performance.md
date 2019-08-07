@@ -21,15 +21,16 @@ helpviewer_keywords:
 ms.assetid: 895b1ad7-ffb9-4a5c-bda6-e1dfbd56d9bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9d7e3e718cae97ece079bbd44ad1a17068201668
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: dd7cfe863fde1b4909caadca12b496705f956483
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939218"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768807"
 ---
 # <a name="enhance-general-replication-performance"></a>レプリケーションの全般的パフォーマンスの向上
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   このトピックで解説するガイドラインに従うことによって、アプリケーションおよびネットワーク上にある全種類のレプリケーションの全般的なパフォーマンスを向上させることができます。  
   
 ## <a name="server-and-network"></a>サーバーおよびネットワーク  
