@@ -28,7 +28,7 @@ ms.locfileid: "67987953"
   
  SQL_ERROR = 1  
   
- szErrorMsg="[Microsoft][ODBC driver for Oracle]Wrong number of parameters"
+ szErrorMsg="[Microsoft][ODBC driver for Oracle]Wrong number of parameters"  
   
  szErrorMsg="[Microsoft][ODBC driver for Oracle]Syntax error or access violation"  
   

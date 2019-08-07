@@ -1,5 +1,5 @@
 ---
-title: SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX) |Microsoft Docs
+title: SELECT FROM&lt;model&gt;.SAMPLE_CASES (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -15,7 +15,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67928317"
 ---
-# <a name="select-from-ltmodelgtsamplecases-dmx"></a>SELECT FROM &lt;model&gt;.SAMPLE_CASES (DMX)
+# <a name="select-from-ltmodelgtsample_cases-dmx"></a>SELECT FROM&lt;model&gt;.SAMPLE_CASES (DMX)
 [!INCLUDE[ssas-appliesto-sqlas](../includes/ssas-appliesto-sqlas.md)]
 
   データ マイニング モデルの学習に使用されるケースを表すサンプル ケースを返します。  

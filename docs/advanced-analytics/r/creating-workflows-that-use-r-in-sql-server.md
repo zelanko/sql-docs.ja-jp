@@ -135,7 +135,7 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![線形モデルを生成し]ます(../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "線形モデルを生成し")ます
+![線形モデルを生成し](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "線形モデルを生成し")
 
 チェックポイントとして、このタスクが完了したら、ssis_iris_models に対してクエリを実行し、1つのバイナリモデルが含まれていることを確認できます。
 

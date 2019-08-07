@@ -233,14 +233,6 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: bdc の状態
                   href: big-data-cluster/reference-azdata-bdc-status.md
-            - name: ノートブック
-              items:
-                - name: ノートブック
-                  href: big-data-cluster/reference-azdata-notebook.md
-            - name: SQL
-              items:
-                - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
 - name: ビジネス継続性
   items:
     - name: 概要

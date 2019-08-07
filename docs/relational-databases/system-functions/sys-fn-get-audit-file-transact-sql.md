@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68046279"
 ---
-# <a name="sysfngetauditfile-transact-sql"></a>sys.fn_get_audit_file (TRANSACT-SQL)
+# <a name="sysfn_get_audit_file-transact-sql"></a>sys.fn_get_audit_file (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバー監査で作成された監査ファイルからの情報を返します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
@@ -61,9 +61,9 @@ fn_get_audit_file ( file_pattern,
  
     この引数は、blob の URL を (ストレージ エンドポイントとコンテナーを含む) を指定するに使用されます。 アスタリスクのワイルドカードはサポートされません、中には、このプレフィックスで始まる複数のファイル (blob) を収集する (完全な blob 名) ではなく、部分的なファイル (blob) 名のプレフィックスを使用できます。 以下に例を示します。
  
-      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\> /**  -特定のデータベースのすべての監査ファイル (blob) を収集します。    
+      - **\<Storage_endpoint\>/\<\<Container\>\>/\<ServerName\>/\<DatabaseName\> /**  -特定のデータベースのすべての監査ファイル (blob) を収集します。    
       
-      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -特定の監査ファイル (blob) を収集します。
+      - **\<Storage_endpoint\>/\<\<Container\>\>/\<ServerName\>/\<DatabaseName\> / \<AuditName\>/\<CreationDate\>/\<FileName\>.xel** -特定の監査ファイル (blob) を収集します。
   
 > [!NOTE]  
 >  ファイル名のパターンがないパスを渡すとエラーが発生します。  
