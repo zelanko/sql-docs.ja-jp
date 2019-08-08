@@ -192,7 +192,7 @@ ON Purchasing.PurchaseOrderDetail
   
  もう一度クエリを実行した後、次の実行プランは、SORT 操作が削除され、新しく作成された非クラスター化インデックスが使用されたことを示します。  
   
- ![実行プランは、並べ替え演算子が使用されていないことを示し]ます(media/insertsort2.gif "実行プランは、並べ替え演算子が使用されていないことを示し")ます  
+ ![実行プランは、並べ替え演算子が使用されていないことを示し](media/insertsort2.gif "実行プランは、並べ替え演算子が使用されていないことを示し")ます  
   
  [!INCLUDE[ssDE](../includes/ssde-md.md)] は、どちらの方向でも同じように効率的に移動します。 `(RejectedQty DESC, ProductID ASC)` として定義されたインデックスは、ORDER BY 句の列の並べ替え方向が逆転されたクエリで引き続き使用できます。 たとえば、ORDER BY 句 `ORDER BY RejectedQty ASC, ProductID DESC` が含まれたクエリでは、このインデックスを使用できます。  
   
