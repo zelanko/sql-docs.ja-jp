@@ -27,7 +27,7 @@ ms.locfileid: "68036546"
 SQLCloseCursor(hstmt);  
 ```  
   
- アプリケーションがカーソルを閉じるまで、別の SQL ステートメントの実行など、カーソルを開かれているステートメントは他のほとんどの操作に使用できません。 カーソルが開いているときに呼び出すことができる関数の完全な一覧については、[付録 B:ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md) を参照してください。    
+ アプリケーションがカーソルを閉じるまで、別の SQL ステートメントの実行など、カーソルを開かれているステートメントは他のほとんどの操作に使用できません。 カーソルが開いているときに呼び出すことができる関数の完全な一覧を参照してください[付録 b:。ODBC の状態遷移テーブル](../../../odbc/reference/appendixes/appendix-b-odbc-state-transition-tables.md)します。  
   
 > [!NOTE]  
 >  カーソルを閉じるには、アプリケーションを呼び出す必要があります**SQLCloseCursor**ではなく、 **SQLCancel**します。  
