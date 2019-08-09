@@ -1,7 +1,7 @@
-- name: Analysis Services
+- name: SQL Server 2014 Analysis Services
   href: analysis-services.md
   items:
-    - name: 新機能
+    - name: 新機能 (SQL Server 2014 Analysis Services)
       href: what-s-new-in-analysis-services.md
     - name: Analysis Services の旧バージョンとの互換性
       href: analysis-services-backward-compatibility.md

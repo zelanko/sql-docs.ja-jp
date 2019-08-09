@@ -2373,12 +2373,16 @@
       items:
         - name: Microsoft SQL Server 用 JDBC Driver のダウンロード
           href: ../connect/jdbc/download-microsoft-jdbc-driver-for-sql-server.md
+        - name: 結果の解析
+          href: ../connect/jdbc/parsing-the-results.md
         - name: JDBC Driver のリリース ノート
           href: ../connect/jdbc/release-notes-for-the-jdbc-driver.md
         - name: JDBC Driver のシステム要件
           href: ../connect/jdbc/system-requirements-for-the-jdbc-driver.md
         - name: JDBC ドライバーの使用
           href: ../connect/jdbc/using-the-jdbc-driver.md
+        - name: useFMTOnly の使用
+          href: ../connect/jdbc/using-usefmtonly.md
         - name: Java EE のサポートについて
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: JDBC Driver の展開
@@ -2538,6 +2542,8 @@
               href: ../connect/jdbc/understanding-data-type-differences.md
             - name: 複数の結果セットの使用
               href: ../connect/jdbc/using-multiple-result-sets.md
+            - name: NTLM 認証の使用
+              href: ../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md
             - name: 保持機能の使用
               href: ../connect/jdbc/using-holdability.md
             - name: Azure Active Directory 認証を利用した接続
