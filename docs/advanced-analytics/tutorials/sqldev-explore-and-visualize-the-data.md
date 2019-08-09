@@ -274,7 +274,7 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 4. を`rXYPlots_Tip_vs_Fare_Amount.pdf`開くと、x 軸の料金 amount と y 軸のチップの金額を含む散布図が表示されます。
 
-   ![料金 amount をプロット]したチップの金額(media/rsql-devtut-tipamtbyfareamt.PNG "料金 amount をプロット")したチップの金額
+   ![料金 amount をプロットしたチップの金額](media/rsql-devtut-tipamtbyfareamt.PNG "料金 amount をプロット")したチップの金額
 
 ## <a name="next-lesson"></a>次のレッスン
 

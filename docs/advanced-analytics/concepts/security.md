@@ -19,7 +19,7 @@ ms.locfileid: "68715851"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、SQL Server データベースエンジンとそれに関連するコンポーネントを拡張機能フレームワークと統合するために使用される全体的なセキュリティアーキテクチャについて説明します。 Securables、サービス、プロセス id、アクセス許可を調べます。 SQL Server の機能拡張の主要な概念とコンポーネントの詳細については、「 [SQL Server Machine Learning Services] の拡張アーキテクチャ](extensibility-framework.md)」を参照してください。
+この記事では、SQL Server データベースエンジンとそれに関連するコンポーネントを拡張機能フレームワークと統合するために使用される全体的なセキュリティアーキテクチャについて説明します。 Securables、サービス、プロセス id、アクセス許可を調べます。 SQL Server の機能拡張の主要な概念とコンポーネントの詳細については、「 [SQL Server Machine Learning Services の拡張アーキテクチャ](extensibility-framework.md)」を参照してください。
 
 ## <a name="securables-for-external-script"></a>外部スクリプトの Securables
 

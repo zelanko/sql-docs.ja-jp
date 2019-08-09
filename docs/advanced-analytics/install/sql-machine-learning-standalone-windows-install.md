@@ -77,7 +77,7 @@ SQL Server 2016 のみ:SQL Server の前提条件としてインストールさ�
 
     - 既定では、R と Python の両方が選択されています。 どちらの言語も選択解除できますが、サポートされている言語の少なくとも1つをインストールすることをお勧めします。
 
-     ![R または Python の機能の選択](media/2017setup-features-page-mlsvr-rpy.png "スタンドアロン Machine Learning Server のインストールを開始")する
+     ![R または Python の機能の選択](media/2017setup-features-page-mlsvr-rpy.png "スタンドアロン Machine Learning Server のインストールを開始 する")
     
     その他のオプションはすべて無視します。 
     
