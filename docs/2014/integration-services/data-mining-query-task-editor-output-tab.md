@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリ タスク エディター ([出力] タブ) |Microsoft Docs
+title: '[データマイニングクエリタスクエディター] ([出力] タブ)Microsoft Docs'
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ ms.assetid: 62f9e015-6fe0-4396-ad90-3ad51bf00025
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: db02b92ffead56451e72c7a1d564c2c9956d2ecc
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 7b381ec722125bfa6ad8a4b8102e2fa3b7a5c309
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059775"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890468"
 ---
 # <a name="data-mining-query-task-editor-output-tab"></a>[データ マイニング クエリ タスク エディター] ([出力] タブ)
   **[データ マイニング クエリ タスク エディター]** ダイアログ ボックスの **[出力]** タブを使用すると、予測クエリの出力先を指定できます。  
   
- パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
-## <a name="general-options"></a>[全般] のオプション  
+## <a name="general-options"></a>一般オプション  
  **名前**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -53,6 +53,6 @@ ms.locfileid: "66059775"
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [データ マイニング クエリ タスク エディター ([マイニング モデル] タブ)](../../2014/integration-services/data-mining-query-task-editor-mining-model-tab.md)   
  [データ マイニング クエリ タスク エディター ([クエリ] タブ)](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
- [データ マイニング デザイナー](../analysis-services/data-mining/data-mining-designer.md)  
+ [データ マイニング デザイナー](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

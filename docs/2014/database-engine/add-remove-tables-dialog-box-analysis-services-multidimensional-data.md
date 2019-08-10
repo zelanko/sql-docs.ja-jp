@@ -1,5 +1,5 @@
 ---
-title: テーブル ダイアログ ボックス (Analysis Services - 多次元データ) の追加と削除 |Microsoft Docs
+title: '[テーブルの追加と削除] ダイアログボックス (Analysis Services-多次元データ) |Microsoft Docs'
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -14,14 +14,14 @@ ms.assetid: b2760517-b0cb-4268-905d-bb1e1f9d902a
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c0c0ad4d5c375b537f4bc0fd4efb820395a8d6e1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c8ea017c7b463a0287e6b6f4437549db667bd251
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66065236"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889212"
 ---
-# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>テーブル ダイアログ ボックス (Analysis Services - 多次元データ) の追加と削除
+# <a name="add-remove-tables-dialog-box-analysis-services---multidimensional-data"></a>[テーブルの追加と削除] ダイアログボックス (Analysis Services-多次元データ)
   [!INCLUDE[ssBIDevStudioFull](../../includes/ssbidevstudiofull-md.md)] の **[テーブルの追加と削除]** ダイアログ ボックスを使用すると、データ ソース ビューに対してデータ ソース内のテーブルを追加または削除できます。 **[テーブルの追加と削除]** ダイアログ ボックスを表示するには、次の手順に従います。  
   
 -   **データ ソース ビュー デザイナー**の **[ツール バー]** ペインで **[オブジェクトの追加と削除]** をクリックします。  
@@ -40,7 +40,7 @@ ms.locfileid: "66065236"
  **[フィルター]**  
  **[使用できるオブジェクト]** に一覧表示されたオブジェクトの制限に使用するフィルターを入力し、ボタンをクリックして一覧表示されているオブジェクトをフィルターします。  
   
- **システム オブジェクトを表示します。**  
+ **システムオブジェクトの表示**  
  **[使用できるオブジェクト]** 内のデータ ソース向けのシステム オブジェクトを表示します。  
   
  **含まれるオブジェクト**  
@@ -48,11 +48,11 @@ ms.locfileid: "66065236"
   
  **[<<]** をクリックすると **[含まれているオブジェクト]** に一覧表示されたすべてのオブジェクトを **[使用できるオブジェクト]** に移行でき、1 つまたは複数のオブジェクトを選択して **[<]** をクリックすると、選択したオブジェクトを **[使用できるオブジェクト]** に移行できます。  
   
- **関連テーブルを追加します。**  
+ **関連テーブルの追加**  
  **[含まれているオブジェクト]** 内の選択したテーブルに関連するすべてのテーブルを追加します。  
   
-## <a name="see-also"></a>参照  
- [Analysis Services のデザイナーおよびダイアログ ボックス&#40;多次元データ&#41;](../analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data.md)   
- [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](../analysis-services/data-source-view-designer-analysis-services-multidimensional-data.md)  
+## <a name="see-also"></a>関連項目  
+ [Analysis Services のデザイナーとダイアログ&#40;ボックス多次元データ&#41;](https://docs.microsoft.com/analysis-services/analysis-services-designers-and-dialog-boxes-multidimensional-data)   
+ [データ ソース ビュー デザイナー (Analysis Services - 多次元データ)](https://docs.microsoft.com/analysis-services/data-source-view-designer-analysis-services-multidimensional-data)  
   
   

@@ -39,7 +39,7 @@ sections:
       - type: list
         style: unordered
         items:
-          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">T-sql で Python を使用する</a>:データ</a>の探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)'
+          - html: '<a href="tutorials/sqldev-in-database-python-for-sql-developers">T-sql で Python を使用する</a>:データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)'
           - html: '<a href="tutorials/sqldev-in-database-r-for-sql-developers">T-sql で R を使用する</a>:データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)'
           - html: '<a href="tutorials/walkthrough-data-science-end-to-end-walkthrough">R ツールで Machine Learning Services を使用する</a>:データの探索、グラフとプロットの作成、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (6 部構成シリーズ)'
   - title: 解決策
@@ -67,3 +67,4 @@ sections:
           - html: <a href="/azure/sql-database/sql-database-machine-learning-services-overview">Azure SQL Database Machine Learning Services<a>
           - html: <a href="/azure/machine-learning/">Azure Machine Learning</a>
           - html: <a href="/dotnet/machine-learning/">ML.NET</a>
+          - html: <a href="/azure/architecture/data-guide/technology-choices/data-science-and-machine-learning">Microsoft の機械学習製品とは何ですか?</a>

@@ -1,5 +1,5 @@
 ---
-title: 配置されたキューブの表示 |Microsoft Docs
+title: 配置されたキューブの参照 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/14/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 849c6109-1453-4fe4-a892-c49a982cfadb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 9c4b80f65b894ebe81ab440e4e7a8f2a7080d2e6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9273f35ccca51d92461783f1110890b161a85059
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078905"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888470"
 ---
 # <a name="browsing-the-deployed-cube"></a>配置したキューブの表示
   この実習では、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを表示します。 分析で複数のディメンションにわたってメジャーを比較するため、データの参照には Excel のピボットテーブルを使用します。 ピボットテーブルを使用すると、顧客、日付、および製品情報を異なる軸に配置して、特定の期間、顧客の人口統計、および製品ラインにわたって見たときに、Internet Sales がどのように変化するかを確認できます。  
@@ -42,9 +42,9 @@ ms.locfileid: "66078905"
   
      次の図のように、2006 年 2 月におけるインターネットでの売上が、地域別および製品ライン別に表示されます。  
   
-     ![地域および製品ラインごとのインターネット販売](../../2014/tutorials/media/l3-cube-browser-finish.gif "地域および製品ラインごとのインターネット販売")  
+     ![地域と製品ライン別のインターネット販売](../../2014/tutorials/media/l3-cube-browser-finish.gif "地域と製品ライン別のインターネット販売")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 4:高度な属性およびディメンションのプロパティを定義します。](../analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties.md)  
+ [レッスン 4:高度な属性およびディメンションのプロパティの定義](https://docs.microsoft.com/analysis-services/lesson-4-defining-advanced-attribute-and-dimension-properties)  
   
   

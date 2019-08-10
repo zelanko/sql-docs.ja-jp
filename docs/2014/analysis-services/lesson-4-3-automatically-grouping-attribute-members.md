@@ -1,5 +1,5 @@
 ---
-title: 属性メンバーを自動的にグループ化 |Microsoft Docs
+title: 属性メンバーの自動的なグループ化 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 9fb2cda3-a122-4a4c-82e0-3454865eef04
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c521a3faf0c11cfab7bab337226de647e27cd060
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 568cb46a17ac29cabe45b79212400fd020be84c3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078652"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888418"
 ---
 # <a name="automatically-grouping-attribute-members"></a>属性メンバーの自動的なグループ化
   キューブを表示するとき、通常は、ある属性階層のメンバーと別の属性階層のメンバーとを多次元化します。 たとえば、都市別、製品別、または性別ごとに顧客の売上をグループ化して表示します。 このとき、属性の種類によっては、属性階層内のメンバー分布に基づいて、属性が自動的にグループ化されるように [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定しておくと便利です。 たとえば、顧客の年収に基づいてグループが作成されるように [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] を設定できます。 このようにグループ化した場合、属性階層を表示したときには、メンバーそのものではなく、グループの名前と値が表示されます。 ユーザーに提示されるレベル数が限定されるので、分析が容易になります。  
@@ -44,11 +44,11 @@ ms.locfileid: "66078652"
   
 4.  **[属性]** ペインで、 **[Yearly Income]** を選択します。  
   
-5.  [プロパティ] ウィンドウでの値を変更、 **DiscretizationMethod**プロパティを**自動**の値を変更し、 **DiscretizationBucketCount**プロパティ`5`します。  
+5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Automatic**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。  
   
      次の図は、変更後の **Yearly Income**プロパティを示しています。  
   
-     ![変更されたプロパティの Yearly income](../../2014/tutorials/media/l4-discretizationmethod-1.gif "Yearly Income のプロパティを変更")  
+     ![年収の変更]されたプロパティ(../../2014/tutorials/media/l4-discretizationmethod-1.gif "年収の変更")されたプロパティ  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Employee ディメンションにおける属性階層メンバーのグループ化  
   
@@ -62,11 +62,11 @@ ms.locfileid: "66078652"
   
 4.  **[属性]** ペインで、 **[Sick Leave Hours]** を選択します。  
   
-5.  [プロパティ] ウィンドウでの値を変更、 **DiscretizationMethod**プロパティを**クラスター**の値を変更し、 **DiscretizationBucketCount**プロパティを`5`.  
+5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**クラスター**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。  
   
 6.  **[属性]** ペインで、 **[Vacation Hours]** を選択します。  
   
-7.  [プロパティ] ウィンドウでの値を変更、 **DiscretizationMethod**プロパティを**Equal Areas**の値を変更し、 **DiscretizationBucketCount**プロパティ`5`します。  
+7.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Equal Areas**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>変更した属性階層の表示  
   
@@ -94,7 +94,7 @@ ms.locfileid: "66078652"
   
      次の図は、従業員の病欠時間別の売上ディメンションを示します。  
   
-     ![従業員の病欠別の売上ディメンションの休暇時間](../../2014/tutorials/media/l4-discretizationmethod-2.gif "従業員の病欠別の売上ディメンションの休暇時間")  
+     ![従業員の病欠時間別の売上](../../2014/tutorials/media/l4-discretizationmethod-2.gif "従業員の病欠時間別の売上")  
   
 10. **データ** ペインの列領域から **Sick Leave Hours** 属性階層を削除します。  
   
@@ -123,9 +123,9 @@ ms.locfileid: "66078652"
      **Vacation Hours** 属性メンバーのグループが 3 つあります。各メンバーに製品の売上の値が含まれています (他の 7 つのグループには、売上データのあるメンバーが存在しません)。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [属性階層の非表示化と無効化](../analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
+ [属性階層の非表示化と無効化](https://docs.microsoft.com/analysis-services/lesson-4-4-hiding-and-disabling-attribute-hierarchies)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

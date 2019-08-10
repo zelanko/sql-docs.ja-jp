@@ -1,5 +1,5 @@
 ---
-title: Analysis Services 処理タスク エディター (Analysis Services ページ) |Microsoft Docs
+title: Analysis Services 処理タスクエディター (Analysis Services ページ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,12 +14,12 @@ ms.assetid: 5612be78-57cf-4e4e-92cf-6bfa9f971040
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: a6a114cba7caa1fa223f21de2aa8cc4a85979fe1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 59220dd32388eed75ed725e7a8b5956394ae575d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061467"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890367"
 ---
 # <a name="analysis-services-processing-task-editor-analysis-services-page"></a>[Analysis Services 処理タスク エディター] ([Analysis Services] ページ)
   **[Analysis Services 処理タスク エディター]** ダイアログ ボックスの **[Analysis Services]** ページを使用すると、Analysis Services 接続マネージャーの指定、処理する分析オブジェクトの選択、処理およびエラー処理オプションの設定を行うことができます。  
@@ -50,7 +50,7 @@ ms.locfileid: "66061467"
 |--------------|-----------------|  
 |**Object Name**|指定されたオブジェクト名を表示します。|  
 |**型**|指定されたオブジェクトの種類を表示します。|  
-|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック:** [多次元モデル オブジェクトの処理](../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック:** [多次元モデルオブジェクトの処理](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**[設定]**|指定されたオブジェクトの処理設定を表示します。|  
   
  **[追加]**  
@@ -78,7 +78,7 @@ ms.locfileid: "66061467"
   
  **関連トピック:** [[設定の変更] ダイアログ ボックス &#40;Analysis Services - 多次元データ&#41;](../../2014/analysis-services/change-settings-dialog-box-analysis-services-multidimensional-data.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [[Analysis Services 処理タスク エディター] ([全般] ページ)](general-page-of-integration-services-designers-options.md)   
  [Analysis Services DDL 実行タスク](control-flow/analysis-services-execute-ddl-task.md)  

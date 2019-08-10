@@ -1,5 +1,5 @@
 ---
-title: 開発者&#39;ガイド (データベース エンジン) |Microsoft Docs
+title: 開発&#39;者ガイド (データベースエンジン) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/09/2017
 ms.prod: sql-server-2014
@@ -13,14 +13,14 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: ba11f16b14520ac5340724597a6e5b9aa3dedbcb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62872618"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890802"
 ---
-# <a name="developer39s-guide-database-engine"></a>開発者&#39;ガイド (データベース エンジン)
+# <a name="developer39s-guide-database-engine"></a>開発&#39;者ガイド (データベースエンジン)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、データベース アプリケーションの開発、管理、および制御のための豊富なツールが用意されています。  
   
 ## <a name="in-this-section"></a>このセクションの内容  
@@ -51,11 +51,11 @@ ms.locfileid: "62872618"
  [例外メッセージ ボックスのプログラミング](../database-engine/dev-guide/exception-message-box-programming.md)  
  アプリケーションに例外メッセージ ボックス プログラム インターフェイスを使用して、メッセージ エクスペリエンスを高い柔軟性で制御し、ユーザーが後で参照できるようにエラー メッセージを保存したり、メッセージのヘルプを表示したりできるようにする方法を説明します。  
   
-## <a name="see-also"></a>参照  
- [Data Mining Programming (データ マイニングのプログラミング)](../analysis-services/dev-guide/data-mining-programming.md)   
- [Developer's Guide &#40;Analysis Services&#41;](../analysis-services/analysis-services-developer-documentation.md)   
- [Developer's Guide &#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
- [Developer's Guide&#40;レプリケーション&#41;](replication/concepts/replication-developer-documentation.md)   
- [Developer's Guide &#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
+## <a name="see-also"></a>関連項目  
+ [Data Mining Programming (データ マイニングのプログラミング)](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [開発者ガイド&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
+ [開発者ガイド&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
+ [開発者ガイド&#40;のレプリケーション&#41;](replication/concepts/replication-developer-documentation.md)   
+ [開発者ガイド&#40;Reporting Services&#41;](../reporting-services/reporting-services-developer-documentation.md)  
   
   

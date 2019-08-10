@@ -1,5 +1,5 @@
 ---
-title: ADOMD.NET サーバー オブジェクト アーキテクチャ |Microsoft Docs
+title: ADOMD.NET サーバーオブジェクトのアーキテクチャ |Microsoft Docs
 ms.date: 05/02/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -9,20 +9,20 @@ ms.author: owend
 ms.reviewer: owend
 author: minewiskan
 manager: kfile
-ms.openlocfilehash: 9a527f9fd3a1d41b0b41190952705a4066b402ac
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6f5ad515251a783705e3f8e04c73674a8e978348
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63059438"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889986"
 ---
 # <a name="adomdnet-server-object-architecture"></a>ADOMD.NET サーバー オブジェクト アーキテクチャ
-  ADOMD.NET サーバー オブジェクトはユーザー定義関数 (Udf) やストアド プロシージャを作成するために使用できるヘルパー オブジェクト[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]します。  
+  ADOMD.NET サーバーオブジェクトは、で[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]ユーザー定義関数 (udf) またはストアドプロシージャを作成するために使用できるヘルパーオブジェクトです。  
   
 > [!NOTE]  
->  使用する、 **Microsoft.AnalysisServices.AdomdServer**名前空間 (およびこれらのオブジェクト)、UDF プロジェクトやストアド プロシージャに msmgdsrv.dll への参照を追加する必要があります。  
+>  **Microsoft.analysisservices.sharepoint.integration.dll**名前空間 (およびこれらのオブジェクト) を使用するには、msmgdsrv への参照を UDF プロジェクトまたはストアドプロシージャに追加する必要があります。  
   
- ![ADOMD.NET サーバーにおけるオブジェクトの関係を示しています。](../../analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "ADOMD.NET サーバーにおけるオブジェクトの関係を示しています。")  
+ ![ADOMD.NET Server のオブジェクトの関係を表示します]。(https://docs.microsoft.com/analysis-services/analysis-services/multidimensional-models-adomd-net-server/media/adomdnetserverobjectmodel.gif "ADOMD.NET Server のオブジェクトの関係を表示します")。  
 ADOMD.NET オブジェクト モデル  
   
  ADOMD.NET オブジェクト階層との対話は、通常、次の表で説明するように、最上位層の 1 つまたは複数のオブジェクトで開始されます。  

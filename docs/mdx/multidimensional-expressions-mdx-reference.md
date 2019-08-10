@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 8fce73abd82afe64c5ecc971e13ba161b880e6c7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e557ffae3c4a530f448e0dfe78594f3f2c63feaf
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68088415"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893175"
 ---
 # <a name="multidimensional-expressions-mdx-reference"></a>多次元式 (MDX) リファレンス
 
@@ -23,13 +23,13 @@ ms.locfileid: "68088415"
   
 |トピック|説明|  
 |-----------|-----------------|  
-|[MDX 構文の要素&#40;MDX&#41;](../mdx/mdx-syntax-elements-mdx.md)|MDX 式、ステートメント、およびスクリプトで使用可能な MDX 言語のさまざまな構文要素について説明します。|  
+|[Mdx 構文要素&#40;mdx&#41;](../mdx/mdx-syntax-elements-mdx.md)|MDX 式、ステートメント、およびスクリプトで使用可能な MDX 言語のさまざまな構文要素について説明します。|  
 |[MDX 言語リファレンス &#40;MDX&#41;](../mdx/mdx-language-reference-mdx.md)|MDX 言語を定義するステートメント、演算子、および関数について説明します。|  
   
 ## <a name="see-also"></a>関連項目  
- [MDX による多次元データのクエリを実行します。](../analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx.md)   
+ [MDX による多次元データのクエリ](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/querying-multidimensional-data-with-mdx)   
  [Analysis Services スクリプト言語 (XMLA 用 ASSL)](https://docs.microsoft.com/bi-reference/assl/analysis-services-scripting-language-assl-for-xmla)   
- [分析データ ソースからデータを取得します。](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
- [割り当てとその他のスクリプト コマンドの定義](../analysis-services/multidimensional-models/define-assignments-and-other-script-commands.md)  
+ [分析データソースからのデータの取得](https://docs.microsoft.com/bi-reference/adomd/multidimensional-models-adomd-net-client/retrieving-data-from-an-analytical-data-source)   
+ [割り当てとその他のスクリプト コマンドの定義](https://docs.microsoft.com/analysis-services/multidimensional-models/define-assignments-and-other-script-commands)  
   
   

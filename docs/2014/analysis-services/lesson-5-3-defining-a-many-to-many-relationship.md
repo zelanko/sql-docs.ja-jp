@@ -10,12 +10,12 @@ ms.assetid: 7bebb174-148c-4cbb-a285-2f6d536a16d5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: ef5fd5e081804abf27ede8d0cd7ad65f888b870c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d6e375c2f2931890228d0accc45b167cda609e53
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078468"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888164"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>多対多関係の定義
   通常、ディメンションを定義する場合、1 つのディメンション メンバーは多数のファクトに結合できますが、各ファクトを結合できるのは 1 つのディメンションのみです。 たとえば、各顧客は多数の商品を注文できますが、それぞれの注文は 1 人の顧客に所属します。 リレーショナル データベース用語では、これを *一対多のリレーションシップ*と呼びます。 しかし、1 つのファクトが複数のディメンション メンバーに結合する場合があります。 リレーショナル データベース用語では、これを *多対多のリレーションシップ*と呼びます。 たとえば、1 回の購入には複数の購入動機があることが考えられ、また、1 つの購入動機が複数の購入に結び付く (関連付けられる) ことがあります。 結合テーブルは、各購入に関連する購入動機の定義に使用されます。 このようなリレーションシップから作成された Sales Reason ディメンションには、1 回の販売取り引きに関連付けられるメンバーが複数存在します。 多対多のディメンションは、従来のスター スキーマ以上にディメンショナル モデルを展開し、ディメンションが直接ファクト テーブルに関連付けられていなくても複雑な分析を可能にします。  
@@ -25,7 +25,7 @@ ms.locfileid: "66078468"
  多対多のディメンションでは値は個別に集計され、すべてのメンバーに対して 2 回以上集計されることはありません。  
   
 > [!NOTE]  
->  多対多ディメンションのリレーションシップをサポートするために関連するすべてのテーブル間のデータ ソース ビューでプライマリ キーと外部キー リレーションシップを定義する必要があります。 このようにしないと、キューブ デザイナーの **[ディメンションの使用法]** タブでリレーションシップを確立するときに正しいメジャー グループを選択できません。  
+>  多対多のディメンションリレーションシップをサポートするには、関連するすべてのテーブル間のデータソースビューで主キーと外部キーのリレーションシップを定義する必要があります。 このようにしないと、キューブ デザイナーの **[ディメンションの使用法]** タブでリレーションシップを確立するときに正しいメジャー グループを選択できません。  
   
  詳細については、「 [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)」および「 [多対多のリレーションシップと多対多のリレーションシップのプロパティの定義](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)」を参照してください。  
   
@@ -35,7 +35,7 @@ ms.locfileid: "66078468"
   
 1.  データ ソース ビュー デザイナーを開き、 **Adventure Works DW 2012** データ ソース ビューを表示します。  
   
-2.  内を右クリックして、**ダイアグラム オーガナイザー**ウィンドウで、をクリックして**新しいダイアグラム**、し、指定`Internet Sales Order Reasons`として新しいダイアグラムの名前。  
+2.  **[ダイアグラムオーガナイザー]** ペイン内の任意の場所を右クリックし、[ `Internet Sales Order Reasons` **新しいダイアグラム**] をクリックして、この新しいダイアグラムの名前としてを指定します。  
   
 3.  **[テーブル]** ペインの **[InternetSales]** テーブルを、 **[ダイアグラム]** ペインにドラッグします。  
   
@@ -43,17 +43,17 @@ ms.locfileid: "66078468"
   
 5.  **[テーブルの追加と削除]** ダイアログ ボックスで、 **[含まれているオブジェクト]** ボックスの一覧に **DimSalesReason** テーブルと **FactInternetSalesReason** テーブルを追加し、 **[OK]** をクリックします。  
   
-     これらのリレーションシップが基になるリレーショナル データベースで定義されているために関連するテーブル間の主キーと外部キー リレーションシップが自動的に確立することに注意してください。 これらのリレーションシップが基のリレーショナル データベースに定義されていない場合は、データ ソース ビューで定義する必要があります。  
+     関連するテーブル間の主キーと外部キーのリレーションシップは、基になるリレーショナルデータベースで定義されているため、自動的に確立されることに注意してください。 これらのリレーションシップが基のリレーショナル データベースに定義されていない場合は、データ ソース ビューで定義する必要があります。  
   
 6.  **[書式]** メニューで **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
-7.  [プロパティ] ウィンドウで変更、 **FriendlyName**のプロパティ、 **DimSalesReason**テーブル`SalesReason`、し、変更、 **FriendlyName**のプロパティ、**FactInternetSalesReason**テーブル`InternetSalesReason`します。  
+7.  プロパティウィンドウで、 **DimSalesReason**テーブル`SalesReason`の**friendlyname**プロパティをに変更し、 **FactInternetSalesReason**テーブルの`InternetSalesReason` **friendlyname**プロパティをに変更します。  
   
 8.  **[テーブル]** ペインで **[InternetSalesReason (dbo.FactInternetSalesReason)]** を展開し、 **[SalesOrderNumber]** をクリックします。次に、[プロパティ] ウィンドウで、このデータ列の **DataType** プロパティを確認します。  
   
      **[SalesOrderNumber]** 列のデータ型は文字列になっています。  
   
-9. 他の列のデータ型の確認、`InternetSalesReason`テーブル。  
+9. `InternetSalesReason`テーブル内の他の列のデータ型を確認します。  
   
      このテーブルでは、他の 2 つの列のデータ型が数値型になっています。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "66078468"
   
      次の図のように、各並び順の行番号では、その行の商品の購入動機がキー値により識別されます。  
   
-     ![キーの購入動機を識別するために値](../../2014/tutorials/media/l5-many-to-many-1.gif "キーの購入動機を識別する値")  
+     ![購入の理由を識別するキー値](../../2014/tutorials/media/l5-many-to-many-1.gif "購入の理由を識別するキー値")  
   
 ## <a name="defining-the-intermediate-measure-group"></a>中間メジャー グループの定義  
   
@@ -69,7 +69,7 @@ ms.locfileid: "66078468"
   
 2.  **[メジャー]** ペイン内を右クリックし、 **[新しいメジャー グループ]** をクリックします。 詳細については、「 [多次元モデル内のメジャーおよびメジャー グループの作成](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)」を参照してください。  
   
-3.  **新しいメジャー グループ**ダイアログ ボックスで、`InternetSalesReason`で、**データ ソース ビューからテーブルを選択**ボックスの一覧をクリックして**OK**します。  
+3.  **[新しいメジャーグループ]** ダイアログボックスで、 `InternetSalesReason` **[データソースビュー]** ボックスの一覧から [テーブルの選択] を選択し、 **[OK]** をクリックします。  
   
      **Internet Sales Reason** メジャー グループが **[メジャー]** ペインに表示されます。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "66078468"
   
 4.  **[基になる情報の指定]** ページで、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 データ ソース ビューが選択されていることを確認します。  
   
-5.  **メイン テーブル**一覧で、`SalesReason`します。  
+5.  **[メインテーブル]** ボックスの一覧`SalesReason`で、を選択します。  
   
 6.  **[キー列]** ボックスの一覧に **[SalesReasonKey]** が表示されていることを確認します。  
   
@@ -107,19 +107,19 @@ ms.locfileid: "66078468"
   
 8.  **[次へ]** をクリックします。  
   
-9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 横にあるチェック ボックスをオン、 **Sales Reason Reason Type**属性、その名前を変更`Sales Reason Type`、順にクリックします**次**します。  
+9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales reason reason Type**属性の横にあるチェックボックスをオンにし、 `Sales Reason Type`その名前をに変更して、 **[次へ]** をクリックします。  
   
 10. **[ウィザードの完了]** ページで **[完了]** をクリックすると、Sales Reason ディメンションが作成されます。  
   
 11. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-12. **属性**のディメンション デザイナーのペイン、 **Sales Reason**ディメンションで、 **Sales Reason Key**、し、変更、**名前**をプロパティ ウィンドウでプロパティ `Sales Reason.`  
+12. **Sales reason**ディメンションのディメンションデザイナーの **[属性]** ペインで、 **[sales reason Key]** を選択し、プロパティウィンドウの**Name**プロパティをに変更します。`Sales Reason.`  
   
-13. **階層**、ディメンション デザイナーのペインの作成、 **Sales Reasons**ユーザー階層を`Sales Reason Type`レベルと**Sales Reason**レベルで、その順序。  
+13. ディメンションデザイナーの **[階層]** ペインで`Sales Reason Type` 、レベルと**販売理由**レベルを含む**sales** Reason ユーザー階層をこの順序で作成します。  
   
-14. [プロパティ] ウィンドウで次のように定義します。`All Sales Reasons`の値として、 **AllMemberName** Sales Reasons 階層のプロパティ。  
+14. プロパティウィンドウで、Sales 理由`All Sales Reasons`階層の**allmembername**プロパティの値としてを定義します。  
   
-15. 定義`All Sales Reasons`の値として**AttributeAllMemberName** Sales Reason ディメンションのプロパティ。  
+15. Sales `All Sales Reasons` Reason ディメンションの**attributeallmembername**プロパティの値としてを定義します。  
   
 16. 新しく作成したディメンションをキューブ ディメンションとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加するには、 **キューブ デザイナー**に切り替えます。 **[キューブ構造]** タブの **[ディメンション]** ペイン内で右クリックし、 **[キューブ ディメンションの追加]** をクリックします。  
   
@@ -143,7 +143,7 @@ ms.locfileid: "66078468"
   
      次の図は、 **[リレーションシップの定義]** ダイアログ ボックスでの操作を示しています。  
   
-     ![定義するリレーションシップ ダイアログ ボックス](../../2014/tutorials/media/l5-many-to-many-3.gif "リレーションシップの定義 ダイアログ ボックス")  
+     ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-many-to-many-3.gif "[リレーションシップの定義] ダイアログボックス")  
   
 5.  **[OK]** をクリックします。  
   
@@ -161,16 +161,16 @@ ms.locfileid: "66078468"
   
 5.  メタデータ ペインで、 **[Customer]** 、 **[Location]** 、 **[Customer Geography]** 、 **[Members]** 、 **[All Customers]** 、 **[Australia]** の順にクリックし、 **[Queensland]** を右クリックして **[フィルターに追加]** をクリックします。  
   
-6.  各メンバーを展開し、`Sales Reason Type`クイーンズランドの顧客が購入のした理由に関連付けられている金額を確認するレベルを[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]インターネット経由での製品です。  
+6.  `Sales Reason Type`レベルの各メンバーを展開し、Queensland の顧客がインターネット経由で[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]製品を購入するために使用した各理由に関連付けられているドル値を確認します。  
   
      購入理由に関連付けられている売上金額をすべて加算すると、総売上額を上回ります。 これは、製品の購入理由を複数選択した顧客がいたためです。  
   
      次の図は、キューブ デザイナーの **[フィルター]** ペインと **[データ]** ペインです。  
   
-     ![キューブ デザイナーのペインのデータのフィルターおよび](../../2014/tutorials/media/l5-many-to-many-5.gif "キューブ デザイナーのフィルターおよびデータ ペイン")  
+     ![キューブデザイナーのフィルターおよびデータペイン](../../2014/tutorials/media/l5-many-to-many-5.gif "キューブデザイナーのフィルターおよびデータペイン")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [メジャー グループでのディメンション粒度の定義](../analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
+ [メジャー グループでのディメンション粒度の定義](https://docs.microsoft.com/analysis-services/lesson-5-4-defining-dimension-granularity-within-a-measure-group)  
   
 ## <a name="see-also"></a>関連項目  
  [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   

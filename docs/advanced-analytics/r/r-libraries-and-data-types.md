@@ -3,17 +3,17 @@ title: R から SQL へのデータ型の変換
 description: データサイエンスと機械学習ソリューションで、R と SQL Server 間の暗黙的および明示的なデータ型変換を確認します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2019
+ms.date: 08/08/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 7c829f39ee9c80d1bad3a4fb33c10635897cfb98
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ef35a704023ab6c8eb0bd735b2feba3b6475b506
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715089"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893003"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server 間のデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ R コードで使用するためにデータベースからデータを取得す
 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型が R でサポートされておらず、R スクリプトでデータの列を使用する必要がある場合、R スクリプトでデータを使用する前に、[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数を使用してデータ型変換が意図したとおりに実行されることを確認することをお勧めします。  
 
 > [!WARNING]
-> データの移動中に **rxDataStep** を使用して互換性のない列を削除する場合、引数 "_varsToKeep_" と "_varsToDrop_" は **RxSqlServerData** データ ソース型としてサポートされないことにご注意ください。
+> データの移動中に **rxDataStep** を使用して互換性のない列を削除する場合、引数 " _" と " _" は **RxSqlServerData** データ ソース型としてサポートされないことにご注意ください。
 
 
 ## <a name="examples"></a>使用例

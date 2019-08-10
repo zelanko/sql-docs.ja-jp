@@ -12,43 +12,43 @@ ms.assetid: a2eaaee8-7b06-48af-ba44-e21a3678c4c4
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 81af61f5bc7af7b4b722067622918bd1c9cecd9b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a18d9d54034ea98cf7a449c8f7147eaa54c65263
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62698955"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889449"
 ---
 # <a name="understanding-microsoft-olap-architecture"></a>Microsoft OLAP アーキテクチャについて
   以下のトピックを参照して、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 多次元データベースを十分に理解し、ビジネス インテリジェンス ソリューションに多次元データベースを実装する計画を立てます。  
   
- ![小さいファイル フォルダー アイコン](../../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**論理アーキテクチャ**  
- [サーバー オブジェクト&#40;Analysis Services - 多次元データ&#41;](../olap-logical/server-objects-analysis-services-multidimensional-data.md)  
+ ![小さいファイルフォルダーアイコン](../../../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")**論理アーキテクチャ**  
+ [サーバーオブジェクト&#40;Analysis Services-多次元データ&#41;](../olap-logical/server-objects-analysis-services-multidimensional-data.md)  
   
- [ディメンション オブジェクト&#40;Analysis Services - 多次元データ&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
+ [ディメンションオブジェクト&#40;の Analysis Services-多次元データ&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimension-objects-analysis-services-multidimensional-data.md)  
   
- [キューブ オブジェクト&#40;Analysis Services - 多次元データ&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
+ [キューブオブジェクト&#40;Analysis Services-多次元データ&#41;](../../multidimensional-models-olap-logical-cube-objects/cube-objects-analysis-services-multidimensional-data.md)  
   
  [詳細情報](../olap-logical/understanding-microsoft-olap-logical-architecture.md)  
   
- ![小さいファイル フォルダー アイコン](../../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**物理アーキテクチャ**  
+ ![小さいファイルフォルダーアイコン](../../../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")**物理アーキテクチャ**  
  [OLAP エンジンのサーバー コンポーネント](olap-engine-server-components.md)  
   
- [ローカル キューブ&#40;Analysis Services - 多次元データ&#41;](local-cubes-analysis-services-multidimensional-data.md)  
+ [ローカルキューブ&#40;Analysis Services-多次元データ&#41;](local-cubes-analysis-services-multidimensional-data.md)  
   
  [詳細情報](understanding-microsoft-olap-physical-architecture.md)  
   
- ![小さいファイル フォルダー アイコン](../../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**プログラミング アーキテクチャ**  
+ ![小さいファイルフォルダーアイコン](../../../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")**プログラミングアーキテクチャ**  
  [分析管理オブジェクト &#40;AMO&#41; による開発](https://docs.microsoft.com/bi-reference/amo/developing-with-analysis-management-objects-amo)  
   
  [Analysis Services スクリプト言語 (ASSL) での開発](../scripting-language-assl/developing-with-analysis-services-scripting-language-assl.md)  
   
  [ADOMD.NET での開発](https://docs.microsoft.com/bi-reference/adomd/developing-with-adomd-net)  
   
- ![小さいファイル フォルダー アイコン](../../../integration-services/media/filefolder-small.gif "小さいファイル フォルダー アイコン")**国際化に関する考慮事項**  
- [Analysis Services 多次元のグローバリゼーションのシナリオ](../../../analysis-services/globalization-scenarios-for-analysis-services-multiidimensional.md)  
+ ![小さいファイルフォルダーアイコン](../../../integration-services/media/filefolder-small.gif "小さいファイルフォルダーアイコン")**国際化に関する注意点**  
+ [Analysis Services Multiidimensional のグローバリゼーションのシナリオ](https://docs.microsoft.com/analysis-services/globalization-scenarios-for-analysis-services-multiidimensional)  
   
 ## <a name="see-also"></a>関連項目  
- [テクニカル リファレンス&#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  
+ [テクニカルリファレンス&#40;SSAS&#41;](../../powershell/technical-reference-ssas.md)  
   
   

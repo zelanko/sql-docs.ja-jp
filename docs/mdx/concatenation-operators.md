@@ -8,19 +8,19 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 235320a65bf04e8b0ce1d7c23da588a4d541a0b3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7298f80a7d3f61b5b00692be8fbc480429487454
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67915858"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892461"
 ---
 # <a name="concatenation-operators"></a>連結演算子
 
 
-  連結演算子はプラス記号 (+) です。 結合、または 1 つの文字の文字列に 2 つ以上の文字の文字列を連結することができます。 バイナリ文字列も連結できます。  
+  連結演算子はプラス記号 (+) です。 複数の文字列を1つの文字列に結合したり、連結したりすることができます。 バイナリ文字列も連結できます。  
   
- 次のコードでは、製品名、製品の一意の名前とを結合する連結演算子の例を示します。  
+ 製品名と製品の一意の名前を組み合わせる連結演算子の例を次のコードに示します。  
   
 ```  
 WITH MEMBER Measures.ProductName AS   
@@ -32,10 +32,10 @@ FROM [Adventure Works]
 ```  
   
 ## <a name="language-considerations"></a>言語に関する注意点  
- 連結対象の複数の文字列の照合順序が同じである場合、連結結果の文字列は、入力と同じ照合順序になります。 連結したもので使用される文字列の照合順序が異なる場合は、照合順序の優先順位の規則は、連結結果の文字列の照合順序を決定します。 詳細については、「[言語および照合順序 &#40;Analysis Services&#41;](../analysis-services/languages-and-collations-analysis-services.md)」を参照してください。  
+ 連結対象の複数の文字列の照合順序が同じである場合、連結結果の文字列は、入力と同じ照合順序になります。 連結で使用される文字列の照合順序が異なる場合、照合順序の優先順位の規則によって、結果として得られる文字列の照合順序が決まります。 詳細については、「[言語および照合順序 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/languages-and-collations-analysis-services)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [MDX 演算子リファレンス&#40;MDX&#41;](../mdx/mdx-operator-reference-mdx.md)   
- [演算子&#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
+ [MDX 演算子リファレンス&#40;mdx&#41;](../mdx/mdx-operator-reference-mdx.md)   
+ [Operators &#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
   
   

@@ -16,15 +16,15 @@ ms.assetid: cd5fa70c-5218-40d5-9ae6-02d798b5c485
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 1a8be3c24a5d13c1a1b3733ab7cbf755c732a612
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c273e453d4eec6d754f38d6be03385957ad50fec
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107136"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890946"
 ---
 # <a name="relational-query-designer-user-interface-report-builder"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
-  レポート ビルダーにはグラフィカル クエリ デザイナーとテキスト ベースのクエリ デザイナーの両方から取得するデータを指定するクエリの作成に役立つ[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]と[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssSDS](../../includes/sssds-md.md)]リレーショナル データベースと[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]レポート データセット用です。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
+  レポートビルダーにはグラフィカルクエリデザイナーとテキストベースのクエリデザイナーが用意されており[!INCLUDE[msCoName](../../../includes/msconame-md.md)] 、および[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssSDS](../../includes/sssds-md.md)]リレーショナルデータベース[!INCLUDE[msCoName](../../../includes/msconame-md.md)]から取得するデータを指定するクエリの作成に役立ちます。[!INCLUDE[ssDWCurrentFull](../../../includes/ssdwcurrentfull-md.md)]レポートデータセットの場合。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
   
 > [!NOTE]  
 >  レポート ビルダーでは、データ ソースの種類が Oracle、OLE DB、ODBC、および Teradata の場合にクエリを指定するには、テキスト ベースのクエリ デザイナーを使用する必要があります。 詳細については、「[テキストベースのクエリ デザイナーのユーザー インターフェイス &#40;レポート ビルダー&#41;](text-based-query-designer-user-interface-report-builder.md)」を参照してください。  
@@ -42,11 +42,11 @@ ms.locfileid: "66107136"
   
  次の図は、テーブルまたはビューを使用した場合のグラフィカル クエリ デザイナーです。  
   
- ![クエリのグラフィカル デザイナー](../../analysis-services/media/rsqd-relational-graphical.gif "クエリのグラフィカル デザイナー")  
+ ![クエリのグラフィカル デザイナー](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "クエリのグラフィカル デザイナー")  
   
  次の図は、ストアド プロシージャまたはテーブル値関数を使用した場合のグラフィカル クエリ デザイナーです。  
   
- ![グラフィカル クエリ デザイナーのストアド プロシージャ](../../analysis-services/media/rs-relational-graphical-sp.gif "グラフィカル クエリ デザイナーのストアド プロシージャ")  
+ ![グラフィカル クエリ デザイナーのストアド プロシージャ](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "グラフィカル クエリ デザイナーのストアド プロシージャ")  
   
  次の表に各ペインの機能を示します。  
   

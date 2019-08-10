@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 28697c46e2e72ae4bfff95155f6646d1a5d076c4
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66079156"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888459"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>レッスン 10: 管理ロールの定義
   このレッスンでは、管理タスク用のセキュリティ ロールを定義する方法について学習します。  
@@ -25,11 +25,11 @@ ms.locfileid: "66079156"
   
  このレッスンの内容は次のとおりです。  
   
- [データベースの処理権限の許可](../analysis-services/lesson-10-granting-process-database-permissions.md)  
+ [データベースの処理権限の許可](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
  この作業では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを処理する権限を持つセキュリティ ロールを定義します。次に、そのセキュリティ ロールをテストします。  
   
-## <a name="see-also"></a>参照  
- [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)   
+## <a name="see-also"></a>関連項目  
+ [Analysis Services チュートリアルのシナリオ](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
  [多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)  
   
   

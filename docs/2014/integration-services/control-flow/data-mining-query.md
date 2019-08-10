@@ -12,12 +12,12 @@ ms.assetid: 948e358a-6245-429f-82c7-4cedc5e048fd
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: cf644d1ef54695a4c590a3a67e84da699f8f192b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 07373f17838fa387fe6ee22e31312a3933307fa3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62832390"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890327"
 ---
 # <a name="data-mining-query"></a>データ マイニング クエリ
   デザイン ペインには、データ マイニング予測クエリ ビルダーがあり、これを利用してデータ マイニング予測クエリを作成できます。 予測クエリは、入力テーブルまたはシングルトン予測クエリに基づいてデザインできます。 クエリを実行して結果を表示するには、結果ビューに切り替えます。 クエリ ビューには、予測クエリ ビルダーによって作成されたデータ マイニング拡張機能 (DMX) のクエリが表示されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "62832390"
  **[入力列]**  
  予測を生成するために選択されている入力列を表示します。  
   
- **Source**  
+ **ソース**  
  列に使用するフィールドを持つソースをドロップダウン リストから選択します。 **[マイニング モデル]** テーブルで選択したマイニング モデル、 **[入力テーブルの選択]** テーブルで選択した入力テーブル、予測関数、またはカスタム式を使用できます。  
   
  マイニング モデルを含むテーブルや入力列から列をセルにドラッグできます。  
@@ -62,8 +62,8 @@ ms.locfileid: "62832390"
  **[条件と引数]**  
  列に適用する条件またはユーザー式を指定します。 マイニング モデルを含むテーブルや入力列から列をセルにドラッグできます。  
   
-## <a name="see-also"></a>参照  
- [データ マイニング クエリ インターフェイス](../../analysis-services/data-mining/data-mining-query-tools.md)   
+## <a name="see-also"></a>関連項目  
+ [データマイニングクエリインターフェイス](https://docs.microsoft.com/analysis-services/data-mining/data-mining-query-tools)   
  [データ マイニング拡張機能 &#40;DMX&#41; ステートメント リファレンス](/sql/dmx/data-mining-extensions-dmx-statements)  
   
   
