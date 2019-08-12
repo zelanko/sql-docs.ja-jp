@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 993e0820-17f2-4c43-880c-d38290bf7abc
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: c912c17ce6914a2de2425ad61e27f49ef7cab86c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ee6c63623cc5b88e0cbb9c4a3edd7a78e6137d77
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011867"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670468"
 ---
 # <a name="diagnostic-connection-for-database-administrators"></a>データベース管理者用の診断接続
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -84,7 +84,7 @@ ms.locfileid: "68011867"
     -   このセッションに関連付けられている sys.dm_os_tasks にタスクが存在しないが、KILL コマンドの実行後に sys.dm_exec_sessions に依然としてセッションが存在する場合は、使用できるワーカーがないことを示します。 現在実行中のタスク ( `sessions_id <> NULL`を指定して sys.dm_os_tasks ビューに一覧されるタスク) のいずれかを選択し、そのタスクに関連付けられているセッションを強制終了して、ワーカーを解放します。 1 つのセッションを強制終了するだけでは不十分で、複数のセッションを強制終了する必要が生じる場合があります。  
   
 ## <a name="dac-port"></a>DAC ポート  
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、TCP ポート 1434 (使用可能な場合) または [!INCLUDE[ssDE](../../includes/ssde-md.md)] の起動時に動的に割り当てられる TCP ポートで DAC をリッスンします。 エラー ログには、DAC がリッスンしているポート番号が含まれています。 既定では、DAC リスナーはローカル ポートでの接続のみを受け入れます。 リモート管理接続をアクティブにするサンプル コードについては、「 [remote admin connections サーバー構成オプション](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、TCP ポート 1434 (使用可能な場合) または [!INCLUDE[ssDE](../../includes/ssde-md.md)] の起動時に動的に割り当てられる TCP ポートで DAC をリッスンします。 [エラー ログ](../../relational-databases/performance/view-the-sql-server-error-log-sql-server-management-studio.md)には、DAC がリッスンしているポート番号が含まれています。 既定では、DAC リスナーはローカル ポートでの接続のみを受け入れます。 リモート管理接続をアクティブにするサンプル コードについては、「 [remote admin connections サーバー構成オプション](../../database-engine/configure-windows/remote-admin-connections-server-configuration-option.md)」を参照してください。  
   
  リモート管理接続を構成すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を再起動しなくても DAC リスナーが有効になり、クライアントからリモートで DAC に接続できるようになります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が応答しない場合でも、DAC リスナーを有効にしてリモート接続を受け入れることができます。これを行うには、まず DAC をローカルに使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に接続してから、sp_configure ストアド プロシージャを実行してリモート接続からの接続を受け入れます。  
   

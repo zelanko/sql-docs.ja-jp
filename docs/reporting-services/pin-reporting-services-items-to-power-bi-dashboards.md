@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 1d96c3f7-2fd4-40f7-8d1c-14a7f54cdb15
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: ad7e73839a988e057f57b9a294e795f65e41f9fb
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8e91341c5c1d6b4f9ddd521a4735f22f63907784
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500028"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892000"
 ---
 # <a name="pin-reporting-services-paginated-report-items-to-dashboards-in-power-bi"></a>Power BI のダッシュボードへの Reporting Services のページ分割されたレポート アイテムのピン留め
 
@@ -68,7 +68,7 @@ ms.locfileid: "66500028"
   
 4. [!INCLUDE[sspowerbi](../includes/sspowerbi-md.md)]にピン留めするレポート アイテムをクリックします。 ピン留めできるアイテムは一度に 1 つに限られます。  レポート ビューアーにレポートの影付きのビューが表示されます。ピン留めできるレポート アイテムは強調表示され、ピン留めできないアイテムは濃い影付きになります。  
   
-    **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択します。   ![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
+    **(1)** ピン留めするダッシュボードを含むグループを選択し、 **(2)** アイテムをピン留するダッシュボードも選択して、 **(3)** ダッシュボードでのタイルの更新頻度を選択します。   ![注:](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。  
   
     ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png)  
   

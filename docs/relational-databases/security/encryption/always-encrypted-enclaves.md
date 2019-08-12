@@ -4,18 +4,18 @@ ms.custom: ''
 ms.date: 06/26/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: security
 ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e4ec4877b7433554ad1f2ef60fdb73ab485cbed7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043201"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661228"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -149,11 +149,11 @@ SQL Server のインスタンスで障害が発生した場合、そのデータ
 - エンクレーブ対応の CEK でランダム化された暗号化を使用して列を暗号化すると、列による範囲比較のサポートのため、列に格納されたデータの順序がリークする可能性があります。 たとえば、従業員の給与が含まれる暗号化された列にインデックスがある場合、悪意のある DBA はインデックスをスキャンして暗号化された給与の最大値を検索し、給与が最高の個人を特定できます (ユーザーの名前は暗号化されていないものとします)。 
 - Always Encrypted を使用して、DBA による不正アクセスから機密データを保護する場合は、列マスター キーまたは列暗号化キーを DBA と共有しないでください。 DBA は、キーに直接アクセスできなくても、エンクレーブ内の列暗号化キーのキャッシュを利用して、暗号化された列のインデックスを管理できます。
 
-## <a name="considerations-for-alwayson-and-database-migration"></a>AlwaysOn とデータベース移行に関する考慮事項
+## <a name="anchorname-1-considerations-availability-groups-db-migration"></a> 可用性グループとデータベースの移行に関する考慮事項
 
-エンクレーブを使用するクエリをサポートするために必要な AlwaysOn 可用性グループを構成する場合は、可用性グループ内のデータベースをホストするすべての SQL Server インスタンスで、セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートし、エンクレーブを構成する必要があります。 プライマリ データベースではエンクレーブがサポートされていても、セカンダリ レプリカではサポートされていない場合、セキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を使用しようとするクエリは失敗します。
+エンクレーブを使用するクエリをサポートするために必要な Always On 可用性グループを構成する場合は、可用性グループ内のデータベースをホストするすべての SQL Server インスタンスで、セキュリティで保護されたエンクレーブが設定された Always Encrypted をサポートし、エンクレーブを構成する必要があります。 プライマリ データベースではエンクレーブがサポートされていても、セカンダリ レプリカではサポートされていない場合、セキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を使用しようとするクエリは失敗します。
 
-エンクレーブが構成されていない SQL Server インスタンスで、セキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を使用するデータベースのバックアップ ファイルを復元すると、復元操作は成功し、エンクレーブに依存しないすべての機能が使用可能になります。 しかし、エンクレーブ機能を使用する後続のクエリは失敗し、ランダム化された暗号化を使用するエンクレーブ対応の列のインデックスは無効になります。  エンクレーブが構成されていないインスタンスで、セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するデータベースをアタッチしたときも、同じようになります。
+エンクレーブが構成されていない SQL Server インスタンスで、セキュリティで保護されたエンクレーブが設定された Always Encrypted の機能を使用するデータベースのバックアップ ファイルを復元すると、復元操作は成功し、エンクレーブに依存しないすべての機能が使用可能になります。 しかし、エンクレーブ機能を使用する後続のクエリは失敗し、ランダム化された暗号化を使用するエンクレーブ対応の列のインデックスは無効になります。 エンクレーブが構成されていないインスタンスで、セキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するデータベースをアタッチしたときも、同じようになります。
 
 ランダム化された暗号化を使用するエンクレーブ対応の列のインデックスがデータベースに含まれる場合は、データベースのバックアップを作成する前に、データベースで[高速データベース復旧 (ADR)](../../backup-restore/restore-and-recovery-overview-sql-server.md#adr) を有効にしてください。 ADR では、データベースを復元した後すぐに、インデックスも含めて、データベースを使用できることが保証されます。 詳しくは、「[データベース復旧](#database-recovery)」をご覧ください。
 

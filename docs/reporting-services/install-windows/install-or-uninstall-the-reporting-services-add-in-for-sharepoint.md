@@ -8,12 +8,12 @@ ms.assetid: c2804a9a-08ea-4f4a-805d-a2c19c68733d
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 855991a52d2f531f559620427d4a3fc29fd79f35
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 41a93cfdac331830477171dfdfc4f306c073bda3
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775968"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893374"
 ---
 # <a name="install-or-uninstall-the-reporting-services-add-in-for-sharepoint"></a>SharePoint 用 Reporting Services アドインのインストールまたはアンインストール
 
@@ -51,7 +51,7 @@ ms.locfileid: "64775968"
 ##  <a name="bkmk_3ways_to_install"></a> インストール方法の概要  
  SharePoint 製品用 SQL Server 2016 Reporting Services アドインは、次の 2 つの方法のいずれかを使ってインストールできます。  
   
--   **インストール ウィザード:** ![メモ](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "メモ") SQL Server 2016 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでアドインをインストールできます。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
+-   **インストール ウィザード:** ![メモ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "メモ") SQL Server 2016 では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでアドインをインストールできます。 ウィザードの **[機能の選択]** ページで、 **[SharePoint 製品用 Reporting Services アドイン]** を選択します。  
   
 -   **rsSharepoint.msi:** インストール メディアまたはダウンロードからアドインを直接インストールする。 rsSharepoint.msi は、グラフィカル ユーザー インターフェイスもコマンド ライン インストールもサポートしています。 .msi を管理者特権を使用して実行する必要があるため、まず高度な権限でコマンド プロンプトを開いてから、コマンド ラインから rsSharepoint.msi を実行します。 アドインのダウンロードの詳細については、「 [SharePoint 製品用 Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   

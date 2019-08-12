@@ -10,12 +10,12 @@ helpviewer_keywords:
 ms.assetid: 0903c7b2-ac59-45f1-b7d0-922ecd9d76f8
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: f9e9884a8875d63ba9defcee5fa20dc121d595ca
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c1f327b42dd3cdc18be769ef4b4b6fac571578e0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65581348"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889839"
 ---
 # <a name="reporting-services-in-sql-server-data-tools-ssdt"></a>SQL Server データ ツールの Reporting Services (SSDT)
 
@@ -39,7 +39,7 @@ ms.locfileid: "65581348"
   
 -   **レポート サーバー プロジェクト ウィザード。** レポート サーバー プロジェクト ウィザードを選択すると、レポート サーバー プロジェクトが自動的に作成され、レポート ウィザードが開きます。 このウィザードでは、各ページの手順に従ってレポートを作成し、データ ソースへの接続文字列の作成、データ ソースの資格情報の設定、クエリのデザイン、テーブルまたはマトリックス データ領域の追加、レポート データやグループの指定、フォントや色のスタイルの選択、レポート サーバーへのレポートのパブリッシュ、およびローカルでのレポートのプレビューを行うことができます。 ウィザードを使用してレポートを作成した後で、レポート サーバー プロジェクトでレポート デザイナーを使用して、レポート データおよびレポート デザイナーを変更できます。  
   
- ![SSDT の新しいプロジェクト テンプレート](../../analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
+ ![SSDT の新しいプロジェクト テンプレート](https://docs.microsoft.com/analysis-services/analysis-services/media/ssdt-biprojects.png "SSDT の新しいプロジェクト テンプレート")  
   
   
 ##  <a name="bkmk_ReportDesignerWindowsandPanes"></a> レポート デザイナーのウィンドウとペイン  

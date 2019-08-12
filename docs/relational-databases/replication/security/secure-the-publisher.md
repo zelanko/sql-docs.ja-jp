@@ -17,23 +17,22 @@ helpviewer_keywords:
 ms.assetid: 4513a18d-dd6e-407a-b009-49dc9432ec7e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 3784135455a29d3d1662793d743d9d788e64b5f0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: d2d1746a9ace097c8d915bb1cb5425170883250d
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095645"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769638"
 ---
 # <a name="secure-the-publisher"></a>パブリッシャーのセキュリティ保護
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
-  次のレプリケーション エージェントはパブリッシャーに接続します。  
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   
--   ログ リーダー エージェント (Log Reader Agent)  
+次のレプリケーション エージェントはパブリッシャーに接続します。  
   
--   スナップショット エージェント  
-  
+-   ログ リーダー エージェント
+-   スナップショット エージェント
 -   キュー リーダー エージェント (Queue Reader Agent)  
-  
 -   [マージ エージェント]  
   
  最低限必要な権限のみを与え、かつ、すべてのパスワードの格納を保護するという原則に従って、これらの各エージェントに対し適切なログインを提供することをお勧めします。 各エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  

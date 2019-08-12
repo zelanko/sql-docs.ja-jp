@@ -15,12 +15,12 @@ ms.assetid: 5bf822fc-6dec-4806-a153-e200af28e9a5
 author: MashaMSFT
 ms.author: mathoma
 robots: noindex,nofollow
-ms.openlocfilehash: b7170b1fbbdd95b1ba50e2448de322fa1247059a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: edd2c17b106e536f1a2694fe0cb25e34b10d1138
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126170"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894064"
 ---
 # <a name="installation-wizard-help"></a>インストール ウィザードのヘルプ
 
@@ -122,7 +122,7 @@ ms.locfileid: "68126170"
   
 ### <a name="see-also"></a>参照
   
-* [サービス アカウントの構成 &#40;Analysis Services&#41;](../../analysis-services/instances/configure-service-accounts-analysis-services.md)
+* [サービス アカウントの構成 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/instances/configure-service-accounts-analysis-services)
 * [Windows サービス アカウントと権限の構成](../../database-engine/configure-windows/configure-windows-service-accounts-and-permissions.md)  
 
 ## <a name="analysis-services-configuration---data-directories-page"></a>[Analysis Services の構成] - [データ ディレクトリ] ページ

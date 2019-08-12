@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 6a428023-e3cc-4626-a88a-4c13ccbd7db0
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5cbc96390799219347415719ddf6754e3c33bbb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 103f74b4a1be1ee2111f8ed3e983f8a468f8db2c
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67984753"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893032"
 ---
 # <a name="whats-new-in-sql-server-2016"></a>SQL Server 2016 の新機能
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]  
@@ -62,7 +62,7 @@ SQL Server 2016 Analysis Services では、**1200 互換性レベル**に基づ�
 - 新しい **[Microsoft.AnalysisServices.Tabular](https://msdn.microsoft.com/library/microsoft.analysisservices.tabular.aspx)** 名前空間は、表形式モードのインスタンスとモデルを管理します。 
 - [Analysis Services Management Objects (AMO)](https://msdn.microsoft.com/library/mt436122.aspx) は、2 つ目のアセンブリ (**Microsoft.AnalysisServices.Core.dll**) を含めるためにリファクタリングされます。
 
-[Analysis Services エンジン (SSAS)](../analysis-services/what-s-new-in-analysis-services.md) に関する記事を参照してください。 
+[Analysis Services エンジン (SSAS)](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services) に関する記事を参照してください。 
 
 ## <a name="sql-server-2016-integration-services-ssis"></a>SQL Server 2016 Integration Services (SSIS)
 - **Always On 可用性グループ**のサポート

@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: dae57067-0275-4ac3-8f34-1b9d169f1112
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9ef5288ea0ffef804aeb9c11aff51b0db6ef4093
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b7a527770e41870729c194bd9c7651b77cffd2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057873"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890843"
 ---
 # <a name="wmi-data-reader-task"></a>WMI データ リーダー タスク
 
@@ -104,7 +104,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-general-page"></a>[WMI データ リーダー タスク エディター] ([全般] ページ)
   **[WMI データ リーダー タスク エディター]** ダイアログ ボックスの **[全般]** ページを使用すると、WMI データ リーダー タスクの名前と説明を入力できます。  
   
-  WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](https://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
+  WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](/windows/win32/wmisdk/querying-with-wql)」を参照してください。  
   
 ### <a name="options"></a>オプション  
  **[名前]**  
@@ -119,7 +119,7 @@ Select * FROM Win32_QuickFixEngineering
 ## <a name="wmi-data-reader-task-editor-wmi-options-page"></a>[WMI データ リーダー タスク エディター] ([WMI オプション] ページ)
   **[WMI データ リーダー タスク エディター]** ダイアログ ボックスの **[WMI オプション]** ページを使用すると、WQL (Windows Management Instrumentation Query Language) クエリのソースおよびクエリ結果の出力先を指定できます。  
   
- WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](https://go.microsoft.com/fwlink/?LinkId=79045)」を参照してください。  
+ WQL (WMI Query Language) の詳細については、MSDN ライブラリにある Windows Management Instrumentation のトピック「 [WQL を使用したクエリ](/windows/win32/wmisdk/querying-with-wql)」を参照してください。  
   
 ### <a name="static-options"></a>静的オプション  
  **[WMIConnectionName]**  

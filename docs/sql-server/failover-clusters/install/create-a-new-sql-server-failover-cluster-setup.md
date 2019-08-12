@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 30e06a7d-75e9-44e2-bca3-b3b0c4a33f61
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2581a2a6c91640ce00b8bc804d8b52183de533ea
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 02cb0eb53ee8561884799c3a5e4f4f44eb5ff752
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063973"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893183"
 ---
 # <a name="create-a-new-sql-server-failover-cluster-setup"></a>新しい SQL Server フェールオーバー クラスターの作成 (セットアップ)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,7 +100,7 @@ ms.locfileid: "68063973"
   
 8.  [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../../includes/msconame-md.md)]に送信することもできます。 **[次へ]** をクリックして次に進みます。 セットアップを終了するには、 **[キャンセル]** をクリックします。  
   
-9. [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできますが、フェールオーバー クラスタリングをサポートしているのは [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、テーブル モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、および多次元モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] だけです。 他のコンポーネントをオンにした場合、それらのコンポーネントは、セットアップを実行している現在のノードでフェールオーバー機能のないスタンドアロン機能として実行されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)」をご覧ください。  
+9. [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできますが、フェールオーバー クラスタリングをサポートしているのは [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、テーブル モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、および多次元モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] だけです。 他のコンポーネントをオンにした場合、それらのコンポーネントは、セットアップを実行している現在のノードでフェールオーバー機能のないスタンドアロン機能として実行されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)」をご覧ください。  
   
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   
@@ -254,7 +254,7 @@ ms.locfileid: "68063973"
   
 9. [ライセンス条項] ページで使用許諾契約書を読み、使用許諾条件に同意する場合は対応するチェック ボックスをオンにします。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]の機能向上に役立てるため、機能の使用状況オプションを有効にしてレポートを [!INCLUDE[msCoName](../../../includes/msconame-md.md)]に送信することもできます。 **[次へ]** をクリックして次に進みます。 セットアップを終了するには、 **[キャンセル]** をクリックします。  
   
-10. [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできますが、フェールオーバー クラスタリングをサポートしているのは [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、テーブル モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、および多次元モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] だけです。 他のコンポーネントをオンにした場合、それらのコンポーネントは、セットアップを実行している現在のノードでフェールオーバー機能のないスタンドアロン機能として実行されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](../../../analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance.md)」をご覧ください。  
+10. [機能の選択] ページで、インストールするコンポーネントを選択します。 機能名を選択すると、右側のペインに各コンポーネント グループの説明が表示されます。 チェック ボックスはいくつでもオンにできますが、フェールオーバー クラスタリングをサポートしているのは [!INCLUDE[ssDE](../../../includes/ssde-md.md)]、テーブル モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] 、および多次元モードの [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] だけです。 他のコンポーネントをオンにした場合、それらのコンポーネントは、セットアップを実行している現在のノードでフェールオーバー機能のないスタンドアロン機能として実行されます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] モードの詳細については、「 [Analysis Services インスタンスのサーバー モードの決定](https://docs.microsoft.com/analysis-services/instances/determine-the-server-mode-of-an-analysis-services-instance)」をご覧ください。  
   
      選択した機能の必須コンポーネントが、右側のペインに表示されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セットアップでは、この手順の後半で説明するインストール手順の間に、まだインストールされていない必須コンポーネントをインストールします。  
   

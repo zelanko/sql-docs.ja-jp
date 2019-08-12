@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 ms.date: 06/20/2019
-ms.openlocfilehash: eca8f43d358ca3869c3812a457b710d64dadeaf5
-ms.sourcegitcommit: 630f7cacdc16368735ec1d955b76d6d030091097
+ms.openlocfilehash: 3e61381c2298a197be698ed82c247023ad708789
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/24/2019
-ms.locfileid: "67343879"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893281"
 ---
 # <a name="sql-server-reporting-services-features-supported-by-its-editions"></a>SQL Server の各エディションでサポートされる SQL Server Reporting Services の機能
 
@@ -24,9 +24,9 @@ ms.locfileid: "67343879"
 
  ## <a name="try-sql-server-2017"></a>SQL Server 2017 をお試す
 
-> [![SQL Server 2017 をダウンロードする](../analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Evaluation Center から SQL Server 2017 をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)**    
+> [![SQL Server 2017 をダウンロードする](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://go.microsoft.com/fwlink/?LinkID=829477) **[Evaluation Center から SQL Server 2017 をダウンロードする](https://go.microsoft.com/fwlink/?LinkID=829477)**    
 >
-> ![Azure Virtual Machine のアイコン](../analysis-services/media/azure-virtual-machine-small.png) **[SQL Server 2017 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
+> ![Azure Virtual Machine のアイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/azure-virtual-machine-small.png) **[SQL Server 2017 がインストール済みの Virtual Machine をすぐにご利用いただけます](https://azure.microsoft.com/services/virtual-machines/sql-server/?wt.mc_id=sqL16_vm)**    
 
 Evaluation Edition および Developer Edition でサポートされている機能については、次の表の SQL Server Enterprise Edition の列を参照してください。
 

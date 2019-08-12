@@ -16,12 +16,12 @@ ms.assetid: c642fc4f-8734-4626-a194-42ac9cd8e2ef
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d5d9c379aaa2b8b0b92e064ed6dc21a4eb968b95
-ms.sourcegitcommit: 0a4879dad09c6c42ad1ff717e4512cfea46820e9
+ms.openlocfilehash: f8dbafaede198c82b3e41625d3e670afd980c57a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/27/2019
-ms.locfileid: "67412594"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893448"
 ---
 # <a name="performance-counters-msrs-2011-web-service-performance-objects"></a>パフォーマンス カウンター MSRS 2011 Web サービス、パフォーマンス オブジェクト
   このトピックでは、 **MSRS 2011 Web Service** および **MSRS 2011 Windows Service** パフォーマンス オブジェクトのパフォーマンス カウンターについて説明します。 これらのオブジェクトは [!INCLUDE[ssRSCurrent](../../includes/ssrscurrent-md.md)] のネイティブ モードの配置の一部です。  
@@ -111,7 +111,7 @@ ms.locfileid: "67412594"
 |**Total Snapshot Updates**|レポート実行スナップショットの更新回数の合計。|  
   
 ##  <a name="bkmk_powershell"></a> PowerShell コマンドレットを使用して一覧を取得する  
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは、CounterSetName が "msr" で始まる一連のカウンターを返します。  
+ ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") 次の Windows PowerShell スクリプトは、CounterSetName が "msr" で始まる一連のカウンターを返します。  
   
 ```  
 get-counter -listset msr*  

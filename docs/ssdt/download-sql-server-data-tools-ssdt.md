@@ -13,12 +13,12 @@ ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 62b3db01792005afa7c124f4f31b78cdc350b2dd
-ms.sourcegitcommit: 40f3b1f2340098496d8428f50616095a190ae94b
+ms.openlocfilehash: 06b2d138ce3d12fdf2a115343d922368accbeda7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68290344"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892427"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -148,7 +148,7 @@ SSDT をインストールした後、次のチュートリアルを使用して
 
 - [プロジェクト指向のオフライン データベース開発](project-oriented-offline-database-development.md)  
 - [SSIS チュートリアル:シンプルな ETL パッケージの作成](../integration-services/ssis-how-to-create-an-etl-package.md)  
-- [Analysis Services チュートリアル](../analysis-services/analysis-services-tutorials-ssas.md)  
+- [Analysis Services チュートリアル](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)  
 - [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

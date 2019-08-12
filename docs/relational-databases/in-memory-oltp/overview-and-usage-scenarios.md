@@ -11,12 +11,12 @@ ms.assetid: 62c964c5-eae4-4cf1-9024-d5a19adbd652
 author: jodebrui
 ms.author: jodebrui
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e16f646a963d22a2fe3a6a67428970d11ee5cb43
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f1f8f4937efa5db9de76d6e111d5a0abf0223d23
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68100261"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715292"
 ---
 # <a name="overview-and-usage-scenarios"></a>概要と使用シナリオ
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -224,7 +224,7 @@ GO
 
 [Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](https://msdn.microsoft.com/library/mt694156.aspx)   
 インメモリ OLTP を使用したパフォーマンス デモ: [in-memory-oltp-perf-demo-v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)   
-[インメモリ OLTP の説明とデモを紹介する 17 分のビデオ](https://www.youtube.com/watch?v=l5l5eophmK4) (デモは 8:25 から)   
+[インメモリ OLTP の説明とデモを紹介する 17 分のビデオ](in-memory-oltp-in-memory-optimization.md#anchorname-17minute-video)  
 [インメモリ OLTP を有効にして推奨されるオプションを設定するスクリプト](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)   
 [主なインメモリ OLTP ドキュメント](in-memory-oltp-in-memory-optimization.md)   
 [インメモリ OLTP が Azure SQL Database のパフォーマンスとリソース活用にもたらす利点](https://azure.microsoft.com/blog/in-memory-oltp-in-azure-sql-database/)  

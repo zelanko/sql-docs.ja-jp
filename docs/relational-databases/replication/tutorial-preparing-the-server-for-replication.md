@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 1900d3d447dd7974fb9afbbd83f17ca375bfbe81
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895431"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742943"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>チュートリアル:レプリケーション用の SQL Server の準備 (パブリッシャー、ディストリビューター、サブスクライバー)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -212,7 +212,7 @@ SQL Server Management Studio インスタンスが管理者権限で実行され
 >[!NOTE]
 > SQL エージェントが自動的に起動しない場合は、SSMS で SQL Server エージェントを右クリックし、 **[更新]** を選択します。 それでも停止状態である場合、SQL Server 構成マネージャーから手動で起動します。    
   
-### <a name="set-database-permissions-at-the-publisher"></a>パブリッシャー側のデータベース権限を設定する  
+## <a name="set-database-permissions"></a>データベースのアクセス許可を設定する  
   
 1. [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]で、 **[セキュリティ]** を展開して **[ログイン]** を右クリックし、 **[新しいログイン]** をクリックします。  
 
@@ -233,6 +233,8 @@ SQL Server Management Studio インスタンスが管理者権限で実行され
 5. その他のローカル アカウント (repl_distribution、repl_logreader、および repl_merge) のログインを作成するために手順 1 ～ 4 を繰り返します。 これらのログインも、**ディストリビューション** データベースと **AdventureWorks** データベースの固定データベース ロール **db_owner** のメンバーとなっているユーザーにマップする必要があります。  
 
    ![オブジェクト エクスプローラーの 4 つのアカウントすべてが表示された画面](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
+   
+ 6. ディストリビューション エージェントとマージ エージェントのサブスクライバーに対して手順 1 から 4 を繰り返し、マシン名をサブスクライバーの名前に変更します。 
   
   
 詳細については、以下をご覧ください。

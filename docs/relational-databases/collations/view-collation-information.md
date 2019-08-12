@@ -12,12 +12,12 @@ ms.assetid: 1338b4ea-7142-44bc-a3b9-44e54431405f
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: e4cd1164b5845f6237a1381fa706fc067cf311a8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bedae7661398ed4281f2da460ad7ce16b5dd82de
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140831"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841616"
 ---
 # <a name="view-collation-information"></a>照合順序情報の表示
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -62,7 +62,7 @@ ms.locfileid: "68140831"
 2.  クエリ ウィンドウで、SERVERPROPERTY システム関数を使用した次のステートメントを入力します。  
   
     ```sql  
-    SELECT CONVERT (varchar, SERVERPROPERTY('collation'));  
+    SELECT CONVERT (varchar(256), SERVERPROPERTY('collation'));  
     ```  
   
 3.  また、sp_helpsort システム ストアド プロシージャを使用することもできます。  
@@ -94,7 +94,7 @@ ms.locfileid: "68140831"
 3.  また、DATABASEPROPERTYEX システム関数を使用することもできます。  
   
     ```sql  
-    SELECT CONVERT (varchar, DATABASEPROPERTYEX('database_name','collation'));  
+    SELECT CONVERT (varchar(256), DATABASEPROPERTYEX('database_name','collation'));  
     ```  
   
  **列の照合順序設定を表示するには**  

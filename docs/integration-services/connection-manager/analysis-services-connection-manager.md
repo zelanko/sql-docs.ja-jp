@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 9f9cadad-a1d0-4db5-98f5-df5dbbec1be4
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: cd2c044e68c71d80c3bbfb4ca5358d8ef156652c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7cecf0294e1225dcb8f9476c1f0f3c85a0b6ab47
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67897979"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892976"
 ---
 # <a name="analysis-services-connection-manager"></a>Analysis Services 接続マネージャー
 
@@ -30,7 +30,7 @@ ms.locfileid: "67897979"
   
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] DDL 実行タスクや [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 処理タスクなどのタスクと、データ マイニング モデル トレーニング変換先などの変換先は、どちらも [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーを使用します。  
   
- [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データべースの詳細については、「[多次元モデル データベース &#40;SSAS&#41;](../../analysis-services/multidimensional-models/multidimensional-model-databases-ssas.md)」を参照してください。  
+ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データべースの詳細については、「[多次元モデル データベース &#40;SSAS&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/multidimensional-model-databases-ssas)」を参照してください。  
   
 ## <a name="configuration-of-the-analysis-services-connection-manager"></a>Analysis Services 接続マネージャーの構成  
  [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続マネージャーをパッケージに追加すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] は、実行時に [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 接続として解決される接続マネージャーを作成し、接続マネージャーのプロパティを設定し、接続マネージャーをパッケージの **Connections** コレクションに追加します。 接続マネージャーの **ConnectionManagerType** プロパティは、 **MSOLAP100**に設定されます。  

@@ -1,7 +1,5 @@
 ---
 title: SQL Server PowerShell プロバイダー | Microsoft Docs
-ms.custom: ''
-ms.date: 03/14/2017
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: scripting
@@ -16,14 +14,17 @@ helpviewer_keywords:
 ms.assetid: b97acc43-fcd2-4ae5-b218-e183bab916f9
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: b6358cc9bce9048dfd0554b595ba7c871fbffdd8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.custom: ''
+ms.date: 07/31/2019
+ms.openlocfilehash: 1017620181ac127576f02fc792e3c4b85213a6d9
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67912225"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731116"
 ---
 # <a name="sql-server-powershell-provider"></a>SQL Server PowerShell Provider
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、ファイル システム パスと同様のパスで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] オブジェクトの階層を公開します。 このパスを使用してオブジェクトの場所を指定し、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト (SMO) モデルのメソッドを使用してオブジェクトの操作を実行できます。  
@@ -33,12 +34,13 @@ Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 > SQL Server Management Studio (SSMS) には前のバージョンの **SqlServer** が含まれて*いました*が、SSMS の 16.x バージョンのみです。 PowerShell を SSMS 17.0 以降で使用するには、**SqlServer** モジュールを PowerShell ギャラリーからインストールする必要があります。
 > **SqlServer** モジュールをインストールする場合は、「[SQL Server PowerShell のインストール](download-sql-server-ps-module.md)」を参照してください。
 
+## <a name="benefits-of-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーの利点
 
-## <a name="benefits-of-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーの利点  
- [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーによって実装されているパスを使用すると、SQL Server のインスタンス内のすべてのオブジェクトを簡単に対話的に確認できます。 ファイル システムのパスの操作に一般的に使用されているコマンドと同様の Windows PowerShell の別名を使用して、パスを操作できます。  
+[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーによって実装されているパスを使用すると、SQL Server のインスタンス内のすべてのオブジェクトを簡単に対話的に確認できます。 ファイル システムのパスの操作に一般的に使用されているコマンドと同様の Windows PowerShell の別名を使用して、パスを操作できます。  
   
-## <a name="the-sql-server-powershell-hierarchy"></a>SQL Server PowerShell の階層  
- データまたはオブジェクトのモデルを階層で表すことができる製品は、Windows PowerShell プロバイダーを使用して階層を公開できます。 階層は、Windows ファイル システムで使用されるものに似たドライブおよびパス構造を使用して公開されます。  
+## <a name="the-sql-server-powershell-hierarchy"></a>SQL Server PowerShell の階層
+
+データまたはオブジェクトのモデルを階層で表すことができる製品は、Windows PowerShell プロバイダーを使用して階層を公開できます。 階層は、Windows ファイル システムで使用されるものに似たドライブおよびパス構造を使用して公開されます。  
   
  それぞれの Windows PowerShell プロバイダーは 1 つ以上のドライブを実装します。 各ドライブは、関連するオブジェクトの階層のルート ノードです。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーは、SQLSERVER: ドライブを実装します。 プロバイダーは、SQLSERVER: ドライブの主要フォルダーのセットも定義します。 各フォルダーおよびそのサブフォルダーは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 管理オブジェクト モデルを使用してアクセスできるオブジェクトのセットを表します。 これらのいずれかの主要フォルダーで始まるパスでサブフォルダーにフォーカスを設定すると、関連付けられたオブジェクト モデルのメソッドを使用して、このノードによって表されるオブジェクトの操作を実行できます。 [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] プロバイダーが実装する Windows PowerShell フォルダーを次の表に示します。  
   
@@ -51,6 +53,8 @@ Windows PowerShell 用の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]
 |`SQLSERVER:\DAC`|<xref:Microsoft.SqlServer.Management.DAC>|データ層アプリケーション オブジェクト (DAC パッケージなど) と操作 (DAC の配置など)|  
 |`SQLSERVER:\DataCollection`|<xref:Microsoft.SqlServer.Management.Collector>|コレクション セットや構成ストアなどのデータ コレクター オブジェクト|  
 |`SQLSERVER:\SSIS`|<xref:Microsoft.SqlServer.Management.IntegrationServices>|[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト、パッケージ、環境などのオブジェクト。|  
+|`SQLSERVER:\XEvent`|<xref:Microsoft.SqlServer.Management.XEvent>|SQL Server 拡張イベント|
+|`SQLSERVER:\DatabaseXEvent`|[Microsoft.SqlServer.Management.XEventDbScoped](https://docs.microsoft.com/dotnet/api/microsoft.sqlserver.management.xeventdbscoped)|SQL Server 拡張イベント|
 |`SQLSERVER:\SQLAS`|<xref:Microsoft.AnalysisServices>|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ、集計、ディメンションなどのオブジェクト。|  
   
  たとえば、SQLSERVER:\SQL フォルダーを使用して、SMO オブジェクト モデルでサポートされる任意のオブジェクトを表すパスを開始することができます。 SQLSERVER:\SQL パスの先頭部分は、SQLSERVER:\SQL\\*ComputerName*\\*InstanceName*です。 インスタンス名の後のノードは、オブジェクト コレクション ( *Databases* 、 *Views*など) とオブジェクト名 (AdventureWorks2012 など) で切り替わります。 スキーマはオブジェクト クラスとしては表されません。 スキーマ内の最上位レベルのオブジェクト (テーブルやビューなど) のノードを指定する場合、オブジェクト名を *SchemaName.ObjectName*の形式で指定する必要があります。  
@@ -79,7 +83,6 @@ SQLSERVER:\SQL\localhost\DEFAULT\Databases\AdventureWorks2012\Tables\Purchasing.
 |SMO URN (Uniform Resource Name) を SQL Server プロバイダー パスに変換する方法について説明します。|[URN から SQL Server プロバイダー パスへの変換](https://docs.microsoft.com/powershell/module/sqlserver/Convert-UrnToPath)|  
 |[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロバイダーを使用して SQL Server 認証接続を開く方法について説明します。 既定では、プロバイダーは、Windows PowerShell セッションを実行している Windows アカウントの資格情報を使用して確立された Windows 認証接続を使用します。|[データベース エンジン PowerShell での認証の管理](manage-authentication-in-database-engine-powershell.md)|  
   
-## <a name="see-also"></a>参照  
- [SQL Server PowerShell](sql-server-powershell.md)  
-  
-  
+## <a name="next-steps"></a>次の手順
+
+[SQL Server PowerShell](sql-server-powershell.md)

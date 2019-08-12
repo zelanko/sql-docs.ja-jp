@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d988fc9dfc126bef79d94ca0867128085069456e
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: bfe22edbc76805fb821ddda42a07a3b74395bdb6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495451"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893992"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -46,7 +46,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 | 新機能または更新 | 詳細 |
 |:---|:---| 
-| Power BI キャッシュに対するガバナンス設定の更新  | Power BI サービスは、Live Connect レポートの初期読み込みのダッシュボード タイル データとレポート データをキャッシュします。これにより、大量のキャッシュ クエリが SSAS に送信され、極端な場合はサーバーが過負荷になります。 このリリースでは、**ClientCacheRefreshPolicy** プロパティが導入されています。 このプロパティによって、サーバー レベルでこの動作をオーバーライドすることが許可されます。 詳細については、「[全般プロパティ](../analysis-services/server-properties/general-properties.md)」を参照してください。 |
+| Power BI キャッシュに対するガバナンス設定の更新  | Power BI サービスは、Live Connect レポートの初期読み込みのダッシュボード タイル データとレポート データをキャッシュします。これにより、大量のキャッシュ クエリが SSAS に送信され、極端な場合はサーバーが過負荷になります。 このリリースでは、**ClientCacheRefreshPolicy** プロパティが導入されています。 このプロパティによって、サーバー レベルでこの動作をオーバーライドすることが許可されます。 詳細については、「[全般プロパティ](https://docs.microsoft.com/analysis-services/server-properties/general-properties)」を参照してください。 |
 | オンラインのアタッチ  | この機能を使用すると、表形式モデルをオンライン操作としてアタッチすることができます。 オンラインのアタッチは、オンプレミスのクエリ スケールアウト環境で読み取り専用レプリカを同期するために使用できます。 詳細については、[オンラインのアタッチ](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)に関するページを参照してください。 |
 | &nbsp; | &nbsp; |
 
@@ -125,7 +125,10 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 ### <a name="polybase"></a>PolyBase
 
-|新機能または更新 | 詳細 | |PolyBase |外部テーブルの列名は、SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースに対してクエリを実行するために使用されるようになりました。 | | &nbsp; | &nbsp; |
+|新機能または更新 | 詳細 |
+|:---|:---|
+|PolyBase |外部テーブルの列名は、SQL Server、Oracle、Teradata、MongoDB および ODBC データ ソースのクエリに使用されるようになりました。 |
+| &nbsp; | &nbsp; |
 
 ### <a name="collation"></a>照合順序
 

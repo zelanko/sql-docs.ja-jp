@@ -7,12 +7,12 @@ ms.technology: report-data
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: de21c7d552e117dd14054cfb9f408a66ccf2ca0d
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d2e8eb3d2f20392c1884c79455e8c3bdfdacd949
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573216"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891958"
 ---
 # <a name="data-connections-data-sources-and-connection-strings-report-builder-and-ssrs"></a>データ接続、データ ソース、および接続文字列 (レポート ビルダーおよび SSRS)
 
@@ -107,7 +107,7 @@ ms.locfileid: "65573216"
 |Azure SQL データベース|`Data Source=<host>;Initial Catalog=AdventureWorks; Encrypt=True`|データ ソースの種類を **Microsoft Azure SQL Database** に設定します。 詳細については、「[SQL Azure の接続の種類 (SSRS)](../../reporting-services/report-data/sql-azure-connection-type-ssrs.md)」を参照してください。|  
 |SQL Server 並列データ ウェアハウス|`HOST=<IP address>;database= AdventureWorks; port=<port>`|データ ソースの種類を **Microsoft SQL Server Parallel Data Warehouse**に設定します。 詳細については、「[SQL Server 並列データ ウェアハウスの接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/sql-server-parallel-data-warehouse-connection-type-ssrs.md)」を参照してください。|  
 |ローカル サーバーの Analysis Services データベース|`data source=localhost;initial catalog=Adventure Works DW`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 詳細については、「[MDX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-mdx-ssrs.md)」または「[DMX のための Analysis Services の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/analysis-services-connection-type-for-dmx-ssrs.md)」を参照してください。|  
-|Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 cube= 設定にパースペクティブの名前を指定します。 詳しくは、「 [パースペクティブ &#40;SSAS テーブル&#41;](../../analysis-services/tabular-models/perspectives-ssas-tabular.md)」をご覧ください。|  
+|Sales パースペクティブを持つ Analysis Services テーブル モデル データベース|`Data source=<servername>;initial catalog= Adventure Works DW;cube='Sales'`|データ ソースの種類を **Microsoft SQL Server Analysis Services**に設定します。 cube= 設定にパースペクティブの名前を指定します。 詳しくは、「 [パースペクティブ &#40;SSAS テーブル&#41;](https://docs.microsoft.com/analysis-services/tabular-models/perspectives-ssas-tabular)」をご覧ください。|  
 |ネイティブ モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=https://myreportservername/reportserver; datasource=/models/Adventure Works`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。
 |SharePoint 統合モードで構成されているレポート サーバーのレポート モデル データ ソース|`Server=https://server; datasource=https://server/site/documents/models/Adventure Works.smdl`|レポート サーバーまたはドキュメント ライブラリの URL と、レポート サーバー フォルダーまたはドキュメント ライブラリ フォルダーの名前空間内のパブリッシュされたモデルへのパスを指定します。|  
 |[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 2000 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サーバー|`provider=MSOLAP.2;data source=<remote server name>;initial catalog=FoodMart 2000`|データ ソースの種類を **[OLE DB Provider for OLAP Services 8.0]** に設定します。<br /><br /> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ConnectTo [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] プロパティを **8.0** に設定すると、 **2000**データ ソースにより高速に接続できるようになります。 このプロパティを設定するには、 **[接続プロパティ]** ダイアログ ボックスの **[詳細プロパティ]** タブを使用します。|  

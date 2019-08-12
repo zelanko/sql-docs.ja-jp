@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 236985bf-fc4a-4a57-98f7-a71ef977fd7b
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: eb0cde5c787e721e99bfa41caa37c7b793141385
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: be854d2002692611289d401b4ad98cb63cf4a27b
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68012492"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731108"
 ---
 # <a name="configure-the-network-packet-size-server-configuration-option"></a>network packet size サーバー構成オプションの構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,6 +54,9 @@ ms.locfileid: "68012492"
   
 -   暗号化された接続の最大ネットワーク パケット サイズは 16,383 バイトです。  
   
+> [!NOTE]  
+> MARS が有効な場合、SMUX プロバイダーによって SSL 暗号化の前に 16 バイトのヘッダーがパケットに追加され、最大ネットワーク パケット サイズは 16,368 バイトに減ります。
+   
 ###  <a name="Recommendations"></a> 推奨事項  
   
 -   このオプションは詳細設定オプションであるため、熟練したデータベース管理者または認定された [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロフェッショナルだけが変更するようにしてください。  

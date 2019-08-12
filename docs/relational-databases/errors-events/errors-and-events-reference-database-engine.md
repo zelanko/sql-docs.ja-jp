@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: ea928535-6fd1-4738-a8ed-ffb602f3825e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 7fc505731f0d0434ea4d8478b3569781b5173ce8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4835e110d0feace4abaec408351351d863da7588
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68068343"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893151"
 ---
 # <a name="errors-and-events-reference-database-engine"></a>エラーおよびイベント リファレンス (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "68068343"
 |リソース|[説明]|  
 |--------------|-----------------|  
 |[SQL Server コミュニティ](https://go.microsoft.com/fwlink/?LinkId=42455)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティが管理するニュースグループおよびフォーラムにリンクしています。 ブログや Web サイトなど、コミュニティ情報のソースも一覧表示されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コミュニティは、回答が得られるという保証はありませんが、問題解決に役立てることができます。|  
-|[SQL Server デベロッパー センター コミュニティ](https://go.microsoft.com/fwlink/?LinkId=42456)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の開発者にとって役立つニュースグループ、フォーラム、およびその他のコミュニティ リソースに焦点を当てています。|  
+|[SQL Server デベロッパー センター コミュニティ](/sql/sql-server/sql-server-technical-documentation)|このサイトは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の開発者にとって役立つニュースグループ、フォーラム、およびその他のコミュニティ リソースに焦点を当てています。|  
 |[Microsoft ヘルプとサポート](https://go.microsoft.com/fwlink/?linkid=16419)|この Web サイトを利用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] のサポート担当者と共にケースを調査できます。|  
   
   

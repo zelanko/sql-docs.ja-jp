@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
 monikerRange: '>=sql-server-2016 <=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 1fb9daa74abd547f23bc78e76b8c0840e9c54af5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: af1ceea86c3e91cb11c393f585c2906f50f039c1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775769"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892281"
 ---
 # <a name="install-the-first-report-server-in-sharepoint-mode"></a>SharePoint モードでの最初のレポート サーバーのインストール
 
@@ -142,7 +142,7 @@ ms.locfileid: "64775769"
   
 9. データベース エンジン サービスを選択した場合は、 **[インスタンスの構成]** ページで **MSSQLSERVER** の既定のインスタンスを受け入れて、 **[次へ]** をクリックします。  
   
-     ![メモ](../../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "メモ")Reporting Services SharePoint サービス アーキテクチャは、以前の Reporting Services アーキテクチャとは異なり、SQL Server "インスタンス" に基づいていません。  
+     ![メモ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "メモ")Reporting Services SharePoint サービス アーキテクチャは、以前の Reporting Services アーキテクチャとは異なり、SQL Server "インスタンス" に基づいていません。  
   
 10. **[サーバーの構成]** ページが表示されたら、適切な資格情報を入力します。 Reporting Services のデータ警告機能またはサブスクリプション機能を使う場合は、SQL Server エージェントの **[スタートアップの種類]** を **[自動]** に変更する必要があります。 コンピューターに既にインストールされている内容によっては、 **[サーバーの構成]** ページは表示されない場合があります。  
   
@@ -164,7 +164,7 @@ ms.locfileid: "64775769"
 15. インストールには数分かかります。 機能の一覧と各機能の状態が表示された **[完了]** ページが表示されます。 コンピューターの再起動が必要であることを示す情報ダイアログが表示される場合もあります。  
   
 ##  <a name="bkmk_install_SSRS_sharedservice"></a> 手順 2: Reporting Services SharePoint サービスの登録と開始  
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
+ ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
 > [!NOTE]
 > 既存の SharePoint ファームにインストールしている場合は、このセクションの手順を実行する必要はありません。 Reporting Services SharePoint サービスはインストールされており、このドキュメントの前のセクションの一部として SQL Server インストール ウィザードを実行したときに開始しています。  
@@ -254,7 +254,7 @@ ms.locfileid: "64775769"
   
 11. サービス アプリケーションの作成処理には数分かかることがあります。 完了すると、確認メッセージと、 **[サブスクリプションと警告の準備]** ページへのリンクが表示されます。 Reporting Services のサブスクリプション機能とデータ警告機能を使う場合は、準備手順を行います。 詳細については、「[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
- ![PowerShell 関連コンテンツ](../../analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") PowerShell を使って Reporting Services サービス アプリケーションを作成する方法については、以下を参照してください。  
+ ![PowerShell 関連コンテンツ](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ") PowerShell を使って Reporting Services サービス アプリケーションを作成する方法については、以下を参照してください。  
   
 -   後の「[手順 1 ～ 4 に対応する Windows PowerShell スクリプト](#bkmk_full_script)」セクションをご覧ください。  
   
@@ -272,7 +272,7 @@ ms.locfileid: "64775769"
   
      ブラウザーで目的の SharePoint サイトを開きます。 例: https://\<サーバー名>/sites/bi  
   
-2.  **[設定]** ![SharePoint の設定](../../analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") を選びます。  
+2.  **[設定]** ![SharePoint の設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint の設定") を選びます。  
   
 3.  **[サイトの設定]** を選びます。  
   
@@ -391,13 +391,13 @@ Enable-SPfeature -identity "reportserver" -Url https://server/sites/bi
  
  SharePoint 2016 の場合は、Excel Services を使うために [Office Online Server](https://technet.microsoft.com/library/jj219456\(v=office.16\).aspx) を構成する必要があります。 詳細については、次のホワイト ペーパーを参照してください。
  
- - [SharePoint 2016 での SQL Server 2016 PowerPivot と Power View の配置](../../analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016.md)
+ - [SharePoint 2016 での SQL Server 2016 PowerPivot と Power View の配置](https://docs.microsoft.com/analysis-services/instances/install-windows/deploying-sql-server-2016-powerpivot-and-power-view-in-sharepoint-2016)
  
- - [多層 SharePoint 2016 ファームでの SQL Server 2016 PowerPivot と Power View の配置](../../analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm.md)
+ - [多層 SharePoint 2016 ファームでの SQL Server 2016 PowerPivot と Power View の配置](https://docs.microsoft.com/analysis-services/instances/install-windows/deploy-powerpivot-and-power-view-multi-tier-sharepoint-2016-farm)
  
  SharePoint 2016 の場合は、Excel Services アプリケーションを作成して構成する必要があります。 詳細については、以下を参照してください。  
   
--   「[Power Pivot モードでの Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)」の「Analysis Services 統合のための Excel Services の構成」セクション。  
+-   「[Power Pivot モードでの Analysis Services のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」の「Analysis Services 統合のための Excel Services の構成」セクション。  
   
 -   [Excel Services のデータ モデルの設定を管理する (SharePoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx)。  
 

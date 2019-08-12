@@ -20,16 +20,18 @@ helpviewer_keywords:
 ms.assetid: 6d09fc8d-843a-4a7a-9812-f093d99d8192
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 84050cd000ae53b8b913a9652a4ddb323743c8da
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bd0cafe74b558dc86f6709b23e2f1195ecada520
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68046578"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68768473"
 ---
 # <a name="replication-agent-security-model"></a>レプリケーション エージェントのセキュリティ モデル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   レプリケーション エージェントのセキュリティ モデルでは、レプリケーション エージェントの実行や接続に使用されるアカウントをきめ細かく制御できます。異なるアカウントをエージェントごとに指定できます。 アカウントを指定する方法の詳細については、「[ID およびアクセス制御 (レプリケーション)](../../../relational-databases/replication/security/identity-and-access-control-replication.md)」を参照してください。  
+
+エージェントを実行する Windows アカウントがないため、Azure SQL Database マネージド インスタンスのレプリケーション エージェントのセキュリティ モデルは少し異なります。 代わりに、SQL Server 認証を使用してすべての操作を行う必要があります。 
   
 > [!IMPORTANT]  
 >  **sysadmin** 固定サーバー ロールのメンバーがレプリケーションを構成する際には、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] エージェント アカウントの権限を借用するようにレプリケーション エージェントを構成できます。 このとき、レプリケーション エージェントのログインとパスワードを指定する必要はありませんが、その方法はお勧めしません。 セキュリティ上、このトピックの「エージェントに必要な権限」に記載されている最小限の権限を持った各エージェントのアカウントを指定することをお勧めします。  

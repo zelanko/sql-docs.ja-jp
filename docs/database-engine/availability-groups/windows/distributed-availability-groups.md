@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e7fadeded7c979631cabc763d1be8d037b5913d9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2670a5967c5bb3921cb23d79670eeefe859cb5a0
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968304"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702738"
 ---
 # <a name="distributed-availability-groups"></a>分散型可用性グループ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -235,7 +235,7 @@ GO
 
 ![上記のクエリの出力例](./media/distributed-availability-group/dag-11-example-output-of-query-above.png)
 
-### <a name="dmv-to-list-distribtued-ag-health"></a>分散型 AG の正常性を一覧表示する DMV
+### <a name="dmv-to-list-distributed-ag-health"></a>分散型 AG の正常性を一覧表示する DMV
 
 SQL Server Management Studio で、ダッシュボードや他の領域に表示される状態は、その可用性グループ内のローカル同期についてのみです。 分散型可用性グループの正常性を表示するには、動的管理ビューに対してクエリを実行します。 次のクエリ例では、前のクエリを拡張して改善しています。
 

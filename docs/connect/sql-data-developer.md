@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 249e3794-e3fa-41cb-ad9c-f46e19e6805c
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cfd79f0cd7470ea94be1c77e5bc27016531909ad
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 8d94f07f12269bb2d4690ae01a5c51dd91d051f7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68265392"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893908"
 ---
 # <a name="sql-data-developer"></a>SQL データ開発者
 Microsoft の SQL データプラットフォームを使用して、web サーバー、エンタープライズサーバー、およびクラウド用のモバイルデバイスとデスクトップにわたるデータ中心のソリューションを作成できます。  
@@ -40,7 +40,7 @@ Microsoft の SQL データプラットフォームを使用して、web サー�
 * [Sqlxml 4.0](../relational-databases/sqlxml/sqlxml-4-0-programming-concepts.md): sqlxml 4.0 を使用してリレーショナルデータを XML にエクスポートします。
 
 ## <a name="data-collection-processing-and-visualization"></a>データの収集、処理、および視覚化
-* [Analysis Services](../analysis-services/analysis-services-developer-documentation.md)
+* [Analysis Services](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)
 * [Integration Services](../integration-services/integration-services-developer-documentation.md)  
 * [マスター データ サービス](../master-data-services/develop/master-data-services-developer-documentation.md)
 * [レプリケーションサービス](../relational-databases/replication/concepts/replication-developer-documentation.md)

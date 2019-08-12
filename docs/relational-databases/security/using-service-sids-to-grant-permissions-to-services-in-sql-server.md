@@ -6,12 +6,12 @@ ms.date: 05/02/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.openlocfilehash: 1a0bd129fc535b53d8d19ad76f99f3a86ba10c11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fa2051e7f21dccf749f4f8938ecfc98c13bc313d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65135238"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888591"
 ---
 # <a name="using-service-sids-to-grant-permissions-to-services-in-sql-server"></a>サービスの SID を使用して SQL Server のサービスにアクセス許可を付与する
 
@@ -24,9 +24,9 @@ SQL Server では、特定のサービスにアクセス許可を直接付与で
 - System Center Operations Manager ヘルス サービス (NT SERVICE\HealthService)
 - Windows Server フェールオーバー クラスタリング (WSFC) サービス (NT SERVICE\ClusSvc)
 
-一部のサービスには、既定ではサービス SID がありません。 サービス SID は、[SC.exe](https://docs.microsoft.com/windows/desktop/services/configuring-a-service-using-sc) を使用して作成する必要があります。 [この方法](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/)は、SQL Server 内でヘルス サービスにアクセス許可を付与するために Microsoft System Center Operations Manager 管理者によって採用されています。
+一部のサービスには、既定ではサービス SID がありません。 サービス SID は、[SC.exe](/windows/desktop/services/configuring-a-service-using-sc) を使用して作成する必要があります。 [この方法](https://kevinholman.com/2016/08/25/sql-mp-run-as-accounts-no-longer-required/)は、SQL Server 内でヘルス サービスにアクセス許可を付与するために Microsoft System Center Operations Manager 管理者によって採用されています。
 
-サービス SID を作成し確定したら、SQL Server 内でそれにアクセス許可を付与する必要があります。 アクセス許可を付与するには、[SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) またはクエリのいずれかを使用して Windows ログインを作成します。 ログインを作成したら、他の任意のログインと同様に、アクセス許可を付与し、ロールに追加し、データベースにマップすることがします。
+サービス SID を作成し確定したら、SQL Server 内でそれにアクセス許可を付与する必要があります。 アクセス許可を付与するには、[SQL Server Management Studio (SSMS)](/sql/ssms/download-sql-server-management-studio-ssms) またはクエリのいずれかを使用して Windows ログインを作成します。 ログインを作成したら、他の任意のログインと同様に、アクセス許可を付与し、ロールに追加し、データベースにマップすることがします。
 
 > [!TIP]
 > エラー `Login failed for user 'NT AUTHORITY\SYSTEM'` が返された場合は、目的のサービスに対してサービス SID が存在すること、SQL Server 内でサービス SID ログインが作成されていること、SQL Server 内でサービス SID に適切なアクセス許可が付与されていることを確認します。
@@ -39,7 +39,7 @@ SQL Server では、特定のサービスにアクセス許可を直接付与で
 
 ### <a name="granular-permissions-to-system-accounts"></a>システム アカウントに対するきめ細かいアクセス許可
 
-これまで、システム アカウントにアクセス許可を付与するには、[LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([en-us で NT AUTHORITY\SYSTEM](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) または [NetworkService](https://docs.microsoft.com/windows/desktop/Services/networkservice-account) ([en-us で NT AUTHORITY\NETWORK SERVICE](https://docs.microsoft.com/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) アカウント用のログインを作成し、それらのログインにアクセス許可を付与していました。 この方法では、システム アカウントとして実行されている SQL への任意のプロセスまたはサービスのアクセス許可が付与されます。
+これまで、システム アカウントにアクセス許可を付与するには、[LocalSystem](https://msdn.microsoft.com/library/windows/desktop/ms684190) ([en-us で NT AUTHORITY\SYSTEM](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions#Localized_service_names)) または [NetworkService](/windows/desktop/Services/networkservice-account) ([en-us で NT AUTHORITY\NETWORK SERVICE](/sql/database-engine/configure-windows/configure-windows-service-accounts-and-permissions?#Localized_service_names)) アカウント用のログインを作成し、それらのログインにアクセス許可を付与していました。 この方法では、システム アカウントとして実行されている SQL への任意のプロセスまたはサービスのアクセス許可が付与されます。
 
 サービス SID を使用すると、特定のサービスにアクセス許可を付与することができます。 そのサービスは、実行時にアクセス許可を与えられたリソースにのみアクセスできます。 たとえば、`HealthService` が `LocalSystem` として実行されていて、それに `View Server State` が付与されている場合、`LocalSystem`アカウントは、`HealthService` のコンテキストで実行されているときに、`View Server State` に対してのみアクセスできます。 その他のどのプロセスが `LocalSystem` として SQL のサーバー状態にアクセスを試みても、アクセスは拒否されます。
 
@@ -102,10 +102,10 @@ GO
 
 ## <a name="next-steps"></a>次の手順
 
-サービス SID 構造体の詳細について、「[SERVICE_SID_INFO structure](https://docs.microsoft.com/windows/desktop/api/winsvc/ns-winsvc-_service_sid_info)」 (SERVICE_SID_INFO 構造体) を参照してください。
+サービス SID 構造体の詳細について、「[SERVICE_SID_INFO structure](/windows/win32/api/winsvc/ns-winsvc-service_sid_info)」 (SERVICE_SID_INFO 構造体) を参照してください。
 
-[ログインを作成](https://docs.microsoft.com/sql/t-sql/statements/create-login-transact-sql)するときに使用できるその他のオプションについて確認してください。
+[ログインを作成](/sql/t-sql/statements/create-login-transact-sql)するときに使用できるその他のオプションについて確認してください。
 
-ロール ベースのセキュリティをサービス SID と一緒に使用するために、SQL Server で[ロールを作成](https://docs.microsoft.com/sql/t-sql/statements/create-role-transact-sql)する方法を確認してください。
+ロール ベースのセキュリティをサービス SID と一緒に使用するために、SQL Server で[ロールを作成](/sql/t-sql/statements/create-role-transact-sql)する方法を確認してください。
 
-SQL Server 内でサービス SID に[アクセス許可を付与](https://docs.microsoft.com/sql/t-sql/statements/grant-transact-sql)するさまざまな方法について確認してください。
+SQL Server 内でサービス SID に[アクセス許可を付与](/sql/t-sql/statements/grant-transact-sql)するさまざまな方法について確認してください。

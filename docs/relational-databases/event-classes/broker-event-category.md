@@ -14,12 +14,12 @@ ms.assetid: 470dc93c-0dda-4d89-829b-937738d59b31
 author: stevestein
 ms.author: sstein
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 65c28b905427c685c2d57a55ac0361aeef5f1a6b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f2c28f7b12279bb908010ef0f97ba6a2cea5ae15
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67999723"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892357"
 ---
 # <a name="broker-event-category"></a>Broker イベント カテゴリ
 
@@ -45,6 +45,6 @@ ms.locfileid: "67999723"
  Service Broker には、2 つのセキュリティ監査イベントも提供されます。 これらのイベントの詳細については、「 [Audit Broker Login イベント クラス](../../relational-databases/event-classes/audit-broker-login-event-class.md) 」と「 [Audit Broker Conversation イベント クラス](../../relational-databases/event-classes/audit-broker-conversation-event-class.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
- [セキュリティ監査イベント カテゴリ](../../analysis-services/trace-events/security-audit-event-category.md)  
+ [セキュリティ監査イベント カテゴリ](https://docs.microsoft.com/analysis-services/trace-events/security-audit-event-category)  
   
   

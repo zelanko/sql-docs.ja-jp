@@ -13,16 +13,16 @@ f1_keywords:
 ms.assetid: db2be511-c76e-4f21-8be4-6a8c60a50d30
 author: MashaMSFT
 ms.author: mathoma
-monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: bc85c55e86ee026a59c20539eb5c761d0cf66fd4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
+ms.openlocfilehash: 7793c64a6c7d5dc404c24f502a45067d2e95fcca
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129830"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68769460"
 ---
 # <a name="sql-server-replication-subscription-properties-dialog-box"></a>SQL Server レプリケーションの [サブスクリプションのプロパティ] ダイアログ ボックス 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 ### <a name="publisher-properties"></a>パブリッシャーのプロパティ
 パブリッシャーの **[サブスクリプションのプロパティ]** ダイアログ ボックスを使用すると、プッシュ サブスクリプションのプロパティを表示したり設定したりできます。 プル サブスクリプションのいくつかのプロパティを表示することもできますが、サブスクリプションの **[サブスクリプションのプロパティ]** ダイアログ ボックスではさらに多くのプロパティが表示され、プロパティを変更することができます。  
@@ -46,7 +46,8 @@ ms.locfileid: "68129830"
  読み取り専用として表示されているオプションの場合、サブスクリプションが作成されている場合にのみ設定できます。 サブスクリプションの新規作成ウィザードで使用することのできないオプションを設定する場合は、サブスクリプションをストアド プロシージャで作成します。 詳細については、「 [Create a Pull Subscription](../../relational-databases/replication/create-a-pull-subscription.md) 」および「 [Create a Push Subscription](../../relational-databases/replication/create-a-push-subscription.md)」を参照してください。  
   
 > [!NOTE]  
->  ディストリビューション エージェントまたはマージ エージェントのジョブがサブスクリプションに対してまだ作成されていない場合、ほとんどのサブスクリプション プロパティは表示されません。 プル サブスクリプションのエージェント ジョブを作成するには、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (スナップショットまたはトランザクション パブリケーションへのサブスクリプションの場合) または [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (マージ パブリケーションへのサブスクリプションの場合) を実行します。  
+>  - ディストリビューション エージェントまたはマージ エージェントのジョブがサブスクリプションに対してまだ作成されていない場合、ほとんどのサブスクリプション プロパティは表示されません。 プル サブスクリプションのエージェント ジョブを作成するには、[sp_addpullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) (スナップショットまたはトランザクション パブリケーションへのサブスクリプションの場合) または [sp_addmergepullsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-agent-transact-sql.md) (マージ パブリケーションへのサブスクリプションの場合) を実行します。  
+> - Azure SQL Database マネージド インスタンスは、スナップショットおよびトランザクション レプリケーションのパブリッシャー、ディストリビューター、およびサブスクライバーの可能性があります。 Azure SQL Database のシングル データベースとプール データベースは、スナップショットとトランザクション レプリケーションのプッシュ サブスクライバーの可能性しかありません。 詳細については、[Azure SQL Database を使用したトランザクションのレプリケーション](/azure/sql-database/sql-database-managed-instance-transactional-replication)に関する記事を参照してください。 
   
 ## <a name="publisher-options-for-all-subscriptions"></a>すべてのサブスクリプションに対するパブリッシャーのオプション  
  **セキュリティ**  

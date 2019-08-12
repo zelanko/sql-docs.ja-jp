@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/24/2018
-ms.openlocfilehash: c2ce0a9f30232f1d5c5c25fc92068be1e40bd2f5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 09fcacbd2f1c5c197517f962073dce6294aed2e2
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264387"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891855"
 ---
 # <a name="store-credentials-in-a-reporting-services-data-source"></a>Store Credentials in a Reporting Services Data Source
 
@@ -33,7 +33,7 @@ ms.locfileid: "68264387"
 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポート サーバーが、レポートに必要な外部データにアクセスするときに使用する、保存された資格情報を構成できます。 保存された資格情報は、レポートを自動実行する場合に使用されます。たとえば、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サブスクリプションがレポートを電子メールとしてパブリッシュする場合などです。 この資格情報は、レポート処理がスケジュールで設定されている場合、または、レポート処理がトリガーされた場合に、レポート サーバーによって取得されて使用されます。 このトピックでは、ネイティブ モードと SharePoint モードの両方のレポート サーバーに対して、保存された資格情報を構成する方法について説明します。  
   
 ##  <a name="bkmk_top"></a> 保存された資格情報のセキュリティ ポリシー要件  
- ![as_powerpivot_refresh_sss_set_key](../../analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 保存された資格情報に使用するアカウントを、レポート サーバー上で、次のいずれかのセキュリティ ポリシー用に構成する必要があります。 環境に必要な最小レベルの権限を持つポリシーを選択することをお勧めします。  
+ ![as_powerpivot_refresh_sss_set_key](https://docs.microsoft.com/analysis-services/analysis-services/power-pivot-sharepoint/media/as-powerpivot-refresh-sss-set-key.gif "as_powerpivot_refresh_sss_set_key") 保存された資格情報に使用するアカウントを、レポート サーバー上で、次のいずれかのセキュリティ ポリシー用に構成する必要があります。 環境に必要な最小レベルの権限を持つポリシーを選択することをお勧めします。  
   
 1.  **ローカル ログオンを許可する**。 詳細については、「 [ローカル ログオンを許可する](https://technet.microsoft.com/library/cc756809\(v=WS.10\).aspx)」を参照してください。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "68264387"
   
 8.  **[適用]** をクリックします。  
   
-     ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
+     ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_data_source_sharepoint"></a> レポート固有のデータ ソース用の保存された資格情報を構成する (SharePoint モード)  
   
@@ -95,7 +95,7 @@ ms.locfileid: "68264387"
   
 8.  **[OK]** をクリックします。  
   
-     ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
+     ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_native"></a> 共有データ ソース用の保存された資格情報を構成する (ネイティブ モード)  
   
@@ -121,7 +121,7 @@ ms.locfileid: "68264387"
   
 6.  **[適用]** をクリックします。  
   
-     ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
+     ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
   
 ##  <a name="bkmk_stored_credentials_shared_data_source_sharepoint"></a> 共有データ ソース用の保存された資格情報を構成する (SharePoint モード)  
   
@@ -149,7 +149,7 @@ ms.locfileid: "68264387"
   
 7.  **[OK]** をクリックします。  
   
-     ![[トップに戻る] リンクで使用される矢印アイコン](../../analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
+     ![[トップに戻る] リンクで使用される矢印アイコン](https://docs.microsoft.com/analysis-services/analysis-services/instances/media/uparrow16x16.gif "[トップに戻る] リンクで使用される矢印アイコン")[保存された資格情報のセキュリティ ポリシーの要件](#bkmk_top)  
   
 ## <a name="see-also"></a>参照  
  [レポート データ ソースに関する資格情報と接続情報を指定する](../../reporting-services/report-data/specify-credential-and-connection-information-for-report-data-sources.md)   

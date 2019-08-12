@@ -19,22 +19,22 @@ helpviewer_keywords:
 ms.assetid: 6bc8cbe2-46af-4f7b-93d6-86779313c9d7
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 6a148af7be04bba6bdf5c16ca7e85e94f1a0de31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7d0e3f3106b7f4a51cf4423497c248c801ed7d6f
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049441"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891426"
 ---
 # <a name="data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
 
-  データ マイニング モデル トレーニング変換先は、変換先が受け取るデータをデータ マイニング モデル アルゴリズムに渡すことにより、データ マイニング モデルのトレーニングを行います。 複数のデータ マイニング モデルが同じデータ マイニング構造に基づいて構築されている場合は、1 つの変換先を使用してトレーニングできます。 詳細については、「 [マイニング構造列](../../analysis-services/data-mining/mining-structure-columns.md) 」と「 [マイニング モデル列](../../analysis-services/data-mining/mining-model-columns.md)」を参照してください。  
+  データ マイニング モデル トレーニング変換先は、変換先が受け取るデータをデータ マイニング モデル アルゴリズムに渡すことにより、データ マイニング モデルのトレーニングを行います。 複数のデータ マイニング モデルが同じデータ マイニング構造に基づいて構築されている場合は、1 つの変換先を使用してトレーニングできます。 詳細については、「 [マイニング構造列](https://docs.microsoft.com/analysis-services/data-mining/mining-structure-columns) 」と「 [マイニング モデル列](https://docs.microsoft.com/analysis-services/data-mining/mining-model-columns)」を参照してください。  
   
 ## <a name="configuration-of-the-data-mining-model-training-destination"></a>データ マイニング モデル トレーニング変換先の構成  
- 対象になる構造とその構造に基づいて構築されているモデルのケース レベル列で、コンテンツの種類が KEY TIME または KEY SEQUENCE の列がある場合、入力データをその列で並べ替える必要があります。 たとえば、Microsoft タイム シリーズ アルゴリズムを使用して構築されたモデルでは、コンテンツの種類に KEY TIME が使用されます。 入力データが並べ替えられていない場合、そのモデルの処理が失敗する場合があります。 データを並べ替える必要がある場合、データ フロー内で事前に並べ替え変換を使用してデータを並べ替えることができます。 コンテンツの種類が KEY である列には、この要件は適用されません。 詳細については、「[コンテンツの種類 (データ マイニング)](../../analysis-services/data-mining/content-types-data-mining.md)」と「[並べ替え変換](../../integration-services/data-flow/transformations/sort-transformation.md)」を参照してください。  
+ 対象になる構造とその構造に基づいて構築されているモデルのケース レベル列で、コンテンツの種類が KEY TIME または KEY SEQUENCE の列がある場合、入力データをその列で並べ替える必要があります。 たとえば、Microsoft タイム シリーズ アルゴリズムを使用して構築されたモデルでは、コンテンツの種類に KEY TIME が使用されます。 入力データが並べ替えられていない場合、そのモデルの処理が失敗する場合があります。 データを並べ替える必要がある場合、データ フロー内で事前に並べ替え変換を使用してデータを並べ替えることができます。 コンテンツの種類が KEY である列には、この要件は適用されません。 詳細については、「[コンテンツの種類 (データ マイニング)](https://docs.microsoft.com/analysis-services/data-mining/content-types-data-mining)」と「[並べ替え変換](../../integration-services/data-flow/transformations/sort-transformation.md)」を参照してください。  
   
 > [!NOTE]  
 >  データ マイニング モデル トレーニング変換先への入力は、並べ替えられている必要があります。 データを並べ替えるため、データ フロー内のデータ マイニング モデル トレーニング変換先の上流に、並べ替え変換を含めることができます。 詳細については、「 [Sort Transformation](../../integration-services/data-flow/transformations/sort-transformation.md)」を参照してください。  
