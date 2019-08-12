@@ -55,12 +55,12 @@ OPENDATASOURCE ( provider_name, init_string )
   
 |Keyword|OLE DB プロパティ|有効な値と説明|  
 |-------------|---------------------|----------------------------------|  
-|[データ ソース]|DBPROP_INIT_DATASOURCE|接続先のデータ ソースの名前。 この値の解釈は、プロバイダーによって異なります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの場合、この値はサーバーの名前を表します。 Jet OLE DB プロバイダーの場合、この値は .mdb ファイルまたは .xls ファイルのフル パスを表します。|  
-|場所|DBPROP_INIT_LOCATION|接続先のデータベースの位置。|  
-|拡張プロパティ|DBPROP_INIT_PROVIDERSTRING|プロバイダー固有の接続文字列。|  
-|接続のタイムアウト|DBPROP_INIT_TIMEOUT|接続試行が失敗する基準となるタイムアウト値。|  
-|[ユーザー ID]|DBPROP_AUTH_USERID|接続に使用されるユーザー ID。|  
-|パスワード|DBPROP_AUTH_PASSWORD|接続に使用されるパスワード。|  
+|Data Source|DBPROP_INIT_DATASOURCE|接続先のデータ ソースの名前。 この値の解釈は、プロバイダーによって異なります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーの場合、この値はサーバーの名前を表します。 Jet OLE DB プロバイダーの場合、この値は .mdb ファイルまたは .xls ファイルのフル パスを表します。|  
+|Location|DBPROP_INIT_LOCATION|接続先のデータベースの位置。|  
+|Extended Properties|DBPROP_INIT_PROVIDERSTRING|プロバイダー固有の接続文字列。|  
+|Connect timeout|DBPROP_INIT_TIMEOUT|接続試行が失敗する基準となるタイムアウト値。|  
+|User ID|DBPROP_AUTH_USERID|接続に使用されるユーザー ID。|  
+|Password|DBPROP_AUTH_PASSWORD|接続に使用されるパスワード。|  
 |Catalog|DBPROP_INIT_CATALOG|データ ソースに接続するときの初期カタログまたは既定のカタログの名前。|  
 |Integrated Security|DBPROP_AUTH_INTEGRATED|Windows 認証を指定する SSPI|  
   
