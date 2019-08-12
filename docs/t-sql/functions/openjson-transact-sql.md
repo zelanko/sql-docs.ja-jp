@@ -97,7 +97,7 @@ SELECT * FROM OpenJson(@json);
 | DoublePrecisionFloatingPoint_value | 45                    | 2 |
 | DoublePrecisionFloatingPoint_value | 2.3456                | 2 |
 | BooleanTrue_value                  | true                  | 3 |
-| BooleanFalse_value                 | オプション                 | 3 |
+| BooleanFalse_value                 | false                 | 3 |
 | Null_value                         | NULL                  | 0 |
 | Array_value                        | ["a","r","r","a","y"] | 4 |
 | Object_value                       | {"obj":"ect"}         | 5 |
