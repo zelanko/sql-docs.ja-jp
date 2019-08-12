@@ -1,5 +1,5 @@
 ---
-title: パッケージとその他の操作を実行するモニター | Microsoft Docs
+title: 実行中のパッケージとその他の操作の監視 | Microsoft Docs
 ms.custom: supportability
 ms.date: 06/04/2018
 ms.prod: sql
@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68120583"
 ---
-# <a name="monitor-running-packages-and-other-operations"></a>パッケージとその他の操作を実行するモニター
+# <a name="monitor-running-packages-and-other-operations"></a>実行中のパッケージとその他の操作の監視
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
