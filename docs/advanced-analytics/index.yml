@@ -53,11 +53,11 @@ sections:
       - type: list
         style: unordered
         items:
-          - html: '<a href="python/ref-py-revoscalepy">Python での revoscalepy</a>:Python タスクの分散および並列処理: データ変換、探索、視覚化、統計および予測分析'
-          - html: '<a href="python/ref-py-microsoftml">Python での microsoft ml</a>:Python 用 Microsoft AI アルゴリズムに基づく関数'
+          - html: '<a href="python/ref-py-revoscalepy">Python の revoscalepy</a>:Python タスクの分散および並列処理: データ変換、探索、視覚化、統計および予測分析'
+          - html: '<a href="python/ref-py-microsoftml">Python の microsoftml</a>:Python に適合する Microsoft AI アルゴリズムに基づく関数'
           - html: '<a href="r/ref-r-revoscaler">R の RevoScaleR</a>:R タスクの分散および並列処理: データ変換、探索、視覚化、統計および予測分析'
-          - html: '<a href="r/ref-r-microsoftml">R の Microsoft ml</a>:R 用 Microsoft AI アルゴリズムに基づく関数'
-          - html: '<a href="r/ref-r-olapr">R の Olapr</a>:OLAP キューブからデータをインポートします'
+          - html: '<a href="r/ref-r-microsoftml">R の MicrosoftML</a>:Microsoft AI アルゴリズムに基づく関数 (R に適合)'
+          - html: '<a href="r/ref-r-olapr">R の olapR</a>:OLAP キューブからデータをインポートします'
           - html: '<a href="r/ref-r-sqlrutils">R の sqlRUtils</a>:R と T-sql をカプセル化するためのヘルパー関数'
   - title: その他の Machine Learning テクノロジ
     items:
