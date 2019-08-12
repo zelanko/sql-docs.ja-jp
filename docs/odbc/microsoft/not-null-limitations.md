@@ -1,5 +1,5 @@
 ---
-title: NULL 以外の制限事項 |Microsoft Docs
+title: NOT NULL の制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
