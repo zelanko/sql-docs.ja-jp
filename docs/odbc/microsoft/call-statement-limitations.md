@@ -1,5 +1,5 @@
 ---
-title: 呼び出しステートメントの制限事項 |Microsoft Docs
+title: CALL ステートメントの制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
