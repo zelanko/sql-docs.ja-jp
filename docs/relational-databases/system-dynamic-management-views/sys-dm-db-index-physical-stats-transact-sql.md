@@ -36,7 +36,7 @@ ms.locfileid: "68811522"
 > [!IMPORTANT]
 > [読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always On をホストしているサーバーインスタンスで、このクエリを実行すると、再実行のブロックの問題が発生する可能性があります。 これは、この動的管理ビューが、指定したユーザー テーブルまたはビューで IS ロックを獲得することが原因です。IS ロックは、そのユーザー テーブルまたはビューの X ロックに関して REDO スレッドの要求をブロックする可能性があります。  
   
- メモリ最適化インデックスに関する情報は返されません。 (_c)。 メモリ最適化インデックスの使用方法については、[sys.dm_db_xtp_index_stats & #40 を参照してください。TRANSACT-SQL と #41 です。](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md)  
+ **sys.dm_db_index_physical_stats**は、メモリ最適化インデックスに関する情報を返しません。 メモリ最適化インデックスの使用方法については、[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md) を参照してください。 
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
