@@ -45,7 +45,7 @@ void Read( BinaryReader r )
 ## <a name="remarks"></a>Remarks  
  読み取り は、入力は検証されません。 無効なバイナリの入力を指定した場合 読み取り で例外が発生します。 または、成功し、生成、無効な場合があります、 **SqlHierarchyId** オブジェクト メソッドを持つ予期しない結果が得られますか、例外が発生します。  
   
- **読み取り はのみ呼び出すことで、新しく作成された SqlHierarchyId** オブジェクトです。  
+ 読み取りは、新しく作成された **SqlHierarchyId** オブジェクトでのみ呼び出すことができます。  
   
  読み取り [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]内部で使用される 必要な場合、ようにデータを書き込む場合 **hierarchyid** 列です。 読み取り 間で変換が行われるときに内部的に呼び出されますも **varbinary** と **hierarchyid**です。  
   
