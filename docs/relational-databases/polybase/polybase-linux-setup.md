@@ -1,20 +1,19 @@
 ---
-title: Linux への PolyBase のインストール | Microsoft Docs
-description: この記事では、Linux に SQL Server フルテキスト検索をインストールする方法について説明します。
+title: Linux への PolyBase のインストール
+titlesuffix: SQL Server
+description: この記事では、Linux に SQL Server PolyBase をインストールする方法について説明します。
 author: aboke
 ms.author: aboke
 ms.date: 4/12/2019
 ms.topic: conceptual
 ms.prod: sql
-ms.custom: sql-linux
 ms.technology: linux
-ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 33a6a4415b5ced4bb2a5ca4448ccca8618f96832
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c53eb5db9238f1da32cb207dafb9e36b7748914
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062139"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495362"
 ---
 # <a name="install-polybase-on-linux"></a>Linux への PolyBase のインストール
 
@@ -154,8 +153,6 @@ sudo systemctl restart mssql-server
 >インストール後に、[PolyBase 機能を有効にする](#enable)必要があります。
 
 ## <a name="next-steps"></a>次の手順
-
-### <a name="supported-external-data-sources-on-linux"></a>Linux でサポートされている外部データ ソース
 
 Linux 上の PolyBase は、次のデータ ソースにアクセスできます。 PolyBase が有効になっているこれらのソースから外部テーブルを作成する方法の詳細については、提供されているリンクを参照してください。 
 

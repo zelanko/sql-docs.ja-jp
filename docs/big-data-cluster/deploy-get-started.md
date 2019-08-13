@@ -1,7 +1,7 @@
 ---
-title: 作業開始
+title: はじめに
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグデータクラスター (プレビュー) をデプロイするための手順とリソースについて説明します。
+description: SQL Server 2019 ビッグ データ クラスター (プレビュー) を展開するための手順とリソースについて説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,62 +9,67 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 41dd39c7aa613083f8ff47824ed6238b6f3c61b9
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.openlocfilehash: 7d6d1765809092184697d0d2d67b532c31606820
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419424"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68470908"
 ---
-# <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server ビッグデータクラスターの概要
+# <a name="get-started-with-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターの概要
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、 [SQL Server 2019 ビッグデータクラスター (プレビュー)](big-data-cluster-overview.md)をデプロイする方法の概要について説明します。 概念を説明し、このセクションの他のデプロイに関する記事を理解するためのフレームワークを提供することを目的としています。 特定の展開手順は、クライアントとサーバーのプラットフォームの選択によって異なります。
+この記事では、[SQL Server 2019 ビッグ データ クラスター (プレビュー)](big-data-cluster-overview.md) を展開する方法の概要を示します。 概念を確認すると共に、このセクションにある他の展開に関する記事を理解するための枠組みを提供することを目的としています。 特定の展開手順は、クライアントとサーバーに対するプラットフォームの選択に応じて異なります。
 
-## <a id="tools"></a>クライアントツール
+## <a id="tools"></a> クライアント ツール
 
-ビッグデータクラスターには、特定のクライアントツールのセットが必要です。 Kubernetes にビッグデータクラスターを展開する前に、次のツールをインストールする必要があります。
+ビッグ データ クラスターには、特定のクライアント ツール セットが必要です。 Kubernetes にビッグ データ クラスターを展開する前に、次のツールをインストールする必要があります。
 
-| ツール | 説明 |
+| ツール | [説明] |
 |---|---|
-| **azdata** | ビッグデータクラスターをデプロイおよび管理します。 |
+| **azdata** | ビッグ データ クラスターを展開して管理します。 |
 | **kubectl** | 基になる Kubernetes クラスターを作成して管理します。 |
-| **Azure Data Studio** | ビッグデータクラスターを使用するためのグラフィカルインターフェイス。 |
-| **SQL Server 2019 拡張機能** | ビッグデータクラスター機能を有効にする Azure Data Studio 拡張機能。 |
+| **Azure Data Studio** | ビッグ データ クラスターを使用するためのグラフィカル インターフェイス。 |
+| **SQL Server 2019 の拡張機能** | ビッグ データ クラスター機能を有効にする Azure Data Studio の拡張機能。 |
 
-その他のツールは、さまざまなシナリオで必要になります。 各記事で、特定のタスクを実行するための前提条件となるツールについて説明します。 ツールとインストールリンクの完全な一覧については、「 [Install SQL Server 2019 big data tools](deploy-big-data-tools.md)」を参照してください。
+別のシナリオでは、ほかのツールが必要になります。 各記事では、特定のタスクを実行するための前提条件が説明されています。 ツールとインストール リンクの完全な一覧については、「[SQL Server 2019 ビッグ データ ツールのインストール](deploy-big-data-tools.md)」を参照してください。
 
 ## <a name="kubernetes"></a>Kubernetes
 
-ビッグデータクラスターは、 [Kubernetes](https://kubernetes.io/docs/home)で管理される一連の相互に関連するコンテナーとしてデプロイされます。 Kubernetes はさまざまな方法でホストできます。 既存の Kubernetes 環境が既に存在する場合でも、ビッグデータクラスターの関連要件を確認する必要があります。
+ビッグ データ クラスターは、[Kubernetes ](https://kubernetes.io/docs/home) 上で管理される一連の相互に関連するコンテナーとして、展開されます。 Kubernetes は、さまざまな方法でホストできます。 既存の Kubernetes 環境が既にある場合でも、ビッグ データ クラスターに対する関連要件を確認する必要があります。
 
-- **Azure Kubernetes サービス (AKS)** :AKS を使用すると、Azure で管理された Kubernetes クラスターをデプロイできます。 エージェントノードの管理と管理のみを行います。 AKS では、クラスター用に独自のハードウェアをプロビジョニングする必要はありません。 ビッグデータクラスター[デプロイスクリプト](quickstart-big-data-cluster-deploy.md)を使用すると、AKS クラスターを作成し、1つの手順でビッグデータクラスターをデプロイすることも簡単にできます。 ビッグデータクラスターでの AKS の使用の詳細については、「 [Configure Azure Kubernetes Service for SQL Server 2019 ビッグ data cluster (preview) デプロイメント](deploy-on-aks.md)」を参照してください。
+- **Azure Kubernetes Service (AKS)** :AKS を使用すると、Azure 内にマネージド Kubernetes クラスターを展開できます。 ユーザーは、エージェント ノードの管理と保守のみを行います。 AKS では、クラスター用に独自のハードウェアをプロビジョニングする必要はありません。 [Python スクリプト](quickstart-big-data-cluster-deploy.md)や[展開ノートブック](deploy-notebooks.md)を使用すると、1 つの手順で AKS クラスターを作成してビッグ データ クラスターを展開することも簡単になります。 ビッグ データ クラスターの展開のために AKS を構成する方法の詳細については、「[SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために Azure Kubernetes Service を構成する](deploy-on-aks.md)」を参照してください。
 
-- **複数のコンピューター**:Kubernetes は、物理サーバーまたは仮想マシンとして、複数の Linux マシンにデプロイすることもできます。 [Kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/)ツールを使用すると、Kubernetes クラスターを作成できます。 この方法は、ビッグデータクラスターに使用する既存のインフラストラクチャが既に存在する場合に適しています。 ビッグデータクラスターでの**kubeadm**デプロイの使用の詳細については、「 [SQL Server 2019 ビッグデータクラスター (プレビュー) のデプロイのために複数のコンピューターで Kubernetes を構成](deploy-with-kubeadm.md)する」を参照してください。
+- **複数のマシン**:Kubernetes を複数の Linux マシンに展開することもできます。物理サーバーまたは仮想マシンの可能性があります。 [kubeadm](https://kubernetes.io/docs/setup/independent/create-cluster-kubeadm/) ツールは、Kubernetes クラスターを作成するために使用できます。 この種類の展開を自動化するには、[bash スクリプト](deployment-script-single-node-kubeadm.md)を使用できます。 ビッグ データ クラスターに使用する既存のインフラストラクチャが既に存在する場合には、この方法が適しています。 ビッグ データ クラスターでの **kubeadm** 展開の利用に関する詳細については、「[SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために複数のマシン上に Kubernetes を構成する](deploy-with-kubeadm.md)」を参照してください。
 
-- **Minikube**:Minikube を使用すると、1台のサーバーで Kubernetes をローカルで実行できます。 ビッグデータクラスターを試す場合や、テストまたは開発シナリオで使用する必要がある場合は、このオプションを選択することをお勧めします。 Minikube の使用方法の詳細については、 [Minikube のドキュメント](https://kubernetes.io/docs/setup/minikube/)を参照してください。 ビッグデータクラスターで Minikube を使用するための特定の要件については、「 [Configure Minikube for SQL Server 2019 ビッグデータクラスターのデプロイ](deploy-on-minikube.md)」を参照してください。
+- **Minikube**:Minikube を使用すると、1台のサーバー上で Kubernetes をローカルに実行できます。 ビッグ データ クラスターを試している場合や、テストまたは開発シナリオに使用する必要がある場合に適しています。 Minikube の使用に関する詳細については、[Minikube のドキュメント](https://kubernetes.io/docs/setup/minikube/)を参照してください。 ビッグ データ クラスターでの Minikube の使用に関する特定の要件については、「[SQL Server 2019 ビッグ データ クラスターの展開のために minikube を構成する](deploy-on-minikube.md)」を参照してください。
 
 ## <a name="deploy-a-big-data-cluster"></a>ビッグ データ クラスターをデプロイする
 
-Kubernetes を構成した後、 `azdata bdc create`コマンドを使用してビッグデータクラスターをデプロイします。 を展開するときに、いくつかの異なる方法を使用できます。
+Kubernetes を構成した後、`azdata bdc create` コマンドを使用してビッグ データ クラスターを展開します。 展開時には、いくつかの異なる方法を使用できます。
 
-- 開発/テスト環境にデプロイする場合は、 **azdata**によって提供される[既定の構成](deployment-guidance.md#deploy)のいずれかを使用することを選択できます。
+- 開発/テスト環境に展開する場合は、**azdata** によって提供される[既定の構成](deployment-guidance.md#deploy)の 1 つを使用することを選択できます。
 
-- 配置をカスタマイズするには、独自の[配置構成ファイル](deployment-guidance.md#configfile)を作成して使用します。
+- 展開をカスタマイズするには、独自の[展開構成ファイル](deployment-guidance.md#configfile)を作成して使用します。
 
-- 完全無人インストールの場合は、環境変数に他のすべての設定を渡すことができます。 詳細については、「[無人展開](deployment-guidance.md#unattended)」を参照してください。
+- 完全な無人インストールの場合は、環境変数によって他のすべての設定を渡すことができます。 詳細については、[無人展開](deployment-guidance.md#unattended)に関するセクションを参照してください。
 
 ## <a name="deployment-scripts"></a>展開スクリプト
 
-配置スクリプトは、Kubernetes とビッグデータクラスターの両方を1回の手順で展開するのに役立ちます。 また、多くの場合、ビッグデータクラスター設定の既定値を提供します。 Azure Kubernetes Service (AKS) のビッグデータクラスターのデプロイスクリプトの例については、次の記事を参照してください。
+展開スクリプトを使用すると、Kubernetes とビッグ データ クラスターの両方を 1 つの手順で展開できます。 また、通常は、ビッグ データ クラスター設定に対して既定値が指定されます。 ビッグ データ クラスターの展開を別の方法で構成する独自のバージョンを作成することで、展開スクリプトをカスタマイズできます。
 
-[デプロイスクリプト (AKS) を使用して SQL Server 2019 ビッグデータクラスターをデプロイ](quickstart-big-data-cluster-deploy.md)します。
+現時点では、次の展開スクリプトを使用できます。
 
-ビッグデータクラスター環境変数を異なる方法で構成する独自のバージョンを作成することにより、配置スクリプトをカスタマイズできます。
+- [Python スクリプト -- Azure Kubernetes Service (AKS) 上にビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
+- [Bash スクリプト--単一ノード kubeadm クラスターにビッグ データ クラスターを展開する](deployment-script-single-node-kubeadm.md)
 
-[Azure Data Studio notebook を使用して SQL Server 2019 ビッグデータクラスターをデプロイ](deploy-notebooks.md)します。
+## <a name="deployment-notebooks"></a>展開ノートブック
+
+Azure Data Studio ノートブックを実行して、ビッグ データ クラスターを展開することも可能です。 ノートブックを使用して AKS 上に展開する方法の詳細については、次の記事を参照してください:
+
+- 「[Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを展開する](deploy-notebooks.md)」。
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグデータクラスターを正常にデプロイしたら、[クラスターに接続](connect-to-big-data-cluster.md)し、いくつかのチュートリアルで使用する[サンプルデータの読み込み](tutorial-load-sample-data.md)を検討します。
+ビッグ データ クラスターを正常に展開した後は、[クラスターに接続](connect-to-big-data-cluster.md)して、複数のチュートリアルに使用する[サンプル データを読み込む](tutorial-load-sample-data.md)ことを検討してください。

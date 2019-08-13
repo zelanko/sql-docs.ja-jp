@@ -1,26 +1,26 @@
 ---
-title: Linux 上の使用量と SQL Server 用の診断データ コレクションを構成します。
-description: SQL Server の顧客の使用状況データと診断データが収集および Linux 上の設定方法について説明します。
+title: SQL Server on Linux の使用状況と診断データの収集を構成する
+description: Linux 上で SQL Server の顧客の使用状況と診断データがどのように収集および構成されるかについて説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 36c5194df015b26e5c9925575a9e524ef17ce602
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.openlocfilehash: e89e6fc5ad1e661fe68b76465c316057e8e5aa7c
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057235"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68476230"
 ---
-# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>Linux 上の使用量と SQL Server 用の診断データ コレクションを構成します。
+# <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-on-linux"></a>SQL Server on Linux の使用状況と診断データの収集を構成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
 Microsoft SQL Server は既定で、お客様のアプリケーションの使用状態に関する情報を収集します。 具体的には、SQL Server はインストール エクスペリエンス、利用状況、およびパフォーマンスに関する情報を収集します。 この情報は、Microsoft が製品の向上を図り、お客様のニーズをさらに満たすのに役立ちます。 たとえば Microsoft では、お客様が受け取るエラー コードの種類に関する情報を収集して、関連するバグの修正、SQL Server の使用方法に関するドキュメントの改善、より良いサービスのために製品に機能を追加すべきかどうかの判断を行います。
 
-このドキュメントではどのような種類の情報を収集および送信を収集する Linux 上の Microsoft SQL Server を構成する方法についての詳細情報を Microsoft にします。 SQL Server 2017 には、ユーザーから収集することはできませんし、どのような情報を説明するプライバシーに関する声明が含まれています。 詳細については、次を参照してください。、[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)します。
+このドキュメントでは、収集される情報の種類と、収集した情報を Microsoft に送信するように Microsoft SQL Server on Linux を構成する方法について詳しく説明します。 SQL Server 2017 にはプライバシーに関する声明が含まれています。この声明では、ユーザーから収集される情報と収集されない情報について説明します。 詳しくは、[プライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkID=868444)をご覧ください。
 
 具体的には、Microsoft はこのメカニズムでは次の種類の情報は送信しません。
 
@@ -28,21 +28,21 @@ Microsoft SQL Server は既定で、お客様のアプリケーションの使�
 - すべてのログオン資格情報またはその他の認証情報
 - 個人を特定できる情報 (PII)
 
-SQL Server 2017 は、インストール エクスペリエンスに関する情報をセットアップ時点から常に収集および送信して、お客様側で発生しているインストールの問題をすばやく発見し修正できるようにします。 SQL Server 2017 にを介して Microsoft に (サーバーのインスタンスごと) に関する情報を送信しないように構成できます**mssql conf**します。 mssql conf は、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、および Ubuntu 用 SQL Server 2017 をインストールする構成スクリプトです。
+SQL Server 2017 は、インストール エクスペリエンスに関する情報をセットアップ時点から常に収集および送信して、お客様側で発生しているインストールの問題をすばやく発見し修正できるようにします。 SQL Server 2017 は、**mssql-conf** によって、Microsoft に (サーバー インスタンスごとに) 情報を送信しないように構成できます。 mssql-conf は、Red Hat Enterprise Linux、SUSE Linux Enterprise Server、Ubuntu 用に SQL Server 2017 と共にインストールされる構成スクリプトです。
 
 > [!NOTE]
 > Microsoft への情報送信を無効にできるのは、有料版の SQL Server のみです。
 
-## <a name="disable-usage-and-diagnostic-data-collection"></a>使用状況と診断データの収集を無効にします。
+## <a name="disable-usage-and-diagnostic-data-collection"></a>使用状況と診断データの収集を無効にする
 
-このオプションを使用して、SQL Server が送信する場合使用状況と診断データの収集を Microsoft にかどうかを変更できます。 既定では、この値を設定を true にします。 値を変更するには、次のコマンドを実行します。
+このオプションを使用すると、SQL Server によって使用状況と診断データの収集が Microsoft に送信されるかどうかを変更できます。 既定では、この値は true に設定されます。 値を変更するには、次のコマンドを実行します。
 
 > [!IMPORTANT]
-> いないオフにできます使用状況と診断データの収集を無料の SQL Server、Express、および Developer エディション。
+> SQL Server、Express、Developer の無償エディションに関する使用状況と診断データの収集をオフにすることはできません。
 
-### <a name="on-red-hat-suse-and-ubuntu"></a>Red Hat、SUSE、Ubuntu 上
+### <a name="on-red-hat-suse-and-ubuntu"></a>Red Hat、SUSE、Ubuntu の場合
 
-1. Mssql conf スクリプトをルートとして実行、**設定**コマンドを**telemetry.customerfeedback**します。 指定することで、次の例が使用状況と診断データの収集をオフに**false**します。
+1. **telemetry.customerfeedback** の **set** コマンドを使用して、mssql-conf スクリプトを root として実行します。 次の例では、**false** を指定することによって、使用状況と診断データの収集をオフにします。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.customerfeedback false
@@ -54,13 +54,13 @@ SQL Server 2017 は、インストール エクスペリエンスに関する情
    sudo systemctl restart mssql-server
    ```
    
-### <a name="on-docker"></a>Docker で
-使用状況と docker での診断データの収集を無効にするには Docker が必要[のデータを保存](sql-server-linux-configure-docker.md)します。 
+### <a name="on-docker"></a>Docker の場合
+Docker 上で使用状況と診断データの収集を無効にするには、Docker によって[データが保持される](sql-server-linux-configure-docker.md)必要があります。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`customerfeedback = false`ホスト ディレクトリ。
+1. `[telemetry]` および `customerfeedback = false` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -70,7 +70,7 @@ SQL Server 2017 は、インストール エクスペリエンスに関する情
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
 
-2. コンテナー イメージを実行します。
+2. コンテナー イメージを実行します
 
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
@@ -84,7 +84,7 @@ SQL Server 2017 は、インストール エクスペリエンスに関する情
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`customerfeedback = false`ホスト ディレクトリ。
+1. `[telemetry]` および `customerfeedback = false` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
 
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -94,42 +94,42 @@ SQL Server 2017 は、インストール エクスペリエンスに関する情
    echo 'customerfeedback = false' >> <host directory>/mssql.conf
    ```
 
-2. コンテナー イメージを実行します。
+2. コンテナー イメージを実行します
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
 ::: moniker-end
 
-## <a name="local-audit-for-sql-server-on-linux-usage-and-diagnostic-data-collection"></a>SQL Server on Linux の使用状況と診断データ コレクションの local Audit
+## <a name="local-audit-for-sql-server-on-linux-usage-and-diagnostic-data-collection"></a>SQL Server on Linux の使用状況と診断データの収集の Local Audit
 
-Microsoft SQL Server 2017 を収集し、コンピューターやデバイス (以下「標準的なコンピューター情報」) に関する情報を Microsoft に送信するインターネット対応機能にはが含まれています。 SQL Server の使用状況と診断データ収集の Local Audit コンポーネントは、Microsoft に送信されるデータ (ログ) を表す、指定されたフォルダーに、サービスによって収集されたデータを記述できます。 Local Audit の目的は、Microsoft がこの機能で収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。
+Microsoft SQL Server 2017 は、お客様のコンピューターまたはデバイスに関する情報 (以下「標準的なコンピューター情報」といいます) を収集してマイクロソフトに送信するインターネット対応の機能を備えています。 SQL Server の使用状況と診断データの収集の Local Audit コンポーネントでは、サービスによって収集されたデータを指定されたフォルダーに書き込むことができます。このデータは、Microsoft に送信されるデータ (ログ) です。 Local Audit の目的は、Microsoft がこの機能で収集するすべてのデータをユーザーがコンプライアンス、法規制、またはプライバシーの検証目的で確認できるようにすることです。
 
-Linux 上の SQL server では Local Audit は SQL Server データベース エンジンのインスタンス レベルで構成できます。 他の SQL Server コンポーネントおよび SQL Server ツールの使用状況と診断データ コレクションの Local Audit 機能はありません。
+SQL Server on Linux では、Local Audit は SQL Server Database Engine のインスタンス レベルで構成可能です。 その他の SQL Server コンポーネントおよび SQL Server ツールには、使用状況と診断データの収集のための Local Audit 機能がありません。
 
-### <a name="enable-local-audit"></a>Local Audit を有効にします。
+### <a name="enable-local-audit"></a>Local Audit を有効にする
 
-このオプション Local Audit を有効にし、ローカルの監査ログが作成されるディレクトリを設定することができます。
+このオプションを使用すると、Local Audit を有効にし、Local Audit ログが作成されるディレクトリを設定できます。
 
-1. 新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例では、作成、新しい**tmp/監査**ディレクトリ。
+1. 新しい Local Audit ログのターゲット ディレクトリを作成します。 次の例では、新しい **/tmp/audit** ディレクトリを作成します。
 
    ```bash
    sudo mkdir /tmp/audit
    ```
 
-2. 所有者とグループをディレクトリの変更、 **mssql**ユーザー。
+2. ディレクトリの所有者とグループを **mssql** ユーザーに変更します。
 
    ```bash
    sudo chown mssql /tmp/audit
    sudo chgrp mssql /tmp/audit
    ```
 
-3. Mssql conf スクリプトをルートとして実行、**設定**コマンドを**telemetry.userrequestedlocalauditdirectory**:
+3. **telemetry.userrequestedlocalauditdirectory** の **set** コマンドを使用して、mssql-conf スクリプトを root として実行します。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set telemetry.userrequestedlocalauditdirectory /tmp/audit
@@ -141,19 +141,19 @@ Linux 上の SQL server では Local Audit は SQL Server データベース エ
    sudo systemctl restart mssql-server
    ```
    
-### <a name="on-docker"></a>Docker で
-Docker で Local Audit を有効にするには Docker が必要[のデータを保存](sql-server-linux-configure-docker.md)します。 
+### <a name="on-docker"></a>Docker の場合
+Docker 上で Local Audit を有効にするには、Docker で[データを保持](sql-server-linux-configure-docker.md)する必要があります。 
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
 
-1. 新しいローカルの監査ログのターゲット ディレクトリは、コンテナーになります。 コンピューターにホスト ディレクトリに新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例では、作成、新しい **/監査**ディレクトリ。
+1. 新しい Local Audit ログのターゲット ディレクトリは、コンテナーに格納されます。 マシン上のホスト ディレクトリに新しい Local Audit ログのターゲット ディレクトリを作成します。 次の例では、新しい **/audit** ディレクトリを作成します。
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`userrequestedlocalauditdirectory = <host directory>/audit`ホスト ディレクトリ。
+1. `[telemetry]` および `userrequestedlocalauditdirectory = <host directory>/audit` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -163,7 +163,7 @@ Docker で Local Audit を有効にするには Docker が必要[のデータを
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
 
-1. コンテナー イメージを実行します。
+1. コンテナー イメージを実行します
 
    ```bash
    docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2017-latest
@@ -177,13 +177,13 @@ Docker で Local Audit を有効にするには Docker が必要[のデータを
 <!--SQL Server 2019 on Linux-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-1. 新しいローカルの監査ログのターゲット ディレクトリは、コンテナーになります。 コンピューターにホスト ディレクトリに新しいローカルの監査ログのターゲット ディレクトリを作成します。 次の例では、作成、新しい **/監査**ディレクトリ。
+1. 新しい Local Audit ログのターゲット ディレクトリは、コンテナーに格納されます。 マシン上のホスト ディレクトリに新しい Local Audit ログのターゲット ディレクトリを作成します。 次の例では、新しい **/audit** ディレクトリを作成します。
 
    ```bash
    sudo mkdir <host directory>/audit
    ```
 
-1. 追加、 `mssql.conf` 、行を含むファイル`[telemetry]`と`userrequestedlocalauditdirectory = <host directory>/audit`ホスト ディレクトリ。
+1. `[telemetry]` および `userrequestedlocalauditdirectory = <host directory>/audit` という行を含む `mssql.conf` ファイルをホスト ディレクトリに追加します。
  
    ```bash
    echo '[telemetry]' >> <host directory>/mssql.conf
@@ -193,18 +193,18 @@ Docker で Local Audit を有効にするには Docker が必要[のデータを
    echo 'userrequestedlocalauditdirectory = <host directory>/audit' >> <host directory>/mssql.conf
    ```
 
-1. コンテナー イメージを実行します。
+1. コンテナー イメージを実行します
 
    ```bash
-   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker run -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
    ```PowerShell
-   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.1-ubuntu
+   docker run -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" -p 1433:1433 -v <host directory>:/var/opt/mssql -d mcr.microsoft.com/mssql/server:2019-CTP3.2-ubuntu
    ```
 
 ::: moniker-end
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。、 [Linux に SQL Server の概要](sql-server-linux-overview.md)します。
+Linux 上の SQL Server の詳細については、[Linux 上の SQL Server の概要](sql-server-linux-overview.md)に関する記事をご覧ください。

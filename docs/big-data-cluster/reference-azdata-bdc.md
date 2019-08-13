@@ -1,7 +1,7 @@
 ---
 title: azdata bdc リファレンス
 titleSuffix: SQL Server big data clusters
-description: Azdata bdc コマンドのリファレンス記事です。
+description: azdata bdc コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,34 +10,34 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 488394cbf4b52a952ffc46ab2ec6c9a273466bd5
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426042"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-次の記事では、 **azdata**ツールの**bdc**コマンドのリファレンスを示します。 その他の**azdata**コマンドの詳細については、「 [azdata reference](reference-azdata.md)」を参照してください。
+以下の記事では、**azdata** ツールでの **bdc** コマンドのリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。
 
 ## <a name="commands"></a>コマンド
 
 |     |     |
 | --- | --- |
-[azdata bdc の作成](#azdata-bdc-create) | ビッグデータクラスターを作成します。
-[azdata bdc の削除](#azdata-bdc-delete) | ビッグデータクラスターを削除します。
-[azdata bdc の構成](reference-azdata-bdc-config.md) | 構成コマンド。
-[azdata bdc エンドポイント](reference-azdata-bdc-endpoint.md) | エンドポイントコマンド。
-[azdata bdc の状態](reference-azdata-bdc-status.md) | Status コマンド。
-[azdata bdc デバッグ](reference-azdata-bdc-debug.md) | デバッグコマンド。
-[azdata bdc コントロール](reference-azdata-bdc-control.md) | 制御コマンド。
-[azdata bdc プール](reference-azdata-bdc-pool.md) | プールコマンド。
-[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS モジュールには、HDFS ファイルシステムにアクセスするためのコマンドが用意されています。
-[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark コマンドを使用すると、セッション、ステートメント、およびバッチを作成して管理することで、ユーザーは Spark システムと対話できます。
-## <a name="azdata-bdc-create"></a>azdata bdc の作成
-SQL Server ビッグデータクラスターを作成する-kube config は、次の環境変数 [' CONTROLLER_USERNAME '、' CONTROLLER_PASSWORD '、' MSSQL_SA_PASSWORD '、' KNOX_PASSWORD '] と共に、システムに必要です。
+[azdata bdc create](#azdata-bdc-create) | ビッグ データ クラスターを作成します。
+[azdata bdc delete](#azdata-bdc-delete) | ビッグ データ クラスターを削除します。
+[azdata bdc config](reference-azdata-bdc-config.md) | 構成コマンド。
+[azdata bdc endpoint](reference-azdata-bdc-endpoint.md) | エンドポイント コマンド。
+[azdata bdc status](reference-azdata-bdc-status.md) | 状態コマンド。
+[azdata bdc debug](reference-azdata-bdc-debug.md) | デバッグ コマンド。
+[azdata bdc control](reference-azdata-bdc-control.md) | 制御コマンド。
+[azdata bdc pool](reference-azdata-bdc-pool.md) | プール コマンド。
+[azdata bdc hdfs](reference-azdata-bdc-hdfs.md) | HDFS モジュールには、HDFS ファイル システムにアクセスするコマンドが用意されています。
+[azdata bdc spark](reference-azdata-bdc-spark.md) | Spark コマンドを使用してセッション、ステートメント、およびバッチを作成および管理することで、ユーザーは Spark システムと対話できます。
+## <a name="azdata-bdc-create"></a>azdata bdc create
+SQL Server ビッグ データ クラスターを作成します。kube 構成と環境変数 ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD', 'MSSQL_SA_PASSWORD', 'KNOX_PASSWORD'] がシステムに必要です。
 ```bash
 azdata bdc create [--name -n] 
                   [--config-profile -c]  
@@ -47,23 +47,23 @@ azdata bdc create [--name -n]
 ```
 ### <a name="examples"></a>使用例
 
-ガイド付き BDC のデプロイエクスペリエンス-必要な値の入力を求めるメッセージが表示されます。
+ガイド付きの BDC 展開のエクスペリエンス。必要な値の入力を求めるプロンプトが表示されます。
 
 ```bash
 azdata bdc create
 ```
 
-引数を使用した BDC デプロイ。
+引数を使用した BDC 展開。
 
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test
 ```
-プロファイルに既定の名前ではなく、指定された名前の BDC 展開。
+既定の名前ではなくプロファイルに名前を指定した BDC 展開。
 ```bash
 azdata bdc create --name <cluster_name> --accept-eula yes --config-profile aks-dev-test --force
 ```
 
-引数を使用した BDC デプロイ--force フラグが使用されるため、プロンプトは表示されません。
+引数を使用した BDC 展開。--force フラグが使用されるため、プロンプトは表示されません。
 
 ```bash
 azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
@@ -71,28 +71,28 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--name -n`
-ビッグデータクラスター名。 kubernetes 名前空間に使用されます。
+ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 #### `--config-profile -c`
-クラスターをデプロイするために使用されるビッグデータクラスター構成プロファイル: [' aks ', ' kubeadm ', ' minikube ', ' ']
+ビッグ データ クラスター構成プロファイル。クラスターの展開に使用されます。['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-ライセンス条項に同意しますか? [はい/いいえ]。 この引数を使用しない場合は、環境変数 ACCEPT_EULA を "yes" に設定します。 この製品のライセンス条項については、 https://aka.ms/azdata-eula 「 https://go.microsoft.com/fwlink/?LinkId=2002534 」および「」を参照してください。
+Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula と https://go.microsoft.com/fwlink/?LinkId=2002534 で表示できます。
 #### `--node-label -l`
-ビッグデータクラスターノードラベル。デプロイ先のノードを指定するために使用されます。
+ビッグ データ クラスター ノードのラベル。展開先のノードを指定するために使用されます。
 #### `--force -f`
-強制的に作成すると、ユーザーに値の入力を求められることはなく、すべての問題が stderr の一部として出力されます。
+強制的に作成すると、ユーザーは値の入力を求められず、すべての問題が stderr の一部として出力されます。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
-## <a name="azdata-bdc-delete"></a>azdata bdc の削除
-次の環境変数 [' CONTROLLER_USERNAME ', ' CONTROLLER_PASSWORD '] と共に、システムで kube config が必要な SQL Server を削除します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
+## <a name="azdata-bdc-delete"></a>azdata bdc delete
+SQL Server ビッグ データ クラスターを削除します。kube 構成と環境変数 ['CONTROLLER_USERNAME', 'CONTROLLER_PASSWORD'] がシステムに必要です。
 ```bash
 azdata bdc delete --name -n 
                   [--force -f]
@@ -104,22 +104,22 @@ azdata bdc delete --name <cluster_name>
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--name -n`
-ビッグデータクラスター名。 kubernetes 名前空間に使用されます。
+ビッグ データ クラスターの名前。kubernetes 名前空間に使用されます。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--force -f`
-ビッグデータクラスターを強制的に削除します。
+ビッグ データ クラスターを強制的に削除します。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-その他の**azdata**コマンドの詳細については、「 [azdata reference](reference-azdata.md)」を参照してください。 **Azdata**ツールをインストールする方法の詳細については、「 [Azdata をインストールして SQL Server 2019 ビッグデータクラスターを管理する](deploy-install-azdata.md)」を参照してください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

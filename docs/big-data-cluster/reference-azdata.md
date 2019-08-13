@@ -1,7 +1,7 @@
 ---
 title: azdata リファレンス
 titleSuffix: SQL Server big data clusters
-description: Azdata コマンドのリファレンス記事です。
+description: azdata コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,29 +10,29 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: a8136c85f8c32e08423f3d199a021d4f60353b39
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68425992"
 ---
 # <a name="azdata"></a>azdata
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-次の記事では、 [SQL Server 2019 ビッグデータクラスター (プレビュー)](big-data-cluster-overview.md)用の**azdata**ツールのリファレンスを提供します。 **Azdata**ツールをインストールする方法の詳細については、「 [Azdata をインストールして SQL Server 2019 ビッグデータクラスターを管理する](deploy-install-azdata.md)」を参照してください。
+以下の記事では、[SQL Server 2019 ビッグ データ クラスター (プレビュー)](big-data-cluster-overview.md) 用の **azdata** ツールのリファレンスを提供します。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。
 
 ## <a name="commands"></a>コマンド
 |     |     |
 | --- | --- |
-|[azdata アプリ](reference-azdata-app.md) | アプリケーションを作成、削除、実行、および管理します。 |
-|[azdata bdc](reference-azdata-bdc.md) | SQL Server ビッグデータクラスターの選択、管理、および操作を行います。 |
-|[azdata notebook](reference-azdata-notebook.md) | ターミナルからノートブックを表示、実行、管理するためのコマンドです。 |
-[azdata ログイン](#azdata-login) | クラスターのコントローラーエンドポイントにログインします。
-[azdata ログアウト](#azdata-logout) | クラスターからログアウトします。
-|[azdata sql](reference-azdata-sql.md) | SQL DB CLI を使用すると、ユーザーは T-sql を使用して SQL Server を操作できます。 |
-## <a name="azdata-login"></a>azdata ログイン
-クラスターがデプロイされると、デプロイ中にコントローラーエンドポイントが一覧表示されます。これはログインに使用する必要があります。  コントローラーのエンドポイントがわからない場合は、システム上のクラスターの kube config を/.kube/config の<user home>既定の場所に置くか、KUBECONFIG env var (export KUBECONFIG = path/to/kube/config) を使用してログインすることができます。
+|[azdata app](reference-azdata-app.md) | アプリケーションを作成、削除、実行、および管理します。 |
+|[azdata bdc](reference-azdata-bdc.md) | SQL Server ビッグ データ クラスターを選択、管理、および操作します。 |
+|[azdata notebook](reference-azdata-notebook.md) | ターミナルからノートブックを表示、実行、管理するコマンドです。 |
+[azdata login](#azdata-login) | クラスターのコントローラー エンドポイントにログインします。
+[azdata logout](#azdata-logout) | クラスターからログアウトします。
+|[azdata sql](reference-azdata-sql.md) | SQL DB CLI により、ユーザーは T-SQL を使用して SQL Server を操作できます。 |
+## <a name="azdata-login"></a>azdata login
+クラスターが展開されると、展開中にコントローラー エンドポイントが一覧表示されます。これをログインに使用する必要があります。  コントローラー エンドポイントがわからない場合は、システム上の <user home>/.kube/config の既定の場所にクラスターの kube 構成を配置してログインするか、KUBECONFIG 環境変数を使用する (つまり KUBECONFIG=path/to/.kube/config をエクスポートする) ことをお勧めします。
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -40,15 +40,15 @@ azdata login [--cluster-name -n]
              [--accept-eula -a]
 ```
 ### <a name="examples"></a>使用例
-対話形式でログインします。 引数として指定されていない場合、クラスター名には常にが表示されます。 システムに CONTROLLER_USERNAME、CONTROLLER_PASSWORD、および ACCEPT_EULA env 変数が設定されている場合、これらの変数はの入力を求められません。 システムに kube config がある場合、または構成へのパスを指定するために KUBECONFIG env var を使用している場合は、対話型エクスペリエンスによって、まず config の使用が試行され、構成が失敗した場合にプロンプトが表示されます。
+対話形式でログインします。 引数として指定されていない場合は、クラスター名の入力が常に求められます。 システムに CONTROLLER_USERNAME、CONTROLLER_PASSWORD、および ACCEPT_EULA 環境変数を設定している場合、これらの入力は求められません。 システムに kube 構成がある場合、または構成のパスを指定するために KUBECONFIG 環境変数を使用している場合は、対話型エクスペリエンスでは、まず構成の使用が試行され、構成が失敗した場合にプロンプトが表示されます。
 ```bash
 azdata login
 ```
-ログイン (非対話形式)。 クラスター名、コントローラーのユーザー名、コントローラーエンドポイント、および使用許諾契約の同意を引数として設定してログインします。 環境変数 CONTROLLER_PASSWORD を設定する必要があります。  コントローラーエンドポイントを指定しない場合は、コンピューター上の kube 構成を/.kube/config の<user home>既定の場所に設定するか、KUBECONFIG env var (export KUBECONFIG = path/to/kube/config) を使用してください。
+ログイン (非対話形式)。 クラスター名、コントローラーのユーザー名、コントローラー エンドポイント、および使用許諾契約の同意を引数として設定してログインします。 環境変数 CONTROLLER_PASSWORD を設定する必要があります。  コントローラー エンドポイントを指定しない場合は、マシン上の <user home>/.kube/config の既定の場所に kube 構成を配置するか、KUBECONFIG 環境変数を使用してください (つまり、KUBECONFIG=path/to/.kube/config をエクスポートしてください)。
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
-コンピューターで kube config を使用してログインし、CONTROLLER_USERNAME、CONTROLLER_PASSWORD、および ACCEPT_EULA の env var set を使用してログインします。
+マシン上で kube 構成を使用してログインし、CONTROLLER_USERNAME、CONTROLLER_PASSWORD、および ACCEPT_EULA の環境変数を設定してログインします。
 ```bash
 azdata login -n ClusterName
 ```
@@ -56,23 +56,23 @@ azdata login -n ClusterName
 #### `--cluster-name -n`
 クラスター名。
 #### `--controller-username -u`
-アカウントユーザー。 この引数を使用しない場合は、環境変数 CONTROLLER_USERNAME を設定できます。
+アカウント ユーザー。 この引数を使用しない場合は、環境変数 CONTROLLER_USERNAME を設定できます。
 #### `--controller-endpoint -e`
-クラスターコントローラーのエンド https://host:port ポイント ""。 この引数を使用しない場合は、コンピューターで kube config を使用することができます。 構成が/.kube/config の既定の<user home>場所にあることを確認するか、KUBECONFIG env var を使用してください。
+クラスター コントローラーのエンドポイント "https://host:port"。 この引数を使用しない場合は、マシンで kube 構成を使用できます。 構成を <user home>/.kube/config の既定の場所に配置するか、KUBECONFIG 環境変数を使用してください。
 #### `--accept-eula -a`
-ライセンス条項に同意しますか? [はい/いいえ]。 この引数を使用しない場合は、環境変数 ACCEPT_EULA を "yes" に設定します。 この製品のライセンス条項に https://aka.ms/azdata-eula ついては、「」を参照してください。
+Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula で確認できます。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
-## <a name="azdata-logout"></a>azdata ログアウト
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
+## <a name="azdata-logout"></a>azdata logout
 クラスターからログアウトします。
 ```bash
 azdata logout 
@@ -84,16 +84,16 @@ azdata logout
 ```
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-**Azdata**ツールをインストールする方法の詳細については、「 [Azdata をインストールして SQL Server 2019 ビッグデータクラスターを管理する](deploy-install-azdata.md)」を参照してください。
+**azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

@@ -9,15 +9,15 @@ ms.topic: language-reference
 dev_langs:
 - TSQL
 ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
-author: XiaoyuL-Preview
+author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 59946e45bbb14fb68e2fc28bcc81c2cf2d534758
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67930647"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68476306"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -33,7 +33,6 @@ Azure [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] データベースの記憶�
 DBCC SHOWRESULTCACHESPACEUSED  
 [;]  
 ```  
-
 ## <a name="remarks"></a>Remarks
 
 `DBCC SHOWRESULTCACHESPACEUSED` コマンドは、パラメーターがなく、このコマンドを実行したデータベースで使用されるスペースが返されます。
@@ -49,6 +48,16 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 VIEW SERVER STATE 権限が必要です。
   
+## <a name="result-sets"></a>結果セット  
+  
+|[列]|データ型|[説明]|  
+|------------|---------------|-----------------|  
+|reserved_space|BIGINT|データベースに使用されている合計領域 (KB 単位)。 この数値は、キャッシュされた結果セットの増加に応じて変化します。|  
+|data_space|BIGINT|データに使用されている領域 (KB 単位)。|  
+|index_space|BIGINT|インデックスに使用されている領域 (KB 単位)。|  
+|unused_space|BIGINT|予約済み領域の一部で使用されていない領域 (KB 単位)。|  
+
+
 ## <a name="see-also"></a>参照
 
 [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>

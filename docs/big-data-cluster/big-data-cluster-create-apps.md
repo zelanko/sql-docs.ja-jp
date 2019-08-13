@@ -1,7 +1,7 @@
 ---
-title: Azdata を使用してアプリケーションをデプロイする
+title: azdata を使用してアプリケーションを展開する
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグデータクラスター (プレビュー) で、Python または R スクリプトをアプリケーションとしてデプロイします。
+description: SQL Server 2019 ビッグ データ クラスター (プレビュー) に、Python または R スクリプトをアプリケーションとして展開します。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
@@ -10,53 +10,53 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 06b76e7eb8eec8db1993ca558a1f57355457c4ad
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68419486"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server ビッグデータクラスターにアプリをデプロイする方法 (プレビュー)
+# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server ビッグ データ クラスター (プレビュー) にアプリを展開する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグデータクラスター (プレビュー) 内でアプリケーションとして R および Python スクリプトをデプロイして管理する方法について説明します。
+この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) 内でアプリケーションとして R および Python スクリプトを展開して管理する方法について説明します。
 
 ## <a name="whats-new-and-improved"></a>新機能と強化された機能
 
-- クラスターとアプリを管理するための単一のコマンドラインユーティリティ。
-- 仕様ファイルを細かく制御しながら、アプリのデプロイを簡略化します。
-- 追加のアプリケーションの種類のホスティングのサポート-SSIS および MLeap (CTP 2.3 の新機能)
-- アプリケーションの展開を管理するための[VS Code 拡張機能](app-deployment-extension.md)
+- クラスターとアプリを管理する 1 つのコマンドライン ユーティリティ。
+- アプリの展開が簡単になり、さらに仕様ファイルを細かく制御できるようになりました。
+- ホストされるアプリケーションの種類が増えました (SSIS と MLeap) (CTP 2.3 の新機能)
+- アプリケーションの展開を管理する [VS Code 拡張機能](app-deployment-extension.md)
 
-アプリケーションは、コマンドラインユーティリティ`azdata`を使用して展開および管理されます。 この記事では、コマンドラインからアプリを展開する方法の例を示します。 でこれを使用する方法については Visual Studio Code [VS Code 拡張機能](app-deployment-extension.md)に関するページを参照してください。
+アプリケーションは、`azdata` コマンドライン ユーティリティを使用して展開および管理されます。 この記事では、コマンド ラインからアプリを展開する方法の例を示します。 Visual Studio Code でこれを使用する方法については、[VS Code 拡張機能](app-deployment-extension.md)のページを参照してください。
 
 サポートされているアプリの種類は次のとおりです。
-- R と Python アプリ (関数、モデル、アプリ)
-- MLeap サービス
+- R および Python アプリ (関数、モデル、アプリ)
+- MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>Prerequisites
 
-- [SQL Server 2019 ビッグデータクラスター](deployment-guidance.md)
-- [azdata コマンドラインユーティリティ](deploy-install-azdata.md)
+- [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
+- [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
 
 ## <a name="capabilities"></a>Capabilities
 
-SQL Server 2019 (プレビュー) では、アプリケーションの作成、削除、説明、初期化、一覧の実行、および更新を行うことができます。 次の表では、 **azdata**で使用できるアプリケーションの展開コマンドについて説明します。
+SQL Server 2019 (プレビュー) では、アプリケーションの作成、削除、説明、初期化、一覧の実行、および更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
-|Command |説明 |
+|コマンド |[説明] |
 |:---|:---|
-|`azdata login` | SQL Server ビッグデータクラスターへのサインイン |
+|`azdata login` | SQL Server ビッグ データ クラスターにサインインします |
 |`azdata app create` | アプリケーションを作成します。 |
 |`azdata app delete` | アプリケーションを削除します。 |
-|`azdata app describe` | アプリケーションについて説明します。 |
-|`azdata app init` | Kickstart 新しいアプリケーションスケルトン。 |
+|`azdata app describe` | アプリケーションについて記述します。 |
+|`azdata app init` | 新しいアプリケーションのスケルトンを開始します。 |
 |`azdata app list` | アプリケーションを一覧表示します。 |
 |`azdata app run` | アプリケーションを実行します。 |
 |`azdata app update`| アプリケーションを更新します。 |
 
-次の例のように`--help` 、パラメーターのヘルプを取得できます。
+次の例のように、`--help` パラメーターを使用してヘルプを取得できます。
 
 ```bash
 azdata app create --help
@@ -66,7 +66,7 @@ azdata app create --help
 
 ## <a name="sign-in"></a>サインイン
 
-アプリケーションをデプロイまたは操作する前に、まず、 `azdata login`コマンドを使用して SQL Server ビッグデータクラスターにサインインします。 `controller-svc-external`サービスの外部 IP アドレス (例: `https://ip-address:30080`) を、クラスターのユーザー名とパスワードと共に指定します。
+アプリケーションを展開または操作する前に、まず、`azdata login` コマンドを使用して SQL Server ビッグ データ クラスターにサインインします。 `controller-svc-external` サービスの外部 IP アドレス (例: `https://ip-address:30080`) を、クラスターのユーザー名とパスワードと共に指定します。
 
 ```bash
 azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -74,7 +74,7 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 
 ## <a name="aks"></a>AKS
 
-AKS を使用している場合は、bash または cmd ウィンドウで次のコマンドを実行`mgmtproxy-svc-external`して、サービスの IP アドレスを取得するために、次のコマンドを実行する必要があります。
+AKS を使用している場合は、次のコマンドを実行し、bash または cmd ウィンドウで次のコマンドを実行することで `mgmtproxy-svc-external` サービスの IP アドレスを取得します。
 
 
 ```bash
@@ -83,7 +83,7 @@ kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm または Minikube
 
-Kubeadm または Minikube を使用している場合は、次のコマンドを実行して、クラスターにログインするための IP アドレスを取得します。
+Kubeadm または Minikube を使用している場合は、次のコマンドを実行して、クラスターにログインするための IP アドレスを取得します
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -91,9 +91,9 @@ kubectl get node --selector='node-role.kubernetes.io/master'
 
 ## <a name="create-an-app"></a>アプリを作成する
 
-アプリケーションを作成するには、 `azdata` `app create`コマンドを使用してを使用します。 これらのファイルは、アプリを作成するコンピューター上にローカルに配置されます。
+アプリケーションを作成するには、`azdata` コマンドと共に `app create` を使用します。 これらのファイルは、アプリを作成するマシンのローカルに展開されます。
 
-ビッグデータクラスターで新しいアプリを作成するには、次の構文を使用します。
+ビッグ データ クラスターに新しいアプリを作成するには、次の構文を使用します。
 
 ```bash
 azdata app create --spec <directory containing spec file>
@@ -105,11 +105,11 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-これは、 `addpy`アプリケーションがフォルダーに格納されていることを前提としています。 このフォルダーには、と呼ばれる`spec.yaml`アプリケーションの仕様ファイルも含まれている必要があります。 `spec.yaml`ファイルの詳細について[は、「アプリケーションの配置」ページ](concept-application-deployment.md)を参照してください。
+これは、アプリケーションが `addpy` フォルダーに格納されていることを前提としています。 このフォルダーには、`spec.yaml` というアプリケーションの仕様ファイルも含まれています。 `spec.yaml` ファイルの詳細については、[アプリケーションの展開](concept-application-deployment.md)のページを参照してください。
 
-このアプリサンプルアプリをデプロイするには、という名前`addpy`のディレクトリに次のファイルを作成します。
+このアプリ サンプル アプリを展開するには、`addpy` というディレクトリに次のファイルを作成します。
 
-- `add.py`。 次の Python コードをこのファイルにコピーします。
+- `add.py` 次の Python コードをこのファイルにコピーします。
    ```py
    #add.py
    def add(x,y):
@@ -117,7 +117,7 @@ azdata app create --spec ./addpy
         return result
     result=add(x,y)
    ```
-- `spec.yaml`。 次のコードをこのファイルにコピーします。
+- `spec.yaml` 次のコードをこのファイルにコピーします。
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -140,13 +140,13 @@ azdata app create --spec ./addpy
 azdata app create --spec ./addpy
 ```
 
-List コマンドを使用してアプリが展開されているかどうかを確認できます。
+list コマンドを使用してアプリが展開されているかどうかを確認できます。
 
 ```bash
 azdata app list
 ```
 
-デプロイが完了していない場合は、 `state`次`WaitingforCreate`の例のように表示されます。
+展開が完了していない場合は、次の例のように `state` に `WaitingforCreate` が表示されます。
 
 ```json
 [
@@ -158,7 +158,7 @@ azdata app list
 ]
 ```
 
-デプロイが正常に完了すると、 `state` `Ready`状態が変更されていることがわかります。
+展開が正常に完了すると、`state` は `Ready` 状態に変わります。
 
 ```json
 [
@@ -172,21 +172,21 @@ azdata app list
 
 ## <a name="list-an-app"></a>アプリを一覧表示する
 
-コマンドを使用して、 `app list`正常に作成されたすべてのアプリを一覧表示できます。
+`app list` コマンドを使用して、正常に作成されたすべてのアプリを一覧表示できます。
 
-次のコマンドは、ビッグデータクラスターで使用可能なすべてのアプリケーションを一覧表示します。
+次のコマンドで、ビッグ データ クラスターで使用できるすべてのアプリケーションが一覧表示されます。
 
 ```bash
 azdata app list
 ```
 
-名前とバージョンを指定すると、その特定のアプリとその状態 (作成中または準備完了) が一覧表示されます。
+名前とバージョンを指定すると、その特定のアプリとその状態 (Creating または Ready) が一覧表示されます。
 
 ```bash
 azdata app list --name <app_name> --version <app_version>
 ```
 
-このコマンドの例を次に示します。
+このコマンドについて次の例を示します。
 
 ```bash
 azdata app list --name add-app --version v1
@@ -206,13 +206,13 @@ azdata app list --name add-app --version v1
 
 ## <a name="run-an-app"></a>アプリを実行する
 
-アプリが`Ready`状態の場合は、指定された入力パラメーターを使用して実行することで、アプリを使用できます。 アプリを実行するには、次の構文を使用します。
+アプリが `Ready` 状態の場合は、それを使用するには、指定された入力パラメーターを使用して実行します。 次の構文を使用してアプリを実行します。
 
 ```bash
 azdata app run --name <app_name> --version <app_version> --inputs <inputs_params>
 ```
 
-次のコマンド例では、run コマンドを示します。
+run コマンドについて、次のコマンド例を示します。
 
 ```bash
 azdata app run --name add-app --version v1 --inputs x=1,y=2
@@ -233,15 +233,15 @@ azdata app run --name add-app --version v1 --inputs x=1,y=2
 }
 ```
 
-## <a name="create-an-app-skeleton"></a>アプリスケルトンを作成する
+## <a name="create-an-app-skeleton"></a>アプリのスケルトンを作成する
 
-Init コマンドは、アプリのデプロイに必要な関連するアーティファクトを含むスキャフォールディングを提供します。 次の例では、次のコマンドを実行して hello を作成します。
+init コマンドには、アプリの展開に必要な関連する成果物を含むスキャフォールディングが用意されています。 次の例では、次のコマンドを実行して、これを実行できる hello を作成します。
 
 ```bash
 azdata app init --name hello --version v1 --template python
 ```
 
-これにより、hello という名前のフォルダーが作成されます。  ディレクトリに`cd`入り、フォルダー内の生成されたファイルを調べることができます。 spec は、名前、バージョン、ソースコードなどのアプリを定義します。 仕様を編集して、名前、バージョン、入力、および出力を変更することができます。
+これにより、hello という名前のフォルダーが作成されます。  `cd` を実行してディレクトリに移動し、フォルダー内に生成されたファイルを調べることができます。 spec.yaml には、名前、バージョン、ソース コードなどのアプリが定義されています。 仕様を編集して、名前、バージョン、入力、および出力を変更することができます。
 
 フォルダーに表示される init コマンドからの出力例を次に示します。
 
@@ -255,7 +255,7 @@ spec.yaml
 
 ## <a name="describe-an-app"></a>アプリの説明
 
-[説明] コマンドは、クラスター内のエンドポイントを含む、アプリに関する詳細情報を提供します。 これは通常、swagger クライアントを使用してアプリを構築し、web サービスを使用して RESTful 方式でアプリと対話するアプリ開発者によって使用されます。 詳細については、「[ビッグデータクラスターでのアプリケーションの使用](big-data-cluster-consume-apps.md)」を参照してください。
+describe コマンドでは、クラスター内のエンドポイントを含め、アプリに関する詳細情報が提供されます。 通常、これは、アプリ開発者が swagger クライアントを使用してアプリを構築するときや、Web サービスを使用して RESTful 方式でアプリと対話するときに使用されます。 詳細については、「[ビッグ データ クラスターでアプリケーションを使用する](big-data-cluster-consume-apps.md)」を参照してください。
 
 ```json
 {
@@ -287,14 +287,14 @@ spec.yaml
 
 ## <a name="delete-an-app"></a>アプリを削除する
 
-ビッグデータクラスターからアプリを削除するには、次の構文を使用します。
+ビッグ データ クラスターからアプリを削除するには、次の構文を使用します。
 
 ```bash
 azdata app delete --name add-app --version v1
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-詳細については、「[ビッグデータクラスターでアプリケーションを使用](big-data-cluster-consume-apps.md)する」で、SQL Server ビッグデータクラスターにデプロイされているアプリを独自のアプリケーションに統合する方法について説明します。 [アプリのデプロイのサンプル](https://aka.ms/sql-app-deploy)で追加のサンプルを確認することもできます。
+SQL Server ビッグ データ クラスターに展開されているアプリを独自のアプリケーションに統合する方法の詳細については、[ビッグ データ クラスター上でアプリケーションを使用する方法](big-data-cluster-consume-apps.md)のページを参照してください。 その他のサンプルにはついては、[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に関するページを参照してください。
 
-ビッグデータクラスター SQL Server の詳細については、「 [SQL Server 2019 ビッグデータクラスターとは](big-data-cluster-overview.md)」を参照してください。
+SQL Server ビッグ データ クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターの概要](big-data-cluster-overview.md)に関するページを参照してください。

@@ -24,12 +24,12 @@ ms.assetid: ca5fd220-d5ea-4182-8950-55d4101a86f6
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 5bfc0e6a64c9895b4b118ec5c6c27a66657b0829
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 750679a41b3178dd587ddbdee2fb33ee491a41b5
+ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065801"
+ms.lasthandoff: 07/24/2019
+ms.locfileid: "68471161"
 ---
 # <a name="alter-database-transact-sql-compatibility-level"></a>ALTER DATABASE (Transact-SQL) 互換性レベル
 
@@ -76,7 +76,7 @@ COMPATIBILITY_LEVEL { 150 | 140 | 130 | 120 | 110 | 100 | 90 | 80 }
 
 - アップグレード前のユーザー データベースの互換性レベルが 100 以上の場合は、アップグレード後も互換性レベルは変わりません。
 - アップグレード前のユーザー データベースの互換性レベルが 90 の場合、アップグレードされたデータベースの互換性レベルは 100 に設定されます。これは、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] でサポートされている下限の互換性レベルです。
-- tempdb、model、msdb、および Resource データベースの互換性レベルは、アップグレード後に現在の互換性レベルに設定されます。
+- tempdb、model、msdb、および Resource データベースの互換性レベルは、指定された [!INCLUDE[ssDE](../../includes/ssde-md.md)] バージョンの既定の互換性レベルに設定されます。 
 - master システム データベースは、アップグレード前の互換性レベルを保持します。
 
 `ALTER DATABASE` を使用し、データベースの互換性レベルを変更します。 データベースの新しい互換性レベル設定は `USE <database>` コマンドが発行されたときか、新しいログインがそのデータベースで既定のデータベース コンテキストとして処理されたときに有効になります。

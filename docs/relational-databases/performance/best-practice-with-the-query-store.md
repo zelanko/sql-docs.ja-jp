@@ -1,7 +1,7 @@
 ---
 title: クエリ ストアを使用するときの推奨事項 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/29/2018
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -13,12 +13,12 @@ ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fa4528b916e70ed838ab8f3665de9293646d94ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 917a471183d31fab92aa871b6f71a5835c7999d1
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67985030"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495389"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -51,7 +51,7 @@ ms.locfileid: "67985030"
   
  クエリ ストアがクエリや実行プラン、統計情報を収集する間、データベース内でクエリ ストアのサイズが増え続けます。 サイズが制限に達すると、クエリ ストアの操作モードが自動的に読み取り専用に切り替わり、新しいデータの収集が停止します。以降、パフォーマンス分析は正確ではなくなります。  
   
- 既定値は 100 MB ですが、ワークロードが多数のクエリとプランを生成する場合や、クエリ履歴を長期間保持する必要がある場合は、より大きなサイズが必要になる可能性があります。 クエリ ストアが読み取り専用モードに移行しないよう、現在の使用量を追跡して最大サイズ (MB) を増やしてください。 クエリ ストアのサイズに関する最新の情報を取得するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するか、次のスクリプトを実行します。  
+ [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] での既定値は 100 MB ですが、ワークロードによって多数の異なるクエリとプランが生成される場合や、クエリ履歴を長期間保持する必要がある場合は、より大きなサイズが必要になる可能性があります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、既定値は 1 GB です。 クエリ ストアが読み取り専用モードに移行しないよう、現在の使用量を追跡して最大サイズ (MB) を増やしてください。 クエリ ストアのサイズに関する最新の情報を取得するには、 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] を使用するか、次のスクリプトを実行します。  
   
 ```sql 
 USE [QueryStoreDB];  
@@ -109,11 +109,13 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
   
  **クエリ ストアのキャプチャ モード:** クエリ ストアのクエリ キャプチャ ポリシーを指定します。  
   
--   **All** - すべてのクエリをキャプチャします。 既定のオプションです。  
+-   **All** - すべてのクエリをキャプチャします。 これは [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] での既定のオプションです。  
   
--   **Auto** - 頻度の低いクエリと、コンパイルと実行時間の短いクエリは無視されます。 実行回数、コンパイル、実行時間のしきい値は内部的に決定されます。  
+-   **Auto** - 頻度の低いクエリと、コンパイルと実行時間の短いクエリは無視されます。 実行回数、コンパイル、実行時間のしきい値は内部的に決定されます。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、これは既定のオプションです。  
   
 -   **None** - クエリ ストアが新しいクエリのキャプチャを停止します。  
+
+-   **Custom** - データ収集ポリシーに対する追加の制御と微調整を許可します。 新しいカスタム設定では、内部キャプチャ ポリシーの時間のしきい値 (構成可能な条件が評価される時刻の境界) 内で何が行われるかが定義され、いずれかが true の場合にクエリがクエリ ストアによるキャプチャの対象となります。
   
  次のスクリプトは、クエリ キャプチャ モードを Auto に設定します。  
   
@@ -121,7 +123,64 @@ SET QUERY_STORE (SIZE_BASED_CLEANUP_MODE = AUTO);
 ALTER DATABASE [QueryStoreDB]   
 SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);  
 ```  
+
+### <a name="examples"></a>使用例
+次の例では、クエリ キャプチャ モードを Auto に設定し、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] のその他の推奨オプションを設定します。  
   
+```sql  
+ALTER DATABASE [QueryStoreDB]   
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```  
+
+次の例では、クエリ キャプチャ モードを Auto に設定し、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] のその他の推奨オプションを設定して待機統計を含めます。  
+
+```sql
+ALTER DATABASE [QueryStoreDB] 
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+次の例では、クエリ キャプチャ モードを Auto に設定し、[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] のその他の推奨オプションを設定します。また、必要に応じてカスタム キャプチャ ポリシーを既定値に設定します。  
+
+```sql
+ALTER DATABASE [QueryStoreDB]  
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
 ## <a name="how-to-start-with-query-performance-troubleshooting"></a>クエリ パフォーマンスのトラブルシューティングを開始する方法  
  次の図に示すように、クエリ ストアでのトラブルシューティングのワークフローはシンプルです。  
   
@@ -132,8 +191,8 @@ SET QUERY_STORE (QUERY_CAPTURE_MODE = AUTO);
 ```sql  
 ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;  
 ```  
-  
- クエリ ストアがワークロードを正確に表すデータ セットを収集するまでに、しばらく時間がかかります。 通常は、非常に複雑なワークロードの場合でも 1 日で十分です。 ただし、機能を有効にした後すぐにデータの探索を開始して、注意が必要なクエリを特定することもできます。   
+
+クエリ ストアがワークロードを正確に表すデータ セットを収集するまでに、しばらく時間がかかります。 通常は、非常に複雑なワークロードの場合でも 1 日で十分です。 ただし、機能を有効にした後すぐにデータの探索を開始して、注意が必要なクエリを特定することもできます。   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のオブジェクト エクスプローラーでデータベース ノードの下にある Query Store サブ フォルダーに移動し、特定のシナリオのトラブルシューティングのビューを開きます。   
 [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] のクエリ ストア ビューの操作には、一連の実行メトリックを使用します。メトリックはそれぞれ、次のいずれかの統計関数で表されます。  
   
@@ -246,7 +305,7 @@ FROM sys.database_query_store_options;
   
  それでも問題が解決しない場合、ディスクに破損したクエリ ストア データが存在しています。
  
- SQL 2017 以上では、影響を受けたデータベース内で **sp_query_store_consistency_check** ストアド プロシージャを実行することで、クエリ ストアを復旧させることができます。 2016 の場合は、次に示すように、クエリ ストアからデータをクリアする必要があります。
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、影響を受けたデータベース内で **sp_query_store_consistency_check** ストアド プロシージャを実行することで、クエリ ストアを復旧させることができます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合は、次に示すように、クエリ ストアからデータをクリアする必要があります。
  
  復旧できない場合は、読み取り/書き込みモードを要求する前にクエリ ストアのクリアを試すことができます。  
   
@@ -271,10 +330,14 @@ FROM sys.database_query_store_options;
   
 |クエリ キャプチャ モード|シナリオ|  
 |------------------------|--------------|  
-|All|すべてのクエリの形式とその実行頻度やその他の統計情報の観点から、ワークロードを詳しく分析します。<br /><br /> ワークロードの新しいクエリを特定します。<br /><br /> ユーザーまたは自動パラメーター化の機会を識別するためにアドホック クエリが使用されているかどうかを検出します。|  
-|Auto|定期的に実行されるクエリや大量にリソースを消費するクエリなど、対応が必要な重要なクエリに焦点を絞ります。|  
-|None|実行時に監視する必要があるクエリ セットを既にキャプチャしており、他のクエリによる影響を受けたくない場合に使用します。<br /><br /> このモードは、テストやベンチマークの環境に適しています。<br /><br /> このモードは、アプリケーションのワークロードを監視するよう構成したクエリ ストアの構成を販売するソフトウェア ベンダーにも適しています。<br /><br /> 重要な新しいクエリを追跡して最適化する機会を見逃す可能性があるので、このモードを使用する際は注意してください。 シナリオで必要な特別な場合を除き、このモードは使用しないでください。|  
-  
+|All|すべてのクエリの形式とその実行頻度やその他の統計情報の観点から、ワークロードを詳しく分析します。<br /><br /> ワークロードの新しいクエリを特定します。<br /><br /> ユーザーまたは自動パラメーター化の機会を識別するためにアドホック クエリが使用されているかどうかを検出します。<br /><br />**注:** これは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] と [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] の既定のキャプチャ モードです。|  
+|Auto|定期的に実行されるクエリや大量にリソースを消費するクエリなど、対応が必要な重要なクエリに焦点を絞ります。<br /><br />**注:** [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、これは既定のキャプチャ モードです。|  
+|なし|実行時に監視する必要があるクエリ セットを既にキャプチャしており、他のクエリによる影響を受けたくない場合に使用します。<br /><br /> このモードは、テストやベンチマークの環境に適しています。<br /><br /> このモードは、アプリケーションのワークロードを監視するよう構成したクエリ ストアの構成を販売するソフトウェア ベンダーにも適しています。<br /><br /> 重要な新しいクエリを追跡して最適化する機会を見逃す可能性があるので、このモードを使用する際は注意してください。 シナリオで必要な特別な場合を除き、このモードは使用しないでください。|  
+|Custom|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、`ALTER DATABASE SET QUERY_STORE` コマンドの下に CUSTOM キャプチャ モードが導入されています。 有効にすると、新しいクエリ ストアのキャプチャ ポリシーの設定で、特定のサーバーでのデータ収集を微調整するための追加のクエリ ストアを使用できるようになります。<br /><br />新しいカスタム設定では、内部キャプチャ ポリシーの時間のしきい値 (構成可能な条件が評価される時刻の境界) 内で何が行われるかが定義され、いずれかが true の場合にクエリがクエリ ストアによるキャプチャの対象となります。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。|  
+
+> [!NOTE]
+> クエリ キャプチャ モードが All、Auto、または Custom に設定されている場合、カーソル、ストアド プロシージャ内のクエリ、およびネイティブ コンパイル済みのクエリは常にキャプチャされます。
+
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>最も重要なデータをクエリ ストアに保存する  
  重要なデータのみを格納するようクエリ ストアを構成すると、通常のワークロードへの影響も最小限に抑えながら、効果的にトラブルシューティングを行えます。  
 次の表に、推奨事項を示します。  
@@ -310,7 +373,6 @@ FROM sys.database_query_store_options;
 クエリ ストアは、クエリ エントリと親オブジェクト (ストアド プロシージャ、関数、トリガー) を関連付けます。  親オブジェクトを再作成すると、同じクエリ テキストに対して新しいクエリ エントリが生成されます。 これにより、クエリのパフォーマンス統計情報を継続して追跡できなくなるので、プランの強制適用メカニズムを使用することになります。 これを回避するには、可能な限り `ALTER <object>` プロセスを使用して親オブジェクトの定義を変更します。  
   
 ##  <a name="CheckForced"></a> 強制適用されたプランの状態を定期的に確認する  
-
 プランの強制適用は、重要なクエリのパフォーマンスを修正してより正確な予測を可能にするための便利なメカニズムです。 ただし、プラン ヒントやプラン ガイドと同様に、強制的に適用されたプランがその後の実行でも確実に使用されるとは限りません。 通常、実行プランによって参照されるオブジェクトが変更または削除されたことによってデータベース スキーマが変更された場合、プランを強制的に適用できなくます。 その場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はクエリの再コンパイルに戻りますが、強制適用が失敗した実際の理由は [sys.query_store_plan](../../relational-databases/system-catalog-views/sys-query-store-plan-transact-sql.md) に示されます。 次のクエリは、強制適用されたプランに関する情報を返します。  
   
 ```sql  
@@ -340,10 +402,14 @@ WHERE is_forced_plan = 1;
   
 -  トレース フラグ 7752 では、クエリ ストアの非同期読み込みが有効になります。 これにより、データベースをオンラインにすることができ、クエリ ストアが完全に復旧される前にクエリを実行できます。 既定の動作では、クエリ ストアの同期読み込みが行われます。 既定の動作では、クエリ ストアが復旧される前にクエリを実行することはできませんが、コレクション内でクエリが失われることもありません。
 
+   > [!NOTE]
+   > [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降では、この動作はエンジンによって制御されるようになり、トレース フラグ 7752 に効力はありません。
+
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の Just In Time ワークロード分析情報のためにクエリ ストアを使用している場合は、[KB 4340759](https://support.microsoft.com/help/4340759) におけるパフォーマンスのスケーラビリティの修正を、できるだけ早くインストールするよう計画します。 
 
 ## <a name="see-also"></a>参照  
+[ALTER DATABASE SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)     
 [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)     
 [クエリ ストアのストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/query-store-stored-procedures-transact-sql.md)     
 [インメモリ OLTP でのクエリ ストアの使用](../../relational-databases/performance/using-the-query-store-with-in-memory-oltp.md)     

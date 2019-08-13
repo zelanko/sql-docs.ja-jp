@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 30cab7ddfe6c0c6b88f1fb6e619cb84866c3efbf
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ecd914603883f83d5434327c5528688936aee420
+ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065722"
+ms.lasthandoff: 07/25/2019
+ms.locfileid: "68495462"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -769,7 +769,10 @@ OFF
 SIZE_BASED_CLEANUP_MODE は **nvarchar** 型です。
 
 QUERY_CAPTURE_MODE { ALL | AUTO | NONE | CUSTOM }         
-現在アクティブなクエリのキャプチャ モードを指定します。
+現在アクティブなクエリのキャプチャ モードを指定します。 各モードでは、特定のクエリ キャプチャ ポリシーを定義します。
+
+> [!NOTE]
+> クエリ キャプチャ モードが ALL、AUTO、または CUSTOM に設定されている場合、カーソル、ストアド プロシージャ内のクエリ、およびネイティブ コンパイル済みのクエリは常にキャプチャされます。
 
 ALL         
 すべてのクエリをキャプチャします。 ALL は既定の構成値です。 これは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で始まる既定の構成値です。
@@ -1232,7 +1235,7 @@ GO
 
 ```
 
-### <a name="b-setting-the-database-to-readonly"></a>B. データベースを READ_ONLY に設定する
+### <a name="b-setting-the-database-to-read_only"></a>B. データベースを READ_ONLY に設定する
 
 データベースまたはファイル グループの状態を READ_ONLY または READ_WRITE に変更するには、データベースに対する排他的アクセスが必要です。 次の例では、排他的アクセスを取得するために、データベースを `SINGLE_USER` モードに設定します。 次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの状態を `READ_ONLY` に設定し、データベースへのアクセス権をすべてのユーザーに戻します。
 
@@ -2083,7 +2086,7 @@ NO_WAIT
 
 ## <a name="examples"></a>使用例
 
-### <a name="a-setting-the-database-to-readonly"></a>A. データベースを READ_ONLY に設定する
+### <a name="a-setting-the-database-to-read_only"></a>A. データベースを READ_ONLY に設定する
 データベースまたはファイル グループの状態を READ_ONLY または READ_WRITE に変更するには、データベースに対する排他的アクセスが必要です。 次の例では、アクセスを制限するために、データベースを `RESTRICTED_USER` モードに設定します。 次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの状態を `READ_ONLY` に設定し、データベースへのアクセス権をすべてのユーザーに戻します。
 
 ```sql
@@ -2789,7 +2792,7 @@ NO_WAIT
 
 ## <a name="examples"></a>使用例
 
-### <a name="a-setting-the-database-to-readonly"></a>A. データベースを READ_ONLY に設定する
+### <a name="a-setting-the-database-to-read_only"></a>A. データベースを READ_ONLY に設定する
 データベースまたはファイル グループの状態を READ_ONLY または READ_WRITE に変更するには、データベースに対する排他的アクセスが必要です。 次の例では、アクセスを制限するために、データベースを `RESTRICTED_USER` モードに設定します。 次に、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースの状態を `READ_ONLY` に設定し、データベースへのアクセス権をすべてのユーザーに戻します。
 
 ```sql

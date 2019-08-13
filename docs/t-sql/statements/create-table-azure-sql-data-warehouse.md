@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 080037ec68169c08f7e543504c84118d0d01e4fd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116998"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68419612"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -167,18 +167,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 クラスター化列ストア インデックスは、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  ORDER 指定の規定値は COMPOUND キーです。  並べ替えは常に昇順です。 ORDER 句を指定しなかった場合、列ストアは並べ替えられません。 順序付けのプロセスによっては、順序付けされていないクラスター化列ストア インデックスよりも、順序付けされたクラスター化列ストア インデックスを使用するテーブルの方がデータの読み込み時間が長い場合があります。 データの読み込み中に追加の tempdb 領域が必要な場合は、挿入ごとのデータ量を減らすことができます。
 
-プレビュー期間中、このクエリを実行して、ORDER を有効にした列を確認できます。
-
-```sql
-SELECT i.name AS index_name  
-    ,COL_NAME(ic.object_id,ic.column_id) AS column_name  
-    ,ic.index_column_id  
-    ,ic.key_ordinal  
-,ic.is_included_column  
-FROM sys.indexes AS i  
-INNER JOIN sys.index_columns AS ic
-    ON i.object_id = ic.object_id AND i.index_id = ic.index_id  
-```
+ユーザーは、sys.index_columns の column_store_order_ordinal 列に対して、テーブルが順序付けられている列とその順序でクエリを実行できます。  
 
 ### <a name="DataTypes"></a> データ型
 

@@ -1,7 +1,7 @@
 ---
-title: azdata アプリのリファレンス
+title: azdata app リファレンス
 titleSuffix: SQL Server big data clusters
-description: Azdata アプリのコマンドに関するリファレンス記事です。
+description: azdata app コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,31 +10,31 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 793edde26ebebf9e55c5751adbedf662142280de
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68426282"
 ---
-# <a name="azdata-app"></a>azdata アプリ
+# <a name="azdata-app"></a>azdata app
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-次の記事では、 **azdata**ツールでの**アプリ**コマンドのリファレンスを示します。 その他の**azdata**コマンドの詳細については、「 [azdata reference](reference-azdata.md)」を参照してください。
+以下の記事では、**azdata** ツールの **app** コマンドに関するリファレンスを提供します。 他の **azdata** コマンドの詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。
 
 ## <a name="commands"></a>コマンド
 |     |     |
 | --- | --- |
-[azdata アプリテンプレート](reference-azdata-app-template.md) | テンプレート.
-[azdata アプリの初期化](#azdata-app-init) | Kickstart 新しいアプリケーションスケルトン。
-[azdata アプリの作成](#azdata-app-create) | アプリケーションを作成します。
-[azdata アプリの更新](#azdata-app-update) | アプリケーションを更新します。
-[azdata アプリの一覧](#azdata-app-list) | アプリケーションを一覧表示します。
-[azdata アプリの削除](#azdata-app-delete) | アプリケーションを削除します。
-[azdata アプリの実行](#azdata-app-run) | アプリケーションを実行します。
-[azdata アプリの説明](#azdata-app-describe) | アプリケーションについて説明します。
-## <a name="azdata-app-init"></a>azdata アプリの初期化
-は、ランタイム環境に基づいて、新しいアプリケーションスケルトンや仕様ファイルを kickstart するのに役立ちます。
+[azdata app template](reference-azdata-app-template.md) | テンプレート。
+[azdata app init](#azdata-app-init) | 新しいアプリケーションのスケルトンを開始します。
+[azdata app create](#azdata-app-create) | アプリケーションを作成します。
+[azdata app update](#azdata-app-update) | アプリケーションを更新します。
+[azdata app list](#azdata-app-list) | アプリケーションを一覧表示します。
+[azdata app delete](#azdata-app-delete) | アプリケーションを削除します。
+[azdata app run](#azdata-app-run) | アプリケーションを実行します。
+[azdata app describe](#azdata-app-describe) | アプリケーションについて記述します。
+## <a name="azdata-app-init"></a>azdata app init
+ランタイム環境に基づいて、新しいアプリケーションのスケルトンや仕様ファイルを開始するのに役立ちます。
 ```bash
 azdata app init [--spec -s] 
                 [--name -n]  
@@ -44,100 +44,100 @@ azdata app init [--spec -s]
                 [--url -u]
 ```
 ### <a name="examples"></a>使用例
-新しいアプリケーション`spec.yaml`のみをスキャフォールディングします。
+新しいアプリケーション `spec.yaml` のみをスキャフォールディングします。
 ```bash
 azdata app init --spec
 ```
-`r`テンプレートに基づいて新しい R アプリケーションスケルトンをスキャフォールディングします。
+`r` テンプレートに基づいて、新しい R アプリケーションのスケルトンをスキャフォールディングします。
 ```bash
 azdata app init --name reduce --template r
 ```
-`python`テンプレートに基づいて新しい Python アプリケーションスケルトンをスキャフォールディングします。
+`python` テンプレートに基づいて、新しい Python アプリケーションのスケルトンをスキャフォールディングします。
 ```bash
 azdata app init --name reduce --template python
 ```
-`ssis`テンプレートに基づいて新しい SSIS アプリケーションスケルトンをスキャフォールディングします。
+`ssis` テンプレートに基づいて、新しい SSIS アプリケーションのスケルトンをスキャフォールディングします。
 ```bash
 azdata app init --name reduce --template ssis            
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--spec -s`
-アプリケーション仕様だけを生成します。 yaml。
+アプリケーションの spec.yaml だけを生成します。
 #### `--name -n`
 [アプリケーション名]
 #### `--version -v`
 アプリケーションのバージョン。
 #### `--template -t`
-テンプレート名。 サポートされているテンプレート名の実行の完全な一覧については、「`azdata app template list`
+テンプレート名。 サポートされているテンプレート名の完全な一覧を表示するには、`azdata app template list` を実行します
 #### `--destination -d`
-アプリケーションスケルトンを配置する場所。 既定値: 現在の作業ディレクトリ。
+アプリケーションのスケルトンを配置する場所。 既定値: 現在の作業ディレクトリ。
 #### `--url -u`
-別のテンプレートリポジトリの場所を指定してください。 標準 https://github.com/Microsoft/SQLBDC-AppDeploy.git
+別のテンプレート リポジトリの場所を指定します。 既定値: https://github.com/Microsoft/SQLBDC-AppDeploy.git
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
-## <a name="azdata-app-create"></a>azdata アプリの作成
+ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+## <a name="azdata-app-create"></a>azdata app create
 アプリケーションを作成します。
 ```bash
 azdata app create --spec -s 
                   
 ```
 ### <a name="examples"></a>使用例
-有効な仕様を含むディレクトリから新しいアプリケーションを作成します。 yaml デプロイ仕様。
+有効な spec.yaml デプロイ仕様を含むディレクトリから新しいアプリケーションを作成します。
 ```bash
 azdata app create --spec /path/to/dir/with/spec/yaml
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--spec -s`
-アプリケーションを説明する YAML 仕様ファイルを含むディレクトリへのパス。
+アプリケーションについて記述した YAML 仕様ファイルが含まれているディレクトリのパス。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
-## <a name="azdata-app-update"></a>azdata アプリの更新
+ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+## <a name="azdata-app-update"></a>azdata app update
 アプリケーションを更新します。
 ```bash
 azdata app update [--spec -s] 
                   [--yes -y]
 ```
 ### <a name="examples"></a>使用例
-有効な仕様を含むディレクトリから既存のアプリケーションを更新します。 yaml デプロイ仕様。
+有効な spec.yaml デプロイ仕様を含むディレクトリから既存のアプリケーションを更新します。
 ```bash
 azdata app update --spec /path/to/dir/with/spec/yaml    
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--spec -s`
-アプリケーションを説明する YAML 仕様ファイルを含むディレクトリへのパス。
+アプリケーションについて記述した YAML 仕様ファイルが含まれているディレクトリのパス。
 #### `--yes -y`
-CWD の spec. yaml ファイルからアプリケーションを更新するときに、確認を求めるメッセージを表示しません。
+CWD の spec.yaml ファイルからアプリケーションを更新するときに、確認を求めるメッセージを表示しません。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
-## <a name="azdata-app-list"></a>azdata アプリの一覧
-アプリケーションの一覧を表示します。
+ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+## <a name="azdata-app-list"></a>azdata app list
+アプリケーションを一覧表示します。
 ```bash
 azdata app list [--name -n] 
                 [--version -v]
@@ -147,11 +147,11 @@ azdata app list [--name -n]
 ```bash
 azdata app list --name reduce  --version v1
 ```
-すべてのアプリケーションのバージョンを名前で一覧表示します。
+名前ですべてのアプリケーションのバージョンを一覧表示します。
 ```bash
 azdata app list --name reduce
 ```
-すべてのアプリケーションのバージョンを名前で一覧表示します。
+名前ですべてのアプリケーションのバージョンを一覧表示します。
 ```bash
 azdata app list
 ```
@@ -162,16 +162,16 @@ azdata app list
 アプリケーションのバージョン。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
-## <a name="azdata-app-delete"></a>azdata アプリの削除
+ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+## <a name="azdata-app-delete"></a>azdata app delete
 アプリケーションを削除します。
 ```bash
 azdata app delete --name -n 
@@ -189,16 +189,16 @@ azdata app delete --name reduce --version v1
 アプリケーションのバージョン。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
-## <a name="azdata-app-run"></a>azdata アプリの実行
+ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+## <a name="azdata-app-run"></a>azdata app run
 アプリケーションを実行します。
 ```bash
 azdata app run --name -n 
@@ -206,15 +206,15 @@ azdata app run --name -n
                [--inputs]
 ```
 ### <a name="examples"></a>使用例
-入力パラメーターを使用せずにアプリケーションを実行します。
+入力パラメーターなしでアプリケーションを実行します。
 ```bash
 azdata app run --name reduce --version v1
 ```
-1つの入力パラメーターを使用してアプリケーションを実行します。
+1 つの入力パラメーターを使ってアプリケーションを実行します。
 ```bash
 azdata app run --name reduce --version v1 --inputs x=10
 ```
-複数の入力パラメーターを使用してアプリケーションを実行します。
+複数の入力パラメーターを使ってアプリケーションを実行します。
 ```bash
 azdata app run --name reduce --version v1 --inputs x=10,y5.6    
 ```
@@ -225,49 +225,49 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 アプリケーションのバージョン。
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--inputs`
-CSV `name=value`形式のアプリケーション入力パラメーター。
+アプリケーションの入力パラメーター (CSV の `name=value` 形式)。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
-## <a name="azdata-app-describe"></a>azdata アプリの説明
-アプリケーションを記述します。
+ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+## <a name="azdata-app-describe"></a>azdata app describe
+アプリケーションについて記述します。
 ```bash
 azdata app describe [--spec -s] 
                     [--name -n]  
                     [--version -v]
 ```
 ### <a name="examples"></a>使用例
-アプリケーションについて説明します。
+アプリケーションについて記述します。
 ```bash
 azdata app describe --name reduce --version v1    
 ```
 ### <a name="optional-parameters"></a>省略可能なパラメーター
 #### `--spec -s`
-アプリケーションを説明する YAML 仕様ファイルを含むディレクトリへのパス。
+アプリケーションについて記述した YAML 仕様ファイルが含まれているディレクトリのパス。
 #### `--name -n`
 [アプリケーション名]
 #### `--version -v`
 アプリケーションのバージョン。
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
-ログの詳細度を上げて、すべてのデバッグログを表示します。
+すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
 #### `--help -h`
-このヘルプメッセージを表示して終了します。
+このヘルプ メッセージを表示して終了します。
 #### `--output -o`
-出力形式。  使用できる値: json、jsonc、table、tsv。  既定値は json です。
+出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-Jのパスのクエリ文字列。 詳細[http://jmespath.org/](http://jmespath.org/])と例については、「」を参照してください。
+JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
 #### `--verbose`
-ログの詳細度を上げます。 完全なデバッグログには--debug を使用します。
+ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-その他の**azdata**コマンドの詳細については、「 [azdata reference](reference-azdata.md)」を参照してください。 **Azdata**ツールをインストールする方法の詳細については、「 [Azdata をインストールして SQL Server 2019 ビッグデータクラスターを管理する](deploy-install-azdata.md)」を参照してください。
+他の **azdata** コマンドの詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理するための azdata のインストール](deploy-install-azdata.md)に関するページをご覧ください。

@@ -1,6 +1,6 @@
 ---
 title: Linux で MSDTC を構成する方法
-description: この記事では、Linux 上の MSDTC を構成するためのチュートリアルについてを提供します。
+description: この記事では、Linux で MSDTC を構成する手順について説明します。
 author: VanMSFT
 ms.author: vanto
 ms.date: 03/21/2019
@@ -9,62 +9,62 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
 ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68077610"
 ---
-# <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux 上の Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
+# <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、Linux で Microsoft 分散トランザクション コーディネーター (MSTDC) を構成する方法について説明します。 Linux 上の MSDTC のサポートは、SQL Server 2019 プレビューで導入されました。
+この記事では、Linux で Microsoft 分散トランザクション コーディネーター (MSTDC) を構成する方法を説明します。 Linux での MSDTC のサポートは SQL Server 2019 プレビューで導入されました。
 
 ## <a name="overview"></a>概要
 
-分散トランザクションは SQL Server on Linux に SQL Server 内で MSDTC と RPC エンドポイント マッパー機能を導入することで有効になっています。 既定では、RPC エンドポイント マッピング プロセスは、受信 RPC 要求のポート 135 をリッスンし、リモート要求に登録されているコンポーネントの情報を提供します。 リモート要求は、エンドポイント マッパーによって返される情報を使用して、MSDTC サービスなど、登録済みの RPC コンポーネントと通信します。 プロセスには、Linux 上の既知のポート (1024 未満のポート番号) にバインドするスーパー ユーザー権限が必要です。 RPC エンドポイント マッパーのプロセスのルート特権を持つ SQL Server の起動を防ぐためには、システム管理者は、SQL Server の RPC エンドポイント マッピングのプロセスにポート 135 でトラフィックをルーティングするのにネットワーク アドレス変換を作成するのに iptables を使用する必要があります。
+分散トランザクションをSQL Server on Linux で有効にするには、MSDTC および RPC エンドポイント マッパー機能を SQL Server に導入します。 既定では、RPC エンドポイント マッピング プロセスは、着信 RPC 要求をポート 135 でリッスンし、登録されたコンポーネント情報をリモート要求に提供します。 リモート要求は、登録済み RPC コンポーネント (MSDTC サービスなど) と通信するために、エンドポイント マッパーによって返される情報を使用できます。 プロセスが Linux 上のよく知られているポート (ポート番号 1024 未満) にバインドするには、スーパーユーザー特権が必要です。 RPC エンドポイント マッパー プロセスのルート権限を使用した SQL Server の起動を回避するには、システム管理者が iptables を使用してネットワーク アドレス変換を作成し、ポート 135 のトラフィックを SQL Server の RPC エンドポイント マッピング プロセスにルーティングするする必要があります。
 
-SQL Server 2019 には、mssql conf ユーティリティの 2 つの構成パラメーターが導入されています。
+SQL Server 2019 では、mssql-conf ユーティリティ用に 2 つの構成パラメーターが導入されています。
 
-| mssql conf 設定 | 説明 |
+| mssql-conf の設定 | [説明] |
 |---|---|
-| **network.rpcport** | RPC エンドポイント マッパーのプロセスがバインドされる TCP ポート。 |
-| **distributedtransaction.servertcpport** | MSDTC サーバーがリッスンするポート。 できない場合は、設定すると、MSDTC サービスを使用してランダムな一時的なポートでサービスが再起動し、ファイアウォールの例外が MSDTC サービスが通信を継続できるようにすることを確認するように再構成する必要があります。 |
+| **network.rpcport** | RPC エンドポイント マッパー プロセスのバインド先の TCP ポート。 |
+| **distributedtransaction.servertcpport** | MSDTC サーバーがリッスンするポート。 設定しない場合、MSDTC サービスはサービス再起動時にランダムな一時ポートを使用するため、MSDTC サービスが通信を継続できるようにファイアウォールの例外を再構成する必要があります。 |
 
-これらの設定とその他の関連の MSDTC 設定の詳細については、次を参照してください。 [mssql-conf ツールを使った Linux 上の SQL Server の構成](sql-server-linux-configure-mssql-conf.md#msdtc)します。
+これらの設定やその他の関連する MSDTC 設定について詳しくは、「[mssql-conf ツールを使用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md#msdtc)」をご覧ください。
 
-## <a name="supported-msdtc-configurations"></a>サポートされている MSDTC の構成
+## <a name="supported-msdtc-configurations"></a>サポートされている MSDTC 構成
 
-次のような MSDTC 構成がサポートされています。
+サポートされている MSDTC 構成は次のとおりです。
 
-- OLE TX 分散トランザクションに対して SQL Server on Linux の ODBC プロバイダー。
-- JDBC および ODBC プロバイダーを使用して Linux 上の SQL Server に対して XA 分散トランザクション。 XA トランザクションの ODBC プロバイダーを使用して実行する場合は、バージョン 17.3 以降の SQL Server 用 Microsoft ODBC Driver を使用する必要があります。
-- リンク サーバー上の分散トランザクション。
+- ODBC プロバイダーのための SQL Server on Linux に対する OLE-TX 分散トランザクション。
+- JDBC および ODBC プロバイダーを使用する SQL Server on Linux に対する XA 分散トランザクション。 XA トランザクションを ODBC プロバイダーを使用して実行するには、Microsoft ODBC Driver for SQL Server バージョン 17.3 以降を使用する必要があります。
+- リンクサーバー上の分散トランザクション。
 
-制限事項とプレビューの MSDTC の既知の問題は、次を参照してください。 [Linux 上の SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md#msdtc)します。
+プレビューでの MSDTC の制限事項と既知の問題については、[Linux 向け SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md#msdtc)をご覧ください。
 
-## <a name="msdtc-configuration-steps"></a>MSDTC の構成手順
+## <a name="msdtc-configuration-steps"></a>MSDTCの 構成手順
 
-MSDTC 通信と機能を構成する 3 つの手順があります。 必要な構成手順が行われていない場合、SQL Server は MSDTC 機能を有効にできません。
+MSDTC の通信と機能を構成するには、3 つの手順を実行します。 必要な構成手順を実行しないと、SQL Server によって MSDTC 機能が有効になりません。
 
-- 構成**network.rpcport**と**distributedtransaction.servertcpport** mssql 会議を使用します。
-- 通信を許可するファイアウォールを構成する**distributedtransaction.servertcpport**ポート 135 とします。
-- Linux サーバーのルーティングには、SQL Server のポート 135 で RPC 通信がリダイレクトされるように構成**network.rpcport**します。
+- mssql-conf を使用して **network.rpcport** と **distributedtransaction.servertcpport** を構成します。
+- **distributedtransaction.servertcpport** とポート 135 での通信を許可するようにファイアウォールを構成します。
+- ポート 135 上の RPC 通信が SQL Server の **network.rpcport** にリダイレクトされるように Linux サーバーのルーティングを構成します。
 
-次のセクションでは、各手順の詳細な手順を説明します。
+以下のセクションで各手順について詳しく説明します。
 
-## <a name="configure-rpc-and-msdtc-ports"></a>RPC、MSDTC のポートを構成します。
+## <a name="configure-rpc-and-msdtc-ports"></a>RPC および MSDTC ポートを構成する
 
-最初に、構成**network.rpcport**と**distributedtransaction.servertcpport** mssql 会議を使用します。 SQL Server に固有でサポートされているすべてのディストリビューション間で一般的な場合は、この手順
+最初に mssql-conf を使用して **network.rpcport** と **distributedtransaction.servertcpport** を構成します。 この手順は、SQL Server に固有であり、サポートされるすべてのディストリビューションで共通しています。
 
-1. Mssql conf を使用して設定する、 **network.rpcport**値。 次の例は、13500 に設定します。
+1. mssql-conf を使用して **network.rpcport** 値を設定します。 次の例では 13500 に設定されます。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set network.rpcport 13500
    ```
 
-2. 設定、 **distributedtransaction.servertcpport**値。 次の例は、51999 に設定します。
+2. **distributedtransaction.servertcpport** 値を設定します。 次の例では 51999 に設定されます。
 
    ```bash
    sudo /opt/mssql/bin/mssql-conf set distributedtransaction.servertcpport 51999
@@ -78,16 +78,16 @@ MSDTC 通信と機能を構成する 3 つの手順があります。 必要な�
 
 ## <a name="configure-the-firewall"></a>ファイアウォールの構成
 
-2 番目の手順が通信を許可するファイアウォールを構成するには**servertcpport**ポート 135 とします。  これにより、RPC エンドポイント マッピングのプロセスとその他のトランザクション マネージャーとコーディネーター外部通信するために MSDTC プロセス。 この実際の手順については、ファイアウォール、Linux ディストリビューションによって異なります。 
+2 番目の手順では、**servertcpport** とポート 135 での通信を許可するようにファイアウォールを構成します。  これにより、RPC エンドポイント マッピング プロセスと MSDTC プロセスが、他のトランザクション マネージャーやコーディネーターと外部で通信できるようになります。 このための実際の手順は、Linux ディストリビューションとファイアウォールによって異なります。 
 
-次の例でこれらの規則を作成する方法を示しています。 **Ubuntu**します。
+次の例は、**Ubuntu** でこれらの規則を作成する方法を示しています。
 
 ```bash
 sudo ufw allow from any to any port 51999 proto tcp
 sudo ufw allow from any to any port 135 proto tcp
 ```
 
-次の例で実行できる方法を示しています**Red Hat Enterprise Linux (RHEL)** :。
+次の例は、**Red Hat Enterprise Linux (RHEL)** でこれを行う方法を示しています。
 
 ```bash
 sudo firewall-cmd --zone=public --add-port=51999/tcp --permanent
@@ -95,17 +95,17 @@ sudo firewall-cmd --zone=public --add-port=135/tcp --permanent
 sudo firewall-cmd --reload
 ```
 
-ポートは、次のセクションでルーティングを構成する前に、ファイアウォールを構成するのには重要です。 ファイアウォールを更新すると、場合によっては、ポート ルーティング規則をクリアできます。
+次のセクションでポートルーティングを構成する前に、ファイアウォールを構成することが重要です。 場合によっては、ファイアウォールを更新するとポートのルーティング規則がクリアされます。
 
-## <a name="configure-port-routing"></a>ポートのルーティングを構成します。
+## <a name="configure-port-routing"></a>ポートのルーティングを構成する
 
-Linux サーバーのルーティング テーブルを構成するのには、SQL Server のポート 135 で RPC 通信がリダイレクトされるように**network.rpcport**します。 異なるディストリビューション上のポート転送の構成メカニズムが異なる場合があります。 次のセクションでは、Ubuntu、SUS Enterprise Linux (SLES) および Red Hat Enterprise Linux (RHEL) のガイダンスを提供します。
+ポート 135 上の RPC 通信が SQL Server の **network.rpcport** にリダイレクトされるように Linux サーバーのルーティング テーブルを構成します。 異なるディストリビューションではポート転送の構成メカニズムが異なる場合があります。 以下のセクションでは、Ubuntu、SUS Enterprise Linux (SLES)、および Red Hat Enterprise Linux (RHEL) に関するガイダンスを提供します。
 
-### <a name="port-routing-in-ubuntu-and-sles"></a>Ubuntu または SLES でのルーティングをポートします。
+### <a name="port-routing-in-ubuntu-and-sles"></a>Ubuntu および SLES でのポート ルーティング
 
-Ubuntu または SLES は使用しないでください、 **firewalld**ためサービス**iptable**ルールは、ポート ルーティングを実現するために、効率的なメカニズムです。 **Iptable**次のコマンドは、再起動後に、ルールを復元するための手順を指定するため、再起動中にルールが保持されない可能性があります。
+Ubuntu と SLES では **firewalld** サービスが使用されないため、ポート ルーティングを実現するには **iptable** 規則が有効なメカニズムです。 **iptable** 規則は再起動時に保持されない可能性があるため、再起動後に規則を復元するように次のコマンドに指示を指定します。
 
-1. ポート 135 のルーティング規則を作成します。 次の例では、ポート 135 は、前のセクションで定義されている RPC ポート 13500 に送られます。 置換`<ipaddress>`サーバーの IP アドレスを使用します。
+1. ポート 135 のルーティング規則を作成します。 次の例では、ポート 135 は、前のセクションで定義した RPC ポート 13500 に転送されます。 `<ipaddress>` をご使用のサーバーの IP アドレスで置き換えます。
 
    ```bash
    sudo iptables -t nat -A PREROUTING -d <ip> -p tcp --dport 135 -m addrtype --dst-type LOCAL  \
@@ -114,41 +114,41 @@ Ubuntu または SLES は使用しないでください、 **firewalld**ため�
       -j DNAT --to-destination <ip>:13500 -m comment --comment RpcEndPointMapper
    ```
 
-   `--comment RpcEndPointMapper`後のコマンドでこれらの規則を管理するを支援し、前のコマンド パラメーター。
+   前のコマンドの `--comment RpcEndPointMapper` パラメーターは、後のコマンドでこれらの規則を管理する際に役立ちます。
 
-2. 次のコマンドで作成したルーティング規則を表示するには。
+2. 次のコマンドを使用して、作成したルーティング規則を表示します。
 
    ```bash
    sudo iptables -S -t nat | grep "RpcEndPointMapper"
    ```
 
-3. ルーティング規則をコンピューター上のファイルに保存します。
+3. コンピューター上のファイルにルーティング規則を保存します。
 
    ```bash
    sudo iptables-save > /etc/iptables.conf
    ```
 
-4. 規則を再読み込み、再起動後に、次のコマンドを追加`/etc/rc.local`(Ubuntu) 用または`/etc/init.d/after.local`(SLES) 用。
+4. 再起動後に規則を再読み込みするには、次のコマンドを `/etc/rc.local` (Ubuntu の場合) または `/etc/init.d/after.local` (SLES の場合) に追加します。
 
    ```bash
    iptables-restore < /etc/iptables.conf
    ```
 
    > [!NOTE]
-   > 編集するスーパー ユーザー (sudo) 特権が必要、 **rc.local**または**after.local**ファイル。
+   > **rc.local** ファイルまたは **after.local** ファイルを編集するには、スーパー ユーザー (sudo) 特権が必要です。
 
-**Iptables 保存**と**iptables 復元**コマンド、と共にと`rc.local` / `after.local`スタートアップ構成を保存し、iptables を復元する基本的なメカニズムを提供エントリ。 使用可能なオプションの自動化によっては、Linux ディストリビューションにある可能性があるより高度なこともできます。 たとえば、Ubuntu の代替は、 **iptables 永続的な**永続的なエントリを作成するパッケージ。
+**iptables-save** および **iptables-restore** コマンドと `rc.local`/`after.local` スタートアップ構成によって、iptables エントリを保存して復元するための基本的なメカニズムが提供されます。 Linux ディストリビューションによっては、高度な方法つまり自動化された方法を使用できる場合もあります。 たとえば、Ubuntu での代替手段は、エントリを永続化するための **iptables-persistent** パッケージです。
 
 > [!IMPORTANT]
-> 前の手順では、固定の IP アドレスと仮定します。 (手動による介入や DHCP) のため、SQL Server インスタンスの IP アドレスが変更された場合は、削除、iptables を使用して作成された場合は、ルーティング規則を再作成する必要があります。 再作成または既存のルーティング規則を削除する必要がある場合、次のコマンドを使用して古いを削除することができます`RpcEndPointMapper`規則。
+> 前の手順では、固定 IP アドレスが想定されています。 SQL Server インスタンスの IP アドレスが (手動操作または DHCP によって) 変更されると、iptables を使用してルーティング規則を作成していた場合は、削除して再作成する必要があります。 既存のルーティング規則を再作成または削除する必要がある場合、次のコマンドを使用して古い `RpcEndPointMapper` 規則を削除できます。
 > 
 > ```bash
 > sudo iptables -S -t nat | grep "RpcEndPointMapper" | sed 's/^-A //' | while read rule; do iptables -t nat -D $rule; done
 > ```
 
-### <a name="port-routing-in-rhel"></a>RHEL でのルーティング ポート
+### <a name="port-routing-in-rhel"></a>RHEL でのポート ルーティング
 
-使用するディストリビューションで**firewalld**両方のサーバーと内部ポート転送ポートを開くために、Red Hat Enterprise Linux、同じサービスなどのサービスを使用できます。 たとえば、Red Hat Enterprise linux、する必要がありますを使用する**firewalld**サービス (を使用して**ファイアウォール cmd**構成ユーティリティを`-add-forward-port`または同様のオプション) の作成し、永続的なポートを管理するにはiptables を使用する代わりにルールを転送します。
+Red Hat Enterprise Linux など、**firewalld** サービスを使用する古いディストリビューションでは、サーバー上のポートのオープンと内部ポート転送の両方に同じサービスを使用できます。 たとえば、Red Hat Enterprise Linux では、iptables を使用する代わりに、**firewalld** サービス (**firewall-cmd** 構成ユーティリティに `-add-forward-port` や同様のオプションを指定) を使用して、永続的なポート転送規則を作成および管理する必要があります。
 
 ```bash
 sudo firewall-cmd --permanent --add-forward-port=port=135:proto=tcp:toport=13500
@@ -157,7 +157,7 @@ sudo firewall-cmd --reload
 
 ## <a name="verify"></a>Verify (英語の可能性あり)
 
-この時点では、SQL Server は、分散トランザクションに参加できる必要があります。 SQL Server がリッスンしていることを確認するには、実行、 **netstat**コマンド (RHEL を使用している場合は、最初にインストールする必要があります、 **net ツール**パッケージ)。
+この時点で、SQL Server は分散トランザクションに参加できるようになっています。 SQL Server がリッスンしていることを確認するには、**netstat** コマンドを実行します (RHEL を使用しているときは、場合によっては最初に **net-tools** パッケージをインストールする必要があります)。
 
 ```bash
 sudo netstat -tulpn | grep sqlservr
@@ -176,18 +176,18 @@ tcp6 0 0 :::13500 :::* LISTEN 13911/sqlservr
 tcp6 0 0 :::51999 :::* LISTEN 13911/sqlservr
 ```
 
-ただし、再起動後、SQL Server が起動しないでリッスンしている、 **servertcpport**最初にディストリビュートされたトランザクションまでです。 ここでは、最初の分散トランザクションまで、この例ではポート 51999 でリッスンしている SQL Server が表示されないとします。
+ただし、再起動後に、SQL Server は最初の分散トランザクションまで **servertcpport** でのリッスンを開始しません。 この場合、最初の分散トランザクションまで、この例のポート 51999 でリッスンしている SQL Server は表示されません。
 
-## <a name="configure-authentication-on-rpc-communication-for-msdtc"></a>MSDTC の RPC 通信で認証を構成します。
+## <a name="configure-authentication-on-rpc-communication-for-msdtc"></a>MSDTC のために RPC 通信の認証を構成する
 
-SQL Server on Linux の MSDTC を使用しない認証 RPC 通信既定。 ただし、ホスト コンピューターが Active Directory (AD) ドメインに参加しているときに行うことが認証された RPC 通信を使用するよう MSDTC を構成する次を使用して**mssql conf**設定。
+SQL Server on Linux の MSDTC では、既定で RPC 通信で認証が使用されません。 ただし、ホスト マシインが Active Directory (AD) ドメインに参加しているときは、次の **mssql-conf** 設定を使用して認証された RPC 通信を使用するように MSDTC を構成できます。
 
-| 設定 | 説明 |
+| 設定 | [説明] |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | 分散トランザクションの唯一の RPC 呼び出しをセキュリティで保護を構成します。 |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | のみの RPC コールは分散トランザクションのセキュリティを構成します。 |
-| **distributedtransaction.turnoffrpcsecurity**               | 有効または分散トランザクションの RPC セキュリティを無効にします。 |
+| **distributedtransaction.allowonlysecurerpccalls**          | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 |
+| **distributedtransaction.turnoffrpcsecurity**               | 分散トランザクションの RPC セキュリティを有効または無効にします。 |
 
 ## <a name="next-steps"></a>次の手順
 
-Linux 上の SQL Server に関する詳細については、次を参照してください。 [SQL Server on Linux](sql-server-linux-overview.md)します。
+SQL Server on Linux について詳しくは、「[SQL Server on Linux](sql-server-linux-overview.md)」をご覧ください。
