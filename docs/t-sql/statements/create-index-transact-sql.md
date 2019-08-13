@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c7808af6be2759b618ec0c57fb9ebb6e97f3b3a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9fdc5ee7428aec65c96755eb9a1c0e013de80d01
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048174"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809772"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -702,7 +702,7 @@ INSERT INTO t1 VALUES (1, 0);
 - 同じステートメントで、旧バージョンとの互換性がある構文と新しい構文の両方を使ってオプションを指定することはできない。 たとえば、WITH (**DROP_EXISTING, ONLINE = ON**) を指定すると、ステートメントは失敗します。
 - XML インデックスを作成するとき、オプションは WITH ( **_option_name_= ON | OFF**) を使用して指定する必要がある。
 
-## <a name="dropexisting-clause"></a>DROP_EXISTING 句
+## <a name="drop_existing-clause"></a>DROP_EXISTING 句
 DROP_EXISTING 句を使用して、インデックスの再構築、列の追加または削除、オプションの変更、列の並べ替え順の変更、パーティション構成またはファイル グループの変更を行うことができます。
 
 インデックスに PRIMARY KEY または UNIQUE 制約が設定されていて、インデックス定義が変更されることがない場合は、既存の制約を保持したままインデックスが削除され再作成されます。 ただし、インデックス定義が変更されると、ステートメントは失敗します。 PRIMARY KEY または UNIQUE 制約の定義を変更するには、制約を削除し、新しい定義で制約を追加します。
@@ -829,7 +829,7 @@ CREATE NONCLUSTERED INDEX IX_SalesPerson_SalesQuota_SalesYTD ON Sales.SalesPerso
 ```
 
 ### <a name="c-create-an-index-on-a-table-in-another-database"></a>C. 他のデータベースのテーブルにインデックスを作成する
-次の例では、`Purchasing` データベースにある `VendorID` テーブルの `ProductVendor` 列に非クラスター化インデックスを作成します。
+次の例では、`Purchasing` データベースにある `ProductVendor` テーブルの `VendorID` 列にクラスター化インデックスを作成します。
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (VendorID);
@@ -873,7 +873,7 @@ Server: Msg 2601, Level 14, State 1, Line 1
 Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_UnitMeasure_Name'. The statement has been terminated.
 ```
 
-### <a name="f-use-the-ignoredupkey-option"></a>F. IGNORE_DUP_KEY オプションを使用する
+### <a name="f-use-the-ignore_dup_key-option"></a>F. IGNORE_DUP_KEY オプションを使用する
 次の例では、最初に `IGNORE_DUP_KEY` オプションを `ON` に設定し、次にこのオプションを `OFF` に設定して、複数の行を一時テーブルに挿入したときのこのオプションの影響を検証します。 2 番目の複数行の `#Test` ステートメントを実行するときには、`INSERT` テーブルに、重複する値となる 1 行を意図的に挿入します。 テーブル内の行数としては、挿入された行数が返されます。
 
 ```sql
@@ -934,7 +934,7 @@ Number of rows
 
 ここでは、`Production.UnitMeasure` テーブルで `UNIQUE` インデックス制約に違反した行は 1 行だけでしたが、このテーブルから行は挿入されませんでした。
 
-### <a name="g-using-dropexisting-to-drop-and-re-create-an-index"></a>G. DROP_EXISTING を使ってインデックスを削除し再作成する
+### <a name="g-using-drop_existing-to-drop-and-re-create-an-index"></a>G. DROP_EXISTING を使ってインデックスを削除し再作成する
 次の例では、`ProductID` オプションを使って、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースにある`Production.WorkOrder` テーブルの `DROP_EXISTING` 列にある既存のインデックスを削除して再作成します。 ここではオプション `FILLFACTOR` および `PAD_INDEX` も設定されています。
 
 ```sql
@@ -1109,7 +1109,7 @@ ALTER INDEX test_idx on test_table RESUME
 ALTER INDEX test_idx on test_table ABORT
 ```
 
-### <a name="o-create-a-non-clustered-index-on-a-table-in-the-current-database"></a>O. 現在のデータベース内のテーブルに非クラスター化インデックスを作成する
+### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>O. 現在のデータベース内のテーブルに非クラスター化インデックスを作成する
 次の例では、`ProductVendor` テーブルの `VendorID` 列に非クラスター化インデックスを作成します。
 
 ```sql
@@ -1118,7 +1118,7 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```
 
 ### <a name="p-create-a-clustered-index-on-a-table-in-another-database"></a>P. 他のデータベースのテーブルにクラスター化インデックスを作成する
-次の例では、`Purchasing` データベースにある `VendorID` テーブルの `ProductVendor` 列に非クラスター化インデックスを作成します。
+次の例では、`Purchasing` データベースにある `ProductVendor` テーブルの `VendorID` 列に非クラスター化インデックスを作成します。
 
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID

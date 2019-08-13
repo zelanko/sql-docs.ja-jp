@@ -23,12 +23,12 @@ ms.assetid: 4b88e98c-49c4-4388-ab0e-476cc956977c
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: b0ee348ec2492ac54c1d8da57dfa95701dd42507
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 627d4c925129e0826fcbc9fd2a09121091d68501
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082524"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742969"
 ---
 # <a name="restore-statements---headeronly-transact-sql"></a>RESTORE Statements - HEADERONLY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md )]
@@ -71,12 +71,14 @@ FROM <backup_device>
 {   
    { logical_backup_device_name |  
       @logical_backup_device_name_var }  
-   | { DISK | TAPE } = { 'physical_backup_device_name' |  
+   | { DISK | TAPE | URL } = { 'physical_backup_device_name' |  
        @physical_backup_device_name_var }   
 }  
   
 ```  
-  
+> [!NOTE] 
+> URL は、Microsoft Azure Blob Storage の場所とファイル名を指定するために使用される形式であり、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] SP1 CU2 以降でサポートされています。 Microsoft Azure ストレージはサービスですが、実装はディスクやテープと似ており、3 つのデバイスすべてで一貫したシームレスな復元エクスペリエンスを実現できます。
+
 ## <a name="arguments"></a>引数  
  RESTORE HEADERONLY の引数の説明については、「[RESTORE の引数 &#40;Transact-SQL&#41;](../../t-sql/statements/restore-statements-arguments-transact-sql.md)」を参照してください。  
   
@@ -149,7 +151,7 @@ FROM <backup_device>
 |**EncryptorType**|**nvarchar(32)**|**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] (CU1) から現在のバージョンまで)。<br /><br /> 使用される暗号化の種類:証明書キーまたは非対称キー。 バックアップが暗号化されていない場合、この値は NULL となります。|  
   
 > [!NOTE]  
->  バックアップ セットにパスワードが定義されている場合、RESTORE HEADERONLY によって完全な情報が返されるのは、コマンドの PASSWORD オプションと同じパスワードが指定されているバックアップ セットに対してのみです。 また保護されていないバックアップ セットについても、RESTORE HEADERONLY では完全な情報が返されます。 メディア上にある、他のパスワードで保護されているバックアップ セットについては、**BackupName** 列が ' **_Password Protected_** ' に設定され、他の列は NULL になります。  
+>  バックアップ セットにパスワードが定義されている場合、RESTORE HEADERONLY によって完全な情報が返されるのは、コマンドの PASSWORD オプションと同じパスワードが指定されているバックアップ セットに対してのみです。 また保護されていないバックアップ セットについても、RESTORE HEADERONLY では完全な情報が返されます。 メディア上にある、他のパスワードで保護されているバックアップ セットについては、**BackupName** 列が ' ** _** ' に設定され、他の列は NULL になります。  
   
 ## <a name="general-remarks"></a>全般的な解説  
  クライアントは RESTORE HEADERONLY を使用して、特定のバックアップ デバイス上のすべてのバックアップについて、バックアップ ヘッダーに関するすべての情報を取得できます。 バックアップ デバイス上にあるバックアップごとに、ヘッダー情報が 1 行のデータとしてサーバーから送信されます。  

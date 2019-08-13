@@ -60,7 +60,7 @@ OPENJSON( jsonExpression [ , path ] )  [ <with_clause> ]
 
 既定では、**OPENJSON** テーブル値関数は、*jsonExpression* で見つかった各 {key:value} ペアのキー名、値、および型を含む 3 つの列を返します。 別の方法として、*with_clause* を指定することで、**OPENJSON** が返す結果セットのスキーマを明示的に指定できます。
   
-### <a name="withclause"></a>with_clause
+### <a name="with_clause"></a>with_clause
   
 ![OPENJSON TVF 内の WITH 句の構文](../../relational-databases/json/media/openjson-shema-syntax.png "OPENJSON WITH 構文")
 
@@ -140,7 +140,7 @@ FROM OPENJSON(@json,'$.path.to."sub-object"')
 
 JSON の式のプロパティを持つパスの手順を照合に使用する比較では、大文字と小文字および照合順序に関係なく (つまり、BIN2 の比較)。 
 
-### <a name="withclause"></a>*with_clause*
+### <a name="with_clause"></a>*with_clause*
 
 **OPENJSON** 関数が返す出力スキーマを明示的に定義します。 省略可能な *with_clause* には、次の要素を含めることができます。
 

@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 04fd9d95-4624-420f-a3be-1794309b3a47
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: adef2650015edadfe61d331c6358fa85c0099c99
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bfc88ea17f78aaad42d585490a4776db65824d92
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014650"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742932"
 ---
 # <a name="overview-of-always-on-availability-groups-sql-server"></a>AlwaysOn 可用性グループの概要 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -128,7 +128,7 @@ ms.locfileid: "68014650"
   
 -   **1 つ以上のセカンダリ レプリカへの読み取り専用アクセス (読み取り可能なセカンダリ レプリカ)**  
   
-     セカンダリ ロールを実行するときに、ローカル データベースへの読み取り専用アクセスを許可するように可用性レプリカを構成できます (ただし、一部の操作は完全にはサポートされていません)。 また、読み取り専用ワークロードがプライマリ レプリカで実行されないようにする場合は、プライマリ ロールで実行されているときに読み取り/書き込みアクセスのみを許可するようにレプリカを構成できます。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+     ローカル データベースへの読み取り専用アクセスのみを許可するようにセカンダリ可用性レプリカを構成できます (ただし、一部の操作は完全にはサポートされていません)。 これにより、セカンダリ レプリカへの読み取り/書き込み接続を試行できなくなります。 読み取り/書き込みアクセスのみを許可することで、 _ レプリカに対する読み取り専用ワークロードを防止することもできます。 これにより、プライマリ レプリカに対して読み取り専用接続が行われなくなります。 詳細については、「[アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
   
      可用性グループに、現在、可用性グループ リスナーと 1 つ以上の読み取り可能なセカンダリ レプリカが存在する場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は読み取りを目的とした接続要求をそれらのいずれかにルーティングできます (*読み取り専用ルーティング*)。 詳細については、「 [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../../database-engine/availability-groups/windows/listeners-client-connectivity-application-failover.md)での 1 つ以上の可用性グループの構成と管理において重要です。  
   

@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/17/2019
 ms.locfileid: "68290352"
 ---
-# <a name="spexecutesql-transact-sql"></a>sp_executesql (TRANSACT-SQL)
+# <a name="sp_executesql-transact-sql"></a>sp_executesql (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   何回も再利用可能な、または動的に作成した [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチを実行します。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントやバッチには、埋め込みパラメーターを含めることができます。  

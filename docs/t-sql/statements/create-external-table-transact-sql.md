@@ -1,7 +1,7 @@
 ---
 title: CREATE EXTERNAL TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/29/2019
+ms.date: 07/29/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -21,12 +21,12 @@ ms.assetid: 6a6fd8fe-73f5-4639-9908-2279031abdec
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: cfdbf22c09dcc57025fd0b3820b7e12bd9097bc6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4c2aa732a98079fd88ebfcafa476f20566e6dc5a
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67940090"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68698295"
 ---
 # <a name="create-external-table-transact-sql"></a>CREATE EXTERNAL TABLE (Transact-SQL)
 
@@ -44,7 +44,7 @@ ms.locfileid: "67940090"
 
 ||||||
 |---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|**\* _SQL Server \*_ ** &nbsp;|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -573,7 +573,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|** _\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|** _** &nbsp;|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -614,6 +614,9 @@ column_name <data_type>
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL では、Azure SQL Database 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、Azure SQL Database に格納されません。
 
 \<column_definition> [ ,...*n* ]。CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+
+> [!NOTE]
+> `Text`、`nText`、および `XML` は、Azure SQL Database の外部テーブルの列に対してサポートされているデータ型ではありません。
 
 データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータに対してクエリを実行するときに、ファイルの行が拒否されます。
 
@@ -698,7 +701,7 @@ WITH
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|** _\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|** _** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-table-transact-sql.md?view=aps-pdw-2016-au7)|
 ||||||
 
 &nbsp;
@@ -746,6 +749,9 @@ column_name <data_type>
 *{ database_name.schema_name.table_name | schema_name.table_name | table_name }* 。作成するテーブルの 1 つから 3 つの部分で構成される名前。 外部テーブルの場合、SQL Data Warehouse では、Azure Data Lake、Hadoop、または Azure Blob Storage 内で参照されているファイルまたはフォルダーに関する基本的な統計情報と共に、テーブルのメタデータのみが格納されます。 実際のデータは移動されず、SQL Data Warehouse に格納されません。
 
 \<column_definition> [ ,...*n* ]。CREATE EXTERNAL TABLE では、列名、データ型、NULL 値の許容、照合順序を構成できます。 外部テーブルに対して DEFAULT CONSTRAINT を使用することはできません。
+
+> [!NOTE]
+> `Text`、`nText`、および `XML` は、Azure SQL Warehouse の外部テーブルの列に対してサポートされているデータ型ではありません。
 
 データ型と列の数を含む列の定義は、外部ファイルのデータと一致している必要があります。 不一致がある場合、実際のデータに対してクエリを実行するときに、ファイルの行が拒否されます。
 
@@ -803,7 +809,7 @@ REJECT_SAMPLE_VALUE = *reject_sample_value*。REJECT_TYPE = percentage を指定
 REJECTED_ROW_LOCATION = *<ディレクトリの場所>*
 
 外部データ ソース内のディレクトリを指定します。拒否された行と該当エラー ファイルをそこに書き込みます。
-指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 "_rejectedrows" という名前で子ディレクトリが作成されます。"_ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。
+指定したパスが存在しない場合、PolyBase では、そのパスが自動的に作成されます。 " _ " 文字があることで、場所パラメーターで明示的に指定されない限り、他のデータ処理ではこのディレクトリがエスケープされます。 このディレクトリ内には、YearMonthDay -HourMinuteSecond (例: 20180330-173205) のロード サブミッション時間に基づいて作成されたフォルダーがあります。 このフォルダーで、2 種類のファイル、理由ファイルとデータ ファイルが書き込まれます。
 
 理由ファイルとデータ ファイルのいずれにも、CTAS ステートメントと関連付けられている queryID が含まれます。 データと理由が別々のファイル内にあるため、対応するファイルはサフィックスが一致しています。
 
@@ -885,10 +891,10 @@ CREATE EXTERNAL FILE FORMAT TextFileFormat
 WITH
 (
     FORMAT_TYPE = DELIMITEDTEXT 
-    , FORMAT_OPTIONS ( FIELDTERMINATOR = '|'
-       , STRINGDELIMITER = ''
-      , DATEFORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
-      , USETYPE_DEFAULT = FALSE
+    , FORMAT_OPTIONS ( FIELD_TERMINATOR = '|'
+       , STRING_DELIMITER = ''
+      , DATE_FORMAT = 'yyyy-MM-dd HH:mm:ss.fff'
+      , USE_TYPE_DEFAULT = FALSE
       )
 )
 
@@ -923,7 +929,7 @@ AS SELECT * FROM
 
 ||||||
 |---|---|---|---|---|
-|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
+|[SQL Server](create-external-table-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-table-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-table-transact-sql.md?view=azure-sqldw-latest)|** _** &nbsp;|
 ||||||
 
 &nbsp;

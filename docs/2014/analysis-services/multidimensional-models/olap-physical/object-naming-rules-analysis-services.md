@@ -12,12 +12,12 @@ ms.assetid: b338a60d-4802-4b68-862a-6dc6a3f75e48
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: be8bec262afc67571c67ad6919ae9e9163a434be
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ba1b1b3b8d8fa3f26af84ef12f95858ac32cdeee
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889437"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957324"
 ---
 # <a name="object-naming-rules-analysis-services"></a>オブジェクトの名前付け規則 (Analysis Services)
   このトピックでは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のコードまたはスクリプトにおけるオブジェクトの名前付け規則、および、オブジェクト名で使用できない予約語と文字について説明します。  
@@ -44,7 +44,7 @@ ms.locfileid: "68889437"
   
  テーブル モデルでは、データベース互換性が 1103 に設定されている場合、一部のオブジェクトで検証ルールが緩められており、一部のクライアント アプリケーションの拡張文字要件と名前付け規則のためにルールに準拠していません。 これらの条件を満たすデータベースは、厳格でない検証ルールに従います。 この場合、制限された文字がオブジェクト名に使用されていても、検証に合格することがあります。  
   
- **予約語**  
+ **予約済みキーワード**  
   
 -   AUX  
   
@@ -69,10 +69,10 @@ ms.locfileid: "68889437"
 |オブジェクト|無効な文字|  
 |------------|------------------------|  
 |`Server`|サーバー オブジェクトに名前を付けるときは、Windows サーバーの名前付け規則に従います。 詳細については、「[名前付け規則 (Windows)](/windows/desktop/DNS/naming-conventions) 」を参照してください。|  
-|`DataSource`|`: / \ * | ? " () [] {} <>`|  
-|`Level` または `Attribute`|````. , ; ' ` : / \ * &| ? " & % $ ! + = [] {} \< >````|  
-|`Dimension` または `Hierarchy`|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \<,>````|  
-|他のすべてのオブジェクト|````. , ; ' ` : / \ * | ? " & % $ ! + = () [] {} \< >````|  
+|`DataSource`| `: / \ * \| ? " () [] {} <>` |  
+|`Level` または `Attribute`|````. , ; ' ` : / \ * & \| ? " & % $ ! + = [] {} < >````|  
+|`Dimension` または `Hierarchy`|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} <,>````|  
+|他のすべてのオブジェクト|````. , ; ' ` : / \ * \| ? " & % $ ! + = () [] {} < >````|  
   
  **例外予約文字を使用できる場合**  
   
