@@ -1,5 +1,5 @@
 ---
-title: Word の制限に予約されています |Microsoft Docs
+title: 予約済みキーワードの制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 05/01/2018
 ms.prod: sql
