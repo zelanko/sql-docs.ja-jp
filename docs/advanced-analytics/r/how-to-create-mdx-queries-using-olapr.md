@@ -7,12 +7,13 @@ ms.date: 05/22/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 09f2f1dcca3fd8d0828a87e8c781d05c4ad8e5f5
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: fb2918e5fb89d85d7f6fa1cc12622481e585d848
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470125"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68887664"
 ---
 # <a name="how-to-create-mdx-queries-in-r-using-olapr"></a>OlapR を使用して R で MDX クエリを作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,13 +74,13 @@ ms.locfileid: "68470125"
 
 次の例は、AdventureWorks データマートとキューブプロジェクトに基づいています。これは、Analysis Services に簡単に復元できるバックアップファイルを含め、複数のバージョンのプロジェクトが広く利用可能であるためです。 既存のキューブがない場合は、次のいずれかのオプションを使用してサンプルキューブを取得します。
 
-+ レッスン4までの Analysis Services チュートリアルに従って、これらの例で使用するキューブを作成します。[OLAP キューブの作成](../../analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial.md)
++ レッスン4までの Analysis Services チュートリアルに従って、これらの例で使用するキューブを作成します。[OLAP キューブの作成](https://docs.microsoft.com/analysis-services/multidimensional-tutorial/multidimensional-modeling-adventure-works-tutorial)
 
-+ 既存のキューブをバックアップとしてダウンロードし、Analysis Services のインスタンスに復元します。 たとえば、このサイトは完全に処理されたキューブを zip 形式で提供します。[Adventure Works 多次元モデル SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 ファイルを抽出し、SSAS インスタンスに復元します。 詳細については、「 [Backup and restore](../../analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases.md)」または「 [Restore-Asdatabase コマンドレット](../../analysis-services/powershell/restore-asdatabase-cmdlet.md)」を参照してください。
++ 既存のキューブをバックアップとしてダウンロードし、Analysis Services のインスタンスに復元します。 たとえば、このサイトは完全に処理されたキューブを zip 形式で提供します。[Adventure Works 多次元モデル SQL 2014](https://msftdbprodsamples.codeplex.com/downloads/get/882334)。 ファイルを抽出し、SSAS インスタンスに復元します。 詳細については、「 [Backup and restore](https://docs.microsoft.com/analysis-services/multidimensional-models/backup-and-restore-of-analysis-services-databases)」または「 [Restore-Asdatabase コマンドレット](https://docs.microsoft.com/analysis-services/powershell/restore-asdatabase-cmdlet)」を参照してください。
 
 ### <a name="1-basic-mdx-with-slicer"></a>1.スライサーを使う基本的な MDX
 
-この MDX クエリは、インターネットの販売数と販売金額の数と金額の_メジャー_を選択し、列軸に設定します。 SalesTerritory ディメンションのメンバーを *スライサー*として追加し、オーストラリアからの販売のみが計算で使われるようにクエリをフィルターします。
+この MDX クエリは、インターネットの販売数と販売金額の数と金額の _を選択し、列軸に設定します。 SalesTerritory ディメンションのメンバーを *スライサー*として追加し、オーストラリアからの販売のみが計算で使われるようにクエリをフィルターします。
 
 ```MDX
 SELECT {[Measures].[Internet Sales Count], [Measures].[InternetSales-Sales Amount]} ON COLUMNS, 
@@ -90,8 +91,8 @@ WHERE [Sales Territory].[Sales Territory Country].[Australia]
 
 + 列では、コンマ区切りの文字列の要素として複数のメジャーを指定できます。
 + 行軸では、"Product Line" ディメンションのすべての可能な値 (すべての MEMBERS) を使います。 
-+ このクエリは、すべての国のインターネット販売の_ロールアップ_の概要を含む3つの列を含むテーブルを返します。
-+ WHERE 句は_スライサー軸_を指定します。 この例では、スライサーは**SalesTerritory**ディメンションのメンバーを使用してクエリをフィルター処理し、オーストラリアからの売上のみを計算に使用します。
++ このクエリは、すべての国のインターネット販売の _の概要を含む3つの列を含むテーブルを返します。
++ WHERE 句は _を指定します。 この例では、スライサーは**SalesTerritory**ディメンションのメンバーを使用してクエリをフィルター処理し、オーストラリアからの売上のみを計算に使用します。
 
 #### <a name="to-build-this-query-using-the-functions-provided-in-olapr"></a>olapR で提供される関数を使ってこのクエリを作成するには
 

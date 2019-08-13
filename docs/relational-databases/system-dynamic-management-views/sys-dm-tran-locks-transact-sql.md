@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68262623"
 ---
-# <a name="sysdmtranlocks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
+# <a name="sysdm_tran_locks-transact-sql"></a>sys.dm_tran_locks (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   Manager リソースで現在アクティブなロックに関する情報を返します[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]します。 各行は、ロック マネージャーに対して現在アクティブになっている要求を示しています。この要求は、許可されたロックまたは許可を待機しているロックに対するものです。  
@@ -47,14 +47,16 @@ ms.locfileid: "68262623"
 |**resource_lock_partition**|**Int**|ロック リソースがパーティション分割されている場合の、ロック パーティションの ID。 パーティション分割されていないロック リソースの値は 0 です。|  
 |**request_mode**|**nvarchar(60)**|要求のモード。 許可された要求については許可モード、待機中の要求については要求中モードになります。|  
 |**request_type**|**nvarchar(60)**|要求の種類。 値は LOCK です。|  
-|**request_status**|**nvarchar(60)**|この要求の現在の状態。 使用できる値は、GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT、または ABORT_BLOCKERS です。 優先度の低い待機とアボート ブロッカーの詳細については、、 *low_priority_lock_wait*のセクション[ALTER INDEX & #40 を参照してください。TRANSACT-SQL と #41 です](../../t-sql/statements/alter-index-transact-sql.md)。|  
+|**request_status**|**nvarchar(60)**|この要求の現在の状態。 使用できる値は、GRANTED、CONVERT、WAIT、LOW_PRIORITY_CONVERT、LOW_PRIORITY_WAIT、または ABORT_BLOCKERS です。 優先度の低い待機とアボート ブロッカーの詳細については、[ALTER INDEX(Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md)の*low_priority_lock_wait*のセクションを参照してください。|  
 |**request_reference_count**|**smallint**|同じ要求元がこのリソースを要求した回数の概数。|  
 |**request_lifetime**|**int**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**request_session_id**|**int**|要求を現在所有するセッション ID。 所有セッション ID は、分散トランザクションとバインドされたトランザクションでは異なります。 値が -2 の場合、その要求が孤立した分散トランザクションに属することを示します。 値が -3 の場合、その要求が遅延復旧トランザクションに属することを示します。遅延復旧トランザクションとは、たとえば、ロールバックが正常に完了しなかったためにロールバックの復旧を遅延したトランザクションのことです。|  
 |**request_exec_context_id**|**int**|要求を現在所有するプロセスの、実行コンテキスト ID。|  
 |**request_request_id**|**int**|要求を現在所有するプロセスの要求 ID (バッチ ID)。 この値は、トランザクションに対する複数のアクティブな結果セット (MARS) 接続が変わるたびに変化します。|  
 |**request_owner_type**|**nvarchar(60)**|要求を所有するエンティティの種類。 ロック マネージャーの要求は、さまざまな種類のエンティティで所有されます。 有効な値は次のとおりです。<br /><br /> TRANSACTION = 要求はトランザクションが所有しています。<br /><br /> CURSOR = 要求はカーソルが所有しています。<br /><br /> SESSION = 要求はユーザー セッションが所有しています。<br /><br /> SHARED_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの共有部分が所有しています。<br /><br /> EXCLUSIVE_TRANSACTION_WORKSPACE = 要求は、トランザクション ワークスペースの排他部分が所有しています。<br /><br /> NOTIFICATION_OBJECT = 要求は内部で所有[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]コンポーネント。 このコンポーネントは、別のコンポーネントがロックの取得を待機しているときに、そのことを通知するようにロック マネージャーに要求しました。 FileTable 機能は、この値を使用するコンポーネントです。<br /><br /> **注:** 作業スペースは、参加しているセッションのロックを保持するために内部的に使用されます。|  
-|**request_owner_id**|**bigint**|この要求の特定の所有者の ID。<br /><br /> トランザクションが要求の所有者である場合、この値にはトランザクション ID が含まれます。<br /><br /> FileTable は、要求の所有者と**request_owner_id**次の値のいずれか。<br /><br /> <br /><br /> -4:FileTable には、データベースのロックを取得しました。<br /><br /> -3:FileTable には、テーブル ロックを取得しました。<br /><br /> その他の値:この値は、ファイル ハンドルを表します。 また、この値として表示されます**fcb_id**動的管理ビューで[sys.dm_filestream_non_transacted_handles & #40 です。TRANSACT-SQL と #41 です](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)。|  
+
+|**request_owner_id**|**bigint**|この要求の特定の所有者の ID。<br /><br /> トランザクションが要求の所有者である場合、この値にはトランザクション ID が含まれます。<br /><br /> FileTable が要求の所有者である場合、**request_owner_id**は次の値のいずれか。<br /><br /> <br /><br /> -4:FileTable が、データベースのロックを取得しました。<br /><br /> -3:FileTable が、テーブル ロックを取得しました。<br /><br /> その他の値:この値は、ファイル ハンドルを表します。 また、この値は動的管理ビュー[sys.dm_filestream_non_transacted_handles (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-filestream-non-transacted-handles-transact-sql.md)では**fcb_id**としても表示されます。|  
+
 |**request_owner_guid**|**uniqueidentifier**|この要求の特定の所有者の GUID。 この値は、分散トランザクションの MS DTC GUID に対応する場合に、そのトランザクションによってのみ使用されます。|  
 |**request_owner_lockspace_id**|**nvarchar(32)**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]この値は、要求元のロック領域 ID を示します。 ロック領域 ID によって、2 つの要求元の間に互換性があり、互いに競合しないモードでロックを許可できるかどうかを判断できます。|  
 |**lock_owner_address**|**varbinary(8)**|要求を追跡するときに使用される内部データ構造のメモリ アドレス。 この列を結合できますで**resource_address**列**sys.dm_os_waiting_tasks**します。|  
@@ -80,9 +82,7 @@ ms.locfileid: "68262623"
   
 -   SET TRANSACTION ISOLATION LEVEL を使用すると、セッションに対するロックのレベルを指定できます。 詳細については、「[SET TRANSACTION ISOLATION LEVEL &#40;Transact-SQL&#41;](../../t-sql/statements/set-transaction-isolation-level-transact-sql.md)」を参照してください。  
   
-
-- テーブル ヒントをロックすると、FROM 句内にあるテーブルの個別の参照に対してロックのレベルを指定できます。構文と制限事項については、[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md) を参照してください。	  
-
+-   テーブル ヒントをロックすると、FROM 句内にあるテーブルの個別の参照に対してロックのレベルを指定できます。 構文と制限事項については、[テーブル ヒント &#40;Transact-SQL&#41;](../../t-sql/queries/hints-transact-sql-table.md) を参照してください。  
   
  1 つのセッション ID で実行されているリソースには、複数のロックを許可できます。 それぞれの 1 つのセッションを実行している別のエンティティが同じリソースのロックを所有できるし、情報が表示されます、 **request_owner_type**と**request_owner_id**である列によって返される**sys.dm_tran_locks**します。 場合の同じインスタンスを複数**request_owner_type**が存在する、 **request_owner_id**列は、各インスタンスを区別するために使用されます。 分散トランザクションの場合、 **request_owner_type**と**request_owner_guid**列は、異なるエンティティ情報が表示されます。  
   
@@ -90,8 +90,7 @@ ms.locfileid: "68262623"
   
  1 つのセッションで実行する複数のカーソルは区別できないため、1 つのエンティティとして扱われます。  
   
- セッション ID 値に関連付けられていない分散トランザクションは孤立したトランザクションで、セッション ID 値 -2 が割り当てられます。詳細については、[KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md) を参照してください。  
-
+ セッション ID 値に関連付けられていない分散トランザクションは孤立したトランザクションで、セッション ID 値 -2 が割り当てられます。 詳細については、[KILL &#40;Transact-SQL&#41;](../../t-sql/language-elements/kill-transact-sql.md) を参照してください。  
   
 ## <a name="resource-details"></a>リソースの詳細  
  次の表に、リソースで表される、 **resource_associated_entity_id**列。  
@@ -276,7 +275,7 @@ ms.locfileid: "68262623"
 |METADATA.XML_COMPONENT|xml_component_id = X|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |METADATA.XML_INDEX_QNAME|object_id = O, $qname_id = Q|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
   
- 次の Xevent は、パーティションに関連する**スイッチ**とオンライン インデックス再構築します。 構文については、次を参照してください。 [ALTER TABLE &#40;TRANSACT-SQL&#41; ](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX &#40;TRANSACT-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)します。  
+ 次の Xevent は、パーティションに関連する**SWITCH**とオンライン インデックス再構築します。 構文については、[ALTER TABLE (Transact-SQL)](../../t-sql/statements/alter-table-transact-sql.md)と[ALTER INDEX (Transact-SQL)](../../t-sql/statements/alter-index-transact-sql.md) を参照してください。 
   
 -   lock_request_priority_state  
   
@@ -288,7 +287,7 @@ ms.locfileid: "68262623"
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-sysdmtranlocks-with-other-tools"></a>A. 別のツールで sys.dm_tran_locks を使用する  
+### <a name="a-using-sysdm_tran_locks-with-other-tools"></a>A. 別のツールで sys.dm_tran_locks を使用する  
  次の例では、更新操作が別のトランザクションによってブロックされたシナリオを処理します。 使用して**sys.dm_tran_locks**し、その他のツールでは、リソースのロックに関する情報が提供されます。  
   
 ```sql  
@@ -386,7 +385,7 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sys.dm_tran_database_transactions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
+ [sys.dm_tran_database_transactions (Transact-SQL)](../../relational-databases/system-dynamic-management-views/sys-dm-tran-database-transactions-transact-sql.md)   
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
  [トランザクション関連の動的管理ビューおよび関数  &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/transaction-related-dynamic-management-views-and-functions-transact-sql.md)  
   

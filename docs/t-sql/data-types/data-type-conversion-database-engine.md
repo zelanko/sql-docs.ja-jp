@@ -21,12 +21,12 @@ ms.assetid: ffacf45e-a488-48d0-9bb0-dcc7fd365299
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c129998db40a64507b119b8392abcb56cc119a8b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4a9ef3df75a54b6565b1d71c0a9e4557f752f95b
+ms.sourcegitcommit: 182ed49fa5a463147273b58ab99dc228413975b6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68001689"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68697493"
 ---
 # <a name="data-type-conversion-database-engine"></a>データ型の変換 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -57,8 +57,44 @@ CAST ( $157.27 AS VARCHAR(10) )
 次の図は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システムで提供されるデータ型に許可されている、すべての明示的および暗黙的なデータ型変換です。 **xml**、**bigint**、**sql_variant** が含まれます。 代入時に **sql_variant** データ型からの暗黙的な変換は行われませんが、**sql_variant** への暗黙的な変換は行われます。
   
 ![データ型変換表](../../t-sql/data-types/media/lrdatahd.png "データ型変換表")
-  
+
+上のグラフは、SQL Server で許可されているすべての明示的および暗黙的な変換を示していますが、変換の結果のデータ型を示すものではありません。 SQL Server で明示的な変換が実行されると、ステートメント自体によって結果のデータ型が決定されます。 暗黙的な変換の場合、変数の値の設定や列への値の挿入などの代入ステートメントは、変数宣言または列定義によって定義されたデータ型になります。 比較演算子または他の式の場合、結果のデータ型は、データ型の優先順位の規則によって異なります。
+
+例として、次のスクリプトでは型 `varchar` の変数が定義され、`int` 型の値が変数に代入された後、文字列型の変数の連結が選択されます。
+
+```sql
+DECLARE @string varchar(10);
+SET @string = 1;
+SELECT @string + ' is a string.'
+```
+
+`1` の `int` 値は `varchar` に変換されるため、`SELECT` ステートメントからは値 `1 is a string.` が返されます。
+
+次の例は、代わりに `int` 変数を使用した同様のスクリプトを示しています。
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + ' is not a string.'
+```
+
+この場合、`SELECT` ステートメントからは次のエラーがスローされます。
+
+`Msg 245, Level 16, State 1, Line 3`
+`Conversion failed when converting the varchar value ' is not a string.' to data type int.`
+
+式 `@notastring + ' is not a string.'` を評価するために、SQL Server では、式の結果を計算する前に、データ型の優先順位の規則に従って暗黙的な変換を完了します。 `int` は `varchar` よりも優先順位が高いため、SQL Server では文字列の整数への変換が試行され、その文字列を整数に変換できないため失敗します。 式に変換可能な文字列が指定されている場合は、ステートメントが成功します。次に例を示します。
+
+```sql
+DECLARE @notastring int;
+SET @notastring = '1';
+SELECT @notastring + '1'
+```
+
+この場合、文字列 `1` を整数値 `1` に変換できるため、この `SELECT` ステートメントからは値 `2` が返されます。 指定されたデータ型が整数である場合、`+` 演算子は連結ではなく加算になることに注意してください。
+
 ## <a name="data-type-conversion-behaviors"></a>データ型変換の動作
+
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オブジェクト間のデータ型の変換を行う場合、暗黙的または明示的なデータ型変換がサポートされない場合があります。 たとえば、**nchar** 型の値を **image** 型の値に変換することはできません。 **nchar** は明示的な変換によってのみ **binary** に変換できます。**binary** への暗黙的な変換はサポートされません。 ただし、**nchar** は暗黙的、明示的のどちらでも **nvarchar** に変換できます。
   
 次のトピックでは、対応するデータ型変換の動作について説明しています。

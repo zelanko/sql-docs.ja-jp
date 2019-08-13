@@ -1,5 +1,5 @@
 ---
-title: バックアップ、復元、および SSIS カタログの移動 |Microsoft Docs
+title: SSIS カタログをバックアップ、復元、移動する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: bf806aef-8556-48ab-aed5-e95de9a2204e
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 625e090ab65eff7a912785e3ddef2de3e7d83b0a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 66cbc5b8b54ec2507bb4fbe96443afa25386de96
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66061272"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670508"
 ---
 # <a name="backup-restore-and-move-the-ssis-catalog"></a>SSIS カタログのバックアップ、復元、および移動
   [!INCLUDE[ssISCurrent](../includes/ssiscurrent-md.md)] には SSISDB データベースが用意されています。 **SSISDB** カタログに格納されているオブジェクト、設定、および業務データを検査するには、SSISDB データベースのビューに対してクエリを実行します。 このトピックでは、データベースのバックアップと復元の手順について説明します。  
@@ -48,7 +48,7 @@ ms.locfileid: "66061272"
   
 5.  SSISDB カタログが作成されていない [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] インスタンスに SSISDB データベースを復元する場合は、次の操作を行って、sp_ssis_startup の CREATE PROCEDURE スクリプトを生成します。 詳細については、「[CREATE PROCEDURE &#40;Transact-SQL&#41;](/sql/t-sql/statements/create-procedure-transact-sql)」を参照してください。  
   
-    1.  オブジェクト エクスプローラーで、 **[データベース]** ノードを展開し、 **[master]**  >  **[プログラミング]**  >  **[ストアド プロシージャ]** ノードの順に展開します。  
+    1.  オブジェクトエクスプローラーで、 **[データベース]** ノードを展開し、 **[システムデータベース** > ] [**master** > ] [**プログラミング** > ] **[ストアドプロシージャ]** ノードの順に展開します。  
   
     2.  **[dbo.sp_ssis_startup]** を右クリックし、 **[ストアド プロシージャをスクリプト化]**  >  **[CREATE]**  >  **[新しいクエリ エディター ウィンドウ]** の順にクリックします。  
   

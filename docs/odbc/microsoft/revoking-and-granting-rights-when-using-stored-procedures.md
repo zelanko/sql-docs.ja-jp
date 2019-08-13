@@ -28,8 +28,8 @@ ms.locfileid: "67987953"
   
  SQL_ERROR = 1  
   
- 後"[Microsoft] [ODBC driver for Oracle] 間違った数のパラメーター"を =  
+ szErrorMsg="[Microsoft][ODBC driver for Oracle]Wrong number of parameters"  
   
- 後 =「[Microsoft] [ODBC driver for Oracle] 構文エラーまたはアクセス違反です」  
+ szErrorMsg="[Microsoft][ODBC driver for Oracle]Syntax error or access violation"  
   
  Oracle OCI 関数 Odessp() への呼び出しがこのシナリオでは失敗が既定のパラメーターを実装するために必要です。 基になるテーブルのアクセス許可を変更した後に、もう一度実行する前に、ストアド プロシージャが再コンパイルする必要があります。

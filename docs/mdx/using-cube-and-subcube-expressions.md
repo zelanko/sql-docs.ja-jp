@@ -1,5 +1,5 @@
 ---
-title: キューブ式とサブキューブ式を使用して |Microsoft Docs
+title: Cube 式およびサブキューブ式の使用 |Microsoft Docs
 ms.date: 06/04/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 0b3e6cd4a38d45f2b63fa5333526832ba31e1ce9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c656bdaa0de108ade568a22bbcc734f38d43bfd
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68097189"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893537"
 ---
 # <a name="using-cube-and-subcube-expressions"></a>キューブ式とサブキューブ式の使用
 
@@ -21,28 +21,28 @@ ms.locfileid: "68097189"
   多次元式 (MDX) ステートメントでは、キューブまたはサブキューブのデータを定義、操作、または取得するために、キューブ式やサブキューブ式を使用します。  
   
 ## <a name="cube-expressions"></a>キューブ式  
- キューブ式は、キューブ識別子または CURRENTCUBE キーワードのいずれかが含まれていて、単純な式にしかできません。 多くの MDX ステートメントでは、キューブ識別子を要求する代わりに、現在のキューブ コンテキストを識別するために CURRENTCUBE キーワードを使用します。  
+ キューブ式には、キューブ識別子または CURRENTCUBE キーワードが含まれているので、単純式のみを指定できます。 多くの MDX ステートメントでは、キューブ識別子を要求する代わりに、CURRENTCUBE キーワードを使用して現在のキューブコンテキストを識別します。  
   
- キューブ識別子*Cube_Name*の MDX ステートメントの BNF 表記の説明。  
+ キューブ識別子は、MDX ステートメントの BNF 表記の説明に*Cube_Name*として表示されます。  
   
- キューブ式は、複数の場所で表示されます。 MDX の SELECT ステートメントでは、キューブ式は、データの取得元のキューブを指定します。 次のクエリ例では、式 [Adventure Works] は、その名前のキューブを参照します。  
+ キューブ式は複数の場所に表示される場合があります。 MDX の SELECT ステートメントでは、キューブ式は、データの取得元のキューブを指定します。 次のクエリの例では、[Adventure Works] という式は、その名前のキューブを参照しています。  
   
  `SELECT [Measures].[Internet Sales Amount] ON COLUMNS`  
   
  `FROM [Adventure Works]`  
   
- CREATE MEMBER ステートメントでは、キューブ式は、作成中の計算されるメンバーが表示されるキューブを指定します。 次の例では、ステートメントには、Adventure Works キューブのメジャー ディメンションに、計算されるメジャーが作成されます。  
+ CREATE MEMBER ステートメントでは、キューブ式は、作成中の計算されるメンバーが表示されるキューブを指定します。 次の例では、ステートメントは、Adventure Works キューブの Measures ディメンションに対して計算されるメジャーを作成します。  
   
  `CREATE MEMBER [Adventure Works].[Measures].[Test] AS 1`  
   
- Followingexamp で示すように、計算されるメンバーが作成されるキューブが MDX スクリプトが属する同じキューブをする必要がありますので、キューブの名前を CURRENTCUBE キーワードに置き換えることが MDX スクリプト内の CREATE MEMBER ステートメントを使用する場合le:  
+ MDX スクリプト内で CREATE MEMBER ステートメントを使用すると、キューブの名前を CURRENTCUBE キーワードに置き換えることができます。これは、計算されるメンバーが作成されるキューブが、MDX スクリプトが属しているキューブと同じである必要があるためです (followingexamp を参照)。&  
   
  `CREATE MEMBER CURRENTCUBE.[Measures].[Test] AS 1;`  
   
- これを行う簡単にコピーして、キューブの名前が不要になったハード コーディングされたために、1 つのキューブから別の計算されるメンバーの定義を貼り付けます。  
+ これにより、キューブの名前がハードコーディングされなくなったため、あるキューブから別のキューブに計算されるメンバーの定義を簡単にコピーして貼り付けることができます。  
   
 ## <a name="subcube-expressions"></a>サブキューブ式  
- サブキューブ式には、サブキューブ識別子、またはサブキューブを返す MDX ステートメントを含めることができます。 サブキューブ式にサブキューブ識別子が含まれている場合、単純な式がなります。 サブキューブを返す MDX ステートメントがある場合は、複雑なステートメント。 たとえば、次の例に示すように、MDX の SELECT ステートメントは、サブキューブを返すので、サブキューブ式が許可されている場所で使用できます。  
+ サブキューブ式には、サブキューブ識別子、またはサブキューブを返す MDX ステートメントを含めることができます。 サブキューブ式にサブキューブ識別子が含まれている場合は、単純式になります。 サブキューブを返す MDX ステートメントが含まれている場合は、複雑なステートメントです。 たとえば、次の例に示すように、MDX の SELECT ステートメントは、サブキューブを返すので、サブキューブ式が許可されている場所で使用できます。  
   
  `SELECT [Measures].MEMBERS ON COLUMNS,`  
   
@@ -56,9 +56,9 @@ ms.locfileid: "68097189"
   
  `FROM [Adventure Works])`  
   
- この FROM 句で SELECT ステートメントの使用は、サブセレクトとも呼ばれます。  
+ FROM 句での SELECT ステートメントの使用は、サブセレクトとも呼ばれます。  
   
- サブキューブ式が発生したもう 1 つの一般的なシナリオでは、MDX スクリプトでスコープ割り当てを行う場合です。 次の例では、スコープ ステートメントを使用して、[Measures] で構成されるサブキューブに割り当てを制限します。[Internet Sales Amount]:  
+ サブキューブ式が発生するもう1つの一般的なシナリオは、MDX スクリプトでスコープ付き割り当てを行う場合です。 次の例では、SCOPE ステートメントを使用して、[Measures] で構成されるサブキューブに割り当てを制限しています。[Internet Sales Amount]:  
   
  `SCOPE([Measures].[Internet Sales Amount]);`  
   
@@ -66,13 +66,13 @@ ms.locfileid: "68097189"
   
  `END SCOPE;`  
   
- サブキューブ識別子*Subcube_Name*します。 MDX ステートメントの BNF 表記の説明。  
+ サブキューブ識別子は*Subcube_Name*として表示されます。 MDX ステートメントの BNF 表記について説明します。  
   
 ## <a name="see-also"></a>関連項目  
- [MDX の基本的なクエリ &#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query.md)   
- [MDX でのサブキューブの構築&#40;MDX&#41;](../analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx.md)   
- [CREATE SUBCUBE ステートメント&#40;MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
- [式&#40;MDX&#41;](../mdx/expressions-mdx.md)   
+ [MDX の基本的なクエリ &#40;MDX&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-query-the-basic-query)   
+ [MDX &#40;mdx でのサブキューブの作成&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/building-subcubes-in-mdx-mdx)   
+ [CREATE サブキューブ&#40;ステートメント MDX&#41;](../mdx/mdx-data-definition-create-subcube.md)   
+ [MDX &#40;の式&#41;](../mdx/expressions-mdx.md)   
  [SCOPE ステートメント &#40;MDX&#41;](../mdx/mdx-scripting-scope.md)  
   
   

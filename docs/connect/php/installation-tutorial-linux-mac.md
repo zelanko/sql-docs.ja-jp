@@ -1,6 +1,6 @@
 ---
 title: Microsoft Drivers for PHP for SQL Server の Linux および macOS インストール チュートリアル | Microsoft Docs
-ms.date: 06/21/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: ulvii
 ms.author: v-ulibra
 manager: v-mabarw
-ms.openlocfilehash: 7a2312a4ff6af5a11825274e3e010873ef2d3bd9
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 78db7a94e462238b65e90d9b2af035a9906403ac
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256702"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68632008"
 ---
 # <a name="linux-and-macos-installation-tutorial-for-the-microsoft-drivers-for-php-for-sql-server"></a>Microsoft Drivers for PHP for SQL Server の Linux および macOS インストール チュートリアル
 次の手順では、クリーンな環境を想定し、Ubuntu 16.04、18.04、および 18.10、RedHat 7、Debian 8 および 9、Suse 12 および 15、および macOS 10.12、10.13、および 10.14 に、PHP 7.x、Microsoft ODBC ドライバー、Apache、および Microsoft Drivers for PHP for SQL Server をインストールする方法を説明します。 これらの手順では、PECL を使用してドライバーをインストールするようにアドバイスしていますが、「[Microsoft Drivers for PHP for SQL Server](https://github.com/Microsoft/msphpsql/releases)」 Github プロジェクト ページからビルド済みのバイナリをダウンロードし、「[Loading the Microsoft Drivers for PHP for SQL Server](../../connect/php/loading-the-php-sql-driver.md)」(Microsoft Drivers for PHP for SQL Server の読み込み) の手順に従ってそれらをインストールすることもできます。 拡張機能の読み込みおよび php.ini に拡張機能を追加しない理由の説明については、[ドライバーの読み込み](../../connect/php/loading-the-php-sql-driver.md##loading-the-driver-at-php-startup)に関するセクションを参照してください。
@@ -175,7 +175,7 @@ sudo service apache2 restart
 ## <a name="installing-the-drivers-on-suse-12-and-15"></a>Suse 12 および 15 へのドライバーのインストール
 
 > [!NOTE]
-> 次の手順で、<SuseVersion> を使用している Suse のバージョンで置き換えます。Suse Enterprise Linux 15 を使用している場合は、SLE_15 または SLE_15_SP1 になり、その他のバージョンも同様です。 Suse Linux のすべてのバージョンで、PHP のすべてのバージョンが利用できるわけではありません。`http://download.opensuse.org/repositories/devel:/languages:/php` を参照して、Suse のどのバージョンで既定のバージョンの PHP を使用できるか確認するか、または `http://download.opensuse.org/repositories/devel:/languages:/php:/` を参照して、PHP のその他のどのバージョンが Suse のどのバージョンで使用できるかを確認してください。
+> 次の手順で、<SuseVersion> を使用している Suse のバージョンで置き換えます。Suse Enterprise Linux 15 を使用している場合は、SLE_15 または SLE_15_SP1 になります。 Suse 12 の場合は、SLE_12_SP4 (該当する場合は上記以上) を使用します。 Suse Linux のすべてのバージョンで、PHP のすべてのバージョンが利用できるわけではありません。`http://download.opensuse.org/repositories/devel:/languages:/php` を参照して、Suse のどのバージョンで既定のバージョンの PHP を使用できるか確認するか、または `http://download.opensuse.org/repositories/devel:/languages:/php:/` を参照して、PHP のその他のどのバージョンが Suse のどのバージョンで使用できるかを確認してください。
 
 > [!NOTE]
 > PHP 7.3 のパッケージは、Suse 12 で使用できません。 PHP 7.1 をインストールするには、下記のリポジトリの URL を URL `https://download.opensuse.org/repositories/devel:/languages:/php:/php71/<SuseVersion>/devel:languages:php:php71.repo` で置き換えます。

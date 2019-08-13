@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: a93667ad-e856-405a-9328-065331b7ab7b
 author: craigg-msft
 ms.author: craigg
-ms.openlocfilehash: edd6d1ddb936571861260e7fafe6a3903e72b29e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6b6870e6b958b2ce7a7c5d050000bd190ef345df
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091819"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893080"
 ---
 # <a name="tutorials-for-sql-server"></a>SQL Server チュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ ms.locfileid: "68091819"
   
 |テクノロジ|[説明]|  
 |--------------|---------------|  
-|[Analysis Services チュートリアル (SSAS)](../analysis-services/analysis-services-tutorials-ssas.md)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] テーブルまたは多次元モデルを開発および配置する方法について説明します。 また、PowerPivot などのツールを使用して、モデル内のデータを分析する方法についても説明します。|  
+|[Analysis Services チュートリアル (SSAS)](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)|[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] テーブルまたは多次元モデルを開発および配置する方法について説明します。 また、PowerPivot などのツールを使用して、モデル内のデータを分析する方法についても説明します。|  
 |[データベース エンジンのチュートリアル](../relational-databases/database-engine-tutorials.md)|データベース エンジンのインスタンスに接続してから、Transact-SQL ステートメントを構築および実行する方法について説明します。|  
 |[Enterprise Information Management のチュートリアル](https://msdn.microsoft.com/library/8745dc80-193d-4de0-9f17-ba648ab1e81c)|Microsoft EIM テクノロジを使用して企業の情報を管理する方法について説明します。|  
 |[Integration Services のチュートリアル](../integration-services/integration-services-tutorials.md)|[!INCLUDE[ssIS](../includes/ssis-md.md)] パッケージの作成と配置の方法を学習します。|  

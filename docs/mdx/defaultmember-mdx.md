@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: c5843ec42cf4ba712a2e55c9cc96dd6f482c0760
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0b5039ae62eac25d698442d4aeb92ad3c4ebc3a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047095"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892900"
 ---
 # <a name="defaultmember-mdx"></a>DefaultMember (MDX)
 
@@ -29,13 +29,13 @@ Hierarchy_Expression.DefaultMember
   
 ## <a name="arguments"></a>引数  
  *Hierarchy_Expression*  
- 階層を返す有効な多次元式 (MDX) 式。  
+ 階層を返す有効な多次元式 (MDX) 式です。  
   
 ## <a name="remarks"></a>コメント  
  属性がクエリに含まれていない場合は、属性上の既定のメンバーが式の評価に使用されます。  
   
 ## <a name="example"></a>例  
- 次の例では、 **DefaultMember**と組み合わせて、関数、**名前**を Adventure Works キューブ内の Destination Currency ディメンションの既定のメンバーを返す関数。 例では、返す**米ドル**します。 **名前**関数を使用して、これは、メジャーの既定のプロパティではなく、メジャーの名前を返す**値**します。  
+ 次の例では、 **DefaultMember**関数を**Name**関数と共に使用して、Adventure Works キューブの換算先通貨ディメンションの既定のメンバーを返します。 この例では、**米ドル**が返されます。 **Name**関数は、メジャーの既定のプロパティではなく、**値**であるメジャーの名前を返すために使用されます。  
   
 ```  
 WITH MEMBER Measures.x AS   
@@ -46,6 +46,6 @@ FROM [Adventure Works]
   
 ## <a name="see-also"></a>関連項目  
  [MDX 関数リファレンス &#40;MDX&#41;](../mdx/mdx-function-reference-mdx.md)   
- [既定のメンバーの定義](../analysis-services/multidimensional-models/attribute-properties-define-a-default-member.md)  
+ [既定のメンバーの定義](https://docs.microsoft.com/analysis-services/multidimensional-models/attribute-properties-define-a-default-member)  
   
   

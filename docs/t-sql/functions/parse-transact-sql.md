@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6a2dbf10-f692-471b-9458-24d246963049
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9182cb55fa1d5e2fd8ffb5f635d801d14f7624ee
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 991d27258b37895ebb2bf54e267fd07fbe87d78e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914415"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892498"
 ---
 # <a name="parse-transact-sql"></a>PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|Dutch|1043|nl-NL|  
 |Norsk|ノルウェー語|2068|nn-NO|  
 |Português|Portuguese|2070|pt-PT|  
-|Suomi|Finnish|1035|fi|  
+|Suomi|Finnish|1035|fi-FI|  
 |Svenska|Swedish|1053|sv-SE|  
 |čeština|Czech|1029|Cs-CZ|  
 |magyar|Hungarian|1038|Hu-HU|  

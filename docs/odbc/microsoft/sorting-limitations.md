@@ -1,5 +1,5 @@
 ---
-title: 制限事項を並べ替え |Microsoft Docs
+title: 並べ替えの制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql
@@ -20,5 +20,5 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68063393"
 ---
-# <a name="sorting-limitations"></a>制限事項を並べ替え
+# <a name="sorting-limitations"></a>並べ替えの制限事項
 GROUP BY 句、ORDER BY 句、SELECT DISTINCT ステートメント、または外部結合での並べ替えキーの最大長は 255 バイトです。並べ替え行内のすべての並べ替えキーの最大長は、65,500 バイトです。

@@ -10,12 +10,12 @@ ms.assetid: 67399b24-e48a-49f3-9dd4-32d78c6a2ece
 author: markingmyname
 ms.author: maghan
 manager: kfile
-ms.openlocfilehash: afef865ed2440f278d61e8b0f4d3304867803853
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 418852430170e40308d1d37446b9868281960f49
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126187"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894048"
 ---
 # <a name="install-sql-server-business-intelligence-features"></a>SQL Server のビジネス インテリジェンス機能のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68126187"
 ## <a name="sql-server-bi-features"></a>SQL Server BI 機能  
  BI コンポーネントを含むすべての SQL Server 機能は、SQL Server セットアップでインストールされます。 次のリンクは、各 BI 機能に固有の補足情報を提供します。  
   
--   [Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services.md)  
+-   [Analysis Services のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)  
   
--   [Power Pivot モードでの Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode.md)  
+-   [Power Pivot モードでの Analysis Services のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)  
   
 -   [Data Quality Services のインストール](../../data-quality-services/install-windows/install-data-quality-services.md)  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68126187"
   
 ## <a name="see-also"></a>参照  
  [Reporting Services &#40;SSRS&#41; の新機能](https://msdn.microsoft.com/bc909063-6b84-4b3a-80d2-e93fc04b4b9d)   
- [Analysis Services の新機能](../../analysis-services/what-s-new-in-analysis-services.md)   
+ [Analysis Services の新機能](https://docs.microsoft.com/analysis-services/what-s-new-in-analysis-services)   
  [Integration Services の新機能](../../integration-services/what-s-new-in-integration-services-in-sql-server-2016.md)   
  [マスター データ サービス &#40;MDS&#41; の新機能](../../master-data-services/what-s-new-in-master-data-services-mds.md)   
  [SQL Server 2016 のインストール](../../database-engine/install-windows/install-sql-server.md)   

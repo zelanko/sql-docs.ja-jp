@@ -1,7 +1,7 @@
 ---
 title: データベース エンジン サービスのスタートアップ オプション | Microsoft Docs
 ms.custom: ''
-ms.date: 05/31/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: d373298b-f6cf-458a-849d-7083ecb54ef5
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 53c7ea706f9e886f147532bfbd3dd148a6ca7d1b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 91f6f88255fb45e101484637f1db823660796475
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68011971"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763232"
 ---
 # <a name="database-engine-service-startup-options"></a>データベース エンジン サービスのスタートアップ オプション
 
@@ -82,8 +82,9 @@ ms.locfileid: "68011971"
  スタートアップ オプションの一部は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を起動するたびに使用することが考えられます。 このようなオプション (トレース フラグを使用した起動など) は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、起動時のパラメーターを構成すると最も容易に設定できます。 これらのツールは、スタートアップ オプションをレジストリ キーとして保存するため、常にこれらのスタートアップ オプションを使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できます。  
   
 ## <a name="compatibility-support"></a>互換性サポート  
- **-h**  パラメーターは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]ではサポートされていません。 このパラメーターは、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビットのインスタンスで AWE が有効になっている場合に、ホット アド メモリ メタデータ用の仮想メモリ アドレス空間を確保するために使用されていました。 詳細については、「 [SQL Server 2016 で提供が中止された機能](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)」を参照してください。  
-  
+
+以前のリリースから削除されたオプションについては、[sqlservr アプリケーション](../../tools/sqlservr-application.md#compatibility-support)のページを参照してください。
+
 ## <a name="related-tasks"></a>Related Tasks  
 [scan for startup procs サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-scan-for-startup-procs-server-configuration-option.md)  
 [データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、再起動](../../database-engine/configure-windows/start-stop-pause-resume-restart-sql-server-services.md)

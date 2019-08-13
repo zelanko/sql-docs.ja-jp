@@ -37,7 +37,7 @@ ms.locfileid: "68063355"
     |-|-|-|-|  
     |Abs|Log|round|tan|  
     |ceiling|log10|second|truncate|  
-    |Cos|Mod|サインイン||  
+    |Cos|Mod|sign||  
     |Exp|Pi|sin||  
     |floor|Power|sqrt||  
   
@@ -47,15 +47,15 @@ ms.locfileid: "68063355"
     |-|-|-|-|  
     |Curdate|Dayofweek|monthname|second|  
     |Curtime|Dayofyear|minute|week|  
-    |Dayname|Hour|今|年|  
-    |Dayofmonth|Month|四半期||  
+    |Dayname|Hour|now|year|  
+    |Dayofmonth|Month|quarter||  
   
 -   文字列関数。  
   
     |||||  
     |-|-|-|-|  
     |Ascii|Left|right|Ucase|  
-    |Char|長さ|rtrim||  
+    |Char|Length|rtrim||  
     |Concat|Ltrim|Soundex||  
     |Lcase|Replace|substring||  
   
@@ -63,11 +63,11 @@ ms.locfileid: "68063355"
   
     ||  
     |-|  
-    |[変換]|  
+    |Convert|  
   
 -   システム関数:  
   
     ||  
     |-|  
-    |見つかれば|  
-    |ユーザー|
+    |Ifnull|  
+    |User|

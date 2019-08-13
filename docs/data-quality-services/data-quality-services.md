@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9c6b996c-e768-4bf5-837f-5436ed9cea1d
 author: lrtoyou1223
 ms.author: lle
-ms.openlocfilehash: 898bbf0f1bdbdbd96ab6ca129fb43b87ad743a18
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0ee5d831c6fcc9361ba75b48a6b0cffad6f6d5d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67935376"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893206"
 ---
 # <a name="data-quality-services"></a>Data Quality Services
 
@@ -28,23 +28,23 @@ ms.locfileid: "67935376"
  DQS のインストールの詳細については、「 [Install Data Quality Services](../data-quality-services/install-windows/install-data-quality-services.md)」を参照してください。 既存のバージョンの DQS を [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]にアップグレードする場合は、「[Data Quality Services のアップグレード](../database-engine/install-windows/upgrade-data-quality-services.md)」をご覧ください。  
   
  **領域ごとのコンテンツの参照**  
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [Data Quality Client アプリケーション](../data-quality-services/data-quality-client-application.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [Data Quality Client アプリケーション](../data-quality-services/data-quality-client-application.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS のナレッジ ベースとドメイン](../data-quality-services/dqs-knowledge-bases-and-domains.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [データ品質プロジェクト](../data-quality-services/data-quality-projects-dqs.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [データ品質プロジェクト](../data-quality-services/data-quality-projects-dqs.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [データ クレンジング](../data-quality-services/data-cleansing.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [データ クレンジング](../data-quality-services/data-cleansing.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [データ照合](../data-quality-services/data-matching.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [データ照合](../data-quality-services/data-matching.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS の参照データ サービス](../data-quality-services/reference-data-services-in-dqs.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS の参照データ サービス](../data-quality-services/reference-data-services-in-dqs.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS でのデータ プロファイルと通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS でのデータ プロファイルと通知](../data-quality-services/data-profiling-and-notifications-in-dqs.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS 管理](../data-quality-services/dqs-administration.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS 管理](../data-quality-services/dqs-administration.md)  
   
- ![小さいファイル フォルダー アイコン](../analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS セキュリティ](../data-quality-services/dqs-security.md)  
+ ![小さいファイル フォルダー アイコン](https://docs.microsoft.com/analysis-services/analysis-services/media/filefolder-small.png "小さいファイル フォルダー アイコン") [DQS セキュリティ](../data-quality-services/dqs-security.md)  
   
 ## <a name="see-also"></a>参照  
  [Data Quality Services の概要](../data-quality-services/introduction-to-data-quality-services.md)   

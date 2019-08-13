@@ -1,5 +1,5 @@
 ---
-title: リレーショナル クエリ デザイナーのユーザー インターフェイス |Microsoft Docs
+title: リレーショナルクエリデザイナーのユーザーインターフェイス |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 4f8aa192-e6fc-4b4e-b107-5a5372ac31d9
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: b39d9d685b158b32dc504229221e6089e6b3e41f
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 45f4b0b09c5f99a1dc561fdba40a659b7f0012d6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66107989"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891136"
 ---
 # <a name="relational-query-designer-user-interface"></a>リレーショナル クエリ デザイナーのユーザー インターフェイス
   [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] のレポート デザイナーにはグラフィカル クエリ デザイナーとテキストベースのクエリ デザイナーが用意されており、レポート データセット用に [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] から取得するデータを指定するクエリの作成に使用できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。 グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -36,11 +36,11 @@ ms.locfileid: "66107989"
   
  次の図は、テーブルまたはビューを使用した場合のグラフィカル クエリ デザイナーです。  
   
- ![クエリのグラフィカル デザイナー](../analysis-services/media/rsqd-relational-graphical.gif "クエリのグラフィカル デザイナー")  
+ ![クエリのグラフィカル デザイナー](https://docs.microsoft.com/analysis-services/analysis-services/media/rsqd-relational-graphical.gif "クエリのグラフィカル デザイナー")  
   
  次の図は、ストアド プロシージャまたはテーブル値関数を使用した場合のグラフィカル クエリ デザイナーです。  
   
- ![グラフィカル クエリ デザイナーのストアド プロシージャ](../analysis-services/media/rs-relational-graphical-sp.gif "グラフィカル クエリ デザイナーのストアド プロシージャ")  
+ ![グラフィカル クエリ デザイナーのストアド プロシージャ](https://docs.microsoft.com/analysis-services/analysis-services/media/rs-relational-graphical-sp.gif "グラフィカル クエリ デザイナーのストアド プロシージャ")  
   
  次の表に各ペインの機能を示します。  
   
@@ -83,7 +83,7 @@ ms.locfileid: "66107989"
   
  集計ではデータの要約が返されます。データは、要約データを提供する集計をサポートするためにグループ化されます。 クエリで集計を使用すると、そのクエリによって返される他のフィールドは自動的にグループ化され、クエリには SQL の GROUP BY 句が含まれます。 **[グループ化と集計]** ボックスの一覧では、 **[グループ化]** オプションだけを使用することによって、集計を追加せずにデータを要約できます。 多くの集計には、DISTINCT キーワードを使用するバージョンが含まれています。 DISTINCT を含めることで値の重複を排除できます。  
   
- [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)] 使用して[!INCLUDE[tsql](../includes/tsql-md.md)]と[!INCLUDE[msCoName](../includes/msconame-md.md)][!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]します。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
+ [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]を[!INCLUDE[tsql](../includes/tsql-md.md)]使用[!INCLUDE[msCoName](../includes/msconame-md.md)]し、を[!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]使用[!INCLUDE[DWsql](../includes/dwsql-md.md)]します。 いずれの SQL 言語構文でも、クエリ デザイナーに用意されている句、キーワード、および集計がサポートされます。  
   
  [!INCLUDE[tsql](../includes/tsql-md.md)] の詳細については、msdn.microsoft.com の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [オンライン ブック](https://go.microsoft.com/fwlink/?LinkId=141687)にある「[Transact-SQL リファレンス (データベース エンジン)](/sql/t-sql/language-reference)」を参照してください。  
   

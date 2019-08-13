@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 275a7546bae70ba329cff7af2df107e43c3d1b4c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 63de71ae82e60b8ec7d8a39e18f89e6bd2393f2d
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68047161"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892946"
 ---
 # <a name="crossjoin-mdx"></a>Crossjoin (MDX)
 
@@ -39,17 +39,17 @@ Set_Expression1 * Set_Expression2 [* ...n]
  セットを返す有効な多次元式 (MDX) です。  
   
 ## <a name="remarks"></a>コメント  
- **Crossjoin**関数は、2 つのクロス積を返しますまたは、複数の指定されたセット。 参加しているため、各セットとそのメンバーの順序の順序、結果セット内の組の順序が決まります。 たとえば、ときに、最初のセットで構成されます {x1, x2,..., x*n*}、2 番目のセットで構成されます {y1, y2,..., y*n*}、これらのセットのクロス積は。  
+ **Crossjoin**関数は、2つ以上の指定されたセットのクロス積を返します。 結果セット内の組の順序は、結合されるセットの順序とメンバーの順序によって異なります。 たとえば、最初のセットが {x1, x2,..., x*n*} で構成され、2番目のセットが {y1, y2,..., y*n*} で構成されている場合、これらのセットのクロス積は次のようになります。  
   
- {0} (x1, y1)、(x1, y2),..., (x1, y*n*)、(x2, y1) (x2 y2),...,  
+ {(x1, y1)、(x1, y2),..., (x1, y*n*)、(x2, y1)、(x2, y2),...,  
   
- (x2, y*n*),..., (x*n*、y1)、(x*n*、y2),..., (xn、y*n*)}  
+ (x2、y*n*),..., (x*n*, y1)、(x*n*、y2),..., (xn, y*n*)}  
   
 > [!IMPORTANT]  
->  クロス結合内のセットが同一ディメンションの異なる属性階層の組から構成されている場合、この関数は実際に存在する組のみを返します。 詳細については、次を参照してください。 [MDX の主な概念&#40;Analysis Services&#41;](../analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services.md)します。  
+>  クロス結合内のセットが同一ディメンションの異なる属性階層の組から構成されている場合、この関数は実際に存在する組のみを返します。 詳細については、「 [MDX &#40;Analysis Services&#41;の主要概念](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/key-concepts-in-mdx-analysis-services)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
- 次のクエリでは、クエリの列と行軸に Crossjoin 関数の使用の簡単な例を示しています。  
+ 次のクエリは、クエリの Columns 軸と Rows 軸で Crossjoin 関数を使用する簡単な例を示しています。  
   
  `SELECT`  
   
@@ -71,7 +71,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
   
  `WHERE Measures.[Internet Sales Amount]`  
   
- 次の例では、同じディメンションの異なる階層がクロス結合される場合に行われる自動フィルター処理を示しています。  
+ 次の例は、同じディメンションの異なる階層がクロス結合されている場合に行われる自動フィルター処理を示しています。  
   
  `SELECT`  
   
@@ -91,7 +91,7 @@ Set_Expression1 * Set_Expression2 [* ...n]
   
  `FROM [Adventure Works]`  
   
- 次の 3 つの例では、米国内の州別 Internet Sales Amount と同じ結果を返します。 最初の 2 つは、2 つのクロス結合構文を使用して、3 つ目は、同じ情報を返す WHERE 句の使用を示します。  
+ 次の3つの例では、米国内の州の州別の Internet Sales Amount と同じ結果が返されます。 最初の2つは2つのクロス結合構文を使用し、3番目の例では WHERE 句を使用して同じ情報を返す方法を示しています。  
   
 ### <a name="example-1"></a>例 1  
   

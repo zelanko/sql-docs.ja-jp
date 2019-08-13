@@ -25,12 +25,12 @@ ms.assetid: 062051e4-4b77-4969-98ae-d2547c24ce3e
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: 39476a5bc6c1f115595c529e56090f7dda31aba2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db986748530a11057bf55e18c6404160504fdb89
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66063879"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68891756"
 ---
 # <a name="query-and-text-editors-sql-server-management-studio"></a>クエリおよびテキスト エディター (SQL Server Management Studio)
   [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] のいずれかのエディターを使用して、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、MDX、DMX、または XML/A スクリプトを対話的に編集し、テストできます。XML またはプレーンテキスト ファイルを編集することもできます。 各エディターでは、キーワードを色分け表示したり、言語固有の構文や使用方法のエラーをチェックするサービスがサポートされています。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターには、 [!INCLUDE[tsql](../../includes/tsql-md.md)] コードの問題を解決するのに役立つ [!INCLUDE[tsql](../../includes/tsql-md.md)] デバッガーが用意されています。  
@@ -108,8 +108,8 @@ ms.locfileid: "66063879"
 |タスクの説明|トピック|  
 |----------------------|-----------|  
 |[!INCLUDE[ssDE](../../includes/ssde-md.md)] クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[データベース エンジン クエリ エディター &#40;SQL Server Management Studio&#41;](database-engine-query-editor-sql-server-management-studio.md)|  
-|MDX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](../../analysis-services/mdx-query-editor-analysis-services-multidimensional-data.md)|  
-|DMX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](../../analysis-services/dmx-query-editor-analysis-services-data-mining.md)|  
+|MDX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[MDX クエリ エディター &#40;Analysis Services - 多次元データ&#41;](https://docs.microsoft.com/analysis-services/mdx-query-editor-analysis-services-multidimensional-data)|  
+|DMX クエリ エディターの基本的な機能を表示し、使用する方法について説明します。|[DMX クエリ エディター &#40;Analysis Services - データ マイニング&#41;](https://docs.microsoft.com/analysis-services/dmx-query-editor-analysis-services-data-mining)|  
 |XML/A エディターの基本的な機能を表示し、使用する方法について説明します。|[XML エディター &#40;SQL Server Management Studio&#41;](xml-editor-sql-server-management-studio.md)|  
 |行番号表示や IntelliSense オプションなど、各種エディターのオプションを構成する方法について説明します。|[エディターの構成 &#40;SQL Server Management Studio&#41;](configure-editors-sql-server-management-studio.md)|  
 |[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]でエディターを開くための、さまざまな方法について説明します。|[エディターの表示 &#40;SQL Server Management Studio&#41;](open-an-editor-sql-server-management-studio.md)|  

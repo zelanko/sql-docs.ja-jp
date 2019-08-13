@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 02e306b8-9dde-4846-8d64-c528e2ffe479
 ms.author: v-chojas
 author: MightyPen
-ms.openlocfilehash: 9d85cee931774da3efd0956ae259bd6eecb42eed
-ms.sourcegitcommit: b57d445d73a0133c7998653f2b72cf09ee83a208
+ms.openlocfilehash: cc6deae9a2ddcb11675586ffd8777644aff00672
+ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68231856"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68702704"
 ---
 # <a name="using-always-encrypted-with-the-odbc-driver-for-sql-server"></a>SQL Server 用 ODBC ドライバーと共に Always Encrypted を使用する
 [!INCLUDE[Driver_ODBC_Download](../../includes/driver_odbc_download.md)]
@@ -25,9 +25,11 @@ ms.locfileid: "68231856"
 
 ### <a name="introduction"></a>概要
 
-この記事では、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) と [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) を使用して ODBC アプリケーションを開発する方法について説明します。
+この記事では、[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) または[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md) と [ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) を使用して ODBC アプリケーションを開発する方法について説明します。
 
-Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 ODBC Driver for SQL Server など、Always Encrypted が有効なドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、「 [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)」を参照してください。
+Always Encrypted を使用すると、クライアント アプリケーションは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 ODBC Driver for SQL Server など、Always Encrypted が有効なドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この処理を実行します。 ドライバーは、どのクエリ パラメーターが機密データベース列 (Always Encrypted を使用して保護される) に対応するかを自動的に決定し、SQL Server または Azure SQL データベースにデータを渡す前にこれらのパラメーターの値を暗号化します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 "*セキュリティで保護されたエンクレーブが設定された*" Always Encrypted では、この機能を拡張して、データの機密性を保ちながら機密データに対してより豊富な機能を使えるようになります。
+
+詳細については、「 [Always Encrypted (データベースエンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md) 」および「 [Secure Enclaves での Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)」を参照してください。
 
 ### <a name="prerequisites"></a>Prerequisites
 
@@ -54,6 +56,17 @@ Always Encrypted は、DSN 構成内で同じキーと値 (接続文字列設定
 - アプリケーションが、データベース内の Always Encrypted キーに関するメタデータへのアクセスに必要な *VIEW ANY COLUMN MASTER KEY DEFINITION* および *VIEW ANY COLUMN ENCRYPTION KEY DEFINITION* データベース権限を持っている。 詳細については、「[データベース権限](../../relational-databases/security/encryption/always-encrypted-database-engine.md#database-permissions)」を参照してください。
 
 - アプリケーションで、クエリ対象の暗号化された列の CEK を保護する CMK にアクセスできる。 このことは、CMK を格納するキーストア プロバイダーに依存します。 詳細については、「[列マスター キー ストアを操作する](#working-with-column-master-key-stores)」を参照してください。
+
+### <a name="enabling-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を有効にする
+
+バージョン17.4 以降では、ドライバーは Secure Enclaves の Always Encrypted をサポートしています。 SQL Server 2019 以降に接続するときにエンクレーブを使用できるようにするに`ColumnEncryption`は、DSN、接続文字列、または接続属性をエンクレーブの種類と構成証明プロトコルの名前に設定し、関連する構成証明データをコンマで区切って設定します。 バージョン17.4 では、[仮想化ベースのセキュリティ](https://www.microsoft.com/security/blog/2018/06/05/virtualization-based-security-vbs-memory-enclaves-data-protection-through-isolation/)エンクレーブの種類と[ホストガーディアンサービス](https://docs.microsoft.com/windows-server/security/set-up-hgs-for-always-encrypted-in-sql-server)の構成証明`VBS-HGS`プロトコル (で示される) のみがサポートされています。これを使用するには、構成証明サーバーの URL を指定します。次に例を示します。
+
+```
+Driver=ODBC Driver 17 for SQL Server;Server=yourserver.yourdomain;Trusted_Connection=Yes;ColumnEncryption=VBS-HGS,http://attestationserver.yourdomain/Attestation
+```
+
+サーバーと構成証明サービスが正しく構成されていて、目的の列に対してエンクレーブ対応 CMKs と CEKs が適切に構成されている場合は、次のように、エンクレーブを使用するクエリを実行できるようになりました。Always Encrypted によって提供される既存の機能。 詳細については[、「Configure Always Encrypted with secure enclaves](../../relational-databases/security/encryption/configure-always-encrypted-enclaves.md) 」を参照してください。
+
 
 ### <a name="retrieving-and-modifying-data-in-encrypted-columns"></a>暗号化された列のデータを取得および変更する
 
@@ -148,7 +161,7 @@ CREATE TABLE [dbo].[Patients](
 - ドライバーが SSN 列と BirthDate 列から取得されたデータを透過的に暗号化解除するので、プログラムで出力される値はすべてプレーンテキストになります。
 
 > [!NOTE]
-> 暗号化が決定論的である場合にのみ、クエリでは、暗号化された列に対して等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
+> 暗号化が決定的である場合、または secure エンクレーブが有効になっている場合にのみ、クエリは暗号化された列に対して等価比較を実行できます。 詳細については、「[明確な暗号化またはランダム化された暗号化の選択](../../relational-databases/security/encryption/always-encrypted-database-engine.md#selecting--deterministic-or-randomized-encryption)」を参照してください。
 
 ```
 SQLCHAR SSN[12];
@@ -579,7 +592,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 |[オブジェクト名]|[説明]|  
 |----------|-----------------|  
-|`ColumnEncryption`|指定できる値は `Enabled`/`Disabled` です。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。 <br><br>既定値は `Disabled` です。|  
+|`ColumnEncryption`|指定できる値は `Enabled`/`Disabled` です。<br>`Enabled` -- 接続の Always Encrypted 機能を有効にします。<br>`Disabled` -- 接続の Always Encrypted 機能を無効にします。<br>*type*、*data* --(バージョン17.4 以降) では、secure エンクレーブと構成証明プロトコルの*種類*、および関連する構成証明データ*データ*を使用して Always Encrypted を有効にします。 <br><br>既定値は `Disabled` です。|
 |`KeyStoreAuthentication` | 有効な値: `KeyVaultPassword`、`KeyVaultClientSecret` |
 |`KeyStorePrincipalId` | `KeyStoreAuthentication`  = `KeyVaultPassword` の場合は、この値を有効な Azure Active Directory ユーザー プリンシパル名に設定します。 <br>`KeyStoreAuthetication`  = `KeyVaultClientSecret` の場合は、この値を有効な Azure Active Directory アプリケーション クライアント ID に設定します。 |
 |`KeyStoreSecret` | `KeyStoreAuthentication`  = `KeyVaultPassword` の場合は、この値を対応するユーザー名のパスワードに設定します。 <br>`KeyStoreAuthentication`  = `KeyVaultClientSecret` の場合は、この値を、有効な Azure Active Directory アプリケーション クライアント ID に関連付けられたアプリケーション シークレットに設定します。 |
@@ -589,7 +602,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 
 |[オブジェクト名]|型|[説明]|  
 |----------|-------|----------|  
-|`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします|
+|`SQL_COPT_SS_COLUMN_ENCRYPTION`|接続前|`SQL_COLUMN_ENCRYPTION_DISABLE` (0) -- Always Encrypted を無効にします <br>`SQL_COLUMN_ENCRYPTION_ENABLE` (1) -- Always Encrypted を有効にします<br> *型*へのポインター、*データ*文字列--(バージョン17.4 以降) で secure エンクレーブを有効にします。|
 |`SQL_COPT_SS_CEKEYSTOREPROVIDER`|接続後|[設定] CEKeystoreProvider の読み込みを試みます<br>[取得] CEKeystoreProvider 名を返します|
 |`SQL_COPT_SS_CEKEYSTOREDATA`|接続後|[設定] CEKeystoreProvider にデータを書き込みます<br>[取得] CEKeystoreProvider からデータを読み取ります|
 |`SQL_COPT_SS_CEKCACHETTL`|接続後|[設定] CEK キャッシュ TTL を設定します<br>[取得] 現在の CEK キャッシュ TTL を取得します|
@@ -607,7 +620,7 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 |-|-|-|-|  
 |`SQL_CA_SS_FORCE_ENCRYPT` (1236)|WORD (2 バイト)|0|0 (既定値) の場合: このパラメーターを暗号化するかどうかは、暗号化メタデータの可用性によって決まります。<br><br>ゼロ以外の場合: このパラメーターで暗号化メタデータが使用可能な場合、それは暗号化されます。 それ以外の場合、要求は次のエラーで失敗します: [CE300] [Microsoft][ODBC Driver 13 for SQL Server]必須の暗号化がパラメーターに指定されましたが、サーバーから暗号化メタデータが提供されませんでした。|
 
-### <a name="bcpcontrol-options"></a>bcp_control オプション
+### <a name="bcp_control-options"></a>bcp_control オプション
 
 |オプション名|既定値|[説明]|
 |-|-|-|
@@ -616,5 +629,6 @@ ODBC Driver 17 for SQL Server 以降、[SQL 一括コピー関数](../../relatio
 ## <a name="see-also"></a>参照
 
 - [Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+- [セキュリティで保護されたエンクレーブが設定された Always Encrypted](../../relational-databases/security/encryption/always-encrypted-enclaves.md)
 - [Always Encrypted 関連のブログ](https://blogs.msdn.com/b/sqlsecurity/archive/tags/always-encrypted/)
 

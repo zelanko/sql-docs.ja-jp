@@ -28,12 +28,12 @@ ms.assetid: c0af54f5-ca4a-4995-a3a4-0ce39c30ec38
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 612132eec023e3497344c01bd34947bb49195385
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5267b5b02ce84d70feb4245fe75f62591409f39f
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68010432"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68743004"
 ---
 # <a name="bcp-utility"></a>bcp ユーティリティ
 
@@ -57,7 +57,7 @@ ms.locfileid: "68010432"
 
 コマンドラインツールは一般公開 (GA) ですが、の[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]インストーラーパッケージと共にリリースされます。
 
-**バージョン情報**
+### <a name="version-information"></a>バージョン情報
 
 リリース番号: 15.0 <br>
 ビルド番号: 15.0.1000.34<br>
@@ -66,7 +66,11 @@ ms.locfileid: "68010432"
 新しいバージョンの SQLCMD では Azure AD 認証がサポートされています。これには、SQL Database、SQL Data Warehouse、および Always Encrypted の機能に対する多要素認証 (MFA) のサポートが含まれます。
 新しい BCP では、SQL Database と SQL Data Warehouse の Multi-factor Authentication (MFA) のサポートなど、Azure AD 認証をサポートしています。
 
-**システム要件**Windows 10、Windows 7、Windows 8、Windows 8.1、Windows server 2008、Windows Server 2008 R2、Windows server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2 このコンポーネントでは、 [Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[Microsoft ODBC Driver 17.3 の両方が必要です。SQL Server](https://www.microsoft.com/download/details.aspx?id=56567)。
+### <a name="system-requirements"></a>システム要件
+
+Windows 10、Windows 7、Windows 8、Windows 8.1、Windows Server 2008、Windows Server 2008 R2、Windows Server 2008 R2 SP1、Windows Server 2012、Windows Server 2012 R2
+
+このコンポーネントには、SQL Server 用に[Windows インストーラー 4.5](https://www.microsoft.com/download/details.aspx?id=8483)と[Microsoft ODBC Driver 17.3 の](https://www.microsoft.com/download/details.aspx?id=56567)両方が必要です。
 
 BCP バージョンの execute `bcp /v`コマンドを確認し、15.0.1000.34 以上が使用されていることを確認します。
 
@@ -88,6 +92,7 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
     [<a href="#i">-i input_file</a>]
     [<a href="#k">-k</a>]
     [<a href="#K">-K application_intent</a>]
+    [<a href="#l">-l login_timeout</a>]
     [<a href="#L">-L last_row</a>]
     [<a href="#m">-m max_errors</a>]
     [<a href="#n">-n</a>]
@@ -313,6 +318,9 @@ bcp [<a href="#db_name">database_name.</a>] <a href="#schema">schema</a>.{<a hre
   
 **-K** _**application\_intent**_ <a name="K"></a>   
 アプリケーションがサーバーに接続するときのワークロードのタイプを宣言します。 指定できる値は、 **ReadOnly**だけです。 **-K** を指定しない場合、bcp ユーティリティでは Always On 可用性グループのセカンダリ レプリカへの接続がサポートされません。 詳細については、「[アクティブなセカンダリ: 読み取り可能なセカンダリ レプリカ &#40;Always On 可用性グループ&#41;](../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)」を参照してください。  
+  
+**-l** _**login\_timeout**_ <a name="l"></a>  
+ログインのタイムアウトを指定します。 -l オプションでは、サーバーへの接続の試行時に、SQL Server へのログインがタイムアウトするまでの秒数を指定します。 既定のログインタイムアウトは15秒です。 ログイン タイムアウトは、0 から 65,534 の数値にする必要があります。 指定した値が数値以外の場合、または範囲外の場合、bcp はエラー メッセージを生成します。 値が0の場合は、タイムアウトが無制限であることを示します。
   
 **-L** _**last\_row**_ <a name="L"></a>  
 テーブルからエクスポートする最後の行、またはデータ ファイルからインポートする最後の行の番号を指定します。 このパラメーターには、0 より大きく (> 0)、最後の行の番号以下 (< または =) となる値が必要です。 このパラメーターがない場合、既定ではファイルの最後の行となります。  

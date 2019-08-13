@@ -1,7 +1,7 @@
 ---
 title: インメモリ OLTP (インメモリ最適化) | Microsoft Docs
 ms.custom: ''
-ms.date: 06/24/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -14,27 +14,21 @@ ms.assetid: e1d03d74-2572-4a55-afd6-7edf0bc28bdb
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 4908caa8c45b4c4f4cd1cdbbc539fe4da3265677
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ab822203fa55e32a3b310f6c5a3ecfe3269d8ed
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050225"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715908"
 ---
-# <a name="in-memory-oltp-in-memory-optimization"></a>インメモリ OLTP (インメモリ最適化)
+# <a name="in-memory-oltp-and-memory-optimization"></a>インメモリ OLTP とメモリ最適化)
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
  [!INCLUDE[hek_2](../../includes/hek-2-md.md)] は、トランザクション処理、データの取り込み、データの読み込みのパフォーマンス、および一時的なデータのシナリオを大幅に向上させることができます。  独自のメモリ最適化テーブルとネイティブ コンパイル ストアド プロシージャをすばやくテストするために必要な基本的なコードと知識については、
  -  [クイック スタート 1:Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ](../../relational-databases/in-memory-oltp/survey-of-initial-areas-in-in-memory-oltp.md)」を参照してください。  
  
-インメモリ OLTP について説明し、パフォーマンス上の利点を示す 17 分の動画:
-
--  [In-Memory OLTP in SQL Server 2016](https://www.youtube.com/watch?v=l5l5eophmK4)(SQL Server 2016 のインメモリ OLTP)
-
-動画で使用されているインメモリ OLTP のパフォーマンス デモをダウンロードするには: 
-
-- [インメモリ OLTP パフォーマンス デモ v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+SQL Server 上のインメモリ OLTP について説明し、パフォーマンス上の利点を示す [**17 分の動画**](#anchorname-17minute-video)を YouTube にアップロードしました。
 
 インメモリ OLTP の詳細な概要、およびテクノロジからパフォーマンスの利点を享受するシナリオのレビュー:
 
@@ -70,10 +64,13 @@ ms.locfileid: "68050225"
 |[インメモリ OLTP データベースにおける高可用性のサポート](../../relational-databases/in-memory-oltp/high-availability-support-for-in-memory-oltp-databases.md)|[!INCLUDE[hek_2](../../includes/hek-2-md.md)]での可用性グループおよびフェールオーバー クラスタリングについて説明します。|  
 |[SQL Server によるインメモリ OLTP のサポート](../../relational-databases/in-memory-oltp/sql-server-support-for-in-memory-oltp.md)|新しい構文および機能、更新された構文および機能のうち、メモリ最適化テーブルをサポートするものを一覧にして紹介します。|  
 |[インメモリ OLTP への移行](../../relational-databases/in-memory-oltp/migrating-to-in-memory-oltp.md)|ディスク ベース テーブルをメモリ最適化テーブルに移行する方法について説明します。|  
-  
- [!INCLUDE[hek_2](../../includes/hek-2-md.md)] の詳細な情報は、以下で参照できます。  
+| &nbsp; | &nbsp; |
 
-- [インメモリ OLTP について説明し、パフォーマンス上の利点を示す動画](https://www.youtube.com/watch?v=l5l5eophmK4)
+## <a name="links-to-other-websites"></a>他の Web サイトへのリンク
+
+このセクションでは、SQL Server 上のインメモリ OLTP に関する情報を含むその他の Web サイトへのリンクを紹介します。
+
+- [インメモリ OLTP について説明し、パフォーマンス上の利点を示す**動画**](#anchorname-17minute-video)
 
 - [インメモリ OLTP パフォーマンス デモ v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
 
@@ -86,7 +83,56 @@ ms.locfileid: "68050225"
 -   [インメモリ OLTP - 一般的なワークロード パターンと移行に関する考慮事項](https://msdn.microsoft.com/library/dn673538.aspx)  
   
 -   [インメモリ OLTP ブログ](https://go.microsoft.com/fwlink/?LinkId=311696)  
-  
+
+## <a name="anchorname-17minute-video"></a>17 分の動画、インデックス付き
+
+- _動画のタイトル:_ **SQL Server 2016 のインメモリ OLTP**
+- _公開日:_ 2019-03-10
+- _期間:_ 17:32
+- _ホスト元:_ SQL Server のシニア プログラム マネージャーである Jos de Bruijn
+
+### <a name="demo-can-be-downloaded"></a>デモをダウンロードできます
+
+時間マーク 08:09 では、動画でデモンストレーションが 2 回実行されます。 動画で使用されている実行可能なパフォーマンスのデモは、次のリンクからダウンロードできます。
+
+- [インメモリ OLTP パフォーマンス デモ v1.0](https://github.com/Microsoft/sql-server-samples/releases/tag/in-memory-oltp-demo-v1.0)
+
+動画で見られる一般的な手順は次のとおりです。
+
+1. 最初に、通常のテーブルを使用してデモを実行します。
+2. 次に、SQL Server Management Studio (SSMS.exe) で数回のクリックでテーブルのメモリ最適化エディションを作成し、設定する方法を確認します。
+3. 次に、メモリ最適化テーブルを使用してデモを再実行します。 大幅な速度の向上が測定されます。
+
+### <a name="index-to-each-section-in-the-video"></a>動画の各セクションへのインデックス
+
+| 時間マークのリンク | セクションのタイトル |
+| :------------- | :------------ |
+| A.&nbsp;[00:00](https://www.youtube.com/watch?v=l5l5eophmK4&t=0) | はじめに。 |
+| <br/>B.&nbsp;[00:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=56) | <br/>顧客がインメモリ OLTP について注意する必要がある理由。 |
+| &nbsp; &nbsp; [01:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=63) | 最新のハードウェアには、データベース システムの最新のアーキテクチャが必要です。 |
+| &nbsp; &nbsp; [02:10](https://www.youtube.com/watch?v=l5l5eophmK4&t=130) | 生成されているデータの急増。操作は瞬時に行う必要があります (低待機時間)。 |
+| &nbsp; &nbsp; [03:19](https://www.youtube.com/watch?v=l5l5eophmK4&t=199) | TCO を削減 - お持ちのリソースでさらに多くのことを行います。 |
+| <br/>C.&nbsp;[03:33](https://www.youtube.com/watch?v=l5l5eophmK4&t=213) | <br/>インメモリ OLTP とは。<br/>メモリ最適化テクノロジを使用して最適化されるパフォーマンス。 |
+| &nbsp; &nbsp; [05:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=303) | 最大 30 倍の高速トランザクション処理。 |
+| &nbsp; &nbsp; [05:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=322) | 完全な持続性 - データはサーバー エラーに耐えます。 |
+| &nbsp; &nbsp; [06:15](https://www.youtube.com/watch?v=l5l5eophmK4&t=375) | SQL Server への完全な統合。 そのため、新しい言語やツールを習得することはできません。 |
+| &nbsp; &nbsp; [07:22](https://www.youtube.com/watch?v=l5l5eophmK4&t=442) | 最初に SQL Server 2014 でリリースされましたが、2016 で大幅に改善されました。 |
+| &nbsp; &nbsp; [07:58](https://www.youtube.com/watch?v=l5l5eophmK4&t=558) | Azure SQL Database でも利用できます (クラウド内)。 |
+| <br/>D.&nbsp;[08:09](https://www.youtube.com/watch?v=l5l5eophmK4&t=489) | <br/>パフォーマンスのデモンストレーション。<br/> 通常のテーブルを使用してデモを実行します。 |
+| &nbsp; &nbsp; [09:11](https://www.youtube.com/watch?v=l5l5eophmK4&t=551) | SSMS コンテキスト メニュー:**レポート** &gt; **トランザクション パフォーマンス分析** |
+| &nbsp; &nbsp; [10:38](https://www.youtube.com/watch?v=l5l5eophmK4&t=638) | SSMS コンテキスト メニュー:**メモリ最適化アドバイザー**<br/> &nbsp; &nbsp; 実際には、通常のテーブルからメモリ最適化テーブルを作成し、さらにデータを移行します。 |
+| &nbsp; &nbsp; [11:28](https://www.youtube.com/watch?v=l5l5eophmK4&t=688) | デモを再実行します。45 倍の速度向上を参照してください。 |
+| <br/>E.&nbsp;[12:17](https://www.youtube.com/watch?v=l5l5eophmK4&t=737) | <br/>SQL Server 2016 では (2014 と比較して) インメモリ OLTP を使いやすくなりました。 |
+| &nbsp; &nbsp; [12:43](https://www.youtube.com/watch?v=l5l5eophmK4&t=763) | アプリの移行に役立つ簡単な分析。 |
+| &nbsp; &nbsp; [13:03](https://www.youtube.com/watch?v=l5l5eophmK4&t=783) | Transact-SQL 言語のサポートが強化されたため、アプリの移行の複雑さが軽減されました (たとえば、外部キーやトリガーなど)。 |
+| &nbsp; &nbsp; [13:56](https://www.youtube.com/watch?v=l5l5eophmK4&t=836) | 管理の容易性の向上。<br/> &nbsp; &nbsp; たとえば、スキーマとインデックスの変更、統計の自動更新などです。 |
+| <br/>F.&nbsp;[14:46](https://www.youtube.com/watch?v=l5l5eophmK4&t=886) | <br/>スケーラビリティの向上。 |
+| &nbsp; &nbsp; [15:12](https://www.youtube.com/watch?v=l5l5eophmK4&t=912) | 大規模なメモリ最適化テーブル (データベースあたり最大 2 TB)。 |
+| &nbsp; &nbsp; [15:34](https://www.youtube.com/watch?v=l5l5eophmK4&t=934) | さらに優れたスケーリング。 |
+| &nbsp; &nbsp; [16:41](https://www.youtube.com/watch?v=l5l5eophmK4&t=1001) | 既存のリソースを使用して、さらに多くのことを行うことができます。 |
+| <br/>G.&nbsp;[16:53](https://www.youtube.com/watch?v=l5l5eophmK4&t=1013) | <br/>最後のコメント (17:32 で終了)。 |
+| &nbsp; | &nbsp; |
+
 ## <a name="see-also"></a>参照  
  [データベース機能](../../relational-databases/database-features.md)  
   

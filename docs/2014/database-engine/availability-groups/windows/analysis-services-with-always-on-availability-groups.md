@@ -10,12 +10,12 @@ ms.assetid: 14d16bfd-228c-4870-b463-a283facda965
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 813740a542f06417156c746574dd0995e59aabd6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a0ccca3f8c9f6307f9715286a3496002dd7e1278
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62791889"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68889222"
 ---
 # <a name="analysis-services-with-always-on-availability-groups"></a>Analysis Services と Always On 可用性グループ
   AlwaysOn 可用性グループは SQL Server リレーショナル データベースの事前に定義されたコレクションで、その中の 1 つのデータベースが条件に従ってフェールオーバーするときに一緒にフェールオーバーし、同じ可用性グループの別のインスタンスのミラー化されたデータベースに要求をリダイレクトします。 高可用性ソリューションとして可用性グループを使用している場合、そのグループ内のデータベースを Analysis Services テーブルまたは多次元ソリューションのデータ ソースとして使用できます。 可用性データベースを使用すると、次の Analysis Services の操作はすべて予期したとおりに動作します。その操作とは、データの処理またはインポート、リレーショナル データへの直接クエリ (ROLAP ストレージまたは DirectQuery モードを使用)、および書き戻しです。  
@@ -115,7 +115,7 @@ ms.locfileid: "62791889"
   
      次に、構成したグループから、データベースを使用する Analysis Services モデルにデータ ソースを作成します。  
   
-##  <a name="bkmk_ssasAODB"></a> AlwaysOn 可用性データベースを使用して Analysis Services データ ソースを作成します。  
+##  <a name="bkmk_ssasAODB"></a>AlwaysOn 可用性データベースを使用して Analysis Services データソースを作成する  
  ここでは、可用性グループのデータベースに接続する Analysis Services データ ソースを作成する方法について説明します。 これらの指示を使用して、前のセクションの手順に基づいて構成したプライマリ レプリカ (既定) または読み取り可能なセカンダリ レプリカへの接続を構成できます。 AlwaysOn 構成設定、およびクライアントで設定された接続プロパティによって、プライマリ レプリカとセカンダリ レプリカのどちらを使用するかが決まります。  
   
 1.  [!INCLUDE[ssBIDevStudio](../../../includes/ssbidevstudio-md.md)] の Analysis Services の多次元およびデータ マイニング モデル プロジェクトで、 **[データ ソース]** を右クリックして **[新しいデータ ソース]** をクリックします。 新しいデータ ソースを作成するには、 **[新規作成]** をクリックします。  
@@ -130,7 +130,7 @@ ms.locfileid: "62791889"
   
      可用性グループ リスナーの名前を判断するには、データベース管理者に問い合わせるか、可用性グループ内のインスタンスに接続して AlwaysOn 可用性設定を表示します。 下のスクリーン ショットでは、可用性グループ リスナーは **AdventureWorks2**です。  
   
-     ![Management Studio での AlwaysOn 可用性フォルダー](../../media/ssas-alwaysoninfoinssms.png "Management Studio での AlwaysOn 可用性フォルダー")  
+     ![Management Studio の AlwaysOn 可用性フォルダー](../../media/ssas-alwaysoninfoinssms.png "Management Studio の AlwaysOn 可用性フォルダー")  
   
 4.  また、接続マネージャーで、左側のナビゲーション ウィンドウで **[すべて]** をクリックしてデータ プロバイダーのプロパティ グリッドを表示します。  
   
@@ -207,7 +207,7 @@ ms.locfileid: "62791889"
   
  エラーが解決しない場合、多くは構成の問題が原因です。 T-SQL スクリプトを再実行すると、セカンダリ レプリカのルーティング リスト、読み取り専用ルーティング URL、および読み取り専用の問題を解決できます。 また、プライマリ レプリカがすべての接続を許可することを確認する必要があります。  
   
-##  <a name="bkmk_writeback"></a> AlwaysOn 可用性データベースを使用する場合、書き戻し  
+##  <a name="bkmk_writeback"></a>AlwaysOn 可用性データベースを使用する場合の書き戻し  
  書き戻しは、Excel で What If 分析をサポートする Analysis Services 機能です。 また、一般にはカスタム アプリケーションの予算タスクおよび予測タスクに使用されます。  
   
  書き戻しのサポートには、READWRITE クライアント接続が必要です。 Excel で、読み取り専用接続で書き戻しを試みた場合は、次のエラーが表示されます。"外部データ ソースのデータを取得できませんでした。" "外部データ ソースのデータを取得できませんでした。"  
@@ -218,9 +218,9 @@ ms.locfileid: "62791889"
   
 ## <a name="see-also"></a>参照  
  [可用性グループ リスナー、クライアント接続、およびアプリケーションのフェールオーバー &#40;SQL Server&#41;](../../listeners-client-connectivity-application-failover.md)   
- [アクティブなセカンダリ:読み取り可能なセカンダリ レプリカ&#40;AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
- [AlwaysOn 可用性グループの運用上の問題の AlwaysOn ポリシー &#40;SQL Server&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
- [データ ソースの作成 &#40;SSAS 多次元&#41;](../../../analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional.md)   
- [ディメンションの書き戻しの有効化](../../../analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback.md)  
+ [アクティブなセカンダリ:読み取り可能な&#40;セカンダリレプリカ AlwaysOn 可用性グループ&#41;](active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)   
+ [AlwaysOn 可用性グループ&#40;SQL Server での運用上の問題のための AlwaysOn ポリシー&#41;](always-on-policies-for-operational-issues-always-on-availability.md)   
+ [データ ソースの作成 &#40;SSAS 多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
+ [ディメンションの書き戻しの有効化](https://docs.microsoft.com/analysis-services/multidimensional-models/bi-wizard-enable-dimension-writeback)  
   
   

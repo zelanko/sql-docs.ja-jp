@@ -1,6 +1,6 @@
 ---
 title: SQL Server のドキュメント | Microsoft Docs
-ms.date: 08/12/2018
+ms.date: 08/02/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -20,12 +20,12 @@ ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
 monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 7d925fcbdb80ada3426b42d4dcb413937f4d3953
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 824036a79897302411ec1a7026351832269511b3
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136340"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68771603"
 ---
 # <a name="sql-server-documentation"></a>SQL Server のドキュメント
 
@@ -109,7 +109,7 @@ SQL Server 2014、および SQL Server 2005 などのさらに古いバージョ
 |||
 |-|-|
 |![SQL データベース エンジン](../sql-server/media/sql-database-engine.png "SQL データベース エンジン")|**[データベース エンジン](../database-engine/sql-server-database-engine-overview.md)**<br /><br /> データベース エンジンは、データの格納、処理、およびセキュリティ保護を目的としたコア サービスです。 データベース エンジンでは、組織で利用しているアプリケーションのうち、データの使用頻度が最も高いアプリケーションの要件を満たすように、アクセスの制御や高速なトランザクション処理が行われます。 また、高可用性を実現するためのさまざまなサポートも提供されます。|
-|![R Server](../sql-server/media/r-server.png "R Server")|**[Machine Learning サービス](../advanced-analytics/r-services/r-services.md)**<br /><br /> Microsoft Machine Learning サービスでは、一般的な R 言語や Python 言語を使用した、機械学習のエンタープライズ ワークフローへの統合がサポートされています。<br /><br /> Machine Learning サービス (データベース内) は、R および Python と SQL Server を統合し、ストアド プロシージャを呼び出すことで、モデルのビルド、リトレイン、評価を容易にします。  Microsoft Machine Learning Server では、SQL Server を必要としない、R および Python に対するエンタープライズ規模のサポートが提供されています。|
+|![Machine Learning Services](../sql-server/media/r-server.png "Microsoft R Server")|**[Machine Learning サービス](../advanced-analytics/index.yml)**<br /><br /> Machine Learning Services には、リレーショナル データを使用して Python および R スクリプトを実行する機能が用意されています。 予測分析と機械学習には、オープン ソースと Microsoft パッケージを使用できます。 スクリプトは、SQL Server の外部またはネットワーク経由でデータを移動することなく、データベース内で実行されます。|
 |![Integration Services](../sql-server/media/integration-services.png "Integration Services")|**[Integration Services](../integration-services/sql-server-integration-services.md)**<br /><br /> [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] は、パフォーマンスの高いデータ統合ソリューションを構築するためのプラットフォームです。これには、データ ウェアハウジングに対して抽出、変換、および読み込み (ETL) の処理を提供するパッケージなどが含まれます。|
 |![Analysis Services](../sql-server/media/analysis-services.png "Analysis Services")|**[Analysis Services](../analysis-services/analysis-services.md)**<br /><br /> [!INCLUDE[ssASnoversion_md](../includes/ssasnoversion-md.md)] は、個人、チーム、および企業のビジネス インテリジェンスのための分析データ プラットフォームおよびツールセットです。 サーバーとクライアント デザイナーは、従来の OLAP ソリューションや新しいテーブル モデリング ソリューションに加えて、 [!INCLUDE[ssGemini](../includes/ssgemini-md.md)]、Excel、および SharePoint Server 環境を使用するセルフサービス型の分析とコラボレーションをサポートしています。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] には、大量のデータ内部に隠されたパターンとリレーションシップを発見するためのデータ マイニング機能も含まれています。|    
 |![Reporting Services](../sql-server/media/reporting-services.png "Reporting Services")|**[Reporting Services](../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md)**<br /><br /> Reporting Services は Web 対応のエンタープライズ レポート機能を提供します。  これによって組織では、さまざまなデータ ソースのコンテンツを表示するレポートの作成、さまざまな形式でのレポートのパブリッシュ、およびセキュリティやサブスクリプションの集中管理を行うことができます。|

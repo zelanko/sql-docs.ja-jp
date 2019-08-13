@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 0d8312019c5deeebb93185609433ae7e4925e3da
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fcfa51678379ecf7f54a956db17089544b22f6be
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078389"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888046"
 ---
 # <a name="lesson-6-defining-calculations"></a>レッスン 6: 計算の定義
   このレッスンでは、多次元式 (MDX) の式またはスクリプトである計算を定義する方法について学習します。 計算を使用すると、計算されるメンバーや名前付きセットを定義できます。また、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの機能を拡張するさまざまなスクリプト コマンドを実行できます。 たとえば、サブキューブを定義し、計算をサブキューブ内のセルに割り当てるスクリプト コマンドを実行できます。  
@@ -45,19 +45,19 @@ ms.locfileid: "66078389"
   
  このレッスンの内容は次のとおりです。  
   
- [計算されるメンバーの定義](../analysis-services/lesson-6-1-defining-calculated-members.md)  
+ [計算されるメンバーの定義](https://docs.microsoft.com/analysis-services/lesson-6-1-defining-calculated-members)  
  ここでは、計算されるメンバーを定義する方法について学習します。  
   
- [名前付きセットの定義](../analysis-services/lesson-6-2-defining-named-sets.md)  
+ [名前付きセットの定義](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
  この作業では、名前付きセットを定義する方法について学習します。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 7: 主要業績評価指標を定義する&#40;Kpi&#41;](../analysis-services/lesson-7-defining-key-performance-indicators-kpis.md)  
+ [レッスン 7: 主要業績評価指標&#40;kpi の定義&#41;](https://docs.microsoft.com/analysis-services/lesson-7-defining-key-performance-indicators-kpis)  
   
-## <a name="see-also"></a>参照  
- [Analysis Services のチュートリアル シナリオ](../analysis-services/analysis-services-tutorial-scenario.md)   
- [多次元モデリング&#40;Adventure Works チュートリアル&#41;](../analysis-services/multidimensional-modeling-adventure-works-tutorial.md)   
- [名前付きセットを作成します。](multidimensional-models/create-named-sets.md)   
+## <a name="see-also"></a>関連項目  
+ [Analysis Services チュートリアルのシナリオ](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [多次元モデリング&#40;の Adventure works チュートリアル&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [名前付きセットの作成](multidimensional-models/create-named-sets.md)   
  [計算されるメンバーの作成](multidimensional-models/create-calculated-members.md)  
   
   

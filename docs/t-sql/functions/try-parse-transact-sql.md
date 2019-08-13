@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 292bac1d-edd8-468c-8ff1-8c7de625bc55
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 65fd65d6849153b807ecbdb0d24296640ca38390
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77a7bd22ee9317e60d1b755e8ef3755735e0d845
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098735"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893791"
 ---
-# <a name="tryparse-transact-sql"></a>TRY_PARSE (Transact-SQL)
+# <a name="try_parse-transact-sql"></a>TRY_PARSE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
 
   式の結果を、要求されたデータ型に変換して返します。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でキャストに失敗した場合は NULL を返します。 TRY_PARSE は、文字列型から日付/時刻型および数値型への変換にのみ使用します。  
@@ -101,7 +101,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
 |Nederlands|Dutch|1043|nl-NL|  
 |Norsk|ノルウェー語|2068|nn-NO|  
 |Português|Portuguese|2070|pt-PT|  
-|Suomi|Finnish|1035|fi|  
+|Suomi|Finnish|1035|fi-FI|  
 |Svenska|Swedish|1053|sv-SE|  
 |čeština|Czech|1029|Cs-CZ|  
 |magyar|Hungarian|1038|Hu-HU|  
@@ -127,7 +127,7 @@ TRY_PARSE ( string_value AS data_type [ USING culture ] )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-simple-example-of-tryparse"></a>A. TRY_PARSE の簡単な使用例  
+### <a name="a-simple-example-of-try_parse"></a>A. TRY_PARSE の簡単な使用例  
   
 ```  
 SELECT TRY_PARSE('Jabberwokkie' AS datetime2 USING 'en-US') AS Result;  
@@ -143,7 +143,7 @@ NULL
 (1 row(s) affected)  
 ```  
   
-### <a name="b-detecting-nulls-with-tryparse"></a>B. TRY_PARSE で NULL 値を検出する  
+### <a name="b-detecting-nulls-with-try_parse"></a>B. TRY_PARSE で NULL 値を検出する  
   
 ```  
 SELECT  
@@ -164,7 +164,7 @@ True
 (1 row(s) affected)  
 ```  
   
-### <a name="c-using-iif-with-tryparse-and-implicit-culture-setting"></a>C. TRY_PARSE と暗黙のカルチャ設定を指定した IIF を使用する  
+### <a name="c-using-iif-with-try_parse-and-implicit-culture-setting"></a>C. TRY_PARSE と暗黙のカルチャ設定を指定した IIF を使用する  
   
 ```  
 SET LANGUAGE English;  

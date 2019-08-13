@@ -1,5 +1,5 @@
 ---
-title: 述語の制限事項と |Microsoft Docs
+title: AND 述語の制限事項 |Microsoft Docs
 ms.custom: ''
 ms.date: 01/19/2017
 ms.prod: sql

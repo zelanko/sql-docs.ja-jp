@@ -1,5 +1,5 @@
 ---
-title: データ マイニング クエリ タスク エディター ([マイニング モデル] タブ) |Microsoft Docs
+title: データマイニングクエリタスクエディター ([マイニングモデル] タブ) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -14,19 +14,19 @@ ms.assetid: 0ede9b86-be27-471e-b012-22a65adce579
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: e7019fd6fd3d7f2bc763098d30abca9aee670e1a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e31e64226d826db1ac41d3411a542d4eac281ad1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059933"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68890773"
 ---
 # <a name="data-mining-query-task-editor-mining-model-tab"></a>[データ マイニング クエリ タスク エディター] ([マイニング モデル] タブ)
   **[データ マイニング クエリ タスク]** ダイアログ ボックスの **[マイニング モデル]** タブを使用すると、使用するマイニング構造とマイニング モデルを指定できます。  
   
- パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](../analysis-services/data-mining/data-mining-solutions.md)」を参照してください。  
+ パッケージでのデータ マイニングの実装の詳細については、「 [データ マイニング クエリ タスク](control-flow/data-mining-query-task.md) 」および「 [データ マイニング ソリューション](https://docs.microsoft.com/analysis-services/data-mining/data-mining-solutions)」を参照してください。  
   
-## <a name="general-options"></a>[全般] のオプション  
+## <a name="general-options"></a>一般オプション  
  **名前**  
  データ マイニング クエリ タスクに固有の名前を指定します。 この名前は、タスク アイコンのラベルとして使用されます。  
   
@@ -53,10 +53,10 @@ ms.locfileid: "66059933"
  **[マイニング モデル]**  
  選択したマイニング構造に基づいて構築されるマイニング モデルを選択します。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Integration Services のエラーおよびメッセージのリファレンス](../../2014/integration-services/integration-services-error-and-message-reference.md)   
  [データ マイニング クエリ タスク エディター ([クエリ] タブ)](../../2014/integration-services/data-mining-query-task-editor-query-tab.md)   
  [データ マイニング クエリ タスク エディター ([出力] タブ)](../../2014/integration-services/data-mining-query-task-editor-output-tab.md)   
- [データ マイニング デザイナー](../analysis-services/data-mining/data-mining-designer.md)  
+ [データ マイニング デザイナー](https://docs.microsoft.com/analysis-services/data-mining/data-mining-designer)  
   
   

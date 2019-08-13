@@ -14,12 +14,12 @@ ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 26658ebc9cc2828bc127be2881bdf24d80922b67
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 494eabcd54e7a8c28b3a68e99efca72ef80eb9e1
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66010288"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811240"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
   新しい FileTable の作成や、既存の FileTable の変更または削除を行う方法について説明します。  
@@ -175,13 +175,13 @@ GO
 |CHECK 制約|システム定義の CHECK 制約によって、次の要件が適用されます。<br /><br /> 有効なファイル名。<br /><br /> 有効なファイル属性。<br /><br /> 親オブジェクトをディレクトリにする。<br /><br /> 名前空間の階層は、ファイル操作中にロックされる。|  
   
  **システム定義の制約の名前付け規則**  
- 上で説明したシステム定義の制約は、**\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** という形式で名前が付けられます。  
+ 上で説明したシステム定義の制約は、 **\<constraintType>_\<tablename>[\_\<columnname>]\_\<uniquifier>** という形式で名前が付けられます。  
   
 -   *<constraint_type>* は CK (CHECK 制約)、DF (DEFAULT 制約)、FK (外部キー)、PK (主キー)、または UQ (一意制約) です。  
   
 -   *\<uniquifier>* は、名前を一意にする、システムによって生成された文字列です。 この文字列には、通常、FileTable の名前と一意の識別子が含まれています。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [FileTable の管理](manage-filetables.md)  
   
   

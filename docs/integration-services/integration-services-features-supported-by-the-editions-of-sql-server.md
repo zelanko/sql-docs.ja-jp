@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e5018225-68bb-4f34-ae4a-ead79d8ad13a
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: ac646cd235a6307fdcebcd48d42a368f4973df89
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08a38e8a907c32a2614b3bda07a3153141b127d5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68057625"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893822"
 ---
 # <a name="integration-services-features-supported-by-the-editions-of-sql-server"></a>SQL Server の各エディションがサポートする Integration Services の機能
 
@@ -35,7 +35,7 @@ Evaluation Edition と Developer Edition でサポートされている機能に
 
 180 日の試用期間中、SQL Server Evaluation Edition をご利用いただけます。  
     
-> [![Evaluation Center からダウンロードする](../analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Center から SQL Server 2016 をダウンロードする](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
+> [![Evaluation Center からダウンロードする](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016) **[Evaluation Center から SQL Server 2016 をダウンロードする](https://www.microsoft.com/evalcenter/evaluate-sql-server-2016)**    
     
 ## <a name="ISNew"></a> SQL Server 2017 の新しい Integration Services 機能
   

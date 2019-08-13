@@ -1,18 +1,19 @@
 ---
 title: R から SQL へのデータ型の変換
-description: データサイエンスと機械学習ソリューションで、R と SQL Server の間で暗黙的および明示的なデータ型の切り替えを確認します。
+description: データサイエンスと機械学習ソリューションで、R と SQL Server 間の暗黙的および明示的なデータ型変換を確認します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/10/2019
+ms.date: 08/08/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 5606997e26aa006e102a2cc60f5635702500e53f
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: ef35a704023ab6c8eb0bd735b2feba3b6475b506
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470055"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893003"
 ---
 # <a name="data-type-mappings-between-r-and-sql-server"></a>R と SQL Server 間のデータ型マッピング
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -21,7 +22,7 @@ SQL Server Machine Learning Services の R 統合機能で実行される R ソ�
 
 ## <a name="base-r-version"></a>Base R バージョン
 
-R を使用した SQL Server 2016 R Services と SQL Server 2017 Machine Learning Services は、Microsoft R Open の特定のリリースに合わせて調整されます。 たとえば、最新リリース (SQL Server 2017 Machine Learning Services) は、Microsoft R Open 3.3.3 に基づいて構築されています。
+R を使用した SQL Server 2016 R Services と SQL Server Machine Learning Services は、Microsoft R Open の特定のリリースに合わせて調整されます。 たとえば、最新リリースの SQL Server Machine Learning Services は、Microsoft R Open 3.3.3 に基づいて構築されています。
 
 SQL Server の特定のインスタンスに関連付けられている R バージョンを表示するには、 **Rgui**を開きます。 既定のインスタンスの場合、パスは次のようになります。`C:\Program Files\Microsoft SQL Server\MSSQL14.MSSQLSERVER\R_SERVICES\bin\x64\`
 
@@ -99,7 +100,7 @@ R コードで使用するためにデータベースからデータを取得す
 特定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データ型が R でサポートされておらず、R スクリプトでデータの列を使用する必要がある場合、R スクリプトでデータを使用する前に、[CAST および CONVERT &#40;Transact-SQL&#41;](../../t-sql/functions/cast-and-convert-transact-sql.md) 関数を使用してデータ型変換が意図したとおりに実行されることを確認することをお勧めします。  
 
 > [!WARNING]
-> データの移動中に **rxDataStep** を使用して互換性のない列を削除する場合、引数 "_varsToKeep_" と "_varsToDrop_" は **RxSqlServerData** データ ソース型としてサポートされないことにご注意ください。
+> データの移動中に **rxDataStep** を使用して互換性のない列を削除する場合、引数 " _" と " _" は **RxSqlServerData** データ ソース型としてサポートされないことにご注意ください。
 
 
 ## <a name="examples"></a>使用例

@@ -21,12 +21,12 @@ ms.assetid: fe658e32-9e6b-4147-a189-7adc3bd28fe7
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: 204d312e1350e7284b335806a0286baf9603c9a9
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9b2fd7a22c202b1210b17f86903fce32ec8d4b5b
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62666799"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68811083"
 ---
 # <a name="select-an-account-for-the-sql-server-agent-service"></a>SQL Server エージェント サービスのアカウントの選択
   サービス開始アカウントにより、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] エージェントを実行する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Windows アカウントとそのネットワーク権限が定義されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、指定されたユーザー アカウントで実行されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスのアカウントを選択します。構成マネージャーでは、次のオプションから選択できます。  
@@ -74,22 +74,22 @@ ms.locfileid: "62666799"
 ## <a name="supported-service-account-types"></a>サポートされるサービス アカウントの種類  
  以下の表に、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービスで使用できる Windows アカウントの種類を示します。  
   
-|サービス アカウントの種類|非クラスター化サーバー|クラスター化サーバー|ドメイン コントローラー (非クラスター化)|  
+|サービス アカウントの種類|非クラスター化サーバー|クラスター化サーバー|ドメインコントローラー (非クラスター化)|  
 |--------------------------|---------------------------|----------------------|------------------------------------------|  
 |[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows ドメイン アカウント (Windows Administrators グループのメンバー)|サポートされている|Supported|サポートされている|  
-|Windows ドメイン アカウント (管理者以外)|サポートされている<sup>1</sup>|サポートされている<sup>1</sup>|サポートされている<sup>1</sup>|  
+|Windows ドメイン アカウント (管理者以外)|サポート<sup>1</sup>|サポート<sup>1</sup>|サポート<sup>1</sup>|  
 |ネットワーク サービス アカウント (NT AUTHORITY\NetworkService)|サポートされている<sup>1、3、4</sup>|サポートされていません|サポートされていません|  
-|ローカル ユーザー アカウント (管理者以外)|サポートされている<sup>1</sup>|サポートされていません|適用なし|  
+|ローカル ユーザー アカウント (管理者以外)|サポート<sup>1</sup>|サポートされていません|適用なし|  
 |ローカル システム アカウント (NT AUTHORITY\System)|サポートされている<sup>2</sup>|サポートされていません|サポートされている<sup>2</sup>|  
 |ローカル サービス アカウント (NT AUTHORITY\LocalService)|サポートされていません|サポートされていません|サポートされていません|  
   
- <sup>1</sup>制限事項 1 次を参照してください。  
+ <sup>1</sup>以下の制限事項1を参照してください。  
   
- <sup>2</sup>制限事項 2 以下を参照してください。  
+ <sup>2</sup>以下の制限事項2を参照してください。  
   
- <sup>3</sup>制限以下の 3 を参照してください。  
+ <sup>3</sup>以下の制限事項3を参照してください。  
   
- <sup>4</sup>制限事項 4 以下を参照してください。  
+ <sup>4</sup>以下の制限事項4を参照してください。  
   
 ### <a name="limitation-1-using-non-administrative-accounts-for-multiserver-administration"></a>制限事項 1: マルチサーバー管理での非管理者アカウントの使用  
  ターゲット サーバーをマスター サーバーに参加させると、次のエラー メッセージが表示されることがあります: "参加操作に失敗しました。"  

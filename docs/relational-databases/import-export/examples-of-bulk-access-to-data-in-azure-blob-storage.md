@@ -16,15 +16,15 @@ ms.assetid: f7d85db3-7a93-400e-87af-f56247319ecd
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7bbf0e39b5187f91495f36624ca133d02b87f764
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c8ae6afaf55bbd146fc2fbd0984d5b430b1653f3
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035778"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742871"
 ---
 # <a name="examples-of-bulk-access-to-data-in-azure-blob-storage"></a>Azure BLOB ストレージのデータに一括アクセスする例
-[!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2017-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2017-asdb-xxxx-xxx-md.md)]
 
 `BULK INSERT` ステートメントと `OPENROWSET` ステートメントは、Azure BLOB ストレージのファイルに直接アクセスできます。 次の例では、`inv-2017-01-19.csv` という名前の CSV (コンマ区切り値) ファイルのデータを使用します。このファイルは `newinvoices` という名前のストレージ アカウントで `Week3` という名前のコンテナーに格納されています。 ファイルの書式を設定するパスを使用できますが、以下の例には含まれていません。 
 
@@ -32,7 +32,6 @@ SQL Server から Azure BLOB ストレージに一括アクセスする場合、
 
 > [!IMPORTANT]
 >  コンテナーと BLOB 上のファイルへのパスはすべて、`CASE SENSITIVE` です。 正しくない場合は、"一括読み込みできません。 ファイル "file.csv" が存在しないか、ファイルへのアクセス権がありません。" などのエラーが返される可能性があります。
-> "
 
 
 ## <a name="create-the-credential"></a>資格情報を作成する   
@@ -42,23 +41,26 @@ SQL Server から Azure BLOB ストレージに一括アクセスする場合、
 > [!IMPORTANT]
 >  外部データ ソースは、`SHARED ACCESS SIGNATURE` ID を使用するデータベース スコープ資格情報で作成する必要があります。 ストレージ アカウントの Shared Access Signature を作成するには、Azure ポータルのストレージ アカウント プロパティに関するページで **Shared Access Signature** プロパティを参照してください。 Shared Access Signature に関する詳細については、「[Shared Access Signature (SAS) を使用](https://docs.microsoft.com/azure/storage/storage-dotnet-shared-access-signature-part-1)」を参照してください。 資格情報の詳細については、「[CREATE DATABASE SCOPED CREDENTIAL](../../t-sql/statements/create-database-scoped-credential-transact-sql.md)」 (データベース スコープ資格情報を作成する) を参照してください。  
  
-`IDENTITY` (`SHARED ACCESS SIGNATURE` に設定します) を利用してデータベース スコープ資格情報を作成します。 Azure ポータルのシークレットを使用します。 例:  
+`IDENTITY` (`SHARED ACCESS SIGNATURE` に設定します) を利用してデータベース スコープ資格情報を作成します。 BLOB ストレージ アカウントに対して生成された SAS トークンを使用します。 SAS トークンの先頭に `?` がないこと、読み込む必要があるオブジェクトに対して少なくとも読み取りアクセス許可があること、有効期間が有効であることを確認します (すべての日付は UTC 時刻です)。 
+
+例:  
 
 ```sql
 CREATE DATABASE SCOPED CREDENTIAL UploadInvoices  
 WITH IDENTITY = 'SHARED ACCESS SIGNATURE',
-SECRET = 'QLYMgmSXMklt%2FI1U6DcVrQixnlU5Sgbtk1qDRakUBGs%3D';
+SECRET = 'sv=2018-03-28&ss=b&srt=sco&sp=rwdlac&se=2019-08-31T02:25:19Z&st=2019-07-30T18:25:19Z&spr=https&sig=KS51p%2BVnfUtLjMZtUTW1siyuyd2nlx294tL0mnmFsOk%3D';
 ```
 
 
 ## <a name="accessing-data-in-a-csv-file-referencing-an-azure-blob-storage-location"></a>Azure BLOB ストレージの場所を参照する CSV ファイルのデータにアクセスする   
-次の例では、`newinvoices` という名前の Azure ストレージ アカウントを指す外部データ ソースを使用します。   
+次の例では、`newinvoices` という名前の Azure ストレージ アカウントを指す外部データ ソースを使用します。  
+
 ```sql
 CREATE EXTERNAL DATA SOURCE MyAzureInvoices
     WITH  (
         TYPE = BLOB_STORAGE,
         LOCATION = 'https://newinvoices.blob.core.windows.net', 
-        CREDENTIAL = UploadInvoices  
+        CREDENTIAL = 'UploadInvoices';
     );
 ```   
 
@@ -67,7 +69,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoices
 SELECT * FROM OPENROWSET(
    BULK  'week3/inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoices',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```
 
 `BULK INSERT` を利用し、コンテナーとファイルの説明を使用します。
@@ -96,7 +98,7 @@ CREATE EXTERNAL DATA SOURCE MyAzureInvoicesContainer
 SELECT * FROM OPENROWSET(
    BULK  'inv-2017-01-19.csv',
    DATA_SOURCE = 'MyAzureInvoicesContainer',
-   SINGLE_CLOB) AS DataFile;
+   FORMAT = 'CSV') AS DataFile;
 ```   
 
 `BULK INSERT` を利用し、ファイルの説明にコンテナー名を使用しません。 

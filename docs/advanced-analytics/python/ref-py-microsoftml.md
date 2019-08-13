@@ -7,17 +7,18 @@ ms.date: 12/04/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 298328db563cac8183b14b47e5c75c850c782d58
-ms.sourcegitcommit: c1382268152585aa77688162d2286798fd8a06bb
-ms.translationtype: HT
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: c7e7a25749484ff0db4d133f10862438ae5f8ea1
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68345453"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715140"
 ---
 # <a name="microsoftml-python-module-in-sql-server"></a>microsoft ml (SQL Server の Python モジュール)
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-Microsoft の Python35 互換モジュールは、高性能機械学習アルゴリズムを提供します。 トレーニングと変換、スコアリング、テキストと画像の分析、および既存のデータから値を派生させるための機能の抽出を行うための関数が含まれています。
+**Microsoft** の Python35 互換モジュールは、高性能機械学習アルゴリズムを提供します。 トレーニングと変換、スコアリング、テキストと画像の分析、および既存のデータから値を派生させるための機能の抽出を行うための関数が含まれています。
 
 Machine learning Api は、内部機械学習アプリケーション用に Microsoft によって開発されたもので、マルチコア処理と高速データストリーミングを使用したビッグデータの高パフォーマンスをサポートするために、長年にわたって改善されています。 このパッケージは、同様の機能を持つ R バージョンの[Microsoft ml](../r/ref-r-microsoftml.md)に相当する Python として生成されました。 
 
@@ -29,7 +30,7 @@ Microsoft **ml**ライブラリは複数の Microsoft 製品に配布されて�
 
 Microsoft **ml**モジュールは Python 3.5 をベースとしており、次のいずれかの Microsoft 製品またはダウンロードをインストールした場合にのみ使用できます。
 
-+ [SQL Server 2017 Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
++ [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)
 + [Microsoft Machine Learning Server 9.2.0 以降](https://docs.microsoft.com/machine-learning-server/)
 + [データサイエンスクライアント用の Python クライアントライブラリ](setup-python-client-tools-sql.md)
 

@@ -1,5 +1,5 @@
 ---
-title: PowerPivot for SharePoint のインストールのトラブルシューティングを行う |Microsoft Docs
+title: PowerPivot for SharePoint のインストールのトラブルシューティング |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 97bc2ce7-af04-4372-ad79-c96b8c3417ab
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: fc6e01ff69850cb4faf9240c9dc0247ba0d01f11
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 797405386e8a6c0b9e62328699f3a73a6d845313
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66091783"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892442"
 ---
 # <a name="troubleshoot-a-powerpivot-for-sharepoint-installation"></a>PowerPivot for SharePoint インストールのトラブルシューティング
   予想したページや機能ではなくエラーが表示された場合は、次の操作を行います。  
@@ -24,21 +24,21 @@ ms.locfileid: "66091783"
   
     -   [SQL Server 2014 リリース ノート](https://technet.microsoft.com/library/dn169381\(v=sql.15\).aspx).  
   
--   Technet wiki のトピックを参照してください。 [PowerPivot のインストールのトラブルシューティング (およびその他のアドイン)](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)します。  
+-   Technet wiki トピック「 [PowerPivot (およびその他のアドイン) のインストールのトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/13737.troubleshooting-installations-of-powerpivot-and-other-add-ins.aspx)」を参照してください。  
   
-## <a name="issues"></a>問題  
+## <a name="issues"></a>懸案事項  
   
 ### <a name="powerpivot-gallery-thumbnail-images-show-as-a-red-x"></a>PowerPivot ギャラリーのサムネイル画像として赤い X マークが表示される  
- 1 つの考えられる原因は、 **PowerPivot 機能の統合サイト コレクション**アクティブではありません。 次の作業を完了します。  
+ 考えられる原因の1つは、**サイトコレクションの PowerPivot 機能の統合**がアクティブではないことです。 次の作業を完了します。  
   
-1.  PowerPivot ギャラリー ライブラリでクリックして**サイト設定**歯車アイコンから![SharePoint 設定](../../../2014/analysis-services/media/as-sharepoint2013-settings-gear.gif "SharePoint 設定")または**ホーム**一覧。  
+1.  PowerPivot ギャラリーライブラリで、歯車アイコン![Sharepoint 設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint の設定")または**ホーム**リストから **[サイトの設定]** をクリックします。  
   
 2.  **[サイト コレクションの管理]** セクションで **[サイト コレクションの機能]** をクリックします。  
   
 3.  **[サイト コレクションの機能]** をクリックします。  
   
-4.  確認**PowerPivot 機能の統合サイト コレクション**は**Active**します。  
+4.  **サイトコレクションの PowerPivot 機能の統合**が**アクティブ**であることを確認します。  
   
- この問題の原因を追加を参照してください。 [PowerPivot ギャラリーには、代わりのアイコンに赤い x が表示されます。](https://support.microsoft.com/kb/2361559) (https://support.microsoft.com/kb/2361559) します。  
+ この問題のその他の原因については、「 [PowerPivot ギャラリーのアイコン](https://support.microsoft.com/kb/2361559)(https://support.microsoft.com/kb/2361559) )」を参照してください。  
   
   

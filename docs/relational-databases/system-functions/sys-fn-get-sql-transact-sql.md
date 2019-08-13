@@ -70,7 +70,7 @@ sys.fn_get_sql ( SqlHandle )
   
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]一部をキャッシュできません[!INCLUDE[tsql](../../includes/tsql-md.md)]一括コピー ステートメントや文字列リテラルは、8 KB を超えるステートメントなどのステートメント。 このようなステートメントに対するハンドルは、fn_get_sql では取得できません。  
   
- **テキスト**パスワードを含む可能性のあるテキストに対して結果セットの列がフィルター処理します。 詳細については、セキュリティ関連ストアド プロシージャについて監視されませんが、次を参照してください。[トレースをフィルター処理](../../relational-databases/sql-trace/filter-a-trace.md)します。  
+ **テキスト**パスワードを含む可能性のあるテキストに対して結果セットの列がフィルター処理します。 セキュリティ関連ストアド プロシージャについて監視されません。詳細については、[トレースへのフィルターの適用](../../relational-databases/sql-trace/filter-a-trace.md)を参照してください。  
   
  Fn_get_sql 関数は、次のような情報を返します、 [DBCC INPUTBUFFER](../../t-sql/database-console-commands/dbcc-inputbuffer-transact-sql.md)コマンド。 次は、DBCC INPUTBUFFER を使用できず、fn_get_sql 関数を使用できる場合の例です。  
   

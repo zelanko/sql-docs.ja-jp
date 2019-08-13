@@ -8,21 +8,21 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: e9081549f34ca4ff9150e2bfe6ab9c1cf5b07e0c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f0e587e4c87b8d209c86476b1500ca6bbe3d026a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68017022"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893642"
 ---
 # <a name="assignment-operators"></a>代入演算子
 
 
   多次元式 (MDX) では、代入演算子は等号 (=) です。  
   
- 代入演算子は、MDX スクリプトでサブキューブに値を代入する際に使用されます。 詳細については、「[MDX スクリプティングの基礎 (Analysis Services)](../analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services.md)」を参照してください。  
+ 代入演算子は、MDX スクリプトでサブキューブに値を代入する際に使用されます。 詳細については、「[MDX スクリプティングの基礎 (Analysis Services)](https://docs.microsoft.com/analysis-services/multidimensional-models/mdx/mdx-scripting-fundamentals-analysis-services)」を参照してください。  
   
 ## <a name="see-also"></a>関連項目  
- [演算子&#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
+ [Operators &#40;MDX 構文&#41;](../mdx/operators-mdx-syntax.md)  
   
   

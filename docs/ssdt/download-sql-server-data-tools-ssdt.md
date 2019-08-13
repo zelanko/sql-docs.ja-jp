@@ -12,14 +12,13 @@ keywords:
 ms.assetid: b0fc4987-d260-4d0a-9dd1-98099835b361
 author: markingmyname
 ms.author: maghan
-manager: craigg
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 3790d0f71b130ff1b73ae9af94fabcefed1cedd1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 06b2d138ce3d12fdf2a115343d922368accbeda7
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65368345"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892427"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md.md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -66,18 +65,18 @@ AS、IS、RS プロジェクト サポートをインストールするには、
 
 ## <a name="ssdt-for-vs-2017-standalone-installer"></a>SSDT for VS 2017 (スタンドアロン インストーラー)
 
-[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.1) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2086373) 
+[![ダウンロード](../ssdt/media/download.png) SSDT for Visual Studio 2017 (15.9.2) をダウンロードする](https://go.microsoft.com/fwlink/?linkid=2095463) 
 
 > [!IMPORTANT]
-> - SSDT for Visual Studio 2017 (15.9.1) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
-> - Teradata のソース/変換先を含む SSIS パッケージを設計する場合は、Visual Studio 2017 (15.8.0) 以前のバージョン用の SSDT を使用してください。 15\.8.0 より後の Visual Studio 2017 用の SSDT では、Attunity による Teradata のソース/変換先を含む SSIS パッケージを設計できません。
+> - SSDT for Visual Studio 2017 (15.9.2) をインストールする前に、*Analysis Services プロジェクト*と *Reporting Services プロジェクト*の拡張機能がインストールされている場合はアンインストールし、すべての VS インスタンスを閉じます。
+> - Teradata のソース/変換先を含む SSIS パッケージを設計する場合は、Visual Studio 2017 (15.8.0) 以前のバージョン用の SSDT を使用してください。 15.8.0 より後の Visual Studio 2017 用の SSDT では、Attunity による Teradata のソース/変換先を含む SSIS パッケージを設計できません。
 
 
 **バージョン情報**  
   
-リリース番号:15.9.1  
-ビルド番号:14.0.16191.0  
-リリース日:2019 年 4 月 27 日  
+リリース番号:15.9.2  
+ビルド番号:14.0.16194.0  
+リリース日:2019 年 7 月 17 日  
 
 すべての変更の一覧については、「[SQL Server Data Tools (SSDT) リリース ノート](release-notes-ssdt.md)」をご覧ください。
 
@@ -87,17 +86,17 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。
 
-- [中国語 (簡体字)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x804)
-- [中国語 (繁体字)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x404)
-- [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x409)
-- [フランス語]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40c)
-- [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x407)
-- [イタリア語]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x410)
-- [日本語]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x411)
-- [韓国語]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x412)
-- [ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x416)
-- [ロシア語]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x419)
-- [スペイン語]( https://go.microsoft.com/fwlink/?linkid=2086373&clcid=0x40a)
+- [中国語 (簡体字)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
+- [中国語 (繁体字)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
+- [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
+- [フランス語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
+- [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)
+- [イタリア語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x410)
+- [日本語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x411)
+- [韓国語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x412)
+- [ポルトガル語 (ブラジル)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x416)
+- [ロシア語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x419)
+- [スペイン語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40a)
 
 ## <a name="offline-install"></a>オフライン インストール
 
@@ -149,7 +148,7 @@ SSDT をインストールした後、次のチュートリアルを使用して
 
 - [プロジェクト指向のオフライン データベース開発](project-oriented-offline-database-development.md)  
 - [SSIS チュートリアル:シンプルな ETL パッケージの作成](../integration-services/ssis-how-to-create-an-etl-package.md)  
-- [Analysis Services チュートリアル](../analysis-services/analysis-services-tutorials-ssas.md)  
+- [Analysis Services チュートリアル](https://docs.microsoft.com/analysis-services/analysis-services-tutorials-ssas)  
 - [基本的なテーブル レポートの作成 (SSRS チュートリアル)](../reporting-services/create-a-basic-table-report-ssrs-tutorial.md)  
 
 [!INCLUDE[get-help-options](../includes/paragraph-content/get-help-options.md)]

@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 92632ed5-9f32-48eb-be28-a5e477ef9076
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: da73c06c49f54caf5e750f6816738738e7a03681
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e37586d17a7b99d3dd191f63ed858805ef497a03
+ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914932"
+ms.lasthandoff: 07/31/2019
+ms.locfileid: "68670536"
 ---
 # <a name="next-value-for-transact-sql"></a>NEXT VALUE FOR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -132,7 +132,7 @@ NEXT VALUE FOR [ database_name . ] [ schema_name . ]  sequence_name
 -   `INSERT ... SELECT` ステートメントまたは `INSERT ... EXEC` ステートメントで、挿入されるデータを **ORDER BY** 句を使用してクエリから取得する場合、**NEXT VALUE FOR** 関数によって返される値は、**ORDER BY** 句で指定された順序で生成されます。  
   
 ## <a name="using-a-sequence-object-with-an-over-order-by-clause"></a>OVER ORDER BY 句でのシーケンス オブジェクトの使用  
- **NEXT VALUE FOR** 関数は、適用することで並べ替えられたシーケンス値の生成をサポートしています、 **OVER** 句を **NEXT VALUE FOR** 呼び出します。 使用して、**OVER** 句では、ユーザーはことが保証の順序で返される値が生成されること、 **OVER** 句の **ORDER BY** のサブ句。 次の追加のルールの適用を使用する場合、 **NEXT VALUE FOR** で動作、 **OVER**で 句。  
+ **NEXT VALUE FOR** 関数は、適用することで並べ替えられたシーケンス値の生成をサポートしています、 **OVER** 句を **NEXT VALUE FOR** 呼び出します。 **OVER** 句を使用することにより、返される値が **OVER** 句の **ORDER BY** サブ句の順序で生成されることが保証されます。 次の追加のルールの適用を使用する場合、 **NEXT VALUE FOR** で動作、 **OVER**で 句。  
   
 -   複数回呼び出す、 **NEXT VALUE FOR** 関数の 1 つのステートメントで同じシーケンス ジェネレーター必要がありますすべてを使用してください、同じ **OVER** 句の定義。  
   

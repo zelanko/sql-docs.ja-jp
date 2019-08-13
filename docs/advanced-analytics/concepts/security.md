@@ -7,18 +7,19 @@ ms.date: 10/17/2018
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-ms.openlocfilehash: 39a9d05761b60878f1d7856378ba4cb28e54e2f9
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: f5b0af74633fb13b9cfd0b187bc2b180d7fd87b4
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470480"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715851"
 ---
 # <a name="security-overview-for-the-extensibility-framework-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の機能拡張フレームワークのセキュリティの概要
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、SQL Server データベースエンジンとそれに関連するコンポーネントを拡張機能フレームワークと統合するために使用される全体的なセキュリティアーキテクチャについて説明します。 Securables、サービス、プロセス id、アクセス許可を調べます。 SQL Server の機能拡張の主要な概念とコンポーネントの詳細については、「 [SQL Server Machine Learning Services] の拡張アーキテクチャ](extensibility-framework.md)」を参照してください。
+この記事では、SQL Server データベースエンジンとそれに関連するコンポーネントを拡張機能フレームワークと統合するために使用される全体的なセキュリティアーキテクチャについて説明します。 Securables、サービス、プロセス id、アクセス許可を調べます。 SQL Server の機能拡張の主要な概念とコンポーネントの詳細については、「 [SQL Server Machine Learning Services の拡張アーキテクチャ](extensibility-framework.md)」を参照してください。
 
 ## <a name="securables-for-external-script"></a>外部スクリプトの Securables
 

@@ -1,5 +1,7 @@
 - name: SQL Server へようこそ
   href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
+- name: SQL ドキュメントのバージョン管理
+  href: toc/versioning-system-monikers-ui-sql-server.md
 - name: 以前のバージョン 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: 概要
@@ -233,14 +235,6 @@
                   href: big-data-cluster/reference-azdata-bdc-spark-statement.md
                 - name: bdc の状態
                   href: big-data-cluster/reference-azdata-bdc-status.md
-            - name: ノートブック
-              items:
-                - name: ノートブック
-                  href: big-data-cluster/reference-azdata-notebook.md
-            - name: SQL
-              items:
-                - name: sql
-                  href: big-data-cluster/reference-azdata-sql.md
 - name: ビジネス継続性
   items:
     - name: 概要
@@ -5170,6 +5164,37 @@
           items:
             - name: レプリケーション言語
               href: relational-databases/replication/replication-language-reference.md
+            - name: レプリケーション システム ビュー
+              href: relational-databases/system-views/replication-views-transact-sql.md
+              items:
+                - name: IHextendedArticleView (T-SQL)
+                  href: relational-databases/system-views/ihextendedarticleview-transact-sql.md
+                - name: IHextendedSubscriptionView (T-SQL)
+                  href: relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
+                - name: IHsyscolumns (T-SQL)
+                  href: relational-databases/system-views/ihsyscolumns-transact-sql.md
+                - name: MSdatatype_mappings (T-SQL)
+                  href: relational-databases/system-views/msdatatype-mappings-transact-sql.md
+                - name: MSdistribution_status (T-SQL)
+                  href: relational-databases/system-views/msdistribution-status-transact-sql.md
+                - name: sysarticlecolumns (システム ビュー) (T-SQL)
+                  href: relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
+                - name: sysarticles (システム ビュー) (T-SQL)
+                  href: relational-databases/system-views/sysarticles-system-view-transact-sql.md
+                - name: sysdatatypemappings (T-SQL)
+                  href: relational-databases/system-views/sysdatatypemappings-transact-sql.md
+                - name: sysextendedarticlesview (T-SQL)
+                  href: relational-databases/system-views/sysextendedarticlesview-transact-sql.md
+                - name: sysmergeextendedarticlesview (T-SQL)
+                  href: relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
+                - name: sysmergepartitioninfoview (T-SQL)
+                  href: relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
+                - name: syspublications (システム ビュー) (T-SQL)
+                  href: relational-databases/system-views/syspublications-system-view-transact-sql.md
+                - name: syssubscriptions (システム ビュー) (T-SQL)
+                  href: relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
+                - name: systranschemas (T-SQL)
+                  href: relational-databases/system-views/systranschemas-transact-sql.md
             - name: レプリケーション オブジェクトのプロパティ
               items:
                 - name: '[ディストリビューターのプロパティ]'
@@ -6672,8 +6697,6 @@
                   href: relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md
         - name: SQL Server ユーティリティ
           href: relational-databases/manage/sql-server-utility-features-and-tasks.md
-        - name: SQL Assessment API
-          href: sql-assessment-api/sql-assessment-api-overview.md
           items:
             - name: SQL Server の同じインスタンスでユーティリティ コレクション セットとユーティリティ以外のコレクション セットを実行する場合の考慮事項
               href: relational-databases/manage/run-utility-and-non-utility-collection-sets-on-same-sql-instance.md
@@ -6709,6 +6732,8 @@
               href: relational-databases/manage/troubleshoot-sql-server-resource-health-sql-server-utility.md
             - name: ユーティリティ エクスプローラーの F1 ヘルプ
               href: relational-databases/manage/utility-explorer-f1-help.md
+        - name: SQL Assessment API
+          href: sql-assessment-api/sql-assessment-api-overview.md
     - name: モニター
       href: relational-databases/performance/monitor-and-tune-for-performance.md
       items:
@@ -7509,7 +7534,7 @@
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
     - name: SQL Server Analysis Services (SSAS) >>
-      href: analysis-services/index.md
+      href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
     - name: SQL Server Reporting Services (SSRS) >>
       href: reporting-services/index.md
     - name: マスター データ サービス
@@ -7532,6 +7557,8 @@
               href: master-data-services/develop/create-master-data-manager-web-service-proxy-classes.md
             - name: マスター データ サービスの開発者向けドキュメント
               href: master-data-services/develop/master-data-services-developer-documentation.md
+            - name: マネージド インスタンス上でデータベースをホストする
+              href: ./master-data-services/master-data-services-host-database-on-managed-instance.md
         - name: Excel のアドイン
           href: master-data-services/microsoft-excel-add-in/master-data-services-add-in-for-microsoft-excel.md
           items:
@@ -7972,8 +7999,6 @@
               href: relational-databases/security/sql-vulnerability-assessment.md
             - name: データの検出と分類
               href: relational-databases/security/sql-data-discovery-and-classification.md
-            - name: SQL Server コネクタのトラブルシューティング
-              href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
         - name: 認証アクセス
           items:
             - name: 有効な権限の決定
@@ -8021,8 +8046,16 @@
                   href: relational-databases/security/encryption/develop-using-always-encrypted-with-net-framework-data-provider.md
             - name: TDE で保護されたデータベースの移動
               href: relational-databases/security/encryption/move-a-tde-protected-database-to-another-sql-server.md
-            - name: EKM で TDE を有効にする
-              href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+            - name: 拡張キー管理
+              items:
+                - name: EKM で TDE を有効にする
+                  href: relational-databases/security/encryption/enable-tde-on-sql-server-using-ekm.md
+                - name: 暗号化を使用する SQL Server コネクタ
+                  href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
+                - name: Azure Key Vault を使用した EKM
+                  href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
+                - name: SQL Server コネクタのトラブルシューティング
+                  href: relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md
             - name: サービス マスター キーをバックアップする
               href: relational-databases/security/encryption/back-up-the-service-master-key.md
             - name: サービス マスター キーを復元する
@@ -8039,16 +8072,12 @@
               href: relational-databases/security/encryption/encrypt-a-column-of-data.md
         - name: Azure SQL Database のセキュリティ保護
           items:
-            - name: 暗号化を使用する SQL Server コネクタ
-              href: relational-databases/security/encryption/use-sql-server-connector-with-sql-encryption-features.md
             - name: Bring Your Own Key >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-configure
             - name: TDE BYOK キーの交換 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation
             - name: TDE の保護機能の削除 >
               href: /azure/sql-database/transparent-data-encryption-byok-azure-sql-remove-tde-protector
-            - name: Azure Key Vault を使用した EKM
-              href: relational-databases/security/encryption/setup-steps-for-extensible-key-management-using-the-azure-key-vault.md
         - name: 監査
           items:
             - name: サーバー監査の仕様の作成
@@ -9983,22 +10012,8 @@
           items:
             - name: SSMS のサポート ポリシー
               href: ssms/support-policy.md
-            - name: 法人のお客様向けサポート オプション
-              href: 'https://support.microsoft.com/gp/support-options-for-business'
-            - name: Microsoft へのお問い合わせ
-              href: 'https://support.microsoft.com/gp/contactus81?Audience=Commercial'
-            - name: さまざまなヘルプの利用方法
+            - name: フィードバックとヘルプ
               href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
-            - name: UserVoice - SQL Server 機能強化のためのご提案
-              href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: セットアップとアップグレード - MSDN フォーラム
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=sqlsetupandupgrade&filter=alltypes&sort=lastpostdesc'
-            - name: Transact-SQL - MSDN フォーラム
-              href: 'https://social.msdn.microsoft.com/Forums/en-US/home?forum=transactsql'
-            - name: Stack Overflow
-              href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: Microsoft SQL Server ライセンス条項および情報
-              href: 'https://www.microsoft.com/download/details.aspx?id=39299'
             - name: SSMS のユーザー サポート
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名の利用状況データ
@@ -10440,28 +10455,12 @@
           href: 'https://mva.microsoft.com/product-training/sql-server'
         - name: Channel 9 での SQL >
           href: 'https://channel9.msdn.com/Search'
-    - name: ブログ
-      items:
-        - name: SQL Server >
-          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: SQL Server データベース エンジン >
-          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: SQL Server セキュリティ >
-          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: SQL Server Data Tools >
-          href: 'https://blogs.msdn.microsoft.com/ssdt/'
-    - name: フィードバックとヘルプ
+    - name: ヘルプ
       items:
         - name: ヘルプの参照
           href: sql-server/sql-server-get-help.md
-        - name: SQL ドキュメントのフィードバック >
-          href: 'https://aka.ms/sqldocsfeedback'
-        - name: SQL Server のフィードバック (UserVoice) >
-          href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: SQL ドキュメントのアンケート >
-          href: 'https://aka.ms/sqldocsurvey'
-        - name: SQL ドキュメントへの投稿
-          href: sql-server/sql-server-docs-contribute.md
+        - name: SQL ドキュメントのナビゲーションに関するヒント
+          href: sql-server/sql-docs-navigation-guide.md
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >
@@ -10470,6 +10469,24 @@
           href: 'https://social.msdn.microsoft.com/Forums/home'
         - name: Reddit >
           href: 'https://www.reddit.com/r/SQLServer'
+    - name: ブログ
+      items:
+        - name: SQL Server >
+          href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
+        - name: データベース エンジン >
+          href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
+        - name: セキュリティ >
+          href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
+        - name: Data Tools >
+          href: 'https://blogs.msdn.microsoft.com/ssdt/'
+    - name: フィードバック
+      items:
+        - name: SQL ドキュメント >
+          href: 'https://aka.ms/sqldocsfeedback'
+        - name: SQL Server >
+          href: 'https://feedback.azure.com/forums/908035-sql-server'
+        - name: SQL ドキュメントの編集
+          href: sql-server/sql-server-docs-contribute.md
     - name: パートナー
       items:
         - name: 監視
@@ -10484,8 +10501,6 @@
       href: sql-server/sql-server-help-installation.md
 - name: リファレンス
   items:
-    - name: SQL ドキュメントのインクルード ファイル
-      href: sql-server/applies-to-includes.md
     - name: アーカイブ コンテンツ (SQL 2005 から 2012) >
       displayName: '2005, 2008, 2008 r2, 2012, previous-versions'
       href: 'https://docs.microsoft.com/previous-versions/sql/'
@@ -15019,37 +15034,6 @@
               href: relational-databases/system-tables/syssubscriptions-transact-sql.md
             - name: sysschemaarticles
               href: relational-databases/system-tables/sysschemaarticles-transact-sql.md
-    - name: システム ビュー
-      href: relational-databases/system-views/replication-views-transact-sql.md
-      items:
-        - name: IHextendedArticleView (T-SQL)
-          href: relational-databases/system-views/ihextendedarticleview-transact-sql.md
-        - name: IHextendedSubscriptionView (T-SQL)
-          href: relational-databases/system-views/ihextendedsubscriptionview-transact-sql.md
-        - name: IHsyscolumns (T-SQL)
-          href: relational-databases/system-views/ihsyscolumns-transact-sql.md
-        - name: MSdatatype_mappings (T-SQL)
-          href: relational-databases/system-views/msdatatype-mappings-transact-sql.md
-        - name: MSdistribution_status (T-SQL)
-          href: relational-databases/system-views/msdistribution-status-transact-sql.md
-        - name: sysarticlecolumns (システム ビュー) (T-SQL)
-          href: relational-databases/system-views/sysarticlecolumns-system-view-transact-sql.md
-        - name: sysarticles (システム ビュー) (T-SQL)
-          href: relational-databases/system-views/sysarticles-system-view-transact-sql.md
-        - name: sysdatatypemappings (T-SQL)
-          href: relational-databases/system-views/sysdatatypemappings-transact-sql.md
-        - name: sysextendedarticlesview (T-SQL)
-          href: relational-databases/system-views/sysextendedarticlesview-transact-sql.md
-        - name: sysmergeextendedarticlesview (T-SQL)
-          href: relational-databases/system-views/sysmergeextendedarticlesview-transact-sql.md
-        - name: sysmergepartitioninfoview (T-SQL)
-          href: relational-databases/system-views/sysmergepartitioninfoview-transact-sql.md
-        - name: syspublications (システム ビュー) (T-SQL)
-          href: relational-databases/system-views/syspublications-system-view-transact-sql.md
-        - name: syssubscriptions (システム ビュー) (T-SQL)
-          href: relational-databases/system-views/syssubscriptions-system-view-transact-sql.md
-        - name: systranschemas (T-SQL)
-          href: relational-databases/system-views/systranschemas-transact-sql.md
     - name: Transact-SQL (T-SQL) リファレンス
       displayName: tsql
       href: t-sql/language-reference.md

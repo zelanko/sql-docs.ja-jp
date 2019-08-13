@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 5cc205c8e35a275cb043de89d06557cc975518e4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: feee489d990bfce813c0bb16aafaf9e7e3a673cf
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127951"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661398"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールの実装
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,14 +47,14 @@ ms.locfileid: "68127951"
   
     |パラメーター|データ型|[説明]|  
     |---------------|---------------|-----------------|  
-    |**@tableowner**|**sysname**|競合を解決する対象のテーブルの所有者名。 これは、パブリケーション データベース内のテーブルの所有者です。|  
-    |**@tablename**|**sysname**|競合を解決する対象のテーブル名。|  
-    |**@rowguid**|**uniqueidentifier**|競合している行の一意の識別子。|  
-    |**@subscriber**|**sysname**|競合する変更の反映元であるサーバーの名前。|  
-    |**@subscriber_db**|**sysname**|競合する変更の反映元であるデータベースの名前。|  
-    |**@log_conflict OUTPUT**|**int**|競合を後で解決できるように、マージ処理で競合をログに記録するかどうかを指定します。<br /><br /> **0** = 競合をログに記録しない。<br /><br /> **1** = サブスクライバーは競合で優先されない。<br /><br /> **2** = パブリッシャーは競合で優先されない。|  
-    |**@conflict_message OUTPUT**|**nvarchar(512)**|競合をログに記録する場合の解決に関するメッセージ。|  
-    |**@destowner**|**sysname**|サブスクライバー側でパブリッシュされたテーブルの所有者。|  
+    |**\@tableowner**|**sysname**|競合を解決する対象のテーブルの所有者名。 これは、パブリケーション データベース内のテーブルの所有者です。|  
+    |**\@tablename**|**sysname**|競合を解決する対象のテーブル名。|  
+    |**\@rowguid**|**uniqueidentifier**|競合している行の一意の識別子。|  
+    |**\@subscriber**|**sysname**|競合する変更の反映元であるサーバーの名前。|  
+    |**\@subscriber_db**|**sysname**|競合する変更の反映元であるデータベースの名前。|  
+    |**\@log_conflict OUTPUT**|**int**|競合を後で解決できるように、マージ処理で競合をログに記録するかどうかを指定します。<br /><br /> **0** = 競合をログに記録しない。<br /><br /> **1** = サブスクライバーは競合で優先されない。<br /><br /> **2** = パブリッシャーは競合で優先されない。|  
+    |**\@conflict_message OUTPUT**|**nvarchar(512)**|競合をログに記録する場合の解決に関するメッセージ。|  
+    |**\@destowner**|**sysname**|サブスクライバー側でパブリッシュされたテーブルの所有者。|  
   
      このストアド プロシージャは、マージ エージェントからパラメーターに渡された値を使用して、カスタム競合回避ロジックを実装します。このロジックでは、ベース テーブルと同じ構造を持ち、競合で優先されたバージョンの行のデータ値を含んでいる、単一行の結果セットを返す必要があります。  
   
@@ -64,13 +64,13 @@ ms.locfileid: "68127951"
 
 #### <a name="to-use-a-custom-conflict-resolver-with-a-new-table-article"></a>新しいテーブル アーティクルにカスタム競合回避モジュールを使用するには  
   
-1.  **@article_resolver** パラメーターに **MicrosoftSQL** **Server ストアド プロシージャ競合回避モジュール**の値を、 **@resolver_info** パラメーターに競合回避ロジックを実装するストアド プロシージャの名前を指定し、[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義します。 詳しくは、「 [Define an Article](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  **\@article_resolver** パラメーターに **MicrosoftSQL** **Server ストアド プロシージャ競合回避モジュール**の値を、 **\@resolver_info** パラメーターに競合回避ロジックを実装するストアド プロシージャの名前を指定し、[sp_addmergearticle](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>既存のテーブル アーティクルにカスタム競合回避モジュールを使用するには  
   
-1.  **@publication** と **@article** を指定し、 **@property** に **article_resolver** の値を、 **@value** に **MicrosoftSQL** **Server Stored ProcedureResolver** の値を指定して、[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。  
+1.  **\@publication** と **\@article** を指定し、 **\@property** に **article_resolver** の値を、 **\@value** に **MicrosoftSQL** **Server Stored ProcedureResolver** の値を指定して、[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。  
   
-2.  **@publication** と **@article** を指定し、 **@property** に **resolver_info** の値を、 **@value** に競合回避ロジックを実装するストアド プロシージャの名前を指定して、[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。  
+2.  **\@publication** と **\@article** を指定し、 **\@property** に **resolver_info** の値を、 **\@value** に競合回避ロジックを実装するストアド プロシージャの名前を指定して、[sp_changemergearticle](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。  
   
 ##  <a name="COM"></a> COM ベースのカスタム競合回避モジュールの使用  
  <xref:Microsoft.SqlServer.Replication.BusinessLogicSupport> 名前空間により実装されるインターフェイスを利用して、マージ レプリケーション同期処理で発生するイベントを処理し、競合を回避するための複雑なビジネス ロジックを作成できます。 詳細については、「 [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)」を参照してください。 また、ネイティブ コード ベースのカスタム ビジネス ロジックを独自に作成して、競合を回避することもできます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Visual C++ などの製品を使用して、このロジックを COM コンポーネントとしてビルドし、ダイナミック リンク ライブラリ (DLL) にコンパイルします。 このような COM ベースのカスタム競合回避モジュールには、競合回避のために用意されている専用の **ICustomResolver** インターフェイスを実装する必要があります。  
@@ -100,7 +100,7 @@ ms.locfileid: "68127951"
   
 8.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行し、そのライブラリがカスタム競合回避モジュールとしてまだ登録されていないことを確認します。  
   
-9. カスタム競合回避モジュールとしてライブラリを登録するには、ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。 COM オブジェクトの表示名を **@article_resolver** に指定し、ライブラリの ID (CLSID) を **@resolver_clsid** に **false** の値を、 **@is_dotnet_assembly** を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。  
+9. カスタム競合回避モジュールとしてライブラリを登録するには、ディストリビューターで [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md) を実行します。 COM オブジェクトの表示名を **\@article_resolver** に指定し、ライブラリの ID (CLSID) を **\@resolver_clsid** に指定し、**false** を **\@is_dotnet_assembly** に指定します。  
   
     > [!NOTE]  
     >  カスタム競合回避モジュールが不要になったら、[sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md) を使用して登録を解除できます。  
@@ -111,13 +111,13 @@ ms.locfileid: "68127951"
   
 1.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行し、目的の競合回避モジュールの表示名をメモします。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義します。 手順 1. で調べたアーティクル競合回避モジュールの表示名を **@article_resolver** を使用して、マージ アーティクルのカスタム競合回避モジュールを実装する方法について説明します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行してアーティクルを定義します。 手順 1. で調べたアーティクル競合回避モジュールの表示名を **\@article_resolver** に指定します。 詳しくは、「 [アーティクルを定義](../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-use-a-custom-conflict-resolver-with-an-existing-table-article"></a>既存のテーブル アーティクルにカスタム競合回避モジュールを使用するには  
   
 1.  パブリッシャーで [sp_enumcustomresolvers &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-enumcustomresolvers-transact-sql.md) を実行し、目的の競合回避モジュールの表示名をメモします。  
   
-2.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **@publication** 、 **@article** を指定し、 **@property** に **article_resolver** 値、 **@value** に手順 1 のアーティクル競合回避モジュールの表示名を指定します。  
+2.  [sp_changemergearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行し、 **\@publication**、 **\@article** を指定し、 **\@property** に **article_resolver** 値、 **\@value** に手順 1 のアーティクル競合回避モジュールの表示名を指定します。  
   
 
 ## <a name="see-also"></a>参照  

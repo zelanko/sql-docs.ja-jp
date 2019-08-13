@@ -32,8 +32,8 @@ ms.locfileid: "67915668"
 |BLOB|n/a|サポートされていません|  
 |CHAR|Supported|Supported|  
 |CLOB|n/a|サポートされていません|  
-|[DATE]|Supported|Supported|  
-|[FLOAT]|Supported|Supported|  
+|DATE|Supported|Supported|  
+|FLOAT|Supported|Supported|  
 |INTEGER|Supported|Supported|  
 |LONG|Supported|Supported|  
 |LONG RAW|Supported|Supported|  

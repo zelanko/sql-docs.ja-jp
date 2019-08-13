@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5748836-b4ce-4e17-ab6b-617a336f02f4
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 617676bf00f5f91652719ca93ef614152523367a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bc0ae0b7a64f7f3d75d9ff67da0142682093da0
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67947936"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893052"
 ---
 # <a name="analysis-services-processing-task"></a>Analysis Services 処理タスク
 
@@ -123,7 +123,7 @@ ms.locfileid: "67947936"
 |--------------|-----------------|  
 |**Object Name**|指定されたオブジェクト名を表示します。|  
 |**型**|指定されたオブジェクトの種類を表示します。|  
-|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック:** [多次元モデルの処理 &#40;Analysis Services&#41;](../../analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services.md)|  
+|**[処理オプション]**|一覧から処理オプションを選択します。<br /><br /> **関連トピック:** [多次元モデルの処理 &#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/processing-a-multidimensional-model-analysis-services)|  
 |**[設定]**|指定されたオブジェクトの処理設定を表示します。|  
   
  **[追加]**  

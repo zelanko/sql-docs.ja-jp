@@ -1,5 +1,5 @@
 ---
-title: ファクト リレーションシップの定義 |Microsoft Docs
+title: ファクトリレーションシップの定義 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,17 +10,17 @@ ms.assetid: 4b49a078-6848-4286-bc71-cf4862d29064
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 726b5fa4295d68c5b74d4fb3cac711126a8e570b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26f92fffadba9ceed03518d07fb3f27339ebff38
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66078573"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68888236"
 ---
 # <a name="defining-a-fact-relationship"></a>ファクト リレーションシップの定義
   ディメンション メジャーをファクト テーブルのデータ アイテムに関連付けなければならない場合があります。また、特定の販売ファクター (請求番号や受注番号) など、関連している特定の補足情報について、ファクト テーブルから情報を抽出しなければならない場合があります。 このように、ファクト テーブル アイテムに基づいて定義されたディメンションを、 *ファクト ディメンション*と呼びます。 ファクト ディメンションは、逆ディメンションとも呼ばれます。 特定の請求番号に関連するすべての行をグループ化する場合などのように、関連するテーブルの行をまとめてグループ化するには、ファクト ディメンションを使用すると便利です。 この情報は、リレーショナル データベースの個々のディメンション テーブルに格納することができます。しかし、情報ごとに異なるディメンション テーブルを作成してもメリットはありません。ファクト テーブルのサイズに比例してディメンション テーブルが大きくなり、データを複製することによって不要な複雑さを招くことになるからです。  
   
- [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、MOLAP ディメンションにファクト ディメンション データを複製してクエリ パフォーマンスを向上させる方法か、ファクト ディメンションを ROLAP ディメンションとして定義し、クエリ パフォーマンスという点を譲歩して記憶領域を節約する方法を選択できます。 MOLAP ストレージ モードでディメンションを格納する場合、すべてのディメンション メンバーは、メジャー グループのパーティションの他に、圧縮率の高い MOLAP 構造内の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに格納されます。 ディメンションの定義のみが格納されているディメンションで ROLAP ストレージ モードを格納すると、molap 構造のディメンションのメンバー自体はクエリ時に照会基になるリレーショナル ファクト テーブルからは。 ファクト ディメンションにクエリを送信する頻度、通常のクエリにより返される行数、クエリのパフォーマンス、および処理コストなどを考慮し、適切なストレージ モードを決定します。 ディメンションを ROLAP モードとして定義する場合は、そのディメンションを使用するすべてのキューブを ROLAP ストレージ モードで格納しなければならないということではありません。 各ディメンションのストレージ モードは、個別に構成できます。  
+ [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]では、MOLAP ディメンションにファクト ディメンション データを複製してクエリ パフォーマンスを向上させる方法か、ファクト ディメンションを ROLAP ディメンションとして定義し、クエリ パフォーマンスという点を譲歩して記憶領域を節約する方法を選択できます。 MOLAP ストレージ モードでディメンションを格納する場合、すべてのディメンション メンバーは、メジャー グループのパーティションの他に、圧縮率の高い MOLAP 構造内の [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] のインスタンスに格納されます。 ROLAP ストレージモードでディメンションを格納する場合、MOLAP 構造にはディメンション定義のみが格納されます。ディメンションメンバー自体は、クエリ時に基になるリレーショナルファクトテーブルからクエリが実行されます。 ファクト ディメンションにクエリを送信する頻度、通常のクエリにより返される行数、クエリのパフォーマンス、および処理コストなどを考慮し、適切なストレージ モードを決定します。 ディメンションを ROLAP モードとして定義する場合は、そのディメンションを使用するすべてのキューブを ROLAP ストレージ モードで格納しなければならないということではありません。 各ディメンションのストレージ モードは、個別に構成できます。  
   
  ファクト ディメンションを定義している場合は、ファクト ディメンションとメジャー グループの間のリレーションシップを、ファクト リレーションシップとして定義できます。 ファクト リレーションシップには、次の制限が適用されます。  
   
@@ -63,15 +63,15 @@ ms.locfileid: "66078573"
   
 13. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-14. **属性**のディメンション デザイナーのペイン、 **Internet Sales Order Details**ディメンションで、 **Sales Order Number**、し、変更、 **名前**をプロパティ ウィンドウでプロパティ `Item Description.`  
+14. **Internet Sales Order Details**ディメンションのディメンションデザイナーの **[属性]** ペインで、 **[Sales order Number]** を選択し、プロパティウィンドウの**Name**プロパティをに変更します。`Item Description.`  
   
-15. **NameColumn**プロパティ セルで、[参照] ボタンをクリックします **([...])。** . **[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
+15. **NameColumn**プロパティセルで、参照ボタン ([. **..])** をクリックします。 **[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
   
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。  
   
-17. 変更、**名前**プロパティの新しい**Sales Order Number**属性を`Order Number`、変更して、 **OrderBy**プロパティを**キー**.  
+17. 新しい**Sales Order Number** `Order Number`属性の**Name**プロパティをに変更し、 **OrderBy**プロパティを**Key**に変更します。  
   
-18. **階層**ウィンドウで、作成、 **Internet Sales Orders**ユーザー階層を`Order Number`と**Item Description**をこの順序でのレベル。  
+18. **[階層]** ペインで、および**項目の説明**の`Order Number`レベルを含む**Internet Sales Orders**ユーザー階層をこの順序で作成します。  
   
 19. **[属性]** ペインで **Internet Sales Order Details**をクリックします。次に、[プロパティ] ウィンドウで、 **StorageMode** プロパティの値を確認します。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "66078573"
   
      以下のアイコンが示すように、 **Internet Sales Order Details** キューブ ディメンションがファクト リレーションシップを保持するよう、自動的に構成されます。  
   
-2.  [参照] ボタンをクリックします ( **.** ) で、 **Item Description**の交差する位置のセル、 **Internet Sales**メジャー グループと**Internet Sales Order Details**ディメンションにはファクト リレーションシップのプロパティを確認します。  
+2.  **Internet sales**メジャーグループと**Internet sales Order Details**ディメンションが交差する位置にある**Item Description**セルで参照ボタン ([. **..** ]) をクリックし、ファクトリレーションシップのプロパティを確認します。  
   
      **[リレーションシップの定義]** ダイアログ ボックスが開きます。 構成できるプロパティはありません。  
   
      次の図は **[リレーションシップの定義]** ダイアログ ボックスのファクト リレーションシップのプロパティです。  
   
-     ![定義するリレーションシップ ダイアログ ボックス](../../2014/tutorials/media/l5-factrelationship-2.gif "リレーションシップの定義 ダイアログ ボックス")  
+     ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-factrelationship-2.gif "[リレーションシップの定義] ダイアログボックス")  
   
 3.  **[キャンセル]** をクリックします。  
   
@@ -115,12 +115,12 @@ ms.locfileid: "66078573"
   
      次の図は、前の手順の結果を示します。  
   
-     ![Internet Sales-sales Amount の寸法](../../2014/tutorials/media/l5-factrelationship-3.gif "Internet Sales-sales Amount の寸法")  
+     ![Internet sales-Sales Amount の寸法](../../2014/tutorials/media/l5-factrelationship-3.gif "Internet sales-Sales Amount の寸法")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [多対多関係の定義](../analysis-services/lesson-5-3-defining-a-many-to-many-relationship.md)  
+ [多対多関係の定義](https://docs.microsoft.com/analysis-services/lesson-5-3-defining-a-many-to-many-relationship)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
