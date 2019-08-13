@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 488394cbf4b52a952ffc46ab2ec6c9a273466bd5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 0a2891256bd6e45de356d620d3fa75256528b697
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426042"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894015"
 ---
 # <a name="azdata-bdc"></a>azdata bdc
 
@@ -75,7 +75,7 @@ azdata bdc create --accept-eula yes --config-profile aks-dev-test --force
 #### `--config-profile -c`
 ビッグ データ クラスター構成プロファイル。クラスターの展開に使用されます。['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--accept-eula -a`
-Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula と https://go.microsoft.com/fwlink/?LinkId=2002534 で表示できます。
+Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項に[https://go.microsoft.com/fwlink/?LinkId=2002534](https://go.microsoft.com/fwlink/?LinkId=2002534)ついては、「」を参照してください。
 #### `--node-label -l`
 ビッグ データ クラスター ノードのラベル。展開先のノードを指定するために使用されます。
 #### `--force -f`

@@ -1,7 +1,7 @@
 ---
-title: Linux を実行しているコンテナーの always On 可用性グループ
+title: Linux を実行するコンテナーの Always On 可用性グループ
 titleSuffix: SQL Server
-description: この記事で SQL Server のコンテナーの可用性グループが導入されています
+description: この記事では、SQL Server コンテナーの可用性グループを紹介します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -11,108 +11,108 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 3910c74be803b7fc63c8bf560fc637387e06ee15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67910474"
 ---
-# <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server のコンテナーの always On 可用性グループ
+# <a name="always-on-availability-groups-for-sql-server-containers"></a>SQL Server のコンテナー用の Always On 可用性グループ
 
-SQL Server 2019 では、Kubernetes クラスター内のコンテナーの可用性グループをサポートしています。 可用性グループには、SQL Server を展開[Kubernetes 演算子](https://coreos.com/blog/introducing-operators.html)Kubernetes クラスターにします。 演算子では、パッケージ、展開、およびクラスター内の可用性グループを管理することができます。
+SQL Server 2019 では、Kubernetes クラスター内のコンテナーの可用性グループがサポートされます。 可用性グループの場合、SQL Server [Kubernetes オペレーター](https://coreos.com/blog/introducing-operators.html)を Kubernetes クラスターに展開します。 このオペレーターにより、クラスターの可用性グループのパッケージ化、展開、管理が支援されます。
 
-![Kubernetes コンテナーでの AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
+![Kubernetes コンテナーの AG](media/tutorial-sql-server-ag-containers-kubernetes/KubernetesCluster.png)
 
-上記の図では、4 つのノードの kubernetes クラスターは、3 つのレプリカを可用性グループをホストします。 ソリューションには、次のコンポーネントが含まれています。
+上の図では、4 ノードの Kubernetes クラスターが 3 つのレプリカを持つ可用性グループをホストしています。 ソリューションには、次のコンポーネントが含まれています。
 
-* Kubernetes [*展開*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)します。 展開には、演算子と構成のマップが含まれています。 これらは、コンテナー イメージ、ソフトウェア、および可用性グループの SQL Server インスタンスをデプロイするために必要な手順を提供します。
+* Kubernetes [*の展開*](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/)。 展開には、オペレーターと構成マップが含まれます。 それらにより、可用性グループの SQL Server インスタンスを展開するために必要なコンテナー イメージ、ソフトウェア、指示が与えられます。
 
-* 各ホストの 3 つのノード、 [ *StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/)します。 含まれています、StatefulSet、 [*ポッド*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)します。 それぞれのポッドが含まれます。
-  * SQL Server の 1 つのインスタンスを実行している SQL Server のコンテナー。
+* 3 つのノードのそれぞれで [*StatefulSet*](https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/) がホストされます。 StatefulSet には[*ポッド*](https://kubernetes.io/docs/concepts/workloads/pods/pod-overview/)が含まれています。 各ポッドの内容:
+  * SQL Server のインスタンスを 1 つ実行している SQL Server コンテナー。
   * 可用性グループのエージェント。 
 
-* 2 つ[ *ConfigMaps* ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)可用性グループに関連します。 ConfigMaps に関する情報を提供します。
-  * 演算子の配置。
+* 可用性グループに関連する 2 つの [*ConfigMaps*](https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/)。 ConfigMaps から提供される情報:
+  * オペレーターの展開。
   * 可用性グループです。
 
- * [*永続ボリューム*](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)記憶域の断片です。 A*永続ボリューム要求*(PVC) は、ユーザーがストレージ要求です。 各コンテナーには、データおよびログ ストレージの PVC 関係します。 Azure Kubernetes Service (AKS) でする[永続ボリューム要求を作成](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)にストレージ クラスに基づく記憶域に自動的にします。
+ * [*永続ボリューム*](https://kubernetes.io/docs/concepts/storage/persistent-volumes/)はストレージの断片です。 *永続ボリューム要求* (PVC) とは、ユーザーがストレージを要求することです。 データとログのストレージに関して、各コンテナーは PVC に関連付けられます。 Azure Kubernetes Service (AKS) では、[永続ボリューム要求を作成し](https://docs.microsoft.com/azure/aks/azure-disks-dynamic-pv)、ストレージ クラスに基づいて自動的にストレージをプロビジョニングします。
 
 
-また、クラスターを格納[*シークレット*](https://kubernetes.io/docs/concepts/configuration/secret/)パスワード、証明書、キー、および他の機密情報。
+さらに、クラスターでは、パスワード、証明書、キー、その他の機密情報のための[*シークレット*](https://kubernetes.io/docs/concepts/configuration/secret/)が保管されます。
 
-## <a name="deploy-the-availability-group-in-kubernetes"></a>Kubernetes で可用性グループを展開します。
+## <a name="deploy-the-availability-group-in-kubernetes"></a>Kubernetes で可用性グループを展開する
 
-Kubernetes で可用性グループを展開するには。
+Kubernetes で可用性グループを展開するには:
 
-1. Kubernetes クラスターを作成します。
+1. Kubernetes クラスターを作成する
 
-   可用性グループでは、master の SQL Server と、ノードには少なくとも 3 つのノードを作成します。
+   可用性グループの場合、SQL Server に少なくとも 3 つのノードを作成し、マスターに 1 つのノードを作成します。
 
-1. 演算子をデプロイします。
+1. オペレーターを展開する
 
-1. ストレージを構成します。
+1. ストレージを構成する
 
-1. StatefulSet をデプロイします。
+1. StatefulSet を展開する
 
-   演算子は、StatefulSet をデプロイする手順をリッスンします。 自動的に、3 つの個別のノードに SQL Server のインスタンスを作成し、外部のクラスター マネージャーで、可用性グループを構成します。
+   オペレーターは、StatefulSet を展開する指示を待ちます。 3 つの別個のノードで SQL Server のインスタンスを自動的に作成し、外部クラスター マネージャーで可用性グループを構成します。
 
-1. データベースを作成し、可用性グループに関連付ける
+1. データベースを作成し、それを可用性グループにアタッチする
 
-詳細については、次を参照してください。 [Always On 可用性グループの SQL Server のコンテナー](sql-server-ag-kubernetes.md)します。
+詳細な手順については、「[SQL Server コンテナーの Always On 可用性グループ](sql-server-ag-kubernetes.md)」を参照してください。
 
-## <a name="sql-server-kubernetes-operator"></a>SQL Server の Kubernetes 演算子
+## <a name="sql-server-kubernetes-operator"></a>SQL Server Kubernetes オペレーター
 
-演算子を展開した後は、カスタムの SQL Server リソースを登録します。 演算子を使用して、このリソースをデプロイします。  各リソースは、SQL Server のインスタンスに対応しなどの特定のプロパティが含まれています`sapassword`と`monitoring policy`します。 演算子は、リソースを解析し、Kubernetes StatefulSet をデプロイします。
+オペレーターを展開すると、カスタム SQL Server リソースが登録されます。 オペレーターを使用してこのリソースを展開します。  各リソースは SQL Server のインスタンスに対応し、`sapassword` や `monitoring policy` など、特定のプロパティが含まれています。 オペレーターによってリソースが解析され、Kubernetes StatefulSet が展開されます。
 
-StatfulSet が含まれます。
+StatfulSet の内容:
 
-* mssql-server container
+* mssql-server コンテナー
 
-* mssql-ha-スーパーバイザー コンテナー
+* mssql-ha-supervisor コンテナー
 
-演算子、HA supervisor、および SQL Server のコードが呼び出す Docker イメージにパッケージ化`mcr.microsoft.com/mssql/ha`します。 このイメージには、次のバイナリが含まれています。
+オペレーター、HA スーパーバイザー、SQL Server のコードは、`mcr.microsoft.com/mssql/ha` という名称の Docker イメージにパッケージされています。 このイメージには、次のバイナリが含まれています。
 
 * `mssql-operator`
 
-    このプロセスは、個別の Kubernetes デプロイとしてデプロイされます。 登録、 [Kubernetes カスタム リソース](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)と呼ばれる`SqlServer`(sqlservers.mssql.microsoft.com)。 このようなリソースの作成中または Kubernetes クラスターで更新をリッスンします。 このようなすべてのイベントの作成または更新プログラムの対応するインスタンスの Kubernetes リソース (たとえば、StatefulSet、または`mssql-server-k8s-init-sql`ジョブ)。
+    このプロセスは、別個の Kubernetes 展開として配置されます。 `SqlServer` という名前の [Kubernetes カスタム リソース](https://kubernetes.io/docs/concepts/extend-kubernetes/api-extension/custom-resources/)が登録されます (sqlservers.mssql.microsoft.com)。 その後、これは登録されたリソースが Kubernetes クラスターで作成されるか、更新されるのを待ちます。 そのようなイベントのたびに、対応するインスタンスに対して Kubernetes リソースが作成されるか、更新されます (StatefulSet や `mssql-server-k8s-init-sql` ジョブなど)。
 
 * `mssql-server-k8s-health-agent`
 
-    この web サーバー機能の Kubernetes[存続性のプローブ](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/)SQL Server インスタンスの正常性を判断します。 呼び出すことによって、ローカルの SQL Server インスタンスの正常性の監視`sp_server_diagnostics`監視ポリシーの結果を比較するとします。
+    この Web サーバーは Kubernetes [liveness probe](https://kubernetes.io/docs/tasks/configure-pod-container/configure-liveness-readiness-probes/) として機能し、SQL Server インスタンスの正常性を判断します。 `sp_server_diagnostics` を呼び出し、結果とモニター ポリシーを比較することで、ローカル SQL Server の正常性を監視します。
 
 * `mssql-ha-supervisor`
 
-   Ag の証明書とエンドポイントを保持します。 
+   AG の証明書とエンドポイントを保守管理します。 
 
 * `mssql-server-k8s-ag-agent`
   
-    このプロセスは、1 つの SQL Server インスタンス上の可用性グループ レプリカの正常性を監視し、フェールオーバーを実行します。
+    このプロセスにより、1 つの SQL Server インスタンスで AG レプリカの正常性を監視し、フェールオーバーを実行します。
 
-    リーダーの選定も保持されます。
+    リーダーの選定も保守管理されます。
 
 * `mssql-server-k8s-init-sql`
   
-    この Kubernetes[ジョブ](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)の desired state configuration を SQL Server インスタンスに適用されます。 Sql Server リソースの作成または更新するたびに、演算子によって、ジョブが作成されます。 カスタムのリソースに対応するターゲットの SQL Server インスタンスが、リソースで説明されている必要な構成を持つようになります。
+    この Kubernetes [ジョブ](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)により、望まれる状態の構成が SQL Server インスタンスに適用されます。 このジョブは、SqlServer リソースが作成されるか、更新されるたびにオペレーターによって作成されます。 カスタム リソースに対応するターゲット SQL Server インスタンスに、リソースで説明されている望ましい構成が与えられていることが確認されます。
 
-    たとえば、次の設定のいずれかが必要な場合、それを完了しました。
-  * SA パスワードを更新します。
-  * エージェントの SQL ログインを作成します。
-  * DBM エンドポイントを作成します。
+    たとえば、次のいずれかの設定が必要な場合、それを完了します。
+  * SA パスワードを更新する
+  * エージェントの SQL ログインを作成する
+  * DBM エンドポイントを作成する
 
 * `mssql-server-k8s-rotate-creds`
   
-    この Kubernetes ジョブは、回転の資格情報のタスクを実装します。 SA パスワード、エージェントの SQL ログインのパスワード、DBM の証明書などの更新を要求するには、このジョブを作成します。SA パスワードは、ジョブのパラメーターとして指定されます。 それ以外は自動生成されます。
+    この Kubernetes ジョブにより、資格情報交換タスクが実装されます。 このジョブを作成し、SA パスワード、エージェント SQL ログイン パスワード、DBM 証明書などの更新を要求します。SA パスワードはジョブ パラメーターとして指定されます。 その他は自動生成されます。
 
 * `mssql-server-k8s-failover`
 
-   手動フェールオーバーのワークフローを実装する Kubernetes ジョブを指定します。
+   手動フェールオーバー ワークフローを実装する Kubernetes ジョブ。
 
-### <a name="notes"></a>メモ
+### <a name="notes"></a>注
 
-AG の構成に関係なく、演算子は、HA supervisor を常にデプロイされます。 Sql Server リソースにすべての可用性グループが表示されない場合、オペレーターはこのコンテナーがデプロイされます。
+AG の構成に関係なく、オペレーターは常に HA スーパーバイザーを展開します。 SqlServer リソースに AG が記載されていない場合でも、オペレーターによってこのコンテナーが展開されます。
 
-演算子のイメージのバージョンでは、SQL Server イメージのバージョンと同じです。
+オペレーター イメージのバージョンは SQL Server イメージのバージョンと同じです。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-> [Kubernetes での SQL Server のコンテナー](tutorial-sql-server-containers-kubernetes.md)
+> [Kubernetes の SQL Server コンテナー](tutorial-sql-server-containers-kubernetes.md)

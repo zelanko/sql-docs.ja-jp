@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 18880c6cf0590c8a10c232cd2dd9d11e5279f918
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: fb1da50fb84cbfd44aeab50a00be1c8433b3041e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470786"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892455"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-azure-data-studio-notebooks"></a>Azure Data Studio ノートブックを使用して SQL Server ビッグ データ クラスターを展開する
 
@@ -26,11 +26,11 @@ ms.locfileid: "68470786"
 
 ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してビッグ データ クラスターを展開できます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必須コンポーネント
 
 ノートブックを起動できるようにするには、次の前提条件が要件となります。
 
-* [Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download) の最新バージョンがインストールされている
+* [Azure Data Studio insider ビルド](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)がインストールされている最新バージョン
 * [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 拡張機能が Azure Data Studio にインストールされている
 
 上記に加えて、SQL Server 2019 ビッグ データ クラスターを展開するには、以下も必要になります。
@@ -41,7 +41,7 @@ ms.locfileid: "68470786"
 
 ## <a name="launch-the-notebook"></a>ノートブックを起動する
 
-1. [Azure Data Studio Insider ビルド](https://github.com/microsoft/azuredatastudio#try-out-the-latest-insiders-build-from-master)をインストールして起動します。
+1. Azure Data Studio Insider を起動します。
 
 1. **[接続]** タブ上で、 **[...]** をクリックして、 **[Deploy SQL Server big data cluster...]\(SQL Server ビッグ データ クラスターを展開する\)** を選択します。
 
@@ -49,8 +49,11 @@ ms.locfileid: "68470786"
 
 1. **[オプション]** 下にある **[展開ターゲット]** から、 **[New Azure Kubernetes Cluster]\(新しい Azure Kubernetes クラスター\)** または **[Existing Azure Kubernetes Service cluster]\(既存の Azure Kubernetes Service クラスター\)** のどちらかを選択します。
 
-1. **[ノートブックを開く]** を選択します。
+1. **[選択]** ボタンをクリックします。
 
+1. この操作では、ユーザー入力を収集するダイアログを起動し、必要な情報を入力して、既定値を確認します。
+
+1. **[Notebook を開く]** ボタンをクリックします。
 この操作により、適切なノートブックが起動されます。 展開を完了するには、ノートブックでの指示に従って、既存または新しい Azure Kubernetes Service クラスター上に [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対するビッグ データ クラスターを展開します。
 
 ## <a name="next-steps"></a>次の手順

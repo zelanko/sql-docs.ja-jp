@@ -1,7 +1,7 @@
 ---
-title: 記憶域プールの HDFS のデータを照会します。
+title: 記憶域プール内の HDFS データにクエリを実行する
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) での HDFS データを照会する方法を示します。 記憶域プール内のデータに対して外部テーブルを作成してクエリを実行しています。
+description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) 内の HDFS データにクエリを実行する方法について説明します。 記憶域プール内のデータに対して外部テーブルを作成し、クエリを実行します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,26 +10,26 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 77e9e7ddcbca9b397ab4f1ca85ff0d6bada93171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957705"
 ---
-# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>チュートリアル:ビッグ データの SQL Server クラスターで HDFS のクエリ
+# <a name="tutorial-query-hdfs-in-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスター内の HDFS にクエリを実行する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) での HDFS データを照会する方法を示します。
+このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) 内の HDFS データにクエリを実行する方法について説明します。
 
-このチュートリアルでは、次の作業を行う方法について説明します。
+このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
-> * ビッグ データ クラスターで HDFS のデータを指す外部テーブルを作成します。
-> * マスター インスタンスで価値の高いデータを持つこのデータを結合します。
+> * ビッグ データ クラスター内の HDFS データを指す外部テーブルを作成する。
+> * このデータを、マスター インスタンスの価値の高いデータと結合する。
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub でします。
+> 必要に応じて、このチュートリアルのコマンド用のスクリプトをダウンロードして実行できます。 手順については、GitHub の[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)を参照してください。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -37,26 +37,26 @@ ms.locfileid: "67957705"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
-- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
+- [ビッグ データ クラスターへのサンプル データの読み込み](tutorial-load-sample-data.md)
 
-## <a name="create-an-external-table-to-hdfs"></a>HDFS に外部テーブルを作成します。
+## <a name="create-an-external-table-to-hdfs"></a>HDFS に対する外部テーブルを作成する
 
-記憶域プールには、HDFS に格納されている CSV ファイルでは、web クリック ストリーム データが含まれています。 次の手順を使用すると、そのファイル内のデータにアクセスできる外部テーブルを定義します。
+記憶域プールには、HDFS に格納されている CSV ファイル内の Web クリックストリーム データが含まれます。 次の手順を使用して、そのファイル内のデータにアクセスできる外部テーブルを定義します。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
+1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、[SQL Server マスター インスタンスへの接続](connect-to-big-data-cluster.md#master)に関する記述を参照してください。
 
-1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
+1. **[サーバー]** ウィンドウで接続をダブルクリックし、SQL Server マスター インスタンスのサーバー ダッシュボードを表示します。 **[新しいクエリ]** を選択します。
 
-   ![SQL Server マスター インスタンスのクエリ](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
+   ![SQL Server マスター インスタンス クエリ](./media/tutorial-query-hdfs-storage-pool/sql-server-master-instance-query.png)
 
-1. コンテキストを変更するのには、次の TRANSACT-SQL コマンドを実行、 **Sales**マスター インスタンス内のデータベース。
+1. 次の Transact-SQL コマンドを実行し、マスター インスタンスの **Sales** データベースにコンテキストを変更します。
 
    ```sql
    USE Sales
    GO
    ```
 
-1. HDFS からの読み取り、CSV ファイルの形式を定義します。 F5 キーを押して、ステートメントを実行します。
+1. HDFS から読み取る CSV ファイルの形式を定義します。 F5 キーを押して、ステートメントを実行します。
 
    ```sql
    CREATE EXTERNAL FILE FORMAT csv_file
@@ -70,7 +70,7 @@ ms.locfileid: "67957705"
    );
    ```
 
-1. 存在しない場合は、記憶域プールに外部データ ソースを作成します。
+1. まだ存在しない場合は、記憶域プールに対する外部データ ソースを作成します。
 
    ```sql
    IF NOT EXISTS(SELECT * FROM sys.external_data_sources WHERE name = 'SqlStoragePool')
@@ -80,7 +80,7 @@ ms.locfileid: "67957705"
    END
    ```
 
-1. 読み取ることができる外部テーブルを作成、`/clickstream_data`記憶域プールから。 **SqlStoragePool**はビッグ データ クラスターのマスター インスタンスからアクセスできます。
+1. 記憶域プールから `/clickstream_data` を読み取ることができる外部テーブルを作成します。 **SqlStoragePool** には、ビッグ データ クラスターのマスター インスタンスからアクセスできます。
 
    ```sql
    CREATE EXTERNAL TABLE [web_clickstreams_hdfs]
@@ -94,9 +94,9 @@ ms.locfileid: "67957705"
    GO
    ```
 
-## <a name="query-the-data"></a>データのクエリ
+## <a name="query-the-data"></a>データにクエリを実行する
 
-HDFS データに結合する次のクエリ実行、`web_clickstream_hdfs`ローカル リレーショナル データを外部テーブル`Sales`データベース。
+次のクエリを実行し、`web_clickstream_hdfs` 外部テーブルの HDFS データを、ローカルの `Sales` データベースのリレーショナル データと結合します。
 
 ```sql
 SELECT  
@@ -118,17 +118,17 @@ GROUP BY  wcs_user_sk;
 GO
 ```
 
-## <a name="clean-up"></a>クリーンアップします。
+## <a name="clean-up"></a>クリーンアップ
 
-このチュートリアルで使用する外部テーブルを削除するのにには、次のコマンドを使用します。
+このチュートリアルで使用される外部テーブルを削除するには、次のコマンドを使用します。
 
 ```sql
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_hdfs];
 GO
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターから Oracle クエリを実行する方法については、次の記事に進んでください。
+次の記事に進み、ビッグ データ クラスターから Oracle にクエリを実行する方法を学習します。
 > [!div class="nextstepaction"]
-> [Oracle の外部のデータを照会します。](tutorial-query-oracle.md)
+> [Oracle の外部データにクエリを実行する](tutorial-query-oracle.md)

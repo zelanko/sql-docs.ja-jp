@@ -1,7 +1,7 @@
 ---
-title: 展開構成ファイル リファレンス
+title: 展開構成ファイルのリファレンス
 titleSuffix: SQL Server big data clusters
-description: ビッグ データ クラスター展開の構成ファイルの参照です。
+description: ビッグ データ クラスターの展開構成ファイルのリファレンスです。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -10,24 +10,24 @@ ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958243"
 ---
-# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>ビッグ データ クラスターの展開構成ファイル リファレンス
+# <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>ビッグ データ クラスターの展開構成ファイルのリファレンス
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター展開構成ファイルの構造について説明する JSON ファイルを提供します。
+この記事では、SQL Server 2019 ビッグ データ クラスターの展開構成ファイルの構造について説明する JSON ファイルを提供します。
 
 > [!TIP]
-> 実際の展開構成ファイルとしてこれを使用しないでください。 代わりに、指示に従います、[デプロイ ガイダンス](deployment-guidance.md#configfile)の構成ファイルを操作する方法。
+> これを実際の展開構成ファイルとして使用しないでください。 代わりに、構成ファイルの使用方法については、「[展開のガイダンス](deployment-guidance.md#configfile)」に記載されている手順に従ってください。
 
 ## <a name="deployment-configuration-file"></a>展開構成フォーム
 
-参照として次の JSON ファイルを使用して、構造体とビッグ データ クラスター展開の構成ファイルに設定します。
+ビッグ データ クラスターの展開構成ファイルの構造と設定については、次の JSON ファイルをリファレンスとして使用してください。
 
 ```json
 {
@@ -453,4 +453,4 @@ ms.locfileid: "67958243"
 
 ## <a name="next-steps"></a>次の手順
 
-使用して、展開構成ファイルをカスタマイズする方法の詳細については、次を参照してください。[ビッグ データの SQL Server をデプロイする方法を Kubernetes クラスターの](deployment-guidance.md#configfile)します。
+展開構成ファイルを使用およびカスタマイズする方法の詳細については、「[Kubernetes に SQL Server ビッグ データ クラスターデを展開する方法](deployment-guidance.md#configfile)」を参照してください。

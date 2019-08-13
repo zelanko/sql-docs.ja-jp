@@ -1,6 +1,6 @@
 ---
-title: PowerShell Core を使った Linux 上の SQL Server を管理します。
-description: この記事では、SQL Server on Linux で PowerShell Core の使用の概要を示します。
+title: PowerShell Core で SQL Server on Linux を管理する
+description: この記事では、SQL Server on Linux で PowerShell Core を使用する方法の概要を提供します。
 ms.date: 04/22/2019
 ms.prod: sql
 ms.technology: linux
@@ -9,64 +9,64 @@ author: SQLvariant
 ms.author: aanelson
 ms.reviewer: vanto
 ms.openlocfilehash: d8d0675bbb7ebbedc9d1efec29fff8854670c10f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952537"
 ---
-# <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core を使った Linux 上の SQL Server を管理します。
+# <a name="manage-sql-server-on-linux-with-powershell-core"></a>PowerShell Core で SQL Server on Linux を管理する
 
-この記事で紹介[SQL Server PowerShell](../powershell/sql-server-powershell.md) macOS および Linux での PowerShell Core (PS コア) で使用する方法の例のいくつかについて詳しく説明します。 PowerShell Core は現在はオープン ソース プロジェクト[GitHub](https://github.com/powershell/powershell)します。
+この記事では [SQL Server PowerShell](../powershell/sql-server-powershell.md) を紹介します。また、macOS と Linux で PowerShell Core (PS Core) を使用する方法について、例をいくつか紹介します。 PowerShell Core は [GitHub](https://github.com/powershell/powershell) のオープン ソース プロジェクトになりました。
 
-## <a name="cross-platform-editor-options"></a>クロス プラットフォーム エディター オプション
+## <a name="cross-platform-editor-options"></a>クロスプラットフォーム エディター オプション
 
-正規のターミナルでは、すべての手順を次の PowerShell Core または VS Code または Azure Data Studio 内で、ターミナルから実行することができます。  VS Code と Azure Data Studio の両方が macOS および Linux で使用できます。  Azure Data Studio の詳細については、次を参照してください。[このクイック スタート](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server)します。  使用を検討することも、 [PowerShell 拡張機能](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension)にします。
+下の PowerShell Core の手順はすべて、通常のターミナルで動作します。あるいは、VS Code または Azure Data Studio 内のターミナルから実行できます。  VS Code と Azure Data Studio のいずれも macOS と Linux で利用できます。  Azure Data Studio の詳細は、[このクイックスタート](https://docs.microsoft.com/sql/azure-data-studio/quickstart-sql-server)を参照してください。  [PowerShell 拡張機能](https://docs.microsoft.com/sql/azure-data-studio/powershell-extension)の使用もお勧めします。
 
 ## <a name="installing-powershell-core"></a>PowerShell Core のインストール
 
-サポートされていると実験用のさまざまなプラットフォームで PowerShell Core のインストールの詳細については、次の記事を参照してください。
+サポートされているさまざまな実験用プラットフォームで PowerShell Core をインストールする方法については、次の記事を参照してください。
 
-- [Windows 上の PowerShell Core のインストール](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
-- [Linux 上の PowerShell Core のインストール](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
-- [MacOS での PowerShell Core のインストール](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
-- [ARM の PowerShell Core のインストール](https://docs.microsoft.com/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
+- [Windows に PowerShell Core をインストールする](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-windows?view=powershell-6)
+- [Linux に PowerShell Core をインストールする](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-linux?view=powershell-6)
+- [macOS に PowerShell Core をインストールする](https://docs.microsoft.com/powershell/scripting/install/installing-powershell-core-on-macos?view=powershell-6)
+- [ARM に PowerShell Core をインストールする](https://docs.microsoft.com/powershell/scripting/install/powershell-core-on-arm?view=powershell-6)
 
-## <a name="install-the-sqlserver-module"></a>SqlServer モジュールをインストールします。
+## <a name="install-the-sqlserver-module"></a>SqlServer モジュールをインストールする
 
-`SqlServer`モジュールの訳では、 [PowerShell ギャラリー](https://www.powershellgallery.com/packages/SqlServer/)します。 SQL Server を使用する場合は、SqlServer PowerShell モジュールの最新バージョンを常に使用する必要があります。
+`SqlServer` モジュールは [PowerShell ギャラリー](https://www.powershellgallery.com/packages/SqlServer/)で保守管理されます。 SQL Server を使用するとき、常に最新版の SqlServer PowerShell モジュールを使用してください。
 
-SqlServer モジュールをインストールするには、PowerShell Core のセッションを開き、次のコードを実行します。
+SqlServer モジュールをインストールするには、PowerShell Core セッションを開き、次のコードを実行します。
 
 ```powerhsell
 Install-Module -Name SqlServer
 ```
 
-SqlServer モジュールを PowerShell ギャラリーからインストールする方法の詳細については、この参照してください。[ページ](../powershell/download-sql-server-ps-module.md)します。
+PowerShell ギャラリーから SqlServer モジュールをインストールする方法については、この[ページ](../powershell/download-sql-server-ps-module.md)を参照してください。
 
-## <a name="using-the-sqlserver-module"></a>SqlServer モジュールを使用します。
+## <a name="using-the-sqlserver-module"></a>SqlServer モジュールを使用する
 
-PowerShell Core を起動してみましょう。  MacOS または Linux、オープンしている場合、*ターミナル セッション*、コンピューター、および種類に**pwsh**新しい PowerShell Core のセッションを起動します。  Windows を使用して<kbd>Win</kbd>+<kbd>R</kbd>、および種類`pwsh`新しい PowerShell Core のセッションを起動します。
+まず、PowerShell Core を起動してみましょう。  macOS または Linux を使用している場合、コンピューターで*ターミナル セッション*を開き、「**pwsh**」と入力すると、新しい PowerShell Core セッションが起動します。  Windows の場合、<kbd>Win</kbd>+<kbd>R</kbd> を使用し、「`pwsh`」と入力すると、新しい PowerShell Core セッションが起動します。
 
 ```
 pwsh
 ```
 
-SQL Server という名前の PowerShell モジュールを提供する**SqlServer**します。 使用することができます、 **SqlServer** PowerShell 環境またはスクリプトに SQL Server コンポーネント (SQL Server プロバイダーとコマンドレット) をインポートするモジュール。
+SQL Server からは、**SqlServer** という名前の PowerShell モジュールが提供されます。 **SqlServer** モジュールを使用し、SQL Server コンポーネント (SQL Server プロバイダーとコマンドレット) を PowerShell 環境またはスクリプトにインポートできます。
 
-コピーをインポートする PowerShell プロンプトで次のコマンドを貼り付けて、 **SqlServer**現在の PowerShell セッションにモジュール。
+PowerShell プロンプトで次のコマンドをコピーし、貼り付けると、**SqlServer** モジュールが現在の PowerShell セッションにインポートされます。
 
 ```powershell
 Import-Module SqlServer
 ```
 
-確認する PowerShell プロンプトで次のコマンドを入力、 **SqlServer**モジュールが正しくインポートされました。
+**SqlServer** が正しくインポートされたことを確認するには、PowerShell プロンプトで次のコマンドを入力します。
 
 ```powershell
 Get-Module -Name SqlServer
 ```
 
-PowerShell では、次の出力のような情報を表示する必要があります。
+PowerShell には、次の出力のような情報が表示されるはずです。
 
 ```
 ModuleType Version    Name          ExportedCommands
@@ -74,16 +74,16 @@ ModuleType Version    Name          ExportedCommands
 Script     21.1.18102 SqlServer     {Add-SqlAvailabilityDatabase, Add-SqlAvailabilityGroupList...
 ```
 
-## <a name="connect-to-sql-server-and-get-server-information"></a>SQL Server に接続し、サーバーの情報を取得します。
+## <a name="connect-to-sql-server-and-get-server-information"></a>SQL Server に接続し、サーバー情報を取得する
 
-次の手順では、Linux 上の SQL Server インスタンスに接続し、いくつかのサーバーのプロパティを表示する PowerShell Core を使用します。
+次の手順では、PowerShell Core を使用して Linux 上の SQL Server インスタンスに接続し、いくつかのサーバー プロパティを表示します。
 
-コピーして、PowerShell プロンプトで次のコマンドを貼り付けます。 これらのコマンドを実行すると、PowerShell が行われます。
-- ホスト名またはインスタンスの IP アドレスの入力を求めるダイアログを表示します。
-- 表示、 *PowerShell 資格情報要求*ダイアログ ボックスで、資格情報が求められます。 使用することができます、 *SQL ユーザー名*と*SQL パスワード*Linux 上の SQL Server インスタンスに接続するには
-- 使用して、 **Get SqlInstance**コマンドレットへの接続を使用して、 **Server**といくつかのプロパティを表示
+PowerShell プロンプトで次のコマンドをコピーして貼り付けます。 これらのコマンドを実行すると、PowerShell では、次のことが行われます。
+- インスタンスのホスト名または IP アドレスの入力を求めるダイアログが表示されます
+- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 *SQL ユーザー名*と *SQL パスワード*を使用し、Linux 上の SQL Server インスタンスに接続できます
+- **Get-SqlInstance** コマンドレットを使用して **Server** に接続し、いくつかのプロパティを表示します
 
-必要に応じて、置き換えることができますのみ、 `$serverInstance` IP アドレスまたは SQL Server インスタンスのホスト名で変数。
+任意で、`$serverInstance` 変数を SQL Server インスタンスの IP アドレスまたはホスト名に置換できます。
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -95,7 +95,7 @@ Get-SqlInstance -ServerInstance $serverInstance -Credential $credential
 # done
 ```
 
-PowerShell では、次の出力のような情報を表示する必要があります。
+PowerShell には、次の出力のような情報が表示されるはずです。
 
 ```
 Instance Name                   Version    ProductLevel UpdateLevel  HostPlatform HostDistribution
@@ -104,15 +104,15 @@ your_server_instance            14.0.3048  RTM          CU13         Linux      
 ```
 
 > [!NOTE]
-> これらの値は何も表示場合、ほとんどの場合、ターゲット SQL Server インスタンスに接続が失敗しました。 SQL Server Management Studio から接続する、同じ接続情報を使用することを確認します。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。
+> これらの値に対して何も表示されない場合、ターゲット SQL Server インスタンスへの接続に失敗した可能性があります。 同じ接続情報を使用して SQL Server Management Studio から接続できることを確認してください。 次に、[接続のトラブルシューティングに関する推奨事項](sql-server-linux-troubleshooting-guide.md#connection)を確認します。
 
-## <a name="using-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーを使用します。
+## <a name="using-the-sql-server-powershell-provider"></a>SQL Server PowerShell プロバイダーの使用
 
-SQL Server インスタンスに接続するためのもう 1 つのオプションは、使用する、 [SQL Server PowerShell プロバイダー](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)します。  プロバイダーを使用してオブジェクト エクスプ ローラーでは、コマンドラインでのツリー構造を移動した場合とのような SQL Server インスタンスを移動することができます。  既定では、このプロバイダーがという名前の PSDrive として表示される`SQLSERVER:\`接続 (&)、ドメイン アカウントがアクセスできる SQL Server インスタンスの移動に使用できます。  参照してください[構成手順](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps)Linux 上の SQL Server の Active Directory 認証をセットアップする方法についてはします。
+SQL Server インスタンスに接続するもう 1 つの方法は、[SQL Server PowerShell プロバイダー](https://docs.microsoft.com/sql/powershell/sql-server-powershell-provider)を使用することです。  プロバイダーを使用すると、オブジェクト エクスプローラーのツリー構造の中を移動するように SQL Server インスタンスの中を移動できます (ただし、コマンドラインで)。  既定では、このプロバイダーは `SQLSERVER:\` という名前の PSDrive として表示されます。これを使用し、ドメイン アカウントでアクセスできる SQL Server インスタンスを接続し、その中を移動できます。  SQL Server on Linux 用に Active Directory 認証を設定する方法については、「[構成手順](https://docs.microsoft.com/sql/linux/sql-server-linux-active-directory-auth-overview#configuration-steps)」を参照してください。
 
-SQL Server PowerShell プロバイダーと SQL 認証を使用することもできます。 これを行うには、使用、`New-PSDrive`新しい PSDrive を作成し、接続する適切な資格情報を提供するコマンドレットです。
+SQL Server PowerShell プロバイダーで SQL 認証を使用することもできます。 これを行うには、`New-PSDrive` コマンドレットを使用して新しい PSDrive を作成し、正しい資格情報を指定して接続します。
 
-、次の例では、SQL 認証を使用して新しい PSDrive の作成方法の例が表示されます。
+下の例では、SQL 認証を使用し、新しい PSDrive を作成する方法を確認できます。
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -120,19 +120,19 @@ SQL Server PowerShell プロバイダーと SQL 認証を使用することも�
 New-PSDrive -Name SQLonDocker -PSProvider SqlServer -Root 'SQLSERVER:\SQL\localhost,10002\Default\' -Credential $credential
 ```
 
-実行して、ドライブが作成されたことを確認できます、`Get-PSDrive`コマンドレット。
+`Get-PSDrive` コマンドレットを実行すると、ドライブが作成されたことを確認できます。
 
 ```powershell
 Get-PSDrive
 ```
 
-新しい PSDrive を作成した後に操作を開始できます。
+新しい PSDrive が作成されたら、その中での移動を開始できます。
 
 ```powershell
 dir SQLonDocker:\Databases
 ```
 
-次の出力のように示します。  この出力は、[データベース] ノードに SSMS が表示されますが分かります。  ユーザーのデータベースがシステム データベースではなくが表示されます。
+出力は次のようになります。  この出力は Databases ノードでの SSMS の出力に似ていることに気付くかもしれません。  ユーザー データベースが表示されますが、システムデータ ベースは表示されません。
 
 ```powershell
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -145,11 +145,11 @@ AdventureWorksDW2016 Normal      172.00 MB   74.76 MB Simple       130 sa
 AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 ```
 
-1 つのオプションを使用するが、インスタンスのすべてのデータベースを表示する必要がある場合、`Get-SqlDatabase`コマンドレット。
+インスタンス上のすべてのデータベースを表示する必要がある場合、`Get-SqlDatabase` コマンドレットを使用する方法があります。
 
-## <a name="get-databases"></a>データベースを取得します。
+## <a name="get-databases"></a>データベースを取得する
 
-知り、重要なコマンドレットは、`Get-SqlDatabase`します。  データベース、または、データベース内のオブジェクトに関連する多くの操作を`Get-SqlDatabase`コマンドレットを使用できます。  両方の値を指定する場合、`-ServerInstance`と`-Database`パラメーター、その 1 つのデータベース オブジェクトのみが取得されます。  ただし、のみを指定する場合、`-ServerInstance`パラメーター、そのインスタンス上のすべてのデータベースの完全な一覧が返されます。
+知っておくべき重要なコマンドレットに `Get-SqlDatabase` があります。  データベースが関係するさまざまな操作に対して、あるいはデータベース内のオブジェクトに対して `Get-SqlDatabase` コマンドレットを使用できます。  `-ServerInstance` パラメーターと `-Database` パラメーターの両方に値を提供する場合、その 1 つのデータベース オブジェクトだけが取得されます。  ただし、`-ServerInstance` パラメーターのみを指定した場合、そのインスタンス上のすべてのデータベースの完全な一覧が返されます。
 
 ```powershell
 # NOTE: We are reusing the values saved in the $credential variable from the above example.
@@ -158,7 +158,7 @@ AdventureWorksDW2017 Normal      208.00 MB   40.57 MB Simple       140 sa
 Get-SqlDatabase -ServerInstance ServerB -Credential $credential
 ```
 
-上記の Get-sqldatabase コマンドによって返される内容のサンプルを次に示します。
+上の Get-SqlDatabase コマンドからは次のようなものが返されます。
 
 ```powershell
 Name                 Status           Size     Space  Recovery Compat. Owner
@@ -176,16 +176,16 @@ tempdb               Normal       16.00 MB    5.49 MB Simple       140 sa
 
 ```
 
-## <a name="examine-sql-server-error-logs"></a>SQL Server エラー ログを調べます
+## <a name="examine-sql-server-error-logs"></a>SQL Server エラー ログを調べる
 
-次の手順では、PowerShell Core を使用して、Linux 上の SQL Server インスタンス上のログの接続エラーを調べます。
+次の手順では、PowerShell Core を使用し、Linux 上の SQL Server インスタンスで接続されているエラー ログを調べます。
 
-コピーして、PowerShell プロンプトで次のコマンドを貼り付けます。 実行するまで数分がかかる場合があります。 これらのコマンドは、次の手順を実行します。
-- ホスト名またはインスタンスの IP アドレスの入力を求めるダイアログを表示します。
-- 表示、 *PowerShell 資格情報要求*資格情報の入力を求めるダイアログ。 使用することができます、 *SQL ユーザー名*と*SQL パスワード*Linux 上の SQL Server インスタンスに接続するには
-- 使用して、 **Get SqlErrorLog** Linux 上の SQL Server インスタンスに接続し、エラーを取得するコマンドレットのログ以降**昨日**
+PowerShell プロンプトで次のコマンドをコピーして貼り付けます。 実行に数分かかる場合があります これらのコマンドで次の手順が実行されます。
+- インスタンスのホスト名または IP アドレスの入力を求めるダイアログが表示されます
+- *[PowerShell 資格情報の要求]* ダイアログが表示され、資格情報の入力が求められます。 *SQL ユーザー名*と *SQL パスワード*を使用し、Linux 上の SQL Server インスタンスに接続できます
+- **Get-SqlErrorLog** コマンドレットを使用して Linux 上の SQL Server インスタンスに接続し、**昨日**以降のエラー ログを取得します。
 
-必要に応じて置き換えることができます、 `$serverInstance` IP アドレス、または SQL Server インスタンスのホスト名の変数。
+任意で、`$serverInstance` 変数を SQL Server インスタンスの IP アドレスまたはホスト名と置換できます。
 
 ```powershell
 # Prompt for instance & credentials to login into SQL Server
@@ -197,10 +197,10 @@ Get-SqlErrorLog -ServerInstance $serverInstance -Credential $credential -Since Y
 # done
 ```
 
-## <a name="explore-cmdlets-currently-available-in-ps-core"></a>PS Core で現在使用可能なコマンドレットを詳細します。
-SqlServer モジュールには、Windows PowerShell で使用できる 106 コマンドレットは現在、唯一 59、106 の PSCore で使用できます。 現在使用可能な 59 コマンドレットの完全な一覧は、以下に示します。  SqlServer モジュールのすべてのコマンドレットの詳細なドキュメントを参照してください、SqlServer[コマンドレット リファレンス](https://docs.microsoft.com/powershell/module/sqlserver/)します。
+## <a name="explore-cmdlets-currently-available-in-ps-core"></a>PS Core で現在利用できるコマンドレットを試す
+SqlServer モジュールには現在、Windows PowerShell で利用できるコマンドレットが 106 個用意されていますが、106 個のうちの 59 個だけが PSCore で利用できます。 現在利用できる 59 個のコマンドレットの完全な一覧は以下のようになります。  SqlServer モジュールの全コマンドレットを詳しく記録したものが必要な場合、SqlServer [コマンドレット リファレンス](https://docs.microsoft.com/powershell/module/sqlserver/)を参照してください。
 
-次のコマンドに表示 すべての利用可能なコマンドレットを使用する PowerShell のバージョン。
+次のコマンドでは、お使いのバージョンの PowerShell で利用できるすべてのコマンドレットが表示されます。
 
 ```powershell
 Get-Command -Module SqlServer -CommandType Cmdlet |
@@ -208,14 +208,14 @@ SORT -Property Noun |
 SELECT Name
 ```
 
-- ConvertFrom EncodedSqlName
-- ConvertTo EncodedSqlName
-- Get SqlAgent
-- Get SqlAgentJob
-- Get SqlAgentJobHistory
-- Get SqlAgentJobSchedule
-- Get SqlAgentJobStep
-- Get SqlAgentSchedule
+- ConvertFrom-EncodedSqlName
+- ConvertTo-EncodedSqlName
+- Get-SqlAgent
+- Get-SqlAgentJob
+- Get-SqlAgentJobHistory
+- Get-SqlAgentJobSchedule
+- Get-SqlAgentJobStep
+- Get-SqlAgentSchedule
 - Remove-SqlAvailabilityDatabase
 - Resume-SqlAvailabilityDatabase
 - Add-SqlAvailabilityDatabase
@@ -225,18 +225,18 @@ SELECT Name
 - Remove-SqlAvailabilityGroup
 - Switch-SqlAvailabilityGroup
 - Join-SqlAvailabilityGroup
-- Revoke-sqlavailabilitygroupcreateanydatabase
-- Grant SqlAvailabilityGroupCreateAnyDatabase
+- Revoke-SqlAvailabilityGroupCreateAnyDatabase
+- Grant-SqlAvailabilityGroupCreateAnyDatabase
 - New-SqlAvailabilityGroupListener
 - Set-SqlAvailabilityGroupListener
 - Add-SqlAvailabilityGroupListenerStaticIp
 - Set-SqlAvailabilityReplica
 - Remove-SqlAvailabilityReplica
 - New-SqlAvailabilityReplica
-- セット SqlAvailabilityReplicaRoleToSecondary
-- 新しい SqlBackupEncryptionOption
-- Get SqlBackupHistory
-- Invoke-sqlcmd
+- Set-SqlAvailabilityReplicaRoleToSecondary
+- New-SqlBackupEncryptionOption
+- Get-SqlBackupHistory
+- Invoke-Sqlcmd
 - New-SqlCngColumnMasterKeySettings
 - Remove-SqlColumnEncryptionKey
 - Get-SqlColumnEncryptionKey
@@ -250,23 +250,23 @@ SELECT Name
 - New-SqlCredential
 - Remove-SqlCredential
 - New-SqlCspColumnMasterKeySettings
-- Get-sqldatabase
+- Get-SqlDatabase
 - Restore-SqlDatabase
 - Backup-SqlDatabase
-- セット SqlErrorLog
-- Get SqlErrorLog
-- 新しい SqlHADREndpoint
-- Set-sqlhadrendpoint
-- Get SqlInstance
-- 追加 SqlLogin
-- 削除 SqlLogin
-- Get SqlLogin
-- Set-sqlsmartadmin
-- Get-sqlsmartadmin
-- Read-sqltabledata
-- 書き込み SqlTableData
-- 行うための読み取り
-- Convert-urntopath
+- Set-SqlErrorLog
+- Get-SqlErrorLog
+- New-SqlHADREndpoint
+- Set-SqlHADREndpoint
+- Get-SqlInstance
+- Add-SqlLogin
+- Remove-SqlLogin
+- Get-SqlLogin
+- Set-SqlSmartAdmin
+- Get-SqlSmartAdmin
+- Read-SqlTableData
+- Write-SqlTableData
+- Read-SqlViewData
+- Convert-UrnToPath
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 - [SQL Server PowerShell](../relational-databases/scripting/sql-server-powershell.md)

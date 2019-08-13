@@ -1,6 +1,6 @@
 ---
-title: SQL Server Always On 可用性グループを Kubernetes の管理します。
-description: この記事では、SQL Server Always On 可用性グループで Kubernetes を管理する方法について説明します。
+title: SQL Server Always On 可用性グループ Kubernetes を管理する
+description: この記事では、Kubernetes の SQL Server Always On 可用性グループを管理する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: vanto
@@ -10,97 +10,97 @@ ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 893e502c35ae33ce6ff87efd88049db97a40f875
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67952543"
 ---
-# <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>SQL Server Always On 可用性グループの Kubernetes を管理します。
+# <a name="manage-sql-server-always-on-availability-group-kubernetes"></a>SQL Server Always On 可用性グループ Kubernetes を管理する
 
-Always On 可用性グループで Kubernetes を管理するには、マニフェストを作成し、クラスターに適用します。 マニフェストは、`.yaml`ファイル。  
+Kubernetes の Always On 可用性グループを管理するには、マニフェストを作成し、それをクラスターに適用します。 マニフェストは `.yaml` ファイルです。  
 
-この記事の例では、すべての Kubernetes クラスターに適用されます。 これらの例のシナリオは、Azure Kubernetes サービス上のクラスターに対して適用されます。
+この記事の例は、すべての Kubernetes クラスターに適用されます。 これらの例のシナリオは、Azure Kubernetes Service のクラスターに対して適用されます。
 
-完全な展開の例を参照してください。 [、SQL Server Always On 可用性グループに Kubernetes クラスターをデプロイ](sql-server-linux-kubernetes-deploy.md)します。
+完全な展開の例については、「[Kubernetes クラスターに SQL Server Always On 可用性グループを展開する](sql-server-linux-kubernetes-deploy.md)」を参照してください。
 
-## <a name="fail-over---sql-server-availability-group-on-kubernetes"></a>フェールオーバー - Kubernetes 上の SQL Server 可用性グループ
+## <a name="fail-over---sql-server-availability-group-on-kubernetes"></a>フェールオーバーする - Kubernetes の SQL Server 可用性グループ
 
-フェールオーバーまたはプライマリ レプリカを可用性グループ内の異なるノードに移動に、次の手順を行います。
+プライマリ レプリカを可用性グループ内の別のノードにフェール オーバーまたは移動するには、次の手順を完了します。
 
-1. マニフェスト ファイルで、ジョブを定義します。
+1. マニフェスト ファイルでジョブを定義します。
 
-  [`failover.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/failover.yaml) -で、 [sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files)github リポジトリには、フェールオーバー ジョブがについて説明します。
+  [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files) github リポジトリの [`failover.yaml`](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/failover.yaml) では、フェールオーバー ジョブについて説明されています。
 
-  ターミナルに管理するには、マニフェスト ファイルをコピーします。
+  マニフェスト ファイルを管理ターミナルにコピーします。
 
-  環境内のファイルを更新します。
+  環境に合わせてファイルを更新します。
 
-  - 置換`<containerName>`で期待される可用性グループのターゲットのポッド名 (例: mssql2-0)。
-  - 可用性グループが含まれていない場合、`ag1`名前空間、置き換える`ag1`名前空間を持つ。
+  - `<containerName>` を、予想される可用性グループ ターゲットのポッド名 (例: mssql2-0) に置き換えます。
+  - 可用性グループが `ag1` 名前空間にない場合は、`ag1` を名前空間に置き換えます。
 
-  このファイルは、という名前のフェールオーバー ジョブを定義します。`manual-failover`します。
+  このファイルでは、`manual-failover` という名前のフェールオーバー ジョブを定義します。
 
-1. ジョブをデプロイするには使用`kubectl apply`します。 次のスクリプトは、ジョブをデプロイします。
+1. ジョブを展開するには、`kubectl apply` を使用します。 次のスクリプトでは、ジョブを展開します。
 
   ```azurecli
   kubectl apply -f failover.yaml
   ```
 
-  ジョブが配置されると、kubernetes では、SQL サーバーの操作では、次のタスクを行います。
+  ジョブが展開された後、Kubernetes では SQL Server 演算子を使用して次のタスクを行います。
   
-  - プライマリ レプリカをセカンダリへ降格します。
+  - プライマリ レプリカをセカンダリに降格する
   
-  - 指定したレプリカをプライマリに昇格させます
+  - 指定されたレプリカをプライマリに昇格する
   
-  マニフェスト ファイルを適用した後、Kubernetes は、ジョブを実行します。 ジョブは、新しいリーダーを選択して、supervisor を行い、リーダーの SQL Server インスタンスにプライマリ レプリカを移動します。
+  マニフェスト ファイルを適用した後、Kubernetes でジョブが実行されます。 このジョブでは、スーパーバイザーは新しいリーダーを選択し、プライマリ レプリカがリーダーの SQL Server インスタンスに移動されます。
 
 1. ジョブが完了したことを確認します。
   
-  Kubernetes は、ジョブを実行した後、ログを確認できます。
+  Kubernetes でジョブが実行された後、ログを確認できます。
   
-  次の例は、という名前のジョブの状態を返します`manual-failover`します。
+  次の例では、`manual-failover` という名前のジョブの状態が返されます。
 
   ```azurecli
   kubectl describe jobs/manual-failover --namespace ag1
   ```
 
-1. 手動のフェールオーバー ジョブを削除します。 
+1. 手動フェールオーバー ジョブを削除します。 
 
   >[!IMPORTANT]
-  >別の手動フェールオーバーを実行する前に、ジョブを手動で削除する必要があります。
+  >別の手動フェールオーバーを実行する前に、手動でジョブを削除する必要があります。
   > 
-  >Kubernetes でのジョブ オブジェクトは、その状態を表示できるように完了した後が維持されます。 それらの状態を記録した後、古いジョブを手動で削除する必要があります。 ジョブを削除すると、Kubernetes のログも削除されます。 ジョブを削除しない場合、ジョブの名前と、ポッドのセレクターを変更しない限り、今後のフェールオーバー ジョブは失敗します。 詳細については、次を参照してください。 [- ジョブが完了するまで実行](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)します。
+  >Kubernetes のジョブ オブジェクトは完了後も維持されるので、その状態を確認できます。 古いジョブは、その状態を確認した後、手動で削除する必要があります。 ジョブを削除すると、Kubernetes ログも削除されます。 ジョブを削除しないと、ジョブ名とポッド セレクターを変更しない限り、今後のフェールオーバー ジョブは失敗します。 詳細については、「[ジョブ - 実行から完了まで](https://kubernetes.io/docs/concepts/workloads/controllers/jobs-run-to-completion/)」を参照してください。
 
-  次のコマンドは、ジョブを削除します。
+  次のコマンドではジョブが削除されます。
 
   ```azurecli
   kubectl delete jobs manual-failover --namespace ag1
   ```
 
-## <a name="rotate-credentials"></a>資格情報を交換します。
+## <a name="rotate-credentials"></a>資格情報を交換する
 
-SQL Server のパスワードをリセットする資格情報の交換`sa`アカウントと SQL Server[サービス マスター _ キー](../relational-databases/security/encryption/service-master-key.md)します。 
+資格情報を交換し、SQL Server の `sa` アカウントと SQL Server の[サービス マスター キー](../relational-databases/security/encryption/service-master-key.md) のパスワードをリセットします。 
 
-このタスクを完了するには、は、Kubernetes クラスターで新しいシークレットが作成され、資格情報を交換するジョブを作成します。
+このタスクを完了するには、Kubernetes クラスターで新しいシークレットを作成してから、資格情報を交換するためのジョブを作成します。
 
-資格情報を交換する前に、パスワードと、マスター _ キーの新しいシークレットを作成します。
+資格情報を交換する前に、パスワードとマスター キーの新しいシークレットを作成します。
 
-次のスクリプト作成という名前のシークレット`new-sql-secrets`します。 スクリプトを実行する前に置き換える`<>`の複雑なパスワードを持つ、 `sapassword` 、`masterkeypassword`します。 それぞれの値ごとに異なるパスワードを使用します。
+次のスクリプトでは、`new-sql-secrets` という名前のシークレットを作成します。 スクリプトを実行する前に、`<>` を、`sapassword` および `masterkeypassword` の複雑なパスワードに置き換えます。 それぞれの値に対して異なるパスワードを使用します。
 
 ```azurecli
 kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --from-literal=masterkeypassword="<>"  --namespace ag1
 ```
 
-マスター _ キーが必要な SQL Server のインスタンスごとに、次の手順を完了または`sa`パスワード。
+マスター キーまたは `sa` パスワードを必要とする SQL Server のすべてのインスタンスについて、次の手順を完了します。
 
-1. コピー [ `rotate-creds.yaml` ](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml)ターミナルに管理します。
+1. [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) を管理ターミナルにコピーします。
 
-  [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) [sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/)github リポジトリは、このジョブのマニフェストの例を示します。
+  [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/high%20availability/Kubernetes/sample-deployment-script/) github リポジトリの [`rotate-creds.yaml`](https://github.com/Microsoft/sql-server-samples/blob/master/samples/features/high%20availability/Kubernetes/sample-manifest-files/rotate-creds.yaml) は、このジョブのマニフェストの例です。
 
-  このマニフェストを適用する前に、環境内のマニフェストを更新します。 確認し、必要に応じて、次の設定を変更します。
+  このマニフェストを適用する前に、環境に合わせてマニフェストを更新します。 次の設定を確認し、必要に応じて変更します。
 
-  - 名前空間を確認します。 必要に応じて更新します。 マニフェストで次の例は、名前空間に適用`ag1`します。
+  - 名前空間を確認します。 必要に応じて更新します。 マニフェストの次の例は、`ag1` という名前空間に適用されます。
 
     ```yaml
     metadata:
@@ -108,7 +108,7 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
       namespace: ag1
     ```
 
-  - SQL Server インスタンスの名前を確認します。 必要に応じて更新します。 マニフェストの仕様では、次の例は、という名前の SQL Server インスタンスに適用`mssql1`します。
+  - SQL Server インスタンスの名前を確認します。 必要に応じて更新します。 マニフェスト仕様の次の例は、`mssql1` という名前の SQL Server インスタンスに適用されます。
 
     ```yaml
     env:
@@ -118,33 +118,33 @@ kubectl create secret generic new-sql-secrets --from-literal=sapassword="<>" --f
 
   更新されたマニフェスト ファイルをワークステーションに保存します。
 
-1. 使用`kubectl`ジョブをデプロイします。
+1. `kubectl` を使用してジョブを展開します。
 
   ```azurecli
   kubectl apply -f rotate-creds.yaml --namespace ag1
   ```
 
-  Kubernetes は、マスター _ キーを更新し、 `sa` SQL Server の可用性グループ内の 1 つのインスタンスのパスワード。
+  Kubernetes では、可用性グループ内の SQL Server の 1 つのインスタンスのマスターキーと `sa` パスワードを更新します。
 
-1. ジョブが完了したことを確認します。 次のコマンドを実行します。ジョブが完了したことを確認するに次のように実行します。 
+1. ジョブが完了したことを確認します。 次のコマンドを実行します。ジョブが完了したことを確認するには、以下を実行します。 
 
   ```azcli
   kubectl describe job rotate-creds --namespace ag1
   ```
 
-  ジョブが成功すると、マスター _ キーと`sa`SQL Server のインスタンスを 1 つのパスワードを更新します。
+  ジョブが成功した後、SQL Server の 1 つのインスタンスのマスター キーと `sa` パスワードが更新されます。
 
 
-1. ジョブをもう一度実行する前に、ジョブを削除します。 各ジョブの名前は一意である必要があります。
+1. ジョブを再度実行する前に、ジョブを削除します。 各ジョブ名は一意である必要があります。
 
   ```azurecli
   kubectl delete job rotate-creds --namespace ag1
   ```
 
-同じように設定する`sa`、SQL Server のすべてのインスタンスのパスワードは、SQL Server のインスタンスごとに上記の手順を繰り返します。
+SQL Server のすべてのインスタンスに同じ `sa` パスワードを設定するには、SQL Server の各インスタンスに対して上記の手順を繰り返します。
 
 ## <a name="next-steps"></a>次の手順
 
-[Azure Kubernetes Service (AKS) での Kubernetes ダッシュ ボードにアクセスします。](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)
+[Azure Kubernetes Service (AKS) を使用して Kubernetes ダッシュボードにアクセスする](https://docs.microsoft.com/azure/aks/kubernetes-dashboard)
 
-[Kubernetes クラスター上の SQL Server 可用性グループ](sql-server-ag-kubernetes.md)
+[Kubernetes クラスターの SQL Server 可用性グループ](sql-server-ag-kubernetes.md)

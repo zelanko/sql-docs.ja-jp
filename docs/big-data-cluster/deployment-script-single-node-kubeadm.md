@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 37017221b636146a003f8af8890c655ed605bca9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 09f1d487e82f1e57762a0949f20bf9d43e40abfc
+ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68473074"
+ms.lasthandoff: 08/01/2019
+ms.locfileid: "68715890"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>bash スクリプトを使用して単一ノード kubeadm クラスターに展開する
 
@@ -22,16 +22,30 @@ ms.locfileid: "68473074"
 
 このチュートリアルでは、サンプルの bash 展開スクリプトを利用し、kubeadm と SQL Server ビッグ データ クラスターを使用して単一ノード Kubernetes クラスターを展開します。  
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必須コンポーネント
 
-- バニラ Ubuntu 18.04 または 16.04 **サーバー**の VM。 スクリプトによってすべての依存関係が設定され、VM 内からそのスクリプトを実行します。
+- バニラ Ubuntu 18.04 または 16.04 **server**仮想マシンまたは物理マシン。 スクリプトによってすべての依存関係が設定され、VM 内からそのスクリプトを実行します。
 
   > [!NOTE]
-  > Azure VM の使用は、まだサポートされていません。
+  > Azure Linux Vm の使用はまだサポートされていません。
 
-- VM には、少なくとも 8 個の CPU、64 GB の RAM、および 100 GB のディスク領域が必要です。 すべてのビッグ データ クラスターの Docker イメージをプルした後は、すべてのコンポーネント全体で使用するデータとログに対して 50 GB が残されます。
+- VM には、少なくとも8個の Cpu、64 GB の RAM、および 100 GB のディスク領域が必要です。 すべてのビッグ データ クラスターの Docker イメージをプルした後は、すべてのコンポーネント全体で使用するデータとログに対して 50 GB が残されます。
 
-## <a name="instructions"></a>Instructions
+- 次のコマンドを使用して既存のパッケージを更新し、OS イメージが最新の状態になっていることを確認します。
+
+   ``` bash
+   sudo apt update&&apt upgrade -y
+   sudo systemctl reboot
+   ```
+
+## <a name="recommended-virtual-machine-settings"></a>推奨される仮想マシンの設定
+
+1. 仮想マシンに静的メモリ構成を使用します。 たとえば、Hyper-v のインストールでは動的メモリ割り当ては使用されず、代わりに推奨される 64 GB 以上が割り当てられます。
+
+1. Hyper-v でチェックポイントまたはスナップショット機能を使用して、仮想マシンをクリーンな状態に戻すことができるようにします。
+
+
+## <a name="instructions-to-deploy-sql-server-big-data-cluster"></a>ビッグデータクラスター SQL Server デプロイする手順
 
 1. 展開に使用することを計画している VM 上にスクリプトをダウンロードします。
 
@@ -45,13 +59,13 @@ ms.locfileid: "68473074"
    chmod +x setup-bdc.sh
    ```
 
-3. **sudo** を使用してスクリプトを実行します。
+3. スクリプトを実行します ( *sudo*を使用して実行していることを確認してください)。
 
    ```bash
    sudo ./setup-bdc.sh
    ```
 
-   要求された場合は、次の外部エンドポイント、つまり、コントローラー、SQL Server マスター、ゲートウェイに使用するパスワードの入力値を指定します。 コントローラーのユーザー名の既定値は、*admin* です。
+   要求された場合は、次の外部エンドポイント、つまり、コントローラー、SQL Server マスター、ゲートウェイに使用するパスワードの入力値を指定します。 パスワードは、SQL Server パスワードの既存の規則に基づいて、十分に複雑にする必要があります。 コントローラーのユーザー名の既定値は、*admin* です。
 
 4. **azdata** ツールに対して別名を設定します。
 
@@ -59,12 +73,16 @@ ms.locfileid: "68473074"
    source ~/.bashrc
    ```
 
-5. 別名が機能することを確認します。
+5. Azdata のエイリアスセットアップを更新します。
 
    ```bash
    azdata --version
    ```
 
+## <a name="cleanup"></a>クリーンアップ
+
+[Cleanup-bdc.sh](https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/deployment/kubeadm/ubuntu-single-node-vm/cleanup-bdc.sh)スクリプトは、必要に応じて環境をリセットする便宜的な方法として提供されています。 ただし、テスト目的では仮想マシンを使用し、ハイパーバイザーでスナップショット機能を使用して仮想マシンをクリーンな状態にロールバックすることをお勧めします。
+
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターの使用を開始するには、[こちらのチュートリアル](tutorial-load-sample-data.md)に従ってください。
+ビッグデータクラスターの使用を開始するには[、次のチュートリアルを参照してください。SQL Server ビッグデータクラスター](tutorial-load-sample-data.md)にサンプルデータを読み込みます。

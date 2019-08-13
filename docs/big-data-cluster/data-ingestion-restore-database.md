@@ -1,7 +1,7 @@
 ---
-title: データベースの復元
+title: データベースを復元する
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスにデータベースを復元する方法を示します。
+description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスにデータベースを復元する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,30 +10,30 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 1ad5ca749f3862f0d7df3411efd78104052dba91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958623"
 ---
-# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元します。
+# <a name="restore-a-database-into-the-sql-server-big-data-cluster-master-instance"></a>SQL Server ビッグ データ クラスターのマスター インスタンスにデータベースを復元する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスに既存のデータベースを復元する方法について説明します。 使用して、バックアップ、コピー、およびアプローチを復元することをお勧めします。
+この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のマスター インスタンスに既存のデータベースを復元する方法について説明します。 バックアップ、コピー、復元の方法を使用することをお勧めします。
 
-## <a name="backup-your-existing-database"></a>既存のデータベースをバックアップします。
+## <a name="backup-your-existing-database"></a>既存のデータベースをバックアップする
 
-最初に、Windows 上のいずれかの SQL Server または Linux から、既存の SQL Server データベースをバックアップします。 Transact-sql または SQL Server Management Studio (SSMS) などのツールでは、標準的なバックアップの手法を使用します。
+最初に、Windows または Linux のいずれかの SQL Server から既存の SQL Server データベースをバックアップします。 Transact-SQL または SQL Server Management Studio (SSMS) などのツールと共に、標準的なバックアップ手法を使用します。
 
-この記事では、AdventureWorks データベースを復元する方法を示していますが、データベースのバックアップを使用することができます。 
+この記事では、AdventureWorks データベースを復元する方法について説明しますが、どのようなデータベース バックアップでも使用できます。 
 
 > [!TIP]
-> AdventureWorks のバックアップをダウンロードする[ここ](https://www.microsoft.com/download/details.aspx?id=49502)します。
+> AdventureWorks のバックアップは[こちら](https://www.microsoft.com/download/details.aspx?id=49502)からダウンロードできます。
 
-## <a name="copy-the-backup-file"></a>バックアップ ファイルをコピーします。
+## <a name="copy-the-backup-file"></a>バックアップ ファイルをコピーする
 
-Kubernetes クラスターのマスター インスタンス ポッドの SQL Server のコンテナーにバックアップ ファイルをコピーします。
+Kubernetes クラスターのマスター インスタンス ポッド内にある SQL Server コンテナーにバックアップ ファイルをコピーします。
 
 ```bash
 kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name of your big data cluster>
@@ -45,7 +45,7 @@ kubectl cp <path to .bak file> mssql-master-pool-0:/tmp -c mssql-server -n <name
 kubectl cp ~/Downloads/AdventureWorks2016CTP3.bak mssql-master-pool-0:/tmp -c mssql-server -n clustertest
 ```
 
-ポッドのコンテナーにバックアップ ファイルをコピーすることを確認してください。
+次に、バックアップ ファイルがポッド コンテナーにコピーされたことを確認します。
 
 ```bash
 kubectl exec -it mssql-master-pool-0 -n <name of your big data cluster> -c mssql-server -- bin/bash
@@ -62,9 +62,9 @@ ls /tmp
 exit
 ```
 
-## <a name="restore-the-backup-file"></a>バックアップ ファイルを復元します。
+## <a name="restore-the-backup-file"></a>バックアップ ファイルを復元する
 
-次に、マスター インスタンス SQL Server データベースのバックアップを復元します。  Windows 上に作成されたデータベースのバックアップを復元する場合は、ファイルの名前を取得する必要があります。  Azure Data Studio では、マスター インスタンスに接続し、この SQL スクリプトを実行します。
+次に、データベース バックアップをマスター インスタンス SQL Server に復元します。  Windows で作成されたデータベース バックアップを復元する場合は、ファイルの名前を取得する必要があります。  Azure Data Studio では、マスター インスタンスを接続し、この SQL スクリプトを実行します。
 
 ```sql
 RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
@@ -76,9 +76,9 @@ RESTORE FILELISTONLY FROM DISK='/tmp/<db file name>.bak'
 RESTORE FILELISTONLY FROM DISK='/tmp/AdventureWorks2016CTP3.bak'
 ```
 
-![バックアップ ファイルの一覧](media/restore-database/database-restore-file-list.png)
+![バックアップ ファイル リスト](media/restore-database/database-restore-file-list.png)
 
-ここで、データベースを復元します。 次のスクリプトでは、例を示します。 データベースのバックアップによって必要に応じて、名前とパスに置き換えます。
+ここで、データベースを復元します。 次のスクリプトは一例です。 必要に応じて、データベースのバックアップに合わせて名前とパスを置き換えます。
 
 ```sql
 RESTORE DATABASE AdventureWorks2016CTP3
@@ -88,9 +88,9 @@ WITH MOVE 'AdventureWorks2016CTP3_Data' TO '/var/opt/mssql/data/AdventureWorks20
         MOVE 'AdventureWorks2016CTP3_mod' TO '/var/opt/mssql/data/AdventureWorks2016CTP3_mod'
 ```
 
-## <a name="configure-data-pool-and-hdfs-access"></a>データのプールと HDFS へのアクセスを構成します。
+## <a name="configure-data-pool-and-hdfs-access"></a>データ プールと HDFS アクセスを構成する
 
-ここで、マスター インスタンスの SQL Server へのアクセスのデータ プールおよび HDFS のデータ プールと記憶域プールに格納されている手順を実行します。 新しく復元されたデータベースに対して次の TRANSACT-SQL スクリプトを実行します。
+SQL Server マスター インスタンスがデータ プールと HDFS にアクセスできるよう、データ プールと記憶域プールのストアド プロシージャを実行します。 新しく復元したデータベースに対して、次の Transact-SQL スクリプトを実行します。
 
 ```sql
 USE AdventureWorks2016CTP3
@@ -108,10 +108,10 @@ GO
 ```
 
 > [!NOTE]
-> SQL Server の以前のバージョンから復元されたデータベースに対してのみこれらのセットアップ スクリプトを実行する必要があります。 Master の SQL Server インスタンスで新しいデータベースを作成する場合のデータ プールと記憶域プールのストアド プロシージャが既に構成します。
+> 以前のバージョンの SQL Server から復元されたデータベースに対してのみ、これらのセットアップ スクリプトを実行する必要があります。 SQL Server マスター インスタンスに新しいデータベースを作成した場合、データ プールと記憶域プールのストアド プロシージャは既に構成されています。
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server のビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+SQL Server ビッグ データ クラスターに関する詳細については、次の概要を参照してください。
 
 - [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)

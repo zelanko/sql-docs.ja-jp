@@ -1,7 +1,7 @@
 ---
-title: Oracle の外部のデータを照会します。
+title: Oracle の外部データにクエリを実行する
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) から Oracle データを照会する方法を示します。 Oracle のデータに対して外部テーブルを作成してクエリを実行しています。
+description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) から Oracle データにクエリを実行する方法について説明します。 Oracle のデータに対する外部テーブルを作成し、クエリを実行します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
@@ -10,26 +10,26 @@ ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957714"
 ---
-# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server のビッグ データ クラスターから Oracle クエリを実行します。
+# <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターから Oracle にクエリを実行する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、SQL Server 2019 のビッグ データ クラスターから Oracle データを照会する方法を示します。 このチュートリアルを実行するには、Oracle サーバーにアクセスする必要があります。 このチュートリアルがアクセスできない場合は、ビッグ データの SQL Server クラスター内の外部データ ソースのデータ仮想化のしくみを把握付与します。
+このチュートリアルでは、SQL Server 2019 ビッグ データ クラスターから Oracle データにクエリを実行する方法について説明します。 このチュートリアルを実行するには、Oracle サーバーにアクセスできる必要があります。 アクセスできない場合は、このチュートリアルで、SQL Server ビッグ データ クラスター内の外部データ ソースに対してデータ仮想化がどのように機能するかを理解できます。
 
-このチュートリアルでは、次の作業を行う方法について説明します。
+このチュートリアルでは、次の方法を学習します。
 
 > [!div class="checklist"]
-> * 外部の Oracle データベースでデータの外部テーブルを作成します。
-> * マスター インスタンスで価値の高いデータを持つこのデータを結合します。
+> * 外部 Oracle データベースのデータ用の外部テーブルを作成する。
+> * このデータを、マスター インスタンスの価値の高いデータと結合する。
 
 > [!TIP]
-> をする場合は、ダウンロードして、このチュートリアルでは、コマンドのスクリプトを実行します。 手順については、次を参照してください。、[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)GitHub でします。
+> 必要に応じて、このチュートリアルのコマンド用のスクリプトをダウンロードして実行できます。 手順については、GitHub の[データ仮想化のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/data-virtualization)を参照してください。
 
 ## <a id="prereqs"></a> 前提条件
 
@@ -37,15 +37,15 @@ ms.locfileid: "67957714"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 の拡張機能**
-- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
+- [ビッグ データ クラスターへのサンプル データの読み込み](tutorial-load-sample-data.md)
 
-## <a name="create-an-oracle-table"></a>Oracle テーブルを作成します。
+## <a name="create-an-oracle-table"></a>Oracle テーブルを作成する
 
-次の手順は、という名前のサンプル テーブルを作成`INVENTORY`Oracle でします。
+次の手順では、Oracle で `INVENTORY` という名前のサンプル テーブルを作成します。
 
-1. Oracle インスタンスとこのチュートリアルで使用するデータベースに接続します。
+1. このチュートリアルで使用する Oracle インスタンスとデータベースに接続します。
 
-1. 作成する次のステートメントを実行して、`INVENTORY`テーブル。
+1. `INVENTORY` テーブルを作成するには、次のステートメントを実行します。
 
    ```sql
     CREATE TABLE "INVENTORY"
@@ -59,26 +59,26 @@ ms.locfileid: "67957714"
     CREATE INDEX INV_ITEM ON HR.INVENTORY(INV_ITEM);
     ```
 
-1. コンテンツをインポート、 **inventory.csv**ファイルをこのテーブルにします。 このファイルは、サンプルの作成スクリプトで作成された、[の前提条件](#prereqs)セクション。
+1. このテーブルに、**inventory.csv** ファイルの内容をインポートします。 このファイルは、「[前提条件](#prereqs) 」セクションのサンプル作成スクリプトによって作成されたものです。
 
-## <a name="create-an-external-data-source"></a>外部データ ソースを作成します。
+## <a name="create-an-external-data-source"></a>外部データ ソースを作成する
 
 最初の手順では、Oracle サーバーにアクセスできる外部データ ソースを作成します。
 
-1. Azure Data Studio では、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続します。 詳細については、次を参照してください。 [master の SQL Server インスタンスへの接続](connect-to-big-data-cluster.md#master)します。
+1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、[SQL Server マスター インスタンスへの接続](connect-to-big-data-cluster.md#master)に関する記述を参照してください。
 
-1. 内の接続をダブルクリックして、**サーバー**ウィンドウに SQL Server のマスター インスタンスのサーバー ダッシュ ボードを表示します。 選択**新しいクエリ**します。
+1. **[サーバー]** ウィンドウで接続をダブルクリックし、SQL Server マスター インスタンスのサーバー ダッシュボードを表示します。 **[新しいクエリ]** を選択します。
 
-   ![SQL Server マスター インスタンスのクエリ](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
+   ![SQL Server マスター インスタンス クエリ](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
-1. コンテキストを変更するのには、次の TRANSACT-SQL コマンドを実行、 **Sales**マスター インスタンス内のデータベース。
+1. 次の Transact-SQL コマンドを実行し、マスター インスタンスの **Sales** データベースにコンテキストを変更します。
 
    ```sql
    USE Sales
    GO
    ```
 
-1. Oracle サーバーに接続するデータベース スコープ資格情報を作成します。 次のステートメントで Oracle サーバーに適切な資格情報を提供します。
+1. Oracle サーバーに接続するためのデータベース スコープ資格情報を作成します。 次のステートメントで、Oracle サーバーに適切な資格情報を指定します。
 
    ```sql
    CREATE DATABASE SCOPED CREDENTIAL [OracleCredential]
@@ -92,9 +92,9 @@ ms.locfileid: "67957714"
    WITH (LOCATION = 'oracle://<oracle_server,nvarchar(100)>',CREDENTIAL = [OracleCredential]);
    ```
 
-## <a name="create-an-external-table"></a>外部テーブルを作成します。
+## <a name="create-an-external-table"></a>外部テーブルを作成する
 
-次に、という名前の外部テーブルを作成**iventory_ora**経由で、 `INVENTORY` Oracle サーバー上のテーブル。
+次に、Oracle サーバー上の `INVENTORY` テーブルに対して **iventory_ora** という名前の外部テーブルを作成します。
 
 ```sql
 CREATE EXTERNAL TABLE [inventory_ora]
@@ -105,11 +105,11 @@ WITH (DATA_SOURCE=[OracleSalesSrvr],
 ```
 
 > [!NOTE]
-> Oracle に対してクエリを実行中に識別子を引用符で囲まれた、ANSI SQL は、テーブル名と列名が使用されます。 その結果、名前は大文字小文字を区別します。 Oracle のメタデータのテーブルおよび列名の大文字と小文字の一致する外部テーブル定義の名前を指定する重要です。
+> Oracle に対するクエリの実行中に、テーブル名と列名では ANSI SQL 引用符で囲まれた識別子が使用されます。 その結果、名前では大文字と小文字が区別されます。 Oracle メタデータ内のテーブル名と列名の大文字と小文字が正確に一致する、外部テーブル定義で名前を指定することが重要です。
 
-## <a name="query-the-data"></a>データのクエリ
+## <a name="query-the-data"></a>データにクエリを実行する
 
-データを結合する次のクエリ実行、`iventory_ora`ローカル テーブルと外部テーブル`Sales`データベース。
+次のクエリを実行し、`iventory_ora` 外部テーブルのデータを、ローカルの `Sales` データベース内のテーブルと結合します。
 
 ```sql
 SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as total_quantity
@@ -122,9 +122,9 @@ SELECT TOP(100) w.w_warehouse_name, i.inv_item, SUM(i.inv_quantity_on_hand) as t
  GROUP BY w.w_warehouse_name, i.inv_item;
 ```
 
-## <a name="clean-up"></a>クリーンアップします。
+## <a name="clean-up"></a>クリーンアップ
 
-このチュートリアルで作成されたデータベース オブジェクトを削除するのにには、次のコマンドを使用します。
+このチュートリアルで作成されたデータベース オブジェクトを削除するには、次のコマンドを使用します。
 
 ```sql
 DROP EXTERNAL TABLE [inventory_ora];
@@ -132,8 +132,8 @@ DROP EXTERNAL DATA SOURCE [OracleSalesSrvr] ;
 DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 ```
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-データのプールにデータを取り込む方法について説明します。
+データ プールにデータを取り込む方法を学習します:
 > [!div class="nextstepaction"]
-> [データのプールにデータを読み込む](tutorial-data-pool-ingest-sql.md)
+> [データをデータ プールに読み込む](tutorial-data-pool-ingest-sql.md)

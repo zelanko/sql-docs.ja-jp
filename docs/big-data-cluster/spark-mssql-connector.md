@@ -1,7 +1,7 @@
 ---
-title: Spark SQL Server に接続する.
+title: Spark を SQL Server に接続する
 titleSuffix: SQL Server big data clusters
-description: Spark で MSSQL Spark コネクタを使用して、SQL Server への読み書きする方法について説明します。
+description: Spark で MSSQL Spark コネクタを使用して、SQL Server に対する読み取りと書き込みを行う方法について学習します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
@@ -10,84 +10,84 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67957838"
 ---
-# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>読み取りし、MSSQL Spark コネクタを使用して Spark から SQL Server への書き込み方法
+# <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark コネクタを使用して Spark から SQL Server に対する読み取りと書き込みを行う方法
 
-キーのビッグ データの使用パターンでは、基幹業務アプリケーションにアクセスするために SQL Server データの書き込み後に、Spark での大量データ処理です。 これらの使用状況パターン SQL の主要な最適化を利用し、書き込みを効率的なメカニズムを提供するコネクタを享受できます。
+主なビッグ データの使用パターンでは、Spark で大量のデータ処理を行った後、基幹業務アプリケーションにアクセスするために SQL Server にデータを書き込みます。 これらの使用パターンでは、主な SQL の最適化を利用し、効率的な書き込みメカニズムを提供するコネクタの恩恵を受けます。
 
-この記事では、MSSQL の Spark コネクタを使用してビッグ データ クラスター内で、次の場所を読み書きする方法の例を示します。
+この記事では、MSSQL Spark コネクタを使用して、ビッグ データ クラスター内の次の場所に対する読み取りと書き込みを行う方法の例を示します。
 
-1. SQL Server のマスター インスタンス
-1. SQL Server のデータ プール
+1. SQL Server マスター インスタンス
+1. SQL Server データ プール
 
-   ![MSSQL Spark コネクタのダイアグラム](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
+   ![MSSQL Spark コネクタ ダイアグラム](./media/spark-mssql-connector/mssql-spark-connector-diagram.png)
 
-サンプルでは、次のタスクを実行します。
+このサンプルでは、次のタスクが実行されます。
 
-- ファイルを HDFS から読み取るし、いくつかの基本的な処理を実行します。
-- SQL テーブルと SQL Server のマスター インスタンスにデータ フレームを作成し、データ フレームにテーブルを読みます。
-- SQL の外部テーブルとして SQL Server のデータ プールに、データ フレームを作成し、データ フレームに外部テーブルを読みます。
+- HDFS からファイルを読み取り、いくつかの基本的な処理を行います。
+- データフレームを SQL テーブルとして SQL Server マスター インスタンスに書き込んでから、テーブルをデータフレームに読み取ります。
+- データフレームを SQL 外部テーブルとして SQL Server データ プールに書き込んでから、外部テーブルをデータフレームに読み取ります。
 
 ## <a name="mssql-spark-connector-interface"></a>MSSQL Spark コネクタ インターフェイス
 
-SQL Server 2019 プレビューの提供、 **MSSQL Spark コネクタ**ビッグ データの SQL Server 一括を使用するクラスターへの書き込み Api for Spark SQL の書き込み。 MSSQL Spark コネクタでは、Spark データ ソースの Api に基づいており、馴染みのある Spark の JDBC コネクタ インターフェイスを提供します。 インターフェイスのパラメーターを参照してください[Apache Spark ドキュメント](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)します。 MSSQL Spark コネクタは、名前によって参照される**com.microsoft.sqlserver.jdbc.spark**します。
+SQL Server 2019 Preview では、Spark から SQL への書き込みに SQL Server 一括書き込み API を使用する、ビッグ データ クラスター用の **MSSQL Spark コネクタ**を提供します。 MSSQL Spark コネクタは Spark データ ソース API に基づいており、使い慣れた Spark JDBC コネクタ インターフェイスを備えています。 インターフェイス パラメーターについては、[Apache Spark のドキュメント](http://spark.apache.org/docs/latest/sql-data-sources-jdbc.html)を参照してください。 MSSQL Spark コネクタは、**com.microsoft.sqlserver.jdbc.spark** という名前で参照されます。
 
-次の表では、インターフェイスのパラメーターが変更されたかを初めて使用するについて説明します。
+次の表では、変更された、または新しくなったインターフェイス パラメーターについて説明します。
 
-| プロパティ名 | Optional | 説明 |
+| プロパティ名 | 省略可 | [説明] |
 |---|---|---|
-| **IsolationLevel** | はい | これには、接続の分離レベルについて説明します。 MSSQLSpark コネクタの既定値は**READ_COMMITTED** |
+| **isolationLevel** | はい | これにより、接続の分離レベルが記述されます。 MSSQL Spark コネクタの既定値は、**READ_COMMITTED** です。 |
 
-SQL Server の一括のコネクタで使用では、Api を記述します。 一括書き込みパラメーターは、ユーザーが省略可能なパラメーターとして渡すことができ、として渡される、基になる API をコネクタでは、します。 一括の詳細については、書き込み操作を参照してください[SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)します。
+このコネクタでは、SQL Server 一括書き込み API を使用します。 任意の一括書き込みパラメーターは、任意のパラメーターとして渡される場合があり、コネクタによって基になる API にそのまま渡されます。 一括書き込み操作の詳細については、「[SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)」を参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>Prerequisites
 
-- A [SQL Server のビッグ データ クラスター](deploy-get-started.md)します。
+- [SQL Server ビッグ データ クラスター](deploy-get-started.md)
 
-- [Azure Data Studio](https://aka.ms/azdata-insiders)します。
+- [Azure Data Studio](https://aka.ms/azdata-insiders)
 
-## <a name="create-the-target-database"></a>ターゲット データベースを作成します。
+## <a name="create-the-target-database"></a>ターゲット データベースを作成する
 
-1. Azure データ Studio を開き、 [、ビッグ データ クラスターの SQL Server のマスター インスタンスに接続する](connect-to-big-data-cluster.md)します。
+1. Azure Data Studio を開いて、[ご利用のビッグ データ クラスターの SQL Server マスター インスタンスに接続します](connect-to-big-data-cluster.md)。
 
-1. 新しいクエリを作成し、という名前のサンプル データベースを作成するには、次のコマンドを実行**MyTestDatabase**します。
+1. 新しいクエリを作成して、次のコマンドを実行し、**MyTestDatabase** という名前のサンプル データを作成します。
 
    ```sql
    Create DATABASE MyTestDatabase
    GO
    ```
 
-## <a name="load-sample-data-into-hdfs"></a>HDFS にサンプル データを読み込む
+## <a name="load-sample-data-into-hdfs"></a>サンプル データを HDFS に読み込む
 
-1. ダウンロード[AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv)ローカル コンピューターにします。
+1. [AdultCensusIncome.csv](https://amldockerdatasets.azureedge.net/AdultCensusIncome.csv) を自分のローカル コンピューターにダウンロードします。
 
-1. Azure データの Studio を起動し、 [、ビッグ データ クラスターに接続する](connect-to-big-data-cluster.md)します。
+1. Azure Data Studio を起動して、[ビッグ データ クラスターに接続します](connect-to-big-data-cluster.md)。
 
-1. お使いのビッグ データ クラスターで HDFS のフォルダーを右クリックし、選択**新しいディレクトリ**します。 ディレクトリの名前を付けます**spark_data**します。
+1. 自分のビッグ データ クラスターの HDFS フォルダーを右クリックして、 **[新しいディレクトリ]** を選択します。 ディレクトリに **spark_data** という名前を付けます。
 
-1. 右クリックして、 **spark_data**ディレクトリ、および select**ファイルをアップロード**します。 アップロード、 **AdultCensusIncome.csv**ファイル。
+1. **spark_data** ディレクトリを右クリックして、 **[ファイルのアップロード]** を選択します。 **AdultCensusIncome.csv** ファイルをアップロードします。
 
    ![AdultCensusIncome CSV ファイル](./media/spark-mssql-connector/spark_data.png)
 
-## <a name="run-the-sample-notebook"></a>サンプルの notebook を実行します。
+## <a name="run-the-sample-notebook"></a>サンプル ノートブックを実行する
 
-MSSQL Spark コネクタは、このデータとの使用を示すためには、サンプルの notebook をダウンロードし、Azure データの Studio で開くおよび各コード ブロックを実行することができます。 Notebook の使用方法の詳細については、次を参照してください。 [SQL Server 2019 プレビューで notebook を使用する方法](notebooks-guidance.md)します。
+このデータを使って MSSQL Spark コネクタの使用法を示すには、サンプル ノートブックをダウロードして、Azure Data Studio で開き、各コード ブロックを実行します。 ノードブックの操作に関する詳細については、「[SQL Server 2019 Preview でノートブックを使用する方法](notebooks-guidance.md)」を参照してください。
 
-1. PowerShell または bash のコマンド ラインからダウンロードするには、次のコマンドを実行、 **mssql_spark_connector.ipynb**サンプルの notebook:
+1. PowerShell または Bash コマンド ラインから、次のコマンドを実行して **mssql_spark_connector.ipynb** サンプル ノートブックをダウンロードします。
 
    ```PowerShell
    curl -o mssql_spark_connector.ipynb "https://raw.githubusercontent.com/microsoft/sql-server-samples/master/samples/features/sql-big-data-cluster/spark/data-virtualization/mssql_spark_connector.ipynb"
    ```
 
-1. Azure データ Studio では、サンプルのノートブック ファイルを開きます。 ビッグ データ クラスターの HDFS/Spark ゲートウェイに接続していることを確認します。
+1. Azure Data Studio で、サンプル ノードブック ファイルを開きます。 自分のビッグ データ クラスター用の HDFS/Spark ゲートウェイに接続されていることを確認します。
 
-1. MSSQL Spark コネクタの使用状況を表示するサンプルでは、各コード セルを実行します。
+1. サンプルで各コード セルを実行して、MSSQL Spark コネクタの使用法を参照してください。
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターに関する詳細については、次を参照してください[で Kubernetes クラスターのビッグ データの SQL Server をデプロイする方法。](deployment-guidance.md)
+ビッグ データ クラスターの詳細については、「[Kubernetes に SQL Server ビッグ データ クラスターデを展開する方法](deployment-guidance.md)」を参照してください。

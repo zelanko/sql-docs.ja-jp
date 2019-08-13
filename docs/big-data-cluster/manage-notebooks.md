@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9c8edd91ced01135d740fecdf6cf837df9cac6b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1a6156dad127ea2a86e8a6f4dfbdd6f692fd8f6e
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470735"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893649"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Azure Data Studio ノートブックを使用して SQL Server のビッグ データ クラスターを管理する
 
@@ -26,9 +26,9 @@ ms.locfileid: "68470735"
 
 ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してビッグ データ クラスターを展開できます。
 
-ノートブックに加え、ユーザーは Jupyter Book と呼ばれるノートブックのコレクションを表示できます。 Jupyter Book には、ノートブックのコレクション内を移動できる目次が用意されています。これにより、ユーザーは必要なノートブックを見つけたり、SQL Server のトラブルシューティングを行ったり、クラスターの状態を表示したりすることができます。
+Notebook に加えて、ユーザーは、Jupyter Books と呼ばれるノートブックのコレクションを表示できます。 Jupyter Book には、ノートブックのコレクション内を移動できる目次が用意されています。これにより、ユーザーは必要なノートブックを見つけたり、SQL Server のトラブルシューティングを行ったり、クラスターの状態を表示したりすることができます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必須コンポーネント
 
 ノートブックを起動できるようにするには、次の前提条件が要件となります。
 
@@ -53,5 +53,5 @@ ms.locfileid: "68470735"
 3. [Explorer]\(エクスプローラー\) ビューに、"**Books**" というセクションが表示されます。 展開されていない場合は、クリックしてノートブックを表示します。
 4. 完了する必要があるタスクのノートブックをクリックします。
 
-## <a name="next-steps"></a>Next Steps
+## <a name="next-steps"></a>次の手順
 Azure Data Studio のノードブックの詳細については、「[SQL Server 2019 プレビューでノートブックを使用する方法](notebooks-guidance.md)」を参照してください。

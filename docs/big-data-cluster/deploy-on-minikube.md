@@ -1,7 +1,7 @@
 ---
-title: Minikube を構成します。
+title: Minikube を構成する
 titleSuffix: SQL Server big data clusters
-description: 1 台のコンピューターでのビッグ データ クラスター (プレビュー) のデプロイを SQL Server 2019 minikube を構成する方法について説明します。
+description: SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために、単一マシンで minikube を構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -10,62 +10,62 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 6c2261b5cfbbe590c76ce410da4b95ee678a20b5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67958474"
 ---
-# <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>SQL Server のビッグ データ クラスター展開 minikube を構成します。
+# <a name="configure-minikube-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために minikube を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、構成する方法を説明**minikube**単一のコンピューターの SQL Server 2019 ビッグ データ クラスター (プレビュー) のデプロイにします。 Minikube は、ラップトップやデスクトップなどの単一のコンピューター上で Kubernetes を実行しやすくツールです。 Minikube は実行 Kubernetes を試すか、それを使用した開発を検討しているユーザーのラップトップ コンピューターで、VM 内で単一ノードの Kubernetes クラスターを日常的なされます。 
+この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために、単一マシンで **minikube** を構成する方法について説明します。 Minikube は、ラップトップやデスクトップなどの単一のコンピューターで Kubernetes を簡単に実行できるツールです。 Minikube では、Kubernetes を試したり、日常的に開発したりしようとしているユーザーのために、ラップトップの VM 内で単一ノードの Kubernetes クラスターが実行されています。 
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>Prerequisites
 
-- 32 GB のメモリ (64 GB を推奨)。
+- 32 GB のメモリ (推奨 64 GB)。
 
-- コンピューターに推奨されるメモリの最小値のみがある場合は、プールのコンピューティング インスタンスの 1 つだけ、1 つのデータ プール インスタンスと 1 の記憶域プールのインスタンスがクラスターのデプロイを構成します。 この構成のみ使用してください評価環境の持続性とデータの可用性が重要です。 参照してください、[のデプロイに関するドキュメント](deployment-guidance.md#configfile)データ プールのレプリカの数を構成する設定を環境変数の詳細については、プール、および記憶域プールを計算します。
+- コンピューターに最小推奨メモリしかない場合は、1 つのコンピューティング プール インスタンス、1 つのデータ プール インスタンス、および 1 つの記憶域プール インスタンスだけを持つようにクラスターの展開を構成します。 この構成は、データの持続性と可用性が重要ではない評価環境に対してのみ使用してください。 データ プール、コンピューティング プール、記憶域プールのレプリカの数を構成するために設定する環境変数の詳細については、[展開のドキュメント](deployment-guidance.md#configfile)を参照してください。
 
-- -X VT または amd-v の仮想化は、コンピューターの BIOS で有効にする必要があります。
+- コンピューターの BIOS で VT-x または AMD-v の仮想化を有効にする必要があります。
 
-## <a name="install-dependencies"></a>依存関係をインストールします。
+## <a name="install-dependencies"></a>依存関係のインストール
 
-1. インストール[kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/)します。
+1. [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl/) をインストールします。
 
 1. Python 3 をインストールします。
-   - Pip が不足している場合は、ダウンロード[get clspip.py](https://bootstrap.pypa.io/get-pip.py)実行`python get-pip.py`します。
-   - インストール要求を使用してパッケージ`python -m pip install requests`します。
+   - Pip が不足している場合は、[get-clspip.py](https://bootstrap.pypa.io/get-pip.py) をダウンロードして、`python get-pip.py` を実行します。
+   - `python -m pip install requests` を使用して、要求パッケージをインストールします。
 
-1. インストールされているハイパーバイザーがいない場合は、今すぐインストールします。
-   - OS X、インストール[xhyve ドライバー](https://git.k8s.io/minikube/docs/drivers.md)、 [VirtualBox](https://www.virtualbox.org/wiki/Downloads)、または[VMware Fusion](https://www.vmware.com/products/fusion)します。
-   - Linux の場合は、インストール[VirtualBox](https://www.virtualbox.org/wiki/Downloads)または[KVM](https://www.linux-kvm.org/)します。
-   - Windows では、インストール[VirtualBox](https://www.virtualbox.org/wiki/Downloads)または[HYPER-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install)します。 Hyper-v で構成されている外部スイッチがいない場合は、外部のネットワーク アクセス権を持つ 1 つを作成します。  表示する方法[minikube の hyper-v で外部スイッチを作成](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/)です。
+1. ハイパーバイザーがまだインストールされていない場合は、今すぐインストールしてください。
+   - OS X の場合は、[xhyve driver](https://git.k8s.io/minikube/docs/drivers.md)、[VirtualBox](https://www.virtualbox.org/wiki/Downloads)、または [VMware Fusion](https://www.vmware.com/products/fusion) をインストールします。
+   - Linux の場合は、[VirtualBox](https://www.virtualbox.org/wiki/Downloads) または [KVM](https://www.linux-kvm.org/) をインストールします。
+   - Windows の場合は、[VirtualBox](https://www.virtualbox.org/wiki/Downloads) または [Hyper-V](https://msdn.microsoft.com/virtualization/hyperv_on_windows/quick_start/walkthrough_install) をインストールします。 Hyper-v で外部スイッチが構成されていない場合は、外部ネットワーク アクセスを持つものを作成します。  [minikube の hyper-v で外部スイッチを作成する方法](https://blogs.msdn.microsoft.com/wasimbloch/2017/01/23/setting-up-kubernetes-on-windows10-laptop-with-minikube/)を参照してください。
 
-## <a name="install-minikube"></a>Minikube をインストールします。
+## <a name="install-minikube"></a>Minikube のインストール
 
-インストールの指示に従って minikube、 [v0.28.2 リリース](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)します。 SQL Server 2019 ビッグ データ クラスター (プレビュー) は、バージョン v0.24.1 と構成にのみ機能します。
+[v0.28.2 リリース](https://github.com/kubernetes/minikube/releases/tag/v0.28.2)の手順に従って minikube をインストールします。 SQL Server 2019 ビッグ データ クラスター (プレビュー) は、バージョン v0.24.1 以上でのみ動作します。
 
-## <a name="create-a-minikube-cluster"></a>Minikube クラスターを作成します。
+## <a name="create-a-minikube-cluster"></a>Minikube クラスターの作成
 
-次のコマンドでは、8 個の Cpu を使用して、HYPER-V VM、28 GB のメモリ、および 100 GB のディスクのサイズに minikube クラスターを作成します。 ディスクのサイズは、予約済みの領域でがありません。  それはディスクにそのサイズを拡大に応じてがします。  ディスクを変更しないことをお勧めします。 このテストでの問題に直面したのと、100 GB 未満を何かする領域。 これも hyper-v スイッチ外部アクセス権を持つ明示的に指定します。
+次のコマンドによって、8 個の CPU、28 GB のメモリ、および 100 GB のディスク Hyper-V VM に minikube クラスターが作成されます。 ディスク サイズは予約領域ではありません。  必要に応じて、ディスク上のサイズに拡大します。  テストで問題が発生したため、ディスク領域を 100 GB 未満に変更しないことをお勧めします。 これによって、外部アクセスを使用する hyper-v スイッチが明示的に指定されます。
 
-パラメーターを変更します。 **--メモリ**によっては、使用可能なハードウェアと必要に応じて、ハイパーバイザーを使用しています。  確認、 **--hyper v**仮想スイッチのパラメーターの値が、仮想スイッチを作成するときに使用した名前と一致します。
+使用するハードウェアや、どのハイパーバイザーを使用しているかに応じて、 **--memory** などのパラメーターを変更します。  **--hyper-v** 仮想スイッチ パラメーターの値が、仮想スイッチの作成時に使用した名前と一致していることを確認します。
 
 ```bash
 minikube start --vm-driver="hyperv" --cpus 8 --memory 28672 --disk-size 100g --hyperv-virtual-switch "External"
 ```
 
-VirtualBox を使用した、minikube を使用している場合、コマンドは次のようになります。
+VirtualBox で minikube を使用している場合、コマンドは次のようになります。
 
 ```base
 minikube start --cpus 8 --memory 28672 --disk-size 100g
 ```
 
-## <a name="disable-automatic-checkpoint-with-hyper-v"></a>Hyper-v を使用した自動チェックポイントを無効にします。
+## <a name="disable-automatic-checkpoint-with-hyper-v"></a>Hyper-V で自動チェックポイントを無効にする
 
-Windows 10 では、自動チェックポイントは、VM で有効にします。 VM での自動チェックポイントを無効にする PowerShell で次のコマンドを実行します。
+Windows 10 では、VM で自動チェックポイントが有効になっています。 PowerShell で次のコマンドを実行して、VM で自動チェックポイントを無効にします。
 
 ```PowerShell
 Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $false
@@ -73,6 +73,6 @@ Set-VM -Name minikube -CheckpointType Disabled -AutomaticCheckpointsEnabled $fal
 
 ## <a name="next-steps"></a>次の手順
 
-この記事の手順では、minikube クラスターを構成します。 次の手順では、SQL Server 2019 ビッグ データのクラスターにデプロイします。 手順については、次の記事を参照してください。
+この記事の手順では、クラスターに minikube クラスターを構成しました。 次のステップとして、SQL Server 2019 ビッグ データ クラスターを展開します。 手順については、次の記事を参照してください。
 
-[Kubernetes での SQL Server 2019 ビッグ データ クラスターを展開します。](deployment-guidance.md#deploy)
+[Kubernetes 上に SQL Server 2019 ビッグ データ クラスターを展開する](deployment-guidance.md#deploy)

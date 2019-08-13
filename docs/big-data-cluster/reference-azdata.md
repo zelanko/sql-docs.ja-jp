@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a8136c85f8c32e08423f3d199a021d4f60353b39
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 24a72683c423661a2981e5a16941bcbc180ac6d1
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68425992"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894004"
 ---
 # <a name="azdata"></a>azdata
 
@@ -27,12 +27,11 @@ ms.locfileid: "68425992"
 | --- | --- |
 |[azdata app](reference-azdata-app.md) | アプリケーションを作成、削除、実行、および管理します。 |
 |[azdata bdc](reference-azdata-bdc.md) | SQL Server ビッグ データ クラスターを選択、管理、および操作します。 |
-|[azdata notebook](reference-azdata-notebook.md) | ターミナルからノートブックを表示、実行、管理するコマンドです。 |
-[azdata login](#azdata-login) | クラスターのコントローラー エンドポイントにログインします。
-[azdata logout](#azdata-logout) | クラスターからログアウトします。
-|[azdata sql](reference-azdata-sql.md) | SQL DB CLI により、ユーザーは T-SQL を使用して SQL Server を操作できます。 |
+|[azdata login](#azdata-login) | クラスターのコントローラー エンドポイントにログインします。
+|[azdata logout](#azdata-logout) | クラスターからログアウトします。
+
 ## <a name="azdata-login"></a>azdata login
-クラスターが展開されると、展開中にコントローラー エンドポイントが一覧表示されます。これをログインに使用する必要があります。  コントローラー エンドポイントがわからない場合は、システム上の <user home>/.kube/config の既定の場所にクラスターの kube 構成を配置してログインするか、KUBECONFIG 環境変数を使用する (つまり KUBECONFIG=path/to/.kube/config をエクスポートする) ことをお勧めします。
+クラスターがデプロイされると、デプロイ中にコントローラーエンドポイントが一覧表示されます。これはログインに使用する必要があります。  コントローラーエンドポイントがわからない場合は、システム上のクラスターの kube config を/.kube/config の<user home>既定の場所に配置するか、KUBECONFIG env var (export KUBECONFIG = path/to/kube/config) を使用してログインすることができます。
 ```bash
 azdata login [--cluster-name -n] 
              [--controller-username -u]  
@@ -44,7 +43,7 @@ azdata login [--cluster-name -n]
 ```bash
 azdata login
 ```
-ログイン (非対話形式)。 クラスター名、コントローラーのユーザー名、コントローラー エンドポイント、および使用許諾契約の同意を引数として設定してログインします。 環境変数 CONTROLLER_PASSWORD を設定する必要があります。  コントローラー エンドポイントを指定しない場合は、マシン上の <user home>/.kube/config の既定の場所に kube 構成を配置するか、KUBECONFIG 環境変数を使用してください (つまり、KUBECONFIG=path/to/.kube/config をエクスポートしてください)。
+ログイン (非対話形式)。 クラスター名、コントローラーのユーザー名、コントローラー エンドポイント、および使用許諾契約の同意を引数として設定してログインします。 環境変数 CONTROLLER_PASSWORD を設定する必要があります。  コントローラーエンドポイントを指定しない場合は、コンピューター上の kube config を/.kube/config の<user home>既定の場所に配置するか、KUBECONFIG env var (export KUBECONFIG = path/to/kube/config) を使用します。
 ```bash
 azdata login --cluster-name ClusterName --controller-user johndoe@contoso.com  --controller-endpoint https://<ip>:30080 --accept-eula yes
 ```
@@ -58,9 +57,9 @@ azdata login -n ClusterName
 #### `--controller-username -u`
 アカウント ユーザー。 この引数を使用しない場合は、環境変数 CONTROLLER_USERNAME を設定できます。
 #### `--controller-endpoint -e`
-クラスター コントローラーのエンドポイント "https://host:port"。 この引数を使用しない場合は、マシンで kube 構成を使用できます。 構成を <user home>/.kube/config の既定の場所に配置するか、KUBECONFIG 環境変数を使用してください。
+クラスター コントローラーのエンドポイント "https://host:port"。 この引数を使用しない場合は、マシンで kube 構成を使用できます。 構成が/.kube/config の既定の<user home>場所にあることを確認するか、KUBECONFIG env var を使用します。
 #### `--accept-eula -a`
-Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula で確認できます。
+Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
@@ -69,7 +68,7 @@ Do you accept the license terms? (ライセンス条項に同意しますか?) [
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細については[http://jmespath.org/](http://jmespath.org/]) 、「」を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-logout"></a>azdata logout
@@ -90,7 +89,7 @@ azdata logout
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細については[http://jmespath.org/](http://jmespath.org/]) 、「」を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
