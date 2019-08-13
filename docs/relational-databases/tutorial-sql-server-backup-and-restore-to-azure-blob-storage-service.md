@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 837c720e115a41f9b41dfb0e0e1117966988040f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3ded19a91aba627a9d69d711a1d1640dc042a56
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138367"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893636"
 ---
 # <a name="quickstart-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>クイック スタート: Azure Blob Storage サービスへの SQL Server のバックアップと復元
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,23 +34,22 @@ ms.locfileid: "68138367"
 ## <a name="create-azure-blob-container"></a>Azure BLOB コンテナーを作成する
 コンテナーには、一連の BLOB をグループ化するコンテナーが用意されています。 すべての BLOB は 1 つのコンテナーに存在する必要があります。 アカウントには、コンテナーを無制限に含めることができますが、少なくとも 1 つのコンテナーが必要です。 コンテナーには、BLOB を無制限に格納できます。 
 
+[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 コンテナーを作成するには、次の手順を実行します。
 
 1. Azure portal を開きます。 
 1. ストレージ アカウントに移動します。 
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-   1. ストレージ アカウントを選択し、 **[Blob Services]\(Blob services\)** までスクロールします。
-   1. **[BLOB]** を選択し、 **[+Container]\(+コンテナー\)** を選択して新しいコンテナーを追加します。 
-   1. コンテナーの名前を入力し、指定したコンテナー名をメモしておきます。 この情報は、後でこのクイックスタートの T-SQL ステートメントの URL (バックアップ ファイルのパス) 内で使用されます。 
-   1. **[OK]** を選択します。 
+1. ストレージ アカウントを選択し、 **[Blob Services]\(Blob services\)** までスクロールします。
+1. **[BLOB]** を選択し、 **[+Container]\(+コンテナー\)** を選択して新しいコンテナーを追加します。 
+1. コンテナーの名前を入力し、指定したコンテナー名をメモしておきます。 この情報は、後でこのクイックスタートの T-SQL ステートメントの URL (バックアップ ファイルのパス) 内で使用されます。 
+1. **[OK]** を選択します。 
     
     ![新しいコンテナー](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/new-container.png)
 
 
-  >[!NOTE]
-  >ストレージ アカウントへの認証は、パブリック コンテナーの作成を選択した場合でも、SQL Server のバックアップと復元に必要です。 コンテナーは、REST API を使用してプログラムで作成することもできます。 詳しくは、「[Create Container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)」をご覧ください
+  > [!NOTE]
+  > ストレージ アカウントへの認証は、パブリック コンテナーの作成を選択した場合でも、SQL Server のバックアップと復元に必要です。 コンテナーは、REST API を使用してプログラムで作成することもできます。 詳しくは、「[Create Container](https://docs.microsoft.com/rest/api/storageservices/Create-Container)」をご覧ください
 
 ## <a name="create-a-test-database"></a>テスト データベースを作成する 
 
@@ -93,14 +92,14 @@ GO
 ## <a name="create-a-sql-server-credential"></a>SQL Server 資格情報の作成
 SQL Server 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。 ここでは、SQL Server のバックアップおよび復元プロセスで資格情報を使用して、Windows Azure Blob Storage サービスを認証します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 資格情報について詳しくは、[資格情報](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/credentials-database-engine)に関する記事をご覧ください。 
 
-  >[!IMPORTANT]
-  >以下で説明する SQL Server 資格情報の作成要件は、SQL Server バックアップ プロセス ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md) および [Microsoft Azure への SQL Server マネージド バックアップ](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)) に固有です。 SQL Server では、Azure ストレージにアクセスしてバックアップの書き込みまたは読み取りを行う場合、ストレージ アカウント名とアクセス キーの情報が使用されます。
+  > [!IMPORTANT]
+  > 以下で説明する SQL Server 資格情報の作成要件は、SQL Server バックアップ プロセス ([SQL Server Backup to URL](backup-restore/sql-server-backup-to-url.md) および [Microsoft Azure への SQL Server マネージド バックアップ](backup-restore/sql-server-managed-backup-to-microsoft-azure.md)) に固有です。 SQL Server では、Azure ストレージにアクセスしてバックアップの書き込みまたは読み取りを行う場合、ストレージ アカウント名とアクセス キーの情報が使用されます。
 
 ### <a name="access-keys"></a>アクセス キー
-Azure portal は開いたままなので、資格情報の作成に必要なアクセス キーを保存します。 
+資格情報を作成するには、ストレージ アカウントのアクセス キーが必要です。 
 
 1. Azure portal で **[ストレージ アカウント]** に移動します。 
-1. **[設定]** までスクロールし、 **[アクセス キー]** を選択します。 
+1. **[設定]** で **[アクセス キー]** を選択します。 
 1. 後でこのクイックスタートで使用するために、キーと接続文字列の両方を保存します。 
 
    ![アクセス キー](media/tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service/access-keys.png)

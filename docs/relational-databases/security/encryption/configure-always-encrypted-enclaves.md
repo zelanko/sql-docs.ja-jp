@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 4ab035890dad4e51b6bc3a8d3f1c463e64143ac1
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: 83a13dc043687096a2d2909e4573ebbc3ac4a1ce
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670605"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892716"
 ---
 # <a name="configure-always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted を構成する
 
@@ -373,7 +373,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -777,7 +777,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -793,8 +793,8 @@ CEK1 は、エンクレーブ対応列暗号化キーです。
 そのテーブルに対する、パラメーター化のガイドラインに準拠したクエリの例を次に示します。
 
 ```sql
-DECLARE @SSNPattern CHAR(11) = '%1111%'
-DECLARE @MinSalary INT = 1000
+DECLARE @SSNPattern [char](11) = '%1111%'
+DECLARE @MinSalary [money] = 1000
 SELECT *
 FROM [dbo].[Employees]
 WHERE SSN LIKE @SSNPattern
@@ -857,7 +857,7 @@ SQL Server エンジンで、アプリケーションのクエリが解析され
 
 ### <a name="set-up-your-visual-studio-project"></a>Visual Studio プロジェクトを設定する
 
-.NET Framework アプリケーションでセキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するには、.NET Framework 4.7.2 をターゲットにしてアプリケーションを構築し、Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet と統合する必要があります。 さらに、列マスター キーを Azure Key Vault に格納する場合は、アプリケーションを Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet バージョン 2.2.0 以降と統合する必要があります。 
+.NET Framework アプリケーションでセキュリティで保護されたエンクレーブが設定された Always Encrypted を使用するには、.NET Framework 4.7.2 をターゲットにしてアプリケーションを構築し、[Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders) と統合する必要があります。 さらに、列マスター キーを Azure Key Vault に格納する場合は、アプリケーションを [Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider NuGet](https://www.nuget.org/packages/Microsoft.SqlServer.Management.AlwaysEncrypted.AzureKeyVaultProvider) バージョン 2.2.0 以降と統合する必要があります。 
 
 1. Visual Studio を開きます。
 2. 新しい Visual C\# プロジェクトを作成するか、既存のプロジェクトを開きます。
@@ -878,13 +878,22 @@ SQL Server エンジンで、アプリケーションのクエリが解析され
 
 6. プロジェクトを選択して [インストール] をクリックします。
 7. プロジェクト から構成ファイルを開きます (たとえば、App.config、Web.config)。
-8. \<configuration\> セクションを見つけます。 \<configuration\> セクション内の \<configSections\> セクションを見つけます。 \<configSections\> 内に次のセクションを追加します。
+8. \<configuration\> セクションを見つけて、\<configsections\> セクションを追加または更新します。
+
+   A. \<configuration\> セクションに \<configSections\> セクションが含まれて**いない**場合、\<configuration\> のすぐ下に次のコンテンツを追加します。
+   
+      ```xml
+      <configSections>
+         <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+      </configSections>
+      ```
+   B. \<configruation\> セクションに既に \<configSections\> セクションが含まれている場合、\<configSections\> 内に次の行を追加します。
 
    ```xml
    <section name="SqlColumnEncryptionEnclaveProviders"  type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data,  Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" /\>
    ```
 
-9. configuration セクション内の \<configSections\> の下に次のセクションを追加します。これは構成証明と Intel SGX エンクレーブとの対話に使用されるエンクレーブ プロバイダーに固有のものです。
+9. configuration セクション内の \<configSections\> の下に次のセクションを追加します。これは構成証明と VBS エンクレーブとの対話に使用されるエンクレーブ プロバイダーに固有のものです。
 
    ```xml
    <SqlColumnEncryptionEnclaveProviders>
@@ -894,6 +903,24 @@ SQL Server エンジンで、アプリケーションのクエリが解析され
    </SqlColumnEncryptionEnclaveProviders>
    ```
 
+単純なコンソール アプリケーションの app.config ファイルの完全な例を次に示します。
+```xml
+<?xml version="1.0" encoding="utf-8" ?>
+<configuration>
+  <configSections>
+    <section name="SqlColumnEncryptionEnclaveProviders" type="System.Data.SqlClient.SqlColumnEncryptionEnclaveProviderConfigurationSection, System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  </configSections>
+  <startup> 
+        <supportedRuntime version="v4.0" sku=".NETFramework,Version=v4.7.2" />
+    </startup>
+
+  <SqlColumnEncryptionEnclaveProviders>
+    <providers>
+      <add name="VBS" type="Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders.HostGuardianServiceEnclaveProvider, Microsoft.SqlServer.Management.AlwaysEncrypted.EnclaveProviders, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    </providers>
+  </SqlColumnEncryptionEnclaveProviders>
+</configuration>
+```
 ### <a name="develop-and-test-your-app"></a>アプリを開発してテストする
 
 Always Encrypted とエンクレーブ計算を使用するには、アプリケーションで接続文字列に次の 2 つのキーワードを指定してデータベースに接続する必要があります: `Column Encryption Setting = Enabled; Enclave Attestation Url=https://x.x.x.x/Attestation` (この xxxx には ip、ドメインなどを指定できます)。
@@ -919,7 +946,7 @@ CREATE TABLE [dbo].[Employees]
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
     [FirstName] [nvarchar](50) NOT NULL,
     [LastName] [nvarchar](50) NOT NULL,
-    [Salary] [int] ENCRYPTED WITH (
+    [Salary] [money] ENCRYPTED WITH (
         COLUMN_ENCRYPTION_KEY = [CEK1],
         ENCRYPTION_TYPE = Randomized,
         ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256') NOT NULL,
@@ -969,7 +996,7 @@ using (SqlConnection connection = new SqlConnection(connectionString))
    SqlParameter MinSalary = cmd.CreateParameter();
    
    MinSalary.ParameterName = @"@MinSalary";
-   MinSalary.DbType = DbType.Int32;
+   MinSalary.DbType = DbType.Currency;
    MinSalary.Direction = ParameterDirection.Input;
    MinSalary.Value = 900;
    

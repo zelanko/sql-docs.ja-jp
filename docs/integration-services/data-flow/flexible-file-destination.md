@@ -12,12 +12,12 @@ f1_keywords:
 - sql14.dts.designer.afpextfiledest.f1
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a8200ed17e9581f0c39693ee7386f7f33c566265
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 4572651bb90098c9afb3a01c574401356dac6706
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316627"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892301"
 ---
 # <a name="flexible-file-destination"></a>柔軟なファイルの変換先
 
@@ -39,7 +39,7 @@ ms.locfileid: "68316627"
 - **[File Connection Manager Type]\(ファイル接続マネージャーの種類\):** ソース接続マネージャーの種類を指定します。 そして、指定された種類の既存のものを選択するか、新しいものを作成します。
 - **[フォルダー パス]:** 送信先フォルダーのパスを指定します。
 - **ファイル名:** 送信先ファイル名を指定します。
-- **[ファイル形式]:** 送信先のファイル形式を指定します。 サポートされている形式は、**テキスト**、**Avro**、**ORC**、**Parquet** です。
+- **[ファイル形式]:** 送信先のファイル形式を指定します。 サポートされている形式は、**テキスト**、**Avro**、**ORC**、**Parquet** です。 ORC/Parquet の場合は Java が必要です。 詳細については、[こちら](../../integration-services/azure-feature-pack-for-integration-services-ssis.md#dependency-on-java)を参照してください。
 - **[列区切り文字]:** 列区切り記号として使用される文字を指定します (複数文字の区切り記号はサポートされていません)。
 - **[First row as the column name]\(先頭行を列名にする\):** 先頭行に列名を書き込むかどうかを指定します。
 - **[Compress the file]\(ファイルの圧縮\):** ファイルを圧縮するかどうかを指定します。
@@ -74,30 +74,3 @@ Data Lake Storage Gen2 の場合、アクセス許可は RBAC と [ACL](https://
 書き込みアクセス許可の場合、少なくともシンク ファイル システムから開始する**実行**アクセス許可を、シンク フォルダーに対する**書き込み**アクセス許可と共に付与します。
 または、少なくとも**ストレージ BLOB データ共同作成者**の役割を RBAC を使用して付与します。
 詳細については、[この記事](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-access-control)を参照してください。
-
-**ORC/Parquet ファイル形式の前提条件**
-
-ORC/Parquet ファイル形式を使用するには Java が必須です。
-Java ビルドのアーキテクチャ (32/64 ビット) は、SSIS ランタイムのそれと一致しなければ使用できません。
-次の Java ビルドがテストされています。
-
-- [Zulu の OpenJDK 8u192](https://www.azul.com/downloads/zulu/zulu-windows/)
-- [Oracle の Java SE Runtime Environment 8u192](https://www.oracle.com/technetwork/java/javase/downloads/java-archive-javase8-2177648.html)
-
-**Zulu の OpenJDK を設定する**
-
-1. インストール zip パッケージをダウンロードし、抽出します。
-2. コマンド プロンプトから `sysdm.cpl` を実行します。
-3. **[詳細設定]** タブの **[環境変数]** を選択します。
-4. **[システム変数]** セクションで **[新規]** を選択します。
-5. **[変数名]** に「`JAVA_HOME`」と入力します。
-6. **[ディレクトリの参照]** を選択し、解凍したフォルダーに移動し、`jre` サブフォルダーを選択します。
-   **[OK]** を選択すると、**変数の値**が自動的に入力されます。
-7. **[OK]** を選択し、 **[新しいシステム変数]** ダイアログ ボックスを閉じます。
-8. **[OK]** を選択し、 **[環境変数]** ダイアログ ボックスを閉じます。
-9. **[OK]** を選択して **[システム プロパティ]** ダイアログ ボックスを閉じます。
-
-**Oracle の Java SE Runtime Environment を設定する**
-
-1. exe インストーラーをダウンロードし、実行します。
-2. インストーラーの指示に従い、設定を完了します。

@@ -34,12 +34,12 @@ helpviewer_keywords:
 ms.assetid: 2c506167-0b69-49f7-9282-241e411910df
 author: pmasl
 ms.author: umajay
-ms.openlocfilehash: 18fdd8cb0062f2f3adcd5979fb5c9203d93f393d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15c1fc0789ff665569ed17be9415bdbdd8047714
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68102109"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809893"
 ---
 # <a name="dbcc-checkdb-transact-sql"></a>DBCC CHECKDB (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdb-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ DBCC CHECKDB でエラーが報告された場合は、REPAIR を REPAIR オプ�
 DBCC CHECKDB コマンドが正常に終了した場合、データベースでは物理的な一貫性が保たれ、データベースの状態は ONLINE に設定されます。 ただし、データベースにはトランザクション上一貫しない部分が 1 つ以上含まれる可能性があります。 [DBCC CHECKCONSTRAINTS](../../t-sql/database-console-commands/dbcc-checkconstraints-transact-sql.md) コマンドを実行してビジネス ロジックの不備を確認し、直ちにデータベースをバックアップすることをお勧めします。
 DBCC CHECKDB コマンドが失敗した場合、データベースを修復することはできません。
     
-## <a name="running-dbcc-checkdb-with-repairallowdataloss-in-replicated-databases"></a>レプリケートされたデータベースでの、REPAIR_ALLOW_DATA_LOSS を指定した DBCC CHECKDB の実行    
+## <a name="running-dbcc-checkdb-with-repair_allow_data_loss-in-replicated-databases"></a>レプリケートされたデータベースでの、REPAIR_ALLOW_DATA_LOSS を指定した DBCC CHECKDB の実行    
 REPAIR_ALLOW_DATA_LOSS オプションを指定して DBCC CHECKDB コマンドを実行すると、レプリケーションで使用されるユーザー データベース (パブリケーション データベースおよびサブスクリプション データベース) とディストリビューション データベースに影響が生じる場合があります。 パブリケーション データベースとサブスクリプション データベースには、パブリッシュされたテーブルとレプリケーション メタデータ テーブルが含まれます。 これらのデータベースでは、次の問題が発生する可能性があります。
 -   パブリッシュされたテーブル。 破損したユーザー データを修復するため CHECKDB 処理によって実行されるアクションが、レプリケートされない場合があります。    
 -   マージ レプリケーションでは、パブリッシュされたテーブルに対する変更を追跡するために、トリガーを使用します。 CHECKDB 処理で行が挿入、更新、または削除された場合、トリガーは起動しません。このため、変更はレプリケートされません。

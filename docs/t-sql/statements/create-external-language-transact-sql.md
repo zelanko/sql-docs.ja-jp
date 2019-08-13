@@ -1,21 +1,21 @@
 ---
 title: CREATE EXTERNAL LANGUAGE (Transact-SQL) - SQL Server | Microsoft Docs
 ms.custom: ''
-ms.date: 06/26/2019
+ms.date: 08/08/2019
 ms.prod: sql
 ms.reviewer: dphansen
-ms.technology: t-sql
+ms.technology: language-extensions
 ms.topic: language-reference
 author: nelgson
 ms.author: negust
 manager: cgronlun
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5a3d66d95907c8ddbc4efd33fe58ee4ddbbb9423
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f0a371e328a585e8a559e3c23c28be135f16c208
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476002"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893416"
 ---
 # <a name="create-external-language-transact-sql"></a>CREATE EXTERNAL LANGUAGE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -156,6 +156,15 @@ FROM
 (CONTENT = N'<path-to-tar.gz>', FILE_NAME = 'javaextension.so', PLATFORM = LINUX);
 GO
 ```
+### <a name="c-grant-permissions-to-execute-external-script"></a>C. 外部スクリプトを実行するアクセス許可を付与する
+
+次の例では、**mylogin** プリンシパルに、**Java** 外部言語を使用してスクリプトを実行するアクセス権を付与します。
+
+```sql
+GRANT EXECUTE EXTERNAL SCRIPT ON EXTERNAL LANGUAGE ::Java 
+TO mylogin;
+```
+
 
 ## <a name="see-also"></a>参照
 

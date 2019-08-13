@@ -46,12 +46,12 @@ ms.assetid: b796c829-ef3a-405c-a784-48286d4fb2b9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 382fd4ab40c574fd1a3d9ce2e972e2c6ea07cc31
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a9228530dcf0204987feda98083ba3a16c946093
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071350"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809806"
 ---
 # <a name="alter-index-transact-sql"></a>ALTER INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -754,7 +754,7 @@ ALLOW_ROW_LOCKS = OFF かつ ALLOW_PAGE_LOCK = OFF の場合は、インデッ�
 
  詳しくは、「 [Perform Index Operations Online](../../relational-databases/indexes/perform-index-operations-online.md)」をご覧ください。  
   
- ### <a name="waitatlowpriority-with-online-index-operations"></a>オンライン インデックス操作での WAIT_AT_LOW_PRIORITY  
+ ### <a name="wait_at_low_priority-with-online-index-operations"></a>オンライン インデックス操作での WAIT_AT_LOW_PRIORITY  
   
  オンライン インデックス再構築の DDL ステートメントを実行するには、特定のテーブルで実行されているすべてのアクティブなブロック トランザクションが完了する必要があります。 オンライン インデックス再構築を実行すると、このテーブルに対する実行の開始が準備できているすべての新しいトランザクションがブロックされます。 オンライン インデックス再構築のロックの期間は非常に短いですが、特定のテーブルに対して開かれているすべてのトランザクションの完了を待機し、新しいトランザクションの開始をブロックすることで、スループットに大きな影響を与える場合があり、ワークロードの速度低下またはタイムアウトを引き起こしたり、基になるテーブルへのアクセスが大幅に制限されたりします。 **WAIT_AT_LOW_PRIORITY** オプションは、オンライン インデックス再構築に必要な S ロックおよび Sch-M ロックを DBA が管理できるようにし、3 つのオプションのいずれかを選択できるようにします。 3 つのいずれのケースでも、待機時間 ((MAX_DURATION = n [minutes])) 中にブロックするアクティビティがない場合は、オンライン インデックス再構築が待機なしで直ちに実行され、DDL ステートメントが完了します。  
   

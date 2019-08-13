@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 8b56627ea415a67016b4009c44556019e6fc20d5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52aeeca0dc61f36fbde2ad4a708d359f1dd19567
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061039"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809753"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -73,7 +73,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX index_name
     [ ON <on_option> ] 
 [ ; ]  
   
---Create a non-clustered columnstore index on a disk-based table.  
+--Create a nonclustered columnstore index on a disk-based table.  
 CREATE [NONCLUSTERED]  COLUMNSTORE INDEX index_name   
     ON { database_name.schema_name.table_name | schema_name.table_name | table_name }
         ( column  [ ,...n ] )  
@@ -139,7 +139,7 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
   
 #### <a name="with-options"></a>WITH オプション
 
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON
 
    `DROP_EXISTING = ON` の場合、既存のインデックスを削除し、新しい列ストア インデックスを作成します。  
 ```sql
@@ -148,7 +148,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 ```
    既定の DROP_EXISTING = OFF では、既存の名前と同じインデックス名が期待されます。 指定したインデックス名が既に存在するは、エラーが発生します。  
   
-##### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+##### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    インデックス操作の間、既存のサーバーの最大並列度構成をオーバーライドします。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
    *max_degree_of_parallelism* 値に指定できる値:  
@@ -163,7 +163,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    詳細については、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md) 」と「 [並列インデックス操作の構成](../../relational-databases/indexes/configure-parallel-index-operations.md)」を参照してください。  
  
-###### <a name="compressiondelay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
+###### <a name="compression_delay--0--delay--minutes-"></a>COMPRESSION_DELAY = **0** | *delay* [ Minutes ]  
    ディスク ベースのテーブルの場合は、CLOSED 状態のデルタ行グループがそのデルタ行グループに留まる必要がある最低限の分数が*遅延*によって指定され、その時間が経過すると、SQL Server は行グループを、圧縮された行グループに圧縮できるようになります。 ディスク ベース テーブルでは個々の行において挿入時間および更新時間が追跡されないため、SQL Server は CLOSED 状態のデルタ行グループに遅延を適用します。  
    既定値は、0 分です。  
    
@@ -174,7 +174,7 @@ CREATE CLUSTERED COLUMNSTORE INDEX cci ON Sales.OrderLines
 
    COMPRESSION_DELAY を使用する場合の推奨事項については、「[列ストアを使用したリアルタイム運用分析の概要](../../relational-databases/indexes/get-started-with-columnstore-for-real-time-operational-analytics.md)」をご覧ください。  
   
-##### <a name="datacompression--columnstore--columnstorearchive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
+##### <a name="data_compression--columnstore--columnstore_archive"></a>DATA_COMPRESSION = COLUMNSTORE | COLUMNSTORE_ARCHIVE  
    指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。   
 - `COLUMNSTORE` は既定で、最もパフォーマンスの高い列ストア圧縮を使用して圧縮します。 これは、一般的な選択です。  
 - `COLUMNSTORE_ARCHIVE` では、さらにテーブルまたはパーティションを小さいサイズに圧縮します。 このオプションは、保存に必要なストレージ サイズが少なく、保存と取得の速度を落とすことが可能な状況などで使用できます。  
@@ -224,12 +224,12 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
    インデックスが含まれているテーブルの 1 部、2 部、または 3 部構成の名前を指定します。  
 
 #### <a name="with-options"></a>WITH オプション
-##### <a name="dropexisting--off--on"></a>DROP_EXISTING = [OFF] | ON  
+##### <a name="drop_existing--off--on"></a>DROP_EXISTING = [OFF] | ON  
    DROP_EXISTING = ON 既存のインデックスは削除され、再構築されます。 指定するインデックス名は、現在存在するインデックスと同じにする必要がありますが、インデックス定義は変更できます。 たとえば、別の列またはインデックス オプションを指定できます。
   
    DROP_EXISTING = OFF 指定するインデックス名が既に存在する場合、エラーが表示されます。 DROP_EXISTING を使用してインデックスの種類を変更することはできません。 旧バージョンと互換性のある構文では、WITH DROP_EXISTING は WITH DROP_EXISTING = ON と同じです。  
 
-###### <a name="maxdop--maxdegreeofparallelism"></a>MAXDOP = *max_degree_of_parallelism*  
+###### <a name="maxdop--max_degree_of_parallelism"></a>MAXDOP = *max_degree_of_parallelism*  
    インデックス操作の間、[max degree of parallelism サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)更新オプションをオーバーライドします。 並列プランの実行で使用されるプロセッサ数を制限するには、MAXDOP を使用します。 最大数は 64 プロセッサです。  
   
    *max_degree_of_parallelism* 値に指定できる値:  
@@ -250,10 +250,10 @@ ON [*database_name*. [*schema_name* ] . | *schema_name* . ] *table_name*
 CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPrice, TaxRate) WITH ( ONLINE = ON );
 ```
 
-##### <a name="compressiondelay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
+##### <a name="compression_delay--0--delayminutes"></a>COMPRESSION_DELAY = **0** | \<delay>[Minutes]  
    行がデルタ行グループに残る期間の下限を指定します。この下限までは、圧縮された行グループに移行できます。 たとえば、行が 120 分間変更されない場合、単票格納形式に圧縮するという顧客がいるかもしれません。 ディスクベース テーブルの列ストア インデックスの場合、行が挿入または更新された時刻は追跡しません。代わりに、行のプロキシとして、デルタ行グループの終了時刻を利用します。 既定の継続時間は 0 分です。 100 万行がデルタ行グループに累積されると、1 行が単票格納に移行されます。その行に終了の印が付きます。  
   
-###### <a name="datacompression"></a>DATA_COMPRESSION  
+###### <a name="data_compression"></a>DATA_COMPRESSION  
    指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 非クラスター化列ストアとクラスター化列ストア インデックスの両方を含む列ストア インデックスにのみ適用されます。 次のオプションがあります。
    
 - 既定の `COLUMNSTORE` では、最もパフォーマンスの高い列ストア圧縮を使用して圧縮します。 これは、一般的な選択です。  
@@ -261,7 +261,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
   
  圧縮の詳細については、「[データ圧縮](../../relational-databases/data-compression/data-compression.md)」を参照してください。  
   
-##### <a name="where-filterexpression--and-filterexpression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
+##### <a name="where-filter_expression--and-filter_expression-"></a>WHERE \<filter_expression> [ AND \<filter_expression> ]
   
    フィルター述語が呼び出されると、インデックスに含める行を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、フィルター選択されたインデックスのデータ行で、フィルター選択された統計情報を作成します。  
   
@@ -487,7 +487,7 @@ GO
 1.  まず、この例で使用する小さいテーブルを作成します。  
   
     ```sql  
-    --Create a rowstore table with a clustered index and a non-clustered index.  
+    --Create a rowstore table with a clustered index and a nonclustered index.  
     CREATE TABLE MyFactTable (  
         ProductKey [int] NOT NULL,  
         OrderDateKey [int] NOT NULL,  
@@ -498,14 +498,14 @@ GO
         CLUSTERED INDEX ( ProductKey )  
     );  
   
-    --Add a non-clustered index.  
+    --Add a nonclustered index.  
     CREATE INDEX my_index ON MyFactTable ( ProductKey, OrderDateKey );  
     ```  
   
 2.  行ストア テーブルからすべての非クラスター化インデックスを削除します。  
   
     ```sql  
-    --Drop all non-clustered indexes  
+    --Drop all nonclustered indexes  
     DROP INDEX my_index ON MyFactTable;  
     ```  
   
