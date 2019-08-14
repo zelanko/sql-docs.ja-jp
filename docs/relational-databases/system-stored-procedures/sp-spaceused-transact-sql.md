@@ -25,7 +25,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68032867"
 ---
-# <a name="spspaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
+# <a name="sp_spaceused-transact-sql"></a>sp_spaceused (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
 
   現在のデータベースのテーブル、インデックス付きビュー、または [!INCLUDE[ssSB](../../includes/sssb-md.md)] キューで使用されている、行数、ディスクの予約領域、およびディスク使用領域を表示します。また、データベース全体で使用されているディスクの予約領域とディスク使用領域を表示します。  
@@ -107,7 +107,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前です。|  
 |**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データとログの両方のファイルが含まれます。|  
-|**nallocated space**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。|  
+|**unallocated space**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。|  
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
@@ -219,7 +219,7 @@ GO
 EXEC sp_spaceused @oneresultset = 1  
 ```  
 
-### <a name="e-displaying-space-usage-information-for-a-database-with-at-least-one-memoryoptimized-file-group-in-a-single-result-set"></a>E. 1 つの結果セットに少なくとも 1 つのメモリ最適化ファイル グループで、データベースの容量利用情報を表示します。 
+### <a name="e-displaying-space-usage-information-for-a-database-with-at-least-one-memory_optimized-file-group-in-a-single-result-set"></a>E. 1 つの結果セットに少なくとも 1 つのメモリ最適化ファイル グループで、データベースの容量利用情報を表示します。 
  次の例では、1 つの結果セット内の少なくとも 1 つのメモリ最適化ファイル グループと現在のデータベース領域の使用状況をまとめたものです。
  
 ```sql
@@ -229,7 +229,7 @@ EXEC sp_spaceused @updateusage = 'FALSE', @mode = 'ALL', @oneresultset = '1', @i
 GO
 ``` 
 
-### <a name="f-displaying-space-usage-information-for-a-memoryoptimized-table-object-in-a-database"></a>F. データベースのメモリ最適化テーブルのオブジェクトの容量利用情報を表示しています。
+### <a name="f-displaying-space-usage-information-for-a-memory_optimized-table-object-in-a-database"></a>F. データベースのメモリ最適化テーブルのオブジェクトの容量利用情報を表示しています。
  次の例は、少なくとも 1 つのメモリ最適化ファイル グループと現在のデータベースでメモリ最適化テーブル オブジェクトの領域の使用状況をまとめたものです。
  
 ```sql
@@ -247,7 +247,7 @@ GO
 ## <a name="see-also"></a>関連項目  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
