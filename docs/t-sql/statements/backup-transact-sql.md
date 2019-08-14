@@ -46,12 +46,12 @@ ms.assetid: 89a4658a-62f1-4289-8982-f072229720a1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 84bc446438a5b8938ee84b1e741c2768636d45b2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8d3a49210575efac6f7d8b4190f96670d06c8824
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141217"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68809732"
 ---
 # <a name="backup-transact-sql"></a>BACKUP (Transact-SQL)
 
@@ -178,7 +178,7 @@ FILEGROUP = { logical_filegroup_name | @logical_filegroup_name_var }
 
 --Encryption Options
  ENCRYPTION (ALGORITHM = { AES_128 | AES_192 | AES_256 | TRIPLE_DES_3KEY } , encryptor_options ) <encryptor_options> ::=
-   SERVER CERTIFICATE = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
+   `SERVER CERTIFICATE` = Encryptor_Name | SERVER ASYMMETRIC KEY = Encryptor_Name
 ```
 
 ## <a name="arguments"></a>引数
@@ -305,8 +305,10 @@ ENCRYPTION: バックアップの暗号化を指定するために使用され�
 
 暗号化することを選択した場合、次の暗号化機能のオプションを使用して、暗号化機能も指定する必要があります。
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE` = Encryptor_Name
+- `SERVER ASYMMETRIC KEY` = Encryptor_Name
+
+`SERVER CERTIFICATE` と `SERVER ASYMMETRIC KEY` は、`master` データベースで作成された証明書と非対称キーです。 詳細については、それぞれ [`CREATE CERTIFICATE`](../../t-sql/statements/create-certificate-transact-sql.md) と [`CREATE ASYMMETRIC KEY`](../../t-sql/statements/create-asymmetric-key-transact-sql.md) を参照してください。
 
 > [!WARNING]
 > 暗号化が `FILE_SNAPSHOT` 引数と組み合わせて使用されている場合、指定した暗号化アルゴリズムを使用して、メタデータ ファイル自体が暗号化され、システムはデータベースの [Transparent Data Encryption (TDE)](../../relational-databases/security/encryption/transparent-data-encryption.md) が完了したことを確認します。 データ自体に対しては、追加の暗号化は行われません。 データベースが暗号化されなかったか、バックアップ ステートメントが発行される前に暗号化が完了しなかった場合、バックアップは失敗します。
@@ -1008,8 +1010,8 @@ ENCRYPTION: バックアップの暗号化を指定するために使用され�
 
 暗号化することを選択した場合、次の暗号化機能のオプションを使用して、暗号化機能も指定する必要があります。
 
-- SERVER CERTIFICATE = Encryptor_Name
-- SERVER ASYMMETRIC KEY = Encryptor_Name
+- `SERVER CERTIFICATE = <Encryptor_Name>`
+- `SERVER ASYMMETRIC KEY = <Encryptor_Name>`
 
 **バックアップ セット オプション**
 

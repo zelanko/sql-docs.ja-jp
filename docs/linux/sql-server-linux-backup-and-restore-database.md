@@ -9,18 +9,18 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: d30090fb-889f-466e-b793-5f284fccc4e6
-ms.openlocfilehash: f3e27b283156bb23754a93161fc796e15baec7ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 88ef620a24bc2ce623ea6fb072871dadeffbcf6d
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077690"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68823116"
 ---
 # <a name="backup-and-restore-sql-server-databases-on-linux"></a>Linux での SQL Server データベースのバックアップと復元
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-他のプラットフォームと同じツールを使用して、SQL Server 2017 on Linux からデータベースのバックアップを作成できます。 Linux サーバーでは、**sqlcmd** を使用して SQL Server に接続してバックアップを作成できます。 Windows からは、SQL Server on Linux に接続して、ユーザー インターフェイスを使用してバックアップを作成できます。 バックアップ機能はプラットフォーム間で同じです。 たとえば、データベースのローカル バックアップ、リモート ドライブへのバックアップ、または [Microsoft Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-to-url.md)へのバックアップを行うことができます。
+さまざまなオプションを使用して、Linux 上の SQL Server 2017 からデータベースのバックアップを作成できます。 Linux サーバーでは、**sqlcmd** を使用して SQL Server に接続してバックアップを作成できます。 Windows からは、SQL Server on Linux に接続して、ユーザー インターフェイスを使用してバックアップを作成できます。 バックアップ機能はプラットフォーム間で同じです。 たとえば、データベースのローカル バックアップ、リモート ドライブへのバックアップ、または [Microsoft Azure Blob ストレージ サービス](../relational-databases/backup-restore/sql-server-backup-to-url.md)へのバックアップを行うことができます。
 
 ## <a name="backup-a-database"></a>データベースをバックアップする
 

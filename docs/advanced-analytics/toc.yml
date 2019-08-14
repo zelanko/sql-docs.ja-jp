@@ -23,7 +23,7 @@
       href: ../linux/sql-server-linux-setup-machine-learning.md?toc=/sql/advanced-analytics/toc.json
     - name: R サービスのインストール
       href: ../advanced-analytics/install/sql-r-services-windows-install.md
-    - name: スタンドアロン サーバー (Python、R) のインストール
+    - name: スタンドアロン サーバーのインストール
       href: ../advanced-analytics/install/sql-machine-learning-standalone-windows-install.md
     - name: 事前トレーニング済みモデルのインストール
       href: ../advanced-analytics/install/sql-pretrained-models-install.md

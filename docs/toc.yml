@@ -1,7 +1,7 @@
 - name: SQL Server へようこそ
-  href: sql-server/sql-server-technical-documentation.md?toc=../toc.json
-- name: SQL ドキュメントのバージョン管理
-  href: toc/versioning-system-monikers-ui-sql-server.md
+  href: sql-server/sql-server-technical-documentation.md
+- name: SQL ドキュメントのナビゲーションに関するヒント
+  href: sql-server/sql-docs-navigation-guide.md
 - name: 以前のバージョン 2014-2005
   href: toc/previous-versions-sql-server.md
 - name: 概要
@@ -10459,8 +10459,8 @@
       items:
         - name: ヘルプの参照
           href: sql-server/sql-server-get-help.md
-        - name: SQL ドキュメントのナビゲーションに関するヒント
-          href: sql-server/sql-docs-navigation-guide.md
+        - name: SQL ドキュメントのバージョン管理
+          href: sql-server/versioning-system-monikers-ui-sql-server.md
         - name: DBA Stack Exchange >
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
         - name: Stack Overflow >

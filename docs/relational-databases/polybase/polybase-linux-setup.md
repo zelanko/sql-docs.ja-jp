@@ -4,16 +4,17 @@ titlesuffix: SQL Server
 description: この記事では、Linux に SQL Server PolyBase をインストールする方法について説明します。
 author: aboke
 ms.author: aboke
-ms.date: 4/12/2019
+ms.date: 7/22/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 3c53eb5db9238f1da32cb207dafb9e36b7748914
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+monikerRange: '>= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions'
+ms.openlocfilehash: 82659c1fdbf4293812db0807ffbb216ba66048b5
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495362"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893213"
 ---
 # <a name="install-polybase-on-linux"></a>Linux への PolyBase のインストール
 
@@ -22,10 +23,10 @@ ms.locfileid: "68495362"
 Linux に [PolyBase](../../relational-databases/search/full-text-search.md) (**mssql server-polybase**) をインストールする手順を以下に示します。 PolyBase を使用すると、リモート データ ソースに対して外部クエリを実行することができます。 
 
 >[!NOTE]
-> Polybase をインストールする前に、まず [SQL Server をインストール](../../linux/sql-server-linux-setup.md#platforms)します。 これにより **mssql server-polybase** パッケージをインストールするときに使用するキーとリポジトリが構成されます。
-
+> Polybase をインストールする前に、まず [SQL Server 2019 プレビューをインストール](../../linux/sql-server-linux-setup.md#platforms)します。 これにより **mssql server-polybase** パッケージをインストールするときに使用するキーとリポジトリが構成されます。
+>
+> PolyBase は、Linux 上の SQL Server 2017 ではサポートされていません。
 > Linux での PolyBase のスケール アウトは、現在ご利用いただけません。
-
 
 ご利用のオペレーティング システムに PolyBase をインストールします。
 

@@ -10,18 +10,20 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
 ms.date: 05/14/2019
-ms.openlocfilehash: 1dd66b432ff489b5576b9ce7f69c1860cb9240d5
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
+ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958934"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68822617"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
 Azure Data Studio とは、Windows、macOS、Linux 上でオンプレミス プラットフォーム、クラウド データ プラットフォームの Microsoft ファミリを使用するデータ プロフェッショナルを対象にした、クロスプラットフォーム データベース ツールです。
 
 SQL Operations Studio というプレビュー名で以前にリリースされていた Azure Data Studio では、IntelliSense、コード スニペット、ソース管理の統合、統合されたターミナルを含む最新のエディター エクスペリエンスが提供されています。 これは、データ プラットフォームのユーザーを念頭に置いて設計されており、クエリ結果セットのグラフ化機能とカスタマイズ可能なダッシュボードが組み込まれています。
+
+Azure Data Studio のソース コードとそのデータ プロバイダーは、ソース コード EULA の下の GitHub で利用できます。この EULA では、ソフトウェアを変更および使用する権利が提供されますが、ソフトウェアを再配布したりクラウドサービス内でホストしたりすることはできません。 詳細については、「[Azure Data Studio FAQ](faq.md)」(Azure Data Studio の FAQ) を参照してください。
 
 **[ダウンロードしてインストールする[!INCLUDE[name-sos](../includes/name-sos-short.md)]](download.md)**
 

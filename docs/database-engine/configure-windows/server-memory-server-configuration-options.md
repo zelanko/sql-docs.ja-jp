@@ -1,7 +1,7 @@
 ---
-title: サーバー メモリに関するサーバー構成オプション | Microsoft Docs
+title: サーバー メモリの構成オプション | Microsoft Docs
 ms.custom: ''
-ms.date: 11/27/2017
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: high-availability
 ms.reviewer: ''
@@ -21,14 +21,14 @@ helpviewer_keywords:
 ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 1f631c7c0d4e1674e5982f0650989583910388e6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 180ef3114513f62f7ea5cded856ec61e06fc64b6
+ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476266"
+ms.lasthandoff: 08/03/2019
+ms.locfileid: "68763171"
 ---
-# <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
+# <a name="server-memory-configuration-options"></a>サーバー メモリの構成オプション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用される SQL Server プロセス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。  
@@ -49,19 +49,18 @@ ms.locfileid: "68476266"
 > **min server memory** および **max server memory** は拡張オプションです。 **sp_configure** システム ストアド プロシージャを使用してこれらの設定を変更するには、 **show advanced options** を 1 に設定する必要があります。 これらの設定は、サーバーを再起動しなくてもすぐに有効になります。  
   
 <a name="min_server_memory"></a> **min_server_memory** を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンス用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager で使用できる最小メモリ量を確保できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、 **min server memory** で指定されたメモリ量を起動時にすぐに割り当てるわけではありません。 ただし、クライアントの負荷によってメモリの使用量がこの値に達すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] min server memory **の値を小さくしない限り、** はメモリを解放できません。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の複数のインスタンスが同じホストに同時に存在するとき、インスタンスのメモリを予約する目的で、max_server_memory の代わりに min_server_memory パラメーターを設定します。 また、基礎をなすホストからのメモリ負荷が高いために、ゲスト [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 仮想マシン (VM) のバッファー プールから十分なパフォーマンスに必要な量を超えるメモリが割り当て解除される事態を回避するために、min_server_memory 値の設定は仮想環境で必要不可欠となります。
- 
-> [!NOTE]  
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**min server memory** で指定されたメモリ量を必ず割り当てるわけではありません。 サーバーの負荷が **min server memory**で指定されたメモリ量の割り当てを必要としない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより少ないメモリで実行します。  
-  
-<a name="max_server_memory"></a> **max_server_memory** を利用し、OS に好ましくないメモリ負荷が発生しないようにします。 最大サーバー メモリ構成を設定するには、メモリ要件を判断する目的で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の全体的使用量を観察します。 単一インスタンスでこのような計算をより精確に行うには:
- -  OS のメモリ合計から、1GB ～ 4GB を OS 自体に予約します。
- -  次に、**max server memory** で制御されない、潜在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てに相当するメモリ量を差し引きます。この相当するメモリ量は、 **_スタック サイズ<sup>1</sup>\* に計算した最大ワーカー スレッド<sup>2</sup> を掛けたものにスタートアップ パラメーター<sup>3</sup> の -g を足して_** 求められます ( *-g* が設定されていない場合、既定で 256MB を足します)。 残ったものが単一インスタンス セットアップの max_server_memory 設定になります。
- 
+
+>[!NOTE]
+>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、**min server memory** で指定されたメモリ量を必ず割り当てるわけではありません。 サーバーの負荷が **min server memory**で指定されたメモリ量の割り当てを必要としない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより少ないメモリで実行します。
+
+<a name="max_server_memory"></a> **max_server_memory** を利用し、OS に好ましくないメモリ負荷が発生しないようにします。 最大サーバー メモリ構成を設定するには、メモリ要件を判断する目的で、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の全体的使用量を観察します。
+
+- OS のメモリ合計から、十分なメモリ量を OS 自体に予約します。
+- 次に、**max server memory** で制御されない、潜在的 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] メモリ割り当てに相当するメモリ量を差し引きます。この相当するメモリ量は、**スタック サイズ**<sup>1</sup> **\* に最大ワーカー スレッド**<sup>2</sup> を掛けたものです。 残ったものが単一インスタンス セットアップの max_server_memory 設定になります。
+
 <sup>1</sup> アーキテクチャあたりのスレッド スタック サイズについては、「[メモリ管理アーキテクチャ ガイド](../../relational-databases/memory-management-architecture-guide.md#stacksizes)」を参照してください。
 
 <sup>2</sup> 現在のホストで関連付けられている所与の CPU 数に対して計算される既定のワーカー スレッドについては、ドキュメント ページの「[max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)」を参照してください。
-
-<sup>3</sup> スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。 32 ビットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) にのみ適用できます。
 
 ## <a name="how-to-configure-memory-options-using-includessmanstudiofullincludesssmanstudiofull-mdmd"></a>[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] を利用してメモリ オプションを構成する方法  
 **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンス用に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Memory Manager によって管理されるメモリ量を MB 単位で再構成します。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  

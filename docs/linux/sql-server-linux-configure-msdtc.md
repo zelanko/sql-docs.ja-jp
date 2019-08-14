@@ -3,46 +3,48 @@ title: Linux で MSDTC を構成する方法
 description: この記事では、Linux で MSDTC を構成する手順について説明します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 03/21/2019
+ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: c44458e1a68c842b6433d7a137865ae8451c136c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077610"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892526"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、Linux で Microsoft 分散トランザクション コーディネーター (MSTDC) を構成する方法を説明します。 Linux での MSDTC のサポートは SQL Server 2019 プレビューで導入されました。
+この記事では、Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法を説明します。
+
+> [!NOTE]
+> Linux 上の MSDTC は、累積的な更新プログラム 16 以降が適用された SQL Server 2019 プレビュー SQL Server 2017 でサポートされています。
 
 ## <a name="overview"></a>概要
 
 分散トランザクションをSQL Server on Linux で有効にするには、MSDTC および RPC エンドポイント マッパー機能を SQL Server に導入します。 既定では、RPC エンドポイント マッピング プロセスは、着信 RPC 要求をポート 135 でリッスンし、登録されたコンポーネント情報をリモート要求に提供します。 リモート要求は、登録済み RPC コンポーネント (MSDTC サービスなど) と通信するために、エンドポイント マッパーによって返される情報を使用できます。 プロセスが Linux 上のよく知られているポート (ポート番号 1024 未満) にバインドするには、スーパーユーザー特権が必要です。 RPC エンドポイント マッパー プロセスのルート権限を使用した SQL Server の起動を回避するには、システム管理者が iptables を使用してネットワーク アドレス変換を作成し、ポート 135 のトラフィックを SQL Server の RPC エンドポイント マッピング プロセスにルーティングするする必要があります。
 
-SQL Server 2019 では、mssql-conf ユーティリティ用に 2 つの構成パラメーターが導入されています。
+MSDTC では、mssql-conf ユーティリティ用に次の 2 つの構成パラメーターを使用します。
 
 | mssql-conf の設定 | [説明] |
 |---|---|
 | **network.rpcport** | RPC エンドポイント マッパー プロセスのバインド先の TCP ポート。 |
 | **distributedtransaction.servertcpport** | MSDTC サーバーがリッスンするポート。 設定しない場合、MSDTC サービスはサービス再起動時にランダムな一時ポートを使用するため、MSDTC サービスが通信を継続できるようにファイアウォールの例外を再構成する必要があります。 |
 
-これらの設定やその他の関連する MSDTC 設定について詳しくは、「[mssql-conf ツールを使用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md#msdtc)」をご覧ください。
+これらの設定やその他の関連する MSDTC 設定について詳しくは、「[mssql-conf ツールを使用して SQL Server on Linux を構成する](sql-server-linux-configure-mssql-conf.md)」をご覧ください。
 
 ## <a name="supported-msdtc-configurations"></a>サポートされている MSDTC 構成
 
 サポートされている MSDTC 構成は次のとおりです。
 
 - ODBC プロバイダーのための SQL Server on Linux に対する OLE-TX 分散トランザクション。
-- JDBC および ODBC プロバイダーを使用する SQL Server on Linux に対する XA 分散トランザクション。 XA トランザクションを ODBC プロバイダーを使用して実行するには、Microsoft ODBC Driver for SQL Server バージョン 17.3 以降を使用する必要があります。
-- リンクサーバー上の分散トランザクション。
 
-プレビューでの MSDTC の制限事項と既知の問題については、[Linux 向け SQL Server 2019 プレビューのリリース ノート](sql-server-linux-release-notes-2019.md#msdtc)をご覧ください。
+- JDBC および ODBC プロバイダーを使用する SQL Server on Linux に対する XA 分散トランザクション。 XA トランザクションを ODBC プロバイダーを使用して実行するには、Microsoft ODBC Driver for SQL Server バージョン 17.3 以降を使用する必要があります。 詳細については、「[XA トランザクションについて](../connect/jdbc/understanding-xa-transactions.md#configuration-instructions)」を参照してください。
+
+- リンクサーバー上の分散トランザクション。
 
 ## <a name="msdtc-configuration-steps"></a>MSDTCの 構成手順
 
@@ -184,9 +186,24 @@ SQL Server on Linux の MSDTC では、既定で RPC 通信で認証が使用さ
 
 | 設定 | [説明] |
 |---|---|
-| **distributedtransaction.allowonlysecurerpccalls**          | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 |
-| **distributedtransaction.fallbacktounsecurerpcifnecessary** | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 |
-| **distributedtransaction.turnoffrpcsecurity**               | 分散トランザクションの RPC セキュリティを有効または無効にします。 |
+| **distributedtransaction.allowonlysecurerpccalls**          | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 既定値は 0 です。 |
+| **distributedtransaction.fallbacktounsecurerpcifnecessary** | 分散トランザクションに対して、セキュリティで保護された RPC のみを構成します。 既定値は 0 です。 |
+| **distributedtransaction.turnoffrpcsecurity**               | 分散トランザクションの RPC セキュリティを有効または無効にします。 既定値は 0 です。 |
+
+## <a name="additional-guidance"></a>その他のガイダンス
+
+### <a name="active-directory"></a>Active Directory
+
+SQL Server が Active Directory (AD) 構成に登録されている場合は、RPC が有効になっている MSDTC を使用することをお勧めします。 AD 認証を使用するように SQL Server が構成されている場合、MSDTC は、既定で相互認証 RPC セキュリティを使用します。
+
+### <a name="windows-and-linux"></a>Windows と Linux
+
+Windows オペレーティング システム上のクライアントが SQL Server on Linux での分散トランザクションに参加する必要がある場合は、次のバージョン以上の Windows オペレーティング システムが必要です。
+
+| オペレーティング システム | 最小バージョン | OS ビルド |
+|---|---|---|
+| [Windows Server](https://docs.microsoft.com/windows-server/get-started/windows-server-release-info) | 1903 | 18362.30.190401-1528 |
+| [Windows 10](https://docs.microsoft.com/windows/release-information/) | 1903 | 18362.267 |
 
 ## <a name="next-steps"></a>次の手順
 
