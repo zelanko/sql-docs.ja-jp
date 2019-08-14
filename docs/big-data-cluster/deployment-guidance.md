@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d9696cf89d4177d8b78d9a0fe08cd27da5112650
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470770"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995832"
 ---
 # <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes 上に SQL Server ビッグ データ クラスターを展開する方法
 
@@ -50,7 +50,7 @@ SQL Server ビッグ データ クラスターでは、サーバーとクライ�
 
 次の3つの方法のいずれかを選んで、Kubernetes を展開できます。
 
-| Kubernetes の展開先: | [説明] | リンク |
+| Kubernetes の展開先: | 説明 | リンク |
 |---|---|---|
 | **Azure Kubernetes Services (AKS)** | Azure にあるマネージド Kubernetes コンテナー サービス。 | [手順](deploy-on-aks.md) |
 | **複数のマシン (kubeadm)** | **kubeadm** を使用して物理または仮想マシン上に展開された Kubernetes クラスター | [手順](deploy-with-kubeadm.md) |
@@ -87,10 +87,10 @@ Kubernetes クラスターを構成したら、新しい SQL Server ビッグ �
 
 **azdata bdc create** を実行することで、ビッグ データ クラスターを展開できます。 これにより、既定の構成の 1 つを選択するよう求めるメッセージが表示され、展開へと進みます。
 
-初めて `azdata` を実行するときは、使用許諾契約書 (EULA) に同意するために `--accept-eula` を含める必要があります。
+初めて `azdata` を実行するときは、使用許諾契約書 (EULA) に同意するために `--accept-eula=yes` を含める必要があります。
 
 ```bash
-azdata bdc create --accept-eula
+azdata bdc create --accept-eula=yes
 ```
 
 このシナリオでは、パスワードなど、既定の構成に含まれない設定をすべて入力するように求められます。 
@@ -142,15 +142,15 @@ azdata bdc create --accept-eula
 
 次の環境変数は、展開構成ファイルに保存されないセキュリティ設定に使用されます。 資格情報以外の Docker 設定は、構成ファイル内で設定できることに注意してください。
 
-| 環境変数 | 要件 |[説明] |
+| 環境変数 | 要件 |説明 |
 |---|---|---|
-| **CONTROLLER_USERNAME** | Required |クラスター管理者のユーザー名。 |
-| **CONTROLLER_PASSWORD** | Required |クラスター管理者のパスワード。 |
-| **MSSQL_SA_PASSWORD** | Required |SQL マスター インスタンス用の SA ユーザーのパスワード。 |
-| **KNOX_PASSWORD** | Required |Knox ユーザーのパスワード。 |
+| **CONTROLLER_USERNAME** | 必須 |クラスター管理者のユーザー名。 |
+| **CONTROLLER_PASSWORD** | 必須 |クラスター管理者のパスワード。 |
+| **MSSQL_SA_PASSWORD** | 必須 |SQL マスター インスタンス用の SA ユーザーのパスワード。 |
+| **KNOX_PASSWORD** | 必須 |Knox ユーザーのパスワード。 |
 | **ACCEPT_EULA**| `azdata` を初めて使用する場合は必須| 値は必要ありません。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula` を含めることができます。|
 | **DOCKER_USERNAME** | 省略可 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
-| **DOCKER_PASSWORD** | 省略可 |上記のプライベート リポジトリにアクセスするためのパスワード。 |
+| **DOCKER_PASSWORD** | Optional |上記のプライベート リポジトリにアクセスするためのパスワード。 |
 
 これらの環境変数は、**azdata bdc create** を呼び出す前に設定される必要があります。 設定されていない変数がある場合は、入力を求められます。
 
