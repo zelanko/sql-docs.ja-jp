@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cae2c216245fdb6483b3ad07a88b3517c38550bd
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470750"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969494"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>ビッグ データ クラスターの展開設定を構成する
 
@@ -22,7 +22,7 @@ ms.locfileid: "68470750"
 
 クラスターの展開構成ファイルをカスタマイズするには、VSCode など、任意の JSON 形式エディターを使用できます。 自動化のためにこれらの編集をスクリプト化するには、**azdata bdc config** コマンドを使用します。 この記事では、展開構成ファイルを変更してビッグ データ クラスターの展開を構成する方法について説明します。 さまざまなシナリオについて構成の変更方法の例を示します。 展開に構成ファイルを使用する方法の詳細詳細については、「[展開のガイダンス](deployment-guidance.md#configfile)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>必須コンポーネント
 
 - [azdata をインストールします](deploy-install-azdata.md)。
 
@@ -174,16 +174,16 @@ azdata bdc config patch --config-file custom/cluster.json --patch ./patch.json
 
 ## <a id="podplacement"></a> Kubernetes ラベルを使用してポッドの配置を構成する
 
-Kubernetes ノード上で特定のリソースを持つポッドの配置を制御することで、さまざまな種類のワークロード要件に対応できます。 たとえば、記憶域プール ポッドを記憶域が多いノードに配置したり、SQL Server マスター インスタンスを CPU およびメモリ リソースが高いノードに配置したりすることができます。 この場合、まず異なる種類のハードウェアが混在する Kubernetes クラスターを構築してから、それに応じて[ノード ラベルを割り当てます](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)。 ビッグ データ クラスターを展開する際に、クラスター展開構成ファイルのプール レベルで同じラベルを指定できます。 Kubernetes では、ノード上の指定されたラベルに一致するポッドの関連付けが処理されます。
+Kubernetes ノード上で特定のリソースを持つポッドの配置を制御することで、さまざまな種類のワークロード要件に対応できます。 たとえば、記憶域プール ポッドを記憶域が多いノードに配置したり、SQL Server マスター インスタンスを CPU およびメモリ リソースが高いノードに配置したりすることができます。 この場合、まず異なる種類のハードウェアが混在する Kubernetes クラスターを構築してから、それに応じて[ノード ラベルを割り当てます](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)。 ビッグ データ クラスターを展開する際に、クラスター展開構成ファイルのプール レベルで同じラベルを指定できます。 Kubernetes では、ノード上の指定されたラベルに一致するポッドの関連付けが処理されます。 Kubernetes クラスター内のノードに追加する必要がある特定のラベルキーは**mssql-クラスター全体**です。 このラベル自体の値には、任意の文字列を指定できます。
 
-次の例は、SQL Server マスター インスタンスのノード ラベル設定を含むようにカスタム構成ファイルを編集する方法を示しています。 組み込みの構成には *nodeLabel* キーがないため、カスタム構成ファイルを手動で編集するか、修正プログラム ファイルを作成してカスタム構成ファイルに適用する必要があります。
+次の例では、カスタム構成ファイルを編集して、SQL Server マスターインスタンス、コンピューティングプール、データプール & 記憶域プールのノードラベル設定を含める方法を示します。 組み込みの構成には *nodeLabel* キーがないため、カスタム構成ファイルを手動で編集するか、修正プログラム ファイルを作成してカスタム構成ファイルに適用する必要があります。 SQL Server マスターインスタンスポッドは、" **mssql-クラスター全体**" という値を含むノードにデプロイされます。 コンピューティングプールとデータプールポッドは、" **mssql-クラスター全体**" という値を含むノードにデプロイされます。 記憶域プールポッドは、" **mssql-クラスター全体**" という値を含むノードにデプロイされます。
 
 現在のディレクトリに次の内容の **patch.json** という名前のファイルを作成します。
 
 ```json
 {
   "patch": [
-     {
+    {
       "op": "replace",
       "path": "$.spec.pools[?(@.spec.type == 'Master')].spec",
       "value": {
@@ -197,8 +197,35 @@ Kubernetes ノード上で特定のリソースを持つポッドの配置を制
              "port": 31433
             }
           ],
-        "nodeLabel": "<yourNodeLabel>"
-       }
+        "nodeLabel": "bdc-master"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Compute')].spec",
+      "value": {
+    "type": "Compute",
+        "replicas": 1,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Data')].spec",
+      "value": {
+    "type": "Data",
+        "replicas": 2,
+        "nodeLabel": "bdc-sql"
+      }
+    },
+    {
+      "op": "replace",
+      "path": "$.spec.pools[?(@.spec.type == 'Storage')].spec",
+      "value": {
+    "type": "Storage",
+        "replicas": 3,
+        "nodeLabel": "bdc-storage"
+      }
     }
   ]
 }
