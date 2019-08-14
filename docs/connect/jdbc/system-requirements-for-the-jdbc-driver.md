@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver のシステム要件 | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 08/01/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 9acd6eeec40421a778c1ab829b9633e1e93a80b7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004262"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893973"
 ---
 # <a name="system-requirements-for-the-jdbc-driver"></a>JDBC Driver のシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -26,6 +26,8 @@ ms.locfileid: "68004262"
 - Java ランタイム環境
 
 ## <a name="java-runtime-environment-requirements"></a>Java Runtime Environment の要件  
+
+ Microsoft JDBC Driver 7.4 for SQL Server 以降で、Java Development Kit (JDK) 12.0 と Java Runtime Environment (JRE) 12.0 がサポートされています。
 
  Microsoft JDBC Driver 7.2 for SQL Server 以降で、Java Development Kit (JDK) 11.0 と Java Runtime Environment (JRE) 11.0 がサポートされています。
  
@@ -40,6 +42,31 @@ ms.locfileid: "68004262"
  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降では、JDBC 4.0 API を包含する形で Java Database Connectivity (JDBC) Spec API に対する JDBC ドライバー サポートが拡張されています。 JDBC 4.0 API は、Java Development Kit (JDK) 6.0 および Java Runtime Environment (JRE) 6.0 の一部として導入されました。 JDBC 4.0 は、JDBC 3.0 API のスーパーセットです。
   
  Windows と UNIX オペレーティング システムで [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を展開する場合、インストール パッケージである *sqljdbc_\<version>_enu.exe* と *sqljdbc_\<version>_enu.tar.gz* をそれぞれ使用する必要があります。 JDBC Driver の展開方法の詳細については、「[JDBC Driver の展開](../../connect/jdbc/deploying-the-jdbc-driver.md)」を参照してください。  
+
+**Microsoft JDBC Driver 7.4 for SQL Server:**  
+
+  JDBC Driver 7.4 の各インストール パッケージには、3 つの JAR クラス ライブラリ (**mssql-jdbc-7.4.1.jre8.jar**、**mssql-jdbc-7.4.1.jre11.jar**、**mssql-jdbc-7.4.1.jre12.jar**) が含まれています。
+
+  JDBC Driver 7.4 は、すべての主要な Java 仮想マシンと連携し、それらでサポートされるように設計されていますが、テストは OpenJDK 1.8、OpenJDK 11.0、OpenJDK 12.0、Azul Zulu JRE 1.8、Azul Zulu JRE 11.0、Azul Zulu JRE 12.0 上でのみ実行されます。
+  
+  Microsoft JDBC Drivers 7.4 for SQL Server に含まれている 2 つの JAR ファイルによって提供されるサポートの概要を以下に示します。  
+  
+  |JAR|JDBC バージョン準拠|推奨される Java のバージョン|[説明]|  
+|---------|-----------------------------|----------------------|-----------------|   
+|mssql-jdbc-7.4.1. jre8|4.2|8|Java Runtime Environment (JRE) 1.8 が必要です。 JRE 1.7 以前を使用すると、例外がスローされます。<br /><br /> 7\.4 の新機能には、JDK 12 のサポート、NTLM 認証、useFmtOnly が含まれます。 |    
+|mssql-jdbc-7.4.1. jre11|4.3|11|Java Runtime Environment (JRE) 11.0 が必要です。 JRE 10.0 以前を使用すると、例外がスローされます。<br /><br /> 7\.4 の新機能には、JDK 12 のサポート、NTLM 認証、useFmtOnly が含まれます。 |  
+|mssql-jdbc-7.4.1. jre12|4.3|12|Java Runtime Environment (JRE) 12.0 が必要です。 JRE 11.0 以前を使用すると、例外がスローされます。<br /><br /> 7\.4 の新機能には、JDK 12 のサポート、NTLM 認証、useFmtOnly が含まれます。 |   
+
+
+  JDBC Driver 7.4 は Maven Central Repository でも使用でき、次のコードを POM.XML に追加することで Maven プロジェクトに追加できます。  
+  
+ ```xml
+<dependency>
+    <groupId>com.microsoft.sqlserver</groupId>
+    <artifactId>mssql-jdbc</artifactId>
+    <version>7.4.1.jre11</version>
+</dependency>
+```
 
 **Microsoft JDBC Driver 7.2 for SQL Server:**  
 

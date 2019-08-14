@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: 22570f7ae8a9f11b89f11027698c948be5766d25
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 998594a4c0c649a0ad73d36e858cf733fc364aae
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661228"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841571"
 ---
 # <a name="always-encrypted-with-secure-enclaves"></a>セキュリティで保護されたエンクレーブが設定された Always Encrypted
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -168,7 +168,6 @@ bacpac ファイルを使ってデータベースを移行するときは、bacp
     > [!NOTE]
     > 上記の操作は、バイナリ 2 並べ替え順序 (BIN2 照合順序) による照合順序を使用する文字列型の列に対してサポートされます。 BIN2 以外の照合順序を使用する文字列型の列は、ランダム化された暗号化およびエンクレーブ対応の列暗号化キーを使用して、暗号化できます。 ただし、このような列に対して有効な唯一の新機能はインプレース暗号化です。
 - ランダム化された暗号化を使用する列での非クラスター化インデックスの作成。
-- ランダム化された暗号化を使用する列に対する LIKE 述語と比較演算子を含む式を使用する計算列。
 
 「[機能の詳細](always-encrypted-database-engine.md#feature-details)」で (セキュリティで保護されたエンクレーブが設定されていない) Always Encrypted について示されている (上記の機能強化により対処されない) 他のすべての制限事項は、セキュリティで保護されたエンクレーブが設定された Always Encrypted にも適用されます。
 
@@ -182,6 +181,7 @@ bacpac ファイルを使ってデータベースを移行するときは、bacp
     - char[n]、varchar[n]、binary[n]、varbinary[n] (n が 7935 より大きい場合)。
 - 同じコード ページ内の照合順序および NULL 値の許容の変更を除き、インプレース暗号化操作を、列メタデータの他の変更と組み合わせることはできません。 たとえば、1 つの ALTER TABLE または ALTER COLUMN Transact-SQL ステートメントで列を暗号化、再暗号化、または復号化し、さらに列のデータ型を変更することはできません。 2 つの異なるステートメントを使用します。
 - インメモリ テーブルの列にエンクレーブ対応キーを使用することは、サポートされていません。
+- 計算列を定義する式では、ランダム化された暗号化を使用してエンクレーブが有効な列の計算を実行することはできません (計算が LIKE および範囲比較の場合でも)。
 - エンクレーブ対応列マスター キーを格納するためにサポートされるキー ストアは、Windows 証明書ストアと Azure Key Vault のみです。
 
 [!INCLUDE[sql-server-2019](../../../includes/sssqlv15-md.md)] には以下の制限事項が適用されますが、対応予定のロードマップ上にあります。

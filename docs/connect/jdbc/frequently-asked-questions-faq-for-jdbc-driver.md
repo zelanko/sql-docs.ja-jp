@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver のよくあるご質問 (FAQ) | Microsoft Docs
 ms.custom: ''
-ms.date: 04/16/2019
+ms.date: 07/31/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cbc0e397-ecf2-4494-87b2-a492609bceae
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 566dfa3fec53878ac565d33af07d405f6f751521
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 17032e4d1bd6487edc0b0b41b7f808c27ab995ee
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956570"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68892374"
 ---
 # <a name="frequently-asked-questions-faq-for-jdbc-driver"></a>JDBC Driver のよくあるご質問 (FAQ)
 
@@ -35,7 +35,15 @@ JDBC Driver はオープンソースであり、[GitHub](https://github.com/micr
 Microsoft JDBC ドライバー用の GitHub リポジトリで入手できる JDBC ドライバー ファイルは JDBC ドライバーの中核であり、リポジトリに示されているオープンソース ライセンスの対象です。 Microsoft ダウンロード センターのドライバー パッケージには、Windows に統合された認証と JDBC ドライバーとの XA トランザクションを可能にするための追加ライブラリが含まれています。 これらの追加ライブラリは、ダウンロード可能パッケージに含まれているライセンスの対象です。
 
 **ドライバーをアップグレードする場合に知っておく必要があることは何ですか。**
-Microsoft JDBC Driver 7.2 では、JDBC 4.2 および 4.3 (一部) の仕様がサポートされ、インストール パッケージには次に示す 2 つの JAR クラス ライブラリが含まれます。
+Microsoft JDBC Driver 7.4 では、DBC 4.2 および 4.3 (一部) 仕様がサポートされ、インストール パッケージには次に示す 3 つの JAR クラス ライブラリが含まれます。
+
+| JAR                        | JDBC 仕様            | JDK のバージョン |
+| -------------------------- | ----------------------------- | ----------- |
+| mssql-jdbc-7.4.1. jre12 | JDBC 4.3 (一部) および 4.2 | JDK 12.0    |
+| mssql-jdbc-7.4.1. jre11 | JDBC 4.3 (一部) および 4.2 | JDK 11.0    |
+| mssql-jdbc-7.4.1. jre8  | JDBC 4.2                      | JDK 8.0     |
+
+ Microsoft JDBC Driver 7.2 では、JDBC 4.2 および 4.3 (一部) の仕様がサポートされ、インストール パッケージには次に示す 2 つの JAR クラス ライブラリが含まれます。
 
 | JAR                        | JDBC 仕様            | JDK のバージョン |
 | -------------------------- | ----------------------------- | ----------- |

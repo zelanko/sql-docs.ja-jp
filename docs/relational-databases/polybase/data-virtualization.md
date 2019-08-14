@@ -4,17 +4,17 @@ description: このページでは、リレーショナル データ ソース�
 author: Abiola
 ms.author: aboke
 ms.reviewer: mikeray
-ms.date: 03/27/2019
+ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: f0e0c5ec609670e6ce1483a9bdbdf81f223b3481
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
+ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041109"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68418764"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>リレーショナル データ ソースで外部テーブル ウィザードを使用する
 
@@ -22,7 +22,7 @@ SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想�
 
 ## <a name="start-the-external-table-wizard"></a>外部テーブル ウィザードを起動する
 
-[**mssqlctl cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) コマンドを使用して取得した **sql-server-master** エンドポイントの IP アドレスまたはポート番号を使用して、マスター インスタンスに接続できます。 オブジェクト エクスプローラーで **[データベース]** ノードを展開します。 次に、既存の SQL Server インスタンスからデータを仮想化するデータベースのいずれかを選択します。 データベースを右クリックして **[外部テーブルを作成する]** を選択し、データ仮想化ウィザードを起動します。 データ仮想化ウィザードは、コマンド パレットから起動することもできます。 Windows では Ctrl + Shift + P キー、Mac では Cmd + Shift + P キーを使用します。
+[**azdata cluster endpoints list**](../../big-data-cluster/deployment-guidance.md#endpoints) コマンドを使用して取得した **sql-server-master** エンドポイントの IP アドレスまたはポート番号を使用して、マスター インスタンスに接続できます。 オブジェクト エクスプローラーで **[データベース]** ノードを展開します。 次に、既存の SQL Server インスタンスからデータを仮想化するデータベースのいずれかを選択します。 データベースを右クリックして **[外部テーブルを作成する]** を選択し、データ仮想化ウィザードを起動します。 データ仮想化ウィザードは、コマンド パレットから起動することもできます。 Windows では Ctrl + Shift + P キー、Mac では Cmd + Shift + P キーを使用します。
 
 ![データ仮想化ウィザード](media/data-virtualization/virtualize-data-wizard.png)
 ## <a name="select-a-data-source"></a>データ ソースを選択する

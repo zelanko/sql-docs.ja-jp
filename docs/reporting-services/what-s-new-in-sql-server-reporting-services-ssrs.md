@@ -9,12 +9,12 @@ ms.author: maggies
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 05/08/2019
-ms.openlocfilehash: d7755f15e78f29814eee93557286736b849c96c6
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: 7e6864a935a9e1d3f2fcdcb1dbe100a65df3789a
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264594"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893525"
 ---
 # <a name="whats-new-in-sql-server-reporting-services-ssrs"></a>SQL Server Reporting Services (SSRS) の新機能
 
@@ -26,7 +26,7 @@ SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] の新機�
 
 Power BI Report Server については、「[Power BI Report Server とは](https://docs.microsoft.com/power-bi/report-server/get-started)」を参照してください。
 
-**ダウンロード** ![download](../analysis-services/media/download.png "download")
+**ダウンロード** ![download](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png "download")
 
 SQL Server 2017 Reporting Services をダウンロードするには、「 **[Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=55252)** 」に移動します。
 
@@ -34,7 +34,7 @@ SQL Server 2017 Reporting Services をダウンロードするには、「 **[Mi
 
 ## <a name="sql-server-2019-preview-reporting-services"></a>SQL Server 2019 プレビュー Reporting Services
 
-[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services は CTP 3.1 では使用できません。 現在のバージョンである [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md) をインストールしてください。
+[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] Reporting Services は CTP 3.2 では使用できません。 現在のバージョンである [SQL Server 2017 Reporting Services](install-windows/install-reporting-services.md) をインストールしてください。
 ::: moniker-end
 
 ::: moniker range=">=sql-server-2017||=sqlallproducts-allversions"
@@ -161,7 +161,7 @@ iPad および iPhone の iOS 用 Power BI モバイル アプリでは、ロー
 2. アイテムをピン留めするダッシュボードを選択します。
 3. ダッシュボードのタイルをどのくらいの頻度で更新するかを選択します。
 
-![注:](../analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
+![注:](https://docs.microsoft.com/analysis-services/analysis-services/instances/install-windows/media/ssrs-fyi-note.png "注:") 更新は [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サブスクリプションによって管理されます。アイテムをピン留めした後に、サブスクリプションを編集し、別の更新スケジュールを構成できます。
 
 ![ssRS_Pin_to_PowerBI](../reporting-services/media/ssrs-pin-to-powerbi.png) 
 

@@ -1,7 +1,7 @@
 ---
-title: HDFS 階層を構成する
+title: HDFS の階層化を構成する
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグデータクラスター (プレビュー) 上の HDFS に外部 Azure Data Lake Storage ファイルシステムをマウントするように HDFS 階層を構成する方法について説明します。
+description: この記事では、外部の Azure Data Lake Storage ファイル システムを SQL Server 2019 ビッグ データ クラスター (プレビュー) 上の HDFS にマウントするように、HDFS の階層化を構成する方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
@@ -10,70 +10,70 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
 ms.openlocfilehash: 17eedf9f0797a0adb5eda6ca8ee090fc762e1491
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "68419380"
 ---
-# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>ビッグデータクラスター SQL Server で HDFS 階層を構成する
+# <a name="configure-hdfs-tiering-on-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターで HDFS の階層を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Hdfs 階層化は、hdfs に外部の HDFS と互換性のあるファイルシステムをマウントする機能を提供します。 この記事では、SQL Server 2019 ビッグデータクラスター (プレビュー) の HDFS 階層を構成する方法について説明します。 現時点では、Azure Data Lake Storage Gen2 および Amazon S3 への接続がサポートされています。 
+HDFS の階層化により、HDFS に外部の HDFS と互換性のあるファイル システムをマウントする機能が提供されます。 この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) で HDFS の階層化を構成する方法について説明します。 現時点では、Azure Data Lake Storage Gen2 および Amazon S3 への接続がサポートされています。 
 
-## <a name="hdfs-tiering-overview"></a>HDFS 階層化の概要
+## <a name="hdfs-tiering-overview"></a>HDFS の階層化の概要
 
-階層化により、アプリケーションは、データがローカルの HDFS に存在する場合と同様に、さまざまな外部ストアのデータにシームレスにアクセスできます。 マウントはメタデータ操作であり、外部ファイルシステムの名前空間を記述するメタデータがローカルの HDFS にコピーされます。 このメタデータには、外部ディレクトリおよびファイルに関する情報と、そのアクセス許可と Acl が含まれます。 クエリなどを通じてデータ自体にアクセスする場合、対応するデータは要求時にのみコピーされます。 これで、SQL Server ビッグデータクラスターから外部ファイルシステムデータにアクセスできるようになりました。 このデータに対して Spark ジョブと SQL クエリを実行する方法は、クラスター上の HDFS に格納されているローカルデータに対して実行する方法と同じです。
+階層化により、アプリケーションは、データがローカル HDFS に存在しているかのように、さまざまな外部ストアのデータにシームレスにアクセスできます。 マウントはメタデータ操作であり、外部ファイル システムの名前空間を記述するメタデータがローカルの HDFS にコピーされます。 このメタデータには、外部ディレクトリおよびファイルに関する情報と共に、そのアクセス許可と ACL が含まれます。 クエリなどを通じてデータ自体にアクセスする場合、対応するデータは要求時にのみコピーされます。 これで、SQL Server ビッグ データ クラスターから外部ファイル システム データにアクセスできるようになりました。 このデータに対して Spark ジョブと SQL クエリを実行する方法は、クラスター上の HDFS に格納されているローカル データに対して実行する方法と同じです。
 
 ### <a name="caching"></a>キャッシュ
-現在、既定では、合計 HDFS ストレージの 1% が、マウントされたデータのキャッシュ用に予約されます。 キャッシュは、マウント全体でグローバルに設定されます。
+現在、既定では、HDFS の総ストレージ容量の 1% が、マウントされたデータのキャッシュ用に予約されます。 キャッシュは、マウント全体のグローバル設定です。
 
 > [!NOTE]
-> HDFS の階層化は、Microsoft によって開発された機能であり、Apache Hadoop 3.1 ディストリビューションの一部としてリリースされています。 詳細については[https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) 、「」を参照してください。
+> HDFS の階層化は、Microsoft によって開発された機能です。以前のバージョンは、Apache Hadoop 3.1 ディストリビューションの一部としてリリースされています。 詳細については、[https://issues.apache.org/jira/browse/HDFS-9806](https://issues.apache.org/jira/browse/HDFS-9806) を参照してください。
 
-次のセクションでは、Azure Data Lake Storage Gen2 データソースで HDFS 階層を構成する方法の例について説明します。
+以降のセクションでは、Azure Data Lake Storage Gen2 データソースを使用して HDFS 階層制御を構成する方法の例を示します。
 
-## <a name="refresh"></a>Refresh
+## <a name="refresh"></a>更新
 
-HDFS の階層化は更新をサポートします。 既存のマウントを更新して、リモートデータの最新のスナップショットを入手します。
+HDFS の階層化は更新をサポートします。 既存のマウントを更新して、リモート データの最新のスナップショットを入手します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>Prerequisites
 
-- [デプロイされたビッグデータクラスター](deployment-guidance.md)
-- [ビッグデータツール](deploy-big-data-tools.md)
+- [展開済みのビッグ データ クラスター](deployment-guidance.md)
+- [ビッグ データ ツール](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
 
 ## <a name="mounting-instructions"></a>マウントの手順
 
-Azure Data Lake Storage Gen2 と Amazon S3 への接続がサポートされています。 これらのストレージの種類に対してマウントする方法については、次の記事を参照してください。
+Azure Data Lake Storage Gen2 および Amazon S3 への接続がサポートされています。 これらのストレージの種類に対するマウント方法については、次の記事を参照してください。
 
-- [ビッグデータクラスターで HDFS 階層化 ADLS Gen2 をマウントする方法](hdfs-tiering-mount-adlsgen2.md)
-- [ビッグデータクラスターで HDFS 階層化に S3 をマウントする方法](hdfs-tiering-mount-s3.md)
+- [ビッグ データ クラスターに HDFS の階層化のための ADLS Gen2 をマウントする方法](hdfs-tiering-mount-adlsgen2.md)
+- [ビッグ データ クラスターに HDFS の階層化のための S3 をマウントする方法](hdfs-tiering-mount-s3.md)
 
-## <a id="issues"></a>既知の問題と制限事項
+## <a id="issues"></a> 既知の問題と制限事項
 
-次の一覧に、SQL Server ビッグデータクラスターで HDFS 階層化を使用する場合の既知の問題と現在の制限事項を示します。
+次の一覧に、SQL Server ビッグ データ クラスターで HDFS の階層化を使用する場合の既知の問題と現在の制限事項を示します。
 
-- マウントが`CREATING`長時間停止している場合は、失敗する可能性が最も高くなります。 このような場合は、コマンドを取り消し、必要に応じてマウントを削除します。 再試行する前に、パラメーターと資格情報が正しいことを確認してください。
+- マウントが `CREATING` 状態で長時間停止している場合は、ほとんどの場合、失敗しています。 このような場合は、コマンドを取り消し、必要に応じてマウントを削除します。 パラメーターと資格情報が正しいことを確認してから、再試行してください。
 
 - 既存のディレクトリにマウントを作成することはできません。
 
 - 既存のマウント内にマウントを作成することはできません。
 
-- マウントポイントのいずれかの先祖が存在しない場合は、xr-xr-x (555) を既定とするアクセス許可を使用して作成されます。
+- マウントポイントの先祖がいずれも存在しない場合は、既定値が r-xr-xr-x (555) に設定されたアクセス許可を使用してこれらが作成されます。
 
-- マウントされるファイルの数とサイズによっては、マウントの作成に時間がかかることがあります。 この処理中に、マウントされたファイルはユーザーに表示されません。 マウントが作成されると、すべてのファイルが一時パスに追加され`/_temporary/_mounts/<mount-location>`ます。既定値はです。
+- マウントされるファイルの数とサイズによっては、マウントの作成に時間がかかることがあります。 この処理中は、マウントされたファイルはユーザーに表示されません。 マウントの作成時に、すべてのファイルが一時パスに追加されます。既定値は `/_temporary/_mounts/<mount-location>` になります。
 
-- マウント作成コマンドは非同期です。 コマンドが実行された後、マウントの状態を確認して、マウントの状態を把握できます。
+- mount creation コマンドは非同期です。 コマンドが実行された後、マウントの状態を確認して、マウントの状態を把握できます。
 
-- マウントを作成する場合、 **--mount-path**に使用される引数は、基本的にマウントの一意の識別子です。 後続のコマンドでは、同じ文字列 (末尾の "/" を含む) を使用する必要があります。
+- マウントの作成時に、 **--mount-path** に使用される引数は、基本的にマウントの一意の識別子です。 後続のコマンドで同じ文字列 (末尾に "/" がある場合はそれも含めて) を使用する必要があります。
 
 - マウントは読み取り専用です。 マウントの下にディレクトリまたはファイルを作成することはできません。
 
-- 変更できるディレクトリとファイルのマウントはお勧めしません。 マウントが作成されると、リモートの場所に対する変更や更新は、HDFS のマウントに反映されません。 リモートの場所で変更が発生した場合は、更新された状態を反映するようにマウントを削除して再作成することを選択できます。
+- 変更できるディレクトリとファイルをマウントすることはお勧めしません。 マウントが作成されると、リモートの場所に対する変更や更新は、HDFS のマウントに反映されません。 リモートの場所で変更が発生した場合は、マウントを削除してから再作成して、更新された状態を反映することができます。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。
+SQL Server 2019 ビッグ データ クラスターの詳細については、「[SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。

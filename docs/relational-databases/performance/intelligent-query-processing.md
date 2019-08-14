@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのインテリジェントなクエリ処理 | Microsoft Docs
 description: SQL Server および Azure SQL Database のクエリ パフォーマンスを向上させるためのインテリジェントなクエリ処理の機能です。
 ms.custom: ''
-ms.date: 04/23/2019
+ms.date: 07/22/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -12,22 +12,22 @@ helpviewer_keywords: ''
 author: joesackmsft
 ms.author: josack
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 57b1cfbafc1ad75db4ca4e0750b8db366b4609d2
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 3f9827a171802f4964f678da5dd4cb3f35fe5d0e
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354627"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388371"
 ---
 # <a name="intelligent-query-processing-in-sql-databases"></a>SQL データベースでのインテリジェントなクエリ処理
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-インテリジェントなクエリ処理 (QP) 機能ファミリには、実装の労力は最小限で適応できる、既存のワークロードのパフォーマンスを改善する、広範な影響がある機能が含まれています。 
+インテリジェントなクエリ処理 (QP) 機能ファミリには、最小限の労力で実装できる、既存のワークロードのパフォーマンスを広範に改善する機能が含まれています。 
 
 ![インテリジェントなクエリ処理](./media/iqp-feature-family.png)
 
-データベースに対して適用可能なデータベース互換性レベルを有効にすることにより、自動的にワークロードをインテリジェントなクエリ処理の対象にすることができます。 これは Transact-SQL を使って設定できます。 例:  
+データベースに対して適用可能なデータベース互換性レベルを有効にすることにより、自動的にワークロードをインテリジェントなクエリ処理の対象にすることができます。 これは [!INCLUDE[tsql](../../includes/tsql-md.md)] を使って設定できます。 例:  
 
 ```sql
 ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
@@ -37,139 +37,19 @@ ALTER DATABASE [WideWorldImportersDW] SET COMPATIBILITY_LEVEL = 150;
 
 | **IQP の機能** | **Azure SQL Database でのサポート** | **SQL Server でのサポート** |**[説明]** |
 | --- | --- | --- |--- |
-| [適応型結合 (バッチ モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-adaptive-joins) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|適応型結合では、実際の入力行に基づき、実行時に結合の種類が動的に選択されます。|
-| [個別の概算数](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#approximate-query-processing) | あり (パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、パブリック プレビュー)|高パフォーマンスと小さいメモリ占有領域の利点がある、ビッグ データシナリオに対して、おおよその COUNT DISTINCT を指定します。 |
-| [行ストアでのバッチ モード](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-on-rowstore) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|列ストア インデックスを必要としない、CPU にバインドされたリレーショナル DW ワークロードに対してバッチ モードを指定します。  | 
-| [インターリーブ実行](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#interleaved-execution-for-mstvfs) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|固定推定値ではなく、最初のコンパイルで発生した複数ステートメントのテーブル値関数の実際のカーディナリティを使用します。|
-| [メモリ許可フィードバック (バッチ モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#batch-mode-memory-grant-feedback) | あり (互換性レベル 140 未満)| あり (SQL Server 2017 以降、互換性レベル 140 未満)|バッチ モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
-| [メモリ許可フィードバック (行モード)](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#row-mode-memory-grant-feedback) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|行モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
-| [スカラー UDF のインライン化](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#scalar-udf-inlining) | いいえ | あり (SQL Server 2019 CTP 2.1 以降、互換性レベル 150 未満、パブリック プレビュー)|スカラー UDF は同等のリレーショナル式に変換され、この式は呼び出し側クエリに "インライン化" されます。これにより、多くの場合、パフォーマンスが大幅に向上します。|
-| [テーブル変数の遅延コンパイル](https://docs.microsoft.com/en-us/sql/relational-databases/performance/intelligent-query-processing?view=sql-server-2017#table-variable-deferred-compilation) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり (SQL Server 2019 CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|固定推定値ではなく、最初のコンパイルで発生したテーブル変数の実際のカーディナリティを使用します。|
+| [適応型結合 (バッチ モード)](#batch-mode-adaptive-joins) | あり (互換性レベル 140 未満)| あり ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降、互換性レベル 140 未満)|適応型結合では、実際の入力行に基づき、実行時に結合の種類が動的に選択されます。|
+| [個別の概算数](#approximate-query-processing) | あり (パブリック プレビュー)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 以降)|高パフォーマンスと小さいメモリ占有領域の利点がある、ビッグ データシナリオに対して、おおよその COUNT DISTINCT を指定します。 |
+| [行ストアでのバッチ モード](#batch-mode-on-rowstore) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|列ストア インデックスを必要としない、CPU にバインドされたリレーショナル DW ワークロードに対してバッチ モードを指定します。  | 
+| [インターリーブ実行](#interleaved-execution-for-mstvfs) | あり (互換性レベル 140 未満)| あり ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降、互換性レベル 140 未満)|固定推定値ではなく、最初のコンパイルで発生した複数ステートメントのテーブル値関数の実際のカーディナリティを使用します。|
+| [メモリ許可フィードバック (バッチ モード)](#batch-mode-memory-grant-feedback) | あり (互換性レベル 140 未満)| あり ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降、互換性レベル 140 未満)|バッチ モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
+| [メモリ許可フィードバック (行モード)](#row-mode-memory-grant-feedback) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|行モード クエリにディスクへの書き込み操作がある場合は、連続実行のためにさらにメモリを追加します。 クエリで 50% を超える、割り当てられたメモリが浪費される場合は、連続実行のためにメモリ許可側を減らします。|
+| [スカラー UDF のインライン化](#scalar-udf-inlining) | いいえ | あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.1 以降、互換性レベル 150 未満、パブリック プレビュー)|スカラー UDF は同等のリレーショナル式に変換され、この式は呼び出し側クエリに "インライン化" されます。これにより、多くの場合、パフォーマンスが大幅に向上します。|
+| [テーブル変数の遅延コンパイル](#table-variable-deferred-compilation) | あり (互換性レベル 150 未満、パブリック プレビュー)| あり ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] CTP 2.0 以降、互換性レベル 150 未満、パブリック プレビュー)|固定推定値ではなく、最初のコンパイルで発生したテーブル変数の実際のカーディナリティを使用します。|
 
-## <a name="batch-mode-adaptive-joins"></a>バッチ モード アダプティブ結合
+## <a name="batch-mode-adaptive-joins"></a>バッチ モード適応型結合
+バッチ モード適応型結合機能を使うと、最初の入力のスキャンが **終わる** まで、[ハッシュ結合方法または入れ子になったループ結合](../../relational-databases/performance/joins.md)方法のどちらを選ぶかを、単一のキャッシュされたプランを使用して遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、実行中により適切な結合方法に動的に切り替えることができます。
 
-この機能により、キャッシュされている単独プランの実行中に、プランをより優れた結合戦略に動的に切り替えることができます。
-
-バッチ モード アダプティブ結合機能を使うと、最初の入力のスキャンが "**終わる**" まで、[ハッシュ結合方法または入れ子になったループ結合](../../relational-databases/performance/joins.md)方法のどちらを選ぶかを、遅延することができます。 アダプティブ結合演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 したがって、実行中により適切な結合方法に動的に切り替えることができます。
-しくみは次のとおりです。
--  ビルド結合入力の行数が十分に小さくて、入れ子になったループ結合の方がハッシュ結合より適している場合、プランは入れ子になったループ アルゴリズムに切り替わります。
--  ビルド結合入力が特定の行数しきい値を超えている場合、切り替えは行われず、プランはハッシュ結合を使い続けます。
-
-アダプティブ結合の例として次のようなクエリを考えます。
-
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 360;
-```
-
-このクエリは 336 行を返します。 [ライブ クエリ統計](../../relational-databases/performance/live-query-statistics.md)を有効にすると次のようなプランが表示されます。
-
-![クエリ結果 336 行](./media/4_AQPStats336Rows.png)
-
-このプランでは次のことがわかります。
-1. ハッシュ結合ビルド フェーズの行を提供するために、列ストア インデックス スキャンが使われています。
-1. 新しいアダプティブ結合演算子があります。 この演算子は、入れ子になったループ プランに切り替えるタイミングを決定するために使われるしきい値を定義します。 この例では、しきい値は 78 行です。 &gt;= 78 行になると、ハッシュ結合が使われます。 しきい値より小さい場合は、入れ子になったループ結合が使われます。
-1. この場合は 336 行を返すため、しきい値を超えており、2 番目の分岐は標準的なハッシュ結合操作のプローブ フェーズを表します。 ライブ クエリ統計は演算子を通過する行数を示すことに注意してください (この場合は "672 of 672")。
-1. 最後の分岐は入れ子になったループ結合で使うためのクラスター化インデックス シークで、しきい値は超えていません。 "0 of 336" 行と表示されます (分岐は使われません)。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
- 次は、クエリは同じですがテーブルの *Quantity* 値が 1 行だけのプランと比較してみましょう。
- 
-```sql
-SELECT [fo].[Order Key], [si].[Lead Time Days], [fo].[Quantity]
-FROM [Fact].[Order] AS [fo]
-INNER JOIN [Dimension].[Stock Item] AS [si]
-       ON [fo].[Stock Item Key] = [si].[Stock Item Key]
-WHERE [fo].[Quantity] = 361;
-```
-クエリでは 1 行が返されます。 ライブ クエリ統計を有効にすると次のようなプランが表示されます。
-
-![クエリ結果 1 行](./media/5_AQPStatsOneRow.png)
-
-このプランでは次のことがわかります。
-- 返されるのが 1 行なので、クラスター化インデックス シークを行が通過します。
-- また、ハッシュ結合ビルド フェーズは続行しなかったので、2 番目の分岐を通る行はありません。
-
-### <a name="adaptive-join-benefits"></a>アダプティブ結合の利点
-大小の結合入力スキャンが頻繁に切り替わるワークロードの場合、この機能から最もメリットがあります。
-
-### <a name="adaptive-join-overhead"></a>アダプティブ結合のオーバーヘッド
-アダプティブ結合では、同等のインデックスが入れ子になったループ結合プランより多くのメモリが必要です。 追加のメモリは、入れ子になったループがハッシュ結合であるかのように要求されます。 ストップ アンド ゴー操作と、同等の入れ子になったループ ストリーミング結合の違いのため、ビルド フェーズにもオーバーヘッドがあります。 その追加コストにより、ビルド入力で行数が変動するシナリオに対して柔軟性があります。
-
-### <a name="adaptive-join-caching-and-re-use"></a>アダプティブ結合のキャッシュと再利用
-バッチ モード アダプティブ結合は、ステートメントの最初の実行に対して作用し、コンパイル後は、コンパイルされたアダプティブ結合しきい値と、外部入力のビルド フェーズを通過するランタイム行に基づいて、連続する実行がアダプティブのままになります。
-
-### <a name="tracking-adaptive-join-activity"></a>アダプティブ結合アクティビティの追跡
-アダプティブ結合演算子には次のプラン演算子属性があります。
-
-| プラン属性 | [説明] |
-|--- |--- |
-| AdaptiveThresholdRows | ハッシュ結合から入れ子になったループ結合への切り替えに使われるしきい値を示します。 |
-| EstimatedJoinType | 予想される結合の種類を示します。 |
-| ActualJoinType | 実際のプランで、しきい値に基づいて最終的に選ばれた結合アルゴリズムを示します。 |
-
-予想されるプランは、アダプティブ結合プランの概要と、定義されているアダプティブ結合しきい値および予想される結合の種類を示します。
-
-### <a name="adaptive-join-and-query-store-interoperability"></a>アダプティブ結合とクエリ ストアの相互運用性
-クエリ ストアは、バッチ モード アダプティブ結合プランをキャプチャし、強制できます。
-
-### <a name="adaptive-join-eligible-statements"></a>アダプティブ結合を使えるステートメント
-論理結合をバッチ モード アダプティブ結合で使うにはいくつかの条件があります。
-- データベースの互換性レベルが 140 である。
-- クエリが SELECT ステートメントである (現在、データ変更ステートメントは使えません)。
-- 結合が、インデックス付きの入れ子になったループ結合またはハッシュ結合の両方の物理アルゴリズムで実行できる。
-- クエリ全体に列ストア インデックスが存在することにより、または列ストア インデックス テーブルを結合で直接参照することにより、ハッシュ結合がバッチ モードを使っている。
-- 入れ子になったループ結合とハッシュ結合の生成された代替ソリューションが、同じ最初の子 (外部参照) を持っている。
-
-### <a name="adaptive-joins-and-nested-loop-efficiency"></a>アダプティブ結合と入れ子になったループの効率
-アダプティブ結合は、入れ子になったループ操作に切り替えた場合、ハッシュ結合ビルドによって既に読み取られた行を使います。 演算子が外部参照行をもう一度読み込むことは "**ありません**"。
-
-### <a name="adaptive-threshold-rows"></a>アダプティブしきい値行
-次のグラフは、ハッシュ結合のコストと入れ子になったループ結合のコストの交点の例を示します。 この交点で、しきい値が決定され、それによって結合操作に実際に使われるアルゴリズムが決まります。
-
-![結合しきい値](./media/6_AQPJoinThreshold.png)
-
-### <a name="disabling-adaptive-joins-without-changing-the-compatibility-level"></a>互換性レベルを変更せず、適応型結合を無効にする
-
-適応型結合は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。  
-データベースを発生源とするすべてのクエリ実行に対して適応型結合を無効にするには、該当するデータベースとの関連で次を実行します。
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = ON;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = OFF;
-```
-
-有効になっているとき、この設定は [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。
-データベースを発生源とするすべてのクエリ実行に対して適応型結合を再有効化するには、該当するデータベースとの関連で次を実行します。
-
-```sql
--- SQL Server 2017
-ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_ADAPTIVE_JOINS = OFF;
-
--- Azure SQL Database, SQL Server 2019 and higher
-ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_ADAPTIVE_JOINS = ON;
-```
-
-[USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) クエリ ヒントとして `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` を指定することで、特定のクエリで適応型結合を無効にすることもできます。 例:
-
-```sql
-SELECT s.CustomerID,
-       s.CustomerName,
-       sc.CustomerCategoryName
-FROM Sales.Customers AS s
-LEFT OUTER JOIN Sales.CustomerCategories AS sc
-       ON s.CustomerCategoryID = sc.CustomerCategoryID
-OPTION (USE HINT('DISABLE_BATCH_MODE_ADAPTIVE_JOINS')); 
-```
-
-USE HINT クエリ ヒントは、データベース スコープ構成またはトレース フラグ設定に優先します。
+詳細については、「[アダプティブ結合について](../../relational-databases/performance/joins.md#adaptive)」を参照してください。
 
 ## <a name="batch-mode-memory-grant-feedback"></a>バッチ モード メモリ許可フィードバック
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でのクエリの実行プランには、実行に最低限必要なメモリと、すべての行をメモリに収めるのに最適なメモリ許可サイズが含まれます。 メモリ許可サイズが正しくない場合、パフォーマンスが低下します。 メモリ許可が多すぎると、メモリが無駄になり、コンカレンシーが制限されます。 メモリ許可が少なすぎると、負荷の高いディスクへの書き込みが発生する原因になります。 繰り返されるワークロードを処理することにより、バッチ モード メモリ許可フィードバックはクエリに実際に必要なメモリ量を再計算し、キャッシュされたプランの許可値を更新します。 同じクエリ ステートメントを実行するとき、クエリは、修正されたメモリ許可サイズを使うことで、コンカレンシーに影響を与える過剰なメモリ許可を減らし、負荷の高いディスクへの書き込みが発生する過少なメモリ許可を修正します。
@@ -193,7 +73,7 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 
 ### <a name="memory-grant-feedback-sizing"></a>メモリ許可フィードバックのサイズ決定
 メモリ許可条件が過剰な場合、許可されるメモリが実際に使われるメモリ サイズの 2 倍より多いと、メモリ許可フィードバックはメモリ許可を再計算して、キャッシュされるプランを更新します。 メモリ許可が 1 MB 未満のプランについては、超過分の再計算は行われません。
-メモリ許可条件が過少な場合、バッチ モード演算子でディスクへの書き込みが発生すると、メモリ許可フィードバックはメモリ許可の再計算をトリガーします。 ディスク書き込みイベントがメモリ許可フィードバックに報告され、*spilling_report_to_memory_grant_feedback* xEvent で表示できます。 このイベントは、プランのノード ID と、そのノードでディスクに書き込まれたデータのサイズを返します。
+メモリ許可条件が過少な場合、バッチ モード演算子でディスクへの書き込みが発生すると、メモリ許可フィードバックはメモリ許可の再計算をトリガーします。 ディスク書き込みイベントがメモリ許可フィードバックに報告され、*spilling_report_to_memory_grant_feedback* xEvent で表示できます。 このイベントは、プランのノード ID と、そのノードの書き込まれたデータ サイズを返します。
 
 ### <a name="memory-grant-feedback-and-parameter-sensitive-scenarios"></a>メモリ許可フィードバックとパラメーター依存シナリオ
 最適化のためには、クエリ プランによってパラメーター値を変えることが必要な場合もあります。 この種のクエリは "パラメーター依存" と定義されます。 パラメーター依存プランでは、メモリ要件が不安定な場合、メモリ許可フィードバック自体がクエリで無効になります。 クエリが数回繰り返し実行された後でプランは無効になり、このことは *memory_grant_feedback_loop_disabled* xEvent で監視できます。 パラメーター スニッフィングとパラメーターの感度の詳細については、「[Query Processing Architecture Guide](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)」(クエリ処理アーキテクチャ ガイド) を参照してください。
@@ -212,7 +92,11 @@ ORDER BY MAX(max_elapsed_time_microsec) DESC;
 メモリ許可フィードバックは、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。 データベースを発生源とするすべてのクエリ実行に対してバッチ モード メモリ許可フィードバックを無効にするには、該当するデータベースとの関連で次を実行します。
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
 ```
 
 有効になっているとき、この設定は [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。
@@ -220,7 +104,11 @@ ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK
 データベースを発生源とするすべてのクエリ実行に対してバッチ モード メモリ許可フィードバックを再有効化するには、該当するデータベースとの関連で次を実行します。
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET BATCH_MODE_MEMORY_GRANT_FEEDBACK = ON;
 ```
 
 `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を [USE HINT クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md#use_hint)として指定することで、特定のクエリのバッチ モード メモリ許可フィードバックを無効にすることもできます。 例:
@@ -354,14 +242,22 @@ MSTVF のシンプルな `SELECT *` では、インターリーブ実行によ�
 インターリーブ実行は、データベースの互換性レベル 140 以上を維持しながら、データベースまたはステートメント範囲で無効にできます。  データベースを発生源とするすべてのクエリ実行に対してインターリーブ実行を無効にするには、該当するデータベースとの関連で次を実行します。
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = ON;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = OFF;
 ```
 
 有効になっているとき、この設定は [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md) で有効として表示されます。
 データベースを発生源とするすべてのクエリ実行に対してインターリーブ実行を再有効化するには、該当するデータベースとの関連で次を実行します。
 
 ```sql
+-- SQL Server 2017
 ALTER DATABASE SCOPED CONFIGURATION SET DISABLE_INTERLEAVED_EXECUTION_TVF = OFF;
+
+-- Azure SQL Database, SQL Server 2019 and higher
+ALTER DATABASE SCOPED CONFIGURATION SET INTERLEAVED_EXECUTION_TVF = ON;
 ```
 
 [USE HINT](../../t-sql/queries/hints-transact-sql-query.md#use_hint) クエリ ヒントとして `DISABLE_INTERLEAVED_EXECUTION_TVF` を指定することで、特定のクエリでインターリーブ実行を無効にすることもできます。 例:

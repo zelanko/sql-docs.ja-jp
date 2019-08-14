@@ -1,7 +1,7 @@
 ---
-title: SQL Server の中央管理サーバーの拡張機能
+title: SQL Server 中央管理サーバーの拡張機能
 titleSuffix: Azure Data Studio
-description: インストールして Azure Data Studio の SQL Server の中央管理サーバーの拡張機能 (プレビュー) を使用
+description: Azure Data Studio 用の SQL Server 中央管理サーバーの拡張機能 (プレビュー) をインストールして使用する
 ms.custom: seodec18
 ms.date: 06/06/2019
 ms.reviewer: alayu; sstein
@@ -11,29 +11,29 @@ ms.topic: conceptual
 author: yualan
 ms.author: alayu
 ms.openlocfilehash: 03edfc5b6d95c5cd6497d96d7014641f3032fb84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
+ms.lasthandoff: 07/25/2019
 ms.locfileid: "67959205"
 ---
 # <a name="sql-server-central-management-servers-extension-preview"></a>SQL Server 中央管理サーバーの拡張機能 (プレビュー)
-中央管理サーバーの拡張機能では、1 つまたは複数のグループに編成は、SQL Server のインスタンスのリストを格納することができます。 CMS のグループを使用して実行されるアクションは、サーバー グループ内のすべてのサーバー上で動作します。
+中央管理サーバーの拡張機能を使用すると、ユーザーは 1 つまたは複数のグループに編成された SQL Server のインスタンスの一覧を格納できます。 CMS グループを使用して実行されるアクションは、サーバー グループ内のすべてのサーバーで動作します。
 
-このエクスペリエンスは、初期のプレビューは現在です。 問題の報告や機能要求[ここ](https://github.com/microsoft/azuredatastudio/issues)します。
+このエクスペリエンスは、現在、初期のプレビュー段階にあります。 問題の報告や機能の要求を行うには、[ここ](https://github.com/microsoft/azuredatastudio/issues)にアクセスしてください。
 
 ![CMS の拡張機能](media/sql-server-cms-extension/cms-list.png)
 
-## <a name="install-the-sql-server-central-management-servers-extension"></a>SQL Server の中央管理サーバーの拡張機能をインストールします。
+## <a name="install-the-sql-server-central-management-servers-extension"></a>SQL Server 中央管理サーバーの拡張機能をインストールする
 
-1. 拡張機能マネージャーを開き、使用可能な拡張機能にアクセスするには、拡張機能 アイコンを選択するか、**ビュー**メニューの**拡張**を選択します。
-2. 詳細を表示する使用可能な拡張機能を選択します。
-1. (SQL Server サーバーの全体管理サーバー) が必要な拡張機能を選択し、**インストール**こと。
+1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスするには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。
+2. 使用可能な拡張機能を選択すると、その詳細が表示されます。
+1. 必要な拡張機能 (SQL Server 中央管理サーバー) を選択して**インストール**します。
 
-### <a name="how-do-i-start-central-management-servers"></a>中央管理サーバーを起動する方法はありますか
- 中央管理サーバーは、(およびコマンド Ctrl + G)、接続アイコンをクリックして表示できます。 最初に、拡張機能をダウンロードする CMS ビューを最小化とでクリックして開くことができます**中央管理サーバー**
+### <a name="how-do-i-start-central-management-servers"></a>中央管理サーバーを起動する方法
+ 中央管理サーバーを表示するには、[接続] アイコン (Ctrl/Cmd + G) をクリックします。 拡張機能を初めてダウンロードすると、CMS ビューは最小化されます。これを開くには、 **[中央管理サーバー]** をクリックします
 
 ## <a name="next-steps"></a>次の手順
-中央管理サーバーでは、詳細については概念[詳しくはこちらを確認できます。](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)
+中央管理サーバーの概念の詳細については、[こちら](https://docs.microsoft.com/sql/ssms/register-servers/create-a-central-management-server-and-server-group)を参照してください。
 
 

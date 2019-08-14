@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: a5513c6f1f326984c93a760afdd88f949dc18b02
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0d789ded4aefe7d39d1298777ebd851a6c87e6d9
+ms.sourcegitcommit: d667fa9d6f1c8035f15fdb861882bd514be020d9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68007979"
+ms.lasthandoff: 07/23/2019
+ms.locfileid: "68388396"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 
@@ -88,6 +88,14 @@ SQL Server Integration Services (SSIS) Feature Pack for Azure は、このペー
     -   [柔軟なファイルの変換先](../integration-services/data-flow/flexible-file-destination.md)
 
 -   Azure BLOB、Azure Data Lake Store、および Data Lake Storage Gen2 のファイル列挙子。 「[Foreach ループ コンテナー](../integration-services/control-flow/foreach-loop-container.md)」を参照してください。
+
+## <a name="use-tls-12"></a>TLS 1.2 を使用する
+
+Azure Feature Pack で使用される TLS のバージョンは、システム .NET Framework 設定に準拠しています。
+TLS 1.2 を使用するには、次の 2 つのレジストリキーの下に `SchUseStrongCrypto` という名前の `REG_DWORD` 値をデータ `1` と共に追加します。
+
+1. `HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\.NETFramework\v4.0.30319`
+2. `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\.NETFramework\v4.0.30319`
 
 ## <a name="scenario-processing-big-data"></a>シナリオ:ビッグ データの処理
  Azure コネクタを使用して、次のビッグ データの処理を完了します。

@@ -10,12 +10,12 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.date: 12/06/2018
-ms.openlocfilehash: ef5664ab93b5e293dd176a91da83284cc2b72743
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 494b682853425b40699ff698117d2941805ab7da
+ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463607"
+ms.lasthandoff: 08/10/2019
+ms.locfileid: "68941148"
 ---
 # <a name="report-parameters-report-builder-and-report-designer"></a>レポート パラメーター (レポート ビルダーおよびレポート デザイナー)
 
@@ -75,13 +75,13 @@ ms.locfileid: "67463607"
   
 1. **パラメーター ペイン** 各パラメーターのプロンプトと既定値がレポート ビューアー ツール バーに表示されます。 パラメーター ペインのパラメーターのレイアウトをカスタマイズすることができます。 詳細については、「 [レポートのパラメーター ペインをカスタマイズする (レポート ビルダー)](../../reporting-services/report-design/customize-the-parameters-pane-in-a-report-report-builder.md)で作成するモバイル レポートで使用できます。  
   
-2. **@SalesDate パラメーター** @SalesDate パラメーターのデータ型は **DateTime** です。 テキスト ボックスの横に [日付を選択] というプロンプトが表示されます。 日付を変更するには、テキスト ボックスに新しい日付を入力するか、カレンダー コントロールを使用します。  
+2. **\@SalesDate パラメーター** @SalesDate パラメーターのデータ型は **DateTime** です。 テキスト ボックスの横に [日付を選択] というプロンプトが表示されます。 日付を変更するには、テキスト ボックスに新しい日付を入力するか、カレンダー コントロールを使用します。  
   
-3. **@ShowAll パラメーター** @ShowAll パラメーターのデータ型は **Boolean** です。 オプション ボタンを使用して、 **True** または **False**を指定します。  
+3. **\@ShowAll パラメーター** @ShowAll パラメーターのデータ型は **Boolean** です。 オプション ボタンを使用して、 **True** または **False**を指定します。  
   
 4. **[パラメーター エリアの表示/非表示の切り替え] ハンドル** レポート ビューアー ツール バーでこの矢印をクリックすると、パラメーター ペインの表示/非表示を切り替えることができます。  
   
-5. **@CategoryQuota パラメーター** @CategoryQuota パラメーターのデータ型は、 **Float** であるため、数値を指定します。  @CategoryQuota には、複数の値を設定できます。  
+5. **\@CategoryQuota パラメーター** @CategoryQuota パラメーターのデータ型は、 **Float** であるため、数値を指定します。  @CategoryQuota には、複数の値を設定できます。  
   
 6. **レポートの表示**  パラメーター値を入力した後にレポートを実行するには、 **[レポートの表示]** をクリックします。 すべてのパラメーターに既定値が定義されている場合、レポートは最初に表示するときに自動的に実行されます。  
   
