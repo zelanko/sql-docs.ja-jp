@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272249b7bd6c22895b7d10e7fbce4a20cb647a49
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
+ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419482"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68841561"
 ---
 # <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターの監視とトラブルシューティング
 
@@ -92,7 +92,7 @@ kubectl describe pod  master-0 -n mssql-cluster
 ポッドで実行されているコンテナーのログを取得できます。 次のコマンドでは、`master-0` という名前のポッドで実行されているすべてのコンテナーのログが取得されて、ファイル名 `master-0-pod-logs.txt` に出力されます。
 
 ```bash
-kubectl logs master-0 --all-containers=true -n mssql-cluser > master-0-pod-logs.txt
+kubectl logs master-0 --all-containers=true -n mssql-cluster > master-0-pod-logs.txt
 ```
 
 ## <a id="services"></a> サービスの状態を取得する
@@ -111,7 +111,7 @@ kubectl get svc -n mssql-cluster
 
 次のサービスでは、ビッグ データ クラスターへの外部接続がサポートされています。
 
-| サービス | [説明] |
+| サービス | 説明 |
 |---|---|
 | **master-svc-external** | マスター インスタンスへのアクセスが提供されます。<br/>(**EXTERNAL-IP,31433** および **SA** ユーザー) |
 | **controller-svc-external** | クラスターを管理するツールとクライアントがサポートされます。 |
@@ -133,36 +133,6 @@ kubectl describe service <service_name> -n <namespace_name>
 
 ```bash
 kubectl describe service master-svc-external -n mssql-cluster
-```
-
-## <a name="run-commands-in-a-container"></a>コンテナーでコマンドを実行する
-
-既存のツールまたはインフラストラクチャで、コンテナーのコンテキスト内に実際に存在しないと特定のタスクを実行できない場合は、`kubectl exec` コマンドを使ってコンテナーにログインできます。 たとえば、特定のファイルが存在するかどうかを確認したり、コンテナー内のサービスを再起動したりすることが必要になる場合があります。 
-
-`kubectl exec` コマンドを使うには、次の構文を使います。
-
-```bash
-kubectl exec -it <pod_name>  -c <container_name> -n <namespace_name> -- /bin/bash <command name> 
-```
-
-次の 2 つのセクションでは、特定のコンテナーでコマンドを実行する 2 つの例を示します。
-
-### <a id="restartsql"></a> 特定のコンテナーにログインして SQL Server プロセスを再起動する
-
-次の例では、`master-0` ポッド内の `mssql-server` コンテナー内の SQL Server プロセスを再起動する方法を示します。
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl restart mssql
-```
-
-### <a id="restartservices"></a> 特定のコンテナーにログインしてコンテナー内のサービスを再起動する
- 
-次の例では、**supervisord** によって管理されているすべてのサービスを再起動する方法を示します。 
-
-```bash
-kubectl exec -it master-0  -c mssql-server -n mssql-cluster -- /bin/bash 
-supervisorctl -c /opt/supervisor/supervisord.conf reload
 ```
 
 ## <a id="copy"></a> ファイルをコピーする

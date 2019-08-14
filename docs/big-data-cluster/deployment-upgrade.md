@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7bdb1eb59fd36d065df9dba0f6d6879c1a294914
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
+ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419387"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68731090"
 ---
 # <a name="how-to-upgrade-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターをアップグレードする方法
 
@@ -42,7 +42,7 @@ ms.locfileid: "68419387"
    CTP 2.3 以降の場合は、次のコマンドを実行します。 コマンド内の `ctp3.1` を、アンインストールする **mssqlctl** のバージョンに置き換えます。 バージョンが CTP 3.1 より前の場合は、バージョン番号の前にダッシュ (例: `ctp-2.5`) を追加します。
 
    ```powershell
-   pip3 uninstall -r https://mcr.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
+   pip3 uninstall -r https://private-repo.microsoft.com/python/ctp3.1/mssqlctl/requirements.txt
    ```
 
 1. **azdata** の最新バージョンをインストールします。 次のコマンドを実行すると、CTP 3.2 の **azdata** がインストールされます。

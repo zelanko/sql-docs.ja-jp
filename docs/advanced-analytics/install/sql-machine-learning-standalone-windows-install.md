@@ -106,7 +106,7 @@ SQL Server 2016 のみ:SQL Server の前提条件としてインストールさ�
 
 2. **[インストール]** タブで、 **[R Server (スタンドアロン) の新規インストール]** をクリックします。
     
-     ![R Server スタンドアロンのセットアップを開始]する(media/2016-setup-installation-rsvr.png "R Server スタンドアロンのセットアップを開始")
+     ![R Server スタンドアロンのセットアップを開始](media/2016-setup-installation-rsvr.png "R Server スタンドアロンのセットアップを開始")
 
 3. ルールの確認が完了したら SQL Server ライセンス条項に同意し、新しいインストールを選択します。
 
