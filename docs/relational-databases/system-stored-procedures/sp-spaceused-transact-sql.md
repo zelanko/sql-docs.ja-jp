@@ -92,14 +92,14 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前です。|  
 |**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データとログの両方のファイルが含まれます。|  
-|**未割り当ての領域**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。|  
+|**unallocated space**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。|  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
-|**未使用**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|  
+|**unused**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|  
   
  場合*objname*を省略するの値*oneresultset*は 1 です。 現在のデータベースのサイズ情報を提供する次の 1 つの結果セットが返されます。  
   
@@ -107,11 +107,11 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前です。|  
 |**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データとログの両方のファイルが含まれます。|  
-|**未割り当ての領域**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。|  
+|**nallocated space**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。|  
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
-|**未使用**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|  
+|**unused**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|  
   
  場合*objname*を指定すると、指定したオブジェクトの次の結果セットが返されます。  
   
@@ -122,7 +122,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|予約領域の合計量*objname*します。|  
 |**data**|**varchar(18)**|内のデータによって使用される領域の合計量*objname*します。|  
 |**index_size**|**varchar(18)**|インデックスで使用される領域の合計量*objname*します。|  
-|**未使用**|**varchar(18)**|予約された領域の合計量*objname*が使用されていません。|  
+|**unused**|**varchar(18)**|予約された領域の合計量*objname*が使用されていません。|  
  
 パラメーターが指定されていない場合、既定のモードになります。 次の結果セットには、ディスク上のデータベース サイズの詳細情報が返されます。 
 
@@ -130,7 +130,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前です。|  
 |**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データとログの両方のファイルが含まれます。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、すべてのチェックポイント ファイルのディスク上の合計サイズ、ファイル グループに含めます。|  
-|**未割り当ての領域**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、状態 PRECREATED とチェックポイント ファイルのディスク上の合計サイズ、ファイル グループに含めます。|  
+|**unallocated space**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、状態 PRECREATED とチェックポイント ファイルのディスク上の合計サイズ、ファイル グループに含めます。|  
 
 データベース内のテーブルで使用される領域: (この結果セットには反映されません、メモリ最適化テーブルのディスク使用量のテーブルのアカウンティングが存在しないため) 
 
@@ -139,7 +139,7 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
-|**未使用**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|
+|**unused**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|
 
 次の結果セットが返される**場合にのみ**を少なくとも 1 つのコンテナーと、MEMORY_OPTIMIZED_DATA ファイル グループ、データベースには。 
 
@@ -155,11 +155,11 @@ sp_spaceused [[ @objname = ] 'objname' ]
 |-----------------|---------------|-----------------|  
 |**database_name**|**nvarchar(128)**|現在のデータベースの名前です。|  
 |**database_size**|**varchar(18)**|現在のデータベースのサイズ (MB 単位)。 **database_size**データとログの両方のファイルが含まれます。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、すべてのチェックポイント ファイルのディスク上の合計サイズ、ファイル グループに含めます。|
-|**未割り当ての領域**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、状態 PRECREATED とチェックポイント ファイルのディスク上の合計サイズ、ファイル グループに含めます。|  
+|**unallocated space**|**varchar(18)**|データベース オブジェクト用に予約されていないデータベース内のスペース。 データベースに MEMORY_OPTIMIZED_DATA ファイル グループがある場合は、状態 PRECREATED とチェックポイント ファイルのディスク上の合計サイズ、ファイル グループに含めます。|  
 |**reserved**|**varchar(18)**|データベース内でオブジェクトによって割り当てられた領域の合計。|  
 |**data**|**varchar(18)**|データの使用領域の合計。|  
 |**index_size**|**varchar(18)**|インデックスによって使用される領域の合計サイズ。|  
-|**未使用**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|
+|**unused**|**varchar(18)**|領域の合計サイズは、データベース内のオブジェクトに予約されていますが、使用されていません。|
 |**xtp_precreated**|**varchar(18)**|チェックポイント ファイルと状態 (KB 単位) の PRECREATED の合計サイズ。 これは、データベース内の未割り当て領域には全体としてカウントされます。 データベースが少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループを持っていない場合は、NULL を返します。 *この列にのみが含まれる場合@include_total_xtp_storage= 1*します。| 
 |**xtp_used**|**varchar(18)**|状態 UNDER CONSTRUCTION、アクティブ、およびサポート技術情報でのマージ ターゲット チェックポイント ファイルの合計サイズ。 これは、メモリ最適化テーブルのデータを積極的に使用されるディスク領域です。 データベースが少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループを持っていない場合は、NULL を返します。 *この列にのみが含まれる場合@include_total_xtp_storage= 1*します。| 
 |**xtp_pending_truncation**|**varchar(18)**|チェックポイント ファイルと状態 (KB 単位) の WAITING_FOR_LOG_TRUNCATION の合計サイズ。 これは、ログが切り捨て後のクリーンアップを待機しているチェックポイント ファイルに使用されるディスク領域です。 データベースが少なくとも 1 つのコンテナーと、memory_optimized_data ファイル グループを持っていない場合は、NULL を返します。 この列にのみが含まれる場合`@include_total_xtp_storage=1`します。|
@@ -247,7 +247,7 @@ GO
 ## <a name="see-also"></a>関連項目  
  [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)   
  [CREATE TABLE &#40;Transact-SQL&#41;](../../t-sql/statements/create-table-transact-sql.md)   
- [DBCC UPDATEUSAGE &#40;TRANSACT-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
+ [DBCC UPDATEUSAGE &#40;Transact-SQL&#41;](../../t-sql/database-console-commands/dbcc-updateusage-transact-sql.md)   
  [SQL Server Service Broker (SQL Server Service Broker)](../../database-engine/configure-windows/sql-server-service-broker.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
  [sys.indexes &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-indexes-transact-sql.md)   
