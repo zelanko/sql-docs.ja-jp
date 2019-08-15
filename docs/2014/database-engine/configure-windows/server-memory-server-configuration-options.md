@@ -1,5 +1,5 @@
 ---
-title: サーバー メモリに関するサーバー構成オプション | Microsoft Docs
+title: サーバー メモリの構成オプション | Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -21,20 +21,20 @@ ms.assetid: 29ce373e-18f8-46ff-aea6-15bbb10fb9c2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: c366a239ca3459bc8fe4517736a4c0bcc64301cb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: d4f7302da7be80038478c887a01bb32037503fc0
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68475973"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028687"
 ---
-# <a name="server-memory-server-configuration-options"></a>サーバー メモリに関するサーバー構成オプション
+# <a name="server-memory-configuration-options"></a>サーバー メモリの構成オプション
   **min server memory** および **max server memory**の 2 つのサーバー メモリ オプションを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンスで使用される SQL Server プロセス用に SQL Server Memory Manager によって管理されるメモリ量を MB 単位で再構成します。  
   
  **min server memory** の既定の設定は 0 MB で、 **max server memory** の既定の設定は 2,147,483,647 MB です。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は使用可能なシステム リソースに基づいて、必要なメモリを動的に変更できます。  
   
 > [!NOTE]  
->  **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、 **-f** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)」を参照してください。  
+> **max server memory** を最小値に設定すると、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のパフォーマンスが極端に悪化し、場合によっては起動できなくなります。 このオプションの変更後に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を起動できなくなった場合は、 **-f** 起動オプションを使用して起動し、**max server memory** を元の値に戻します。 詳細については、「 [データベース エンジン サービスのスタートアップ オプション](database-engine-service-startup-options.md)」を参照してください。  
   
  メモリを動的に使用する場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はシステムに定期的にクエリして、メモリの空き容量を確認します。 このようにメモリの空き容量を維持することによって、オペレーティング システム (OS) のページングが防止されます。 空きメモリが少ない場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は OS に対してメモリを解放します。 空きメモリが多い場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] はより多くのメモリを割り当てることができます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってメモリが追加されるのは、ワークロードが高いためにメモリを増やす必要がある場合だけです。アクティブでないサーバーの仮想アドレス空間のサイズは増えません。  
   
@@ -63,7 +63,7 @@ ms.locfileid: "68475973"
 
 <sup>2</sup> 現在のホストで関連付けられている所与の CPU 数に対して計算される既定のワーカー スレッドについては、ドキュメント ページの「[max worker threads サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-worker-threads-server-configuration-option.md)」を参照してください。
 
-<sup>3</sup> スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](../../database-engine/configure-windows/database-engine-service-startup-options.md)」を参照してください。 Aplicable は 32 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ビット ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]から) に[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]のみ使用できます。
+<sup>3</sup> スタートアップ パラメーター *-g* の詳細については、ドキュメント ページの「[データベース エンジン サービスのスタートアップ オプション](https://docs.microsoft.com/sql/database-engine/configure-windows/database-engine-service-startup-options?view=sql-server-2014)」を参照してください。 32 ビットの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)] から [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)]) にのみ適用できます。
 
 |OS の種類|**Max server memory**に許容される最小メモリ容量|  
 |-------------|----------------------------------------------------------------|  

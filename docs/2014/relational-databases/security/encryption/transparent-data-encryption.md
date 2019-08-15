@@ -18,12 +18,12 @@ ms.assetid: c75d0d4b-4008-4e71-9a9d-cee2a566bd3b
 author: aliceku
 ms.author: aliceku
 manager: craigg
-ms.openlocfilehash: 40bf5851663840dac27252aa5cdfdadb0e76da93
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: ee4581d91b9f57b48f22e66dc15ff03e6f7320d7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63188034"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028540"
 ---
 # <a name="transparent-data-encryption-tde"></a>Transparent Data Encryption (TDE)
   *Transparent Data Encryption* (TDE) は、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] のデータ ファイルを暗号化します。これは保存データの暗号化と呼ばれます。 データベースをセキュリティで保護するために、安全なシステムの設計、機密資産の暗号化、データベース サーバーに対するファイアウォールの構築などの予防策を講じることができます。 ただし、物理メディア (ドライブやバックアップ テープなど) が盗まれた場合は、悪意のある人物によってデータベースが復元またはアタッチされ、データが参照されるおそれがあります。 解決策の 1 つは、データベース内の機密データを暗号化し、データの暗号化に使用されるキーを証明書で保護することです。 これにより、キーを持たない人物によるデータの使用を防止できますが、このような保護は事前に計画する必要があります。  
@@ -44,9 +44,9 @@ ms.locfileid: "63188034"
   
  **[!INCLUDE[ssSDS](../../../includes/sssds-md.md)] に該当する情報**  
   
- TDE を [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([一部のリージョンではプレビュー版](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) と一緒に使用すると、マスター データベースに格納されるサーバー レベルの証明書が [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]によって自動的に作成されます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] で TDE データベースを移動するには、データベースの暗号化を解除してデータベースを移動し、移動先の [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を再度有効にする必要があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]での TDE に関する詳細な手順については、「 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)」を参照してください。  
+ TDE を [!INCLUDE[sqldbesa](../../../includes/sqldbesa-md.md)] V12 ([一部のリージョンではプレビュー版](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/?WT.mc_id=TSQL_GetItTag)) と一緒に使用すると、マスター データベースに格納されるサーバー レベルの証明書が [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]によって自動的に作成されます。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] で TDE データベースを移動するには、データベースの暗号化を解除してデータベースを移動し、移動先の [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]で TDE を再度有効にする必要があります。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)]での TDE に関する詳細な手順については、「 [Transparent Data Encryption with Azure SQL Database](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)」を参照してください。  
   
- TDE のプレビューの状態は、 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のバージョン ファミリ V12 が現在一般提供の段階にあると発表されている地理的リージョンのサブセットにおいても適用されます。 TDE がプレビューから GA に昇格されたことを [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] が発表するまで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用の TDE の実稼働データベースでの使用は想定されていません。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 の詳細については、「 [Azure SQL Database の新機能](http://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)」をご覧ください。  
+ TDE のプレビューの状態は、 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] のバージョン ファミリ V12 が現在一般提供の段階にあると発表されている地理的リージョンのサブセットにおいても適用されます。 TDE がプレビューから GA に昇格されたことを [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] が発表するまで、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] 用の TDE の実稼働データベースでの使用は想定されていません。 [!INCLUDE[ssSDS](../../../includes/sssds-md.md)] V12 の詳細については、「 [Azure SQL Database の新機能](https://azure.microsoft.com/documentation/articles/sql-database-preview-whats-new/)」をご覧ください。  
   
  **[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] に該当する情報**  
   
@@ -229,10 +229,10 @@ GO
 ## <a name="transparent-data-encryption-and-in-memory-oltp"></a>Transparent Data Encryption とインメモリ OLTP  
  TDE は、インメモリ OLTP オブジェクトを含むデータベースで有効にすることができます。 TDE が有効な場合、インメモリ OLTP ログ レコードが暗号化されます。 MEMORY_OPTIMIZED_DATA ファイル グループのデータは、TDE が有効な場合は暗号化されません。  
   
-## <a name="see-also"></a>参照  
- [TDE で保護されたデータベースを別の SQL Server の移動します。](move-a-tde-protected-database-to-another-sql-server.md)   
- [EKM を使用して TDE を有効にします。](enable-tde-on-sql-server-using-ekm.md)   
- [Azure SQL Database での transparent Data Encryption](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
+## <a name="see-also"></a>関連項目  
+ [TDE で保護されたデータベースを別の SQL Server に移動する](move-a-tde-protected-database-to-another-sql-server.md)   
+ [EKM を使用して TDE を有効にする](enable-tde-on-sql-server-using-ekm.md)   
+ [Azure SQL Database での Transparent Data Encryption](../../../database-engine/transparent-data-encryption-with-azure-sql-database.md)   
  [SQL Server の暗号化](sql-server-encryption.md)   
  [SQL Server とデータベースの暗号化キー &#40;データベース エンジン&#41;](sql-server-and-database-encryption-keys-database-engine.md)   
  [SQL Server データベース エンジンと Azure SQL Database のセキュリティ センター](../security-center-for-sql-server-database-engine-and-azure-sql-database.md)   

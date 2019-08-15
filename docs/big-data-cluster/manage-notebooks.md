@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1a6156dad127ea2a86e8a6f4dfbdd6f692fd8f6e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7adc5c3d07b47b5310d8a45d00747d6dd6de9952
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893649"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028583"
 ---
 # <a name="manage-big-data-clusters-for-sql-server-with-azure-data-studio-notebooks"></a>Azure Data Studio ノートブックを使用して SQL Server のビッグ データ クラスターを管理する
 
@@ -22,7 +22,7 @@ ms.locfileid: "68893649"
 
 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] は、ノートブックを含む Azure Data Studio の拡張機能を提供します。 ノートブックには、SQL Server のビッグ データ クラスターを管理するために Azure Data Studio で使用できるドキュメントとコードが含まれています。
 
-[ノートブック](notebooks-guidance.md)は、もともとはオープン ソース プロジェクトとして実装され、[Azure Data Studio](http://docs.microsoft.com/sql/azure-data-studio/download) に実装されていました。 テキスト セルのテキストにマークダウンを使用し、使用できるカーネルのいずれかを使用してコード セル内にコードを記述できます。
+[ノートブック](notebooks-guidance.md)は、もともとはオープン ソース プロジェクトとして実装され、[Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/download) に実装されていました。 テキスト セル内のテキストに対してはマークダウンを、また、コード セル内にコードを記述するには利用可能なカーネルの 1 つを使用できます。
 
 ノートブックを使用して、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対してビッグ データ クラスターを展開できます。
 

@@ -13,21 +13,21 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 674f6f53610c8bf864aba5a2b5c7310c10f969c2
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fe9a196424a8d3488a49c86f0996dece71eee0f7
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63049485"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028531"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
   このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、ディザスター リカバリーとマルチサブネットのシナリオにおいて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
   
--   **開始前の準備: **[推奨事項](#Recommendations)、[セキュリティ](#Security)  
+-   **開始前の準備:** [推奨事項](#Recommendations)、[セキュリティ](#Security)  
   
--   **クラスター クォーラムを使用せずを起動させるには。**[フェールオーバー クラスター マネージャーを使用して](#FailoverClusterManagerProcedure)、 [Powershell を使用して](#PowerShellProcedure)、 [Net.exe の使用](#CommandPromptProcedure)  
+-   **クォーラムを使用せずにクラスターを強制的に起動するには、次を使用:** [フェールオーバー クラスター マネージャーの使用](#FailoverClusterManagerProcedure)、[PowerShell の使用](#PowerShellProcedure)、[Net.exe の使用](#CommandPromptProcedure)  
   
--   **補足情報:** [フォローしてください：クラスターを強制的にクォーラムを使用せずに開始した後](#FollowUp)  
+-   **補足情報:** [補足情報: クォーラムを使用せずにクラスターを強制的に起動した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始前の準備  
   
@@ -43,11 +43,11 @@ ms.locfileid: "63049485"
   
 1.  フェールオーバー クラスター マネージャーを開き、強制的にオンラインにする目的のクラスター ノードに接続します。  
   
-2.  **[アクション]** ペインで、**[クラスターの強制起動]** をクリックし、**[はい - クラスターを強制起動します]** をクリックします。  
+2.  **[アクション]** ペインで、 **[クラスターの強制起動]** をクリックし、 **[はい - クラスターを強制起動します]** をクリックします。  
   
 3.  左ペインにある **[フェールオーバー クラスター マネージャー]** ツリーで、クラスター名をクリックします。  
   
-4.  、[概要] ウィンドウで確認する、現在**クォーラム構成**値します。**警告:クラスターは ForceQuorum 状態で実行されている**します。  
+4.  概要ペインで、 **[クォーラムの構成]** の現在の値が **[警告: クラスターは ForceQuorum 状態で実行中です]** であることを確認します。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
@@ -102,7 +102,7 @@ net.exe stop clussvc
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a>補足情報: クラスターを強制的にクォーラムを使用せずに開始した後  
+##  <a name="FollowUp"></a>補足情報: クォーラムを使用せずにクラスターを強制的に起動した後  
   
 -   他のノードをオンラインに戻す前に、NodeWeight の値を再評価および再構成して、新しいクォーラムを正しく構築する必要があります。 この処理を行わないと、クラスターが再びオフラインに戻る場合があります。  
   
@@ -122,11 +122,11 @@ net.exe start clussvc /forcequorum
   
 ##  <a name="RelatedContent"></a> 関連コンテンツ  
   
--   [フェールオーバー クラスターのイベントおよびログを表示する](https://technet.microsoft.com/en-us/library/cc772342\(WS.10\).aspx)  
+-   [フェールオーバー クラスターのイベントおよびログを表示する](https://docs.microsoft.com/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772342(v=ws.11))  
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [クラスター クォーラムの NodeWeight の設定の構成](configure-cluster-quorum-nodeweight-settings.md)   
  [タスク フォーカスによって一覧表示される Windows PowerShell でのフェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  

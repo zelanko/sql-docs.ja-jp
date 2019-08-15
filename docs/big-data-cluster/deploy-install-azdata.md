@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9444842081456563f411ad618f32b8dbd59f7513
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: aaccdff9d5debe30eacfddfd8423a0a57b8a37fb
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426442"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028564"
 ---
 # <a name="install-azdata-to-manage-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターを管理するために azdata をインストールする
 
@@ -71,8 +71,8 @@ Linux では、Python 3.5 をインストールしてから、pip をアップ�
 1. 必要な Python パッケージをインストールします。
 
    ```bash
-   sudo apt-get update && /
-   sudo apt-get install -y python3 && /
+   sudo apt-get update && \
+   sudo apt-get install -y python3 && \
    sudo apt-get install -y python3-pip
    ```
 
@@ -107,6 +107,6 @@ Linux では、Python 3.5 をインストールしてから、pip をアップ�
    > [!NOTE]
    > `--user` スイッチを指定すると、azdata が Python ユーザー インストール ディレクトリにインストールされます。 通常、Linux 上ではこれは `~/.local/bin` です。 このディレクトリをパスに追加するか、ユーザー インストール ディレクトリに移動して、そこから `./azdata` を実行します。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグ データ クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターの概要](big-data-cluster-overview.md)のページを参照してください。
