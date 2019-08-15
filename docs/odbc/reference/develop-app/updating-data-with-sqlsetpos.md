@@ -30,7 +30,7 @@ ms.locfileid: "68091647"
   
  行セット内の先頭行の行番号は 1 です。 *RowNumber*引数**SQLSetPos**行セット内の行を識別する必要がありますは、その値が 1 から最後にフェッチされた行の数の範囲である必要があります (なる可能性があるより小さい行セット サイズ)。 場合*RowNumber*が 0 の場合、操作は、行セット内のすべての行に適用されます。  
   
- Sql、リレーショナル データベースとのほとんどの対話が行われるため、 **SQLSetPos**広くサポートされていません。 ただし、ドライバーを簡単にエミュレートできますが構築して実行する**UPDATE**または**削除**ステートメント。  
+ Sql、リレーショナル データベースとのほとんどの対話が行われるため、 **SQLSetPos**広くサポートされていません。 ただし、ドライバーを簡単にエミュレートできますが構築して実行する**UPDATE**または**DELETE**ステートメント。  
   
  操作を決定する**SQLSetPos**サポートされており、アプリケーションを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または (カーソルの種類) に応じて SQL_STATIC_CURSOR_ATTRIBUTES1 情報オプション。  
   
