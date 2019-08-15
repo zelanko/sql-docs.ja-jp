@@ -10012,12 +10012,12 @@
           items:
             - name: SSMS のサポート ポリシー
               href: ssms/support-policy.md
-            - name: フィードバックとヘルプ
-              href: 'https://docs.microsoft.com/sql/sql-server/sql-server-get-help'
             - name: SSMS のユーザー サポート
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名の利用状況データ
               href: ssms/sql-server-management-studio-telemetry-ssms.md
+            - name: フィードバック >
+              href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
         - name: sqlpackage のインストール
