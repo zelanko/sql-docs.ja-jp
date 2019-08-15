@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/16/2019
 ms.locfileid: "68263961"
 ---
-# <a name="sysdmdbtaskspaceusage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
+# <a name="sysdm_db_task_space_usage-transact-sql"></a>sys.dm_db_task_space_usage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   データベースに対するタスクごとに、ページの割り当てと割り当て解除の処理に関する情報を返します。  
@@ -58,7 +58,7 @@ ms.locfileid: "68263961"
 ## <a name="remarks"></a>コメント  
  このビューでレポートされるページの数に、IAM ページは含まれません。  
   
- ページ カウンターは要求の開始時にゼロ (0) に初期化されます。 これらの値は要求が完了したときにセッション レベルで集計されます。 詳細については、[sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)を参照してください。
+ ページ カウンターは要求の開始時にゼロ (0) に初期化されます。 これらの値は要求が完了したときにセッション レベルで集計されます。 詳細については、[sys.dm_db_session_space_usage &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-session-space-usage-transact-sql.md)を参照してください。  
   
  指定したタスクで割り当てられるページ数と割り当て解除されるページ数は、作業テーブル キャッシュ、一時テーブル キャッシュ、および延期された削除操作によって影響を受けます。  
   
