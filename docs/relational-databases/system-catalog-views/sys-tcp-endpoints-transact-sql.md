@@ -40,7 +40,7 @@ ms.locfileid: "68116731"
 |**ip_address**|**nvarchar(45)**|LISTENER_IP 句で指定されたリスナーの IP アドレス。 NULL 値が許可されます。|  
   
 ## <a name="remarks"></a>コメント  
- エンドポイントと接続に関する情報を収集するためには、次のクエリを実行します。 エンドポイントまたは TCP 接続を使用せず、現在の接続には、NULL 値が表示されます。 追加、**WHETE**句`WHERE des.session_id = @@SPID`現在の接続に関する情報を返します。  
+ エンドポイントと接続に関する情報を収集するためには、次のクエリを実行します。 エンドポイントまたは TCP 接続を使用せず、現在の接続には、NULL 値が表示されます。 追加、**WHERE**句`WHERE des.session_id = @@SPID`現在の接続に関する情報を返します。  
   
 ```  
 SELECT des.login_name, des.host_name, program_name,  dec.net_transport, des.login_time,   
