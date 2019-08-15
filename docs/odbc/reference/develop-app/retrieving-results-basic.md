@@ -30,7 +30,7 @@ SELECT OrderID, SalesPerson, Status FROM Orders WHERE Status = 'OPEN'
 ```  
   
  結果セットを空にすることとは異なる結果がすべての設定はありません。 たとえば、次の SQL ステートメントは、空の結果セットを作成します。  
-  　
+  
 ```  
 SELECT * FROM Orders WHERE 1 = 2  
 ```  
