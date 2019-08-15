@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ed777391af3695da69e04c0e2693cff912c76771
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 1962fd25416ab3546c15f9b894375e0f3ed740c6
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426292"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68894032"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -57,7 +57,7 @@ Config profile source: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--force -f`
 ターゲット ファイルを強制的に上書きします。
 #### `--accept-eula -a`
-ライセンス条項に同意しますか? [yes/no]。 この引数を使用したくない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula で確認できます。
+ライセンス条項に同意しますか? [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
@@ -66,7 +66,7 @@ Config profile source: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test']
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-config-list"></a>azdata bdc config list
@@ -92,7 +92,7 @@ Default config profile: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test'
 表示する構成の種類。
 `cluster`
 #### `--accept-eula -a`
-ライセンス条項に同意しますか? [yes/no]。 この引数を使用したくない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula で確認できます。
+ライセンス条項に同意しますか? [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
@@ -101,7 +101,7 @@ Default config profile: ['aks-dev-test', 'kubeadm-dev-test', 'minikube-dev-test'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-config-show"></a>azdata bdc config show
@@ -142,7 +142,7 @@ azdata bdc config show --config-file custom-config/cluster.json  --json-path '$.
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-config-add"></a>azdata bdc config add
@@ -169,7 +169,7 @@ azdata bdc config add --config-file custom/control.json --json-values 'spec.stor
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-config-remove"></a>azdata bdc config remove
@@ -196,7 +196,7 @@ azdata bdc config remove --config-file custom/control.json --json-path '.spec.st
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-config-replace"></a>azdata bdc config replace
@@ -231,7 +231,7 @@ azdata bdc config replace --config-file custom/cluster.json --json-values '$.spe
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-config-patch"></a>azdata bdc config patch
@@ -275,10 +275,10 @@ jsonpatch ライブラリに基づいた修正プログラム json ファイル�
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理するための azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。

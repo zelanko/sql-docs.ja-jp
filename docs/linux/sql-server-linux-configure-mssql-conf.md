@@ -3,17 +3,17 @@ title: Linux 上の SQL Server 設定の構成
 description: この記事では、mssql-conf ツールを使用して Linux 上で SQL Server 設定を構成する方法について説明します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 02/28/2019
+ms.date: 07/30/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 06798dff-65c7-43e0-9ab3-ffb23374b322
-ms.openlocfilehash: ac1f88377b15bf8bd4a92a5dd705716db55deaaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: aaddcbfb9520f2619df82ddbf3695604c2cbee40
+ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077603"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "68661372"
 ---
 # <a name="configure-sql-server-on-linux-with-the-mssql-conf-tool"></a>mssql-conf ツールを使用して SQL Server on Linux を構成する
 
@@ -405,7 +405,7 @@ SQL Server によって収集されるメモリ ダンプの種類を制御す�
 **sqlpagent.databasemailprofile** を使用すると、メール アラートの既定の DB メール プロファイルを設定できます。
 
 ```bash
-sudo /opt/mssq/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
+sudo /opt/mssql/bin/mssql-conf set sqlagent.databasemailprofile <profile_name>
 ```
 ## <a id="hadr"></a> 高可用性
 
