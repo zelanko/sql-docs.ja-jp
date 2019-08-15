@@ -28,7 +28,7 @@ ms.locfileid: "68091661"
   
  使用される行セット サイズ**SQLBulkOperations**への呼び出しで設定されて**SQLSetStmtAttr**で、*属性*引数 sql_attr_row_array_size を指定します。 異なり**SQLSetPos**への呼び出し後にのみ新しい行セット サイズを使用する**SQLFetch**または**SQLFetchScroll**、 **SQLBulkOperations**を使用して、呼び出しの後の新しい行セット サイズ**SQLSetStmtAttr**します。  
   
- Sql、リレーショナル データベースとのほとんどの対話が行われるため、 **SQLBulkOperations**広くサポートされていません。 ただし、ドライバーを簡単にエミュレートできますが構築して実行する**更新**、**削除**、または**挿入**ステートメント。  
+ Sql、リレーショナル データベースとのほとんどの対話が行われるため、 **SQLBulkOperations**広くサポートされていません。 ただし、ドライバーを簡単にエミュレートできますが構築して実行する**UPDATE**、**DELETE**、または**INSERT**ステートメント。  
   
  操作を決定する**SQLBulkOperation**サポートされており、アプリケーションを呼び出す**SQLGetInfo** SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または (カーソルの種類) に応じて SQL_STATIC_CURSOR_ATTRIBUTES1 情報オプション。  
   
