@@ -1,5 +1,5 @@
 ---
-title: MSmerge_contents (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_contents (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -33,17 +33,17 @@ ms.locfileid: "68089945"
 |-----------------|---------------|-----------------|  
 |**tablenick**|**int**|パブリッシュされたテーブルのニックネームです。|  
 |**rowguid**|**uniqueidentifier**|特定の行の行識別子。|  
-|**生成**|**bigint**|識別される行の生成、 **tablenick**と**rowguid**します。|  
+|**generation**|**bigint**|識別される行の生成、 **tablenick**と**rowguid**します。|  
 |**partchangegen**|**bigint**|行がフィルター選択されたパブリケーションに属しているかどうかに変わる可能性がある最新のデータ変更に関連付けられているジェネレーション。|  
-|**系列**|**varbinary(501)**|サブスクライバーのニックネームとバージョン番号のペアのこの行に対する変更の履歴を保持するために使用します。|  
+|**lineage**|**varbinary(501)**|サブスクライバーのニックネームとバージョン番号のペアのこの行に対する変更の履歴を保持するために使用します。|  
 |**colvl**|**varbinary(7489)**|列バージョン情報です。|  
-|**マーカー**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
+|**marker**|**uniqueidentifier**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**logical_record_parent_rowguid**|**uniqueidentifier**|最上位レベル親行を識別**MSmerge_contents** (によって**rowguid**) 論理レコードの対応する子行はごとです。|  
 |**logical_record_lineage**|**varbinary(501)**|サブスクライバーのニックネーム、論理レコードの最上位レベル親行に対する変更の履歴を維持するために使用されるバージョン番号のペア。 論理レコードのすべての子行に対しては、この値は NULL です。|  
 |**logical_relation_change_gen**|**bigint**|既存の行が論理レコード内外に移動した、論理レコードの再調整の原因となった最後の変更に関連付けられた generation 値です。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
