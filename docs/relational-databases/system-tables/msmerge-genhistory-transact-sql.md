@@ -1,5 +1,5 @@
 ---
-title: MSmerge_genhistory (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_genhistory (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -33,15 +33,15 @@ ms.locfileid: "68017702"
 |-----------------|---------------|-----------------|  
 |**guidsrc**|**uniqueidentifier**|サブスクライバーの generation 値によって識別される変更のグローバル識別子です。|  
 |**pubid**|**uniqueidentifier**|パブリケーションの識別子です。|  
-|**生成**|**bigint**|Generation 値です。|  
+|**generation**|**bigint**|Generation 値です。|  
 |**art_nick**|**int**|アーティクルのニックネームです。|  
-|**ニックネーム**|**varbinary(1001)**|この generation 値を持っていることが既に認識されている他のサブスクライバーのニックネームの一覧です。 その変更を既に認識しているサブスクライバーに、generation 値を送信することを防ぐために使用します。 ニックネーム一覧内のニックネームは、検索をより効率的に並べ替えられた順序で保持されます。 このフィールドに収まるを超えるニックネームがある場合は、この最適化からいない活用します。|  
+|**nicknames**|**varbinary(1001)**|この generation 値を持っていることが既に認識されている他のサブスクライバーのニックネームの一覧です。 その変更を既に認識しているサブスクライバーに、generation 値を送信することを防ぐために使用します。 ニックネーム一覧内のニックネームは、検索をより効率的に並べ替えられた順序で保持されます。 このフィールドに収まるを超えるニックネームがある場合は、この最適化からいない活用します。|  
 |**coldate**|**datetime**|現在の generation 値がテーブルに追加された日付です。|  
 |**genstatus**|**tinyint**|次のように、世代の状態:<br /><br /> **0**開くを = です。<br /><br /> **1** = 終了します。<br /><br /> **2** = クローズし、別のサブスクライバーで発生します。|  
-|**これは changecount**|**int**|特定のジェネレーションに反映される変更の数|  
+|**changecount**|**int**|特定のジェネレーションに反映される変更の数|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
