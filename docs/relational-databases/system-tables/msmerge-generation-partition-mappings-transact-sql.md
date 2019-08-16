@@ -1,5 +1,5 @@
 ---
-title: MSmerge_generation_partition_mappings (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_generation_partition_mappings (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68101367"
 ---
-# <a name="msmergegenerationpartitionmappings-transact-sql"></a>MSmerge_generation_partition_mappings (TRANSACT-SQL)
+# <a name="msmergegenerationpartitionmappings-transact-sql"></a>MSmerge_generation_partition_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_generation_partition_mappings**テーブルがマージ パブリケーション内のパーティションに変更を追跡するために使用します。 このテーブルは、パブリケーションおよび scubscription データベースに格納されます。  
@@ -32,12 +32,12 @@ ms.locfileid: "68101367"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**publication_number**|**smallint**|マージ パブリケーションを識別します。|  
-|**生成**|**bigint**|Generation 値です。|  
+|**generation**|**bigint**|Generation 値です。|  
 |**partition_id**|**int**|パーティションを識別します。|  
-|**これは changecount**|**int**|パーティションが変更された回数。|  
+|**changecount**|**int**|パーティションが変更された回数。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
