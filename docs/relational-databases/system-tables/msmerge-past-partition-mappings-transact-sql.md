@@ -1,5 +1,5 @@
 ---
-title: MSmerge_past_partition_mappings (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_past_partition_mappings (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -35,11 +35,11 @@ ms.locfileid: "67984890"
 |**tablenick**|**int**|パブリッシュされたテーブルのニックネームです。|  
 |**rowguid**|**uniqueidentifier**|特定の行の行識別子。|  
 |**partition_id**|**int**|行が属するパーティションの ID。 行の変更がすべてのサブスクライバーに関連する場合、値は-1 を使用します。|  
-|**生成**|**bigint**|パーティションの変更が発生した生成の値。|  
+|**generation**|**bigint**|パーティションの変更が発生した生成の値。|  
 |**reason**|**tinyint**|内部使用のみ。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
