@@ -1,5 +1,5 @@
 ---
-title: MSmerge_agents (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_agents (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68106441"
 ---
-# <a name="msmergeagents-transact-sql"></a>MSmerge_agents (TRANSACT-SQL)
+# <a name="msmergeagents-transact-sql"></a>MSmerge_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_agents**テーブルは、サブスクライバーで実行されるマージ エージェントはごとに 1 行を格納します。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -35,9 +35,9 @@ ms.locfileid: "68106441"
 |**name**|**nvarchar(100)**|マージ エージェントの名前。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
+|**publication**|**sysname**|パブリケーションの名前を指定します。|  
 |**subscriber_id**|**smallint**|サブスクライバーの ID。|  
-|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
+|**\@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**local_job**|**bit**|ローカル ディストリビューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブがあるかどうかを示します。|  
 |**job_id**|**binary(16)**|ジョブの識別番号。|  
 |**profile_id**|**int**|ある構成 ID、 **MSagent_profiles**テーブル。|  
@@ -49,14 +49,14 @@ ms.locfileid: "68106441"
 |**sid**|**varbinary(85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
 |**subscriber_security_mode**|**smallint**|次のいずれかの値と、サブスクライバーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**subscriber_login**|**sysname**|サブスクライバーに接続するときに使用されるログイン。|  
-|**@subscriber_password**|**nvarchar(524)**|サブスクライバーに接続するときに使用されるパスワードの暗号化された値。|  
+|**\@subscriber_password**|**nvarchar(524)**|サブスクライバーに接続するときに使用されるパスワードの暗号化された値。|  
 |**publisher_security_mode**|**smallint**|次のいずれかの値と、パブリッシャーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログイン。|  
 |**publisher_password**|**nvarchar(524)**|パブリッシャーに接続するときに使用されるパスワードの暗号化された値。|  
 |**job_step_uid**|**uniqueidentifier**|エージェントが起動される [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブ ステップの一意な ID|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
