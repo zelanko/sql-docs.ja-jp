@@ -10,12 +10,12 @@ ms.assetid: 4a34ba52-e3b3-4e8a-8e55-73e0cd5a97bd
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: c1d5afebb0f0bf69990a0e93bca49d95f7a4c6b5
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9d436ab68f2c0045d1cfa127c251575495f831cd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888290"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493931"
 ---
 # <a name="defining-a-referenced-relationship"></a>参照リレーションシップの定義
   このチュートリアルのこれまでの実習では、主キーから外部キーへのリレーションシップを使用し、メジャー グループのファクト テーブルに直接リンクしているテーブルに基づいて、各キューブ ディメンションを定義しました。 このトピックの実習では、 **Reseller** ディメンションを介し、 **Geography** ディメンションを再販業者販売のファクト テーブルにリンクさせます。このようにリンクを中継するディメンションを、 *参照ディメンション*といいます。 参照ディメンションにより、販売店の売上と地域を関連付けることができます。 詳細については、「 [参照リレーションシップと参照リレーションシップのプロパティの定義](multidimensional-models/define-a-referenced-relationship-and-referenced-relationship-properties.md)」を参照してください。  
@@ -121,7 +121,7 @@ ms.locfileid: "68888290"
      ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-referencedrelationship-5.gif "[リレーションシップの定義] ダイアログボックス")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [ファクト リレーションシップの定義](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)  
+ [ファクト リレーションシップの定義](lesson-5-2-defining-a-fact-relationship.md)  
   
 ## <a name="see-also"></a>関連項目  
  [のディメンション デザイナーでは、[ディメンション構造] ビューの](multidimensional-models-olap-logical-dimension-objects/attribute-relationships.md)   

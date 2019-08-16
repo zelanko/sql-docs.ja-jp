@@ -10,12 +10,12 @@ ms.assetid: 766004b9-6578-4914-a445-6f44843a5fb0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 3d7f0f0964c2602ef4203c0f14ee71af73f65d46
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7889bb81d9bb1f1e3fefa229c0a6a0ee0dc1f1dd
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888065"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493770"
 ---
 # <a name="defining-and-browsing-perspectives"></a>パースペクティブの定義と表示
   パースペクティブを使用すれば、特定の目的に従ってキューブの表示を単純化できます。 既定では、ユーザーはアクセスする権限のあるキューブ内のすべての要素を表示できます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブ全体の表示時に表示されるものが、キューブの既定のパースペクティブです。 キューブ全体を表示すると、操作が非常に複雑になる可能性があります。特に、ビジネス インテリジェンスやレポートの要件に応じてキューブのごく一部分しか操作する必要のないユーザーにとっては複雑すぎます。  
@@ -191,7 +191,7 @@ ms.locfileid: "68888065"
      ![Internet sales および再販業者の売上メジャー](../../2014/tutorials/media/l9-perspectives-4.gif "Internet sales および再販業者の売上メジャー")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [翻訳の定義と表示](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [翻訳の定義と表示](lesson-9-2-defining-and-browsing-translations.md)  
   
 ## <a name="see-also"></a>関連項目  
  [ビジョン](multidimensional-models-olap-logical-cube-objects/perspectives.md)   

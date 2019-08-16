@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 914140df4460741f8441ce899a8e73a420806169
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68887883"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493756"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9: パースペクティブと翻訳の定義
   このレッスンでは、パースペクティブと翻訳を定義する方法について学習します。 パースペクティブを定義すると、キューブの表示上の複雑さを軽減できます。翻訳を定義すると、ユーザーは希望する言語でキューブ メタデータを表示できます。  
@@ -28,7 +28,7 @@ ms.locfileid: "68887883"
  [パースペクティブの定義と表示](multidimensional-models-olap-logical-cube-objects/perspectives.md)  
  この作業では、特定のユーザーまたは用途に合わせてキューブの表示内容を単純化するために、パースペクティブを定義して表示します。  
   
- [翻訳の定義と表示](https://docs.microsoft.com/analysis-services/lesson-9-2-defining-and-browsing-translations)  
+ [翻訳の定義と表示](lesson-9-2-defining-and-browsing-translations.md)  
  この作業では、特定のメタデータの特定言語への翻訳を定義して表示します。  
   
 ## <a name="next-lesson"></a>次のレッスン  

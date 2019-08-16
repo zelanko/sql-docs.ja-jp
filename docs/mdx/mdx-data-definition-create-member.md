@@ -8,12 +8,12 @@ ms.topic: reference
 ms.author: owend
 ms.reviewer: owend
 author: minewiskan
-ms.openlocfilehash: 90db0be2372c3af9d3d079a187e4b3cbd8147566
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 220741cb2103c3428737cdcb9def9463381db900
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892136"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494074"
 ---
 # <a name="mdx-data-definition---create-member"></a>MDX データ操作 - CREATE MEMBER
 
@@ -114,7 +114,7 @@ WHERE ProfitRatio
 |SOLVE_ORDER|計算されるメンバーがもう 1 つの他の計算されるメンバーを参照する場合 (つまり、計算されるメンバーが互いに交差する場合) に、計算されるメンバーが解決される順序です。|  
 |FORMAT_STRING|クライアントアプリケーションがセル値を表示するときに使用できる Office スタイルの書式指定文字列。|  
 |さ|計算されるメンバーがスキーマ行セットに表示されるかどうかを示す値です。 表示される計算されるメンバーは、 [Add演算メンバー](../mdx/addcalculatedmembers-mdx.md)関数を使用してセットに追加できます。 0以外の値は、計算されるメンバーが表示されることを示します。 このプロパティの既定値が*表示*されます。<br /><br /> 表示されない計算されるメンバー (この値がゼロに設定されている場合) は、一般に、より複雑な計算されるメンバーの中間手順として使用されます。 これらの計算されるメンバーは、メジャーなど、他の種類のメンバーによって参照することもできます。|  
-|NON_EMPTY_BEHAVIOR|空のセルを解決するときの計算されるメンバーの動作を決定するために使用されるメジャーまたはセットです。<br /><br /> **警告このプロパティ\*は非推奨とされます。\* \* \*** これを設定しないでください。 詳細については、「 [SQL Server 2016 に含まれている非推奨の Analysis Services 機能](https://docs.microsoft.com/analysis-services/deprecated-analysis-services-features-in-sql-server-2016) 」を参照してください。|  
+|NON_EMPTY_BEHAVIOR|空のセルを解決するときの計算されるメンバーの動作を決定するために使用されるメジャーまたはセットです。<br /><br /> **警告このプロパティ\*は非推奨とされます。\* \* \*** これを設定しないでください。 詳細については、「 [SQL Server 2014 の非推奨の Analysis Services 機能](/sql/analysis-services/deprecated-analysis-services-features-in-sql-server-2014)」を参照してください。|  
 |キャプション|メンバーのキャプションとしてクライアント アプリケーションが使用する文字列です。|  
 |DISPLAY_FOLDER|クライアントアプリケーションがメンバーを表示するために使用する表示フォルダーのパスを識別する文字列。 フォルダー レベルの区切り記号は、クライアント アプリケーションによって定義されます。 によって[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]提供されるツールとクライアントでは\\、円記号 () がレベルの区切り記号です。 定義されたメンバーで複数の表示フォルダーを指定するには、セミコロン (;) を使用してフォルダーを区切ります。|  
 |ASSOCIATED_MEASURE_GROUP|このメンバーが関連付けられているメジャー グループの名前です。|  

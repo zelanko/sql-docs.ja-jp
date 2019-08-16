@@ -10,12 +10,12 @@ ms.prod_service: reporting-services-native, reporting-services-sharepoint
 ms.topic: conceptual
 ms.custom: seodec18
 ms.date: 12/14/2018
-ms.openlocfilehash: a1e1b4dc2f66baf0ef7486a3105573d673a5eb7f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6552e6e2ed1ad168fb5e5ff9c0715227870bcb92
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891454"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493957"
 ---
 # <a name="analysis-and-reporting-with-microsoft-business-intelligence-bi-tools"></a>Microsoft ビジネス インテリジェンス (BI) ツールでの分析とレポート
 
@@ -31,7 +31,7 @@ ms.locfileid: "68891454"
 |**セルフサービス BI**|アナリスト/エンド ユーザー||||||  
 |パブリック データと企業データの検出とアクセスの簡素化||[Power Query](https://go.microsoft.com/fwlink/p/?LinkId=391845)||[Azure データ カタログ](https://azure.microsoft.com/services/data-catalog/)<br /><br />||  
 |強力なデータ モデルの作成||[Power Pivot](https://support.office.com/article/power-pivot-overview-and-learning-f9001958-7901-4caa-ad80-028a6d2432ed?ui=en-US&rs=en-US&ad=US)|||[Power BI Desktop](https://powerbi.microsoft.com/documentation/powerbi-desktop-get-the-desktop/)||  
-|セルフサービスの予測分析の実行||||||[Excel 用データマイニングアドイン](https://docs.microsoft.com/analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins)|  
+|セルフサービスの予測分析の実行||||||[Excel 用データマイニングアドイン](../analysis-services/data-mining-client-for-excel-sql-server-data-mining-add-ins.md)|  
 |データの視覚化と探索||[Power View](https://go.microsoft.com/fwlink/p/?LinkId=391847)<br /><br /> [Power Map](https://go.microsoft.com/fwlink/p/?LinkId=391848)|||||  
 |自然言語クエリを使用した問い合わせの実施|||||[Q & A](https://docs.microsoft.com/power-bi/consumer/end-user-q-and-a)||  
 |モバイル デバイスを使用したレポートのアクセス||||[HTML 5 (< 10 MB ファイルの表示をサポート)](https://go.microsoft.com/fwlink/p/?LinkId=391853)|[HTML 5 (< 250 MB ファイルの表示をサポート)](https://go.microsoft.com/fwlink/p/?LinkId=391854)<br /><br /> [iOS デバイス上の Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-iphone-app-get-started)<br /><br /> [Android デバイス上の Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-android-app-get-started) <br /><br />[Windows 10 用 Power BI モバイル アプリ](https://docs.microsoft.com/power-bi/consumer/mobile/mobile-windows-10-phone-app-get-started)||  

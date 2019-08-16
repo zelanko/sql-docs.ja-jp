@@ -10,12 +10,12 @@ ms.assetid: a74239f4-0f38-43ed-82d3-bf742dbf8a54
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f835defb27410c0c812ac5acf5793cf15accbe60
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 266833abbfa959e39a171eb498701c75c7eb66c8
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888459"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493964"
 ---
 # <a name="lesson-10-defining-administrative-roles"></a>レッスン 10: 管理ロールの定義
   このレッスンでは、管理タスク用のセキュリティ ロールを定義する方法について学習します。  
@@ -25,7 +25,7 @@ ms.locfileid: "68888459"
   
  このレッスンの内容は次のとおりです。  
   
- [データベースの処理権限の許可](https://docs.microsoft.com/analysis-services/lesson-10-granting-process-database-permissions)  
+ [データベースの処理権限の許可](lesson-10-granting-process-database-permissions.md)  
  この作業では、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] データベースを処理する権限を持つセキュリティ ロールを定義します。次に、そのセキュリティ ロールをテストします。  
   
 ## <a name="see-also"></a>関連項目  

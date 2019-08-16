@@ -10,12 +10,12 @@ ms.assetid: 6401fd92-f43b-450e-8298-12db644c25bc
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 48d96a731724717a398c2170d642c419a1f3e9da
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888594"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493971"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>PowerPivot の構成とソリューションの配置 (SharePoint 2013)
   このトピックでは、PowerPivot ギャラリー、定期データ更新、管理ダッシュボード、データ プロバイダーなどの [!INCLUDE[SPS2013](../../../includes/sps2013-md.md)] の PowerPivot 機能への中間層機能強化の展開および構成について説明します。 **PowerPivot for SharePoint 2013 の構成** ツールを実行して、以下を完了します。  
@@ -68,7 +68,7 @@ ms.locfileid: "68888594"
   
     5.  左側のウィンドウで **[サイト コレクションの作成]** をクリックします。 **[サイトの URL]** をメモしておくと、この後の手順で参照できます。 SharePoint サーバーがまだ構成されていない場合、構成ウィザードでは Web アプリケーションとサイト コレクション URL のルートは既定で `http://[ServerName]` になります。 既定値を変更するには、左側のウィンドウの次のページを確認します。**既定の web アプリケーションの作成**と**web アプリケーションソリューションの配置**  
   
-5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 それぞれの詳細については、このトピックの「 [PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;を構成または修復](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010)して、サーバーを構成するために使用する入力値」を参照してください。  
+5.  必要に応じて、各アクションを完了するために使用された残りの入力値を確認します。 左側のウィンドウで各アクションをクリックして、アクションの詳細を確認します。 それぞれの詳細については、このトピックの「 [PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;を構成または修復](../../configure-repair-powerpivot-sharepoint-2010.md)して、サーバーを構成するために使用する入力値」を参照してください。  
   
 6.  必要に応じて、今回は処理しないすべてのアクションを削除します。 たとえば、Secure Store Service を後で構成する場合は、 **[Secure Store Service の構成]** をクリックし、 **[この操作をタスク一覧に含めます]** チェック ボックスをオフにします。  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68888594"
   
 8.  **[実行]** をクリックして、タスクの一覧にあるすべてのアクションを処理します。 **[実行]** は、アクションの検証後に有効になります。 **[実行]** が有効になっていない場合は、まず **[検証]** をクリックしてください。  
   
- 詳細については、「 [PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;の構成または修復](https://docs.microsoft.com/analysis-services/configure-repair-powerpivot-sharepoint-2010)」を参照してください。  
+ 詳細については、「 [PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツール&#41;の構成または修復](../../configure-repair-powerpivot-sharepoint-2010.md)」を参照してください。  
   
 ##  <a name="bkmk_verify_powerpivot"></a>PowerPivot の構成の確認  
  **サービス**  
