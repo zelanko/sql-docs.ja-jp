@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: 5ca2cd85087cf26be925e8899dfc3a1957e284ba
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68032280"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810981"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server 用に Red Hat Enterprise Linux 共有ディスク クラスターを構成する
 
@@ -61,7 +61,7 @@ IP ではなく、文字列サーバー名をポイントする接続文字列�
    sudo systemctl disable mssql-server
    ```
 > [!NOTE] 
-> セットアップ時に、SQL Server インスタンスのサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は常に mssql というローカル アカウントとして実行されます。 ローカル アカウントであるため、ID はノード間で共有されません。 したがって、プライマリ ノードから各セカンダリ ノードに暗号化キーをコピーして、サーバー マスター キーの暗号化を解除するために各ローカル mssql アカウントがそれにアクセスできるようにする必要があります。 
+> セットアップ時に、SQL Server インスタンスのサーバー マスター キーが生成され、`/var/opt/mssql/secrets/machine-key` に配置されます。 Linux では、SQL Server は常に mssql というローカル アカウントとして実行されます。 ローカル アカウントであるため、その ID はノード間で共有されません。 したがって、プライマリ ノードから各セカンダリ ノードに暗号化キーをコピーして、サーバー マスター キーの暗号化を解除するために各ローカル mssql アカウントがそれにアクセスできるようにする必要があります。 
 
 1. プライマリ ノードで、Pacemaker の SQL Server ログインを作成し、`sp_server_diagnostics` を実行するためにログイン権限を付与します。 Pacemaker は、このアカウントを使用して、SQL Server が実行されているノードを確認します。 
 
@@ -84,13 +84,13 @@ IP ではなく、文字列サーバー名をポイントする接続文字列�
 
 1. クラスター ノードごとにホスト ファイルを構成します。 ホスト ファイルには、すべてのクラスター ノードの IP アドレスと名前が含まれている必要があります。 
 
-    各ノードの IP アドレスを確認します。 次のスクリプトは、現在のノードの IP アドレスを示しています。 
+    各ノードの IP アドレスを確認します。 次のスクリプトを実行すると、現在のノードの IP アドレスが表示されます。 
 
    ```bash
    sudo ip addr show
    ```
 
-   各ノードにコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 コンピューター名は `/etc/hosts` に追加することで設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
+   各ノードのコンピューター名を設定します。 各ノードに 15 文字以下の一意の名前を指定します。 コンピューター名は `/etc/hosts` に追加することで設定します。 次のスクリプトを使うと、`vi` で `/etc/hosts` を編集できます。 
 
    ```bash
    sudo vi /etc/hosts
@@ -243,7 +243,7 @@ NFS の使用の詳細については、次のリソースを参照してくだ�
    $ exit
    ``` 
  
-1.  SQL Server が新しいファイルパスで正常に開始されることを確認します。 これを各ノードで行います。 この時点では、一度に 1 つのノードだけで SQL Server を実行する必要があります。 両方が同時にデータ ファイルにアクセスしようとするため、両方とも同時に実行することはできません (両方のノードで誤って SQL Server が開始されるのを防ぐために、ファイル システム クラスターのリソースを使用して、共有が異なるノードによって 2 回マウントされていないようにしてください)。 次のコマンドは、SQL Server を起動し、状態を確認してから、SQL Server を停止します。
+1.  SQL Server が新しいファイルパスで正常に開始されることを確認します。 これを各ノードで行います。 この時点では、一度に 1 つのノードだけで SQL Server を実行する必要があります。 両方が同時にデータ ファイルにアクセスしようとするため、両方とも同時に実行することはできません (両方のノードで誤って SQL Server が開始されるのを防ぐために、ファイル システム クラスターのリソースを使用して、共有が異なるノードによって 2 回マウントされていないようにしてください)。 次のコマンドでは、SQL Server が起動され、状態が確認されてから、SQL Server が停止されます。
  
    ```bash
    sudo systemctl start mssql-server
@@ -251,7 +251,7 @@ NFS の使用の詳細については、次のリソースを参照してくだ�
    sudo systemctl stop mssql-server
    ```
  
-この時点で、SQL Server の両方のインスタンスが、共有ストレージ上のデータベース ファイルを使用して実行されるように構成されています。 次のステップで Pacemaker の SQL Server を構成します。 
+この時点で、SQL Server の両方のインスタンスが、共有ストレージ上のデータベース ファイルを使用して実行されるように構成されています。 次のステップでは、Pacemaker 用に SQL Server を構成します。 
 
 ## <a name="install-and-configure-pacemaker-on-each-cluster-node"></a>各クラスター ノードに Pacemaker をインストールして構成する
 
@@ -388,7 +388,7 @@ NFS の使用の詳細については、次のリソースを参照してくだ�
 
 ## <a name="additional-resources"></a>その他のリソース
 
-* Pacemaker の [Cluster from Scratch](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf) ガイド
+* Pacemaker の「[一からのクラスター](https://clusterlabs.org/doc/Cluster_from_Scratch.pdf)」ガイド
 
 ## <a name="next-steps"></a>次の手順
 

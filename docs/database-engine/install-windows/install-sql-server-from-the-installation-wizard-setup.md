@@ -1,7 +1,7 @@
 ---
 title: SQL Server 2016 をインストール ウィザードからインストールする (セットアップ) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: install
@@ -14,12 +14,12 @@ ms.assetid: 6ad23de1-2bab-4933-9122-c09f5565028d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 9608e61108ad6f13c14816a35f06ca578e55d192
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 86b63bd2ccdb3cb4d8f2c73c2298cce1803e5ee9
+ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419272"
+ms.lasthandoff: 08/02/2019
+ms.locfileid: "68742915"
 ---
 # <a name="install-sql-server-from-the-installation-wizard-setup"></a>SQL Server をインストール ウィザードからインストールする (セットアップ)
 
@@ -280,9 +280,9 @@ SQL Server 2016 および 2017 の前提条件としてインストールされ�
   
      インストールの残りの部分のワークフローは、インストールするように指定した機能に応じて異なります。 選択によっては、表示されないページもあります。 
 
-1. Polybase 機能をインストールすることを選択すると、 **[インスタンスの構成]** ページの後に表示される SQL Server の設定に **[PolyBase の構成]** ページが追加されます。 PolyBase には、Oracle JRE 7 更新プログラム 51 (少なくとも) が必要です。これがまだインストールされていない場合、SQL Server 2019 以降では、SQL Server と共に Azul Zulu Open JRE をインストールすることができます。 **[PolyBase の構成]** ページでは、SQL Server をスタンドアロンの Polybase 対応インスタンスとして使用するか、それともこの SQL Server を PolyBase スケールアウト グループの一部として使用するかを選択できます。 スケールアウト グループを使用することを選択した場合は、最大 6 つ以上のポートのポート範囲を指定する必要があります。  **[Java のインストール場所]** ページでは、SQL Server 2019 インストールに含まれる Azul Zulu Open JRE をインストールすることも、コンピューターに既にインストールされている別の JRE または JDK の場所を指定することも選択できます。
+1. SQL Server 2019 以降では、Polybase の機能をインストールする前に、コンピューターに (少なくとも) Oracle JRE 7 Update 51 を事前にインストールしておく必要がなくなりました。 Polybase 機能をインストールすることを選択すると、 **[インスタンスの構成]** ページの後に表示される SQL Server の設定に **[Java のインストール場所]** ページが追加されます。 [Java のインストール場所] ページでは、SQL Server 2019 インストールに含まれる Azul Zulu Open JRE をインストールすることも、コンピューターに既にインストールされている別の JRE または JDK の場所を指定することも選択できます。
 
-1. SQL Server 2019 以降、Machine Learning Services および言語拡張の一覧に、R および Python と共に Java が追加されました。 Java 機能をインストールすることを選択すると、SQL Server 設定ダイアログ ウィンドウに **[Java のインストール場所]** ページが追加されます。このページは、 **[インスタンスの構成]** ページの後に表示されます。 **[Java のインストール場所]** ページでは、SQL Server 2019 インストールに含まれる Azul Zulu Open JRE をインストールすることも、コンピューターに既にインストールされている別の JRE または JDK の場所を指定することも選択できます。
+1. SQL Server 2019 以降では、言語拡張機能と共に Java が追加されています。 Java 機能をインストールすることを選択すると、SQL Server 設定ダイアログ ウィンドウに **[Java のインストール場所]** ページが追加されます。このページは、 **[インスタンスの構成]** ページの後に表示されます。 **[Java のインストール場所]** ページでは、SQL Server 2019 インストールに含まれる Zulu Open JRE をインストールすることも、コンピューターに既にインストールされている別の JRE または JDK の場所を指定することも選択できます。
 
 1. **[サーバーの構成] - [サービス アカウント]** ページを使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスのログイン アカウントを指定します。 このページで構成する実際のサービスは、インストール時に選択した機能によって異なります。 構成設定の詳細については、「[インストール ウィザードのヘルプ](../../sql-server/install/instance-configuration.md#serverconfig)」を参照してください。
   

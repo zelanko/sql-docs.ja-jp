@@ -1,22 +1,28 @@
 ---
-title: SQL Server 2019 の相違点
-description: SQL Server 2019 preview リリースの R および Python SQL Server machine learning extensions の新機能について説明します。
+title: Windows の分離の変更
+description: この記事では、Windows 上の SQL Server 2019 の Machine Learning Services での分離メカニズムに対する変更について説明します。 これらの変更は、SQLRUserGroup、ファイアウォール規則、ファイルのアクセス許可、および暗黙の認証に影響します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 05/22/2019
+ms.date: 08/15/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 218ae9bd0685370f38942592fd32da75272fbcac
-ms.sourcegitcommit: 9062c5e97c4e4af0bbe5be6637cc3872cd1b2320
+ms.openlocfilehash: 4fae460e78682263c604d8e1e86ca40b7b62df97
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68470305"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531043"
 ---
-# <a name="differences-in-sql-server-machine-learning-services-installation-in-sql-server-2019"></a>SQL Server 2019 での SQL Server Machine Learning Services インストールの相違点  
+# <a name="sql-server-2019-on-windows-isolation-changes-for-machine-learning-services"></a>Windows の SQL Server 2019:Machine Learning Services の分離の変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+
+この記事では、Windows 上の SQL Server 2019 の Machine Learning Services での分離メカニズムに対する変更について説明します。 これらの変更は、 **SQLRUserGroup**、ファイアウォール規則、ファイルのアクセス許可、および暗黙の認証に影響します。
+
+詳細については、「 [Windows で SQL Server Machine Learning Services](sql-machine-learning-services-windows-install.md)をインストールする方法」を参照してください。
+
+## <a name="changes-to-isolation-mechanism"></a>分離メカニズムの変更
 
 Windows では、SQL Server 2019 セットアップにより、外部プロセスの分離メカニズムが変更されます。 この変更により、ローカルワーカーアカウントは、Windows で実行されているクライアントアプリケーションの分離テクノロジである[Appcontainers](https://docs.microsoft.com/windows/desktop/secauthz/appcontainer-isolation)に置き換えられます。 
 
@@ -63,5 +69,4 @@ SQL Server セットアップの一部として、現在の既定の**R_SERVICES
 ## <a name="see-also"></a>関連項目
 
 + [Windows に SQL Server Machine Learning Services をインストールする](sql-machine-learning-services-windows-install.md)
-
-+ [Linux に SQL Server 2019 Machine Learning Services をインストールする](../../linux/sql-server-linux-setup-machine-learning.md)
++ [Linux に SQL Server Machine Learning Services をインストールする](../../linux/sql-server-linux-setup-machine-learning.md)

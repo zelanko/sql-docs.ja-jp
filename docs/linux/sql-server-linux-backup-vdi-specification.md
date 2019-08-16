@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 0250ba2b-8cdd-450e-9109-bf74f70e1247
-ms.openlocfilehash: 483173f18bc4a71a482a0e8bc490e7e6684affdb
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dafa8f1c0811771cbbc684b24d2c92e989dff5
+ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67996431"
+ms.lasthandoff: 08/06/2019
+ms.locfileid: "68810969"
 ---
 # <a name="sql-server-on-linux-vdi-client-sdk-specification"></a>SQL Server on Linux の VDI クライアント SDK の仕様
 
@@ -29,7 +29,7 @@ ms.locfileid: "67996431"
 - SQL Server on Linux では名前付きインスタンスがサポートされていないため、インスタンス名への参照は削除されました。 
 - 共有ライブラリは、/opt/mssql/lib/libsqlvdi.so にインストールされている libsqlvdi.so に実装されます
 
-このドキュメントは、Windows VDI の仕様について説明している **vbackup.chm** の内容を補うものです。 [Windows VDI の仕様](https://www.microsoft.com/download/details.aspx?id=17282)をダウンロードしてください。
+このドキュメントは、Windows 上の MS SQL Server の VDI の仕様について説明している **vbackup.chm** の内容を補うものです。 [Windows 上の SQL VDI の仕様](https://www.microsoft.com/download/details.aspx?id=17282)をダウンロードしてください。
 
 また、[SQL Server サンプルの GitHub リポジトリ](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sqlvdi-linux)で、サンプルの VDI バックアップ ソリューションを参照してください。
 

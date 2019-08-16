@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: e37742d4-541c-4d43-9ec7-a5f9b2c0e5d1
-ms.openlocfilehash: 1d6a68ea3bc9954cbab62cee7579db6905a4632f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4da9f5118b77fc389e08ddb3c2b351aaaa0fb3b2
+ms.sourcegitcommit: bcc3b2c7474297aba17b7a63b17c103febdd0af9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67967516"
+ms.lasthandoff: 08/05/2019
+ms.locfileid: "68794995"
 ---
 # <a name="always-on-availability-groups-on-linux"></a>Linux 上の AlwaysOn 可用性グループ
 
@@ -24,8 +24,8 @@ ms.locfileid: "67967516"
 
 全体的に見ると、Linux 上の [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の可用性グループは、WSFC ベースの実装で使用する場合と同様に機能します。 つまり、制限事項や機能は基本的に同じですが、いくつかの例外があります。 主な違いは次のとおりです。
 
--   [!INCLUDE[sssql17-md](../includes/sssql17-md.md)] では、Microsoft 分散トランザクション コーディネーター (DTC) は Linux 下でサポートされていません。 アプリケーションで分散トランザクションを使用する必要があり、AG が必要な場合は、Windows 上で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をデプロイしてください。
--   Linux ベースのデプロイでは、WSFC ではなく Pacemaker を使用します。
+-   SQL Server 2017 CU16 以降では、Linux で Microsoft 分散トランザクション コーディネーター (DTC) がサポートされています。 ただし、Linux 上の可用性グループでは DTC はまだサポートされていません。 アプリケーションで分散トランザクションを使用する必要があり、AG が必要な場合は、Windows 上で [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をデプロイしてください。
+-   高可用性を必要とする Linux ベースのデプロイでは、クラスタリングに WSFC ではなく Pacemaker が使われます。
 -   Windows 上の AG のほとんどの構成 (ワークグループクラスターのシナリオを除く) とは異なり、Pacemaker では Active Directory Domain Services (AD DS) が必要とされることはありません。
 -   1 つのノードから別のノードに AG をフェールオーバーする方法は、Linux と Windows で異なります。
 -   特定の設定 (`required_synchronized_secondaries_to_commit` など) は、Linux 上の Pacemaker を使用してのみ変更できます。一方、WSFC ベースのインストールでは Transact-SQL を使用します。

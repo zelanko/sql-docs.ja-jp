@@ -13,12 +13,12 @@ ms.assetid: 7638f46c-9e66-48e6-9a9b-425e0b788311
 author: MightyPen
 ms.author: genemi
 manager: craigg
-ms.openlocfilehash: df0b873936d6738e79e656fa0ac5e69e799efe3e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: fb5dec821d69066ce0a24c4e104f5f2be3ef905a
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890802"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530950"
 ---
 # <a name="developer39s-guide-database-engine"></a>開発&#39;者ガイド (データベースエンジン)
   [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には、データベース アプリケーションの開発、管理、および制御のための豊富なツールが用意されています。  
@@ -52,7 +52,7 @@ ms.locfileid: "68890802"
  アプリケーションに例外メッセージ ボックス プログラム インターフェイスを使用して、メッセージ エクスペリエンスを高い柔軟性で制御し、ユーザーが後で参照できるようにエラー メッセージを保存したり、メッセージのヘルプを表示したりできるようにする方法を説明します。  
   
 ## <a name="see-also"></a>関連項目  
- [Data Mining Programming (データ マイニングのプログラミング)](https://docs.microsoft.com/analysis-services/dev-guide/data-mining-programming)   
+ [Data Mining Programming (データ マイニングのプログラミング)](../analysis-services/dev-guide/data-mining-programming.md)   
  [開発者ガイド&#40;Analysis Services&#41;](https://docs.microsoft.com/analysis-services/analysis-services-developer-documentation)   
  [開発者ガイド&#40;Integration Services&#41;](../integration-services/integration-services-developer-documentation.md)   
  [開発者ガイド&#40;のレプリケーション&#41;](replication/concepts/replication-developer-documentation.md)   

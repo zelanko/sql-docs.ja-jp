@@ -1,7 +1,7 @@
 ---
 title: コマンド プロンプトからの SQL Server のインストール | Microsoft Docs
 ms.custom: ''
-ms.date: 07/24/2019
+ms.date: 07/26/2019
 ms.prod: sql
 ms.technology: install
 ms.reviewer: ''
@@ -84,12 +84,12 @@ ms.assetid: df40c888-691c-4962-a420-78a57852364d
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: db2bb1f0a4c36b84ac4d4200c0651b407fdf144a
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 94169ec75f542c27c47bc9f050b2ac36736d13de
+ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419325"
+ms.lasthandoff: 08/09/2019
+ms.locfileid: "68893014"
 ---
 # <a name="install-sql-server-from-the-command-prompt"></a>コマンド プロンプトからの SQL Server のインストール
 
@@ -227,7 +227,7 @@ ms.locfileid: "68419325"
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASCONFIGDIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] 構成ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Config`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASDATADIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] データ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Data`|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASLOGDIR<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] ログ ファイルのディレクトリを指定します。 既定値:<br /><br /> 64 ビットの WOW モード: `%Program Files(x86)%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`<br /><br /> 他のすべてのインストール: `%Program Files%\Microsoft SQL Server\<INSTANCEDIR>\<ASInstanceID>\OLAP\Log`|  
-|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー モードを指定します。 有効な値は、MULTIDIMENSIONAL、POWERPIVOT、または TABULAR です。 **ASSERVERMODE** では、大文字と小文字が区別されます。 値はすべて大文字で指定する必要があります。 有効な値の詳細については、「 [Analysis Services のインストール](../../analysis-services/instances/install-windows/install-analysis-services.md)」をご覧ください。|  
+|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSERVERMODE<br /><br /> **省略可**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスのサーバー モードを指定します。 有効な値は、MULTIDIMENSIONAL、POWERPIVOT、または TABULAR です。 **ASSERVERMODE** では、大文字と小文字が区別されます。 値はすべて大文字で指定する必要があります。 有効な値の詳細については、「 [Analysis Services のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services)」をご覧ください。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCACCOUNT<br /><br /> **必須**|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスのアカウントを指定します。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCPASSWORD<br /><br /> [必須](#Accounts)|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] サービスのパスワードを指定します。|  
 |[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]|/ASSVCSTARTUPTYPE<br /><br /> **省略可**|[サービスの](#Accounts) スタートアップ [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] モードを指定します。 サポートされる値:<br /><br /> **自動**<br /><br /> **無効**<br /><br /> **手動**|  
@@ -279,7 +279,7 @@ ms.locfileid: "68419325"
 |[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]|/RSSVCStartupType<br /><br /> **省略可**|[の](#Accounts) スタートアップ [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]モードを指定します。|  
 |Python/Machine Learning Services (データベース内)|/MPYCACHEDIRECTORY|将来の使用のために予約されています。 インターネットに接続されていないコンピューター上にインストール用の Python .CAB ファイルを格納するには %TEMP% を使用します。 |  
 |R/Machine Learning Services (データベース内)|/MRCACHEDIRECTORY|このパラメーターを使用して、SQL Server 2017 Machine Learning Services または Machine Learning Server (スタンドアロン) で Microsoft R Open、SQL Server 2016 R Services、SQL Server 2016 R Server (スタンドアロン)、または R の機能をサポートするためのキャッシュ ディレクトリを指定します。 通常、この設定を使用するのは、[インターネット アクセスを使用していないコンピューターでコマンド ラインから](https://docs.microsoft.com/sql/advanced-analytics/install/sql-ml-component-install-without-internet-access) R コンポーネントをインストールする場合です。|  
-|Java/Machine Learning Services (データベース内)| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "パス"<br /><br /> **省略可** | SQL Server 2019 以降、Machine Learning Services と共に Java をインストールすることを指定します。 /SQLJAVADIR パラメーターなしで /SQL_INST_JAVA を入力した場合は、インストール メディアで提供されている Zulu JRE をインストールすることが想定されます。 <br /><br /> /SQLJAVADIR のパスを指定すると、既にインストールされている JRE または JDK を使用することができます。 |
+|Java/言語拡張機能| /SQL_INST_JAVA,<br /> /SQLJAVADIR = "パス"<br /><br /> **省略可** | SQL Server 2019 以降、言語拡張機能と共に Java をインストールすることを指定します。 /SQLJAVADIR パラメーターなしで /SQL_INST_JAVA を指定した場合は、インストール メディアで提供されている Zulu Open JRE をインストールすることが想定されます。 <br /><br /> /SQLJAVADIR のパスを指定すると、既にインストールされている JRE または JDK を使用することができます。 |
   
 ###### <a name="sample-syntax"></a>サンプル構文:  
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、レプリケーション、フルテキスト検索の各コンポーネントが配置された新しいスタンドアロン インスタンスをインストールし、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]のファイルの瞬時初期化を有効にするには、次の構文を使用します。 

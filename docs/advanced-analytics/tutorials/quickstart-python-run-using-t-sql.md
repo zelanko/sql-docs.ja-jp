@@ -1,24 +1,24 @@
 ---
-title: T-sql での "Hello World" 基本的な Python コード実行のクイックスタート
-description: SQL Server での Python スクリプトのクイックスタート。 Hello world の演習で sp_execute_external_script システムストアドプロシージャを使用した Python スクリプトの呼び出しの基本について説明します。
+title: 'クイック スタート: Python "Hello World"'
+description: このクイックスタートでは、SQL Server Machine Learning Services で "Hello World" Python スクリプトを実行して、主要な概念について学習します。 T-sql sp_execute_external_script システムストアドプロシージャを使用します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/10/2019
+ms.date: 08/15/2019
 ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a170bd2ee3e893a83ebb9d3201ee117321e7562b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 1149c7888bc783c9d4f658eed5e8405214d6ffc4
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714823"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530966"
 ---
-# <a name="quickstart-hello-world-python-script-in-sql-server"></a>クイック スタート: SQL Server の "Hello world" Python スクリプト 
+# <a name="quickstart-run-a-hello-world-python-script-on-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services で "Hello world" Python スクリプトを実行する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、sp_execute_external_script システムストアドプロシージャの概要と共に、"Hello World" Python スクリプトのを実行して、主要な概念を学習します。 
+このクイックスタートでは、SQL Server Machine Learning Services で "Hello World" Python スクリプトを実行して、主要な概念について学習します。 T-sql **sp_execute_external_script**システムストアドプロシージャを使用します。
 
 ## <a name="prerequisites"></a>前提条件
 

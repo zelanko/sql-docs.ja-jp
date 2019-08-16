@@ -1,29 +1,29 @@
 ---
-title: SQL Server 2017 Python チュートリアルの概要
-description: SQL Server 2017 でのデータベース内分析に関する Python チュートリアルの概要を説明します。
+title: Python のチュートリアル
+description: この記事では、SQL Server Machine Learning Services の Python チュートリアルについて説明します。 Python スクリプトの実行方法について説明します。 Python モデルをビルドし、トレーニングして、SQL Server に配置します。 リモートとローカルのコンピューティングコンテキストについて説明します。 データサイエンスと機械学習のための Microsoft Python パッケージについて説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 08/16/2019
 ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 65dd2197d9fb079da116908871d931ad19370cf5
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: ba0b03f658f0121b04d5a2002cd2f28fbd522a8d
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714768"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530965"
 ---
-# <a name="sql-server-2017-python-tutorials"></a>SQL Server 2017 Python チュートリアル
+# <a name="python-tutorials-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の Python チュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、 [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)でのデータベース内分析の Python チュートリアルについて説明します。 
 
-+ ストアドプロシージャで Python コードをラップして実行する方法について説明します。
-+ Python ベースのモデルをシリアル化し、SQL Server データベースに保存します。
-+ リモートとローカルの計算コンテキスト、およびそれらを使用するタイミングについて説明します。
-+ データサイエンスと機械学習のタスクについては、Microsoft Python モジュールを参照してください。
++ Python スクリプトの実行方法について説明します。
++ Python モデルをビルドし、トレーニングして、SQL Server に配置します。
++ リモートとローカルのコンピューティングコンテキストについて説明します。
++ データサイエンスと機械学習のための Microsoft Python パッケージについて説明します。
 
 <a name="bkmk_pythontutorials"></a>
 
@@ -35,17 +35,6 @@ ms.locfileid: "68714768"
 | [クイック スタート:ストアドプロシージャを使用した Python モデルの作成、トレーニング、および使用 SQL Server](quickstart-python-train-score-in-tsql.md) | ストアドプロシージャへの Python コードの埋め込み、入力、およびストアドプロシージャの実行のしくみについて説明します。 |
 | [チュートリアル: Revoscalepy を使用してモデルを作成する](use-python-revoscalepy-to-create-model.md) | SQL Server のコンピューティングコンテキストを使用してリモート Python ターミナルからコードを実行する方法を示します。 Python のツールと環境についてよく理解している必要があります。 新しい**revoscalepy**ライブラリから**rxLinMod**を使用してモデルを作成するサンプルコードが用意されています。 |
 | [チュートリアル: SQL 開発者向けのデータベース内 Python analytics について学習する](sqldev-in-database-python-for-sql-developers.md) | このエンドツーエンドチュートリアルでは、T-sql ストアドプロシージャを使用して完全な Python ソリューションを構築するプロセスについて説明します。 すべての Python コードが含まれています。|
-
-<a name ="bkmk_samples"></a>
-
-## <a name="code-samples"></a>コード サンプル
-
-SQL Server 開発チームが提供するこれらのサンプルとデモは、実際のアプリケーションで埋め込み分析を使用する方法を示しています。
-
-| リンク | 説明 |
-|------|-------------|
-| [Python と SQL Server を使用した予測モデルの作成](https://microsoft.github.io/sql-ml-tutorials/python/rentalprediction/) | Ski レンタル企業が機械学習を使用して将来のレンタルを予測する方法について説明します。これにより、ビジネスプランやスタッフが将来の需要に対応できるようになります。 |
-| [Python と SQL Server を使用して顧客のクラスタリングを実行する](https://microsoft.github.io/sql-ml-tutorials/python/customerclustering/) | Kmeans アルゴリズムを使用して顧客のクラスタリングを実行する方法について説明します。 |
 
 ## <a name="see-also"></a>関連項目
 

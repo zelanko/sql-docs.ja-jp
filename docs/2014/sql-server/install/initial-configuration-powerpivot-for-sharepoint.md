@@ -10,12 +10,12 @@ ms.assetid: 3a0ec2eb-017a-40db-b8d4-8aa8f4cdc146
 author: markingmyname
 ms.author: maghan
 manager: craigg
-ms.openlocfilehash: 6ba51a979572bb91b840f41483081464e8cd044e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: e331f25811255569261fb30c2869b428843ebfc5
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891082"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530908"
 ---
 # <a name="initial-configuration-powerpivot-for-sharepoint"></a>初期構成 (PowerPivot for SharePoint)
   このトピックの手順を使用して、PowerPivot for SharePoint の最初のインストールを構成します。 最初のインストールを構成する最も簡単な方法は、PowerPivot 構成ツールを使用することです。 これによって、以下に説明したすべての構成手順が自動で行われます。  
@@ -195,7 +195,7 @@ ms.locfileid: "68891082"
 ##### <a name="part-3-configure-the-unattended-powerpivot-data-refresh-account"></a>第 3 部:PowerPivot 自動データ更新アカウントの構成  
  データ更新時の外部データ アクセスのために、PowerPivot データ アクセスに対する自動データ更新アカウントの作成が必要になることがよくあります。 たとえば、Kerberos が有効になっていない場合、外部データ ソースに接続するには、PowerPivot サービスで使用できる自動アカウントを作成する必要があります。  
   
- データ更新で使用される自動 PowerPivot データ更新アカウントまたはその他の保存された資格情報を作成する方法については、「 [Powerpivot 自動データ更新&#40;アカウントの構成&#41; ](https://docs.microsoft.com/analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint) 」を参照してください PowerPivot for SharePointまた、 [PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;用に保存された資格情報を構成](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)します。  
+ データ更新で使用される自動 PowerPivot データ更新アカウントまたはその他の保存された資格情報を作成する方法については、「 [Powerpivot 自動データ更新&#40;アカウントの構成&#41; ](../../analysis-services/configure-unattended-data-refresh-account-powerpivot-sharepoint.md) 」を参照してください PowerPivot for SharePointまた、 [PowerPivot データ更新&#40;PowerPivot for SharePoint&#41;用に保存された資格情報を構成](../../../2014/analysis-services/configure-stored-credentials-data-refresh-powerpivot-sharepoint.md)します。  
   
 ##  <a name="Usage"></a> 手順 6:使用状況データ収集の有効化  
  PowerPivot for SharePoint は、SharePoint の使用状況データ収集インフラストラクチャを使用して、PowerPivot の使用状況に関する情報をファーム全体で収集します。 使用状況データは常に SharePoint のインストールに含まれますが、使用する前に有効にする必要がある場合があります。 手順については、「 [PowerPivot for SharePoint の&#40;使用状況データ収集の構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/configure-usage-data-collection-for-power-pivot-for-sharepoint)」を参照してください。  

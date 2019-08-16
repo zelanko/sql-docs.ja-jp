@@ -10,12 +10,12 @@ ms.assetid: fc475b25-cbb2-408a-901f-9299299538c5
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: f5fed7f199f80f59c1983ec5f17a4f922c836333
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 0be986ee50599c6e95222bca2eae217b088e2de3
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888629"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530821"
 ---
 # <a name="install-sample-data-and-projects-for-the-analysis-services-multidimensional-modeling-tutorial"></a>Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール
   このトピックに示す手順とリンクを使用して、Analysis Services チュートリアルで使用するすべてのデータとプロジェクト ファイルをインストールします。  
@@ -145,7 +145,7 @@ ms.locfileid: "68888629"
 8.  [SQL Server Management Studio] を起動します。 SQL Server Management Studio で、Analysis Services に接続します。 **Analysis Services Tutorial** という名前のデータベースがサーバーで実行されていることを確認します。  
   
 ## <a name="next-step"></a>次の手順  
- 以上の操作で、チュートリアルを使用する準備が整いました。 開始方法の詳細については、「[多次元モデリング (Adventure Works チュートリアル)](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)」を参照してください。  
+ 以上の操作で、チュートリアルを使用する準備が整いました。 開始方法の詳細については、「[多次元モデリング (Adventure Works チュートリアル)](multidimensional-modeling-adventure-works-tutorial.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [インストールウィザード&#40;から SQL Server 2014 をインストールする (セットアップ)&#41;](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)   

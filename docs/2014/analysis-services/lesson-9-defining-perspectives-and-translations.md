@@ -10,12 +10,12 @@ ms.assetid: a040fa65-d5d6-4156-9f2c-307a4d18e1a6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 779d63264280569465ae2c0815caf15ed9b9f8b2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: d7e9edcba3a9645f1b327e698af2336b838915bb
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493756"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530832"
 ---
 # <a name="lesson-9-defining-perspectives-and-translations"></a>レッスン 9: パースペクティブと翻訳の定義
   このレッスンでは、パースペクティブと翻訳を定義する方法について学習します。 パースペクティブを定義すると、キューブの表示上の複雑さを軽減できます。翻訳を定義すると、ユーザーは希望する言語でキューブ メタデータを表示できます。  
@@ -35,7 +35,7 @@ ms.locfileid: "69493756"
  [レッスン 10:管理ロールの定義](lesson-10-defining-administrative-roles.md)  
   
 ## <a name="see-also"></a>関連項目  
- [Analysis Services チュートリアルのシナリオ](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
+ [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
  [多次元モデリング&#40;の Adventure works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [ビジョン](https://docs.microsoft.com/analysis-services/multidimensional-models-olap-logical-cube-objects/perspectives)   
  [多次元モデルのパースペクティブ](multidimensional-models/perspectives-in-multidimensional-models.md)   

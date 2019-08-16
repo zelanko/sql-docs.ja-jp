@@ -10,12 +10,12 @@ ms.assetid: e0a1e354-e879-4eb8-bb2b-6c3809e32cb6
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 1d9b41a37a48e5ff8456eb353e45b894d3bb0757
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 8f61e0e04c5ca96da69098b58c38b1ef73eba206
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69493847"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530840"
 ---
 # <a name="lesson-6-defining-calculations"></a>レッスン 6: 計算の定義
   このレッスンでは、多次元式 (MDX) の式またはスクリプトである計算を定義する方法について学習します。 計算を使用すると、計算されるメンバーや名前付きセットを定義できます。また、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] キューブの機能を拡張するさまざまなスクリプト コマンドを実行できます。 たとえば、サブキューブを定義し、計算をサブキューブ内のセルに割り当てるスクリプト コマンドを実行できます。  
@@ -55,8 +55,8 @@ ms.locfileid: "69493847"
  [レッスン 7: 主要業績評価指標&#40;kpi の定義&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
   
 ## <a name="see-also"></a>関連項目  
- [Analysis Services チュートリアルのシナリオ](https://docs.microsoft.com/analysis-services/analysis-services-tutorial-scenario)   
- [多次元モデリング&#40;の Adventure works チュートリアル&#41;](https://docs.microsoft.com/analysis-services/multidimensional-modeling-adventure-works-tutorial)   
+ [Analysis Services チュートリアルのシナリオ](analysis-services-tutorial-scenario.md)   
+ [多次元モデリング&#40;の Adventure works チュートリアル&#41;](multidimensional-modeling-adventure-works-tutorial.md)   
  [名前付きセットの作成](multidimensional-models/create-named-sets.md)   
  [計算されるメンバーの作成](multidimensional-models/create-calculated-members.md)  
   

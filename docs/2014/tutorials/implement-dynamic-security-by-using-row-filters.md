@@ -10,12 +10,12 @@ ms.assetid: 8bf03c45-caf5-4eda-9314-e4f8f24a159f
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 49a62fb647b7b1a1579103f96907d0635ecc635f
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 39d0d92d83a41970dcddae54d74aca3d118dcf6f
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893602"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69530882"
 ---
 # <a name="implement-dynamic-security-by-using-row-filters"></a>行フィルターを使用した動的なセキュリティの実装
   この補足のレッスンでは、動的なセキュリティを実装する追加のロールを作成します。 動的なセキュリティには、現在ログオンしているユーザーのユーザー名またはログイン ID に基づいた行レベルのセキュリティが用意されています。 詳細については、「[ロール (SSAS テーブル)](https://docs.microsoft.com/analysis-services/tabular-models/roles-ssas-tabular)」 を参照してください。  
@@ -28,7 +28,7 @@ ms.locfileid: "68893602"
   
  このレッスンの推定所要時間:**30分**  
   
-## <a name="prerequisites"></a>必須コンポーネント  
+## <a name="prerequisites"></a>前提条件  
  この補足のレッスンのトピックはテーブル モデリング チュートリアルの一部であり、チュートリアルでの順番に従って実行する必要があります。 この補足のレッスンの作業を実行する前に、前のレッスンをすべて完了している必要があります。  
   
 ## <a name="add-the-dimsalesterritory-table-to-the-aw-internet-sales-tabular-model-project"></a>AW Internet Sales Tabular Model プロジェクトへの dimSalesTerritory テーブルの追加  
@@ -130,7 +130,7 @@ ms.locfileid: "68893602"
  この作業では、新しいユーザー ロールを作成します。 このロールには、Sales Territory テーブル内のどの行がユーザーに表示されるかを定義する行フィルターが含まれます。 このフィルターは、一対多のリレーションシップの方向で、Sales Territory に関連する他のすべてのテーブルに適用されます。 また、ロールのメンバーであるユーザーがクエリを実行できないように Employee Security テーブル全体を保護する簡単なフィルターも追加します。  
   
 > [!NOTE]  
->  このレッスンで作成する Sales Employees by Territory ロールによって、メンバーが参照 (またはクエリを実行) できるデータは、自分が属する販売区域の売上データのみに制限されます。 ユーザーを、レッスン12で作成したロールのメンバーとしても存在する Sales Employees by 区域ロールのメンバーと[して追加する場合は、次のようにします。ロール](https://docs.microsoft.com/analysis-services/lesson-11-create-roles)を作成すると、権限の組み合わせが得られます。 あるユーザーが複数のロールのメンバーである場合、各ロールに対して定義された権限と行フィルターは累積されます。 つまり、ロールを組み合わせることでユーザーの権限は引き上げられます。  
+>  このレッスンで作成する Sales Employees by Territory ロールによって、メンバーが参照 (またはクエリを実行) できるデータは、自分が属する販売区域の売上データのみに制限されます。 ユーザーを、レッスン12で作成したロールのメンバーとしても存在する Sales Employees by 区域ロールのメンバーと[して追加する場合は、次のようにします。ロール](../analysis-services/lesson-11-create-roles.md)を作成すると、権限の組み合わせが得られます。 あるユーザーが複数のロールのメンバーである場合、各ロールに対して定義された権限と行フィルターは累積されます。 つまり、ロールを組み合わせることでユーザーの権限は引き上げられます。  
   
 #### <a name="to-create-a-sales-employees-by-territory-user-role"></a>Sales Employees by Territory ユーザー ロールを作成するには  
   
