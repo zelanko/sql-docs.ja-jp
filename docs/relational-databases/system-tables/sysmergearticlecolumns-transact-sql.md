@@ -1,5 +1,5 @@
 ---
-title: sysmergearticlecolumns (TRANSACT-SQL) |Microsoft Docs
+title: sysmergearticlecolumns (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68029963"
 ---
-# <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (TRANSACT-SQL)
+# <a name="sysmergearticlecolumns-transact-sql"></a>sysmergearticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sysmergearticlecolumns**テーブルには、マージ パブリケーションでパブリッシュされ、各列はマージ アーティクルにマップされるテーブル列ごとに 1 つの行が含まれています。 このテーブルは、パブリケーション データベース内に保存されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "68029963"
 |**colid**|**smallint**|アーティクル内の列を識別します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
