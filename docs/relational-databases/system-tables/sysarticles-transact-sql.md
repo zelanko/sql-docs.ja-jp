@@ -1,5 +1,5 @@
 ---
-title: sysarticles (TRANSACT-SQL) |Microsoft Docs
+title: sysarticles (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68130489"
 ---
-# <a name="sysarticles-transact-sql"></a>sysarticles (TRANSACT-SQL)
+# <a name="sysarticles-transact-sql"></a>sysarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ローカル データベースで定義された各アーティクルに対して行が含まれています。 このテーブルは、パブリッシュされたデータベースに格納されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "68130489"
 |**del_cmd**|**nvarchar (255)**|テーブル アーティクルの削除をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**description**|**nvarchar (255)**|この記事の説明エントリします。|  
 |**dest_table**|**sysname**|対象テーブルの名前です。|  
-|**フィルター (filter)**|**int**|ストアド プロシージャ ID は、水平的パーティション分割に使用します。|  
+|**filter**|**int**|ストアド プロシージャ ID は、水平的パーティション分割に使用します。|  
 |**filter_clause**|**ntext**|フィルターによる行選択に使用する、アーティクルの WHERE 句です。|  
 |**ins_cmd**|**nvarchar (255)**|テーブル アーティクルの挿入をレプリケートするときに使用するレプリケーション コマンドの種類。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**name**|**sysname**|パブリケーションの中で一意なアーティクルに関係する名前です。|  
@@ -56,10 +56,10 @@ ms.locfileid: "68130489"
 |**fire_triggers_on_snapshot**|**bit**|これらの値のいずれかを指定することができます、スナップショットが適用されるときにトリガーが実行されるレプリケートされたかどうかを示します。<br /><br /> **0** = トリガーは実行されません。<br /><br /> **1** = トリガーは実行されます。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
- [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
- [sp_helparticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_changearticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
+ [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)  
   
   
