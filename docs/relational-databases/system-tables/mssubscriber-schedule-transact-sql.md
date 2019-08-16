@@ -1,5 +1,5 @@
 ---
-title: MSsubscriber_schedule (TRANSACT-SQL) |Microsoft Docs
+title: MSsubscriber_schedule (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68139797"
 ---
-# <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (TRANSACT-SQL)
+# <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsubscriber_schedule**テーブルには、既定のマージとトランザクション同期スケジュール パブリッシャー/サブスクライバーの各ペアが含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -34,8 +34,8 @@ ms.locfileid: "68139797"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
-|**サブスクライバー**|**sysname**|サブスクライバーの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
+|**subscriber**|**sysname**|サブスクライバーの名前。|  
 |**agent_type**|**smallint**|エージェントの種類:<br /><br /> 0 = ディストリビューション エージェント<br /><br /> 1 = マージ エージェントです。|  
 |**frequency_type**|**int**|ディストリビューション エージェントをスケジュールする頻度。<br /><br /> **1** = 1 回です。<br /><br /> **2** = 要求時。<br /><br /> **4**毎日を = です。<br /><br /> **8** = 毎週。<br /><br /> **16**毎月を = です。<br /><br /> **32** = 月単位。<br /><br /> **64** = 自動開始します。<br /><br /> **128**定期的なを = です。|  
 |**frequency_interval**|**int**|設定した頻度に適用する値**frequency_type**します。|  
@@ -49,7 +49,7 @@ ms.locfileid: "68139797"
 |**active_end_date**|**int**|ディストリビューション エージェントの停止と日付スケジュールに yyyymmdd です。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
