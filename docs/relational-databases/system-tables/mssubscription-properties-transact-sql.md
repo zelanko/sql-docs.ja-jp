@@ -1,5 +1,5 @@
 ---
-title: MSsubscription_properties (TRANSACT-SQL) |Microsoft Docs
+title: MSsubscription_properties (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,14 +31,14 @@ ms.locfileid: "68139720"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
+|**publication**|**sysname**|パブリケーションの名前を指定します。|  
 |**publication_type**|**int**|パブリケーションの種類:<br /><br /> **0** = トランザクション。<br /><br /> **2** = マージします。|  
 |**publisher_login**|**sysname**|パブリッシャーで使用されたログイン ID[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**publisher_password**|**nvarchar(524)**|パブリッシャーで使用するパスワード (暗号化)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**publisher_security_mode**|**int**|パブリッシャーで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 認証。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。<br /><br /> **2**静的な同期のトリガーの使用を = **sysservers**リモート プロシージャ コール (RPC) を実行するエントリと*パブリッシャー*で定義する必要があります、 **sysservers**リモート サーバーまたはリンク サーバーとしてのテーブル。|  
-|**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
+|**distributor**|**sysname**|ディストリビューターの名前。|  
 |**distributor_login**|**sysname**|ディストリビューターで使用する SQL Server 認証のログイン ID です。|  
 |**distributor_password**|**nvarchar(524)**|場合はディストリビューターを使用するパスワード (暗号化)[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**distributor_security_mode**|**int**|ディストリビューターで実装されているセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1** = Windows 認証。|  
@@ -62,13 +62,13 @@ ms.locfileid: "68139720"
 |**internet_password**|**nvarchar(524)**|マージ エージェントを使用して Web 同期をホストしている Web サーバーに接続するときに使用するログインのパスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**internet_security_mode**|**int**|値が、Web 同期をホストしている Web サーバーに接続するときに使用する認証モード**1** 、Windows 認証を示し、値の**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**internet_timeout**|**int**|Web 同期要求が期限切れとなるまでの時間の長さ (秒単位)。|  
-|**ホスト名**|**sysname**|値を指定**HOST_NAME**でこの関数を使用する場合、**場所**結合フィルターまたは論理レコード リレーションシップの句。|  
+|**hostname**|**sysname**|値を指定**HOST_NAME**でこの関数を使用する場合、**場所**結合フィルターまたは論理レコード リレーションシップの句。|  
   
 ## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helppullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_helppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [sp_helpsubscription_properties &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)  
   
   
