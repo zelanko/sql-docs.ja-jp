@@ -1,5 +1,5 @@
 ---
-title: sysmergepublications (TRANSACT-SQL) |Microsoft Docs
+title: sysmergepublications (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -31,11 +31,11 @@ ms.locfileid: "68029778"
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**パブリッシャー**|**sysname**|既定のサーバーの名前です。|  
+|**publisher**|**sysname**|既定のサーバーの名前です。|  
 |**publisher_db**|**sysname**|既定のパブリッシャー データベースの名前です。|  
 |**name**|**sysname**|パブリケーションの名前を指定します。|  
 |**description**|**nvarchar (255)**|パブリケーションの簡単な説明です。|  
-|**保有期間**|**int**|値によって、単位が示されます、パブリケーション全体で設定の保存期間、 **retention_period_unit**列。|  
+|**retention**|**int**|値によって、単位が示されます、パブリケーション全体で設定の保存期間、 **retention_period_unit**列。|  
 |**publication_type**|**tinyint**|パブリケーションがフィルター選択されているかどうかを示します。<br /><br /> **0** = フィルター選択されたしません。<br /><br /> **1** = フィルター選択します。|  
 |**pubid**|**uniqueidentifier**|このパブリケーションの一意な識別番号です。 パブリケーションが追加されたときに生成されます。|  
 |**designmasterid**|**uniqueidentifier**|将来使用するために予約されています。|  
@@ -76,7 +76,7 @@ ms.locfileid: "68029778"
 |**allow_subscriber_initiated_snapshot**|**bit**|サブスクライバーがパラメーター化フィルターを使用して、パブリケーションのスナップショットを生成する処理を開始できることを示します。 **1**サブスクライバーがスナップショット プロセスを開始できることを示します。|  
 |**dynamic_snapshot_queue_timeout**|**int**|パラメーター化フィルターを使用するときに、サブスクライバーがスナップショット生成処理の開始までキューで待機する分数を指定します。|  
 |**dynamic_snapshot_ready_timeout**|**int**|パラメーター化フィルターを使用するときに、サブスクライバーがスナップショット生成処理の完了まで待機する分数を指定します。|  
-|**ディストリビューター**|**sysname**|パブリケーションのディストリビューターの名前。|  
+|**distributor**|**sysname**|パブリケーションのディストリビューターの名前。|  
 |**snapshot_jobid**|**binary(16)**|サブスクライバーによるスナップショット生成処理の開始が可能な場合のスナップショットを生成するエージェント ジョブを示します。|  
 |**allow_web_synchronization**|**bit**|Web 同期では、パブリケーションが有効になっているかどうかを指定します、 **1**パブリケーションに対して Web 同期が有効であることを意味します。|  
 |**web_synchronization_url**|**nvarchar(500)**|Web 同期で使用するインターネット URL の既定値を指定します。|  
@@ -87,10 +87,10 @@ ms.locfileid: "68029778"
 |**automatic_reinitialization_policy**|**bit**|自動再初期化を実行する前に、サブスクライバーから変更をアップロードするかどうかを示します。<br /><br /> **1** = 自動再初期化が発生する前に、サブスクライバーから変更をアップロードします。<br /><br /> **0** = 変更は、自動再初期化する前にアップロードされません。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
- [sp_changemergepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
- [sp_helpmergepublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)   
+ [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)   
+ [sp_helpmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)  
   
   
