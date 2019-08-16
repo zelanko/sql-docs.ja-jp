@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67907300"
 ---
-# <a name="mslogreaderagents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
+# <a name="mslogreader_agents-transact-sql"></a>MSlogreader_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSlogreader_agents**テーブルには、ローカルのディストリビューターで実行される各ログ リーダー エージェントの 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -47,7 +47,7 @@ ms.locfileid: "67907300"
 |**job_password**|**nvarchar(524)**||  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

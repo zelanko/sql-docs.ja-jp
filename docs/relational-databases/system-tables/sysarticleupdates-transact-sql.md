@@ -43,7 +43,7 @@ ms.locfileid: "68130492"
 |**identity_support**|**bit**|キュー更新を使用する場合、自動 id 範囲処理が有効にするかどうかを指定します。 **0**サポートの範囲は id がないことを意味します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

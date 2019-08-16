@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68017692"
 ---
-# <a name="msmergehistory-transact-sql"></a>MSmerge_history (Transact-SQL)
+# <a name="msmerge_history-transact-sql"></a>MSmerge_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_history**テーブルに履歴行以前のマージ エージェント ジョブ セッションの結果の詳細な説明にはが含まれています。 このテーブルには、エージェントの出力の行ごとに 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースと各サブスクリプション データベースで使用されます。 ディストリビューション データベースでは、すべてのマージ パブリケーションおよびディストリビューターを使用するサブスクリプションの履歴が含まれます。 各サブスクリプション データベースでは、サブスクライバーでサブスクライブしているパブリケーションの履歴が含まれます。  
@@ -39,7 +39,7 @@ ms.locfileid: "68017692"
 |**updatable_row**|**bit**|設定**1**履歴行を上書きできる場合。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

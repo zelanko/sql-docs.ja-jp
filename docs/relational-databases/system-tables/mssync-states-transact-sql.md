@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68016512"
 ---
-# <a name="mssyncstates-transact-sql"></a>MSsync_states (Transact-SQL)
+# <a name="mssync_states-transact-sql"></a>MSsync_states (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsync_states**トラックはどのパブリケーションは、まだ同時実行スナップショット モードでのテーブルします。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -36,9 +36,9 @@ ms.locfileid: "68016512"
 |**publication_id**|**int**|パブリケーションの ID。|  
   
 ## <a name="see-also"></a>関連項目  
- [システム ビューへのシステム テーブルのマッピング&#40;Transact-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
- [Integration Services テーブル&#40;Transact-SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
- [バックアップし、復元テーブル&#40;Transact-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
+ [システム ビューへのシステム テーブルのマッピング&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/mapping-system-tables-to-system-views-transact-sql.md)   
+ [Integration Services テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/integration-services-tables-transact-sql.md)   
+ [バックアップし、復元テーブル&#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/backup-and-restore-tables-transact-sql.md)   
  [ログ配布テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/log-shipping-tables-transact-sql.md)  
   
   

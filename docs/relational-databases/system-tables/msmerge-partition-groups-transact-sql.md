@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68102193"
 ---
-# <a name="msmergepartitiongroups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
+# <a name="msmerge_partition_groups-transact-sql"></a>MSmerge_partition_groups (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_partition_groups**テーブルでは、それぞれ特定のデータベースでパーティションを事前計算済みの 1 行が格納されます。 示されている列、だけでなく、1 つの列は、パラメーター化された行フィルターで使用される各関数は、このテーブルに追加されます。 たとえば、という名前の列**HOST_NAME**フィルターを使用している場合に、テーブルに追加、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数。 このパブリッシャーと同期された関数値の一意のセットごとに 1 つの行が格納されます。 これらの関数のすべてのまったく同じ値との同期、2 つ以上のサブスクライバーがこのテーブル内の同じ行を共有し、したがってすべて共有と同じパーティション id。このテーブルは、パブリケーション データベース内に保存されます。  
@@ -38,7 +38,7 @@ ms.locfileid: "68102193"
 |**HOST_NAME_FN**|**nvarchar(128)**|パラメーター化された行フィルターを使用してパーティションを生成するときに指定された値。 詳しくは、「 [Parameterized Row Filters](../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)」をご覧ください。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

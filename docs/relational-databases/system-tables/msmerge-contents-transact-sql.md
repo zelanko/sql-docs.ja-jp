@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68089945"
 ---
-# <a name="msmergecontents-transact-sql"></a>MSmerge_contents (Transact-SQL)
+# <a name="msmerge_contents-transact-sql"></a>MSmerge_contents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_contents**テーブルには、発行された後に、現在のデータベースで変更された行ごとに 1 行が含まれています。 マージ プロセスはこのテーブルを使用して、変更された行を決定します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "68089945"
 |**logical_relation_change_gen**|**bigint**|既存の行が論理レコード内外に移動した、論理レコードの再調整の原因となった最後の変更に関連付けられた generation 値です。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

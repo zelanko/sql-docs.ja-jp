@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67907296"
 ---
-# <a name="mslogreaderhistory-transact-sql"></a>MSlogreader_history (Transact-SQL)
+# <a name="mslogreader_history-transact-sql"></a>MSlogreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSlogreader_history**テーブルは、ローカル ディストリビューターに関連付けられているログ リーダー エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -49,7 +49,7 @@ ms.locfileid: "67907296"
 |**updateable_row**|**bit**|設定**1**履歴行を上書きできる場合。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
