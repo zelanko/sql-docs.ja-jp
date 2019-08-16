@@ -1,5 +1,5 @@
 ---
-title: MSpeer_conflictdetectionconfigrequest (TRANSACT-SQL) |Microsoft Docs
+title: MSpeer_conflictdetectionconfigrequest (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68115038"
 ---
-# <a name="mspeerconflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (TRANSACT-SQL)
+# <a name="mspeerconflictdetectionconfigrequest-transact-sql"></a>MSpeer_conflictdetectionconfigrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ピア ツー ピア レプリケーションで、パブリケーションに対するトポロジ全体の構成要求を追跡するために使用されます。 このテーブルは、パブリケーション データベース内に保存されます。  
@@ -32,7 +32,7 @@ ms.locfileid: "68115038"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**int**|競合構成要求を識別します。 Request_id 列に[MSpeer_conflictdetectionconfigresponse](../../relational-databases/system-tables/mspeer-conflictdetectionconfigresponse-transact-sql.md)はこの値を使用します。|  
-|パブリケーション (publication)|**sysname**|競合構成要求が発行されたパブリケーションの名前です。|  
+|publication|**sysname**|競合構成要求が発行されたパブリケーションの名前です。|  
 |sent_date|**datetime**|日付と競合構成要求が開始された時刻。|  
 |timeout|**int**|すべてのピアから競合情報が返されるのをプロシージャが待機する時間です。|  
 |modified_date|**datetime**|日付と時刻のフェーズが完了したこと。|  
@@ -40,7 +40,7 @@ ms.locfileid: "68115038"
 |phase_timed_out|**bit**|現在のフェーズがタイムアウトしているかどうかを示します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
