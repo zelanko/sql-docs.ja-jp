@@ -1,5 +1,5 @@
 ---
-title: sysarticlecolumns (TRANSACT-SQL) |Microsoft Docs
+title: sysarticlecolumns (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68130515"
 ---
-# <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (TRANSACT-SQL)
+# <a name="sysarticlecolumns-transact-sql"></a>sysarticlecolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **Sysarticlecolumns**テーブルに 1 行がスナップショット パブリケーションまたはトランザクション パブリケーションでパブリッシュされ、各列はアーティクルにマップするテーブルの各列のデータが含まれています。 このテーブルは、パブリケーション データベース内に保存されます。  
@@ -38,7 +38,7 @@ ms.locfileid: "68130515"
 |**is_max**|**bit**|列が大きな値データ型の列かどうかを示します**varchar (max)** 、 **nvarchar (max)** 、および**varbinary (max)** します。 値**1**大きな値の列を示します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
