@@ -1,5 +1,5 @@
 ---
-title: MSsubscriber_schedule (TRANSACT-SQL) |Microsoft Docs
+title: MSsubscriber_schedule (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68139797"
 ---
-# <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (TRANSACT-SQL)
+# <a name="mssubscriberschedule-transact-sql"></a>MSsubscriber_schedule (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsubscriber_schedule**テーブルには、既定のマージとトランザクション同期スケジュール パブリッシャー/サブスクライバーの各ペアが含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
