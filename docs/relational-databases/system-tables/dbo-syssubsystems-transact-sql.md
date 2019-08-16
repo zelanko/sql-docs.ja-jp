@@ -1,5 +1,5 @@
 ---
-title: dbo.syssubsystems (TRANSACT-SQL) |Microsoft Docs
+title: dbo.syssubsystems (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68069085"
 ---
-# <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (TRANSACT-SQL)
+# <a name="dbosyssubsystems-transact-sql"></a>dbo.syssubsystems (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   使用可能なすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのプロキシ サブシステムに関する情報を格納します。 **Syssubsystems**でテーブルが格納されている、 **msdb**データベース。  
@@ -47,8 +47,8 @@ ms.locfileid: "68069085"
  メンバーのみ、 **sysadmin**固定サーバー ロールがこのテーブルにアクセスできます。  
   
 ## <a name="see-also"></a>関連項目  
- [dbo.sysproxysubsystem &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
- [dbo.sysproxies &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
- [sys.messages &#40; です。TRANSACT-SQL と&#41; です。](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
+ [dbo.sysproxysubsystem &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxysubsystem-transact-sql.md)   
+ [dbo.sysproxies &#40;Transact-SQL&#41;](../../relational-databases/system-tables/dbo-sysproxies-transact-sql.md)   
+ [sys.messages &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/messages-for-errors-catalog-views-sys-messages.md)  
   
   
