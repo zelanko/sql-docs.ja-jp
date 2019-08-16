@@ -1,5 +1,5 @@
 ---
-title: MSmerge_identity_range_allocations (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_identity_range_allocations (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68072653"
 ---
-# <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (TRANSACT-SQL)
+# <a name="msmergeidentityrangeallocations-transact-sql"></a>MSmerge_identity_range_allocations (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_identity_range_allocations** id 範囲の割り当て、パブリッシャーとサブスクライバーの両方にパブリッシュされたアーティクルの履歴を追跡するテーブルを使用します。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -33,10 +33,10 @@ ms.locfileid: "68072653"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**nvarchar(128)**|パブリケーション データベースの名前です。|  
-|**パブリケーション**|**nvarchar(128)**|パブリケーションの名前を指定します。|  
+|**publication**|**nvarchar(128)**|パブリケーションの名前を指定します。|  
 |**article**|**nvarchar(128)**|アーティクルの名前です。|  
-|**サブスクライバー**|**nvarchar(128)**|サブスクライバーの名前。|  
-|**@subscriber_db**|**nvarchar(128)**|サブスクリプション データベースの名前。|  
+|**subscriber**|**nvarchar(128)**|サブスクライバーの名前。|  
+|**\@subscriber_db**|**nvarchar(128)**|サブスクリプション データベースの名前。|  
 |**is_pub_range**|**bit**|Id 範囲がパブリッシャーに割り当てられているかどうかを示します。|  
 |**ranges_allocated**|**tinyint**|割り当てられている ID 範囲の数です。|  
 |**range_begin**|**numeric(38)**|範囲の開始値。|  
@@ -47,7 +47,7 @@ ms.locfileid: "68072653"
 |**time_of_allocation**|**datetime**|時刻、割り当てが行われた場合。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
