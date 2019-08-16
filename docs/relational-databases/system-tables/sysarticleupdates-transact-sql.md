@@ -1,5 +1,5 @@
 ---
-title: sysarticleupdates (TRANSACT-SQL) |Microsoft Docs
+title: sysarticleupdates (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68130492"
 ---
-# <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (TRANSACT-SQL)
+# <a name="sysarticleupdates-transact-sql"></a>sysarticleupdates (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   即時更新サブスクリプションをサポートするアーティクルごとに 1 つの行が含まれています。 このテーブルは、レプリケートされたデータベースに保存されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "68130492"
 |**identity_support**|**bit**|キュー更新を使用する場合、自動 id 範囲処理が有効にするかどうかを指定します。 **0**サポートの範囲は id がないことを意味します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
