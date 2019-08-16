@@ -1,5 +1,5 @@
 ---
-title: sysmergepartitioninfo (TRANSACT-SQL) |Microsoft Docs
+title: sysmergepartitioninfo (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68029830"
 ---
-# <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (TRANSACT-SQL)
+# <a name="sysmergepartitioninfo-transact-sql"></a>sysmergepartitioninfo (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   各アーティクルのパーティションに情報を提供します。 ローカル データベースに定義されているマージ アーティクルごとに 1 行のデータを格納します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
@@ -49,7 +49,7 @@ ms.locfileid: "68029830"
 |**partition_options**|**tinyint**|アーティクル内のデータをパーティション分割する方法を定義します。パーティション分割することにより、すべての行が 1 つのパーティションまたは 1 つのサブスクリプションに属している場合に、パフォーマンスを最適化できます。 *partition_options*値は次のいずれかを指定できます。<br /><br /> **0** =、フィルタ リング、情報の記事が静的か、つまり「重複する」パーティションまたは各パーティションのデータの一意なサブセットは生成されません。<br /><br /> **1** = パーティションが重複していると、サブスクライバーで実行された DML 更新は、行が属するパーティションを変更できません。<br /><br /> **2**記事、重複しないパーティションが得られますが、複数のサブスクライバーが同じパーティションを受け取ることができます = フィルター選択します。<br /><br /> **3** =、フィルタ リング、情報の記事には、サブスクリプションごとに固有の重複しないパーティションが得られます。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
