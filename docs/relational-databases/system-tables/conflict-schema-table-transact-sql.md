@@ -1,5 +1,5 @@
 ---
-title: conflict _&lt;スキーマ&gt;_&lt;テーブル&gt;(TRANSACT-SQL) |Microsoft Docs
+title: conflict_&lt;schema&gt;_&lt;table&gt;(Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 01/15/2016
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.locfileid: "68084769"
 # <a name="conflictltschemagtlttablegt-transact-sql"></a>conflict _&lt;スキーマ&gt;_&lt;テーブル&gt;(TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  Conflict _\<スキーマ > _\<table > テーブルには、ピア ツー ピア レプリケーションで競合する行に関する情報が含まれています。 競合テーブルはパブリケーション内のレプリケートされたテーブルごとに存在し、競合テーブルの名前にはスキーマとアーティクルの名前が付加されます。 このアーティクル固有の競合テーブルは、各パブリケーション データベースに保存されます。  
+  conflict_\<schema>_\<table> テーブルには、ピア ツー ピア レプリケーションで競合する行に関する情報が含まれています。 競合テーブルはパブリケーション内のレプリケートされたテーブルごとに存在し、競合テーブルの名前にはスキーマとアーティクルの名前が付加されます。 このアーティクル固有の競合テーブルは、各パブリケーション データベースに保存されます。  
   
  ピア ツー ピア レプリケーションの場合、ディストリビューション エージェントは、競合を検出すると既定で停止します。 競合エラーはエラー ログに記録されますが、競合データは競合テーブルに記録されないため、競合データを表示できません。 ディストリビューション エージェントが実行の継続を許可されている場合は、競合が検出された各ノードで、競合がローカルでログに記録されます。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」の「競合の処理」を参照してください。  
   
@@ -48,7 +48,7 @@ ms.locfileid: "68084769"
 |\<ベース テーブルの列名 >|\<テーブル列の型を基本 >|この競合テーブルにはベース テーブルの列ごとに 1 行のデータが格納されます。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
