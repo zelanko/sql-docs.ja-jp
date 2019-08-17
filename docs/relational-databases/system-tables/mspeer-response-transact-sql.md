@@ -1,5 +1,5 @@
 ---
-title: MSpeer_response (TRANSACT-SQL) |Microsoft Docs
+title: MSpeer_response (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -34,7 +34,7 @@ ms.locfileid: "68026672"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|内の状態要求エントリを識別、 [MSpeer_request](../../relational-databases/system-tables/mspeer-request-transact-sql.md)テーブル。|  
-|**ピア**|**sysname**|応答を生成したピアです。|  
+|**peer**|**sysname**|応答を生成したピアです。|  
 |**peer_db**|**sysname**|応答を生成したピアでサブスクリプション データベースです。|  
 |**received_date**|**datetime**|日付と時刻がピア要求を受信しました。|  
   
