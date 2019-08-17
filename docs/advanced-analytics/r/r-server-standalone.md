@@ -1,21 +1,21 @@
 ---
-title: スタンドアロンの R Server または Machine Learning Server インストール
+title: SQL Server のスタンドアロン Machine Learning Server または R Server とは
 description: 概要 SQL Server セットアップでのスタンドアロン R Server と Machine Learning Server の概要
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 12/18/2018
+ms.date: 08/13/2019
 ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: d4843aaf14a944e7beef73ef1330985666007498
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: cb7aef4502f42bc91067cdcbd598b9b2ea7477cf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715111"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028614"
 ---
-# <a name="r-server-standalone-and-machine-learning-server-standalone-in-sql-server"></a>SQL Server の R Server (スタンドアロン) と Machine Learning Server (スタンドアロン)
+# <a name="what-are-standalone-machine-learning-server-or-r-server-in-sql-server"></a>SQL Server のスタンドアロン Machine Learning Server または R Server とは
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 SQL Server では、スタンドアロンの R サーバーまたは SQL Server とは別に実行される Machine Learning Server のインストールがサポートされます。 SQL Server のバージョンに応じて、スタンドアロンサーバーにはオープンソースの R と、場合によっては Python の基盤があり、Microsoft の高パフォーマンスのライブラリを使用して、大規模な統計分析や予測分析を追加します。 ライブラリは、R または Python でスクリプト化された機械学習タスクも有効にします。 
@@ -79,7 +79,7 @@ RevoScaleR、revoscalepy、機械学習アルゴリズムの機能を使用し�
 
 ### <a name="step-4-operationalize-your-solution"></a>手順 4:ソリューションの運用化
 
-スタンドアロンサーバーでは、SQL 以外の[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)の運用[化機能を](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)使用できます。 運用化のためのスタンドアロンサーバーを構成できます。これにより、コードを web サービスとしてデプロイしてホストし、診断を実行し、web サービスの機能をテストすることができます。
+スタンドアロンサーバーでは、SQL 以外の[Microsoft Machine Learning Server](https://docs.microsoft.com/machine-learning-server/what-is-machine-learning-server)の[運用化機能](https://docs.microsoft.com//machine-learning-server/what-is-operationalization)を使用できます。 運用化のためのスタンドアロンサーバーを構成できます。これにより、コードを web サービスとしてデプロイしてホストし、診断を実行し、web サービスの機能をテストすることができます。
 
 ### <a name="step-5-maintain-your-server"></a>手順 5:サーバーの保守
 
