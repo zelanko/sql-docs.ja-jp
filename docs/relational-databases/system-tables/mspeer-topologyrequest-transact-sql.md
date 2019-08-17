@@ -1,5 +1,5 @@
 ---
-title: MSpeer_topologyrequest (TRANSACT-SQL) |Microsoft Docs
+title: MSpeer_topologyrequest (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026660"
 ---
-# <a name="mspeertopologyrequest-transact-sql"></a>MSpeer_topologyrequest (TRANSACT-SQL)
+# <a name="mspeertopologyrequest-transact-sql"></a>MSpeer_topologyrequest (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   パブリケーションに対するトポロジ状態要求を追跡するためにピア ツー ピア レプリケーションで使用します。 このテーブルは、パブリケーション データベース内に保存されます。  
@@ -32,11 +32,11 @@ ms.locfileid: "68026660"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |id|**int**|トポロジ状態要求を識別します。 Request_id 列に[MSpeer_topologyresponse](../../relational-databases/system-tables/mspeer-topologyresponse-transact-sql.md)はこの値を使用します。|  
-|パブリケーション (publication)|**sysname**|トポロジ状態要求が発行されたパブリケーションの名前です。|  
+|publication|**sysname**|トポロジ状態要求が発行されたパブリケーションの名前です。|  
 |sent_date|**datetime**|日付とトポロジ状態要求が開始された時刻。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
