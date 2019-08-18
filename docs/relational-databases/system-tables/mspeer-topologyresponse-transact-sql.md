@@ -33,7 +33,7 @@ ms.locfileid: "68026646"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |request_id|**int**|内のトポロジ状態要求エントリを識別、 [MSpeer_topologyrequest](../../relational-databases/system-tables/mspeer-topologyrequest-transact-sql.md)テーブル。|  
-|ピア|**sysname**|応答を生成するサーバー インスタンスの名前です。|  
+|peer|**sysname**|応答を生成するサーバー インスタンスの名前です。|  
 |peer_version|**int**|パブリッシャーのバージョン番号を識別します。|  
 |peer_db|**sysname**|応答を生成したピアでサブスクリプション データベースです。|  
 |originator_id|**int**|競合検出のためにトポロジの各ノードを識別します。 詳細については、「 [Conflict Detection in Peer-to-Peer Replication](../../relational-databases/replication/transactional/peer-to-peer-conflict-detection-in-peer-to-peer-replication.md)」を参照してください。|  
@@ -42,7 +42,7 @@ ms.locfileid: "68026646"
 |connection_info|**xml**|要求に応答したノードに関する情報。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
