@@ -1,5 +1,5 @@
 ---
-title: MSmerge_settingshistory (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_settingshistory (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68106322"
 ---
-# <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (TRANSACT-SQL)
+# <a name="msmergesettingshistory-transact-sql"></a>MSmerge_settingshistory (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_settingshistory**テーブルはマージ レプリケーション トポロジに加えられた変更ごとに 1 行で、マージ レプリケーションのアーティクルおよびパブリケーションのプロパティに加えられた変更の履歴を維持するために使用します。 このテーブルには、プロパティの初期設定が行われた日時に関する情報も格納されます。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
@@ -34,14 +34,14 @@ ms.locfileid: "68106322"
 |**eventtime**|**datetime**|イベントが発生した日時。|  
 |**pubid**|**uniqueidentifier**|指定したパブリケーションの一意な識別番号。|  
 |**artid**|**uniqueidentifier**|指定したアーティクルの一意な ID 番号です。|  
-|**イベントの種類**|**tinyint**|次のいずれかの値を記録中イベントの種類を指定します。<br /><br /> **1** -の初期パブリケーション レベルのプロパティの設定。<br /><br /> **2** -パブリケーションのプロパティを変更します。<br /><br /> **101** -最初のアーティクルのプロパティの設定。<br /><br /> **102** -アーティクルのプロパティを変更します。|  
+|**eventtype**|**tinyint**|次のいずれかの値を記録中イベントの種類を指定します。<br /><br /> **1** -の初期パブリケーション レベルのプロパティの設定。<br /><br /> **2** -パブリケーションのプロパティを変更します。<br /><br /> **101** -最初のアーティクルのプロパティの設定。<br /><br /> **102** -アーティクルのプロパティを変更します。|  
 |**propertyname**|**sysname**|設定または変更されたプロパティの名前|  
 |**previousvalue**|**sysname**|前のプロパティをプロパティが変更された場合を値。|  
 |**newvalue**|**sysname**|変更後または作成時のプロパティの値。|  
 |**eventtext**|**nvarchar(2000)**|イベントを説明する文字列。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
