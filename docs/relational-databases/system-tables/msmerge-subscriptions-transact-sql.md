@@ -1,5 +1,5 @@
 ---
-title: MSmerge_subscriptions (TRANSACT-SQL) |Microsoft Docs
+title: MSmerge_subscriptions (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -35,14 +35,14 @@ ms.locfileid: "68106311"
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**publication_id**|**int**|パブリケーションの ID。|  
 |**subscriber_id**|**smallint**|サブスクライバーの ID。|  
-|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
+|**\@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> 0 = プッシュ。<br /><br /> 1 = プル<br /><br /> 2 = 匿名です。|  
 |**sync_type**|**tinyint**|同期の種類。<br /><br /> 1 = 自動同期<br /><br /> 2 = 同期はありません。|  
 |**status**|**tinyint**|サブスクリプションの状態。|  
 |**subscription_time**|**datetime**|サブスクリプションが追加された時刻。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
