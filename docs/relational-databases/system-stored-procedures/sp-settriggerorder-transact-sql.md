@@ -60,8 +60,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  トリガーとして指定できる、**First**または**Last**ステートメントの種類のトリガーとしてそのトリガーが定義した後にのみステートメントの種類のトリガー。 たとえば、トリガー **TR1**指定できるは**First**テーブルに挿入**T1**場合**TR1** INSERT トリガーとして定義されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]エラーが返されます**TR1**、として設定されますが、INSERT トリガーとしてのみ定義されている、**First**、または**Last**、UPDATE ステートメントをトリガーします。 詳細については、「解説」を参照してください。  
   
- **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
- ときに*triggername* 、DDL トリガーは、 **@namespace** を指定するかどうか*triggername*データベース スコープか、サーバー スコープで作成されました。 場合*triggername* 、ログオン トリガーは、サーバーを指定する必要があります。 DDL トリガーのスコープの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。 指定しない場合、または NULL が指定されている場合*triggername* DML トリガーです。  
+ **\@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
+ ときに*triggername* 、DDL トリガーは、 **\@namespace** を指定するかどうか*triggername*データベース スコープか、サーバー スコープで作成されました。 場合*triggername* 、ログオン トリガーは、サーバーを指定する必要があります。 DDL トリガーのスコープの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。 指定しない場合、または NULL が指定されている場合*triggername* DML トリガーです。  
   
 ||  
 |-|  
@@ -75,29 +75,29 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="dml-triggers"></a>DML トリガー  
  1 つのみ**First**と 1 つ**Last**1 つのテーブルの各ステートメントに対してトリガーします。  
   
- 場合、**最初**トリガーがテーブル、データベース、またはサーバーで既に定義されている、として新しいトリガーを指定することはできません**最初**の同じテーブル、データベース、またはサーバーで、同じ*statement_type*. この制限は適用も**最後**トリガーします。  
+ 場合、**First**トリガーがテーブル、データベース、またはサーバーで既に定義されている、として新しいトリガーを指定することはできません**First**の同じテーブル、データベース、またはサーバーで、同じ*statement_type*. この制限は適用も**Last**トリガーします。  
   
- レプリケーションは、テーブルが即時更新サブスクリプションまたはキュー更新サブスクリプションに含まれる場合、自動的に最初のトリガーを生成します。 レプリケーションのトリガーは最初のトリガーであることが必要です。 レプリケーションでは、最初のトリガーを持つテーブルを即時更新サブスクリプションまたはキュー更新サブスクリプションに含めるよう設定すると、エラーが発生します。 テーブルをサブスクリプションに含めた後、トリガーを最初のトリガーに設定すると、 **sp_settriggerorder** はエラーを返します。 レプリケーション トリガーに ALTER TRIGGER を使用して、または使用するかどうかは**sp_settriggerorder**レプリケーション トリガーを変更する、**最後**または**None**トリガーでは、サブスクリプションは正しく機能しません。  
+ レプリケーションは、テーブルが即時更新サブスクリプションまたはキュー更新サブスクリプションに含まれる場合、自動的に最初のトリガーを生成します。 レプリケーションのトリガーは最初のトリガーであることが必要です。 レプリケーションでは、最初のトリガーを持つテーブルを即時更新サブスクリプションまたはキュー更新サブスクリプションに含めるよう設定すると、エラーが発生します。 テーブルをサブスクリプションに含めた後、トリガーを最初のトリガーに設定すると、 **sp_settriggerorder** はエラーを返します。 レプリケーション トリガーに ALTER TRIGGER を使用して、または使用するかどうかは**sp_settriggerorder**レプリケーション トリガーを変更する、**Last**または**None**トリガーでは、サブスクリプションは正しく機能しません。  
   
 ## <a name="ddl-triggers"></a>DDL トリガー  
- 両方のトリガーがあることを指定するにはデータベース スコープの DDL トリガーとサーバー スコープの DDL トリガーが、同じイベントで存在する場合、**最初**トリガーまたは**最後**トリガーします。 ただし、常にサーバー スコープのトリガーが最初に起動します。 一般に、同じイベント上に存在する DDL トリガーの実行の順序のとおりです。  
+ 両方のトリガーがあることを指定するにはデータベース スコープの DDL トリガーとサーバー スコープの DDL トリガーが、同じイベントで存在する場合、**First**トリガーまたは**Last**トリガーします。 ただし、常にサーバー スコープのトリガーが最初に起動します。 一般に、同じイベント上に存在する DDL トリガーの実行の順序のとおりです。  
   
-1.  サーバー レベル トリガー**最初**します。  
+1.  **First**とされたサーバー レベル トリガー。  
   
 2.  その他のサーバー レベル トリガー。  
   
-3.  サーバー レベル トリガー**最後**します。  
+3.  **Last**とされたサーバー レベル トリガー。
   
-4.  データベース レベル トリガー**最初**します。  
+4.  **First**とされたデータベース レベル トリガー。 
   
 5.  その他のデータベース レベル トリガー。  
   
-6.  データベース レベル トリガー**最後**します。  
+6.  **Last**とされたデータベース レベル トリガー。  
   
 ## <a name="general-trigger-considerations"></a>トリガーについての留意事項  
- ALTER TRIGGER ステートメントが最初と最後のトリガーの場合は、変更された場合、**最初**または**最後**トリガーに設定されていた属性が削除され、値が置き換え**None**します。 使用して、順序の値をリセットする必要があります**sp_settriggerorder**します。  
+ ALTER TRIGGER ステートメントがFirstとLastのトリガーの場合は、変更された場合、**First**または**Last**トリガーに設定されていた属性が削除され、値が置き換え**None**します。 使用して、順序の値をリセットする必要があります**sp_settriggerorder**します。  
   
- 1 つ以上のステートメントの種類の最初と最後の順序と同じトリガーを指定する必要がある場合**sp_settriggerorder**ステートメントの種類ごとに実行する必要があります。 また、トリガーする必要があります最初ステートメントの種類の前に定義することを指定できます、**最初**または**最後**にステートメントの種類に対して起動されるトリガー。  
+ 1 つ以上のステートメントの種類のFirstとLastの順序と同じトリガーを指定する必要がある場合**sp_settriggerorder**ステートメントの種類ごとに実行する必要があります。 また、トリガーする必要がありますFirstステートメントの種類の前に定義することを指定できます、**First**または**Last**にステートメントの種類に対して起動されるトリガー。  
   
 ## <a name="permissions"></a>アクセス許可  
  トリガーを (ON ALL SERVER を作成する)、サーバー スコープまたはログオンの DDL トリガーの順序を設定するには、CONTROL SERVER 権限が必要です。  
@@ -109,7 +109,7 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-setting-the-firing-order-for-a-dml-trigger"></a>A. DML トリガーの起動順序を設定する  
- 次の例では、そのトリガーを指定します。`uSalesOrderHeader`後に発生する最初のトリガーになる、`UPDATE`操作の発生、`Sales.SalesOrderHeader`テーブル。  
+ 次の例では、そのトリガーを指定します。発生するFirst トリガーになる、`UPDATE`操作の発生、`Sales.SalesOrderHeader`テーブルでUPDATE操作が発生した後にトリガー`uSalesOrderHeader`が最初にトリガーされるように指定しています。
   
 ```  
 USE AdventureWorks2012;  
@@ -118,7 +118,7 @@ sp_settriggerorder @triggername= 'Sales.uSalesOrderHeader', @order='First', @stm
 ```  
   
 ### <a name="b-setting-the-firing-order-for-a-ddl-trigger"></a>B. DDL トリガーの起動順序を設定する  
- 次の例では、トリガー `ddlDatabaseTriggerLog` が、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで `ALTER_TABLE` イベントの発生後、最初に起動されるトリガーとなるよう指定します。  
+ 次の例では、トリガー `ddlDatabaseTriggerLog` が、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースで `ALTER_TABLE` イベントが発生した後に最初のトリガーであることを指定します。
   
 ```  
 USE AdventureWorks2012;  
