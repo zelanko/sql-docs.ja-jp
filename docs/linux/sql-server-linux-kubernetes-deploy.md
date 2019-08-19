@@ -9,12 +9,12 @@ ms.topic: article
 ms.prod: sql
 ms.technology: linux
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a4811c1f41c4c8b9a566dc13b3de713576b4980d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 1e8825336edd4e55812f6037bbb4479a3b225e3f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952624"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028731"
 ---
 # <a name="deploy-a-sql-server-always-on-availability-group-on-a-kubernetes-cluster"></a>Kubernetes クラスターに SQL Server Always On 可用性グループを展開する
 
@@ -36,7 +36,7 @@ Kubernetes での展開には、SQL Server 演算子、SQL Server コンテナ�
 > [!NOTE]
 > 任意の種類の Kubernetes クラスターを使用できます。 Azure Kubernetes Service (AKS) で Kubernetes クラスターを作成する場合は、[AKS クラスターの作成](https://docs.microsoft.com/azure/aks/create-cluster)に関する記述を参照してください。
 >
-> 最新バージョンの Kubernetes を使用します。 特定のバージョンは、サブスクリプションとリージョンによって異なります。 [AKS でサポートされている Kubernetes のバージョン](https://docs.microsoft.com/en-us/azure/aks/supported-kubernetes-versions)に関するページを参照してください。  
+> 最新バージョンの Kubernetes を使用します。 特定のバージョンは、サブスクリプションとリージョンによって異なります。 [AKS でサポートされている Kubernetes のバージョン](https://docs.microsoft.com/azure/aks/supported-kubernetes-versions)に関するページを参照してください。  
 >
 > 次のスクリプトでは、Azure で 4 ノードの Kubernetes クラスターを作成します。 スクリプトを実行する前に、`<latest version>` を使用可能な最新のバージョンに置き換えます。 たとえば、 `1.12.5`があります。
 >
@@ -153,7 +153,7 @@ Kubernetes で SQL Server コンテナーが作成された後、次の手順を
 
 1. クラスター内の SQL Server インスタンスに[接続](sql-server-linux-kubernetes-connect.md)します。
 
-1. データベースの作成。
+1. データベースを作成します。
 
       ```sql
       CREATE DATABASE [demodb]

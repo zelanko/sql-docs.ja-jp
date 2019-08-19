@@ -9,12 +9,12 @@ f1_keywords: ''
 helpviewer_keywords: ''
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 40057200c5b8241849f4030e6c418cf080d149f2
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: c92eead00b10c4a26a93234c3bbfeebf254f6aff
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329344"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028843"
 ---
 # <a name="sql-server-privacy-supplement"></a>SQL Server のプライバシーの補足情報
 
@@ -23,7 +23,7 @@ ms.locfileid: "68329344"
 この記事では、機能使用状況および診断データを匿名で収集して Microsoft に送信する、インターネット対応機能の概要を説明します。 SQL Server では、標準的なコンピューター情報、および使用とパフォーマンスに関するデータが収集される場合があります。これらの情報は Microsoft に送信され、製品の品質、セキュリティ、および信頼性を向上させる目的で分析されます。 この記事は、[Microsoft のプライバシーに関する声明](https://go.microsoft.com/fwlink/?LinkId=521839)全体の内容を補うものです。 この記事のデータ分類は、SQL Server オンプレミス製品のバージョンにのみ適用されます。 次のアイテムには適用されません。
 
 - Azure SQL データベース
-- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/en-us/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
+- [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-telemetry-ssms?view=sql-server-2017)
 - SQL Server Data Tools (SSDT)
 - Azure Data Studio
 - Database Migration Assistant

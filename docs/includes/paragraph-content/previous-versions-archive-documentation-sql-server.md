@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: 69aef06a7a4c8a8cfbf15a541a98cf8979de2296
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cac46ccdef1440613e4caa3e8458f03031a6ba1b
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68212782"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969468"
 ---
 
 Microsoft は、Web ページのアーカイブ セットに非常に古いバージョンの Microsoft SQL Server のドキュメントを蓄積し、保持しています。 アーカイブされた Web ページは、Bing.com や Google.com などの検索エンジンの対象にはなりません。 これらのアーカイブは、Microsoft の Docs の _previous-versions/sql/_ アドレスで確認できます。
@@ -22,4 +22,13 @@ Microsoft は、Web ページのアーカイブ セットに非常に古いバ�
 
 [SQL Server 2019 のドキュメント](https://docs.microsoft.com/sql/sql-server/sql-server-technical-documentation?toc=/sql/toc/toc.json&view=sql-server-ver15) は、メインの Docs アドレスから入手できます。 次に、ページの上部近くにある [バージョン管理] ドロップダウンを使用して、対象の別のバージョンを選択します。
 
-以前のバージョンの SQL Server に関するドキュメントの詳細については、「[以前のバージョンの SQL Server ドキュメント](/sql/toc/previous-versions-sql-server?view=sql-server-previousversions)」を参照してください。
+以前のバージョンの SQL Server に関するドキュメントの詳細については、「[以前のバージョンの SQL Server ドキュメント](/sql/toc/previous-versions-sql-server)」を参照してください。
+
+<!-- GM:
+On links to file 'previous-versions-sql-server.md', append 
+    '?view=sql-server-previousversions' 
+only when customer explicitly does so. 
+If our markdown ever needs to append a ?view= for the article, best is probably 
+    '?view=sql-server-2016' . 
+-->
+

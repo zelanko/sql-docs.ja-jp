@@ -10,12 +10,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: haoqian
 ms.author: haoqian
-ms.openlocfilehash: a7c0e9b1d3315edb314cc95980fec8e18d544d0d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 36f4dce1559df59a61ee25d26b76d0ddd4dda3c1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68064561"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028749"
 ---
 # <a name="scale-out-support-for-high-availability"></a>高可用性を実現するための Scale Out のサポート
 
@@ -73,7 +73,7 @@ Scale Out Master のセカンダリ ノードに SQL Server データベース �
 
 SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##** (パスワードは自動生成されます) によって行われます。 SSISDB のすべてのレプリカのログ記録を機能させるには、次の操作を行います。
 
-### <a name="61-change-the-password-of-msssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 プライマリ SQL Server で **##MS_SSISLogDBWorkerAgentLogin##** のパスワードを変更する
+### <a name="61-change-the-password-of-ms_ssislogdbworkeragentlogin-on-the-primary-sql-server"></a>6.1 プライマリ SQL Server で **##MS_SSISLogDBWorkerAgentLogin##** のパスワードを変更する
 
 ### <a name="62-add-the-login-to-the-secondary-sql-server"></a>6.2 ログインをセカンダリ SQL Server に追加する
 
@@ -98,7 +98,7 @@ SSISDB でのログ記録は、ログイン **##MS_SSISLogDBWorkerAgentLogin##**
 
 Azure の仮想マシンでは、この構成手順の他に追加の手順が必要です。 これらの概念および手順の詳しい説明については、この記事の範囲対象外です。
 
-1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/en-us/azure/active-directory-domain-services/create-instance)」を参照してください。
+1.  Azure ドメインを設定する必要があります。 Windows Server フェールオーバー クラスタリングでは、クラスター内のすべてのコンピューターが同じドメインのメンバーである必要があります。 詳細については、「[Azure Portal を使用して Azure Active Directory Domain Services を有効にする](https://docs.microsoft.com/azure/active-directory-domain-services/create-instance)」を参照してください。
 
 2. Azure ロード バランサーを設定する必要があります。 これは可用性グループ リスナーの要件です。 詳細については、「[チュートリアル:Azure portal の Basic ロードバランサーを使用して内部トラフィックの負荷を分散する](https://docs.microsoft.com/azure/load-balancer/tutorial-load-balancer-basic-internal-portal)」を参照してください。
 

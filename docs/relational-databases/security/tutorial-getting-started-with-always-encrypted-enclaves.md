@@ -12,12 +12,12 @@ ms.topic: tutorial
 author: jaszymas
 ms.author: jaszymas
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e70dc6ddf897b34f5ffd0cf3c573ea973a1a36ad
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: de030c3982fb3e3ed64603707b7e6915779fb4d8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888885"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028816"
 ---
 # <a name="tutorial-getting-started-with-always-encrypted-with-secure-enclaves-using-ssms"></a>チュートリアル:SSMS を使用したセキュリティで保護されたエンクレーブを持つ Always Encrypted の概要
 [!INCLUDE [tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -37,15 +37,15 @@ ms.locfileid: "68888885"
 
 - [!INCLUDE [sssqlv15-md](../../includes/sssqlv15-md.md)] 以降。
 - Windows 10 Enterprise バージョン 1809、または Windows Server 2019 Datacenter。
-- SQL Server コンピューターが物理マシンの場合は、[Hyper-V のハードウェア要件](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)を満たしている必要があります。
+- SQL Server コンピューターが物理マシンの場合は、[Hyper-V のハードウェア要件](https://docs.microsoft.com/virtualization/hyper-v-on-windows/reference/hyper-v-requirements#hardware-requirements)を満たしている必要があります。
    - 第 2 レベル アドレス変換 (SLAT) 付き 64 ビット プロセッサ
    - VM モニター モード拡張機能 (Intel CPU 上の VT-c) の CPU サポート
    - 仮想化のサポートが有効になりました (Intel VT-x または AMD-V)
 - 使用している SQL Server コンピューターが仮想マシンの場合は、仮想化ベースのセキュリティをサポートするように VM を構成する必要があります。
-   - Hyper-V 2016 以降では、第 1 世代の VM を使用して VM プロセッサ上で[入れ子になった仮想化拡張機能を有効にする](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)か、第 2 世代の VM を使用します。 VM の世代の詳細については、「[Hyper-V で第 1 世代または第 2 世代のどちらの仮想マシンを作成するか](https://docs.microsoft.com/en-us/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)」を参照してください。 
+   - Hyper-V 2016 以降では、第 1 世代の VM を使用して VM プロセッサ上で[入れ子になった仮想化拡張機能を有効にする](https://docs.microsoft.com/virtualization/hyper-v-on-windows/user-guide/nested-virtualization#configure-nested-virtualization)か、第 2 世代の VM を使用します。 VM の世代の詳細については、「[Hyper-V で第 1 世代または第 2 世代のどちらの仮想マシンを作成するか](https://docs.microsoft.com/windows-server/virtualization/hyper-v/plan/should-i-create-a-generation-1-or-2-virtual-machine-in-hyper-v)」を参照してください。 
    - Azure では、次のいずれかをサポートする VM サイズを実行している必要があります。
-      - 入れ子になった仮想化。たとえば、Dv3 と Ev3 シリーズの VM です。 [入れ子対応の Azure VM の作成](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
-      - 第 2 世代の VM (例: Dsv3 または Esv3 シリーズの VM)。 [Azure での第 2 世代 VM のサポート](https://docs.microsoft.com/en-us/azure/virtual-machines/windows/generation-2)に関するページを参照してください。
+      - 入れ子になった仮想化。たとえば、Dv3 と Ev3 シリーズの VM です。 [入れ子対応の Azure VM の作成](https://docs.microsoft.com/azure/virtual-machines/windows/nested-virtualization#create-a-nesting-capable-azure-vm)に関するページを参照してください。
+      - 第 2 世代の VM (例: Dsv3 または Esv3 シリーズの VM)。 [Azure での第 2 世代 VM のサポート](https://docs.microsoft.com/azure/virtual-machines/windows/generation-2)に関するページを参照してください。
    - VMWare vSphere 6.7 以降では、[VMware のドキュメント](https://docs.vmware.com/en/VMware-vSphere/6.7/com.vmware.vsphere.vm_admin.doc/GUID-C2E78F3E-9DE2-44DB-9B0A-11440800AADD.html)の説明に従って、仮想化ベースのセキュリティによる VM のサポートを有効にします。
    - 仮想化拡張機能 (入れ子になった仮想化とも呼ばれます) が VM に公開されている限り、その他のハイパーバイザーとパブリック クラウドは、VM でのセキュリティで保護されたエンクレーブとの Always Encrypted を使用してサポートする可能性があります。 互換性と構成手順については、仮想化ソリューションのドキュメントを確認してください。
 - [SQL Server Management Studio (SSMS) 18.0 以降](../../ssms/download-sql-server-management-studio-ssms.md)。

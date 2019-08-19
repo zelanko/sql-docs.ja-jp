@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.custom: ''
 ms.technology: configuration
-ms.openlocfilehash: 80b6e7444f77fbd764402643887dcee94eaec7aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d5248f97b044cb688174171fdb6ef79943851a92
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68091805"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028935"
 ---
 # <a name="configure-usage-and-diagnostic-data-collection-for-sql-server-ceip"></a>SQL Server の使用状況および診断データの収集を構成する (CEIP)
 
@@ -144,7 +144,7 @@ SSMS では、それ自体のクラッシュ ダンプを収集しません。 S
  
 - Windows Server 2016 および Windows 10
 
-    [組織内の Windows 診断データの構成](https://docs.microsoft.com/en-us/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
+    [組織内の Windows 診断データの構成](https://docs.microsoft.com/windows/privacy/configure-windows-diagnostic-data-in-your-organization)
 - Windows Server 2008 R2 および Windows 7
 
     [WER 設定](/windows/desktop/wer/wer-settings)

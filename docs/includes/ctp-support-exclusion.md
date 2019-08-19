@@ -1,10 +1,10 @@
 ---
-ms.openlocfilehash: dd52923a1e9c363d527aee9aedc1253e478f3e4e
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: b51f93b12c51bd7bc9659ee1661a7fdc068dd2bd
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419553"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028865"
 ---
 ## <a name="enabled-deployment-scenarios"></a>有効なデプロイ シナリオ
 
@@ -19,7 +19,7 @@ CTP 3.2 により、次のシナリオが有効にされます。
 
 ## <a name="support"></a>サポート
 
-SQL Server 2019 CTP 3.2 はプレビュー ソフトウェアです。 この操作は、公式にはサポートされていません。 [SQL 早期導入プログラム](http://aka.ms/sqleap)を使用しているお客様は、Microsoft と相談して特別な契約を結び、SQL Server 2019 CTP 3.2 の実行がサポートされている場合があります。
+SQL Server 2019 CTP 3.2 はプレビュー ソフトウェアです。 この操作は、公式にはサポートされていません。 [SQL 早期導入プログラム](https://aka.ms/sqleap)を使用しているお客様は、Microsoft と相談して特別な契約を結び、SQL Server 2019 CTP 3.2 の実行がサポートされている場合があります。
 
 早期導入プログラムを使用されていないお客様の制限付きサポートについては、次のいずれかで見つかる可能性があります。
 

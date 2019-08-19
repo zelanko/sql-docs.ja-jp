@@ -981,7 +981,7 @@
   href: ../integration-services/security/identify-the-source-of-packages-with-digital-signatures.md
 - name: Integration Services のロール (SSIS サービス)
   href: ../integration-services/security/integration-services-roles-ssis-service.md
-- name: パッケージとその他の操作を実行するモニター
+- name: 実行中のパッケージとその他の操作の監視
   href: ../integration-services/performance/monitor-running-packages-and-other-operations.md
 - name: Integration Services パッケージによってログに記録されるイベント
   href: ../integration-services/performance/events-logged-by-an-integration-services-package.md
@@ -1438,6 +1438,17 @@
   href: ../integration-services/azure-feature-pack-for-integration-services-ssis.md
 - name: Integration Services (SSIS) での Hadoop と HDFS のサポート
   href: ../integration-services/hadoop-and-hdfs-support-in-integration-services-ssis.md
+- name: Microsoft Connector for Oracle
+  href: ../integration-services/data-flow/oracle-connector.md
+  items:
+    - name: Oracle 接続マネージャー
+      href: ../integration-services/data-flow/oracle-connection-manager.md
+    - name: Oracle 変換元
+      ref: ../integration-services/data-flow/oracle-source.md
+    - name: Oracle 変換先
+      href: ../integration-services/data-flow/oracle-destination.md
+    - name: データ型のサポート
+      href: ../integration-services/data-flow/oracle-data-type-support.md
 - name: Microsoft Connectors for Oracle and Teradata by Attunity
   href: ../integration-services/attunity-connectors.md
 - name: SQL Server インポートおよびエクスポート ウィザード
