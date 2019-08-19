@@ -73,7 +73,7 @@ SQL Server では、このステートメントは、新しいデータベース
 
 ## <a name="syntax"></a>構文
 
-データベースの作成。
+データベースを作成します。
 
 ```
 CREATE DATABASE database_name
@@ -462,7 +462,7 @@ AS SNAPSHOT OF *source_database_name*: 作成されるデータベースが、*s
 2. Service Broker GUID がデータベースに割り当てられます。
 3. 次に、[!INCLUDE[ssDE](../../includes/ssde-md.md)] は、データベース内の領域の使用状況を記録する内部データが格納されるページを除いて、データベースの残りの部分に空のページを挿入します。
 
-インスタンスには、最大 32,767 個のデータベースを指定できます [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]です。
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスには、最大 32,767 個のデータベースを指定できます。
 
 各データベースには、データベース内で特殊な操作を実行できる所有者が存在します。 所有者はデータベースを作成するユーザーです。 データベース所有者は、[sp_changedbowner](../../relational-databases/system-stored-procedures/sp-changedbowner-transact-sql.md) を使用して変更できます。
 

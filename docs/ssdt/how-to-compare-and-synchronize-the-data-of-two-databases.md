@@ -82,7 +82,7 @@ ms.locfileid: "67929475"
   
     プレースホルダー (*sServerName*、*sDatabaseName*、*sUserName*、*sPassword*、*sDisplayName*、*tServerName*、*tDatabaseName*、*tUserName*、*tPassword*、*tDisplayName*) をソース データベースとターゲット データベースの値に置き換えます。  
   
-    ソースおよびターゲットを指定しない場合は、 **[新しいデータの比較]** ダイアログ ボックスが表示されます。 Sql.NewDataComparison コマンドのパラメーターについて詳しくは、「[Visual Studio のデータベース機能のオートメーション コマンド リファレンス](https://msdn.microsoft.com/library/dd470565.aspx)」をご覧ください。  
+    ソースおよびターゲットを指定しない場合は、 **[新しいデータの比較]** ダイアログ ボックスが表示されます。 Sql.NewDataComparison コマンドのパラメーターについて詳しくは、[Visual Studio Team System のデータベース機能のオートメーション コマンド リファレンス](https://msdn.microsoft.com/library/dd470565.aspx)に関するページをご覧ください。  
   
     指定したソース データベースとターゲット データベースのデータが比較されます。 結果が [データ比較] セッションに表示されます。 結果の表示方法またはデータの同期方法について詳しくは、「[データの差異の表示](#ViewDifferences)」および「[データベース データの同期](#Synchronize)」をご覧ください。  
   

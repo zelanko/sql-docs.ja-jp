@@ -1,5 +1,5 @@
 ---
-title: 静的データ マスク | Microsoft Docs
+title: 静的データ マスキング | Microsoft Docs
 ms.date: 04/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -18,12 +18,12 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/20/2019
 ms.locfileid: "67298192"
 ---
-# <a name="static-data-masking"></a>静的データ マスク
+# <a name="static-data-masking"></a>静的データ マスキング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 静的データ マスキングは、[SQL Server Management Studio](../../ssms/sql-server-management-studio-ssms.md) 18.0 プレビュー 5 以降のコンポーネントとしてリリースされました。 
 > [!IMPORTANT]
-> Microsoft では、現在のプロトタイプはお客様の期待を満たしていないと判断しました。 そのため、この機能の今後の改良は行われない予定です。 これに代わるものが用意できた場合、弊社の計画を改めてお知らせします。
+> Microsoft では、現在のプロトタイプはお客様の期待を満たしていないと判断しました。 そのため、この機能の今後の改良は行われない予定です。 これに代わるものがご用意できた場合には、弊社の計画を改めてお知らせします。
 >
 
 ## <a name="see-also"></a>参照  
