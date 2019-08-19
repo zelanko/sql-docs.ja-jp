@@ -60,8 +60,8 @@ sp_settriggerorder [ @triggername = ] '[ triggerschema. ] triggername'
   
  トリガーとして指定できる、**First**または**Last**ステートメントの種類のトリガーとしてそのトリガーが定義した後にのみステートメントの種類のトリガー。 たとえば、トリガー **TR1**指定できるは**First**テーブルに挿入**T1**場合**TR1** INSERT トリガーとして定義されます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]エラーが返されます**TR1**、として設定されますが、INSERT トリガーとしてのみ定義されている、**First**、または**Last**、UPDATE ステートメントをトリガーします。 詳細については、「解説」を参照してください。  
   
- **\@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
- ときに*triggername* 、DDL トリガーは、 **\@namespace** を指定するかどうか*triggername*データベース スコープか、サーバー スコープで作成されました。 場合*triggername* 、ログオン トリガーは、サーバーを指定する必要があります。 DDL トリガーのスコープの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。 指定しない場合、または NULL が指定されている場合*triggername* DML トリガーです。  
+ **@namespace=** { **'DATABASE'**  |  **'SERVER'** | NULL }  
+ ときに*triggername* 、DDL トリガーは、 **@namespace** を指定するかどうか*triggername*データベース スコープか、サーバー スコープで作成されました。 場合*triggername* 、ログオン トリガーは、サーバーを指定する必要があります。 DDL トリガーのスコープの詳細については、次を参照してください。 [DDL トリガー](../../relational-databases/triggers/ddl-triggers.md)します。 指定しない場合、または NULL が指定されている場合*triggername* DML トリガーです。  
   
 ||  
 |-|  
