@@ -10,12 +10,12 @@ ms.assetid: 3765f865-2b93-44be-b290-28e3815d5ecb
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: a6cf8b025530cbeee236e519564cc5c25861824c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: cbc9ad315792fc4198988a53713f978ff119d2ee
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888102"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493822"
 ---
 # <a name="defining-and-using-a-drillthrough-action"></a>ドリルスルー アクションの定義と使用
   ファクト ディメンションによってファクト データを多次元化する場合、必要なデータのみが返されるようにフィルターを設定しないとクエリのパフォーマンスが低下する可能性があります。 これを回避するために、返される合計行数を制限するドリルスルー アクションを定義できます。 これにより、クエリのパフォーマンスが大幅に向上します。  
@@ -143,13 +143,13 @@ ms.locfileid: "68888102"
      ![Adam Powell に発送]された注文(../../2014/tutorials/media/l8-action8.gif "Adam Powell に発送")された注文  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 9:パースペクティブと翻訳の定義](https://docs.microsoft.com/analysis-services/lesson-9-defining-perspectives-and-translations)  
+ [レッスン 9:パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)  
   
 ## <a name="see-also"></a>関連項目  
  [アクション&#40;Analysis Services-多次元データ&#41;](multidimensional-models/actions-analysis-services-multidimensional-data.md)   
  [多次元モデルでのアクション](multidimensional-models/actions-in-multidimensional-models.md)   
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [ファクトリレーションシップの定義](https://docs.microsoft.com/analysis-services/lesson-5-2-defining-a-fact-relationship)   
+ [ファクトリレーションシップの定義](lesson-5-2-defining-a-fact-relationship.md)   
  [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   
   

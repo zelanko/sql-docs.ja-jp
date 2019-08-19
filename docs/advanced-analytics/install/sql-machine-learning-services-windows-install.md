@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0b9161d2093c7a32d027da987fdcd3316d1cbbaa
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715225"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531048"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows に SQL Server Machine Learning Services をインストールする
 
@@ -106,7 +106,7 @@ ms.locfileid: "68715225"
 
 R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)、Intel MATH Kernel Library (MKL) 計算からの一貫した出力を確保する必要があります。
 
-1. コントロールパネルで、[**システムとセキュリティ** >  **] [システム** > ] [システム**設定** > ] [**環境変数**] をクリックします。
+1. コントロールパネルで、[**システムとセキュリティ** >  > ] [システム] [システム**設定** > ] [**環境変数**] をクリックします。
 
 2. 新しいユーザー変数またはシステム変数を作成します。 
 
@@ -244,6 +244,10 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
 * [SQLRUserGroup のログインを作成する](../../advanced-analytics/security/create-a-login-for-sqlrusergroup.md)
 * ディスク[クォータを管理](https://docs.microsoft.com/windows/desktop/fileio/managing-disk-quotas)して、ディスク領域を消費するタスクを実行する外部スクリプトを回避する
 
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+Windows の SQL Server 2019 では、分離メカニズムが変更されました。 これは、 **SQLRUserGroup**、ファイアウォール規則、ファイルのアクセス許可、および暗黙の認証に影響します。 詳細については、「 [Machine Learning Services の分離の変更](sql-server-machine-learning-services-2019.md)」を参照してください。
+::: moniker-end
+
 <a name="bkmk_configureAccounts"></a> 
 <a name="permissions-external-script"></a> 
 
@@ -258,9 +262,11 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
 
 すべての作業が完了したので、機械学習をサポートするようにサーバーを最適化したり、事前トレーニング済みのモデルをインストールしたりすることもできます。
 
+::: moniker range="=sql-server-2017||=sqlallproducts-allversions"
 ### <a name="add-more-worker-accounts"></a>ワーカーアカウントを追加する
 
 多くのユーザーがスクリプトを同時に実行することが予想される場合は、スタートパッドサービスに割り当てられているワーカーアカウントの数を増やすことができます。 詳細については、「 [SQL Server Machine Learning Services のユーザーアカウントプールを変更](../administration/modify-user-account-pool.md)する」を参照してください。
+::: moniker-end
 
 ### <a name="optimize-the-server-for-script-execution"></a>スクリプトの実行用にサーバーを最適化する
 
@@ -286,14 +292,14 @@ R パッケージをインストールして管理するには、データベー
 
 ## <a name="next-steps"></a>次のステップ
 
-R 開発者は、いくつかの簡単な例を使って開始し、SQL Server での R の動作の基本を学習できます。 次の手順については、次のリンクを参照してください。
+R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクをご覧ください。
 
-+ [チュートリアル: T-sql で R を実行する](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [チュートリアル: T-SQL での R の実行](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
 + [チュートリアル: R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。
 
-+ [チュートリアル: T-sql で Python を実行する](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル: T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
 + [チュートリアル: Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-実際のシナリオに基づく機械学習の例については、「 [machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)」を参照してください。
+実際のシナリオに基づいた機械学習の例については、[機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)を参照してください。

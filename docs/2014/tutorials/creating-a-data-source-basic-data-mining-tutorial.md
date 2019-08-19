@@ -10,12 +10,12 @@ ms.assetid: d7107c32-69ed-49a8-9b6e-32753eebf42c
 author: minewiskan
 ms.author: owend
 manager: kfile
-ms.openlocfilehash: 7fc2d6eebc342de7126ebd3c8c41c12e07107089
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 3f85320a99c901a2fd71c9048750825569559099
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888751"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494025"
 ---
 # <a name="creating-a-data-source-basic-data-mining-tutorial"></a>データ ソースの作成 (基本的なデータ マイニング チュートリアル)
   *データソース*は、プロジェクトに保存および管理され、 [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]データベースに[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]配置されるデータ接続です。 データ ソースには、ソース データが存在するサーバーとデータベースの名前、および接続に必要なその他のプロパティが含まれます。  
@@ -62,7 +62,7 @@ ms.locfileid: "68888751"
   
 ## <a name="see-also"></a>参照  
  [データ ソースの作成 &#40;SSAS 多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/create-a-data-source-ssas-multidimensional)   
- [データソースの定義](https://docs.microsoft.com/analysis-services/lesson-1-2-defining-a-data-source)   
+ [データソースの定義](../analysis-services/lesson-1-2-defining-a-data-source.md)   
  [権限借用オプションの設定 &#40;SSAS - 多次元&#41;](https://docs.microsoft.com/analysis-services/multidimensional-models/set-impersonation-options-ssas-multidimensional)  
   
   

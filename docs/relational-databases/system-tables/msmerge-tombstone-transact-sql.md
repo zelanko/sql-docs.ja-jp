@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68092662"
 ---
-# <a name="msmergetombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
+# <a name="msmerge_tombstone-transact-sql"></a>MSmerge_tombstone (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_tombstone**テーブルは、削除された行に関する情報を格納でき、他のサブスクライバーに反映されるまで削除します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
@@ -40,7 +40,7 @@ ms.locfileid: "68092662"
 |**logical_record_lineage**|**varbinary(501)**|サブスクライバーのニックネームとバージョン番号のペアのこの行が属する論理レコードの削除の履歴を維持するために使用されます。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

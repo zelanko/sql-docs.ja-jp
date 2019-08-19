@@ -10,12 +10,12 @@ ms.assetid: 648b9a02-1278-4f11-b940-6f0de6a4042d
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 7eba0c1778923981361e5ecab1819afe3dec58d9
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888090"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493793"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI の定義と表示
   主要業績評価指標 (KPI) を定義するには、まず、KPI の名前と、KPI に関連するメジャー グループを定義します。 すべてのメジャー グループ、または単一のメジャー グループを KPI に関連付けることができます。 その後、KPI の次のような要素を定義します。  
@@ -268,6 +268,6 @@ ms.locfileid: "68888090"
      Q3 CY 2007 の North America における小売店のバイクの売上総利益率が表示されます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 8: アクションの定義](https://docs.microsoft.com/analysis-services/lesson-8-defining-actions)  
+ [レッスン 8: アクションの定義](lesson-8-defining-actions.md)  
   
   

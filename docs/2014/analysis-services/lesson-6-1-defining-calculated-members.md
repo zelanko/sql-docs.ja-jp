@@ -10,12 +10,12 @@ ms.assetid: 07f13e1c-0b20-4f9e-ad62-c438983f2785
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b4d2fddf1707ec4e1521b99d9d526f173464cd8e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ede0a23a6e37c47a1af242748233ca49b0cdfab7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888181"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69493882"
 ---
 # <a name="defining-calculated-members"></a>計算されるメンバーの定義
   計算されるメンバーとは、キューブ データ、算術演算子、数値、関数を組み合わせて定義した、ディメンション グループまたはメジャー グループのメンバーです。 たとえば、キューブ内の 2 つの物理的なメジャーの合計を計算する、計算されるメンバーを作成できます。 計算されるメンバーの定義はキューブ内に保存されますが、その値はクエリ時に計算されます。  
@@ -287,7 +287,7 @@ ms.locfileid: "68888181"
      アクセサリの売上は毎年増加しているものの、合計売上に占める割合が非常に小さいことがわかります。 また、アクセサリの売上における総利益率は、自転車よりも高くなっています。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [名前付きセットの定義](https://docs.microsoft.com/analysis-services/lesson-6-2-defining-named-sets)  
+ [名前付きセットの定義](lesson-6-2-defining-named-sets.md)  
   
 ## <a name="see-also"></a>関連項目  
  [Custom](multidimensional-models-olap-logical-cube-objects/calculations.md)   
