@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67986471"
 ---
-# <a name="msreplerrors-transact-sql"></a>MSrepl_errors (Transact-SQL)
+# <a name="msrepl_errors-transact-sql"></a>MSrepl_errors (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_errors**テーブルには、ディストリビューション エージェントおよびマージ エージェントのエラーに関する拡張情報を持つ行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "67986471"
 |**session_id**|**int**|エラーが発生したエージェント セッションの ID。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68032602"
 ---
-# <a name="mspubidentityrange-transact-sql"></a>MSpub_identity_range (Transact-SQL)
+# <a name="mspub_identity_range-transact-sql"></a>MSpub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSpub_identity_range**テーブル id 範囲管理サポートを提供します。 このテーブルは、パブリケーションおよびサブスクリプション データベースに格納されます。  
@@ -39,7 +39,7 @@ ms.locfileid: "68032602"
 |**last_seed**|**bigint**|現在の範囲の下限値です。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
