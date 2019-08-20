@@ -1,5 +1,5 @@
 ---
-title: MSreplication_monitordata (TRANSACT-SQL) |Microsoft Docs
+title: MSreplication_monitordata (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -34,10 +34,10 @@ ms.locfileid: "68079140"
 |**lastrefresh**|**datetime**|日付とモニターのデータが更新された時刻。|  
 |**computetime**|**int**|モニターのデータを計算する時間 (秒) が取得されます。|  
 |**publication_id**|**int**|パブリケーション ID|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
 |**publisher_srvid**|**int**|パブリッシャーのサーバー ID です。|  
 |**publisher_db**|**sysname**|パブリケーション データベースの名前です。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
+|**publication**|**sysname**|パブリケーションの名前を指定します。|  
 |**publication_type**|**int**|パブリケーションで、これらの値のいずれかの種類:<br /><br /> **0** = トランザクション パブリケーション<br /><br /> **1** = スナップショット パブリケーション<br /><br /> **2** = マージ パブリケーション|  
 |**agent_type**|**int**|レプリケーション エージェントの種類です。次のいずれかの値をとります。<br /><br /> **1** = スナップショット エージェント<br /><br /> **2** = ログ リーダー エージェント<br /><br /> **3** = ディストリビューション エージェント<br /><br /> **4** = マージ エージェント<br /><br /> **9** = キュー リーダー エージェント|  
 |**agent_id**|**int**|レプリケーション エージェントの ID。|  
@@ -49,7 +49,7 @@ ms.locfileid: "68079140"
 |**last_distsync**|**datetime**|最後の日付と、ディストリビューション エージェントが実行された時刻が必要です。|  
 |**agentstoptime**|**datetime**|エージェントが停止された日時です。|  
 |**distdb**|**sysname**|サブスクリプションのディストリビューション データベースの名前。|  
-|**保有期間**|**int**|パブリケーションの保有期間。|  
+|**retention**|**int**|パブリケーションの保有期間。|  
 |**time_stamp**|**datetime**|内部使用のみ。|  
 |**worst_latency**|**int**|トランザクション パブリケーションのログ リーダーまたはディストリビューション エージェントによって反映されるデータの変更を秒単位で最大待ち時間。|  
 |**best_latency**|**int**|秒単位のトランザクション パブリケーションのログ リーダーまたはディストリビューション エージェントによって反映されるデータ変更で最も短い。|  
@@ -65,14 +65,14 @@ ms.locfileid: "68079140"
 |**retention_period_unit**|**tinyint**|保有期間を定義するときに使用する単位を指定します。次のいずれかの値をとります。<br /><br /> **1** = 週<br /><br /> **2** = 月<br /><br /> **3** = 年|  
   
 ## <a name="see-also"></a>関連項目  
- [プログラムでレプリケーションを監視します。](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_replmonitorhelpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
- [sp_replmonitorhelppublication &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
- [sp_replmonitorhelppublisher &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
- [sp_replmonitorhelpmergesession &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
- [sp_replmonitorhelppublicationthresholds &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
- [sp_replmonitorhelpmergesessiondetail &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
+ [プログラムによるレプリケーションの監視](../../relational-databases/replication/monitor/programmatically-monitor-replication.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_replmonitorhelpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpsubscription-transact-sql.md)   
+ [sp_replmonitorhelppublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublication-transact-sql.md)   
+ [sp_replmonitorhelppublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublisher-transact-sql.md)   
+ [sp_replmonitorhelpmergesession &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesession-transact-sql.md)   
+ [sp_replmonitorhelppublicationthresholds &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelppublicationthresholds-transact-sql.md)   
+ [sp_replmonitorhelpmergesessiondetail &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replmonitorhelpmergesessiondetail-transact-sql.md)  
   
   
