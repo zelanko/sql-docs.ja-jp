@@ -1250,7 +1250,7 @@ BEGIN TRANSACTION
   
  sys.dm_tran_top_version_generators。 バージョン ストア内で最も高いバージョンを生成しているオブジェクトの仮想テーブルを返します。 集計済みのレコード長について、長いものから順に 256 位までを database_id と rowset_id でグループ化しています。 この関数を使用して、バージョン ストアを最も多く使用しているレコードを見つけます。 詳しくは、「[sys.dm_tran_top_version_generators &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-top-version-generators-transact-sql)」をご覧ください。  
   
- sys.dm_tran_version_store。 共通バージョン ストア内のすべてのバージョン レコードを表す仮想テーブルを返します。 詳細については、[sys.dm_tran_version_store & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql)。  
+ sys.dm_tran_version_store。 共通バージョン ストア内のすべてのバージョン レコードを表す仮想テーブルを返します。 詳細については、[sys.dm_tran_version_store &#40;Transact-SQL&#41;](/sql/relational-databases/system-dynamic-management-views/sys-dm-tran-version-store-transact-sql)を参照してください。 
   
 > [!NOTE]  
 >  sys.dm_tran_top_version_generators と sys.dm_tran_version_store では、非常に大きくなる可能性があるバージョン ストア全体に対してクエリが実行されるので、これらの関数を実行すると非常に多くのリソースが使用される可能性があります。  
@@ -1944,7 +1944,7 @@ GO
   
 #### <a name="stopping-a-transaction"></a>トランザクションの停止  
 
- KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、[KILL & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/kill-transact-sql)。  
+ KILL ステートメントの使用が必要になる場合もあります。 ただし、重要なプロセスが実行中の場合は特に、このステートメントの使用には十分注意してください。 詳細については、[KILL &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/kill-transact-sql) を参照してください。  
   
  ![上部のリンクに戻る で使用される矢印アイコン](media/uparrow16x16.gif "に戻る リンクの上位で使用される矢印アイコン")[このガイドで](#Top)  
   
