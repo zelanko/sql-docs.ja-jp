@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 60e8ef0a-0851-41cf-a6d8-cca1e04cbcdb
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 1778f9b3f6b4662de36e33e3ae7974f4eef4dd82
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1feb0cfe509f4dec4e77076021757045628e2e7a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771024"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028972"
 ---
 # <a name="sqlservr-application"></a>sqlservr アプリケーション
 
@@ -84,8 +84,8 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 |パラメーター | 詳細情報|
 |:-----|:-----|
-|**-h** | 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 32 ビットのインスタンスで、AWE が有効になっている場合に、ホット アド メモリ メタデータ用の仮想メモリ アドレス空間を確保します。 で[!INCLUDE[sssql14](../includes/sssql14-md.md)]サポートされています。 詳細については、「 [SQL Server 2016 で提供が中止された機能](https://msdn.microsoft.com/library/0678bfbc-5d3f-44f4-89c0-13e8e52404da)」を参照してください。|
-|**-g** | *memory_to_reserve*<br/><br>以前のバージョンの32ビットインスタンス[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に適用されます。 で[!INCLUDE[sssql14](../includes/sssql14-md.md)]サポートされています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ プール外にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセス内に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がメモリ割り当て用の領域として残すメモリの容量を、整数で指定します (メガバイト単位)。|
+|**-h** | 以前のバージョンの [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の 32 ビットのインスタンスで、AWE が有効になっている場合に、ホット アド メモリ メタデータ用の仮想メモリ アドレス空間を確保します。 で[!INCLUDE[sssql14](../includes/sssql14-md.md)]サポートされています。 詳細については、「 [SQL Server 2016 で提供が中止された機能](../database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md)」を参照してください。|
+|**-g** | *memory_to_reserve*<br/><br>以前のバージョンの32ビットインスタンス[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]に適用されます。 で[!INCLUDE[sssql14](../includes/sssql14-md.md)]サポートされています。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] メモリ プール外にある [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] プロセス内に、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] がメモリ割り当て用の領域として残すメモリの容量を、整数で指定します (メガバイト単位)。 詳細については、[サーバーメモリ構成オプションに関する SQL Server 2014 のドキュメント](https://docs.microsoft.com/sql/database-engine/configure-windows/server-memory-server-configuration-options?view=sql-server-2014)を参照してください。|
 | &nbsp; | &nbsp; |
 
 ## <a name="see-also"></a>参照
