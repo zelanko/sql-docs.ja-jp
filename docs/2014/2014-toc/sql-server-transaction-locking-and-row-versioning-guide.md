@@ -120,7 +120,7 @@ ms.locfileid: "62513278"
  コミット フェーズ  
  トランザクション マネージャーは、すべてのリソース マネージャーから準備の正常完了通知を受け取ると、リソース マネージャーにコミット コマンドを送ります。 これにより、リソース マネージャーはコミットを完了できます。 すべてのリソース マネージャーがコミットの正常完了を報告した場合、トランザクション マネージャーは、アプリケーションに成功通知を送ります。 準備できなかったことを報告するリソース マネージャーがあった場合、トランザクション マネージャーはすべてのリソース マネージャーにロールバック コマンドを送り、アプリケーションにコミットできなかったことを報告します。  
   
- [!INCLUDE[ssDE](../includes/ssde-md.md)] アプリケーションは分散トランザクションの管理に [!INCLUDE[tsql](../includes/tsql-md.md)] またはデータベース API のどちらも使用できます。 詳細については、[BEGIN DISTRIBUTED TRANSACTION & #40 を参照してください。TRANSACT-SQL と #41 です](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql)。  
+ [!INCLUDE[ssDE](../includes/ssde-md.md)] アプリケーションは分散トランザクションの管理に [!INCLUDE[tsql](../includes/tsql-md.md)] またはデータベース API のどちらも使用できます。 詳細については、[BEGIN DISTRIBUTED TRANSACTION &#40;Transact-SQL&#41;](/sql/t-sql/language-elements/begin-distributed-transaction-transact-sql) を参照してください。  
   
 #### <a name="ending-transactions"></a>トランザクションの終了  
 
