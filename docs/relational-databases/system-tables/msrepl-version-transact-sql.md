@@ -1,5 +1,5 @@
 ---
-title: MSrepl_version (TRANSACT-SQL) |Microsoft Docs
+title: MSrepl_version (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68079154"
 ---
-# <a name="msreplversion-transact-sql"></a>MSrepl_version (TRANSACT-SQL)
+# <a name="msreplversion-transact-sql"></a>MSrepl_version (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_version**テーブルにインストールされているレプリケーションの現在のバージョンとの 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "68079154"
 |**db_existed**|**bit**|前に、ディストリビューション データベースが存在するかどうかを示す**sp_adddistributiondb**が呼び出されます。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
