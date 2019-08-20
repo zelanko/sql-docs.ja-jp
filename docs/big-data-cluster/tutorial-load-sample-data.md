@@ -9,12 +9,12 @@ ms.date: 07/24/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b35eccece4df47cb483932386cf6a38e45d2dc8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
+ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419278"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69621664"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターにサンプル データを読み込む
 
@@ -25,7 +25,7 @@ ms.locfileid: "68419278"
 > [!TIP]
 > [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub リポジトリには、他にも、SQL Server 2019 ビッグ データ クラスター (プレビュー) 用のサンプルが用意されています。 それらは、パス **sql-server-samples/samples/features/sql-big-data-cluster/** に置かれています。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [展開済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
@@ -33,7 +33,7 @@ ms.locfileid: "68419278"
    - **kubectl**
    - **sqlcmd**
    - **curl**
-
+ 
 ## <a id="sampledata"></a> サンプル データを読み込む
 
 次の手順では、ブートストラップ スクリプトを使用して SQL Server データベースのバックアップをダウンロードし、ご利用のビッグ データ クラスターにそのデータを読み込みます。 使いやすいように、これらの手順は 「[Windows](#windows)」セクションと「[Linux](#linux)」セクションに分けられています。
@@ -61,7 +61,7 @@ ms.locfileid: "68419278"
 
 1. ブートストラップ スクリプトでは、ご利用のビッグ データ クラスターに関する次の位置指定パラメーターが必要です。
 
-   | パラメーター | [説明] |
+   | パラメーター | 説明 |
    |---|---|
    | <CLUSTER_NAMESPACE> | ビッグ データ クラスターに付ける名前。 |
    | <SQL_MASTER_IP> | マスター インスタンスの IP アドレス。 |
@@ -97,7 +97,7 @@ ms.locfileid: "68419278"
 
 1. ブートストラップ スクリプトでは、ご利用のビッグ データ クラスターに関する次の位置指定パラメーターが必要です。
 
-   | パラメーター | [説明] |
+   | パラメーター | 説明 |
    |---|---|
    | <CLUSTER_NAMESPACE> | ビッグ データ クラスターに付ける名前。 |
    | <SQL_MASTER_IP> | マスター インスタンスの IP アドレス。 |

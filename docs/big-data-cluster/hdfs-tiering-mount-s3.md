@@ -9,20 +9,20 @@ ms.date: 07/31/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 10e7d0e30135622fedfcbe8f8dba67bfaf1908cd
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: aa95fc656a0adb7d88c3728d15cfcb3720266d07
+ms.sourcegitcommit: 8d01698e779a536093dd637e84c52f3ff0066a2c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702877"
+ms.lasthandoff: 08/19/2019
+ms.locfileid: "69611421"
 ---
 # <a name="how-to-mount-s3-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための S3 をマウントする方法
 
 次のセクションでは、S3 ストレージ データ ソースを使用して HDFS 階層制御を構成する方法の例を示します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
-- [デプロイ済みのビッグ データ クラスター](deployment-guidance.md)
+- [展開済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
@@ -61,7 +61,7 @@ ms.locfileid: "68702877"
    
 1. 上の手順に続けて環境変数 MOUNT_CREDENTIALS を設定する
 
-1. **azdata bdc storage-pool mount create** を使用して、Azure でリモート HDFS ストレージをマウントします。 次のコマンドを実行する前に、プレースホルダーの値を置き換えます。
+1. **Azdata bdc ストレージプールマウントの create**を使用して、リモート HDFS ストレージを S3 にマウントします。 次のコマンドを実行する前に、プレースホルダーの値を置き換えます。
 
    ```bash
    azdata bdc storage-pool mount create --remote-uri s3a://<S3 bucket name> --mount-path /mounts/<mount-name>
