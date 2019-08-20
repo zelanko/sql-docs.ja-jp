@@ -1,6 +1,6 @@
 - name: SQL Server Integration Services (SSIS)
   href: ../integration-services/sql-server-integration-services.md
-- name: SQL Server へようこそ >>
+- name: SQL Server へようこそ >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 概要
   items:
@@ -1801,11 +1801,11 @@
               href: ../integration-services/lesson-3-3-testing-the-deployed-packages.md
 - name: リソース
   items:
-    - name: SSIS フォーラムのヘルプの表示 >
+    - name: SSIS フォーラム >>
       href: 'https://social.msdn.microsoft.com/Forums/en-US/home'
-    - name: Stack Overflow のヘルプの表示 >
+    - name: スタック オーバーフロー >>
       href: 'https://stackoverflow.com/questions/tagged/ssis'
-    - name: SSIS チーム ブログのフォロー >
+    - name: SSIS ブログ >>
       href: 'https://blogs.msdn.microsoft.com/ssis/'
-    - name: 問題と要求の報告機能 >
+    - name: 製品フィードバック >>
       href: 'https://feedback.azure.com/forums/908035-sql-server'

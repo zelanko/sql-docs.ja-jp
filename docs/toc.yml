@@ -1982,7 +1982,7 @@
               href: relational-databases/xml/use-the-value-and-nodes-methods-with-openxml.md
 - name: 開発
   items:
-    - name: クライアント プログラムのコード >>
+    - name: クライアント プログラムのコード >
       displayName: 'ADO, ADO.NET, connect, C#, C++, Java, Node.js, ODBC, OLE DB, PHP, Python, Ruby'
       href: connect/index.md
     - name: データ層アプリケーション
@@ -4500,7 +4500,7 @@
               href: database-engine/configure-windows/server-properties-advanced-page.md
 - name: データの移行と読み込み
   items:
-    - name: SQL Server Integration Services (SSIS) >>
+    - name: SQL Server Integration Services (SSIS) >
       href: integration-services/index.md
     - name: 一括コピー ユーティリティ (bcp)
       href: tools/bcp-utility.md
@@ -5692,13 +5692,13 @@
                   href: sql-server/stretch-database/extended-events-for-stretch-database.md
         - name: リソース
           items:
-            - name: 価格 >
+            - name: 価格 >>
               href: 'https://azure.microsoft.com/pricing/details/sql-server-stretch-database/'
-            - name: ブログ >
+            - name: ブログ >>
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/tag/stretch-database/'
-            - name: サービスの更新 >
+            - name: サービスの更新 >>
               href: 'https://azure.microsoft.com/updates/?product=sql-server-stretch-database'
-            - name: ビデオ >
+            - name: ビデオ >>
               href: 'https://azure.microsoft.com/documentation/videos/index/?services=sql-server-stretch-database'
     - name: Database Experimentation ウィザード
       href: dea/database-experimentation-assistant-overview.md
@@ -7422,15 +7422,15 @@
               href: relational-databases/polybase/polybase-type-mapping.md
         - name: リソース
           items:
-            - name: DBA Stack Exchange >
+            - name: DBA Stack Exchange >>
               href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-            - name: Stack Overflow >
+            - name: スタック オーバーフロー >>
               href: 'https://stackoverflow.com/questions/tagged/sql-server'
-            - name: MSDN フォーラム >
+            - name: MSDN フォーラム >>
               href: 'https://social.msdn.microsoft.com/Forums/home?category=sqlserver'
-            - name: フィードバックの送信 >
+            - name: フィードバックの送信 >>
               href: 'https://feedback.azure.com/forums/908035-sql-server'
-            - name: Reddit >
+            - name: Reddit >>
               href: 'https://www.reddit.com/r/SQLServer'
     - name: リンク サーバー
       href: relational-databases/linked-servers/linked-servers-database-engine.md
@@ -7528,14 +7528,14 @@
           href: relational-databases/synonyms/create-synonyms.md
 - name: レポートと分析
   items:
-    - name: 高度な分析と機械学習 >>
+    - name: 高度な分析と機械学習 >
       href: advanced-analytics/
-    - name: 分析プラットフォーム システム >>
+    - name: 分析プラットフォーム システム >
       displayName: 'APS, PDW, Parallel Data Warehouse'
       href: analytics-platform-system/index.md
-    - name: SQL Server Analysis Services (SSAS) >>
+    - name: SQL Server Analysis Services (SSAS) >
       href: 'https://docs.microsoft.com/en-us/analysis-services/analysis-services-overview'
-    - name: SQL Server Reporting Services (SSRS) >>
+    - name: SQL Server Reporting Services (SSRS) >
       href: reporting-services/index.md
     - name: マスター データ サービス
       displayName: MDS
@@ -8107,7 +8107,7 @@
               href: relational-databases/security/row-level-security.md
             - name: 動的なデータ マスキング
               href: relational-databases/security/dynamic-data-masking.md
-            - name: 静的データ マスク
+            - name: 静的データ マスキング
               href: relational-databases/security/static-data-masking.md
             - name: 証明書と非対称キー
               href: relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
@@ -8282,11 +8282,11 @@
           items:
             - name: よく寄せられる質問
               href: azure-data-studio/faq.md
-            - name: Azure Data Studio の GitHub リポジトリ >
+            - name: Azure Data Studio の GitHub リポジトリ >>
               href: 'https://www.github.com/Microsoft/azuredatastudio'
-            - name: SQL Server ブログ >
+            - name: SQL Server ブログ >>
               href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-            - name: 問題の報告とご提案 >
+            - name: 問題の報告と提案 >>
               href: 'https://github.com/microsoft/azuredatastudio/issues'
     - name: コマンド プロンプト ユーティリティ
       href: tools/command-prompt-utility-reference-database-engine.md
@@ -10016,7 +10016,7 @@
               href: ssms/user-assistance-in-sql-server-management-studio.md
             - name: 匿名の利用状況データ
               href: ssms/sql-server-management-studio-telemetry-ssms.md
-            - name: フィードバック >
+            - name: フィードバック >>
               href: 'https://aka.ms/sqlfeedback'
     - name: SqlPackage.exe
       items:
@@ -10427,17 +10427,17 @@
       items:
         - name: '[トラブルシューティング]'
           href: linux/sql-server-linux-troubleshooting-guide.md
-        - name: ライセンス方法 >
+        - name: ライセンス方法 >>
           href: 'https://www.microsoft.com/sql-server/sql-server-2017-pricing'
-        - name: DBA Stack Exchange >
+        - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow >
+        - name: スタック オーバーフロー >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム >
+        - name: MSDN フォーラム >>
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: フィードバックの送信 >
+        - name: フィードバックの送信 >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
-        - name: Reddit >
+        - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
 - name: Azure 上の SQL
   items:
@@ -10451,9 +10451,9 @@
   items:
     - name: 学習する
       items:
-        - name: Microsoft Virtual Academy >
+        - name: Microsoft Virtual Academy >>
           href: 'https://mva.microsoft.com/product-training/sql-server'
-        - name: Channel 9 での SQL >
+        - name: Channel 9 での SQL >>
           href: 'https://channel9.msdn.com/Search'
     - name: ヘルプ
       items:
@@ -10461,29 +10461,29 @@
           href: sql-server/sql-server-get-help.md
         - name: SQL ドキュメントのバージョン管理
           href: sql-server/versioning-system-monikers-ui-sql-server.md
-        - name: DBA Stack Exchange >
+        - name: DBA Stack Exchange >>
           href: 'https://dba.stackexchange.com/questions/tagged/sql-server'
-        - name: Stack Overflow >
+        - name: スタック オーバーフロー >>
           href: 'https://stackoverflow.com/questions/tagged/sql-server'
-        - name: MSDN フォーラム >
+        - name: MSDN フォーラム >>
           href: 'https://social.msdn.microsoft.com/Forums/home'
-        - name: Reddit >
+        - name: Reddit >>
           href: 'https://www.reddit.com/r/SQLServer'
     - name: ブログ
       items:
-        - name: SQL Server >
+        - name: SQL Server >>
           href: 'https://blogs.technet.microsoft.com/dataplatforminsider/'
-        - name: データベース エンジン >
+        - name: データベース エンジン >>
           href: 'https://blogs.msdn.microsoft.com/sqlserverstorageengine/'
-        - name: セキュリティ >
+        - name: セキュリティ >>
           href: 'https://blogs.msdn.microsoft.com/sqlsecurity/'
-        - name: Data Tools >
+        - name: データツール >>
           href: 'https://blogs.msdn.microsoft.com/ssdt/'
     - name: フィードバック
       items:
-        - name: SQL ドキュメント >
+        - name: SQL ドキュメント >>
           href: 'https://aka.ms/sqldocsfeedback'
-        - name: SQL Server >
+        - name: SQL Server >>
           href: 'https://feedback.azure.com/forums/908035-sql-server'
         - name: SQL ドキュメントの編集
           href: sql-server/sql-server-docs-contribute.md
@@ -10508,7 +10508,7 @@
       items:
         - name: サンプルの概要
           href: samples/sql-samples-where-are.md
-        - name: すべての Github サンプル >
+        - name: すべての Github サンプル >>
           href: 'https://github.com/Microsoft/sql-server-samples/tree/master/samples'
         - name: AdventureWorks
           items:

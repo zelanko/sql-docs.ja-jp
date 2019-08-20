@@ -1,6 +1,6 @@
 - name: SQL Server Reporting Services (SSRS) とは
   href: ../reporting-services/create-deploy-and-manage-mobile-and-paginated-reports.md
-- name: SQL Server へようこそ >>
+- name: SQL Server へようこそ >
   href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
 - name: 概要
   items:
@@ -1676,7 +1676,7 @@
   items:
     - name: REST API
       href: ../reporting-services/developer/rest-api.md
-    - name: REST API のサンプル >
+    - name: REST API サンプル >>
       href: 'https://github.com/Microsoft/Reporting-Services'
     - name: アプリケーションへの Reporting Services の統合
       href: ../reporting-services/application-integration/integrating-reporting-services-into-applications.md
