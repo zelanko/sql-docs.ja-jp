@@ -1,5 +1,5 @@
 ---
-title: MSrepl_errors (TRANSACT-SQL) |Microsoft Docs
+title: MSrepl_errors (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -43,7 +43,7 @@ ms.locfileid: "67986471"
 |**session_id**|**int**|エラーが発生したエージェント セッションの ID。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
