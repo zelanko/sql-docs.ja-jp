@@ -1,5 +1,5 @@
 ---
-title: MSqreader_history (TRANSACT-SQL) |Microsoft Docs
+title: MSqreader_history (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68032530"
 ---
-# <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (TRANSACT-SQL)
+# <a name="msqreaderhistory-transact-sql"></a>MSqreader_history (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSqreader_history**テーブルは、ローカル ディストリビューターに関連付けられているキュー リーダー エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -44,13 +44,13 @@ ms.locfileid: "68032530"
 |**commands_processed**|**int**|セッション中に処理されたコマンド数の累計。|  
 |**delivery_rate**|**float(53)**|1 秒あたりに配信される平均コマンド数。|  
 |**transaction_rate**|**float(53)**|処理されたトランザクションの比率。|  
-|**サブスクライバー**|**sysname**|サブスクライバーの名前。|  
+|**subscriber**|**sysname**|サブスクライバーの名前。|  
 |**subscriberdb**|**sysname**|サブスクリプション データベースの名前。|  
 |**error_id**|**int**|場合は 0、その番号を表す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エラー メッセージ。|  
 |**timestamp**|**timestamp**|テーブルのタイムスタンプ列。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
