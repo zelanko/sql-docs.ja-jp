@@ -1,5 +1,5 @@
 ---
-title: MSpublications (TRANSACT-SQL) |Microsoft Docs
+title: MSpublications (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -33,7 +33,7 @@ ms.locfileid: "67939010"
 |-----------------|---------------|-----------------|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
+|**publication**|**sysname**|パブリケーションの名前を指定します。|  
 |**publication_id**|**int**|パブリケーションの ID。|  
 |**publication_type**|**int**|パブリケーションの種類:<br /><br /> **0** = トランザクション。<br /><br /> **1** = スナップショット。<br /><br /> **2** = マージします。|  
 |**thirdparty_flag**|**bit**|パブリケーションがかどうかを示す、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。<br /><br /> **0** = [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)].<br /><br /> **1**以外のデータ ソースを =[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
@@ -52,7 +52,7 @@ ms.locfileid: "67939010"
 |**options**|**int**|このリリースに関する情報はありません。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

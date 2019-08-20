@@ -1,5 +1,5 @@
 ---
-title: MSrepl_identity_range (TRANSACT-SQL) |Microsoft Docs
+title: MSrepl_identity_range (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,14 +24,14 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68079163"
 ---
-# <a name="msreplidentityrange-transact-sql"></a>MSrepl_identity_range (TRANSACT-SQL)
+# <a name="msreplidentityrange-transact-sql"></a>MSrepl_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSrepl_identity_range**テーブル id 範囲管理サポートを提供します。 このテーブルは、パブリケーション、ディストリビューションおよびサブスクリプション データベースに保存します。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリケーション データベースの名前です。|  
 |**tablename**|**sysname**|テーブルの名前です。|  
 |**identity_support**|**int**|自動 id 範囲処理が有効になっているかどうかを指定します。 0 は、自動 id 範囲処理が有効でないことを指定します。|  
@@ -43,7 +43,7 @@ ms.locfileid: "68079163"
 |**current_max**|**bigint**|現在の最大値を割り当てることができますが、必ずしもを割り当てます。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
