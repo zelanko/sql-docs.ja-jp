@@ -38,7 +38,7 @@ ms.locfileid: "68130515"
 |**is_max**|**bit**|列が大きな値データ型の列かどうかを示します**varchar (max)** 、 **nvarchar (max)** 、および**varbinary (max)** します。 値**1**大きな値の列を示します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
