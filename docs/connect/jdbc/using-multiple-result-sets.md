@@ -1,7 +1,7 @@
 ---
 title: 複数の結果セットを使用する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ab6a3cfa-073b-44e9-afca-a8675cfe5fd1
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c471f74fc8e1029cfeaad06b564ea4a9b6641171
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 802ade7a34eb5c5174efc35032587f801ef12179
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005962"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026274"
 ---
 # <a name="using-multiple-result-sets"></a>複数の結果セットの使用
 
@@ -28,7 +28,7 @@ execute メソッドから **true** が返された場合、実行されたス�
 execute メソッドから **false** が返された場合、実行されたステートメントから返されるのは更新数の値です。更新数の値は、[getUpdateCount](../../connect/jdbc/reference/getupdatecount-method-sqlserverstatement.md) メソッドを呼び出すことで取得できます。
 
 > [!NOTE]  
-> 更新数の詳細については、「 [Update Count を使用したストアドプロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」を参照してください。
+> 更新数の詳細については、「 [update count を使用したストアドプロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」を参照してください。
 
 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal_md.md)] サンプル データベースに対して開いている接続が関数に渡され、実行時に 2 つの結果セットを返す SQL ステートメントが作成されています。
 

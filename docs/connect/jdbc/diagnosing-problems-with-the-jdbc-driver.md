@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver に関する問題の診断 |Microsoft Docs
+title: JDBC driver に関する問題の診断 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 723e2680-a0c5-4a7d-a319-1e49e41078cf
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 39523acba6f13bd73130a3786f1421e0468084f3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9c36e81631435e4e079d2b52aea4fe9bce587159
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956697"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028106"
 ---
-# <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC ドライバーで発生した問題の診断
+# <a name="diagnosing-problems-with-the-jdbc-driver"></a>JDBC ドライバーに関する問題の診断
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   アプリケーションの設計および開発がいかに優れていても、問題は必然的に発生します。 問題が発生した場合に備え、それらを診断するための手法を知っておくことが重要になります。 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用する場合に発生する一般的な問題として、適切なバージョンのドライバーがないことや、データベースに接続できないことなどがあります。  
@@ -34,7 +34,7 @@ ms.locfileid: "67956697"
 |[接続のトラブルシューティング](../../connect/jdbc/troubleshooting-connectivity.md)|データベース接続のトラブルシューティングを行う方法について説明します。|  
 |[拡張イベント ログの診断情報へのアクセス](../../connect/jdbc/accessing-diagnostic-information-in-the-extended-events-log.md)|サーバーの拡張イベント ログを使用して、接続エラーに関する情報を得る方法について説明します。|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>参照 
  [JDBC ドライバーの概要](../../connect/jdbc/overview-of-the-jdbc-driver.md)  
   
   

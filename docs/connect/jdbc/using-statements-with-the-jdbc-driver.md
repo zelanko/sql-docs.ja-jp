@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver | でステートメントを使用するMicrosoft Docs
+title: JDBC driver | でステートメントを使用するMicrosoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 7f8f3e8f-841e-4449-9154-b5366870121f
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7646903fc9efcbdb838b4a2d585735dc3a105639
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9ddd61d15e3c363766c7e49b8e9045b60a7be164
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005925"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025795"
 ---
 # <a name="using-statements-with-the-jdbc-driver"></a>JDBC ドライバーでのステートメントの使用
 

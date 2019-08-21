@@ -1,7 +1,7 @@
 ---
 title: 大規模なデータの読み取りサンプル |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cc18dbddf98e41957e0b9e47058a0eab2f65fba9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f39bda7c98382e1bb3a63047a80a2afb34008808
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957189"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028318"
 ---
 # <a name="reading-large-data-sample"></a>大きなデータを読み取るサンプル
 

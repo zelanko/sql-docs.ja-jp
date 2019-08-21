@@ -1,7 +1,7 @@
 ---
 title: 接続 URL を作成する |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 44996746-d373-4f59-9863-a8a20bb8024a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8d26ab3b32f9830127c47b319cc0feddd532f1af
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18ed8477e6fc7c276db1842dba4f8856629bd29a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957372"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028451"
 ---
 # <a name="building-the-connection-url"></a>接続 URL の構築
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -40,7 +40,7 @@ ms.locfileid: "67957372"
 -   **property** (省略可能) は、1 つ以上の接続プロパティ オプションです。 詳細については、「[接続プロパティの設定](../../connect/jdbc/setting-the-connection-properties.md)」を参照してください。 リストに含まれる任意のプロパティを指定できます。 プロパティを区切るには必ずセミコロン (';') を使用します。またプロパティを重複して指定することはできません。  
   
 > [!CAUTION]  
->  セキュリティ上の理由から、ユーザー入力に基づく接続 URL の作成は避ける必要があります。 URL では、サーバー名とドライバーだけを指定するようにします。 ユーザー名とパスワードの値には、接続プロパティのコレクションを使用します。 JDBC アプリケーションのセキュリティの詳細については、「 [Jdbc Driver アプリケーション](../../connect/jdbc/securing-jdbc-driver-applications.md)のセキュリティ保護」を参照してください。  
+>  セキュリティ上の理由から、ユーザー入力に基づく接続 URL の作成は避ける必要があります。 URL では、サーバー名とドライバーだけを指定するようにします。 ユーザー名とパスワードの値には、接続プロパティのコレクションを使用します。 JDBC アプリケーションのセキュリティの詳細については、「 [jdbc driver アプリケーション](../../connect/jdbc/securing-jdbc-driver-applications.md)のセキュリティ保護」を参照してください。  
   
 ## <a name="connection-examples"></a>接続の例  
  ユーザー名とパスワードを使用して、ローカル コンピューター上の既定のデータベースに接続します。  

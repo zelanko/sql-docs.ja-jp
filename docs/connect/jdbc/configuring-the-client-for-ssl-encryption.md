@@ -1,7 +1,7 @@
 ---
 title: SSL 暗号化用にクライアントを構成する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7098df4d2a38c6a9415504bec6933afc4a4b310f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956896"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028202"
 ---
 # <a name="configuring-the-client-for-ssl-encryption"></a>SSL 暗号化のためのクライアントの構成
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -24,9 +24,9 @@ ms.locfileid: "67956896"
   
  このトピックでは、まず、クライアント コンピューターのトラスト マテリアルを提供する方法を説明します。 次に、SQL Server のインスタンスの SSL (Secure Sockets Layer) 証明書が民間の証明機関によって発行されている場合にサーバー証明書をクライアント コンピューターのトラスト ストアにインポートする方法を説明します。  
   
- サーバー証明書の検証の詳細については、「[SSL のサポートについて](../../connect/jdbc/understanding-ssl-support.md)」の「サーバーの SSL 証明書の検証」を参照してください。  
+ サーバー証明書の検証の詳細については、「[SSL のサポートについて](../../connect/jdbc/understanding-ssl-support.md)」の「サーバーの SSL 証明書の検証」セクションを参照してください。  
   
-## <a name="configuring-the-client-trust-store"></a>クライアントのトラスト ストアの構成  
+## <a name="configuring-the-client-trust-store"></a>クライアントのトラスト ストアの構成 
  サーバー証明書を検証するには、**trustStore** 接続プロパティと **trustStorePassword** 接続プロパティを明示的に使用するか、または基になる Java 仮想マシンのトラスト ストアを暗黙的に使用して、接続時にトラスト マテリアルを提供する必要があります。 接続文字列内に **trustStore** プロパティと **trustStorePassword** プロパティを設定する方法の詳細については、「[SSL 暗号化を使用した接続](../../connect/jdbc/connecting-with-ssl-encryption.md)」を参照してください。  
   
  **trustStore** プロパティが指定されていないか null に設定されている場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、基になる JVM のセキュリティ プロバイダー Java Secure Socket Extension (SunJSSE) を信頼します。 SunJSSE プロバイダーによって提供される既定の TrustManager を使用して、SQL Server から返される X.509 証明書を、トラスト ストアで提供されるトラスト マテリアルに対して検証します。  

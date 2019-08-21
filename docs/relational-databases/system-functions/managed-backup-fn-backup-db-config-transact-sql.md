@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68067778"
 ---
-# <a name="managedbackupfnbackupdbconfig-transact-sql"></a>managed_backup.fn_backup_db_config (TRANSACT-SQL)
+# <a name="managed_backupfn_backup_db_config-transact-sql"></a>managed_backup.fn_backup_db_config (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   0、1 つ以上の行を返す[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]構成設定。 指定されたデータベースに対して 1 行を返すか、インスタンス上で [!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]によって構成されたすべてのデータベースの情報を返します。  
@@ -44,7 +44,7 @@ managed_backup.fn_backup_db_config ('database_name' | '' | NULL)
   
 ##  <a name="Arguments"></a> 引数  
  @db_name  
- データベースの名前。 @db_nameパラメーターが**SYSNAME**します。 このパラメーターに空の文字列または NULL 値が渡されると、SQL Server のインスタンス上にあるすべてのデータベースに関する情報が返されます。  
+ データベースの名前。 @db_nameパラメーターが **SYSNAME**します。 このパラメーターに空の文字列または NULL 値が渡されると、SQL Server のインスタンス上にあるすべてのデータベースに関する情報が返されます。  
   
 ## <a name="table-returned"></a>返されるテーブル  
   

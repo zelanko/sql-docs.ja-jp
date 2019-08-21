@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver のシステム要件 | Microsoft Docs
+title: JDBC ドライバーのシステム要件 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 447792bb-f39b-49b4-9fd0-1ef4154c74ab
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: e5b317b3483d24087df203eb14fdabe7b12f2539
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 5759a1f9936fdb8a6df4de422ae2ff0542dc63a8
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893973"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027672"
 ---
-# <a name="system-requirements-for-the-jdbc-driver"></a>JDBC Driver のシステム要件
+# <a name="system-requirements-for-the-jdbc-driver"></a>JDBC ドライバーのシステム要件
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
   [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] または [!INCLUDE[ssAzure](../../includes/ssazure_md.md)] のデータにアクセスするには、次のコンポーネントをコンピューターにインストールする必要があります。
@@ -41,7 +41,7 @@ ms.locfileid: "68893973"
   
  [!INCLUDE[jdbc_40](../../includes/jdbc_40_md.md)] 以降では、JDBC 4.0 API を包含する形で Java Database Connectivity (JDBC) Spec API に対する JDBC ドライバー サポートが拡張されています。 JDBC 4.0 API は、Java Development Kit (JDK) 6.0 および Java Runtime Environment (JRE) 6.0 の一部として導入されました。 JDBC 4.0 は、JDBC 3.0 API のスーパーセットです。
   
- Windows と UNIX オペレーティング システムで [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を展開する場合、インストール パッケージである *sqljdbc_\<version>_enu.exe* と *sqljdbc_\<version>_enu.tar.gz* をそれぞれ使用する必要があります。 JDBC Driver の展開方法の詳細については、「[JDBC Driver の展開](../../connect/jdbc/deploying-the-jdbc-driver.md)」を参照してください。  
+ Windows と UNIX オペレーティング システムで [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] を展開する場合、インストール パッケージである *sqljdbc_\<version>_enu.exe* と *sqljdbc_\<version>_enu.tar.gz* をそれぞれ使用する必要があります。 JDBC Driver の展開方法の詳細については、「[JDBC Driver の展開](../../connect/jdbc/deploying-the-jdbc-driver.md)」トピックを参照してください。  
 
 **Microsoft JDBC Driver 7.4 for SQL Server:**  
 
@@ -192,14 +192,14 @@ JDBC Driver 6.4 は Maven Central Repository でも使用でき、次のコー�
 |---------|------------------|---------------------|-------------------------|   
 |sqljdbc41.jar|4|7|7 6 5|  
   
-## <a name="sql-server-requirements"></a>SQL Server の要件  
+## <a name="sql-server-requirements"></a>SQL Server 要件  
  JDBC ドライバーは、Azure SQL Database と SQL Server への接続をサポートします。 Microsoft JDBC Driver 4.2 for SQL Server と Microsoft JDBC Driver 4.1 for SQL Server では、SQL Server 2008 以降をサポートします。
   
-## <a name="operating-system-requirements"></a>必要なオペレーティング システム  
+## <a name="operating-system-requirements"></a>オペレーティング システムの要件  
  JDBC ドライバーは、Java 仮想マシン (JVM) の使用をサポートするすべてのオペレーティング システムで機能するように設計されています。 ただし、公式にテストされているのは、Sun Solaris、SUSE Linux、および Windows オペレーティング システムだけです。  
   
-## <a name="supported-languages"></a>サポートされる言語  
- JDBC ドライバーは、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列の照合順序をサポートしています。 JDBC Driver でサポートされる照合順序の詳細については、「[International Features of the JDBC Driver (JDBC Driver の国際化機能)](../../connect/jdbc/international-features-of-the-jdbc-driver.md)」を参照してください。  
+## <a name="supported-languages"></a>サポートされている言語  
+ JDBC ドライバーは、すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 列の照合順序をサポートしています。 JDBC ドライバーでサポートされる照合順序の詳細については、「[JDBC Driver の国際化機能](../../connect/jdbc/international-features-of-the-jdbc-driver.md)」をご覧ください。  
   
  照合順序の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「照合順序の使用」を参照してください。  
   

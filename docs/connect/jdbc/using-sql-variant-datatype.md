@@ -1,7 +1,7 @@
 ---
 title: 使用して Sql_variant データ型 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 662362a692742d206902a0cf23aff63a3ba89df9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cdede5d41d5ad7fc22cfed3f1efa9f95612032ca
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916168"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025843"
 ---
-# <a name="using-sqlvariant-data-type"></a>Sql_variant データ型の使用
+# <a name="using-sql_variant-data-type"></a>Sql_variant データ型の使用
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -65,7 +65,7 @@ try (SQLServerResultSet resultSet = (SQLServerResultSet) stmt.executeQuery("sele
 }
 ```
 
-## <a name="using-stored-procedures-with-sqlvariant"></a>Sql_variant でストアドプロシージャを使用する:   
+## <a name="using-stored-procedures-with-sql_variant"></a>Sql_variant でストアドプロシージャを使用する:   
 次のようなストアドプロシージャがあるとします。     
 
 ```java
@@ -81,7 +81,7 @@ try (CallableStatement callableStatement = con.prepareCall(" {call " + inputProc
 }
 ```
 
-## <a name="limitations-of-sqlvariant"></a>Sql_variant の制限事項は次のとおりです。
+## <a name="limitations-of-sql_variant"></a>Sql_variant の制限事項は次のとおりです。
 - Tvp を使用して、sql_variant に格納`datetime`されている`date`値をテーブル`getDateTime()` `getSmallDateTime()` / `smalldatetime` /に設定し、を呼び出す/場合 / `getDate()`ResultSet は動作せず、次の例外をスローします。
     
     `Java.lang.String cannot be cast to java.sql.Timestamp`

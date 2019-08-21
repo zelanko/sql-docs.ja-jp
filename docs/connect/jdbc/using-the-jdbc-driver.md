@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver の使用 | Microsoft Docs
+title: JDBC ドライバーの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6faaf05b-8b70-4ed2-9b44-eee5897f1cd0
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b00cd72309fde42ab794d7a365be2a736e3671e0
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 828f58249f525a7c694b15eb85f051d80ba2211a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893665"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025771"
 ---
 # <a name="using-the-jdbc-driver"></a>JDBC ドライバーの使用
 

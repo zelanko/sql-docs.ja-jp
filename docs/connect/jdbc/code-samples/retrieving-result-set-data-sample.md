@@ -1,7 +1,7 @@
 ---
 title: 結果セットデータサンプル | を取得していますMicrosoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 1b190c36-3d38-49a2-8599-612329675851
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7f3c502ad189bb63d8f10f215b296f97d48457f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2cca84ebc59bdefb43e2aa1a5f8b62bbf6301d51
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957103"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028372"
 ---
 # <a name="retrieving-result-set-data-sample"></a>結果セットのデータ サンプルの取得
 

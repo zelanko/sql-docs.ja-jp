@@ -1,7 +1,7 @@
 ---
 title: 大規模なデータを操作する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 5b93569f-eceb-4f05-b49c-067564cd3c85
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: b685160f7d6a2c5c413425fe8d150214d3dd9897
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aab60ed1db5d7749c4edbc52fcad4bebddf93d52
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003838"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025461"
 ---
-# <a name="working-with-large-data"></a>大きなデータの処理
+# <a name="working-with-large-data"></a>大きなデータの操作
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -39,4 +39,4 @@ JDBC ドライバーは、サーバー カーソルのオーバーヘッドを�
   
 ## <a name="see-also"></a>参照
 
-[サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+[サンプル JDBC ドライバー アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
