@@ -22,7 +22,7 @@ ms.lasthandoff: 07/15/2019
 ms.locfileid: "68039982"
 ---
 # <a name="determining-the-number-of-affected-rows"></a>影響を受ける行数の決定
-呼び出すことができます、アプリケーションは、更新、削除、または行を挿入後、 **SQLRowCount**に影響を受けた行の数を決定します。 **SQLRowCount**更新、削除、または実行することによって挿入された行かどうかは、この値を返す、 **UPDATE**、**DELETE**、または**INSERT**ステートメントでは、位置指定を実行して更新または delete ステートメント、または呼び出すことによって**SQLSetPos**します。  
+アプリケーションが行を更新、削除、または挿入後、 **SQLRowCount** を呼び出し影響を受けた行の数を判断できます。 **SQLRowCount** は、 **UPDATE**、**DELETE**、または**INSERT**ステートメントの実行により、位置指定、更新、削除、または **SQLSetPos** の呼び出しによって行が更新、削除または挿入されたかどうかに関わらず、この値を返します。  
   
  SQL ステートメントのバッチを実行すると、バッチ内のすべてのステートメントの総数または個々 のカウント、バッチ内の各ステートメントの影響を受ける行の数。 可能性があります。 詳細については、次を参照してください。 [SQL ステートメントのバッチ](../../../odbc/reference/develop-app/batches-of-sql-statements.md)と[複数結果](../../../odbc/reference/develop-app/multiple-results.md)します。  
   
