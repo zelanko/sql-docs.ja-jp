@@ -79,7 +79,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 ## <a name="database-engine"></a>データベース エンジン
 
-### <a name="security"></a>Security
+### <a name="security"></a>セキュリティ
 
 |新機能または更新 | 詳細 |
 |:---|:---|
@@ -176,7 +176,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-| 新しい Spatial Reference Identifier (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) により、グローバル ポジショニング システムにより合わせたより堅牢で正確な測量基準点が提供されます。 新しい SRID は次のとおりです。<br/><br/> - 7843 - 地理 2D<br/> - 7844 - 地理 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) ビューには、新しい SRID の定義が含まれています。 |
+| 新しい Spatial Reference Identifier (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) により、全地球測位システム (GPS) に対しさらに緊密に配置された、より堅牢で正確な測量基準点が提供されます。 新しい SRID は次のとおりです。<br/><br/> - 7843 - 地理 2D<br/> - 7844 - 地理 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) ビューには、新しい SRID の定義が含まれています。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance"></a>パフォーマンス

@@ -139,7 +139,7 @@ SQLRETURN SQLSetPos(
   
 -   SQL_DELETE、SQL_REFRESH、および SQL_UPDATE オプションを使用して**SQLSetPos**を呼び出します。  
   
- たとえば、RowNumber が2の*操作***で SQL_DELETE**を呼び出す場合、 *RowNumber*が2の場合、カーソルは行セットの2番目の行に配置され、その行は削除されます。 2番目の行の実装行ステータス配列 (SQL_ATTR_ROW_STATUS_PTR statement 属性が指す) のエントリが SQL_ROW_DELETED に変更されます。  
+ たとえば、RowNumber が2の*操作* **で SQL_DELETE**を呼び出す場合、 *RowNumber*が2の場合、カーソルは行セットの2番目の行に配置され、その行は削除されます。 2番目の行の実装行ステータス配列 (SQL_ATTR_ROW_STATUS_PTR statement 属性が指す) のエントリが SQL_ROW_DELETED に変更されます。  
   
  アプリケーションで**SQLSetPos**を呼び出すと、カーソル位置を指定できます。 通常は、位置指定の update または delete ステートメントを実行する前にカーソルを移動するか、 **SQLGetData**を呼び出すために、SQL_POSITION または SQL_REFRESH 操作を使用して**SQLSetPos**を呼び出します。  
   
@@ -160,7 +160,7 @@ SQLRETURN SQLSetPos(
   
  1つのステートメントに対して*LockType*引数が指定されていますが、このロックは、接続上のすべてのステートメントに対して同じ特権を accords します。 特に、ある接続で1つのステートメントによって取得されたロックを、同じ接続上の別のステートメントによってロック解除することができます。  
   
- **Sqlsetpos**によってロックされている行は、アプリケーションが*LockType*を SQL_LOCK_UNLOCK に設定されている行に対して**sqlsetpos**を呼び出すか、またはアプリケーションがステートメントまたは SQLFreeStmt の**sqlfreehandle**を呼び出すまでロックされたままになります。 SQL_CLOSE オプションを使用します。 トランザクションをサポートするドライバーの場合、アプリケーションが**SQLEndTran**を呼び出して、接続でトランザクションをコミットまたはロールバックすると、そのトランザクションがコミットまたはロールバックされるときに、ロックが解除されます (トランザクションのコミットまたはロールバック時にカーソルが閉じられた場合)。 **SQLGetInfo**によって返される SQL_CURSOR_COMMIT_BEHAVIOR および SQL_CURSOR_ROLLBACK_BEHAVIOR 情報の種類によって示されます。  
+ **Sqlsetpos**によってロックされている行は、アプリケーションが*LockType*を SQL_LOCK_UNLOCK に設定されている行に対して**sqlsetpos**を呼び出すか、またはアプリケーションがステートメントまたは SQLFreeStmt の**sqlfreehandle**を呼び出すまでロックされたままになります。SQL_CLOSE オプションを使用します。 トランザクションをサポートするドライバーの場合、アプリケーションが**SQLEndTran**を呼び出して、接続でトランザクションをコミットまたはロールバックすると、そのトランザクションがコミットまたはロールバックされるときに、ロックが解除されます (トランザクションのコミットまたはロールバック時にカーソルが閉じられた場合)。**SQLGetInfo**によって返される SQL_CURSOR_COMMIT_BEHAVIOR および SQL_CURSOR_ROLLBACK_BEHAVIOR 情報の種類によって示されます。  
   
  *LockType*引数では、次の種類のロックがサポートされています。 アプリケーションは、データソースでサポートされているロックを特定するために、SQL_DYNAMIC_CURSOR_ATTRIBUTES1、SQL_FORWARD_ONLY_CURSOR_ATTRIBUTES1、SQL_KEYSET_CURSOR_ATTRIBUTES1、または SQL_STATIC_CURSOR_ATTRIBUTES1 を使用して**SQLGetInfo**を呼び出します。情報の種類 (カーソルの種類によって異なります)。  
   
