@@ -1,28 +1,28 @@
 ---
 title: HDFS の階層制御の ADLS Gen2 のマウント
 titleSuffix: How to mount ADLS Gen2
-description: この記事では、HDFS 階層制御を構成して、外部の Azure Data Lake Storage ファイル システムを SQL Server 2019 ビッグ データ クラスター (プレビュー) 上の HDFS にマウントする方法について説明します。
+description: この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]上の hdfs に外部 Azure Data Lake Storage ファイルシステムをマウントするように hdfs 階層を構成する方法について説明します。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 83922206503b690a7b49c27d4686333bf7b966a1
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742734"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652319"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
 次のセクションでは、Azure Data Lake Storage Gen2 データソースを使用して HDFS 階層制御を構成する方法の例を示します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
-- [デプロイ済みのビッグ データ クラスター](deployment-guidance.md)
+- [展開済みのビッグ データ クラスター](deployment-guidance.md)
 - [ビッグ データ ツール](deploy-big-data-tools.md)
   - **azdata**
   - **kubectl**
@@ -153,4 +153,4 @@ azdata bdc hdfs mount delete --mount-path <mount-path-in-hdfs>
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server 2019 ビッグ データ クラスターに関する詳細については、次を参照してください。 [SQL Server 2019 ビッグ データ クラスターには何でしょうか](big-data-cluster-overview.md)。
+の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。

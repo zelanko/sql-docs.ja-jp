@@ -5,16 +5,16 @@ description: azdata bdc control コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8c91338c91dfea749c527c3d83736ed7be6b65e4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5c2dd75157fca457d7dd73e9ee5d4dbe9f61486d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426242"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653348"
 ---
 # <a name="azdata-bdc-control"></a>azdata bdc control
 
@@ -29,4 +29,4 @@ ms.locfileid: "68426242"
 
 ## <a name="next-steps"></a>次の手順
 
-**azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理する azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。
+**Azdata**ツールをインストールする方法の詳細については、「[管理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]する azdata をインストール](deploy-install-azdata.md)する」を参照してください。

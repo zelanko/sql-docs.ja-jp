@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a37f0eb62ec0483b8c73bd5cc4d6d29221e8082f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715182"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634540"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での Python 開発用のデータサイエンスクライアントの設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ Anaconda には Jupyter Notebook が含まれています。 次の手順とし�
 
 3. コマンド`import revoscalepy`を入力して実行し、Microsoft 固有のライブラリのいずれかを読み込みます。
 
-4. 「」と`print(revoscalepy.__version__)`入力し、を実行してバージョン情報を返します。 9\.2.1 または9.3.0 が表示できます。 [サーバーの revoscalepy](../package-management/installed-package-information.md)では、これらのバージョンのいずれかを使用できます。 
+4. 「」と`print(revoscalepy.__version__)`入力し、を実行してバージョン情報を返します。 9\.2.1 または9.3.0 が表示できます。 [サーバーの revoscalepy](../package-management/r-package-information.md)では、これらのバージョンのいずれかを使用できます。
 
 4. より複雑な一連のステートメントを入力します。 この例では、ローカルデータセットに対して[rx_summary](https://docs.microsoft.com/machine-learning-server/python-reference/revoscalepy/rx-summary)を使用して、概要統計情報を生成します。 その他の関数は、サンプルデータの場所を取得し、ローカルの xdf ファイルのデータソースオブジェクトを作成します。
 

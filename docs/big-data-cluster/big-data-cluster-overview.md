@@ -1,26 +1,29 @@
 ---
 title: ビッグ データ クラスターとは
 titleSuffix: SQL Server big data clusters
-description: Kubernetes 上で動作し、リレーショナル データと HDFS データの両方にスケールアウト オプションを提供する SQL Server 2019 ビッグ データ クラスター (プレビュー) について説明します。
+description: Kubernetes で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]実行される (プレビュー) について説明し、リレーショナルデータと HDFS データの両方に対してスケールアウトオプションを提供します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 0beb4ea57ba6c2591e5b2c06a7775fc2d7e8b26c
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 15002f9d5633336fb61474a834c913a0d7dbf1c5
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419498"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653189"
 ---
-# <a name="what-are-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターとは
+# <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]概要
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] 以降、SQL Server ビッグ データ クラスターを使用すると、Kubernetes 上で動作する SQL Server、Spark、および HDFS コンテナーのスケーラブルなクラスターを展開できます。 これらのコンポーネントを並行して実行し、Transact-SQL または Spark からのビッグ データの読み取り、書き込み、処理を行うことができるので、高価値のリレーショナル データと大量のビッグ データを簡単に組み合わせて分析できます。
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
+
+以降で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]は、Kubernetes で実行されている SQL Server、Spark、HDFS コンテナーのスケーラブルなクラスターをデプロイできます。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] これらのコンポーネントを並行して実行し、Transact-SQL または Spark からのビッグ データの読み取り、書き込み、処理を行うことができるので、高価値のリレーショナル データと大量のビッグ データを簡単に組み合わせて分析できます。
 
 最新リリースの新機能と既知の問題の詳細については、[リリース ノート](release-notes-big-data-cluster.md)を参照してください。
 
@@ -28,11 +31,11 @@ ms.locfileid: "68419498"
 
 ## <a name="scenarios"></a>シナリオ
 
-SQL Server ビッグ データ クラスターを使用すると、ビッグ データの操作が柔軟になります。 外部データ ソースに対してクエリを実行する、SQL Server が管理する HDFS にビッグ データを格納する、またはクラスターを介して複数の外部データ ソースのデータに対してクエリを実行することができます。 このデータは、AI、機械学習、その他の分析タスクに使用できます。 以下に、これらのシナリオについて詳しく説明します。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]ビッグデータを柔軟に操作できるようにします。 外部データ ソースに対してクエリを実行する、SQL Server が管理する HDFS にビッグ データを格納する、またはクラスターを介して複数の外部データ ソースのデータに対してクエリを実行することができます。 このデータは、AI、機械学習、その他の分析タスクに使用できます。 以下に、これらのシナリオについて詳しく説明します。
 
 ### <a name="data-virtualization"></a>データの仮想化
 
-[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md) を利用することで、SQL Server ビッグ データ クラスターでは、データを移動またはコピーすることなく、外部データ ソースに対してクエリを実行できます。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、データ ソースに新しいコネクタが導入されています。
+[SQL Server PolyBase](../relational-databases/polybase/polybase-guide.md)を利用する[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]ことで、はデータを移動またはコピーせずに外部データソースに対してクエリを実行できます。 [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、データ ソースに新しいコネクタが導入されています。
 
 ![データの仮想化](media/big-data-cluster-overview/data-virtualization.png)
 
@@ -44,13 +47,13 @@ SQL Server ビッグ データ クラスターには、スケーラブルな HDF
 
 ### <a name="scale-out-data-mart"></a>スケールアウト データ マート
 
-SQL Server ビッグ データ クラスターには、任意のデータの分析パフォーマンスを向上させるスケールアウト コンピューティングとストレージが用意されています。 さまざまなソースのデータを取り込み、さらに分析するためにキャッシュとして*データ プール* ノード全体に分散することができます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]データの分析のパフォーマンスを向上させるために、スケールアウトコンピューティングとストレージを提供します。 さまざまなソースのデータを取り込み、さらに分析するためにキャッシュとして*データ プール* ノード全体に分散することができます。
 
 ![データ マート](media/big-data-cluster-overview/data-mart.png)
 
 ### <a name="integrated-ai-and-machine-learning"></a>AI と機械学習の統合
 
-SQL Server ビッグ データ クラスターを使用すると、HDFS 記憶域プールとデータ プールに格納されているデータに対して AI と機械学習タスクを実行できます。 R、Python、Scala、または Java を使用し、Spark だけでなく SQL Server の組み込みの AI ツールを使用できます。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]HDFS ストレージプールとデータプールに格納されているデータに対して AI と機械学習のタスクを有効にします。 R、Python、Scala、または Java を使用し、Spark だけでなく SQL Server の組み込みの AI ツールを使用できます。
 
 ![AI と ML](media/big-data-cluster-overview/ai-ml-spark.png)
 
@@ -80,7 +83,7 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 | **ポッド** | ポッドは、Kubernetes のアトミック展開単位です。 ポッドは、アプリケーションの実行に必要な 1 つ以上のコンテナーと関連するリソースの論理グループです。 各ポッドはノード上で実行されます。ノードでは、1 つ以上のポッドを実行できます。 Kubernetes マスターによって、クラスター内のノードにポッドが自動的に割り当てられます。 |
 | &nbsp; ||
 
-SQL Server ビッグ データ クラスターでは、Kubernetes は SQL Server ビッグ データ クラスターの状態の責任を負います。Kubernetes では、クラスター ノードの構築と構成が行われ、ポッドがノードに割り当てられ、クラスターの正常性が監視されます。
+で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]は、Kubernetes はの状態[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を担います。Kubernetes は、クラスターノードの構築と構成を行い、ポッドをノードに割り当て、クラスターの正常性を監視します。
 
 ### <a name="big-data-clusters-architecture"></a>ビッグ データ クラスターのアーキテクチャ
 
@@ -105,8 +108,8 @@ SQL Server ビッグ データ クラスターでは、Kubernetes は SQL Server
 記憶域プールは、SQL Server on Linux、Spark、および HDFS で構成される記憶域プール ポッドで構成されます。 SQL Server ビッグ データ クラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
 
 > [!TIP]
-> ビッグ データ クラスターのアーキテクチャとインストールの詳細については、「[ワークショップ:Microsoft SQL Server ビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)」を参照してください。
+> ビッグ データ クラスターのアーキテクチャとインストールの詳細については、「[ワークショップ:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)アーキテクチャ。
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server ビッグ データ クラスターは、まずは SQL Server 2019 早期導入プログラムを通じての限られたパブリック プレビューとして利用できます。 アクセスをリクエストするには、[ここ](https://aka.ms/eapsignup)で登録し、ビッグ データ クラスターを試用したい旨を指定します。 Microsoft はすべてのリクエストを重要度の高い順に対応し、可能な限り早く対応しています。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]は、SQL Server 2019 早期導入プログラムを通じて、限定的なパブリックプレビューとして最初に提供されます。 アクセスをリクエストするには、[ここ](https://aka.ms/eapsignup)で登録し、ビッグ データ クラスターを試用したい旨を指定します。 Microsoft はすべてのリクエストを重要度の高い順に対応し、可能な限り早く対応しています。

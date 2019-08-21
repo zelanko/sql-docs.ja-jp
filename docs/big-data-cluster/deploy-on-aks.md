@@ -1,26 +1,26 @@
 ---
 title: Azure Kubernetes Service の構成
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために Azure Kubernetes Service (AKS) を構成する方法について説明します。
+description: デプロイ用に Azure Kubernetes Service (AKS) を構成[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/10/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1ba5b4b06d31f391733603ce146a7d05e05aebaf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b33ef15bd6a47bcd2a475f608197a1566bb030b0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470815"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652385"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために Azure Kubernetes Service (AKS) を構成する方法について説明します。
+この記事では、デプロイ用に[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Kubernetes Service (AKS) を構成する方法について説明します。
 
 AKS を使用すると、コンテナー化されたアプリケーションを実行するために、Kubernetes クラスターを利用して事前に構成された仮想マシンのクラスターを簡単に作成、構成、管理できます。 これにより、既存のスキルを使用したり、規模が拡大している専門知識コミュニティを利用したりして、コンテナー ベースのアプリケーションを Microsoft Azure 上に展開して管理することができます。
 
@@ -29,7 +29,7 @@ AKS を使用すると、コンテナー化されたアプリケーションを�
 > [!TIP]
 > また、1 つの手順で AKS とビッグ データ クラスターの展開をスクリプト化することもできます。 詳細については、[Python スクリプト](quickstart-big-data-cluster-deploy.md)または Azure Data Studio の[ノートブック](deploy-notebooks.md)において、この操作を行う方法を確認してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ ツールを展開する](deploy-big-data-tools.md):
    - **kubectl**
@@ -165,4 +165,4 @@ Azure リソース グループは、Azure リソースが展開され管理さ�
 
 この記事の手順では、AKS に Kubernetes クラスターを構成しました。 次のステップとして、AKS Kubernetes クラスター上に SQL Server 2019 ビッグ データ クラスターを展開します。 ビッグ データ クラスターを展開する方法の詳細については、次の記事を参照してください。
 
-[Kubernetes 上に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)
+[Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]する方法](deployment-guidance.md)

@@ -5,24 +5,24 @@ description: SQL Server ビッグ データ クラスター上の Azure Toolkit 
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 02/28/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f17544ed4dd37ff43be97d114abb58f4fbbbe319
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 59946731dc1e76716b6202dd6f8aa93d777986b3
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68470697"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653716"
 ---
-# <a name="submit-spark-jobs-on-sql-server-big-data-clusters-in-intellij"></a>SQL Server ビッグ データ クラスター上の IntelliJ で Spark ジョブを送信する
+# <a name="submit-spark-jobs-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-in-intellij"></a>IntelliJ で Spark ジョブ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を送信する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-SQL Server ビッグ データ クラスターの主なシナリオの 1 つに、Spark ジョブを送信する機能があります。 Spark ジョブ送信機能を使用すると、SQL Server ビッグ データ クラスターへの参照を含むローカル Jar ファイルまたは Py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
+の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]主なシナリオの1つは、Spark ジョブを送信する機能です。 Spark ジョブ送信機能では、へ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]の参照を含むローカル Jar ファイルまたは .py ファイルを送信できます。 また、HDFS ファイル システムに既に配置されている Jar ファイルまたは Py ファイルを実行することもできます。 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - SQL Server ビッグ データ クラスター。
 - Oracle Java Development Kit。 [Oracle Web サイト](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)からインストールできます。
@@ -139,7 +139,7 @@ WINUTILS.EXE の前提条件を満たしていることを確認します。
 
 4. 次の値を指定し、 **[OK]** を選択します。
 
-    |プロパティ |[値] |
+    |プロパティ |値 |
     |----|----|
     |ジョブのメイン クラス|既定値は、選択したファイルのメイン クラスです。 クラスを変更するには、省略記号 ( **...** ) をクリックし、別のクラスを選択します。|
     |環境変数|HADOOP_HOME の値が正しいことを確認します。|
@@ -173,7 +173,7 @@ Spark Livy Interactive Session Console(Scala) は、IntelliJ 2018.2 および 20
 
 4. 次の値を指定し、 **[OK]** を選択します。
 
-    |プロパティ |[値] |
+    |プロパティ |値 |
     |----|----|
     |Spark クラスター (Linux のみ)|アプリケーションを実行する SQL Server ビッグ データ クラスターを選択します。|
     |メイン クラス名|既定値は、選択したファイルのメイン クラスです。 クラスを変更するには、省略記号 ( **...** ) をクリックし、別のクラスを選択します。|
@@ -195,4 +195,4 @@ Local Console または Livy Interactive Session Console(Scala) に何らかの�
    ![選択内容を Spark コンソールに送信する](./media/spark-submit-job-intellij-tool-plugin/send-selection-to-console.png)
 
 ## <a name="next-steps"></a>次の手順
-SQL Server ビッグ データ クラスターと関連するシナリオの詳細については、[SQL Server 2019 ビッグ データ クラスターの概要](big-data-cluster-overview.md)のページを参照してください。
+ビッグデータクラスターとそれに関連するシナリオの SQL Server の詳細について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)、「」を参照してください。

@@ -5,16 +5,16 @@ description: azdata bdc hdfs mount コマンドのリファレンス記事です
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7f0b259a3ac4ac0850fa05de3867e928b035307b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: eca0bf6cab7d88d91bc52daf88d5e71cf652d474
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426272"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653692"
 ---
 # <a name="azdata-bdc-hdfs-mount"></a>azdata bdc hdfs mount
 
@@ -59,7 +59,7 @@ azdata bdc hdfs mount create --remote-uri hdfs://namenode1:8080/ --mount-path /m
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-hdfs-mount-delete"></a>azdata bdc hdfs mount delete
@@ -84,7 +84,7 @@ azdata bdc hdfs mount delete --mount-path /mounts/adlsv2/data
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-hdfs-mount-status"></a>azdata bdc hdfs mount status
@@ -113,7 +113,7 @@ azdata bdc hdfs mount status
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-bdc-hdfs-mount-refresh"></a>azdata bdc hdfs mount refresh
@@ -138,10 +138,10 @@ azdata bdc hdfs mount refresh --mount-path /mounts/adlsv2/data
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-他の **azdata** コマンドの詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理するための azdata のインストール](deploy-install-azdata.md)に関するページをご覧ください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **Azdata**ツールをインストールする方法の詳細については、「[管理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]する azdata をインストール](deploy-install-azdata.md)する」を参照してください。

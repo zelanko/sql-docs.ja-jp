@@ -5,16 +5,16 @@ description: azdata bdc hdfs コマンドの参照記事。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 8e892c2d501902ef915a297440ae5a6ffda83bce
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fab1f3e831f660a01ea2f03967a1144725baabde
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426182"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653460"
 ---
 # <a name="azdata-bdc-hdfs"></a>azdata bdc hdfs
 
@@ -55,7 +55,7 @@ azdata bdc hdfs shell
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-ls"></a>azdata bdc hdfs ls
@@ -80,7 +80,7 @@ azdata bdc hdfs ls --path '/tmp'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-exists"></a>azdata bdc hdfs exists
@@ -105,7 +105,7 @@ azdata bdc hdfs exists --path '/tmp'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-mkdir"></a>azdata bdc hdfs mkdir
@@ -130,7 +130,7 @@ azdata bdc hdfs mkdir --path '/tmp'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-mv"></a>azdata bdc hdfs mv
@@ -157,7 +157,7 @@ azdata bdc hdfs mv --source-path '/tmp' --target-path '/dest'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-create"></a>azdata bdc hdfs create
@@ -184,7 +184,7 @@ azdata bdc hdfs create --path '/tmp/test.txt' --data "This is a test."
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-cat"></a>azdata bdc hdfs cat
@@ -214,7 +214,7 @@ azdata bdc hdfs cat --path '/tmp/test.txt'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-rm"></a>azdata bdc hdfs rm
@@ -239,7 +239,7 @@ azdata bdc hdfs rm --path '/tmp'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-rmr"></a>azdata bdc hdfs rmr
@@ -264,7 +264,7 @@ azdata bdc hdfs rmr --path '/tmp'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-chmod"></a>azdata bdc hdfs chmod
@@ -291,7 +291,7 @@ azdata bdc hdfs chmod --permission 775 --path '/tmp/test.txt'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
 ## <a name="azdata-bdc-hdfs-chown"></a>azdata bdc hdfs chown
@@ -321,10 +321,10 @@ azdata bdc hdfs chown --owner hdfs --group superusergroup --path '/tmp/test.txt'
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログには --debug を使用します。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理するための azdata のインストール](deploy-install-azdata.md)に関するページを参照してください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **Azdata**ツールをインストールする方法の詳細については、「[管理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]する azdata をインストール](deploy-install-azdata.md)する」を参照してください。

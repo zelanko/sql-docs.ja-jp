@@ -5,16 +5,16 @@ description: SQL Server ビッグ データ クラスター上で Spark & Hive T
 author: jejiang
 ms.author: jejiang
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4458666792d7f4629b4e1820e98e2dbb9901c2b6
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: b09a5febe9bc67f04d70c4d5b7850ef26ebac750
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68425982"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653730"
 ---
 # <a name="submit-spark-jobs-on-sql-server-big-data-cluster-in-visual-studio-code"></a>SQL Server ビッグ データ クラスター上の Visual Studio Code で Spark ジョブを送信する
 
@@ -23,15 +23,15 @@ Spark & Hive Tools for Visual Studio Code を使用して Apache Spark 用の Py
 Spark & Hive Tools は、Windows、Linux、macOS など、Visual Studio Code でサポートされているプラットフォームにインストールできます。 以下では、さまざまなプラットフォームの前提条件について説明します。
 
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 この記事の手順を完了するには、次の項目が必要です。
 
-- SQL Server ビッグ データ クラスター。 [SQL Server ビッグ データ クラスター](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)に関するページを参照してください。
+- SQL Server ビッグ データ クラスター。 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)に関するページを参照してください。
 - [Visual Studio Code](https://code.visualstudio.com/)。
 - [Mono](https://www.mono-project.com/docs/getting-started/install/)。 Mono は、Linux と macOS の場合にのみ必要です。
 - [Visual Studio Code 用に PySpark の対話型の環境を設定します](https://docs.microsoft.com/azure/hdinsight/set-up-pyspark-interactive-environment)。
-- **Hdexample** という名前のローカル ディレクトリ。  この記事では、**C:\HD\HDexample** を使用します。
+- **SQLBDCexample**という名前のローカルディレクトリ。  この記事では、 **C:\SQLBDC\SQLBDCexample**を使用します。
 
 ## <a name="install-spark--hive-tools"></a>Spark & Hive Tools をインストールする
 
@@ -53,9 +53,9 @@ Spark & Hive Tools は、Windows、Linux、macOS など、Visual Studio Code で
 
 次の手順を実行して作業フォルダーを開き、Visual Studio Code でファイルを作成します。
 
-1. メニュー バーから **[File]\(ファイル\)**  >  **[Open Folder]\(フォルダーを開く\)**  > **C:\HD\HDexample** に移動し、 **[Select Folder]\(フォルダーの選択\)** ボタンを選択します。 左側の **[Explorer]\(エクスプローラー\)** ビューにフォルダーが表示されます。
+1. メニューバーで、[**ファイル** > ] **[フォルダーを開く...** ] の順に移動します。C:\SQLBDC\SQLBDCexample をクリックし、 **[フォルダーの選択]** ボタンを選択します。  >  左側の **[Explorer]\(エクスプローラー\)** ビューにフォルダーが表示されます。
 
-2. **[Explorer]\(エクスプローラー\)** ビューで、**HDexample** というフォルダーを選択し、作業フォルダーの横にある **[New File]\(新しいファイル\)** アイコンを選択します。
+2. **[エクスプローラー]** ビューで、 **SQLBDCexample**フォルダーを選択し、作業フォルダーの横にある**新しいファイル**アイコンをクリックします。
 
    ![新しいファイル](./media/spark-hive-tools-vscode/new-file.png)
 
@@ -116,7 +116,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 ## <a name="set-default-cluster"></a>既定のクラスターを設定する
 
-1. [以前の手順](#open-work-folder)で作成したフォルダー **HDexample** が閉じている場合は再び開きます。  
+1. [前](#open-work-folder)の手順で作成した**SQLBDCexample**フォルダーを再度開きます。  
 
 2. [以前の手順](#open-work-folder)で作成した **HelloWorld.py** ファイルを選択し、スクリプト エディターで開きます。
 
@@ -132,7 +132,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 次の手順に従って、対話型の PySpark クエリを送信できます。
 
-1. [以前の手順](#open-work-folder)で作成したフォルダー **HDexample** が閉じている場合は再び開きます。  
+1. [前](#open-work-folder)の手順で作成した**SQLBDCexample**フォルダーを再度開きます。  
 
 2. [以前の手順](#open-work-folder)で作成した **HelloWorld.py** ファイルを選択し、スクリプト エディターで開きます。
 
@@ -159,7 +159,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 ## <a name="submit-pyspark-batch-job"></a>PySpark バッチ ジョブを送信する
 
-1. [以前の手順](#open-work-folder)で作成したフォルダー **HDexample** が閉じている場合は再び開きます。  
+1. [前](#open-work-folder)の手順で作成した**SQLBDCexample**フォルダーを再度開きます。  
 
 2. [以前の手順](#open-work-folder)で作成した **HelloWorld.py** ファイルを選択し、スクリプト エディターで開きます。
 
@@ -200,7 +200,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 **要求本文**
 
-| NAME | description | 型 |
+| NAME | description | type |
 | :- | :- | :- |
 | file | 実行するアプリケーションを含むファイル | パス (必須) |
 | proxyUser | ジョブの実行時に権限を借用するユーザー | string |
@@ -210,10 +210,10 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 | pyFiles | このセッションで使用される Python ファイル | 文字列の一覧 |
 | files | このセッションで使用されるファイル | 文字列の一覧 |
 | driverMemory | ドライバー プロセスに使用するメモリの量 | string |
-| driverCores | ドライバー プロセスに使用するコアの数 | INT |
+| driverCores | ドライバー プロセスに使用するコアの数 | ssNoversion |
 | executorMemory | 実行プログラム プロセスごとに使用するメモリの量 | string |
-| executorCores | 実行プログラムごとに使用するコアの数 | INT |
-| numExecutors | このセッションで起動する実行プログラムの数 | INT |
+| executorCores | 実行プログラムごとに使用するコアの数 | ssNoversion |
+| numExecutors | このセッションで起動する実行プログラムの数 | ssNoversion |
 | archives | このセッションで使用するアーカイブ | 文字列の一覧 |
 | queue | 送信先の YARN キューの名前 | string |
 | NAME | このセッションの名前 | string |
@@ -223,9 +223,9 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 作成されるバッチ オブジェクト。
 
-| NAME | description | 型 |
+| NAME | description | type |
 | :- | :- | :- |
-| id | セッション ID | INT |
+| id | セッション ID | ssNoversion |
 | appId | このセッションのアプリケーション ID | String |
 | appInfo | アプリケーションの詳細情報 | キーのマップ = val |
 | log | ログの行 | 文字列の一覧 |
@@ -255,4 +255,4 @@ Spark & Hive for Visual Studio Code は次の機能をサポートしていま�
 3. **[OUTPUT]\(出力\)** ビューを確認します。  
 
 ## <a name="next-steps"></a>次の手順
-SQL Server ビッグ データ クラスターと関連するシナリオの詳細については、[SQL Server ビッグ データ クラスター](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)に関するページを参照してください。
+ビッグデータクラスターとそれに関連するシナリオの SQL Server の詳細[[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](https://docs.microsoft.com/sql/big-data-cluster/big-data-cluster-overview?view=sqlallproducts-allversions)については、「」を参照してください。

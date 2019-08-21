@@ -5,16 +5,16 @@ description: 構成ファイルを使用してビッグ データ クラスタ�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7d04df5bf881f285ab28508443fbf0ce1056fada
-ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
+ms.openlocfilehash: 02e922ca909cd863d496f9c49a60dd986df8bedb
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68969494"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652391"
 ---
 # <a name="configure-deployment-settings-for-big-data-clusters"></a>ビッグ データ クラスターの展開設定を構成する
 
@@ -22,7 +22,7 @@ ms.locfileid: "68969494"
 
 クラスターの展開構成ファイルをカスタマイズするには、VSCode など、任意の JSON 形式エディターを使用できます。 自動化のためにこれらの編集をスクリプト化するには、**azdata bdc config** コマンドを使用します。 この記事では、展開構成ファイルを変更してビッグ データ クラスターの展開を構成する方法について説明します。 さまざまなシナリオについて構成の変更方法の例を示します。 展開に構成ファイルを使用する方法の詳細詳細については、「[展開のガイダンス](deployment-guidance.md#configfile)」を参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - [azdata をインストールします](deploy-install-azdata.md)。
 
@@ -420,4 +420,4 @@ azdata bdc config patch --config-file custom/cluster.json --patch-file ./patch.j
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターの展開で構成ファイルを使用する方法の詳細については、「[Kubernetes に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md#configfile)」を参照してください。
+ビッグデータクラスターの展開における構成ファイルの使用の詳細については、「 [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile)」を参照してください。

@@ -5,16 +5,16 @@ description: azdata app コマンドのリファレンス記事です。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 793edde26ebebf9e55c5751adbedf662142280de
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 031d8283f14e06515394bb26aa94049a43b6b79f
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68426282"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653229"
 ---
 # <a name="azdata-app"></a>azdata app
 
@@ -81,7 +81,7 @@ azdata app init --name reduce --template ssis
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-app-create"></a>azdata app create
@@ -106,7 +106,7 @@ azdata app create --spec /path/to/dir/with/spec/yaml
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-app-update"></a>azdata app update
@@ -133,7 +133,7 @@ CWD の spec.yaml ファイルからアプリケーションを更新すると�
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-app-list"></a>azdata app list
@@ -168,7 +168,7 @@ azdata app list
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-app-delete"></a>azdata app delete
@@ -195,7 +195,7 @@ azdata app delete --name reduce --version v1
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-app-run"></a>azdata app run
@@ -234,7 +234,7 @@ azdata app run --name reduce --version v1 --inputs x=10,y5.6
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-app-describe"></a>azdata app describe
@@ -264,10 +264,10 @@ azdata app describe --name reduce --version v1
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細および例については、[http://jmespath.org/](http://jmespath.org/]) をご覧ください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
 #### `--verbose`
-ログの詳細レベルを上げます。 完全なデバッグ ログを表示するには --debug を使います。
+ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
 ## <a name="next-steps"></a>次の手順
 
-他の **azdata** コマンドの詳細については、[azdata のリファレンス](reference-azdata.md)に関するページをご覧ください。 **azdata** ツールをインストールする方法の詳細については、[SQL Server 2019 ビッグ データ クラスターを管理するための azdata のインストール](deploy-install-azdata.md)に関するページをご覧ください。
+他の **azdata** コマンドの詳細については、[azdata リファレンス](reference-azdata.md)に関するページを参照してください。 **Azdata**ツールをインストールする方法の詳細については、「[管理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]する azdata をインストール](deploy-install-azdata.md)する」を参照してください。

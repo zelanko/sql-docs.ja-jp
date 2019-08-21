@@ -1,22 +1,22 @@
 ---
 title: 展開のガイダンス
 titleSuffix: SQL Server big data clusters
-description: Kubernetes 上に SQL Server 2019 ビッグ データ クラスター (プレビュー) を展開する方法について説明します。
+description: Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: b7439fdc93f04ad137b0bb65269b9767d8281798
-ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
+ms.openlocfilehash: 1520254a8a7817db612bf5e42706113495a832de
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68995832"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652357"
 ---
-# <a name="how-to-deploy-sql-server-big-data-clusters-on-kubernetes"></a>Kubernetes 上に SQL Server ビッグ データ クラスターを展開する方法
+# <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]する方法
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -39,7 +39,7 @@ SQL Server 2019 ビッグ データ クラスターを展開する前に、ま�
 
 ## <a id="prereqs"></a> Kubernetes の前提条件
 
-SQL Server ビッグ データ クラスターでは、サーバーとクライアント (kubectl) の両方に、最小の Kubernetes バージョンとして v1.10 以上が必要です。
+[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]サーバーとクライアント (kubectl) の両方に対して、少なくとも v 1.10 の Kubernetes の最小バージョンを必要とします。
 
 > [!NOTE]
 > クライアントとサーバーでの Kubernetes のバージョンは、マイナー バージョンが +1 または -1 の範囲内になっている必要があることに注意してください。 詳細については、[Kubernetes のリリース ノートとバージョン スキューの SKU ポリシー](https://github.com/kubernetes/community/blob/master/contributors/design-proposals/release/versioning.md#supported-releases-and-component-skew)に関するページを参照してください。
@@ -67,7 +67,7 @@ SQL Server ビッグ データ クラスターでは、サーバーとクライ�
 kubectl config view
 ```
 
-Kubernetes クラスターを構成したら、新しい SQL Server ビッグ データ クラスターの展開に進むことができます。 以前のリリースからアップグレードする場合は、「[SQL Server ビッグ データ クラスターをアップグレードする方法](deployment-upgrade.md)」を参照してください。
+Kubernetes クラスターを構成したら、新しい SQL Server ビッグ データ クラスターの展開に進むことができます。 以前のリリースからアップグレードする場合は、「[アップグレード[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]方法](deployment-upgrade.md)」を参照してください。
 
 ## <a id="deploy"></a> 展開の概要
 
@@ -150,7 +150,7 @@ azdata bdc create --accept-eula=yes
 | **KNOX_PASSWORD** | 必須 |Knox ユーザーのパスワード。 |
 | **ACCEPT_EULA**| `azdata` を初めて使用する場合は必須| 値は必要ありません。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula` を含めることができます。|
 | **DOCKER_USERNAME** | 省略可 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
-| **DOCKER_PASSWORD** | Optional |上記のプライベート リポジトリにアクセスするためのパスワード。 |
+| **DOCKER_PASSWORD** | 省略可 |上記のプライベート リポジトリにアクセスするためのパスワード。 |
 
 これらの環境変数は、**azdata bdc create** を呼び出す前に設定される必要があります。 設定されていない変数がある場合は、入力を求められます。
 
@@ -201,7 +201,7 @@ Cluster control plane is ready.
 ```
 
 > [!IMPORTANT]
-> ビッグ データ クラスターのコンポーネントに対応するコンテナー イメージのダウンロードに必要な時間によって、展開全体に時間がかかる場合があります。 ただし、数時間もかかることはありません。 展開時に問題が発生した場合は、「[SQL Server ビッグ データ クラスターの監視とトラブルシューティング](cluster-troubleshooting-commands.md)」を参照してください。
+> ビッグ データ クラスターのコンポーネントに対応するコンテナー イメージのダウンロードに必要な時間によって、展開全体に時間がかかる場合があります。 ただし、数時間もかかることはありません。 展開で問題が発生している場合は、「[監視[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]とトラブルシューティング](cluster-troubleshooting-commands.md)」を参照してください。
 
 展開が完了すると、出力に成功したことが通知されます。
 
@@ -225,7 +225,7 @@ Cluster deployed successfully.
    > [!TIP]
    > 展開中に既定の名前を変更しなかった場合、前のコマンドにある `-n mssql-cluster` を使用します。 **mssql-cluster** は、ビッグ データ クラスターの既定の名前です。
 
-1. [azdata login](reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 **--controller-endpoint** パラメータ―をコントローラー エンドポイントの外部 IP アドレスに設定します。
+1. [azdata login](reference-azdata.md) を使用して、ビッグ データ クラスターにログインします。 **--controller-endpoint** パラメーターをコントローラー エンドポイントの外部 IP アドレスに設定します。
 
    ```bash
    azdata login --controller-endpoint https://<ip-address-of-controller-svc-external>:30080 --controller-username <user-name>
@@ -314,4 +314,4 @@ Storage  default        Ready
 
 - [ビッグ データ クラスターの展開設定を構成する](deployment-custom-configuration.md)
 - [SQL Server ビッグ データ クラスターのオフライン展開を実行する](deploy-offline.md)
-- [ワークショップ: Microsoft SQL Server ビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e87770447c371f46ad384daffa3c7bc40b836904
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715602"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633633"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server で R 開発用のデータサイエンスクライアントをセットアップする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -199,7 +199,7 @@ IDE でローカル R ライブラリをポイントします (base R、RevoScal
 
 [Rstudio](https://www.rstudio.com/)を使用する場合は、リモート SQL Server に対応する R ライブラリと実行可能ファイルを使用するように環境を構成できます。
 
-1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、「 [Get R package information](../package-management/installed-package-information.md)」を参照してください。
+1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、「 [Get R package information](../package-management/r-package-information.md)」を参照してください。
 
 1. Microsoft R Client またはスタンドアロンサーバーオプションの1つをインストールして、SQL Server インスタンスで使用される base R ディストリビューションなど、RevoScaleR およびその他の R パッケージを追加します。 同じレベル以下のバージョンを選択してください (パッケージは下位互換性があります)。サーバーと同じバージョンのパッケージを提供します。 バージョン情報については、この記事のバージョンマップを参照してください。[R および Python コンポーネントをアップグレード](../install/upgrade-r-and-python.md)します。
 

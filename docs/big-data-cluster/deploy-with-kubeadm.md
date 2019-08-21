@@ -1,32 +1,32 @@
 ---
 title: Kubeadm を使用して Kubernetes を構成する
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために、複数の Ubuntu 16.04 または18.04 マシン (物理または仮想) 上に Kubernetes を構成する方法について説明します。
+description: 複数の Ubuntu 16.04 または18.04 マシン (物理または仮想) でデプロイ用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に Kubernetes を構成する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d55a51ac388cfb4af197ce409434a0dc9847bd2d
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: 63a3529755267137cb7a1094060499e5db008ec8
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661365"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652376"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために複数のマシン上に Kubernetes を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、**kubeadm** を使用して、SQL Server 2019 ビッグ データ クラスター (プレビュー) の展開のために複数のコンピューター上に Kubernetes を構成する方法の例を示します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想) を対象とします。 別の Linux プラットフォームに展開する場合は、お使いのシステムに合わせてコマンドの一部を変更する必要があります。  
+この記事では、 **kubeadm**を使用して複数の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]コンピューターで Kubernetes を構成する方法の例について説明します。 この例では、複数の Ubuntu 16.04 または 18.04 LTS マシン (物理または仮想) を対象とします。 別の Linux プラットフォームに展開する場合は、お使いのシステムに合わせてコマンドの一部を変更する必要があります。  
 
 > [!TIP] 
 > Kubernetes を構成するサンプル スクリプトについては、「[Ubuntu 16.04 LTS または 18.04 LTS 上で Kubeadm を使用して Kubernetes クラスターを作成する](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster/deployment/kubeadm)」を参照してください。
 また、VM 上での単一ノードの kubeadm の展開を自動化して、その上にビッグ データ クラスターの既定の構成を展開するサンプル スクリプトについては、[こちら](deployment-script-single-node-kubeadm.md)のトピックを参照してください。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - 最低 3 台の Linux 物理マシンまたは仮想マシン
 - マシンごとに推奨される構成:

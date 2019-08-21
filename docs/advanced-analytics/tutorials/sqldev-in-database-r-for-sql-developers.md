@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e15e56dfb4a27f0a99262ff1f105ceb0a1fbc294
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 5b2629a50a73208181cc14fd843cd9ab9c0b05df
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715384"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69633606"
 ---
 # <a name="tutorial-r-data-analytics-for-sql-developers"></a>チュートリアル:SQL 開発者向け R Data Analytics
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 
 モデルがデータベースに保存された後、ストアドプロシージャを使用して[!INCLUDE[tsql](../../includes/tsql-md.md)] 、からの予測のためにモデルを呼び出します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 すべてのタスクは、の[!INCLUDE[tsql](../../includes/tsql-md.md)] [!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]ストアドプロシージャを使用して実行できます。
 
@@ -55,7 +55,7 @@ SQL プログラマー向けのこのチュートリアルでは、SQL Server �
 
 + [R が有効になっている](../install/sql-machine-learning-services-windows-install.md#verify-installation) [SQL Server 2016 r Services](../install/sql-r-services-windows-install.md#verify-installation)または SQL Server Machine Learning Services
 
-+ [R ライブラリ](../package-management/installed-package-information.md)
++ [R ライブラリ](../package-management/r-package-information.md)
 
 + [権限](../security/user-permission.md)
 

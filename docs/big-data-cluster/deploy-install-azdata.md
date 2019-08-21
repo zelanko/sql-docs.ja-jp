@@ -1,22 +1,22 @@
 ---
 title: azdata をインストールする
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) をインストールおよび管理するために azdata ツールをインストールする方法について説明します。
+description: のインストールと管理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) 用の azdata ツールをインストールする方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: aaccdff9d5debe30eacfddfd8423a0a57b8a37fb
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: e95fe15877dd6d22ca575b79f9fb213b6104d3aa
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028564"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652415"
 ---
-# <a name="install-azdata-to-manage-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターを管理するために azdata をインストールする
+# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>管理する azdata をインストールする[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -107,6 +107,6 @@ Linux では、Python 3.5 をインストールしてから、pip をアップ�
    > [!NOTE]
    > `--user` スイッチを指定すると、azdata が Python ユーザー インストール ディレクトリにインストールされます。 通常、Linux 上ではこれは `~/.local/bin` です。 このディレクトリをパスに追加するか、ユーザー インストール ディレクトリに移動して、そこから `./azdata` を実行します。
 
-## <a name="next-steps"></a>次のステップ
+## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターの概要](big-data-cluster-overview.md)のページを参照してください。
+ビッグデータクラスターの詳細について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。

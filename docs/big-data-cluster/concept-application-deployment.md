@@ -1,20 +1,20 @@
 ---
 title: アプリケーション展開とは
-titleSuffix: SQL Server 2019 big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のアプリケーション展開について説明します。
+titleSuffix: Big Data Clusters for SQL Server 2019
+description: この記事では、SQL Server 2019 のビッグデータクラスターでのアプリケーションの展開について説明します。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: d8cc44862af21c54bdbd0e4adbb35db912c3f7c9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: da497f8d7c435a807ba530ae619ff91a6f2dff71
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419406"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653004"
 ---
 # <a name="what-is-application-deployment-on-a-sql-server-2019-big-data-cluster"></a>SQL Server 2019 ビッグ データ クラスターのアプリケーション展開とは
 
@@ -61,12 +61,12 @@ RESTful Web サービスを使用してアプリケーションを実行する�
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server ビッグ データ クラスターでアプリケーションを作成して実行する方法の詳細については、次を参照してください。
+で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]アプリケーションを作成して実行する方法の詳細については、次を参照してください。
 
 - [azdata を使用してアプリケーションを展開する](big-data-cluster-create-apps.md)
 - [アプリケーション展開の拡張機能を使用してアプリケーションを展開する](app-deployment-extension.md)
 - [ビッグ データ クラスターでアプリケーションを使用する](big-data-cluster-consume-apps.md)
 
-SQL Server ビッグ データ クラスターに関する詳細については、次の概要を参照してください。
+の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]詳細については、次の概要を参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]概要](big-data-cluster-overview.md)

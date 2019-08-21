@@ -1,20 +1,20 @@
 ---
 title: Oracle の外部データにクエリを実行する
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) から Oracle データにクエリを実行する方法について説明します。 Oracle のデータに対する外部テーブルを作成し、クエリを実行します。
+description: このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]から Oracle データを照会する方法について説明します。 Oracle のデータに対する外部テーブルを作成し、クエリを実行します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
-ms.date: 12/12/2018
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bf0efdc3a9be44a0ffad4efcaaeb351bbdbdf626
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ebad25ed0532ed6ba96dc803fa8e6dc2538977ae
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957714"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653257"
 ---
 # <a name="tutorial-query-oracle-from-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターから Oracle にクエリを実行する
 
@@ -65,9 +65,9 @@ ms.locfileid: "67957714"
 
 最初の手順では、Oracle サーバーにアクセスできる外部データ ソースを作成します。
 
-1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、[SQL Server マスター インスタンスへの接続](connect-to-big-data-cluster.md#master)に関する記述を参照してください。
+1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、「[SQL Server マスター インスタンスに接続する](connect-to-big-data-cluster.md#master)」を参照してください。
 
-1. **[サーバー]** ウィンドウで接続をダブルクリックし、SQL Server マスター インスタンスのサーバー ダッシュボードを表示します。 **[新しいクエリ]** を選択します。
+1. **[サーバー]** ウィンドウで接続をダブルクリックして、SQL Server マスター インスタンスのサーバー ダッシュボードを表示します。 **[新しいクエリ]** を選択します。
 
    ![SQL Server マスター インスタンス クエリ](./media/tutorial-query-oracle/sql-server-master-instance-query.png)
 
@@ -132,7 +132,7 @@ DROP EXTERNAL DATA SOURCE [OracleSalesSrvr] ;
 DROP DATABASE SCOPED CREDENTIAL [OracleCredential];
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 データ プールにデータを取り込む方法を学習します:
 > [!div class="nextstepaction"]

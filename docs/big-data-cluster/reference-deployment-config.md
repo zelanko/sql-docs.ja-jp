@@ -5,16 +5,16 @@ description: ビッグ データ クラスターの展開構成ファイルの�
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 04/23/2019
+ms.date: 08/21/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f26d25637ec0739edc31e0d5fa8794f7a887019b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4be1c381da092dcf51823ed43b7cf42dc6d2479e
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958243"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653498"
 ---
 # <a name="deployment-configuration-file-reference-for-big-data-clusters"></a>ビッグ データ クラスターの展開構成ファイルのリファレンス
 
@@ -453,4 +453,4 @@ ms.locfileid: "67958243"
 
 ## <a name="next-steps"></a>次の手順
 
-展開構成ファイルを使用およびカスタマイズする方法の詳細については、「[Kubernetes に SQL Server ビッグ データ クラスターデを展開する方法](deployment-guidance.md#configfile)」を参照してください。
+展開構成ファイルを使用およびカスタマイズする方法の詳細については、「 [how to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md#configfile)」を参照してください。

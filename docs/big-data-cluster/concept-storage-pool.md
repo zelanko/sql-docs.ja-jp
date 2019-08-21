@@ -5,22 +5,22 @@ description: この記事では、SQL Server 2019 ビッグ データ クラス�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 12/06/2018
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 58e6f16a088d6dc6c1fc6bd32297e7bd698acbbf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ead6c2ceeecbdfb3466bd4475978b139a0d2ddde
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958656"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652249"
 ---
-# <a name="what-is-the-storage-pool-sql-server-big-data-clusters"></a>記憶域プールとは (SQL Server ビッグ データ クラスター)
+# <a name="what-is-the-storage-pool-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>記憶域プール ([!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]) とは
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) での "*SQL Server 記憶域プール*" の役割について説明します。 以下のセクションでは、SQL 記憶域プールのアーキテクチャと機能について説明します。
+この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の*SQL Server 記憶域プール*の役割について説明します。 以下のセクションでは、SQL 記憶域プールのアーキテクチャと機能について説明します。
 
 ## <a name="storage-pool-architecture"></a>記憶域プールのアーキテクチャ
 
@@ -38,7 +38,7 @@ ms.locfileid: "67958656"
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server ビッグ データ クラスターの詳細については、次のリソースを参照してください。
+の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
-- [ワークショップ: Microsoft SQL Server ビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]概要](big-data-cluster-overview.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

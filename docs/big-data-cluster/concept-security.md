@@ -1,22 +1,22 @@
 ---
 title: セキュリティの概念
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のセキュリティの概念について説明します。 これには、クラスター エンドポイントとクラスター認証の説明が含まれます。
+description: この記事では、の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]セキュリティの概念について説明します。 これには、クラスター エンドポイントとクラスター認証の説明が含まれます。
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 54ae86785590eb26fb8ac402f3ae8ab6c7f29a98
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4e4441f0cc4f19d4784019408bfc5309a5734285
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958664"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652252"
 ---
-# <a name="security-concepts-for-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターのセキュリティの概念
+# <a name="security-concepts-for-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>セキュリティの概念[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -44,7 +44,7 @@ ms.locfileid: "67958664"
 
 ビッグ データ クラスター内のエンドポイントのセキュリティ保護は、パスワードを使用して行います。パスワードは、環境変数または CLI コマンドを使用して設定/更新できます。 すべてのクラスター内部パスワードは、Kubernetes シークレットとして格納されます。  
 
-## <a name="authentication"></a>[認証]
+## <a name="authentication"></a>認証
 
 クラスターをプロビジョニングすると、複数のログインが作成されます。
 
@@ -82,7 +82,7 @@ HDFS/Spark エンドポイントにアクセスするためのパスワード:
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server ビッグ データ クラスターの詳細については、次のリソースを参照してください。
+の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]詳細については、次のリソースを参照してください。
 
-- [SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)
-- [ワークショップ: Microsoft SQL Server ビッグ データ クラスターのアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)
+- [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]概要](big-data-cluster-overview.md)
+- [ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]のアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)

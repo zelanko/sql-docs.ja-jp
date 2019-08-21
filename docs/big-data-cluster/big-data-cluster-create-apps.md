@@ -1,42 +1,42 @@
 ---
 title: azdata を使用してアプリケーションを展開する
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) に、Python または R スクリプトをアプリケーションとして展開します。
+description: Python または R スクリプトをアプリケーションとして[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]に配置します。
 author: jeroenterheerdt
 ms.author: jterh
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 06b76e7eb8eec8db1993ca558a1f57355457c4ad
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
-ms.translationtype: HT
+ms.openlocfilehash: 18e97a3567b50982bd2be11dcc3493951dfe8fa9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419486"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653155"
 ---
-# <a name="how-to-deploy-an-app-on-sql-server-big-data-cluster-preview"></a>SQL Server ビッグ データ クラスター (プレビュー) にアプリを展開する方法
+# <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>アプリを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) 内でアプリケーションとして R および Python スクリプトを展開して管理する方法について説明します。
+この記事では、SQL Server 2019 ビッグデータクラスター内のアプリケーションとして R および Python スクリプトをデプロイして管理する方法について説明します。
 
 ## <a name="whats-new-and-improved"></a>新機能と強化された機能
 
 - クラスターとアプリを管理する 1 つのコマンドライン ユーティリティ。
 - アプリの展開が簡単になり、さらに仕様ファイルを細かく制御できるようになりました。
-- ホストされるアプリケーションの種類が増えました (SSIS と MLeap) (CTP 2.3 の新機能)
-- アプリケーションの展開を管理する [VS Code 拡張機能](app-deployment-extension.md)
+- 追加のアプリケーションの種類 (SSIS および MLeap) をホストするためのサポート (CTP 2.3 の新機能)。
+- アプリケーションの展開を管理するための[Visual Studio Code 拡張機能](app-deployment-extension.md)。
 
-アプリケーションは、`azdata` コマンドライン ユーティリティを使用して展開および管理されます。 この記事では、コマンド ラインからアプリを展開する方法の例を示します。 Visual Studio Code でこれを使用する方法については、[VS Code 拡張機能](app-deployment-extension.md)のページを参照してください。
+アプリケーションは、`azdata` コマンドライン ユーティリティを使用して展開および管理されます。 この記事では、コマンド ラインからアプリを展開する方法の例を示します。 でこれを使用する方法については Visual Studio Code [Visual Studio Code 拡張機能](app-deployment-extension.md)に関するページを参照してください。
 
 サポートされているアプリの種類は次のとおりです。
-- R および Python アプリ (関数、モデル、アプリ)
+- R と Python アプリ (関数、モデル、アプリ)
 - MLeap Serving
 - SQL Server Integration Services (SSIS)
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)
 - [azdata コマンドライン ユーティリティ](deploy-install-azdata.md)
@@ -45,7 +45,7 @@ ms.locfileid: "68419486"
 
 SQL Server 2019 (プレビュー) では、アプリケーションの作成、削除、説明、初期化、一覧の実行、および更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
-|コマンド |[説明] |
+|Command |説明 |
 |:---|:---|
 |`azdata login` | SQL Server ビッグ データ クラスターにサインインします |
 |`azdata app create` | アプリケーションを作成します。 |
@@ -74,16 +74,16 @@ azdata login --controller-endpoint https://<ip-address-of-controller-svc-externa
 
 ## <a name="aks"></a>AKS
 
-AKS を使用している場合は、次のコマンドを実行し、bash または cmd ウィンドウで次のコマンドを実行することで `mgmtproxy-svc-external` サービスの IP アドレスを取得します。
+AKS を使用している場合は、次のコマンドを実行し、bash または cmd ウィンドウで次のコマンドを実行することで `controller-svc-external` サービスの IP アドレスを取得します。
 
 
 ```bash
-kubectl get svc mgmtproxy-svc-external -n <name of your big data cluster>
+kubectl get svc controller-svc-external -n <name of your big data cluster>
 ```
 
 ## <a name="kubeadm-or-minikube"></a>Kubeadm または Minikube
 
-Kubeadm または Minikube を使用している場合は、次のコマンドを実行して、クラスターにログインするための IP アドレスを取得します
+Kubeadm または Minikube を使用している場合は、次のコマンドを実行して、クラスターにサインインするための IP アドレスを取得します。
 
 ```bash
 kubectl get node --selector='node-role.kubernetes.io/master'
@@ -105,19 +105,19 @@ azdata app create --spec <directory containing spec file>
 azdata app create --spec ./addpy
 ```
 
-これは、アプリケーションが `addpy` フォルダーに格納されていることを前提としています。 このフォルダーには、`spec.yaml` というアプリケーションの仕様ファイルも含まれています。 `spec.yaml` ファイルの詳細については、[アプリケーションの展開](concept-application-deployment.md)のページを参照してください。
+これは、アプリケーションが `addpy` フォルダーに格納されていることを前提としています。 このフォルダーには、`spec.yaml` というアプリケーションの仕様ファイルも含まれています。 `spec.yaml`ファイルの詳細について[は、「アプリケーションの配置」ページ](concept-application-deployment.md)を参照してください。
 
 このアプリ サンプル アプリを展開するには、`addpy` というディレクトリに次のファイルを作成します。
 
-- `add.py` 次の Python コードをこのファイルにコピーします。
+- `add.py`。 次の Python コードをこのファイルにコピーします。
    ```py
    #add.py
-   def add(x,y):
-        result = x+y
-        return result
-    result=add(x,y)
+  def add(x, y):
+    result = x+y
+    return result
+  result=add(x,y)
    ```
-- `spec.yaml` 次のコードをこのファイルにコピーします。
+- `spec.yaml`。 次のコードをこのファイルにコピーします。
    ```yaml
    #spec.yaml
    name: add-app #name of your python script
@@ -241,7 +241,7 @@ init コマンドには、アプリの展開に必要な関連する成果物を
 azdata app init --name hello --version v1 --template python
 ```
 
-これにより、hello という名前のフォルダーが作成されます。  `cd` を実行してディレクトリに移動し、フォルダー内に生成されたファイルを調べることができます。 spec.yaml には、名前、バージョン、ソース コードなどのアプリが定義されています。 仕様を編集して、名前、バージョン、入力、および出力を変更することができます。
+これにより、hello という名前のフォルダーが作成されます。  `cd` を実行してディレクトリに移動し、フォルダー内に生成されたファイルを調べることができます。 spec は、名前、バージョン、ソースコードなどのアプリを定義します。 仕様を編集して、名前、バージョン、入力、および出力を変更することができます。
 
 フォルダーに表示される init コマンドからの出力例を次に示します。
 
@@ -270,8 +270,8 @@ describe コマンドでは、クラスター内のエンドポイントを含�
     }
   ],
   "links": {
-    "app": "https://10.1.1.3:30777/api/app/add-app/v1",
-    "swagger": "https://10.1.1.3:30777/api/app/add-app/v1/swagger.json"
+    "app": "https://10.1.1.3:30080/api/app/add-app/v1",
+    "swagger": "https://10.1.1.3:30080/api/app/add-app/v1/swagger.json"
   },
   "name": "add-app",
   "output_param_defs": [
@@ -295,6 +295,6 @@ azdata app delete --name add-app --version v1
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server ビッグ データ クラスターに展開されているアプリを独自のアプリケーションに統合する方法の詳細については、[ビッグ データ クラスター上でアプリケーションを使用する方法](big-data-cluster-consume-apps.md)のページを参照してください。 その他のサンプルにはついては、[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に関するページを参照してください。
+「[ビッグデータクラスターでアプリケーション](big-data-cluster-consume-apps.md)を[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]使用する」で、独自のアプリケーションにデプロイされているアプリを統合する方法について詳しく説明します。 その他のサンプルにはついては、[アプリの展開サンプル](https://aka.ms/sql-app-deploy)に関するページを参照してください。
 
-SQL Server ビッグ データ クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターの概要](big-data-cluster-overview.md)に関するページを参照してください。
+の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。

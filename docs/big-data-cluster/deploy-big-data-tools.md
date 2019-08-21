@@ -1,26 +1,26 @@
 ---
 title: ビッグ データ ツールをインストールする
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) で使用するツールをインストールする方法について説明します。
+description: (プレビュー) で使用するツール[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]をインストールする方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 757209ff89fd40dcc737b65d3b19f2a7d4ef247b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: f30b3b2e3c8503d2ac74ede8c1a45114a6b1d555
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419460"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653406"
 ---
 # <a name="install-sql-server-2019-big-data-tools"></a>SQL Server 2019 のビッグ データ ツールをインストールする
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) を作成、管理、使用するためにインストールする必要があるクライアント ツールについて説明します。 次のセクションでは、ツールおよびインストール手順へのリンクの一覧を示します。 ビッグ データ クラスターを配置する前に、必須とマークされているツールを Windows または Linux で構成します。
+この記事では、(プレビュー) を作成、管理、および使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]するためにインストールする必要があるクライアントツールについて説明します。 次のセクションでは、ツールおよびインストール手順へのリンクの一覧を示します。 ビッグ データ クラスターを配置する前に、必須とマークされているツールを Windows または Linux で構成します。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -28,7 +28,7 @@ ms.locfileid: "68419460"
 
 次の表では、一般的なビッグ データ クラスター ツールとそのインストール方法を示します。
 
-| ツール | Required | [説明] | インストール |
+| ツール | 必須 | 説明 | インストール |
 |---|---|---|---|
 | **python** | はい | Python は、動的なセマンティクスを備えた、インタープリター方式でオブジェクト指向の高水準プログラミング言語です。 SQL Server 用のビッグ データ クラスターの多くの部分で、Python が使われています。 | [Python のインストール](#python)|
 | **azdata** | はい | ビッグ データ クラスターをインストールして管理するためのコマンドライン ツールです。 | [インストール](deploy-install-azdata.md) |
@@ -87,6 +87,6 @@ ms.locfileid: "68419460"
 ツールを構成した後、クラウドまたはオンプレミスの Kubernetes に SQL Server 2019 ビッグ データ クラスターを配置します。 詳しくは、展開に関する次の記事をご覧ください。
 
 - [クイックスタート: Azure Kubernetes Service (AKS) に SQL Server ビッグ データ クラスターを展開する](quickstart-big-data-cluster-deploy.md)
-- [Kubernetes 上に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)
+- [Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]する方法](deployment-guidance.md)
 
-ビッグ データ クラスターについて詳しくは、[SQL Server 2019 ビッグ データ クラスターの概要](big-data-cluster-overview.md)に関する記事をご覧ください。
+ビッグデータクラスターの詳細について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。

@@ -1,28 +1,27 @@
 ---
-title: マスターおよび HDFS に接続する
-titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) の SQL Server マスター インスタンスと HDFS/Spark ゲートウェイに接続する方法について説明します。
+title: Master および HDFS ビッグデータクラスターへの接続
+description: の SQL Server マスターインスタンスと HDFS/Spark ゲートウェイに接続する方法について説明[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 05/22/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1f09763b210427c84efe75d693fee302d7048db7
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: fb6e1f684a277740c06fbd0a2fdc23dbd77f8e5c
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67958645"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652420"
 ---
 # <a name="connect-to-a-sql-server-big-data-cluster-with-azure-data-studio"></a>Azure Data Studio を使用して SQL Server ビッグ データ クラスターに接続する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、Azure Data Studio から SQL Server 2019 ビッグ データ クラスター (プレビュー) に接続する方法について説明します。
+この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] Azure Data Studio からに接続する方法について説明します。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - 展開済みの [SQL Server 2019 ビッグ データ クラスター](deployment-guidance.md)。
 - [SQL Server 2019 ビッグ データ ツール](deploy-big-data-tools.md):
@@ -70,4 +69,4 @@ Azure Data Studio の 2019 年 2 月リリースでは、SQL Server マスター
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server 2019 ビッグ データ クラスターの詳細については、「[SQL Server 2019 ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。
+の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] ](big-data-cluster-overview.md)、「」を参照してください。

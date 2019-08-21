@@ -1,20 +1,20 @@
 ---
 title: bash スクリプトを使用して単一ノード kubeadm クラスターに展開する
 titleSuffix: SQL Server big data clusters
-description: bash 展開スクリプトを使用して、SQL Server 2019 ビッグ データ クラスター (プレビュー) を単一ノード kubeadm クラスターに展開します。
+description: Bash デプロイスクリプトを使用して、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]を1つのノード kubeadm クラスターにデプロイします。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 09f1d487e82f1e57762a0949f20bf9d43e40abfc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715890"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652340"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>bash スクリプトを使用して単一ノード kubeadm クラスターに展開する
 
@@ -22,7 +22,7 @@ ms.locfileid: "68715890"
 
 このチュートリアルでは、サンプルの bash 展開スクリプトを利用し、kubeadm と SQL Server ビッグ データ クラスターを使用して単一ノード Kubernetes クラスターを展開します。  
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 - バニラ Ubuntu 18.04 または 16.04 **server**仮想マシンまたは物理マシン。 スクリプトによってすべての依存関係が設定され、VM 内からそのスクリプトを実行します。
 

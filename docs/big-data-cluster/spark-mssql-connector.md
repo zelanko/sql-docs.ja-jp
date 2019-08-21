@@ -5,16 +5,16 @@ description: Spark で MSSQL Spark コネクタを使用して、SQL Server に�
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5b603e91e2dffae034dd9d66a1bcd3e5f812a308
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 3ad3a0e03c75f7961864f70fc52655e47e2b89ea
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957838"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653302"
 ---
 # <a name="how-to-read-and-write-to-sql-server-from-spark-using-the-mssql-spark-connector"></a>MSSQL Spark コネクタを使用して Spark から SQL Server に対する読み取りと書き込みを行う方法
 
@@ -39,13 +39,13 @@ SQL Server 2019 Preview では、Spark から SQL への書き込みに SQL Serv
 
 次の表では、変更された、または新しくなったインターフェイス パラメーターについて説明します。
 
-| プロパティ名 | 省略可 | [説明] |
+| プロパティ名 | 省略可 | 説明 |
 |---|---|---|
 | **isolationLevel** | はい | これにより、接続の分離レベルが記述されます。 MSSQL Spark コネクタの既定値は、**READ_COMMITTED** です。 |
 
 このコネクタでは、SQL Server 一括書き込み API を使用します。 任意の一括書き込みパラメーターは、任意のパラメーターとして渡される場合があり、コネクタによって基になる API にそのまま渡されます。 一括書き込み操作の詳細については、「[SQLServerBulkCopyOptions]( ../connect/jdbc/using-bulk-copy-with-the-jdbc-driver.md#sqlserverbulkcopyoptions)」を参照してください。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
 - [SQL Server ビッグ データ クラスター](deploy-get-started.md)
 
@@ -90,4 +90,4 @@ SQL Server 2019 Preview では、Spark から SQL への書き込みに SQL Serv
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターの詳細については、「[Kubernetes に SQL Server ビッグ データ クラスターデを展開する方法](deployment-guidance.md)」を参照してください。
+ビッグデータクラスターの詳細については、「 [How [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to deploy on Kubernetes](deployment-guidance.md) 」を参照してください。

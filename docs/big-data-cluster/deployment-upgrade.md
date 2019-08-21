@@ -1,22 +1,22 @@
 ---
 title: 新しいリリースにアップグレードする
 titleSuffix: SQL Server big data clusters
-description: SQL Server 2019 ビッグ データ クラスター (プレビュー) を新しいリリースにアップグレードする方法について説明します。
+description: 新しいリリースにアップグレード[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) する方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 29bdd3996112154b222ffb7d43390050c9af2d02
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.openlocfilehash: 867729b7d638960a2dbf2cb5f7544fecf698c94d
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731090"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652334"
 ---
-# <a name="how-to-upgrade-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターをアップグレードする方法
+# <a name="how-to-upgrade-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>アップグレードする方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
@@ -72,8 +72,8 @@ azdata --version
 
 ## <a name="install-the-new-release"></a>新しいリリースをインストールする
 
-以前のビッグ データ クラスターを削除し、最新の **azdata** をインストールしたら、現在の展開手順に従って、新しいビッグ データ クラスターを展開します。 詳細については、「[Kubernetes に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)」を参照してください。 次に、必要なデータベースまたはファイルを復元します。
+以前のビッグ データ クラスターを削除し、最新の **azdata** をインストールしたら、現在の展開手順に従って、新しいビッグ データ クラスターを展開します。 詳細については、「 [How [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] to deploy on Kubernetes](deployment-guidance.md)」を参照してください。 次に、必要なデータベースまたはファイルを復元します。
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターの詳細については、「[SQL Server ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。
+ビッグデータクラスターの詳細について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)、「」を参照してください。

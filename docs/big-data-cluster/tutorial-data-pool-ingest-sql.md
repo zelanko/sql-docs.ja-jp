@@ -1,28 +1,28 @@
 ---
 title: SQL Server のデータ プールにデータを取り込む
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、SQL Server 2019 ビッグ データ クラスター (プレビュー) のデータ プールにデータを取り込む方法について説明します。
+description: このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のデータプールにデータを取り込む方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 178eceaf99d1f8c2b51f7079d0bdd406c2cb5eef
-ms.sourcegitcommit: c70a0e2c053c2583311fcfede6ab5f25df364de0
+ms.openlocfilehash: f2ae96a04da69835b4b13886637cf87e62996b57
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/31/2019
-ms.locfileid: "68670523"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653312"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-transact-sql"></a>チュートリアル: Transact-SQL を使用して SQL Server のデータ プールにデータを取り込む
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、Transact-SQL を使用して SQL Server 2019 ビッグ データ クラスター (プレビュー) の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 SQL Server ビッグ データ クラスターを使用すると、さまざまなソースからのデータを取り込んで、データ プールのインスタンス間で分散させることができます。
+このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]transact-sql を使用しての[データプール](concept-data-pool.md)にデータを読み込む方法について説明します。 で[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]は、さまざまなソースからのデータを取り込まれたし、データプールのインスタンス間で分散することができます。
 
-このチュートリアルでは、次の方法を学習します。
+このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
 > * データ プールに外部テーブルを作成する。
@@ -44,7 +44,7 @@ ms.locfileid: "68670523"
 
 次の手順では、**web_clickstream_clicks_data_pool** という名前のデータ プールに外部テーブルを作成します。 このテーブルは、ビッグ データ クラスターにデータを取り込むための場所として使用できます。
 
-1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、[SQL Server マスター インスタンスへの接続](connect-to-big-data-cluster.md#master)に関する記事を参照してください。
+1. Azure Data Studio で、ビッグ データ クラスターの SQL Server マスター インスタンスに接続します。 詳細については、「[SQL Server マスター インスタンスに接続する](connect-to-big-data-cluster.md#master)」を参照してください。
 
 1. **[サーバー]** ウィンドウで接続をダブルクリックして、SQL Server マスター インスタンスのサーバー ダッシュボードを表示します。 **[新しいクエリ]** を選択します。
 

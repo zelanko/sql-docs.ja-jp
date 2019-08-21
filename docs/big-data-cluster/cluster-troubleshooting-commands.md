@@ -1,26 +1,26 @@
 ---
 title: 監視とトラブルシューティング
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) の監視とトラブルシューティングに役立つコマンドについて説明します。
+description: この記事では、の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]監視とトラブルシューティングに役立つコマンドについて説明します。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: ccdfe31f7873c44ea09e273d5d9afb2361f9b36b
-ms.sourcegitcommit: 9702dd51410dd610842d3576b24c0ff78cdf65dc
+ms.openlocfilehash: 36203552e9070d80179fa88df0a7d1951b09664a
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68841561"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653023"
 ---
-# <a name="monitoring-and-troubleshoot-sql-server-big-data-clusters"></a>SQL Server ビッグ データ クラスターの監視とトラブルシューティング
+# <a name="monitoring-and-troubleshoot-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>監視とトラブルシューティング[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) の監視とトラブルシューティングに使用できる、いくつかの便利な Kubernetes コマンドについて説明します。 ビッグ データ クラスター内に存在するポッドまたは他の Kubernetes アーティファクトの詳細を表示する方法を示します。 この記事では、SQL Server ビッグ データ クラスター サービスのいずれかが実行されているコンテナーとの間でのファイルのコピーなど、一般的なタスクについても説明します。
+この記事では、の監視とトラブルシューティングに使用できる、いくつか[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の便利な Kubernetes コマンドについて説明します。 ビッグ データ クラスター内に存在するポッドまたは他の Kubernetes アーティファクトの詳細を表示する方法を示します。 この記事では、SQL Server ビッグ データ クラスター サービスのいずれかが実行されているコンテナーとの間でのファイルのコピーなど、一般的なタスクについても説明します。
 
 > [!TIP]
 > Windows (cmd または PS) または Linux (bash) のクライアント コンピューターで、次の **kubectl** コマンドを実行します。 それらには、クラスターでの以前の認証と、実行対象のクラスター コンテキストが必要です。 たとえば、以前に作成された AKS クラスターでは、`az aks get-credentials --name <aks_cluster_name> --resource-group <azure_resource_group_name>` を実行して Kubernetes クラスター構成ファイルをダウンロードし、クラスター コンテキストを設定できます。
@@ -224,4 +224,4 @@ kubectl proxy
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターの詳細については、「[SQL Server ビッグ データ クラスターとは](big-data-cluster-overview.md)」を参照してください。
+ビッグデータクラスターの詳細について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] ](big-data-cluster-overview.md)、「」を参照してください。

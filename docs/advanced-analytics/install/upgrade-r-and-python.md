@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 948ce20bf32aaa2051c4a805a3ca2f131a7c0c8f
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: abc14f78a969abd4adbbb2dcf12b4ee316614d23
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715210"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634548"
 ---
 # <a name="upgrade-machine-learning-r-and-python-components-in-sql-server-instances"></a>SQL Server インスタンス内の machine learning (R および Python) コンポーネントをアップグレードする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -148,7 +148,7 @@ Microsoft Machine Learning セットアップでは、既存の機能と SQL Ser
 
     ![インストール手順の構成](media/mls-931-installer-mssql13.png)
 
-1. **[使用許諾契約書]** ページで、[Machine Learning Server のライセンス条項に**同意する]** を選択します。 
+1. **[使用許諾契約書]** ページで、[Machine Learning Server のライセンス条項に同意する] を選択します。 
 
 1. 連続したページで、Microsoft R Open や Python Anaconda distribution など、選択したオープンソースコンポーネントの追加のライセンス条件に同意します。
 
@@ -274,7 +274,7 @@ SQL Server セットアップを実行して、R および Python の機能を�
 
 ### <a name="step-3-add-any-third-party-packages"></a>手順 3:サードパーティ製のパッケージを追加する
 
-パッケージライブラリに、他のオープンソースまたはサードパーティのパッケージを追加した可能性があります。 バインドを逆にすると、既定のパッケージライブラリの場所が切り替わります。そのため、R および Python が現在使用しているライブラリにパッケージを再インストールする必要があります。 詳細については、「[既定のパッケージ](../package-management/default-packages.md)」、「[新しい R パッケージのインストール](../r/install-additional-r-packages-on-sql-server.md)」、および「[新しい Python パッケージのインストール](../python/install-additional-python-packages-on-sql-server.md)」を参照してください。
+パッケージライブラリに、他のオープンソースまたはサードパーティのパッケージを追加した可能性があります。 バインドを逆にすると、既定のパッケージライブラリの場所が切り替わります。そのため、R および Python が現在使用しているライブラリにパッケージを再インストールする必要があります。 詳細については、「 [R パッケージの情報](../package-management/r-package-information.md)と[インストール](../package-management/install-additional-r-packages-on-sql-server.md)」と「 [Python パッケージの情報](../package-management/python-package-information.md)と[インストール](../package-management/install-additional-python-packages-on-sql-server.md)」を参照してください。
 
 ## <a name="sqlbindrexe-command-syntax"></a>SqlBindR .exe コマンドの構文
 

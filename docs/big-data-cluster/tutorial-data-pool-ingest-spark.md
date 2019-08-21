@@ -1,28 +1,28 @@
 ---
 title: Spark ジョブを使用してデータを取り込む
 titleSuffix: SQL Server big data clusters
-description: このチュートリアルでは、Azure Data Studio で Spark ジョブを使用して、SQL Server 2019 ビッグ データ クラスター (プレビュー) のデータ プールにデータを取り込む方法について説明します。
+description: このチュートリアルでは、Azure Data Studio で Spark ジョブを使用して[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] 、のデータプールにデータを取り込む方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: shivsood
-ms.date: 06/26/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6d0ea6d4fb7a3aea9788c089ad68cb3bf523837f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5325b44512d2dc1522d4bc49478e65ae4c0999e0
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67957815"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653295"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル:Spark ジョブを使用して SQL Server のデータ プールにデータを取り込む
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、Spark ジョブを使用して SQL Server 2019 ビッグ データ クラスター (プレビュー) の[データ プール](concept-data-pool.md)にデータを取り込む方法について説明します。 
+このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]Spark ジョブを使用しての[データプール](concept-data-pool.md)にデータを読み込む方法について説明します。 
 
-このチュートリアルでは、次の方法を学習します。
+このチュートリアルでは、次の作業を行う方法について説明します。
 
 > [!div class="checklist"]
 > * データ プールに外部テーブルを作成する
@@ -103,12 +103,12 @@ ms.locfileid: "67957815"
 
    次の表では、それぞれの引数について説明します。
 
-   | 引数 | [説明] |
+   | 引数 | 説明 |
    |---|---|
    | サーバー名 (server name) | SQL Server によってテーブル スキーマの読み取りに使用されます |
    | ポート番号 | SQL Server でリッスンしているポート (既定値: 1433) |
    | username | SQL Server ログイン ユーザー名 |
-   | パスワード | SQL Server ログイン パスワード |
+   | password | SQL Server ログイン パスワード |
    | データベース名 | [対象になるデータベース] |
    | external table name | 結果に使用するテーブル |
    | ストリーミング用のソース ディレクトリ | これは、"hdfs:///clickstream_data" などの完全な URI である必要があります |
@@ -147,7 +147,7 @@ ms.locfileid: "67957815"
 DROP EXTERNAL TABLE [dbo].[web_clickstreams_spark_results];
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 Azure Data Studio でサンプル ノートブックを実行する方法について説明します。
 > [!div class="nextstepaction"]

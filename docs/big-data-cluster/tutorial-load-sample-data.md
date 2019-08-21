@@ -5,25 +5,25 @@ description: このチュートリアルでは、SQL Server ビッグ データ 
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a705e93cd4fce09abb7f8f3615c1ab638f332d60
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: 405df2c66917dc5e5b350aaaa0769bede6ccf6c9
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621664"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653288"
 ---
 # <a name="tutorial-load-sample-data-into-a-sql-server-big-data-cluster"></a>チュートリアル:SQL Server ビッグ データ クラスターにサンプル データを読み込む
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-このチュートリアルでは、スクリプトを使用して、サンプル データを SQL Server 2019 ビッグ データ クラスター (プレビュー) に読み込む方法について説明します。 ドキュメントに記載されている他のチュートリアルの多くで、このサンプル データが使用されています。
+このチュートリアルでは、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]スクリプトを使用してにサンプルデータを読み込む方法について説明します。 ドキュメントに記載されている他のチュートリアルの多くで、このサンプル データが使用されています。
 
 > [!TIP]
-> [sql-server-samples](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster) GitHub リポジトリには、他にも、SQL Server 2019 ビッグ データ クラスター (プレビュー) 用のサンプルが用意されています。 それらは、パス **sql-server-samples/samples/features/sql-big-data-cluster/** に置かれています。
+> のその他のサンプルに[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]ついては、「 [sql server のサンプル](https://github.com/Microsoft/sql-server-samples/tree/master/samples/features/sql-big-data-cluster)GitHub リポジトリ」を参照してください。 それらは、パス **sql-server-samples/samples/features/sql-big-data-cluster/** に置かれています。
 
 ## <a name="prerequisites"></a>前提条件
 

@@ -5,24 +5,24 @@ description: SQL Server ビッグ データ クラスターのオフライン展
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cd8b3128fc11037a5ade494813611d473c995f8f
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 061e3c39f3cbcfd7e15367bbe9b37f8fc0aebb31
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68419368"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69652368"
 ---
 # <a name="perform-an-offline-deployment-of-a-sql-server-big-data-cluster"></a>SQL Server ビッグ データ クラスターのオフライン展開を実行する
 
-この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) のオフライン展開を実行する方法について説明します。 ビッグ データ クラスターには、コンテナー イメージをプルする Docker リポジトリへのアクセス権が必要です。 オフライン インストールでは、必要なイメージがプライベート Docker リポジトリに配置されています。 そのプライベート リポジトリはその後、新しい展開のイメージ ソースとして使用されます。
+この記事では、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]のオフライン展開を実行する方法について説明します。 ビッグ データ クラスターには、コンテナー イメージをプルする Docker リポジトリへのアクセス権が必要です。 オフライン インストールでは、必要なイメージがプライベート Docker リポジトリに配置されています。 そのプライベート リポジトリはその後、新しい展開のイメージ ソースとして使用されます。
 
-## <a name="prerequisites"></a>Prerequisites
+## <a name="prerequisites"></a>前提条件
 
-- サポートされているいずれかの Linux ディストリビューションの Docker エンジン 1.8+ または Mac/Windows 用 Docker。 詳細については、「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker をインストールする) を参照してください。
+- サポートされている任意の Linux ディストリビューションの Docker エンジン 1.8 + または Docker for Mac/Windows。 詳細については「[Install Docker](https://docs.docker.com/engine/installation/)」(Docker のインストール) を参照してください。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
 
@@ -171,4 +171,4 @@ azdata bdc config replace --config-file custom/control.json --json-values "$.spe
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグ データ クラスターの展開の詳細については、「[Kubernetes に SQL Server ビッグ データ クラスターを展開する方法](deployment-guidance.md)」を参照してください。
+ビッグデータクラスターの展開の詳細については、「 [How to deploy [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] on Kubernetes](deployment-guidance.md)」を参照してください。

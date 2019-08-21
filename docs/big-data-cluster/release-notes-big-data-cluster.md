@@ -1,28 +1,31 @@
 ---
 title: リリース ノート
 titleSuffix: SQL Server big data clusters
-description: この記事では、SQL Server 2019 ビッグ データ クラスター (プレビュー) の最新の更新プログラムと既知の問題について説明します。
+description: この記事では、(プレビュー) の最新[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の更新プログラムと既知の問題について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7951c79fa457ffa47a2c2a7089c71256d870628b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 66a317fb68dff2dc4914b80f2e70655e1bba2773
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476250"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653439"
 ---
 # <a name="release-notes-for-big-data-clusters-on-sql-server"></a>SQL Server 上のビッグ データ クラスターのリリース ノート
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、SQL Server ビッグ データ クラスターの最新リリースに関する更新プログラムと既知の問題を一覧表示します。
+この記事では、の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]最新リリースに関する更新プログラムと既知の問題の一覧を示します。
 
 [!INCLUDE [Limited public preview note](../includes/big-data-cluster-preview-note.md)]
+
+>[!NOTE]
+>[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a id="ctp32"></a> CTP 3.2 (7 月)
 
@@ -32,7 +35,7 @@ ms.locfileid: "68476250"
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|パブリック プレビュー |CTP 3.2 より前の SQL Server ビッグ データ クラスターは、登録した早期導入者に提供されていました。 このリリースでは、あらゆるユーザーが SQL Server ビッグ データ クラスターの機能を操作できるようにします。 <br/><br/> 「[SQL Server ビッグ データ クラスターの概要](deploy-get-started.md)」を参照してください。|
+|パブリック プレビュー |CTP 3.2 より前の SQL Server ビッグ データ クラスターは、登録した早期導入者に提供されていました。 このリリースでは、あらゆるユーザーが SQL Server ビッグ データ クラスターの機能を操作できるようにします。 <br/><br/> 「[使用を開始[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md)する」を参照してください。|
 |`azdata` |CTP 3.2 での `azdata` の導入 - Python で作成されたコマンドライン ユーティリティを使用して、クラスター管理者が REST API 経由でビッグ データ クラスターをブートストラップし、管理できるようにします。 `mssqlctl` が `azdata` に置き換えられます。 [`azdata` のインストール](deploy-install-azdata.md)に関するページを参照してください。 |
 |PolyBase |外部テーブルの列名は、SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースに対してクエリを実行するために使用されるようになりました。 以前の CTP リリースでは、外部データ ソース内の列は序数位置に基づいてのみバインドされ、EXTERNAL TABLE の定義で指定された名前は使用されませんでした。 |
 |HDFS の階層の更新 |リモート データの最新のスナップショットに対して既存のマウントを更新できるように、HDFS の階層に対して更新機能を導入しました。 [HDFS の階層](hdfs-tiering.md)に関するページを参照してください。 |
@@ -144,7 +147,7 @@ ms.locfileid: "68476250"
 
 - ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>セキュリティ
 
 - SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
 
@@ -248,7 +251,7 @@ ms.locfileid: "68476250"
 
 - ノートブックでは、 **[Add Text] (テキストの追加)** コマンドをクリックすると、テキスト セルが編集モードではなくプレビュー モードで追加されます。 プレビュー アイコンをクリックして編集モードに切り替え、そのセルを編集することができます。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>セキュリティ
 
 - SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
 
@@ -336,7 +339,7 @@ ms.locfileid: "68476250"
 
 - hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>セキュリティ
 
 - SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
 
@@ -353,7 +356,7 @@ ms.locfileid: "68476250"
 | Spark で TensorFlow を使用しディープ ラーニングを実行する場合の GPU でのサポートに関するガイダンス。 | [GPU をサポートしているビッグ データ クラスターを展開し、TensorFlow を実行します](spark-gpu-tensorflow.md)。 |
 | データ ソース **SqlDataPool** と **SqlStoragePool** は、既定では作成されなくなりました。 | 必要に応じてこれらを手動で作成します。 [既知の問題](#externaltablesctp24)を参照してください。 |
 | データ プール用の `INSERT INTO SELECT` のサポート。 | 例については、「[Tutorial:Ingest data into a SQL Server data pool with Transact-SQL](tutorial-data-pool-ingest-sql.md)」 (チュートリアル: Transact SQL を使用して SQL Server のデータ プールにデータを取り込む) を参照してください。 |
-| オプション `FORCE SCALEOUTEXECUTION` と `DISABLE SCALEOUTEXECUTION` | 外部テーブルに対するクエリでのコンピューティング プールの使用を強制するか、または無効にします。 たとえば、`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` のようになります。 |
+| オプション `FORCE SCALEOUTEXECUTION` と `DISABLE SCALEOUTEXECUTION` | 外部テーブルに対するクエリでのコンピューティング プールの使用を強制するか、または無効にします。 たとえば、`SELECT TOP(100) * FROM web_clickstreams_hdfs_book_clicks OPTION(FORCE SCALEOUTEXECUTION)` のようにします。 |
 | 更新された AKS の展開に関する推奨事項 | AKS でビッグ データ クラスターを評価するときには、サイズ **Standard_L8s** の単一ノードを使用することをお勧めします。 |
 | Spark 2.4 への Spark のランタイムのアップグレード。 | |
 
@@ -467,7 +470,7 @@ make: *** [deploy-clean] Error 2
 
 - hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>セキュリティ
 
 - SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
 
@@ -481,9 +484,9 @@ make: *** [deploy-clean] Error 2
 
 | 新機能または更新 | 詳細 |
 | :---------- | :------ |
-| IntelliJ のビッグ データ クラスターでの Spark ジョブの送信。 | [IntelliJ の SQL Server ビッグ データ クラスターで Spark ジョブを送信する](spark-submit-job-intellij-tool-plugin.md) |
-| アプリケーションの展開およびクラスター管理の一般的な CLI。 | [SQL Server 2019 ビッグ データ クラスター (プレビュー) でアプリを展開する方法](big-data-cluster-create-apps.md) |
-| ビッグ データ クラスターにアプリケーションを展開するための VS Code の拡張機能。 | [VS Code を使用して SQL Server のビッグ データ クラスターにアプリケーションを展開する方法](app-deployment-extension.md) |
+| IntelliJ のビッグ データ クラスターでの Spark ジョブの送信。 | [IntelliJ で Spark ジョブ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を送信する](spark-submit-job-intellij-tool-plugin.md) |
+| アプリケーションの展開およびクラスター管理の一般的な CLI。 | [アプリを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
+| ビッグ データ クラスターにアプリケーションを展開するための VS Code の拡張機能。 | [VS Code を使用してアプリケーションを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
 | **azdata** ツール コマンドの使用法の変更。 | 詳細については、[azdata の既知の問題](#azdatactp23)を参照してください。 |
 | ビッグ データ クラスターで Sparklyr を使用する | [SQL Server 2019 のビッグ データ クラスターで Sparklyr を使用する](sparklyr-from-RStudio.md) |
 | **HDFS 階層**を使用した、外部の HDFS 互換ストレージのビッグ データ クラスターへのマウント。 | [HDFS 階層](hdfs-tiering.md)に関するページを参照してください。 |
@@ -589,7 +592,7 @@ kubeadm を使用して複数のコンピューターに Kubernetes をデプロ
 
 - hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>セキュリティ
 
 - SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
 
@@ -658,7 +661,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>セキュリティ
 
 - SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
 
@@ -676,7 +679,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>既知の問題
 
-以下のセクションでは、CTP 2.1 での SQL Server ビッグ データ クラスターの既知の問題について説明します。
+以下のセクションでは、CTP [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 2.1 でのに関する既知の問題について説明します。
 
 #### <a name="deployment"></a>展開
 
@@ -722,7 +725,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>セキュリティ
 
 - SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
 
@@ -751,7 +754,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>既知の問題
 
-以下のセクションでは、CTP 2.0 での SQL Server ビッグ データ クラスターの既知の問題について説明します。
+以下のセクションでは、CTP [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 2.0 でのに関する既知の問題について説明します。
 
 #### <a name="deployment"></a>展開
 
@@ -793,7 +796,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 - hdfs-site.xml への変更が含まれた HDFS の構成変更はサポートされていません。
 
-#### <a name="security"></a>Security
+#### <a name="security"></a>セキュリティ
 
 - SA_PASSWORD は環境の一部であり (コード ダンプ ファイルなどで) 検出できます。 デプロイの後、マスター インスタンス上の SA_PASSWORD をリセットする必要があります。 これはバグではなく、セキュリティ手順です。 Linux コンテナー内の SA_PASSWORD を変更する方法の詳細については、[SA パスワードの変更](../linux/quickstart-install-connect-docker.md#sapassword)に関するページを参照してください。
 
@@ -801,4 +804,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server ビッグ データ クラスターの詳細については、[SQL Server 2019 ビッグ データ クラスターの概要](big-data-cluster-overview.md)に関するページを参照してください。
+の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。

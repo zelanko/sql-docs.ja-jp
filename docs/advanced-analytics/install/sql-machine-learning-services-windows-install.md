@@ -1,25 +1,26 @@
 ---
-title: Windows に SQL Server Machine Learning Services (データベース内) をインストールする
-description: SQL Server または Python での R は、Windows 上の SQL Server Machine Learning Services のインストール手順 SQL Server ます。
+title: Windows に SQL Server Machine Learning Services (Python、R) をインストールする
+titleSuffix: ''
+description: この記事では、Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用すると、データベース内で Python および R スクリプトを実行できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 08/20/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fba13ea5d6d91ab83cb2560727ed75c79bc4c48b
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
+ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531048"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69634564"
 ---
 # <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows に SQL Server Machine Learning Services をインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]セットアップウィザードを実行し、画面の指示に従って、machine learning コンポーネントをインストールする方法について説明します。
+この記事では、Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用すると、データベース内で Python および R スクリプトを実行できます。
 
 ## <a name="bkmk_prereqs"></a>インストール前のチェックリスト
 
@@ -79,9 +80,9 @@ ms.locfileid: "69531048"
 
         > [!NOTE]
         > 
-        > [ **Machine Learning Server (スタンドアロン)** ] のオプションは選択しないでください。 [**共有機能**] の下に Machine Learning Server をインストールするオプションは、別のコンピューターでの使用を目的としています。
+        > **[Machine Learning Server (スタンドアロン)]** のオプションは選択しないでください。 **[共有機能]** の下に Machine Learning Server をインストールするオプションは、別のコンピューターでの使用を目的としています。
 
-4. [ **R のインストールに同意する**] ページで、[**同意**する] を選択します。 このライセンス契約には、microsoft R Open が含まれています。これには、Microsoft 開発チームの拡張 R パッケージと接続プロバイダーと共に、オープンソースの R 基本パッケージとツールの配布が含まれます。
+4. **[R のインストールに同意する]** ページで、 **[同意]** する を選択します。 このライセンス契約には、microsoft R Open が含まれています。これには、Microsoft 開発チームの拡張 R パッケージと接続プロバイダーと共に、オープンソースの R 基本パッケージとツールの配布が含まれます。
 
 5. [ **Python のインストールに同意**します] ページで、[**同意**する] を選択します。 Python オープンソースライセンス契約には、Anaconda および関連するツールに加えて、Microsoft 開発チームのいくつかの新しい Python ライブラリも含まれています。
      
@@ -90,9 +91,9 @@ ms.locfileid: "69531048"
     > [!NOTE]
     >  使用しているコンピューターがインターネットにアクセスできない場合は、この時点でセットアップを一時停止して、インストーラーを個別にダウンロードすることができます。 詳細については、「[インターネットにアクセスせずに machine learning コンポーネントをインストール](../install/sql-ml-component-install-without-internet-access.md)する」を参照してください。
   
-     [ **Accept**] \ (同意 \) を選択し、[**次へ**] ボタンがアクティブになるまで待ち、[**次へ**] を選択します。
+     **[Accept]** \ (同意 \) を選択し、 **[次へ]** ボタンがアクティブになるまで待ち、 **[次へ]** を選択します。
   
-6. [**インストールの準備完了**] ページで、これらの選択が含まれていることを確認し、[**インストール**] を選択します。
+6. **[インストールの準備完了]** ページで、これらの選択が含まれていることを確認し、 **[インストール]** を選択します。
   
     + データベース エンジン サービス
     + Machine Learning Services (データベース内)
@@ -106,7 +107,7 @@ ms.locfileid: "69531048"
 
 R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)、Intel MATH Kernel Library (MKL) 計算からの一貫した出力を確保する必要があります。
 
-1. コントロールパネルで、[**システムとセキュリティ** >  > ] [システム] [システム**設定** > ] [**環境変数**] をクリックします。
+1. コントロールパネルで、[**システムとセキュリティ** >  > ] [システム] [システム**設定** > ] **[環境変数]** をクリックします。
 
 2. 新しいユーザー変数またはシステム変数を作成します。 
 
@@ -126,7 +127,7 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
     > 
     > また、SQL Server に対する管理タスクとクエリをサポートする[Azure Data Studio](../../azure-data-studio/what-is.md)を使用することもできます。
   
-2. Machine Learning Services をインストールしたインスタンスに接続し、[**新しいクエリ**] をクリックしてクエリウィンドウを開き、次のコマンドを実行します。
+2. Machine Learning Services をインストールしたインスタンスに接続し、 **[新しいクエリ]** をクリックしてクエリウィンドウを開き、次のコマンドを実行します。
 
     ```sql
     sp_configure
@@ -149,7 +150,7 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
 
 サービスを再起動すると、関連[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]するサービスも自動的に再起動されます。
 
-サービスを再起動するには、SSMS でインスタンスの右クリック**restart**コマンドを使用するか、コントロールパネルの [**サービス**] パネルを使用するか、または[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)を使用します。
+サービスを再起動するには、SSMS でインスタンスの右クリック**restart**コマンドを使用するか、コントロールパネルの **[サービス]** パネルを使用するか、または[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)を使用します。
 
 ## <a name="verify-installation"></a>インストールの確認
 
@@ -165,7 +166,7 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
 
     この時点で、**run_value** が 1 に設定されている必要があります。
     
-2. [**サービス**] パネルまたは SQL Server 構成マネージャーを開き、 **SQL Server Launchpad サービス**が実行されていることを確認します。 R または Python がインストールされているデータベースエンジンインスタンスごとに1つのサービスを用意する必要があります。 サービスの詳細については、「[機能拡張フレームワーク](../concepts/extensibility-framework.md)」を参照してください。 
+2. **[サービス]** パネルまたは SQL Server 構成マネージャーを開き、 **SQL Server Launchpad サービス**が実行されていることを確認します。 R または Python がインストールされているデータベースエンジンインスタンスごとに1つのサービスを用意する必要があります。 サービスの詳細については、「[機能拡張フレームワーク](../concepts/extensibility-framework.md)」を参照してください。 
    
 3. スタートパッドが実行されている場合は、単純な R および Python スクリプトを実行して、外部スクリプトランタイムが SQL Server と通信できることを確認できる必要があります。
 
