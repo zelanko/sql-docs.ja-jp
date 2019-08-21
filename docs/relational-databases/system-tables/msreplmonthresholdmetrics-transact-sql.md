@@ -1,5 +1,5 @@
 ---
-title: MSreplmonthresholdmetrics (TRANSACT-SQL) |Microsoft Docs
+title: MSreplmonthresholdmetrics (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
