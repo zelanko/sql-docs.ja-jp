@@ -1,5 +1,5 @@
 ---
-title: MSreplication_subscriptions (TRANSACT-SQL) |Microsoft Docs
+title: MSreplication_subscriptions (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68079994"
 ---
-# <a name="msreplicationsubscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
+# <a name="msreplication_subscriptions-transact-sql"></a>MSreplication_subscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSreplication_subscriptions**テーブルに 1 行ディストリビューション エージェントがローカル サブスクライバー データベースのサービスごとにレプリケーション情報にはが含まれています。 このテーブルは、サブスクリプション データベースに格納されます。  

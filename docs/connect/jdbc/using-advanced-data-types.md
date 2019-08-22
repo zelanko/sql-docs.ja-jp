@@ -1,7 +1,7 @@
 ---
 title: 高度なデータ型を使用する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/28/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: b39461d3-48d6-4048-8300-1a886c00756d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5faf330b80f0d8ece7ee4482e881de9c7dd8ead9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a50bc3e4fae8fe45004374d3dd019a0f65fe544f
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004066"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027009"
 ---
 # <a name="using-advanced-data-types"></a>高度なデータ型の使用
 
@@ -170,9 +170,9 @@ JDBC ドライバーにおける **xml** データ型の実装では、以下の
   
 ユーザー定義データ型の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「ユーザー定義型のインスタンスの使用と変更」を参照してください。  
   
-## <a name="sqlvariant-data-type"></a>Sql_variant データ型
+## <a name="sql_variant-data-type"></a>Sql_variant データ型
 
-Sql_variant データ型の詳細については、「 [Sql_variant データ型の使用](../../connect/jdbc/using-sql-variant-datatype.md)」を参照してください。  
+Sql_variant データ型の詳細については、「 [sql_variant データ型の使用](../../connect/jdbc/using-sql-variant-datatype.md)」を参照してください。  
 
 ## <a name="spatial-data-types"></a>空間データ型
 

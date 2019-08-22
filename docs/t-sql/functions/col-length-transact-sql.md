@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68064732"
 ---
-# <a name="collength-transact-sql"></a>COL_LENGTH (Transact-SQL)
+# <a name="col_length-transact-sql"></a>COL_LENGTH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
 この関数は、定義されている列の長さをバイト単位で返します。
@@ -45,7 +45,7 @@ COL_LENGTH ( 'table' , 'column' )
 列の長さ情報を定義するテーブルの名前。 *テーブル* 型の式は、 **nvarchar**です。
   
 **'** *column* **'**  
-長さを定義する列名。 ** 列* * 型の式は、 **nvarchar**です。
+長さを定義する列名。 *列* 型の式は、 **nvarchar**です。
   
 ## <a name="return-type"></a>の戻り値の型 :
 **smallint**

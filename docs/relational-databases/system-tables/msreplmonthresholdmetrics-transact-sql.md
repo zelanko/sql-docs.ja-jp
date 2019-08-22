@@ -1,5 +1,5 @@
 ---
-title: MSreplmonthresholdmetrics (TRANSACT-SQL) |Microsoft Docs
+title: MSreplmonthresholdmetrics (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.locfileid: "68079941"
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSreplmonthresholdmetrics**テーブルがレプリケーションを監視するためのメトリックを定義します。 このテーブルに格納されます、 **msdb**データベース。  
+  **MSreplmonthresholdmetrics** テーブルがレプリケーションを監視するためのメトリックを定義します。 このテーブルは、**msdb** データベースに格納されます。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

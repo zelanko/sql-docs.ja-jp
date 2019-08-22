@@ -54,6 +54,6 @@ ms.locfileid: "68139712"
 ## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_helpsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)  
   
   

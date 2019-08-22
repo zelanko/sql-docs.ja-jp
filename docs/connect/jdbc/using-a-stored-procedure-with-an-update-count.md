@@ -1,7 +1,7 @@
 ---
 title: 更新数があるストアド プロシージャの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 64cf4877-5995-4bfc-8865-b7618a5c8d01
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 4d66c19e9e033e838eac07f7140ce7864fc049e0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 851974955b9311efc149ecdff310bfbb1d8869fc
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004072"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026936"
 ---
 # <a name="using-a-stored-procedure-with-an-update-count"></a>更新数があるストアド プロシージャの使用
 

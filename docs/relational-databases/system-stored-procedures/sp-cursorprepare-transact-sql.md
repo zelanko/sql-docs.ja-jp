@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68108422"
 ---
-# <a name="spcursorprepare-transact-sql"></a>sp_cursorprepare (TRANSACT-SQL)
+# <a name="sp_cursorprepare-transact-sql"></a>sp_cursorprepare (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   カーソル ステートメントまたはバッチをコンパイルして実行プランを作成します。カーソルは作成しません。 コンパイルされたステートメントは、sp_cursorexecute で後で使用できます。 、Sp_cursorexecute と組み合わせると、この手順では、sp_cursoropen と同じ機能しますが、2 つのフェーズに分割されます。 sp_cursorprepare は、ID を指定して呼び出される、表形式データ ストリーム (TDS) パケットで 3 を = です。  
@@ -118,7 +118,7 @@ sp_cursorprepare prepared_handle OUTPUT, params , stmt , options
 ## <a name="examples"></a>使用例  
  ときに*stmt*がパラメーター化と*scrollopt* PARAMETERIZED_STMT の値が ON に、文字列の形式は次のようには。  
   
- { *\<ローカル変数名 > * *\<データ型 >* } [,...*n* ]  
+ { *\<ローカル変数名 > **\<データ型 >* } [,...*n* ]  
   
 ## <a name="see-also"></a>関連項目  
  [sp_cursorexecute &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-cursorexecute-transact-sql.md)   

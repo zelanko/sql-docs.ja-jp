@@ -1,7 +1,7 @@
 ---
 title: ステートメントおよび結果セットの操作 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: cc917534-f5f8-4844-87c8-597c48b4e06d
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fb6d545a3a7f8c3b29e5bc372aa4fdadf95edd52
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a57ffc5c9314f8e84c077b6c15ab88ed5411f028
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003787"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025365"
 ---
 # <a name="working-with-statements-and-result-sets"></a>ステートメントおよび結果セットの操作
 
@@ -23,7 +23,7 @@ ms.locfileid: "68003787"
 
 [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] および提供されている Statement オブジェクトと ResultSet オブジェクトを操作するときに、アプリケーションのパフォーマンスと信頼性を向上させるために使用できる手法がいくつかあります。
 
-## <a name="use-the-appropriate-statement-object"></a>適切な Statement オブジェクトの使用
+## <a name="use-the-appropriate-statement-object"></a>適切なステートメント オブジェクトの使用
 
 JDBC ドライバーの Statement オブジェクト、たとえば [SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、[SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) オブジェクトなどのいずれかを使用するときは、必ずジョブに対して適切なオブジェクトを使用します。
 

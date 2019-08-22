@@ -79,7 +79,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 ## <a name="database-engine"></a>データベース エンジン
 
-### <a name="security"></a>Security
+### <a name="security"></a>セキュリティ
 
 |新機能または更新 | 詳細 |
 |:---|:---|
@@ -93,7 +93,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|エッジ制約のカスケード削除アクション |グラフ データベースでのエッジ制約で連鎖削除操作を定義する [エッジ制約](../relational-databases/tables/graph-edge-constraints.md)に関するページを参照してください。 |
+|エッジ制約のカスケード削除アクション |グラフ データベースでのエッジ制約で連鎖削除操作を定義します。 [エッジ制約](../relational-databases/tables/graph-edge-constraints.md)に関するページを参照してください。 |
 |新しいグラフ関数 - `SHORTEST_PATH` | `MATCH` 内で `SHORTEST_PATH` を使用し、グラフ内の任意の 2 ノード間の最短パスを検索するか、任意の長さのトラバーサルを実行します。|
 |パーティション テーブルとパーティション インデックス| パーティション テーブルとパーティション インデックスのデータは、グラフ データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 |
 |グラフ一致クエリで派生テーブルまたはビューの別名を使用する |[グラフ エッジ制約](../relational-databases/tables/graph-edge-constraints.md)に関するページを参照してください。 |
@@ -176,7 +176,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-| 新しい Spatial Reference Identifier (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) により、グローバル ポジショニング システムにより合わせたより堅牢で正確な測量基準点が提供されます。 新しい SRID は次のとおりです。<br/><br/> - 7843 - 地理 2D<br/> - 7844 - 地理 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) ビューには、新しい SRID の定義が含まれています。 |
+| 新しい Spatial Reference Identifier (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) により、全地球測位システム (GPS) に対しさらに緊密に配置された、より堅牢で正確な測量基準点が提供されます。 新しい SRID は次のとおりです。<br/><br/> - 7843 - 地理 2D<br/> - 7844 - 地理 3D <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) ビューには、新しい SRID の定義が含まれています。 |
 | &nbsp; | &nbsp; |
 
 ### <a name="performance"></a>パフォーマンス
@@ -201,7 +201,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|詳細な切り捨ての警告 | 切り捨てエラー メッセージに、テーブル名および列名と切り捨てられた値が既定で含まれる。 [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)に関するページを参照してください。|
+|詳細な切り捨ての警告 | 切り捨てエラー メッセージに、テーブル名および列名と切り捨てられた値が既定で含まれます。 [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)に関するページを参照してください。|
 | &nbsp; | &nbsp; |
 
 ## <a name="sql-server-on-linux"></a>Linux 上の SQL Server
@@ -210,7 +210,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 |:-----|:-----|
 |新しいコンテナー レジストリ|[Docker で SQL Server のコンテナーの使用を開始する](../linux/quickstart-install-connect-docker.md) |
 |Kubernetes を使用する Docker コンテナー上の Always On 可用性グループ |[コンテナー用の Always On 可用性グループ](../linux/sql-server-ag-kubernetes.md) |
-|レプリケーションのサポート |[Linux での SQL Serve rのレプリケーション](../linux/sql-server-linux-replication.md)
+|レプリケーションのサポート |[Linux での SQL Server のレプリケーション](../linux/sql-server-linux-replication.md)
 |Microsoft 分散トランザクション コーディネーター (MSDTC) のサポート |[Linux で MSDTC を構成する方法](../linux/sql-server-linux-configure-msdtc.md) |
 |サード パーティの AD プロバイダーに対する OpenLDAP のサポート |[チュートリアル: SQL Server on Linux で Active Directory 認証を使用する](../linux/sql-server-linux-active-directory-authentication.md) |
 |Linux 上の Machine Learning |[Linux に Machine Learning を構成する](../linux/sql-server-linux-setup-machine-learning.md) |
@@ -258,7 +258,7 @@ Community Technology Preview (CTP) 3.2 は、[!INCLUDE[sql-server-2019](../inclu
 
 ## <a name="next-steps"></a>次の手順
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-ver15-release-notes.md)。
+- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-ver15-release-notes.md)
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]:テクニカル ホワイト ペーパー](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />2018 年 9 月に公開されました。 Windows、Linux、Docker コンテナー向けの Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 に適用されます。
 

@@ -1,7 +1,7 @@
 ---
 title: SQLXML を使用したプログラミング |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4d2cc57c-7293-4d92-b8b1-525e2b35f591
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c8d88f6c9febf582aa9aca3d47931ceb72074c87
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 22f225799e704b7a34449bbfc69ef351cc4d4ac1
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956174"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027769"
 ---
 # <a name="programming-with-sqlxml"></a>SQLXML でのプログラミング
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
@@ -37,7 +37,7 @@ ms.locfileid: "67956174"
   
 -   SQLXML オブジェクトをデータベース テーブルの **xml** 型の列に格納するには、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md) クラスまたは [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) クラスの setSQLXML メソッドを使用します。  
   
- 以上に挙げた基本的な API タスクの使用例については、「[SQLXML データ型のサンプル](../../connect/jdbc/sqlxml-data-type-sample.md)」のコード例を参照してください。  
+ 「[SQLXML データ型のサンプル](../../connect/jdbc/sqlxml-data-type-sample.md)」に記載されているコード例では、これらの一般的な API タスクを実行する方法が示されています。  
   
 ## <a name="readable-and-writable-sqlxml-objects"></a>読み取り/書き込み可能な SQLXML オブジェクト  
  次の表は、JDBC API の setter、getter、および updater メソッドによってサポートされる SQLXML オブジェクトの種類を一覧にしたものです。 この表の各列の意味は次のとおりです。  

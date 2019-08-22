@@ -19,7 +19,7 @@ ms.locfileid: "69028935"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>概要
 
 Microsoft SQL Server は既定で、お客様のアプリケーションの使用状態に関する情報を収集します。 具体的には、SQL Server はインストール エクスペリエンス、利用状況、およびパフォーマンスに関する情報を収集します。 この情報は、Microsoft が製品の向上を図り、お客様のニーズをさらに満たすのに役立ちます。 たとえば Microsoft では、お客様が受け取るエラー コードの種類に関する情報を収集して、関連するバグの修正、SQL Server の使用方法に関するドキュメントの改善、より良いサービスのために製品に機能を追加すべきかどうかの判断を行います。
 
@@ -55,7 +55,7 @@ Linux 上の SQL Server については、「[Customer Feedback for SQL Server o
 > [!NOTE]
 > Microsoft への情報送信を無効にできるのは、有料版の SQL Server のみです。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>備考
  - SQL CEIP サービスの削除または無効化はサポートされていません。 
  - クラスター グループからの SQL CEIP リソースの削除はサポートされていません。 
 

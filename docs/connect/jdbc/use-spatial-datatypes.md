@@ -1,7 +1,7 @@
 ---
 title: 空間データ型を使用する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f2290aa8d7ebad7a40b5aea9d37c5a9a53e0d333
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f133fa066ef2c486cf7bb40c5b653c99e077bc46
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916535"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026942"
 ---
 # <a name="using-spatial-datatypes"></a>空間データ型の使用
 
@@ -23,7 +23,7 @@ ms.locfileid: "67916535"
 
 空間データ型 (Geometry および Geography) は、JDBC Driver preview release 6.5.0 の開始をサポートしています。 現在、空間データ型は、ストアドプロシージャ、テーブル値パラメーター (TVP)、BulkCopy、および Always Encrypted ではサポートされていません。 このページでは、JDBC ドライバーを使用した Geometry データ型と Geography データ型のさまざまなユースケースを示します。 空間データ型の概要については、「[空間データ型の概要」](https://docs.microsoft.com/sql/relational-databases/spatial/spatial-data-types-overview)ページをご覧ください。
 
-## <a name="creating-a-geometry--geography-object"></a>Geometry/Geography オブジェクトの作成
+## <a name="creating-a-geometry--geography-object"></a>Geometry/geography オブジェクトの作成
 
 Geometry / Geography オブジェクトを作成する主な方法は 2 つあります - Well-Known Text (WKT) または、Well-Known Binary (WKB) のいずれかから変換します。
 

@@ -28,7 +28,7 @@ ms.locfileid: "68926950"
 
 ## <a name="ask-community-for-help"></a>コミュニティに支援を求める
 
-活気のある SQL Server コミュニティの支援を受けたい場合は、複数の選択肢があります。
+活気のある SQL Server コミュニティに参加してそのサポートを受けたい場合は、様々な方法を選ぶことができます。
 
 
 ### <a name="msdn-forums"></a>MSDN フォーラム

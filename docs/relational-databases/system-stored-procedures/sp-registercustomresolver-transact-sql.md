@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68075735"
 ---
-# <a name="spregistercustomresolver-transact-sql"></a>sp_registercustomresolver (TRANSACT-SQL)
+# <a name="sp_registercustomresolver-transact-sql"></a>sp_registercustomresolver (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ビジネス ロジック ハンドラーまたはマージ レプリケーションの同期処理中に呼び出すことができます (COM) ベースのカスタム リゾルバーを登録します。 このストアド プロシージャは、ディストリビューターで実行されます。  
@@ -47,9 +47,9 @@ sp_registercustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @is_dotnet_assembly = ] 'is_dotnet_assembly'` 登録されているカスタム ビジネス ロジックの種類を指定します。 *is_dotnet_assembly*は**nvarchar (50)** 、既定値は FALSE。 **true**登録されているカスタム ビジネス ロジックがビジネス ロジック ハンドラー アセンブリであることを示します**false**は COM コンポーネントであることを示します。  
   
-`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` ビジネス ロジック ハンドラーを実装するアセンブリの名前です。 *@dotnet_assembly_name*は**nvarchar (255)** 既定値は NULL です。 マージ エージェントの実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、アセンブリの完全なパスを指定する必要があります。  
+`[ @dotnet_assembly_name = ] 'dotnet_assembly_name'` ビジネス ロジック ハンドラーを実装するアセンブリの名前です。 *\@dotnet_assembly_name*は **nvarchar (255)** 既定値は NULL です。 マージ エージェントの実行可能ファイルがあるディレクトリ、マージ エージェントを同期的に起動するアプリケーションがあるディレクトリ、およびグローバル アセンブリ キャッシュ (GAC) の、いずれとも異なる場所にアセンブリが配置されている場合は、アセンブリの完全なパスを指定する必要があります。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name'` オーバーライドするクラスの名前を指定<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ビジネス ロジック ハンドラーを実装します。 形式で名前を指定する必要があります**Namespace.Classname**します。 *@dotnet_class_name*は**nvarchar (255)** 既定値は NULL です。  
+`[ @dotnet_class_name = ] 'dotnet_class_name'` オーバーライドするクラスの名前を指定<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ビジネス ロジック ハンドラーを実装します。 形式で名前を指定する必要があります**Namespace.Classname**します。 *\@dotnet_class_name*は **nvarchar (255)** 既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

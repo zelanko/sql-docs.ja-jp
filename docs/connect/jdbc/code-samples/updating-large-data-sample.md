@@ -1,7 +1,7 @@
 ---
 title: 大きなデータサンプルを更新しています |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 76ecc05f-a77d-40a2-bab9-91a7fcf17347
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: efde9e7254d73fcc84caeb2fce3df96bc3c88972
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bd284f6fb8021164aa3edf6aa31761b7483406e
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957025"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028264"
 ---
 # <a name="updating-large-data-sample"></a>大きなデータを更新するサンプル
 

@@ -1,7 +1,7 @@
 ---
 title: MSSQL JDBC Driver で一括コピー API を使用してバッチ挿入操作を実行する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/21/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 028caf1bf69c7e361ea7e4445c192c1fc1adf437
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3050cdf87775a67618902dfbb88b656003020769
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68004137"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027103"
 ---
 # <a name="using-bulk-copy-api-for-batch-insert-operation"></a>バッチ挿入操作に一括コピー API を使用する
 
@@ -25,7 +25,7 @@ Microsoft JDBC Driver 7.0 for SQL Server は、Azure Data Warehouse に対する
 
 この機能は、PreparedStatement および callablestatement の`executeBatch()`  &  `executeLargeBatch()` api にのみ適用されます。
 
-## <a name="pre-requisites"></a>前提条件
+## <a name="prerequisites"></a>Prerequisites
 
 一括コピー API を有効にするには、次の2つの前提条件があります。
 

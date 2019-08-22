@@ -1,7 +1,7 @@
 ---
 title: データの接続と取得 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ce43cc20-46a3-42ff-a3fb-75ad1ed10e08
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 310c66f6951a467b368fc44e1933bc6c8b6b36b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 11378d51cb6d88858ebba069dba161dbbb494f27
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67957274"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028402"
 ---
 # <a name="connecting-and-retrieving-data"></a>接続およびデータの取得
 
@@ -39,5 +39,5 @@ ms.locfileid: "67957274"
   
 ## <a name="see-also"></a>参照
 
-[サンプル JDBC Driver アプリケーション](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
+[サンプル JDBC ドライバー アプリケーション](../../jdbc/code-samples/sample-jdbc-driver-applications.md)
   

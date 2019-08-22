@@ -1,5 +1,5 @@
 ---
-title: MSreplication_queue (TRANSACT-SQL) |Microsoft Docs
+title: MSreplication_queue (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68080015"
 ---
-# <a name="msreplicationqueue-transact-sql"></a>MSreplication_queue (TRANSACT-SQL)
+# <a name="msreplication_queue-transact-sql"></a>MSreplication_queue (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSreplication_queue** SQL ベースを使用するキュー更新サブスクリプションのキューに置かれたすべてによって発行されたキューに登録されたコマンドを格納する、テーブルがレプリケーション プロセスによって使用されます。 このテーブルは、サブスクリプション データベースに格納されます。  

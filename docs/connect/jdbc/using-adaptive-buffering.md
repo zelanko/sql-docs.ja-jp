@@ -1,7 +1,7 @@
 ---
 title: アダプティブバッファリングの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 92d4e3be-c3e9-4732-9a60-b57f4d0f7cb7
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 07a7a67addb10d91b011f821f5b85ed03981d055
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28b2750d96e1fbe5b5a1cfc3021a22415128b7df
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916467"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026797"
 ---
 # <a name="using-adaptive-buffering"></a>アダプティブ バッファリングの使用
 
@@ -63,7 +63,7 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 > [!NOTE]
 > 結果セットの処理中に、ResultSet. close () を呼び出すと、残りのすべてのパケットを読み取り、破棄するために、Microsoft JDBC Driver for SQL Server が必要になります。 クエリから大きなデータセットが返された場合、特にネットワーク接続の速度が遅い場合、この処理にはかなりの時間がかかることがあります。
 
-## <a name="guidelines-for-using-adaptive-buffering"></a>アダプティブ バッファリングを使用するうえでのガイドライン
+## <a name="guidelines-for-using-adaptive-buffering"></a>アダプティブ バッファリングの使用に関するガイドライン
 
 アプリケーションによるメモリ使用量を最小限に抑えるには、開発者は次の重要なガイドラインに従う必要があります。
 
@@ -79,7 +79,7 @@ get\<Type>Stream メソッドを使用して大きな値を 1 回読み取り、
 
 - 次のように、 **responsebuffering = adaptive**の代わりに**selectMethod = cursor**を使用すると便利な場合があります。
 
-  - ユーザー入力後に各行を読み取るなど、順方向専用の読み取り専用の結果セットを処理するアプリケーションでは、 **responsebuffering = adaptive**ではなく、 **selectMethod = cursor**を使用して、リソース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の使用量を減らすことができます。
+  - ユーザー入力後に各行を読み取るなど、順方向専用の読み取り専用の結果セットを処理するアプリケーションでは、 **responsebuffering = adaptive**ではなく、 **selectMethod = cursor**を使用して、リソース[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の使用量を減らすことができます。.
 
   - 同じ接続で順方向専用、読み取り専用の複数の結果セットを同時に処理するようなアプリケーションでは、**responseBuffering=adaptive** の代わりに **selectMethod=cursor** を使用することで、ドライバーがこれらの結果セットを処理する際に必要となるメモリ量を減らすことができます。
 

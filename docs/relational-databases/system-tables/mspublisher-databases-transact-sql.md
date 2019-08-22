@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68032613"
 ---
-# <a name="mspublisherdatabases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
+# <a name="mspublisher_databases-transact-sql"></a>MSpublisher_databases (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSpublisher_databases**テーブルには、ローカル ディストリビューターによって処理されるパブリッシャー/パブリッシャー データベースの各ペアの 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -34,7 +34,7 @@ ms.locfileid: "68032613"
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**id**|**int**|行の ID。|  
-|**publisher_engine_edition**|**int**|エディション、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]発行元は、次のいずれかを指定できます。<br /><br /> **10** personal Edition を =<br /><br /> **11** desktop Engine (MSDE) を =<br /><br /> **20** = 標準<br /><br /> **21**ワークグループを =<br /><br /> **30** = Enterprise (評価)<br /><br /> **31**開発者を =<br /><br /> **40** = express (Express は、パブリッシャーをすることはできません。 この値は完全を期すのために存在します。)|  
+|**publisher_engine_edition**|**int**|エディション、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]発行元は、次のいずれかを指定できます。<br /><br /> **10** = Personal Edition<br /><br /> **11** = Desktop Engine (MSDE)<br /><br /> **20** = Standard<br /><br /> **21** = Workgroup<br /><br /> **30** = Enterprise (評価)<br /><br /> **31** = Developer<br /><br /> **40**= Express (Express は、パブリッシャーにはなれません。 この値は完全を期すのために存在します。)|  
   
 ## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
