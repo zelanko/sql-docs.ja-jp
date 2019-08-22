@@ -27,7 +27,9 @@ ms.locfileid: "68079941"
 # <a name="msreplmonthresholdmetrics-transact-sql"></a>MSreplmonthresholdmetrics (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
+
   **MSreplmonthresholdmetrics** テーブルがレプリケーションを監視するためのメトリックを定義します。 このテーブルは、**msdb** データベースに格納されます。
+
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  

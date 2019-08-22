@@ -1,7 +1,7 @@
 ---
 title: JDBC Driver のリリース ノート | Microsoft Docs
 ms.custom: ''
-ms.date: 08/01/2019
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 074f211e-984a-4b76-bb15-ee36f5946f12
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4ddc58c624e9177e670e8dcf4fc5bf54ef08e57
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 04a179492b151e664dfe31f4fe4e51c5440fcef5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891284"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027788"
 ---
 # <a name="release-notes-for-the-microsoft-jdbc-driver"></a>Microsoft JDBC Driver のリリース ノート
 
@@ -47,7 +47,7 @@ Microsoft JDBC Driver 7.4 for SQL Server は、JDK 11.0 と 1.8 に加え、Java
 | この認証モードを使用するための詳細とサンプル アプリケーション。 | 「 [NTLM 認証を使用](../../connect/jdbc/using-ntlm-authentication-to-connect-to-sql-server.md)した接続」を参照してください。 |
 | &nbsp; | &nbsp; |
 
-### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_UseFmtOnly_ を使用した parametermetadata のクエリについて説明します。
+### <a name="introduces-querying-parametermetadata-via-_usefmtonly_"></a>_UseFmtOnly_を使用した parametermetadata のクエリについて説明します。
 
 | useFmtOnly の変更 | 詳細 |
 | :---------- | :------ |
@@ -160,7 +160,7 @@ Microsoft JDBC Driver 7.0 for SQL Server で、`java.sql.Connection` クラス�
 
 ### <a name="support-for-sql-data-discovery-and-classification"></a>SQL データの検出と分類のサポート
 
-Microsoft JDBC Driver 7.0 for SQL Server では、SQL データの検出と分類機能をサポートしている任意のターゲット データベースで、その機能に対するサポートが提供されます。 ドライバーで、フェッチされた `ResultSet` からこの情報を抽出するための `SQLServerResultSet.getSensitivityClassification()` API が公開されるようになりました。
+Microsoft JDBC Driver 7.0 for SQL Server には、SQL データの検出と分類に関するサポートが、この機能に対応している任意のターゲット データベースに向けて用意されています。 ドライバーで、フェッチされた `ResultSet` からこの情報を抽出するための `SQLServerResultSet.getSensitivityClassification()` API が公開されるようになりました。
 
 JDBC Driver でこの機能を使用する方法の詳細については、「[SQL データの検出と分類](../../connect/jdbc/data-discovery-classification-sample.md)」内の例を参照してください。
 

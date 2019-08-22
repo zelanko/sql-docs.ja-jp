@@ -1,7 +1,7 @@
 ---
 title: 大規模なデータの読み取りサンプル |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 6c986144-3854-4352-8331-e79eccbefc28
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: dde0c8eb487fed00996b56a684a0e28326750679
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 260666488a21b02c0c318d3277b72fc576b0ab08
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956169"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027821"
 ---
 # <a name="reading-large-data-sample"></a>大きなデータを読み取るサンプル
 
@@ -50,4 +50,4 @@ ms.locfileid: "67956169"
 
 ## <a name="see-also"></a>参照
 
-[大きなデータの処理](../../connect/jdbc/working-with-large-data.md)
+[大きなデータの操作](../../connect/jdbc/working-with-large-data.md)

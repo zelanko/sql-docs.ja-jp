@@ -1,7 +1,7 @@
 ---
 title: JDBC driver での Always Encrypted の使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: 271c0438-8af1-45e5-b96a-4b1cabe32707
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: f19878f73397b9146765fecd879dad07ebb73dc3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e1f15e490a8d0e803bf0936c07d2e739009e1bf5
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67916450"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69026639"
 ---
 # <a name="using-always-encrypted-with-the-jdbc-driver"></a>JDBC ドライバーでの Always Encrypted の使用
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 このページでは、 [Always Encrypted](../../relational-databases/security/encryption/always-encrypted-database-engine.md)と Microsoft JDBC Driver 6.0 (またはそれ以降) を使用して SQL Server の Java アプリケーションを開発する方法について説明します。
 
-Always Encrypted を使用すると、クライアントは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Microsoft JDBC Driver 6.0 for SQL Server 以降など、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この動作を実行します。 ドライバーは、どのクエリパラメーターが Always Encrypted データベースの列に対応しているかを自動的に判断し、それらのパラメーターの値を暗号化して SQL Server または Azure SQL Database に送信します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、JDBC Driver の[Always Encrypted (データベースエンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)と[Always Encrypted API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)に関する説明を参照してください。
+Always Encrypted を使用すると、クライアントは SQL Server または Azure SQL データベースにデータまたは暗号化キーを開示することなく、機密データを暗号化することができます。 Microsoft JDBC Driver 6.0 for SQL Server 以降など、Always Encrypted が有効のドライバーは、クライアント アプリケーション内の機密データを透過的に暗号化および暗号化解除することで、この動作を実行します。 ドライバーは、どのクエリパラメーターが Always Encrypted データベースの列に対応しているかを自動的に判断し、それらのパラメーターの値を暗号化して SQL Server または Azure SQL Database に送信します。 同様に、ドライバーは、クエリ結果内の暗号化されたデータベース列から取得されたデータを透過的に暗号化解除します。 詳細については、JDBC driver の[Always Encrypted (データベースエンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)と[Always Encrypted API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)に関する説明を参照してください。
 
 ## <a name="prerequisites"></a>Prerequisites
 - SQL Server の Microsoft JDBC Driver 6.0 (またはそれ以降) が開発用コンピューターにインストールされていることを確認します。 
@@ -105,7 +105,7 @@ SQLServerConnection.registerColumnEncryptionKeyStoreProviders(keyStoreMap);
 > これらの依存関係を Maven プロジェクトに含める方法の例については、「 [Apache Maven を使用した ADAL4J と AKV の依存関係のダウンロード](https://github.com/Microsoft/mssql-jdbc/wiki/Download-ADAL4J-And-AKV-Dependencies-with-Apache-Maven)」を参照してください。
 
 ### <a name="using-windows-certificate-store-provider"></a>Windows 証明書ストア プロバイダーの使用
-SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キーを Windows 証明書ストアに格納するために使用できます。 データベースに列マスターキーと列暗号化キーの定義を作成するには、SQL Server Management Studio (SSMS) Always Encrypted ウィザードまたはその他のサポートされているツールを使用します。 同じウィザードを使用して、always encrypted データの列マスターキーとして使用できる自己署名証明書を Windows 証明書ストアに生成できます。 列マスターキーと列暗号化キーの T-sql 構文の詳細については、「列[マスターキーの作成](../../t-sql/statements/create-column-master-key-transact-sql.md)」および「[列暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)」を参照してください。
+SQLServerColumnEncryptionCertificateStoreProvider は、列マスター キーを Windows 証明書ストアに格納するために使用できます。 データベースに列マスターキーと列暗号化キーの定義を作成するには、SQL Server Management Studio (SSMS) Always Encrypted ウィザードまたはその他のサポートされているツールを使用します。 同じウィザードを使用して、Windows 証明書ストアに自己署名証明書を生成し、Always Encrypted データの列マスターキーとして使用することができます。 列マスターキーと列暗号化キーの T-sql 構文の詳細については、「列[マスターキーの作成](../../t-sql/statements/create-column-master-key-transact-sql.md)」および「[列暗号化キーの作成](../../t-sql/statements/create-column-encryption-key-transact-sql.md)」を参照してください。
 
 SQLServerColumnEncryptionCertificateStoreProvider の名前は MSSQL_CERTIFICATE_STORE であり、プロバイダーオブジェクトの getName () API によってクエリを実行できます。 これはドライバーによって自動的に登録され、アプリケーションを変更することなくシームレスに使用できます。
 
@@ -524,7 +524,7 @@ Always Encrypted では、暗号化されたデータ型に対するいくつか
 
 - 暗号化された列をターゲットとするパラメーターの値を渡すときは、適切な setter メソッドを使用します。 パラメーターの SQL Server データ型が、ターゲット列の型とまったく同じであること、またはパラメーターの SQL Server データ型を列の対象の型に変換することがサポートされていることを確認してください。 特定の SQL Server データ型に対応するパラメーターを渡すために、API メソッドが SQLServerPreparedStatement、SQLServerCallableStatement、および SQLServerResultSet クラスに追加されました。 たとえば、列が暗号化されていない場合は、setTimestamp () メソッドを使用して、パラメーターを datetime2 または datetime 列に渡すことができます。 ただし、列が暗号化されている場合は、データベース内の列の型を表す正確なメソッドを使用する必要があります。 たとえば、setTimestamp () を使用して、暗号化された datetime2 列に値を渡し、Settimestamp () を使用して、暗号化された datetime 列に値を渡すことができます。 新しい Api の完全な一覧については[、JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)を参照してください。
 - 10 進数と数値の SQL Server データ型の列をターゲットとするパラメーターの有効桁数と小数点以下桁数が、ターゲット列に対して構成された有効桁数と小数点と同じである。 API メソッドが SQLServerPreparedStatement、SQLServerCallableStatement、および SQLServerResultSet クラスに追加され、decimal および numeric データ型を表すパラメーターまたは列のデータ値と共に、有効桁数と小数点以下桁数を受け入れるようになりました。 新しい Api とオーバーロードされた Api の完全な一覧については[、「JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)」を参照してください。  
-- datetime2、datetimeoffset、または time SQL Server の列をターゲットとするパラメーターの秒の小数部の有効桁数/小数点以下桁数が、ターゲット列の値を変更するクエリの対象列の秒の小数部の有効桁数/小数点以下桁数よりも大きくありません。 API メソッドは、SQLServerPreparedStatement、SQLServerCallableStatement、および SQLServerResultSet クラスに追加され、秒の小数部の有効桁数/小数点以下桁数と、これらのデータ型を表すパラメーターのデータ値を受け入れるようになりました。 新しい/オーバーロードされた Api の完全な一覧については、 [JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)を参照してください。
+- datetime2、datetimeoffset、または time SQL Server の列をターゲットとするパラメーターの秒の小数部の有効桁数/小数点以下桁数が、ターゲット列の値を変更するクエリの対象列の秒の小数部の有効桁数/小数点以下桁数よりも大きくありません。. API メソッドは、SQLServerPreparedStatement、SQLServerCallableStatement、および SQLServerResultSet クラスに追加され、秒の小数部の有効桁数/小数点以下桁数と、これらのデータ型を表すパラメーターのデータ値を受け入れるようになりました。 新しい/オーバーロードされた Api の完全な一覧については、 [JDBC Driver の ALWAYS ENCRYPTED API リファレンス](../../connect/jdbc/always-encrypted-api-reference-for-the-jdbc-driver.md)を参照してください。
 
 ### <a name="errors-due-to-incorrect-connection-properties"></a>接続プロパティが正しくないために発生するエラー
 
@@ -651,4 +651,4 @@ SQLServerBulkCopy を使用して、データの暗号化解除を行うこと�
 
 ## <a name="see-also"></a>参照
 
-[Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))](../../relational-databases/security/encryption/always-encrypted-database-engine.md)
+[Always Encrypted (データベース エンジン)](../../relational-databases/security/encryption/always-encrypted-database-engine.md)

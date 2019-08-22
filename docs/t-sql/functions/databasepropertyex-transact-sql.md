@@ -54,7 +54,7 @@ DATABASEPROPERTYEX ( database , property )
   
 |プロパティ|[説明]|返される値|  
 |---|---|---|
-|照合順序|データベースの既定の照合順序名です。|照合順序名<br /><br /> NULL: データベースは開始していません<br /><br /> 基本データ型: **nvarchar(128)**|  
+|Collation|データベースの既定の照合順序名です。|照合順序名<br /><br /> NULL: データベースは開始していません<br /><br /> 基本データ型: **nvarchar(128)**|  
 |ComparisonStyle|照合順序の Windows 比較形式です。 次のスタイルの値を使用し、完全な ComparisonStyle 値のビットマップを構築します。<br /><br /> 大文字と小文字を区別しない: 1<br /><br /> アクセントを無視する: 2<br /><br /> ひらがなとカタカナを区別しない: 65536<br /><br /> 全角と半角を区別しない: 131072<br /><br /> <br /><br /> たとえば、既定値 196609 は、大文字と小文字を区別しない、ひらがなとカタカナを区別しない、全角と半角を区別しないという 3 つのオプションを足した値を表しています。|比較スタイルを返します。<br /><br /> バイナリ照合順序ではすべて 0 が返されます。<br /><br /> 基本データ型: **int**|  
 |のエディション|データベースのエディションまたはサービス レベルです。|**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)]。<br /><br /> <br /><br /> General Purpose<br /><br /> Business Critical<br /><br /> Basic<br /><br /> Standard<br /><br /> Premium<br /><br /> System (マスター データベース向け)<br /><br /> NULL: データベースは開始していません<br /><br /> 基本データ型: **nvarchar**(64)|  
 |IsAnsiNullDefault|データベースは、ISO のルールに従い NULL 値を許可します。|1:TRUE<br /><br /> 0:FALSE<br /><br /> NULL: 無効な入力<br /><br /> 基本データ型: **int**|  
@@ -115,7 +115,7 @@ DATABASEPROPERTYEX ( database , property )
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-retrieving-the-status-of-the-autoshrink-database-option"></a>A. AUTO_SHRINK データベース オプションの設定値を取得する  
+### <a name="a-retrieving-the-status-of-the-auto_shrink-database-option"></a>A. AUTO_SHRINK データベース オプションの設定値を取得する  
 この例では、`AdventureWorks` データベースの AUTO_SHRINK データベース オプションのステータスを返します。
   
 ```sql

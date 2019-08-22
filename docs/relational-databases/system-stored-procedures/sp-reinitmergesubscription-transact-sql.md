@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68075699"
 ---
-# <a name="spreinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (TRANSACT-SQL)
+# <a name="sp_reinitmergesubscription-transact-sql"></a>sp_reinitmergesubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   マージ エージェントの次回実行時に再初期化するように、マージ サブスクリプションにマークを付けます。 このストアド プロシージャは、パブリッシャー側のパブリケーション データベースで実行されます。  
@@ -44,9 +44,9 @@ sp_reinitmergesubscription [ [ @publication = ] 'publication'
   
 `[ @subscriber = ] 'subscriber'` サブスクライバーの名前です。 *サブスクライバー*は**sysname**、既定値は**すべて**します。  
   
-`[ @subscriber_db = ] 'subscriber_db'` サブスクライバー データベースの名前です。 *@subscriber_db*は**sysname**、既定値は**すべて**します。  
+`[ @subscriber_db = ] 'subscriber_db'` サブスクライバー データベースの名前です。 *\@subscriber_db*は **sysname**、既定値は**すべて**します。  
   
-`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうか。 *@upload_first*は**nvarchar (5)** 、既定値は FALSE。 場合**true**変更をアップロードして、サブスクリプションを再初期化します。 場合**false**変更はアップロードされません。  
+`[ @upload_first = ] 'upload_first'` サブスクリプションを再初期化する前に、サブスクライバーでの変更をアップロードするかどうか。 *\@upload_first*は **nvarchar (5)** 、既定値は FALSE。 場合**true**変更をアップロードして、サブスクリプションを再初期化します。 場合**false**変更はアップロードされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

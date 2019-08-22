@@ -1,7 +1,7 @@
 ---
 title: SQL エスケープシーケンスの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 07/11/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 00f9e25a-088e-4ac6-aa75-43eacace8f03
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 8cd32d41c1ebacc13004a0a5130567b7df9a09a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: da2ae6b5353448d5281910d94aeef05ee0999c6a
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68005937"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025893"
 ---
 # <a name="using-sql-escape-sequences"></a>SQL エスケープ シーケンスの使用
 
@@ -99,7 +99,7 @@ UPDATE Orders SET OpenDate={d '2005-01-31'}
 WHERE OrderID=1025  
 ```
 
-## <a name="stored-procedure-calls"></a>ストアド プロシージャ呼び出し
+## <a name="stored-procedure-calls"></a>ストアド プロシージャの呼び出し
 
 JDBC ドライバーでは、ストアド プロシージャ呼び出しについては、戻りパラメーターを処理する必要があるかどうかによって、`{? = call proc_name(?,...)}` および `{call proc_name(?,...)}` というエスケープ構文がサポートされています。  
   

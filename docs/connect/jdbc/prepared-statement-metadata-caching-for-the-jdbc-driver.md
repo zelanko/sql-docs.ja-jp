@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver の準備されたステートメント メタデータ キャッシュ | Microsoft Docs
+title: JDBC ドライバーの準備されたステートメント メタデータ キャッシュ | Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2018
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,19 +10,19 @@ ms.topic: conceptual
 ms.assetid: ''
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a9abd72b366060da2fdffd58c17ace50f01246a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 97224f53bb716abe3b79dd00df12d0eed4a63cec
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956208"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69027837"
 ---
-# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC Driver の準備されたステートメント メタデータ キャッシュ
+# <a name="prepared-statement-metadata-caching-for-the-jdbc-driver"></a>JDBC ドライバーの準備されたステートメント メタデータ キャッシュ
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
 この記事では、ドライバーのパフォーマンスを向上させるために実装される2つの変更について説明します。
 
-## <a name="batching-of-unprepare-for-prepared-statements"></a>準備されたステートメントの Unprepare のバッチ処理
+## <a name="batching-of-unprepare-for-prepared-statements"></a>準備されたステートメントの unprepare のバッチ処理
 バージョン 6.1.6-preview 以降では、サーバーのラウンドトリップ SQL Server を最小限に抑えてパフォーマンスを向上させることができました。 以前は、すべての unprepare ステートメントクエリに対して、呼び出しが送信されました。 これで、ドライバーは unprepare クエリを、既定値の10を持つしきい値 "ServerPreparedStatementDiscardThreshold" までバッチ処理します。
 
 > [!NOTE]  
@@ -33,7 +33,7 @@ ms.locfileid: "67956208"
 > [!NOTE]  
 >  ユーザーは、次のメソッドを使用して enablePrepareOnFirstPreparedStatementCall を**true**に設定することにより、既定の動作を以前のバージョンの sp_prepexec 呼び出しに変更できます。 setEnablePrepareOnFirstPreparedStatementCall (ブール値)
 
-### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>準備されたステートメントの Unprepare のバッチ処理のために、この変更で導入された新しい Api の一覧
+### <a name="list-of-the-new-apis-introduced-with-this-change-for-batching-of-unprepare-for-prepared-statements"></a>準備されたステートメントの unprepare のバッチ処理のために、この変更で導入された新しい Api の一覧
 
  **SQLServerConnection**
  

@@ -55,7 +55,7 @@ ms.locfileid: "68073711"
     |[!INCLUDE[ssSQL11](../includes/sssql11-md.md)]|C:\Windows\SysWOW64\SQLServerManager11.msc|  
     |[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)]|C:\Windows\SysWOW64\SQLServerManager10.msc|  
   
-2.  **SQL Server 構成マネージャー**で **SQL Server ネットワークの構成**を展開し、 **** _<InstanceName>_ をクリックします。  
+2.  **SQL Server 構成マネージャー**で **[SQL Server ネットワークの構成]** を展開し、 _<InstanceName>_ **をクリックします**。  
   
     既定のインスタンス (名前のないインスタンス) は、 **MSSQLSERVER**として一覧表示されます。 名前付きインスタンスをインストールした場合は、指定した名前が表示されます。 [!INCLUDE[ssExpressEd11](../includes/ssexpressed11-md.md)] は **SQLEXPRESS**としてしてインストールされます (セットアップ中に名前を変更した場合を除く)。  
   

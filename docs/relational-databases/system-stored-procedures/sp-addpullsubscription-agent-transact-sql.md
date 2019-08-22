@@ -195,7 +195,7 @@ sp_addpullsubscription_agent [ @publisher = ] 'publisher'
   
 `[ @working_directory = ] 'working_director'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)** ,、既定値は NULL です。 名前は UNC 形式で指定する必要があります。  
   
-`[ @use_ftp = ] 'use_ftp'`スナップショットを取得するために通常のプロトコルではなく FTP を使用することを指定します。 *@use_ftp* は **nvarchar (5)** 、既定値は FALSE。  
+`[ @use_ftp = ] 'use_ftp'`スナップショットを取得するために通常のプロトコルではなく FTP を使用することを指定します。 *\@use_ftp* は **nvarchar (5)** 、既定値は FALSE。  
   
 `[ @publication_type = ] publication_type`パブリケーションのレプリケーションの種類を指定します。 *publication_type*は**tinyint**で、既定値は**0**です。 **0**の場合、パブリケーションはトランザクションの種類です。 **1**の場合、パブリケーションはスナップショットの種類です。 **2**の場合、publication はマージの種類です。  
   

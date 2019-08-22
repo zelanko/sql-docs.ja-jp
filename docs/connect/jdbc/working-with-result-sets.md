@@ -1,7 +1,7 @@
 ---
 title: 結果セットを操作する |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: 4fc4b1c6-3075-4ad7-9244-865d9ede7ae6
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: fe44efec59b78fe025cd08207c2026e658466554
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d38cb92fbbf83f9b8a110d2e17f60af70c177ab4
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003828"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025439"
 ---
-# <a name="working-with-result-sets"></a>結果セットの処理
+# <a name="working-with-result-sets"></a>結果セットの操作
 
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
@@ -40,5 +40,5 @@ ms.locfileid: "68003828"
   
 ## <a name="see-also"></a>参照
 
- [サンプル JDBC Driver アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
+ [サンプル JDBC ドライバー アプリケーション](../../connect/jdbc/sample-jdbc-driver-applications.md)  
   

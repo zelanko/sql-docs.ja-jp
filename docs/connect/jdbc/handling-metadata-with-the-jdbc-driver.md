@@ -1,7 +1,7 @@
 ---
-title: JDBC Driver を使用したメタデータの処理 |Microsoft Docs
+title: JDBC driver を使用したメタデータの処理 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 5cfb35d4-ddcd-40a2-8091-f29cddc32552
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 7a5ac2591c10bc77ff4e4d1d9dcacd755a442b9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0176e1da9a64e4ed32ba6989496178f5f9741193
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67956522"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028023"
 ---
 # <a name="handling-metadata-with-the-jdbc-driver"></a>JDBC ドライバーによるメタデータの処理
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]

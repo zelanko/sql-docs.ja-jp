@@ -1,7 +1,7 @@
 ---
 title: ストアドプロシージャでのステートメントの使用 |Microsoft Docs
 ms.custom: ''
-ms.date: 01/19/2017
+ms.date: 08/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 0041f9e1-09b6-4487-b052-afd636c8e89a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 774e79b6baa3db1c6356768de4b04226ddbc7688
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7fe07352ff1bcda9dd3ff3e77a6b879e592235a6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68003932"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69025864"
 ---
 # <a name="using-statements-with-stored-procedures"></a>ストアド プロシージャでのステートメントの使用
 
@@ -35,7 +35,7 @@ ms.locfileid: "68003932"
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース内のデータをストアド プロシージャで操作するために、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] には、[SQLServerStatement](../../connect/jdbc/reference/sqlserverstatement-class.md)、[SQLServerPreparedStatement](../../connect/jdbc/reference/sqlserverpreparedstatement-class.md)、および [SQLServerCallableStatement](../../connect/jdbc/reference/sqlservercallablestatement-class.md) の各クラスが用意されています。 使用するクラスは、ストアド プロシージャで IN (入力) パラメーターと OUT (出力) パラメーターのどちらが必要かによって異なります。 ストアド プロシージャで IN パラメーターも OUT パラメーターも必要ない場合、SQLServerStatement クラスを使用できます。ストアド プロシージャが何度も呼び出される場合、または IN パラメーターのみを必要とする場合は、SQLServerPreparedStatement クラスを使用できます。 ストアドプロシージャで IN パラメーターと OUT パラメーターの両方が必要な場合は、SQLServerCallableStatement クラスを使用する必要があります。 SQLServerCallableStatement クラスを使用するオーバーヘッドが必要なのは、ストアド プロシージャで OUT パラメーターが必要な場合だけです。  
   
 > [!NOTE]  
-> ストアド プロシージャは、更新数および複数の結果セットを返すこともできます。 詳細については、「Update Count を使用し[たストアドプロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」および「[複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)」を参照してください。  
+> ストアド プロシージャは、更新数および複数の結果セットを返すこともできます。 詳細については、「update count を使用し[たストアドプロシージャの使用](../../connect/jdbc/using-a-stored-procedure-with-an-update-count.md)」および「[複数の結果セットの使用](../../connect/jdbc/using-multiple-result-sets.md)」を参照してください。  
   
 JDBC ドライバーを使用してパラメーターがあるストアド プロシージャを呼び出す場合は、`call` SQL エスケープ シーケンスを、[SQLServerConnection](../../connect/jdbc/reference/sqlserverconnection-class.md) クラスの [prepareCall](../../connect/jdbc/reference/preparecall-method-sqlserverconnection.md) メソッドと一緒に使用する必要があります。 `call` エスケープ シーケンスの完全な構文は次のとおりです。  
   

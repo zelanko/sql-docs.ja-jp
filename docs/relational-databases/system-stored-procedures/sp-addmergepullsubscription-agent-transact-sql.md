@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769146"
 ---
-# <a name="spaddmergepullsubscriptionagent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
+# <a name="sp_addmergepullsubscription_agent-transact-sql"></a>sp_addmergepullsubscription_agent (Transact-SQL)
 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
@@ -126,7 +126,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このパラメーターに値が指定されている場合は、警告メッセージが返されますが、値は無視されます。  
   
-`[ @subscriber_password = ] 'subscriber_password'`認証用の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーパスワードを入力します。 *subscriber_password* 場合は必須です *subscriber_security_mode* に設定されている **0** します。 *@subscriber_password* は **sysname** 、既定値は NULL です。  
+`[ @subscriber_password = ] 'subscriber_password'`認証用の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーパスワードを入力します。 *subscriber_password* 場合は必須です *subscriber_security_mode* に設定されている **0** します。 *\@subscriber_password* は **sysname** 、既定値は NULL です。  
   
 > [!NOTE]  
 >  このパラメーターは非推奨とされており、スクリプトの旧バージョンとの互換性のために保持されています。 このパラメーターに値が指定されている場合は、警告メッセージが返されますが、値は無視されます。  
@@ -235,7 +235,7 @@ sp_addmergepullsubscription_agent [ [ @name = ] 'name' ]
   
 `[ @working_directory = ] 'working_directory'`FTP を使用してスナップショットファイルを転送するときに、パブリケーションのデータファイルとスキーマファイルを一時的に保存するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)** ,、既定値は NULL です。  
   
-`[ @use_ftp = ] 'use_ftp'`スナップショットを取得するための一般的なプロトコルではなく、FTP の使用を指定します。 *@use_ftp* は **nvarchar (5)** 、既定値は FALSE。  
+`[ @use_ftp = ] 'use_ftp'`スナップショットを取得するための一般的なプロトコルではなく、FTP の使用を指定します。 *\@use_ftp* は **nvarchar (5)** 、既定値は FALSE。  
   
 `[ @reserved = ] 'reserved'` [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]  
   

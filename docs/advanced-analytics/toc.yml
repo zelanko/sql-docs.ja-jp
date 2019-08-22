@@ -183,6 +183,8 @@
   items:
     - name: 接続する
       items:
+        - name: ループバック接続
+          href: ../advanced-analytics/connect/loopback-connection.md
         - name: R から OLAP への接続
           items:
             - name: R での OLAP キューブからのデータの使用
@@ -225,34 +227,22 @@
           href: ../advanced-analytics/sql-native-scoring.md
     - name: パッケージの管理
       items:
-        - name: 既定のパッケージ
-          href: ../advanced-analytics/package-management/default-packages.md
-        - name: パッケージ情報の取得
-          href: ../advanced-analytics/package-management/installed-package-information.md
+        - name: 新しい Python パッケージのインストール
+          items:
+            - name: Python パッケージ情報の取得
+              href: ../advanced-analytics/package-management/python-package-information.md
+            - name: Python パッケージのインストール
+              href: ../advanced-analytics/package-management/install-additional-python-packages-on-sql-server.md
         - name: 新しい R パッケージのインストール
           items:
+            - name: R パッケージ情報の取得
+              href: ../advanced-analytics/package-management/r-package-information.md
             - name: R パッケージのインストール
-              href: ../advanced-analytics/r/install-additional-r-packages-on-sql-server.md
-            - name: T-SQL の使用
-              href: ../advanced-analytics/r/install-r-packages-tsql.md
-            - name: パッケージ マネージャーの使用
-              href: ../advanced-analytics/r/use-r-package-managers-on-sql-server.md
-            - name: RevoScaleR の使用
-              items:
-                - name: RevoScaleR を使用してのインストール
-                  href: ../advanced-analytics/r/use-revoscaler-to-manage-r-packages.md
-                - name: リモートの R パッケージ管理を有効にする
-                  href: ../advanced-analytics/r/r-package-how-to-enable-or-disable.md
-                - name: R パッケージの同期
-                  href: ../advanced-analytics/r/package-install-uninstall-and-sync.md
+              href: ../advanced-analytics/package-management/install-additional-r-packages-on-sql-server.md
             - name: miniCRAN リポジトリの作成
               href: ../advanced-analytics/r/create-a-local-package-repository-using-minicran.md
             - name: R パッケージを使用するためのヒント
               href: ../advanced-analytics/r/packages-installed-in-user-libraries.md
-        - name: 新しい Python パッケージのインストール
-          items:
-            - name: パッケージ マネージャーの使用
-              href: ../advanced-analytics/python/install-additional-python-packages-on-sql-server.md
     - name: 管理
       items:
         - name: 統合の管理

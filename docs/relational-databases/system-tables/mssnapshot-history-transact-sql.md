@@ -1,5 +1,5 @@
 ---
-title: MSsnapshot_history (TRANSACT-SQL) |Microsoft Docs
+title: MSsnapshot_history (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67997281"
 ---
-# <a name="mssnapshothistory-transact-sql"></a>MSsnapshot_history (TRANSACT-SQL)
+# <a name="mssnapshot_history-transact-sql"></a>MSsnapshot_history (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsnapshot_history**テーブルは、ローカル ディストリビューターに関連付けられているスナップショット エージェントの履歴行を保持します。 このテーブルは、ディストリビューション データベースに格納されます。  

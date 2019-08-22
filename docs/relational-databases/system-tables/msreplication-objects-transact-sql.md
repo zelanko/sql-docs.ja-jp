@@ -1,5 +1,5 @@
 ---
-title: MSreplication_objects (TRANSACT-SQL) |Microsoft Docs
+title: MSreplication_objects (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68079078"
 ---
-# <a name="msreplicationobjects-transact-sql"></a>MSreplication_objects (TRANSACT-SQL)
+# <a name="msreplication_objects-transact-sql"></a>MSreplication_objects (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSreplication_objects**テーブルには、サブスクライバー データベースのレプリケーションに関連付けられているオブジェクトごとに 1 つの行が含まれています。 このテーブルは、サブスクリプション データベースに格納されます。  

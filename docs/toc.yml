@@ -10376,17 +10376,8 @@
             - name: コンテナーの高可用性
               href: linux/sql-server-linux-container-ha-overview.md
               items:
-                - name: SQL Server のコンテナー用の Always On 可用性グループ
-                  href: linux/sql-server-ag-kubernetes.md
-                  items:
-                    - name: 配置
-                      href: linux/sql-server-linux-kubernetes-deploy.md
-                    - name: 管理する
-                      href: linux/sql-server-linux-kubernetes-manage.md
-                    - name: 接続する
-                      href: linux/sql-server-linux-kubernetes-connect.md
-                    - name: 配置スクリプトを作成する
-                      href: linux/sql-server-linux-kubernetes-create-deployment.md
+                - name: Kubernetes でコンテナーを構成する
+                  href: linux/tutorial-sql-server-containers-kubernetes.md
         - name: Security
           href: linux/sql-server-linux-security-overview.md
           items:
