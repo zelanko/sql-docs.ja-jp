@@ -6,4 +6,4 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/20/2019
 ms.locfileid: "69652225"
 ---
-ビッグデータクラスターの SQL Server
+SQL Server ビッグ データ クラスター
