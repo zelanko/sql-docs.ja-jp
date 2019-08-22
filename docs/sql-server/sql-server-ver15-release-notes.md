@@ -113,7 +113,7 @@ CTP リリースのサポートとライセンスに関するすべての詳細�
 
 - **回避策**:最新の VC ランタイム 2013 (x86) をインストールします。
 
-  - [Verbose](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
+  - [詳細](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
   - [直接](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5。
