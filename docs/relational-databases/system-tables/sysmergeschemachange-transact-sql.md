@@ -1,5 +1,5 @@
 ---
-title: sysmergeschemachange (TRANSACT-SQL) |Microsoft Docs
+title: sysmergeschemachange (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68029822"
 ---
-# <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (TRANSACT-SQL)
+# <a name="sysmergeschemachange-transact-sql"></a>sysmergeschemachange (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   スナップショット エージェントによって生成された、パブリッシュされたアーティクルに関する情報を格納します。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
@@ -41,7 +41,7 @@ ms.locfileid: "68029822"
 |**schemasubtype**|**int**|スキーマ変更のサブタイプ。<br /><br /> **1** ADDCOLUMN を =<br /><br /> **2** DROPCOLUMN を =<br /><br /> **3** ALTERCOLUMN を =<br /><br /> **4** ADDPRIMARYKEY を =<br /><br /> **5** ADDUNIQUE を =<br /><br /> **6** ADDREFERENCE を =<br /><br /> **7** DROPCONSTRAINT を =<br /><br /> **8** ADDDEFAULT を =<br /><br /> **9** ADDCHECK を =<br /><br /> **10** DISABLETRIGGER<br /><br /> **11** ENABLETRIGGER<br /><br /> **12** DISABLETRIGGER<br /><br /> **13** ENABLETRIGGER<br /><br /> **14** ENABLECONSTRAINT<br /><br /> **15** DISABLECONSTRAINT<br /><br /> **16** ENABLECONSTRAINT<br /><br /> **17** DISABLECONSTRAINT|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
