@@ -66,7 +66,7 @@ ms.locfileid: "69493787"
   
      次の図のように、各キューブ オブジェクトの既定の言語でメタデータが表示されます。 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブの既定の言語は英語です。  
   
-     [![翻訳] タブの既定の言語][(../../2014/tutorials/media/l9-translations-5.gif "翻訳] タブの既定の言語")  
+     ![翻訳 タブの既定の言語](../../2014/tutorials/media/l9-translations-5.gif "翻訳 タブの既定の言語")  
   
 2.  **[翻訳]** タブのツール バーで **[新しい翻訳]** ボタンをクリックします。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "69493787"
   
      メタデータ ペインのアイテムが再設定されます。 メタデータ ペインのアイテムが再設定されると、Internet Sales-Sales Amount メジャーが [Internet Sales] 表示フォルダーに表示されなくなります。 代わりに、次の図に示すように、スペイン語`Ventas del lnternet`ではという名前の新しい表示フォルダーに表示されます。  
   
-     再読み込み![メタデータペイン]再読み込み(../../2014/tutorials/media/l9-translations-6.gif "メタデータペイン")  
+     再読み込み![メタデータペイン](../../2014/tutorials/media/l9-translations-6.gif "再読み込みメタデータペイン")  
   
 6.  メタデータペインでを右クリック`Cantidad de las Ventas del Internet`し、 **[クエリに追加]** を選択します。  
   
