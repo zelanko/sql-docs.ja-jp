@@ -25,7 +25,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68126303"
 ---
-# <a name="spsenddbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
+# <a name="sp_send_dbmail-transact-sql"></a>sp_send_dbmail (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定した受信者に電子メール メッセージを送信します。 メッセージには、クエリの結果セット、添付ファイル、またはその両方を含めることができます。 メールが正常にデータベース メール キューに配置されるときに**sp_send_dbmail**を返します、 **mailitem_id**メッセージ。 このストアド プロシージャは、 **msdb**データベース。  

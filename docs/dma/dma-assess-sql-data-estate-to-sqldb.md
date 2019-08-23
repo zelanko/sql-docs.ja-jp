@@ -37,21 +37,21 @@ Azure サブスクリプションで新しい Azure Migrate プロジェクト�
 
 Azure Migrate のプロジェクトは、評価または移行しようとしている環境から収集された検出、評価、および移行のメタデータを格納するために使用されます。 また、プロジェクトを使用して、検出された資産を追跡し、評価と移行を調整します。
 
-1. Azure portal にサインインし、[**すべてのサービス**] を選択して、Azure Migrate を検索します。
-2. [**サービス**] で、[ **Azure Migrate**] を選択します。
+1. Azure portal にサインインし、 **[すべてのサービス]** を選択して、Azure Migrate を検索します。
+2. **[サービス]** で、 **[Azure Migrate]** を選択します。
 
    ![Azure Migrate-サービスの選択](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-services.png)
 
-3. [**概要**] ページで、[**データベースの評価と移行**] を選択します。
+3. **[概要]** ページで、 **[データベースの評価と移行]** を選択します。
 
    ![Azure Migrate-評価の開始](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-hub-assess.png)
 
-4. [**データベース**] の [**はじめ**に] で、[**ツールの追加**] を選択します。
+4. **[データベース]** の **[はじめ]** に で、 **[ツールの追加]** を選択します。
 
    ![Azure Migrate-ツールの追加](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tools.png)
 
-5. [**プロジェクトの移行**] タブで、Azure サブスクリプションとリソースグループを選択します (リソースグループをまだ持っていない場合は、作成します)。
-6. [**プロジェクトの詳細**] で、プロジェクトの名前とプロジェクトを作成する場所を指定します。
+5. **[プロジェクトの移行]** タブで、Azure サブスクリプションとリソースグループを選択します (リソースグループをまだ持っていない場合は、作成します)。
+6. **[プロジェクトの詳細]** で、プロジェクトの名前とプロジェクトを作成する場所を指定します。
 
     ![Azure Migrate-[ツール] ダイアログボックスの追加](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-add-tool-dialog.png)
 
@@ -66,20 +66,20 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
     プロジェクトに指定された geography は、オンプレミスの Vm から収集されたメタデータを格納するためにのみ使用されます。 実際の移行では、任意のターゲットリージョンを選択できます。
 
-7. [**次へ**] を選択し、アセスメントツールを追加します。
+7. **[次へ]** を選択し、アセスメントツールを追加します。
 
    > [!NOTE]
    > プロジェクトを作成するときは、少なくとも1つのアセスメントツールまたは移行ツールを追加する必要があります。
 
-8. [**評価ツールの選択**] タブ**で、次の Azure Migrate ます。データベース評価**は、追加する評価ツールとして表示されます。 現在評価ツールが必要ない場合は、[**今すぐの評価ツールの追加をスキップ**する] チェックボックスをオンにします。 **[次へ]** を選択します。
+8. **[評価ツールの選択]** タブ**で、次の Azure Migrate ます。データベース評価**は、追加する評価ツールとして表示されます。 現在評価ツールが必要ない場合は、[**今すぐの評価ツールの追加をスキップ**する] チェックボックスをオンにします。 **[次へ]** を選択します。
 
     ![Azure Migrate-[評価ツール] タブの選択](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-assessment-tool.png)
 
-9. [**移行ツールの選択**] タブ**で、次の Azure Migrate します。データベースの**移行は、追加する移行ツールとして表示されます。 移行ツールを現在必要としていない場合は、**今すぐ移行ツールの追加をスキップ**します。 **[次へ]** を選択します。
+9. **[移行ツールの選択]** タブ**で、次の Azure Migrate します。データベースの**移行は、追加する移行ツールとして表示されます。 移行ツールを現在必要としていない場合は、**今すぐ移行ツールの追加をスキップ**します。 **[次へ]** を選択します。
 
     ![Azure Migrate-[移行ツール] タブの選択](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-select-migration-tool.png)
 
-10. [**レビュー + ツールの追加**] で、設定を確認し、[**ツールの追加**] を選択します。
+10. **[レビュー + ツールの追加]** で、設定を確認し、 **[ツールの追加]** を選択します。
 
     ![Azure Migrate-レビュー + ツールの追加 タブ](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-review-tools.png)
 
@@ -119,9 +119,9 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
 ### <a name="add-databases-to-assess"></a>評価するデータベースの追加
 
-1. [**ソースの追加**] を選択し、[接続の開始] メニューを開きます。
-2. SQL server インスタンス名を入力し、認証の種類を選択して、適切な接続プロパティを設定し、[**接続**] を選択します。
-3. 評価するデータベースを選択し、[**追加**] を選択します。
+1. **ソースの追加** を選択し、接続の開始 メニューを開きます。
+2. SQL server インスタンス名を入力し、認証の種類を選択して、適切な接続プロパティを設定し、 **[接続]** を選択します。
+3. 評価するデータベースを選択し、 **[追加]** を選択します。
 
    > [!NOTE]
    > 複数のデータベースを削除するには、Shift キーまたは Ctrl キーを押しながら選択し、[ソースの削除] をクリックします。 [ソースの追加] ボタンを使用して、複数の SQL Server インスタンスからデータベースを追加することもできます。
@@ -130,7 +130,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
    ![Azure Migrate-Data Migration Assistant-[ソースの選択] 画面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-select-sources-screen.png)
 
-5. 評価が完了したら、[ **Azure Migrate にアップロード**] を選択します。
+5. 評価が完了したら、 **[Azure Migrate にアップロード]** を選択します。
 
    ![Azure Migrate Data Migration Assistant-レビュー結果画面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-dma-review-results-screen.png)
 
@@ -138,7 +138,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
    ![Azure Migrate Data Migration Assistant-レビュー結果画面](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-signin.png)
 
-7. 評価結果をアップロードするサブスクリプションと Azure Migrate プロジェクトを選択し、[**アップロード**] を選択します。
+7. 評価結果をアップロードするサブスクリプションと Azure Migrate プロジェクトを選択し、 **[アップロード]** を選択します。
 
    評価のアップロードの確認を待ちます。
 
@@ -148,7 +148,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
    ![Azure Migrate-Azure portal サービス検索](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-portal-search.png)
 
-2. [**データベースの評価と移行**] を選択して、評価結果を取得します。
+2. **[データベースの評価と移行]** を選択して、評価結果を取得します。
 
    ![Azure Migrate-評価結果の確認](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-hub-assess.png)
 

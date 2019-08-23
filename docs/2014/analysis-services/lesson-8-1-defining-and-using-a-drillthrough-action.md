@@ -38,7 +38,7 @@ ms.locfileid: "69493822"
   
      ![表示ウィンドウの空のアクションテンプレート](../../2014/tutorials/media/l8-action2.gif "表示ウィンドウの空のアクションテンプレート")  
   
-3.  [**名前**] ボックスで、このアクションの名前をに`Internet Sales Details Drillthrough Action`変更します。  
+3.  **[名前]** ボックスで、このアクションの名前をに`Internet Sales Details Drillthrough Action`変更します。  
   
 4.  **[メジャー グループのメンバー]** リストで **[Internet Sales]** をクリックします。  
   
@@ -52,9 +52,9 @@ ms.locfileid: "69493822"
   
      ![[追加のプロパティ] ボックス](../../2014/tutorials/media/l8-action4.gif "[追加のプロパティ] ボックス")  
   
-8.  [**最大行数**] ボックスに「 `10`」と入力します。  
+8.  **[最大行数]** ボックスに「 `10`」と入力します。  
   
-9. [**キャプション**] ボックスに「 `Drillthrough to Order Details...`」と入力します。  
+9. **[キャプション]** ボックスに「 `Drillthrough to Order Details...`」と入力します。  
   
      これらの設定は、返される行数を制限し、クライアント アプリケーションのメニューに表示されるキャプションを指定します。 次の図は、 **[追加のプロパティ]** ボックスでの設定を示しています。  
   
@@ -80,7 +80,7 @@ ms.locfileid: "69493822"
   
      次の図のように、Adam Powell に発送された注文の詳細が **[データ サンプル ビューアー]** に表示されます。 しかし、注文日、期限、発送日などの追加の情報があればさらに便利です。 次の手順では、これらの情報を追加します。  
   
-     ![Adam Powell に発送]された注文(../../2014/tutorials/media/l8-action6.gif "Adam Powell に発送")された注文  
+     ![Adam Powell に発送](../../2014/tutorials/media/l8-action6.gif "された注文Adam Powell に発送")された注文  
   
 8.  Excel を閉じます。  
   
@@ -104,9 +104,9 @@ ms.locfileid: "69493822"
   
     -   ShipDateKey  
   
-6.  **Order Date Key**属性の`Order Date` **name**プロパティをに変更し、 **name column**プロパティの参照ボタンをクリックします。次に、[**名前列**] ダイアログボックスで、ソーステーブルとして [**日付**] を選択し、[] を選択します。ソース列としての SimpleDate。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
+6.  **Order Date Key**属性の`Order Date` **name**プロパティをに変更し、 **name column**プロパティの参照ボタンをクリックします。次に、**名前列** ダイアログボックスで、ソーステーブルとして **日付** を選択し、 を選択します。ソース列としての SimpleDate。 [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
-7.  [**期限切れ**日] 属性の [**名前**] プロパティ`Due Date`をに変更し、 **Order Date key**属性と同じ方法を使用して、この属性の**name Column**プロパティを**date. simpledate (WChar) に変更します。** .  
+7.  **[期限切れ]** 日 属性の **[名前]** プロパティ`Due Date`をに変更し、 **Order Date key**属性と同じ方法を使用して、この属性の**name Column**プロパティを**date. simpledate (WChar) に変更します。** .  
   
 8.  **Ship date Key**属性の`Ship Date` **name**プロパティをに変更し、この属性の**name Column**プロパティを**date. simpledate (WChar)** に変更します。  
   
@@ -140,7 +140,7 @@ ms.locfileid: "69493822"
   
      Adam Powell に発送された注文の詳細が一時ワークシートに表示されます。 表示される情報には、次の図に示すように、アイテムの説明、注文番号、受注日、期日、出荷日が含まれます。  
   
-     ![Adam Powell に発送]された注文(../../2014/tutorials/media/l8-action8.gif "Adam Powell に発送")された注文  
+     ![Adam Powell に発送](../../2014/tutorials/media/l8-action8.gif "された注文Adam Powell に発送")された注文  
   
 ## <a name="next-lesson"></a>次のレッスン  
  [レッスン 9:パースペクティブと翻訳の定義](lesson-9-defining-perspectives-and-translations.md)  
