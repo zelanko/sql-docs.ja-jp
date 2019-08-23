@@ -1,5 +1,5 @@
 ---
-title: IHcolumns (TRANSACT-SQL) |Microsoft Docs
+title: IHcolumns (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67990389"
 ---
-# <a name="ihcolumns-transact-sql"></a>IHcolumns (TRANSACT-SQL)
+# <a name="ihcolumns-transact-sql"></a>IHcolumns (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHcolumns**列がパブリッシュされた各システム テーブルに 1 つの行が含まれます。 このテーブルは基本的に SQL Server 以外のデータベース管理システム (DBMS) 間のデータ型にマップする発行されるの列のデータ型から、SQL Server 以外のパブリッシャーの表現方法の定義に使用し、SQL Server。 このテーブルは、ディストリビューション データベースに格納されます。  
