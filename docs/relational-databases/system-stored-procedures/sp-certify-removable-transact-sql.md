@@ -29,7 +29,7 @@ ms.locfileid: "68045930"
 
   リムーバブル メディア上でデータベースが配布用に正しく構成されているかどうか確認し、問題があればユーザーにレポートします。  
   
-> **重要!!** [!含める[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) 代わりにします。  
+> **重要!!** [!INCLUDE[ssNoteDepFutureAvoid](../../t-sql/statements/create-database-sql-server-transact-sql.md) instead.  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
