@@ -9,15 +9,21 @@ ms.technology: ''
 ms.topic: conceptual
 author: jovanpop-msft
 ms.author: jovanpop
-ms.openlocfilehash: 4828f5fd8a655d29837dd661267c73f0082f942e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7c389f6b7cb2df2d7f464dcc8fc5eeb110a7f4d5
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059568"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957445"
 ---
 # <a name="store-json-documents-in-sql-server-or-sql-database"></a>SQL Server または SQL Database に JSON ドキュメントを保存する
 SQL Server と Azure SQL Database には、ネイティブ JSON 機能があります。標準 SQL 言語を利用し、JSON ドキュメントを解析できます。 SQL Server または SQL Database に JSON ドキュメントを保存したり、NoSQL データベースの場合のように JSON データを問い合わせたりできます。 この記事では、SQL Server または SQL Database に JSON ドキュメントを保存するためのオプションについて説明します。
+
+## <a name="json-storage-format"></a>JSON ストレージの形式
+
+最初のストレージ設計では、JSON ドキュメントをテーブルに格納する方法を決定します。 次の 2 つのオプションを使用できます。
+- **LOB ストレージ** - JSON ドキュメントは、`NVARCHAR` 列にそのまま格納できます。 この方法では、読み込み速度が文字列型の列の読み込みに匹敵するため、データの読み込みと取り込みをすばやく行うのに最適です。 この方法では、クエリの実行中に未加工の JSON ドキュメントを解析する必要があるため、JSON 値のインデックス作成が実行されていない場合は、クエリ/分析時間のパフォーマンスがさらに低下する可能性があります。 
+- **リレーショナル ストレージ** - JSON ドキュメントは、`OPENJSON`、`JSON_VALUE`、または `JSON_QUERY` 関数を使用してテーブルに挿入されるときに解析できます。 入力 JSON ドキュメントのフラグメントは、SQL データ型の列、または JSON サブ要素を含む NVARCHAR 列に格納できます。 この方法では、読み込み中に JSON の解析が行われるため読み込み時間が長くなります。ただし、クエリは、リレーショナル データに対する従来のクエリのパフォーマンスに匹敵します。
 
 ## <a name="classic-tables"></a>クラシック テーブル
 

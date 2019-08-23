@@ -7,12 +7,12 @@ ms.date: 08/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c753e12b17047f397aeb619c758e2160e5d38e09
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: a39e0a743053db694efc2d0e8176e659d7e376d1
+ms.sourcegitcommit: 58f1d5498c87bfe0f6ec4fd9d7bbe723be47896b
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892526"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68995875"
 ---
 # <a name="how-to-configure-the-microsoft-distributed-transaction-coordinator-msdtc-on-linux"></a>Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法
 
@@ -21,7 +21,7 @@ ms.locfileid: "68892526"
 この記事では、Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法を説明します。
 
 > [!NOTE]
-> Linux 上の MSDTC は、累積的な更新プログラム 16 以降が適用された SQL Server 2019 プレビュー SQL Server 2017 でサポートされています。
+> Linux 上の MSDTC は、累積的な更新プログラム 16 以降が適用された SQL Server 2017 でサポートされています。
 
 ## <a name="overview"></a>概要
 
@@ -29,7 +29,7 @@ ms.locfileid: "68892526"
 
 MSDTC では、mssql-conf ユーティリティ用に次の 2 つの構成パラメーターを使用します。
 
-| mssql-conf の設定 | [説明] |
+| mssql-conf setting | [説明] |
 |---|---|
 | **network.rpcport** | RPC エンドポイント マッパー プロセスのバインド先の TCP ポート。 |
 | **distributedtransaction.servertcpport** | MSDTC サーバーがリッスンするポート。 設定しない場合、MSDTC サービスはサービス再起動時にランダムな一時ポートを使用するため、MSDTC サービスが通信を継続できるようにファイアウォールの例外を再構成する必要があります。 |

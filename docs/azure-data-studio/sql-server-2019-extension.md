@@ -3,19 +3,19 @@ title: SQL Server 2019 の拡張機能 (プレビュー)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用の SQL Server 2019 プレビューの拡張機能
 ms.custom: seodec18
-ms.date: 06/25/2019
+ms.date: 08/15/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 9b25fd044b94e21151b687d428c469a12d8c8a5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
+ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959214"
+ms.lasthandoff: 08/15/2019
+ms.locfileid: "69494043"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 の拡張機能 (プレビュー)
 
@@ -29,9 +29,9 @@ SQL Server 2019 の拡張機能 (プレビュー) をインストールするに
 
    |プラットフォーム|ダウンロード|リリース日|バージョン
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097803)|2019 年 6 月 25 日 |0.14.1
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097802)|2019 年 6 月 25 日 |0.14.1
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2097801)|2019 年 6 月 25 日 |0.14.1
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|2019 年 8 月 15 日 |0.15.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|2019 年 8 月 15 日 |0.15.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|2019 年 8 月 15 日 |0.15.0
 
 1. Azure Data Studio では、 **[ファイル]** メニューから **[Install Extension from VSIX Package]\(VSIX パッケージから拡張機能をインストールする)** を選択し、ダウンロードした .vsix ファイルを選択します。
 
@@ -42,6 +42,13 @@ SQL Server 2019 の拡張機能 (プレビュー) をインストールするに
 1. 再読み込み後、拡張機能によって依存関係がインストールされます。 [出力] ウィンドウに進行状況が表示され、数分かかることがあります。
 
 1. 依存関係のインストールが完了したら、Azure Data Studio を閉じてから再度開きます。 **SQL Server ビッグ データ クラスター**の接続の種類は、Azure Data Studio を再起動するまで使用できません。
+
+## <a name="changes-in-release-015"></a>リリース 0.15 での変更点
+* [Create External Table]\(外部テーブルの作成\) ウィザード:
+  * オブジェクト マッピング ページ上でテーブルと列の情報の読み込みにかかる時間が短縮されました。
+  * 接続の詳細ページ上で、既存のデータベース スコープの資格情報の読み込みに関するバグを修正しました。
+* CSV ファイルからの外部テーブルの作成ウィザード:
+  * PROSE の解析に使用される既定のサンプル サイズが増加しました。
 
 ## <a name="changes-in-release-0141"></a>リリース 0.14.1 での変更点
 * CTP 3.1 データ ソース サポートのサポート

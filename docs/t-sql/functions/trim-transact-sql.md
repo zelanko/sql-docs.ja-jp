@@ -18,12 +18,12 @@ ms.assetid: a00245aa-32c7-4ad4-a0d1-64f3d6841153
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = azure-sqldw-latest||=azuresqldb-current||>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8a25a41600aca4d350c7434662de4c25dd51888c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 77b8244efda0a1f06e16821d817339feebc9384f
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68098792"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561153"
 ---
 # <a name="trim-transact-sql"></a>TRIM (Transact-SQL)
 
@@ -55,7 +55,7 @@ string: 文字を削除する必要がある任意の文字型 (`nvarchar`、`va
 
 ## <a name="remarks"></a>Remarks
 
-`TRIM` 関数は、既定で、両側からスペース文字 `char(32)` を削除します。 この動作は `LTRIM(RTRIM(@string))` と同等です。 文字が指定された `TRIM` 関数の動作は、`REPLACE` 関数の動作 (先頭または末尾の文字が空白の文字列で置き換えられる) と同じです。
+既定では、`TRIM` 関数によって文字列の先頭と末尾の両方から空白文字が削除されます。 この動作は `LTRIM(RTRIM(@string))` と同等です。
 
 ## <a name="examples"></a>使用例
 
@@ -69,18 +69,22 @@ SELECT TRIM( '     test    ') AS Result;
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
 
-`test`
+```
+test
+```
 
 ### <a name="b--removes-specified-characters-from-both-sides-of-string"></a>B.  指定した文字を文字列の両側から削除します。
 
-次の例では、末尾のピリオドと末尾のスペースを削除します。
+次の例では、`#` の前と単語 `test` の後ろからピリオドとスペースを削除します。
 
 ```sql
-SELECT TRIM( '.,! ' FROM  '#     test    .') AS Result;
+SELECT TRIM( '.,! ' FROM  '     #     test    .') AS Result;
 ```
 
 [!INCLUDE[ssResult_md](../../includes/ssresult-md.md)]
-`#     test`
+```
+#     test
+```
 
 ## <a name="see-also"></a>参照
 

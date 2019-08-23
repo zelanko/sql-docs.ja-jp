@@ -9,17 +9,33 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 07/11/2019
-ms.openlocfilehash: 3e2b75282c9babf876d0daec033a435d75c2e2f1
-ms.sourcegitcommit: 0d89bcaebdf87db3bd26db2ca263be9c671b0220
+ms.date: 08/15/2019
+ms.openlocfilehash: cad91dc5b48a60746b4f8ef1f4831a1aa9dc2c40
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68731058"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553105"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="august-2019"></a>2019 年 8 月
+
+2019 年 8 月 15 日 &nbsp; / &nbsp; バージョン:1.10.0 
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| SandDance 1.3.1 拡張機能のリリース | &bull; &nbsp; スマート グラフ検出 <br/>&bull; &nbsp; 3D 視覚化 <br/> &bull; &nbsp; データ フィルタリング |
+| ノートブックの機能強化 | &bull; &nbsp; コードまたはテキスト セルのインラインでの追加 <br/>&bull; &nbsp; SQL 結果グリッドを右クリックして結果を CSV、JSON などとして保存する機能を追加しました <br/> &bull; &nbsp; JSON をより高速に読み込むためのノートブック読み込みのパフォーマンスの向上 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+label%3A%22Area%3A+Notebooks%22+milestone%3A%22August+2019+Release%22+is%3Aclosed)を参照してください |
+| SQL Server 2019 のサポート |  このリリースには、次のような追加の SQL Server 2019 ビッグ データ クラスター機能のサポートが含まれています。 <br/> &bull; &nbsp; オブジェクト マッピング ページ上でテーブルと列の情報の読み込みにかかる時間が短縮されました。 <br/> &bull; &nbsp; 接続の詳細ページ上で、既存のデータベース スコープの資格情報の読み込みに関するバグを修正しました。 <br/> &bull; &nbsp; PROSE の解析に使用される既定のサンプル サイズが増加しました。 | 
+| Dacpac 拡張機能での AAD のサポート | 
+| Visual Studio Code May Release Merge 1.37 | 最新の機能強化については、[こちら](https://code.visualstudio.com/updates/v1_37)を参照してください。 |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)を参照してください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="july-2019"></a>2019 年 7 月
 

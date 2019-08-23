@@ -1,22 +1,22 @@
 ---
 title: SQL Server Data Tools (SSDT) リリース ノート | Microsoft Docs
-ms.custom: ''
-ms.date: 09/28/2018
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: ssdt
 ms.topic: conceptual
 ms.assetid: b071f8b8-c8e5-44e0-bbb6-04804dd1863a
-author: stevestein
-ms.author: sstein
+author: markingmyname
+ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9efb156c64d0e8daf7dcae8849a2e4687773602c
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
+ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68892474"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69531029"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
 
@@ -43,6 +43,7 @@ GeneMi , 2019/03/22.
 
 P.S.  There is no need to keep this large HTML comment indefinitely.
 -->
+
 ## <a name="1592nbsp-ssdt-for-vs-2017"></a>15.9.2、&nbsp; VS 2017 用 SSDT
 
 _リリース済み:_ &nbsp; 2019 年 7 月 17 日  
@@ -51,16 +52,14 @@ _Visual Studio 2017 用 SSDT。_
 
 ### <a name="whats-new"></a>新機能
 
-#### <a name="ssis"></a>SSIS
-
 | 新しい項目 | 詳細 |
-| :------- | :------ |
-| AzureEnabled 機能を追加しました。 Azure Data Factory で、プロジェクトのパッケージを SSIS のサービスとしてのプラットフォーム (PaaS) で実行できるようにしました | &nbsp; |
-| Oracle コネクタのプロパティを変数式から設定できない問題を修正しました | &nbsp; |
-| SQL Server 2019 より前を対象とするパッケージをデバッグするときに Oracle コネクタで VS_NEEDSNEWMETATDATA エラーが発生する問題を修正しました | &nbsp; |
-| パッケージ/プロジェクトで接続マネージャーのプロパティに式を使用している場合に、Oracle コネクタがパッケージ/プロジェクトのアップグレード/ダウングレードに失敗した問題を修正しました | &nbsp; |
-| Web サービス タスク エディターの [WSDL のダウンロード] ボタンが、TLS 1.1 & 1.2 プロトコルをサポートしていない問題を修正しました (SQL Server 2019 を対象とする) | &nbsp; |
-| DQS 接続マネージャーを含むパッケージを保存後に再度読み込むことができない問題を修正しました | &nbsp; |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | AzureEnabled 機能を追加しました。 Azure Data Factory で、プロジェクトのパッケージを SSIS のサービスとしてのプラットフォーム (PaaS) で実行できるようにしました |
+| Integration Services (SSIS) | Oracle コネクタのプロパティを変数式から設定できない問題を修正しました |
+| Integration Services (SSIS) | SQL Server 2019 より前を対象とするパッケージをデバッグするときに Oracle コネクタで VS_NEEDSNEWMETATDATA エラーが発生する問題を修正しました |
+| Integration Services (SSIS) | パッケージ/プロジェクトで接続マネージャーのプロパティに式を使用している場合に、Oracle コネクタがパッケージ/プロジェクトのアップグレード/ダウングレードに失敗した問題を修正しました |
+| Integration Services (SSIS) | Web サービス タスク エディターの [WSDL のダウンロード] ボタンが、TLS 1.1 & 1.2 プロトコルをサポートしていない問題を修正しました (対象は SQL Server 2019) |
+| Integration Services (SSIS) | DQS 接続マネージャーを含むパッケージを保存後に再度読み込むことができない問題を修正しました |
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -82,17 +81,15 @@ _Visual Studio 2017 用 SSDT。_
 
 ### <a name="whats-new"></a>新機能
 
-#### <a name="ssis"></a>SSIS
-
 | 新しい項目 | 詳細 |
-| :------- | :------ |
-| 以前のバージョンの SQL Server をターゲットにするとパッケージ パーツを正しく永続化できないという問題を修正しました | &nbsp; |
-| パッケージ パーツを使用する場合に、優先順位制約に式を追加できないという問題を修正しました | &nbsp; |
-| Power Query ソースおよび接続マネージャーの [ヘルプ] ボタンが正しいドキュメントにリンクしていないという問題を修正しました | &nbsp; |
-| VS ヘルプ ウィンドウに SSIS ビルド バージョンが表示されないという問題を修正しました | &nbsp; |
-| Ole DB およびフラット ファイル接続マネージャー用のプロパティ "ConnectByProxy" を追加しました。これにより、Azure-SSIS IR でセルフホステッド IR を使用してオンプレミスのデータへのアクセスを有効にすることができます。 | &nbsp; |
-| ODBC コンポーネントによって DT_DBDATE データ型が誤ってマップされるという問題を修正しました | &nbsp; |
-| ADO.NET および OLE DB 接続マネージャー用のプロパティ "ConnectUsingManagedIdentity" を追加しました。これにより、Azure-SSIS IR でデータソースに接続するためのマネージド ID 認証を有効にすることができます。 | &nbsp; |
+|-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | 以前のバージョンの SQL Server を対象にするとパッケージ パーツを正しく永続化できないという問題を修正しました。 |
+| Integration Services (SSIS) | パッケージ パーツを使用する場合に、優先順位制約に式を追加できないという問題を修正しました。 |
+| Integration Services (SSIS) | Power Query ソースおよび接続マネージャーの [ヘルプ] ボタンが正しいドキュメントにリンクしていないという問題を修正しました。 |
+| Integration Services (SSIS) | VS ヘルプ ウィンドウに SSIS ビルド バージョンが表示されないという問題を修正しました。 |
+| Integration Services (SSIS) | Ole DB およびフラット ファイル接続マネージャー用のプロパティ "ConnectByProxy" を追加しました。これにより、Azure-SSIS IR でセルフホステッド IR を使用してオンプレミスのデータへのアクセスを有効にすることができます。 |
+| Integration Services (SSIS) | ODBC コンポーネントが DT_DBDATE データ型に誤ってマップされるという問題を修正しました。 |
+| Integration Services (SSIS) | ADO.NET および OLE DB 接続マネージャー用のプロパティ "ConnectUsingManagedIdentity" を追加しました。これにより、Azure-SSIS IR 内でデータ ソースに接続するためのマネージド ID 認証を有効にすることができます。 |
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -114,20 +111,19 @@ _Visual Studio 2017 用 SSDT。_
 
 ### <a name="whats-new"></a>新機能
 
-#### <a name="ssis"></a>SSIS
-
 | 新しい項目 | 詳細 |
-| :------- | :------ |
-| ADF 2017 の SSIS 用の Power Query ソース (プレビュー) を追加します。 | &nbsp; |
-| SQL Server 2012 のサポートが再び追加されます。 | &nbsp; |
-| SQL Server 2019 用の Oracle ソース/ターゲットを追加します。 | SQL Server 2019 をターゲットとする Oracle ソースとターゲットは、SSDT によって既にインストールされています。<br/><br/>2017 以前のバージョンのサーバーをターゲットとするパッケージを設計するには、Microsoft ダウンロード サイトから該当する Oracle コネクターのバージョンをダウンロードして SSDT マシン上にインストールします。 <br/>[Attunity による SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=55179)<br/>[Attunity による SQL Server 2016 をターゲットとする Microsoft Connector Version 4.0 for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=52950)<br/>[Attunity による SQL Server 2014 をターゲットとする Microsoft Connector Version 3.0 for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=44582)<br/>[Attunity による SQL Server 2012 をターゲットとする Microsoft Connector Version 2.0 for Oracle](https://www.microsoft.com/en-us/download/details.aspx?id=29283)|
-| 以前のバージョンの SSIS から移行する際に、スクリプト タスク/コンポーネントを読み込みできないという問題を修正します。 | &nbsp; |
-| Windows 7 SP1 および Windows 8.1 でデータ ビューアーが機能しないという問題を修正します。 | &nbsp; |
-| パッケージの保存時に Visual Studio がクラッシュすることがあるという問題を修正します。 | &nbsp; |
-| パッケージを実行できない場合がある問題を修正します。 | この問題は、次の条件の両方が当てはまるときに発生します。<br/><br/>&bull; &nbsp; 保護レベルが EncryptSensitiveWithPassword である。<br/>&bull; &nbsp; ターゲット サーバーのバージョンが、SQL Server 2017 より前である。 |
-| 既定のフォントを使用した注釈が SSDT に表示されないという問題を修正します。 | &nbsp; |
-| ISDeploymentWizard で、SQL 認証、Azure Active Directory 統合認証、および Azure Active Directory パスワード認証がコマンド ライン モードでサポートされるようになります。 | &nbsp; |
-| &nbsp; | &nbsp; |
+|-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Integration Services (SSIS) | ADF 2017 の SSIS 用の Power Query ソース (プレビュー) を追加します。 |
+| Integration Services (SSIS) | SQL Server 2012 のサポートが再び追加されます。 |
+| Integration Services (SSIS) | SQL Server 2019 用の Oracle ソース/ターゲットを追加します。 |
+| Integration Services (SSIS) | SQL Server 2019 をターゲットとする Oracle ソースとターゲットは、SSDT によって既にインストールされています。 <br/></br> 2017 以前のバージョンのサーバーをターゲットとするパッケージを設計するには、Microsoft ダウンロード サイトから該当する Oracle コネクターのバージョンをダウンロードして SSDT マシン上にインストールします。 <br/></br> [Attunity による SQL Server 2017 をターゲットとする Microsoft Connector Version 5.0 for Oracle ](https://www.microsoft.com/en-us/download/details.aspx?id=55179 ) <br/></br> [Attunity による SQL Server 2016 をターゲットとする Microsoft Connector Version 4.0 for Oracle ](https://www.microsoft.com/en-us/download/details.aspx?id=52950 )<br/></br> [Attunity による SQL Server 2014 をターゲットとする Microsoft Connector Version 3.0 for Oracle ](https://www.microsoft.com/en-us/download/details.aspx?id=44582 )<br/></br> [Attunity による SQL Server 2012 をターゲットとする Microsoft Connector Version 2.0 for Oracle ](https://www.microsoft.com/en-us/download/details.aspx?id=29283 ) |
+| Integration Services (SSIS) | 以前のバージョンの SSIS から移行する際に、スクリプト タスク/コンポーネントを読み込みできないという問題を修正します。 |
+| Integration Services (SSIS) | Windows 7 SP1 および Windows 8.1 でデータ ビューアーが機能しないという問題を修正します。 |
+| Integration Services (SSIS) | パッケージの保存時に Visual Studio がクラッシュすることがあるという問題を修正します。 |
+| Integration Services (SSIS) | パッケージを実行できない場合がある問題を修正します。 |
+| Integration Services (SSIS) | この問題は、次の両方の条件に該当する場合に発生します:< br />< br /> &bull;   保護レベルが EncryptSensitiveWithPassword である。< br /> &bull;   ターゲット サーバー バージョンが SQL Server 2017 より前である。          |
+| Integration Services (SSIS) | 既定のフォントを使用した注釈が SSDT に表示されないという問題を修正します。 |
+| Integration Services (SSIS) | ISDeploymentWizard で、SQL 認証、Azure Active Directory 統合認証、および Azure Active Directory パスワード認証がコマンド ライン モードでサポートされるようになります。 |
 
 ### <a name="known-issues"></a>既知の問題
 
@@ -258,7 +254,7 @@ _Visual Studio 2017 用 SSDT。_
 **SSIS:**
 
 - SQLServer2016 と SQLServer2017 を対象とする AS の処理タスクで処理手順のログが記録されない問題を修正しました
-- SSDT で英語以外の非常に長いタスク名の dtsx を開くとアクセス違反が発生する問題を修正しました
+- SSDT で英語以外の長いタスク名の dtsx を開くとアクセス違反が発生する問題を修正しました
 - ScriptTask の変数一覧がタスク UI に時々表示されなくなる問題を修正しました
 - パッケージの場所が SQL Server である場合に既存のパッケージのコピーの追加が失敗する問題を修正しました
 - 一部のエディターのダイアログ ボックスでコンボ ボックスにアクセスするとフォーカスがスタックする問題を修正しました。
@@ -662,13 +658,13 @@ _SQL Server 2017 までのサポート。_
 ### <a name="bug-fixes"></a>バグの修正
 **AS プロジェクト:**
 - BI プロジェクトのテンプレートの優先順位を修正して、VS の [新しいプロジェクト] カテゴリで先頭に表示されることがないようにしました
-- SSIS、SSAS、または SSRS ソリューションが開いているとき、めったにない状況で発生する可能性がある VS のクラッシュを修正しました。
-- 表形式:DAX の解析と数式バーにさまざまな機能強化とパフォーマンス修正を行いました。
+- SSIS、SSAS、または SSRS ソリューションが開いているとき、めったにない状況で発生する可能性がある VS のクラッシュを修正しました
+- 表形式: DAX の解析と数式バーにさまざまな機能強化とパフォーマンス修正を行いました。
 - 表形式:SSAS 表形式プロジェクトが開いていない場合、表形式モデル エクスプローラーが表示されなくなりました。
 - 多次元:高 DPI コンピューターで処理中のダイアログを使用できない問題を修正しました。
 - 表形式:SSMS が既に開いている場合に BI プロジェクトを開くと SSDT で障害が発生する問題を修正しました。( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3100900/ssdt-faults-when-opening-any-bi-project-when-ssms-is-already-open)を参照)。
-- 表形式:1103 モデルの bim ファイルに階層が正しく保存されない問題を修正しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)を参照)。
-- 表形式:32 ビット コンピューターで、サポートされていない統合ワークスペース モードが使用できる問題を修正しました。
+- 表形式: 1103 モデルの bim ファイルに階層が正しく保存されない問題を修正しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3105222/vs-2015-ssdt)を参照)
+- 表形式: 32 ビット コンピューターで、サポートされていない統合ワークスペース モードが使用できる問題を修正しました。
 - 表形式:半選択モード (DAX 式は入力したが、メジャーをクリックしている場合など) の状態で何かをクリックするとクラッシュする可能性がある問題を修正しました。
 - 表形式:展開ウィザードでモデルの .Name プロパティが "Model" にリセットされる問題を修正しました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3107018/ssas-deployment-wizard-resets-modelname-to-model)を参照)。
 - 表形式:ダイアログ ビューが選択されていない場合でも、TME で階層を選択するとプロパティが表示される問題を修正しました。
@@ -698,7 +694,7 @@ _SQL Server 2017 までのサポート。_
  
 
 **RS プロジェクト:**
-- SSDT でレポートをデザインしているときに、大半を変更すると、パラメーターのツリー ビュー、データ ソース、およびデータセットが折りたたまれる問題を修正しました。 
+- SSDT でレポートをデザインしているときに、大半を変更すると、パラメーターのツリー ビュー、データ ソース、およびデータセットが折りたたまれる問題を修正しました 
 - 保存の操作で、最新バージョンではなく、RDL のバージョンが保存されるという問題が修正されました。
 - バックアップが無効になっているときに SSDT RS がファイルをバックアップするという問題と他のいくつかの問題が修正されました。
 - レポート ビルダーで [セルの分割] をクリックするとエラーが表示されるという問題が修正されました ( [Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/3101818/ssdt-2015-ssrs-designer-error-by-matrix-cell-split)を参照)。
@@ -715,7 +711,7 @@ _SQL Server 2017 までのサポート。_
 **データベース プロジェクト:**
 - SSDT DACPAC のデプロイで、IgnoreColumnOrder の追加設定が復活しました ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/1221587/ssdt-dacpac-deploy-add-setting-back-in-for-ignorecolumnorder)を参照)。
 - STRING_SPLIT を使用した場合、SSDT でのコンパイルは失敗します ([Connect アイテム](https://connect.microsoft.com/SQLServer/feedback/details/2906200/ssdt-failing-to-compile-if-string-split-is-used)を参照)。
-- DeploymentContributors でパブリック モデルにアクセスできるが、バッキング スキーマが初期化されていない問題を修正しました ([Github の問題](https://github.com/Microsoft/DACExtensions/issues/8)を参照)。
+- DeploymentContributors でパブリック モデルにアクセスできるが、バッキング スキーマが初期化されていない問題を修正しました ([GitHub の問題](https://github.com/Microsoft/DACExtensions/issues/8)を参照)
 - ファイル グループの配置に対する DacFx を一時的に修正しました。
 - 外部シノニムに対する「未解決の参照」エラーを修正しました。 
 - Always Encrypted:オンライン暗号化では、キャンセル時の変更追跡は無効にできず、暗号化を開始する前に変更追跡がクリーニングされていない場合は適切に機能しません。
@@ -805,7 +801,7 @@ SSAS 表形式デザイナーの DAX パーサーにおいて、大きな DAX �
 
 * SSDT AS のテーブル デザイナーにおいて、特定の状況でデータ グリッドのスクロール バーのつまみをクリックするとクラッシュしていた問題を修正しました。
 * SSDT AS のテーブルで接続を現在のユーザーとして偽装するオプションを使用できない問題を修正しました
-* SSDT AS のテーブル デザイナーにおいて、数式バーを大きく展開しすぎると、プロジェクトを再度開けなくなる問題を修正しました。
+* SSDT AS のテーブル デザイナーにおいて、数式バーを大きく展開しすぎると、プロジェクトを再度開けなくなる問題を修正しました
 * SSDT AS のテーブル デザイナーにおいて、テーブル タブが選択された場合にキーを押すとクラッシュが発生する問題を修正しました。
 * SSDT AS のプロジェクトにおいて、[Excel で分析] から下位の AS サーバー バージョンに接続できない問題を修正しました。
 
@@ -847,8 +843,8 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 * KPI アイコンが設定されている SSDT AS のプロジェクトにおいて、"このビジュアルのデータを取得できませんでした" というエラーが生成される問題を修正しました。
 * 高 DPI スケールでサイズ変更する際に正しく固定される SSDT AS のプロジェクトのプロパティダイアログに関する問題を修正しました。
 * SSDT AS のプロジェクトにおいて、貼り付けられたテーブルを含む特定のモデルのアップグレード中にエラーが発生する問題を修正しました。
-* SSDT AS において、Excel からシート行全体を貼り付ける処理が非常に遅く、不要な多数の列が作成される問題を修正しました。
-* SSDT AS において、静的な大きい DataTable式の解析と強調表示が非常に遅い、またはハングする問題を修正しました。
+* SSDT AS において、Excel からシート行全体を貼り付ける処理が遅く、不要な多数の列が作成される問題を修正しました。
+* SSDT AS において、静的な大きい DataTable 式の解析と強調表示が遅い、またはハングする問題を修正しました。
 * SSDT AS において、エディターで選択した現在のパースペクティブにメジャーと KPI 値を追加する際の問題を修正しました。
 * SSDT において、SQL Azure から AS プロジェクトへのデータのインポートで "dbo" 以外のスキーマの種類がサポートされない問題を修正しました。
 
@@ -863,7 +859,7 @@ _SQL Server 2016 の場合。_
 - **リリース バージョン管理と番号付け:** 月別ではなく数値でリリースがタグ付けされるようになりました。 これは新しい SSMS ポリシーに準拠したもので、リリースや修正プログラムが 1 か月に複数ある場合の処理が簡略化されます。 このリリースは 16.3 であり、RTM リリース後の 3 回目の更新であることを意味します。 修正プログラムは 16.3.1 のように表記され、次回の更新 (来月を予定) は 16.4 になります。
 - **Analysis Services - 表形式モデル エクスプローラー:** 表形式モデル エクスプローラーを使用すると、モデル内のさまざまなメタデータ オブジェクト (データ ソース、テーブル、メジャー、リレーションシップなど) 間を移動できます。 このエクスプローラーは個別のツール ウィンドウとして実装されます。Visual Studio の [表示] メニューを開いて [その他のウィンドウ] をポイントし、[表形式モデル エクスプローラー] をクリックすると表示できます。 既定では、表形式モデル エクスプローラーは個別のタブのソリューション エクスプローラー領域に表示されます。表形式モデル エクスプローラーでは、メタデータ オブジェクトが、表形式モデル 1200 のスキーマによく似たツリー構造で表示されます。また、多数の新機能も追加されています。
 - **データベース ツール - Always Encrypted**:このリリースには、新しい [Always Encrypted キー管理](../relational-databases/security/encryption/overview-of-key-management-for-always-encrypted.md)ダイアログが用意されています。これにより、データベース プロジェクトまたは SQL Server オブジェクト エクスプローラーのライブ データベースに列マスター キーまたは列暗号化キーを簡単に追加できます。 このリリースは、Windows 証明書ストアの証明書をサポートしています。 今後のリリースでは、Azure Key Vault および CNG プロバイダーがサポートされる予定です。
-    - 列マスター キーまたは列暗号化キーを作成する際、[データベースの更新] のクリック直後に SQL Server オブジェクト エクスプローラーに変更が反映されない可能性があります。 この問題を回避するには、SQL Server オブジェクト エクスプローラーでデータベース ノードを更新します。
+    - 列マスター キーまたは列暗号化キーを作成する際、[データベースの更新] のクリック直後に SQL Server オブジェクト エクスプローラーに変更が反映されない可能性があります。 回避するには、SQL Server オブジェクト エクスプローラーでデータベース ノードを更新します。
     - SQL Server オブジェクト エクスプローラーからデータを含むテーブル内の列を暗号化しようとすると、エラーが発生する可能性があります。 現在、この機能は SSDT データベース プロジェクトと SSMS でのみサポートされています。 SQL Server オブジェクト エクスプローラーのサポートは今後のリリースで有効になる予定です。
 
 
@@ -898,7 +894,7 @@ _SQL Server 2016 の場合。_
 
 **新機能**  
 - **Always Encrypted のサポート:** このリリースでは、Always Encrypted 列があるデータベースで、Always Encrypted がコア API とコマンド ライン ツール (SqlPackage.exe) を通じて完全にサポートされます。 Always Encrypted のすべての機能が完全にサポートされた状態でデータベース プロジェクトをビルドして発行できます。  
-- **テンポラル テーブルのサポートの強化:** テンポラル テーブルのリンクを変更前に解除し、これらが完了したら再リンクするようにし、処理を簡略化しました。 つまり、サポートされる操作に関して、テンポラル テーブルが他の種類のテーブル (標準、メモリ内) と同等になります。 
+- **テンポラル テーブルのサポートの強化:** テンポラル テーブルのリンクを変更前に解除し、これらが完了したら再リンクするようにして、処理を簡略化しました。 つまり、サポートされる操作に関して、テンポラル テーブルが他の種類のテーブル (標準、メモリ内) と同等になります。 
 - **SqlPackage.exe とインストールの変更:** SSDT を SQL Server エンジンと SSMS の更新から切り離すための変更を行いました。 詳しくは、「[Changes to SSDT and SqlPackage.exe installation and updates](https://blogs.msdn.microsoft.com/ssdt/2016/06/30/changes-to-ssdt-and-sqlpackage-exe-installation-and-updates/)」(SSDT と SqlPackage.exe のインストールおよび更新の変更) をご覧ください。
 
  

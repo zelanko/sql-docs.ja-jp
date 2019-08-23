@@ -10,12 +10,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: 9538ad04a6e9e1e95a1fafc1080d132e218a196d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 770b7d3d9a16adf64134ba6896c7c3a1f46dcc9b
+ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68062197"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69561121"
 ---
 # <a name="install-polybase-on-windows"></a>Windows への PolyBase のインストール
 
@@ -72,6 +72,9 @@ PolyBase スケールアウト グループの場合、次のことを確認し�
 3. [機能の選択] ページで、 **[外部データ用 PolyBase クエリ サービス]** を選択します。  
 
    ![PolyBase サービス](../../relational-databases/polybase/media/install-wizard.png "PolyBase サービス")  
+   
+   >[!NOTE]
+   >現在、SQL Server 2019 PolyBase には、追加オプションである **HDFS データ ソース用の Java コネクタ**が含まれています。 この機能の詳細については、[SQL Server のプレビュー機能](https://cloudblogs.microsoft.com/sqlserver/2019/04/24/sql-server-2019-community-technology-preview-2-5-is-now-available/)に関する記事を参照してください。
    
 4. [Server の構成] ページで、**SQL Server PolyBase エンジン サービス**と **SQL Server PolyBase Data Movement Service** を同じアカウントで実行するように構成します。  
 
