@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 CTP アナウンス アーカイブ | Microsoft Docs
-ms.date: 07/24/2019
+ms.date: 08/21/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 9f881367442cfa2e24921300ba7595bdbf28ce27
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 8c34126f84987f0255d815b972e87118f184d070
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028873"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653786"
 ---
 # <a name="sql-server-2019-ctp-announcement-archive"></a>SQL Server 2019 CTP アナウンス アーカイブ
 
@@ -25,6 +25,39 @@ ms.locfileid: "69028873"
 この記事は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の運用環境へのリリース時に削除される予定です。
 
 最新の情報については、[SQL Server 2019 の新機能](what-s-new-in-sql-server-ver15.md)に関するページを参照してください。
+
+## <a name="ctp-32-july-2019"></a>CTP 3.2、2019 年 7 月
+
+### <a name="new-in-big-data-clusters"></a>ビッグ データ クラスターの新機能
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+|パブリック プレビュー |CTP 3.2 より前の SQL Server ビッグ データ クラスターは、登録した早期導入者に提供されていました。 このリリースでは、あらゆるユーザーが SQL Server ビッグ データ クラスターの機能を操作できるようにします。 <br/><br/> 「[SQL Server ビッグ データ クラスターの概要](../big-data-cluster/deploy-get-started.md)」を参照してください。|
+|`azdata` |CTP 3.2 での `azdata` の導入 - Python で作成されたコマンドライン ユーティリティを使用して、クラスター管理者が REST API 経由でビッグ データ クラスターをブートストラップし、管理できるようにします。 `mssqlctl` が `azdata` に置き換えられます。 [`azdata` のインストール](../big-data-cluster/deploy-install-azdata.md)に関するページを参照してください。 |
+|PolyBase |外部テーブルの列名は、SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースに対してクエリを実行するために使用されるようになりました。 以前の CTP リリースでは、列は変換先の序数に基づいてのみバインドされ、外部テーブルの定義の列名は使用されませんでした。|
+|HDFS の階層の更新 |リモート データの最新のスナップショットに対して既存のマウントを更新できるように、HDFS の階層に対して更新機能を導入しました。 [HDFS の階層](../big-data-cluster/hdfs-tiering.md)に関するページを参照してください。 |
+|Notebook ベースのトラブルシューティング |CTP 3.2 では、Jupyter Notebook が導入されており、SQL Server ビッグ データ クラスター内のコンポーネントの[配置](../big-data-cluster/deploy-notebooks.md)と[検出、診断、トラブルシューティング](../big-data-cluster/manage-notebooks.md)の支援が行われます。 |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-analysis-services"></a>Analysis Services の新機能
+
+| 新機能または更新 | 詳細 |
+|:---|:---| 
+| Power BI キャッシュに対するガバナンス設定の更新  | Power BI サービスは、Live Connect レポートの初期読み込みのダッシュボード タイル データとレポート データをキャッシュします。これにより、大量のキャッシュ クエリが SSAS に送信され、極端な場合はサーバーが過負荷になります。 このリリースでは、**ClientCacheRefreshPolicy** プロパティが導入されています。 このプロパティによって、サーバー レベルでこの動作をオーバーライドすることが許可されます。 詳細については、「[全般プロパティ](https://docs.microsoft.com/analysis-services/server-properties/general-properties)」を参照してください。 |
+| オンラインのアタッチ  | この機能を使用すると、表形式モデルをオンライン操作としてアタッチすることができます。 オンラインのアタッチは、オンプレミスのクエリ スケールアウト環境で読み取り専用レプリカを同期するために使用できます。 詳細については、[オンラインのアタッチ](what-s-new-in-sql-server-ver15-prerelease.md#online-attach-ctp32)に関するページを参照してください。 |
+| &nbsp; | &nbsp; |
+
+### <a name="new-in-language-extensions"></a>言語拡張の新機能
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+| 新しい既定の Java Runtime  | SQL Server には、製品全体で Java サポート用に埋め込まれた Azul System のズールー語が含まれるようになりました。 詳細については、「[Free supported Java in SQL Server 2019 is now available](https://cloudblogs.microsoft.com/sqlserver/2019/07/24/free-supported-java-in-sql-server-2019-is-now-available/)」 (SQL Server 2019 で無料でサポートされる Java が利用可能になりました) を参照してください。 |
+
+### <a name="new-in-sql-server-on-linux"></a>SQL Server on Linux の新機能
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+| 変更データ キャプチャ (CDC) のサポート | SQL Server 2019 では、変更データ キャプチャ (CDC) が Linux でサポートされるようになりました。 |
 
 ## <a name="ctp-31-june-2019"></a>CTP 3.1 2019 年 6 月
 
@@ -151,7 +184,7 @@ ms.locfileid: "69028873"
 
 | 新機能または更新 | 詳細 |
 |:-----|:-----|
-|切り捨てエラー メッセージに、テーブル名および列名と切り捨てられた値が既定で含まれる。|[VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)|
+|切り捨てエラー メッセージに、テーブル名および列名と切り捨てられた値が既定で含まれます。|[VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)|
 |新しい DMF `sys.dm_exec_query_plan_stats` では、ほとんどのクエリについて最後の既知の実際の実行プランと同等のものが返される。 |[sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md)<sup>1</sup>|
 |新しい `query_post_execution_plan_profile` 拡張イベントでは、標準プロファイリングを使用する `query_post_execution_showplan` とは異なり、軽量プロファイリングに基づいて、実際の実行プランと同等のものを収集します。 |[クエリ プロファイリング インフラストラクチャ](../relational-databases/performance/query-profiling-infrastructure.md)|
 |Transparent Data Encryption (TDE) のスキャン: 一時停止と再開。|[Transparent Data Encryption (TDE) のスキャン: 一時停止と再開。](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)|
@@ -318,7 +351,7 @@ ms.locfileid: "69028873"
 
 | 新機能または更新 | 詳細 |
 |:-----|:-----|
-|レプリケーションのサポート |[Linux での SQL Serve rのレプリケーション](../linux/sql-server-linux-replication.md)
+|レプリケーションのサポート |[Linux での SQL Server のレプリケーション](../linux/sql-server-linux-replication.md)
 |Microsoft 分散トランザクション コーディネーター (MSDTC) のサポート |[Linux で MSDTC を構成する方法](../linux/sql-server-linux-configure-msdtc.md) |
 |サード パーティの AD プロバイダーに対する OpenLDAP のサポート |[チュートリアル: SQL Server on Linux で Active Directory 認証を使用する](../linux/sql-server-linux-active-directory-authentication.md) |
 |Linux 上の Machine Learning |[Linux に Machine Learning を構成する](../linux/sql-server-linux-setup-machine-learning.md) |
@@ -893,7 +926,7 @@ CTP 3.2 では、オンライン操作として表形式モデルをアタッチ
 
 ## <a name="next-steps"></a>次の手順
 
-- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-ver15-release-notes.md)。
+- [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース ノート](sql-server-ver15-release-notes.md)
 
 - [Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]:テクニカル ホワイト ペーパー](http://info.microsoft.com/rs/157-GQE-382/images/EN-US-CNTNT-white-paper-DBMod-Microsoft-SQL-Server-2019-Technical-white-paper.pdf)<br />2018 年 9 月に公開されました。 Windows、Linux、Docker コンテナー向けの Microsoft [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] CTP 2.0 に適用されます。
 
