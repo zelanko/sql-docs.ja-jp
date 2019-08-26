@@ -36,9 +36,9 @@ ms.locfileid: "67907411"
 |**publisher_database_id**|**int**|パブリッシャー データベースの ID。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
+|**publication**|**sysname**|パブリケーションの名前を指定します。|  
 |**subscriber_id**|**smallint**|よく知られているエージェントだけが使用するサブスクライバーの ID。 匿名のエージェントに対しては、予約済みとなります。|  
-|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
+|**subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ。<br /><br /> **1** = プルします。<br /><br /> **2** = 匿名です。|  
 |**local_job**|**bit**|ローカル ディストリビューターで SQL Server エージェント ジョブがあるかどうかを示します。|  
 |**job_id**|**binary(16)**|ジョブの識別番号。|  
@@ -60,11 +60,11 @@ ms.locfileid: "67907411"
 |**queue_server**|**sysname**|[!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]|  
 |**subscriber_security_mode**|**smallint**|次のいずれかの値と、サブスクライバーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] SQL Server 認証<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**subscriber_login**|**sysname**|サブスクライバーに接続するときに使用されるログイン。|  
-|**@subscriber_password**|**nvarchar(524)**|サブスクライバーに接続するときに使用するパスワードの暗号化された値。|  
+|**subscriber_password**|**nvarchar(524)**|サブスクライバーに接続するときに使用するパスワードの暗号化された値。|  
 |**reset_partial_snapshot_progress**|**bit**|スナップショット全体のプロセスをもう一度開始するため、部分的にダウンロードしたスナップショットは破棄されます。|  
 |**job_step_uid**|**uniqueidentifier**|SQL Server エージェント ジョブの一意の ID はステップが、エージェントを開始します。|  
 |**subscriptionstreams**|**tinyint**|変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数を設定します。 サポートされている値の範囲は 1 ～ 64 です。|  
-|**メモリ最適化**|**bit**|1 は、メモリ最適化テーブルのサブスクライバーを使用できることを示します。|  
+|**memory_optimized**|**bit**|1 は、メモリ最適化テーブルのサブスクライバーを使用できることを示します。|  
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  
   
