@@ -35,7 +35,7 @@ ms.locfileid: "68106311"
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**publication_id**|**int**|パブリケーションの ID。|  
 |**subscriber_id**|**smallint**|サブスクライバーの ID。|  
-|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
+|**subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> 0 = プッシュ。<br /><br /> 1 = プル<br /><br /> 2 = 匿名です。|  
 |**sync_type**|**tinyint**|同期の種類。<br /><br /> 1 = 自動同期<br /><br /> 2 = 同期はありません。|  
 |**status**|**tinyint**|サブスクリプションの状態。|  
