@@ -1,5 +1,5 @@
 ---
-title: IHindextypes (TRANSACT-SQL) |Microsoft Docs
+title: IHindextypes (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67990370"
 ---
-# <a name="ihindextypes-transact-sql"></a>IHindextypes (TRANSACT-SQL)
+# <a name="ihindextypes-transact-sql"></a>IHindextypes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHindextypes**システム テーブルには SQL Server 以外のパブリッシャーがサポートされている SQL Server 以外のインデックスの種類ごとに 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -35,7 +35,7 @@ ms.locfileid: "67990370"
   
 ## <a name="see-also"></a>関連項目  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
