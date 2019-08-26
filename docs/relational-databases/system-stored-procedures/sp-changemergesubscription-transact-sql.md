@@ -65,7 +65,7 @@ sp_changemergesubscription [ [ @publication= ] 'publication' ]
 |**subscriber_security_mode**|**1**|サブスクライバーに接続するときに Windows 認証を使用。|  
 ||**0**|使用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サブスクライバーに接続するときに認証します。|  
 |**subscriber_login**||サブスクライバーのログイン名です。|  
-|**@subscriber_password**||指定したサブスクライバー ログインに対する複雑なパスワード。|  
+|**subscriber_password**||指定したサブスクライバー ログインに対する複雑なパスワード。|  
 |**sync_type**|**自動**|スキーマと初期データのパブリッシュされたテーブルの」は最初に、サブスクライバーに転送されます。|  
 ||**none**|スキーマと初期データのパブリッシュされたテーブル以外のサブスクライバーに既に存在します。システム テーブルとデータは常に転送します。|  
 |**use_interactive_resolver**|**true**|対話的に競合を回避できるすべてのアーティクルについて、対話的に競合を解決できるようにします。|  
