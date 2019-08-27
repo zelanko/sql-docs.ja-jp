@@ -1415,7 +1415,7 @@
             - name: データ ウェアハウス (data warehouse)
               href: relational-databases/indexes/columnstore-indexes-data-warehouse.md
             - name: デフラグ
-              href: relational-databases/indexes/columnstore-indexes-defragmentation.md
+              href: relational-databases/indexes/reorganize-and-rebuild-indexes.md
     - name: SQL Graph
       href: relational-databases/graphs/sql-graph-overview.md
       items:
@@ -5722,8 +5722,10 @@
       items:
         - name: 新機能
           href: dma/dma-whatsnew.md
-        - name: アクセス
+        - name: SQL Database の評価
           href: dma/dma-assesssqlonprem.md
+        - name: SQL Server Integration Services (SSIS) の評価
+          href: dma/dma-assess-ssis.md
         - name: 適切な Azure SQL Database SKU の特定
           href: dma/dma-sku-recommend-sql-db.md
         - name: SQL Server の新しいバージョンへのアップグレード
