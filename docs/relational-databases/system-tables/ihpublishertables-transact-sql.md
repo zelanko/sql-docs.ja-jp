@@ -34,11 +34,11 @@ ms.locfileid: "67990155"
 |**table_id**|**int**|パブリッシュされたテーブルを識別します。|  
 |**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャーのテーブルのパブリッシュされるを識別します。|  
 |**name**|**sysname**|パブリッシュされたテーブルの名前。|  
-|**所有者**|**sysname**|テーブルの所有者。|  
+|**owner**|**sysname**|テーブルの所有者。|  
   
 ## <a name="see-also"></a>関連項目  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
