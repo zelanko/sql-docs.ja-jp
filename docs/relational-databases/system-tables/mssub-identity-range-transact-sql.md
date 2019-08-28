@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68221962"
 ---
-# <a name="mssubidentityrange-transact-sql"></a>MSsub_identity_range (Transact-SQL)
+# <a name="mssub_identity_range-transact-sql"></a>MSsub_identity_range (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSsub_identity_range**テーブルは、サブスクリプションの id 範囲管理サポートを提供します。 このテーブルは、subscription データベースに保存されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "68221962"
 |**threshold**|**int**|ディストリビューション エージェントがどの時点で新しい ID 範囲を割り当てるかを制御するパーセンテージの値です。 値の比率が指定されている場合*しきい値*はディストリビューション エージェント、新しい id 範囲を作成します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

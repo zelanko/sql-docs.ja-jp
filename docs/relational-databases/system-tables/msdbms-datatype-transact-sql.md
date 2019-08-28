@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67907510"
 ---
-# <a name="msdbmsdatatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
+# <a name="msdbms_datatype-transact-sql"></a>MSdbms_datatype (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdbms_datatype**テーブルには、異種データベース レプリケーションでパブリッシャーまたはサブスクライバーとして使用される各サポートされているデータベース管理システム (DBMS) でのネイティブ データ型の完全な一覧が含まれています。 このテーブルに格納されます、 **msdb**データベース。  
@@ -42,7 +42,7 @@ ms.locfileid: "67907510"
 ## <a name="see-also"></a>関連項目  
  [異種データベース レプリケーション](../../relational-databases/replication/non-sql/heterogeneous-database-replication.md)   
  [Oracle パブリッシャーのデータ型マッピングを指定します。](../../relational-databases/replication/publish/specify-data-type-mappings-for-an-oracle-publisher.md)   
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
