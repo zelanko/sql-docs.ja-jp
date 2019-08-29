@@ -1,5 +1,5 @@
 ---
-title: sp_mergecleanupmetadata (Transact-sql) |Microsoft Docs
+title: sp_mergecleanupmetadata (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/28/2019
 ms.locfileid: "70123090"
 ---
-# <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-sql)
+# <a name="sp_mergecleanupmetadata-transact-sql"></a>sp_mergecleanupmetadata (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] Service Pack 1 より前のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を実行しているサーバーを含むレプリケーショントポロジでのみ使用してください。**sp_mergecleanupmetadata**を使用すると、管理者は**MSmerge_genhistory**、 **MSmerge_contents** 、 **MSmerge_tombstone**の各システムテーブルでメタデータをクリーンアップできます。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -52,13 +52,13 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
 >  **Sp_mergecleanupmetadata**を実行した後、既定では、 **MSmerge_genhistory**、 **MSmerge_contents** 、 **MSmerge_tombstone**に格納されているメタデータを持つパブリケーションのサブスクライバーのすべてのサブスクリプションは、としてマークされます。再初期化、サブスクライバーでの保留中の変更はすべて失われ、現在のスナップショットは古い形式に設定されます。  
 > 
 > [!NOTE]
->  データベースに複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション=保有期間 ( **\@リテンション**期間**0**) を使用している場合、 **sp_mergecleanupmetadata**を実行しても、データベースのマージレプリケーションの変更追跡メタデータ。 このため、無期限のパブリケーション保有期間は注意して使用してください。  
+>  データベースに複数のパブリケーションが存在し、それらのパブリケーションのいずれかが無期限のパブリケーション=保有期間 (**\@retention**=**0**) を使用している場合、 **sp_mergecleanupmetadata**を実行しても、データベースのマージレプリケーションの変更追跡メタデータ。 このため、無期限のパブリケーション保有期間は注意して使用してください。  
   
  このストアドプロシージャを実行するときに、  **\@reinitialize_subscriber**パラメーターを**TRUE** (既定値) または**FALSE**に設定して、サブスクライバーを再初期化するかどうかを選択できます。 **\@Reinitialize_subscriber**パラメーターを**TRUE**に設定して**sp_mergecleanupmetadata**を実行すると、初期スナップショットを使用せずにサブスクリプションが作成された場合でも、サブスクライバーでスナップショットが再適用されます (たとえば、スナップショットデータとスキーマが手動で適用された場合、またはサブスクライバーに既に存在していた場合)。 パラメーターを**FALSE**に設定する場合は、注意してください。パブリケーションが再初期化されない場合は、パブリッシャーとサブスクライバーのデータが同期されていることを確認する必要があります。  
   
  **\@Reinitialize_subscriber**の値に関係なく、 **sp_mergecleanupmetadata**が格納されているときに、パブリッシャーまたは再パブリッシュサブスクライバーに変更をアップロードしようとしている進行中のマージプロセスがある場合、は失敗します。プロシージャが呼び出されます。  
   
- **Reinitialize_subscriber = TRUE \@を使用して sp_mergecleanupmetadata を実行します。**  
+ **Executing sp_mergecleanupmetadata with \@reinitialize_subscriber = TRUE:**  
   
 1.  パブリケーションデータベースとサブスクリプションデータベースに対するすべての更新を停止することをお勧めしますが、必須ではありません。 更新が続行された場合、パブリケーションが再初期化されると、前回のマージ以降にサブスクライバーで行われた更新は失われますが、データの収束が維持されます。  
   
@@ -74,7 +74,7 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
   
 7.  パブリケーション データベースをバックアップします。 この操作を行わないと、パブリケーションデータベースの復元後にマージエラーが発生する可能性があります。  
   
- **Reinitialize_subscriber = FALSE \@を使用して sp_mergecleanupmetadata を実行します。**  
+ **Executing sp_mergecleanupmetadata with \@reinitialize_subscriber = FALSE:**  
   
 1.  パブリケーションデータベースとサブスクリプションデータベースに対する**すべて**の更新を停止します。  
   
@@ -118,8 +118,8 @@ sp_mergecleanupmetadata [ [ @publication = ] 'publication' ]
  このストアド プロシージャを使用するには、パブリッシャーが [!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)] を実行していることが必要です。 サブスクライバーで[!INCLUDE[ssVersion2000](../../includes/ssversion2000-md.md)]は、または[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 7.0 Service Pack 2 が実行されている必要があります。  
   
 ## <a name="see-also"></a>参照  
- [MSmerge_genhistory &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
- [MSmerge_contents &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
- [MSmerge_tombstone &#40;transact-sql&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
+ [MSmerge_genhistory &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)   
+ [MSmerge_contents &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-contents-transact-sql.md)   
+ [MSmerge_tombstone &#40;Transact-SQL&#41;](../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md)  
   
   
