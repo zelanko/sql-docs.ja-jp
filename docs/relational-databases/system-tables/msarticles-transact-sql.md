@@ -1,5 +1,5 @@
 ---
-title: MSarticles (TRANSACT-SQL) |Microsoft Docs
+title: MSarticles (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68132096"
 ---
-# <a name="msarticles-transact-sql"></a>MSarticles (TRANSACT-SQL)
+# <a name="msarticles-transact-sql"></a>MSarticles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSarticles**テーブルには、パブリッシャーによってレプリケートされる各アーティクルに対して 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -43,7 +43,7 @@ ms.locfileid: "68132096"
 |**destination_owner**|**sysname**|サブスクライバーで作成されたテーブルのスキーマの名前。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
