@@ -1,5 +1,5 @@
 ---
-title: MSagent_profiles (TRANSACT-SQL) |Microsoft Docs
+title: MSagent_profiles (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68021048"
 ---
-# <a name="msagentprofiles-transact-sql"></a>MSagent_profiles (TRANSACT-SQL)
+# <a name="msagent_profiles-transact-sql"></a>MSagent_profiles (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSagent_profiles**テーブルに定義されているレプリケーション エージェントのプロファイルごとに 1 つの行が含まれています。 このテーブルに格納されます、 **msdb**データベース。  

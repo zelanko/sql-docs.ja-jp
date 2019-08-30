@@ -8103,8 +8103,6 @@
           items:
             - name: SQL インジェクション
               href: relational-databases/security/sql-injection.md
-            - name: 機能の制限
-              href: relational-databases/security/feature-restrictions.md
             - name: TRUSTWORTHY データベース プロパティ
               href: relational-databases/security/trustworthy-database-property.md
             - name: パスワード ポリシー
@@ -12105,8 +12103,6 @@
               href: relational-databases/system-catalog-views/sys-server-principals-transact-sql.md
             - name: sys.server_role_members
               href: relational-databases/system-catalog-views/sys-server-role-members-transact-sql.md
-            - name: sys.sql_feature_restrictions
-              href: relational-databases/system-catalog-views/sys-sql-feature-restrictions.md
             - name: sys.sql_logins
               href: relational-databases/system-catalog-views/sys-sql-logins-transact-sql.md
             - name: sys.symmetric_keys

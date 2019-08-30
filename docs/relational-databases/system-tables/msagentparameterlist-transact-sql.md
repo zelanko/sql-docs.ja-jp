@@ -1,5 +1,5 @@
 ---
-title: MSagentparameterlist (TRANSACT-SQL) |Microsoft Docs
+title: MSagentparameterlist (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
