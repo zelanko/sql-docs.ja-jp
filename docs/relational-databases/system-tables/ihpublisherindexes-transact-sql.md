@@ -1,5 +1,5 @@
 ---
-title: IHpublisherindexes (TRANSACT-SQL) |Microsoft Docs
+title: IHpublisherindexes (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67990247"
 ---
-# <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (TRANSACT-SQL)
+# <a name="ihpublisherindexes-transact-sql"></a>IHpublisherindexes (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **IHpublisherindexes**システム テーブルにはから SQL Server 以外のパブリッシャー、現在のディストリビューターを使用してレプリケートされたインデックスごとに 1 行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -33,7 +33,7 @@ ms.locfileid: "67990247"
 |-----------------|---------------|-----------------|  
 |**publisherindex_id**|**int**|パブリッシュされたインデックスを識別します。|  
 |**table_id**|**int**|テーブルを識別する[IHpublishertables](../../relational-databases/system-tables/ihpublishertables-transact-sql.md)インデックスが属しています。|  
-|**publisher_id**|**smallint**|-SQL Server 以外のパブリッシャー、インデックスの発行元を識別します。|  
+|**publisher_id**|**smallint**|SQL Server 以外のパブリッシャー、インデックスの発行元を識別します。|  
 |**name**|**sysname**|パブリッシュされたインデックスの名前。|  
 |**type**|**nvarchar (255)**|サポートされているインデックスの種類、 [IHindextypes](../../relational-databases/system-tables/ihindextypes-transact-sql.md)システム テーブル。|  
   

@@ -319,7 +319,7 @@ ERROR_BROKER_CONVERSATIONS
 データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法の詳細については、[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) に関するページを参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。 アタッチを使用してデータベースをアップグレードする方法については、[デタッチとアタッチを使用したデータベースのアップグレード](../../relational-databases/databases/upgrade-a-database-using-detach-and-attach-transact-sql.md)に関するページを参照してください。
 
 > [!IMPORTANT]
-> 不明なソースや信頼されていないソースからのデータベースはアタッチしないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前に、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。
+> 不明なソースや信頼されていないソースからのデータベースはアタッチしないことをお勧めします。 こうしたデータベースには、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマまたは物理データベース構造を変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 不明または信頼できないソースのデータベースを使用する前には、運用サーバー以外のサーバーでそのデータベースに対し [DBCC CHECKDB](../../t-sql/database-console-commands/dbcc-checkdb-transact-sql.md) を実行し、さらに、そのデータベースのストアド プロシージャやその他のユーザー定義コードなどのコードを調べます。
 
 > [!NOTE]
 > データベースをアタッチするときに、**TRUSTWORTHY** オプションおよび **DB_CHAINING** オプションによる効果は発生しません。
@@ -450,7 +450,7 @@ AS SNAPSHOT OF *source_database_name*: 作成されるデータベースが、*s
 
 詳細については、「解説」セクションの「[データベース スナップショット](#database-snapshots)」を参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 
 [master データベース](../../relational-databases/databases/master-database.md)は、ユーザー データベースが作成、変更、または削除されるたびにバックアップする必要があります。
 
@@ -487,7 +487,7 @@ AS SNAPSHOT OF *source_database_name*: 作成されるデータベースが、*s
 > [!NOTE]
 > データベース スナップショットを作成する際、`CREATE DATABASE` ステートメントを使用して、ログ ファイル、オフライン ファイル、復元ファイル、および現存しないファイルを参照することはできません。
 
-データベース スナップショットの作成に失敗した場合、スナップショットは問題ありになり、削除する必要があります。 詳細については、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) に関するページを参照してください。
+データベース スナップショットの作成に失敗した場合、スナップショットは問題のある状態となり、削除する必要があります。 詳細については、[DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md) に関するページを参照してください。
 
 各スナップショットは、`DROP DATABASE` を使用して削除されるまで保持されます。
 
@@ -525,7 +525,7 @@ GO
 
 |||
 |-|-|
-|Created|変更して新しいファイルを追加|
+|作成済み|変更して新しいファイルを追加|
 |アタッチ|バックアップ|
 |デタッチ|復元|
 
@@ -1071,7 +1071,7 @@ AS COPY OF [source_server_name.]source_database_name
 
 コピーするデータベースの名前。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内のデータベースについては、データベースの作成時に設定される既定の設定がいくつかあります。 これらの既定の設定の詳細については、「[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)」の値の一覧を参照してください。
 
 `MAXSIZE` を使用して、データベースのサイズを制限できます。 データベースのサイズが `MAXSIZE` に達すると、エラー コード 40544 が返されます。 このエラーが発生すると、データを挿入、更新したり、新しいオブジェクト (テーブル、ストアド プロシージャ、ビュー、関数など) を作成したりできなくなります。 データの読み取りと削除、テーブルの切り捨て、テーブルとインデックスの削除、およびインデックスの再構築は引き続き可能です。 これを解決するには、`MAXSIZE` を現在のデータベースのサイズより大きい値に更新するか、一部のデータを削除してストレージ領域を解放します。 新しいデータを挿入できるようになるまでに、最大で 15 分の遅延が生じる可能性があります。
@@ -1219,7 +1219,7 @@ CREATE DATABASE database_name [ COLLATE collation_name ]
 
 Windows と SQL の照合順序名の詳細については、[COLLATE (Transact-SQL)](../../t-sql/statements/collations.md) に関するページを参照してください。
 
-## <a name="remarks"></a>Remarks
+## <a name="remarks"></a>解説
 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 内のデータベースについては、データベースの作成時に設定される既定の設定がいくつかあります。 これらの既定の設定の詳細については、「[DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)」の値の一覧を参照してください。
 
 > [!IMPORTANT]

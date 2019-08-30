@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770854"
 ---
-# <a name="spaddagentprofile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
+# <a name="sp_add_agent_profile-transact-sql"></a>sp_add_agent_profile (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   レプリケーション エージェントの新しいプロファイルを作成します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  

@@ -1,5 +1,5 @@
 ---
-title: MSdatatype_mappings (TRANSACT-SQL) |Microsoft Docs
+title: MSdatatype_mappings (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68129620"
 ---
-# <a name="msdatatypemappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
+# <a name="msdatatype_mappings-transact-sql"></a>MSdatatype_mappings (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdatatype_mappings**ビューでは、SQL Server データ型を SQL Server 以外のデータベース管理システム (DBMS) によって使用されるデータ型にマップします。 このテーブルに格納されます、 **msdb**データベース。  

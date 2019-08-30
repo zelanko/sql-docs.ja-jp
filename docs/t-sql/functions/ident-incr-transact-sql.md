@@ -19,45 +19,44 @@ helpviewer_keywords:
 ms.assetid: e13b491f-4f1f-4cb6-8b63-5084120f98cf
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: c3d601df6b045347a46010b422308cabc43188c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6edd1cb219f7250a6f9e5671efdb076c6e0a0349
+ms.sourcegitcommit: 316c25fe7465b35884f72928e91c11eea69984d5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024381"
+ms.lasthandoff: 08/13/2019
+ms.locfileid: "68969476"
 ---
-# <a name="identincr-transact-sql"></a>IDENT_INCR (Transact-SQL)
+# <a name="ident_incr-transact-sql"></a>IDENT_INCR (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  テーブルまたはビューの ID 列を作成するときに指定された増分値を (**numeric** ( **@@** MAXPRECISION, 0) として) 返します。  
+テーブルまたはビューの ID 列を作成するときに指定された増分値を返します。  
   
- ![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+![記事リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 IDENT_INCR ( 'table_or_view' )  
 ```  
   
 ## <a name="arguments"></a>引数  
- **'** *table_or_view* **'**  
- 有効な ID 増分値を確認するためのテーブルまたはビューを表す[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *table_or_view* には、引用符で囲まれた文字列定数を指定できます。 変数、関数、または列名を指定することもできます。 *table_or_view* は **char**、**nchar**、**varchar**、または **nvarchar**です。  
+**'** *table_or_view* **'**  
+有効な ID 増分値を確認するためのテーブルまたはビューを表す[式](../../t-sql/language-elements/expressions-transact-sql.md)を指定します。 *table_or_view* には、引用符で囲まれた文字列定数を指定できます。 変数、関数、または列名を指定することもできます。 *table_or_view* は **char**、**nchar**、**varchar**、または **nvarchar**です。  
   
 ## <a name="return-types"></a>戻り値の型  
- **numeric**  
+**numeric**([@@MAXPRECISION](../../t-sql/functions/max-precision-transact-sql.md),0))  
   
 ## <a name="exceptions"></a>例外  
- エラーが発生した場合、または呼び出し元にオブジェクトの表示アクセス許可がない場合は、NULL が返されます。  
+エラーが発生した場合、または呼び出し元にオブジェクトの表示アクセス許可がない場合は、NULL が返されます。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、自身が所有している、またはアクセス許可を持っているセキュリティ保護可能なリソースのメタデータのみを表示できます。 ユーザー オブジェクトのアクセス許可がないと、IDENT_INCR などのメタデータを発行する組み込み関数から NULL が返されることがあります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
+[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、ユーザーは、自身が所有している、またはアクセス許可を持っているセキュリティ保護可能なリソースのメタデータのみを表示できます。 ユーザー オブジェクトのアクセス許可がないと、IDENT_INCR などのメタデータを発行する組み込み関数から NULL が返されることがあります。 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-returning-the-increment-value-for-a-specified-table"></a>A. 指定したテーブルの増分値を返す  
  次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベース内の `Person.Address` テーブルの増分値を返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT IDENT_INCR('Person.Address') AS Identity_Increment;  
@@ -67,7 +66,7 @@ GO
 ### <a name="b-returning-the-increment-value-from-multiple-tables"></a>B. 複数のテーブルの増分値を返す  
  次の例では、増分値を持つ ID 列を含む、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースのテーブルを返します。  
   
-```  
+```sql  
 USE AdventureWorks2012;  
 GO  
 SELECT TABLE_SCHEMA, TABLE_NAME,   

@@ -38,7 +38,7 @@ ms.locfileid: "67929475"
 詳しくは、「[1 つ以上のテーブルのデータを参照データベースのデータと比較して同期する](../ssdt/compare-and-synchronize-data-in-tables-with-data-in-reference-database.md)」をご覧ください。  
   
 > [!NOTE]  
-> 2 つのデータベース、または同一データベースの 2 つのバージョンの*スキーマ*も比較できます。 詳細については、「[ソフト NUMA を使用するようにスキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」を参照してください。  
+> 2 つのデータベース、または同一データベースの 2 つのバージョンの*スキーマ*も比較できます。 詳細については、「[スキーマ比較を使用して各種のデータベース定義を比較する方法](../ssdt/how-to-use-schema-compare-to-compare-different-database-definitions.md)」を参照してください。  
   
 ## <a name="CompareDatabaseData"></a>データベース データの比較  
   

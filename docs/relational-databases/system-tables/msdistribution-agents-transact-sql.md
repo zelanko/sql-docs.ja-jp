@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67907411"
 ---
-# <a name="msdistributionagents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
+# <a name="msdistribution_agents-transact-sql"></a>MSdistribution_agents (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdistribution_agents**テーブルには、ローカルのディストリビューターで実行されるディストリビューション エージェントごとに 1 つの行が含まれています。 このテーブルは、ディストリビューション データベースに格納されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "67907411"
 |**publisher_database_id**|**int**|パブリッシャー データベースの ID。|  
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前を指定します。|  
+|**publication**|**sysname**|パブリケーションの名前を指定します。|  
 |**subscriber_id**|**smallint**|よく知られているエージェントだけが使用するサブスクライバーの ID。 匿名のエージェントに対しては、予約済みとなります。|  
 |**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ。<br /><br /> **1** = プルします。<br /><br /> **2** = 匿名です。|  
@@ -64,7 +64,7 @@ ms.locfileid: "67907411"
 |**reset_partial_snapshot_progress**|**bit**|スナップショット全体のプロセスをもう一度開始するため、部分的にダウンロードしたスナップショットは破棄されます。|  
 |**job_step_uid**|**uniqueidentifier**|SQL Server エージェント ジョブの一意の ID はステップが、エージェントを開始します。|  
 |**subscriptionstreams**|**tinyint**|変更のバッチをサブスクライバーに並列的に適用するために、ディストリビューション エージェントごとに許可される接続の数を設定します。 サポートされている値の範囲は 1 ～ 64 です。|  
-|**メモリ最適化**|**bit**|1 は、メモリ最適化テーブルのサブスクライバーを使用できることを示します。|  
+|**memory_optimized**|**bit**|1 は、メモリ最適化テーブルのサブスクライバーを使用できることを示します。|  
 |**job_login**|**sysname**||  
 |**job_password**|**nvarchar(524)**||  
   

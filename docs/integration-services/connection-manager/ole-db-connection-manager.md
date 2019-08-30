@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 91e3622e-4b1a-439a-80c7-a00b90d66979
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 70e439dd6ed176fbb9c2d2fe666b314bd48f2f9c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d3b1526d55321e5f32a243a48f64bde2f579caa6
+ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67904269"
+ms.lasthandoff: 08/14/2019
+ms.locfileid: "69028791"
 ---
 # <a name="ole-db-connection-manager"></a>OLE DB 接続マネージャー
 
@@ -93,6 +93,9 @@ ms.locfileid: "67904269"
 ### <a name="managed-identities-for-azure-resources-authentication"></a>Azure リソース認証用のマネージド ID
 [Azure Data Factory 内の Azure-SSIS 統合ランタイム](https://docs.microsoft.com/azure/data-factory/concepts-integration-runtime#azure-ssis-integration-runtime)上で SSIS パッケージを実行しているときは、お使いのデータ ファクトリに関連付けられている[マネージド ID](https://docs.microsoft.com/azure/data-factory/connector-azure-sql-database#managed-identity) を Azure SQL Database (または Managed Instance) 認証に使用できます。 この ID を使用して指定したファクトリからデータベースにアクセスし、データベースに、またはデータベースからデータをコピーできます。
 
+> [!NOTE]
+>  Azure AD 認証 (マネージド ID 認証を含む) を使用して Azure SQL Database (または Managed Instance) に接続する場合、パッケージの実行エラーや予期しない動作の変更を引き起こす可能性がある既知の問題があります。 詳しくは、「[Azure AD の機能と制限事項](https://docs.microsoft.com/azure/sql-database/sql-database-aad-authentication#azure-ad-features-and-limitations)」をご覧ください。
+
 Azure SQL Database にマネージド ID 認証を使用するには、以下の手順でデータベースを構成します。
 
 1. **Azure AD でグループを作成します。** マネージド ID をそのグループのメンバーにします。
@@ -113,7 +116,7 @@ Azure SQL Database にマネージド ID 認証を使用するには、以下の
     CREATE USER [your AAD group name] FROM EXTERNAL PROVIDER;
     ```
 
-1. SQL ユーザーなどに対して通常行っているように、**Azure AD グループに必要なアクセス許可を付与**します。 たとえば、次のコードを実行します。
+1. SQL ユーザーなどに対して通常行っているように、**Azure AD グループに必要なアクセス許可を付与**します。 適切なロールについては、「[データベース レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)」をご覧ください。  たとえば、次のコードを実行します。
 
     ```sql
     ALTER ROLE [role name] ADD MEMBER [your AAD group name];
@@ -138,11 +141,11 @@ Azure SQL Database Managed Instance にマネージド ID 認証を使用する�
     CREATE LOGIN [{a name for the managed identity}] FROM EXTERNAL PROVIDER with SID = {your managed identity application ID as binary}, TYPE = E
     ```
 
-1. **データ ファクトリ マネージド ID に必要なアクセス許可を付与**します。 データのコピー元またはコピー先のデータベースに対して、次の T-SQL を実行します。
+1. **データ ファクトリ マネージド ID に必要なアクセス許可を付与**します。 適切なロールについては、「[データベース レベルのロール](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles)」をご覧ください。 データのコピー元またはコピー先のデータベースに対して、次の T-SQL を実行します。
 
     ```sql
     CREATE USER [{the managed identity name}] FOR LOGIN [{the managed identity name}] WITH DEFAULT_SCHEMA = dbo
-    ALTER ROLE db_owner ADD MEMBER [{the managed identity name}]
+    ALTER ROLE [role name] ADD MEMBER [{the managed identity name}]
     ```
 
 次に、OLE DB 接続マネージャーに対して **OLE DB プロバイダーを構成**します。 これを行うには 2 つのオプションがあります。
@@ -167,7 +170,7 @@ Azure SQL Database Managed Instance にマネージド ID 認証を使用する�
     >  Azure-SSIS 統合ランタイムでは、データベース接続を確立するためにマネージド ID 認証を使用すると、OLE DB 接続マネージャーで事前構成済みの他のすべての認証方法 (統合セキュリティ、パスワードなど) は**オーバーライド**されます。
 
 > [!NOTE]
->  既存のパッケージでマネージド ID 認証を構成するには、[最新の SSIS デザイナー](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)で SSIS プロジェクトを少なくとも 1 回リビルドし、その SSIS プロジェクトを Azure-SSIS 統合ランタイムに再デプロイして、新しい接続マネージャーのプロパティ**ConnectUsingManagedIdentity** が SSIS プロジェクト内のすべての OLE DB 接続マネージャーに自動的に追加されるようにしてください。
+>  既存のパッケージでマネージド ID 認証を構成する場合、推奨される方法は、[最新の SSIS デザイナー](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)で SSIS プロジェクトを少なくとも 1 回リビルドし、その SSIS プロジェクトを Azure-SSIS 統合ランタイムに再デプロイして、新しい接続マネージャーのプロパティ **ConnectUsingManagedIdentity** が SSIS プロジェクト内のすべての OLE DB 接続マネージャーに自動的に追加されるようにすることです。 別の方法として、実行時にプロパティ パス **\Package.Connections[{the name of your connection manager}].Properties[ConnectUsingManagedIdentity]** を指定してプロパティのオーバーライドを直接使用する方法もあります。
 
 ## <a name="see-also"></a>参照    
  [OLE DB ソース](../../integration-services/data-flow/ole-db-source.md)     

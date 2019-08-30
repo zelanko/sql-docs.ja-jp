@@ -1,5 +1,5 @@
 ---
-title: sysmergesubscriptions (TRANSACT-SQL) |Microsoft Docs
+title: sysmergesubscriptions (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68029773"
 ---
-# <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (TRANSACT-SQL)
+# <a name="sysmergesubscriptions-transact-sql"></a>sysmergesubscriptions (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   既知のサブスクライバーごとに 1 つの行が含まれていて、パブリッシャー側でのローカル テーブルです。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  

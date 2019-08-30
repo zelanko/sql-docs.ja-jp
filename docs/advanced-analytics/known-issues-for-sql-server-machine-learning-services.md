@@ -1,23 +1,23 @@
 ---
-title: R 言語と Python の統合に関する既知の問題
+title: Python および R の既知の問題
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 06/13/2019
+ms.date: 08/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 93b2871fa60d6a7c7a41fae202e960440b53c11e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: d56e3109c0820b800bbd72c9cc86bed9b7a09eea
+ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715192"
+ms.lasthandoff: 08/26/2019
+ms.locfileid: "70030300"
 ---
-# <a name="known-issues-in-machine-learning-services"></a>Machine Learning Services の既知の問題
+# <a name="known-issues-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の既知の問題
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、 [SQL Server 2016 r Services](r/sql-server-r-services.md)でオプションとして提供される機械学習コンポーネントの既知の問題または制限事項について説明し、 [r と Python で Machine Learning Services SQL Server](what-is-sql-server-machine-learning.md)します。
+この記事では、 [SQL Server Machine Learning Services](what-is-sql-server-machine-learning.md)および[SQL Server 2016 R Services](r/sql-server-r-services.md)のオプションとして提供される機械学習コンポーネントの既知の問題または制限事項について説明します。
 
 ## <a name="setup-and-configuration-issues"></a>セットアップと構成に関する問題
 
@@ -43,7 +43,7 @@ R_SERVER は Intel Math Kernel Library (MKL) を使用します。 MKL を含む
 3. R_SERVER を再起動します。 SQL Server では、SQL Server Launchpad サービスを再起動できます。
 
 > [!NOTE]
-> Linux で SQL Server 2019 Preview を実行している場合は、ユーザーのホームディレクトリで bash_profile を編集または作成し`export MKL_CBWR="AUTO"`、行を追加し*ます。* Bash コマンドプロンプトで「 `source .bash_profile` 」と入力して、このファイルを実行します。 R コマンドプロンプトで`Sys.getenv()` 「」と入力して、R_SERVER を再起動します。
+> Linux で SQL Server 2019 Preview を実行している場合は、ユーザーのホームディレクトリで bash_profile を編集または作成し`export MKL_CBWR="AUTO"`、行を追加し*ます。* bash コマンド プロンプトで「`source .bash_profile`」と入力して、このファイルを実行します。 R コマンドプロンプトで`Sys.getenv()` 「」と入力して、R_SERVER を再起動します。
 
 ### <a name="2-r-script-runtime-error-sql-server-2017-cu5-cu7-regression"></a>2.R スクリプトの実行時エラー (SQL Server 2017 CU5-CU7 回帰)
 
@@ -168,7 +168,7 @@ SQL Server 2016 のコンピューティングコンテキストで R コード�
 
 が Windows Azure 仮想[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]マシンにインストールされている場合は、仮想マシンのワークスペースを使用する必要がある計算コンテキストを使用できない可能性があります。 その理由は、既定では、Azure 仮想マシンのファイアウォールに、ローカルの R ユーザーアカウントのネットワークアクセスをブロックする規則が含まれているためです。
 
-回避策として、Azure VM で **[セキュリティが強化された Windows ファイアウォール]** を開き、 **[送信の規則]** を選択して、次の規則を無効にします。**SQL Server インスタンス MSSQLSERVER の R ローカルユーザーアカウントのネットワークアクセスをブロック**します。 また、規則を有効のままにしておくこともできますが、セキュリティを有効に**するには**セキュリティプロパティを変更します。
+回避策として、Azure VM で **[セキュリティが強化された Windows ファイアウォール]** を開き、 **[送信の規則]** を選択して、次の規則を無効にします。**SQL Server インスタンス MSSQLSERVER の R ローカルユーザーアカウントのネットワークアクセスをブロック**します。 また、規則を有効のままにしておくこともできますが、セキュリティを有効にするにはセキュリティプロパティを変更します。
 
 ### <a name="10-implied-authentication-in-sqlexpress"></a>10.SQLEXPRESS での暗黙の認証
 
@@ -238,7 +238,7 @@ SQL Server が既定の場所にインストールされている場合、すべ
 
 つまり、シリアル化と逆シリアル化の両方の操作に同じバージョンの RevoScaleR を使用します。
 
-### <a name="3-real-time-scoring-does-not-correctly-handle-the-learningrate-parameter-in-tree-and-forest-models"></a>3.リアルタイムスコアリングでは、ツリーおよびフォレストモデルの_learningRate_パラメーターが正しく処理されない
+### <a name="3-real-time-scoring-does-not-correctly-handle-the-_learningrate_-parameter-in-tree-and-forest-models"></a>3.リアルタイムスコアリングでは、ツリーおよびフォレストモデルの_learningRate_パラメーターが正しく処理されない
 
 デシジョンツリーまたはデシジョンフォレストの方法を使用してモデルを作成し、学習速度を指定した場合、 `sp_rxpredict`または SQL `PREDICT`関数を使用すると、の`rxPredict`使用と比較して一貫性のない結果が表示されることがあります。
 
@@ -322,7 +322,7 @@ data <- RxSqlServerData(
 
 RxDataStep 関数を使用してテーブルに結果を書き込む場合、操作の一部として含めるまたは除外する列を指定する便利な方法として、 *Varstokeep*と*varstokeep*を使用する方法があります。 ただし、これらの引数は SQL Server データソースではサポートされていません。
 
-### <a name="11-limited-support-for-sql-data-types-in-spexecuteexternalscript"></a>11.Sp\_での SQL データ型の制限さ\_れ\_たサポート外部スクリプトの実行
+### <a name="11-limited-support-for-sql-data-types-in-sp_execute_external_script"></a>11.Sp\_での SQL データ型の制限さ\_れ\_たサポート外部スクリプトの実行
 
 SQL でサポートされているすべてのデータ型を R で使用できるわけではありません。回避策として、データを sp\_\_\_に渡す前に、サポートされていないデータ型をサポートされるデータ型にキャストすることを検討してください。
 
@@ -334,7 +334,7 @@ Varchar 型の列[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の unico
 
 から[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ASCII 以外の文字列データを R/Python に送信するには、utf-8 エンコード (で[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)]使用可能) を使用するか、同じに対して nvarchar 型を使用します。
 
-### <a name="13-only-one-value-of-type-raw-can-be-returned-from-spexecuteexternalscript"></a>13.型`raw`の1つの値のみを返すことができます。`sp_execute_external_script`
+### <a name="13-only-one-value-of-type-raw-can-be-returned-from-sp_execute_external_script"></a>13.型`raw`の1つの値のみを返すことができます。`sp_execute_external_script`
 
 R からバイナリデータ型 (R の**生**データ型) が返される場合、値は出力データフレームに送信される必要があります。
 
@@ -502,6 +502,33 @@ SQL Server 2017 累積更新プログラム 12 (CU12) 以降では、との Pyth
 
 これは SQL Server 2017 累積更新プログラム 14 (CU14) で修正されました。
 
+### <a name="6-bad-interpreter-error-when-installing-python-packages-with-pip-on-linux"></a>6。Linux で pip を使用して Python パッケージをインストールするときに無効なインタープリターエラーが発生する 
+
+SQL Server 2019 で、 **pip**を使用しようとした場合。 以下に例を示します。
+
+```bash
+/opt/mssql/mlservices/runtime/python/bin/pip -h
+```
+
+次のエラーが表示されます。
+
+> *bash:/opt/mssql/mlservices/runtime/python/bin/pip:/opt/microsoft/mlserver/9.4.7/bin/python/python: 無効なインタープリター:ファイルまたはディレクトリがありません*
+
+**回避策**
+
+[Python パッケージ機関 (PyPA)](https://www.pypa.io)から**pip**をインストールします。
+
+```bash
+wget 'https://bootstrap.pypa.io/get-pip.py' 
+/opt/mssql/mlservices/bin/python/python ./get-pip.py 
+```
+
+**推奨**
+
+「 [Sqlmlutils を使用して Python パッケージをインストール](package-management/install-additional-python-packages-on-sql-server.md)する」を参照してください。
+
+**適用対象:** Linux 上の SQL Server 2019
+
 ## <a name="revolution-r-enterprise-and-microsoft-r-open"></a>Revolution R Enterprise と Microsoft R Open
 
 このセクションでは、変革分析によって提供される R 接続、開発、およびパフォーマンスツールに固有の問題を示します。 これらのツールは、以前のプレリリースバージョンの[!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]で提供されていました。
@@ -522,8 +549,6 @@ SQL Server 2017 累積更新プログラム 12 (CU12) 以降では、との Pyth
 
 SQLite ODBC ドライバーのリビジョン0.92 は RevoScaleR と互換性がありません。 リビジョン 0.88-0.91 と0.93 以降には互換性があることがわかっています。
 
-## <a name="see-also"></a>関連項目
-
-[SQL Server 2016 の新機能](../sql-server/what-s-new-in-sql-server-2016.md)
+## <a name="next-steps"></a>次の手順
 
 [SQL Server での機械学習のトラブルシューティング](machine-learning-troubleshooting-faq.md)

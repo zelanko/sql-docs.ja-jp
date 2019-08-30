@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 413a77ecb0ad93e64d05f528217597184c03b9a7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6290a9b8b8ff71c05d52051ffa02f097575484e
+ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914713"
+ms.lasthandoff: 08/12/2019
+ms.locfileid: "68957466"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -142,7 +142,7 @@ OPENROWSET
 |ACP|**char**、**varchar**、または **text** データ型の列を、ANSI/[!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows コード ページ (ISO 1252) から [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|  
 |OEM (既定値)|**char**、**varchar**、または **text** データ型の列を、システムの OEM コード ページから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] コード ページに変換します。|  
 |RAW|コード ページの変換は行われません。 これは最も高速なオプションです。|  
-|*code_page*|データ ファイルの文字データのエンコードに使用されているソースのコード ページを示します (例 : 850)。<br /><br /> **重要** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンはコード ページ 65001 (UTF-8 エンコード) をサポートしません。|  
+|*code_page*|データ ファイルの文字データのエンコードに使用されているソースのコード ページを示します (例 : 850)。<br /><br /> **重要** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンではコード ページ 65001 (UTF-8 エンコード) がサポートされません。|  
   
  ERRORFILE ='*file_name*'  
  形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。  
@@ -191,7 +191,7 @@ OPENROWSET
   
  データ ファイル内の実際の行が指定の順序で並べ替えられていない場合、または UNIQUE ヒントが指定された一方で重複したキーが存在する場合は、エラーが返されます。  
   
- ORDER を使用する場合は列の別名が必要です。 列の別名リストは、BULK 句によってアクセスされる派生テーブルを参照する必要があります。 ORDER 句に指定された列名は、この列の別名リストを参照します。 大きな値の型 (**varchar (max)** , 、**nvarchar (max)** , 、**varbinary (max)** , 、および **xml**) およびラージ オブジェクト (LOB) 型 (**text**, 、**ntext**, 、および **image**) 列を指定することはできません。  
+ ORDER を使用する場合は列の別名が必要です。 列の別名リストは、BULK 句によってアクセスされる派生テーブルを参照する必要があります。 ORDER 句に指定された列名は、この列の別名リストを参照します。 大きな値の型 (**varchar (max)** , 、**nvarchar (max)** , 、**varbinary (max)** , 、および **xml**) およびラージ オブジェクト (LOB) 型 (**テキスト**, 、**ntext**, 、および **イメージ**) 列を指定することはできません。  
   
  SINGLE_BLOB  
  *data_file* の内容を、**varbinary(max)** 型の単一行、単一列の行セットとして返します。  

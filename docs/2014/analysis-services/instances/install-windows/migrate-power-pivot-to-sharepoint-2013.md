@@ -129,7 +129,7 @@ ms.locfileid: "68888516"
   
 -   **スケジュールの移行オプション 1:SharePoint ファーム管理者**  
   
-    1.  SharePoint 2013 管理`Set-PowerPivotServiceApplication`で、 `-StartMigratingRefreshSchedules`スイッチを使用してコマンドレットを実行します。 ![powershell 関連コンテンツ]の(../../../reporting-services/media/rs-powershellicon.jpg "powershell")関連コンテンツの自動移行を有効にします。 次の Windows PowerShell スクリプトは、PowerPivot サービス アプリケーションが 1 つだけであることを前提としています。  
+    1.  SharePoint 2013 管理`Set-PowerPivotServiceApplication`で、 `-StartMigratingRefreshSchedules`スイッチを使用してコマンドレットを実行します。 ![powershell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "powershell")関連コンテンツの自動移行を有効にします。 次の Windows PowerShell スクリプトは、PowerPivot サービス アプリケーションが 1 つだけであることを前提としています。  
   
         ```  
         $app=Get-PowerPivotServiceApplication  

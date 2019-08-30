@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: ce30a095-2975-4387-9377-94a461ac78ee
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 212782574ffa5cc603a8b7c28a9ced3d34d89a50
-ms.sourcegitcommit: c5e2aa3e4c3f7fd51140727277243cd05e249f78
+ms.openlocfilehash: beb0c68b86521ce9a5b3463e8c959970297519fe
+ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/02/2019
-ms.locfileid: "68742943"
+ms.lasthandoff: 08/20/2019
+ms.locfileid: "69653822"
 ---
 # <a name="tutorial-prepare-sql-server-for-replication-publisher-distributor-subscriber"></a>チュートリアル:レプリケーション用の SQL Server の準備 (パブリッシャー、ディストリビューター、サブスクライバー)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "68742943"
 ## <a name="create-windows-accounts-for-replication"></a>レプリケーション用の Windows アカウントの作成
 このセクションでは、レプリケーション エージェントを実行するための Windows アカウントを作成します。 また、次のエージェントを実行するための別の Windows アカウントをローカル サーバー上に作成します。  
   
-|エージェント|場所|アカウント名|  
+|エージェント|Location|アカウント名|  
 |---------|------------|----------------|  
 |スナップショット エージェント|パブリッシャー|<*machine_name*>\repl_snapshot|  
 |ログ リーダー エージェント (Log Reader Agent)|パブリッシャー|<*machine_name*>\repl_logreader|  
@@ -234,8 +234,6 @@ SQL Server Management Studio インスタンスが管理者権限で実行され
 
    ![オブジェクト エクスプローラーの 4 つのアカウントすべてが表示された画面](media/tutorial-preparing-the-server-for-replication/usersinssms.png)
    
- 6. ディストリビューション エージェントとマージ エージェントのサブスクライバーに対して手順 1 から 4 を繰り返し、マシン名をサブスクライバーの名前に変更します。 
-  
   
 詳細については、以下をご覧ください。
 - [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md) 

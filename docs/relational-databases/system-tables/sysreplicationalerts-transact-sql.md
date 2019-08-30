@@ -1,5 +1,5 @@
 ---
-title: sysreplicationalerts (TRANSACT-SQL) |Microsoft Docs
+title: sysreplicationalerts (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -38,19 +38,19 @@ ms.locfileid: "68029738"
 |**error_id**|**int**|格納されているエラーの ID **MSrepl_errors**します。|  
 |**alert_error_code**|**int**|このレコードにログインするときに発生した警告のメッセージ ID。|  
 |**time**|**datetime**|レコードが挿入された時間。|  
-|**パブリッシャー**|**sysname**|この警告を発生したエージェントに関係するパブリッシャー名です。|  
+|**publisher**|**sysname**|この警告を発生したエージェントに関係するパブリッシャー名です。|  
 |**publisher_db**|**sysname**|この警告を発生したエージェントに関連付けられたパブリッシャーのデータベース。|  
-|**パブリケーション**|**sysname**|この警告を発生したエージェントに関係するパブリケーションです。|  
+|**publication**|**sysname**|この警告を発生したエージェントに関係するパブリケーションです。|  
 |**publication_type**|**int**|パブリケーションの種類:<br /><br /> **0** = スナップショット。<br /><br /> **1** = トランザクション。<br /><br /> **2** = マージします。|  
-|**サブスクライバー**|**sysname**|このアラートが発生したエージェントに関連付けられているサブスクライバーの名前。|  
-|**@subscriber_db**|**sysname**|この警告を発生したエージェントに関連付けられたサブスクライバー データベースの名前。|  
+|**subscriber**|**sysname**|このアラートが発生したエージェントに関連付けられているサブスクライバーの名前。|  
+|**subscriber_db**|**sysname**|この警告を発生したエージェントに関連付けられたサブスクライバー データベースの名前。|  
 |**article**|**sysname**|このアラートが発生したエージェントに関連付けられているアーティクルの名前。|  
 |**destination_object**|**sysname**|アラートに関連付けられているサブスクリプションのテーブルの名前。|  
 |**source_object**|**sysname**|アラートに関連付けられているパブリッシュされたテーブルの名前。|  
 |**alert_error_text**|**ntext**|アラートのテキスト。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   

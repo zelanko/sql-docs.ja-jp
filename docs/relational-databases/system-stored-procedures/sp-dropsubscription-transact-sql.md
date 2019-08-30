@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 7551f345-5510-4684-ab53-f9057249d13a
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: c752adc6ea3c97900956b64a026a5acd13899a98
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 21d90c94c73eb6e49fcfedf997fffe2881146a22
+ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771378"
+ms.lasthandoff: 08/22/2019
+ms.locfileid: "69903631"
 ---
-# <a name="spdropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
+# <a name="sp_dropsubscription-transact-sql"></a>sp_dropsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   パブリッシャー上の特定のアーティクル、パブリケーション、またはサブスクリプションの集合へのサブスクリプションを削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -46,7 +46,7 @@ sp_dropsubscription [ [ @publication= ] 'publication' ]
   
 `[ @article = ] 'article'`アーティクルの名前を指定します。 *アーティクル*は**sysname**で、既定値は NULL です。 **All**を指定すると、指定された各パブリケーションおよびサブスクライバーのすべてのアーティクルに対するサブスクリプションが削除されます。 即時更新が可能なパブリケーションの場合は、 **all**を使用します。  
   
-`[ @subscriber = ] 'subscribe_r'`サブスクリプションを削除するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値はありません。 **All**を使用すると、すべてのサブスクライバーのすべてのサブスクリプションが削除されます。  
+`[ @subscriber = ] 'subscriber'`サブスクリプションを削除するサブスクライバーの名前を指定します。 *サブスクライバー*は**sysname**,、既定値はありません。 **All**を使用すると、すべてのサブスクライバーのすべてのサブスクリプションが削除されます。  
   
 `[ @destination_db = ] 'destination_db'`転送先データベースの名前を指定します。 *destination_db*は**sysname**,、既定値は NULL です。 NULL の場合、そのサブスクライバーからのすべてのサブスクリプションが削除されます。  
   

@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68002644"
 ---
-# <a name="sphelpmergesubscription-transact-sql"></a>sp_helpmergesubscription (TRANSACT-SQL)
+# <a name="sp_helpmergesubscription-transact-sql"></a>sp_helpmergesubscription (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   情報を返します、マージ パブリケーションに対するサブスクリプションでは、プッシュし、プルの両方。 このストアド プロシージャは、パブリッシャー、パブリケーション データベースに対して、またはサブスクリプション データベースに対して再パブリッシュ サブスクライバーで実行されます。  
@@ -57,9 +57,9 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
   
 |値|説明|  
 |-----------|-----------------|  
-|**プッシュ**(既定値)|プッシュ サブスクリプション|  
-|**プル**|プル サブスクリプション|  
-|**両方**|プッシュおよびプル サブスクリプションの両方|  
+|**push**(既定値)|プッシュ サブスクリプション|  
+|**pull**|プル サブスクリプション|  
+|**both**|プッシュおよびプル サブスクリプションの両方|  
   
 `[ @found = ] 'found'OUTPUT` 行を返すことを示すフラグ。 *見つかった*は**int**は出力パラメーター、既定値は NULL です。 **1**パブリケーションが見つかったことを示します。 **0**パブリケーションが見つからないことを示します。  
   
@@ -68,10 +68,10 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**sysname**|サブスクリプションの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前。|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
+|**publication**|**sysname**|パブリケーションの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前です。|  
-|**サブスクライバー**|**sysname**|サブスクライバーの名前。|  
+|**subscriber**|**sysname**|サブスクライバーの名前。|  
 |**subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**status**|**int**|サブスクリプションの状態:<br /><br /> **0** = すべてのジョブが起動待ち<br /><br /> **1** = 1 つ以上のジョブが起動中<br /><br /> **2** = すべてのジョブが正常に実行されました<br /><br /> **3** = 少なくとも 1 つジョブが実行中<br /><br /> **4** = すべてのジョブがスケジュールされ、アイドル状態<br /><br /> **5** = 少なくとも 1 つジョブが前回のエラーの後に実行しようとしています<br /><br /> **6** = 少なくとも 1 つが正常に実行するジョブが失敗しました|  
 |**subscriber_type**|**int**|サブスクライバーの種類。|  
@@ -84,7 +84,7 @@ sp_helpmergesubscription [ [ @publication=] 'publication']
 |**offload_enabled**|**bit**|レプリケーション エージェントのオフロードするために、サブスクライバーで実行設定されているかどうかを指定します。 NULL の場合、パブリッシャー側で実行されます。|  
 |**offload_server**|**sysname**|エージェントが動作しているサーバーの名前。|  
 |**use_interactive_resolver**|**int**|調整時に対話型の競合回避モジュールを使用するかどうかを示します。 場合**0**、インタラクティブ競合回避モジュールを使用しません。|  
-|**ホスト名**|**sysname**|値によってサブスクリプションがフィルター選択するときに指定された値、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数。|  
+|**hostname**|**sysname**|値によってサブスクリプションがフィルター選択するときに指定された値、 [HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)関数。|  
 |**subscriber_security_mode**|**smallint**|セキュリティ モードをサブスクライバーで、場所**1** Windows 認証では、ことを意味と**0**意味[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名です。|  
 |**@subscriber_password**|**sysname**|実際のサブスクライバー パスワードは返されません。 によってマスクされる結果は、" **\*\*\*\*\*\*** "文字列。|  

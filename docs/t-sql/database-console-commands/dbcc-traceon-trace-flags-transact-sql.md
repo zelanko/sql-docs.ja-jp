@@ -20,16 +20,16 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: c84ef656fcadee3c66b0155fa587a85ebf453095
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 8661bc871018b542b3388adfcbd63f255c1d32a2
+ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809832"
+ms.lasthandoff: 08/16/2019
+ms.locfileid: "69553295"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
-[!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-asdbmi-xxxx-xxx-md.md)]
 
 トレース フラグは、サーバー固有の特性を設定したり、特定の動作を変更したりするときに使用します。 たとえば、トレース フラグ 3226 は、よく使用されるスタートアップ トレース フラグであり、エラー ログ内のバックアップの成功メッセージを抑制します。 トレース フラグは、パフォーマンスの問題を診断する場合や、ストアド プロシージャや複雑なコンピューター システムをデバッグする場合によく使用されますが、特定のワークロードに悪影響を及ぼす動作に対応するために Microsoft サポートがお勧めすることもあります。  ドキュメントに記載されているすべてのトレース フラグと Microsoft サポートがお勧めするトレース フラグは、指示どおりに使用した場合、運用環境で完全にサポートされます。  この一覧のトレース フラグには、特定の使用法に関して追加の考慮事項が存在する可能性があるため、ここに示したすべての推奨事項とサポート エンジニアによる推奨事項を慎重に検討することをお勧めします。 また、SQL Server での構成変更と同様に、展開する前に、運用環境以外でこのフラグを徹底的にテストすることをお勧めします。
 
@@ -51,8 +51,10 @@ ms.locfileid: "68809832"
 
 ## <a name="trace-flags"></a>トレース フラグ
 
-  
-次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるトレース フラグの一覧とその説明です。
+次の表は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用できるトレース フラグの一覧とその説明です。 
+
+> [!NOTE]
+> Azure SQL Database Managed Instance では、次のグローバル トレース フラグがサポートされています。460、2301、2389、2390、2453、2467、7471、8207、9389、10316、および 11024。 Managed Instance では、セッション トレース フラグはまだサポートされていません。
  
 > [!NOTE]
 > 一部のトレース フラグは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の特定のバージョンで導入されました。 該当するバージョンについて詳しくは、特定のトレース フラグに関連する Microsoft サポート記事をご覧ください。
