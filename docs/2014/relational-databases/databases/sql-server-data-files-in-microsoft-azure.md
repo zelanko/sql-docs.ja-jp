@@ -10,12 +10,12 @@ ms.assetid: 38ffd9c2-18a5-43d2-b674-e425addec4e4
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 55f0ab0cf2f1d4a29c0fca252c45f9e92740851c
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 445a43d54dc4578f8e93a18d4a13d31912b8494c
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154538"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175694"
 ---
 # <a name="sql-server-data-files-in-azure"></a>Azure でのデータファイルの SQL Server
   Azure のデータファイルを SQL Server すると、Azure Blob として格納されている SQL Server データベースファイルのネイティブサポートが有効になります。 これを使用すると、オンプレミスまたは Azure の仮想マシンで実行されている SQL Server で、Azure Blob Storage のデータ専用のストレージの場所を使用してデータベースを作成できます。 この機能強化では特に、デタッチとアタッチの操作を使用することにより、コンピューター間でのデータベース移動が容易になります。 また、Azure Storage から復元できるようにすることで、データベースバックアップファイル用の別の保存場所を提供します。 このため、データの仮想化、移動、セキュリティ、および可用性の面での利点と、低コストと容易なメンテナンスで実現できる高可用性と柔軟なスケーリングにより、いくつかのハイブリッド ソリューションが有効になります。  
@@ -93,7 +93,7 @@ ON
   
 -   **オンプレミスの SQL Server:** SQL Server 2014 バージョンには、この機能が含まれています。 SQL Server 2014 のダウンロード方法については、「 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)」をご覧ください。  
   
--   Azure の仮想マシンで実行されている SQL Server:Azure 仮想マシンに SQL Server をインストールする場合は SQL Server 2014 をインストールするか、既存のインスタンスを更新します。 同様に、SQL Server 2014 プラットフォームイメージを使用して Azure に新しい仮想マシンを作成することもできます。 SQL Server 2014 のダウンロード方法については、「 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)」をご覧ください。  
+-   Azure 仮想マシンで実行されている SQL Server:Azure 仮想マシンに SQL Server をインストールする場合は SQL Server 2014 をインストールするか、既存のインスタンスを更新します。 同様に、SQL Server 2014 プラットフォームイメージを使用して Azure に新しい仮想マシンを作成することもできます。 SQL Server 2014 のダウンロード方法については、「 [SQL Server 2014](https://www.microsoft.com/sqlserver/sql-server-2014.aspx)」をご覧ください。  
   
 ###  <a name="bkmk_Limitations"></a> 制限事項  
   

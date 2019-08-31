@@ -10,12 +10,12 @@ ms.assetid: 9e1d94ce-2c93-45d1-ae2a-2a7d1fa094c4
 author: rothja
 ms.author: jroth
 manager: craigg
-ms.openlocfilehash: 8a9cbb46b04491be3fe97cb707ad79c98990ff19
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b166930b5d077e7294fcdbc13449d40cab309425
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155330"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176112"
 ---
 # <a name="tutorial-sql-server-backup-and-restore-to-azure-blob-storage-service"></a>チュートリアル:Azure Blob Storage サービスへの SQL Server のバックアップと復元
   Azure Blob Storage サービスを使用した SQL Server のバックアップと復元に関するチュートリアルのはじめにへようこそ。 このチュートリアルで、Azure Blob Storage サービスへのバックアップの書き込みと、Azure Blob Storage サービスからの復元を実行する方法について学習できます。  
@@ -24,7 +24,7 @@ ms.locfileid: "70155330"
  このチュートリアルでは、Windows ストレージ アカウント、BLOB コンテナーを作成し、ストレージ アカウントにアクセスするための資格情報の作成、BLOB サービスへのバックアップの書き込み、簡単な復元の実行を行う方法について説明します。 このチュートリアルは、次の 4 つのレッスンで構成されています。  
   
  [レッスン 1:Azure Storage オブジェクトの作成](../tutorials/lesson-1-create-windows-azure-storage-objects.md)  
- このレッスンでは、Azure ストレージアカウントと blob コンテナーを作成します。  
+ このレッスンでは、Azure ストレージ アカウントおよび BLOB コンテナーを作成します。  
   
  [レッスン 2:SQL Server 資格情報の作成](../tutorials/lesson-2-create-a-sql-server-credential.md)  
  このレッスンでは、Azure ストレージ アカウントへのアクセスに使用するセキュリティ情報を格納するための資格情報を作成します。  
@@ -40,7 +40,7 @@ ms.locfileid: "70155330"
   
 -   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] インスタンス、およびインストールされた AdventureWorks2012 データベース。  
   
-     SQL Server インスタンスは、オンプレミスまたは Azure 仮想マシンに配置できます。  
+     SQL Server インスタンスは、オンプレミスと Azure Virtual Machine のどちらに存在してもかまいません。  
   
      AdventureWorks2012 の代わりにユーザー データベースを使用し、それに応じて TSQL コマンド構文を変更できます。  
   

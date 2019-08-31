@@ -10,12 +10,12 @@ ms.assetid: 0c4553cd-d8e4-4691-963a-4e414cc0f1ba
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 76b19ace362d147520b9f39cecae3ce1cc65d53b
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: aa2cbce81827c9085f87112b366d532077915f58
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154105"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176097"
 ---
 # <a name="setting-up-sql-server-managed-backup-to-azure-for-availability-groups"></a>可用性グループのための Azure への SQL Server マネージバックアップの設定
   このトピックは、AlwaysOn 可用性グループに参加しているデータベースの [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の構成に関するチュートリアルです。  
@@ -68,7 +68,7 @@ ms.locfileid: "70154105"
 #### <a name="enable-and-configure-includess_smartbackupincludesss-smartbackup-mdmd-for-an-availability-database"></a>可用性データベースに対する [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の有効化と構成  
  このチュートリアルでは、Node1 と Node2 の[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]コンピューターでデータベース (agtestdb 対し) を有効にして構成する手順について説明し[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] 、その後、正常性状態の監視を有効にする手順について説明します。  
   
-1.  **Azure ストレージアカウントを作成します。** バックアップは、Azure Blob ストレージサービスに格納されます。 Azure ストレージアカウントをまだ作成していない場合は、最初に作成する必要があります。 詳細については、「 [Azure Storage アカウントの作成](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)」を参照してください。 ストレージ アカウントの名前、アクセス キー、および URL をメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、バックアップ操作中にストレージ アカウントへの認証を行うために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]によって使用されます。  
+1.  **Azure ストレージ アカウントを作成する:** バックアップは、Azure Blob ストレージサービスに格納されます。 Azure ストレージアカウントをまだ作成していない場合は、最初に作成する必要があります。 詳細については、「 [Azure Storage アカウントの作成](http://www.windowsazure.com/manage/services/storage/how-to-create-a-storage-account/)」を参照してください。 ストレージ アカウントの名前、アクセス キー、および URL をメモしておきます。 ストレージ アカウント名およびアクセス キー情報は、SQL 資格情報の作成に使用します。 SQL 資格情報は、バックアップ操作中にストレージ アカウントへの認証を行うために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]によって使用されます。  
   
 2.  **SQL 資格情報を作成します。** Id としてストレージアカウントの名前を使用し、パスワードとしてストレージアクセスキーを使用して、SQL 資格情報を作成します。  
   

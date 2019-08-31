@@ -24,12 +24,12 @@ ms.assetid: 88ed5b97-1d28-4980-80e4-b36761f3c03a
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 7650f579a42453486a1d8483b9537496d454a036
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 42ede73866c45662cf653d538f59be48684c5a45
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155019"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176188"
 ---
 # <a name="reporting-services-report-server"></a>Reporting Services Report Server
   このトピックでは、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] インストールの中心となるコンポーネントである [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーの概要を説明します。 処理エンジンのペアと、認証、データ処理、表示、配信の各操作を行う用途別拡張機能の集合で構成されます。 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] レポート サーバーは、ネイティブ モードと SharePoint モードという 2 種類の配置モードのいずれかで動作します。 機能の比較については、「 [SharePoint モードとネイティブ モードの機能の比較](#bkmk_featuresupport) 」セクションを参照してください。  
@@ -44,7 +44,7 @@ ms.locfileid: "70155019"
   
 -   [Azure Virtual Machines のビジネスインテリジェンスを SQL Server](https://msdn.microsoft.com//library/windowsazure/jj992719.aspx)します。  
   
--   [ネイティブモードのレポートサーバーを使用して AZURE VM を作成するには、PowerShell を使用](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)します。  
+-   [PowerShell を使用したネイティブ モードのレポート サーバーを含む Azure VM の作成](https://msdn.microsoft.com/library/windowsazure/dn449661.aspx)。  
   
 ##  <a name="bkmk_top"></a> このトピックの内容  
   

@@ -10,12 +10,12 @@ ms.assetid: efdbd930-cde5-41b0-90ad-58a6cc68dddc
 author: VanMSFT
 ms.author: vanto
 manager: craigg
-ms.openlocfilehash: 3f9775b98a2cf86690bf290543d6394e06cefe32
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 69d09b5b058af3404226905bdbe0ef83f33982cf
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153500"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176181"
 ---
 # <a name="lesson-1-create-azure-storage-account-and-container"></a>レッスン 1:Azure Storage アカウントとコンテナーを作成する
   Azure Storage で SQL Server データファイルの格納を開始するには、まず Azure Storage アカウントと blob コンテナー、および shared access signature を作成する必要があります。 レッスン1では、Azure 管理ポータルにログインし、ストレージアカウント、blob コンテナー、および共有アクセス署名を作成する手順について説明します。  

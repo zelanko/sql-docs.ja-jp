@@ -10,12 +10,12 @@ ms.assetid: a9f99670-e1de-441e-972c-69faffcac17a
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3f17384b979e960995a3522a81c4f0611287cb15
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 5b30a9f60f52b8b19875f5fb3c15242ce2c632fd
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153742"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175430"
 ---
 # <a name="lesson-8-restore-a-database-to-azure-storage"></a>レッスン 8: Azure Storage にデータベースを復元する
   このレッスンでは、バックアップファイルをローカルに作成し、Azure Storage に復元する方法について説明します。 データベースは、オンプレミスまたは Azure の仮想マシンのいずれかにあることに注意してください。 このレッスンを続行するには、レッスン 4、5、6 および 7 を実行する必要はありません。  

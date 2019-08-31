@@ -10,12 +10,12 @@ ms.assetid: 78fb78ed-653f-45fe-a02a-a66519bfee1b
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 3f5a35fe9e2df55dd6b1f76c52503c5d4cad50bf
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 70d941786fd06e48bf071b8448b84c8f4857f8c8
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154072"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176065"
 ---
 # <a name="sql-server-managed-backup-to-azure-interoperability-and-coexistence"></a>Azure へのマネージバックアップの SQL Server:相互運用性と共存
   このトピックでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] のいくつかの機能との [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)]の相互運用性および共存について説明します。 使用できる機能には、次のようなものがあります。AlwaysOn 可用性グループ、データベースミラーリング、バックアップメンテナンスプラン、ログ配布、アドホックバックアップ、データベースのデタッチ、およびデータベースの削除。  

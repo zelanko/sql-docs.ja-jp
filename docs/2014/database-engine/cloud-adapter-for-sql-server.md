@@ -13,12 +13,12 @@ ms.assetid: 82ed0d0f-952d-4d49-aa36-3855a3ca9877
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 4c4e690d13f8cd12992c2b26db8e5d640a971712
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bf57adb31330f5b0c0f18fbcccd4d71f47d3c933
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154392"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70176019"
 ---
 # <a name="cloud-adapter-for-sql-server"></a>SQL Server のクラウド アダプター
   クラウドアダプターサービスは、Azure VM での[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]プロビジョニングの一部として作成されます。 クラウド アダプター サービスは、最初の実行時に自己署名 SSL 証明書を生成し、 **Local System** アカウントとして実行されます。 その際に、自身を構成するために使用される構成ファイルを生成します。 クラウド アダプターは、Windows ファイアウォール ルールを作成し、既定のポート 11435 で着信する TCP 接続を許可します。  

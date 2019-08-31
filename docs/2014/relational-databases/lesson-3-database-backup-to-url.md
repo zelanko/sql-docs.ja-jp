@@ -10,12 +10,12 @@ ms.assetid: a9ae1501-b614-49d3-b975-6569da8350b2
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 45cce2278e17fcb95f11920c2426caf580385518
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: ee331966984a12d309e71a7040edac6343e296c6
+ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153763"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70175630"
 ---
 # <a name="lesson-4-create-a-database-in-azure-storage"></a>レッスン 4:Azure Storage でのデータベースの作成
   このレッスンでは、Azure 機能の SQL Server データファイルを使用してデータベースを作成する方法について説明します。 このレッスンの前に、レッスン 1、2、および 3 を完了する必要があることに注意してください。 レッスン3は非常に重要な手順です。レッスン4の前に、Azure ストレージコンテナーとそれに関連付けられているポリシー名と SAS キーに関する情報を SQL Server 資格情報ストアに格納する必要があるためです。  
