@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 5ec2100d50364ae0e85d2a28375bd454608af34a
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123165"
+ms.lasthandoff: 08/30/2019
+ms.locfileid: "70190410"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -95,7 +95,7 @@ WITH
 場所のパス:
 
 - `<`Namenode`>` = Hadoop クラスター内の `Namenode` のマシン名、ネーム サービス URI、または IP アドレス。 PolyBase では Hadoop クラスターで使用されているすべての DNS 名が解決される必要があります。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = 外部データ ソースがリッスンしているポート。 Hadoop では、`fs.default.name` 構成パラメーターを使用してポートを見つけることができます。 既定値は 8020 です。
+- `port` = 外部データ ソースがリッスンしているポート。 Hadoop では、`fs.defaultFS` 構成パラメーターを使用してポートを見つけることができます。 既定値は 8020 です。
 - `<container>` = データを保持するストレージ アカウントのコンテナー。 ルート コンテナーは読み取り専用で、このコンテナーにデータを書き込むことはできません。
 - `<storage_account>` = azure リソースのストレージ アカウント名。
 - `<server_name>` = ホスト名。
@@ -899,7 +899,7 @@ WITH
 場所のパス:
 
 - `<`Namenode`>` = Hadoop クラスター内の `Namenode` のマシン名、ネーム サービス URI、または IP アドレス。 PolyBase では Hadoop クラスターで使用されているすべての DNS 名が解決される必要があります。 <!-- For highly available Hadoop configurations, provide the Nameservice ID as the `LOCATION`. -->
-- `port` = 外部データ ソースがリッスンしているポート。 Hadoop では、`fs.default.name` 構成パラメーターを使用してポートを見つけることができます。 既定値は 8020 です。
+- `port` = 外部データ ソースがリッスンしているポート。 Hadoop では、`fs.defaultFS` 構成パラメーターを使用してポートを見つけることができます。 既定値は 8020 です。
 - `<container>` = データを保持するストレージ アカウントのコンテナー。 ルート コンテナーは読み取り専用で、このコンテナーにデータを書き込むことはできません。
 - `<storage_account>` = azure リソースのストレージ アカウント名。
 
