@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 05742e279d65d828fcbd9a7917033fcf8df2825d
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 5ec2100d50364ae0e85d2a28375bd454608af34a
+ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "68984583"
+ms.lasthandoff: 08/28/2019
+ms.locfileid: "70123165"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -89,7 +89,7 @@ WITH
 | Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
 | Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
 | MongoDB または CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
-| ODBC                        | `odbc`          | `<server_name>{:port]`                                | SQL Server (2019 以降) - Windows のみ           |
+| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 以降) - Windows のみ           |
 | 一括操作             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017 以降)                  |
 
 場所のパス:
@@ -792,6 +792,24 @@ WITH
 ,    TYPE       = HADOOP
 )
 [;]
+```
+
+### <a name="d-create-external-data-source-to-reference-polybase-connectivity-to-azure-data-lake-store-gen-2"></a>D. Azure Data Lake Store Gen 2 への Polybase 接続を参照する外部データ ソースを作成する
+
+[マネージド ID](/azure/active-directory/managed-identities-azure-resources/overview
+) メカニズムで Azure Data Lake Store Gen2 アカウントに接続するとき、SECRET を指定する必要はありません。
+
+```sql
+-- If you do not have a Master Key on your DW you will need to create one
+CREATE MASTER KEY ENCRYPTION BY PASSWORD = '<password>'
+
+--Create database scoped credential with **IDENTITY = 'Managed Service Identity'**
+
+CREATE DATABASE SCOPED CREDENTIAL msi_cred WITH IDENTITY = 'Managed Service Identity';
+
+--Create external data source with abfss:// scheme for connecting to your Azure Data Lake Store Gen2 account
+
+CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCATION = 'abfss://myfile@mystorageaccount.dfs.core.windows.net', CREDENTIAL = msi_cred);
 ```
 
 ## <a name="see-also"></a>参照
