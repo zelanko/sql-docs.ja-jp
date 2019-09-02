@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_history (TRANSACT-SQL) |Microsoft Docs
+title: MSdistribution_history (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -53,7 +53,7 @@ ms.locfileid: "67907391"
 |**timestamp**|**timestamp**|このテーブルのタイムスタンプ列です。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
