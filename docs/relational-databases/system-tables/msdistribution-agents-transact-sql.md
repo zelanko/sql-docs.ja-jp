@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_agents (TRANSACT-SQL) |Microsoft Docs
+title: MSdistribution_agents (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 10/28/2015
 ms.prod: sql
@@ -38,7 +38,7 @@ ms.locfileid: "67907411"
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**publication**|**sysname**|パブリケーションの名前を指定します。|  
 |**subscriber_id**|**smallint**|よく知られているエージェントだけが使用するサブスクライバーの ID。 匿名のエージェントに対しては、予約済みとなります。|  
-|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
+|**subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**subscription_type**|**int**|サブスクリプションの種類です。<br /><br /> **0** = プッシュ。<br /><br /> **1** = プルします。<br /><br /> **2** = 匿名です。|  
 |**local_job**|**bit**|ローカル ディストリビューターで SQL Server エージェント ジョブがあるかどうかを示します。|  
 |**job_id**|**binary(16)**|ジョブの識別番号。|  
