@@ -28,7 +28,7 @@ ms.locfileid: "68022361"
   内のエントリ、およびトリガーなどのメタデータが削除**sysmergesubscriptions**と**sysmergearticles**パブリッシャー側で、指定されたマージ プッシュ サブスクリプションを削除した後。 このストアド プロシージャは、サブスクリプション データベースで、サブスクライバーで実行されます。  
   
 > [!NOTE]  
->  プル サブスクリプションのメタデータが削除されるとき[sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)を実行します。  
+>  プル サブスクリプションのメタデータが削除されるとき[sp_dropmergepullsubscription &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)を実行します。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
