@@ -1,5 +1,5 @@
 ---
-title: sp_mergesubscription_cleanup (TRANSACT-SQL) |Microsoft Docs
+title: sp_mergesubscription_cleanup (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68022361"
 ---
-# <a name="spmergesubscriptioncleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
+# <a name="sp_mergesubscription_cleanup-transact-sql"></a>sp_mergesubscription_cleanup (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   内のエントリ、およびトリガーなどのメタデータが削除**sysmergesubscriptions**と**sysmergearticles**パブリッシャー側で、指定されたマージ プッシュ サブスクリプションを削除した後。 このストアド プロシージャは、サブスクリプション データベースで、サブスクライバーで実行されます。  

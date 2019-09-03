@@ -1,5 +1,5 @@
 ---
-title: sp_dropmergesubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_dropmergesubscription (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67933873"
 ---
-# <a name="spdropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
+# <a name="sp_dropmergesubscription-transact-sql"></a>sp_dropmergesubscription (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   マージ パブリケーションのサブスクリプションおよびこれと関連するマージ エージェントを削除します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -53,10 +53,10 @@ sp_dropmergesubscription [ [ @publication= ] 'publication' ]
 |値|説明|  
 |-----------|-----------------|  
 |**all**|プッシュ、プル、および匿名サブスクリプション|  
-|**匿名**|匿名サブスクリプションです。|  
+|**anonymous**|匿名サブスクリプションです。|  
 |**push**|サブスクリプションをプッシュします。|  
-|**プル**|プル サブスクリプションです。|  
-|**どちらも**(既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
+|**pull**|プル サブスクリプションです。|  
+|**both**(既定値)|プッシュ サブスクリプションおよびプル サブスクリプションです。|  
   
 `[ @ignore_distributor = ] ignore_distributor` ディストリビューターに接続しなくてもこのストアド プロシージャを実行するかどうかを示します。 *ignore_distributor*は**ビット**、既定値は**0**します。 このパラメーターは、ディストリビューターでクリーンアップ タスクを実行せずにサブスクリプションを削除する使用できます。 ディストリビューターを再インストールした場合にも便利です。  
   
