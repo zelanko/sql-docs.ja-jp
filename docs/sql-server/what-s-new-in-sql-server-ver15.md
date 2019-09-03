@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 の新機能 | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 08/28/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6464f83c8783c6fa82f397b7a30ed068f695e66b
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
+ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026243"
+ms.lasthandoff: 08/29/2019
+ms.locfileid: "70155480"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -40,15 +40,12 @@ ms.locfileid: "70026243"
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| スケーラブルなビッグ データ ソリューション | Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置する](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行う<br/><br/> 大量のビッグ データを使用して、価値の高いリレーショナル データを簡単に組み合わせて分析する<br/><br/>外部データ ソースを照会する<br/><br/>SQL Server によって管理される HDFS にビッグ データを格納する<br/><br/>クラスターを介して複数の外部データ ソースからデータを照会する<br/><br/> AI、機械学習、その他の分析タスクにデータを使用する<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] にアプリケーションをデプロイして実行する <br/>|
+| スケーラブルなビッグ データ ソリューション | Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置する](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行う<br/><br/> 大量のビッグ データを使用して、価値の高いリレーショナル データを簡単に組み合わせて分析する<br/><br/>外部データ ソースを照会する<br/><br/>SQL Server によって管理される HDFS にビッグ データを格納する<br/><br/>クラスターを介して複数の外部データ ソースからデータを照会する<br/><br/> AI、機械学習、その他の分析タスクにデータを使用する<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] にアプリケーションをデプロイして実行する <br/><br/> SQL Server マスター インスタンス データベースで Always On 可用性グループを使用する<br/>|
 | &nbsp; | &nbsp; |
 
 詳細については、「[SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] とは](../big-data-cluster/big-data-cluster-overview.md)」を参照してください。
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) アナウンス アーカイブ](what-s-new-in-sql-server-ver15-prerelease.md)には、この機能の以前のすべての CTP リリースで発表および変更された機能の一覧が含まれています。
-
->[!NOTE]
->[!INCLUDE[ssbdc-rcnote](../includes/ssbigdataclusters-ver15-rcnote.md)]
 
 ## <a name="database-engine"></a>データベース エンジン
 
