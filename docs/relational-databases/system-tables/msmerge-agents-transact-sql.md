@@ -37,7 +37,7 @@ ms.locfileid: "68106441"
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**publication**|**sysname**|パブリケーションの名前を指定します。|  
 |**subscriber_id**|**smallint**|サブスクライバーの ID。|  
-|**subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
+|**@subscriber_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**local_job**|**bit**|ローカル ディストリビューターに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント ジョブがあるかどうかを示します。|  
 |**job_id**|**binary(16)**|ジョブの識別番号。|  
 |**profile_id**|**int**|ある構成 ID、 **MSagent_profiles**テーブル。|  
@@ -49,7 +49,7 @@ ms.locfileid: "68106441"
 |**sid**|**varbinary(85)**|最初の実行時の、ディストリビューション エージェントまたはマージ エージェントのセキュリティ識別番号 (SID) です。|  
 |**subscriber_security_mode**|**smallint**|次のいずれかの値と、サブスクライバーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**subscriber_login**|**sysname**|サブスクライバーに接続するときに使用されるログイン。|  
-|**subscriber_password**|**nvarchar(524)**|サブスクライバーに接続するときに使用されるパスワードの暗号化された値。|  
+|**@subscriber_password**|**nvarchar(524)**|サブスクライバーに接続するときに使用されるパスワードの暗号化された値。|  
 |**publisher_security_mode**|**smallint**|次のいずれかの値と、パブリッシャーに接続するときに、エージェントで使用されるセキュリティ モード。<br /><br /> **0**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。<br /><br /> **1**  =  [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows 認証。|  
 |**publisher_login**|**sysname**|パブリッシャーに接続するときに使用されるログイン。|  
 |**publisher_password**|**nvarchar(524)**|パブリッシャーに接続するときに使用されるパスワードの暗号化された値。|  

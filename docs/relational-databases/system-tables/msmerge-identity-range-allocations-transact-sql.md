@@ -36,7 +36,7 @@ ms.locfileid: "68072653"
 |**publication**|**nvarchar(128)**|パブリケーションの名前を指定します。|  
 |**article**|**nvarchar(128)**|アーティクルの名前です。|  
 |**subscriber**|**nvarchar(128)**|サブスクライバーの名前。|  
-|**subscriber_db**|**nvarchar(128)**|サブスクリプション データベースの名前。|  
+|**@subscriber_db**|**nvarchar(128)**|サブスクリプション データベースの名前。|  
 |**is_pub_range**|**bit**|Id 範囲がパブリッシャーに割り当てられているかどうかを示します。|  
 |**ranges_allocated**|**tinyint**|割り当てられている ID 範囲の数です。|  
 |**range_begin**|**numeric(38)**|範囲の開始値。|  
