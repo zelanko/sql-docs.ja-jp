@@ -23,7 +23,7 @@ ms.locfileid: "70242500"
 この記事では、次の方法について説明します。
 
 > [!div class="checklist"]
-> * SQL Server データベースから**パンダ**のデータフレームにデータを読み込む
+> * SQL Server データベースから **pandas** のデータフレームにデータを読み込む
 > * いくつかの列を削除して Python でデータを準備する
 
 [パート 1](python-ski-rental-linear-regression.md)では、サンプルデータベースを復元する方法を学習しました。
@@ -38,11 +38,11 @@ ms.locfileid: "70242500"
 
 ## <a name="explore-and-prepare-the-data"></a>データの探索と準備
 
-Python でデータを使用するには、SQL Server データベースから、パンダのデータフレームにデータを読み込みます。
+Python でデータを使用するには、SQL Server データベースから、pandas のデータフレームにデータを読み込みます。
 
 Azure Data Studio で新しい Python notebook を作成し、次のスクリプトを実行します。 を`<SQL Server>`独自の SQL Server 名に置き換えます。
 
-次の Python スクリプトでは、データベースの**rental_data**テーブルから、パンダのデータフレーム**df**にデータセットをインポートします。
+次の Python スクリプトでは、データベースの**rental_data**テーブルから、pandas のデータフレーム**df**にデータセットをインポートします。
 
 ```python
 import pandas as pd
@@ -116,7 +116,7 @@ Data frame:      Day  Holiday  Month  RentalCount  Snow  WeekDay  Year
 
 このチュートリアルシリーズの第2部では、次の手順を完了しました。
 
-* SQL Server データベースから**パンダ**のデータフレームにデータを読み込む
+* SQL Server データベースから **pandas** のデータフレームにデータを読み込む
 * いくつかの列を削除して Python でデータを準備する
 
 TutorialDB データベースのデータを使用する機械学習モデルをトレーニングするには、このチュートリアルシリーズの第3部に従います。
