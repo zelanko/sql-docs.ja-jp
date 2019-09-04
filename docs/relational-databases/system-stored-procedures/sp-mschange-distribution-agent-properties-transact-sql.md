@@ -63,7 +63,7 @@ sp_MSchange_distribution_agent_properties [ @publisher = ] 'publisher'
 |--------------|-----------|-----------------|  
 |**distrib_job_login**||エージェントを実行する [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows アカウントのログイン。|  
 |**distrib_job_password**||エージェント ジョブを実行する Windows アカウントのパスワード。|  
-|**対応します。**||OLE DB プロバイダーに接続するときに使用されるカタログします。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
+|**subscriber_catalog**||OLE DB プロバイダーに接続するときに使用されるカタログします。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
 |**subscriber_datasource**||OLE DB プロバイダーで認識されるデータ ソースの名前。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
 |**subscriber_location**||OLE DB プロバイダーで認識されるデータベースの場所です。 *このプロパティは有効でのみ非*[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] *サブスクライバー。*|  
 |**subscriber_login**||サブスクリプションを同期するサブスクライバーに接続するときに使用するログイン。|  
