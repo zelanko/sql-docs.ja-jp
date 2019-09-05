@@ -34,7 +34,7 @@ ms.locfileid: "68032613"
 |**publisher_id**|**smallint**|パブリッシャーの ID。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前。|  
 |**id**|**int**|行の ID。|  
-|**publisher_engine_edition**|**int**|エディション、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]発行元は、次のいずれかを指定できます。<br /><br /> **10** = Personal Edition<br /><br /> **11** = Desktop Engine (MSDE)<br /><br /> **20** = Standard<br /><br /> **21** = Workgroup<br /><br /> **30** = Enterprise (評価)<br /><br /> **31** = Developer<br /><br /> **40**= Express (Express は、パブリッシャーにはなれません。 この値は完全を期すのために存在します。)|  
+|**publisher_engine_edition**|**int**|エディション、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]発行元は、次のいずれかを指定できます。<br /><br /> **10** = Personal Edition<br /><br /> **11** = Desktop Engine (MSDE)<br /><br /> **20** = Standard<br /><br /> **21** = Workgroup<br /><br /> **30** = Enterprise (評価)<br /><br /> **31** = Developer<br /><br /> **40** = Express (Express は、パブリッシャーにはなれません。 この値は完全性のために存在します。)|  
   
 ## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)  
