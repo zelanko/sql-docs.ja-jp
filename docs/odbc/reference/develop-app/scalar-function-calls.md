@@ -42,7 +42,7 @@ SELECT {fn SUBSTRING(Name, 1, CHARINDEX(',', Name) - 1)} FROM Customers
   
  相互運用性を最大に、アプリケーションを使用する必要があります、**CONVERT**スカラー関数、スカラー関数の出力が必要な型であることを確認します。 **CONVERT**関数は、1 つの SQL データ型のデータを指定した SQL データ型に変換します。 構文、**CONVERT**関数  
   
- **変換 (** _value_exp_ **、** _data_type_ **)**  
+ **CONVERT (** _value_exp_ **、** _data_type_ **)**  
   
  場所*value_exp*列名、もう 1 つのスカラー関数、または、リテラル値の結果と*data_type*と一致するキーワード、 **#define**によって使用される名前、定義されている、SQL データ型識別子[付録 d:データ型](../../../odbc/reference/appendixes/appendix-d-data-types.md)します。 たとえば、次の SQL ステートメントを使用して、**CONVERT**ことを確認する関数の出力、 **CURDATE**関数は、タイムスタンプ列または文字データではなく、日付。  
   
