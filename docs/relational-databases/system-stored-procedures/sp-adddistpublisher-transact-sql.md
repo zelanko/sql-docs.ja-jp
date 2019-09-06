@@ -88,8 +88,8 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
   
 |値|説明|  
 |-----------|-----------------|  
-|**MS**<br /><br /> (既定値)。|パブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定します。|  
-|**ORACLE11I**|標準の Oracle パブリッシャーを指定します。|  
+|**MSSQLSERVER**<br /><br /> (既定値)。|パブリッシャーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定します。|  
+|**ORACLE**|標準の Oracle パブリッシャーを指定します。|  
 |**ORACLE ゲートウェイ**|Oracle ゲートウェイ パブリッシャーを指定します。|  
   
  Oracle パブリッシャーと Oracle ゲートウェイパブリッシャーの違いの詳細については、「 [Oracle パブリッシャーの構成](../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)」を参照してください。  
@@ -109,7 +109,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
