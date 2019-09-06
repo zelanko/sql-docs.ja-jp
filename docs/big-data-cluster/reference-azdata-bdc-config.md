@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: cb999ede4516f903b7d2f409e53940adc79b4f9a
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: b24a552bcfaae45fa4c8644d590d2573909a03ce
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155276"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304839"
 ---
 # <a name="azdata-bdc-config"></a>azdata bdc config
 
@@ -57,7 +57,7 @@ Config プロファイルのソース: [' aks ', ' kubeadm ', ' minikube ', ' ku
 #### `--force -f`
 ターゲット ファイルを強制的に上書きします。
 #### `--accept-eula -a`
-ライセンス条項に同意しますか? [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula で確認できます。
+ライセンス条項に同意しますか? [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
@@ -92,7 +92,7 @@ azdata bdc config list --config-profile aks-dev-test
 表示する構成の種類。
 `cluster`
 #### `--accept-eula -a`
-ライセンス条項に同意しますか? [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula で確認できます。
+ライセンス条項に同意しますか? [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
 すべてのデバッグ ログを表示するようにログの詳細レベルを上げます。
