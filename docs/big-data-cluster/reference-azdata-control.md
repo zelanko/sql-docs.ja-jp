@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 6fceea54c6ea7d5c904cc27c87033c4a40cff59f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 2ce02ef0b212070b4a52944e055404137c78c98b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158217"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304723"
 ---
 # <a name="azdata-control"></a>azdata コントロール
 
@@ -47,7 +47,7 @@ azdata control create
 #### `--config-profile -c`
 クラスターのデプロイに使用されるクラスター構成プロファイル: [' aks ', ' kubeadm ', ' minikube ', ' ', ' kubeadm ', ' ']
 #### `--accept-eula -a`
-Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 この製品のライセンス条項は https://aka.ms/azdata-eula で確認できます。
+Do you accept the license terms? (ライセンス条項に同意しますか?) [yes/no]. ([はい/いいえ]。) この引数を使用しない場合は、環境変数 ACCEPT_EULA を 'yes' に設定できます。 
 #### `--node-label -l`
 ノードラベル。デプロイ先のノードを指定するために使用されます。
 #### `--force -f`

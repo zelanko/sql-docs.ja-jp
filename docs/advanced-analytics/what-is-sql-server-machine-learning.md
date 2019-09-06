@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4a1a9a3b0f712458466051ce2c67c0a725ef0a76
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957438"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276664"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services (Python と R) とは何ですか?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ Azure SQL Database では、 [Machine Learning Services](https://docs.microsoft.
 
 SQL Server Machine Learning Services では、データベース内で Python および R スクリプトを実行できます。 この機能を使用して、データの準備とクリーンアップ、特徴エンジニアリング、およびデータベース内での機械学習モデルのトレーニング、評価、およびデプロイを行うことができます。 この機能により、データが存在するスクリプトが実行され、ネットワーク経由で別のサーバーにデータが転送されることがなくなります。
 
-Python と R のベースディストリビューションは Machine Learning Services に含まれています。 PyTorch、、scikit-learn などのオープンソースのパッケージとフレームワークを使用できます。また、Python 用の Microsoft パッケージ [revoscalepy](python/ref-py-revoscalepy.md) と [microsoftml](python/ref-py-microsoftml.md)、および[RevoScaleR](r/ref-r-revoscaler.md)、[microsoft ml](r/ref-r-microsoftml.md)、[olapr](r/ref-r-olapr.md) などを使用できます。、R の場合は [sqlrutils](r/ref-r-sqlrutils.md)。
+Python と R のベースディストリビューションは Machine Learning Services に含まれています。 PyTorch、scikit-learn[などのオープン](python/ref-py-microsoftml.md)ソースのパッケージとフレームワークをインストールして使用できます。また、Python の場合は[Microsoft packages、](python/ref-py-revoscalepy.md) Python の場合は microsoft パッケージ、 [RevoScaleR](r/ref-r-revoscaler.md)の場合は microsoft の[ml、](r/ref-r-microsoftml.md)[Olapr](r/ref-r-olapr.md)、 [sqlrutils](r/ref-r-sqlrutils.md) for R。
 
 Machine Learning Services は、拡張フレームワークを使用して SQL Server で Python および R スクリプトを実行します。 詳細については、次を参照してください。
 
@@ -76,6 +76,13 @@ Microsoft のエンタープライズパッケージに加えて、オープン�
 | R | [olapR](r/ref-r-olapr.md) | SQL Server Analysis Services OLAP キューブに対する MDX クエリに使用される R 関数。 |
 | R | [sqlrutils](r/ref-r-sqlrutils.md) | T-sql ストアドプロシージャで R スクリプトを使用し、そのストアドプロシージャをデータベースに登録し、 [r 開発環境](r/set-up-a-data-science-client.md)からストアドプロシージャを実行するためのメカニズム。 |
 | R | [Microsoft R オープンプラン](https://mran.microsoft.com/rro) | Microsoft R Open (MRO) は、Microsoft からの R の拡張ディストリビューションです。 これは、統計分析とデータサイエンスを行うための完全なオープンソースプラットフォームです。 これは、R と互換性があり、100% に準拠しており、パフォーマンスと再現性を向上させるための追加機能が含まれています。 |
+
+Machine Learning Services と共にインストールされるパッケージと、他のパッケージをインストールする方法の詳細については、次を参照してください。
+
++ [Python パッケージ情報の取得](package-management/python-package-information.md)
++ [Sqlmlutils を使用して Python パッケージをインストールする](package-management/install-additional-python-packages-on-sql-server.md)
++ [R パッケージ情報の取得](package-management/r-package-information.md)
++ [Sqlmlutils を使用して、新しい R パッケージをインストール](package-management/install-additional-r-packages-on-sql-server.md)します。
 
 ## <a name="how-do-i-get-started-with-machine-learning-services"></a>Machine Learning Services の使用を開始操作方法
 

@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 230ec2300bff55cefbb176c69d677b4e04d6ad30
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155321"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304830"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>クラスターリソースとサービスの展開設定を構成する
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-Azdata management tool で組み込まれている構成プロファイルの定義済みセットから開始すると、既定の設定を簡単に変更して、BDC のワークロード要件に合わせることができます。 リリース候補リリース以降、構成ファイルの構造が更新され、リソースの各サービスごとに設定を細かく更新できるようになりました。 
+Azdata management tool に組み込まれている構成プロファイルの定義済みセットから開始すると、既定の設定を簡単に変更して、BDC のワークロード要件に合わせることができます。 リリース候補リリース以降、構成ファイルの構造が更新され、リソースの各サービスごとに設定を細かく更新できるようになりました。 
 
 リソースレベルの構成を設定したり、リソース内のすべてのサービスの構成を更新したりすることもできます。 次に、bdc の構造の概要を示します **。**
 
@@ -99,7 +99,7 @@ Azdata management tool で組み込まれている構成プロファイルの定
 }
 ``` 
 
-同様に、特定のリソース内のシングルサービスの設定を変更します。 たとえば、ストレージプール内の Spark コンポーネントに対してのみ Spark メモリの設定を変更する場合は、れる update 構成ファイルの**spark**サービスの**settings**セクションで**storage 0**リソースを使用します **。** .
+同様に、特定のリソース内の1つのサービスの設定を変更します。 たとえば、ストレージプール内の Spark コンポーネントに対してのみ Spark メモリの設定を変更する場合は、bdc 構成ファイルの**spark**サービスの **[設定]** セクションで**storage 0**リソースを更新します **。** .
 ```json
 "resources":{
     ...
@@ -243,7 +243,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 ## <a id="storage"></a> 記憶域を構成する
 
-各プールに使用される記憶域クラスと特性を変更することもできます。 次の例では、カスタム記憶域クラスを記憶域プールに割り当て、データを保存する永続ボリューム要求のサイズを 100Gb に更新します。 まず、次のように、*type* と *replicas* に加えて新しい *storage* セクションを含む patch.json ファイルを作成します
+各プールに使用される記憶域クラスと特性を変更することもできます。 次の例では、カスタムストレージクラスをストレージとデータプールに割り当て、データを格納するための永続ボリューム要求のサイズを HDFS (記憶域プール) 用に 500 Gb、データプール用に 100 Gb に更新します。 まず、次のように、*type* と *replicas* に加えて新しい *storage* セクションを含む patch.json ファイルを作成します
 
 ```json
 {
@@ -256,13 +256,33 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
         "replicas": 2,
         "storage": {
           "data": {
-            "size": "100Gi",
-            "className": "myStorageClass",
+            "size": "500Gi",
+            "className": "myHDFSStorageClass",
             "accessMode": "ReadWriteOnce"
           },
           "logs": {
             "size": "32Gi",
-            "className": "myStorageClass",
+            "className": "myHDFSStorageClass",
+            "accessMode": "ReadWriteOnce"
+          }
+        }
+      }
+    },
+    {
+      "op": "replace",
+      "path": "spec.resources.data-0.spec",
+      "value": {
+        "type": "Data",
+        "replicas": 2,
+        "storage": {
+          "data": {
+            "size": "100Gi",
+            "className": "myDataStorageClass",
+            "accessMode": "ReadWriteOnce"
+          },
+          "logs": {
+            "size": "32Gi",
+            "className": "myDataStorageClass",
             "accessMode": "ReadWriteOnce"
           }
         }
@@ -287,7 +307,7 @@ azdata bdc config patch --config-file custom/bdc.json --patch ./patch.json
 また、Spark を使用せずに実行し、別の Spark プールを作成するように記憶域プールを構成することもできます。 こうすると、記憶域に依存せず、Spark コンピューティングの機能を拡張することができます。 Spark プールを構成する方法については、この記事の末尾にある [JSON 修正プログラム ファイルの例](#jsonpatch)を参照してください。
 
 
-既定では、記憶域プールリソースの [格納] 設定は [true] に設定されているため、変更を行うには、[格納] フィールドをストレージ構成に編集する必要があります。 次のコマンドは、インライン json を使用してこの値を編集する方法を示しています。
+既定では、記憶域プールリソース**の [格納] 設定は**[true] に設定されているため、変更を行うには **、[格納] フィールド**をストレージ構成に編集する必要があります。 次のコマンドは、インライン json を使用してこの値を編集する方法を示しています。
 
 ```bash
 azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.resources.storage-0.spec.settings.spark.includeSpark=false"
@@ -297,7 +317,7 @@ azdata bdc config replace --config-file custom/bdc.json --json-values "$.spec.re
 
 Kubernetes ノード上で特定のリソースを持つポッドの配置を制御することで、さまざまな種類のワークロード要件に対応できます。 たとえば、記憶域プールリソースポッドがより多くの記憶域を持つノードに配置されていること、また SQL Server は CPU とメモリリソースが高いノードにマスターインスタンスが配置されていることを確認する必要がある場合があります。 この場合、まず異なる種類のハードウェアが混在する Kubernetes クラスターを構築してから、それに応じて[ノード ラベルを割り当てます](https://kubernetes.io/docs/concepts/overview/working-with-objects/labels/)。 ビッグ データ クラスターを展開する際に、クラスター展開構成ファイルのプール レベルで同じラベルを指定できます。 Kubernetes では、ノード上の指定されたラベルに一致するポッドの関連付けが処理されます。 Kubernetes クラスター内のノードに追加する必要がある特定のラベルキーは**mssql-クラスター全体**です。 このラベル自体の値には、任意の文字列を指定できます。
 
-次の例では、カスタム構成ファイルを編集して、SQL Server マスターインスタンス、コンピューティングプール、データプール & 記憶域プールのノードラベル設定を含める方法を示します。 組み込みの構成には *nodeLabel* キーがないため、カスタム構成ファイルを手動で編集するか、修正プログラム ファイルを作成してカスタム構成ファイルに適用する必要があります。 SQL Server マスターインスタンスポッドは、" **mssql-クラスター全体**" という値を含むノードにデプロイされます。 コンピューティングプールとデータプールポッドは、" **mssql-クラスター全体**" という値を含むノードにデプロイされます。 記憶域プールポッドは、" **mssql-クラスター全体**" という値を含むノードにデプロイされます。
+次の例では、カスタム構成ファイルを編集して、SQL Server マスターインスタンス、コンピューティングプール、データプール & 記憶域プールのノードラベル設定を含める方法を示します。 組み込みの構成に*Nodelabel*キーがないため、カスタム構成ファイルを手動で編集するか、修正プログラムファイルを作成してカスタム構成ファイルに適用する必要があります。 SQL Server マスターインスタンスポッドは、" **mssql-クラスター全体**" と**いう値を**含むノードにデプロイされます。 コンピューティングプールとデータプールポッドは、" **mssql-クラスター全体**" と**いう値を**含むノードにデプロイされます。 記憶域プールポッドは、" **mssql-クラスター全体**" と**いう値を**含むノードにデプロイされます。
 
 現在のディレクトリに次の内容の **patch.json** という名前のファイルを作成します。
 
@@ -556,7 +576,7 @@ ElasticSearch を実行するコンテナーが特権モードで実行される
 }
 ```
 
-手動でを編集して上記のセクションを**仕様**に追加することができます。または、次のような修正プログラムファイル**elasticsearch**を作成し、 **azdata** CLI を使用して、 **config.xml**ファイルに修正プログラムを適用することもできます。
+手動でを編集して上記のセクションを**仕様**に追加することが**できます。** または、次のような修正プログラムファイル**elasticsearch**を作成し、 **azdata** CLI を使用して、 **config.xml**ファイルに修正プログラムを適用することもできます。
 
 ```json
 {
