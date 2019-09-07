@@ -1,5 +1,5 @@
 ---
-title: 実行関連の動的管理ビューおよび関数 (TRANSACT-SQL) |Microsoft Docs
+title: 実行関連の動的管理ビューおよび関数 (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/27/2019
 ms.prod: sql
@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68130833"
 ---
-# <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>実行関連の動的管理ビューおよび関数 (TRANSACT-SQL)
+# <a name="execution-related-dynamic-management-views-and-functions-transact-sql"></a>実行関連の動的管理ビューおよび関数 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   このセクションには、次の動的管理オブジェクトが含まれています。  
@@ -57,7 +57,7 @@ ms.locfileid: "68130833"
   
 ## <a name="see-also"></a>関連項目  
  [動的管理ビューと動的管理関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)   
- [システム ビュー &#40;TRANSACT-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [システム ビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 
