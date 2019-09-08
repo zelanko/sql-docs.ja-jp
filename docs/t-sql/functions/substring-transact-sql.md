@@ -64,7 +64,7 @@ SUBSTRING ( expression ,start , length )
 |**binary**/**varbinary**/**image**|**varbinary**|  
   
 ## <a name="remarks"></a>Remarks  
- 値は、 *開始* と *長さ* の文字数で指定する必要があります **ntext**, 、**char**, 、または **varchar** データ型とのバイト **テキスト**, 、**イメージ**, 、**バイナリ**, 、または **varbinary** データ型。  
+ 値は、 *開始* と *長さ* の文字数で指定する必要があります **ntext**、**char**、または **varchar** データ型とのバイト **text**、**image**、**binary**、または **varbinary** データ型。  
   
  *式* する必要があります **varchar (max)** または **varbinary (max)** ときに、 *開始* または *長さ* 2,147, 483,647 を超える値が含まれています。  
   
@@ -115,7 +115,7 @@ bcd
 > [!NOTE]  
 >  次の例を実行するには、**pubs** データベースをインストールする必要があります。  
   
- 次の例では、`pubs` データベースにある `pub_info` テーブルの **text** および **image** データ列から、それぞれ最初の 10 文字を返す方法を示します。 **テキスト** としてデータが返される **varchar**, 、および **イメージ** としてデータが返されます **varbinary**です。  
+ 次の例では、`pubs` データベースにある `pub_info` テーブルの **text** および **image** データ列から、それぞれ最初の 10 文字を返す方法を示します。 **text** としてデータが返される **varchar**, 、および **image** としてデータが返されます **varbinary**です。  
   
 ```  
 USE pubs;  
