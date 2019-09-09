@@ -77,7 +77,7 @@ ms.locfileid: "69530846"
   
      次の図では、選択した属性の **AttributeHierarchyEnabled** プロパティが False に設定されています。  
   
-     ![AttributeHierarchyEnabled プロパティが False に設定]される(../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled プロパティが False に設定")される  
+     ![AttributeHierarchyEnabled プロパティが False に設定 される](../../2014/tutorials/media/l4-hierarchyenabled-1.gif "AttributeHierarchyEnabled プロパティが False に設定")される  
   
 5.  **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
