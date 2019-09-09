@@ -27,10 +27,10 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/02/2019
 ms.locfileid: "68742900"
 ---
-# <a name="sysdmexecprocedurestats-transact-sql"></a>sys _exec_procedure_stats (Transact-SQL)
+# <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys _exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
-  キャッシュされたストアドプロシージャの集計パフォーマンス統計を返します。 ビューは、キャッシュされたストアド プロシージャのプランごとに 1 行を返します。その行の有効期間はストアド プロシージャがキャッシュに残っている間になります。 つまり、ストアド プロシージャがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点で、パフォーマンス統計 SQL トレースイベントが **sys.dm_exec_query_stats**と同様に発生します。  
+  キャッシュされたストアドプロシージャの集計パフォーマンス統計を返します。 ビューは、キャッシュされたストアド プロシージャのプランごとに 1 行を返します。その行の有効期間はストアド プロシージャがキャッシュに残っている間になります。 つまり、ストアド プロシージャがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点で、パフォーマンス統計 SQL トレースイベントが **_exec_query_stats**と同様に発生します。  
   
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
   
@@ -45,7 +45,7 @@ ms.locfileid: "68742900"
 |**object_id**|**int**|ストアドプロシージャのオブジェクト id 番号。|  
 |**type**|**char(2)**|次のいずれかのオブジェクトの種類。<br /><br /> P = SQL ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> X = 拡張ストアドプロシージャ|  
 |**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明。<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
-|**sql_handle**|**varbinary(64)**|これを使用すると、このストアドプロシージャ内から実行された **sys.dm_exec_query_stats**内のクエリと相関させることができます。|  
+|**sql_handle**|**varbinary(64)**|これを使用すると、このストアドプロシージャ内から実行された **_exec_query_stats**内のクエリと相関させることができます。|  
 |**plan_handle**|**varbinary(64)**|インメモリプランの識別子。 この識別子は一時的なものであり、プランがキャッシュに残っている間だけ一定のままです。 この値は、 **sys.dm_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**cached_time**|**datetime**|ストアド プロシージャがキャッシュに追加された時刻。|  
 |**last_execution_time**|**datetime**|ストアドプロシージャが最後に実行された時刻です。|  
@@ -103,12 +103,12 @@ ORDER BY [total_worker_time] DESC;
 ```  
   
 ## <a name="see-also"></a>関連項目  
-[実行関連の動的管理ビューおよび関数 &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
-[sys.dm_exec_sql_text &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
-[sys.dm_exec_query_plan &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
-[sys.dm_exec_query_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
-[sys.dm_exec_trigger_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
-[sys.dm_exec_cached_plans &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
+[実行関連の動的管理ビューおよび&#40;関数 transact-sql&#41;](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)   
+[_exec_sql_text &#40;transact-sql (dm)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)   
+[_exec_query_plan &#40;transact-sql (dm)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[_exec_query_stats &#40;transact-sql (dm)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-stats-transact-sql.md)    
+[_exec_trigger_stats &#40;transact-sql (dm)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-trigger-stats-transact-sql.md)    
+[_exec_cached_plans &#40;transact-sql (dm)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-cached-plans-transact-sql.md)    
   
   
 

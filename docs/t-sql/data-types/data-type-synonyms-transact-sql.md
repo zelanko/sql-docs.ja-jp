@@ -34,16 +34,16 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 |**char varying**|**varchar**|  
 |**character**|**char**|  
 |**character**|**char(1)**|  
-|**character(**_n_**)**|**char(n)**|  
-|**character varying(**_n_**)**|**varchar(n)**|  
+|**character(** _n_ **)**|**char(n)**|  
+|**character varying(** _n_ **)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[ **(**n**)** ] for _n_ = 1-7|**real**|  
-|**float**[ **(**n**)** ] for _n_ = 8-15|**float**|  
+|**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
+|**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
-|**national character(**_n_**)**|**nchar(n)**|  
-|**national char(**_n_**)**|**nchar(n)**|  
-|**national character varying(**_n_**)**|**nvarchar(n)**|  
+|**national character(** _n_ **)**|**nchar(n)**|  
+|**national char(** _n_ **)**|**nchar(n)**|  
+|**national character varying(** _n_ **)**|**nvarchar(n)**|  
 |**national char varying(** _n_ **)**|**nvarchar(n)**|  
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  

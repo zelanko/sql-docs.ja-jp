@@ -36,15 +36,15 @@ ms.locfileid: "67937142"
 
   ANSI などの文字データ文字の SQL_C_CHAR で宣言された変数またはデータに格納されている[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を使用して、 **char**、 **varchar**、または**text**データ型のことができます文字の制限の数のみを表します。 1 文字ごとに 1 バイトを使用して保存される文字データでは、256 文字しか表現できません。 SQL_C_CHAR 変数に格納される値は、クライアント コンピューターの ANSI コード ページ (ACP) を使用して解釈されます。 使用して格納されている値**char**、 **varchar**、または**text**サーバー上のデータ型は、サーバーの ACP を使用して評価されます。  
   
- サーバーとクライアントの両方に同じの ACP があるかどうかは、SQL_C_CHAR に格納された値を解釈するときに問題があるない**char**、 **varchar**、または**text**オブジェクト。 サーバーとクライアントが別の Acp かどうかは、クライアントの SQL_C_CHAR データで使用されている場合、サーバー上の別の文字として解釈可能性があります**char**、 **varchar**、または**text**列、変数、またはパラメーター。 たとえば、0xA5 という値の文字バイトは、コード ページ 437 を使用するコンピューターでは &#xD1; という文字に解釈されますが、コード ページ 1252 を使用するコンピューターでは円記号 (\) として解釈されます。  
+ サーバーとクライアントの両方に同じの ACP があるかどうかは、SQL_C_CHAR に格納された値を解釈するときに問題があるない**char**、 **varchar**、または**テキスト**オブジェクト。 サーバーとクライアントが別の Acp かどうかは、クライアントの SQL_C_CHAR データで使用されている場合、サーバー上の別の文字として解釈可能性があります**char**、 **varchar**、または**テキスト**列、変数、またはパラメーター。 たとえば、0xA5 という値の文字バイトは、コード ページ 437 を使用するコンピューターでは &#xD1; という文字に解釈されますが、コード ページ 1252 を使用するコンピューターでは円記号 (\) として解釈されます。  
   
  Unicode データは、1 文字あたり 2 バイトを使用して格納されます。 Unicode の仕様は、すべての拡張文字を網羅しています。したがって、すべての Unicode 文字は、すべてのコンピューターで同じ文字に解釈されます。  
   
  AutoTranslate 機能、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーは異なるコード ページが、クライアントとサーバー間の文字のデータ移動の問題を最小化しようとしています。 接続文字列の AutoTranslate を設定できます[SQLDriverConnect](../../relational-databases/native-client-odbc-api/sqldriverconnect.md)の構成文字列[SQLConfigDataSource](../../relational-databases/native-client-odbc-api/sqlconfigdatasource.md)、またはデータ ソースを構成するときに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBCドライバーは ODBC アドミニストレーターを使用します。  
   
- クライアントの SQL_C_CHAR 変数との間で移動するデータの変換は行われません AutoTranslate の設定を"no"にすると、および**char**、 **varchar**、または**text**列、変数、またはのパラメーターを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 この場合、データに拡張文字が含まれていて、クライアント コンピューターとサーバー コンピューターのコード ページが異なっていると、ビット パターンはクライアントとサーバーでは異なって解釈される可能性があります。 クライアントとサーバーが同じコード ページを使用している場合は、データは同じ文字に解釈されます。  
+ クライアントの SQL_C_CHAR 変数との間で移動するデータの変換は行われません AutoTranslate の設定を"no"にすると、および**char**、 **varchar**、または**テキスト**列、変数、またはのパラメーターを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。 この場合、データに拡張文字が含まれていて、クライアント コンピューターとサーバー コンピューターのコード ページが異なっていると、ビット パターンはクライアントとサーバーでは異なって解釈される可能性があります。 クライアントとサーバーが同じコード ページを使用している場合は、データは同じ文字に解釈されます。  
   
- AutoTranslate が"yes"に設定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、Unicode を使用して、クライアントの SQL_C_CHAR 変数との間で移動するデータを変換しますおよび**char**、 **varchar**、または**text**列、変数、またはパラメーターで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
+ AutoTranslate が"yes"に設定されている場合、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client ODBC ドライバーでは、Unicode を使用して、クライアントの SQL_C_CHAR 変数との間で移動するデータを変換しますおよび**char**、 **varchar**、または**テキスト**列、変数、またはパラメーターで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース。  
   
 -   クライアントの SQL_C_CHAR 変数からデータを送信するときに、 **char**、 **varchar**、または**text**列、変数、またはパラメーターで、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データベース, ODBCドライバーは、サーバーの acp に基づいて文字に Unicode からし、クライアントの acp に基づいて Unicode を SQL_C_CHAR から最初に変換します。  
   

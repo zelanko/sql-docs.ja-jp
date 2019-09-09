@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/06/2019
 ms.locfileid: "68811522"
 ---
-# <a name="sysdm_db_index_physical_stats-transact-sql"></a>システム統計情報 (Transact-sql) (_d) (_s)
+# <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定されたテーブルまたはビューのデータとインデックスのサイズと断片化に関する情報を返します。 インデックスの場合、各パーティションの B ツリーのレベルごとに 1 行のデータが返されます。 ヒープの場合、各パーティションの IN_ROW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 ラージオブジェクト (LOB) データの場合、各パーティションの LOB_DATA アロケーションユニットに対して1行が返されます。 テーブルに行オーバーフロー データが存在する場合、各パーティションの ROW_OVERFLOW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 XVelocity メモリ最適化列ストアインデックスに関する情報は返されません。  
