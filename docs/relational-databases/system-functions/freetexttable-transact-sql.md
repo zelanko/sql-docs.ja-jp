@@ -32,7 +32,7 @@ ms.locfileid: "68042762"
 # <a name="freetexttable-transact-sql"></a>FREETEXTTABLE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-  使用される関数、[句から](../../t-sql/queries/from-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行する SELECT ステートメント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フル ・ テキストの全文検索が文字ベースのデータ型を含む列をインデックス付けします。 この関数は 0、1、または複数の行を意味し、正確な表現だけでなく、指定したテキストに一致する値を格納している列のテーブルを返します*freetext_string*します。 FREETEXTTABLE は、通常のテーブル名の場合と同様に参照されます。  
+  使用される関数、[FROM 句](../../t-sql/queries/from-transact-sql.md)の[!INCLUDE[tsql](../../includes/tsql-md.md)]を実行する SELECT ステートメント、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]フル ・ テキストの全文検索が文字ベースのデータ型を含む列をインデックス付けします。 この関数は 0、1、または複数の行を意味し、正確な表現だけでなく、指定したテキストに一致する値を格納している列のテーブルを返します*freetext_string*します。 FREETEXTTABLE は、通常のテーブル名の場合と同様に参照されます。  
   
  FREETEXTTABLE は、同じ種類と一致するのに便利です、 [FREETEXT &#40;Transact SQL&#41;](../../t-sql/queries/freetext-transact-sql.md)、  
   
