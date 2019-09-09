@@ -36,9 +36,9 @@ ms.locfileid: "70294377"
 
 [パート 1](python-clustering-model.md)では、前提条件をインストールし、サンプルデータベースを復元しました。
 
-[第2部](python-clustering-model-prepare-data.md)では、クラスタリングを実行するために SQL データベースからデータを準備する方法を学習しました。
+[パート 2](python-clustering-model-prepare-data.md)では、クラスタリングを実行するために SQL データベースからデータを準備する方法を学習しました。
 
-[パート 3](python-clustering-model-build.md)では、Python で K を意味するクラスターモデルを作成してトレーニングする方法について学習しました。
+[パート 3](python-clustering-model-build.md)では、Python で K-Means クラスターモデルを作成してトレーニングする方法について学習しました。
 
 ## <a name="prerequisites"></a>前提条件
 
@@ -49,7 +49,7 @@ ms.locfileid: "70294377"
 次の T-sql スクリプトを実行して、ストアドプロシージャを作成します。 この手順では、パート1とこのチュートリアルシリーズで開発した手順を再作成します。
 
 * 購入と返却履歴に基づいて顧客を分類する
-* K の意味アルゴリズムを使用して4つの顧客のクラスターを生成する
+* K-Means アルゴリズムを使用して4つの顧客のクラスターを生成する
 
 ```sql
 USE [tpcxbb_1gb]
