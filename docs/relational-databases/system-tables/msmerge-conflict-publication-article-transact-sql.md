@@ -1,5 +1,5 @@
 ---
-title: MSmerge_conflict_&lt;publication&gt;_&lt;article(transact-sql)|&gt;Microsoft Docs
+title: MSmerge_conflict_&lt;publication&gt;_&lt;article&gt;(Transact-sql) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -27,11 +27,11 @@ ms.locfileid: "68893581"
 # <a name="msmerge_conflict_ltpublicationgt_ltarticlegt-transact-sql"></a>MSmerge\_conflict\_&lt;publication&gt;\_&lt;article&gt; (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-  **MSmerge\_conflict\_publication\_article** には、競合している行や、データの収束を実現するために元に戻された行の変更に関する情報が含まれています。競合テーブルはパブリケーション内のレプリケートされたテーブルごとに存在し、競合テーブルの名前にパブリケーションとアーティクルの名前が付加されます。 このアーティクル固有の競合テーブルは、競合ログで使用するデータベースに保存されます。通常、これはパブリケーション データベースですが、集中型でない競合ログの場合はサブスクリプション データベースの場合もあります。  
+  **MSmerge\_conflict\_publication\_article** には、競合している行や、データの収束を実現するために元に戻された行の変更に関する情報が含まれています。 競合テーブルはパブリケーション内のレプリケートされたテーブルごとに存在し、競合テーブルの名前にパブリケーションとアーティクルの名前が付加されます。 このアーティクル固有の競合テーブルは、競合ログで使用するデータベースに保存されます。通常、これはパブリケーション データベースですが、集中型でない競合ログの場合はサブスクリプション データベースの場合もあります。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**_アーティクル\_列\_名_**|**variable**|レプリケートされたテーブルの列。 このシステム テーブルにはテーブル アーティクルの列ごとに 1 行のデータが格納されます。|  
+|**_article\_column\_name_**|**variable**|レプリケートされたテーブルの列。 このシステム テーブルにはテーブル アーティクルの列ごとに 1 行のデータが格納されます。|  
 |**rowguid**|**uniqueidentifier**|競合行の行識別子。|  
 |**ModifiedDate**|**datetime**|競合が発生した時刻。|  
 |**origin\_datasource\_id**|**uniqueidentifier**|行変更が取り消された、または競合が失われたサブスクリプション。|  
