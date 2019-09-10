@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft Docs
+title: システムの状態 (Transact-sql) (_d) | をコピーします。Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -234,7 +234,7 @@ GO
   
  VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 また、データベースのワイルドカード @*database_id*= NULL が指定されている場合、データベースは省略されます。  
   
- 詳細については、「[動的管理ビューと関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
+ 詳細については、「[動的管理ビュー &#40;と関数 transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   
@@ -294,7 +294,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. インデックスの再構築または再構成のためのスクリプトでの使用 (_d)  
- 次の例では、平均断片化が 10% を超えるデータベース内のすべてのパーティションを自動的に再編成または再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 現在のデータベースの互換性レベルが80以下の場合は、エラーが生成されます。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、「 [ALTER DATABASE &#40;Transact-SQL&#41; 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
+ 次の例では、平均断片化が 10% を超えるデータベース内のすべてのパーティションを自動的に再編成または再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 現在のデータベースの互換性レベルが80以下の場合は、エラーが生成されます。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、「 [ALTER Database &#40;互換性レベル transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -430,7 +430,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [SQL server の統計&#40;情報 (_d): transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [システムの&#40;transact-sql (_d) (_d)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [システムビュー &#40;Transact-SQL&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [システムビュー &#40;transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 
