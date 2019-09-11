@@ -90,8 +90,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**distribution cleanup agent**|**nvarchar(100)**|ディストリビューションクリーンアップエージェントの名前。|  
 |**rpc server name**|**sysname**|リモートディストリビューターまたはローカルディストリビューターの名前。|  
 |**rpc login name**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
-|**publisher type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **
-MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
+|**publisher type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
