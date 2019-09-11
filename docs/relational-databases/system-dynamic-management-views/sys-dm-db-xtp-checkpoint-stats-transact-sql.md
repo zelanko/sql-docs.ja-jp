@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_stats (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -99,15 +99,15 @@ SELECT * FROM sys.dm_db_xtp_checkpoint_stats;
 |new_log_wait_time_in_ms|**bigint**|新しいログ待機に費やされた累積時間。|  
 |log_generated_since_last_checkpoint_in_bytes|**bigint**|前回のインメモリ OLTP チェックポイント以降に生成されたログの量。|  
 |ms_since_last_checkpoint|**bigint**|前回のインメモリ OLTP チェックポイント以降のミリ秒単位の時間。|  
-|checkpoint_lsn|**数値 (38)**|復旧ログ シーケンス番号 (LSN) 最後に完了したインメモリ OLTP チェックポイントに関連付けられています。|  
-|current_lsn|**数値 (38)**|現在処理しているログ レコードの LSN。|  
-|end_of_log_lsn|**数値 (38)**|ログの最後の LSN。|  
+|checkpoint_lsn|**numeric(38)**|復旧ログ シーケンス番号 (LSN) 最後に完了したインメモリ OLTP チェックポイントに関連付けられています。|  
+|current_lsn|**numeric(38)**|現在処理しているログ レコードの LSN。|  
+|end_of_log_lsn|**numeric(38))**|ログの最後の LSN。|  
 |task_address|**varbinary(8)**|SOS_Task のアドレス。 追加の情報を得るには、sys.dm_os_tasks と組み合わせます。|  
   
 ## <a name="permissions"></a>アクセス許可  
  サーバーに対する `VIEW DATABASE STATE` 権限が必要です。  
   
 ## <a name="see-also"></a>関連項目  
- [メモリ最適化テーブルの動的管理ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
+ [メモリ最適化テーブルの動的管理ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/memory-optimized-table-dynamic-management-views-transact-sql.md)  
   
   
