@@ -1,6 +1,6 @@
 ---
 title: チュートリアル:Python でモデルを構築して顧客を分類する
-description: この4部構成のチュートリアルシリーズの第3部では、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行する K の手段モデルを構築します。
+description: この 4 部構成のチュートリアルシリーズの第 3 部では、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行する K-Means モデルを構築します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -21,18 +21,18 @@ ms.locfileid: "70294407"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この4部構成のチュートリアルシリーズの第3部では、クラスタリングを実行するために、Python で K の手段モデルを構築します。 このシリーズの次のパートでは、SQL Server Machine Learning Services を使用して、このモデルを SQL database にデプロイします。
+この 4 部構成のチュートリアルシリーズの第 3 部では、クラスタリングを実行するために、Python で K-Means モデルを構築します。 このシリーズの次のパートでは、SQL Server Machine Learning Services を使用して、このモデルを SQL database にデプロイします。
 
 この記事では、次の方法について説明します。
 
 > [!div class="checklist"]
-> * K の意味アルゴリズムのクラスター数を定義します。
+> * K-Means アルゴリズムのクラスター数を定義します。
 > * クラスタリングを実行する
 > * 結果の分析
 
 [パート 1](python-clustering-model.md)では、前提条件をインストールし、サンプルデータベースを復元しました。
 
-[第2部](python-clustering-model-prepare-data.md)では、クラスタリングを実行するために SQL データベースからデータを準備する方法を学習しました。
+[パート 2](python-clustering-model-prepare-data.md)では、クラスタリングを実行するために SQL データベースからデータを準備する方法を学習しました。
 
 [パート 4](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できる SQL データベースにストアドプロシージャを作成する方法について説明します。
 
@@ -43,12 +43,12 @@ ms.locfileid: "70294407"
 ## <a name="define-the-number-of-clusters"></a>クラスターの数を定義する
 
 顧客データをクラスター化するには、 **K の意味**を持つクラスタリングアルゴリズムを使用します。これは、データをグループ化する最も簡単でよく知られている方法の1つです。
-K の意味の詳細については[、「k」のクラスターアルゴリズムの完全なガイド](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html)を参照してください。
+K-Means の詳細については、[K-Means クラスターアルゴリズムの完全なガイド](https://www.kdnuggets.com/2019/05/guide-k-means-clustering-algorithm.html) を参照してください。
 
 このアルゴリズムでは、次の2つの入力を受け取ります。データ自体、および生成するクラスターの数を表す定義済みの番号 "*k*"。
 出力は、クラスター間でパーティション分割された入力データを持つ*k*クラスターです。
 
-K の目標は、項目を k クラスターにグループ化して、同じクラスター内のすべての項目が互いに類似していること、および他のクラスター内の項目とは可能な限り異なるようにすることです。
+K-Means の目標は、項目を k クラスターにグループ化して、同じクラスター内のすべての項目が互いに類似していること、および他のクラスター内の項目とは可能な限り異なるようにすることです。
 
 アルゴリズムで使用するクラスターの数を決定するには、抽出されたクラスターの数によって、グループ内の平方和のプロットを使用します。 使用するクラスターの数は、プロットのベンドまたは "肘" になります。
 
@@ -152,7 +152,7 @@ K を使用したデータマイニングでは、多くの場合、結果をさ
 
 このチュートリアルシリーズの第3部では、次の手順を完了しました。
 
-* K の意味アルゴリズムのクラスター数を定義します。
+* K-Means アルゴリズムのクラスター数を定義します。
 * クラスタリングを実行する
 * 結果の分析
 
