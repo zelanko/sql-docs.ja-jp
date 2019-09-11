@@ -268,7 +268,7 @@ ms.locfileid: "68890274"
   
      ブラウザーで目的の SharePoint サイトを開きます。 たとえば、 http://\<サーバー名>/sites/bi などです。  
   
-2.  **[設定]** [![sharepoint]の設定] [(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint の設定")] をクリックします。  
+2.  **設定** ![sharepointの設定](https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint の設定") をクリックします。  
   
 3.  **[サイトの設定]** をクリックします。  
   

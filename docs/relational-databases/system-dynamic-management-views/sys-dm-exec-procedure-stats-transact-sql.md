@@ -1,5 +1,5 @@
 ---
-title: sys _exec_procedure_stats (Transact-sql) |Microsoft Docs
+title: sys _exec_procedure_stats (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/03/2019
 ms.prod: sql
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/02/2019
 ms.locfileid: "68742900"
 ---
-# <a name="sysdmexecprocedurestats-transact-sql"></a>sys _exec_procedure_stats (Transact-sql)
+# <a name="sysdm_exec_procedure_stats-transact-sql"></a>sys _exec_procedure_stats (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
 
   キャッシュされたストアドプロシージャの集計パフォーマンス統計を返します。 ビューは、キャッシュされたストアド プロシージャのプランごとに 1 行を返します。その行の有効期間はストアド プロシージャがキャッシュに残っている間になります。 つまり、ストアド プロシージャがキャッシュから削除されると、対応する行もこのビューから削除されます。 その時点で、パフォーマンス統計 SQL トレースイベントが **_exec_query_stats**と同様に発生します。  
@@ -35,8 +35,8 @@ ms.locfileid: "68742900"
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]では、動的管理ビューでデータベースの包含に影響を与える情報を公開することや、ユーザーがアクセスできる他のデータベースに関する情報を公開することはできません。 この情報を公開しないように、接続されたテナントに属していないデータを含むすべての行がフィルターで除外されます。  
   
 > [!NOTE]
-> データには完了したクエリだけが反映され、まだ処理中ではないため、 **_exec_procedure_stats**の結果は実行ごとに異なる場合があります。
-> またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **_pdw_nodes_exec_procedure_stats**という名前を使用します。 
+> データには完了したクエリだけが反映され、まだ処理中ではないため、 **sys.dm_exec_procedure_stats**の結果は実行ごとに異なる場合があります。
+> またはから[!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)]これを[!INCLUDE[ssPDW](../../includes/sspdw-md.md)]呼び出すには、 **sys.dm_pdw_nodes_exec_procedure_stats**という名前を使用します。 
 
   
 |列名|データ型|説明|  
@@ -46,7 +46,7 @@ ms.locfileid: "68742900"
 |**type**|**char(2)**|次のいずれかのオブジェクトの種類。<br /><br /> P = SQL ストアド プロシージャ<br /><br /> PC = アセンブリ (CLR) ストアド プロシージャ<br /><br /> X = 拡張ストアドプロシージャ|  
 |**type_desc**|**nvarchar(60)**|オブジェクトの種類の説明。<br /><br /> SQL_STORED_PROCEDURE<br /><br /> CLR_STORED_PROCEDURE<br /><br /> EXTENDED_STORED_PROCEDURE|  
 |**sql_handle**|**varbinary(64)**|これを使用すると、このストアドプロシージャ内から実行された **_exec_query_stats**内のクエリと相関させることができます。|  
-|**plan_handle**|**varbinary(64)**|インメモリプランの識別子。 この識別子は一時的なものであり、プランがキャッシュに残っている間だけ一定のままです。 この値は、 **_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
+|**plan_handle**|**varbinary(64)**|インメモリプランの識別子。 この識別子は一時的なものであり、プランがキャッシュに残っている間だけ一定のままです。 この値は、 **sys.dm_exec_cached_plans**動的管理ビューで使用できます。<br /><br /> ネイティブ コンパイル ストアド プロシージャがメモリ最適化テーブルに対してクエリを実行するときは、常に 0x000 になります。|  
 |**cached_time**|**datetime**|ストアド プロシージャがキャッシュに追加された時刻。|  
 |**last_execution_time**|**datetime**|ストアドプロシージャが最後に実行された時刻です。|  
 |**execution_count**|**bigint**|ストアドプロシージャが最後にコンパイルされてから実行された回数。|  

@@ -1,6 +1,6 @@
 ---
 title: チュートリアル:Python でモデルを構築して顧客を分類する
-description: この4部構成のチュートリアルシリーズの第3部では、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行する K-Means モデルを構築します。
+description: この 4 部構成のチュートリアルシリーズの第 3 部では、SQL Server Machine Learning Services を使用して Python でクラスタリングを実行する K-Means モデルを構築します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -21,7 +21,7 @@ ms.locfileid: "70294407"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この4部構成のチュートリアルシリーズの第3部では、クラスタリングを実行するために、Python で K-Means モデルを構築します。 このシリーズの次のパートでは、SQL Server Machine Learning Services を使用して、このモデルを SQL database にデプロイします。
+この 4 部構成のチュートリアルシリーズの第 3 部では、クラスタリングを実行するために、Python で K-Means モデルを構築します。 このシリーズの次のパートでは、SQL Server Machine Learning Services を使用して、このモデルを SQL database にデプロイします。
 
 この記事では、次の方法について説明します。
 

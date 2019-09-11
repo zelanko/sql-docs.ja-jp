@@ -36,11 +36,11 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 |**character**|**char(1)**|  
 |**character(** _n_ **)**|**char(n)**|  
 |**character varying(** _n_ **)**|**varchar(n)**|  
-|**dec**|**decimal**|  
-|**DOUBLE PRECISION**|**float**|  
+|**Dec**|**decimal**|  
+|**Double precision**|**float**|  
 |**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
 |**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
-|**整数 (integer)**|**int**|  
+|**integer**|**int**|  
 |**national character(** _n_ **)**|**nchar(n)**|  
 |**national char(** _n_ **)**|**nchar(n)**|  
 |**national character varying(** _n_ **)**|**nvarchar(n)**|  

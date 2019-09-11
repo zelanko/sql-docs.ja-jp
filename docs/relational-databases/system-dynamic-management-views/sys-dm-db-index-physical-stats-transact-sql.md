@@ -1,5 +1,5 @@
 ---
-title: システムの状態 (Transact-sql) (_d) | をコピーします。Microsoft Docs
+title: sys.dm_db_index_physical_stats (TRANSACT-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/06/2019
 ms.locfileid: "68811522"
 ---
-# <a name="sysdm_db_index_physical_stats-transact-sql"></a>システム統計情報 (Transact-sql) (_d) (_s)
+# <a name="sysdm_db_index_physical_stats-transact-sql"></a>sys.dm_db_index_physical_stats (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]指定されたテーブルまたはビューのデータとインデックスのサイズと断片化に関する情報を返します。 インデックスの場合、各パーティションの B ツリーのレベルごとに 1 行のデータが返されます。 ヒープの場合、各パーティションの IN_ROW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 ラージオブジェクト (LOB) データの場合、各パーティションの LOB_DATA アロケーションユニットに対して1行が返されます。 テーブルに行オーバーフロー データが存在する場合、各パーティションの ROW_OVERFLOW_DATA アロケーション ユニットごとに 1 行のデータが返されます。 XVelocity メモリ最適化列ストアインデックスに関する情報は返されません。  
@@ -36,7 +36,7 @@ ms.locfileid: "68811522"
 > [!IMPORTANT]
 > [読み取り可能なセカンダリレプリカ](../../database-engine/availability-groups/windows/active-secondaries-readable-secondary-replicas-always-on-availability-groups.md)Always On をホストしているサーバーインスタンスで、このクエリを実行すると、再実行のブロックの問題が発生する可能性があります。 これは、この動的管理ビューが、指定したユーザー テーブルまたはビューで IS ロックを獲得することが原因です。IS ロックは、そのユーザー テーブルまたはビューの X ロックに関して REDO スレッドの要求をブロックする可能性があります。  
   
- **sys.dm_db_index_physical_stats**は、メモリ最適化インデックスに関する情報を返しません。 メモリ最適化インデックスの使用方法については、[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md) を参照してください。 
+ **sys.dm_db_index_physical_stats**は、メモリ最適化インデックスに関する情報を返しません。 メモリ最適化インデックスの使用方法については、[sys.dm_db_xtp_index_stats &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-xtp-index-stats-transact-sql.md) を参照してください。  
   
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
@@ -294,7 +294,7 @@ GO
 ```  
   
 ### <a name="d-using-sysdm_db_index_physical_stats-in-a-script-to-rebuild-or-reorganize-indexes"></a>D. インデックスの再構築または再構成のためのスクリプトでの使用 (_d)  
- 次の例では、平均断片化が 10% を超えるデータベース内のすべてのパーティションを自動的に再編成または再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 現在のデータベースの互換性レベルが80以下の場合は、エラーが生成されます。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、「 [ALTER Database &#40;互換性レベル transact-sql&#41;](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
+ 次の例では、平均断片化が 10% を超えるデータベース内のすべてのパーティションを自動的に再編成または再構築します。 このクエリを実行するには、VIEW DATABASE STATE 権限が必要です。 この例では、データベース名を指定せずに `DB_ID` を 1 番目のパラメーターとして指定しています。 現在のデータベースの互換性レベルが80以下の場合は、エラーが生成されます。 このエラーを解決するには、`DB_ID()` を有効なデータベース名で置き換えます。 データベース互換性レベルの詳細については、「 [ALTER DATABASE &#40;Transact-SQL&#41; 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」を参照してください。  
   
 ```  
 -- Ensure a USE <databasename> statement has been executed first.  
@@ -430,7 +430,7 @@ select * from sys.dm_db_index_physical_stats (db_id(), object_id ('ExpenseQueue'
  [SQL server の統計&#40;情報 (_d): transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-index-usage-stats-transact-sql.md)   
  [システムの&#40;transact-sql (_d) (_d)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-db-partition-stats-transact-sql.md)   
  [sys.allocation_units &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-allocation-units-transact-sql.md)   
- [システムビュー &#40;transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
+ [システムビュー &#40;Transact-sql&#41;](https://msdn.microsoft.com/library/35a6161d-7f43-4e00-bcd3-3091f2015e90)  
   
   
 

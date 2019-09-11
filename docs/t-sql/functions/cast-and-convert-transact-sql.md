@@ -93,7 +93,7 @@ date または time データ型の *expression* の場合、*style* には次�
 |**7**|**107** <sup>(1)</sup>|-|  7 = Mon dd, yy<br /> 107 = Mon dd, yyyy|  
 |**8** または **24**|**108**|-|hh:mi:ss|  
 |-|**9** または **109** (<sup>1、</sup><sup>2</sup>)|既定値 + ミリ秒|mon dd yyyy hh:mi:ss:mmmAM (または PM)|  
-|"**10**"|**110**|米国| 10 = mm-dd-yy<br /> 110 = mm-dd-yyyy|  
+|**10**|**110**|米国| 10 = mm-dd-yy<br /> 110 = mm-dd-yyyy|  
 |**11**|**111**|日本| 11 = yy/mm/dd<br /> 111 = yyyy/mm/dd|  
 |**12**|**112**|ISO| 12 = yymmdd<br /> 112 = yyyymmdd|  
 |-|**13** または **113** (<sup>1、</sup><sup>2</sup>)|ヨーロッパの既定値 + ミリ秒|dd mon yyyy hh:mi:ss:mmm (24h)|  

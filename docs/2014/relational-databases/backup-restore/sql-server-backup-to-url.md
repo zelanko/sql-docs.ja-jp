@@ -56,7 +56,7 @@ ms.locfileid: "70175840"
   
  このプロセスの最初の手順として、Azure アカウントを作成します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]は、 **Azure ストレージアカウント名**とその**アクセスキー**値を使用して、ストレージサービスに対して認証および blob の読み書きを行います。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 資格情報はこの認証情報を格納するため、バックアップ操作または復元操作中に使用されます。 ストレージアカウントを作成し、単純な復元を実行する完全なチュートリアルについては、「 [Azure Storage サービスを使用した SQL Server のバックアップと復元のチュートリアル](https://go.microsoft.com/fwlink/?LinkId=271615)」を参照してください。  
   
- ![ストレージアカウントを sql 資格情報にマップし]ています(../../tutorials/media/backuptocloud-storage-credential-mapping.gif "ストレージアカウントを sql 資格情報にマップし")ています  
+ ![ストレージアカウントを sql 資格情報にマップしています](../../tutorials/media/backuptocloud-storage-credential-mapping.gif "ストレージアカウントを sql 資格情報にマップしています")  
   
 ###  <a name="Blob"></a>Azure Blob Storage サービス  
  **ストレージ アカウント:** ストレージ アカウントは、すべてのストレージ サービスの開始点となります。 Azure Blob Storage サービスにアクセスするには、まず Azure ストレージアカウントを作成します。 **ストレージアカウント名**とその**アクセスキー**プロパティは、Azure Blob Storage サービスとそのコンポーネントに対して認証を行うために必要です。  

@@ -79,18 +79,18 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
-|**ディストリビューションデータベース**|**sysname**|ディストリビューションデータベースの名前。|  
-|**名簿**|**nvarchar (255)**|作業ディレクトリの名前。|  
-|**顧客**|**nvarchar (255)**|Windows ユーザー アカウントの名前です。|  
-|**最小 distrib.exe 保有期間**|**int**|ディストリビューションの最小保有期間。|  
-|**最大 distrib.exe 保有期間**|**int**|ディストリビューションの最大保有期間。|  
-|**履歴の保有期間**|**int**|履歴の保有期間。|  
-|**履歴クリーンアップエージェント**|**nvarchar(100)**|履歴クリーンアップエージェントの名前。|  
-|**ディストリビューションクリーンアップエージェント**|**nvarchar(100)**|ディストリビューションクリーンアップエージェントの名前。|  
-|**rpc サーバー名**|**sysname**|リモートディストリビューターまたはローカルディストリビューターの名前。|  
-|**rpc ログイン名**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
-|**パブリッシャーの種類**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MS**<br /><br /> **ORACLE11I**<br /><br /> **ORACLE ゲートウェイ**|  
+|**distributor**|**sysname**|ディストリビューターの名前。|  
+|**distribution database**|**sysname**|ディストリビューションデータベースの名前。|  
+|**directory**|**nvarchar (255)**|作業ディレクトリの名前。|  
+|**account**|**nvarchar (255)**|Windows ユーザー アカウントの名前です。|  
+|**min distrib retention**|**int**|ディストリビューションの最小保有期間。|  
+|**max distrib retention**|**int**|ディストリビューションの最大保有期間。|  
+|**history retention**|**int**|履歴の保有期間。|  
+|**history cleanup agent**|**nvarchar(100)**|履歴クリーンアップエージェントの名前。|  
+|**distribution cleanup agent**|**nvarchar(100)**|ディストリビューションクリーンアップエージェントの名前。|  
+|**rpc server name**|**sysname**|リモートディストリビューターまたはローカルディストリビューターの名前。|  
+|**rpc login name**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
+|**publisher type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -106,12 +106,12 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |結果セット列|出力パラメーター|  
 |-----------------------|----------------------|  
 |account|**@account**|  
-|最小 distrib.exe 保有期間|**@min_distretention**|  
-|最大 distrib.exe 保有期間|**@max_distretention**|  
-|履歴の保有期間|**@history_retention**|  
+|min distrib retention|**@min_distretention**|  
+|max distrib retention|**@max_distretention**|  
+|history retention|**@history_retention**|  
 |history cleanup agent|**@history_cleanupagent**|  
-|ディストリビューション クリーンアップ エージェント (distribution cleanup agent)|**@distrib_cleanupagent**|  
-|rpc ログイン名|none|  
+|distribution cleanup agent|**@distrib_cleanupagent**|  
+|rpc login name|none|  
   
  次の結果セット列は、ディストリビューターのパブリケーション用のパブリケーション アクセス リストのユーザーに返されます。  
   
@@ -121,9 +121,9 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |結果セット列|出力パラメーター|  
 |-----------------------|----------------------|  
-|ディストリビューター (distributor)|**@distributor**|  
-|ディストリビューション データベース (distribution database)|**@distribdb**|  
-|rpc サーバー名|**@rpcsrvname**|  
+|distributor|**@distributor**|  
+|distribution database|**@distribdb**|  
+|rpc server name|**@rpcsrvname**|  
 |publisher type|**@publisher_type**|  
   
 ## <a name="see-also"></a>関連項目  

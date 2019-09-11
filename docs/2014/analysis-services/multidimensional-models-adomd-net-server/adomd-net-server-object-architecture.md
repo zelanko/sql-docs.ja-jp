@@ -26,7 +26,7 @@ ms.locfileid: "68887970"
 > [!NOTE]  
 >  `Microsoft.AnalysisServices.AdomdServer` 名前空間 (およびこれらのオブジェクト) を使用するには、UDF プロジェクトやストアド プロシージャに msmgdsrv.dll への参照を追加する必要があります。  
   
- ![ADOMD.NET Server のオブジェクトの関係を表示します]。(https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "ADOMD.NET Server のオブジェクトの関係を表示します")。  
+ ![ADOMD.NET Server のオブジェクトの関係を表示します](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/adomdnetserverobjectmodel.gif "ADOMD.NET Server のオブジェクトの関係を表示します")  
 ADOMD.NET オブジェクト モデル  
   
  ADOMD.NET オブジェクト階層との対話は、通常、次の表で説明するように、最上位層の 1 つまたは複数のオブジェクトで開始されます。  
