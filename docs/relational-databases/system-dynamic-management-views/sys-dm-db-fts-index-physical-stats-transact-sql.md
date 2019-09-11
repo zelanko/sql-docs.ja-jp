@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_fts_index_physical_stats (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_fts_index_physical_stats (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/20/2017
 ms.prod: sql
@@ -35,7 +35,7 @@ ms.locfileid: "68264494"
 ||||  
 |-|-|-|  
 |**列名**|**型**|**[説明]**|  
-|**object_id**|ssNoversion|インデックスを含むテーブルのオブジェクト ID。|  
+|**object_id**|int|インデックスを含むテーブルのオブジェクト ID。|  
 |**fulltext_index_page_count**|**bigint**|インデックス ページの数で表された、抽出の論理サイズ。|  
 |**keyphrase_index_page_count**|**bigint**|インデックス ページの数で表された、抽出の論理サイズ。|  
 |**similarity_index_page_count**|**bigint**|インデックス ページの数で表された、抽出の論理サイズ。|  
