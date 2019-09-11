@@ -128,11 +128,11 @@ ms.locfileid: "70155378"
 
 5. **[データベース名]** フィールドに名前を入力します。 必要に応じて、Windows 照合順序を選択して、 **[SQL Server の既定の照合順序]** チェック ボックスをオフにし、 **[大文字小文字を区別する]** などの利用可能なオプションを 1 つ以上クリックします。 **[次へ]** をクリックします。
 
-    ![SQLServer2019] ---//(../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "SQLServer2019-MI_CreatedDBName")  
+    ![SQLServer2019](../master-data-services/media/mds-sqlserver2019-config-mi-createddbname.png "SQLServer2019-MI_CreatedDBName")  
 
 6. **[ユーザー名]** フィールドに、の[!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)]既定のスーパーユーザーになるユーザーの Windows アカウントを指定します。 スーパー ユーザーには、すべての機能領域へのアクセス権があり、すべてのモデルを追加、削除、および更新できます。
 
-    ![SQLServer2019] ------//(../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "SQLServer2019-MI_createDBUserName")
+    ![SQLServer2019](../master-data-services/media/mds-sqlserver2019-config-mi-createdbusername.png "SQLServer2019-MI_createDBUserName")
 
 7. **[次へ]** をクリックして、 [!INCLUDE[ssMDSshort_md](../includes/ssmdsshort-md.md)] データベースの設定の概要を表示し、 **[次へ]** をもう一度クリックしてデータベースを作成します。 **[続行して完了する]** ページが表示されます。
 
