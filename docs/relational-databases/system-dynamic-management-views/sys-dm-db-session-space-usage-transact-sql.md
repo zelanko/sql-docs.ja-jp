@@ -61,7 +61,7 @@ ms.locfileid: "68263969"
   
  セッションは、複数の要求を同時にアクティブに持つことができます。 要求が並列クエリの場合、複数のスレッドやタスクを開始できます。  
   
- セッション、要求、およびタスクの詳細については、次を参照してください[sys.dm_exec_sessions &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)、 [sys.dm_exec_requests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)、および。[sys.dm_os_tasks と組み合わせます&#40;TRANSACT-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)します。  
+ セッション、要求、およびタスクの詳細については、[sys.dm_exec_sessions &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)、 [sys.dm_exec_requests &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)、および [sys.dm_os_tasks &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md) を参照してください。  
   
 ## <a name="user-objects"></a>ユーザー オブジェクト  
  次のオブジェクトは、ユーザー オブジェクト ページ カウンターに含まれます。  
