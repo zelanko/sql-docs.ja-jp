@@ -31,7 +31,7 @@ ms.locfileid: "70294347"
 
 [パート 1](python-clustering-model.md)では、前提条件をインストールし、サンプルデータベースを復元しました。
 
-[パート 3](python-clustering-model-build.md)では、Python で K を意味するクラスターモデルを作成してトレーニングする方法について説明します。
+[パート 3](python-clustering-model-build.md) では、Python で K-Means クラスターモデルを作成してトレーニングする方法について説明します。
 
 [パート 4](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できる SQL データベースにストアドプロシージャを作成する方法について説明します。
 

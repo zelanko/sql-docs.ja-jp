@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.openlocfilehash: 0681e82f9e36fd2a2f66bb8b7d3faa2f07a72f13
 ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770941"
 ---
-# <a name="sphelpdistributor-transact-sql"></a>sp_helpdistributor (Transact-sql)
+# <a name="sp_helpdistributor-transact-sql"></a>sp_helpdistributor (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ディストリビューター、ディストリビューションデータベース、作業ディレクトリ、および[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェントユーザーアカウントに関する情報を一覧表示します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースまたは任意のデータベースに対して実行されます。  
@@ -79,18 +79,18 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**distributor**|**sysname**|ディストリビューターの名前。|  
-|**distribution database**|**sysname**|ディストリビューションデータベースの名前。|  
-|**directory**|**nvarchar (255)**|作業ディレクトリの名前。|  
-|**account**|**nvarchar (255)**|Windows ユーザー アカウントの名前です。|  
-|**min distrib retention**|**int**|ディストリビューションの最小保有期間。|  
-|**max distrib retention**|**int**|ディストリビューションの最大保有期間。|  
-|**history retention**|**int**|履歴の保有期間。|  
-|**history cleanup agent**|**nvarchar(100)**|履歴クリーンアップエージェントの名前。|  
-|**distribution cleanup agent**|**nvarchar(100)**|ディストリビューションクリーンアップエージェントの名前。|  
-|**rpc server name**|**sysname**|リモートディストリビューターまたはローカルディストリビューターの名前。|  
-|**rpc login name**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
-|**publisher type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
+|**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
+|**ディストリビューションデータベース**|**sysname**|ディストリビューションデータベースの名前。|  
+|**名簿**|**nvarchar (255)**|作業ディレクトリの名前。|  
+|**顧客**|**nvarchar (255)**|Windows ユーザー アカウントの名前です。|  
+|**最小 distrib.exe 保有期間**|**int**|ディストリビューションの最小保有期間。|  
+|**最大 distrib.exe 保有期間**|**int**|ディストリビューションの最大保有期間。|  
+|**履歴の保有期間**|**int**|履歴の保有期間。|  
+|**履歴クリーンアップエージェント**|**nvarchar(100)**|履歴クリーンアップエージェントの名前。|  
+|**ディストリビューションクリーンアップエージェント**|**nvarchar(100)**|ディストリビューションクリーンアップエージェントの名前。|  
+|**rpc サーバー名**|**sysname**|リモートディストリビューターまたはローカルディストリビューターの名前。|  
+|**rpc ログイン名**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
+|**パブリッシャーの種類**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE ゲートウェイ**|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -106,12 +106,12 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |結果セット列|出力パラメーター|  
 |-----------------------|----------------------|  
 |account|**@account**|  
-|min distrib retention|**@min_distretention**|  
-|max distrib retention|**@max_distretention**|  
-|history retention|**@history_retention**|  
+|最小 distrib.exe 保有期間|**@min_distretention**|  
+|最大 distrib.exe 保有期間|**@max_distretention**|  
+|履歴の保有期間|**@history_retention**|  
 |history cleanup agent|**@history_cleanupagent**|  
-|distribution cleanup agent|**@distrib_cleanupagent**|  
-|rpc login name|none|  
+|ディストリビューション クリーンアップ エージェント (distribution cleanup agent)|**@distrib_cleanupagent**|  
+|rpc ログイン名|none|  
   
  次の結果セット列は、ディストリビューターのパブリケーション用のパブリケーション アクセス リストのユーザーに返されます。  
   
@@ -121,9 +121,9 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |結果セット列|出力パラメーター|  
 |-----------------------|----------------------|  
-|distributor|**@distributor**|  
-|distribution database|**@distribdb**|  
-|rpc server name|**@rpcsrvname**|  
+|ディストリビューター (distributor)|**@distributor**|  
+|ディストリビューション データベース (distribution database)|**@distribdb**|  
+|rpc サーバー名|**@rpcsrvname**|  
 |publisher type|**@publisher_type**|  
   
 ## <a name="see-also"></a>関連項目  
