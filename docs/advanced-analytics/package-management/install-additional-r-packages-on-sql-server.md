@@ -120,11 +120,11 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 ## <a name="add-an-r-package-on-sql-server"></a>SQL Server に R パッケージを追加する
 
-次の例では、SQL Server に[**グルー**](https://cran.r-project.org/web/packages/glue/)パッケージを追加します。
+次の例では、SQL Server に[**glue**](https://cran.r-project.org/web/packages/glue/)パッケージを追加します。
 
 ### <a name="add-the-package-online"></a>パッケージをオンラインで追加する
 
-SQL Server への接続に使用するクライアントコンピューターがインターネットにアクセスできる場合は、 **sqlmlutils**を使用して、インターネット経由で**グルー**パッケージと依存関係を検索し、そのパッケージを SQL Server インスタンスにリモートでインストールすることができます。
+SQL Server への接続に使用するクライアントコンピューターがインターネットにアクセスできる場合は、 **sqlmlutils**を使用して、インターネット経由で**glue**パッケージと依存関係を検索し、そのパッケージを SQL Server インスタンスにリモートでインストールすることができます。
 
 1. クライアントコンピューターで RStudio を開き、新しい**R スクリプト**ファイルを作成します。
 
@@ -146,7 +146,7 @@ SQL Server への接続に使用するクライアントコンピューターが
 
 ### <a name="add-the-package-offline"></a>パッケージをオフラインで追加する
 
-クライアントコンピューターがインターネットに接続されていない場合は、 **miniCRAN**を使用して、インターネットにアクセスできるコンピューターを使用して、**グルー**パッケージをダウンロードできます。 次に、パッケージをクライアントコンピューターにコピーして、パッケージをオフラインでインストールできるようにします。
+クライアントコンピューターがインターネットに接続されていない場合は、 **miniCRAN**を使用して、インターネットにアクセスできるコンピューターを使用して、**glue**パッケージをダウンロードできます。 次に、パッケージをクライアントコンピューターにコピーして、パッケージをオフラインでインストールできるようにします。
 **MiniCRAN**のインストールについては、「 [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 」を参照してください。
 
 インターネットにアクセスできるコンピューターの場合:
@@ -212,7 +212,7 @@ SQL Server への接続に使用するクライアントコンピューターが
 
 ## <a name="use-the-package"></a>パッケージを使用する
 
-**グルー**パッケージがインストールされたら、t-sql **sp_execute_external_script**コマンドを使用して SQL Server の R スクリプトで使用できます。
+**glue**パッケージがインストールされたら、t-sql **sp_execute_external_script**コマンドを使用して SQL Server の R スクリプトで使用できます。
 
 1. Azure Data Studio または SSMS を開き、SQL Server データベースに接続します。
 
@@ -240,7 +240,7 @@ SQL Server への接続に使用するクライアントコンピューターが
 
 ## <a name="remove-the-package"></a>パッケージを削除する
 
-**グルー**パッケージを削除する場合は、次の R スクリプトを実行します。 前に定義したのと同じ**接続**変数を使用します。
+**glue**パッケージを削除する場合は、次の R スクリプトを実行します。 前に定義したのと同じ**接続**変数を使用します。
 
 ```R
 sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLIC")
