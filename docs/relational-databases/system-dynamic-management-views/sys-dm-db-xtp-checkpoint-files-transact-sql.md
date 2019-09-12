@@ -1,5 +1,5 @@
 ---
-title: sys.dm_db_xtp_checkpoint_files (TRANSACT-SQL) |Microsoft Docs
+title: sys.dm_db_xtp_checkpoint_files (Transact-SQL) |Microsoft Docs
 ms.date: 03/20/2017
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
@@ -27,7 +27,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68026910"
 ---
-# <a name="sysdmdbxtpcheckpointfiles-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
+# <a name="sysdm_db_xtp_checkpoint_files-transact-sql"></a>sys.dm_db_xtp_checkpoint_files (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2014-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2014-asdb-xxxx-xxx-md.md)]
 
   ファイル サイズ、物理的な場所、トランザクション ID など、チェックポイント ファイルに関する情報を表示します。  

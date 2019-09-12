@@ -1,6 +1,6 @@
 ---
 title: K-Means クラスタリングを使用して顧客を分類する方法
-description: この4部構成のチュートリアルシリーズでは、SQL Server Machine Learning Services で Python を使用した SQL database で K-Means アルゴリズムを使用して、顧客のクラスタリングを実行します。
+description: この 4 部構成のチュートリアルシリーズでは、SQL Server Machine Learning Services で Python を使用した SQL database で K-Means アルゴリズムを使用して、顧客のクラスタリングを実行します。
 ms.prod: sql
 ms.technology: machine-learning
 ms.devlang: python
@@ -21,23 +21,23 @@ ms.locfileid: "70294367"
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この4部構成のチュートリアルシリーズでは、お客様のデータをクラスター化するために、Python を使用して、 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)で K-Means クラスターモデルを開発およびデプロイします。
+この 4 部構成のチュートリアルシリーズでは、お客様のデータをクラスター化するために、Python を使用して、 [SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md) で K-Means クラスターモデルを開発およびデプロイします。
 
 このシリーズの第1部では、チュートリアルの前提条件を設定してから、サンプルデータセットを SQL database に復元します。 このシリーズの後半で、このデータを使用して、SQL Server Machine Learning Services を使用した Python でのクラスターモデルのトレーニングとデプロイを行います。
 
 このシリーズのパート2と3では、データを分析および準備し、機械学習モデルをトレーニングするために、Azure Data Studio notebook でいくつかの Python スクリプトを開発します。 次に、第4部では、ストアドプロシージャを使用して、これらの Python スクリプトを SQL database 内で実行します。
 
-*クラスター*は、グループのメンバーが何らかの方法で類似しているグループへのデータの編成として説明できます。 このチュートリアルシリーズでは、小売事業を所有しているとします。 **K-Means** アルゴリズムを使用して、製品の購入と返品のデータセットで顧客のクラスタリングを実行します。 顧客をクラスタリングすることで、特定のグループをターゲットにすることで、マーケティングの取り組みをより効果的に進めることができます。
-K-Means クラスタリングは、類似性に基づいてデータのパターンを検索する*教師なし学習*アルゴリズムです。
+*クラスタリング* は、グループのメンバーが何らかの方法で類似しているグループにデータの編成することとして説明できます。 このチュートリアルシリーズでは、小売事業を所有しているとします。 **K-Means** アルゴリズムを使用して、製品の購入と返品のデータセットで顧客のクラスタリングを実行します。 顧客をクラスタリングすることで、特定のグループをターゲットにし、マーケティングの取り組みをより効果的に進めることができます。
+K-Means クラスタリングは、類似性に基づいてデータのパターンを検索する *教師なし学習* アルゴリズムです。
 
 この記事では、次の方法について説明します。
 
 > [!div class="checklist"]
 > * サンプルデータベースを SQL Server インスタンスに復元する
 
-[パート 2](python-clustering-model-prepare-data.md)では、クラスタリングを実行するために SQL データベースからデータを準備する方法について説明します。
+[パート 2](python-clustering-model-prepare-data.md) では、クラスタリングを実行するために SQL データベースからデータを準備する方法について説明します。
 
-[パート 3](python-clustering-model-build.md)では、Python で K-Means クラスターモデルを作成してトレーニングする方法について説明します。
+[パート 3](python-clustering-model-build.md) では、Python で K-Means クラスターモデルを作成してトレーニングする方法について説明します。
 
 [パート 4](python-clustering-model-deploy.md)では、新しいデータに基づいて Python でクラスタリングを実行できる SQL データベースにストアドプロシージャを作成する方法について説明します。
 
