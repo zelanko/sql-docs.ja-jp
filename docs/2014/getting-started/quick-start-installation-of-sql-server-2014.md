@@ -46,7 +46,7 @@ ms.locfileid: "68890128"
   
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] には 32 ビット版と 64 ビット版があります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] セットアップでは、次のインストール方法がサポートされています。  
   
--   **インストール ウィザードからの SQL Server&2016; のインストール (セットアップ)**  
+-   **インストール ウィザード**  
   
      インストールウィザードを使用してをインストールする[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]手順については、「インストール[ウィザード&#40;&#41;から SQL Server 2014 をインストール](../database-engine/install-windows/install-sql-server-from-the-installation-wizard-setup.md)する」を参照してください。  
   
