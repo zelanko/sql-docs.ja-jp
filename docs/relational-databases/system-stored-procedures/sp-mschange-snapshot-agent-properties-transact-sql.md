@@ -70,7 +70,7 @@ sp_MSchange_snapshot_agent_properties [ @publisher = ] 'publisher'
 |**2**|[要求時]|  
 |**4**|毎日。|  
 |**8**|毎週。|  
-|"**10**"|毎月。|  
+|**10**|毎月。|  
 |**20**|frequency_interval を基準とした月単位|  
 |**40**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントの起動時|  
   
