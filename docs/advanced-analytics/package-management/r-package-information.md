@@ -156,7 +156,7 @@ WITH RESULT SETS ((PackageName nvarchar(250), PackageVersion nvarchar(max) ))
 R パッケージをインストールし、特定の SQL Server インスタンスで使用できるようにする場合は、ストアドプロシージャを実行してパッケージを読み込み、メッセージを返すことができます。
 
 たとえば、次のステートメントは、使用可能な場合、[glue](https://cran.r-project.org/web/packages/glue/) パッケージを検索して読み込みます。
-パッケージが見つからないか、または読み込めない場合は、"グルー ' という名前のパッケージはありません" というテキストを含むエラーが表示されます。
+パッケージが見つからないか、または読み込めない場合は、"'glue' という名前のパッケージはありません" というテキストを含むエラーが表示されます。
 
 ```sql
 EXECUTE sp_execute_external_script  
