@@ -67,7 +67,7 @@ ms.locfileid: "70175840"
   
  ![Azure BLOB ストレージ](../../database-engine/media/backuptocloud-blobarchitecture.gif "Azure BLOB ストレージ")  
   
- Azure Blob ストレージサービスの詳細については、「 [How to use the Azure Blob Storage service](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) 」を参照してください。  
+ Azure Blob ストレージサービスの詳細については、「 [クイック スタート:.NET 用 Azure Blob Storage クライアント ライブラリ](http://www.windowsazure.com/develop/net/how-to-guides/blob-storage/) 」を参照してください。  
   
  ページ BLOB の詳細については、「 [ブロック BLOB およびページ BLOB について](https://msdn.microsoft.com/library/windowsazure/ee691964.aspx)」を参照してください。  
   
