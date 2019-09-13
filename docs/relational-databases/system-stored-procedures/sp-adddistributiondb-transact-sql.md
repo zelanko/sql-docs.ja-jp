@@ -1,5 +1,5 @@
 ---
-title: sp_adddistributiondb (Transact-sql) |Microsoft Docs
+title: sp_adddistributiondb (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/30/2018
 ms.prod: sql
@@ -165,10 +165,10 @@ GO
   
 ## <a name="see-also"></a>関連項目  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
- [sp_changedistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [sp_helpdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistributiondb-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
- [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  
+ [ディストリビューションの構成](../../relational-databases/replication/configure-distribution.md)  
   
   
