@@ -1,5 +1,5 @@
 ---
-title: 図形 (DMX) |Microsoft Docs
+title: SHAPE (DMX) |Microsoft Docs
 ms.date: 06/07/2018
 ms.prod: sql
 ms.technology: analysis-services
@@ -20,7 +20,7 @@ ms.locfileid: "67938115"
 
   単一の階層テーブル (つまり、入れ子になったテーブルを持つテーブル)、マイニング モデルのケース テーブルになるには、複数のデータ ソースからクエリを結合します。  
   
- 完全な構文、**図形**コマンドが記載されて、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) ソフトウェア開発キット (SDK)。  
+ 完全な構文、**SHAPE**コマンドが記載されて、 [!INCLUDE[msCoName](../includes/msconame-md.md)] Data Access Components (MDAC) ソフトウェア開発キット (SDK)。  
   
 ## <a name="syntax"></a>構文  
   
@@ -58,7 +58,7 @@ APPEND ({ <child table query> }
  親テーブルと子テーブルを関連付けられている列で、クエリを注文する必要があります。  
   
 ## <a name="examples"></a>使用例  
- 内で次の例を使用することができます、 [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)入れ子になったテーブルを含むモデルをトレーニングするステートメント。 2 つのテーブル内で、**図形**から関連するステートメント、 **OrderNumber**列。  
+ 内で次の例を使用することができます、 [INSERT INTO &#40;DMX&#41; ](../dmx/insert-into-dmx.md)入れ子になったテーブルを含むモデルをトレーニングするステートメント。 2 つのテーブル内で、**SHAPE**から関連するステートメント、 **OrderNumber**列。  
   
 ```  
 SHAPE {  
