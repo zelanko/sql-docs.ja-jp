@@ -25,7 +25,7 @@ ms.locfileid: "68771387"
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  指定されたディストリビューション データベースを使用するように、パブリッシャーを構成します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。 このストアドプロシージャを使用する前に、ストアドプロシージャ[ &#40;sp_adddistributor transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)と[sp_adddistributiondb &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)を実行しておく必要があることに注意してください。  
+  指定されたディストリビューション データベースを使用するように、パブリッシャーを構成します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。 このストアドプロシージャを使用する前に、ストアドプロシージャ[sp_adddistributor &#40;Transact-SQL&#41;]((../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)と[sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)を実行しておく必要があることに注意してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
