@@ -1,5 +1,5 @@
 ---
-title: MSdistribution_status (TRANSACT-SQL) |Microsoft Docs
+title: MSdistribution_status (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -37,7 +37,7 @@ ms.locfileid: "68129576"
 |**DelivCmdsInDistDB**|**int**|サブスクライバーに配信されたコマンド数。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
