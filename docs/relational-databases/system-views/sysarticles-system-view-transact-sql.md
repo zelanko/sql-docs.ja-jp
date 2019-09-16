@@ -1,5 +1,5 @@
 ---
-title: sysarticles (システム ビュー) (TRANSACT-SQL) |Microsoft Docs
+title: sysarticles (システム ビュー) (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ ms.locfileid: "68129535"
 |**del_cmd**|**nvarchar (255)**|DELETE 時に実行するコマンド、またはログから作成するコマンドです。|  
 |**description**|**nvarchar (255)**|この記事の説明エントリします。|  
 |**dest_table**|**sysname**|対象テーブルの名前です。|  
-|**フィルター (filter)**|**int**|ストアド プロシージャ ID は、水平的パーティション分割に使用します。|  
+|**filter**|**int**|ストアド プロシージャ ID は、水平的パーティション分割に使用します。|  
 |**filter_clause**|**ntext**|フィルターによる行選択に使用する、アーティクルの WHERE 句です。|  
 |**ins_cmd**|**nvarchar (255)**|挿入時に実行するコマンドそれ以外の場合、ログから作成します。|  
 |**name**|**sysname**|パブリケーションの中で一意なアーティクルに関係する名前です。|  
@@ -56,11 +56,11 @@ ms.locfileid: "68129535"
 |**fire_triggers_on_snapshot**|**bit**|スナップショットが適用されるときにレプリケートされたトリガーが実行されるかどうかを示します。次のいずれかの値をとります。<br /><br /> **0** = トリガーは実行されません。<br /><br /> **1** = トリガーは実行されます。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
- [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
- [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_helparticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)   
- [sysarticles &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)  
+ [sysarticles &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysarticles-transact-sql.md)  
   
   
