@@ -65,7 +65,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
   
-`[ @working_directory = ] 'working_directory'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)** ,、既定値は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このインスタンスの ReplData フォルダーです。たとえば`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`、です。 名前は UNC 形式で指定する必要があります。  
+`[ @working_directory = ] 'working_directory'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)**,、既定値は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このインスタンスの ReplData フォルダーです。たとえば`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`、です。 名前は UNC 形式で指定する必要があります。  
 
  Azure SQL Database には、 `\\<storage_account>.file.core.windows.net\<share>`を使用します。
 
@@ -109,7 +109,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 ## <a name="see-also"></a>参照  
  [パブリッシングとディストリビューションの構成](../../relational-databases/replication/configure-publishing-and-distribution.md)   
  [sp_changedistpublisher (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changedistpublisher-transact-sql.md)   
- [sp_dropdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
+ [sp_dropdistpublisher &#40;Transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md)   
  [sp_helpdistpublisher &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdistpublisher-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)  

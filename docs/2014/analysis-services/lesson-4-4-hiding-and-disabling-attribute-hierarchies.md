@@ -107,7 +107,7 @@ ms.locfileid: "69530846"
   
      次の図では、 **AttributeHierarchyVisible** プロパティが False に設定されています。  
   
-     ![AttributeHierarchyVisible プロパティが False に設定]される(../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible プロパティが False に設定")される  
+     ![AttributeHierarchyVisible プロパティが False に設定される](../../2014/tutorials/media/l4-hierarchyvisible-1.gif "AttributeHierarchyVisible プロパティが False に設定")される  
   
 5.  **[属性]** ペインの **Postal Code** 属性を、 **[階層とレベル]** ペインの **Customer Geography** ユーザー階層 ( **City** レベルのすぐ下) にドラッグします。  
   
