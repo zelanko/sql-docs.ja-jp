@@ -72,7 +72,7 @@ ms.locfileid: "68769484"
   
 -   [列フィルターの定義および変更](publish/define-and-modify-a-column-filter.md)    
 -   [静的行フィルターの定義および変更](publish/define-and-modify-a-static-row-filter.md)    
--   [Define and Modify a Parameterized Row Filter for a Merge Article](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
+-   [マージ アーティクルのパラメーター化された行フィルターの定義および変更](publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md)    
 -   [パラメーター化された行フィルターの最適化](publish/optimize-parameterized-row-filters.md)    
 -   [マージ アーティクル間の結合フィルターの定義および変更](publish/define-and-modify-a-join-filter-between-merge-articles.md)  
   
