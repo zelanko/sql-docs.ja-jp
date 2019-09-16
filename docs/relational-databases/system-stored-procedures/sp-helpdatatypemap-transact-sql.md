@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771060"
 ---
-# <a name="sphelpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
+# <a name="sp_helpdatatypemap-transact-sql"></a>sp_helpdatatypemap (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   と非[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベース管理システム(DBMS)の間の定義済みデータ型マッピングに関する情報[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を返します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
@@ -92,7 +92,7 @@ sp_helpdatatypemap [ @source_dbms = ] 'source_dbms'
  **Sp_helpdatatypemap**を実行できるのは、ディストリビューター側の固定サーバーロール**sysadmin**のメンバー、またはディストリビューションデータベースの**db_owner**固定データベースロールのメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_getdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
- [sp_setdefaultdatatypemapping &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
+ [sp_getdefaultdatatypemapping &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-getdefaultdatatypemapping-transact-sql.md)   
+ [sp_setdefaultdatatypemapping &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setdefaultdatatypemapping-transact-sql.md)  
   
   

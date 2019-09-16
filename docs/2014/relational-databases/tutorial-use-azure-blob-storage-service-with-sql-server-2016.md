@@ -39,7 +39,7 @@ ms.locfileid: "70176087"
  **[レッスン 4:Azure Storage でのデータベースの作成](../relational-databases/lesson-3-database-backup-to-url.md)**  
  このレッスンでは、CREATE Database FILENAME オプションを使用して Azure Storage でデータベースを作成します。  
   
- **レッスン 5.&#40;オプション&#41; tde を使用してデータベースを暗号化する**  
+ **[レッスン 5.&#40;オプション&#41; tde を使用してデータベースを暗号化する](../relational-databases/lesson-4-restore-database-to-virtual-machine-from-url.md)**  
  このレッスンでは、透過的なデータ暗号化 (TDE) およびサーバー証明書を使用してデータベースを暗号化します。  
   
  **[レッスン 6:オンプレミスのソースマシンから Azure のターゲットコンピューターにデータベースを移行する](lesson-5-backup-database-using-file-snapshot-backup.md)**  

@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68129576"
 ---
-# <a name="msdistributionstatus-transact-sql"></a>MSdistribution_status (Transact-SQL)
+# <a name="msdistribution_status-transact-sql"></a>MSdistribution_status (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdistribution_status**ビューは、ディストリビューション データベースの状態コマンドに追加の情報を公開します。 このビューは、ディストリビューション データベースに保存されます。  
@@ -37,7 +37,7 @@ ms.locfileid: "68129576"
 |**DelivCmdsInDistDB**|**int**|サブスクライバーに配信されたコマンド数。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
