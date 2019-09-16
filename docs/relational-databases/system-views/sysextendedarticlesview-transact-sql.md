@@ -1,5 +1,5 @@
 ---
-title: sysextendedarticlesview (TRANSACT-SQL) |Microsoft Docs
+title: sysextendedarticlesview (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -36,7 +36,7 @@ ms.locfileid: "67910112"
 |**del_cmd**|**nvarchar (255)**|DELETE 時に実行するコマンド、またはログから作成するコマンドです。|  
 |**description**|**nvarchar (255)**|この記事の説明エントリします。|  
 |**dest_table**|**nvarchar(128)**|対象テーブルの名前です。|  
-|**フィルター (filter)**|**int**|行方向のパーティション分割に使用するストアド プロシージャのオブジェクト識別子です。|  
+|**filter**|**int**|行方向のパーティション分割に使用するストアド プロシージャのオブジェクト識別子です。|  
 |**filter_clause**|**ntext**|フィルターによる行選択に使用する、アーティクルの WHERE 句です。|  
 |**ins_cmd**|**nvarchar (255)**|INSERT 時に実行するコマンドです。|  
 |**name**|**nvarchar(128)**|パブリケーションの中で一意なアーティクルに関係する名前です。|  
@@ -56,7 +56,7 @@ ms.locfileid: "67910112"
 |**fire_triggers_on_snapshot**|**int**|スナップショットが適用されるときにレプリケートされたトリガーが実行されるかどうかを示します。次のいずれかの値をとります。<br /><br /> **0** = トリガーは実行されません。<br /><br /> **1** = トリガーは実行されます。|  
   
 ## <a name="see-also"></a>参照  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;TRANSACT-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)   
  [sp_addarticle &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
