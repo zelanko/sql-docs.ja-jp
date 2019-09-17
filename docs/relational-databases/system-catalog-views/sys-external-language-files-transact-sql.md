@@ -26,20 +26,20 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "65995090"
 ---
-# <a name="sysexternallanguagefiles-transact-sql"></a>sys.external_language_files (TRANSACT-SQL)
+# <a name="sysexternal_language_files-transact-sql"></a>sys.external_language_files (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
 このカタログ ビューでは、データベース内の外部の言語拡張機能ファイルの一覧を示します。 **R** と **Python** は予約済みの名前であり、それらの特定の名前で外部言語を作成することはできません。
 
 外部の言語が、file_spec から作成されると、拡張機能自体とそのプロパティがこのビューで表示します。 このビューは、OS ごとに、言語ごとに 1 つのエントリが含まれます。
 
-## <a name="sysexternallanguages"></a>sys.external_languages
+## <a name="sysexternal_languages"></a>sys.external_languages
 
 カタログ ビューの sys.external_language_files には、データベース内の各外部言語拡張機能の行が一覧表示します。 パラメーター
 
 |列名 |データ型 | 説明|
 |------|------|------|
-|external_language_id |ssNoversion | 外部の言語の ID|
+|external_language_id |int | 外部の言語の ID|
 |コンテンツ|varbinary(max) |外部の言語拡張機能のファイルの内容|
 |file_name|nvarchar(266)|言語拡張機能のファイルの名前|
 |プラットフォーム|TINYINT|SQL Server がインストールされているホスト プラットフォームの ID|

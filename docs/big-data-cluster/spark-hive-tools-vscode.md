@@ -210,10 +210,10 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 | pyFiles | このセッションで使用される Python ファイル | 文字列の一覧 |
 | files | このセッションで使用されるファイル | 文字列の一覧 |
 | driverMemory | ドライバー プロセスに使用するメモリの量 | string |
-| driverCores | ドライバー プロセスに使用するコアの数 | ssNoversion |
+| driverCores | ドライバー プロセスに使用するコアの数 | int |
 | executorMemory | 実行プログラム プロセスごとに使用するメモリの量 | string |
-| executorCores | 実行プログラムごとに使用するコアの数 | ssNoversion |
-| numExecutors | このセッションで起動する実行プログラムの数 | ssNoversion |
+| executorCores | 実行プログラムごとに使用するコアの数 | int |
+| numExecutors | このセッションで起動する実行プログラムの数 | int |
 | archives | このセッションで使用するアーカイブ | 文字列の一覧 |
 | queue | 送信先の YARN キューの名前 | string |
 | NAME | このセッションの名前 | string |
@@ -225,7 +225,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 
 | NAME | description | type |
 | :- | :- | :- |
-| id | セッション ID | ssNoversion |
+| id | セッション ID | int |
 | appId | このセッションのアプリケーション ID | String |
 | appInfo | アプリケーションの詳細情報 | キーと値のマップ |
 | log | ログの行 | 文字列の一覧 |

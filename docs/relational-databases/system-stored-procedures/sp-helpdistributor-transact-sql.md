@@ -89,7 +89,7 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
 |**history cleanup agent**|**nvarchar(100)**|履歴クリーンアップエージェントの名前。|  
 |**distribution cleanup agent**|**nvarchar(100)**|ディストリビューションクリーンアップエージェントの名前。|  
 |**rpc server name**|**sysname**|リモートディストリビューターまたはローカルディストリビューターの名前。|  
-|**rpc ログイン名**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
+|**rpc login name**|**sysname**|リモート ディストリビューターに対するリモート プロシージャ呼び出しで使用するログインです。|  
 |**publisher type**|**sysname**|パブリッシャーの種類です。次のいずれかを指定できます。<br /><br /> **MSSQLSERVER**<br /><br /> **ORACLE**<br /><br /> **ORACLE GATEWAY**|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -121,9 +121,9 @@ sp_helpdistributor [ [ @distributor= ] 'distributor' OUTPUT ]
   
 |結果セット列|出力パラメーター|  
 |-----------------------|----------------------|  
-|ディストリビューター (distributor)|**\@ディストリビューター**|  
-|ディストリビューション データベース (distribution database)|**\@distribdb**|  
-|rpc サーバー名|**\@rpcsrvname**|  
+|distributor|**\@ディストリビューター**|  
+|distribution database|**\@distribdb**|  
+|rpc server name|**\@rpcsrvname**|  
 |publisher type|**\@publisher_type**|  
   
 ## <a name="see-also"></a>関連項目  

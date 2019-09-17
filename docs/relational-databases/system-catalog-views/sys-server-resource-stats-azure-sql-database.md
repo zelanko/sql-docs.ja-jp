@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68133072"
 ---
-# <a name="sysserverresourcestats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL データベース)
+# <a name="sysserver_resource_stats-azure-sql-database"></a>sys.server_resource_stats (Azure SQL データベース)
 [!INCLUDE[tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-xxxxxx-asdb-xxxx-xxx-md.md)]
 
 Azure SQL マネージ インスタンスの CPU 使用量、IO、およびストレージのデータを返します。 データは、5 分間隔で収集と集計が実行されます。 レポートは 15 秒ごとに 1 つの行があります。 返されるデータには、CPU 使用率、ストレージ サイズ、I/O 使用率、およびマネージ インスタンス SKU が含まれています。 履歴データは約 14 日間保持されます。
@@ -44,7 +44,7 @@ Azure SQL マネージ インスタンスの CPU 使用量、IO、およびス�
 |resource_name|nvarchar(128)|リソースの名前。|
 |sku|nvarchar(128)|インスタンスのインスタンスのサービス階層を管理します。 使用できる値を次に示します。 <br><ul><li>General Purpose</li></ul><ul><li>Business Critical</li></ul>|
 |hardware_generation|nvarchar(128)|ハードウェアの世代の識別子 Gen 4 など Gen 5。|
-|virtual_core_count|ssNoversion|(8、16 または 24 がパブリック プレビュー) のインスタンスあたりの仮想コアの数を表します|
+|virtual_core_count|int|(8、16 または 24 がパブリック プレビュー) のインスタンスあたりの仮想コアの数を表します|
 |avg_cpu_percent|decimal(5,2)|インスタンスで使用されるマネージ インスタンスのサービス層の制限の割合で表した平均コンピューティング使用率。 すべてのデータベース インスタンスですべてのリソース プールの CPU 時間の合計として計算は、指定した間隔でその層の使用可能な CPU 時間で割った値します。|
 |reserved_storage_mb|BIGINT|インスタンスあたりのストレージに予約されています (ストレージの量は、その顧客のマネージ インスタンスの購入を領域)|
 |storage_space_used_mb|decimal(18,2)|(ユーザーとシステムの両方のデータベースを含む) のすべてのマネージ インスタンス データベースのファイルによって使用されるストレージ|

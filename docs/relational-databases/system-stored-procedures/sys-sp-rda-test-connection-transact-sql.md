@@ -23,7 +23,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68061791"
 ---
-# <a name="syssprdatestconnection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
+# <a name="syssp_rda_test_connection-transact-sql"></a>sys.sp_rda_test_connection (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2016-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-xxxx-xxxx-xxx-md.md)]
 
   SQL Server から、リモート Azure サーバーへの接続をテストし、データの移行を妨げる可能性のある問題を報告します。  
@@ -70,9 +70,9 @@ EXECUTE sys.sp_rda_test_connection
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|link_state|ssNoversion|値に対応して、次の値のいずれかの**link_state_desc**します。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
+|link_state|int|値に対応して、次の値のいずれかの**link_state_desc**します。<br /><br /> -   0<br />-   1<br />-   2<br />-   3<br />-   4|  
 |link_state_desc|varchar (32)|上記に対応して、次の値のいずれかの値**link_state**します。<br /><br /> -正常<br />     SQL サーバーとリモート Azure サーバーが正常な状態です。<br />-   ERROR_AZURE_FIREWALL<br />     Azure のファイアウォールには、SQL Server とリモート Azure サーバー間のリンクが原因です。<br />-   ERROR_NO_CONNECTION<br />     SQL Server では、リモート Azure サーバーへの接続を作成できません。<br />-   ERROR_AUTH_FAILURE<br />     認証の失敗が原因で SQL Server とリモート Azure サーバー間のリンク。<br />-エラー<br />     認証の問題、接続の問題またはファイアウォールの問題でないエラーが SQL Server とリモート Azure サーバー間のリンクを妨げています。|  
-|error_number|ssNoversion|エラーの数。 エラーがない場合は、このフィールドは NULL です。|  
+|error_number|int|エラーの数。 エラーがない場合は、このフィールドは NULL です。|  
 |error_message|nvarchar(1024)|エラー メッセージです。 エラーがない場合は、このフィールドは NULL です。|  
   
 ## <a name="permissions"></a>アクセス許可  
