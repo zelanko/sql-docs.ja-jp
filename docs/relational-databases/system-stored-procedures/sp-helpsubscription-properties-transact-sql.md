@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscription_properties (Transact-sql) |Microsoft Docs
+title: sp_helpsubscription_properties (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771564"
 ---
-# <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-sql)
+# <a name="sphelpsubscriptionproperties-transact-sql"></a>sp_helpsubscription_properties (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   [MSsubscription_properties](../../relational-databases/system-tables/mssubscription-properties-transact-sql.md)テーブルからセキュリティ情報を取得します。 このストアドプロシージャは、サブスクライバー側で実行されます。  
@@ -58,14 +58,14 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリッシャーデータベースの名前。|  
-|**レプリケーション**|**sysname**|パブリケーションの名前。|  
+|**publication**|**sysname**|パブリケーションの名前。|  
 |**publication_type**|**int**|パブリケーションの種類です。<br /><br /> **0** = トランザクション<br /><br /> **1** = スナップショット<br /><br /> **2** = マージ|  
 |**publisher_login**|**sysname**|パブリッシャーで認証に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されるログイン ID。|  
 |**publisher_password**|**nvarchar(524)**|パブリッシャーで認証 (暗号化) [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のために使用されるパスワード。|  
 |**publisher_security_mode**|**int**|パブリッシャーで使用されているセキュリティ モードです。<br /><br /> **0**  = 認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 認証|  
-|**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
+|**distributor**|**sysname**|ディストリビューターの名前。|  
 |**distributor_login**|**sysname**|ディストリビューターログイン。|  
 |**distributor_password**|**nvarchar(524)**|ディストリビューターパスワード (暗号化)。|  
 |**distributor_security_mode**|**int**|ディストリビューターで使用されるセキュリティモード:<br /><br /> **0**  = 認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 認証|  
@@ -88,7 +88,7 @@ sp_helpsubscription_properties [ [ @publisher = ] 'publisher' ]
 |**internet_password**|**nvarchar(524)**|基本認証を使用して Web 同期をホストしている Web サーバーに接続するときにマージエージェントが使用するログインのパスワード。|  
 |**internet_security_mode**|**int**|Web 同期をホストしている Web サーバーに接続するときに使用される認証モード。値**1**は Windows 認証を意味し、値**0**は基本認証を意味します。|  
 |**internet_timeout**|**int**|Web 同期要求が期限切れになるまでの時間の長さ (秒単位)。|  
-|**名**|**nvarchar(128)**|この関数が WHERE 句のパラメーター化された行フィルターで使用される場合の HOST_NAME () の値を指定します。|  
+|**hostname**|**nvarchar(128)**|この関数が WHERE 句のパラメーター化された行フィルターで使用される場合の HOST_NAME () の値を指定します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
