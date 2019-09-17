@@ -217,7 +217,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 | archives | このセッションで使用するアーカイブ | 文字列の一覧 |
 | queue | 送信先の YARN キューの名前 | string |
 | NAME | このセッションの名前 | string |
-| conf | Spark の構成プロパティ | キーのマップ = val |
+| conf | Spark の構成プロパティ | キーと値のマップ |
 
 #### <a name="response-body"></a>応答本文
 
@@ -227,7 +227,7 @@ Visual Studio Code からクラスターにスクリプトを送信するには�
 | :- | :- | :- |
 | id | セッション ID | ssNoversion |
 | appId | このセッションのアプリケーション ID | String |
-| appInfo | アプリケーションの詳細情報 | キーのマップ = val |
+| appInfo | アプリケーションの詳細情報 | キーと値のマップ |
 | log | ログの行 | 文字列の一覧 |
 | state | バッチの状態 | string |
 
