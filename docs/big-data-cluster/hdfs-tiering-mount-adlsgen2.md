@@ -5,16 +5,16 @@ description: この記事では、 [!INCLUDE[big-data-clusters-2019](../includes
 author: nelgson
 ms.author: negust
 ms.reviewer: mikeray
-ms.date: 08/21/2019
+ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 822c10ad41232d213302e4bb5e328449d9f5f764
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652319"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774215"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
@@ -33,33 +33,35 @@ ms.locfileid: "69652319"
 
 1. [Data Lake Storage Gen2 機能を持つストレージ アカウントを作成します](https://docs.microsoft.com/azure/storage/blobs/data-lake-storage-quickstart-create-account)。
 
-1. このストレージ アカウントに外部データ用の [BLOB コンテナーを作成します](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)。
+1. このストレージアカウントに外部データ用の[blob コンテナー/ファイルシステムを作成](https://docs.microsoft.com/azure/storage/blobs/storage-quickstart-blobs-portal)します。
 
 1. CSV ファイルまたは Parquet ファイルをコンテナーにアップロードします。 これは、ビッグ データ クラスターの HDFS にマウントされる外部 HDFS データです。
 
 ## <a name="credentials-for-mounting"></a>マウントのための資格情報
 
-## <a name="use-oauth-credentials-to-mount"></a>OAuth 資格情報を使用してマウントする
+### <a name="use-oauth-credentials-to-mount"></a>OAuth 資格情報を使用してマウントする
 
 OAuth 資格情報を使用してマウントするには、次の手順に従う必要があります。
 
 1. [Azure portal](https://portal.azure.com) にアクセスします
-1. 左側のナビゲーション ウィンドウで [サービス] に移動し、[Azure Active Directory] をクリックします
-1. メニューの [アプリの登録] を使用して、Web アプリケーションを作成し、ウィザードの指示に従います。 **ここで作成した名前を忘れないでください**。 この名前を承認されたユーザーとして ADLS アカウントに追加する必要があります。
-1. Web アプリケーションが作成されたら、アプリの [設定] の下にある [キー] にアクセスします。
-1. キーの期間を選択し、[保存] をクリックします。 **生成されたキーを保存します。**
-1.  [アプリの登録] ページに戻り、上部にある [エンドポイント] ボタンをクリックします。 **"トークン エンドポイント" の URL をメモします**
+1. "Azure Active Directory" に移動します。 左側のナビゲーションバーにこのサービスが表示されます。
+1. 右のナビゲーションバーで、[アプリの登録] を選択し、新しい登録を作成します。
+1. "Web アプリケーション" を作成し、ウィザードに従います。 **ここで作成するアプリの名前を忘れないで**ください。 この名前を承認されたユーザーとして ADLS アカウントに追加する必要があります。 アプリを選択すると、[概要] にアプリケーションクライアント ID も記録されます。
+1. Web アプリケーションが作成されたら、[証明書 & シークレット] にアクセスし、**新しいクライアントシークレット**を作成して、キーの期間を選択します。 シークレットを**追加**します。
+1.  [アプリの登録] ページに戻り、上部にある [エンドポイント] をクリックします。 **"OAuth トークンエンドポイント (v2)" をメモしておきます。** 先
 1. ここまでで、OAuth に関する次の内容をメモしておく必要があります。
 
-    - 上の手順 3 で作成した Web アプリの "アプリケーション ID"
-    - 手順 5 で生成したキー
-    - 手順 6 のトークン エンドポイント
+    - Web アプリケーションの "アプリケーションクライアント ID"
+    - クライアントシークレット
+    - トークンエンドポイント
 
 ### <a name="adding-the-service-principal-to-your-adls-account"></a>ADLS アカウントへのサービス プリンシパルの追加
 
-1. portal にもう一度移動し、ADLS アカウントを開き、左側のメニューで [アクセス制御 (IAM)] を選択します。
-1. [ロールの割り当てを追加する] を選択し、上の手順 3 で作成した名前を検索します (一覧には表示されませんが、フル ネームを検索すると見つかります)。
-1. ここで、"Storage BLOB データ共同作成者 (プレビュー)" ロールを追加します。
+1. ポータルにもう一度移動し、ADLS ストレージアカウントのファイルシステムに移動して、左側のメニューの [アクセス制御 (IAM)] を選択します。
+1. [ロールの割り当てを追加] を選択します。 
+1. ロール "Storage Blob データ共同作成者" を選択します。
+1. 前の手順で作成した名前を検索します (一覧には表示されませんが、フルネームを検索した場合は検出されます)。
+1. ロールを保存します。
 
 マウントで資格情報を使用するまで、5 分から 10 分お待ちください
 
@@ -70,9 +72,9 @@ OAuth 資格情報を使用してマウントするには、次の手順に従�
    ```text
     set MOUNT_CREDENTIALS=fs.azure.account.auth.type=OAuth,
     fs.azure.account.oauth.provider.type=org.apache.hadoop.fs.azurebfs.oauth2.ClientCredsTokenProvider,
-    fs.azure.account.oauth2.client.endpoint=[token endpoint from step6 above],
-    fs.azure.account.oauth2.client.id=[<Application ID> from step3 above],
-    fs.azure.account.oauth2.client.secret=[<key> from step5 above]
+    fs.azure.account.oauth2.client.endpoint=[token endpoint],
+    fs.azure.account.oauth2.client.id=[Application client ID],
+    fs.azure.account.oauth2.client.secret=[client secret]
    ```
 
 ## <a name="use-access-keys-to-mount"></a>アクセス キーを使用してマウントする
@@ -137,7 +139,7 @@ azdata bdc hdfs mount status --mount-path <mount-path-in-hdfs>
 
 ## <a name="refresh-a-mount"></a>マウントを更新する
 
-次の例では、マウントを更新しています。
+次の例では、マウントを更新しています。 この更新により、マウントキャッシュもクリアされます。
 
 ```bash
 azdata bdc hdfs mount refresh --mount-path <mount-path-in-hdfs>

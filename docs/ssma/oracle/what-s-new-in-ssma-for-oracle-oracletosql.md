@@ -2,22 +2,32 @@
 title: SSMA for Oracle の新機能 (OracleToSQL) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: f305ebb6-7393-4a43-abb3-6332b739d690
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: da0a047b0ae20fbc191a61e1c9eb96660eac035e
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 95b2ebd450fe54a2e02e5eed77a5259a8437e7ef
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811450"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745481"
 ---
 # <a name="whats-new-in-ssma-for-oracle-oracletosql"></a>SSMA for Oracle の新機能 (OracleToSQL)
+
 この記事では、各リリースでの Oracle の変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+SSMA for Oracle の v2.0 リリースは、ユーザー補助の問題に対処し、最大インデックス列 (16 ではなく 32) に関連するバグを修正するように設計された、SQL Server 2016 以降のバージョンで強化されています。
+
+また、SSMA for Oracle のこのリリースでは、ストアドプロシージャの OUT パラメーターとして**SYS_REFCURSOR**の変換が追加されています。
+
+> [!IMPORTANT]
+> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -27,9 +37,6 @@ SSMA for Oracle の v2.0 リリースは、品質と変換のメトリックを�
 * SQL Server に ' hierarchyid ' 型の基本的なサポートを追加します
 * シノニムによって呼び出された関数の戻り値の型が不明な問題を解決する
 * ODP.NET を v 19.3 に更新する
-
-> [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -49,9 +56,6 @@ SSMA for Oracle の v2.0 リリースは次のように強化されています�
 
 > [!NOTE]
 > 自動更新に関する既知の問題により、SSMA v2.0 から v2.0 への更新が失敗する場合があります。 このエラーが発生した場合は、新しいバージョンをダウンロードし、手動でインストールしてください。
-
-> [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 

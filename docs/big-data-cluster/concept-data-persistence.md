@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7a12afd88f0eb83de7d5c5bd4a3735e71e037138
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: bb6d87803c0a3839afd8dbd1333b52c3abcc4518
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155347"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878740"
 ---
 # <a name="data-persistence-with-sql-server-big-data-cluster-on-kubernetes"></a>Kubernetes 上の SQL Server ビッグ データ クラスターでのデータ永続化
 
@@ -28,7 +28,7 @@ SQL Server ビッグ データ クラスターがこれらの永続ボリュー�
 
 ## <a name="configure-big-data-cluster-storage-settings"></a>ビッグ データ クラスターのストレージ設定を構成する
 
-他のカスタマイズと同様に、各プールとコントロール プレーンに対して、展開時にクラスター構成ファイル内にストレージの設定を指定できます。 プールの仕様にストレージ構成の設定がない場合は、コントロール プレーンのストレージ設定が使用されます。 これは、仕様に含めることができるストレージ構成セクションのサンプルです。
+他のカスタマイズと同様に、 **bdc**構成ファイル内の各プールについて、デプロイ時にクラスター構成ファイルのストレージ設定を指定したり、**コントロールの json**ファイル内のコントロールサービスを指定したりすることができます。 プールの仕様にストレージ構成設定がない場合は、SQL Server マスター (**マスター**リソース)、HDFS (**ストレージ 0**リソース)、データなど、**他のすべてのコンポーネントに対して**、コントロールのストレージ設定が使用されます。管理. これは、仕様に含めることができるストレージ構成セクションのサンプルです。
 
 ```json
     "storage": 

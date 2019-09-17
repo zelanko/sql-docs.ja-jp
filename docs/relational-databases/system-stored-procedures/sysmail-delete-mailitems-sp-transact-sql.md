@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f87c9f4a-bda1-4bce-84b2-a055a3229ecd
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: df7ae090efbcd448dc5df3df5355273c891da4fe
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: ad69cc6933b4f3d51d3b9ec11fad4edd6d555abe
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941171"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846639"
 ---
 # <a name="sysmail_delete_mailitems_sp-transact-sql"></a>sysmail_delete_mailitems_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -40,9 +40,9 @@ sysmail_delete_mailitems_sp  [ [ @sent_before = ] 'sent_before' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @sent_before = ] 'sent_before'`*Sent_before*引数として指定された日時までの電子メールを削除します。 *sent_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
+`[ \@sent_before = ] 'sent_before'`*Sent_before*引数として指定された日時までの電子メールを削除します。 *sent_before*は**datetime**で、既定値は NULL です。 NULL はすべての日付を表します。  
   
-`[ @sent_status = ] 'sent_status'`*Sent_status*によって指定された種類の電子メールを削除します。 *sent_status*は**varchar (8)** 既定値はありません。 有効なエントリは、**送信済み**、**未送信**、**再試行**中、および**失敗**です。 NULL はすべての状態を表します。  
+`[ \@sent_status = ] 'sent_status'`*Sent_status*によって指定された種類の電子メールを削除します。 *sent_status*は**varchar (8)** 既定値はありません。 有効なエントリは、**送信済み**、**未送信**、**再試行**中、および**失敗**です。 NULL はすべての状態を表します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

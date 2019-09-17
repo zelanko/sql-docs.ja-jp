@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 2c0e5f5a5f194045b5d1b48a383f9d4dfd282649
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 307697f43fc1c2615f212ae5f433485814dd62d0
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158167"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874705"
 ---
 # <a name="deploy-sql-server-big-data-cluster-with-high-availability"></a>高可用性を備えた SQL Server ビッグデータクラスターのデプロイ
 
@@ -31,6 +31,7 @@ ms.locfileid: "70158167"
 1. 外部エンドポイントは、AG データベースに接続するために自動的にプロビジョニングされます。 このエンド`master-svc-external`ポイントは、AG リスナーの役割を果たします。
 1. セカンダリレプリカへの読み取り専用接続に対して、2番目の外部エンドポイントがプロビジョニングされます。 
 
+
 # <a name="deploy"></a>配置
 
 可用性グループに SQL Server マスターをデプロイするには:
@@ -39,9 +40,9 @@ ms.locfileid: "70158167"
 1. AG のレプリカの数を指定します (最小値は 3)
 1. 読み取り専用セカンダリレプリカへの接続用に作成された2番目の外部エンドポイントの詳細を構成します。
 
-次の手順は、これらの設定を含む修正プログラムファイルを作成する方法と、 `aks-dev-test`または`kubeadm-dev-test`構成プロファイルに適用する方法を示しています。 これらの手順では、HA 属性を追加する`aks-dev-test`ためにプロファイルに修正プログラムを適用する方法の例を紹介します。
+次の手順は、これらの設定を含む修正プログラムファイルを作成する方法と、 `aks-dev-test`または`kubeadm-dev-test`構成プロファイルに適用する方法を示しています。 これらの手順では、HA 属性を追加する`aks-dev-test`ためにプロファイルに修正プログラムを適用する方法の例を紹介します。Kubeadm クラスターでのデプロイの場合は、同様の修正プログラムが適用されますが、 **[エンドポイント]** セクションで、 **ServiceType**に*nodeport*を使用していることを確認してください。
 
-1. ファイルの`ha-patch.json`作成
+1. ファイルの`patch.json`作成
 
     ```json
     {
@@ -78,7 +79,7 @@ ms.locfileid: "70158167"
 1. ターゲットプロファイルの複製
 
     ```bash
-    azdata config init --source aks-dev-test --target custom-aks
+    azdata bdc config init --source aks-dev-test --target custom-aks
     ```
 
 1. カスタムプロファイルにパッチファイルを適用する
@@ -102,6 +103,10 @@ azdata bdc endpoint list -e sql-server-master -o table
 `Description                           Endpoint             Name               Protocol`
 `------------------------------------  -------------------  -----------------  ----------`
 `SQL Server Master Instance Front-End  13.64.235.192,31433  sql-server-master  tds`
+
+> [!NOTE]
+> フェールオーバーイベントは、HDFS やデータプールなどのリモートデータソースからデータにアクセスする分散クエリの実行中に発生する可能性があります。 ベストプラクティスとして、フェールオーバーによる切断が発生した場合の接続再試行ロジックを使用するようにアプリケーションを設計する必要があります。  
+>
 
 ### <a name="connect-to-databases-on-the-secondary-replicas"></a>セカンダリレプリカのデータベースに接続する
 

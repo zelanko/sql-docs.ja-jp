@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: bd1dac6b-6ef8-4735-ad4e-67bb42dc4f66
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 022e1228a9796dadddc4d9adfd20b4faeda35515
-ms.sourcegitcommit: 3be14342afd792ff201166e6daccc529c767f02b
+ms.openlocfilehash: 99572edbc477999a1ccc8f6c1fff89b5e04521d6
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68307636"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910835"
 ---
 # <a name="prerequisites-for-minimal-logging-in-bulk-import"></a>一括インポートで最小ログ記録を行うための前提条件
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -36,10 +36,10 @@ ms.locfileid: "68307636"
   
 -   テーブルがレプリケート中でないこと。  
   
--   (TABLOCK を使用して) テーブル ロックが指定されていること。 クラスター化列ストア インデックスを持つテーブルでは、最小ログ記録に TABLOCK は不要です。  さらに、バッチサイズが 102400 以上必要な、圧縮された行グループへのデータ読み込みでのみ最小ログ記録が行われます。  
+-   (TABLOCK を使用して) テーブル ロックが指定されていること。 
   
     > [!NOTE]  
-    >  最小限のログ記録しか行われない一括インポート操作では、データを挿入してもトランザクション ログに記録されませんが、新しいエクステントがテーブルに割り当てられるたびに、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によりエクステントの割り当てがログに記録されます。  
+    >  最小限のログ記録しか行われない一括インポート操作では、データを挿入してもトランザクション ログに記録されませんが、新しいエクステントがテーブルに割り当てられるたびに、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によりエクステントの割り当てがログに記録されます。  
   
 -   テーブルは、メモリ最適化テーブルではありません。  
   

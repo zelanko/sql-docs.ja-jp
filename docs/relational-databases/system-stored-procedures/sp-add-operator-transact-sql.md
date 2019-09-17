@@ -17,15 +17,15 @@ helpviewer_keywords:
 ms.assetid: 817cd98a-4dff-4ed8-a546-f336c144d1e0
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 27919edee71f55d6d035f81e92cc12aa298b74e5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 14746f5d18db9fbdac3dc6f80d885a8e07e8216a
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811425"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810398"
 ---
 # <a name="sp_add_operator-transact-sql"></a>sp_add_operator (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   警告およびジョブで使用するオペレーター (通知受信者) を作成します。  
   
@@ -81,7 +81,7 @@ sp_add_operator [ @name = ] 'name'
   
 `[ @pager_days = ] pager_days`ページで演算子が使用できる曜日を示す数値です (指定された開始/終了時刻に従います)。 *pager_days*は**tinyint**,、既定値は**0**の場合は、オペレーターがページを受信できないことを示します。 有効な値は**0** ~ **127**です。 *pager_days*は、必要な日の個々の値を加算することによって計算されます。 たとえば、月曜日から金曜日の場合は、 **2**+**4**+**8**+**16**+**32** = **62**になります。 次の表は、各曜日の値を示しています。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**1**|日曜日|  
 |**2**|月曜日|  

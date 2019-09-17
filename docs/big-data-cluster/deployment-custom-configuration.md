@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: a0da84d60a9513b0ca81a0256218928372882e72
-ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
+ms.openlocfilehash: 0b76b6645e6be35f04b1a83670a99e529dcb84d6
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70304830"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745441"
 ---
 # <a name="configure-deployment-settings-for-cluster-resources-and-services"></a>クラスターリソースとサービスの展開設定を構成する
 
@@ -126,7 +126,7 @@ Azdata management tool に組み込まれている構成プロファイルの定
 }
 ```
 
-複数のリソースに関連付けられているサービスに対して同じ構成を適用する場合は、 **[サービス]** セクションで対応する**設定**を更新します。 たとえば、ストレージプールと Spark プールの両方で、Spark に同じ設定を同じように設定する場合は、 **bdc**構成ファイルの**spark**サービスセクションの **[設定]** セクションを更新します。
+複数のリソースに関連付けられているサービスに対して同じ構成を適用する場合は、 **[サービス]** セクションで対応する**設定**を更新します。 たとえば、ストレージプールと Spark プールの両方で Spark に同じ設定を設定する場合は、 **bdc**構成ファイルの**spark**サービスセクションの **[設定]** セクションを更新します。
 
 ```json
 "services": {

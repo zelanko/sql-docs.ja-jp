@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: machine-learning
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: f578ae9dbc60b255959de406999feb8b68171389
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 91bacc4ab4c8876ac49a09b58d1821f1c2853a3c
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476196"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913562"
 ---
-# <a name="install-sql-server-2019-machine-learning-services-r-python-on-linux"></a>Linux に SQL Server 2019 Machine Learning Services (R、Python) をインストールする
+# <a name="install-sql-server-machine-learning-services-r-python-on-linux"></a>Linux に SQL Server Machine Learning Services (R、Python) をインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
@@ -31,11 +31,11 @@ Machine Learning Services は Linux コンテナーでもサポートされて�
 
 ## <a name="uninstall-previous-ctp"></a>以前の CTP をアンインストールする
 
-パッケージ一覧は、最新のいくつかの CTP リリースによって変更されており、パッケージ数が減少しています。 CTP 3.2 をインストールする前に、以前のすべてのパッケージを削除するために、CTP 2.x をアンインストールすることをお勧めします。 複数のバージョンの並列インストールはサポートされていません。
+パッケージ一覧は、最新のいくつかの CTP リリースによって変更されており、パッケージ数は減少しています。 CTP 3.2 をインストールする前に、以前のすべてのパッケージを削除するために、CTP 2.x をアンインストールすることをお勧めします。 複数のバージョンの並列インストールはサポートされていません。
 
 ### <a name="1-confirm-package-installation"></a>1.パッケージのインストールを確認する
 
-最初の手順として、必要に応じて以前のインストールの存在をチェックします。 次のファイルは既存のインストールを示します: checkinstallextensibility.sh、exthost、launchpad。
+最初の手順として、状況に応じて以前のインストールの存在をチェックします。 次のファイルは既存のインストールを示します。checkinstallextensibility.sh、exthost、launchpad です。
 
 ```bash
 ls /opt/microsoft/mssql/bin
@@ -66,7 +66,7 @@ ls /opt/microsoft/mssql/bin
 
 ### <a name="3-proceed-with-ctp-32-install"></a>3.CTP 3.2 のインストールを続行する
 
-この記事の手順を使用して、ご自身のオペレーティング システムに最上位のパッケージ レベルでインストールを行います。
+この記事の手順を使用して、お使いのオペレーティング システムに最上位のパッケージ レベルでインストールを行います。
 
 OS 固有の一連のインストール手順ごとに、"*最上位のパッケージ レベル*" は、完全なパッケージ セットに対応した **例 1 - 完全なインストール**か、実行可能なインストールに必要なパッケージの最小数に対応した**例 2 - 最小限のインストール**のどちらかになります。
 
@@ -80,7 +80,7 @@ OS 固有の一連のインストール手順ごとに、"*最上位のパッケ
 
 ## <a name="prerequisites"></a>Prerequisites
 
-+ Linux バージョンは、必ず [SQL Server によってサポートされます](sql-server-linux-release-notes-2019.md#supported-platforms)が、Docker エンジンを搭載していません。 サポートされているバージョンは次のとおりです。
++ Linux バージョンは、必ず [SQL Server によってサポートされます](sql-server-linux-release-notes-2019.md#supported-platforms)が、Docker エンジンは含まれていません。 サポートされているバージョンは次のとおりです。
 
    + [Red Hat Enterprise Linux (RHEL)](quickstart-install-connect-red-hat.md)
 
@@ -214,7 +214,7 @@ sudo yum install mssql-mlservices-packages-r-9.4.7*
 言語サポートは、必要な任意の組み合わせ (1 つまたは複数の言語) でインストールできます。 R と Python では、2 つのパッケージから選択できます。 1 つは、*完全インストール*として機能するすべての利用可能な機能を提供します。 もう 1 つの選択肢では、事前トレーニング済みの機械学習モデルが除外され、*最小インストール*と見なされます。
 
 > [!Tip]
-> 可能であれば、`apt-get update` を実行して、インストールの前にシステム上のパッケージを更新しておきます。 また、Ubuntu の一部の docker イメージには、https apt transport オプションが含まれていない場合があります。 インストールするには、`apt-get install apt-transport-https` を使用します。
+> 可能であれば、`apt-get update` を実行して、インストールの前にシステム上のパッケージを更新しておきます。 また、Ubuntu の一部の Docker イメージには、https apt transport オプションが含まれていない場合があります。 インストールするには、`apt-get install apt-transport-https` を使用します。
 
 ### <a name="example-1----full-installation"></a>例 1 - 完全インストール 
 
@@ -305,7 +305,7 @@ sudo zypper install mssql-mlservices-packages-r-9.4.7*
 
    + bash コマンド プロンプトで「`source .bash_profile`」と入力して、このファイルを実行します。
 
-5. SQL Server Launchpad サービスとデータベース エンジン インスタンスを再起動して、INI ファイルから更新後の値を読み込みます。 拡張機能に関連する設定が変更されるたびに、再起動のメッセージが表示されます。  
+5. SQL Server Launchpad サービスとデータベース エンジン インスタンスを再起動して、INI ファイルから更新後の値を読み込みます。 拡張機能に関連する設定が変更されるたびに、再起動を促すメッセージが表示されます。  
 
    ```bash
    systemctl restart mssql-launchpadd

@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: bb42076f-e823-4cee-9281-cd3f83ae42f5
-ms.openlocfilehash: 9a637e6b12c674102bd09239739a137e1d442e12
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 2f99310a1eaa240db15b4db5f686a4d6cc49c186
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68065090"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874764"
 ---
 # <a name="install-sql-server-full-text-search-on-linux"></a>Linux に SQL Server フルテキスト検索をインストールする
 
@@ -92,7 +92,7 @@ sudo zypper update mssql-server-fts
 | アラビア語 | 1025 |
 | ベンガル語 (インド) | 1093 |
 | ブークモール | 1044 |
-| Brazilian | 1046 |
+| ポルトガル語 (ブラジル) | 1046 |
 | 英語 (U.K.) | 2057 |
 | Bulgarian | 1026 |
 | カタロニア語 | 1027 |
@@ -148,7 +148,7 @@ sudo zypper update mssql-server-fts
 
 インストールされているフィルターの一覧を確認するには、**sp_help_fulltext_system_components 'filter'** を呼び出します。 SQL Server には、以下のフィルターがインストールされています。
 
-| [コンポーネント名] | クラス ID | バージョン |
+| [コンポーネント名] | クラス ID | Version |
 |---|---|---|
 |.a | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |
 |.ans | C1243CA0-BF96-11CD-B579-08002B30BFEB | 12.0.6828.0 |

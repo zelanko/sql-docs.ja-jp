@@ -1,5 +1,5 @@
 ---
-title: オブジェクトのプロパティ、メソッド、およびイベントを記録 |Microsoft Docs
+title: オブジェクトのプロパティ、メソッド、およびイベントを記録します。Microsoft Docs
 ms.prod: sql
 ms.prod_service: connectivity
 ms.technology: connectivity
@@ -12,13 +12,12 @@ helpviewer_keywords:
 ms.assetid: dadde268-bd0f-4ba0-8775-83a5cd3e258a
 author: MightyPen
 ms.author: genemi
-manager: jroth
-ms.openlocfilehash: ecb09e15a0d54573cf921a5b2a7633c9d1e61704
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 4868db07f3366163412021ac7f613c3cddf050da
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66712299"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70737655"
 ---
 # <a name="record-object-properties-methods-and-events"></a>Record オブジェクトのプロパティ、メソッド、およびイベント
 ## <a name="propertiescollections"></a>プロパティ/コレクション  
@@ -30,7 +29,7 @@ ms.locfileid: "66712299"
   
  [ParentURL プロパティ](../../../ado/reference/ado-api/parenturl-property-ado.md)  
   
- [プロパティのコレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
+ [Properties コレクション](../../../ado/reference/ado-api/properties-collection-ado.md)  
   
  [RecordType プロパティ](../../../ado/reference/ado-api/recordtype-property-ado.md)  
   
@@ -56,5 +55,5 @@ ms.locfileid: "66712299"
 ## <a name="events"></a>イベント  
  [なし] :  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Record オブジェクト (ADO)](../../../ado/reference/ado-api/record-object-ado.md)

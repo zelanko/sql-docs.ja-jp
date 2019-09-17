@@ -2,23 +2,30 @@
 title: SSMA for Access の新機能 (アクセス可能な Sql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: a24d3fc0-6911-4bfa-828a-197abf222e02
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: 39f8d7da95fc8e2102d1208216a2eb43bb038fea
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 608f7c8b2de7ae43bdd44e72da25f864f985efeb
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68632071"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745436"
 ---
 # <a name="whats-new-in-ssma-for-access-accesstosql"></a>SSMA for Access の新機能 (アクセス可能な Sql)
 
 この記事では、各リリースでのアクセス変更の SQL Server Migration Assistant (SSMA) を示します。  
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+SSMA for Access のリリースは、ユーザー補助の問題に対処し、最大インデックス列 (16 ではなく 32) に関連するバグを修正して、SQL Server 2016 以降のバージョンに対応するように設計された、対象の修正によって強化されています。
+
+> [!IMPORTANT]
+> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -27,18 +34,12 @@ SSMA for Access の v2.0 リリースは、品質と変換メトリックの向�
 * アクセシビリティに関する問題の解決
 * SQL Server に ' hierarchyid ' 型の基本的なサポートを追加します
 
-> [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
-
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
 SSMA for Access のリリースは、品質と変換メトリックの向上を目的とした修正が適用され、強化されています。
 
 > [!NOTE]
 > 自動更新に関する既知の問題により、SSMA v2.0 から v2.0 への更新が失敗する場合があります。 このエラーが発生した場合は、新しいバージョンをダウンロードし、手動でインストールしてください。
-
-> [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 
