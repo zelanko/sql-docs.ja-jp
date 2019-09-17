@@ -10,12 +10,12 @@ ms.assetid: 29b4488e-4c6a-4bf0-a64d-19e2fdafa7ae
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 3e8b4442d8d7f6e8838d9c5bb56e4c545b6f931c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 9e0eadbbc2d126a001057cf5f9d0e17211c0a93e
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66011088"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874725"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] では、フルテキスト検索でサポートされているすべての言語 (韓国語を除く) 用のワード ブレーカーおよびステマーのバージョンがインストールされ、有効になります。 このトピックでは、これらのコンポーネントのこのバージョンを前のバージョンに切り替えたり、前のバージョンから新しいバージョンに切り替えたりする方法について説明します。  
@@ -79,8 +79,8 @@ ms.locfileid: "66011088"
 |ニュートラル|ニュートラル|0000|  
 |ノルウェー語 (ボークモール)|nor|1044|  
 |パンジャーブ語|pan|1094|  
-|ポルトガル語 (ブラジル)|ptb|1046|  
 |ポルトガル語|ptg|2070|  
+|ポルトガル語 (ブラジル) |ptb|1046|  
 |ルーマニア語|rom|1048|  
 |スロバキア語|sky|1051|  
 |スロベニア語|slv|1060|  
@@ -164,7 +164,7 @@ ms.locfileid: "66011088"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す以前のステマーのファイル名に更新します。  
   
-7.  レジストリで、次のノードに移動します。**Hkey_local_machine \software\microsoft\microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+7.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>language_key<>。\\** *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 8.  **WBreakerClass** キー値を、表に示す現在のワード ブレーカーの値に更新します。  
   
@@ -193,7 +193,7 @@ ms.locfileid: "66011088"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す現在のステマーのファイル名に更新します。  
   
-5.  レジストリで、次のノードに移動します。**Hkey_local_machine \software\microsoft\microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+5.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>language_key<>。\\** *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 6.  **WBreakerClass** キー値を、表に示す以前のワード ブレーカーの値に更新します。  
   
@@ -285,7 +285,7 @@ ms.locfileid: "66011088"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す以前のステマーのファイル名に更新します。  
   
-4.  レジストリで、次のノードに移動します。**Hkey_local_machine \software\microsoft\microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+4.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>language_key<>。\\** *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 5.  **WBreakerClass** キー値を、表に示す現在のワード ブレーカーの値に更新します。  
   
@@ -309,7 +309,7 @@ ms.locfileid: "66011088"
   
     4.  選択した言語でステマーを使用する場合は、そのキー値の (既定) データを、表に示す現在のステマーのファイル名に更新します。  
   
-4.  レジストリで、次のノードに移動します。**Hkey_local_machine \software\microsoft\microsoft SQL Server\\< InstanceRoot\>\MSSearch\Language\\< language_key >** します。 *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
+4.  レジストリで、次のノードに移動します。**HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\\< InstanceRoot\>language_key<>。\\** *<language_key>* は、レジストリで使用される言語の省略形を表します。たとえば、フランス語の場合は "fra"、スペイン語の場合は "esn" です。  
   
 5.  **WBreakerClass** キー値を、表に示す以前のワード ブレーカーの値に更新します。  
   
@@ -376,7 +376,7 @@ ms.locfileid: "66011088"
 |現在の CLSID|E0831C90-BAB0-4ca5-B9BD-EA254B538DAC|  
 |現在のファイル名|MsWb70804.dll|  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [米国英語と英国英語に使用されるワード ブレーカーの変更](change-the-word-breaker-used-for-us-english-and-uk-english.md)   
  [フルテキスト検索の動作の変更](../../database-engine/behavior-changes-to-full-text-search.md)  
   

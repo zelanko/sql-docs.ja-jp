@@ -35,7 +35,7 @@ ms.locfileid: "68116731"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**< 継承された列 >**||列を継承[sys.endpoints](../../relational-databases/system-catalog-views/sys-endpoints-transact-sql.md)します。|  
-|**port**|ssNoversion|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
+|**port**|int|エンドポイントがリッスンするポート番号です。 NULL 値は許可されません。|  
 |**is_dynamic_port**|bit|1 = ポート番号が動的に割り当てられます。<br /><br /> NULL 値は許可されません。|  
 |**ip_address**|**nvarchar(45)**|LISTENER_IP 句で指定されたリスナーの IP アドレス。 NULL 値が許可されます。|  
   

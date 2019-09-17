@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 81a832b4372dc2b35893c329d0b7ca909224fb9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041507"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70278755"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>ファイルとファイル グループの復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -97,7 +97,7 @@ ms.locfileid: "68041507"
     |**[復元]**|このチェック ボックスをオンにすると、バックアップ セットが復元されます。|  
     |**[名前]**|バックアップ セットの名前です。|  
     |**[ファイルの種類]**|バックアップのデータの種類を指定します。**データ**、**ログ**、または **Filestream データ**です。 テーブルに含まれるデータの種類は、 **データ** ファイルです。 トランザクション ログ データの種類は、 **ログ** ファイルです。 ファイル システムに格納されたバイナリ ラージ オブジェクト (BLOB) データの種類は、 **FILESTREAM データ** ファイルです。|  
-    |**型**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
+    |**Type**|実行するバックアップの種類: **[完全]** 、 **[差分]** 、 **[トランザクション ログ]** 。|  
     |**[サーバー]**|バックアップ操作を実行するデータベース エンジン インスタンスの名前です。|  
     |**[ファイルの論理名]**|ファイルの論理名です。|  
     |**[データベース]**|バックアップ操作に呼び出されるデータベース名です。|  
@@ -140,21 +140,21 @@ ms.locfileid: "68041507"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
-     **Leave the database ready for use by rolling back the uncommitted transactions. Additional transaction logs cannot be restored. (RESTORE WITH RECOVERY)**  
-     Recovers the database. This is the default behavior. Choose this option only if you are restoring all of the necessary backups now. This option is equivalent to specifying WITH RECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする。別のトランザクション ログは復元できません。(RESTORE WITH RECOVERY)]**  
+  データベースを復旧します。 これは既定の動作です。 このオプションは、必要なすべてのバックアップをすべて復元する場合のみ選択します。 このオプションを選択することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで WITH RECOVERY を使用することと同じです。  
   
-     **Leave the database non-operational, and don't roll back the uncommitted transactions. Additional transaction logs can be restored. (RESTORE WITH NORECOVERY)**  
-     Leaves the database in the restoring state. To recover the database, you will need to perform another restore using the preceding RESTORE WITH RECOVERY option (see above). This option is equivalent to specifying WITH NORECOVERY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **データベースは操作不可状態のままで、コミットされていないトランザクションはロールバックしない。別のトランザクション ログは復元できます(RESTORE WITH NORECOVERY)**  
+  データベースを復元状態のままにします。 データベースを復旧するには、RESTORE WITH RECOVERY オプションを使用して (上記を参照) 別の復元を実行する必要があります。 このオプションを選択することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで WITH NORECOVERY を使用することと同じです。  
   
-     If you select this option, the **Preserve replication settings** option is unavailable.  
+  このオプションを選択すると、 **[レプリケーションの設定を保存する]** オプションを選択できなくなります。  
   
-     **Leave the database in read-only mode. Roll back the uncommitted transactions, but save the rollback operation in a file so the recovery effects can be undone. (RESTORE WITH STANDBY)**  
-     Leaves the database in a standby state. This option is equivalent to specifying WITH STANDBY in a [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE statement.  
+  **[データベースを読み取り専用モードにする。コミットされていないトランザクションはロールバックされますが、復旧結果を元に戻せるようにロールバック操作をファイルに保存します。(RESTORE WITH STANDBY)]**  
+  データベースをスタンバイ状態のままにします。 このオプションを選択することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで WITH STANDBY を使用することと同じです。  
   
-     Choosing this option requires that you specify a standby file.  
+  このオプションを選択した場合は、スタンバイ ファイルを指定する必要があります。  
   
-     **Rollback undo file**  
-     Specify a standby file name in the **Rollback undo file** text box. This option is required if you leave the database in read-only mode (RESTORE WITH STANDBY).  
+  **[ロールバック UNDO ファイル]**  
+  **[ロールバック UNDO ファイル]** テキスト ボックスで、スタンバイ ファイル名を指定します。 データベースを読み取り専用モード (RECOVERY WITH STANDBY) にする場合は、このオプションが必要です。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

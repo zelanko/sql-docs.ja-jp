@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: v-kaywon
 ms.author: v-kaywon
-ms.openlocfilehash: d092a534d973de246d3e3c61e67bce9d87d45fe6
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fb596365f284a141b5e57bfc8601427fe603d73d
+ms.sourcegitcommit: 49f3d12c0a46d98b82513697a77a461340f345e1
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "64775171"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70392016"
 ---
 # <a name="utf-8-support-in-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server の UTF-8 のサポート
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,6 +25,9 @@ ms.locfileid: "64775171"
 Microsoft OLE DB Driver for SQL Server (version 18.2.1) によって、UTF-8 サーバーのエンコードのサポートが追加されます。 SQL Server の UTF-8 のサポートについては、以下を参照してください。
 - [照合順序と Unicode のサポート](../../../relational-databases/collations/collation-and-unicode-support.md)
 - [UTF-8 のサポート](#ctp23)
+
+> [!IMPORTANT]
+> Microsoft OLE DB Driver for SQL Server は[Getacp](https://docs.microsoft.com/windows/win32/api/winnls/nf-winnls-getacp)関数を使用して、DBTYPE_STR 入力バッファーのエンコーディングを決定します。 GetACP が UTF-8 エンコードを返すシナリオはサポートされていません。 バッファーで Unicode データを格納する必要がある場合は、バッファーデータ型を DBTYPE_WSTR (UTF-16 エンコード) に設定する必要があります。
 
 ## <a name="data-insertion-into-a-utf-8-encoded-char-or-varchar-column"></a>UTF-8 でエンコードされた CHAR または VARCHAR 列へのデータの挿入
 挿入用の入力パラメーター バッファーが作成されるとき、そのバッファーは、[DBBINDING 構造体](https://go.microsoft.com/fwlink/?linkid=2071182)の配列を使用して記述されます。 各 DBBINDING 構造体では単一のパラメーターがコンシューマーのバッファーに関連付けられ、データ値の長さや型などの情報が含まれます。 CHAR 型の入力パラメーター バッファーでは、DBBINDING 構造体の *wType* を DBTYPE_STR に設定する必要があります。 WCHAR 型の入力パラメーター バッファーでは、DBBINDING 構造体の *wType* を DBTYPE_WSTR に設定する必要があります。

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
 manager: kenvh
-ms.openlocfilehash: 590ca8048d45d9832ff53775512f991268843872
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
-ms.translationtype: MTE75
+ms.openlocfilehash: 7fb220f8a5a33d33e2ee9177efd9fe2f713b7439
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809455"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774179"
 ---
 # <a name="release-notes-for-sqlpackageexe"></a>SqlPackage.exe のリリース ノート
 
@@ -35,10 +35,49 @@ I discussed this with SStein (SteveStein).
 Thanks.  GeneMi (MightyPen in GitHub).  2019-03-27
 -->
 
+## <a name="183-sqlpackage"></a>18.3 sqlpackage
+
+|プラットフォーム|ダウンロード|リリース日|Version|ビルド
+|:---|:---|:---|:---|:---|
+|Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2102893)|2019年9月6日|18.3|15.0.4532.1|
+|macOS .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102894)|2019年9月6日| 18.3|15.0.4532.1|
+|Linux .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102978)|2019年9月6日| 18.3|15.0.4532.1|
+|Windows .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102979)|2019年9月6日| 18.3|15.0.4532.1|
+
+### <a name="features"></a>[機能]
+
+| 機能 | 詳細 |
+| :------ | :------ |
+| Azure SQL Data Warehouse (プレビュー) | Azure SQL Data Warehouse に配置するためのサポートを追加します。 | 
+| 展開 | /P: DatabaseLockTimeout = (INT32 ' 60 ') パラメーターを sqlpackage に追加します。 | 
+| 展開 | /P: LongRunningCommandTimeout = (INT32) パラメーターを sqlpackage に追加します。 |
+| エクスポート/抽出 | /P: TempDirectoryForTableData = (STRING) パラメーターを sqlpackage に追加します。 |
+| 展開 | 配置コントリビューターを他の場所から読み込むことを許可します。 配置コントリビューターは、配置されている対象の dacpac と同じディレクトリ、sqlpackage のバイナリに関連する拡張機能のディレクトリ、および sqlpackage に追加される/p: AdditionalDeploymentContributorPaths = (STRING) パラメーターから読み込まれます。追加のディレクトリの場所を指定できます。 |
+| 展開 | OPTIMIZE_FOR_SEQUENTIAL_KEY のサポートを追加します。 |
+| &nbsp; | &nbsp; |
+
+### <a name="fixes"></a>修正
+
+| Fix | 詳細 |
+| :-- | :------ |
+| 展開 | 自動インデックスが配置時に削除されないように、自動インデックスを無視するように修正しました。 | 
+| Always Encrypted | Always Encrypted varchar 列の処理を修正します。 | 
+| ビルド/配置 | Xml 列セットの nodes () メソッドを解決するように修正します。| 
+| ScriptDom | ' URL ' 文字列が最上位レベルのトークンとして解釈された場合の追加の問題を修正します。 | 
+| グラフ | 制約内の擬似列参照に対して生成された TSQL を修正しました。  | 
+| [エクスポート] | 複雑さの要件を満たすランダムなパスワードを生成します。 | 
+| 展開 | 制約を取得するときにコマンドタイムアウトを優先するように修正します。 | 
+| .NET Core (プレビュー) | ファイルへの診断ログの記録を修正します。 | 
+| .NET Core (プレビュー) | ストリーミングを使用して、大きなテーブルをサポートするテーブルデータをエクスポートします。 | 
+| &nbsp; | &nbsp; |
+
 ## <a name="182-sqlpackage"></a>18.2 sqlpackage
 
-リリース日: &nbsp; 2019 年 4 月 15 日  
-ビルド: &nbsp; 15.0.4384.2 
+|プラットフォーム|ダウンロード|リリース日|Version|ビルド
+|:---|:---|:---|:---|:---|
+|Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2087429)|2019 年 4 月 15 日|18.2|15.0.4384.2|
+|macOS .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2087247)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
+|Linux .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2087431)|2019 年 4 月 15 日 | 18.2 |15.0.4384.2|
 
 ### <a name="features"></a>[機能]
 

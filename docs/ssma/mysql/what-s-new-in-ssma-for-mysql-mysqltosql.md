@@ -2,23 +2,30 @@
 title: SSMA for MySQL の新機能 (MySQLToSql) |Microsoft Docs
 ms.prod: sql
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.reviewer: ''
 ms.technology: ssma
 ms.topic: conceptual
 ms.assetid: 1451a0b0-6713-4d0c-954f-ea3d8fce1d31
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: d02b002dd5f974fa7fd989026172b70a049d0e5f
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 900ea1a83e8f06916bf48a003d99584113a8304b
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811493"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745506"
 ---
 # <a name="whats-new-in-ssma-for-mysql-mysqltosql"></a>SSMA for MySQL の新機能 (MySqlToSql)
 
 この記事では、各リリースでの MySQL 変更の SQL Server Migration Assistant (SSMA) を示します。
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+SSMA for MySQL の v2.0 リリースは、ユーザー補助の問題に対処し、最大インデックス列 (16 ではなく 32) に関連するバグを修正するように設計された、SQL Server 2016 以降のバージョンで強化されています。
+
+> [!IMPORTANT]
+> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -26,9 +33,6 @@ SSMA for MySQL の v2.0 リリースは、品質と変換のメトリックを�
 
 * アクセシビリティに関する問題の解決
 * SQL Server に ' hierarchyid ' 型の基本的なサポートを追加します
-
-> [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -40,9 +44,6 @@ SSMA for MySQL の v2.0 リリースは、品質と変換のメトリックを�
 
 > [!NOTE]
 > 自動更新に関する既知の問題により、SSMA v2.0 から v2.0 への更新が失敗する場合があります。 このエラーが発生した場合は、新しいバージョンをダウンロードし、手動でインストールしてください。
-
-> [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 
@@ -111,7 +112,7 @@ SSMA for MySQL のバージョン7.5 リリースは、障碍のある方にと�
 
 SSMA for MySQL の v2.0 リリースには、次の変更が含まれています。
 
-* **[クエリタイムアウト]** オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
+* [**クエリタイムアウト**] オプションは、ソースおよびターゲットでのスキーマオブジェクトの検出中に使用できるようになりました。
 
     ![クエリタイムアウトオプション](../media/query-timeout_red.png)
 * お客様からのフィードバックに基づいて、品質と換算のメトリックが修正されました。

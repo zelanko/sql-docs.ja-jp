@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d7d7d7eeacca4e18fe5b5fdc97331e24a6ca212d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952618"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809955"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
 
@@ -215,9 +215,6 @@ Pacemaker クラスターのログの場所は、ディストリビューショ�
 -   Hyper-V のドキュメント - [高可用性のためのゲスト クラスタリングの使用](https://technet.microsoft.com/library/dn440540(v=ws.11).aspx)
 -   ホワイトペーパー (Windows ベースのデプロイ向けに記述されていますが、ほとんどの概念が適用されます) - [VMware vSphere を使用したミッション クリティカルな高可用性 SQL Server デプロイの計画](https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/solutions/vmware-vsphere-highly-available-mission-critical-sql-server-deployments.pdf)
 
->[!NOTE]
->Pacemaker クラスターと STONITH を使用した RHEL は、Hyper-V ではまだサポートされていません。 これがサポートされるまでは、「[RHEL 高可用性クラスターのサポート ポリシー](https://access.redhat.com/articles/29440#3physical_host_mixing)」で詳細と更新情報を確認してください。
-
 ### <a name="networking"></a>ネットワーク
 WSFC とは異なり、Pacemaker では、Pacemaker クラスター自体に対して専用の名前を付けたり、少なくとも 1 つの専用 IP アドレスを持たせる必要はありません。 AG と FCI には IP アドレスが必要 (詳細については、それぞれのドキュメントを参照してください) ですが、ネットワーク名リソースがないので、名前は必要ありません。 SLES では、管理目的で IP アドレスを構成することができますが、「[Pacemaker クラスターを作成する](sql-server-linux-deploy-pacemaker-cluster.md#create)」で示されているように、必須ではありません。
 
@@ -229,9 +226,6 @@ WSFC と同様に、Pacemaker では冗長ネットワークの使用が推奨�
 クォーラムの構成と要件は、[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] の AG または FCI 固有のデプロイに関連します。
 
 サポートされている Pacemaker クラスターには STONITH が必須です。 STONITH を構成するには、ディストリビューションのドキュメントを使用します。 たとえば、SLES の場合なら「[ストレージベースのフェンス](https://www.suse.com/documentation/sle_ha/book_sleha/data/sec_ha_storage_protect_fencing.html)」を使用します。 ESXI ベースのソリューションの場合は、VMware vCenter 用の STONITH エージェントもあります。 詳細については、「[VMWare VM VCenter SOAP フェンス向け STONITH プラグイン エージェント (非公式)](https://github.com/olafrv/fence_vmware_soap)」を参照してください。
-
-> [!NOTE]
-> この記事の執筆時点では、Hyper-V には STONITH 向けのソリューションがありません。 これはオンプレミスのデプロイについても同様で、特定のディストリビューション (RHEL など) を使用した Azure ベースの Pacemaker デプロイにも影響します。
 
 ### <a name="interoperability"></a>相互運用性
 このセクションでは、Linux ベースのクラスターで、WSFC や他の Linux ディストリビューションとどのように連携できるかについて説明します。

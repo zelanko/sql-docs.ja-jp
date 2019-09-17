@@ -99,15 +99,15 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |FLOAT|float [24]|  
 |float [*..255] [\*..30]|数値 [*] [\*]|  
 |float [*..53]|float [53]|  
-|ssNoversion|ssNoversion|  
-|int [*..255]|ssNoversion|  
-|integer|ssNoversion|  
-|整数 [*..255]|ssNoversion|  
+|int|int|  
+|int [*..255]|int|  
+|integer|int|  
+|整数 [*..255]|int|  
 |longblob|varbinary(max)|  
 |長いテキスト|nvarchar(max)|  
 |mediumblob|varbinary(max)|  
-|mediumint|ssNoversion|  
-|mediumint [*..255]|ssNoversion|  
+|mediumint|int|  
+|mediumint [*..255]|int|  
 |mediumtext|nvarchar(max)|  
 |national char|nchar [1]|  
 |national char [0..1]|nchar [1]|  
@@ -173,15 +173,15 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |符号なし int [*..255]|BIGINT|  
 |符号なし整数|BIGINT|  
 |符号なし整数 [*..255]|BIGINT|  
-|符号なしの mediumint|ssNoversion|  
-|符号なしの mediumint [*..255]|ssNoversion|  
+|符号なしの mediumint|int|  
+|符号なしの mediumint [*..255]|int|  
 |unsigned numeric|NUMERIC|  
 |符号なし数値 [*..65]|数値 [*] [0]|  
 |符号なし数値 [*..65] [\*..30]|数値 [*] [\*]|  
 |実際に符号なし|float [53]|  
 |実際に署名されていない [*..255 [\*..30]|数値 [*] [\*]|  
-|符号なしの smallint|ssNoversion|  
-|符号なしの smallint [*..255]|ssNoversion|  
+|符号なしの smallint|int|  
+|符号なしの smallint [*..255]|int|  
 |符号なしの tinyint|TINYINT|  
 |符号なしの tinyint [*..255]|TINYINT|  
 |varbinary [0..1]|varbinary [1]|  

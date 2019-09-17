@@ -1,5 +1,5 @@
 ---
-title: sp_helpsubscription (Transact-sql) |Microsoft Docs
+title: sp_helpsubscription (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771566"
 ---
-# <a name="sphelpsubscription-transact-sql"></a>sp_helpsubscription (Transact-sql)
+# <a name="sp_helpsubscription-transact-sql"></a>sp_helpsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   特定のパブリケーション、アーティクル、サブスクライバー、またはサブスクリプションのセットに関連付けられているサブスクリプション情報を一覧表示します。 このストアドプロシージャは、パブリッシャー側のパブリケーションデータベースで実行されます。  
@@ -65,17 +65,17 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**サブスクライバー**|**sysname**|サブスクライバーの名前。|  
-|**レプリケーション**|**sysname**|パブリケーションの名前。|  
+|**subscriber**|**sysname**|サブスクライバーの名前。|  
+|**publication**|**sysname**|パブリケーションの名前。|  
 |**article**|**sysname**|アーティクルの名前。|  
-|**転送先データベース**|**sysname**|レプリケートされたデータの格納先のデータベースの名前。|  
-|**サブスクリプションの状態**|**tinyint**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ済み<br /><br /> **2** = アクティブ|  
-|**同期の種類**|**tinyint**|サブスクリプションの同期の種類:<br /><br /> **1** = 自動<br /><br /> **2** = なし|  
-|**サブスクリプションの種類**|**int**|サブスクリプションの種類:<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
-|**完全なサブスクリプション**|**bit**|サブスクリプションがパブリケーション内のすべてのアーティクルを対象としているかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
-|**サブスクリプション名**|**nvarchar (255)**|サブスクリプションの名前。|  
-|**更新モード**|**int**|**0** = 読み取り専用<br /><br /> **1** = 即時更新サブスクリプション|  
-|**配布ジョブ id**|**binary(16)**|ディストリビューション エージェントのジョブ ID。|  
+|**destination database**|**sysname**|レプリケートされたデータの格納先のデータベースの名前。|  
+|**subscription status**|**tinyint**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブ<br /><br /> **1** = サブスクライブ済み<br /><br /> **2** = アクティブ|  
+|**synchronization type**|**tinyint**|サブスクリプションの同期の種類:<br /><br /> **1** = 自動<br /><br /> **2** = なし|  
+|**subscription type**|**int**|サブスクリプションの種類:<br /><br /> **0** = プッシュ<br /><br /> **1** = プル<br /><br /> **2** = 匿名|  
+|**full subscription**|**bit**|サブスクリプションがパブリケーション内のすべてのアーティクルを対象としているかどうかを示します。<br /><br /> **0** = いいえ<br /><br /> **1** = はい|  
+|**subscription name**|**nvarchar (255)**|サブスクリプションの名前。|  
+|**update mode**|**int**|**0** = 読み取り専用<br /><br /> **1** = 即時更新サブスクリプション|  
+|**distribution job id**|**binary(16)**|ディストリビューション エージェントのジョブ ID。|  
 |**loopback_detection**|**bit**|ディストリビューション エージェントが、サブスクライバーで発生したトランザクションをサブスクライバーに戻すかどうかを示します。<br /><br /> **0** = 返送します。<br /><br /> **1** = を返しません。<br /><br /> 双方向トランザクション レプリケーションで使用されます。 詳細については、「 [Bidirectional Transactional Replication](../../relational-databases/replication/transactional/bidirectional-transactional-replication.md)」を参照してください。|  
 |**offload_enabled**|**bit**|レプリケーションエージェントのオフロード実行がサブスクライバーで実行されるように設定されているかどうかを指定します。<br /><br /> **0**の場合、エージェントはパブリッシャーで実行されます。<br /><br /> **1**の場合、エージェントはサブスクライバーで実行されます。|  
 |**offload_server**|**sysname**|リモートエージェントのアクティブ化が有効になっているサーバーの名前。 NULL の場合は、 [MSdistribution_agents](../../relational-databases/system-tables/msdistribution-agents-transact-sql.md) table に示されている現在の offload_server が使用されます。|  
@@ -92,7 +92,7 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**subscriber_datasource**|**nvarchar (4000)**|OLE DB プロバイダーで認識されるデータ ソースの名前。|  
 |**subscriber_providerstring**|**nvarchar (4000)**|データソースを識別する OLE DB プロバイダー固有の接続文字列。|  
 |**subscriber_location**|**nvarchar (4000)**|OLE DB プロバイダーによって認識されるデータベースの場所|  
-|**対応する、**|**sysname**|OLE DB プロバイダーに接続するときに使用するカタログ。|  
+|**subscriber_catalog**|**sysname**|OLE DB プロバイダーに接続するときに使用するカタログ。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

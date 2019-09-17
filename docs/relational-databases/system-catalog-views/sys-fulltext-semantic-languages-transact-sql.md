@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68133778"
 ---
-# <a name="sysfulltextsemanticlanguages-transact-sql"></a>sys.fulltext_semantic_languages (TRANSACT-SQL)
+# <a name="sysfulltext_semantic_languages-transact-sql"></a>sys.fulltext_semantic_languages (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   統計モデルが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスに登録されている各言語の行を返します。 言語モデルの登録時に、セマンティック インデックス作成用の言語が有効であります。  
@@ -36,7 +36,7 @@ ms.locfileid: "68133778"
 ||||  
 |-|-|-|  
 |**列名**|**型**|**[説明]**|  
-|lcid|ssNoversion|言語の Microsoft Windows ロケール識別子 (LCID) です。|  
+|lcid|int|言語の Microsoft Windows ロケール識別子 (LCID) です。|  
 |NAME|sysname|内の別名のいずれかの値は、 [sys.syslanguages &#40;TRANSACT-SQL&#41; ](../../relational-databases/system-compatibility-views/sys-syslanguages-transact-sql.md)の値に対応する**lcid**、または LCID の数値の文字列表現。|  
   
 ## <a name="general-remarks"></a>全般的な解説  

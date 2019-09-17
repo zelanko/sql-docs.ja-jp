@@ -1,35 +1,35 @@
 ---
-title: 動的管理ビュー (Dmv) を使用した R と Python スクリプトの実行の監視
-description: 動的管理ビュー (Dmv) を使用して、SQL Server Machine Learning Services で R および Python の外部スクリプトの実行を監視します。
+title: Dmv を使用した Python と R スクリプトの実行の監視
+description: 動的管理ビュー (Dmv) を使用して、SQL Server Machine Learning Services での Python および R 外部スクリプトの実行を監視します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/29/2018
+ms.date: 09/13/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: ade3714459ebc0457b6afea2600cc0547c9940a1
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715320"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978403"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>動的管理ビュー (Dmv) を使用して SQL Server Machine Learning Services を監視する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-動的管理ビュー (Dmv) を使用して、外部スクリプト (R および Python) の実行を監視したり、使用されているリソースを監視したり、問題を診断したり、SQL Server Machine Learning Services のパフォーマンスを調整したりします。
+動的管理ビュー (Dmv) を使用して、外部スクリプト (Python と R) の実行を監視し、使用されているリソース、問題を診断し、SQL Server Machine Learning Services でパフォーマンスを調整します。
 
 この記事では、SQL Server Machine Learning Services に固有の Dmv について説明します。 また、次のようなクエリの例も紹介します。
 
 + Machine learning の設定と構成オプション
-+ 外部 R または Python スクリプトを実行しているアクティブセッション
-+ R および Python の外部ランタイムの実行の統計
++ 外部 Python またはスクリプトを実行しているアクティブセッション
++ Python および R 用の外部ランタイムの実行の統計
 + 外部スクリプトのパフォーマンスカウンター
 + OS、SQL Server、および外部リソースプールのメモリ使用量
 + SQL Server と外部リソースプールのメモリ構成
 + 外部リソースプールを含む Resource Governor リソースプール
-+ R および Python 用にインストールされたパッケージ
++ Python および R 用にインストールされたパッケージ
 
 Dmv に関する一般的な情報については、「[システム動的管理ビュー](../../relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。
 
@@ -131,7 +131,7 @@ R および Python の外部ランタイムの実行の統計情報を表示し�
 
 ![実行統計クエリからの出力](media/dmv-execution-statistics.png "実行統計クエリからの出力")
 
-この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「」[を参照し](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md)てください。 クエリは、複数回実行された関数のみを返します。
+この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「」[を参照してください。](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) クエリは、複数回実行された関数のみを返します。
 
 ```sql
 SELECT language, counter_name, counter_value
@@ -167,7 +167,7 @@ WHERE object_name LIKE '%External Scripts%'
 | カウンター | 説明 |
 |---------|-------------|
 | Total Executions | ローカル呼び出しまたはリモート呼び出しによって開始された外部プロセスの数。 |
-| Parallel Executions | スクリプトに仕様が _@parallel_ 含まれて[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]おり、並列クエリプランを生成して使用できる回数。 |
+| Parallel Executions | スクリプトに _\@並列_仕様が含まれており[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 、並列クエリプランを生成して使用できる回数。 |
 | Streaming Executions | ストリーミング機能が呼び出された回数。 |
 | SQL CC Executions | 呼び出しがリモートでインスタンス化され、SQL Server が計算コンテキストとして使用された場合に実行される外部スクリプトの数。 |
 | Implied Auth.Login | 暗黙の認証を使用して ODBC ループバック呼び出しが行われた回数。つまり、は[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 、スクリプト要求を送信するユーザーの代わりに呼び出しを実行します。 |
@@ -204,7 +204,7 @@ SQL Server と外部リソースプールの割合での最大メモリ構成に
 
 ![メモリ構成クエリからの出力](media/dmv-memory-configuration.png "メモリ構成クエリからの出力")
 
-この出力を取得するには、次のクエリを実行します。 使用されるビューの詳細については[、「](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md) _resource_governor_external_resource_pools」および「 [sys](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)」を参照してください。
+この出力を取得するには、次のクエリを実行します。 使用されるビューの詳細については、「 [_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md)」および「sys」を参照し[てください。](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
 
 ```sql
 SELECT 'SQL Server' AS name

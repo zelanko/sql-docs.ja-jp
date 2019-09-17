@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6c776fd176379e8a65bdc70f6bf4c56fd370bef0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 92ff867d98b83f1934972a576df8295c3f9ca79d
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134376"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228414"
 ---
 # <a name="database-mail-mail-queued-not-delivered"></a>データベース メール:メールがキューされました、配信されません 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 このトピックでは、電子メール メッセージが正常にキューに登録されても、そのメッセージが配信されない問題のトラブルシューティングを行う方法について説明します。
 
@@ -69,7 +69,7 @@ sysmail_help_queue_sp @queue_type = 'Mail' ;
 
 ## <a name="message-status-failed"></a>メッセージの状態 - failed
 
-状態 failed は、電子メール メッセージをデータベース メール外部プログラムから SMTP サーバーに配信できなかったことを表します。 この場合、**sysmail_event_log** ビューにデータベース メールからの詳細情報が含まれています。 **sysmail_faileditems** と **sysmail_event_log** を結合して詳細なエラー メッセージを入手するサンプル クエリについては、「[データベース メールから送信された電子メール メッセージの状態の確認](check-the-status-of-e-mail-messages-sent-with-database-mail.md)」を参照してください。 このような問題では、宛先のアドレスが間違っているか、ネットワーク上で問題が発生したためにデータベース メールが 1 つ以上のフェールオーバー アカウントにアクセスできないことが最も一般的な原因です。 SMTP サーバーで問題が発生すると、その SMTP サーバーでメールが拒否されることがあります。 データベース メール構成ウィザードを使用して、 **[ログ記録レベル]** を **[詳細]** に変更し、テスト メールを送信して障害発生時点を調べます。
+状態 failed は、電子メール メッセージをデータベース メール外部プログラムから SMTP サーバーに配信できなかったことを表します。 この場合、**sysmail_event_log** ビューにデータベース メールからの詳細情報が含まれています。 **sysmail_faileditems** と **sysmail_event_log** を結合して詳細なエラー メッセージを入手するサンプル クエリについては、「[データベース メールから送信された電子メール メッセージの状態の確認](check-the-status-of-e-mail-messages-sent-with-database-mail.md)」を参照してください。 このような問題では、宛先のアドレスが間違っているか、ネットワーク上で問題が発生したためにデータベース メールが 1 つ以上のフェールオーバー アカウントにアクセスできないことが最も一般的な原因です。 SMTP サーバーで問題が発生すると、その SMTP サーバーでメールが拒否されることがあります。 データベース メール構成ウィザードを使用して、**[ログ記録レベル]** を **[詳細]** に変更し、テスト メールを送信して障害発生時点を調べます。
 
 
 

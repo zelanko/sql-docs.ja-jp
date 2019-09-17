@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 63caee60bc96c5ff8579471ae0a98322e4fc99b7
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160690"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988094"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server ビッグデータクラスターのリリースノート
 
@@ -37,7 +37,9 @@ ms.locfileid: "70160690"
 
 ### <a name="known-issues"></a>既知の問題
 
-SQL Server 2019 ビッグデータクラスターリリース候補更新ビルド番号は`15.0.1900.47`です。
+* SQL Server 2019 ビッグデータクラスターリリース候補更新ビルド番号は`15.0.1900.47`です。
+
+* "Kubeadm" デプロイプロファイルは、上記のビルド番号の SQL Server 2019 ビッグデータクラスターリリース候補ではサポートされていません。 代わりに、Kubeadm デプロイには "kubeadm" プロファイルを使用してください。
 
 ## <a id="ctp32"></a> CTP 3.2 (7 月)
 
@@ -167,7 +169,7 @@ SQL Server 2019 ビッグデータクラスターリリース候補更新ビル�
 
 #### <a name="kibana-logs-dashboards"></a>Kibana ログのダッシュボード
 
-- Aris CTP 3.0 および 3.1 の間で、Kibana バージョンが 6.3.1 から 7.0.1 にアップグレードされました。  これにより、Edge ブラウザーと Kibana との互換性がなくなりました。 ユーザーが Edge で Kibana ダッシュボードの現在のバージョンを読み込むと、空白のページが表示されます。 Kibana.rs でサポートされるブラウザーについては、[こちら]( https://www.elastic.co/support/matrix#matrix_browse)を参照してください。 
+- Aris CTP 3.0 および 3.1 の間で、Kibana バージョンが 6.3.1 から 7.0.1 にアップグレードされました。  これにより、Microsoft Edge ブラウザーと Kibana との互換性がなくなりました。 Microsoft Edge で Kibana ダッシュボードの現在のバージョンを読み込むと、空のページが表示されます。 Kibana.rs でサポートされるブラウザーについては、[こちら]( https://www.elastic.co/support/matrix#matrix_browse)を参照してください。 
 
 
 ## <a id="ctp30"></a> CTP 3.0 (5 月)

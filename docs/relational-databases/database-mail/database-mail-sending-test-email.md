@@ -13,15 +13,15 @@ helpviewer_keywords:
 - Database Mail [SQL Server], components
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b5363ab8fe37e67b7efa1aa193e269585064f07e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d8412a87703577595f0408de3b9cf26520160fdf
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137435"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228454"
 ---
 # <a name="send-a-test-email-with-database-mail"></a>データベース メールでテスト メールを送信する  
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
 [テスト電子メールの送信] ダイアログ ボックスを使用して、特定のプロファイルからメールを送信する機能をテストできます。
 

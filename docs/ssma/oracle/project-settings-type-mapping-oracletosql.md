@@ -62,7 +62,7 @@ SSMA for Oracle は、引数、列、ローカル変数、および戻り値の�
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_integer|ssNoversion|  
+|binary_integer|int|  
 |blob (blob)|varbinary(max)|  
 |boolean|bit|  
 |char|varchar(max)|  
@@ -75,8 +75,8 @@ SSMA for Oracle は、引数、列、ローカル変数、および戻り値の�
 |Decimal|float [53]|  
 |倍精度|float [53]|  
 |FLOAT|float [53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|int|int|  
+|integer|int|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [\*..8000]<sup>*</sup>|varbinary [*]|  
@@ -91,7 +91,7 @@ SSMA for Oracle は、引数、列、ローカル変数、および戻り値の�
 |number|float [53]|  
 |NUMERIC|float [53]|  
 |nvarchar2|nvarchar(max)|  
-|pls_integer|ssNoversion|  
+|pls_integer|int|  
 |raw|varbinary(max)|  
 |REAL|float [53]|  
 |Rowid|UNIQUEIDENTIFIER|  
@@ -137,8 +137,8 @@ SSMA for Oracle は、引数、列、ローカル変数、および戻り値の�
 |FLOAT|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
-|ssNoversion|ssNoversion|  
-|integer|ssNoversion|  
+|int|int|  
+|integer|int|  
 |long|varchar(max)|  
 |long raw|varbinary(max)|  
 |long raw [*..8000]|varbinary [*]|  
@@ -186,7 +186,7 @@ SSMA for Oracle は、引数、列、ローカル変数、および戻り値の�
 |Bfile|varbinary(max)|  
 |binary_double|float [53]|  
 |binary_float|float [53]|  
-|binary_interger|ssNoversion|  
+|binary_interger|int|  
 |Blob|varbinary(max)|  
 |ブール値|bit|  
 |Char|char|  
@@ -211,8 +211,8 @@ SSMA for Oracle は、引数、列、ローカル変数、および戻り値の�
 |Float|float [53]|  
 |float [*..53]|float [*]|  
 |float [54.. *]|float [53]|  
-|Int|ssNoversion|  
-|整数型|ssNoversion|  
+|Int|int|  
+|整数型|int|  
 |整数 [*..\*]|数値 [*] [0]|  
 |Long|varchar(max)|  
 |long raw|varbinary(max)|  
@@ -242,7 +242,7 @@ SSMA for Oracle は、引数、列、ローカル変数、および戻り値の�
 |数値 [*..\*][\*..\*]|数値 [*] [\*]|  
 |nvarchar2 [*..4000]|nvarchar [*]|  
 |nvarchar2 [4001.. *]|nvarchar(max)|  
-|pls_integer|ssNoversion|  
+|pls_integer|int|  
 |生 [*..8000]|varbinary [*]|  
 |生 [8001.. *]|varbinary(max)|  
 |Real|float [53]|  

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 9a1953ecb17dba3894afe15e88690fbb150fb5a3
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153454"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878720"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]する方法
 
@@ -120,7 +120,7 @@ azdata bdc create --accept-eula=yes
 1. 展開構成プロファイルでの設定をカスタマイズするために、VS Code などの JSON ファイルの編集に適したツール上で、展開構成ファイルを編集できます。 スクリプト化されたオートメーションの場合、**azdata bdc config**  コマンドを使用してカスタムの展開プロファイルを編集することもできます。 たとえば、次のコマンドでは、カスタムの展開プロファイルを変更して、展開されたクラスターの名前を既定 (**mssql-cluster**) から **test-cluster** に変えています。  
 
    ```bash
-   azdata bdc config replace --config-file custom/cluster.json --json-values "metadata.name=test-cluster"
+   azdata bdc config replace --config-file custom/bdc.json --json-values "metadata.name=test-cluster"
    ```
    
    > [!TIP]
@@ -147,7 +147,7 @@ azdata bdc create --accept-eula=yes
 | **CONTROLLER_USERNAME** | 必須 |クラスター管理者のユーザー名。 |
 | **CONTROLLER_PASSWORD** | 必須 |クラスター管理者のパスワード。 |
 | **MSSQL_SA_PASSWORD** | 必須 |SQL マスター インスタンス用の SA ユーザーのパスワード。 |
-| **KNOX_PASSWORD** | 必須 |Knox ユーザーのパスワード。 |
+| **KNOX_PASSWORD** | 必須 |Knox **root**ユーザーのパスワード。 注: 基本認証のセットアップでは、Knox に対してサポートされているユーザーのみが**root**です。|
 | **ACCEPT_EULA**| `azdata` を初めて使用する場合は必須| 値は必要ありません。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula` を含めることができます。|
 | **DOCKER_USERNAME** | 省略可 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
 | **DOCKER_PASSWORD** | 省略可 |上記のプライベート リポジトリにアクセスするためのパスワード。 |
@@ -169,6 +169,10 @@ SET CONTROLLER_PASSWORD=<password>
 SET MSSQL_SA_PASSWORD=<password>
 SET KNOX_PASSWORD=<password>
 ```
+
+> [!NOTE]
+> 上記のパスワードを使用して、Knox ゲートウェイに**root**ユーザーを使用する必要があります。 **root**は、この基本認証 (ユーザー名/パスワード) のセットアップでサポートされている唯一のユーザーです。 SQL Server マスターの場合、上記のパスワードと共に使用するためにプロビジョニングされたユーザー名は**sa**です。
+
 
 環境変数を設定したら、`azdata bdc create` を実行して展開をトリガーする必要があります。 この例では、上記で作成したクラスター構成プロファイルを使用します。
 

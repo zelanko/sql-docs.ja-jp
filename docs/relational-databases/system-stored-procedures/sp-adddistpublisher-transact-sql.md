@@ -25,7 +25,7 @@ ms.locfileid: "68771387"
 # <a name="sp_adddistpublisher-transact-sql"></a>sp_adddistpublisher (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
-  指定されたディストリビューション データベースを使用するように、パブリッシャーを構成します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。 このストアドプロシージャを使用する前に、ストアドプロシージャ[sp_adddistributor &#40;Transact-SQL&#41;]((../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)と[sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)を実行しておく必要があることに注意してください。  
+  指定されたディストリビューション データベースを使用するように、パブリッシャーを構成します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。 このストアドプロシージャを使用する前に、ストアドプロシージャ[ &#40;sp_adddistributor transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributor-transact-sql.md)と[sp_adddistributiondb &#40;&#41; ](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)を実行しておく必要があることに注意してください。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -65,7 +65,7 @@ sp_adddistpublisher [ @publisher= ] 'publisher'
 > [!IMPORTANT]  
 >  空白のパスワードは使用しないでください。 強力なパスワードを使用してください。  
   
-`[ @working_directory = ] 'working_directory'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)**,、既定値は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このインスタンスの ReplData フォルダーです。たとえば`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`、です。 名前は UNC 形式で指定する必要があります。  
+`[ @working_directory = ] 'working_directory'`パブリケーションのデータとスキーマファイルを格納するために使用する作業ディレクトリの名前を指定します。 *working_directory*は**nvarchar (255)** ,、既定値は、の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]このインスタンスの ReplData フォルダーです。たとえば`C:\Program Files\Microsoft SQL Server\MSSQL\MSSQ.1\ReplData`、です。 名前は UNC 形式で指定する必要があります。  
 
  Azure SQL Database には、 `\\<storage_account>.file.core.windows.net\<share>`を使用します。
 

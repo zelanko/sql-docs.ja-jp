@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/24/2019
 ms.locfileid: "68471101"
 ---
-# <a name="sysexternallibraries-transact-sql"></a>external_libraries (Transact-sql)  
+# <a name="sysexternal_libraries-transact-sql"></a>external_libraries (Transact-sql)  
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
 では、R、Python、Java などの外部ランタイムに関連するパッケージライブラリの管理がサポートされています。
@@ -34,17 +34,17 @@ ms.locfileid: "68471101"
 > [!NOTE]
 > SQL Server 2017 では、R 言語と Windows プラットフォームがサポートされています。 Windows および Linux プラットフォームの R、Python、Java は SQL Server 2019 CTP 2.4 でサポートされています。
 
-## <a name="sysexternallibraries"></a>sys.external_libraries
+## <a name="sysexternal_libraries"></a>sys.external_libraries
 
 カタログビュー external_libraries には、データベースにアップロードされた各外部ライブラリの行が一覧表示されます。
 
 |列名 |データ型 | 説明|
 |------|------|------|
-|external_library_id |ssNoversion | 外部ライブラリオブジェクトの ID。 |
+|external_library_id |int | 外部ライブラリオブジェクトの ID。 |
 |NAME |sysname |外部ライブラリの名前。 所有者ごとにデータベース内で一意です。|
-|principal_id |ssNoversion |この外部ライブラリを所有するプリンシパルの ID。 |
+|principal_id |int |この外部ライブラリを所有するプリンシパルの ID。 |
 |language | sysname | 外部ライブラリをサポートする言語またはランタイムの名前。 有効な値は、' R '、' Python '、および ' Java ' です。 今後、追加のランタイムが追加される可能性があります。|
-|スコープ (scope) |ssNoversion |パブリックスコープの場合は0。プライベートスコープの場合は1 |  
+|スコープ (scope) |int |パブリックスコープの場合は0。プライベートスコープの場合は1 |  
 |scope_desc |varchar (7) |パッケージがパブリックであるかプライベートであるかを示します|
 
 ## <a name="see-also"></a>関連項目  

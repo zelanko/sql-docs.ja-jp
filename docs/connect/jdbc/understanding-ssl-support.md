@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 073f3b9e-8edd-4815-88ea-de0655d0325e
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 5da6c0f567e86a5d9ba979f01cb82ec382834651
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: dd5d5003970f87d39148a058ca02befaf006775c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69027305"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874631"
 ---
 # <a name="understanding-ssl-support"></a>SSL のサポートについて
 
@@ -28,7 +28,7 @@ ms.locfileid: "69027305"
 > [!NOTE]  
 > SSL 接続に成功するためには、**serverName** に渡された値が、サーバー証明書に含まれる Subject Alternate Name (SAN) の Common Name (CN) または DNS 名と厳密に一致している必要があります。  
 >
-> [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の SSL を構成する方法の詳細については、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オンライン ブックの「[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] への接続の暗号化」のトピックを参照してください。  
+> 用[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]に SSL を構成する方法の詳細については、「[データベースエンジンへの暗号化接続の有効化](../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 ## <a name="remarks"></a>Remarks
 

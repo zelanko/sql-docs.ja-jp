@@ -8,21 +8,21 @@ ms.topic: quickstart
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0f81b4f755441a5129892ed321d74bb8c6427ee4
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: c8c8f69391db2e1028a0da33dbaf77fd60eafd8f
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714846"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70909197"
 ---
-# <a name="quickstart-using-r-functions"></a>クイック スタート: R 関数の使用
+# <a name="quickstart-use-r-functions"></a>クイック スタート: R 関数の使用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 前のクイックスタートを完了している場合は、基本的な操作について理解し、統計関数など、より複雑な作業を行うことができます。 T-sql で実装するのが複雑な高度な統計関数は、1行のコードだけを使用して R で実行できます。
 
 このクイックスタートでは、R の数学関数とユーティリティ関数を SQL Server ストアドプロシージャに埋め込みます。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 前のクイックスタート「 [SQL Server に r が存在することを確認](quickstart-r-verify.md)する」では、このクイックスタートに必要な r 環境を設定するための情報とリンクを提供しています。
 

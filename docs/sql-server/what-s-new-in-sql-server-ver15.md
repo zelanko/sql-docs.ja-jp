@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 718f0c6c5fa6b517f2b60bbca0f06f58310c6d22
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155480"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228465"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -88,7 +88,7 @@ ms.locfileid: "70155480"
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|UTF-8 文字エンコードのサポート |インポート エンコードとエクスポート エンコードに対する UTF-8 文字、および文字列データのデータベース レベルまたは列レベルの照合順序がサポートされます。 これにより、グローバルな多言語データベース アプリケーションとサービスを提供する必要性が、顧客の要求と特定の市場規制を満たすために重要である、グローバルなスケールへのアプリケーションの拡張がサポートされます。 「[照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)」を参照してください<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース候補では、Polybase 外部テーブルおよび Always Encrypted に対する UTF-8 のサポートが有効になります。|
+|UTF-8 文字エンコードのサポート |インポート エンコードとエクスポート エンコードに対する UTF-8 文字、および文字列データのデータベース レベルまたは列レベルの照合順序がサポートされます。 これにより、グローバルな多言語データベース アプリケーションとサービスを提供する必要性が、顧客の要求と特定の市場規制を満たすために重要である、グローバルなスケールへのアプリケーションの拡張がサポートされます。 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)に関するページを参照してください。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース候補では、Polybase 外部テーブルおよび Always Encrypted に対する UTF-8 のサポートが有効になります。|
 | &nbsp; | &nbsp; |
 
 ### <a name="polybase"></a>PolyBase
@@ -168,7 +168,7 @@ ms.locfileid: "70155480"
 
 |新機能または更新 | 詳細 | 
 |:---|:---| 
-|新しいメモリ セットアップ オプション | インストール中に "*最小サーバー メモリ (MB)* " および "*最大サーバー メモリ (MB)* " のサーバー構成を設定します。 詳細については、「[[データベース エンジンの構成] - [メモリ] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY`、`SQLMAXMEMORY` パラメーターを参照してください。 提案される値は、「[サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)」のメモリ構成ガイドラインと一致します。| 
+|新しいメモリ セットアップ オプション | インストール中に "*最小サーバー メモリ (MB)*" および "*最大サーバー メモリ (MB)*" のサーバー構成を設定します。 詳細については、「[[データベース エンジンの構成] - [メモリ] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY`、`SQLMAXMEMORY` パラメーターを参照してください。 提案される値は、「[サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)」のメモリ構成ガイドラインと一致します。| 
 |新しい並列処理セットアップ オプション | インストールの間に "*並列処理の最大限度*" サーバー構成オプションを設定します。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `SQLMAXDOP` パラメーターを参照してください。 既定値は、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」の並列処理の最大限度ガイドラインと一致します。| 
 | &nbsp; | &nbsp; |
 

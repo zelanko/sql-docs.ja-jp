@@ -1,7 +1,7 @@
 ---
 title: SSMA for SAP ASE の新機能 (SybaseToSQL) |Microsoft Docs
 ms.custom: ''
-ms.date: 07/31/2019
+ms.date: 09/06/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: ssma
@@ -9,15 +9,23 @@ ms.topic: conceptual
 ms.assetid: 2be0cf8d-6dbe-443a-abbd-036249922205
 author: HJToland3
 ms.author: Shamikg
-ms.openlocfilehash: b0284d0a562578e8b27f492e79e9662a240f8ccb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 44e59d80b21b71fbbc94b9c902edfb1019256d06
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811439"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745283"
 ---
 # <a name="whats-new-in-ssma-for-sap-ase-sybasetosql"></a>SSMA for SAP ASE の新機能 (SybaseToSQL)
+
 この記事では、各リリースでの SAP ASE (旧称 SSMA for Sybase) の変更 (SSMA) の SQL Server Migration Assistant を示します。
+
+## <a name="ssma-v84"></a>SSMA v 8.4
+
+SSMA for SAP ASE の v1.0 リリースは、ユーザー補助の問題に対処し、最大インデックス列 (16 ではなく 32) に関連するバグを修正して、SQL Server 2016 以降のバージョンに対応するように設計された、対象の修正によって強化されています。
+
+> [!IMPORTANT]
+> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v83"></a>SSMA v 8.3
 
@@ -25,9 +33,6 @@ SSMA for SAP ASE の v2.0 リリースは、品質と変換のメトリックを
 
 * アクセシビリティに関する問題の解決
 * SQL Server に ' hierarchyid ' 型の基本的なサポートを追加します
-
-> [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v82"></a>SSMA v 8.2
 
@@ -39,9 +44,6 @@ SSMA for SAP ASE の v2.0 リリースは、品質と変換のメトリックを
 
 > [!NOTE]
 > 自動更新に関する既知の問題により、SSMA v2.0 から v2.0 への更新が失敗する場合があります。 このエラーが発生した場合は、新しいバージョンをダウンロードし、手動でインストールしてください。
-
-> [!IMPORTANT]
-> SSMA version 7.4 以降のバージョンでは、.Net 4.5.2 はインストールの前提条件です。
 
 ## <a name="ssma-v81"></a>SSMA v 8.1
 

@@ -35,24 +35,24 @@ Azure SQL Database データベースのリソースガバナンスの構成と�
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**database_id**|ssNoversion|データベースの ID。 Azure SQL Database サーバー内で一意です。|
+|**database_id**|int|データベースの ID。 Azure SQL Database サーバー内で一意です。|
 |**logical_database_guid**|UNIQUEIDENTIFIER|ユーザーデータベースの論理 guid であり、ユーザーデータベースの有効期間中は維持されます。  データベースの名前を変更するか、別の SLO に設定すると、GUID は変更されません。 |
 |**physical_database_guid**|UNIQUEIDENTIFIER|ユーザーデータベースの物理インスタンスが存続しているユーザーデータベースの物理 guid。 を別の SLO に設定すると、この列が変更されます。|
 |**server_name**|NVARCHAR|論理サーバー名。|
 |**database_name**|NVARCHAR|論理データベース名。|
 |**slo_name**|NVARCHAR|サービスレベル目標とハードウェアの生成。|
-|**dtu_limit**|ssNoversion|データベースの DTU 制限 (vCore の場合は NULL)。|
-|**cpu_limit**|ssNoversion|データベースの vCore の制限 (DTU データベースの場合は NULL)。|
+|**dtu_limit**|int|データベースの DTU 制限 (vCore の場合は NULL)。|
+|**cpu_limit**|int|データベースの vCore の制限 (DTU データベースの場合は NULL)。|
 |**min_cpu**|TINYINT|ユーザーワークロードで使用できる最小 CPU%。|
 |**max_cpu**|TINYINT|ユーザーワークロードで使用できる最大 CPU パーセント。|
 |**cap_cpu**|TINYINT|ユーザーワークロードグループの CPU 使用率の上限。|
 |**min_cores**|SMALLINT|SQL によって使用されている Cpu の数。|
 |**max_dop**|SMALLINT|ユーザーワークロードで使用される並列処理の最大限度。|
-|**min_memory**|ssNoversion|ユーザーのワークロードで使用できる最小メモリの割合。|
-|**max_memory**|ssNoversion|ユーザーワークロードで使用できる最大メモリ割合 (%)。|
-|**max_sessions**|ssNoversion|ユーザーグループのセッション数の制限。|
-|**max_memory_grant**|ssNoversion|ユーザーワークロード内の各クエリに対する最大メモリ許可 (%)。|
-|**max_db_memory**|ssNoversion|ユーザー DB ワークロードの最大バッファープールメモリ上限|
+|**min_memory**|int|ユーザーのワークロードで使用できる最小メモリの割合。|
+|**max_memory**|int|ユーザーワークロードで使用できる最大メモリ割合 (%)。|
+|**max_sessions**|int|ユーザーグループのセッション数の制限。|
+|**max_memory_grant**|int|ユーザーワークロード内の各クエリに対する最大メモリ許可 (%)。|
+|**max_db_memory**|int|ユーザー DB ワークロードの最大バッファープールメモリ上限|
 |**govern_background_io**|bit|バックグラウンド書き込みがユーザーグループに対して課金されるかどうかを示します。|
 |**min_db_max_size_in_mb**|BIGINT|最小データベースファイルの最大サイズ (MB 単位)。|
 |**max_db_max_size_in_mb**|BIGINT|最大データベースファイルの最大サイズ (MB 単位)。|
@@ -60,34 +60,34 @@ Azure SQL Database データベースのリソースガバナンスの構成と�
 |**db_file_growth_in_mb**|BIGINT|Azure データベースファイルの既定の拡張 (MB 単位)。|
 |**initial_db_file_size_in_mb**|BIGINT|既定のデータベースファイルのサイズ (MB 単位)。|
 |**log_size_in_mb**|BIGINT|既定のログファイルのサイズ (MB 単位)。|
-|**instance_cap_cpu**|ssNoversion|インスタンスレベルの CPU 上限。|
+|**instance_cap_cpu**|int|インスタンスレベルの CPU 上限。|
 |**instance_max_log_rate**|BIGINT|インスタンスレベルでのログ生成率の上限 (バイト/秒)。|
-|**instance_max_worker_threads**|ssNoversion|インスタンスレベルでのワーカースレッドの制限。|
-|**replica_type**|ssNoversion|レプリカの種類。ここで、0はプライマリ、1はセカンダリです。|
+|**instance_max_worker_threads**|int|インスタンスレベルでのワーカースレッドの制限。|
+|**replica_type**|int|レプリカの種類。ここで、0はプライマリ、1はセカンダリです。|
 |**max_transaction_size**|BIGINT|任意のトランザクションで使用される最大ログ領域 (KB 単位)。|
-|**checkpoint_rate_mbps**|ssNoversion|チェックポイントの帯域幅 (Mbps)。|
-|**checkpoint_rate_io**|ssNoversion|1秒あたりの IOs のチェックポイント IO 率。|
+|**checkpoint_rate_mbps**|int|チェックポイントの帯域幅 (Mbps)。|
+|**checkpoint_rate_io**|int|1秒あたりの IOs のチェックポイント IO 率。|
 |**last_updated_date_utc**|DATETIME|最後に設定を変更または再構成した日付と時刻。|
-|**primary_group_id**|ssNoversion|プライマリユーザーワークロードグループ ID。|
-|**primary_group_max_workers**|ssNoversion|プライマリユーザーワークロードグループレベルでのワーカー制限。|
+|**primary_group_id**|int|プライマリユーザーワークロードグループ ID。|
+|**primary_group_max_workers**|int|プライマリユーザーワークロードグループレベルでのワーカー制限。|
 |**primary_min_log_rate**|BIGINT|プライマリユーザーワークロードグループレベルでの最小ログレート (1 秒あたりのバイト数)。|
 |**primary_max_log_rate**|BIGINT|プライマリユーザーワークロードグループレベルでの最大ログ速度 (1 秒あたりのバイト数)。|
-|**primary_group_min_io**|ssNoversion|プライマリユーザーワークロードグループレベルでの最小 IO。|
-|**primary_group_max_io**|ssNoversion|プライマリユーザーワークロードグループレベルでの最大 IO 数。|
+|**primary_group_min_io**|int|プライマリユーザーワークロードグループレベルでの最小 IO。|
+|**primary_group_max_io**|int|プライマリユーザーワークロードグループレベルでの最大 IO 数。|
 |**primary_group_min_cpu**|FLOAT|プライマリユーザーワークロードグループレベルの CPU の割合の最小値。|
 |**primary_group_max_cpu**|FLOAT|プライマリユーザーワークロードグループレベルでの CPU の割合の最大値。|
-|**primary_log_commit_fee**|ssNoversion|プライマリユーザーワークロードグループレベルでのログレートガバナンスコミット料金。|
-|**primary_pool_max_workers**|ssNoversion|プライマリユーザープールレベルでのワーカー制限。
-|**pool_max_io**|ssNoversion|プライマリユーザープールレベルでの最大 IO 制限。|
+|**primary_log_commit_fee**|int|プライマリユーザーワークロードグループレベルでのログレートガバナンスコミット料金。|
+|**primary_pool_max_workers**|int|プライマリユーザープールレベルでのワーカー制限。
+|**pool_max_io**|int|プライマリユーザープールレベルでの最大 IO 制限。|
 |**govern_db_memory_in_resource_pool**|bit|バッファープールの最大サイズがリソースプールレベルで管理されているかどうかを示します。 通常、エラスティックプール内のデータベースに対して設定します。|
-|**volume_local_iops**|ssNoversion|ローカルボリュームの1秒あたりの Io 数 (例: C:、D:)。|
-|**volume_managed_xstore_iops**|ssNoversion|リモートストレージアカウントの Io/秒の上限。|
-|**volume_external_xstore_iops**|ssNoversion|Azure SQL DB のバックアップとテレメトリで使用されるリモートストレージアカウントの1秒あたりの Io 数。|
-|**volume_type_local_iops**|ssNoversion|すべてのローカルボリュームの1秒あたりの Io 数の上限。|
-|**volume_type_managed_xstore_iops**|ssNoversion|インスタンスによって使用されるすべてのリモートストレージアカウントの1秒あたりの Io 数。|
-|**volume_type_external_xstore_iops**|ssNoversion|インスタンスの Azure SQL DB のバックアップとテレメトリによって使用されるすべてのリモートストレージアカウントの1秒あたりの Io 数。|
-|**volume_pfs_iops**|ssNoversion|Premium file storage の Io/秒の上限。|
-|**volume_type_pfs_iops**|ssNoversion|インスタンスによって使用されているすべての premium file ストレージの Io/秒の上限。|
+|**volume_local_iops**|int|ローカルボリュームの1秒あたりの Io 数 (例: C:、D:)。|
+|**volume_managed_xstore_iops**|int|リモートストレージアカウントの Io/秒の上限。|
+|**volume_external_xstore_iops**|int|Azure SQL DB のバックアップとテレメトリで使用されるリモートストレージアカウントの1秒あたりの Io 数。|
+|**volume_type_local_iops**|int|すべてのローカルボリュームの1秒あたりの Io 数の上限。|
+|**volume_type_managed_xstore_iops**|int|インスタンスによって使用されるすべてのリモートストレージアカウントの1秒あたりの Io 数。|
+|**volume_type_external_xstore_iops**|int|インスタンスの Azure SQL DB のバックアップとテレメトリによって使用されるすべてのリモートストレージアカウントの1秒あたりの Io 数。|
+|**volume_pfs_iops**|int|Premium file storage の Io/秒の上限。|
+|**volume_type_pfs_iops**|int|インスタンスによって使用されているすべての premium file ストレージの Io/秒の上限。|
 |||
 
 ## <a name="permissions"></a>アクセス許可

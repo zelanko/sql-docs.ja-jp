@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: d021864e-3f21-4d1a-89df-6c1086f753bf
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ac51409db23f4b8eefb3616d5daf5ca43b3ab0f6
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b45da78b0a79130cbbbd6c39bee07f237de2ef89
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771251"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878728"
 ---
-# <a name="spreplicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
+# <a name="sp_replicationdboption-transact-sql"></a>sp_replicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   指定したデータベースのレプリケーション データベース オプションを設定します。 このストアドプロシージャは、任意のデータベースのパブリッシャーまたはサブスクライバーで実行されます。  
@@ -66,7 +66,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
 ## <a name="remarks"></a>コメント  
  **sp_replicationdboption**は、スナップショットレプリケーション、トランザクションレプリケーション、およびマージレプリケーションで使用します。  
   
- このプロシージャでは、指定したオプションに従って、特定のレプリケーション システム テーブル、セキュリティ アカウントなどが作成または削除されます。 **Sysdatabases**システムテーブルに対応するカテゴリビットを設定し、必要なシステムテーブルを作成します。  
+ このプロシージャでは、指定したオプションに従って、特定のレプリケーション システム テーブル、セキュリティ アカウントなどが作成または削除されます。 Is_published システムテーブルの対応する (transacational またはスナップショットレプリケーション)、 **is_merge_published** (マージレプリケーション)、または**is_distributor**ビットを設定し、必要なシステムを作成し**ます。** テーブル.  
   
  パブリッシングを無効にするには、パブリケーションデータベースがオンラインである必要があります。 パブリケーションデータベースのデータベーススナップショットが存在する場合は、パブリッシングを無効にする前にデータベーススナップショットを削除する必要があります。 データベーススナップショットは、データベースの読み取り専用のオフラインコピーであり、レプリケーションスナップショットに関連付けられていません。 詳細については、「[データベース スナップショット &#40;SQL Server&#41;](../../relational-databases/databases/database-snapshots-sql-server.md)」を参照してください。  
   
@@ -78,7 +78,7 @@ sp_replicationdboption [ @dbname= ] 'db_name'
  [Create a Publication](../../relational-databases/replication/publish/create-a-publication.md)   
  [パブリケーションを削除する](../../relational-databases/replication/publish/delete-a-publication.md)   
  [パブリッシングおよびディストリビューションの無効化](../../relational-databases/replication/disable-publishing-and-distribution.md)   
- [sysdatabases &#40;transact-sql&#41;](../../relational-databases/system-compatibility-views/sys-sysdatabases-transact-sql.md)   
+ [sys.databases &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

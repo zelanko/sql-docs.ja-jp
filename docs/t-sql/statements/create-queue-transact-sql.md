@@ -25,15 +25,15 @@ helpviewer_keywords:
 ms.assetid: fce80faf-2bdc-475d-8ca1-31438ed41fb0
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8d2ea60a1babc5cc0869586db13a7dfcb39c6277
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 395a2190baf46734cdc85357bc39a34473ee0e42
+ms.sourcegitcommit: a97d551b252b76a33606348082068ebd6f2c4c8c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117353"
+ms.lasthandoff: 09/06/2019
+ms.locfileid: "70745498"
 ---
 # <a name="create-queue-transact-sql"></a>CREATE QUEUE (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   データベースに新しいキューを作成します。 キューにはメッセージが格納されます。 サービス用のメッセージを受信すると、そのメッセージは [!INCLUDE[ssSB](../../includes/sssb-md.md)] によって、サービスに関連付けられているキューに格納されます。  
   
@@ -76,7 +76,7 @@ CREATE QUEUE <object>
  *queue_name*  
  作成するキューの名前を指定します。 この名前は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 識別子のガイドラインに従っている必要があります。  
   
- STATUS (Queue)  
+ STATUS (Queue)   
  キューが使用可能 (ON) か、使用不可能 (OFF) かを指定します。 キューが使用不可能な場合、キューにメッセージを追加したり、キューからメッセージを削除することはできません。 ALTER QUEUE ステートメントによってキューが使用可能になるまでキューにメッセージが届かないようにする場合は、キューを使用不可能な状態で作成できます。 この句を省略すると、既定値の ON が使用され、キューは使用可能になります。  
   
  RETENTION  
@@ -123,13 +123,13 @@ CREATE QUEUE <object>
   
  有害なメッセージの処理が OFF に設定されているキューは、トランザクションのロールバックが連続して 5 回実行されても無効になりません。 これにより、カスタムの有害なメッセージの処理システムをアプリケーションで定義できます。  
   
- ON *filegroup |* **[DEFAULT]**  
+ ON *filegroup |* [**DEFAULT**]  
  このキューを作成する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ファイル グループを指定します。 *filegroup* パラメーターを使用してファイル グループを指定するか、DEFAULT 識別子を使用して Service Broker データベースの既定のファイル グループを指定することができます。 この句のコンテキストでは、DEFAULT はキーワードとして扱われないため、識別子として区切り記号で区切る必要があります。 ファイル グループを指定しない場合、キューの作成ではデータベースの既定のファイル グループが使用されます。  
   
 ## <a name="remarks"></a>Remarks  
  キューは SELECT ステートメントの対象にすることができますが、 キューの内容を変更するには、SEND、RECEIVE、END CONVERSATION など、[!INCLUDE[ssSB](../../includes/sssb-md.md)] のメッセージ交換で動作するステートメントを使用する必要があります。 キューは、INSERT、UPDATE、DELETE、または TRUNCATE ステートメントの対象にすることはできません。  
   
- キューは一時オブジェクトとして指定できません。 したがって、 **#** で始まるキューの名前は無効になります。  
+ キューは一時オブジェクトとして指定できません。 したがって、**#** で始まるキューの名前は無効になります。  
   
  キューを非アクティブ状態で作成した場合、サービス用のインフラストラクチャを配置してから、キューでメッセージを受信することができます。  
   

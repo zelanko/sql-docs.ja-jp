@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5d65cb2577749a45bccf1383bdf880ce8c5a7a46
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: bd7d5e0093d3805679e59b542582c263dfd56c9c
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653077"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978291"
 ---
 # <a name="consume-an-app-deployed-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-using-a-restful-web-service"></a>RESTful web サービスを使用[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]してにデプロイされたアプリを使用する
 
@@ -32,7 +32,7 @@ ms.locfileid: "69653077"
 
 アプリケーションをに[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]デプロイした後は、RESTful web サービスを使用してそのアプリケーションにアクセスして使用することができます。 これにより、そのアプリを他のアプリケーションやサービス (モバイル アプリや Web サイトなど) と統合できるようになります。 次の表では、**azdata** と共に使用して、アプリの RESTful Web サービスに関する情報を取得できるアプリケーションの展開コマンドについて説明します。
 
-|Command |説明 |
+|コマンド |説明 |
 |:---|:---|
 |`azdata app describe` | アプリケーションについて記述します。 |
 
@@ -51,7 +51,7 @@ azdata app describe --help
 次の例のようなコマンドを実行して、アプリを記述します。
 
 ```bash
-azdata app describe --name addpy --version v1
+azdata app describe --name add-app --version v1
 ```
 
 ```json

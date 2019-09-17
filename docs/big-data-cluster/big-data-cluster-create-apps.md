@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 18e97a3567b50982bd2be11dcc3493951dfe8fa9
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 93c94b8ca5688bd5c67369849094e20d1dae697e
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653155"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929719"
 ---
 # <a name="how-to-deploy-an-app-on-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>アプリを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]
 
@@ -45,7 +45,7 @@ ms.locfileid: "69653155"
 
 SQL Server 2019 (プレビュー) では、アプリケーションの作成、削除、説明、初期化、一覧の実行、および更新を行うことができます。 次の表では、**azdata** で使用できるアプリケーションの展開コマンドについて説明します。
 
-|Command |説明 |
+|コマンド |説明 |
 |:---|:---|
 |`azdata login` | SQL Server ビッグ データ クラスターにサインインします |
 |`azdata app create` | アプリケーションを作成します。 |
@@ -247,10 +247,8 @@ azdata app init --name hello --version v1 --template python
 
 ```
 hello.py
-README.md
 run-spec.yaml
 spec.yaml
-
 ```
 
 ## <a name="describe-an-app"></a>アプリの説明

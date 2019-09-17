@@ -289,9 +289,9 @@
               items:
                 - name: URL へのバックアップ
                   href: relational-databases/backup-restore/sql-server-backup-to-url.md
-                - name: Azure Blob Storage サービスへのバックアップ (PowerShell)
+                - name: Azure BLOB ストレージへのバックアップ
                   href: relational-databases/backup-restore/back-up-multiple-databases-to-azure-blob-storage-powershell.md
-                - name: バックアップ ブログ ファイルの削除
+                - name: バックアップ ログ ファイルの削除
                   href: relational-databases/backup-restore/deleting-backup-blob-files-with-active-leases.md
                 - name: '[復元]'
                   href: relational-databases/backup-restore/restoring-from-backups-stored-in-microsoft-azure.md
@@ -525,6 +525,66 @@
                       href: relational-databases/backup-restore/select-backup-device.md
                     - name: Azure Storage への接続
                       href: relational-databases/backup-restore/connect-to-microsoft-azure-storage-restore.md
+            - name: VDI リファレンス
+              items:
+                - name: VDI の概要
+                  href: relational-databases/backup-restore/vdi-reference/reference-virtual-device-interface.md
+                - name: IClientVirtualDevice
+                  items:
+                    - name: CompleteCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-completecommand.md
+                    - name: GetCommand
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdevice-getcommand.md
+                - name: IClientVirtualDeviceSet2
+                  items:
+                    - name: 閉じる
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-close.md
+                    - name: CreateEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-createex.md
+                    - name: GetBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getbufferhandle.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-getconfiguration.md
+                    - name: MapBufferHandle
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-mapbufferhandle.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-opendevice.md
+                    - name: OpenInSecondaryEx
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-openinsecondaryex.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iclientvirtualdeviceset2-signalabort.md
+                - name: IServerVirtualDevice
+                  items:
+                    - name: CloseDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-closedevice.md
+                    - name: SendCommand
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdevice-sendcommand.md
+                - name: IServerVirtualDeviceSet2
+                  items:
+                    - name: AllocateBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-allocatebuffer.md
+                    - name: BeginConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-beginconfiguration.md
+                    - name: 閉じる
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-close.md
+                    - name: EndConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-endconfiguration.md
+                    - name: ExecuteCompletionAgent
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-executecompletionagent.md
+                    - name: FreeBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-freebuffer.md
+                    - name: GetConfiguration
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-getconfiguration.md
+                    - name: IsSharedBuffer
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-issharedbuffer.md
+                    - name: '[ファイル]'
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-open.md
+                    - name: OpenDevice
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-opendevice.md
+                    - name: RequestBuffers
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-requestbuffers.md
+                    - name: SignalAbort
+                      href: relational-databases/backup-restore/vdi-reference/iservervirtualdeviceset2-signalabort.md
     - name: Always On 可用性グループ
       href: database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server.md
       items:
@@ -1583,7 +1643,7 @@
               href: relational-databases/tables/use-column-sets.md
             - name: テーブル値パラメーター
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-        - name: エッジ制約
+        - name: Microsoft Edge の制約
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: 作成
@@ -8143,8 +8203,6 @@
               href: relational-databases/security/row-level-security.md
             - name: 動的なデータ マスキング
               href: relational-databases/security/dynamic-data-masking.md
-            - name: 静的データ マスキング
-              href: relational-databases/security/static-data-masking.md
             - name: 証明書と非対称キー
               href: relational-databases/security/sql-server-certificates-and-asymmetric-keys.md
         - name: 認証アクセス

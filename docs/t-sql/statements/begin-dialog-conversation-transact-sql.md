@@ -30,15 +30,15 @@ helpviewer_keywords:
 ms.assetid: 8e814f9d-77c1-4906-b8e4-668a86fc94ba
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 96b2611bdbc7c13072f43b36d5e132b9713b3878
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c456b6e34dba77b7e35cc24e8af673662725a2bb
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68141186"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211374"
 ---
 # <a name="begin-dialog-conversation-transact-sql"></a>BEGIN DIALOG CONVERSATION (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   あるサービスから別のサービスに対してダイアログを開始します。 ダイアログとは、2 つのサービスの間で順序どおりにメッセージを 1 回だけ交換する (exactly-once-in-order) メッセージ交換のことです。  
   
@@ -68,7 +68,7 @@ BEGIN DIALOG [ CONVERSATION ] @dialog_handle
  FROM SERVICE *initiator_service_name*  
  ダイアログを開始するサービスを指定します。 現在のデータベースにあるサービスの名前を指定する必要があります。 発信先サービスから返されるメッセージ、およびこのメッセージ交換用に Service Broker によって作成されるメッセージは、発信側サービス用に指定したキューで受信されます。  
   
- TO SERVICE **'** _target_service_name_ **'**  
+ TO SERVICE **'**_target_service_name_**'**  
  ダイアログの発信先となるサービスを指定します。 *target_service_name* の型は **nvarchar(256)** です。 [!INCLUDE[ssSB](../../includes/sssb-md.md)] ではバイト単位の比較を使用して、*target_service_name* 文字列を照合します。 つまり、この場合、大文字小文字は区別され、現在の照合順序は考慮されません。  
   
  *service_broker_guid*  
@@ -91,13 +91,13 @@ WHERE database_id = DB_ID() ;
  ON CONTRACT *contract_name*  
  メッセージ交換が従うコントラクトを指定します。 コントラクトは、現在のデータベース内に存在している必要があります。 発信先サービスで、指定したコントラクトに従った新しいメッセージ交換が受け入れられない場合、[!INCLUDE[ssSB](../../includes/sssb-md.md)] ではそのメッセージ交換に関するエラー メッセージが返されます。 この句を省略すると、メッセージ交換は **DEFAULT** という名前のコントラクトに従います。  
   
- RELATED_CONVERSATION **=** _related_conversation_handle_  
+ RELATED_CONVERSATION **=**_related_conversation_handle_  
  新しいダイアログを追加する既存のメッセージ交換グループを指定します。 この句が存在する場合、新しいダイアログは、*related_conversation_handle* で指定したダイアログと同じメッセージ交換グループに属することになります。 *related_conversation_handle* は、**uniqueidentifier** 型に暗黙的に変換できる型である必要があります。 *related_conversation_handle* が既存のダイアログを参照していない場合、ステートメントは失敗します。  
   
- RELATED_CONVERSATION_GROUP **=** _related_conversation_group_id_  
+ RELATED_CONVERSATION_GROUP **=**_related_conversation_group_id_  
  新しいダイアログを追加する既存のメッセージ交換グループを指定します。 この句が存在する場合、新しいダイアログは、*related_conversation_group_id* で指定したメッセージ交換グループに追加されます。 *related_conversation_group_id* は、**uniqueidentifier** 型に暗黙的に変換できる型である必要があります。 *related_conversation_group_id* が既存のメッセージ交換グループを参照していない場合、Service Broker では、指定した *related_conversation_group_id* で新しいメッセージ交換グループが作成され、そのメッセージ交換グループに新しいダイアログが関連付けられます。  
   
- LIFETIME **=** _dialog_lifetime_  
+ LIFETIME **=**_dialog_lifetime_  
  ダイアログを開いたままにする最長時間を指定します。 ダイアログを正常に完了するには、有効期間の終了までに、双方のエンドポイントが明示的にダイアログを終了する必要があります。 *dialog_lifetime* の値は秒単位で表す必要があります。 有効期間は **int** 型です。LIFETIME 句を指定しない場合、ダイアログの有効期間は **int** データ型の最大値になります。  
   
  ENCRYPTION  
