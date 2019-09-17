@@ -23,15 +23,15 @@ ms.assetid: 3f57d0f0-4781-46ec-82cd-b751dc5affef
 author: markingmyname
 ms.author: maghan
 monikerRange: = azuresqldb-mi-current || >= sql-server-2016 || = sqlallproducts-allversions
-ms.openlocfilehash: 58e8393531f6e08e5a2eb6d8d75ce7072559210c
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: c29706e1bf94f8717b90964f8edc3a8fff4bc474
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264654"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383795"
 ---
 # <a name="alerts"></a>警告
-[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 > [!IMPORTANT]  
 > [Azure SQL Database Managed Instance](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance) では現在、すべてではありませんがほとんどの SQL Server エージェントの機能がサポートされています。 詳細については、「[Azure SQL Database Managed Instance と SQL Server の T-SQL の相違点](https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance-transact-sql-information#sql-server-agent)」を参照してください。
@@ -96,7 +96,7 @@ ms.locfileid: "68264654"
   
 -   **[警告カウンター]** および **[値]**  
   
-    警告およびそれを生成する動作のしきい値です。 しきい値は数値です。 動作は、 **[設定値未満]** 、 **[設定値に等しい]** 、 **[設定値を超える]** のいずれかになります。 **[値]** は、パフォーマンス状況の警告カウンターの基準となる数値です。 たとえば、パフォーマンス オブジェクト **SQLServer:Locks** で、 **Lock Wait Time** が 30 分を超えると警告が発生するように設定するには、 **[設定値を超える]** を選択し、 **[値] を 30 に指定**します。  
+    警告およびそれを生成する動作のしきい値です。 しきい値は数値です。 動作は、 **[設定値未満]**、 **[設定値に等しい]**、 **[設定値を超える]** のいずれかになります。 **[値]** は、パフォーマンス状況の警告カウンターの基準となる数値です。 たとえば、パフォーマンス オブジェクト **SQLServer:Locks** で、 **Lock Wait Time** が 30 分を超えると警告が発生するように設定するには、 **[設定値を超える]** を選択し、 **[値] を 30 に指定**します。  
   
     別の例として、 **tempdb** の空き領域が 1,000 KB を下回った場合にパフォーマンス オブジェクト **SQLServer:Transactions** に対して警告が発生するように指定できます。 このように設定するには、カウンター **[Free space in tempdb (KB)]** を選択し **[設定値未満]** を選択します。さらに、 **[値]** を **1000**に設定します。  
   

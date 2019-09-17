@@ -10,10 +10,10 @@ ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
 ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
+ms.lasthandoff: 09/02/2019
 ms.locfileid: "68702792"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列のキーワードと属性
@@ -124,7 +124,7 @@ ms.locfileid: "68702792"
 
 データ ソースの説明に使用されます。
 
-### <a name="sqlcoptssansioem"></a>SQL_COPT_SS_ANSI_OEM
+### <a name="sql_copt_ss_ansi_oem"></a>SQL_COPT_SS_ANSI_OEM
 
 データの ANSI から OEM への変換を制御します。 
 
@@ -133,7 +133,7 @@ ms.locfileid: "68702792"
 | SQL_AO_OFF | (既定値) 変換は行われません。 |
 | SQL_AO_ON | 変換は行われます。 |
 
-### <a name="sqlcoptssfallbackconnect"></a>SQL_COPT_SS_FALLBACK_CONNECT
+### <a name="sql_copt_ss_fallback_connect"></a>SQL_COPT_SS_FALLBACK_CONNECT
 
 SQL Server のフォールバック接続の使用を制御します。 これはサポートされなくなりました。
 
@@ -146,7 +146,7 @@ SQL Server のフォールバック接続の使用を制御します。 これ�
 
 ## <a name="new-connection-string-keywords-and-connection-attributes"></a>新しい接続文字列のキーワードおよび接続属性
 
-###  <a name="authentication---sqlcoptssauthentication"></a>認証 - SQL_COPT_SS_AUTHENTICATION
+###  <a name="authentication---sql_copt_ss_authentication"></a>認証 - SQL_COPT_SS_AUTHENTICATION
 
 SQL Server に接続するときに使用する認証モードを設定します。 詳しくは、「[Azure Active Directory の使用](using-azure-active-directory.md)」をご覧ください。
 
@@ -163,7 +163,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 > [!NOTE]
 > `Authentication` キーワードまたは属性を使用するときは、接続文字列/DSN/接続属性で必要な値に対する `Encrypt` の設定を明示的に指定します。 詳しくは、「[Using Connection String Keywords with SQL Server Native Client (SQL Server Native Client での接続文字列キーワードの使用)](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」をご覧ください。
 
-### <a name="columnencryption---sqlcoptsscolumnencryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
+### <a name="columnencryption---sql_copt_ss_column_encryption"></a>ColumnEncryption - SQL_COPT_SS_COLUMN_ENCRYPTION
 
 透過的な列の暗号化を制御します (Always Encrypted)。 詳しくは、「[Using Always Encrypted (ODBC) (Always Encrypted の使用 (ODBC))](using-always-encrypted-with-the-odbc-driver.md)」をご覧ください。
 
@@ -173,7 +173,7 @@ SQL Server に接続するときに使用する認証モードを設定します
 |Disabled|SQL_CE_DISABLED|(既定値) Always Encrypted を無効にします。|
 | |SQL_CE_RESULTSETONLY|解読のみを有効にします (結果と戻り値)。|
 
-### <a name="transparentnetworkipresolution---sqlcoptsstnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
+### <a name="transparentnetworkipresolution---sql_copt_ss_tnir"></a>TransparentNetworkIPResolution - SQL_COPT_SS_TNIR
 
 透過的ネットワーク IP 解決機能を制御します。この機能は、MultiSubnetFailover と対話して、より速い再接続の試行を可能にします。 詳しくは、「[透過的なネットワーク IP の解決の使用](using-transparent-network-ip-resolution.md)」をご覧ください。
 
@@ -191,7 +191,7 @@ SQL Server 2012 以降に接続するときの、メタデータに対する SET
 |いいえ|(既定値) 使用可能な場合は、メタデータに sp_describe_first_result_set を使用します。 |
 |はい| メタデータに SET FMTONLY を使用します。 |
 
-### <a name="sqlcoptssaccesstoken"></a>SQL_COPT_SS_ACCESS_TOKEN
+### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
 認証のための Azure Active Directory のアクセス トークンの使用を許可します。 詳しくは、「[Azure Active Directory の使用](using-azure-active-directory.md)」をご覧ください。
 
@@ -200,7 +200,7 @@ SQL Server 2012 以降に接続するときの、メタデータに対する SET
 | NULL | (既定値) アクセス トークンが提供されていません。 |
 | ACCESSTOKEN* | アクセス トークンへのポインター。 |
 
-### <a name="sqlcoptsscekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
+### <a name="sql_copt_ss_cekeystoredata"></a>SQL_COPT_SS_CEKEYSTOREDATA
 
 読み込まれたキーストア プロバイダー ライブラリと通信します。 透過的な列の暗号化を制御します (Always Encrypted)。 この属性には既定値はありません。 詳しくは、「[カスタム キーストア プロバイダー](custom-keystore-providers.md)」をご覧ください。
 
@@ -208,7 +208,7 @@ SQL Server 2012 以降に接続するときの、メタデータに対する SET
 |-|-|
 | CEKEYSTOREDATA * | キーストア プロバイダー ライブラリ用の通信データ構造 |
 
-### <a name="sqlcoptsscekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
+### <a name="sql_copt_ss_cekeystoreprovider"></a>SQL_COPT_SS_CEKEYSTOREPROVIDER
 
 Always Encrypted 用のキーストア プロバイダー ライブラリを読み込むか、または読み込まれたキーストア プロバイダー ライブラリの名前を取得します。 詳しくは、「[カスタム キーストア プロバイダー](custom-keystore-providers.md)」をご覧ください。 この属性には既定値はありません。
 
@@ -216,7 +216,7 @@ Always Encrypted 用のキーストア プロバイダー ライブラリを読�
 |-|-|
 | char * | キーストア プロバイダー ライブラリへのパス |
 
-### <a name="sqlcoptssenlistinxa"></a>SQL_COPT_SS_ENLIST_IN_XA
+### <a name="sql_copt_ss_enlist_in_xa"></a>SQL_COPT_SS_ENLIST_IN_XA
 
 XA 準拠トランザクション プロセッサ (TP) での XA トランザクションを有効にするには、アプリケーションで SQL_COPT_SS_ENLIST_IN_XA および `XACALLPARAM` オブジェクトへのポインターを指定して **SQLSetConnectAttr** を呼び出す必要があります。 このオプションは、Windows、(17.3 以降) Linux、Mac でサポートされています。
 ```

@@ -1,7 +1,8 @@
 ---
-title: SQL Server、Azure SQL Database、および Azure SQL Data Warehouse 用の SQL ツールとユーティリティ |Microsoft Docs
+title: SQL Server 用の SQL クエリおよび管理ツール、Azure SQL (azure sql データベース、azure sql マネージインスタンス、SQL 仮想マシン)、Azure SQL data warehouse |Microsoft Docs
+description: SQL Server 用の SQL クエリおよび管理ツール、Azure SQL (Azure sql database、azure sql マネージインスタンス、SQL 仮想マシン)、Azure SQL data warehouse
 ms.custom: ''
-ms.date: 11/19/2018
+ms.date: 09/11/2019
 ms.prod: sql
 ms.prod_service: sql-tools
 ms.reviewer: ''
@@ -11,27 +12,29 @@ ms.assetid: ''
 author: markingmyname
 ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: fe249e4df9c33fcbb292fc93f218e16ae111b0bb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MTE75
+ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
+ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68105658"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70913574"
 ---
-# <a name="sql-tools-and-utilities-for-sql-server-azure-sql-database-and-azure-sql-data-warehouse"></a>SQL Server、Azure SQL Database、および Azure SQL Data Warehouse 用の SQL ツールとユーティリティ
+# <a name="sql-query-and-management-tools-for-sql-server-azure-sql-azure-sql-database-azure-sql-managed-instance-sql-virtual-machines-and-azure-sql-data-warehouse"></a>SQL Server 用の SQL クエリおよび管理ツール、Azure SQL (Azure sql database、azure sql マネージインスタンス、SQL 仮想マシン)、Azure SQL data warehouse
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 データベースの管理 (クエリ、監視など) を行うには、ツールが必要です。 データベースはクラウド、Windows、または[Linux](../linux/sql-server-linux-overview.md)で実行できますが、ツールをデータベースと同じプラットフォームで実行する必要はありません。 
 
 使用できるデータベースツールは多数あります。この記事では、SQL データベースを操作するために使用できるツールについて説明します。 必要なツールを決定する際には、[どのツールを使用すればよいでしょうか](#which-tool-should-i-choose)。
 
+詳細については、ツールをダウンロードするには、次の表の「ツール」列のリンクを選択してください。 SQL Server をダウンロードするには、「 [SQL Server のインストール](../database-engine/install-windows/install-sql-server.md)」を参照してください。 
+
 ## <a name="gui-tools-to-manage-databases"></a>データベースを管理するための GUI ツール  
 
-次に、グラフィカルユーザーインターフェイス (GUI) の主要なツールを示します。
+次のツールには、グラフィカルユーザーインターフェイス (GUI) が用意されています。
 
 | ツール | [説明] | 実行 |
 |:--|:--|:--|
-| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]は、実行されている任意の場所でデータベースを管理するための、無料の軽量ツールです。 このプレビューリリースでは、拡張された Transact-sql エディターや、データベースの運用状態に対するカスタマイズ可能な洞察など、データベース管理機能を利用できます。 | **Windows、macOS、Linux で実行されます。 [!INCLUDE[name-sos](../includes/name-sos-short.md)]**|
+| [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) | [!INCLUDE[name-sos](../includes/name-sos-short.md)]は、実行されている任意の場所でデータベースを管理するための、無料の軽量ツールです。 このプレビューリリースでは、拡張された Transact-sql エディターや、データベースの運用状態に対するカスタマイズ可能な洞察など、データベース管理機能を利用できます。 | **[!INCLUDE[name-sos](../includes/name-sos-short.md)] は、Windows、macOS、Linux 上で実行されます**。|
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS) を使用して、SQL Server、Azure SQL Database、および Azure SQL Data Warehouse のクエリ、設計、管理を行います。 | **SSMS は Windows 上で実行**されます。|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server、Azure SQL Database、および Azure SQL Data Warehouse のために、Visual Studio を強力な開発環境にします。| **SSDT は Windows 上で実行されます**。|
 | [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code のインストール後、Microsoft SQL Server、Azure SQL Database、および SQL Data Warehouse を開発するための[mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)をインストールします。| **Visual Studio Code は、Windows、macOS、Linux で実行**されます。|

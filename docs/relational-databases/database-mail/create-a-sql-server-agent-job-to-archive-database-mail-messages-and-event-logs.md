@@ -15,15 +15,15 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a035483534ec11e2c26c8a35b654d4ee55a025cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8396b30122a393ea3532113e261a908d8079432a
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134459"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228485"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
   データベース メール メッセージと添付ファイルのコピーは、データベース メール イベント ログに記録されると同時に、 **msdb** のテーブルに保持されます。 このテーブルのサイズを縮小するためには、不要になったメッセージやイベントを定期的にアーカイブする必要があります。 次の手順では、この処理を自動化する SQL Server エージェント ジョブを作成します。  
   
 -   **作業を開始する準備:**  、 [前提条件](#Prerequisites)、 [推奨事項](#Recommendations)、 [権限](#Permissions)  
@@ -47,11 +47,11 @@ ms.locfileid: "68134459"
   
 -   まず、次のステップから構成される "データベース メールのアーカイブ" という名前のジョブを作成します。  
   
-    1.  すべてのメッセージをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_** _<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
+    1.  すべてのメッセージをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_**_<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
   
-    2.  最初のステップでコピーしたメッセージに関連する添付ファイルをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Attachments_** _<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
+    2.  最初のステップでコピーしたメッセージに関連する添付ファイルをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Attachments_**_<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
   
-    3.  最初のステップでコピーしたメッセージに関連するデータベース メール イベント ログからのイベントを、データベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Log_** _<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
+    3.  最初のステップでコピーしたメッセージに関連するデータベース メール イベント ログからのイベントを、データベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Log_**_<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
   
     4.  移し変えたメール アイテムのレコードをデータベース メールのテーブルから削除します。  
   
@@ -210,7 +210,7 @@ ms.locfileid: "68134459"
   
 5.  **[頻度]** 領域で、たとえば毎月 1 回など、定期的にジョブを実行するオプションを選択します。  
   
-6.  **[一日のうちの頻度]** 領域で、 **[Occurs once at <time\<]** (<時刻> に 1 度実行) を選びます。  
+6.  **[一日のうちの頻度]** 領域で、**[Occurs once at <time\<]** (<時刻> に 1 度実行) を選びます。  
   
 7.  その他のオプションが目的どおりに構成されていることを確認し、 **[OK]** をクリックしてスケジュールを保存します。  
   

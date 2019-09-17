@@ -7,12 +7,12 @@ ms.prod_service: reporting-services-native
 ms.technology: tools
 ms.topic: conceptual
 ms.date: 01/15/2019
-ms.openlocfilehash: 2560c752dd55741e1718ba60f942288093d027bb
-ms.sourcegitcommit: 9d3ece500fa0e4a9f4fefc88df4af1db9431c619
+ms.openlocfilehash: 079565c813e0b66f09881039ea3d6509bdf6cf54
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/28/2019
-ms.locfileid: "67463587"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70908262"
 ---
 # <a name="server-properties-advanced-page---reporting-services"></a>[サーバーのプロパティ]\([詳細設定] ページ) - Reporting Services
 
@@ -93,9 +93,9 @@ Web ポータルのページ タイトルに表示されるレポート サー�
 
 **AccessControlMaxAge** プリフライト要求の結果をキャッシュできる秒数を指定します。 既定値は 600 (10 分) です。
 
-**AllowedResourceExtensionsForUpload**のレポート サーバーにアップロードできるリソース拡張機能のセット。 &ast;.rdl や &ast;.pbix のような組み込みのファイルの種類用の拡張子は含める必要はありません。 既定値は "&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx" です。
+**AllowedResourceExtensionsForUpload (Power BI Report Server および Reporting Services 2017 以降のみ)** レポート サーバーにアップロードできるリソースの拡張子のセット。 &ast;.rdl や &ast;.pbix のような組み込みのファイルの種類用の拡張子は含める必要はありません。 既定値は "&ast;、&ast;.xml、&ast;.xsd、&ast;.xsl、&ast;.png、&ast;.gif、&ast;.jpg、&ast;.tif、&ast;.jpeg、&ast;.tiff、&ast;.bmp、&ast;.pdf、&ast;.svg、&ast;.rtf、&ast;.txt、&ast;.doc、&ast;.docx、&ast;.pps、&ast;.ppt、&ast;.pptx" です。
 
-**RestrictedResourceMimeTypeForUpload** mime の種類のユーザーのセットが許可されないとコンテンツをアップロードします。 制限付きの mime の種類に既に保存されているすべてのリソースは、ブラウザーによって、アプリケーションまたはオクテット ストリームを開く/実行されているのではなくとしてのみダウンロードできます。  既定では、この一覧で、制限付きの項目はありませんが、最も安全なエクスペリエンスを提供するこの組織を設定することをお勧めします。 します。
+**RestrictedResourceMimeTypeForUpload**ユーザーがコンテンツをアップロードすることが許可されていない mime の種類のセット。 制限付きの mime の種類で既に保存されているリソースは、ブラウザーによって開かれたり実行されたりするのではなく、アプリケーション/オクテットストリームとしてのみダウンロードできます。  既定では、この一覧には制限された項目はありませんが、セキュリティで保護されたエクスペリエンスを提供するために組織で設定することをお勧めします。
 
 **EditSessionCacheLimit**  
 レポート編集セッションでアクティブにできるデータ キャッシュ エントリの数を指定します。 既定の数は 5 です。  

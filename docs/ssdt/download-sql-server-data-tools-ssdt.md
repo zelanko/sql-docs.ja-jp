@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 5d8e964830e56066ef75a0a2caacbdbc081cdac2
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 7fc8925b4257631561b6b68ed144becbadece639
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028942"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383785"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 
@@ -36,7 +36,7 @@ Visual Studio 2019 のライセンスが既にある場合:
 
 Visual Studio 2019 のライセンスがまだない場合:
 
-- [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_content=sqlssdt) をインストールする
+- [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) をインストールする
 - Analysis Services、Integration Services、Reporting Services 拡張機能を適宜インストールする
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017 の変更点
@@ -48,13 +48,13 @@ Visual Studio 2017 以降では、データベース プロジェクトの作成
 
 ## <a name="install-ssdt-with-visual-studio-2017"></a>Visual Studio 2017 で SSDT をインストールする
 
-[Visual Studio インストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio)中に SSDT をインストールするには、 **[データの保存と処理]** ワークロードを選択し、 **[SQL Server Data Tools]** を選択します。 Visual Studio が既にインストールされている場合、[ワークロードの一覧を編集し](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)、SSDT:![データの保存と処理ワークロード](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)を含めることができます。
+[Visual Studio インストール](https://docs.microsoft.com/visualstudio/install/install-visual-studio)中に SSDT をインストールするには、**[データの保存と処理]** ワークロードを選択し、**[SQL Server Data Tools]** を選択します。 Visual Studio が既にインストールされている場合、[ワークロードの一覧を編集し](https://docs.microsoft.com/visualstudio/install/modify-visual-studio)、SSDT:![データの保存と処理ワークロード](../ssdt/media/download-sql-server-data-tools-ssdt/data-workload.png)を含めることができます。
 
 ## <a name="install-analysis-services-integration-services-and-reporting-services-tools"></a>Analysis Services、Integration Services、Reporting Services ツールをインストールする
 
 AS、IS、RS プロジェクト サポートをインストールするには、[SSDT スタンドアロン インストーラー](#ssdt-for-vs-2017-standalone-installer)を実行します。
 
-このインストーラーは、SSDT ツールの追加先となる Visual Studio インスタンスを一覧表示します。 Visual Studio がインストールされていない場合、 **[Install a new SQL Server Data Tools instance]\(新しい SQL Server Data Tools インスタンスをインストールする\)** を選択すると、SSDT と最小バージョンの Visual Studio がインストールされますが、SSDT と共に、最も使い勝手の良い[最新バージョンの Visual Studio](https://www.visualstudio.com/downloads) を利用することをお勧めします。
+このインストーラーは、SSDT ツールの追加先となる Visual Studio インスタンスを一覧表示します。 Visual Studio がインストールされていない場合、**[Install a new SQL Server Data Tools instance]\(新しい SQL Server Data Tools インスタンスをインストールする\)** を選択すると、SSDT と最小バージョンの Visual Studio がインストールされますが、SSDT と共に、最も使い勝手の良い[最新バージョンの Visual Studio](https://www.visualstudio.com/downloads) を利用することをお勧めします。
 
 ![AS、IS、RS を選択する](../ssdt/media/download-sql-server-data-tools-ssdt/select-services.png)
 

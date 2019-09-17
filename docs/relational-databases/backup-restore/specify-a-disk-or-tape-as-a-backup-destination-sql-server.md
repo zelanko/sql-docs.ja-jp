@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: e391f452-ed8c-4b40-b846-ac3881271b94
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 5e4eca65f3a5bde99adc49e8019080e6a59b496b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3119e81a462ff163f1ee3d0df0ee334a718ddba5
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041421"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70280946"
 ---
 # <a name="specify-a-disk-or-tape-as-a-backup-destination-sql-server"></a>バックアップ先としてディスクまたはテープを指定する (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -68,9 +68,7 @@ ms.locfileid: "68041421"
   
 4.  **[全般]** ページの **[バックアップ先]** セクションで、 **[ディスク]** または **[テープ]** をクリックします。 1 つのメディア セットを含んでいる最大 64 個のディスク ドライブまたはテープ ドライブのパスを選択するには、 **[追加]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     To remove a backup destination, select it and click **Remove**. To view the contents of a backup destination, select it and click **Contents**.  
+   バックアップ先を削除するには、バックアップ先を選択して **[削除]** をクリックします。 バックアップ先の内容を表示するには、バックアップ先を選択して **[内容]** をクリックします。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

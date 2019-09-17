@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: a7b1b9b0-7c19-4acc-9de3-3a7c5e70694d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: b29c55f0618d095840a7f56e5618231935b6fe4a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bcc63d87bc71fa2497e1282364f87272438bbf97
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67996543"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212290"
 ---
 # <a name="monitoring-database-mirroring-sql-server"></a>データベース ミラーリングの監視 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -126,12 +126,12 @@ ms.locfileid: "67996543"
   
      **[状態]** ページの基準に関する詳細については、後の「データベース ミラーリング モニターに表示されるパフォーマンス基準」を参照してください。  
   
--   **sp_dbmmonitorresults**の使用  
+-    **sp_dbmmonitorresults**の使用  
   
      システム管理者は、 **sp_dbmmonitorresults** システム ストアド プロシージャを使用して状態テーブルを表示できます。また、前回の更新から 15 秒以内に更新が行われていない場合には、必要に応じて状態テーブルを更新できます。 このプロシージャは、 **sp_dbmmonitorupdate** プロシージャを呼び出し、プロシージャ コールでの要求数に応じて 1 つ以上の履歴行を返します。 返される結果セットの状態に関する詳細については、「 [sp_dbmmonitorresults &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dbmmonitorresults-transact-sql.md)」を参照してください。  
   
-#### <a name="monitoring-database-mirroring-status-by-dbmmonitor-members"></a>データベース ミラーリングの状態の監視 (dbm_monitor メンバーの場合)  
- 既に説明したように、 **sp_dbmmonitorupdate** の初回実行時に、 **dbm_monitor** 固定データベース ロールが **msdb** データベースに作成されます。 **dbm_monitor** 固定データベース ロールのメンバーは、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** ストアド プロシージャを使用して既存のミラーリングの状態を表示できます。 ただし、これらのユーザーは状態テーブルを更新できません。 表示された状態の古さを調べるには、 **[状態]** ページの **[プリンシパル ログ (***\<time>***)]** ラベルと **[ミラー ログ (***\<time>***)]** ラベルで時刻を確認できます。  
+#### <a name="monitoring-database-mirroring-status-by-dbm_monitor-members"></a>データベース ミラーリングの状態の監視 (dbm_monitor メンバーの場合)  
+ 既に説明したように、 **sp_dbmmonitorupdate** の初回実行時に、 **dbm_monitor** 固定データベース ロールが **msdb** データベースに作成されます。 **dbm_monitor** 固定データベース ロールのメンバーは、データベース ミラーリング モニターまたは **sp_dbmmonitorresults** ストアド プロシージャを使用して既存のミラーリングの状態を表示できます。 ただし、これらのユーザーは状態テーブルを更新できません。 表示された状態の古さを調べるには、**[状態]** ページの **[プリンシパル ログ (**_\<time>_**)]** ラベルと **[ミラー ログ (**_\<time>_**)]** ラベルで時刻を確認できます。  
   
  **dbm_monitor** 固定データベース ロールのメンバーは、 **[データベース ミラーリング モニターのジョブ]** を使用して定期的に状態テーブルを更新します。 ジョブが存在しない場合や [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントが停止している場合、状態が急速に古くなり、ミラーリング セッションの構成を反映しなくなることがあります。 たとえば、フェールオーバー後、パートナーがプリンシパルまたはミラーなどの同じロールを共有しているように見えたり、現在のプリンシパル サーバーがミラー サーバーとして表示され、その一方で現在のミラー サーバーがプリンシパルとして表示されたりすることがあります。  
   

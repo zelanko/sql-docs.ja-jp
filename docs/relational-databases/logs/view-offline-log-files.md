@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 9223e474-f224-4907-a4f2-081e11db58f5
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: edd83dd3b96b80052c9920bd2cd6486273b4a1ad
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 39a5ab4ab7159c0915994e555271ba0246f3f896
+ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68083909"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70212309"
 ---
 # <a name="view-offline-log-files"></a>オフライン ログ ファイルの表示
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "68083909"
 ## <a name="before-you-begin"></a>作業を開始する準備  
  オフライン ログ ファイルに接続するには、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが、オフライン ログ ファイルの表示に使用するコンピューターと、表示するログ ファイルが置かれているコンピューターにインストールされている必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスが両方のコンピューターにインストールされている場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のインスタンス、およびどちらかのコンピューター上の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の以前のバージョンを実行しているインスタンスのオフライン ファイルを表示できます。  
   
- 登録済みサーバーを使用している場合は、接続するインスタンスが **[ローカル サーバー グループ]** または **[中央管理サーバー]** で登録されている必要があります。 (インスタンスは自身に登録するか、またはサーバー グループのメンバーにすることができます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録済みサーバーに追加する方法の詳細については、次のトピックを参照してください。  
+ 登録済みサーバーを使用している場合は、接続するインスタンスが **[ローカル サーバー グループ]** または **[中央管理サーバー]** で登録されている必要があります。  (インスタンスは自身に登録するか、またはサーバー グループのメンバーにすることができます)。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを登録済みサーバーに追加する方法の詳細については、次のトピックを参照してください。  
   
 -   [サーバー グループの作成または編集 &#40;SQL Server Management Studio&#41;](../../tools/sql-server-management-studio/create-or-edit-a-server-group-sql-server-management-studio.md)  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68083909"
   
 1.  WMI コントロール スナップインを開きます。 これを行うには、次のいずれかの操作を実行します (オペレーティング システムによって異なります)。  
   
-    -   **[スタート]** ボタンをクリックし、 **[検索の開始]** ボックスに「 **wmimgmt.msc** 」と入力して Enter キーを押します。  
+    -   **[スタート]** ボタンをクリックし、[ **検索の開始** ] ボックスに「 **wmimgmt.msc** 」と入力して Enter キーを押します。  
   
     -   **[スタート]** ボタンをクリックし、 **[ファイル名を指定して実行]** をクリックします。「 **wmimgmt.msc**」と入力して Enter キーを押します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "68083909"
   
     3.  リモート コンピューター名を入力し、 **[OK]** をクリックします。  
   
-3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (***RemoteComputerName***)]** を右クリックして、 **[プロパティ]** をクリックします。  
+3.  **[WMI コントロール (ローカル)]** または **[WMI コントロール (**_RemoteComputerName_**)]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 4.  **[WMI コントロールのプロパティ]** ダイアログ ボックスで、 **[セキュリティ]** タブをクリックします。  
   

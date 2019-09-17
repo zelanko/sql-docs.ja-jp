@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.assetid: 198198e2-7cf4-4a21-bda4-51b36cb4284b
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 89f6139861b971eb6c1f5771bd4ee77cf379f56f
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: a144a3c2eea75a90445ca5a3b13d756f4be4c503
+ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190374"
+ms.lasthandoff: 09/07/2019
+ms.locfileid: "70774205"
 ---
 # <a name="sqlpackageexe"></a>SqlPackage.exe
 
@@ -87,6 +87,7 @@ SqlPackage {parameters}{properties}{SQLCMD Variables}
 |**/p:**|IgnoreUserLoginMappings = (BOOLEAN)|ユーザーとログイン間のリレーションシップを無視するかどうかを指定します。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
 |**/p:**|TableData = (STRING)|データの抽出元となるテーブルを示します。 名前の部分を角かっこで囲むか、schema_name の形式で指定します。 table_identifier の形式で指定します。|
+|**/p:**| TempDirectoryForTableData = (STRING)|パッケージファイルに書き込まれる前にテーブルデータをバッファーするために使用する一時ディレクトリを指定します。|
 |**/p:**|VerifyExtraction = (ブール値)|抽出された DACPAC を検証するかどうかを指定します。|
 
 ## <a name="publish-parameters-properties-and-sqlcmd-variables"></a>Publish のパラメーター、プロパティ、および SQLCMD 変数
@@ -149,6 +150,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|Compareby Targetcollation = (BOOLEAN)|この設定では、配置の際にデータベースの照合順序をどのように処理するかを指定します。既定では、ソースで指定されている照合順序と異なる場合にターゲット データベースの照合順序が更新されます。 このオプションを設定した場合、ターゲット データベース (またはサーバー) の照合順序が使用されます。|
 |**/p:**|CreateNewDatabase = (ブール値)|データベースへの公開時に、ターゲット データベースを更新するか、削除して再作成するかを指定します。|
 |**/p:**|DatabaseEdition=({Basic&#124;Standard&#124;Premium&#124;Default} 'Default')|Azure SQL Database のエディションを定義します。|
+|**/p:**|DatabaseLockTimeout = (INT32 ' 60 ')|SQLServer に対してクエリを実行するときのデータベース ロックのタイムアウトを秒単位で指定します。 無期限に待機するには-1 を使用します。|
 |**/p:**|DatabaseMaximumSize = (INT32)|Azure SQL Database の最大サイズを GB 単位で定義します。|
 |**/p:**|DatabaseServiceObjective = (文字列)|Azure SQL Database のパフォーマンス レベル ("P0" や "S1" など) を定義します。|
 |**/p:**|DeployDatabaseInSingleUserMode = (ブール値)|true の場合、データベースは配置前にシングル ユーザー モードに設定されます。|
@@ -207,6 +209,7 @@ SqlPackage.exe の公開操作では、ソース データベースの構造に�
 |**/p:**|IgnoreWithNocheckOnForeignKeys = (ブール値)|データベースに公開するとき、外部キーの WITH NOCHECK 句の値の相違を無視するか、更新するかを指定します。|
 |**/p:**|IncludeCompositeObjects = (ブール値)|単一の公開操作の一部としてすべての複合要素を含めます。|
 |**/p:**|IncludeTransactionalScripts = (ブール値)|データベースに公開するとき、可能であればトランザクション ステートメントを使用するかどうかを指定します。|
+|**/p:**|LongRunningCommandTimeout = (INT32)|SQL Server に対してクエリを実行するときの実行時間の長いコマンドのタイムアウトを秒単位で指定します。 無期限に待機するには0を使用します。|
 |**/p:**|NoAlterStatementsToChangeClrTypes = (ブール値)|公開で、相違がある場合に ALTER ASSEMBLY ステートメントを発行するのではなく、常にアセンブリを削除して再作成することを指定します。|
 |**/p:**|PopulateFilesOnFileGroups = (ブール値 ' True ')|ターゲット データベースで新しい FileGroup が作成されたときに新しいファイルも作成するかどうかを指定します。|
 |**/p:**|RegisterDataTierApplication = (ブール値)|スキーマがデータベース サーバーに登録されるかどうかを指定します。|
@@ -268,6 +271,7 @@ SqlPackage.exe の Export 操作を実行すると、SQL Server または Azure 
 |**/p:**|CommandTimeout=(INT32 '60')|SQL Server に対してクエリを実行するときのコマンドのタイムアウト (秒) を指定します。|
 |**/p:**|Storage=({File&#124;Memory} 'File')|抽出時に使用されるスキーマ モデルのバックアップ用ストレージの種類を指定します。|
 |**/p:**|TableData = (STRING)|データの抽出元となるテーブルを示します。 名前の部分を角かっこで囲むか、schema_name の形式で指定します。 table_identifier の形式で指定します。|
+|**/p:**|TempDirectoryForTableData = (STRING)|パッケージファイルに書き込まれる前にテーブルデータをバッファーするために使用する一時ディレクトリを指定します。|
 |**/p:**|TargetEngineVersion=({Default&#124;Latest&#124;V11&#124;V12} 'Latest')|予期されるターゲット エンジンのバージョンを指定します。 これは、生成された bacpac で、Azure SQL Database サーバーでサポートされているオブジェクト (メモリ最適化テーブルなど) を使用できるようにするかどうかに影響します。|
 |**/p:**|VerifyFullTextDocumentTypesSupported=(BOOLEAN)|Microsoft Azure SQL Database v12 のサポートされているフルテキスト ドキュメントの種類を確認するかどうかを指定します。|
   
