@@ -1,5 +1,5 @@
 ---
-title: sp_removedbreplication (Transact-sql) |Microsoft Docs
+title: sp_removedbreplication (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -47,9 +47,9 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
 |||  
 |-|-|  
-|**さん**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
+|**tran**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
 |**merge**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
-|**両方**標準|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
+|**both**標準|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
