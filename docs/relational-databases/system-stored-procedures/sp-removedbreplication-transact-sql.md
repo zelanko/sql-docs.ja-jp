@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771037"
 ---
-# <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
+# <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   このストアド プロシージャにより、SQL Server のパブリッシャー インスタンス側のパブリケーション データベース、または SQL Server のサブスクライバー インスタンス側のサブスクリプション データベースから、すべてのレプリケーション オブジェクトが削除されます。 適切なデータベースで実行するか、または同じインスタンスにある別のデータベースのコンテキストで実行する場合は、レプリケーション オブジェクトを削除するデータベースを指定します。 このプロシージャでは、ディストリビューション データベースなどその他のデータベースからオブジェクトが削除されることはありません。  
