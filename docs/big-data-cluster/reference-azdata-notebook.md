@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f147e2b4ec785c3723d09cac6eb3548511946780
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 97b8cbae68e16dbdde6e9662b18e37f222a1af80
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70158237"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118156"
 ---
 # <a name="azdata-notebook"></a>azdata notebook
 
@@ -61,6 +61,10 @@ JMESPath クエリ文字列。 詳細と例については、[http://jmespath.or
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 ## <a name="azdata-notebook-run"></a>azdata notebook run
 このコマンドで、一時ディレクトリが作成され、作業ディレクトリとして指定されたノートブックが実行されます。
+
+>[!NOTE]
+>Azdata v 15.0.1900: Python 3 notebook でのみサポートされている run コマンドを検証しました。
+
 ```bash
 azdata notebook run --path -p 
                     [--output-path]  
@@ -81,7 +85,7 @@ azdata notebook run --path '/home/me/notebooks/demo_notebook.ipynb'
 #### `--output-path`
 ノートブックの出力に使用するディレクトリ パス。  出力データを含むノートブックと、ノートブックによって生成されるファイルは、このディレクトリに対して相対的に生成されます。
 #### `--output-html`
-さらに出力ノートブックを HTML 形式に変換するかどうかを示す省略可能なフラグ。  2 つ目の出力ファイルを作成します。
+出力ノートブックを HTML 形式にさらに変換するかどうかを示す省略可能なフラグです。  2 つ目の出力ファイルを作成します。
 #### `--arguments -a`
 Notebook の実行に挿入する notebook 引数のオプションの一覧です。  JSON ディクショナリとしてエンコードされます。  例: ' {"name": "value", "name2": "value2"} '
 #### `--interactive -i`
@@ -96,7 +100,7 @@ Notebook の実行に挿入する notebook 引数のオプションの一覧で�
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 
