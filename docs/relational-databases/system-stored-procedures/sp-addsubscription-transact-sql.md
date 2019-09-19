@@ -1,5 +1,5 @@
 ---
-title: sp_addsubscription (Transact-sql) |Microsoft Docs
+title: sp_addsubscription (Transact-SQL) |Microsoft Docs
 ms.date: 10/28/2015
 ms.prod: sql
 ms.prod_service: database-engine
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769034"
 ---
-# <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-sql)
+# <a name="sp_addsubscription-transact-sql"></a>sp_addsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   パブリケーションにサブスクリプションを追加し、サブスクライバーの状態を設定します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -95,8 +95,8 @@ sp_addsubscription [ @publication = ] 'publication'
 |none|サブスクライバーには、パブリッシュされたテーブルのスキーマと初期データが既に存在します。<br /><br /> 注:このオプションは非推奨とされます。 代わりに replication support only を使用してください。|  
 |automatic (既定値)|パブリッシュされたテーブルのスキーマと初期データは、最初にサブスクライバーに転送されます。|  
 |replication support only|更新サブスクリプションをサポートするアーティクルのカスタム ストアド プロシージャとトリガーがサブスクライバー側で必要に応じて自動的に生成されます。 サブスクライバーがパブリッシュされたテーブルのスキーマと初期データを既に持っていることを前提としています。 ピアツーピアトランザクションレプリケーショントポロジを構成する場合は、トポロジ内のすべてのノードのデータが同一であることを確認します。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。<br /><br /> *SQL Server 以外のパブリケーションに対するサブスクリプションではサポートされていません。*|  
-|バックアップを使用した初期化|パブリッシュされたテーブルのスキーマと初期データは、パブリケーション データベースのバックアップから取得されます。 サブスクライバーがパブリケーションデータベースのバックアップにアクセスできることを前提としています。 バックアップの場所とメディアの種類は、 *backupdevicename*と*backupdevicetype*によって指定されます。 このオプションを使用する場合、ピアツーピアトランザクションレプリケーショントポロジは、構成中に停止する必要はありません。<br /><br /> *SQL Server 以外のパブリケーションに対するサブスクリプションではサポートされていません。*|  
-|lsn から初期化する|ピア ツー ピア トランザクション レプリケーション トポロジにノードを追加するときに使用します。 @subscriptionlsn と共に使用すると、関連するトランザクションのすべてが、新しいノードに確実にレプリケートされます。 サブスクライバーがパブリッシュされたテーブルのスキーマと初期データを既に持っていることを前提としています。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
+|initialize with backup|パブリッシュされたテーブルのスキーマと初期データは、パブリケーション データベースのバックアップから取得されます。 サブスクライバーがパブリケーションデータベースのバックアップにアクセスできることを前提としています。 バックアップの場所とメディアの種類は、 *backupdevicename*と*backupdevicetype*によって指定されます。 このオプションを使用する場合、ピアツーピアトランザクションレプリケーショントポロジは、構成中に停止する必要はありません。<br /><br /> *SQL Server 以外のパブリケーションに対するサブスクリプションではサポートされていません。*|  
+|initialize from lsn|ピア ツー ピア トランザクション レプリケーション トポロジにノードを追加するときに使用します。 @subscriptionlsn と共に使用すると、関連するトランザクションのすべてが、新しいノードに確実にレプリケートされます。 サブスクライバーがパブリッシュされたテーブルのスキーマと初期データを既に持っていることを前提としています。 詳細については、「 [Peer-to-Peer Transactional Replication](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)」を参照してください。|  
   
 > [!NOTE]  
 >  システム テーブルとデータは常に転送されます。  
@@ -122,9 +122,9 @@ sp_addsubscription [ @publication = ] 'publication'
 |-----------|-----------------|  
 |read only (既定値)|サブスクリプションは読み取り専用です。 サブスクライバーでの変更は、パブリッシャーに送信されません。|  
 |sync tran|即時更新サブスクリプションのサポートを有効にします。 Oracle パブリッシャーではサポートされていません。|  
-|キューに登録されたトランザクション|サブスクリプションのキュー更新を有効にします。 サブスクライバーでデータ変更を行い、キューに格納して、パブリッシャーに反映することができます。 Oracle パブリッシャーではサポートされていません。|  
+|queued tran|サブスクリプションのキュー更新を有効にします。 サブスクライバーでデータ変更を行い、キューに格納して、パブリッシャーに反映することができます。 Oracle パブリッシャーではサポートされていません。|  
 |failover|キュー更新をフェールオーバーとするサブスクリプションの即時更新を有効にします。 サブスクライバーでデータを変更し、それを直ちにパブリッシャーに配信することができます。 パブリッシャーとサブスクライバーが接続されていない場合は、更新モードを変更することにより、サブスクライバーで加えられたデータの変更を、サブスクライバーとパブリッシャーが接続されるまで、キューに格納することができます。 Oracle パブリッシャーではサポートされていません。|  
-|キューに置かれたフェールオーバー|即時更新モードへの変更が可能なキュー更新サブスクリプションとしてサブスクリプションを有効にします。 サブスクライバーでデータを変更し、サブスクライバーとパブリッシャーの間に接続が確立されるまで、キューに格納することができます。 連続接続が確立されると、更新モードを即時更新に変更できます。 Oracle パブリッシャーではサポートされていません。|  
+|queued failover|即時更新モードへの変更が可能なキュー更新サブスクリプションとしてサブスクリプションを有効にします。 サブスクライバーでデータを変更し、サブスクライバーとパブリッシャーの間に接続が確立されるまで、キューに格納することができます。 連続接続が確立されると、更新モードを即時更新に変更できます。 Oracle パブリッシャーではサポートされていません。|  
   
  サブスクライブされるパブリケーションで DTS が許可されている場合、値 synctran および queued tran は使用できません。  
   
@@ -319,10 +319,10 @@ sp_addsubscription [ @publication = ] 'publication'
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [SQL Server 以外のサブスクライバーのサブスクリプションの作成](../../relational-databases/replication/create-a-subscription-for-a-non-sql-server-subscriber.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addpushsubscription_agent &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
- [sp_changesubstatus &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
- [sp_dropsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
- [sp_helpsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
+ [sp_addpushsubscription_agent &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpushsubscription-agent-transact-sql.md)   
+ [sp_changesubstatus &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changesubstatus-transact-sql.md)   
+ [sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md)   
+ [sp_helpsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
