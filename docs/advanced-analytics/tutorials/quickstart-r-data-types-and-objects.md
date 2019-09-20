@@ -1,39 +1,45 @@
 ---
-title: R と SQL のデータ型およびオブジェクトに関するクイックスタート
-description: このクイックスタートでは、R および SQL Server でデータ型とデータオブジェクトを操作する方法について説明します。
+title: R と SQL のデータ型およびオブジェクトの操作
+titleSuffix: SQL Server Machine Learning Services
+description: このクイックスタートでは、R でデータ型とデータオブジェクトを操作する方法と、SQL Server Machine Learning Services を使用して SQL Server する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 01/04/2019
+ms.date: 09/17/2019
 ms.topic: quickstart
-author: dphansen
-ms.author: davidph
+author: garyericson
+ms.author: garye
+ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: eb007525834c312952f9eb02809edadebaefa305
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715431"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149960"
 ---
-# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server"></a>クイック スタート: SQL Server で R を使用してデータ型とオブジェクトを処理する
+# <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services で R を使用してデータ型とオブジェクトを処理する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-このクイックスタートでは、R と SQL Server 間でデータを移動するときに発生する一般的な問題について、実践的な概要を説明します。 この演習を通じて得られる経験により、独自のスクリプトでデータを操作するときに必要な背景情報を得ることができます。
+このクイックスタートでは、R と SQL Server 間でデータを移動するときに発生する一般的な問題について説明します。 この演習を通じて得られる経験により、独自のスクリプトでデータを操作するときに必要な背景情報を得ることができます。
 
 主な問題は、次のとおりです。
 
-+ データ型が一致しない場合がある
-+ 暗黙的な変換が行われる可能性があります
-+ キャスト操作と変換操作が必要な場合がある
-+ R と SQL が異なるデータ オブジェクトを使用する
+- データ型が一致しない場合がある
+- 暗黙的な変換が行われる可能性があります
+- キャスト操作と変換操作が必要な場合がある
+- R と SQL が異なるデータ オブジェクトを使用する
 
 ## <a name="prerequisites"></a>前提条件
 
-前のクイックスタート「 [SQL Server に r が存在することを確認](quickstart-r-verify.md)する」では、このクイックスタートに必要な r 環境を設定するための情報とリンクを提供しています。
+- このクイックスタートでは、R 言語がインストールされている[SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)で SQL Server のインスタンスにアクセスする必要があります。
+
+  SQL Server インスタンスは、Azure 仮想マシンまたはオンプレミスに配置できます。 外部スクリプト機能が既定で無効になっているため、[外部スクリプトを有効](../install/sql-machine-learning-services-windows-install.md#bkmk_enableFeature)にし、開始する前に**SQL Server Launchpad サービス**が実行されていることを確認する必要がある場合があることに注意してください。
+
+- また、R スクリプトを含む SQL クエリを実行するためのツールも必要です。 これらのスクリプトは、SQL Server インスタンスに接続し、T-sql クエリまたはストアドプロシージャを実行できる限り、任意のデータベース管理ツールまたはクエリツールを使用して実行できます。 このクイックスタートでは、 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms)を使用します。
 
 ## <a name="always-return-a-data-frame"></a>常にデータフレームを返す
 
-スクリプトが R から SQL Server に結果を返す場合は、データを **data.frame** として返す必要があります。 スクリプトで生成するその他の種類のオブジェクト (リスト、係数、ベクター、バイナリデータなど) は、ストアドプロシージャの結果の一部として出力する場合は、データフレームに変換する必要があります。 他のオブジェクトをデータ フレームに変更する処理をサポートする R 関数は複数あります。 バイナリ モデルをシリアル化して、データ フレームに返すこともできます。この処理については、このチュートリアルで後述します。
+スクリプトが R から SQL Server に結果を返す場合は、データを **data.frame** として返す必要があります。 スクリプトで生成するその他の種類のオブジェクト (リスト、係数、ベクター、バイナリデータなど) は、ストアドプロシージャの結果の一部として出力する場合は、データフレームに変換する必要があります。 他のオブジェクトをデータ フレームに変更する処理をサポートする R 関数は複数あります。 バイナリモデルをシリアル化してデータフレームに返すこともできます。これについては、このクイックスタートで後ほど説明します。
 
 まず、いくつかの R 基本的な R オブジェクト (ベクター、マトリックス、およびリスト) を試し、データフレームへの変換によって SQL Server に渡される出力を変更する方法を見てみましょう。
 
@@ -60,7 +66,7 @@ EXECUTE sp_execute_external_script
 
 ## <a name="identify-schema-and-data-types"></a>スキーマとデータ型の識別
 
-結果が異なる理由は何でしょうか。 
+結果が異なる理由は何でしょうか。
 
 通常、その答えは、R の `str()` コマンドを使用するとわかります。 R スクリプトのいずれかの場所に関数 `str(object_name)` を追加し、指定された R オブジェクトのデータ スキーマを情報メッセージとして返します。 メッセージを確認するには、Visual Studio Code の **[メッセージ]** ウィンドウまたは SSMS の **[メッセージ]** タブを参照してください。
 
@@ -119,6 +125,22 @@ R 構文のわずかな変更が結果のスキーマに大きな影響をもた
 
 R の各データ オブジェクトには、2 つのデータ オブジェクトの次元数が同じ場合や、いずれかのデータ オブジェクトに異種データ型が格納されている場合に他のデータ オブジェクトと結合する際の値の処理方法に関する固有のルールがあります。
 
+まず、テストデータの小さなテーブルを作成します。
+
+```sql
+CREATE TABLE RTestData (col1 INT NOT NULL)
+
+INSERT INTO RTestData
+VALUES (1);
+
+INSERT INTO RTestData
+VALUES (10);
+
+INSERT INTO RTestData
+VALUES (100);
+GO
+```
+
 たとえば、次のステートメントを実行して、R を使用して行列乗算を実行するとします。4つの値を持つ配列で、1列の行列に3つの値を乗算し、結果として 4x3 matrix を想定します。
 
 ```sql
@@ -158,7 +180,7 @@ execute sp_execute_external_script
 これで、R は結果として 1 つの値を返します。
 
 **結果**
-    
+
 |Col1|
 |---|
 |1542|
@@ -167,10 +189,8 @@ execute sp_execute_external_script
 
 > [!TIP]
 > 
-> エラーの取得 これらの例では、 **RTestData**テーブルが必要です。 テストデータテーブルを作成していない場合は、このトピックに戻ってテーブルを作成します。[入力と出力を処理](../tutorials/rtsql-working-with-inputs-and-outputs.md)します。
-> 
-> テーブルを作成した後もエラーが発生する場合は、 **master**データベースや他のデータベースではなく、テーブルが格納されているデータベースのコンテキストでストアドプロシージャを実行していることを確認してください。
-> 
+> エラーの取得 **Master**データベースや他のデータベースではなく、テーブルが格納されているデータベースのコンテキストでストアドプロシージャを実行していることを確認します。
+>
 > また、これらの例では一時テーブルを使用しないことをお勧めします。 一部の R クライアントは、バッチ間の接続を終了し、一時テーブルを削除します。
 
 ## <a name="merge-or-multiply-columns-of-different-length"></a>異なる長さの列の結合または乗算
@@ -193,7 +213,7 @@ EXECUTE sp_execute_external_script
 データ フレームに入力するために、R は RTestData から取得した要素を必要な数だけ繰り返し、配列 `df1` 内の要素の数と一致させます。
 
 **結果**
-    
+
 |*Col2*|*Col3*|
 |----|----|
 |1|1|
@@ -229,7 +249,7 @@ SELECT ReportingDate
 ```
 
 > [!NOTE]
-> 
+>
 > 任意のバージョンの AdventureWorks を使用することも、独自のデータベースを使用して別のクエリを作成することもできます。 ここでは、text、datetime、および numeric 値を含むデータを処理しようとします。
 
 ここで、ストアドプロシージャへの入力としてこのクエリを貼り付けてみてください。
@@ -262,25 +282,29 @@ STDOUT message(s) from external script: $ ProductSeries: Factor w/ 1 levels "M20
 STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 16950 16950
 ```
 
-+ 日時列は R データ型 **POSIXct** を使用して処理されました。
-+ テキスト列 "ProductSeries" は、カテゴリ変数として識別されています。 文字列値は、既定では因子として処理されます。 R に渡した文字列は、内部で使用するために整数に変換され、出力時に再度文字列にマップされます。
+- 日時列は R データ型 **POSIXct** を使用して処理されました。
+- テキスト列 "ProductSeries" は、カテゴリ変数として識別されています。 文字列値は、既定では因子として処理されます。 R に渡した文字列は、内部で使用するために整数に変換され、出力時に再度文字列にマップされます。
 
 ### <a name="summary"></a>まとめ
 
 これらの短い例からも、SQL クエリを入力として渡すときに、データ変換の影響を確認する必要があることを確認できます。 一部の SQL Server データ型は R でサポートされていないため、エラーを回避するには、次の方法を検討してください。
 
-+ データを事前にテストし、R コードに渡されたときに問題となる可能性があるスキーマの列または値を確認します。
-+ `SELECT *` を使用するのではなく、入力データ ソースに列を個別に指定し、各列の処理方法を把握します。
-+ 予期しない動作を回避するために、入力データを準備する際に、必要に応じて明示的なキャストを実行します。
-+ エラーが発生し、モデリングには役に立たない、データの列 (GUID や rowguids など) を渡さないようにします。
+- データを事前にテストし、R コードに渡されたときに問題となる可能性があるスキーマの列または値を確認します。
+- `SELECT *` を使用するのではなく、入力データ ソースに列を個別に指定し、各列の処理方法を把握します。
+- 予期しない動作を回避するために、入力データを準備する際に、必要に応じて明示的なキャストを実行します。
+- エラーが発生し、モデリングには役に立たない、データの列 (GUID や rowguids など) を渡さないようにします。
 
 サポートされるデータ型とサポートされないデータ型の詳細については、「 [R ライブラリとデータ型](../r/r-libraries-and-data-types.md)」を参照してください。
 
 文字列から数値要素への実行時の変換によるパフォーマンスへの影響の詳細については、「 [SQL Server R Services パフォーマンスチューニング](../r/sql-server-r-services-performance-tuning.md)」を参照してください。
 
-## <a name="next-step"></a>次の手順
+## <a name="next-steps"></a>次の手順
 
-次のクイックスタートでは、SQL Server データに R 関数を適用する方法について説明します。
+SQL Server で高度な R 関数を作成する方法については、次のクイックスタートを参照してください。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server データでの R 関数の使用](quickstart-r-functions.md)
+> [SQL Server Machine Learning Services を使用した高度な R 関数の作成](quickstart-r-functions.md)
+
+SQL Server Machine Learning Services の詳細については、以下を参照してください。
+
+- [SQL Server Machine Learning Services (Python と R) とは何ですか?](../what-is-sql-server-machine-learning.md)

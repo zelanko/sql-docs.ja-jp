@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: adcac48bc7d90aae5f05a9b671f05e34cc8cf554
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 248a2e12199466cfaf686bcfcf10341a75981ef7
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715685"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149899"
 ---
 # <a name="operationalize-r-code-using-stored-procedures-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services のストアドプロシージャを使用した R コードの運用化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -24,7 +24,7 @@ SQL Server Machine Learning Services の R および Python 機能を使用す�
 
 従来、データサイエンスソリューションの統合には、パフォーマンスと統合をサポートするための広範な記録が含まれていました。 R と Python のコードは SQL Server で実行でき、ストアドプロシージャを使用して呼び出すことができるため、SQL Server Machine Learning Services によってこのタスクが簡単になります。 ストアドプロシージャにコードを埋め込むしくみの詳細については、以下を参照してください。
 
-+ [クイック スタート:SQL Server の "Hello world" R スクリプト](../../advanced-analytics/tutorials//quickstart-r-run-using-tsql.md)
++ [SQL Server での単純な R スクリプトの作成と実行](../tutorials/quickstart-r-create-script.md)
 + [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)
 
 ストアドプロシージャを使用して R コードを運用環境にデプロイする包括的な例に[ついては、チュートリアルを参照してください。SQL 開発者向け R Data Analytics](../../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md)

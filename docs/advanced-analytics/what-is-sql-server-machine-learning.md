@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d60445d52a8a78fb7924d82338162e4719f45681
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 634f9f62a3ff1de70be84fd5a7721d8efed891bf
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276664"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149935"
 ---
 # <a name="what-is-sql-server-machine-learning-services-python-and-r"></a>SQL Server Machine Learning Services (Python と R) とは何ですか?
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -95,8 +95,8 @@ Machine Learning Services と共にインストールされるパッケージと
 
 1. 初めての Python または R スクリプトを作成する
 
-    + クイック スタート: [Python](tutorials/quickstart-python-run-using-t-sql.md)または[R](tutorials/quickstart-r-run-using-tsql.md)で "Hello world" スクリプトを実行する
-    + クイック スタート: [Python](tutorials/quickstart-python-train-score-in-tsql.md)または[R](tutorials/quickstart-r-create-predictive-model.md)で予測モデルを作成する
+    + クイック スタート: [SQL での単純な R スクリプトの作成と実行](tutorials/quickstart-r-create-script.md)
+    + クイック スタート: [R で予測モデルを作成してトレーニングする](tutorials/quickstart-r-train-score-model.md)
     + チュートリアル:[T-sql で Python を使用する](tutorials/sqldev-in-database-python-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
     + チュートリアル:[T-sql で R を使用する](tutorials/sqldev-in-database-r-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
     + チュートリアル:[R ツールで Machine Learning Services を使用する](tutorials/walkthrough-data-science-end-to-end-walkthrough.md):データの探索、グラフとプロットの作成、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (6 部構成シリーズ)

@@ -9,12 +9,12 @@ ms.topic: overview
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 973c09be9cff6e66043b056e1a772ab8974cebb4
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: 99aba9748e7ee6d53aabb18919324243740d996a
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957489"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149926"
 ---
 # <a name="what-is-sql-server-2016-r-services"></a>SQL Server 2016 R Services とは
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,8 +81,8 @@ Microsoft のエンタープライズパッケージに加えて、オープン�
 
 1. 最初の R スクリプトを作成する
 
-    + クイック スタート: [R で "Hello world" スクリプトを実行する](../tutorials/quickstart-r-run-using-tsql.md)
-    + クイック スタート: [R での予測モデルの作成](../tutorials/quickstart-r-create-predictive-model.md)
+    + クイック スタート: [SQL Server での単純な R スクリプトの作成と実行](../tutorials/quickstart-r-create-script.md)
+    + クイック スタート: [R で予測モデルを作成してトレーニングする](../tutorials/quickstart-r-train-score-model.md)
     + チュートリアル:[T-sql で R を使用する](../tutorials/sqldev-in-database-r-for-sql-developers.md):データの探索、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (5 部構成シリーズ)
     + チュートリアル:R[ツールで r Services を使用する](../tutorials/walkthrough-data-science-end-to-end-walkthrough.md):データの探索、グラフとプロットの作成、特徴エンジニアリングの実行、モデルのトレーニングとデプロイ、予測の作成 (6 部構成シリーズ)
 
