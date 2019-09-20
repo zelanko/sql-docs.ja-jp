@@ -32,7 +32,7 @@ ms.locfileid: "70383560"
 | チュートリアル | 説明 |
 |-|-|
 | [線形回帰による ski レンタルの予測](python-ski-rental-linear-regression.md) | Python と線形回帰を使用して、ski のレンタル数を予測します。 Azure Data Studio のノートブックを使用して、データを準備し、モデルをトレーニングし、モデルを配置するための T-sql を使用します。 |
-| [K を使用して顧客を分類する方法クラスタリング](python-clustering-model.md) | Python を使用して、顧客を分類する K の意味のあるクラスターモデルを開発およびデプロイします。 Azure Data Studio のノートブックを使用して、データを準備し、モデルをトレーニングし、モデルを配置するための T-sql を使用します。 |
+| [K-Means クラスタリングを使用して顧客を分類する方法](python-clustering-model.md) | Python を使用して、顧客を分類する K-Means クラスターモデルを開発およびデプロイします。 Azure Data Studio のノートブックを使用して、データを準備し、モデルをトレーニングし、モデルを配置するための T-sql を使用します。 |
 | [Revoscalepy を使用してモデルを作成する](use-python-revoscalepy-to-create-model.md) | SQL Server を計算コンテキストとして使用してリモート Python クライアントからコードを実行する方法を示します。 このチュートリアルでは、 **revoscalepy**ライブラリの**rxLinMod**を使用してモデルを作成します。 |
 | [SQL 開発者向けの Python Data Analytics](sqldev-in-database-python-for-sql-developers.md) | このエンドツーエンドチュートリアルでは、T-sql を使用して完全な Python ソリューションを構築するプロセスについて説明します。 |
 
