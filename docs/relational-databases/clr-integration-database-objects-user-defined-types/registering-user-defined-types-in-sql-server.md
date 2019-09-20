@@ -48,7 +48,7 @@ ms.locfileid: "68028256"
   
  Visual Studio を使用して UDT を作成および配置するには、次の手順を実行します。  
   
-1.  新規作成**データベース**プロジェクト、 **Visual Basic**または**Visual c#** 言語ノード。  
+1.  新規作成**データベース**プロジェクト、 **Visual Basic**または**Visual C#** 言語ノード。  
   
 2.  UDT を格納する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースへの参照を追加します。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68028256"
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="using-transact-sql-to-deploy-udts"></a>Transact-SQL を使用した UDT の配置  
- [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 構文は、UDT を使用するデータベースにアセンブリを登録する場合に使用します。 アセンブリは、ファイル システムに外部的に格納されるのではなく、データベース システム テーブルに内部的に格納されます。 UDT が外部アセンブリに依存する場合は、それらのアセンブリもデータベースに読み込む必要があります。 CREATE TYPE ステートメントは、UDT を使用するデータベースに UDT を作成する場合に使用します。 詳細については、[CREATE ASSEMBLY & #40 を参照してください。TRANSACT-SQL と #41 です。](../../t-sql/statements/create-assembly-transact-sql.md)と[型 & #40; を作成します。TRANSACT-SQL と #41 です](../../t-sql/statements/create-type-transact-sql.md)。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)] CREATE ASSEMBLY 構文は、UDT を使用するデータベースにアセンブリを登録する場合に使用します。 アセンブリは、ファイル システムに外部的に格納されるのではなく、データベース システム テーブルに内部的に格納されます。 UDT が外部アセンブリに依存する場合は、それらのアセンブリもデータベースに読み込む必要があります。 CREATE TYPE ステートメントは、UDT を使用するデータベースに UDT を作成する場合に使用します。 詳細については、[CREATE ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/create-assembly-transact-sql.md) と [CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md) を参照してください。  
   
 ### <a name="using-create-assembly"></a>CREATE ASSEMBLY の使用  
  CREATE ASSEMBLY 構文では、UDT を使用するデータベースにアセンブリが登録されます。 アセンブリを登録すると、そのアセンブリに依存関係がなくなります。  
@@ -94,7 +94,7 @@ FROM 0xfeac4 ... 21ac78
 > [!NOTE]  
 >  ネイティブを作成するため、CREATE TYPE 構文を使用しても[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]別名データ型を置き換えるものでは**sp_addtype**を別名データ型を作成する手段として。 CREATE TYPE 構文の省略可能な一部の引数は CLR の UDT の作成に関係しており、(基本型などの) 別名データ型の作成には適用されません。  
   
- 詳細については、[の種類の作成 & #40 を参照してください。TRANSACT-SQL と #41 です](../../t-sql/statements/create-type-transact-sql.md)。  
+ 詳細については、[CREATE TYPE &#40;Transact-SQL&#41;](../../t-sql/statements/create-type-transact-sql.md) を参照してください。。  
   
 #### <a name="example"></a>例  
  次[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメントを作成、**ポイント**型。 2 つの部分の名前付け構文を使用して外部名が指定された*AssemblyName*.*UDTName*します。  
@@ -149,7 +149,7 @@ SELECT o.name AS major_name, o.type_desc AS major_type_desc
  UDT を [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースに作成した後は、型の基になるアセンブリを変更することはできますが、UDT は変更できません。 ほとんどの場合、[!INCLUDE[tsql](../../includes/tsql-md.md)] DROP TYPE ステートメントを使用してデータベースから UDT を削除し、基になるアセンブリに変更を加えて、ALTER ASSEMBLY ステートメントを使用してアセンブリを再読み込みする必要があります。 その後、UDT とすべての依存オブジェクトを再作成する必要があります。  
   
 ### <a name="example"></a>例  
- ALTER ASSEMBLY ステートメントは、UDT アセンブリのソース コードに変更を加え、ソース コードを再コンパイルした後に使用します。 ALTER ASSEMBLY ステートメントを使用すると、サーバーに .dll ファイルがコピーされ、新しいアセンブリに再バインドされます。 完全な構文については、[ALTER ASSEMBLY &#40Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md) を参照してください。  
+ ALTER ASSEMBLY ステートメントは、UDT アセンブリのソース コードに変更を加え、ソース コードを再コンパイルした後に使用します。 ALTER ASSEMBLY ステートメントを使用すると、サーバーに .dll ファイルがコピーされ、新しいアセンブリに再バインドされます。 完全な構文については、[ALTER ASSEMBLY &#40;Transact-SQL&#41;](../../t-sql/statements/alter-assembly-transact-sql.md) を参照してください。  
   
  次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントでは、ディスク上の指定された場所から Point.dll アセンブリを再読み込みしています。  
   
