@@ -62,7 +62,7 @@ ms.locfileid: "68139720"
 |**internet_password**|**nvarchar(524)**|マージ エージェントを使用して Web 同期をホストしている Web サーバーに接続するときに使用するログインのパスワード[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**internet_security_mode**|**int**|値が、Web 同期をホストしている Web サーバーに接続するときに使用する認証モード**1** 、Windows 認証を示し、値の**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**internet_timeout**|**int**|Web 同期要求が期限切れとなるまでの時間の長さ (秒単位)。|  
-|**hostname**|**sysname**|値を指定**HOST_NAME**でこの関数を使用する場合、**場所**結合フィルターまたは論理レコード リレーションシップの句。|  
+|**hostname**|**sysname**|値を指定**HOST_NAME**でこの関数を使用する場合、**WHERE**結合フィルターまたは論理レコード リレーションシップの句。|  
   
 ## <a name="see-also"></a>関連項目  
  [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
