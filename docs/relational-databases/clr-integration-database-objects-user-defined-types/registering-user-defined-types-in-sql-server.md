@@ -161,7 +161,7 @@ FROM '\\Projects\Point\bin\Point.dll'
 ### <a name="using-alter-assembly-to-add-source-code"></a>ALTER ASSEMBLY を使用したソース コードの追加  
  ALTER ASSEMBLY 構文の ADD FILE 句は、CREATE ASSEMBLY 構文には存在しません。 ADD FILE 句を使用すると、アセンブリに関連付けられるソース コードやその他のファイルを追加できます。 ファイルは元の場所からコピーされ、データベース内のシステム テーブルに格納されます。 これにより、現在のバージョンの UDT を再作成またはドキュメント化する必要があれば、ソース コードや他のファイルをいつでも使用できます。  
   
- 次[!INCLUDE[tsql](../../includes/tsql-md.md)]の Point.cs クラスのソース コードを追加する ALTER ASSEMBLY ステートメント、**ポイント**UDT します。 Point.cs ファイルに含まれているテキストがコピーされ、"PointSource" という名前でデータベースに格納されます。  
+ 次の [!INCLUDE[tsql](../../includes/tsql-md.md)] ALTER ASSEMBLY ステートメントは、**Point** UDT の Point.cs クラス ソース コードを追加します。 Point.cs ファイルに含まれているテキストがコピーされ、"PointSource" という名前でデータベースに格納されます。  
   
 ```  
 ALTER ASSEMBLY Point  
