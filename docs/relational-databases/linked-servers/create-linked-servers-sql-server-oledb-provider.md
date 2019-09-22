@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: pmasl
 ms.author: pelopes
 manager: rothj
-ms.openlocfilehash: 577de413c318f1f1e442ad86009a0237671e9104
-ms.sourcegitcommit: ef7834ed0f38c1712f45737018a0bfe892e894ee
+ms.openlocfilehash: 166b55c70cc9b7d1337128b12b78a8ec1f4a1032
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/17/2019
-ms.locfileid: "68301358"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929656"
 ---
 # <a name="microsoft-sql-server-distributed-queries-ole-db-connectivity"></a>Microsoft SQL Server 分散クエリ: OLE DB 接続
 
@@ -326,11 +326,11 @@ SQL Server と OLE DB のデータ型マッピング テーブル。
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`<br>内の複数の<br> 最大長 > 4000 文字|ntext|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true`|NCHAR|
 |`DBTYPE_BSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|NVARCHAR|
-|`DBTYPE_IDISPATCH`| |Error|
-|`DBTYPE_ERROR`| |Error|
+|`DBTYPE_IDISPATCH`| |エラー|
+|`DBTYPE_ERROR`| |エラー|
 |`DBTYPE_BOOL`| |`bit`|
 |`DBTYPE_VARIANT`*| |NVARCHAR|
-|`DBTYPE_IUNKNOWN`| |Error|
+|`DBTYPE_IUNKNOWN`| |エラー|
 |`DBTYPE_GUID`| |`uniqueidentifier`|
 |`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISLONG=true` <br>内の複数の<br> 最大長 > 8000|`image`|
 |`DBTYPE_BYTES`|`DBCOLUMNFLAGS_ISROWVER=true`、`DBCOLUMNFLAGS_ISFIXEDLENGTH=true`、列サイズ = 8 <br>内の複数の<br> 最大長は報告されない。 | `timestamp` |
@@ -342,15 +342,15 @@ SQL Server と OLE DB のデータ型マッピング テーブル。
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISFIXEDLENGTH=true` |`nchar`|
 |`DBTYPE_WSTR` | `DBCOLUMNFLAGS_ISFIXEDLENGTH=false`|`nvarchar`|
 |`DBTYPE_WSTR`| `DBCOLUMNFLAGS_ISLONG=true` <br>内の複数の<br> 最大長 > 4000 文字 <br>内の複数の<br>   最大長は報告されない。 | `ntext`|
-|`DBTYPE_UDT`| |Error|
+|`DBTYPE_UDT`| |エラー|
 |`DBTYPE_DATE`* | | `datetime` |
 |`DBTYPE_DBDATE` | | `datetime` (明示的な変換が必要)|
 |`DBTYPE_DBTIME`| | `datetime` (明示的な変換が必要)|
 |`DBTYPE_DBTIMESTAMP`* | | `datetime`|
-|`DBTYPE_ARRAY` | |Error|
+|`DBTYPE_ARRAY` | |エラー|
 |`DBTYPE_BYREF` | | 無視 |
-|`DBTYPE_VECTOR` | |Error|
-|`DBTYPE_RESERVED`| |Error|
+|`DBTYPE_VECTOR` | |エラー|
+|`DBTYPE_RESERVED`| |エラー|
 
 \* SQL Server 型の表記への何らかの形式の変換を示します。これは、SQL Server に正確な同等のデータ型がないためです。 このような変換によって、精度の損失、オーバーフロー、またはアンダーフローが生じる可能性があります。 対応するデータ型が SQL Server の将来のバージョンでサポートされた場合、既定の暗黙的なマッピングは将来変更される可能性があります。
 
@@ -479,7 +479,7 @@ SQL Server では、Transact-SQL 文字列内のパラメーター マーカー�
 
 1. SQL Server により、`IDBCreateCommand::CreateCommand` を使用して `Session` オブジェクトから `Command` オブジェクトが作成されます。
 
-9. `Remote Query Timeout` サーバー構成オプションが 0 より大きい値に設定されている場合、SQL Server により、Command オブジェクトの DBPROP_COMMANDTIMEOUT プロパティが、ICommandProperties::SetProperties を使用して同じ値に設定されます。コマンド テキストを、生成された Transact-SQL 文字列に設定するために、ICommand::SetCommandText が呼び出される必要があります。` 0, SQL Server sets the DBPROP_COMMANDTIMEOUT property on the `` object to the same value by using ``; `
+9. `Remote Query Timeout` サーバー構成オプションが 0 より大きい値に設定されている場合、SQL Server により、`Command` オブジェクトの `DBPROP_COMMANDTIMEOUT` プロパティが、`ICommandProperties::SetProperties` を使用して同じ値に設定されます。コマンド テキストを、生成された Transact-SQL 文字列に設定するために、`ICommand::SetCommandText` が呼び出される必要があります。
 
 10. コマンドを準備するために、SQL Server によって `ICommandPrepare::Prepare` が呼び出されます。 プロバイダーでこのインターフェイスがサポートされていない場合、SQL Server の手順 4 に進みます。
 
@@ -744,7 +744,7 @@ comparison-operator ::= `< \| >` \| `<= \| >`= \| = \| `<>`
 
 `ORDER BY clause`
 
-order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\...
+order-by-clause ::= ORDER BY sort-specification \[, sort-specification\]\..
 
 sort-specification ::= { \| column-name } \[ASC \| DESC\]
 
@@ -786,7 +786,7 @@ base-table-identifier ::= user-defined-name
 
 column-identifier ::= user-defined-name
 
-user-defined-name ::= letter\[digit \| letter \| _\]\...
+user-defined-name ::= letter\[digit \| letter \| _\]\..
 
 unsigned-integer ::= {digit}...
 

@@ -1,7 +1,7 @@
 ---
 title: SQL 暗号化機能への SQL Server コネクタの使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 07/18/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 58fc869e-00f1-4d7c-a49b-c0136c9add89
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 965980bcfe765f291b232a48af946db5f8f4f230
-ms.sourcegitcommit: 73dc08bd16f433dfb2e8406883763aabed8d8727
+ms.openlocfilehash: 76b3d714f1522cfecd5c61eb028b59f3bbeaa09d
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68329266"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929743"
 ---
 # <a name="use-sql-server-connector-with-sql-encryption-features"></a>SQL 暗号化機能への SQL Server コネクタの使用
 [!INCLUDE[appliesto-xx-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,8 +34,10 @@ ms.locfileid: "68329266"
 > [!NOTE]  
 >  1\.0.0.440 以前のバージョンは置き換えられ、実稼働環境ではサポートされなくなりました。 [Microsoft ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=45344)にアクセスし、[[SQL Server コネクタのメンテナンスとトラブルシューティング]](../../../relational-databases/security/encryption/sql-server-connector-maintenance-troubleshooting.md) ページの "SQL Server コネクタのアップグレード" に示されている手順を使用して、バージョン 1.0.1.0 以降にアップグレードしてください。  
   
-## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Azure Key Vault からの非対称キーを使用した透過的データ暗号化  
- 「Azure Key Vault を使用した拡張キー管理のセットアップ手順」のトピックのパート I からパート IV を終えたら、Azure Key Vault キーを使用し、データベースの暗号化キーを TDE で暗号化します。  
+## <a name="transparent-data-encryption-by-using-an-asymmetric-key-from-azure-key-vault"></a>Azure Key Vault からの非対称キーを使用した透過的データ暗号化
+
+「Azure Key Vault を使用した拡張キー管理のセットアップ手順」のトピックのパート I からパート IV を終えたら、Azure Key Vault キーを使用し、データベースの暗号化キーを TDE で暗号化します。 PowerShell を使用したキーのローテーションの詳細については、「[PowerShell を使用して Transparent Data Encryption (TDE) 保護機能をローテーションする](/azure/sql-database/transparent-data-encryption-byok-azure-sql-key-rotation)」を参照してください。
+ 
 資格情報とログインが必要となります。また、データベースに格納されるデータとログを暗号化するためのデータベース暗号化キーを作成する必要があります。 データベースを暗号化するには、データベースに対する **CONTROL** 権限が必要です。 次の図は、Azure Key Vault 使用下における暗号化キーの階層を示したものです。  
   
  ![ekm&#45;key&#45;hierarchy&#45;with&#45;akv](../../../relational-databases/security/encryption/media/ekm-key-hierarchy-with-akv.png "ekm-key-hierarchy-with-akv")  

@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: d9d6f1f0bdf1a0e38bf26fdc18bc91c5825ca412
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653045"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70911195"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 プレビュー リリース ノート
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -43,6 +43,10 @@ ms.locfileid: "69653045"
 - **問題およびユーザーへの影響**: [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]ドキュメントはバージョンによってフィルター処理できます。 各ドキュメント ページの左上にあるコントロールを使用し、要件に応じてフィルター処理してください。
 
 - **問題およびユーザーへの影響**:SQL Server 2019 (15.x) には、オフライン コンテンツがありません。
+
+## <a name="build-number"></a>ビルド番号
+
+Windows、Linux、およびコンテナーでの SQL Server 2019 RC のビルド番号は `15.0.1900.25` です。  ビッグ データ クラスターで使用される SQL Server 2019 RC のビルド番号は `15.0.1900.47` です。
 
 ## <a name="hardware-and-software-requirements"></a>ハードウェアとソフトウェアの要件
 
@@ -129,6 +133,16 @@ ms.locfileid: "69653045"
 - **回避策**:なし
 
 - **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] リリース候補
+
+## <a name="master-data-service-notification-email-contains-broken-link"></a>マスター データ サービスの通知電子メールに壊れたリンクが含まれる
+
+- **問題およびユーザーへの影響**:マスター データ サービス (MDS) からの通知電子メールには、壊れたリンクが含まれています。 そのリンクでは、次のメッセージのようなエラーが返されるページに移動します。
+
+   `The view 'Index' or its master was not found or no view engine supports the searched locations.`
+
+- **回避策**:MDS ポータルを開き、リソースに手動で移動します。
+
+- **適用対象**:SQL Server 2019 リリース候補。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

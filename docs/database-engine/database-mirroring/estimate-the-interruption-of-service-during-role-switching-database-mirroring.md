@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 586a6f25-672b-491b-bc2f-deab2ccda6e2
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: e90fcec386868a87ccca9faaf349dcb1a4064aff
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 44f6a8966ef2da55ffd43830677f52398b356399
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67997859"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874180"
 ---
 # <a name="estimate-the-interruption-of-service-during-role-switching-database-mirroring"></a>役割の交代中に発生するサービスの中断時間の算出 (データベース ミラーリング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,7 @@ ms.locfileid: "67997859"
 -   手動フェールオーバーでは、フェールオーバー コマンドの発行以降にデータベースをフェールオーバーするために必要な時間だけになります。  
   
 ## <a name="error-detection"></a>エラー検出  
- システムにエラーが通知されるまでの時間は、エラーの種類によって異なります。たとえば、ネットワーク エラーは発生した直後に通知されます。サーバーが応答しなくなった場合は、既定で 10 秒かかります。これは既定のタイムアウト期間です。  
+ システムにエラーが通知されるまでの時間は、エラーの種類によって異なります。たとえば、ネットワーク エラーはほぼ即座に通知されますが、サーバーが応答しない場合では (既定のタイムアウトで) 10 秒かかります。  
   
  データベース ミラーリング セッション中に障害が発生する原因と考えられるエラー、および自動フェールオーバーを伴う高い安全性モードでのタイムアウト検出の詳細については、「 [データベース ミラーリング中に発生する可能性のあるエラー](../../database-engine/database-mirroring/possible-failures-during-database-mirroring.md)」を参照してください。  
   

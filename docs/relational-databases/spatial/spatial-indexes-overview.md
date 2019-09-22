@@ -12,12 +12,12 @@ ms.assetid: b1ae7b78-182a-459e-ab28-f743e43f8293
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a19d934fcc8b6d190b762b170117722fe4e29b6e
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 7d1425b23b98ac0a81aaa0e6e848b405f06cc086
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190415"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929818"
 ---
 # <a name="spatial-indexes-overview"></a>空間インデックスの概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -172,7 +172,7 @@ ms.locfileid: "70190415"
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
- 次の図は、この 3 つの手順による分解プロセスの概略図です。 四角錐の点線は、各四角錐の 4 つの面の境界を表しています。 手順 1. と 2. は、測地の楕円体を表しています。緑の横線は赤道の経線を表し、一連の緑の縦線は緯線を表します。 手順 1. では、2 つの半球が四角錐に投影されています。 手順 2. では、四角錐が平面化されています。 手順 3. は、平面を形成するために結合された後の平面化された四角錐を表しています。いくつかの緯線が投影されているのがわかります。 これらの投影された線は直線化されていて、四角錐のどこに投影されたかによって長さが異なっています。  
+ 次の図は、この 3 つの手順による分解プロセスの概略図です。 四角錐の点線は、各四角錐の 4 つの面の境界を表しています。 手順 1. と 2. は、測地の楕円体を表しています。緑の横線は赤道の緯線を表し、一連の緑の縦線は複数の経線を表します。 手順 1. では、2 つの半球が四角錐に投影されています。 手順 2. では、四角錐が平面化されています。 手順 3. は、平面を形成するために結合された後の平面化された四角錐を表しています。いくつかの緯線が投影されているのがわかります。 これらの投影された線は直線化されていて、四角錐のどこに投影されたかによって長さが異なっています。  
   
  ![平面への楕円体の投影](../../relational-databases/spatial/media/spndx-geodetic-projection.gif "平面への楕円体の投影")  
   

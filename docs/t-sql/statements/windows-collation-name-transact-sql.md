@@ -18,12 +18,12 @@ ms.assetid: acceef84-2c68-46e2-a021-be019b7ab14e
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 80c777fad7bbe9e6680b8baa826bc5acdf65730a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3fb28ddb5e910c70c8f5e72f34703d18fc4c38c
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68051434"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874464"
 ---
 # <a name="windows-collation-name-transact-sql"></a>Windows 照合順序名 (Transact-SQL)
 
@@ -79,7 +79,7 @@ Windows 照合順序で使用される基本照合順序規則を指定します
 **UTF8**  
 - **適用対象**:[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降   
 
-- UTF-8 のエンコードが対象となるデータ型で使用されるように指定します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
+- 対象となるデータ型で UTF-8 のエンコードが使用されるように指定します。 詳細については、「 [Collation and Unicode Support](../../relational-databases/collations/collation-and-unicode-support.md)」を参照してください。
 
 **BIN**  
 旧バージョンとの互換性のあるバイナリ並べ替え順を使用します。
@@ -139,9 +139,9 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |アムハラ語 (エチオピア)|Latin1_General_100_|使用不可|
 |アルメニア語 (アルメニア)|Cyrillic_General_100_|使用不可|
 |アッサム語 (インド)|Assamese_100_ <sup>1</sup>|使用不可|
+|バングラ語 (バングラデシュ)|Bengali_100_<sup>1</sup>|使用不可|
 |バシキール語 (ロシア)|Bashkir_100_|使用不可|
 |バスク語 (バスク)|Latin1_General_100_|使用不可|
-|ベンガル語 (バングラデシュ)|Bengali_100_<sup>1</sup>|使用不可|
 |ベンガル語 (インド)|Bengali_100_<sup>1</sup>|使用不可|
 |ボスニア語 (ボスニア・ヘルツェゴビナ、キリル文字)|Bosnian_Cyrillic_100_|使用不可|
 |ボスニア語 (ボスニア・ヘルツェゴビナ、ラテン文字)|Bosnian_Latin_100_|使用不可|
@@ -187,7 +187,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |ノルウェー語 (ブークモール、ノルウェー)|Norwegian_100_|使用不可|
 |ノルウェー語 (ニーノシュク、ノルウェー)|Norwegian_100_|使用不可|
 |オクシタン語 (フランス)|French_100_|使用不可|
-|オリヤー語 (インド)|Indic_General_100_<sup>1</sup>|使用不可|
+|オディア語 (インド)|Indic_General_100_<sup>1</sup>|使用不可|
 |パシュトゥー語 (アフガニスタン)|Pashto_100_<sup>1</sup>|使用不可|
 |ペルシア語 (イラン)|Persian_100_|使用不可|
 |パンジャーブ語 (インド)|Indic_General_100_<sup>1</sup>|Indic_General_90_|
@@ -226,7 +226,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |ウェールズ語 (イギリス)|Welsh_100_|使用不可|
 |ウォロフ語 (セネガル)|French_100_|使用不可|
 |コサ語 (南アフリカ)|Latin1_General_100_|使用不可|
-|ヤクート語 (ロシア)|Yakut_100_|使用不可|
+|サハ語 (ロシア)|Yakut_100_|使用不可|
 |イ語 (PRC)|Latin1_General_100_|使用不可|
 |ヨルバ語 (ナイジェリア)|Latin1_General_100_|使用不可|
 |ズールー語 (南アフリカ)|Latin1_General_100_|使用不可|
@@ -235,7 +235,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|Lithuanian_Classic|Lithuanian_Classic|
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降では非推奨であり、サーバー レベルでは利用できません|Macedonian|Macedonian|
 
-<sup>1</sup> Unicode 専用の Windows 照合順序は、列レベルまたは式レベルのデータにのみ適用できます。 これらの照合順序は、サーバーまたはデータベースの照合順序としては使用できません。
+<sup>1</sup> Windows の Unicode のみの照合順序は、列レベルまたは式レベルのデータにのみ適用できます。 これらの照合順序は、サーバーまたはデータベースの照合順序としては使用できません。
 
 <sup>2</sup> 中国語 (台湾) の照合順序と同様に、中国語 (マカオ) は簡体中国語の規則を使用し、中国語 (台湾) とは異なるコード ページ 950 を使用します。
 
