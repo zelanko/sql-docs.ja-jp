@@ -1,5 +1,5 @@
 ---
-title: syssubscriptions (システム ビュー) (TRANSACT-SQL) |Microsoft Docs
+title: syssubscriptions (システム ビュー) (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
