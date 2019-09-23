@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1a1e8fe19b952f2cc4a72f651dfea53c2177e6c1
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: 6e1291537495f6c59295d607203ff4c8a450008b
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70110279"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304805"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -732,9 +732,6 @@ OFF
 
 CLEAR         
 クエリ ストアの内容を削除します。
-
-> [!NOTE]
-> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合、ユーザー データベースから `ALTER DATABASE SET QUERY_STORE` を実行する必要があります。 別のデータ ウェアハウス インスタンスからのステートメントの実行は、サポートされていません。
 
 OPERATION_MODE { READ_ONLY | READ_WRITE }         
 クエリのストアの操作モードをについて説明します。 
@@ -2911,20 +2908,43 @@ SET
 
 <option_spec>::=
 {
-<RESULT_SET_CACHING>
-|<snapshot_option>
+    <auto_option>
+  | <db_encryption_option>
+  | <query_store_options>
+  | <result_set_caching>
+  | <snapshot_option>
 }
 ;
 
-<RESULT_SET_CACHING>::=
+<auto_option> ::=
 {
-RESULT_SET_CACHING {ON | OFF}
+    AUTO_CREATE_STATISTICS { OFF | ON }
 }
 
-<snapshot_option>::=
+<db_encryption_option> ::=
 {
-READ_COMMITTED_SNAPSHOT {ON | OFF }
+    ENCRYPTION { ON | OFF }
 }
+
+<query_store_option> ::=
+{
+    QUERY_STORE
+    {
+          = OFF
+        | = ON
+    }
+}
+
+<result_set_caching_option> ::=
+{
+    RESULT_SET_CACHING { ON | OFF }
+}
+
+<snapshot_option> ::=
+{
+    READ_COMMITTED_SNAPSHOT {ON | OFF }
+}
+
 
 
 ```
@@ -2935,8 +2955,47 @@ READ_COMMITTED_SNAPSHOT {ON | OFF }
 
 変更するデータベースの名前です。
 
-<a name="result_set_caching"></a> RESULT_SET_CACHING { ON | OFF }   
-**適用先**: Azure SQL Data Warehouse (プレビュー)
+**<auto_option> ::=**
+
+自動オプションを制御します。
+
+AUTO_CREATE_STATISTICS { ON | OFF }: ON: クエリ プランを改善してクエリのパフォーマンスを向上するために必要な場合、クエリ オプティマイザーによってクエリ述語内の列に対して 1 列ずつ統計が作成されます。 これらの 1 列ずつの統計は、クエリ オプティマイザーがクエリをコンパイルする場合に作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
+
+既定値は ON です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
+
+OFF: クエリ オプティマイザーがクエリをコンパイルするときにクエリ述語内の列の 1 列ずつの統計が作成されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
+このオプションの状態を確認するには、sys.databases カタログ ビューの is_auto_create_stats_on 列を調べてください。 DATABASEPROPERTYEX 関数の IsAutoCreateStatistics プロパティを調べて状態を確認することもできます。
+詳細については、「統計」の「データベース全体の統計オプションの使用」セクションを参照してください。
+
+**<db_encryption_option> ::=**
+
+データベース暗号化の状態を制御します。
+
+ENCRYPTION { ON | OFF }: ON の場合、データベースを暗号化します。
+
+OFF の場合、データベースを暗号化しません。
+
+データベース暗号化について詳しくは、「透過的なデータ暗号化」と「Azure SQL Database での Transparent Data Encryption」をご覧ください。
+
+データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに READ ONLY に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
+データベースの暗号化の状態や暗号化スキャンの状態を確認するには、sys.dm_database_encryption_keys 動的管理ビューを使用します。
+
+**\<query_store_option> ::=**
+
+ON | OFF   
+このデータ ウェアハウスでクエリ ストアを有効にするかどうかを制御します。     
+
+ON         
+クエリのストアを有効にします。
+
+OFF         
+クエリのストアを無効にします。 既定値は OFF です。
+
+> [!NOTE]
+> [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合、ユーザー データベースから `ALTER DATABASE SET QUERY_STORE` を実行する必要があります。 別のデータ ウェアハウス インスタンスからのステートメントの実行は、サポートされていません。
+
+**\<result_set_caching_option> ::=**    
+**適用対象**:Azure SQL Data Warehouse (プレビュー)
 
 このコマンドは、`master` データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という新しい列が `sys.databases` に導入され、データベースの結果キャッシュ設定を示します。  
 
@@ -2954,22 +3013,7 @@ OFF
 command|Like|%DWResultCacheDb%|
 | | |
 
-
-<a name="snapshot_option"></a> READ_COMMITTED_SNAPSHOT  { ON | OFF }   
-**適用先**: Azure SQL Data Warehouse (プレビュー)
-
-ON: データベース レベルで READ_COMMITTED_SNAPSHOT オプションを有効にします。
-
-OFF: データベース レベルで READ_COMMITTED_SNAPSHOT オプションをオフにします。
-
-データベースの READ_COMMITTED_SNAPSHOT のオン/オフを切り替えると、このデータベースにつながっている接続がすべて切断されます。  この変更はデータベースのメンテナンス期間中に行うか、ALTER DATABSE コマンドを実行している接続を除き、データベースへのアクティブな接続がなくなるまで待つことをお勧めします。  データベースをシングル ユーザー モードにする必要はありません。  セッションレベルで READ_COMMITTED_SNAPSHOT 設定を変更することはできません。  データベースのこの設定は、sys.databases の is_read_committed_snapshot_on 列で確認します。
-
-データベースで READ_COMMITTED_SNAPSHOT が有効になっている場合、複数のデータ バージョンが存在するとき、各バージョンのスキャンのため、クエリのパフォーマンスが遅くなることがあります。 トランザクションが長時間開いている状態になるときも、トランザクションによってデータが変更され、バージョンのクリーンアップが阻止される場合、データベースのサイズが増えることがあります。  
-
-
-
-
-## <a name="remarks"></a>Remarks
+### <a name="remarks"></a>Remarks
 
 次の要件がすべて満たされる場合、キャッシュされた結果セットはクエリに再利用されます。
 
@@ -2979,6 +3023,21 @@ OFF: データベース レベルで READ_COMMITTED_SNAPSHOT オプションを�
 
 データベースに対して結果セットのキャッシュが ON にされると、DateTime.Now() などの非決定関数を使用したクエリを除き、すべてのクエリについて結果が、キャッシュがいっぱいになるまでキャッシュされます。   大きな結果セットを伴うクエリ (100 万行を超えるなど) の場合、結果のキャッシュが作成される最初の実行時にパフォーマンスが低下することがあります。
 
+**<snapshot_option> ::=**
+
+トランザクション分離レベルを計算します。
+
+READ_COMMITTED_SNAPSHOT  { ON | OFF }   
+**適用対象**:Azure SQL Data Warehouse (プレビュー)
+
+ON: データベース レベルで READ_COMMITTED_SNAPSHOT オプションを有効にします。
+
+OFF: データベース レベルで READ_COMMITTED_SNAPSHOT オプションをオフにします。
+
+データベースの READ_COMMITTED_SNAPSHOT のオン/オフを切り替えると、このデータベースにつながっている接続がすべて切断されます。  この変更はデータベースのメンテナンス期間中に行うか、ALTER DATABSE コマンドを実行している接続を除き、データベースへのアクティブな接続がなくなるまで待つことをお勧めします。  データベースをシングル ユーザー モードにする必要はありません。  セッションレベルで READ_COMMITTED_SNAPSHOT 設定を変更することはできません。  データベースのこの設定は、sys.databases の is_read_committed_snapshot_on 列で確認します。
+
+データベースで READ_COMMITTED_SNAPSHOT が有効になっている場合、複数のデータ バージョンが存在するとき、各バージョンのスキャンのため、クエリのパフォーマンスが遅くなることがあります。 トランザクションが長時間開いている状態になるときも、トランザクションによってデータが変更され、バージョンのクリーンアップが阻止される場合、データベースのサイズが増えることがあります。  
+
 ## <a name="permissions"></a>アクセス許可
 
 RESULT_SET_CACHING オプションを設定するには、ユーザーにサーバーレベルのプリンシプル ログインを与えるか (プロビジョニング プロセスで作成されるもの)、ユーザーが `dbmanager` データベース ロールのメンバーになる必要があります。  
@@ -2987,28 +3046,90 @@ READ_COMMITTED_SNAPSHOT オプションを設定するには、ユーザーに�
 
 ## <a name="examples"></a>使用例
 
-### <a name="enable-result-set-caching-for-a-database"></a>データベースに対して結果セットのキャッシュを有効にする
+### <a name="a-enabling-the-query-store"></a>A. クエリ ストアを有効にする
+
+次の例では、クエリ ストアを有効にし、クエリ ストアのパラメーターを構成します。
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE,
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      QUERY_CAPTURE_MODE = AUTO,
+      MAX_STORAGE_SIZE_MB = 1024,
+      INTERVAL_LENGTH_MINUTES = 60
+    );
+```
+
+### <a name="b-enabling-the-query-store-with-wait-statistics"></a>B. 待機統計を使用してクエリ ストアを有効にする
+
+次の例では、クエリ ストアを有効にし、クエリ ストアのパラメーターを構成します。
+
+```sql
+ALTER DATABASE AdventureWorksDW
+SET QUERY_STORE = ON
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+    );
+```
+
+### <a name="c-enabling-the-query-store-with-custom-capture-policy-options"></a>C. カスタム キャプチャ ポリシー オプションを使用してクエリ ストアを有効にする
+
+次の例では、クエリ ストアを有効にし、クエリ ストアのパラメーターを構成します。
+
+```sql
+ALTER DATABASE AdventureWorksDW 
+SET QUERY_STORE = ON 
+    (
+      OPERATION_MODE = READ_WRITE, 
+      CLEANUP_POLICY = ( STALE_QUERY_THRESHOLD_DAYS = 90 ),
+      DATA_FLUSH_INTERVAL_SECONDS = 900,
+      MAX_STORAGE_SIZE_MB = 1024, 
+      INTERVAL_LENGTH_MINUTES = 60,
+      SIZE_BASED_CLEANUP_MODE = AUTO, 
+      MAX_PLANS_PER_QUERY = 200,
+      WAIT_STATS_CAPTURE_MODE = ON,
+      QUERY_CAPTURE_MODE = CUSTOM,
+      QUERY_CAPTURE_POLICY = (
+        STALE_CAPTURE_POLICY_THRESHOLD = 24 HOURS,
+        EXECUTION_COUNT = 30,
+        TOTAL_COMPILE_CPU_TIME_MS = 1000,
+        TOTAL_EXECUTION_CPU_TIME_MS = 100 
+      )
+    );
+```
+
+### <a name="d-enable-result-set-caching-for-a-database"></a>D. データベースに対して結果セットのキャッシュを有効にする
+
+```sql
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="disable-result-set-caching-for-a-database"></a>データベースに対して結果セットのキャッシュを無効にする
+### <a name="d-disable-result-set-caching-for-a-database"></a>D. データベースに対して結果セットのキャッシュを無効にする
 
 ```sql
-ALTER DATABASE myTestDW  
+ALTER DATABASE AdventureWorksDW  
 SET RESULT_SET_CACHING OFF;
 ```
 
-### <a name="check-result-set-caching-setting-for-a-database"></a>データベースに対する結果セットのキャッシュを確認する
+### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. データベースに対する結果セットのキャッシュを確認する
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>結果セットのキャッシュ ヒットとキャッシュ ミスと共にクエリの数を確認する
+### <a name="d-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>D. 結果セットのキャッシュ ヒットとキャッシュ ミスと共にクエリの数を確認する
 
 ```sql
 SELECT  
@@ -3028,7 +3149,7 @@ s.request_id else null end)
      ON s.request_id = r.request_id) A;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>あるクエリに対する結果セットのキャッシュ ヒットまたはキャッシュ ミスを確認する
+### <a name="d-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>D. あるクエリに対する結果セットのキャッシュ ヒットまたはキャッシュ ミスを確認する
 
 ```sql
 If
@@ -3040,7 +3161,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>結果セットにキャッシュ ヒットがあるクエリをすべて確認する
+### <a name="d-check-for-all-queries-with-result-set-cache-hits"></a>D. 結果セットにキャッシュ ヒットがあるクエリをすべて確認する
 
 ```sql
 SELECT *  
@@ -3049,6 +3170,7 @@ WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
 ### <a name="enable-read_committed_snapshot-option-for-a-database"></a>データベースの Read_Committed_Snapshot オプションを有効にする
+
 ```sql
 ALTER DATABASE MyDatabase  
 SET READ_COMMITTED_SNAPSHOT ON
@@ -3064,3 +3186,4 @@ SET READ_COMMITTED_SNAPSHOT ON
 - [SQL Data Warehouse の言語要素](/azure/sql-data-warehouse/sql-data-warehouse-reference-tsql-language-elements)
 
 ::: moniker-end
+

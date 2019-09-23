@@ -16,12 +16,12 @@ ms.assetid: 997c0b8e-d8d9-4eed-85b1-6baa1f8594ce
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2229119fd5f6b8b2482c8bb201ac8bade8366596
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 74183916a438ea19536a7cac1abeb8d6cf7cc18a
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768125"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846690"
 ---
 # <a name="delete-a-pull-subscription"></a>プル サブスクリプションの削除
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -67,15 +67,15 @@ ms.locfileid: "68768125"
   
 #### <a name="to-delete-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプル サブスクリプションを削除するには  
   
-1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) を実行します。 **@publication** 、 **@publisher** 、および **@publisher_db** を指定します。  
+1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md) を実行します。 **\@publication**、 **\@publisher**、 **\@publisher_db** を指定します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) を実行します。 **@publication** および **@subscriber** を指定します。 **@article** に **all** を指定します。 (省略可) ディストリビューターにアクセスできない場合、 **@ignore_distributor** に **@ignore_distributor** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropsubscription-transact-sql.md) を実行します。 **\@publication** と **\@subscriber** を指定します。 **\@article** に **all** を指定します。 (省略可能) ディストリビューターにアクセスできない場合、 **\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
   
 #### <a name="to-delete-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションを削除するには  
   
-1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) を実行します。 **@publication** 、 **@publisher** 、および **@publisher_db** を指定します。  
+1.  サブスクライバー側のサブスクリプション データベースに対して、[sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md) を実行します。 **\@publication**、 **\@publisher**、 **\@publisher_db** を指定します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) を実行します。 **@publication** 、 **@subscriber** 、および **@subscriber_db** を指定します。 **@subscription_type** に **pull** を指定します。 (省略可) ディストリビューターにアクセスできない場合、 **@ignore_distributor** に **@ignore_distributor** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md) を実行します。 **\@publication**、 **\@subscriber**、 **\@subscriber_db** を指定します。 **\@subscription_type** には **pull** を指定します。 (省略可能) ディストリビューターにアクセスできない場合、 **\@ignore_distributor** に **1** を指定して、ディストリビューターの関連オブジェクトを削除せずにサブスクリプションを削除します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トランザクション パブリケーションへのプル サブスクリプションを削除します。 最初のバッチはサブスクライバーで実行され、次のバッチはパブリッシャーで実行されます。  

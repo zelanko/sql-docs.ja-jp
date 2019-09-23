@@ -266,7 +266,7 @@ Server Core への SQL Server のインストールの詳細については、�
   
   
   
-##  <a name="DC_support"></a> FAT32 ファイル システムのコンピューターへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール  
+##  <a name="DC_support">ドメイン コントローラーへの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインストール</a>  
  セキュリティ上の理由から、ドメイン コントローラーには [!INCLUDE[ssCurrent](../../includes/ssnoversion-md.md)] をインストールしないことをお勧めします。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のセットアップ時にインストールが中止されることはありませんが、次の制限事項が適用されます。  
   
 -   ローカル サービス アカウントを使用して、ドメイン コントローラー上で [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスを実行することはできません。    

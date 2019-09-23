@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ff847b3a-c6b0-4eaf-b225-2ffc899c5558
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9cff330e7dc69f4d99ffdbf3df82e2ff0b154ab5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 74d9d0bec559dbc618e5487fea647461bc967db3
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907828"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846612"
 ---
 # <a name="define-a-logical-record-relationship-between-merge-table-articles"></a>マージ テーブル アーティクル間に論理レコード リレーションシップを定義する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,7 +92,7 @@ ms.locfileid: "67907828"
   
     -   値が **1**の場合、事前計算済みパーティションが既に使用されています。  
   
-    -   値が **0**の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。 **@property** に **use_partition_groups** を指定し、 **@value** に **true** を指定します。  
+    -   値が **0**の場合、パブリッシャー側のパブリケーション データベースに対して [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) を実行します。 **\@property** には **use_partition_groups** を指定し、 **\@value** には **true** を指定します。  
   
         > [!NOTE]  
         >  パブリケーションで事前計算済みパーティションがサポートされない場合、論理レコードは使用できません。 詳細については、[事前計算済みパーティションによるパラメーター化されたフィルター パフォーマンスの最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)に関するページで、事前計算済みパーティションを使用するための要件をご覧ください。  
@@ -101,13 +101,13 @@ ms.locfileid: "67907828"
   
 2.  論理レコードを構成するアーティクルが存在しない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行します。 論理レコードの競合の検出と解決に関するオプションを次の中から 1 つ指定します。  
   
-    -   論理レコードの関連する行で発生する競合を検出し、解決するには、 **@value** には **@logical_record_level_conflict_detection** 」および「 **@logical_record_level_conflict_resolution** 」をご覧ください。  
+    -   論理レコードの関連する行で発生する競合を検出し、解決するには、 **\@logical_record_level_conflict_detection** と **\@logical_record_level_conflict_resolution** に **true** を指定します。  
   
-    -   標準の行レベルまたは列レベルの競合の検出と解決を使用するには、 **@logical_record_level_conflict_detection** には **@logical_record_level_conflict_detection** 」および「 **@logical_record_level_conflict_resolution** を指定します。これは既定の設定です。  
+    -   標準の行レベルまたは列レベルの競合の検出と解決を使用するには、 **\@logical_record_level_conflict_detection** と **\@logical_record_level_conflict_resolution** に **false** を指定します。これは既定の設定です。  
   
 3.  論理レコードを構成する各アーティクルに対して、手順 2. を実行します。 論理レコード内の各アーティクルに使用する競合の検出および解決のオプションは、すべて同じである必要があります。 詳しくは、「 [Detecting and Resolving Conflicts in Logical Records](../../../relational-databases/replication/merge/advanced-merge-replication-conflict-resolving-in-logical-record.md)」をご覧ください。  
   
-4.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)を実行します。 **@publication** を指定します。リレーションシップの 1 つのアーティクルの名前を **@article** に、もう 1 つのアーティクルの名前を **@join_articlename** に指定します。リレーションシップの名前を **@filtername** に、2 つのアーティクル間のリレーションシップを定義する句を **@join_filterclause** に、結合の種類を **@join_unique_key** に指定します。次のいずれかの値を **@filter_type** に指定します。  
+4.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md)を実行します。 **\@publication** を指定します。リレーションシップの 1 つのアーティクルの名前を **\@article** に、もう 1 つのアーティクルの名前を **\@join_articlename** に指定します。リレーションシップの名前を **\@filtername** に、2 つのアーティクル間のリレーションシップを定義する句を **\@join_filterclause** に、結合の種類を **\@join_unique_key** に指定します。次のいずれかの値を **\@filter_type** に指定します。  
   
     -   **2** - 論理リレーションシップを定義します。  
   
@@ -122,15 +122,15 @@ ms.locfileid: "67907828"
   
 1.  論理レコードの関連する行で発生する競合を検出し、解決するには、次の手順を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@property** に **logical_record_level_conflict_detection** を指定し、 **@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **\@property** に **logical_record_level_conflict_detection** を指定し、 **\@value** に **true** を指定します。 **\@force_invalidate_snapshot** と **\@force_reinit_subscription** に **1** を指定します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@property** に **logical_record_level_conflict_resolution** を指定し、 **@value** に **true** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **\@property** に **logical_record_level_conflict_resolution** を指定し、 **\@value** に **true** を指定します。 **\@force_invalidate_snapshot** と **\@force_reinit_subscription** に **1** を指定します。  
   
 2.  標準の行レベルまたは列レベルの競合の検出と解決を使用するには、次の手順を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@property** に **logical_record_level_conflict_detection** を指定し、 **@value** に **false** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **\@property** に **logical_record_level_conflict_detection** を指定し、 **\@value** に **false** を指定します。 **\@force_invalidate_snapshot** と **\@force_reinit_subscription** に **1** を指定します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@property** に **logical_record_level_conflict_resolution** を指定し、 **@value** に **false** を指定します。 **@force_invalidate_snapshot** と **@force_reinit_subscription** に **1** を指定します。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **\@property** に **logical_record_level_conflict_resolution** を指定し、 **\@value** に **false** を指定します。 **\@force_invalidate_snapshot** と **\@force_reinit_subscription** に **1** を指定します。  
   
 #### <a name="to-remove-a-logical-record-relationship"></a>論理レコード リレーションシップを削除するには  
   
@@ -143,7 +143,7 @@ ms.locfileid: "67907828"
     > [!NOTE]  
     >  このクエリは、 [sp_helpmergefilter](../../../relational-databases/system-stored-procedures/sp-helpmergefilter-transact-sql.md)と同じ情報を返します。ただし、このシステム ストアド プロシージャは、結合フィルターでもある論理レコード リレーションシップに関する情報のみ返します。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)を実行します。 **@publication** を指定し、リレーションシップ内の 1 つのアーティクルの名前を **@article** に、手順 1 のリレーションシップの名前を **@filtername** に指定します。  
+2.  パブリッシャー側のパブリケーション データベースに対して、 [sp_dropmergefilter](../../../relational-databases/system-stored-procedures/sp-dropmergefilter-transact-sql.md)を実行します。 **\@publication** を指定し、リレーションシップ内の 1 つのアーティクルの名前を **\@article** に、手順 1. のリレーションシップの名前を **\@filtername** に指定します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  この例では、既存のパブリケーションで事前計算済みパーティションを有効にし、 `SalesOrderHeader` テーブルと `SalesOrderDetail` テーブルの 2 つの新しいアーティクルを含む論理レコードを作成しています。  

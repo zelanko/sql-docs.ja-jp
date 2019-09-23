@@ -22,12 +22,12 @@ helpviewer_keywords:
 ms.assetid: 41313809-e970-449c-bc35-85da2ef96e48
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 78dd9533a33d3b28f4fffcb2bb0ff4cd6604713f
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 4e8476ef7fafde1d891736938e1cdedd6933f697
+ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155822"
+ms.lasthandoff: 09/05/2019
+ms.locfileid: "70383829"
 ---
 # <a name="create-synonym-transact-sql"></a>CREATE SYNONYM (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -102,7 +102,10 @@ CREATE SYNONYM [ schema_name_1. ] synonym_name FOR < object >
   
  4 部構成の関数ベース オブジェクト名はサポートされません。  
   
- シノニムは、動的な SQL で作成、削除、参照することができます。  
+ シノニムは、動的な SQL で作成、削除、参照することができます。
+ 
+ > [!NOTE]
+ > シノニムはデータベース固有であり、他のデータベースではアクセスできません。
   
 ## <a name="permissions"></a>アクセス許可  
  ユーザーが特定のスキーマ内にシノニムを作成するには、CREATE SYNONYM 権限が必要であり、さらにスキーマを所有しているか ALTER SCHEMA 権限が与えられている必要があります。  
