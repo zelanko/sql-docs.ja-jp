@@ -4,19 +4,19 @@ titleSuffix: ''
 description: この記事では、Windows に SQL Server Machine Learning Services をインストールする方法について説明します。 Machine Learning Services を使用すると、データベース内で Python および R スクリプトを実行できます。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 08/20/2019
+ms.date: 09/23/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 28e4681808348df97e61709745e9b59e0a44d3be
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 58db08edb6afd8738a1aeecec6745e4419d2fd92
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634564"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199365"
 ---
-# <a name="install-sql-server-machine-learning-services-on-windows"></a>Windows に SQL Server Machine Learning Services をインストールする
+# <a name="install-sql-server-machine-learning-services-python-and-r-on-windows"></a>Windows に SQL Server Machine Learning Services (Python および R) をインストールする
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
