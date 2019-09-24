@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 helpviewer_keywords:
 - Linux, encrypted connections
-ms.openlocfilehash: 3f658ba8723b142f37763ea8b4f0c8f7b0c5d0e1
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 975a312988a7df4bdb4fb2858d7b0fcbe95cea33
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077290"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016857"
 ---
 # <a name="encrypting-connections-to-sql-server-on-linux"></a>SQL Server on Linux への接続の暗号化
 
@@ -69,8 +69,8 @@ ms.locfileid: "68077290"
         - **Windows**:[現在のユーザー] -> [信頼されたルート証明機関] -> [証明書] で、.pem ファイルを証明書としてインポートします。
         - **macOS**: 
            - 証明書を ```/usr/local/etc/openssl/certs``` にコピーします。
-           - 次のコマンドを実行して、ハッシュ値を取得します。```/usr/local/Cellar/openssql/1.0.2l/openssql x509 -hash -in mssql.pem -noout```
-           - 証明書の名前を値に変更します。 例: ```mv mssql.pem dc2dd900.0```。 ```/usr/local/etc/openssl/certs``` に dc2dd900.0 が含まれていることを確認します。
+           - 次のコマンドを実行して、ハッシュ値を取得します。```/usr/local/Cellar/openssl/1.0.2l/openssl x509 -hash -in mssql.pem -noout```
+           - 証明書の名前を値に変更します。 例: ```mv mssql.pem dc2dd900.0```」を参照してください。 ```/usr/local/etc/openssl/certs``` に dc2dd900.0 が含まれていることを確認します。
     
 -   **接続文字列の例** 
 

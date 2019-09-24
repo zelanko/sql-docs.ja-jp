@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ade7deb2fd86f5dfd0f89aa1f13d5352e6e5fc9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68127287"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70810127"
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
 
@@ -63,6 +63,7 @@ ms.locfileid: "68127287"
 ## <a name="rename-a-database-using-sql-server-management-studio"></a>SQL Server Management Studio を使用してデータベースの名前を変更する
 
 SQL Server Management Studio を使用して SQL Server または Azure SQL データベースの名前を変更するには、次の手順を使用します。
+
   
 1. **オブジェクト エクスプローラー**で、SQL インスタンスに接続します。  
   
@@ -71,6 +72,8 @@ SQL Server Management Studio を使用して SQL Server または Azure SQL デ�
 3. オブジェクト エクスプローラーで **[データベース]** を展開し、名前を変更するデータベースを右クリックし、 **[名前の変更]** をクリックします。  
   
 4. 新しいデータベース名を入力し、 **[OK]** をクリックします。  
+  
+5. 任意で、データベースがご利用の既定のデータベースであった場合、「[名称変更後、既定のデータベースを再設定する](#reset-your-default-database-after-rename)」を参照してください。
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
@@ -95,6 +98,8 @@ SQL Server Management Studio で T-SQL を使用して SQL Server データベ�
    GO
    ```  
 
+4. 任意で、データベースがご利用の既定のデータベースであった場合、「[名称変更後、既定のデータベースを再設定する](#reset-your-default-database-after-rename)」を参照してください。
+
 ### <a name="to-rename-an-azure-sql-database-database"></a>Azure SQL Database データベースの名前を変更するには
 
 SQL Server Management Studio で T-SQL を使用して Azure SQL データベースの名前を変更するには、次の手順を使用します。
@@ -112,6 +117,19 @@ SQL Server Management Studio で T-SQL を使用して Azure SQL データベー
 
 SQL Server 内のデータベースの名前を変更した後、`master` データベースをバックアップします。 Azure SQL database では、バックアップは自動的に発生するため、この操作は必要ありません。  
   
+## <a name="reset-your-default-database-after-rename"></a>名称変更後、既定のデータベースを再設定する
+
+名前を変更するデータベースがご利用の既定のデータベースであった場合、次のコマンドを使用し、名前を変更したデータベースに既定を設定し直します。
+
+
+```sql
+USE [master]
+GO
+ALTER LOGIN [your-login] WITH DEFAULT_DATABASE=[new-database-name]
+GO
+```
+
+
 ## <a name="see-also"></a>参照
 
 - [ALTER DATABASE (Transact-SQL)](../../t-sql/statements/alter-database-transact-sql.md)

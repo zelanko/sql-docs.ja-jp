@@ -10,12 +10,12 @@ ms.assetid: 0b57f375-9242-4bb2-9d4b-c560d5a93524
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>= sql-server-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 8c2950e677537ee6a6bc35d930e124f285bc24df
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 87537979ab3459727f07aec460118a74e15561f9
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494308"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874825"
 ---
 # <a name="whats-new-in-sql-server-2017"></a>SQL Server 2017 の新機能
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,7 @@ SQL Server 2017 は、SQL Server をプラットフォームとする方向に�
 ## <a name="sql-server-2017-database-engine"></a>SQL Server 2017 データベース エンジン
 
 SQL Server 2017 には多くの新しいデータベース エンジン機能、機能強化、パフォーマンス向上が含まれています。 
-- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**をホワイトリストに追加できるようになりました。 信頼できるアセンブリ (RC1) のホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
+- CTP 2.0 で説明されている `clr strict security` 機能の回避策として、**CLR アセンブリ**を信頼できるアセンブリの一覧に追加できるようになりました。 信頼できるアセンブリ (RC1) の一覧をサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。  
 - **再開可能なオンライン インデックス リビルド**は、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、一時停止した場所からオンライン インデックス リビルド操作を再開します。または、一時停止し、オンライン インデックス リビルド操作を後から再開します。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。 (CTP 2.0)
 - ALTER DATABASE SCOPED CONFIGURATION の **IDENTITY_CACHE** オプションを使用すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。 (CTP 2.0)
 - 新世代のクエリ処理では、最適化戦略がアプリケーション ワークロードの実行時条件に適用される点が改善されています。 **アダプティブ クエリ処理**機能ファミリのこの最初のバージョンでは、3 つの新しい改善点があります。**バッチ モード適応型結合**、**バッチ モード メモリ許可フィードバック**、そして複数ステートメントのテーブル値関数の**インターリーブ実行**です。  「[SQL データベースでのインテリジェントなクエリ処理](../relational-databases/performance/intelligent-query-processing.md)」を参照してください。

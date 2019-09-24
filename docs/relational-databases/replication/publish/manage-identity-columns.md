@@ -17,12 +17,12 @@ ms.assetid: 98892836-cf63-494a-bd5d-6577d9810ddf
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 635cdf4b698659ca85c343331425500c88c74759
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b7418f2f38bd853d462727c2fac65d08e0bd1e8d
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769846"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846669"
 ---
 # <a name="manage-identity-columns"></a>ID 列の管理
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -97,27 +97,27 @@ ms.locfileid: "68769846"
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>トランザクション パブリケーションのアーティクルを定義する際に自動 ID 範囲管理を有効にするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 パブリッシュするソース テーブルに ID 列がある場合、 **@identityrangemanagementoption** に **@identityrangemanagementoption** を指定し、パブリッシャーに割り当てる ID 値の範囲を **@pub_identity_range** に、各サブスクライバーに割り当てる ID 値の範囲を **@identity_range** に、新しい ID 範囲を割り当てる前に使用されていた ID 値の総数のパーセンテージを **@threshold** を使用して、ID 列を管理する方法について説明します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 パブリッシュするソース テーブルに ID 列がある場合、 **\@identityrangemanagementoption** に **auto** を指定し、パブリッシャーに割り当てる ID 値の範囲を **\@pub_identity_range** に、各サブスクライバーに割り当てる ID 値の範囲を **\@identity_range** に、新しい ID 範囲を割り当てる前に使用されていた ID 値の総数のパーセンテージを **\@threshold** に指定します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
   
     > [!NOTE]  
     >  ID 列のデータ型のサイズが、すべてのサブスクライバーに割り当てられる ID 範囲の総計をサポートできるだけの大きさであることを確認してください。  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-transactional-publication"></a>トランザクション パブリケーションのアーティクルを定義する際に自動 ID 範囲管理を無効にするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **@identityrangemanagementoption** の値には **manual** を指定します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **\@identityrangemanagementoption** に **manual** を指定します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
   
 2.  サブスクライバーの更新時に競合が発生しないように、サブスクライバーの ID アーティクル列に範囲を割り当てます。 詳細については、トピック「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」で、手動による ID 範囲管理用に範囲を割り当てる方法に関する部分を参照してください。  
   
 #### <a name="to-enable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義する際の自動 ID 範囲管理を有効にするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 パブリッシュするソース テーブルに ID 列がある場合、 **@identityrangemanagementoption** に **@identityrangemanagementoption** を指定し、サーバー サブスクリプションに割り当てる ID 値の範囲を **@pub_identity_range** に、パブリッシャーおよび各クライアント サブスクリプションに割り当てる ID 値の範囲を **@identity_range** に、新しい ID 範囲を割り当てる前に使用されていた ID 値の総数のパーセンテージを **@threshold** を使用して、ID 列を管理する方法について説明します。 いつ新しい ID 範囲が割り当てられるのかについては、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。 アーティクルの定義の詳細については、「[アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)」を参照してください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 パブリッシュするソース テーブルに ID 列がある場合、 **\@identityrangemanagementoption** に **auto** を指定し、サーバー サブスクリプションに割り当てる ID 値の範囲を **\@pub_identity_range** に、パブリッシャーおよび各クライアント サブスクリプションに割り当てる ID 値の範囲を **\@identity_range** に、新しい ID 範囲を割り当てる前に使用されていた ID 値の総数のパーセンテージを **\@threshold** に指定します。 いつ新しい ID 範囲が割り当てられるのかについては、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。 アーティクルの定義の詳細については、「[アーティクルの定義](../../../relational-databases/replication/publish/define-an-article.md)」を参照してください。  
   
     > [!NOTE]  
     >  特にサーバー サブスクリプションを使用するサブスクライバーの場合、ID 列のデータ型のサイズが、すべてのサブスクライバーに割り当てられる ID 範囲の総計をサポートできるだけの大きさであることを確認してください。  
   
 #### <a name="to-disable-automatic-identity-range-management-when-defining-articles-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義する際に自動 ID 範囲管理を無効にするには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 次のいずれかの値を **@identityrangemanagementoption** に指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 次のいずれかの値を **\@identityrangemanagementoption** に指定します。  
   
     -   **manual** - サブスクライバーを更新するには、手動で ID 範囲を割り当てる必要があります。  
   
@@ -133,9 +133,9 @@ ms.locfileid: "68769846"
   
 2.  結果セットの **identityrangemanagementoption** の値が **1**の場合、次のようにして設定を変更します。  
   
-    -   割り当てられている ID 範囲を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を実行します。 **@property** の値として **identity_range** または **pub_identity_range** を指定し、 **@value** には新しい範囲の値を指定します。  
+    -   割り当てられている ID 範囲を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を実行します。 **\@property** に **identity_range** か **pub_identity_range** を指定し、 **\@value** に新しい範囲値を指定します。  
   
-    -   新しい範囲の割り当てのしきい値を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を実行します。 **@property** の値として **threshold** を指定し、 **@value** には新しいしきい値を指定します。  
+    -   新しい範囲の割り当てのしきい値を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を実行します。 **\@property** に **threshold** を指定し、 **\@value** に新しいしきい値を指定します。  
   
 #### <a name="to-change-automatic-identity-range-management-settings-for-an-existing-article-in-a-merge-publication"></a>マージ パブリケーションの既存のアーティクルに対する ID 範囲管理設定を自動的に変更するには  
   
@@ -143,11 +143,11 @@ ms.locfileid: "68769846"
   
 2.  結果セットの **identity_support** の値が **1**の場合、次のようにして設定を変更します。  
   
-    -   割り当てられている ID 範囲を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **@property** の値として **identity_range** または **pub_identity_range** を指定し、 **@value** には新しい範囲の値を指定します。  
+    -   割り当てられている ID 範囲を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **\@property** に **identity_range** か **pub_identity_range** を指定し、 **\@value** に新しい範囲値を指定します。  
   
-    -   新しい範囲の割り当てのしきい値を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **@property** の値として **threshold** を指定し、 **@value** には新しいしきい値を指定します。 いつ新しい ID 範囲が割り当てられるのかについては、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。  
+    -   新しい範囲の割り当てのしきい値を変更するには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **\@property** に **threshold** を指定し、 **\@value** に新しいしきい値を指定します。 いつ新しい ID 範囲が割り当てられるのかについては、「[ID 列のレプリケート](../../../relational-databases/replication/publish/replicate-identity-columns.md)」の「ID 範囲の割り当て」を参照してください。  
   
-    -   自動 ID 範囲管理を無効にするには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **@property** の値として **identityrangemanagementoption** を指定し、 **@value** には **manual** または **none** を指定します。  
+    -   自動 ID 範囲管理を無効にするには、パブリッシャー側のパブリケーション データベースに対して [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。 **\@property** に **identityrangemanagementoption** を指定し、 **\@value** に **manual** または **none** を指定します。  
   
 ## <a name="see-also"></a>参照  
  [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   

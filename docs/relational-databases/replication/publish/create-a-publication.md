@@ -16,12 +16,12 @@ ms.assetid: 52ee6de9-1d58-4cb9-8711-372bddbe7154
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7e4676ec5360a235b1a5ec9f1bece8566f63625c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: dc432ca82662d098b970b2dbeab6a43243e2ead6
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769943"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846631"
 ---
 # <a name="create-a-publication"></a>パブリケーションの作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -110,16 +110,16 @@ ms.locfileid: "68769943"
   
     -   パブリッシュされたデータベース用のログ リーダー エージェント ジョブが存在するかどうかわからない場合は、パブリッシャー側のパブリケーション データベースに対して [sp_helplogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) を実行します。  
   
-    -   結果セットが空の場合は、ログ リーダー エージェント ジョブを作成します。 パブリッシャーで、[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) を実行します。 エージェントの実行に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を **@job_name** と **@password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** 」および「 **@publisher_password** 」を参照してください。 手順 3. に進みます。  
+    -   結果セットが空の場合は、ログ リーダー エージェント ジョブを作成します。 パブリッシャーで、[sp_addlogreader_agent &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addlogreader-agent-transact-sql.md) を実行します。 エージェントの実行に使用される [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows 資格情報を **\@job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 手順 3. に進みます。  
   
-3.  パブリッシャーで、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を実行します。 **@publication** にパブリケーション名を指定し、 **@repl_freq** パラメーターに **snapshot** (スナップショット パブリケーションの場合) または **continuous** (トランザクション パブリケーションの場合) を指定します。 必要に応じて、その他のパブリケーション オプションを指定してください。 これにより、パブリケーションが定義されます。  
+3.  パブリッシャーで、[sp_addpublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を実行します。 **\@publication** にパブリケーション名を指定し、 **\@repl_freq** パラメーターに **snapshot** (スナップショット パブリケーションの場合) または **continuous** (トランザクション パブリケーションの場合) を指定します。 必要に応じて、その他のパブリケーション オプションを指定してください。 これにより、パブリケーションが定義されます。  
   
     > [!NOTE]  
     >  パブリケーション名に、次の文字を含めることはできません。  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 3. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@snapshot_job_name** と **@password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+4.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 3 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -132,14 +132,14 @@ ms.locfileid: "68769943"
   
 1.  パブリッシャーで [sp_replicationdboption &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md) を実行し、マージ レプリケーションを使用して現在のデータベースのパブリケーションを有効にします。  
   
-2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行します。 **@publication** にパブリケーションの名前を指定し、必要に応じて他のパブリケーション オプションを指定します。 これにより、パブリケーションが定義されます。  
+2.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) を実行します。 **\@publication** にパブリケーションの名前を指定し、必要に応じて他のパブリケーション オプションを指定します。 これにより、パブリケーションが定義されます。  
   
     > [!NOTE]  
     >  パブリケーション名に、次の文字を含めることはできません。  
     >   
     >  % * [ ] | : " ? \ / < >  
   
-3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 2. で使用したパブリケーション名を **@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **@snapshot_job_name** と **@password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **@publisher_security_mode** に **@publisher_security_mode** を指定し、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] と **@publisher_login** と **@publisher_password** を使用して、トランザクション パブリケーションに対するサブスクリプションの更新を有効にする方法について説明します。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
+3.  パブリッシャーで [sp_addpublication_snapshot &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addpublication-snapshot-transact-sql.md) を実行します。 手順 2 で使用したパブリケーション名を **\@publication** に指定し、スナップショット エージェントを実行するときに使用される Windows 資格情報を **\@snapshot_job_name** と **\@password** に指定します。 エージェントがパブリッシャーに接続する際に SQL Server 認証を使用する場合、さらに **\@publisher_security_mode** に **0** を指定し、 **\@publisher_login** と **\@publisher_password** に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログイン情報を指定する必要があります。 これにより、パブリケーション用のスナップショット エージェント ジョブが作成されます。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  

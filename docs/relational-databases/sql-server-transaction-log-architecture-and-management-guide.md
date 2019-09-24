@@ -21,12 +21,12 @@ ms.assetid: 88b22f65-ee01-459c-8800-bcf052df958a
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 9f0011d8ad44a34aee1c6e18f66aa99e2068902c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8626b9b1a00d62273165706bda5b742eebab3251
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895222"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874203"
 ---
 # <a name="sql-server-transaction-log-architecture-and-management-guide"></a>SQL Server トランザクション ログのアーキテクチャと管理ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -65,7 +65,7 @@ ms.locfileid: "67895222"
   
  ロールバック操作も記録されます。 トランザクションごとにトランザクション ログの領域が予約されるので、明示的にロールバック ステートメントを実行したときやエラーが発生したときのロールバックに備え、十分なログ領域が確保されます。 予約領域のサイズは、トランザクションで実行される操作によって変わりますが、一般には各操作を記録するために使用される領域のサイズと同じです。 この予約領域は、トランザクションが完了したときに解放されます。  
   
-<a name="minlsn"></a> ログ ファイルの中で、データベース全体を正常にロールバックするために必要な最初のログ レコードから最後に書き込まれたログ レコードまでの部分を、ログのアクティブな部分、または*アクティブ ログ*といいます。 これは、データベースの完全復旧を実行するために必要なログのセクションです。 アクティブなログはどの部分も切り捨てることができません。 この先頭ログ レコードの[ログ シーケンス番号 (LSN)](../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md#Logical_Arch) は、**最小復旧 LSN (*MinLSN*)** と呼ばれます。  
+<a name="minlsn"></a> ログ ファイルの中で、データベース全体を正常にロールバックするために必要な最初のログ レコードから最後に書き込まれたログ レコードまでの部分を、ログのアクティブな部分、または*アクティブ ログ*といいます。 これは、データベースの完全復旧を実行するために必要なログのセクションです。 アクティブなログはどの部分も切り捨てることができません。 この最初のログ レコードのログ シーケンス番号 (LSN) は、**最小復旧 LSN (*MinLSN*)** と呼ばれています。  
   
 ##  <a name="physical_arch"></a> トランザクション ログの物理アーキテクチャ  
 データベースのトランザクション ログは、1 つ以上の物理ファイルにマップされます。 概念的には、ログ ファイルは一続きのログ レコードです。 物理的には、一連のログ レコードは、トランザクション ログを実装する一連の物理ファイルに効率的に格納されます。 1 つのデータベースにトランザクション ログ ファイルが少なくとも 1 つ必要です。  

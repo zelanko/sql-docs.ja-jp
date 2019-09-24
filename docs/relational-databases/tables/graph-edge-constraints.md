@@ -1,7 +1,7 @@
 ---
 title: グラフのエッジ制約 | Microsoft Docs
 ms.custom: ''
-ms.date: 06/21/2019
+ms.date: 09/09/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 author: shkale-msft
 ms.author: shkale
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current||=azuresqldb-current'
-ms.openlocfilehash: 5c0f7ea57a36c4d264bec5c70e745b36a319bbc8
-ms.sourcegitcommit: e0c55d919ff9cec233a7a14e72ba16799f4505b2
+ms.openlocfilehash: ae08d5baef685a0b338ad574357230f01d3814cf
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/10/2019
-ms.locfileid: "67731055"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70873881"
 ---
 # <a name="edge-constraints"></a>エッジ制約
 
@@ -48,6 +48,14 @@ ms.locfileid: "67731055"
 ### <a name="indexes-on-edge-constraints"></a>エッジ制約のインデックス
 
 エッジ制約を作成しても、エッジ テーブルの `$from_id` 列と `$to_id` 列の対応するインデックスは自動的に作成されることはありません。 ポイント ルックアップ クエリまたは OLTP ワークロードがある場合は、`$from_id`と `$to_id` のペアに対するインデックスを手動で作成することをお勧めします。
+
+### <a name="on-delete-referential-actions-on-edge-constraints"></a>エッジ制約に対する削除時の参照操作
+エッジ制約に対する連鎖操作では、そのエッジが接続されているノードをユーザーが削除したときに、データベース エンジンが実行するアクションをユーザーが定義できます。 以下の参照操作を定義できます。  
+*NO ACTION*   
+エッジが接続されているノードを削除しようとすると、データベース エンジンでエラーが発生します。  
+
+*CASCADE*   
+データベースからノードを削除するときに、接続されているエッジが削除されます。  
 
 ## <a name="working-with-edge-constraints"></a>エッジ制約の使用
 
@@ -80,7 +88,35 @@ GO
 CREATE TABLE bought
    (
       PurchaseCount INT
-         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product)
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE NO ACTION
+   )
+   AS EDGE;
+   ```
+
+#### <a name="defining-referential-actions-on-a-new-edge-table"></a>新しいエッジ テーブルでの参照操作の定義 
+
+次の例では、**bought** エッジ テーブルにエッジ制約を作成し、ON DELETE CASCADE 参照アクションを定義します。 
+
+```sql
+-- CREATE node and edge tables
+CREATE TABLE Customer
+   (
+      ID INTEGER PRIMARY KEY
+      ,CustomerName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE Product
+   (
+      ID INTEGER PRIMARY KEY
+      ,ProductName VARCHAR(100)
+   )
+AS NODE;
+GO
+CREATE TABLE bought
+   (
+      PurchaseCount INT
+         ,CONSTRAINT EC_BOUGHT CONNECTION (Customer TO Product) ON DELETE CASCADE
    )
    AS EDGE;
    ```
@@ -248,6 +284,7 @@ DROP CONSTRAINT EC_BOUGHT;
 
 Transact-SQL を使用してエッジ制約を変更するには、まず既存のエッジ制約を削除してから、新しい定義を使用して再作成する必要があります。
 
+
 ### <a name="view-edge-constraints"></a>エッジ制約の表示
 
 [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。
@@ -302,4 +339,8 @@ WHERE EC.parent_object_id = object_id('bought');
 
 ## <a name="related-tasks"></a>関連タスク
 
+[CREATE TABLE (SQL Graph)](../../t-sql/statements/create-table-sql-graph.md)  
+[ALTER TABLE table_constraint](../../t-sql/statements/alter-table-table-constraint-transact-sql.md)  
+
 SQL Server のグラフ テクノロジについて詳しくは、「[SQL Server と Azure SQL Database でのグラフ処理](../graphs/sql-graph-overview.md?view=sql-server-2017)」をご覧ください。
+

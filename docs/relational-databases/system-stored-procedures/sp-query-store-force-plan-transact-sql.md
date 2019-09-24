@@ -21,26 +21,25 @@ ms.assetid: 0068f258-b998-4e4e-b47b-e375157c8213
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 07d2e8032bb596faaac577194273760c59006645
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: b34cf94a2ab6cfec601d41b02bf32b00f0eb3b41
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418855"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207724"
 ---
-# <a name="spquerystoreforceplan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
+# <a name="sp_query_store_force_plan-transact-sql"></a>sp_query_store_force_plan (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
 
   特定のクエリに対して特定のプランを強制することができます。  
   
- 特定のクエリに対してプランが強制されると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、クエリが発生するたびに、オプティマイザーでプランを強制的に実行しようとします。 プランの強制に失敗した場合は、XEvent が発生し、オプティマイザーは通常の方法で最適化するように指示されます。  
+ 特定のクエリに対してプランが強制されると[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、クエリが発生するたびに、クエリオプティマイザーでプランが強制的に実行されます。 プランの強制に失敗した場合は、拡張イベントが発生し、通常の方法で最適化するようにクエリオプティマイザーに指示されます。  
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]  
 ```  
   
@@ -60,7 +59,7 @@ sp_query_store_force_plan [ @query_id = ] query_id , [ @plan_id = ] plan_id [;]
 ## <a name="examples"></a>使用例  
  次の例では、クエリストア内のクエリに関する情報を返します。  
   
-```  
+```sql  
 SELECT Txt.query_text_id, Txt.query_sql_text, Pl.plan_id, Qry.*  
 FROM sys.query_store_plan AS Pl  
 JOIN sys.query_store_query AS Qry  
@@ -71,7 +70,7 @@ JOIN sys.query_store_query_text AS Txt
   
  強制する query_id と plan_id を特定したら、次の例を使用して、クエリでプランを使用するように強制します。  
   
-```  
+```sql  
 EXEC sp_query_store_force_plan 3, 3;  
 ```  
   
@@ -80,8 +79,9 @@ EXEC sp_query_store_force_plan 3, 3;
  [sp_query_store_remove_query &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-remove-query-transact-sql.md)   
  [sp_query_store_unforce_plan &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-unforce-plan-transact-sql.md)   
  [クエリ ストアのカタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/query-store-catalog-views-transact-sql.md)   
- [クエリのストアを使用した、パフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
+ [クエリストアを使用したパフォーマンスの監視](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md)   
  [sp_query_store_reset_exec_stats &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-reset-exec-stats-transact-sql.md)   
- [sp_query_store_flush_db &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)  
+ [sp_query_store_flush_db &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-query-store-flush-db-transact-sql.md)       
+ [クエリ ストアを使用する際の推奨事項](../../relational-databases/performance/best-practice-with-the-query-store.md#CheckForced)    
   
   

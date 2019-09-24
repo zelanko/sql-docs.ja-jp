@@ -10,12 +10,12 @@ ms.prod: sql
 ms.technology: linux
 ms.assetid: 82737f18-f5d6-4dce-a255-688889fdde69
 moniker: '>= sql-server-linux-2017 || >= sql-server-2017 || =sqlallproducts-allversions'
-ms.openlocfilehash: 6d3a54afebbee475500e4d973db5d86a43e50317
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c70ba17073030f4fbbe4851fffb84a4c4a30fbbc
+ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476062"
+ms.lasthandoff: 09/14/2019
+ms.locfileid: "70988138"
 ---
 # <a name="configure-sql-server-container-images-on-docker"></a>Docker 上で SQL Server コンテナー イメージを構成する
 
@@ -72,14 +72,14 @@ docker pull mcr.microsoft.com/mssql/rhel/server:2019-CTP3.2
 docker run --name sqlenterprise \
       -e 'ACCEPT_EULA=Y' -e 'MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>' \
       -e 'MSSQL_PID=Enterprise' -p 1433:1433 \
-      -d store/microsoft/mssql-server-linux:2017-latest
+      -d mcr.microsoft.com/mssql/server:2017-latest
 ```
 
 ```PowerShell
 docker run --name sqlenterprise `
       -e "ACCEPT_EULA=Y" -e "MSSQL_SA_PASSWORD=<YourStrong!Passw0rd>" `
       -e "MSSQL_PID=Enterprise" -p 1433:1433 `
-      -d "store/microsoft/mssql-server-linux:2017-latest"
+      -d "mcr.microsoft.com/mssql/server:2017-latest"
  ```
 
 > [!IMPORTANT]
@@ -147,7 +147,7 @@ SQL Server 2017 プレビュー以降では、[SQL Server のコマンドライ�
 
 ## <a name="run-multiple-sql-server-containers"></a>複数の SQL Server コンテナーを実行する
 
-Docker には、同じホスト マシン上で複数の SQL Server コンテナーを実行する方法が用意されています。 これは、同じホスト上に複数の SQL Server インスタンスを必要とするシナリオの場合のアプローチです。 各コンテナーは、異なるポート上で公開される必要があります。
+Docker には、同じホスト マシン上で複数の SQL Server コンテナーを実行する方法が用意されています。 このアプローチは、同じホスト上に複数の SQL Server インスタンスを必要とするシナリオで使用します。 各コンテナーは、異なるポート上で公開される必要があります。
 
 <!--SQL Server 2017 on Linux -->
 ::: moniker range="= sql-server-linux-2017 || = sql-server-2017"
@@ -196,7 +196,7 @@ sqlcmd -S 10.3.2.4,1402 -U SA -P "<YourPassword>"
 
 ## <a id="customcontainer"></a> カスタマイズしたコンテナーを作成する
 
-独自の [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) を作成して、カスタマイズされた SQL Server コンテナーを作成することができます。 詳しくは、[SQL Server とノード アプリケーションを組み合わせたデモ](https://github.com/twright-msft/mssql-node-docker-demo-app)をご覧ください。 独自の Dockerfile を作成する場合は、フォアグラウンド プロセスに注意してください。このプロセスによってコンテナーの有効期間が制御されるためです。 終了すると、コンテナーがシャットダウンされます。 たとえば、スクリプトを実行して SQL Server を開始する場合は、SQL Server プロセスが一番右のコマンドであることを確認します。 その他のコマンドはすべてバックグラウンドで実行されます。 これは、Dockerfile 内の次のコマンドで示されています。
+独自の [Dockerfile](https://docs.docker.com/engine/reference/builder/#usage) を作成して、カスタマイズされた SQL Server コンテナーを作成することができます。 詳しくは、[SQL Server とノード アプリケーションを組み合わせたデモ](https://github.com/twright-msft/mssql-node-docker-demo-app)をご覧ください。 独自の Dockerfile を作成する場合は、フォアグラウンド プロセスに注意してください。このプロセスによってコンテナーの有効期間が制御されるためです。 終了すると、コンテナーがシャットダウンされます。 たとえば、スクリプトを実行して SQL Server を開始する場合は、SQL Server プロセスが一番右のコマンドであることを確認します。 その他のコマンドはすべてバックグラウンドで実行されます。 次のコマンドは、Dockerfile 内でのこのことを示しています。
 
 ```bash
 /usr/src/app/do-my-sql-commands.sh & /opt/mssql/bin/sqlservr
@@ -351,13 +351,13 @@ docker cp C:\Temp\mydb.mdf d6b75213ef80:/var/opt/mssql/data
 ```
 ## <a id="tz"></a> タイムゾーンを構成する
 
-特定のタイムゾーンを持つ Linux コンテナー内で SQL Server を実行するには、**TZ** 環境変数を構成します。 適切なタイムゾーン値を検索するには、Linux bash プロンプトから **tzselect** コマンドを実行します。
+特定のタイムゾーンを持つ Linux コンテナー内で SQL Server を実行するには、`TZ` 環境変数を構成します。 適切なタイムゾーン値を検索するには、Linux bash プロンプトから `tzselect` コマンドを実行します。
 
 ```bash
 tzselect
 ```
 
-タイムゾーンを選択すると、**tzselect** に次のような出力が表示されます。
+タイムゾーンを選択すると、`tzselect` に次のような出力が表示されます。
 
 ```bash
 The following information has been given:
@@ -446,7 +446,7 @@ docker exec -it <Container ID or name> /opt/mssql-tools/bin/sqlcmd `
    -Q 'SELECT @@VERSION'
 ```
 
-ターゲットの docker コンテナー イメージの SQL Server バージョンとビルド番号を特定することもできます。 次のコマンドでは、**microsoft/mssql-Server-linux: 2017-latest** イメージの SQL Server バージョンとビルド情報が表示されます。 これは、環境変数 **PAL_PROGRAM_INFO=1** を使用して新しいコンテナーを実行することで行われます。 結果のコンテナーはすぐに終了し、`docker rm` コマンドによって削除されます。
+ターゲットの docker コンテナー イメージの SQL Server バージョンとビルド番号を特定することもできます。 次のコマンドでは、**mcr.microsoft.com/mssql/server:2017-latest** イメージの SQL Server バージョンとビルド情報が表示されます。 これは、環境変数 **PAL_PROGRAM_INFO=1** を使用して新しいコンテナーを実行することで行われます。 結果のコンテナーはすぐに終了し、`docker rm` コマンドによって削除されます。
 
 ```bash
 sudo docker run -e PAL_PROGRAM_INFO=1 --name sqlver \
@@ -648,6 +648,118 @@ cat errorlog
 
 > [!TIP]
 > コンテナーの作成時にホスト ディレクトリを **/var/opt/mssql** にマウントした場合は、代わりに、ホスト上のマップされたパスにある **log** サブディレクトリを調べることができます。
+
+
+## <a id="buildnonrootcontainer"></a> 非ルート ユーザーとして SQL Server コンテナーを作成して実行する
+
+次の手順に従って、`mssql` (非ルート) ユーザーとして起動する SQL Server コンテナーを作成します。
+
+1. [非ルート SQL Server コンテナー用のサンプル dockerfile](https://raw.githubusercontent.com/microsoft/mssql-docker/master/linux/preview/examples/mssql-server-linux-non-root/Dockerfile) をダウンロードし、`dockerfile` として保存します。
+ 
+2. dockerfile ディレクトリのコンテキストで次のコマンドを実行して、非ルート SQL Server コンテナーを作成します。
+
+```bash
+cd <path to dockerfile>
+docker build -t 2017-latest-non-root .
+```
+ 
+3. コンテナーを開始します。
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword@" --cap-add SYS_PTRACE --name sql1 -p 1433:1433 -d 2017-latest-non-root
+```
+
+> [!NOTE]
+> 非ルート SQL Server コンテナーによってトラブルシューティング用のダンプが生成されるようにするには、`--cap-add SYS_PTRACE` フラグが必要です。
+ 
+4. コンテナーが非ルート ユーザーとして実行されていることを確認します。
+
+docker exec をコンテナーに挿入します。
+```bash
+docker exec -it sql1 bash
+```
+ 
+`whoami` を実行します。これにより、コンテナー内で実行されているユーザーが返されます。
+ 
+```bash
+whoami
+```
+ 
+
+## <a id="nonrootuser"></a> ホスト上で別の非ルート ユーザーとしてコンテナーを実行する
+
+SQL Server コンテナーを別の非ルート ユーザーとして実行するには、-u フラグを docker run コマンドに追加します。 非ルート コンテナーに適用される制限として、非ルート ユーザーがアクセスできる '/var/opt/mssql' にボリュームがマウントされていない場合、ルート グループの一部として実行される必要があります。 ルート グループから非ルート ユーザーに対して追加のルート アクセス許可は付与されません。
+ 
+**UID 4000 を持つユーザーとして実行する**
+ 
+カスタム UID を使用して SQL Server を開始できます。 たとえば、次のコマンドでは UID 4000 を使用して SQL Server が開始されます。
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u 4000:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+> [!Warning]
+> SQL Server コンテナーに 'mssql' や 'root' などの名前付きユーザーが含まれていることを確認してください。そうしないと、コンテナー内で SQLCMD を実行できません。 SQL Server コンテナーが名前付きユーザーとして実行されているかどうかは、コンテナー内で `whoami` を実行することで確認できます。
+
+**非ルート コンテナーをルート ユーザーとして実行する**
+
+必要に応じて、非ルート コンテナーをルート ユーザーとして実行できます。 この場合はまた、より高い特権となるため、コンテナーにすべてのファイル アクセス許可が自動的に付与されます。
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -u 0:0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+**ご利用のホスト コンピューター上のユーザーとして実行する**
+ 
+次のコマンドを使用すれば、ホスト コンピューター上の既存のユーザーで SQL Server を開始できます。
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u $(id -u myusername):0 -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+**別のユーザーおよびグループとして実行する**
+ 
+カスタムのユーザーおよびグループで SQL Server を開始できます。 この例では、マウントされたボリュームには、ホスト コンピューター上のユーザーまたはグループ用に構成されたアクセス許可があります。
+ 
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" --cap-add SYS_PTRACE -u (id -u myusername):(id -g myusername) -v /path/to/mssql:/var/opt/mssql -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+ 
+## <a id="storagepermissions"></a> 非ルート コンテナーに対して永続的なストレージ アクセス許可を構成する
+マウントされたボリューム上にある DB ファイルへのアクセスを非ルート ユーザーに許可するには、ご自分がコンテナーを実行する場合のユーザーまたはグループが永続的なファイル ストレージにアクセスできることを確認します。  
+
+次のコマンドを使用すれば、データベース ファイルの現在の所有権を取得できます。
+ 
+```bash
+ls -ll <database file dir>
+```
+
+永続化されたデータベース ファイルへのアクセス権が SQL Server にない場合は、次のいずれかのコマンドを実行します。
+ 
+ 
+**DB ファイルへの R/W アクセス権をルート グループに付与する**
+
+非ルート SQL Server コンテナーがデータベース ファイルにアクセスできるように、次のディレクトリへのアクセス許可をルート グループに付与します。
+
+```bash
+chgroup -R 0 <database file dir>
+chmod -R g=u <database file dir>
+```
+ 
+**非ルート ユーザーをファイルの所有者として設定します。**
+
+これは、既定の非ルート ユーザーとすることも、その他の任意の非ルート ユーザーを指定することもできます。 この例では、UID 10001 を非ルート ユーザーとして設定します。
+
+```bash
+chown -R 10001:0 <database file dir>
+```
+ 
+## <a id="changefilelocation"></a> 既定のファイルの場所を変更する
+
+ご利用の `docker run` コマンド内にデータ ディレクトリを変更するための `MSSQL_DATA_DIR` 変数を追加してしてから、ご利用のコンテナーのユーザーがアクセスできるその場所にボリュームをマウントします。
+
+```bash
+docker run -e "ACCEPT_EULA=Y" -e "SA_PASSWORD=MyStrongPassword" -e "MSSQL_DATA_DIR=/my/file/path" -v /my/host/path:/my/file/path -p 1433:1433 -d mcr.microsoft.com/mssql/server:2019-latest
+```
+
 
 ## <a name="next-steps"></a>次の手順
 

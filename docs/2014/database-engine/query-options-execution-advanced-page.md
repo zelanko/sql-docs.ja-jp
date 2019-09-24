@@ -12,12 +12,12 @@ manager: jroth
 ms.reviewer: ''
 ms.custom: ''
 ms.date: 09/03/2019
-ms.openlocfilehash: 4530d07ceb284f6f7c5a795836b979e846562f40
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: 39a43adeb82b154a076fc7bfc24cc56b54cc8640
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118110"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199326"
 ---
 # <a name="query-options-execution-advanced-page"></a>[クエリ オプション] の [実行] ([詳細設定] ページ)
 
@@ -29,9 +29,9 @@ ms.locfileid: "71118110"
 
 **SET PARSEONLY**各クエリの構文をチェックしますが、クエリは実行しません。 既定では、このオプションはオフになっています。  
 
-**CONCAT_NULL_YIELDS_NULL の設定**このチェックボックスをオンにすると、既存の値`NULL`とを連結するクエリは、常にを`NULL`結果として返します。 このチェック ボックスがオフの場合、既存の値と `NULL` を連結するクエリは、既存の値を返します。 既定では、このオプションはオンです。
+**CONCAT_NULL_YIELDS_NULL の設定**このチェックボックスをオンにすると、既存の値`NULL`とを連結するクエリは、常にを`NULL`結果として返します。 このチェック ボックスがオフの場合、既存の値と `NULL` を連結するクエリは、既存の値を返します。 既定では、このオプションはオンになっています。
 
-**ARITHABORT の設定**このチェックボックスがオンの場合、式`INSERT`の`DELETE`評価`UPDATE`中に、、またはステートメントで算術エラー (オーバーフロー、0による除算、またはドメインエラー) が発生すると、クエリまたはバッチは終了します。 このチェック ボックスがオフの場合、可能であればその値に対して  `NULL` が与えられ、クエリが続行されます。さらに、結果にメッセージが含められます。 この動作の詳細については、オンライン ブックを参照してください。 既定では、このオプションはオンです。
+**ARITHABORT の設定**このチェックボックスがオンの場合、式`INSERT`の`DELETE`評価`UPDATE`中に、、またはステートメントで算術エラー (オーバーフロー、0による除算、またはドメインエラー) が発生すると、クエリまたはバッチは終了します。 このチェック ボックスがオフの場合、可能であればその値に対して  `NULL` が与えられ、クエリが続行されます。さらに、結果にメッセージが含められます。 この動作の詳細については、オンライン ブックを参照してください。 既定では、このオプションはオンになっています。
   
 **SHOWPLAN_TEXT の設定**このチェックボックスをオンにすると、クエリごとにクエリプランがテキスト形式で返されます。 既定では、このオプションはオフになっています。
   
@@ -58,11 +58,11 @@ ms.locfileid: "71118110"
 
 **完了時刻を表示する**クエリの実行が完了した時刻を、クエリ結果または [メッセージ] タブで印刷できます。
 
-**Always Encrypted 用の VBS enclaves の構成証明プロトコル**Always Encrypted によって使用される仮想化ベースセキュリティ (VBS) enclaves の構成証明プロトコルをセキュリティで保護された enclaves に設定できます。 
+**Always Encrypted 用の VBS enclaves の構成証明プロトコル**セキュリティで保護された enclaves で always Encrypted によって使用される、仮想化ベースのセキュリティ (VBS) enclaves の構成証明プロトコルを設定できます。
 
-  現在サポートされている構成証明プロトコルは次のとおりです。
+現在サポートされている構成証明プロトコルは次のとおりです。
 
-  * ホストガーディアンサービス-Windows ホストガーディアンサービス (HGS) を使用した構成証明プロトコル。
+* ホストガーディアンサービス-Windows ホストガーディアンサービス (HGS) を使用した構成証明プロトコル。
 
 詳細については、「 [Always Encrypted with secure enclaves](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions) And [Secure エンクレーブ構成証明](https://docs.microsoft.com/sql/relational-databases/security/encryption/always-encrypted-enclaves?view=sqlallproducts-allversions#secure-enclave-attestation)書」を参照してください。
 

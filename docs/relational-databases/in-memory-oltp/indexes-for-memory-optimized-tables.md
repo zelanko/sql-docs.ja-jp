@@ -1,7 +1,7 @@
 ---
 title: メモリ最適化テーブルのインデックス | Microsoft Docs
 ms.custom: ''
-ms.date: 06/02/2019
+ms.date: 09/16/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,18 +11,18 @@ ms.assetid: eecc5821-152b-4ed5-888f-7c0e6beffed9
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f283868f180764f5b3276cce9678de075f3d0483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6db09106a6ebd8128cc9a7c69b9094adbf732ad7
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050215"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929695"
 ---
 # <a name="indexes-on-memory-optimized-tables"></a>メモリ最適化テーブルのインデックス
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
-すべてのメモリ最適化テーブルには少なくとも 1 つのインデックスが必要です。このインデックスによって行が連結されるためです。 メモリ最適化テーブルでは、すべてのインデックスもメモリ最適化されます。 メモリ最適化インデックスは、ディスク ベース テーブルの従来のインデックスとはさまざまな点で違いがあります。  
+すべてのメモリ最適化テーブルには少なくとも 1 つのインデックスが必要です。このインデックスによって行が連結されるためです。 メモリ最適化テーブルでは、すべてのインデックスもメモリ最適化されます。 メモリ最適化テーブルは、ディスク ベース テーブルの従来のインデックスとはさまざまな点で違いがあります。  
 
 - データ行はページに格納されないため、ページやエクステントのコレクションも、テーブルのすべてのページを取得するために参照できるパーティションやアロケーション ユニットもありません。 インデックスの使用可能ないずれかの型に対するインデックス ページの概念はありますが、これらの格納方法はディスクベースのテーブルのインデックスとは異なります。 それらはページ内で断片化の従来の種類を計上しないため、fillfactor を持ちません。
 - データ操作中にメモリ最適化テーブルのインデックスに行われた変更がディスクに書き込まれることはありません。 データ行と、データへの変更のみが、トランザクション ログに書き込まれます。 
@@ -59,6 +59,7 @@ ms.locfileid: "68050215"
             MEMORY_OPTIMIZED = ON,  
             DURABILITY = SCHEMA_AND_DATA);  
     ```
+
 > [!NOTE]  
 > [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] および [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] には、メモリ最適化テーブルまたはテーブル型あたりインデックスは 8 個までという制限があります。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、メモリ最適化テーブルおよびテーブル型に固有のインデックス数に制限がなくなりました。
   

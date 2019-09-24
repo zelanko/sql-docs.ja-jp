@@ -234,7 +234,7 @@ GO
   
  VIEW DATABASE STATE 権限を拒否すると、特定のオブジェクトに対する CONTROL 権限が許可されていたとしても、そのデータベース内のどのオブジェクトも取得できません。 また、データベースのワイルドカード @*database_id*= NULL が指定されている場合、データベースは省略されます。  
   
- 詳細については、「[動的管理ビュー &#40;と関数 transact-sql&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
+ 詳細については、「[動的管理ビューと関数 &#40;Transact-SQL&#41;](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)」を参照してください。  
   
 ## <a name="examples"></a>使用例  
   

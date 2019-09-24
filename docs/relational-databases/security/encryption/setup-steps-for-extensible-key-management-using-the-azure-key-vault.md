@@ -1,7 +1,7 @@
 ---
 title: Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順 | Microsoft Docs
 ms.custom: ''
-ms.date: 08/24/2018
+ms.date: 09/12/2019
 ms.prod: sql
 ms.reviewer: vanto
 ms.technology: security
@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: c1f29c27-5168-48cb-b649-7029e4816906
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: 3d9b28b1723b5c984446be09336b24ff5e2d2bb0
-ms.sourcegitcommit: 2efb0fa21ff8093384c1df21f0e8910db15ef931
+ms.openlocfilehash: 5d767f8257395368cf3ceeba45b9b9d7cadcfa80
+ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/18/2019
-ms.locfileid: "68316645"
+ms.lasthandoff: 09/12/2019
+ms.locfileid: "70929709"
 ---
 # <a name="sql-server-tde-extensible-key-management-using-azure-key-vault---setup-steps"></a>Azure Key Vault を使用する SQL Server TDE 拡張キー管理 - 設定手順
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -342,7 +342,7 @@ SQL Server のバージョン  |再頒布可能パッケージのインストー
   
 5.  **で Azure Key Vault のキーを開く [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]**  
   
-     パート II で、非対称キーをインポートした場合は、次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトで目的のキー名を指定してキーを開きます。  
+     新しいキーを作成したか、パート II での説明に従って非対称キーをインポートしたかにかかわらず、キーを開く必要があります。 次の [!INCLUDE[tsql](../../../includes/tsql-md.md)] スクリプトにご利用のキー名を指定することで、キーを開きます。  
   
     -   `CONTOSO_KEY` の部分は、実際に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] でキーに割り当てる名前に置き換えます。  
   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 85180155-6726-4f42-ba57-200bf1e15f4d
-ms.openlocfilehash: 063adf4f1f180138150484e4ac9fc397ef886f5d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: a14ad2d77b21dba2fd14ea7856aa7199bc081bbe
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68003562"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809829"
 ---
 # <a name="configure-sles-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の SLES クラスターを構成する
 
@@ -187,7 +187,7 @@ Linux サーバーで、可用性グループを構成してから、クラス�
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>クラスター プロパティ cluster-recheck-interval を設定する
 
-`cluster-recheck-interval` は、クラスターがリソース パラメーター、制約、またはその他のクラスター オプションの変更を確認するポーリング間隔を示します。 レプリカがダウンした場合、クラスターは、`failure-timeout` 値と `cluster-recheck-interval` 値によってバインドされた間隔でレプリカの再起動を試みます。 たとえば、`failure-timeout` が 60 秒に設定されていて、`cluster-recheck-interval` が 120 秒に設定されている場合、再起動は 60 秒より大きく 120 秒未満の間隔で試行されます。 failure-timeout は 60 秒、cluster-recheck-interval は 60 秒より大きい値に設定することをお勧めします。 cluster-recheck-interval を小さい値に設定することは推奨されません。
+`cluster-recheck-interval` は、クラスターによってリソース パラメーター、制約、またはその他のクラスター オプションの変更が確認されるポーリング間隔を示します。 レプリカがダウンした場合、クラスターでは、`failure-timeout` 値と `cluster-recheck-interval` 値によってバインドされた間隔でレプリカの再起動が試みられます。 たとえば、`failure-timeout` が 60 秒に設定されていて、`cluster-recheck-interval` が 120 秒に設定されている場合、再起動は 60 秒より大きく 120 秒未満の間隔で試行されます。 failure-timeout は 60 秒、cluster-recheck-interval は 60 秒より大きい値に設定することをお勧めします。 cluster-recheck-interval を小さい値に設定することは推奨されません。
 
 プロパティ値を `2 minutes` に更新するには、次を実行します。
 
@@ -218,9 +218,13 @@ Pacemaker クラスターのベンダーは、STONITH を有効にして、サ�
 
 リソース レベルのフェンスは、主に、リソースを構成することによって障害が発生したときにデータが破損しないことを保証します。 たとえば DRBD (分散レプリケートされたブロックデバイス) でリソース レベルのフェンスを使用して、通信リンクがダウンしたときにノード上のディスクを期限切れとしてマークすることができます。
 
-ノード レベルのフェンスは、ノードがリソースを実行しないようにします。 これはノードをリセットすることによって行われ、Pacemaker の実装は "STONITH" ("Shoot the Other Node in the Head") と呼ばれます。 Pacemaker は、サーバーの無停電電源装置や管理インターフェイス カードなど、さまざまな種類のフェンス デバイスをサポートしています。
+ノード レベルのフェンスでは、ノードによってリソースが実行されないことが保証されます。 これはノードをリセットすることによって行われ、Pacemaker の実装は "STONITH" ("Shoot the Other Node in the Head") と呼ばれます。 Pacemaker は、サーバーの無停電電源装置や管理インターフェイス カードなど、さまざまな種類のフェンス デバイスをサポートしています。
 
-詳細については、「[Pacemaker Clusters from Scratch](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)」(ゼロから始める Pacemaker クラスター)、「[Fencing and Stonith](https://clusterlabs.org/doc/crm_fencing.html)」(フェンスと STONITH)、および「[SUSE HA documentation: Fencing and STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)」(SUSE HA ドキュメント: フェンスと STONITH) を参照してください。
+詳細については、以下をご覧ください。
+
+- [ゼロから始める Pacemaker クラスター](https://clusterlabs.org/pacemaker/doc/en-US/Pacemaker/1.1/html/Clusters_from_Scratch/)
+- [フェンスと STONITH](https://clusterlabs.org/doc/crm_fencing.html)
+- [SUSE HA ドキュメント:フェンスと STONITH](https://www.suse.com/documentation/sle_ha/book_sleha/data/cha_ha_fencing.html)
 
 クラスターの初期化時に構成が検出されない場合、STONITH は無効になります。 後で次のコマンドを実行して有効にすることができます。
 
@@ -230,7 +234,6 @@ sudo crm configure property stonith-enabled=true
   
 >[!IMPORTANT]
 >STONITH を無効にするのは、テスト目的の場合だけです。 運用環境で Pacemaker を使用する予定がある場合は、環境に応じて STONITH の実装を計画し、有効にしておく必要があります。 SUSE では、どのクラウド環境 (Azure を含む) のフェンス エージェントも提供していません。 結果的に、クラスター ベンダーは、これらの環境で運用クラスターを実行するためのサポートを提供していません。 Microsoft では、このギャップのための、今後のリリースで利用できるようになるソリューションに取り組んでいます。
-
 
 ## <a name="configure-the-cluster-resources-for-sql-server"></a>SQL Server のクラスター リソースを構成する
 
@@ -293,7 +296,7 @@ primitive admin_addr \
 ```
 
 ### <a name="add-colocation-constraint"></a>コロケーション制約を追加する
-リソースを実行する場所の選択など、Pacemaker クラスターでのほぼすべての決定は、スコアを比較することによって行われます。 スコアはリソースごとに計算され、クラスター リソース マネージャーは、特定のリソースのスコアが最も高いノードを選択します。 (ノードにリソースの負のスコアがある場合、そのノードではリソースを実行できません。)制約を使用してクラスターの決定を操作できます。 制約にはスコアがあります。 制約のスコアが INFINITY より低い場合、これは単なる推奨設定です。 INFINITY のスコアは、それが必要であることを意味します。 可用性グループと仮想 IP リソースのプライマリが同じホスト上で実行されるようにするため、INFINITY のスコアを持つコロケーション制約を定義します。 
+リソースを実行する場所の選択など、Pacemaker クラスターでのほぼすべての決定は、スコアを比較することによって行われます。 スコアはリソースごとに計算され、クラスター リソース マネージャーでは、特定のリソースのスコアが最も高いノードが選択されます。 (ノードにリソースの負のスコアがある場合、そのノードではリソースを実行できません。)制約を使用してクラスターの決定を操作できます。 制約にはスコアがあります。 制約のスコアが INFINITY より低い場合、これは単なる推奨設定です。 INFINITY のスコアは、それが必要であることを意味します。 可用性グループと仮想 IP リソースのプライマリが同じホスト上で実行されるようにするため、INFINITY のスコアを持つコロケーション制約を定義します。 
 
 マスターと同じノードで実行されるように仮想 IP のコロケーション制約を設定するには、1 つのノードで次のコマンドを実行します。
 
@@ -322,7 +325,7 @@ crm crm configure \
 
 
 >[!IMPORTANT]
->クラスターを構成し、可用性グループをクラスター リソースとして追加した後は、Transact-SQL を使用して可用性グループ リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバークラスター (WSFC) の場合と同様に、オペレーティング システムと緊密に結合されていません。 SQL Server サービスはクラスターの存在を認識しません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 SLES では `crm` を使用します。 
+>クラスターを構成し、可用性グループをクラスター リソースとして追加した後は、Transact-SQL を使用して可用性グループ リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバー クラスター (WSFC) ほど、オペレーティング システムと緊密に結合されていません。 SQL Server サービスでは、クラスターの存在は認識されません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 SLES では `crm` を使用します。 
 
 `crm` を使用して可用性グループの手動フェールオーバーを行います。 Transact-SQL を使用してフェールオーバーを開始しないでください。 詳細については、[フェールオーバー](sql-server-linux-availability-group-failover-ha.md#failover)に関するページを参照してください。
 

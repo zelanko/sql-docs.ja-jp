@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: de0482a2-3cc8-4030-8a4a-14364549ac9f
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 93d3946f712c3b4287e2589a69b94351dacca049
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d24b967821310876cfff00c257c1024dac512588
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907762"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846758"
 ---
 # <a name="define-and-modify-a-parameterized-row-filter-for-a-merge-article"></a>マージ アーティクルのパラメーター化された行フィルターの定義および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -107,7 +107,7 @@ ms.locfileid: "67907762"
   
 #### <a name="to-define-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>マージ パブリケーション内のアーティクルにパラメーター化された行フィルターを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行します。 **@publication** を指定し、アーティクルの名前を **@article** に、パブリッシュするテーブルを **@source_object** に、パラメーター化されたフィルターを定義する WHERE 句 (`WHERE` は含めません) を **@subset_filterclause** に指定します。 **@partition_options** に次のいずれかの値を指定します。これにより、パラメーター化された行フィルターによって行われるパーティション分割の種類が指定されます。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行します。 **\@publication** を指定し、アーティクルの名前を **\@article** に、パブリッシュするテーブルを **\@source_object** に、パラメーター化されたフィルターを定義する WHERE 句 (`WHERE` は含めません) を **\@subset_filterclause** に指定します。 **\@partition_options** に次のいずれかの値を指定します。これにより、パラメーター化された行フィルターによって行われるパーティション分割の種類が指定されます。  
   
     -   **0** - アーティクルのフィルター選択が静的であるか、各パーティションに対して一意なデータのサブセットは生成されません ("重複する" パーティション)。  
   
@@ -119,9 +119,9 @@ ms.locfileid: "67907762"
   
 #### <a name="to-change-a-parameterized-row-filter-for-an-article-in-a-merge-publication"></a>マージ パブリケーション内のアーティクルに適用するパラメーター化された行フィルターを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@publication** と **@article** を指定し、 **@property** に **subset_filterclause** を指定し、 **@value** にパラメーター化されたフィルターを定義する式 (`WHERE` は含めません) を指定します。さらに **@force_invalidate_snapshot** と **@force_reinit_subscription** の両方に **1** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **\@publication** と **\@article** を指定し、**subset_filterclause** を **\@property** に、パラメーター化されたフィルターを定義する式 (`WHERE` は含めません) を **\@value** に指定し、 **\@force_invalidate_snapshot** と **\@force_reinit_subscription** に **1** を指定します。  
   
-2.  この変更によって別のパーティション分割が発生した場合、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を再び実行します。 **@publication** と **@article** を指定し、 **@property** に **partition_options** を指定します。そして次の中から最も適切なパーティション分割オプションを **@value** に指定します。  
+2.  この変更によって別のパーティション分割が発生した場合、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を再び実行します。 **\@publication** と **\@article** を指定し、**partition_options** を **\@property** に指定します。次の中から最も適切なパーティション分割オプションを **\@value** に指定します。  
   
     -   **0** - アーティクルのフィルター選択が静的であるか、各パーティションに対して一意なデータのサブセットは生成されません ("重複する" パーティション)。  
   

@@ -38,8 +38,8 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 |**character varying(** _n_ **)**|**varchar(n)**|  
 |**Dec**|**decimal**|  
 |**Double precision**|**float**|  
-|**float**[ **(** _n_ **)** ] for _n_ = 1-7|**real**|  
-|**float**[ **(** _n_ **)** ] for _n_ = 8-15|**float**|  
+|**float**[ **(** n **)** ] for _n_ = 1-7|**real**|  
+|**float**[ **(** n **)** ] for _n_ = 8-15|**float**|  
 |**integer**|**int**|  
 |**national character(** _n_ **)**|**nchar(n)**|  
 |**national char(** _n_ **)**|**nchar(n)**|  
