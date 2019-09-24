@@ -30,7 +30,7 @@ ms.locfileid: "71199335"
 
   この動的管理関数は、 @object_idをパラメーターとして受け取り、その ID を持つモジュールの最初の結果メタデータを記述します。 指定@object_idできるは、 [!INCLUDE[tsql](../../includes/tsql-md.md)]ストアドプロシージャまた[!INCLUDE[tsql](../../includes/tsql-md.md)]はトリガーの ID です。 その他のオブジェクト (ビュー、テーブル、関数、または CLR プロシージャ) などの ID の場合は、結果のエラー列にエラーが記載されます。  
   
- **sys.dm_exec_describe_first_result_set_for_object** has the same result set definition as [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) and is similar to [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md).  
+ **sys.dm_exec_describe_first_result_set_for_object** には、[sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md) と同じ結果セット定義があり、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) に似ています。
   
  ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
@@ -97,7 +97,9 @@ sys.dm_exec_describe_first_result_set_for_object
 |**error_type_desc**|**nvarchar(60)**|返されるエラーを表す短い大文字の文字列が格納されます。 error_type にマップされます。 解説の下の一覧を参照してください。|  
   
 ## <a name="remarks"></a>コメント  
- この関数は、 **sp_describe_first_result_set**と同じアルゴリズムを使用します。 詳細については、[sp_describe_first_result_set & #40 を参照してください。TRANSACT-SQL と #41 です](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)。  
+
+ この関数と同じアルゴリズムを使用して**sp_describe_first_result_set**します。 詳細については、[sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md) を参照してください。
+
   
  次の表に、エラーの種類とその説明を示します。  
   
@@ -154,6 +156,8 @@ GO
 ## <a name="see-also"></a>参照  
  [sp_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-first-result-set-transact-sql.md)   
  [sp_describe_undeclared_parameters &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-describe-undeclared-parameters-transact-sql.md)   
- [_exec_describe_first_result_set &#40;transact-sql (dm)&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+
+ [sys.dm_exec_describe_first_result_set &#40;Transact-SQL&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-exec-describe-first-result-set-transact-sql.md)  
+
   
   
