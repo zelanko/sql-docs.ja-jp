@@ -45,7 +45,7 @@ sqlservr [-s instance_name] [-c] [-d master_path] [-f]
 
 ## <a name="arguments"></a>引数
 
-**-s***instance_name*接続先のの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスを指定します。 名前付きインスタンスを指定しない場合、 **sqlservr** は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既定のインスタンスを起動します。
+**-s** *instance_name* 接続先のの[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]インスタンスを指定します。 名前付きインスタンスを指定しない場合、 **sqlservr** は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の既定のインスタンスを起動します。
 
 > [!IMPORTANT]
 >[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のインスタンスを起動する場合、そのインスタンス用の適切なディレクトリで **sqlservr** アプリケーションを使用する必要があります。 既定のインスタンスの場合は、\MSSQL\Binn ディレクトリで **sqlservr** を実行します。 名前付きインスタンスの場合は、\MSSQL$ **instance_name** \Binn ディレクトリで*sqlservr*を実行します。
