@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6d835269f77e563b94c89c3a68c5c82844edc773
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493971"
 ---
 # <a name="configure-powerpivot-and-deploy-solutions-sharepoint-2013"></a>PowerPivot の構成とソリューションの配置 (SharePoint 2013)
@@ -54,7 +54,7 @@ ms.locfileid: "69493971"
   
 2.  **[PowerPivot for SharePoint の構成または修復]** をクリックし、 **[OK]** をクリックします。  
   
-3.  このツールでは、PowerPivot の現在の状態と構成を完了するために必要な手順を確認するための検証が実行されます。 ウィンドウを最大化します。 ウィンドウの下部に **[検証]** 、 **[実行]** 、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
+3.  このツールでは、PowerPivot の現在の状態と構成を完了するために必要な手順を確認するための検証が実行されます。 ウィンドウを最大化します。 ウィンドウの下部に **[検証]**、 **[実行]**、および **[終了]** の各コマンドを含むボタン バーが表示されます。  
   
 4.  **[パラメーター]** タブで、次の操作を行います。  
   
@@ -95,7 +95,7 @@ ms.locfileid: "69493971"
   
 1.  構成ツールによって作成されたサイトの URL を参照します。  
   
-     **[設定]** [![sharepoint]の設定] [(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint の設定")] をクリックし、 **[サイトの設定]** をクリックします。  
+     [**設定**] [![sharepoint]の設定] [(https://docs.microsoft.com/analysis-services/analysis-services/media/as-sharepoint2013-settings-gear.gif "sharepoint の設定")] をクリックし、[**サイトの設定**] をクリックします。  
   
      **[サイト コレクションの機能]** をクリックします。  
   
@@ -132,9 +132,9 @@ ms.locfileid: "69493971"
   
 4.  **[正常性データの収集を有効にする]** が選択されていることを確認します。  
   
-5.  **[OK]** をクリックします。  
+5.  [**OK**] をクリックします。  
   
- データ更新のトラブルシューティングの詳細については、「 [PowerPivot データ更新のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)」 (https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx) を参照してください。  
+ データ更新のトラブルシューティングの詳細については、「 [PowerPivot データ更新のトラブルシューティング](https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)」 (https://social.technet.microsoft.com/wiki/contents/articles/3870.troubleshooting-powerpivot-data-refresh.aspx)を参照してください。  
   
  構成ツールの詳細については、「 [PowerPivot Configuration Tools](../../power-pivot-sharepoint/power-pivot-configuration-tools.md)」を参照してください。  
   

@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493877"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>多対多関係の定義
@@ -69,7 +69,7 @@ ms.locfileid: "69493877"
   
 2.  **[メジャー]** ペイン内を右クリックし、 **[新しいメジャー グループ]** をクリックします。 詳細については、「 [多次元モデル内のメジャーおよびメジャー グループの作成](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)」を参照してください。  
   
-3.  **[新しいメジャーグループ]** ダイアログボックスで、 `InternetSalesReason` **[データソースビュー]** ボックスの一覧から [テーブルの選択] を選択し、 **[OK]** をクリックします。  
+3.  **新しいメジャーグループ** ダイアログボックスで、 `InternetSalesReason` **データソースビュー** ボックスの一覧から テーブルの選択 を選択し、 **OK** をクリックします。  
   
      **Internet Sales Reason** メジャー グループが **[メジャー]** ペインに表示されます。  
   

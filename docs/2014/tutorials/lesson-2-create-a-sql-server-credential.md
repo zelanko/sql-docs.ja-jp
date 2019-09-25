@@ -11,14 +11,14 @@ author: VanMSFT
 ms.author: vanto
 manager: craigg
 ms.openlocfilehash: baa337d33173f292145d92b60d6192af2a716c5e
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "70154336"
 ---
 # <a name="lesson-2-create-a-sql-server-credential"></a>レッスン 2:SQL Server 資格情報の作成
-  **資格情報:** [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、バックアップと復元のプロセスで、Azure Blob ストレージサービスに対する認証に資格情報を使用します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 ストレージアカウントの**アクセスキー**を表示、コピー、または再生成する方法の詳細については、「[ストレージアカウントのアクセスキー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)」を参照してください。  
+  **資格情報:**[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 資格情報は、SQL Server の外部にあるリソースへの接続に必要な認証情報を保存するために使用されるオブジェクトです。  ここで[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]は、バックアップと復元のプロセスで、Azure Blob ストレージサービスに対する認証に資格情報を使用します。 資格情報には、ストレージ アカウントの名前とその **アクセス キー** 値が格納されます。 作成した資格情報は、BACKUP/RESTORE ステートメントの実行時に WITH CREDENTIAL オプションで指定する必要があります。 ストレージアカウントの**アクセスキー**を表示、コピー、または再生成する方法の詳細については、「[ストレージアカウントのアクセスキー](https://msdn.microsoft.com/library/windowsazure/hh531566.aspx)」を参照してください。  
   
  資格情報の全般的な情報については、「 [資格情報](../relational-databases/security/authentication-access/credentials-database-engine.md)」を参照してください。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "70154336"
   
     ```  
   
-     ![ストレージアカウントを sql 資格情報にマップし]ています(../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "ストレージアカウントを sql 資格情報にマップし")ています  
+     ![ストレージアカウントを sql 資格情報にマップしています](../../2014/tutorials/media/backuptocloud-storage-credential-mapping.gif "ストレージアカウントを sql 資格情報にマップしています")  
   
-5.  T-sql ステートメントを確認し、 **[実行]** をクリックします。  
+5.  T-sql ステートメントを確認し、[**実行**] をクリックします。  
   
  バックアップの概念と要件に関する Azure Blob storage サービスの詳細については、「 [Azure Blob Storage サービスを使用したバックアップと復元の SQL Server](../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。  
   

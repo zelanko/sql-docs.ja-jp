@@ -17,10 +17,10 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "68811039"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
@@ -114,7 +114,7 @@ ms.locfileid: "68811039"
  高パフォーマンスと高い圧縮率を実現するために、列ストア インデックスは、テーブルを行グループと呼ばれる行のグループにスライスし、各行グループを列方向に圧縮します。 行グループ内の行数は、圧縮率を向上させるのに十分な大きさで、インメモリ操作の利点を十分に小さくする必要があります。  
   
  行グループ  
- 行グループは、同時に列ストア形式に圧縮される行のグループです。  
+ 行*グループは、* 同時に列ストア形式に圧縮される行のグループです。  
   
  列セグメント  
  *列セグメント* は、行グループ内のデータ列です。  
