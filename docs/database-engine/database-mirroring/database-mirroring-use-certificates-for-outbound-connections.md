@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 464c9096-10d6-4c5e-8bb1-19acba27ad9e
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a5e737f230ce7462aa59c0bfbcbfe19be55b66a5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b989d4958da67a0959c0d3686a1d207c4353e302
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68044563"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846664"
 ---
 # <a name="database-mirroring---use-certificates-for-outbound-connections"></a>データベース ミラーリング - 発信接続に証明書を使用する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,7 +44,7 @@ ms.locfileid: "68044563"
   
 ## <a name="procedure"></a>手順  
   
-#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-hosta"></a>ミラーリングの発信接続用に (HOST_A 上で) サーバー インスタンスを構成するには  
+#### <a name="to-configure-server-instances-for-outbound-mirroring-connections-on-host_a"></a>ミラーリングの発信接続用に (HOST_A 上で) サーバー インスタンスを構成するには  
   
 1.  **master** データベースで、データベース マスター キーが存在しない場合は作成します。 データベースの既存のキーを表示するには、 [sys.symmetric_keys](../../relational-databases/system-catalog-views/sys-symmetric-keys-transact-sql.md) カタログ ビューを使用します。  
   
@@ -64,7 +64,7 @@ ms.locfileid: "68044563"
      たとえば、HOST_A システム用の証明書を作成するには、次のステートメントを使用します。  
   
     > [!IMPORTANT]  
-    >  証明書の使用期間が 1 年を超える場合は、CREATE CERTIFICATE ステートメントの EXPIRY_DATE オプションを使用して、有効期限を UTC 時間で指定してください。 また、証明書の有効期限が近いことを知らせるポリシー ベースの管理ルールを SQL Server Management Studio で作成することをお勧めします。 ポリシー管理の **[新しい条件の作成]** ダイアログ ボックスを使用し、 **@ExpirationDate** ファセットの **[@ExpirationDate]** フィールドでこのルールを作成します。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 」と「 [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)」を参照してください。  
+    >  証明書の使用期間が 1 年を超える場合は、CREATE CERTIFICATE ステートメントの EXPIRY_DATE オプションを使用して、有効期限を UTC 時間で指定してください。 また、証明書の有効期限が近いことを知らせるポリシー ベースの管理ルールを SQL Server Management Studio で作成することをお勧めします。 ポリシー管理の **[新しい条件の作成]** ダイアログ ボックスを使用し、 **[証明書]** ファセットの **[\@ExpirationDate]** フィールドでこのルールを作成します。 詳細については、「 [ポリシー ベースの管理を使用したサーバーの管理](../../relational-databases/policy-based-management/administer-servers-by-using-policy-based-management.md) 」と「 [SQL Server の保護](../../relational-databases/security/securing-sql-server.md)」を参照してください。  
   
     ```  
     USE master;  

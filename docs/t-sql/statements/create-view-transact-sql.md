@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 4c94d94a572f1bc3c8ac0fe7507bc251537d38f5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 80f97354c60d26cff6a10c29712b23bc1f6dfd84
+ms.sourcegitcommit: 059da40428ee9766b6f9b16b66c689b788c41df1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67938880"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71038873"
 ---
 # <a name="create-view-transact-sql"></a>CREATE VIEW (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,7 +165,7 @@ OR ALTER
   
  削除されたテーブル (またはビュー) に従属しているビューを使用すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] ではエラー メッセージが返されます。 テーブルの構造が以前のベース テーブルから変わっていなければ、削除されたテーブルやビューの代わりになる、新しいテーブルまたはビューを作成すると、ビューは再び使用可能になります。 新しいテーブルまたはビューの構造が変化した場合は、ビューを削除し、再作成する必要があります。  
   
- ビューが SCHEMABINDING 句を使用して作成したものでない場合、ビューの基になっているオブジェクトに対して、ビューの定義に影響するような変更が行われた際には、[sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) を実行する必要があります。 それ以外の場合は、ビューのクエリ時に、予期しない結果が生成される可能性があります。  
+ ビューが SCHEMABINDING 句を使用して作成したものでない場合、ビューの基になっているオブジェクトに対して、ビューの定義に影響するような変更が行われた際には、[sp_refreshview](../../relational-databases/system-stored-procedures/sp-refreshview-transact-sql.md) を実行します。 それ以外の場合は、ビューのクエリ時に、予期しない結果が生成される可能性があります。  
   
  ビューが作成されると、ビューについての情報がカタログ ビュー [sys.views](../../relational-databases/system-catalog-views/sys-views-transact-sql.md)、[sys.columns](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)、[sys.sql_expression_dependencies](../../relational-databases/system-catalog-views/sys-sql-expression-dependencies-transact-sql.md) に格納されます。 CREATE VIEW ステートメントのテキストは、[sys.sql_modules](../../relational-databases/system-catalog-views/sys-sql-modules-transact-sql.md) カタログ ビューに格納されます。  
   
@@ -245,11 +245,11 @@ FROM Tn;
   
 1.  選択リスト (`list`  
   
-    -   メンバー テーブルのすべての列は、ビュー定義の列リストで選択する必要があります。  
+    -   ビュー定義の列リストで、メンバー テーブルのすべての列を選択します。  
   
-    -   それぞれの `select list` の同じ位置にある列は、照合順序も含めて同じ型であることが必要です。 一般的に UNION の場合のように、列が暗黙的に変換される型にするだけでは十分ではありません。  
+    -   それぞれの `select list` の同じ位置にある列は、照合順序も含めて同じ型にします。 一般的に UNION の場合のように、列が暗黙的に変換される型にするだけでは十分ではありません。  
   
-         また、すべての選択リストの同じ位置に、少なくとも 1 つの列 (たとえば `<col>`) が指定されている必要があります。 この `<col>` は、メンバー テーブル `T1, ..., Tn` の `<col>` にそれぞれ CHECK 制約 `C1, ..., Cn` を指定することで定義します。  
+         また、すべての選択リストの同じ位置に、少なくとも 1 つの列 (たとえば `<col>`) が指定されている必要があります。 `<col>` は、メンバー テーブル `T1, ..., Tn` の `<col>` にそれぞれ CHECK 制約 `C1, ..., Cn` が定義されるように定義します。  
   
          テーブル `C1` の制約 `T1` は、次の形式で定義する必要があります。  
   
@@ -263,7 +263,7 @@ FROM Tn;
         < col > { < | <= } < value2 >  
         ```  
   
-    -   これらの制約は、`<col>` に指定したすべての値が `C1, ..., Cn` の制約の 1 つにのみ該当するような形式にする必要があります。つまり、連続せずかつ重複しない間隔を持つ制約セットを形成するように定義します。 連続しない制約が定義されている列 `<col>` は、パーティション分割列と呼ばれます。 パーティション分割列は、基になるテーブルではそれぞれ異なる名前が付いている場合があります。 前に示したパーティション分割列の条件を満たすには、パーティション分割列に対して制約が有効かつ信頼されている必要があります。 制約が無効の場合は、ALTER TABLE の CHECK CONSTRAINT *constraint_name* オプションを使用して制約チェックを再度有効にし、WITH CHECK オプションを使用して制約を検証します。  
+    -   制約は、連続せずかつ重複しない間隔を持つ制約セットを形成されるよう、`<col>` に指定したすべての値が `C1, ..., Cn` の制約の 1 つにのみ該当するような形式にする必要があります。 連続しない制約が定義されている列 `<col>` は、パーティション分割列と呼ばれます。 パーティション分割列は、基になるテーブルではそれぞれ異なる名前が付いている場合があります。 前に示したパーティション分割列の条件を満たすには、パーティション分割列に対して制約が有効かつ信頼されている必要があります。 制約が無効の場合は、ALTER TABLE の CHECK CONSTRAINT *constraint_name* オプションを使用して制約チェックを再度有効にし、WITH CHECK オプションを使用して制約を検証します。  
   
          次は、有効な制約のセットの例です。  
   
@@ -280,7 +280,7 @@ FROM Tn;
   
     -   計算列、ID 列、既定の列、または **timestamp** 列に対して指定することはできません。  
   
-    -   メンバー テーブルの同じ列に複数の制約が定義されている場合、データベース エンジンではすべての制約が無視され、ビューがパーティション ビューであるかどうかを判断する際にそれらの制約は考慮されません。 パーティション ビューの条件を満たすには、パーティション分割列にパーティション分割制約を 1 つだけにする必要があります。  
+    -   メンバー テーブルの同じ列に複数の制約が定義されている場合、データベース エンジンではすべての制約が無視され、ビューがパーティション ビューであるかどうかを判断する際にそれらの制約は考慮されません。 パーティション ビューの条件を満たすには、パーティション分割列にパーティション分割制約を 1 つだけにします。  
   
     -   パーティション分割列の更新可能性に制限はありません。  
   
@@ -294,16 +294,16 @@ FROM Tn;
   
     -   メンバー テーブルでは、テーブル内の計算列上にインデックスを作成することはできません。  
   
-    -   メンバー テーブルでは、すべての PRIMARY KEY 制約が同じ数の列に対して含める必要があります。  
+    -   メンバー テーブルでは、すべての PRIMARY KEY 制約が同じ数の列に対して与えられます。  
   
-    -   ビューのすべてのメンバー テーブルには、同じ ANSI PADDING 設定を含める必要があります。 これは、**sp_configure** の **user options** オプションまたは SET ステートメントを使用して設定できます。  
+    -   ビューのすべてのメンバー テーブルには、同じ ANSI PADDING 設定が与えられます。 これは、**sp_configure** の **user options** オプションまたは SET ステートメントを使用して設定できます。  
   
 ## <a name="conditions-for-modifying-data-in-partitioned-views"></a>パーティション ビューのデータを変更する条件  
  パーティション ビューのデータを変更するステートメントには、次の制限が適用されます。  
   
--   INSERT ステートメントでは、基になるメンバー テーブルで列に DEFAULT 制約があるか、NULL 値が許可されている場合でも、ビューのすべての列に値を提供する必要があります。 メンバー テーブルの列に DEFAULT 定義がある場合、ステートメントで明示的に DEFAULT キーワードを使用することはできません。  
+-   INSERT ステートメントでは、基になるメンバー テーブルで列に DEFAULT 制約があるか、NULL 値が許可されている場合でも、ビューのすべての列に値を提供します。 メンバー テーブルの列に DEFAULT 定義がある場合、ステートメントで明示的に DEFAULT キーワードを使用することはできません。  
   
--   パーティション分割列に挿入する値は、基になる制約の少なくとも 1 つを満たしている必要があります。満たしていない場合、INSERT アクションは制約違反で失敗します。  
+-   パーティション分割列に挿入する値は、基になる制約の少なくとも 1 つを満たします。満たしていない場合、INSERT アクションは制約違反で失敗します。  
   
 -   UPDATE ステートメントでは、対応するメンバー テーブルで列の DEFAULT 値が定義されている場合でも、SET 句の値として DEFAULT キーワードを指定することはできません。  
   
@@ -325,7 +325,7 @@ FROM Tn;
   
 -   更新によって影響を受けるすべてのノードを超えて原子性を保証するため、分散トランザクションが起動されます。  
   
--   INSERT、UPDATE、または DELETE ステートメントが動作するには、XACT_ABORT SET オプションを ON に設定する必要があります。  
+-   INSERT、UPDATE、または DELETE ステートメントが動作するには、XACT_ABORT SET オプションを ON に設定します。  
   
 -   パーティション ビューで参照されるリモート テーブルの **smallmoney** 型の列は、**money** としてマップされます。 このため、ローカル テーブルの対応する列 (選択リストの同じ順番にある列) も、**money** 型であることが必要です。  
   
@@ -340,7 +340,7 @@ FROM Tn;
 ## <a name="considerations-for-replication"></a>レプリケーションに関する注意点  
  レプリケーションに関係するメンバー テーブルのパーティション ビューを作成するには、次の点に注意してください。  
   
--   基になるテーブルが、更新サブスクライバーとのマージ レプリケーションまたはトランザクション レプリケーションに関係する場合、選択リストには **uniqueidentifier** 列も含まれる必要があります。  
+-   基になるテーブルが、更新サブスクライバーとのマージ レプリケーションまたはトランザクション レプリケーションに関係する場合、選択リストには **uniqueidentifier** 列も含まれるようにします。 
   
      パーティション ビューに対する INSERT 操作では、**uniqueidentifier** 列の NEWID() 値を指定する必要があります。 **uniqueidentifier** 列に対する UPDATE 操作では、DEFAULT キーワードを使用できないので、NEWID() を値として指定する必要があります。  
   

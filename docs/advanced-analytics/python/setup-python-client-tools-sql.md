@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 6f40f04d677d5dcfa758a13321009da3e535c5d4
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: 87c05fafb122e292c45033bb019548c84df44de0
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69634540"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199477"
 ---
 # <a name="set-up-a-data-science-client-for-python-development-on-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services での Python 開発用のデータサイエンスクライアントの設定
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -40,7 +40,7 @@ Python 開発者が SQL を初めて使用する場合でも、Python とデー�
 
 Python の開発では、Jupyter Notebook を使用できます。これは SQL Server によってインストールされた Anaconda ディストリビューションにバンドルされています。 この記事では、Jupyter Notebook を起動して、SQL Server で Python コードをローカルおよびリモートで実行できるようにする方法について説明します。
 
-SSMS は、Python コードが含まれているものを含め、SQL Server でストアドプロシージャを作成および実行する場合に便利な、個別のダウンロードです。 Jupyter Notebook で記述するほとんどすべての Python コードは、ストアドプロシージャに埋め込むことができます。 他のクイックスタートをステップ実行して[、SSMS と埋め込み Python](../tutorials/quickstart-python-verify.md)について学習することができます。
+SSMS は、Python コードが含まれているものを含め、SQL Server でストアドプロシージャを作成および実行する場合に便利な、個別のダウンロードです。 Jupyter Notebook で記述するほとんどすべての Python コードは、ストアドプロシージャに埋め込むことができます。 他のクイックスタートをステップ実行して[、SSMS と埋め込み Python](../tutorials/quickstart-python-create-script.md)について学習することができます。
 
 ## <a name="1---install-python-packages"></a>1-Python パッケージをインストールする
 
@@ -305,4 +305,4 @@ PyCharm で、インタープリターを Machine Learning Server によって�
 これで、ツールと SQL Server への接続が完了したので、 [SQL Server Management Studio (SSMS)](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms)を使用して Python のクイックスタートでを実行し、スキルを向上させることができます。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server に Python が存在することを確認する](../tutorials/quickstart-python-verify.md)
+> [クイック スタート:SQL Server Machine Learning Services を使用した単純な Python スクリプトの作成と実行](../tutorials/quickstart-python-create-script.md)

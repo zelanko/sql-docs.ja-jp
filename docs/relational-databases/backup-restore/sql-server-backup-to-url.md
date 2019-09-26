@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 11be89e9-ff2a-4a94-ab5d-27d8edf9167d
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 534907b49e5139f57f8b008742cf76346f7838ec
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: 86ef1638fc37fd70d8438c173b5972fa2fc8f551
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176359"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118184"
 ---
 # <a name="sql-server-backup-to-url"></a>SQL Server Backup to URL
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -66,8 +66,10 @@ ms.locfileid: "70176359"
 - 複数のブロック BLOB にバックアップしてバックアップと復元のパフォーマンスを向上させ、より大きなデータベースのバックアップをサポートすることができます。
 - [ブロック BLOB](https://azure.microsoft.com/pricing/details/storage/blobs/) は[ページ BLOB](https://azure.microsoft.com/pricing/details/storage/page-blobs/) よりも安価です。 
 
-ブロック BLOB にバックアップする場合、指定できる最大ブロック サイズは 4 MB です。 1 つのブロック BLOB ファイルの最大サイズは、4 MB * 50000 = 195 GB です。 データベースが 195 GB を超える場合は、以下をお勧めします。
-- バックアップの圧縮の使用
+Blob Storage に大規模なデータベースをバックアップするとき、「[マネージド インスタンスの T-SQL の相違点、制限、既知の問題](/azure/sql-database/sql-database-managed-instance-transact-sql-information#backup)」に記載されている制限事項が当てはまります。
+
+ データベースが大きすぎる場合、次のいずれかの方法を実行します。
+- バックアップの圧縮の使用または
 - 複数のブロック BLOB へのバックアップ
 
 ###  <a name="Blob"></a> Microsoft Azure BLOB ストレージ サービス  

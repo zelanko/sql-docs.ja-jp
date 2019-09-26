@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: 056110966ece8e344320b73890dbead9d513230b
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
+ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68085721"
+ms.lasthandoff: 07/30/2019
+ms.locfileid: "70910792"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux に SQL Server コマンドライン ツール sqlcmd および bcp をインストールする
 
@@ -197,7 +197,7 @@ brew install mssql-tools
 
 ## <a id="docker"></a> Docker
 
-SQL Server コマンドライン ツールは、Docker イメージに含まれています。 対話型のコマンド プロンプトを使用してイメージにアタッチすると、ツールをローカルで実行できます。
+[Docker コンテナー内で SQL Server を実行する](quickstart-install-connect-docker.md)場合、SQL Server のコマンドライン ツールは SQL Server Linux コンテナー イメージに既に含まれています。 対話型の Bash シェルで実行中のコンテナーにアタッチする場合は、ツールをローカルで実行できます。
 
 ## <a name="offline-installation"></a>オフライン インストール
 
@@ -229,7 +229,7 @@ SQL Server コマンドライン ツールは、Docker イメージに含まれ�
     | SLES | `sudo zypper install msodbcsql-<version>.rpm`<br/>`sudo zypper install mssql-tools-<version>.rpm` |
     | Ubuntu | `sudo dpkg -i msodbcsql_<version>.deb`<br/>`sudo dpkg -i mssql-tools_<version>.deb` |
 
-1. **不足している依存関係を解決します**。この時点で、依存関係が不足している可能性があります。 そうでない場合は、この手順は省略します。 場合によっては、それらの依存関係を手動で見つけてインストールする必要があります。
+1. **不足している依存関係を解決します**。この時点で、依存関係が不足している場合があります。 そうでない場合は、この手順は省略します。 場合によっては、それらの依存関係を手動で見つけてインストールする必要があります。
 
     RPM パッケージでは、次のコマンドを使用して必要な依存関係を調べることができます。
 

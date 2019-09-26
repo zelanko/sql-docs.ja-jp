@@ -10,12 +10,12 @@ ms.assetid: 42f45b23-6509-45e8-8ee7-76a78f99a920
 author: rothja
 ms.author: jroth
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: bc752d5653c4483552312c45139996e8a84c39e4
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 6c0889349631a543e970b11eff9bb24a6f2da208
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811283"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874455"
 ---
 # <a name="whats-new-in-database-engine---sql-server-2017"></a>データベース エンジンの新機能 - SQL Server 2017
 [!INCLUDE[tsql-appliesto-ss2017-xxxx-xxxx-xxx-md](../includes/tsql-appliesto-ss2017-xxxx-xxxx-xxx-md.md)]
@@ -27,7 +27,7 @@ ms.locfileid: "68811283"
 
 **機能強化**  
 
-- CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 `clr strict security` 機能の回避策として、CLR アセンブリをホワイトリストに追加できます。 信頼できるアセンブリのホワイトリストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。 詳しくは、「[CLR の厳密なセキュリティ](configure-windows/clr-strict-security.md)」をご覧ください。  
+- CLR では、セキュリティ境界としてサポートされなくなった、.NET Framework のコード アクセス セキュリティ (CAS) が使用されます。 `PERMISSION_SET = SAFE` で作成された CLR アセンブリが、外部のシステム リソースにアクセスし、非管理対象コードを呼び出し、sysadmin 特権を取得できる場合があります。 [!INCLUDE[sssqlv14-md](../includes/sssqlv14-md.md)] 以降、CLR アセンブリのセキュリティを強化するために `clr strict security` という `sp_configure` オプションが導入されました。 `clr strict security` は既定で有効になり、`SAFE` および `EXTERNAL_ACCESS` アセンブリを `UNSAFE` とマークされている場合と同様に扱います。 `clr strict security` オプションは、旧バージョンとの互換性のために無効にできますが、これは推奨されません。 Microsoft では、master データベースで `UNSAFE ASSEMBLY` アクセス許可が付与されている対応するログインを含む証明書または非対称キーで、すべてのアセンブリに署名することをお勧めします。 `clr strict security` 機能の回避策として、CLR アセンブリを許可リストに追加できます。 信頼できるアセンブリの許可リストをサポートするために、[sp_add_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-add-trusted-assembly-transact-sql.md)、[sp_drop_trusted_assembly](../relational-databases/system-stored-procedures/sys-sp-drop-trusted-assembly-transact-sql.md)、および [sys.trusted_asssemblies](../relational-databases/system-catalog-views/sys-trusted-assemblies-transact-sql.md) が追加されました。 詳しくは、「[CLR の厳密なセキュリティ](configure-windows/clr-strict-security.md)」をご覧ください。  
 - 新しい DMF [sys.dm_db_log_stats](../relational-databases/system-dynamic-management-views/sys-dm-db-log-stats-transact-sql.md) は、トランザクション ログの正常性の監視に役立つ、トランザクション ログ ファイルに関する概要レベルの属性と情報を公開するために、導入されました。  
 - 再開可能なオンライン インデックス リビルド。 再開可能なオンライン インデックス リビルドを使用すると、障害 (レプリカへのフェールオーバーや、ディスク領域不足など) 発生後、停止した場所からオンライン インデックス リビルド操作を再開できます。 また、一時停止し、オンライン インデックス リビルド操作を後で再開することもできます。 たとえば、利用できるメンテナンス期間が大規模なテーブルには短すぎる場合、別のメンテナンス期間に優先度の高いタスクを実行したり、インデックスのリビルドを完了したりするために、システム リソースの解放が必要になる場合があります。 最終的に、再開可能なオンライン インデックス リビルドでは大量のログ領域は必要ないため、再開可能なリビルド操作の実行中に、ログの切り捨てを実行できます。 「[ALTER INDEX](../t-sql/statements/alter-index-transact-sql.md)」と「[オンライン インデックス操作のガイドライン](../relational-databases/indexes/guidelines-for-online-index-operations.md)」を参照してください。
 - **ALTER DATABASE SCOPED CONFIGURATION の IDENTITY_CACHE オプション**。 `ALTER DATABASE SCOPED CONFIGURATION` T-SQL ステートメントに追加された新しい IDENTITY_CACHE オプションです。 このオプションを `OFF` に設定すると、サーバーが予期せず再起動したときやセカンダリ サーバーにフェールオーバーしたときに、データベースが ID 列の値のギャップを回避できます。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。   

@@ -9,17 +9,37 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 08/15/2019
-ms.openlocfilehash: fd10408eb976dd40383c058489a971b557a2acd4
-ms.sourcegitcommit: 2bc15f81d7a238c6fc409440800f1d6c7943a4b5
+ms.date: 09/11/2019
+ms.openlocfilehash: d505fcdbffe52245a64548d476cbee2193823fdb
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/27/2019
-ms.locfileid: "70059265"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878624"
 ---
 # <a name="release-notes-for-azure-data-studio"></a>Azure Data Studio のリリース ノート
 
 **[最新リリースのダウンロードとインストール](download.md)**
+
+## <a name="september-2019"></a>2019 年 9 月
+
+2019 年 9 月 10 日 &nbsp; / &nbsp; バージョン:1.11.0 
+
+&nbsp;
+
+| [変更] | 詳細 |
+| :----- | :------ |
+| SQLCMD モードの有効化 | クエリ エディターで SQLCMD モードを切り替えて、クエリを SQLCMD スクリプトとして記述および編集できるようになりました |
+| コミュニティ拡張機能:クエリ エディター ブースト | クエリ エディター ブーストとは、Azure Data Studio クエリ エディターを、クエリを頻繁に記述するユーザー向けに拡張したオープン ソースの拡張機能です。 &bull; &nbsp; 現在のクエリをスニペットとして保存する <br/>&bull; &nbsp; Ctrl + U を使用してデータベースを切り替える <br/> &bull; &nbsp; テンプレートから新しいクエリ <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/dzsquared/query-editor-boost)を参照してください |
+| ノートブックの機能強化 | &bull; &nbsp; より大きなノートブック ファイルをサポートするためのパフォーマンスの強化 <br/> &bull; &nbsp; 機能強化の完全な一覧については、[こちら](https://github.com/microsoft/azuredatastudio/issues?q=is%3Aissue+milestone%3A%22September+2019+Release%22+label%3A%22Area%3A+Notebooks%22+is%3Aclosed)を参照してください |
+| Visual Studio Code August Release Merge 1.38 | 最新の機能強化については、[こちら](https://code.visualstudio.com/updates/v1_38)を参照してください。 |
+| バグと問題が解決されました | 修正の完全な一覧については、[GitHubの「バグと問題」](https://github.com/microsoft/azuredatastudio/milestone/39?closed=1)を参照してください。 |
+| &nbsp; | &nbsp; |
+
+### <a name="known-issues"></a>既知の問題
+- ノートブック
+    - [7080](https://github.com/microsoft/azuredatastudio/issues/7080) Notebook が正しくシリアル化されないまれなケース
+
 
 ## <a name="august-2019"></a>2019 年 8 月
 

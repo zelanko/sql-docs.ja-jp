@@ -13,12 +13,12 @@ ms.assetid: c9a4e145-33c3-42b2-a510-79813e67806a
 author: jovanpop-msft
 ms.author: jovanpop
 monikerRange: =azuresqldb-current||= azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: f97c2e52c92a4ad6313ca6b18ed17fa89d831e93
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 3a18105727079997710ece9047ef87788d57b8d7
+ms.sourcegitcommit: b4962530f90234017073b3fdd2248936b2de4e69
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190400"
+ms.lasthandoff: 09/17/2019
+ms.locfileid: "71077523"
 ---
 # <a name="json-data-in-sql-server"></a>SQL Server の JSON データ
 [!INCLUDE[appliesto-ss2016-asdb-asdw-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-asdw-xxx-md.md)]
@@ -60,10 +60,10 @@ SQL Server がその組み込みの JSON サポートで提供する主な機能
 ### <a name="extract-values-from-json-text-and-use-them-in-queries"></a>JSON テキストから値を抽出し、それらをクエリで使用する
 データベース テーブルに格納されている JSON テキストがある場合は、組み込み関数を使用して JSON テキスト内の値を読み取るか、変更することができます。  
     
--   [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) は、文字列に有効な JSON が含まれているかどうかをテストします。
--   [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) は、JSON 文字列からスカラー値を抽出します。
--   [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) は、JSON 文字列からオブジェクトまたは配列を抽出します。
--   [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) は、JSON 文字列の値を変更します。
+- [ISJSON (Transact-SQL)](../../t-sql/functions/isjson-transact-sql.md) は、文字列に有効な JSON が含まれているかどうかをテストします。
+- [JSON_VALUE (Transact-SQL)](../../t-sql/functions/json-value-transact-sql.md) は、JSON 文字列からスカラー値を抽出します。
+- [JSON_QUERY (Transact-SQL)](../../t-sql/functions/json-query-transact-sql.md) は、JSON 文字列からオブジェクトまたは配列を抽出します。
+- [JSON_MODIFY (Transact-SQL)](../../t-sql/functions/json-modify-transact-sql.md) は、JSON 文字列の値を変更します。
 
 
 **例**

@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cd458727fad637414d7c71865b2633f3caf80175
-ms.sourcegitcommit: 949e55b32eff6610087819a93160a35af0c5f1c9
+ms.openlocfilehash: 80f714810acd8c04c80fe0b8abe5214a456f6dd6
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/05/2019
-ms.locfileid: "70383560"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199409"
 ---
 # <a name="python-tutorials-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の Python チュートリアル
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -42,10 +42,9 @@ SQL Server Machine Learning Services を初めて使用する場合は、Python 
 
 | クイック スタート | 説明 |
 |-|-|
-| [Python および SQL Server での Hello World](quickstart-python-run-using-t-sql.md) | T-sql で Python を呼び出す方法の基本について説明します。 |
-| [SQL Server での Python を使用した入力と出力の処理](quickstart-python-inputs-and-outputs.md) | [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)で Python の入力と出力を処理する方法について説明します。 |
-| [SQL Server の Python データ構造](quickstart-python-data-structures.md) | SQL Server が Python パンダパッケージを使用してデータ構造を処理する方法について説明します。 |
-| [最初のモデルをトレーニングして使用する](quickstart-python-train-score-in-tsql.md) | Python モデルを作成、トレーニング、および使用して、新しいデータを予測する方法について説明します。 |
+| [Python および SQL Server での Hello World](quickstart-python-create-script.md) | [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)を使用して T-sql で Python を呼び出す方法の基本について説明します。 |
+| [SQL Server での Python を使用したデータ型とオブジェクトの処理](quickstart-python-data-structures.md) | SQL Server が Python パンダパッケージを使用してデータ構造を処理する方法について説明します。 |
+| [Python で予測モデルを作成してスコア付けする](quickstart-python-train-score-model.md) | Python モデルを作成、トレーニング、および使用して、新しいデータから予測を行う方法について説明します。 |
 
 ## <a name="next-steps"></a>次の手順
 

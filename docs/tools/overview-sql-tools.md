@@ -1,34 +1,35 @@
 ---
 title: SQL Server 用の SQL クエリおよび管理ツール、Azure SQL (azure sql データベース、azure sql マネージインスタンス、SQL 仮想マシン)、Azure SQL data warehouse |Microsoft Docs
 description: SQL Server 用の SQL クエリおよび管理ツール、Azure SQL (Azure sql database、azure sql マネージインスタンス、SQL 仮想マシン)、Azure SQL data warehouse
-ms.custom: ''
-ms.date: 09/11/2019
 ms.prod: sql
 ms.prod_service: sql-tools
-ms.reviewer: ''
 ms.technology: tools-other
 ms.topic: conceptual
 ms.assetid: ''
 author: markingmyname
 ms.author: maghan
+ms.reviewer: ''
+ms.custom: ''
+ms.date: 09/11/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017'
-ms.openlocfilehash: 56ed7a0cf53a026b470c90c36b37da95f02ac5bc
-ms.sourcegitcommit: 3bd813ab2c56b415a952e5fbd5cfd96b361c72a2
-ms.translationtype: HT
+ms.openlocfilehash: 9c5262dfc610e62f0782b0cc6c8fe523d94d0730
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70913574"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096880"
 ---
-# <a name="sql-query-and-management-tools-for-sql-server-azure-sql-azure-sql-database-azure-sql-managed-instance-sql-virtual-machines-and-azure-sql-data-warehouse"></a>SQL Server 用の SQL クエリおよび管理ツール、Azure SQL (Azure sql database、azure sql マネージインスタンス、SQL 仮想マシン)、Azure SQL data warehouse
+# <a name="sql-query-and-management-tools-for-sql-server"></a>SQL Server 用の SQL クエリおよび管理ツール
+
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
-データベースの管理 (クエリ、監視など) を行うには、ツールが必要です。 データベースはクラウド、Windows、または[Linux](../linux/sql-server-linux-overview.md)で実行できますが、ツールをデータベースと同じプラットフォームで実行する必要はありません。 
+データベースの管理 (クエリ、監視など) を行うには、ツールが必要です。 データベースはクラウド、Windows、または[Linux](../linux/sql-server-linux-overview.md)で実行できますが、ツールをデータベースと同じプラットフォームで実行する必要はありません。
 
 使用できるデータベースツールは多数あります。この記事では、SQL データベースを操作するために使用できるツールについて説明します。 必要なツールを決定する際には、[どのツールを使用すればよいでしょうか](#which-tool-should-i-choose)。
 
-詳細については、ツールをダウンロードするには、次の表の「ツール」列のリンクを選択してください。 SQL Server をダウンロードするには、「 [SQL Server のインストール](../database-engine/install-windows/install-sql-server.md)」を参照してください。 
+詳細については、ツールをダウンロードするには、次の表の「ツール」列のリンクを選択してください。 SQL Server をダウンロードするには、「 [SQL Server のインストール](../database-engine/install-windows/install-sql-server.md)」を参照してください。
 
-## <a name="gui-tools-to-manage-databases"></a>データベースを管理するための GUI ツール  
+## <a name="gui-tools-to-manage-databases"></a>データベースを管理するための GUI ツール
 
 次のツールには、グラフィカルユーザーインターフェイス (GUI) が用意されています。
 
@@ -38,7 +39,6 @@ ms.locfileid: "70913574"
 | [SQL Server Management Studio (SSMS)](../ssms/download-sql-server-management-studio-ssms.md) | SQL Server Management Studio (SSMS) を使用して、SQL Server、Azure SQL Database、および Azure SQL Data Warehouse のクエリ、設計、管理を行います。 | **SSMS は Windows 上で実行**されます。|
 | [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) | SQL Server、Azure SQL Database、および Azure SQL Data Warehouse のために、Visual Studio を強力な開発環境にします。| **SSDT は Windows 上で実行されます**。|
 | [Visual Studio Code](https://code.visualstudio.com/)| Visual Studio Code のインストール後、Microsoft SQL Server、Azure SQL Database、および SQL Data Warehouse を開発するための[mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)をインストールします。| **Visual Studio Code は、Windows、macOS、Linux で実行**されます。|
-
 
 ## <a name="command-line-tools-to-manage-databases"></a>データベースを管理するためのコマンドラインツール
 
@@ -54,8 +54,6 @@ ms.locfileid: "70913574"
 |[**mssql-scripter (プレビュー)** ](https://github.com/Microsoft/mssql-scripter)|**scripter**は、SQL Server データベースをスクリプト化するためのマルチプラットフォームコマンドラインエクスペリエンスです。|Windows、macOS、Linux|
 |[**mssql-conf**](../linux/sql-server-linux-configure-mssql-conf.md)|**mssql は、** Linux で実行されている SQL Server を構成します。|Linux|
 
-
-
 ## <a name="which-tool-should-i-choose"></a>どのツールを選択すればよいですか?
 
 - Windows、Linux、または Mac で軽量エディターを使用して、SQL Server インスタンスまたはデータベースを管理しますか? [[!INCLUDE[name-sos](../includes/name-sos.md)]](../sql-operations-studio/download.md) を選択します。
@@ -63,8 +61,6 @@ ms.locfileid: "70913574"
 - Windows でのコンパイル時の検証、リファクタリング、デザイナーのサポートなど、データベースコードを作成または管理しますか? [SQL Server Data Tools (SSDT)](../ssdt/download-sql-server-data-tools-ssdt.md) を選択します。
 - IntelliSense、高光灯などの機能を備えたコマンドラインツールを使用して SQL Server に対してクエリを実行しますか? [Mssql-cli の](mssql-cli.md)選択
 - Windows、Linux、または Mac の軽量エディターで T-sql スクリプトを作成しますか? [Visual Studio Code](https://code.visualstudio.com/)と[mssql 拡張機能](https://marketplace.visualstudio.com/items?itemName=ms-mssql.mssql)を選択します。
-
-
 
 ## <a name="additional-tools"></a>その他のツール
 
@@ -77,4 +73,3 @@ ms.locfileid: "70913574"
 | [ssbdiagnose](../tools/ssbdiagnose/ssbdiagnose-utility-service-broker.md) | Ssbdiagnose ユーティリティは、Service Broker メッセージ交換または Service Broker サービスの構成の問題を報告します。 |
 
 このページに記載されていないその他のツールについては、「 [SQL コマンドプロンプトユーティリティ](command-prompt-utility-reference-database-engine.md)」を参照してください。
-

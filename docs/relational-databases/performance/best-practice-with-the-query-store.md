@@ -10,15 +10,15 @@ ms.topic: conceptual
 helpviewer_keywords:
 - Query Store, best practices
 ms.assetid: 5b13b5ac-1e4c-45e7-bda7-ebebe2784551
-author: julieMSFT
+author: pmasl
 ms.author: jrasnick
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||= azure-sqldw-latest||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fc407a8b76665b39837b5c278f2ce5942be45e51
-ms.sourcegitcommit: 676458a9535198bff4c483d67c7995d727ca4a55
+ms.openlocfilehash: 4627118daa91305dc905eb5f306e6bd2fcc1b91c
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/22/2019
-ms.locfileid: "69903613"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163893"
 ---
 # <a name="best-practice-with-the-query-store"></a>クエリ ストアを使用するときの推奨事項
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
@@ -229,11 +229,13 @@ ALTER DATABASE [DatabaseOne] SET QUERY_STORE = ON;
 
 > [!NOTE]
 > 上の図では特定のクエリ プランに異なる図形が使われている場合があり、考えられる各状態の意味を次に示します。<br />  
+> 
 > |図形|意味|  
 > |-------------------|-------------|
 > |Circle|クエリ完了 (通常の実行が正常に終了しました)|
 > |Square|キャンセル (クライアントが開始した実行中止)|
 > |Triangle|失敗 (例外による実行中止)|
+> 
 > また、図形のサイズは指定期間内でのクエリ実行回数を反映し、実行回数が多いほどサイズが大きくなります。  
 
 -   クエリが最適に実行するために必要なインデックスが欠落している場合があります。 この情報は、クエリの実行プラン内で確認できます。 クエリ ストアを使用して欠落しているインデックスを作成し、クエリのパフォーマンスを確認します。  
@@ -306,9 +308,9 @@ FROM sys.database_query_store_options;
   
  それでも問題が解決しない場合、ディスクに破損したクエリ ストア データが存在しています。
  
- [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、影響を受けたデータベース内で **sp_query_store_consistency_check** ストアド プロシージャを実行することで、クエリ ストアを復旧させることができます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合は、次に示すように、クエリ ストアからデータをクリアする必要があります。
+ [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、影響を受けたデータベース内で **sp_query_store_consistency_check** ストアド プロシージャを実行することで、クエリ ストアを復旧させることができます。 復旧操作を試みる前にクエリ ストアを無効にする必要があります。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] の場合は、次に示すように、クエリ ストアからデータをクリアする必要があります。
  
- 復旧できない場合は、読み取り/書き込みモードを要求する前にクエリ ストアのクリアを試すことができます。  
+ 回復に失敗した場合、読み取り/書き込みモードを設定する前にクエリ ストアを消去してみてください。  
   
 ```sql  
 ALTER DATABASE [QueryStoreDB]   
@@ -337,7 +339,7 @@ FROM sys.database_query_store_options;
 |Custom|[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、`ALTER DATABASE SET QUERY_STORE` コマンドの下に CUSTOM キャプチャ モードが導入されています。 有効にすると、新しいクエリ ストアのキャプチャ ポリシーの設定で、特定のサーバーでのデータ収集を微調整するための追加のクエリ ストアを使用できるようになります。<br /><br />新しいカスタム設定では、内部キャプチャ ポリシーの時間のしきい値 (構成可能な条件が評価される時刻の境界) 内で何が行われるかが定義され、いずれかが true の場合にクエリがクエリ ストアによるキャプチャの対象となります。 詳細については、「[ALTER DATABASE の SET オプション &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql-set-options.md)」を参照してください。|  
 
 > [!NOTE]
-> クエリ キャプチャ モードが All、Auto、または Custom に設定されている場合、カーソル、ストアド プロシージャ内のクエリ、およびネイティブ コンパイル済みのクエリは常にキャプチャされます。
+> クエリ キャプチャ モードが ALL、AUTO、または CUSTOM に設定されている場合、カーソル、ストアド プロシージャ内のクエリ、ネイティブ コンパイル済みのクエリは常にキャプチャされます。 ネイティブ コンパイルされたクエリをキャプチャするには、[sys.sp_xtp_control_query_exec_stats](../../relational-databases/system-stored-procedures/sys-sp-xtp-control-query-exec-stats-transact-sql.md) を使用し、クエリごとの統計情報の収集を有効にします。 
 
 ## <a name="keep-the-most-relevant-data-in-query-store"></a>最も重要なデータをクエリ ストアに保存する  
  重要なデータのみを格納するようクエリ ストアを構成すると、通常のワークロードへの影響も最小限に抑えながら、効果的にトラブルシューティングを行えます。  

@@ -47,32 +47,22 @@
   items:
     - name: Python
       items:
-        - name: SQL Server に Python が存在することを確認する
-          href: ../advanced-analytics/tutorials/quickstart-python-verify.md
-        - name: Python と SQL での Hello World
-          href: ../advanced-analytics/tutorials/quickstart-python-run-using-t-sql.md
-        - name: 入力と出力の処理
-          href: ../advanced-analytics/tutorials/quickstart-python-inputs-and-outputs.md
-        - name: Python のデータ構造と SQL
+        - name: Python スクリプトを作成する
+          href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
+        - name: データ型とオブジェクトの処理
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
-        - name: 最初のモデルのトレーニングと使用
-          href: ../advanced-analytics/tutorials/quickstart-python-train-score-in-tsql.md
+        - name: モデルのトレーニングとスコア付け
+          href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
       items:
-        - name: SQL Server に R が存在することを確認する
-          href: ../advanced-analytics/tutorials/quickstart-r-verify.md
-        - name: R と SQL での Hello World
-          href: ../advanced-analytics/tutorials/quickstart-r-run-using-tsql.md
-        - name: 入力と出力の処理
-          href: ../advanced-analytics/tutorials/quickstart-r-inputs-and-outputs.md
+        - name: R スクリプトの作成
+          href: ../advanced-analytics/tutorials/quickstart-r-create-script.md
         - name: データ型とオブジェクトの処理
           href: ../advanced-analytics/tutorials/quickstart-r-data-types-and-objects.md
-        - name: R 関数の使用
+        - name: R 関数の記述
           href: ../advanced-analytics/tutorials/quickstart-r-functions.md
-        - name: 予測モデルの作成
-          href: ../advanced-analytics/tutorials/quickstart-r-create-predictive-model.md
-        - name: モデルから予測する
-          href: ../advanced-analytics/tutorials/quickstart-r-predict-from-model.md
+        - name: モデルのトレーニングとスコア付け
+          href: ../advanced-analytics/tutorials/quickstart-r-train-score-model.md
 - name: チュートリアル
   items:
     - name: Python

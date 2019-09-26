@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
+ms.lasthandoff: 09/25/2019
 ms.locfileid: "69493793"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI の定義と表示
@@ -67,7 +67,7 @@ ms.locfileid: "69493793"
   
      ![表示ウィンドウの空白の KPI テンプレート](../../2014/tutorials/media/l7-kpi-2.gif "表示ウィンドウの空白の KPI テンプレート")  
   
-3.  [**名前**] ボックスに「 `Reseller Revenue`」と入力し、[**関連付けられているメジャーグループ**] ボックスの一覧で [**再販業者の売上**] を選択します。  
+3.  **[名前]** ボックスに「 `Reseller Revenue`」と入力し、 **[関連付けられているメジャーグループ]** ボックスの一覧で **[再販業者の売上]** を選択します。  
   
 4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]** 、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493793"
   
 1.  **[KPI]** タブのツール バーの **[フォーム ビュー]** ボタンをクリックして、 **[新しい KPI]** ボタンをクリックします。  
   
-2.  [**名前**] ボックスに「 `Product Gross Profit Margin`」  **\<** と入力し、[すべての > が**関連付けら**れているメジャーグループ] ボックスに表示されていることを確認します。  
+2.  **[名前]** ボックスに「 `Product Gross Profit Margin`」  **\<** と入力し、すべての > が **[関連付けら]** れているメジャーグループ ボックスに表示されていることを確認します。  
   
 3.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **Total GPM** メジャーを **[値式]** ボックスにドラッグします。  
   

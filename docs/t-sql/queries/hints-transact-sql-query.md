@@ -1,7 +1,7 @@
 ---
 title: クエリ ヒント (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 02/21/2019
+ms.date: 09/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 6e319fb56760f78df56105873f26a9bbec004dd6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
+ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902008"
+ms.lasthandoff: 09/03/2019
+ms.locfileid: "70228406"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -216,19 +216,19 @@ MAXRECURSION _number_
 NO_PERFORMANCE_SPOOL    
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
   
-Spool 操作は、(を除く、計画、スプールが有効な更新のセマンティクスを保証するために必要な場合) のクエリ プランに追加されないようにします。 一部のシナリオでは、spool 演算子を使用するとパフォーマンスが低下する可能性があります。 たとえば、spool のサイズは、tempdb を使用し、スプール操作を実行している多くの同時実行クエリがある場合に、tempdb の競合が発生することがあります。  
+Spool 操作は、(を除く、計画、スプールが有効な更新のセマンティクスを保証するために必要な場合) のクエリ プランに追加されないようにします。 一部のシナリオでは、spool 演算子を使用するとパフォーマンスが低下する可能性があります。 たとえば、スプールで tempdb が使用され、スプール操作が実行されている多くの同時実行クエリがある場合に、tempdb の競合が発生することがあります。  
   
-OPTIMIZE FOR ( _@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
+OPTIMIZE FOR ( _\@variable\_name_ { UNKNOWN | = _literal\_constant }_ [ **,** ..._n_ ] )     
 クエリをコンパイルおよび最適化するときにローカル変数に対して特定の値を使用するように、クエリ オプティマイザーに指示します。 この値はクエリを最適化する過程でのみ使用され、クエリの実行時には使用されません。  
   
-_@variable\_name_  
+_\@variable\_name_  
 クエリで使用されるローカル変数の名前です。このローカル変数に OPTIMIZE FOR クエリ ヒントで使用する値を割り当てます。  
   
 _UNKNOWN_  
 クエリ オプティマイザーでのクエリの最適化時に、初期値の代わりに統計データを使用してローカル変数の値を決定することを指定します。  
   
 _literal\_constant_  
-OPTIMIZE FOR クエリ ヒントで使用する _@variable\_name_ に割り当てるリテラル定数値です。 _literal\_constant_ は、クエリの最適化の過程でのみ使用され、クエリ実行時に _@variable\_name_ の値としては使用されません。 _literal\_constant_ には、リテラル定数として表現できる任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型を指定できます。 _literal\_constant_ のデータ型は、 _@variable\_name_ がクエリ内で参照するデータ型に暗黙的に変換できる必要があります。  
+OPTIMIZE FOR クエリ ヒントで使用する _\@variable\_name_ に割り当てるリテラル定数値です。 _literal\_constant_ は、クエリの最適化の過程でのみ使用され、クエリ実行時に _\@variable\_name_ の値としては使用されません。 _literal\_constant_ には、リテラル定数として表現できる任意の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] システム データ型を指定できます。 _literal\_constant_ のデータ型は、 _\@variable\_name_ がクエリ内で参照するデータ型に暗黙的に変換できる必要があります。  
   
 OPTIMIZE FOR は、オプティマイザーの既定のパラメーター検出動作を無効にする場合に使用できます。 また、プラン ガイドを作成するときにも OPTIMIZE FOR を使用します。 詳細については、「[ストアド プロシージャの再コンパイル](../../relational-databases/stored-procedures/recompile-a-stored-procedure.md)」を参照してください。  
   
@@ -327,10 +327,10 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > 一部の USE HINT ヒントは、グローバルまたはセッション レベルで有効になっているトレース フラグや、データベース スコープ構成設定と競合する場合があります。 この場合、クエリ レベル ヒント (USE HINT) が常に優先されます。 USE HINT が別のクエリ ヒントまたはクエリ レベルで (QUERYTRACEON などによって) 有効になっているトレース フラグと競合する場合、クエリを実行しようとすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成されます。 
 
- USE PLAN N **'** _xml\_plan_ **'**      
+USE PLAN N'_xml\_plan_'  
  **'** _xml\_plan_ **'** で指定されているクエリの既存のクエリ プランを使用するように、クエリ オプティマイザーを設定します。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
-TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint>  **[,]** ..._n_ ] ] **)** では、_exposed\_object\_name_ に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
+TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ **[,]** ..._n_ ] ] **)** では、_exposed\_object\_name_ に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  
   
  _exposed\_object\_name_ には、次のいずれかの参照を指定できます。  
   
@@ -366,7 +366,7 @@ TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint>  **[,]** ..._n_ ]
   
 既存のテーブル ヒントがないクエリのクエリ ヒントとして、INDEX、FORCESCAN、および FORCESEEK のテーブル ヒントを指定できます。 また、それらを使用して、クエリ内の既存の INDEX、FORCESCAN、または FORCESEEK ヒントをそれぞれ置き換えることもできます。 
 
-INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 この場合、一致するヒントもクエリ ヒントとして指定する必要があります。 OPTION 句で TABLE HINT を使用して、一致するヒントをクエリ ヒントとして指定します。 この指定はクエリのセマンティクスを保持します。 たとえば、クエリにテーブル ヒント NOLOCK が含まれている場合、プラン ガイドの **@hints** パラメーターの OPTION 句にも NOLOCK ヒントが含まれている必要があります。 例 K を参照してください。 
+INDEX、FORCESCAN、および FORCESEEK 以外のテーブル ヒントは、クエリで既に WITH 句を使用してテーブル ヒントが指定されていない限り、クエリ ヒントとして使用できません。 この場合、一致するヒントもクエリ ヒントとして指定する必要があります。 OPTION 句で TABLE HINT を使用して、一致するヒントをクエリ ヒントとして指定します。 この指定はクエリのセマンティクスを保持します。 たとえば、クエリにテーブル ヒント NOLOCK が含まれている場合、プラン ガイドの **\@hints** パラメーターの OPTION 句にも NOLOCK ヒントが含まれている必要があります。 例 K を参照してください。 
 
 エラー 8072 はいくつかのシナリオで発生します。 1 つ目は、一致するクエリ ヒントがない OPTION 句で、TABLE HINT を使用して INDEX、FORCESCAN、または FORCESEEK 以外のテーブル ヒントを指定した場合です。 2 つ目のシナリオはその逆です。 このエラーは、OPTION 句によってクエリのセマンティクスが変更され、クエリが失敗した可能性があることを示しています。  
   

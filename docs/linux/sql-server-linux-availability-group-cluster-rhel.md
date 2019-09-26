@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: b7102919-878b-4c08-a8c3-8500b7b42397
-ms.openlocfilehash: 086138fc1df6245de33b348c529e56e606c3ddc9
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 7e401a53b07d5a71ccafb38f6edb2f80bcf1e274
+ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027323"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70910808"
 ---
 # <a name="configure-rhel-cluster-for-sql-server-availability-group"></a>SQL Server 可用性グループ用の RHEL クラスターを構成する
 
@@ -46,9 +46,9 @@ ms.locfileid: "68027323"
    クラスター リソース マネージャーを構成する方法は、特定の Linux ディストリビューションによって異なります。 
 
    >[!IMPORTANT]
-   >運用環境では、高可用性のために STONITH のようなフェンス エージェントが必要です。 このドキュメントのデモでは、フェンス エージェントは使用しません。 このデモはテストと検証専用です。 
+   >運用環境では、高可用性のために STONITH のようなフェンス エージェントが必要です。 このドキュメントに含まれているデモでは、フェンス エージェントは使用しません。 このデモはテストと検証専用です。
    
-   >Linux クラスターは、フェンスを使用してクラスターを既知の状態に戻します。 フェンスを構成する方法は、ディストリビューションと環境によって異なります。 現時点では、一部のクラウド環境ではフェンスを利用できません。 詳細については、[RHEL 高可用性クラスターのサポート ポリシー (仮想化プラットフォーム)](https://access.redhat.com/articles/29440) に関するページをご覧ください。
+   >Linux クラスターでは、フェンスを使用して、クラスターが既知の状態に戻されます。 フェンスを構成する方法は、ディストリビューションと環境によって異なります。 現時点では、一部のクラウド環境ではフェンスを利用できません。 詳細については、[RHEL 高可用性クラスターのサポート ポリシー (仮想化プラットフォーム)](https://access.redhat.com/articles/29440) に関するページをご覧ください。
 
 5. [可用性グループをクラスターのリソースとして追加します](sql-server-linux-availability-group-cluster-rhel.md#create-availability-group-resource)。  
 
@@ -104,6 +104,8 @@ Pacemaker を構成した後、`pcs` を使用してクラスターを操作し�
 
 Pacemaker クラスターのベンダーは、STONITH を有効にして、サポートされているクラスター セットアップ用にフェンス デバイスを構成する必要があります。 STONITH は "Shoot the Other Node in The Head" の略です。 クラスター リソース マネージャーがノードまたはノード上のリソースの状態を判断できない場合は、フェンスによりクラスターが既知の状態に戻ります。
 
+STONITH デバイスでは、フェンス エージェントが提供されます。 「[Azure の Red Hat Enterprise Linux に Pacemaker をセットアップする](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices)」では、Azure でこのクラスター用の STONITH デバイスを作成する方法の例が示されています。 環境の手順を変更します。
+
 リソース レベルのフェンスは、リソースを構成することによって障害が発生した場合にデータが破損しないことを保証します。 たとえば、リソース レベルのフェンスを使用して、通信リンクがダウンしたときにノード上のディスクを期限切れとしてマークすることができます。 
 
 ノード レベルのフェンスは、ノードがリソースを実行しないようにします。 これを行うには、ノードをリセットします。 Pacemaker は、さまざまなフェンス デバイスをサポートしています。 例として、無停電電源装置やサーバーの管理インターフェイスカードなどがあります。
@@ -114,18 +116,18 @@ STONITH、およびフェンスの詳細については、次の記事を参照�
 * [フェンスと STONITH](https://clusterlabs.org/doc/crm_fencing.html)
 * [Pacemaker を使用した Red Hat High Availability Add-On:フェンス](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/6/html/Configuring_the_Red_Hat_High_Availability_Add-On_with_Pacemaker/ch-fencing-HAAR.html)
 
-ノード レベルのフェンス構成は環境に大きく依存しているため、このチュートリアルでは無効にします (後で構成できます)。 次のスクリプトは、ノード レベルのフェンスを無効にします。
-
-```bash
-sudo pcs property set stonith-enabled=false
-```
-  
->[!IMPORTANT]
->STONITH を無効にするのは、テスト目的の場合だけです。 運用環境で Pacemaker を使用する予定がある場合は、環境に応じて STONITH の実装を計画し、有効にしておく必要があります。 RHEL では、どのクラウド環境 (Azure を含む) に対しても、Hyper-V に対しても、フェンス エージェントを提供していません。 結果的に、クラスター ベンダーは、これらの環境で運用クラスターを実行するためのサポートを提供していません。 Microsoft では、このギャップのための、今後のリリースで利用できるようになるソリューションに取り組んでいます。
+>[!NOTE]
+>ノード レベルのフェンス構成は環境に大きく依存しているため、このチュートリアルでは無効にします (後で構成できます)。 次のスクリプトは、ノード レベルのフェンスを無効にします。
+>
+>```bash
+>sudo pcs property set stonith-enabled=false
+>``` 
+>
+>STONITH を無効にするのは、テスト目的の場合だけです。 運用環境で Pacemaker を使用する予定がある場合は、環境に応じて STONITH の実装を計画し、有効にしておく必要があります。
 
 ## <a name="set-cluster-property-cluster-recheck-interval"></a>クラスター プロパティ cluster-recheck-interval を設定する
 
-`cluster-recheck-interval` は、クラスターがリソース パラメーター、制約、またはその他のクラスター オプションの変更を確認するポーリング間隔を示します。 レプリカがダウンした場合、クラスターは、`failure-timeout` 値と `cluster-recheck-interval` 値によってバインドされた間隔でレプリカの再起動を試みます。 たとえば、`failure-timeout` が 60 秒に設定されていて、`cluster-recheck-interval` が 120 秒に設定されている場合、再起動は 60 秒より大きく 120 秒未満の間隔で試行されます。 failure-timeout は 60 秒、cluster-recheck-interval は 60 秒より大きい値に設定することをお勧めします。 cluster-recheck-interval を小さい値に設定することは推奨されません。
+`cluster-recheck-interval` は、クラスターによってリソース パラメーター、制約、またはその他のクラスター オプションの変更が確認されるポーリング間隔を示します。 レプリカがダウンした場合、クラスターでは、`failure-timeout` 値と `cluster-recheck-interval` 値によってバインドされた間隔でレプリカの再起動が試みられます。 たとえば、`failure-timeout` が 60 秒に設定されていて、`cluster-recheck-interval` が 120 秒に設定されている場合、再起動は 60 秒より大きく 120 秒未満の間隔で試行されます。 failure-timeout は 60 秒、cluster-recheck-interval は 60 秒より大きい値に設定することをお勧めします。 cluster-recheck-interval を小さい値に設定することは推奨されません。
 
 プロパティ値を `2 minutes` に更新するには、次を実行します。
 
@@ -212,7 +214,7 @@ sudo pcs constraint order promote ag_cluster-master then start virtualip
 ```
 
 >[!IMPORTANT]
->クラスターを構成し、可用性グループをクラスター リソースとして追加した後は、Transact-SQL を使用して可用性グループ リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバークラスター (WSFC) の場合と同様に、オペレーティング システムと緊密に結合されていません。 SQL Server サービスはクラスターの存在を認識しません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 RHEL または Ubuntu では `pcs` を使用し、SLES では `crm` ツールを使用します。 
+>クラスターを構成し、可用性グループをクラスター リソースとして追加した後は、Transact-SQL を使用して可用性グループ リソースをフェールオーバーすることはできません。 Linux 上の SQL Server クラスター リソースは、Windows Server フェールオーバー クラスター (WSFC) ほど、オペレーティング システムと緊密に結合されていません。 SQL Server サービスでは、クラスターの存在は認識されません。 すべてのオーケストレーションは、クラスター管理ツールを使用して実行されます。 RHEL または Ubuntu では `pcs` を使用し、SLES では `crm` ツールを使用します。 
 
 `pcs` を使用して可用性グループの手動フェールオーバーを行います。 Transact-SQL を使用してフェールオーバーを開始しないでください。 手順については、[フェールオーバー](sql-server-linux-availability-group-failover-ha.md#failover)に関するページを参照してください。
 

@@ -9,12 +9,12 @@ ms.prod_service: sql-tools
 ms.topic: conceptual
 author: pensivebrian
 ms.author: broneill
-ms.openlocfilehash: 01654df047d2dc78014c6e8c41edbb370d15da60
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
-ms.translationtype: HT
+ms.openlocfilehash: d8422146e3569ff991ef16179e54f0f78961fc79
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874390"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016867"
 ---
 # <a name="download-and-install-sqlpackage"></a>sqlpackage をダウンロードしてインストールする
 
@@ -24,10 +24,10 @@ sqlpackage は Windows、macOS、Linux 上で実行されます。
 
 |プラットフォーム|ダウンロード|リリース日|Version|ビルド
 |:---|:---|:---|:---|:---|
-|Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2102893)|2019年9月6日|18.3|15.0.4532.1|
-|macOS .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102894)|2019年9月6日| 18.3|15.0.4532.1|
-|Linux .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102978)|2019年9月6日| 18.3|15.0.4532.1|
-|Windows .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102979)|2019年9月6日| 18.3|15.0.4532.1|
+|Windows|[MSI インストーラー](https://go.microsoft.com/fwlink/?linkid=2102893)|2019 年 9 月 13 日|18.3.1|15.0.4538.1|
+|macOS .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102894)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
+|Linux .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102978)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
+|Windows .NET Core (プレビュー)|[zip ファイル](https://go.microsoft.com/fwlink/?linkid=2102979)|2019 年 9 月 13 日| 18.3.1|15.0.4538.1|
 
 最新リリースに関する詳細については、[リリース ノート](release-notes-sqlpackage.md)をご覧ください。
 
@@ -46,7 +46,7 @@ sqlpackage は Windows、macOS、Linux 上で実行されます。
 
 1. [Windows 用の sqlpackage](https://go.microsoft.com/fwlink/?linkid=2102979) をダウンロードします。
 2. エクスプローラーでファイルを右クリックして [すべて展開...] を選択し、ターゲットディレクトリを選択して、ファイルを抽出します。
-3. 新しいターミナルウィンドウを開くと、sqlpackage が実行されていた場所に cd を使用できるようになります。
+3. 新しいターミナルウィンドウを開き、sqlpackage が抽出された場所まで cd を開きます。
 
    **.zip のインストール:**
 

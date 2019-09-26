@@ -1,6 +1,6 @@
 ---
 title: Hadoop 内の外部データにアクセスするように PolyBase を構成する | Microsoft Docs
-description: 外部の Hadoop に接続するための Parallel Data Warehouse で PolyBase を構成する方法について説明します。
+description: Parallel Data Warehouse で PolyBase を構成して外部 Hadoop に接続する方法について説明します。
 author: mzaman1
 ms.prod: sql
 ms.technology: data-warehouse
@@ -8,30 +8,30 @@ ms.topic: conceptual
 ms.date: 04/17/2018
 ms.author: murshedz
 ms.reviewer: martinle
-ms.openlocfilehash: 2e675b87c3c4f01f63e21bafd5d071cebb4ae4c9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ceaa1cbe04148443dd7a60b8d2b7936dc0a2cf55
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67960276"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227125"
 ---
 # <a name="configure-polybase-to-access-external-data-in-hadoop"></a>Hadoop 内の外部データにアクセスするように PolyBase を構成する
 
-この記事では、Hadoop の外部データのクエリを APS アプライアンスで PolyBase を使用する方法について説明します。
+この記事では、APS アプライアンスで PolyBase を使用して Hadoop の外部データを照会する方法について説明します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
 
 PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (CDH) の 2 つの Hadoop プロバイダーをサポートしています。 Hadoop では、新規リリースについて "Major.Minor.Version" パターンを採用しており、サポートされているメジャーおよびマイナー リリース内のすべてのバージョンがサポートされています。 次の Hadoop プロバイダーがサポートされています。
  - Linux/Windows Server 上の Hortonworks HDP 1.3  
- - Linux 上の Hortonworks HDP 2.1 2.6
- - Linux 上の Hortonworks HDP 3.0 3.1
+ - Hortonworks HDP 2.1-2.6 (Linux)
+ - Hortonworks HDP 3.0-3.1 (Linux)
  - Windows Server 上の Hortonworks HDP 2.1 - 2.3  
  - Linux 上の Cloudera CDH 4.3  
- - Cloudera CDH 5.1-5.5、5.9-5.13 on Linux
+ - Cloudera CDH 5.1-5.5、5.9-5.13、5.15 & 5.16 (Linux)
 
 ### <a name="configure-hadoop-connectivity"></a>Hadoop 接続を構成する
 
-最初に、APS、特定の Hadoop プロバイダーを使用するを構成します。
+まず、特定の Hadoop プロバイダーを使用するように APS を構成します。
 
 1. 'hadoop connectivity' を使用して [sp_configure](../relational-databases/system-stored-procedures/sp-configure-transact-sql.md) を実行し、プロバイダーに対する適切な値を設定します。 プロバイダーの値を見つけるには、[PolyBase 接続構成 ](../database-engine/configure-windows/polybase-connectivity-configuration-transact-sql.md)に関する記事を参照してください。 
 
@@ -46,15 +46,15 @@ PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (
    GO
    ```  
 
-2. APS リージョンのサービスの状態のページを使用して再起動[アプライアンス Configuration Manager](launch-the-configuration-manager.md)します。
+2. [アプライアンス Configuration Manager](launch-the-configuration-manager.md)の [サービスの状態] ページを使用して、APS リージョンを再起動します。
   
 ## <a id="pushdown"></a> プッシュダウン計算を有効にする  
 
 クエリ パフォーマンスを高めるには、Hadoop クラスターへのプッシュダウン計算を有効にします。  
   
-1. PDW 管理ノードへのリモート デスクトップ接続を開きます。
+1. PDW コントロールノードへのリモートデスクトップ接続を開きます。
 
-2. ファイルを見つける**yarn-site.xml**コントロールのノード上。 通常、このパスは次のとおりです。  
+2. コントロールノードで**yarn-site.xml**ファイルを見つけます。 通常、このパスは次のとおりです。  
 
    ```xml  
    C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\Hadoop\conf\  
@@ -62,11 +62,11 @@ PolyBase は、Hortonworks Data Platform (HDP) と Cloudera Distributed Hadoop (
 
 3. Hadoop コンピューターで、Hadoop 構成ディレクトリ内の対応するファイルを検索します。 このファイル内の構成キー yarn.application.classpath の値をコピーします。  
   
-4. コントロールのノード上で、 **yarn.site.xml ファイル**検索、 **yarn.application.classpath**プロパティ。 Hadoop コンピューターからこの値要素に値を貼り付けます。  
+4. [コントロール] ノードの**yarn ファイル**で、 **yarn**プロパティを見つけます。これは、 Hadoop コンピューターからこの値要素に値を貼り付けます。  
   
 5. すべての CDH 5.X バージョンで、yarn.site.xml file の最後か mapred-site.xml file に mapreduce.application.classpath 構成パラメーターを追加する必要があります。 HortonWorks では、yarn.application.classpath 構成内にこれらの構成が含まれます。 例については、「[PolyBase の構成](../relational-databases/polybase/polybase-configuration.md)」を参照してください。
 
-## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>XML の例のファイルの cdh 5.X クラスターの既定値
+## <a name="example-xml-files-for-cdh-5x-cluster-default-values"></a>CDH 5.x クラスターの既定値の XML ファイルの例
 
 yarn.application.classpath と mapreduce.application.classpath で構成される Yarn-site.xml。
 
@@ -101,7 +101,7 @@ yarn.application.classpath と mapreduce.application.classpath で構成され�
 </configuration>
 ```
 
-2 つの構成設定を mapred-site.xml と yarn-site.xml に分割する場合は、ファイルは次のようになります
+2つの構成設定を mapred-site.xml と yarn-site.xml に分割することを選択した場合、ファイルは次のようになります。
 
 **yarn-site.xml**
 
@@ -138,7 +138,7 @@ yarn.application.classpath と mapreduce.application.classpath で構成され�
 
 **mapred-site.xml**
 
-プロパティ mapreduce.application.classpath が追加されています。 CDH 5.x では、Ambari で同じ名前付け規則の構成値が検索されます。
+プロパティ mapreduce.application.classpath が追加されています。 CDH 5.x では、Ambari の名前付け規則に従って構成値を確認できます。
 
 ```xml
 <?xml version="1.0"?>
@@ -172,7 +172,7 @@ yarn.application.classpath と mapreduce.application.classpath で構成され�
 </configuration>
 ```
 
-## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>HDP のファイルの XML 例 3.X のクラスターの既定値
+## <a name="example-xml-files-for-hdp-3x-cluster-default-values"></a>HDP 3.x クラスターの既定値の XML ファイルの例
 
 **yarn-site.xml**
 
@@ -211,7 +211,7 @@ yarn.application.classpath と mapreduce.application.classpath で構成され�
 
 Hadoop データ ソース内のデータのクエリを実行するには、Transact-SQL クエリで使用する外部テーブルを定義する必要があります。 次の手順では、外部テーブルを構成する方法を説明します。
 
-1. データベースにマスター キーを作成します。 資格情報シークレットを暗号化することが必要です。
+1. データベースにマスター キーを作成します。 資格情報のシークレットを暗号化する必要があります。
 
    ```sql
    CREATE MASTER KEY ENCRYPTION BY PASSWORD = 'S0me!nfo';  
@@ -277,7 +277,7 @@ Hadoop データ ソース内のデータのクエリを実行するには、Tra
 
 PolyBase が適している機能には、次の 3 つがあります。  
   
-- 外部テーブルに対するアドホック クエリ。  
+- 外部テーブルに対するアドホッククエリ。  
 - データのインポート。  
 - データのエクスポート。  
 
@@ -285,7 +285,7 @@ PolyBase が適している機能には、次の 3 つがあります。
 
 ### <a name="ad-hoc-queries"></a>アドホック クエリ  
 
-次のアドホック クエリがリレーショナル Hadoop データを結合します。 35 mph、結合の構造化された顧客データを Hadoop に格納されている車両センサー データのアクセス ポイントに格納されているよりも高速化を推進する顧客を選択します。  
+次のアドホッククエリは、Hadoop データとリレーショナルに結合します。 これは、35 mph を上回る顧客を選択し、AP に格納されている構造化顧客データを、Hadoop に格納されている車両センサーデータと結合します。  
 
 ```sql  
 SELECT DISTINCT Insured_Customers.FirstName,Insured_Customers.LastName,
@@ -298,7 +298,7 @@ OPTION (FORCE EXTERNALPUSHDOWN);   -- or OPTION (DISABLE EXTERNALPUSHDOWN)
 
 ### <a name="importing-data"></a>インポート、データ  
 
-次のクエリでは、AP に外部データをインポートします。 この例より詳細な解析を行う AP に高速のドライバーのデータをインポートします。 パフォーマンスを向上させるのには、AP で列ストア テクノロジを活用します。  
+次のクエリでは、外部データを APS にインポートします。 この例では、高速ドライバーのデータを AP にインポートして、さらに詳細な分析を行います。 パフォーマンスを向上させるために、APS の列ストアテクノロジを活用しています。  
 
 ```sql
 CREATE TABLE Fast_Customers
@@ -317,7 +317,7 @@ ON Insured_Customers.CustomerKey = SensorD.CustomerKey
 
 ### <a name="exporting-data"></a>データのエクスポート  
 
-次のクエリは、AP からデータを Hadoop にエクスポートします。 Hadoop にリレーショナル データをアーカイブするために使用できる while はまだそれをクエリできるようにします。
+次のクエリでは、APS から Hadoop にデータをエクスポートします。 これを使用すると、リレーショナルデータを Hadoop にアーカイブしながら、クエリを実行することができます。
 
 ```sql
 -- Export data: Move old data to Hadoop while keeping it query-able via an external table.  
@@ -333,14 +333,14 @@ ON (T1.CustomerKey = T2.CustomerKey)
 WHERE T2.YearMeasured = 2009 and T2.Speed > 40;  
 ```  
 
-## <a name="view-polybase-objects-in-ssdt"></a>SSDT での PolyBase オブジェクトを表示します。  
+## <a name="view-polybase-objects-in-ssdt"></a>SSDT で PolyBase オブジェクトを表示する  
 
-SQL Server Data tools、外部テーブルが別のフォルダーに表示されます。**外部テーブル**します。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
+SQL Server Data Tools では、外部テーブルが別のフォルダー**外部テーブル**に表示されます。 外部データ ソースおよび外部ファイル形式は、 **[外部リソース]** の下のサブフォルダーにあります。  
   
-![SSDT での PolyBase オブジェクト](media/polybase/external-tables-datasource.png)  
+![SSDT の PolyBase オブジェクト](media/polybase/external-tables-datasource.png)  
 
 ## <a name="next-steps"></a>次の手順
 
-Hadoop セキュリティの設定」をご覧ください[Hadoop セキュリティの構成](polybase-configure-hadoop-security.md)します。<br>
+Hadoop のセキュリティ設定については、「 [hadoop セキュリティの構成](polybase-configure-hadoop-security.md)」を参照してください。<br>
 PolyBase について詳しくは、「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」をご覧ください。 
  

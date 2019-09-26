@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: b8ea6c3b-01d6-4efc-bbfb-03b264530bbd
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e132bea4e0926719092d9a7055735210e2b5908b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6320d7192d2493486779a1b6ac433f78a45114ca
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67942755"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70276540"
 ---
 # <a name="manage-oracle-tablespaces"></a>Oracle テーブルスペースの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,15 +32,15 @@ ms.locfileid: "67942755"
   
 -   [sp_changearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を使用します。 **sp_changearticle**を使用するには、以下を指定します。  
   
-    -   パラメーター **@publisher** のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **\@publisher** に、Oracle パブリッシャー名を指定する。  
   
-    -   パラメーター **@publication** のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **\@publication** に、Oracle パブリケーション名を指定する。  
   
-    -   パラメーター **@article** のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **\@article** に、アーティクル名を指定する。  
   
-    -   パラメーター **@property** のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **\@property** に "テーブルスペース" の値を指定する。  
   
-    -   パラメーター **@value** のファイル グループにほぼ等しいデータベース領域の単位です。  
+    -   パラメーター **\@value** に、テーブルスペース名を指定する。  
   
 ## <a name="see-also"></a>参照  
  [Configure an Oracle Publisher (Oracle パブリッシャーの構成)](../../../relational-databases/replication/non-sql/configure-an-oracle-publisher.md)   

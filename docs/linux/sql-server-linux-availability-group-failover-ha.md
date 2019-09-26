@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: a13f9f3da00889323f3d971ffd801f1fa7d09890
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: e887c718c76563a7fcd8388c46a3e9e684faf6d5
+ms.sourcegitcommit: 0c6c1555543daff23da9c395865dafd5bb996948
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027221"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70304850"
 ---
 # <a name="always-on-availability-group-failover-on-linux"></a>Linux での Always On 可用性グループのフェールオーバー
 
@@ -43,7 +43,7 @@ ms.locfileid: "68027221"
 
    次に、[場所の制約を削除](#removeLocConstraint)します。
 
-#### <a name="a-namemanualmovestep-1-manually-fail-over-by-moving-availability-group-resource"></a><a name="manualMove">ステップ 1. 可用性グループ リソースを移動することにより手動でフェールオーバーを行う
+#### <a name="manualMove"></a> 手順 1. 可用性グループ リソースを移動することにより手動でフェールオーバーを行う
 
 *ag_cluster* という名前の AG リソースを *nodeName2* という名前のクラスター ノードに手動でフェールオーバーするには、ディストリビューションに適したコマンドを実行します。
 
@@ -62,7 +62,7 @@ ms.locfileid: "68027221"
 >[!IMPORTANT]
 >手動でリソースをフェールオーバーした後、自動的に追加される場所の制約を削除する必要があります。
 
-#### <a name="a-nameremovelocconstraint-step-2-remove-the-location-constraint"></a><a name="removeLocConstraint">ステップ 2. 場所の制約の削除
+#### <a name="removeLocConstraint"> </a> 手順 2. 場所の制約の削除
 
 手動フェールオーバーの間に、`pcs` のコマンド `move` または `crm` のコマンド `migrate` によって、新しいターゲット ノードに配置されるリソースに対する場所の制約が追加されます。 新しい制約を表示するには、リソースを手動で移動した後に次のコマンドを実行します。
 

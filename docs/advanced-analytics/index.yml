@@ -10,12 +10,12 @@ metadata:
   author: dphansen
   ms.author: davidph
   ms.date: 09/12/2019
-  ms.openlocfilehash: e1851799ee4c46c8b639a2f50bce129e672aecfa
-  ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+  ms.openlocfilehash: d46abc3b6e02f81db733df584ea95fbdc73777c0
+  ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
   ms.translationtype: MT
   ms.contentlocale: ja-JP
-  ms.lasthandoff: 09/12/2019
-  ms.locfileid: "70929551"
+  ms.lasthandoff: 09/23/2019
+  ms.locfileid: "71199391"
 landingContent:
 - title: Machine Learning Services について
   linkLists:
@@ -36,13 +36,13 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: SQL Server で "Hello world" Python スクリプトを実行する
-      url: tutorials/quickstart-python-run-using-t-sql.md
+      url: tutorials/quickstart-python-create-script.md
     - text: 入力と出力の処理
-      url: tutorials/quickstart-python-inputs-and-outputs.md
-    - text: SQL Server の Python データ構造
+      url: tutorials/quickstart-python-create-script.md#use-inputs-and-outputs
+    - text: SQL Server で Python データ構造を使用する
       url: tutorials/quickstart-python-data-structures.md
     - text: 最初のモデルのトレーニングと使用
-      url: tutorials/quickstart-python-train-score-in-tsql.md
+      url: tutorials/quickstart-python-train-score-model.md
   - linkListType: tutorial
     links:
     - text: 線形回帰による ski レンタルの予測
@@ -54,13 +54,13 @@ landingContent:
   - linkListType: quickstart
     links:
     - text: SQL Server で "Hello world" R スクリプトを実行する
-      url: tutorials/quickstart-r-run-using-tsql.md
+      url: tutorials/quickstart-r-create-script.md
     - text: 入力と出力の処理
-      url: tutorials/quickstart-r-inputs-and-outputs.md
-    - text: SQL Server の R データ構造
+      url: tutorials/quickstart-r-create-script.md#use-inputs-and-outputs
+    - text: SQL Server での R データ構造の使用
       url: tutorials/quickstart-r-data-types-and-objects.md
-    - text: 予測モデルの作成
-      url: tutorials/quickstart-r-create-predictive-model.md
+    - text: 最初のモデルのトレーニングと使用
+      url: tutorials/quickstart-r-train-score-model.md
   - linkListType: tutorial
     links:
     - text: T-SQL での R の使用
@@ -93,8 +93,8 @@ landingContent:
       url: concepts/extension-r.md
   - linkListType: concept
     links:
-    - text: Externsibility framework のセキュリティ
-      url: /concepts/security.md
+    - text: 機能拡張フレームワークのセキュリティ
+      url: concepts/security.md
 - title: Python および R パッケージの管理
   linkLists:
   - linkListType: how-to-guide

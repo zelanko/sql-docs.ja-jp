@@ -59,7 +59,7 @@ sp_who [ [ @loginame = ] 'login' | session ID | 'ACTIVE' ]
 |------------|---------------|-----------------|  
 |**spid**|**smallint**|セッション ID。|  
 |**ecid**|**smallint**|特定のセッション ID に関連付けられている、指定されたスレッドの実行コンテキスト ID。<br /><br /> ECID = {0、1、2、3、...*n*} 0 常を表しますメインまたは親スレッド、および {1、2、3、...、*n*}、サブスレッドを表します。|  
-|**status**|**nchar(30)**|プロセスの状態。 設定できる値は次のとおりです。<br /><br /> **休止**します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でセッションがリセットされています。<br /><br /> **実行している**します。 セッションには、1 つまたは複数のバッチが実行中です。 複数のアクティブな結果セット (MARS) が有効にすると、セッションは、複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **バック グラウンド**します。 セッションがデッドロック検出などのバック グラウンド タスクを実行中です。<br /><br /> **ロールバック**します。 セッションでトランザクション ロールバックが実行中です。<br /><br /> **保留中**します。 セッションは、ワーカー スレッドが使用可能になるのを待機しています。<br /><br /> **実行可能な**します。 セッションのタスクはクォンタムの取得を待機中にスケジューラの実行可能キューでです。<br /><br /> **spinloop**します。 セッションのタスクはスピンロックの空きを待機しています。<br /><br /> **中断**します。 セッションが完了する I/O などのイベントを待機しています。|  
+|**status**|**nchar(30)**|プロセスの状態。 設定できる値は次のとおりです。<br /><br /> **dormant** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でセッションがリセットされています。<br /><br /> **running** セッションには、1 つまたは複数のバッチが実行中です。 複数のアクティブな結果セット (MARS) が有効にすると、セッションは、複数のバッチを実行できます。 詳細については、「[複数のアクティブな結果セット &#40;MARS&#41; の使用](../../relational-databases/native-client/features/using-multiple-active-result-sets-mars.md)」を参照してください。<br /><br /> **background** セッションがデッドロック検出などのバック グラウンド タスクを実行中です。<br /><br /> **rollback** セッションでトランザクション ロールバックが実行中です。<br /><br /> **pending** セッションは、ワーカー スレッドが使用可能になるのを待機しています。<br /><br /> **runnable** セッションのタスクはクォンタムの取得を待機中にスケジューラの実行可能キューでです。<br /><br /> **spinloop**します。 セッションのタスクはスピンロックの空きを待機しています。<br /><br /> **suspended** セッションが完了する I/O などのイベントを待機しています。|  
 |**loginame**|**nchar(128)**|特定のプロセスに関連付けられているログイン名です。|  
 |**hostname**|**nchar(128)**|各プロセスのホストまたはコンピューターの名前。|  
 |**blk**|**char (5)**|ブロック中のプロセスが存在する場合は、そのプロセスのセッション ID。 存在しない場合は、この列は 0 になります。<br /><br /> 指定したセッション ID に関連付けられたトランザクションが、孤立した分散トランザクションによってブロックされると、この列は、ブロックの孤立したトランザクションに対して '-2' を返します。|  
@@ -120,8 +120,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_lock &#40;です。TRANSACT-SQL と&#41;です。](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
- [sys.sysprocesses &#40;TRANSACT-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
+ [sp_lock &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-lock-transact-sql.md)   
+ [sys.sysprocesses &#40;Transact-SQL&#41;](../../relational-databases/system-compatibility-views/sys-sysprocesses-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

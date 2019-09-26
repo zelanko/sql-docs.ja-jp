@@ -1,7 +1,7 @@
 ---
 title: 緩やかに変化するディメンション変換 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 08/31/2019
 ms.prod: sql
 ms.prod_service: integration-services
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: f8849151-c171-4725-bd25-f2c33a40f4fe
 author: janinezhang
 ms.author: janinez
-ms.openlocfilehash: 9b867d0f1d8dff2c424a7b23d9f7cfa30565f483
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 231d69585368660a63adab2b74b64e0c2e5c648b
+ms.sourcegitcommit: 3de1fb410de2515e5a00a5dbf6dd442d888713ba
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67928152"
+ms.lasthandoff: 09/02/2019
+ms.locfileid: "70211308"
 ---
 # <a name="slowly-changing-dimension-transformation"></a>緩やかに変化するディメンション変換
 
@@ -111,6 +111,7 @@ ms.locfileid: "67928152"
   
 ## <a name="related-content"></a>関連コンテンツ  
   
--   blogs.msdn.com のブログ「 [Optimizing the Slowly Changing Dimension Wizard](https://go.microsoft.com/fwlink/?LinkId=199481)(緩やかに変化するディメンション ウィザードの最適化)」  
+-   [SSIS で緩やかに変化するディメンションを処理する](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Handling-Slowly-Changing-Dimensions-in-SSIS/ba-p/387599)
+-   [緩やかに変化するディメンション ウィザードを最適化する](https://techcommunity.microsoft.com/t5/SQL-Server-Integration-Services/Optimizing-the-Slowly-Changing-Dimension-Wizard/ba-p/387702)
   
   

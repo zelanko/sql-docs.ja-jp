@@ -9,12 +9,12 @@ ms.date: 08/27/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 679fbd63d77e21a84db315cf05adf112d122ad63
-ms.sourcegitcommit: 243925311cc952dd455faea3c1156e980959d6de
+ms.openlocfilehash: f209d249fb0e289258aa20bbfafd8a715dc463d6
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/07/2019
-ms.locfileid: "70774215"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118117"
 ---
 # <a name="how-to-mount-adls-gen2-for-hdfs-tiering-in-a-big-data-cluster"></a>ビッグ データ クラスターに HDFS 階層制御のための ADLS Gen2 をマウントする方法
 
@@ -108,7 +108,7 @@ Azure portal で ADLS アカウント用に取得できるアクセス キーを
 1. クラスターのユーザー名とパスワードによるコントローラー エンドポイントの外部 IP アドレスを使用して **azdata** でログインします。
 
    ```bash
-   azdata login -e https://<IP-of-controller-svc-external>:30080/
+   azdata login -e https://<IP-of-controller-svc-external>:30080
    ```
 1. 環境変数 MOUNT_CREDENTIALS を設定する (手順については上へスクロール)
 

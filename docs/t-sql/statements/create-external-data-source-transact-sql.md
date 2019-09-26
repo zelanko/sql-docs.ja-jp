@@ -19,12 +19,12 @@ helpviewer_keywords:
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 17fad67ff8eb050b191d22cf2638dd992ba2e6b3
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: 427aa6c21f108f9c488e8209e311d242d0a785df
+ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70190410"
+ms.lasthandoff: 09/04/2019
+ms.locfileid: "70274728"
 ---
 # <a name="create-external-data-source-transact-sql"></a>CREATE EXTERNAL DATA SOURCE (Transact-SQL)
 
@@ -40,10 +40,10 @@ SQL Server、SQL Database、SQL Data Warehouse、または Analytics Platform Sy
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|**\* _SQL Server \*_** &nbsp;|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                               |                                                              |                                                              |                                                              |      |
+| ----------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| **\* _SQL Server \*_** &nbsp; | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                               |                                                              |                                                              |                                                              |      |
 
 &nbsp;
 
@@ -81,16 +81,16 @@ WITH
 
 接続プロトコルと外部データ ソースへのパスを指定します。
 
-| 外部データ ソース        | 場所プレフィックス | ロケーション パス                                         | 製品/サービスでサポートされている場所    |
-| --------------------------- | --------------- | ----------------------------------------------------- | ------------------------------------------- |
-| Cloudera または Hortonworks     | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016 以降)                     |
-| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016 以降)        |
-| SQL Server                  | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019 以降)                          |
-| Oracle                      | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
-| Teradata                    | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
-| MongoDB または CosmosDB         | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019 以降)                          |
-| ODBC                        | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 以降) - Windows のみ           |
-| 一括操作             | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017 以降)                  |
+| 外部データ ソース    | 場所プレフィックス | ロケーション パス                                         | 製品/サービスでサポートされている場所 |
+| ----------------------- | --------------- | ----------------------------------------------------- | ---------------------------------------- |
+| Cloudera または Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   | SQL Server (2016 以降)                       |
+| Azure Blob Storage      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` | SQL Server (2016 以降)                       |
+| SQL Server              | `sqlserver`     | `<server_name>[\<instance_name>][:port]`              | SQL Server (2019 以降)                       |
+| Oracle                  | `oracle`        | `<server_name>[:port]`                                | SQL Server (2019 以降)                       |
+| Teradata                | `teradata`      | `<server_name>[:port]`                                | SQL Server (2019 以降)                       |
+| MongoDB または CosmosDB     | `mongodb`       | `<server_name>[:port]`                                | SQL Server (2019 以降)                       |
+| ODBC                    | `odbc`          | `<server_name>[:port]`                                | SQL Server (2019 以降) - Windows のみ        |
+| 一括操作         | `https`         | `<storage_account>.blob.core.windows.net/<container>` | SQL Server (2017 以降)                       |
 
 場所のパス:
 
@@ -375,10 +375,10 @@ WITH
 ::: moniker-end
 ::: moniker range="=azuresqldb-current||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|**_\* SQL Database \*_** &nbsp;|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                                                              |                                 |                                                              |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | **_\* SQL Database \*_** &nbsp; | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                                                              |                                 |                                                              |                                                              |      |
 
 &nbsp;
 
@@ -414,11 +414,11 @@ WITH
 
 接続プロトコルと外部データ ソースへのパスを指定します。
 
-| 外部データ ソース        | 場所プレフィックス | ロケーション パス                                         |
-| --------------------------- | --------------- | ----------------------------------------------------- |
-| 一括操作             | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
-| エラスティック クエリ (シャード)       | 任意    | `<shard_map_server_name>.database.windows.net`        |                                 |
-| エラスティック クエリ (リモート)      | 任意    | `<remote_server_name>.database.windows.net`           |                                |
+| 外部データ ソース   | 場所プレフィックス | ロケーション パス                                         |
+| ---------------------- | --------------- | ----------------------------------------------------- |
+| 一括操作        | `https`         | `<storage_account>.blob.core.windows.net/<container>` |
+| エラスティック クエリ (シャード)  | 任意    | `<shard_map_server_name>.database.windows.net`        |
+| エラスティック クエリ (リモート) | 任意    | `<remote_server_name>.database.windows.net`           |
 
 場所のパス:
 
@@ -461,10 +461,10 @@ WITH
 
 この引数は、`TYPE` が `RDBMS` または `SHARD_MAP_MANAGER` に設定されている場合に構成します。
 
-| TYPE              | DATABASE_NAME の値                                                  |
-| ----------------- | ----------------------------------------------------------------------- |
+| TYPE              | DATABASE_NAME の値                                       |
+| ----------------- | ------------------------------------------------------------ |
 | RDBMS (RDBMS)             | `LOCATION` を使用して指定されたサーバー上のリモート データベースの名前 |
-| SHARD_MAP_MANAGER | シャード マップ マネージャーとして動作しているデータベースの名前                 |
+| SHARD_MAP_MANAGER | シャード マップ マネージャーとして動作しているデータベースの名前      |
 
 `TYPE` = `RDBMS` の外部データ ソースを作成する方法を示す例については、「[RDBMS 外部データ ソースを作成する](#b-create-an-rdbms-external-data-source)」を参照してください
 
@@ -602,10 +602,10 @@ WITH
 ::: moniker-end
 ::: moniker range="=azure-sqldw-latest||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|**_\* SQL Data<br />Warehouse \*_** &nbsp;|[Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7)|
-||||||
+|                                                              |                                                              |                                            |                                                              |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------ | ------------------------------------------------------------ | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | **_\* SQL Data<br />Warehouse \*_** &nbsp; | [Analytics Platform<br />System (PDW)](create-external-data-source-transact-sql.md?view=aps-pdw-2016-au7) |      |
+|                                                              |                                                              |                                            |                                                              |      |
 
 &nbsp;
 
@@ -623,7 +623,7 @@ CREATE EXTERNAL DATA SOURCE <data_source_name>
 WITH
 (    LOCATION                  = '<prefix>://<path>[:<port>]'
 [,   CREDENTIAL                = <credential_name> ]
-[,   TYPE                      =  HADOOP | BLOB_STORAGE]
+[,   TYPE                      =  HADOOP
 )
 [;]
 ```
@@ -642,7 +642,7 @@ WITH
 | --------------------------- | --------------- | ----------------------------------------------------- |
 | Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 | Azure Data Lake Store Gen 1 | `adl`           | `<storage_account>.azuredatalake.net`                 |
-| Azure Data Lake Store Gen 2 | `abfs[s]`         | `<container>@<storage_account>.dfs.core.windows.net`  |
+| Azure Data Lake Store Gen 2 | `abfs[s]`       | `<container>@<storage_account>.dfs.core.windows.net`  |
 
 場所のパス:
 
@@ -667,7 +667,7 @@ WITH
 
 データベース スコープ資格情報を作成するには、「[CREATE DATABASE SCOPED CREDENTIAL (Transact-SQL)][create_dsc]」を参照してください。
 
-### <a name="type---hadoop--blob_storage-"></a>TYPE = *[ HADOOP | BLOB_STORAGE ]*
+### <a name="type--hadoop"></a>TYPE = *HADOOP*
 
 構成されている外部データ ソースの種類を指定します。 このパラメーターは常に必要ではありません。
 
@@ -857,10 +857,10 @@ CREATE EXTERNAL DATA SOURCE ext_datasource_with_abfss WITH (TYPE = hadoop, LOCAT
 ::: moniker-end
 ::: moniker range=">=aps-pdw-2016||=sqlallproducts-allversions"
 
-||||||
-|---|---|---|---|---|
-|[SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017)|[SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current)|[SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest)|**_\* Analytics<br />Platform System (PDW) \*_** &nbsp;|
-||||||
+|                                                              |                                                              |                                                              |                                                         |      |
+| ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------- | ---- |
+| [SQL Server](create-external-data-source-transact-sql.md?view=sql-server-2017) | [SQL Database](create-external-data-source-transact-sql.md?view=azuresqldb-current) | [SQL Data<br />Warehouse](create-external-data-source-transact-sql.md?view=azure-sqldw-latest) | **_\* Analytics<br />Platform System (PDW) \*_** &nbsp; |      |
+|                                                              |                                                              |                                                              |                                                         |      |
 
 &nbsp;
 
@@ -891,10 +891,10 @@ WITH
 
 接続プロトコルと外部データ ソースへのパスを指定します。
 
-| 外部データ ソース        | 場所プレフィックス | ロケーション パス                                |
-| --------------------------- | --------------- |  ------------------------------------------- |
-| Cloudera または Hortonworks     | `hdfs`          | `<Namenode>[:port]`                          |
-| Azure Blob Storage          | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
+| 外部データ ソース    | 場所プレフィックス | ロケーション パス                                         |
+| ----------------------- | --------------- | ----------------------------------------------------- |
+| Cloudera または Hortonworks | `hdfs`          | `<Namenode>[:port]`                                   |
+| Azure Blob Storage      | `wasb[s]`       | `<container>@<storage_account>.blob.core.windows.net` |
 
 場所のパス:
 

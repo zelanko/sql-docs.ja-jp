@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: e77b9be3-1a02-4769-8acf-ac71d48d6a76
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: ef3cd31068c324475e8edfe8bf8f7c16acc4a2de
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f3acffe6a922084fd63e38a8e212b5cf86d6b278
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67968511"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096903"
 ---
 # <a name="tostring-method-datetimeoffset"></a>toString (DateTimeOffset) メソッド
 [!INCLUDE[Driver_JDBC_Download](../../../includes/driver_jdbc_download.md)]
@@ -33,7 +33,7 @@ public String toString()
  **DateTimeOffset**オブジェクトの文字列表現。  
   
 ## <a name="remarks"></a>Remarks  
- 文字列の形式は*YYYY*-*MM*-*DD * * hh*:*MM*:*ss*[です。*fffffff*] [+ |-]*hh*:*mm*。  
+ この文字列の形式は `YYYY-MM-DD HH:mm:ss[.fffffff] [+|-]HH:mm` になります。  
   
  返される文字列の小数部では、宣言されている有効桁数になるまでゼロが埋め込まれます。 たとえば、値が "2010-03-10 12:34: 56.78-08:00" の**datetimeoffset (6)** は、datetimeoffset によって "2010-03-10 12:34: 56.780000-08:00" として書式設定されます。  
   

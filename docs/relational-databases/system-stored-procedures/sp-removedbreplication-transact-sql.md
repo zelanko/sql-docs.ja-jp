@@ -1,5 +1,5 @@
 ---
-title: sp_removedbreplication (Transact-sql) |Microsoft Docs
+title: sp_removedbreplication (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771037"
 ---
-# <a name="spremovedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
+# <a name="sp_removedbreplication-transact-sql"></a>sp_removedbreplication (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   このストアド プロシージャにより、SQL Server のパブリッシャー インスタンス側のパブリケーション データベース、または SQL Server のサブスクライバー インスタンス側のサブスクリプション データベースから、すべてのレプリケーション オブジェクトが削除されます。 適切なデータベースで実行するか、または同じインスタンスにある別のデータベースのコンテキストで実行する場合は、レプリケーション オブジェクトを削除するデータベースを指定します。 このプロシージャでは、ディストリビューション データベースなどその他のデータベースからオブジェクトが削除されることはありません。  
@@ -47,9 +47,9 @@ sp_removedbreplication [ [ @dbname = ] 'dbname' ]
   
 |||  
 |-|-|  
-|**さん**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
+|**tran**|トランザクション レプリケーション パブリッシング オブジェクトを削除。|  
 |**merge**|マージ レプリケーション パブリッシング オブジェクトを削除。|  
-|**両方**標準|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
+|**both**標準|すべてのレプリケーション パブリッシング オブジェクトを削除。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

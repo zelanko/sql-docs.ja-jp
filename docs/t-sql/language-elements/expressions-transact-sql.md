@@ -21,12 +21,12 @@ ms.assetid: ee53c5c8-e36c-40f9-8cd1-d933791b98fa
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1c1a4e90dfaa5f513e3d197619afd26e8ec0898d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0563510242e38e817c7fb01e4185241062feedf3
+ms.sourcegitcommit: 5a61854ddcd2c61bb6da30ccad68f0ad90da0c96
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075220"
+ms.lasthandoff: 09/13/2019
+ms.locfileid: "70978596"
 ---
 # <a name="expressions-transact-sql"></a>式 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -128,7 +128,27 @@ GO
 ```  
   
  式 `1+2` は、結果セット内の各行で `3` と評価されます。 式 `ProductID` は、結果セットの各行で一意な値をとりますが、各行に格納される `ProductID` の値は 1 つだけです。  
-  
+ 
+- Azure SQL Data Warehouse では各スレッドに固定された最大メモリ量が割り当てられるため、スレッドによってすべてのメモリが使い尽くされることはありません。  このメモリの一部は、クエリの式を格納するために使用されます。  クエリに含まれる式が多すぎて、必要なメモリが内部制限を超えた場合、そのクエリはエンジンによって実行されません。  この問題を回避するために、ユーザーはクエリを複数のクエリに変更して、それぞれのクエリに含まれる式の数を減らすことができます。 たとえば、次のように WHERE 句に式の長いリストを含むクエリがあるとします。 
+
+```sql
+DELETE FROM dbo.MyTable 
+WHERE
+(c1 = '0000001' AND c2 = 'A000001') or
+(c1 = '0000002' AND c2 = 'A000002') or
+(c1 = '0000003' AND c2 = 'A000003') or
+...
+
+```
+このクエリは次のように変更します。
+
+```sql
+DELETE FROM dbo.MyTable WHERE (c1 = '0000001' AND c2 = 'A000001');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000002' AND c2 = 'A000002');
+DELETE FROM dbo.MyTable WHERE (c1 = '0000003' AND c2 = 'A000003');
+...
+```
+
 ## <a name="see-also"></a>参照  
  [AT TIME ZONE &#40;Transact-SQL&#41;](../../t-sql/queries/at-time-zone-transact-sql.md)   
  [CASE &#40;Transact-SQL&#41;](../../t-sql/language-elements/case-transact-sql.md)   

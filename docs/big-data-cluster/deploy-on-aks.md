@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bc9879236fa50f19f443b2d6086980842ce0b3f1
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9a3b52a87927eb85d638ed97c1e145efd50602bf
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160701"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016889"
 ---
 # <a name="configure-azure-kubernetes-service-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために Azure Kubernetes Service を構成する
 
@@ -39,9 +39,9 @@ AKS を使用すると、コンテナー化されたアプリケーションを�
 
 - Kubernetes server の最小1.13 バージョン。 AKS の場合、`--kubernetes-version` パラメータ―を使用して、既定値とは異なるバージョンを指定する必要があります。
 
-- AKS 上で基本のシナリオを検証する際の最適なエクスペリエンスのためには、次を使用してください。
+- AKS の基本的なシナリオを検証しながら、デプロイを成功させ、最適なエクスペリエンスを確保するために、次のリソースを使用して、単一ノードまたはマルチノードの AKS クラスターを使用できます。
    - すべてのノード全体で 8個の vCPU
-   - VM ごとに 32 GB のメモリ
+   - 64 GB のメモリ (VM あたり)
    - すべてのノード全体で 24 個以上の接続されたディスク
 
    > [!TIP]

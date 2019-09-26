@@ -16,12 +16,12 @@ ms.assetid: 9c290a88-4e9f-4a7e-aab5-4442137a9918
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 80d8d7d5f4a02c119a1b038023505d60eddec6ab
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: a1a0b084175de3e06eb69f245c3c634c12dd8364
+ms.sourcegitcommit: dc8697bdd950babf419b4f1e93b26bb789d39f4a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768159"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70846783"
 ---
 # <a name="work-with-replication-agent-profiles"></a>レプリケーション エージェント プロファイルを操作する
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -140,7 +140,7 @@ ms.locfileid: "68768159"
   
 ###  <a name="Create_tsql"></a> 新しいエージェント プロファイルを作成するには  
   
-1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md) を実行します。 **@name** に名前、 **@profile_type に** 値 **1**、および **@agent_type** に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md) を実行します。 **\@name** を指定し、 **\@profile_type** に **1** を、 **\@agent_type** に次のいずれかの値を指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -152,13 +152,13 @@ ms.locfileid: "68768159"
   
     -   **9** - [Replication Queue Reader Agent](../../../relational-databases/replication/agents/replication-queue-reader-agent.md)  
   
-     このプロファイルがこの種類のレプリケーション エージェントの新しい既定のプロファイルになる場合、 **@profile_type** に **@default** をクリックします。 新しいプロファイルの ID は、 **@profile_id** 出力パラメーターにより返されます。 これにより、特定の種類のエージェントの既定のプロファイルに基づいたプロファイル パラメーターのセットを備えた、新しいプロファイルが作成されます。  
+     このプロファイルがこの種類のレプリケーション エージェントの新しい既定のプロファイルになる場合、 **\@default** に **1** を指定します。 新しいプロファイルの ID は、 **\@profile_id** 出力パラメーターにより返されます。 これにより、特定の種類のエージェントの既定のプロファイルに基づいたプロファイル パラメーターのセットを備えた、新しいプロファイルが作成されます。  
   
 2.  新しいプロファイルを作成したら、既定のパラメーターを追加、削除、変更してプロファイルをカスタマイズします。  
   
 ###  <a name="Modify_tsql"></a> 既存のエージェント プロファイルを変更するには  
   
-1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **@agent_type** に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **\@agent_type** に指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -172,24 +172,24 @@ ms.locfileid: "68768159"
   
      これにより、指定された種類のエージェントのプロファイルがすべて返されます。 変更するプロファイルの結果セットで **profile_id** の値を確認します。  
   
-2.  ディストリビューターで、[sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** をクリックします。 これにより、プロファイルのすべてのパラメーターが返されます。 変更するパラメーター、またはプロファイルから削除するパラメーターの名前を確認します。  
+2.  ディストリビューターで、[sp_help_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-parameter-transact-sql.md) を実行します。 手順 1 で確認したプロファイル ID を **\@profile_id** に指定します。 これにより、プロファイルのすべてのパラメーターが返されます。 変更するパラメーター、またはプロファイルから削除するパラメーターの名前を確認します。  
   
-3.  プロファイル内のパラメーターの値を変更するには、[sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** に指定し、変更するパラメーターの名前を **@parameter_name** に、パラメーターの新しい値を **@parameter_value** をクリックします。  
+3.  プロファイル内のパラメーターの値を変更するには、[sp_change_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-change-agent-parameter-transact-sql.md) を実行します。 手順 1 で確認したプロファイル ID を **\@profile_id** に指定し、変更するパラメーターの名前を **\@parameter_name** に、パラメーターの新しい値を **\@parameter_value** に指定します。  
   
     > [!NOTE]  
     >  既存のエージェント プロファイルを変更して、エージェントの既定のプロファイルにすることはできません。 代わりに、前の手順に示すように、新しいプロファイルを既定のプロファイルとして作成する必要があります。  
   
-4.  プロファイルからパラメーターを削除するには、[sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** に指定し、削除するパラメーターの名前を **@parameter_name** をクリックします。  
+4.  プロファイルからパラメーターを削除するには、[sp_drop_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-parameter-transact-sql.md) を実行します。 手順 1 で確認したプロファイル ID を **\@profile_id** に指定し、削除するパラメーターの名前を **\@parameter_name** に指定します。  
   
 5.  プロファイルに新しいパラメーターを追加するには、次の手順を実行する必要があります。  
   
     -   ディストリビューターで [MSagentparameterlist &#40;Transact-SQL&#41;](../../../relational-databases/system-tables/msagentparameterlist-transact-sql.md) テーブルに対してクエリを実行して、各種類のエージェントに設定できるプロファイル パラメーターを確認します。  
   
-    -   ディストリビューターで、[sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** に指定し、追加する有効なパラメーターの名前を **@parameter_name** に、パラメーターの値を **@parameter_value** をクリックします。  
+    -   ディストリビューターで、[sp_add_agent_parameter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-parameter-transact-sql.md) を実行します。 手順 1 で確認したプロファイル ID を **\@profile_id** に指定し、追加する有効なパラメーターの名前を **\@parameter_name** に、パラメーターの値を **\@parameter_value** に指定します。  
   
 ###  <a name="Delete_tsql"></a> エージェント プロファイルを削除するには  
   
-1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **@agent_type** に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **\@agent_type** に指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
@@ -203,11 +203,11 @@ ms.locfileid: "68768159"
   
      これにより、指定された種類のエージェントのプロファイルがすべて返されます。 削除するプロファイルの結果セットで **profile_id** の値を確認します。  
   
-2.  ディストリビューターで、[sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md) を実行します。 手順 1. で確認したプロファイル ID を **@profile_id** をクリックします。  
+2.  ディストリビューターで、[sp_drop_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-drop-agent-profile-transact-sql.md) を実行します。 手順 1 で確認したプロファイル ID を **\@profile_id** に指定します。  
   
 ###  <a name="Synch_tsql"></a> 同期の際にエージェント プロファイルを使用するには  
   
-1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **@agent_type** に次のいずれかの値を指定します。  
+1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **\@agent_type** に指定します。  
   
     -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   

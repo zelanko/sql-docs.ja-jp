@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 07/31/2019
-ms.openlocfilehash: 3ed3f08232b3811ad57ae37d8be6ed93af3572de
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.date: 09/04/2019
+ms.openlocfilehash: 10f5290275a921e923ca49492eab78e4fb019475
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70122994"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149882"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -107,9 +107,13 @@ SSMS 18.2 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 
 - SSMS 18.0 では、複数のクエリ ウィンドウ間を切り替えると問題が再描画されます。 「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)」を参照してください この問題を回避するには、 **[ツール]**  >  **[オプション]** でハードウェア アクセラレータを無効にします。
 
-- SSMS の結果から表示されるデータのサイズには、グリッド、テキスト、またはファイルに制限があります。
+- SSMS のグリッド、テキスト、またはファイルの結果のデータ サイズに制限があります。
 
-他の既知の問題と製品チームへのフィードバックの提供については、「[UserVoice](https://feedback.azure.com/forums/908035-sql-server)」を参照してください。 
+- オブジェクト エクスプローラーで Azure SQL Database を削除した場合、実際には成功しているにもかかわらず、エラーが表示される問題があります。 このタスクでは、不正なエラー メッセージが表示されます。
+
+- 実際のログイン用の既定の言語設定にかかわらず、[ログインのプロパティ] ダイアログにアラビア語が SQL ログインの既定の言語として表示される場合があります。 このログインの実際の既定の言語を表示するには、T-SQL を使用して **master.sys.server_principles** からログインの **default_language_name** を選択します。
+
+他の既知の問題と製品チームへのフィードバックの提供については、「[UserVoice](https://feedback.azure.com/forums/908035-sql-server)」を参照してください。
 
 ## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
 

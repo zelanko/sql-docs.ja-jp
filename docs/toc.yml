@@ -1643,7 +1643,7 @@
               href: relational-databases/tables/use-column-sets.md
             - name: テーブル値パラメーター
               href: relational-databases/tables/use-table-valued-parameters-database-engine.md
-        - name: Microsoft Edge の制約
+        - name: エッジ制約
           href: relational-databases/tables/graph-edge-constraints.md
           items:
             - name: 作成
@@ -1768,6 +1768,8 @@
               href: relational-databases/track-changes/administer-and-monitor-change-data-capture-sql-server.md
             - name: 操作
               href: relational-databases/track-changes/work-with-change-data-sql-server.md
+            - name: '[トラブルシューティング]'
+              href: relational-databases/track-changes/known-issues-resolutions-with-cdc-for-oracle-attunity.md
         - name: 変更の追跡
           href: relational-databases/track-changes/about-change-tracking-sql-server.md
           items:
@@ -4183,8 +4185,12 @@
           href: sql-server/install/file-locations-for-default-and-named-instances-of-sql-server.md
         - name: 使用状況と診断データの収集
           items:
-            - name: のプライバシーの補足情報
-              href: sql-server/sql-server-privacy.md
+            - name: SQL Server のプライバシーの補足情報
+              items:
+                - name: SQL Server 2017 以前
+                  href: sql-server/sql-server-privacy.md
+                - name: SQL Server 2019
+                  href: sql-server/sql-server-privacy-ver15.md
             - name: SQL Server の使用状況と診断データを構成する
               href: sql-server/usage-and-diagnostic-data-configuration-for-sql-server.md
             - name: ツールの使用状況と診断データを構成する
@@ -6495,6 +6501,12 @@
   items:
     - name: 管理する
       items:
+        - name: 高速データベース回復
+          items:
+            - name: 概要
+              href: relational-databases/accelerated-database-recovery-concepts.md
+            - name: 管理
+              href: relational-databases/accelerated-database-recovery-management.md
         - name: 中央管理サーバー
           href: relational-databases/administer-multiple-servers-using-central-management-servers.md
         - name: 構成マネージャー

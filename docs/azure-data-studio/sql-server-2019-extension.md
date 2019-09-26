@@ -3,19 +3,19 @@ title: SQL Server 2019 の拡張機能 (プレビュー)
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用の SQL Server 2019 プレビューの拡張機能
 ms.custom: seodec18
-ms.date: 08/15/2019
+ms.date: 09/11/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 5def1291480b4b2dbe1eca289f02e5c9cfd6b8d7
-ms.sourcegitcommit: f5807ced6df55dfa78ccf402217551a7a3b44764
+ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
+ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/15/2019
-ms.locfileid: "69494043"
+ms.lasthandoff: 09/11/2019
+ms.locfileid: "70878614"
 ---
 # <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 の拡張機能 (プレビュー)
 
@@ -27,11 +27,11 @@ SQL Server 2019 の拡張機能 (プレビュー) をインストールするに
 
 1. SQL Server 2019 の拡張機能 (プレビュー) の .vsix ファイルをローカル ディレクトリにダウンロードします。
 
-   |プラットフォーム|ダウンロード|リリース日|バージョン
+   |プラットフォーム|ダウンロード|リリース日|Version
    |:---|:---|:---|:---|
-   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101241)|2019 年 8 月 15 日 |0.15.0
-   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101240)|2019 年 8 月 15 日 |0.15.0
-   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2101239)|2019 年 8 月 15 日 |0.15.0
+   |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019 年 9 月 11 日 |0.16.0
+   |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019 年 9 月 11 日 |0.16.0
+   |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019 年 9 月 11 日 |0.16.0
 
 1. Azure Data Studio では、 **[ファイル]** メニューから **[Install Extension from VSIX Package]\(VSIX パッケージから拡張機能をインストールする)** を選択し、ダウンロードした .vsix ファイルを選択します。
 
@@ -42,6 +42,10 @@ SQL Server 2019 の拡張機能 (プレビュー) をインストールするに
 1. 再読み込み後、拡張機能によって依存関係がインストールされます。 [出力] ウィンドウに進行状況が表示され、数分かかることがあります。
 
 1. 依存関係のインストールが完了したら、Azure Data Studio を閉じてから再度開きます。 **SQL Server ビッグ データ クラスター**の接続の種類は、Azure Data Studio を再起動するまで使用できません。
+
+## <a name="changes-in-release-016"></a>リリース 0.16 での変更点
+* [Create External Table]\(外部テーブルの作成\) ウィザード:
+  * オブジェクト マッピング ページでテーブルとビューを読み込むときのエラー処理が改善されました。
 
 ## <a name="changes-in-release-015"></a>リリース 0.15 での変更点
 * [Create External Table]\(外部テーブルの作成\) ウィザード:
@@ -96,7 +100,7 @@ SQL Server 2019 のサポートが更新されました。 SQL Server ビッグ 
 
 #### <a name="known-issues"></a>既知の問題
 * Notebook を開くと、Python のインストール用のダイアログが表示されます。 このインストールをキャンセルすると、[カーネル] および [アタッチ先] ドロップダウンに期待する値が表示されません。 この回避策は、Python のインストールを完了することです。
-* サポートされていないカーネルでノートブックを開くと、[カーネル] と _[アタッチ先]_ ドロップダウンによって Azure Data Studio がハングします。 Azure Data Studio を閉じて、サポートされているカーネル (Python3、Spark | R、Spark | Scala、PySpark、PySpark3) を使用していることを確認する必要があります
+* サポートされていないカーネルでノートブックを開くと、[カーネル] と _[アタッチ先]_ ドロップダウンによって Azure Data Studio が応答を停止します。 Azure Data Studio を閉じて、サポートされているカーネル (Python3、Spark | R、Spark | Scala、PySpark、PySpark3) を使用していることを確認する必要があります
 * PySpark3 またはその他の Spark カーネルを SQL Server エンドポイントに対して使用すると、Spark UI リンクが失敗します。 回避策としては、ダッシュボードから Spark UI をクリックします。または、SQL Server ビッグ データ クラスターの接続の種類には正しい Spark UI ハイパーリンクが含まれているので、これを使用して接続します。
 
 ### <a name="extensibility-improvements"></a>拡張性の向上

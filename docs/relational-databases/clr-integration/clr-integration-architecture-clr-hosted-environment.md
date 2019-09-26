@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: d280d359-08f0-47b5-a07e-67dd2a58ad73
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 69d548d6d6682a1bdd999bf2b9a4fdba4cefd669
-ms.sourcegitcommit: 734529a6f108e6ee6bfce939d8be562d405e1832
+ms.openlocfilehash: 016d8af878a75a0a4e72b17fc9fa09f8791b242b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "70212446"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096916"
 ---
 # <a name="clr-integration-architecture---clr-hosted-environment"></a>CLR 統合のアーキテクチャ - CLR ホスト環境
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -174,7 +174,7 @@ Thread.EndThreadAffinity();
   
  このような考慮事項を考えると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で使用するクラスの静的変数や静的なデータ メンバーを使用することはお勧めしません。 SAFE アセンブリと EXTERNAL_ACCESS アセンブリの場合、CREATE ASSEMBLY を使用するときに [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] でアセンブリのメタデータが調べられ、静的なデータ メンバーや変数の使用が検出された場合はこのようなアセンブリを作成できません。  
   
- [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **Sharedstate**、* * Synchronization、 **externalprocessmgmt**の各ホスト保護属性で注釈が付けられた .NET Framework api の呼び出しも許可されません。 これにより、SAFE アセンブリと EXTERNAL_ACCESS アセンブリで、状態の共有、同期の実行、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性のあるすべての API が呼び出されなくなります。 詳細については、「 [CLR 統合プログラミングモデルの制限](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、 **Sharedstate**、 **Synchronization**、 **externalprocessmgmt**の各ホスト保護属性で注釈が付けられた .NET Framework api の呼び出しも許可されません。 これにより、SAFE アセンブリと EXTERNAL_ACCESS アセンブリで、状態の共有、同期の実行、および [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] プロセスの整合性に影響を与える可能性のあるすべての API が呼び出されなくなります。 詳細については、「 [CLR 統合プログラミングモデルの制限](../../relational-databases/clr-integration/database-objects/clr-integration-programming-model-restrictions.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [CLR 統合のセキュリティ](../../relational-databases/clr-integration/security/clr-integration-security.md)   

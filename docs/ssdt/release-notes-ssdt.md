@@ -11,12 +11,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 9af4c8c43dfa3e7153b6ecb9e42301677247845d
-ms.sourcegitcommit: 187f6d327421e64f1802a3085f88bbdb0c79b707
+ms.openlocfilehash: 9f4fa51ff0ba9a5ce3e2960ab07e3e1994ddb881
+ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69531029"
+ms.lasthandoff: 09/10/2019
+ms.locfileid: "70874891"
 ---
 # <a name="release-notes-for-sql-server-data-tools-ssdt"></a>SQL Server Data Tools (SSDT) リリース ノート
 
@@ -304,7 +304,7 @@ _Visual Studio 2017 用 SSDT。_
 
 Visual Studio 2017 (15.5.1) はバージョン 15.5.0 と同じリリースですが、インストーラーの次のバグが修正されています。
 
-1.  SQL Server Integration Services のインストールの後処理でインストーラーがハングする問題を修正しました。
+1.  SQL Server Integration Services のインストールの後処理でインストーラーが応答を停止する問題を修正しました。
 2.  次のエラー メッセージで設定が失敗する問題を修正します。「要求されたメタファイル操作はサポートされていません (0x800707D3)」
 
 以上の 2 つのバグ修正に加え、15.5.0 の次の詳細が 15.5.1 にも当てはまります。
@@ -497,7 +497,7 @@ _Visual Studio 2015 用 SSDT。_
 - コンテキスト式の場合に、データ ソースの構造で変更が維持されない ChangeSource に関する問題を修正しました
 - M 式のエラーによって、エラー メッセージが表示されずにモデルの更新に失敗することがある問題を修正しました
 - "ソリューションを閉じる前にビルドを中止しなければなりません" エラーで SSDT が終了する問題を修正しました
-- 1400 互換性レベル モデルで不適切な権限借用モードを設定すると、VS がハングしたような状態になる問題を修正しました 
+- 1400 互換性レベル モデルで不適切な権限借用モードを設定すると、VS が応答を停止したような状態になる問題を修正しました 
 - 詳細な行プロパティは、空ではない場合にのみ、JSON にシリアル化されるようになります (既定からの変更)
 - Oracle OLEDB ドライバーは、表形式の直接クエリ モードのリストで使用できるようになりました
 - 1400 互換性表形式モデルに M 式を追加すると、表形式モデル エクスプローラー (TME) で表示または更新できるようになりました
@@ -844,7 +844,7 @@ SSDT テーブルに内部 SSAS インスタンスが含まれるようになり
 * 高 DPI スケールでサイズ変更する際に正しく固定される SSDT AS のプロジェクトのプロパティダイアログに関する問題を修正しました。
 * SSDT AS のプロジェクトにおいて、貼り付けられたテーブルを含む特定のモデルのアップグレード中にエラーが発生する問題を修正しました。
 * SSDT AS において、Excel からシート行全体を貼り付ける処理が遅く、不要な多数の列が作成される問題を修正しました。
-* SSDT AS において、静的な大きい DataTable 式の解析と強調表示が遅い、またはハングする問題を修正しました。
+* SSDT AS において、静的な大きい DataTable 式の解析と強調表示が遅い、または応答が停止する問題を修正しました。
 * SSDT AS において、エディターで選択した現在のパースペクティブにメジャーと KPI 値を追加する際の問題を修正しました。
 * SSDT において、SQL Azure から AS プロジェクトへのデータのインポートで "dbo" 以外のスキーマの種類がサポートされない問題を修正しました。
 

@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 1655525fd9ec8acba80637a86936484859f85df2
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878720"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174269"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]する方法
 
@@ -148,7 +148,7 @@ azdata bdc create --accept-eula=yes
 | **CONTROLLER_PASSWORD** | 必須 |クラスター管理者のパスワード。 |
 | **MSSQL_SA_PASSWORD** | 必須 |SQL マスター インスタンス用の SA ユーザーのパスワード。 |
 | **KNOX_PASSWORD** | 必須 |Knox **root**ユーザーのパスワード。 注: 基本認証のセットアップでは、Knox に対してサポートされているユーザーのみが**root**です。|
-| **ACCEPT_EULA**| `azdata` を初めて使用する場合は必須| 値は必要ありません。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula` を含めることができます。|
+| **ACCEPT_EULA**| `azdata` を初めて使用する場合は必須| [はい] に設定します。 環境変数として設定された場合、SQL Server と `azdata` の両方に EULA が適用されます。 環境変数として設定されない場合、`azdata` コマンドの初めての使用時に `--accept-eula=yes` を含めることができます。|
 | **DOCKER_USERNAME** | 省略可 | コンテナー イメージがプライベート リポジトリに格納されている場合に、それらにアクセスするためのユーザー名。 ビッグ データ クラスターの展開にプライベート Docker リポジトリを使用する方法の詳細については、[オフライン展開](deploy-offline.md)に関するトピックを参照してください。|
 | **DOCKER_PASSWORD** | 省略可 |上記のプライベート リポジトリにアクセスするためのパスワード。 |
 
@@ -161,6 +161,7 @@ export CONTROLLER_USERNAME=admin
 export CONTROLLER_PASSWORD=<password>
 export MSSQL_SA_PASSWORD=<password>
 export KNOX_PASSWORD=<password>
+export ACCEPT_EULA=yes
 ```
 
 ```PowerShell

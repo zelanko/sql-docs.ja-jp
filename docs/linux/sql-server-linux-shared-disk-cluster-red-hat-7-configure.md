@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: dcc0a8d3-9d25-4208-8507-a5e65d2a9a15
-ms.openlocfilehash: dd320079291199b512bb9d9e8334e7ec8c2803a7
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: b76797d6b6bc9b9d2c9f666039595446f975a3aa
+ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810981"
+ms.lasthandoff: 09/09/2019
+ms.locfileid: "70809780"
 ---
 # <a name="configure-red-hat-enterprise-linux-shared-disk-cluster-for-sql-server"></a>SQL Server 用に Red Hat Enterprise Linux 共有ディスク クラスターを構成する
 
@@ -308,6 +308,10 @@ NFS の使用の詳細については、次のリソースを参照してくだ�
    sudo yum install mssql-server-ha
    ```
 
+## <a name="configure-fencing-agent"></a>フェンス エージェントを構成する
+
+STONITH デバイスでは、フェンス エージェントが提供されます。 「[Azure の Red Hat Enterprise Linux に Pacemaker をセットアップする](/azure/virtual-machines/workloads/sap/high-availability-guide-rhel-pacemaker/#1-create-the-stonith-devices)」では、Azure でこのクラスター用の STONITH デバイスを作成する方法の例が示されています。 環境の手順を変更します。
+
 ## <a name="create-the-cluster"></a>クラスターを作成する 
 
 1. ノードのいずれかで、クラスターを作成します。
@@ -316,15 +320,6 @@ NFS の使用の詳細については、次のリソースを参照してくだ�
    sudo pcs cluster auth <nodeName1 nodeName2 ...> -u hacluster
    sudo pcs cluster setup --name <clusterName> <nodeName1 nodeName2 ...>
    sudo pcs cluster start --all
-   ```
-
-   > RHEL HA アドオンには、VMWare および KVM 用のフェンス エージェントがあります。 他のすべてのハイパーバイザーでは、フェンスを無効にする必要があります。 運用環境では、フェンス エージェントを無効にすることはお勧めしません。 期間において、HyperV またはクラウド環境用のフェンス エージェントはありません。 これらの構成のいずれかを実行している場合は、フェンスを無効にする必要があります。 \**これは実稼働システムでは推奨されません。* *
-
-   次のコマンドでは、フェンス エージェントが無効になります。
-
-   ```bash
-   sudo pcs property set stonith-enabled=false
-   sudo pcs property set start-failure-is-fatal=false
    ```
 
 2. SQL Server、ファイル システム、および仮想 IP リソースのクラスター リソースを構成し、クラスターに構成をプッシュします。 次の情報が必要です。
