@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a378daeb4307b9f99e055edafd5cb21d95c30977
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
+ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009408"
+ms.lasthandoff: 09/16/2019
+ms.locfileid: "71016854"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>クイック スタート: SQL Server の拡張イベント
 
@@ -84,7 +84,7 @@ SSMS.exe では、拡張イベント向けに優れたユーザー インター�
 - 詳細設定
 
 
-SSMS UI が数カ月または数年にわたって微調整されると、テキストとそれを補助するスクリーンショットが少し正確ではなくなる場合があります。 しかし、差異が小さいものであれば、スクリーンショットは説明には十分に役立ちます。
+SSMS UI が数カ月または数年にわたって微調整されると、テキストとそれを補助するスクリーンショットが少し正確ではなくなる場合があります。 しかしながら、差異がほんのわずかなものであれば、スクリーンショットは説明には十分に役立ちます。
 
 
 1. SSMS と接続します。
@@ -623,7 +623,7 @@ SELECT
 ```
 
 
-#### <a name="haspermsbyname-function"></a>HAS_PERMS_BY_NAME 関数
+#### <a name="has_perms_by_name-function"></a>HAS_PERMS_BY_NAME 関数
 
 
 次の SELECT はユーザーのアクセス許可を報告します。 これは組み込み関数 [HAS_PERMS_BY_NAME](../../t-sql/functions/has-perms-by-name-transact-sql.md)に依存します。

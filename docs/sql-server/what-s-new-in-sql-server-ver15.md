@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 8fe83d73c0c7413715122d849141ea5378c24c47
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
+ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228465"
+ms.lasthandoff: 09/18/2019
+ms.locfileid: "71096890"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -53,7 +53,7 @@ ms.locfileid: "70228465"
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|暗号化された列のインデックス付け|ランダム化された暗号化およびエンクレーブ対応のキーを使用して暗号化された列のインデックスを作成し、リッチなクエリのパフォーマンスを向上させます (`LIKE` と比較演算子を使用)。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)」をご覧ください。
+|セキュア エンクレーブを使用する Always Encrypted|Always Encrypted、インプレース暗号化、さまざまな計算法を基盤に拡張し、サーバー側のセキュア エンクレーブ内でプレーンテキスト データの計算を可能にします。 インプレース暗号化では、データをデータベースの外に移動することが回避されるため、暗号操作 (列の暗号化、列のローテーション、暗号化鍵など) の性能と信頼度が上がります。 さまざまな計算法 (パターン一致や比較演算) がサポートされることで、機密データの保護が求められ、同時に Transact-SQL クエリで豊富な機能性が求められる幅広いシナリオや用途に Always Encrypted が対応できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)」をご覧ください。|
 |Transparent Data Encryption (TDE) に対する初期スキャンの一時停止および再開|[Transparent Data Encryption (TDE) スキャンの一時停止と再開](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)に関するページを参照してください。|
 |SQL Server 構成マネージャーでの証明書管理|[証明書の管理 (SQL Server 構成マネージャー)](../database-engine/configure-windows/manage-certificates.md) に関するページを参照してください。|
 | &nbsp; | &nbsp; |
@@ -168,7 +168,7 @@ ms.locfileid: "70228465"
 
 |新機能または更新 | 詳細 | 
 |:---|:---| 
-|新しいメモリ セットアップ オプション | インストール中に "*最小サーバー メモリ (MB)*" および "*最大サーバー メモリ (MB)*" のサーバー構成を設定します。 詳細については、「[[データベース エンジンの構成] - [メモリ] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY`、`SQLMAXMEMORY` パラメーターを参照してください。 提案される値は、「[サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)」のメモリ構成ガイドラインと一致します。| 
+|新しいメモリ セットアップ オプション | インストール中に "*最小サーバー メモリ (MB)* " および "*最大サーバー メモリ (MB)* " のサーバー構成を設定します。 詳細については、「[[データベース エンジンの構成] - [メモリ] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#memory)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `USESQLRECOMMENDEDMEMORYLIMITS`、`SQLMINMEMORY`、`SQLMAXMEMORY` パラメーターを参照してください。 提案される値は、「[サーバー メモリ構成オプション](../database-engine/configure-windows/server-memory-server-configuration-options.md#setting-the-memory-options-manually)」のメモリ構成ガイドラインと一致します。| 
 |新しい並列処理セットアップ オプション | インストールの間に "*並列処理の最大限度*" サーバー構成オプションを設定します。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `SQLMAXDOP` パラメーターを参照してください。 既定値は、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」の並列処理の最大限度ガイドラインと一致します。| 
 | &nbsp; | &nbsp; |
 

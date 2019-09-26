@@ -22,12 +22,12 @@ ms.assetid: e71831fa-3d39-4e4a-9706-4d3a497082cc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 1dfbe6ede99184ea806b24bb7f8565b616a561cd
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b11273743ecdd54fa7a48aa4b8750d1925e8cca0
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769749"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174313"
 ---
 # <a name="view-and-modify-article-properties"></a>アーティクルのプロパティの表示および変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -104,29 +104,29 @@ ms.locfileid: "68769749"
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに属するアーティクルのプロパティを表示するには  
   
-1.  テーブル アーティクルについて [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行します。 **@publication** パラメーターにはパブリケーションの名前を指定し、 **@article** パラメーターにはアーティクルの名前を指定します。 **@article** を指定しない場合は、パブリケーションのすべてのアーティクルに関する情報が返されます。  
+1.  [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md) を実行します。 **\@publication** パラメーターにはパブリケーションの名前を指定し、 **\@article** パラメーターにはアーティクルの名前を指定します。 **\@article** を指定しない場合、パブリケーションのすべてのアーティクルに関する情報が返されます。  
   
 2.  テーブル アーティクルについて [sp_helparticlecolumns](../../../relational-databases/system-stored-procedures/sp-helparticlecolumns-transact-sql.md) を実行し、ベース テーブルで使用できるすべての列を一覧表示します。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに属するアーティクルのプロパティを変更するには  
   
-1.  テーブル アーティクルについて [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)を実行します。このとき、変更するアーティクルのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** パラメーターにはアーティクルの名前を指定します。  
+1.  [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) を実行します。このとき、変更するアーティクルのプロパティを **\@property** パラメーターに指定し、このプロパティの新しい値を **\@value** パラメーターに指定します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription** 」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  さらに、新しいスナップショットを生成する必要がある場合は、 **\@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、 **\@force_reinit_subscription** に **1** を指定します。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
 #### <a name="to-view-the-properties-of-an-article-belonging-to-a-merge-publication"></a>マージ パブリケーションに属するアーティクルのプロパティを表示するには  
   
-1.  テーブル アーティクルについて [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)を実行します。 **@publication** パラメーターにはパブリケーションの名前を指定し、 **@article** パラメーターにはアーティクルの名前を指定します。 これらのパラメーターを指定しない場合、パブリケーションまたはパブリッシャーのすべてのアーティクルに関する情報が返されます。  
+1.  [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md) を実行します。 **\@publication** パラメーターにはパブリケーションの名前を指定し、 **\@article** パラメーターにはアーティクルの名前を指定します。 これらのパラメーターを指定しない場合、パブリケーションまたはパブリッシャーのすべてのアーティクルに関する情報が返されます。  
   
 2.  テーブル アーティクルに対して [sp_helpmergearticlecolumn](../../../relational-databases/system-stored-procedures/sp-helpmergearticlecolumn-transact-sql.md) を実行し、ベース テーブルで使用できるすべての列を一覧表示します。  
   
 #### <a name="to-modify-the-properties-of-an-article-belonging-to-a-merge-publication"></a>マージ パブリケーションに属するアーティクルのプロパティを変更するには  
   
-1.  テーブル アーティクルについて [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。このとき、変更するアーティクルのプロパティを **@property** パラメーターに指定し、このプロパティの新しい値を **@value** パラメーターにはアーティクルの名前を指定します。  
+1.  [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md) を実行します。このとき、変更するアーティクルのプロパティを **\@property** パラメーターに指定し、このプロパティの新しい値を **\@value** パラメーターに指定します。  
   
     > [!NOTE]  
-    >  さらに、新しいスナップショットを生成する必要がある場合は、 **@force_invalidate_snapshot** に **@force_invalidate_snapshot** を、また、サブスクライバーを再初期化する必要がある場合は、 **@force_invalidate_snapshot** に **@force_reinit_subscription** 」を参照してください。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
+    >  さらに、新しいスナップショットを生成する必要がある場合は、 **\@force_invalidate_snapshot** に **1** を、また、サブスクライバーを再初期化する必要がある場合は、 **\@force_reinit_subscription** に **1** を指定します。 変更時に新しいスナップショットの生成または再初期化が必要となるプロパティの詳細については、「[Change Publication and Article Properties](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」(パブリケーションとアーティクルのプロパティの変更) を参照してください。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  パブリッシュされたアーティクルのプロパティを取得するトランザクション レプリケーションの例を、次に示します。  

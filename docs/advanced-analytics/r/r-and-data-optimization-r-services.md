@@ -7,12 +7,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: a65afba9455fb475b760439e92ad8d4d38a70be8
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a8143bae69e85ecf0056dcb9433707a681a69077
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715656"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271891"
 ---
 # <a name="performance-for-r-services---data-optimization"></a>R Services のパフォーマンス-データの最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -81,7 +81,7 @@ SQL Server で R を使用して並列化を実現するには、次の2つの�
 
     R スクリプトを並列化できる場合、および SQL クエリを並列化できる場合は、データベースエンジンによって複数の並列処理が作成されます。 作成できるプロセスの最大数は、インスタンスの [**並列処理の最大限度**(MAXDOP)] 設定と同じです。 その後、すべてのプロセスが同じスクリプトを実行しますが、データの一部のみを受け取ります。
     
-    このため、モデルのトレーニング時など、すべてのデータを表示する必要があるスクリプトでは、この方法は役に立ちません。 ただし、バッチ予測などのタスクを並列で実行する場合は便利です。 で`sp_execute_external_script`の並列処理の使用の詳細については、「 [transact-sql での R コードの使用](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)」の「**高度なヒント: 並列処理**」セクションを参照してください。
+    このため、モデルのトレーニング時など、すべてのデータを表示する必要があるスクリプトでは、この方法は役に立ちません。 ただし、バッチ予測などのタスクを並列で実行する場合は便利です。 で`sp_execute_external_script`の並列処理の使用の詳細については、「 [transact-sql での R コードの使用](../tutorials/quickstart-r-create-script.md)」の「**高度なヒント: 並列処理**」セクションを参照してください。
 
 -   **NumTasks = 1 を使用します。** SQL Server の計算コンテキストで**rx**関数を使用する場合は、 _numtasks_パラメーターの値を、作成するプロセスの数に設定します。 作成されるプロセスの数は**MAXDOP**を超えることはできません。ただし、実際に作成されるプロセスの数はデータベースエンジンによって決定され、要求した数よりも少なくなる場合があります。
 

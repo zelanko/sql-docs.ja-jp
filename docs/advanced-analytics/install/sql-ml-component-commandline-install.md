@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3e1e74c9d14c93cf44a7da5db4795a1524d238be
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f60aa3684778a7347b1ffd613a924c3bf0b7b94a
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715272"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271946"
 ---
 # <a name="install-sql-server-machine-learning-r-and-python-components-from-the-command-line"></a>コマンドラインから machine learning R および Python コンポーネントをインストール SQL Server
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -201,14 +201,14 @@ Python コマンドを開くには、に`\Program files\Microsoft SQL Server\150
 
 ## <a name="next-steps"></a>次の手順
 
-R 開発者は、いくつかの簡単な例を使って開始し、SQL Server での R の動作の基本を学習できます。 次の手順については、次のリンクを参照してください。
+R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクをご覧ください。
 
-+ [チュートリアル: T-sql で R を実行する](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [チュートリアル: T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
 + [チュートリアル: R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
 Python 開発者は、次のチュートリアルに従って、SQL Server で Python を使用する方法を学習できます。
 
-+ [チュートリアル: T-sql で Python を実行する](../tutorials/run-python-using-t-sql.md)
++ [チュートリアル: T-SQL での Python の実行](../tutorials/run-python-using-t-sql.md)
 + [チュートリアル: Python 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-python-for-sql-developers.md)
 
-実際のシナリオに基づく機械学習の例については、「 [machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)」を参照してください。
+実際のシナリオに基づいた機械学習の例については、[機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)を参照してください。

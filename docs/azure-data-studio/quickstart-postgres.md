@@ -3,26 +3,26 @@ title: 'クイック スタート: PostgreSQL に対する接続およびクエ�
 titleSuffix: Azure Data Studio
 description: このクイック スタートでは、Azure Data Studio を使用して PostgreSQL に接続し、クエリを実行する方法を示します
 ms.custom: seodec18
-ms.date: 03/19/2019
+ms.date: 09/18/2019
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.reviewer: alayu; sstein
 ms.topic: quickstart
 author: rachel-msft
 ms.author: raagyema
-ms.openlocfilehash: 9dcbbe621ab237eeceff55cd5f931d7d650dd3b4
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: ac4d1a3ae93310475c284661e1b8dff1d9a9f523
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959469"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127251"
 ---
 # <a name="quickstart-connect-and-query-postgresql-using-includename-sosincludesname-sos-shortmd"></a>クイック スタート: [!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して PostgreSQL に接続し、クエリを実行する
 このクイック スタートでは、[!INCLUDE[name-sos](../includes/name-sos-short.md)] を使用して Postgres に接続し、SQL ステートメントを使用して、データベース *tutorialdb* を作成し、クエリを実行する方法を示します。
 
 ## <a name="prerequisites"></a>Prerequisites
 
-このクイック スタートを完了するには、[!INCLUDE[name-sos](../includes/name-sos-short.md)]、[!INCLUDE[name-sos](../includes/name-sos-short.md) 用の PostgreSQL 拡張機能、PostgreSQL サーバーへのアクセス権が必要です。
+このクイック スタートを完了するには、[!INCLUDE[name-sos](../includes/name-sos-short.md)]、[!INCLUDE[name-sos](../includes/name-sos-short.md)] 用の PostgreSQL 拡張機能、PostgreSQL サーバーへのアクセス権が必要です。
 
 - [[!INCLUDE[name-sos](../includes/name-sos-short.md)] をインストールする](download.md)。
 - [Azure Data Studio 用の PostgreSQL 拡張機能をインストールする](postgres-extension.md)。

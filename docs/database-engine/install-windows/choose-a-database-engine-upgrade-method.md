@@ -10,12 +10,12 @@ ms.assetid: 5e57a427-2e88-4ef6-b142-4ccad97bcecc
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 309ef92b105ae022cfc543ce0e73107af6870331
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ae6962d52c40053256117f2e20227f39ed1fd4f8
+ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68054246"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71149992"
 ---
 # <a name="choose-a-database-engine-upgrade-method"></a>データベース エンジンのアップグレード方法の選択
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -102,7 +102,7 @@ SQL Server の以前のリリースから [!INCLUDE[ssDE](../../includes/ssde-md
      ![SAN ストレージのデタッチとアタッチを使用した新しいインストール アップグレードの方法](../../database-engine/install-windows/media/new-installation-upgrade-method-using-detach-and-attach-for-san-storage.png "SAN ストレージのデタッチとアタッチを使用した新しいインストール アップグレードの方法")  
   
 ## <a name="rolling-upgrade"></a>ローリング アップグレード  
- ローリング アップグレードは、特定の順序でアップグレードする必要がある複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを含む SQL Server ソリューション環境で、アップタイムを最大にし、リスクを最小にして、機能を維持するために必要です。 ローリング アップグレードは、基本的に特定の順序での複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのアップグレードであり、既存の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対してインプレース アップグレードを実行するか、またはアップグレード プロジェクトの一環としてハードウェアやオペレーティング システムのアップグレードを容易にするために、新規インストール アップグレードを実行します。 ローリング アップグレード アプローチを使用する必要がある多くのシナリオがあります。 これらを以下の各記事で説明します。  
+ ローリング アップグレードは、特定の順序でアップグレードする必要がある複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスを含む SQL Server ソリューション環境で、アップタイムを最大にし、リスクを最小にして、機能を維持するために必要です。 ローリング アップグレードは、基本的に特定の順序での複数の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスのアップグレードであり、既存の各 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに対してインプレース アップグレードを実行するか、またはアップグレード プロジェクトの一環としてハードウェアやオペレーティング システムのアップグレードを容易にするために、新規インストール アップグレードを実行します。 ローリング アップグレード アプローチを使用する必要がある多くのシナリオがあります。 これらを以下の各記事で説明します。  
   
 -   Always On 可用性グループ: この環境でローリング アップグレードを実行する詳細な手順については、「[Always On 可用性グループ レプリカ インスタンスのアップグレード](../../database-engine/availability-groups/windows/upgrading-always-on-availability-group-replica-instances.md)」を参照してください。    
 -   フェールオーバー クラスター インスタンス: この環境でローリング アップグレードを実行する詳細な手順については、「[SQL Server フェールオーバー クラスター インスタンスのアップグレード](../../sql-server/failover-clusters/windows/upgrade-a-sql-server-failover-cluster-instance.md)」を参照してください。    
