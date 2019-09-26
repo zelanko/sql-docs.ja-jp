@@ -1,5 +1,5 @@
 ---
-title: sp_change_users_login (TRANSACT-SQL) |Microsoft Docs
+title: sp_change_users_login (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2016
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68120227"
 ---
-# <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (TRANSACT-SQL)
+# <a name="spchangeuserslogin-transact-sql"></a>sp_change_users_login (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
   マップする既存のデータベース ユーザー、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ログインします。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)] 使用[ALTER USER](../../t-sql/statements/alter-user-transact-sql.md)代わりにします。  
@@ -50,7 +50,7 @@ sp_change_users_login [ @Action = ] 'action'
 |[値]|説明|  
 |-----------|-----------------|  
 |**Auto_Fix**|現在のデータベース内の sys.database_principals システム カタログ ビューにあるユーザー エントリを、同じ名前の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインにリンクします。 同じ名前のログインが存在しない場合は、新しく作成されます。 結果を**Auto_Fix**ステートメントを正しいリンクが実際に作成されたことを確認します。 使用しないでください**Auto_Fix**セキュリティに影響する場合。<br /><br /> 使用すると**Auto_Fix**を指定する必要があります*ユーザー*と*パスワード*ログインが存在しない場合は、それ以外の場合を指定してください*ユーザー*が*パスワード*は無視されます。 *ログイン*NULL にする必要があります。 *ユーザー*現在のデータベースで有効なユーザーである必要があります。 ログインにマップされている別のユーザーを含めることはできません。|  
-|**レポート**|現在のデータベース内で、どのログインにもリンクされていないユーザーと、対応するセキュリティ識別子 (SID) を一覧表示します。 *ユーザー*、*ログイン*、および*パスワード*NULL であるか、指定されていません。<br /><br /> レポート オプションのシステム テーブルを使用してクエリに置き換えると、エントリを比較**sys.server_prinicpals**内のエントリに**sys.database_principals**します。|  
+|**Report**|現在のデータベース内で、どのログインにもリンクされていないユーザーと、対応するセキュリティ識別子 (SID) を一覧表示します。 *ユーザー*、*ログイン*、および*パスワード*NULL であるか、指定されていません。<br /><br /> レポート オプションのシステム テーブルを使用してクエリに置き換えると、エントリを比較**sys.server_prinicpals**内のエントリに**sys.database_principals**します。|  
 |**Update_One**|指定したリンク*ユーザー*を既存の現在のデータベースで[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]*ログイン*します。 *ユーザー*と*ログイン*指定する必要があります。 *パスワード*NULL であるか、指定されていません。|  
   
  [ @UserNamePattern= ] '*user*'  
@@ -123,7 +123,7 @@ GO
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
  [CREATE LOGIN &#40;Transact-SQL&#41;](../../t-sql/statements/create-login-transact-sql.md)   
  [sp_adduser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adduser-transact-sql.md)   
- [sp_helplogins &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
+ [sp_helplogins &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helplogins-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [sys.database_principals &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md)  
   
