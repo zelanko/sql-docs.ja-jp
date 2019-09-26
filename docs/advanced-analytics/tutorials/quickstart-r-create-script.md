@@ -49,7 +49,7 @@ print(c(c, d))
 
 1. 完全な R スクリプトを`sp_execute_external_script`ストアドプロシージャに渡します。
 
-   スクリプトは引数を`@script`通じて渡されます。 引数内の`@script`すべては、有効な R コードである必要があります。
+   スクリプトは引数を`@script`通じて渡されます。 `@script`引数内のすべては、有効な R コードである必要があります。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -85,26 +85,26 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-ストアドプロシージャへ`sp_execute_external_script`の入力は次のとおりです。
+`sp_execute_external_script`ストアドプロシージャへの入力は次のとおりです。
 
 | | |
 |-|-|
 | @language | 呼び出す言語拡張機能 (この場合は R) を定義します。 |
 | @script | R ランタイムに渡されるコマンドを定義します。 Unicode テキストとして、この引数で R スクリプト全体を囲む必要があります。 また、 **nvarchar**型の変数にテキストを追加し、その変数を呼び出すこともできます。 |
 | @input_data_1 | データフレームとして SQL Server するデータを返す R ランタイムに渡される、クエリによって返されるデータ |
-|結果セットを含む | 句では、SQL Server に対して返されるデータテーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に**int**を追加します。 |
+| WITH RESULT SETS | 句では、SQL Server に対して返されるデータテーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に**int**を追加します。 |
 
 このコマンドは、次のテキストを出力します。
 
-| ハローワールド |
+| Hello World |
 |-------------|
 | 1 |
 
 ## <a name="use-inputs-and-outputs"></a>入力と出力を使用する
 
-既定では`sp_execute_external_script` 、は1つのデータセットを入力として受け取ります。通常は、有効な SQL クエリの形式で指定します。 次に、1つの R データフレームを出力として返します。
+既定では、`sp_execute_external_script` は1つのデータセットを入力として受け取ります。通常は、有効な SQL クエリの形式で指定します。 次に、1つの R データフレームを出力として返します。
 
-ここでは、の`sp_execute_external_script`既定の入力変数と出力変数を使用します。**Inputdataset**と**outputdataset**。
+ここでは、`sp_execute_external_script`の既定の入力変数と出力変数を使用します。**Inputdataset**と**outputdataset**。
 
 1. テストデータの小さなテーブルを作成します。
 
@@ -122,7 +122,7 @@ GO
     GO
     ```
 
-1. テーブルに`SELECT`対してクエリを実行するには、ステートメントを使用します。
+1. テーブルに対してクエリを実行するには、`SELECT`ステートメントを使用します。
   
     ```sql
     SELECT *
@@ -133,7 +133,7 @@ GO
 
     ![RTestData テーブルの内容](./media/select-rtestdata.png)
 
-1. 次の R スクリプトを実行します。 `SELECT`ステートメントを使用してテーブルからデータを取得し、それを R ランタイムを介して渡し、データをデータフレームとして返します。 句`WITH RESULT SETS`は、SQL に対して返されたデータテーブルのスキーマを定義し、列名*NewColName*を追加します。
+1. 次の R スクリプトを実行します。 `SELECT`ステートメントを使用してテーブルからデータを取得し、それを R ランタイムを介して渡し、データをデータフレームとして返します。 `WITH RESULT SETS`句は、SQL に対して返されたデータテーブルのスキーマを定義し、列名*NewColName*を追加します。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'R'
@@ -157,12 +157,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    R では大文字と小文字が区別されることに注意してください。 R スクリプト (**SQL_out**、 **SQL_in**) で使用される入力変数と出力変数は、大文字小文字を`@input_data_1_name`含め`@output_data_1_name`、およびで定義されている名前と一致する必要があります。
+    R では大文字と小文字が区別されることに注意してください。 R スクリプトで使用される入力変数と出力変数 (**SQL_out**、 **SQL_in**) は、大文字小文字を含め、`@input_data_1_name`および`@output_data_1_name`で定義されている名前と一致する必要があります。
 
    > [!TIP]
    > パラメーターとして渡すことができるのは、1 つの入力データセットのみです。また、1 つのデータセットのみを返すことができます。 ただし、R コード内から他のデータセットを呼び出し、データセットに加えて他の型の出力を返すことができます。 また、OUTPUT キーワードを任意のパラメーターに追加して、その結果を受け取ることもできます。
 
-1. また、入力データのない R スクリプトを使用するだけで値を`@input_data_1`生成することもできます (は空白に設定されます)。
+1. また、入力データのない R スクリプトを使用するだけで値を生成することもできます (`@input_data_1`は空白に設定されます)。
 
    次のスクリプトは、"hello" と "world" というテキストを出力します。
 
