@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: fed3adb0-4c15-4a1a-8acd-1b184aff558f
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 91db8a7969ed4b9d9de2be4c5ee3887e75fb89a9
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 3ef386d6643be7742c0bc042a2b2a16f1877f2e2
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155408"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314511"
 ---
 # <a name="sp_addlinkedserver-transact-sql"></a>sp_addlinkedserver (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,6 @@ ms.locfileid: "70155408"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]   
      [ , [ @provider= ] 'provider_name' ]  
      [ , [ @datasrc= ] 'data_source' ]   
@@ -44,24 +43,31 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @server = ] 'server'`作成するリンクサーバーの名前を指定します。 *server* のデータ型は **sysname**で、既定値はありません。  
+[ @server =] *サーバー\'\'*           
+作成するリンク サーバーの名前を指定します。 *server* のデータ型は **sysname**で、既定値はありません。  
   
-`[ @srvproduct = ] 'product_name'`リンクサーバーとして追加する OLE DB データソースの製品名を指定します。 は**nvarchar (** 128 **)** ,、既定値は NULL です。 **SQL Server**の場合、 *provider_name*、 *data_source*、 *location*、 *provider_string*、および*catalog*を指定する必要はありません。  
+[ @srvproduct *=\']があり\'* ます          
+リンクサーバーとして追加する OLE DB データソースの製品名を指定します。 は**nvarchar (** 128 **)** ,、既定*値は NULL*です。 **SQL Server**の場合、 *provider_name*、 *data_source*、 *location*、 *provider_string*、および*catalog*を指定する必要はありません。  
   
-`[ @provider = ] 'provider_name'`は、このデータソースに対応する OLE DB プロバイダーの一意のプログラム識別子 (PROGID) です。 *provider_name*は、現在のコンピューターにインストールされている、指定された OLE DB プロバイダーに対して一意である必要があります。 *provider_name*は**nvarchar (** 128 **)** ,、既定値は NULL です。ただし、 *provider_name*を省略した場合、SQLNCLI が使用されます。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。OLE DB プロバイダーは、レジストリに指定された PROGID で登録されている必要があります。  
+[ @provider =] *provider_name\'\'*           
+このデータ ソースに対応する OLE DB プロバイダーの一意なプログラム識別子 (PROGID) を指定します。 *provider_name*は、現在のコンピューターにインストールされている、指定された OLE DB プロバイダーに対して一意である必要があります。 *provider_name*は**nvarchar (** 128 **)** ,、既定値は NULL です。ただし、 *provider_name*を省略した場合、SQLNCLI が使用されます。 (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。OLE DB プロバイダーは、レジストリに指定された PROGID で登録されている必要があります。  
   
-`[ @datasrc = ] 'data_source'`OLE DB プロバイダーによって解釈されるデータソースの名前を指定します。 *data_source*は**nvarchar (** 4000 **)** です。 *data_source*は、OLE DB プロバイダーを初期化するために DBPROP_INIT_DATASOURCE プロパティとして渡されます。  
+[ @datasrc =] *data_source\'\'*           
+ OLE DB プロバイダーによって解釈されるデータソースの名前を指定します。 *data_source*は**nvarchar (** 4000 **)** です。 *data_source*は、OLE DB プロバイダーを初期化するために DBPROP_INIT_DATASOURCE プロパティとして渡されます。  
   
-`[ @location = ] 'location'`OLE DB プロバイダーによって解釈されるデータベースの場所を指定します。 *場所*は**nvarchar (** 4000 **)** ,、既定値は NULL です。 *location*は、OLE DB プロバイダーを初期化する DBPROP_INIT_LOCATION プロパティとして渡されます。  
+[ @location =] *場所\'\'*           
+ OLE DB プロバイダーで認識されるデータベースの場所を指定します。 *場所*は**nvarchar (** 4000 **)** ,、既定値は NULL です。 *location*は、OLE DB プロバイダーを初期化する DBPROP_INIT_LOCATION プロパティとして渡されます。  
   
-`[ @provstr = ] 'provider_string'`一意のデータソースを識別する、OLE DB プロバイダー固有の接続文字列を指定します。 *provider_string*は**nvarchar (** 4000 **)** ,、既定値は NULL です。 *provstr*は、IDataInitialize に渡されるか、または DBPROP_INIT_PROVIDERSTRING プロパティとして設定されて OLE DB プロバイダーを初期化します。  
+[ @provstr =] *provider_string\'\'*           
+ 一意なデータ ソースを識別する、OLE DB プロバイダー固有の接続文字列を指定します。 *provider_string*は**nvarchar (** 4000 **)** ,、既定値は NULL です。 *provstr*は、IDataInitialize に渡されるか、または DBPROP_INIT_PROVIDERSTRING プロパティとして設定されて OLE DB プロバイダーを初期化します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーに対してリンクサーバーを作成する場合は、server キーワードを使用して server =*servername*\\*instancename*としてインスタンスを指定し、の特定のインスタンスを指定することができます[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]。 *servername*は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]が実行されているコンピューターの名前です。 *instancename*は、ユーザーが接続するの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]特定のインスタンスの名前です。  
   
 > [!NOTE]
->  ミラー化されたデータベースにアクセスするには、接続文字列にデータベース名を含める必要があります。 この名前は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。 データベースは、 **@provstr** または **@catalog** パラメーターで指定できます。 必要に応じて、接続文字列でフェールオーバーパートナー名を指定することもできます。  
+> ミラー化されたデータベースにアクセスするには、接続文字列にデータベース名を含める必要があります。 この名前は、データ アクセス プロバイダーがフェールオーバーを試行できるようにするために必要です。 データベースは、 **@provstr** または **@catalog** パラメーターで指定できます。 必要に応じて、接続文字列でフェールオーバーパートナー名を指定することもできます。  
   
-`[ @catalog = ] 'catalog'`OLE DB プロバイダーへの接続が確立されるときに使用するカタログを指定します。 *catalog*の**sysname**,、既定値は NULL です。 *カタログ*は、OLE DB プロバイダーを初期化する DBPROP_INIT_CATALOG プロパティとして渡されます。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対してリンクサーバーが定義されている場合、catalog は、リンクサーバーがマップされている既定のデータベースを参照します。  
+[ @catalog =] *カタログ\'\'*        
+ OLE DB プロバイダーへの接続が確立されるときに使用するカタログを指定します。 *catalog*の**sysname**,、既定値は NULL です。 *カタログ*は、OLE DB プロバイダーを初期化する DBPROP_INIT_CATALOG プロパティとして渡されます。 の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]インスタンスに対してリンクサーバーが定義されている場合、catalog は、リンクサーバーがマップされている既定のデータベースを参照します。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -101,14 +107,14 @@ sp_addlinkedserver [ @server= ] 'server' [ , [ @srvproduct= ] 'product_name' ]
 >  **Sp_addlinkedserver**を使用してリンクサーバーを作成すると、すべてのローカルログインに対して既定の自己マッピングが追加されます。 以外[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のプロバイダーの場合[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 、認証されたログインは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]サービスアカウントでプロバイダーにアクセスできる可能性があります。 管理者は、 `sp_droplinkedsrvlogin <linkedserver_name>, NULL`を使用してグローバルマッピングを削除することを検討する必要があります。  
   
 ## <a name="permissions"></a>アクセス許可  
- ステートメント`sp_addlinkedserver`には、 `ALTER ANY LINKED SERVER`権限が必要です。 (SSMS の **[リンクサーバーの新規作成]** ダイアログボックスは、 `sysadmin`固定サーバーロールのメンバーシップを必要とするように実装されています)。  
+ ステートメント`sp_addlinkedserver`には、 `ALTER ANY LINKED SERVER`権限が必要です。 ([ [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] **新しいリンクサーバー** ] ダイアログボックスは、 `sysadmin`固定サーバーロールのメンバーシップを必要とする方法で実装されます)。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-using-the-microsoft-sql-server-native-client-ole-db-provider"></a>A. Microsoft SQL Server Native Client OLE DB プロバイダーの使用  
  次の例では、`SEATTLESales` というリンク サーバーを作成します。 製品名は `SQL Server` で、プロバイダー名は使用されません。  
   
-```  
+```sql  
 USE master;  
 GO  
 EXEC sp_addlinkedserver   
@@ -119,7 +125,7 @@ GO
   
  次の例では、 `S1_instance1` [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用して、のインスタンスにリンクサーバーを作成します。  
   
-```  
+```sql  
 EXEC sp_addlinkedserver     
    @server=N'S1_instance1',   
    @srvproduct=N'',  
@@ -131,9 +137,9 @@ EXEC sp_addlinkedserver
  Microsoft Jet OLEDB プロバイダーは、2002-2003 形式を使用する Microsoft Access データベースに接続します。 次の例では、`SEATTLE Mktg` というリンク サーバーを作成します。  
   
 > [!NOTE]  
->  この例では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access とサンプルの**northwind**データベースの両方がインストールされており、 **northwind**データベースが c:\msoffice\access\samples に存在することを前提としています。  
+> この例では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access とサンプルの**northwind**データベースの両方がインストールされており、 **northwind**データベースが c:\msoffice\access\samples に存在することを前提としています。  
   
-```  
+```sql  
 EXEC sp_addlinkedserver   
    @server = N'SEATTLE Mktg',   
    @provider = N'Microsoft.Jet.OLEDB.4.0',   
@@ -145,9 +151,9 @@ GO
  Microsoft.ACE.OLEDB.12.0 プロバイダーは、2007 形式を使用する Microsoft Access データベースに接続します。 次の例では、`SEATTLE Mktg` というリンク サーバーを作成します。  
   
 > [!NOTE]  
->  この例では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access とサンプルの**northwind**データベースの両方がインストールされており、 **northwind**データベースが c:\msoffice\access\samples に存在することを前提としています。  
+> この例では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] Access とサンプルの**northwind**データベースの両方がインストールされており、 **northwind**データベースが c:\msoffice\access\samples に存在することを前提としています。  
   
-```  
+```sql  
 EXEC sp_addlinkedserver   
    @server = N'SEATTLE Mktg',   
    @provider = N'Microsoft.ACE.OLEDB.12.0',   
@@ -160,9 +166,9 @@ GO
  次の例で`SEATTLE Payroll`は、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for ODBC (`MSDASQL`) と*data_source*パラメーターを使用するという名前のリンクサーバーを作成します。  
   
 > [!NOTE]  
->  リンク サーバーを使用する前には、指定した ODBC データ ソース名をサーバーのシステム DSN として定義する必要があります。  
+> リンク サーバーを使用する前には、指定した ODBC データ ソース名をサーバーのシステム DSN として定義する必要があります。  
   
-```  
+```sql  
 EXEC sp_addlinkedserver   
    @server = N'SEATTLE Payroll',   
    @srvproduct = N'',  
@@ -174,7 +180,7 @@ GO
 ### <a name="d-using-the-microsoft-ole-db-provider-for-excel-spreadsheet"></a>D. Microsoft OLE DB Provider for Excel スプレッドシートの使用  
  Jet の[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider を使用して 1997-2003 形式の excel スプレッドシートにアクセスするリンクサーバー定義を作成するには、まず、選択する excel ワークシートの列と行を指定して、excel で名前付き範囲を作成します。 こうすると、分散クエリで範囲の名前をテーブル名として参照できるようになります。  
   
-```  
+```sql  
 EXEC sp_addlinkedserver 'ExcelSource',  
    'Jet 4.0',  
    'Microsoft.Jet.OLEDB.4.0',  
@@ -186,7 +192,7 @@ GO
   
  Excel スプレッドシートのデータにアクセスするには、セルの範囲を名前に関連付けます。 先に設定したリンク サーバーを使って、テーブルとして指定されている名前付き範囲 `SalesData` にアクセスするときには、次のクエリを使用できます。  
   
-```  
+```sql  
 SELECT *  
    FROM ExcelSource...SalesData;  
 GO  
@@ -194,7 +200,7 @@ GO
   
  が[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]リモート共有へのアクセス権を持つドメインアカウントで実行されている場合は、マップされたドライブの代わりに UNC パスを使用できます。  
   
-```  
+```sql  
 EXEC sp_addlinkedserver 'ExcelShare',  
    'Jet 4.0',  
    'Microsoft.Jet.OLEDB.4.0',  
@@ -205,7 +211,7 @@ EXEC sp_addlinkedserver 'ExcelShare',
   
  Excel 2007 形式の Excel スプレッドシートに接続するには、ACE プロバイダーを使用します。  
   
-```  
+```sql  
 EXEC sp_addlinkedserver @server = N'ExcelDataSource',   
 @srvproduct=N'ExcelData', @provider=N'Microsoft.ACE.OLEDB.12.0',   
 @datasrc=N'C:\DataFolder\People.xlsx',  
@@ -218,7 +224,7 @@ EXEC sp_addlinkedserver @server = N'ExcelDataSource',
   
  データソースは、テキストファイルが格納されているディレクトリの完全なパスです。 テキストファイルの構造を記述する schema.ini ファイルは、テキストファイルと同じディレクトリに存在する必要があります。 Schema.ini ファイルの作成方法の詳細については、Jet Database Engine のマニュアルを参照してください。  
   
-```  
+```sql  
 --Create a linked server.  
 EXEC sp_addlinkedserver txtsrv, N'Jet 4.0',   
    N'Microsoft.Jet.OLEDB.4.0',  
@@ -244,7 +250,7 @@ FROM txtsrv...[file1#txt];
 ### <a name="f-using-the-microsoft-ole-db-provider-for-db2"></a>F. Microsoft OLE DB Provider for DB2 の使用  
  次の例では、 `DB2` `Microsoft OLE DB Provider for DB2`を使用するという名前のリンクサーバーを作成します。  
   
-```  
+```sql  
 EXEC sp_addlinkedserver  
    @server=N'DB2',  
    @srvproduct=N'Microsoft OLE DB Provider for DB2',  
@@ -259,41 +265,44 @@ EXEC sp_addlinkedserver
        Default Schema=admin;';  
 ```  
   
-### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premise-databases"></a>G. クラウドと内部設置型データベースに対応する分散クエリで使用するリンク サーバーとしての [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] の追加  
+### <a name="g-add-a-includesssdsfullincludessssdsfull-mdmd-as-a-linked-server-for-use-with-distributed-queries-on-cloud-and-on-premises-databases"></a>G. クラウドと[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]オンプレミスのデータベースで分散クエリを使用するために、をリンクサーバーとして追加する  
  [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] をリンク サーバーとして追加し、内部設置型データベースとクラウド データベースにまたがる分散クエリでそのサーバーを使用することができます。 これは、オンプレミスの企業ネットワークと Azure クラウドにまたがるデータベースハイブリッドソリューションのコンポーネントです。  
   
  Box 製品には、分散クエリ機能が含まれています。この機能を使用すると、リンクサーバーとして定義されているリモート[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ソース (データ以外のソースからのデータを含む) からローカルデータソースとデータのデータを結合するクエリを作成できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ( [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]仮想マスターを除く) ごとに個別のリンクサーバーとして追加し、データベースアプリケーションで他のデータベースとして直接使用することができます。  
   
- を使用する利点[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]としては、管理性、高可用性、スケーラビリティ、使い慣れた開発モデルの使用、リレーショナルデータモデルなどがあります。 データベースアプリケーションの要件によって、クラウドでの[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]使用方法が決まります。 すべてのデータを一度に移動する[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]か、データの一部を段階的に移動しながら、残りのデータをオンプレミスに維持することができます。 このようなハイブリッド データベース アプリケーションの場合、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] をリンク サーバーとして追加し、データベース アプリケーションで分散クエリを実行して [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] からのデータと内部設置型データ ソースからのデータを結合することもできます。  
+ を使用する利点[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]としては、管理性、高可用性、スケーラビリティ、使い慣れた開発モデルの使用、リレーショナルデータモデルなどがあります。 データベースアプリケーションの要件によって、クラウドでの[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]使用方法が決まります。 すべてのデータを一度に移動する[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]か、データの一部を段階的に移動しながら、残りのデータをオンプレミスに維持することができます。 このようなハイブリッドデータベースアプリケーションで[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]は、をリンクサーバーとして追加できるようになりました。 [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]また、データベースアプリケーションは分散クエリを発行して、オンプレミスのデータソースとデータを結合することができます。  
   
  分散クエリを[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]使用してに接続する方法を説明する簡単な例を次に示します。  
   
-```  
------- Configure the linked server  
+```sql  
+-- Configure the linked server  
 -- Add one Azure SQL DB as Linked Server  
 EXEC sp_addlinkedserver  
-@server='myLinkedServer', -- here you can specify the name of the linked server  
-@srvproduct='',       
-@provider='sqlncli', -- using SQL Server Native Client  
-@datasrc='myServer.database.windows.net',   -- add here your server name  
-@location='',  
-@provstr='',  
-@catalog='myDatabase'  -- add here your database name as initial catalog (you cannot connect to the master database)  
+  @server='myLinkedServer', -- here you can specify the name of the linked server  
+  @srvproduct='',       
+  @provider='sqlncli', -- using SQL Server Native Client  
+  @datasrc='myServer.database.windows.net',   -- add here your server name  
+  @location='',  
+  @provstr='',  
+  @catalog='myDatabase'  -- add here your database name as initial catalog (you cannot connect to the master database)  
+
 -- Add credentials and options to this linked server  
 EXEC sp_addlinkedsrvlogin  
-@rmtsrvname = 'myLinkedServer',  
-@useself = 'false',  
-@rmtuser = 'myLogin',             -- add here your login on Azure DB  
-@rmtpassword = 'myPassword' -- add here your password on Azure DB  
+  @rmtsrvname = 'myLinkedServer',  
+  @useself = 'false',  
+  @rmtuser = 'myLogin',             -- add here your login on Azure DB  
+  @rmtpassword = 'myPassword' -- add here your password on Azure DB  
+
 EXEC sp_serveroption 'myLinkedServer', 'rpc out', true;  
------- Now you can use the linked server to execute 4-part queries  
+
+-- Now you can use the linked server to execute 4-part queries  
 -- You can create a new table in the Azure DB  
-exec ('CREATE TABLE t1tutut2(col1 int not null CONSTRAINT PK_col1 PRIMARY KEY CLUSTERED (col1) )') at myLinkedServer  
+EXEC ('CREATE TABLE t1tutut2(col1 int not null CONSTRAINT PK_col1 PRIMARY KEY CLUSTERED (col1) )') at myLinkedServer  
 -- Insert data from your local SQL Server  
-exec ('INSERT INTO t1tutut2 VALUES(1),(2),(3)') at myLinkedServer  
+EXEC ('INSERT INTO t1tutut2 VALUES(1),(2),(3)') at myLinkedServer  
   
 -- Query the data using 4-part names  
-select * from myLinkedServer.myDatabase.dbo.myTable  
+SELECT * FROM myLinkedServer.myDatabase.dbo.myTable  
 ```  
   
 ## <a name="see-also"></a>関連項目  
