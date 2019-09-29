@@ -26,16 +26,16 @@ ms.locfileid: "71342006"
 
 - Linux (Ubuntu) の場合は、 [`apt` を使用して `azdata` をインストール](#azdata-apt)します。
 
-現時点では、他のオペレーティングシステムまたはディストリビューションに @no__t 0 をインストールするパッケージマネージャーはありません。 これらのプラットフォームについては、「[パッケージマネージャーを使用しない `azdata` のインストール](./deploy-install-azdata.md)」を参照してください。
+現時点では、他のオペレーティングシステムまたはディストリビューションに `azdata` をインストールするパッケージマネージャーはありません。 これらのプラットフォームについては、「[パッケージマネージャーを使用しない `azdata` のインストール](./deploy-install-azdata.md)」を参照してください。
 
 ## <a id="linux"></a>Linux 用の `azdata` のインストール
 
-@no__t 0 のインストールパッケージは、`apt` の Ubuntu で使用できます。
+`azdata` のインストールパッケージは、`apt` の Ubuntu で使用できます。
 
 ### <a id="azdata-apt"></a>Apt (Ubuntu) を使用して `azdata` をインストールする
 
 >[!NOTE]
->@No__t 0 のパッケージは、システム Python を使用せず、独自の Python インタープリターをインストールします。
+>`azdata` のパッケージは、システム Python を使用せず、独自の Python インタープリターをインストールします。
 
 1. インストールプロセスに必要なパッケージを取得します。
 
@@ -50,7 +50,7 @@ ms.locfileid: "71342006"
     wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
-3. @No__t 0 のリポジトリ情報を追加します。
+3. `azdata` のリポジトリ情報を追加します。
 
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
@@ -71,7 +71,7 @@ ms.locfileid: "71342006"
 
 ### <a name="update"></a>更新
 
-@No__t-0 のみをアップグレードします。
+`azdata` のみをアップグレードします。
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
@@ -85,7 +85,7 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
     sudo apt-get remove -y azdata-cli
     ```
 
-2. @No__t 0 のリポジトリ情報を削除します。
+2. `azdata` のリポジトリ情報を削除します。
 
     >[!NOTE]
     >今後 `azdata` をインストールする予定の場合、この手順は必要ありません。
