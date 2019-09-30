@@ -26,7 +26,7 @@ ms.locfileid: "71342040"
 # <a name="sql-server-operating-system-related-dynamic-management-views-transact-sql"></a>SQL Server オペレーティング システム関連の動的管理ビュー (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
-このセクションでは、@no__t 0 オペレーティングシステム (SQLOS) に関連付けられている動的管理ビュー (DMV) について説明します。 SQLOS は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に固有のオペレーティングシステムリソースの管理を担当します。
+このセクションでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] オペレーティングシステム (SQLOS) に関連付けられている動的管理ビュー (DMV) について説明します。 SQLOS は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に固有のオペレーティングシステムリソースの管理を担当します。
 
 SQLOS Dmv が目次に一覧表示されます。 これらのほとんどのとには `sys.dm_os_<description>` という名前が付けられます。
 

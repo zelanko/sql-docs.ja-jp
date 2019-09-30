@@ -1,7 +1,7 @@
 ---
 title: ビッグ データ ツールをインストールする
 titleSuffix: SQL Server big data clusters
-description: '@No__t-0 (プレビュー) で使用するツールをインストールする方法について説明します。'
+description: '[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) で使用するツールをインストールする方法について説明します。'
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab

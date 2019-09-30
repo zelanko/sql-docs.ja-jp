@@ -1,7 +1,7 @@
 ---
 title: bash スクリプトを使用して単一ノード kubeadm クラスターに展開する
 titleSuffix: SQL Server big data clusters
-description: Bash デプロイスクリプトを使用して、1つのノード kubeadm クラスターに @no__t 0 をデプロイします。
+description: Bash デプロイスクリプトを使用して、1つのノード kubeadm クラスターに [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] をデプロイします。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
