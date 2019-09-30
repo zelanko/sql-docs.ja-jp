@@ -39,22 +39,22 @@ ms.locfileid: "68000582"
 自動的に生成された、データベース内で一意の 2 進数を公開するデータ型です。 **rowversion** は、通常、テーブルの行のバージョンを記録するためのメカニズムとして使用します。 ストレージ サイズは 8 バイトです。 **rowversion** データ型は数値を加算していくだけであり、日付や時刻では保持されません。 日付または時刻を記録するには、 **datetime2** データ型を使用してください。
   
 ## <a name="remarks"></a>Remarks  
-データベース毎にカウンターを保持し、データベースの中の **rowversion** 列を含むテーブルに対して実行される挿入または更新操作の度にインクリメントされます。 このカウンターは、データベース rowversion です。 これにより、クロックへの関連付けが可能な実際の時間ではなく、データベース内の相対時間が追跡されます。 テーブルには、1 つだけ **rowversion** 列を保持できます。 **rowversion** 列を持つ行が変更または挿入されるたびに、増加したデータベース rowversion 値が **rowversion** 列に挿入されます。 このため、 **rowversion** 列は、キーとして、特に主キーとして不適切です。 行を更新すると rowversion 値が変わるので、キーの値も変わります。 列が主キー内にある場合、以前のキーの値は無効になり、この以前の値を参照する外部キーも無効になります。 動的カーソルでテーブルを参照する場合、すべての更新操作はカーソル上の行の位置を変更します。 列がインデックス キーの場合は、データ行に対するすべての更新によって、インデックスの更新も生成されます。 行の値が変更されない場合でも、**rowversion** 値は、update ステートメントによって増分されます (たとえば、列の値が 5 のときに、update ステートメントによって値が 5 に設定された場合、この操作は値の変更がないにもかかわらず更新とみなされ、**rowversion** は増分されます)。
+各データベースを含むテーブルで実行される update 操作または挿入ごとにインクリメントされるカウンターには、 **rowversion** 、データベース内の列です。 このカウンターは、データベース rowversion です。 これにより、クロックへの関連付けが可能な実際の時間ではなく、データベース内の相対時間が追跡されます。 テーブルには、1 つだけ保持できます **rowversion** 列です。 たびにを持つ行、 **rowversion** で増加したデータベース rowversion 値が挿入される、列が変更または挿入、 **rowversion** 列です。 このため、 **rowversion** 列、不適切なキーとして、特に主キー。 行を更新すると rowversion 値が変わるので、キーの値も変わります。 列が主キー内にある場合、以前のキーの値は無効になり、この以前の値を参照する外部キーも無効になります。 動的カーソルでテーブルを参照する場合、すべての更新操作はカーソル上の行の位置を変更します。 列がインデックス キーの場合は、データ行に対するすべての更新によって、インデックスの更新も生成されます。  行の値が変更されない場合でも、**rowversion** 値は、update ステートメントによって増分されます (たとえば、列の値が 5 のときに、update ステートメントによって値が 5 に設定された場合、この操作は値の変更がないにもかかわらず更新とみなされ、**rowversion** は増分されます)。
   
-**timestamp** は、**rowversion** データ型のシノニムであり、データ型のシノニムの動作が適用されます。 DDL ステートメントでは、可能な限り **timestamp** の代わりに **rowversion** を使用してください。 詳しくは、「[データ型のシノニム &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)」をご覧ください。
+**タイムスタンプ** のシノニムには、**rowversion** データを入力し、動作が適用のデータ型のシノニム。 DDL ステートメントでは、次のように使用します。 **rowversion** の代わりに **タイムスタンプ** 可能な限りです。 詳しくは、「[データ型のシノニム &#40;Transact-SQL&#41;](../../t-sql/data-types/data-type-synonyms-transact-sql.md)」をご覧ください。
   
 [!INCLUDE[tsql](../../includes/tsql-md.md)] の **timestamp** データ型は、ISO 標準に定義されている **timestamp** データ型とは異なります。
   
 > [!NOTE]  
 >  **timestamp** 構文は非推奨とされます。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]  
   
-CREATE TABLE または ALTER TABLE ステートメントでは、 **timestamp** データ型の列名を指定する必要はありません。次に例を示します。
+CREATE TABLE または ALTER TABLE ステートメントでは、列名を指定する必要はありません、 **タイムスタンプ** などのデータ型します。
   
 ```sql
 CREATE TABLE ExampleTable (PriKey int PRIMARY KEY, timestamp);  
 ```  
   
-列名を指定しない場合、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] が **timestamp** 列名を生成します。 ただし、 **rowversion** シノニムはこの動作に従っていません。 **rowversion** を使用するときは、列名を指定する必要があります。次に例を示します。
+列名を指定しない場合、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] 生成、 **タイムスタンプ** 列の名前。 ただし、、 **rowversion** シノニムがこの動作に従っていません。 使用すると **rowversio**n, 、たとえば、列名を指定する必要があります。
   
 ```sql
 CREATE TABLE ExampleTable2 (PriKey int PRIMARY KEY, VerCol rowversion) ;  

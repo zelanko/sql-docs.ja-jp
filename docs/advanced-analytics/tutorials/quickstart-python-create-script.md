@@ -47,7 +47,7 @@ print(c, d)
 
 1. 完全な Python スクリプトを`sp_execute_external_script`ストアドプロシージャに渡します。
 
-   スクリプトは引数を`@script`通じて渡されます。 引数内の`@script`すべては、有効な Python コードである必要があります。
+   スクリプトは `@script`引数を通じて渡されます。 `@script`引数内のすべては、有効な Python コードである必要があります。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -83,7 +83,7 @@ WITH RESULT SETS(([Hello World] INT));
 GO
 ```
 
-ストアドプロシージャへ`sp_execute_external_script`の入力は次のとおりです。
+`sp_execute_external_script` ストアドプロシージャへの入力には次のものが含まれます。
 
 | | |
 |-|-|
@@ -94,7 +94,7 @@ GO
 
 このコマンドは、次のテキストを出力します。
 
-| ハローワールド |
+| Hello World |
 |-------------|
 | 1 |
 
@@ -120,7 +120,7 @@ GO
     GO
     ```
 
-1. テーブルに`SELECT`対してクエリを実行するには、ステートメントを使用します。
+1. テーブルに対してクエリを実行するには、`SELECT`ステートメントを使用します。
   
     ```sql
     SELECT *
@@ -131,7 +131,7 @@ GO
 
     ![PythonTestData テーブルの内容](./media/select-pythontestdata.png)
 
-1. 次の Python スクリプトを実行します。 `SELECT`ステートメントを使用してテーブルからデータを取得し、それを Python ランタイムを介して渡し、データをデータフレームとして返します。 句`WITH RESULT SETS`は、SQL に対して返されたデータテーブルのスキーマを定義し、列名*NewColName*を追加します。
+1. 次の Python スクリプトを実行します。 `SELECT` ステートメントを使用してテーブルからデータを取得し、それを Python ランタイムを介して渡し、データをデータフレームとして返します。 `WITH RESULT SETS` 句は、SQL に対して返されたデータテーブルのスキーマを定義し、列名 *NewColName* を追加します。
 
     ```sql
     EXECUTE sp_execute_external_script @language = N'Python'
@@ -155,12 +155,12 @@ GO
     WITH RESULT SETS(([NewColName] INT NOT NULL));
     ```
 
-    Python では大文字と小文字が区別されることに注意してください。 Python スクリプト (**SQL_out**、 **SQL_in**) で使用される入力変数と出力変数は、大文字小文字を`@input_data_1_name`含め`@output_data_1_name`、およびで定義されている名前と一致する必要があります。
+    Python では大文字と小文字が区別されることに注意してください。 Python スクリプトで使用される入力変数と出力変数 (**SQL_out**、 **SQL_in**) は、大文字小文字を含め、`@input_data_1_name` および `@output_data_1_name` で定義されている名前と一致する必要があります。
 
    > [!TIP]
    > パラメーターとして渡すことができるのは、1 つの入力データセットのみです。また、1 つのデータセットのみを返すことができます。 ただし、Python コード内から他のデータセットを呼び出すことができます。また、データセットに加えて他の型の出力を返すこともできます。 また、OUTPUT キーワードを任意のパラメーターに追加して、その結果を受け取ることもできます。
 
-1. また、入力データのない Python スクリプトを使用して値を生成`@input_data_1`することもできます (は空白に設定されます)。
+1. また、入力データのない Python スクリプトを使用して値を生成することもできます (`@input_data_1` は空白に設定されます)。
 
    次のスクリプトは、"hello" と "world" というテキストを出力します。
 
@@ -231,7 +231,7 @@ for i in pip.get_installed_distributions():
 GO
 ```
 
-出力は Python の`pip.get_installed_distributions()`からのものであり`STDOUT` 、メッセージとして返されます。
+出力は Python の`pip.get_installed_distributions()`からのものであり、`STDOUT` メッセージとして返されます。
 
 **結果**
 
