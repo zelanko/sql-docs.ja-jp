@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - prepSqlSrv
 ms.assetid: 20b51dbf-a545-4234-87ae-4228268a0fb2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 77524cc56a848b9eef844ff604fa79f6f28a2743
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 3664aa3565a1df42657f206e1f102f4e1f2a8db6
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086651"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71294637"
 ---
 # <a name="prepare-sql-server-for-cdc"></a>CDC 用の SQL Server の準備
 
@@ -35,7 +35,7 @@ ms.locfileid: "68086651"
 ### <a name="server-name"></a>[サーバー名]  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が存在するサーバーの名前を入力します。  
   
-### <a name="authentication"></a>[認証]  
+### <a name="authentication"></a>認証  
  次のいずれかを選択します。  
   
 -   **[Windows 認証]**  

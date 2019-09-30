@@ -16,14 +16,14 @@ helpviewer_keywords:
 - Integration Services, data types
 - SQL Server Integration Services, data types
 ms.assetid: 896fc3e8-3aa6-4396-ba82-5d7741cffa56
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: eab2401dc3cb85dfeaedc22b406f1da73c112127
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 45ada0520d90c1c6e63adad4f9e62bf1ea31e270
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67941468"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292413"
 ---
 # <a name="integration-services-data-types"></a>Integration Services のデータ型
 
@@ -109,7 +109,7 @@ ms.locfileid: "67941468"
 ### <a name="converting-datetime-data-types"></a>日付/時刻データ型の変換  
  日付または時刻のデータを含む列のデータ型を変更し、データの一部である日付または時刻を抽出できます。 次の表に、日付/時刻データ型を別の日付/時刻データ型に変換した結果を示します。  
   
-#### <a name="converting-from-dtfiletime"></a>DT_FILETIME からの変換  
+#### <a name="converting-from-dt_filetime"></a>DT_FILETIME からの変換  
   
 |DT_FILETIME の変換|結果|  
 |-----------------------------|------------|  
@@ -122,7 +122,7 @@ ms.locfileid: "67941468"
 |DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### <a name="converting-from-dtdate"></a>DT_DATE からの変換  
+#### <a name="converting-from-dt_date"></a>DT_DATE からの変換  
   
 |DT_DATE の変換|結果|  
 |-------------------------|------------|  
@@ -135,7 +135,7 @@ ms.locfileid: "67941468"
 |DT_DBTIMESTAMP2|データ型を変換します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。|  
   
-#### <a name="converting-from-dtdbdate"></a>DT_DBDATE からの変換  
+#### <a name="converting-from-dt_dbdate"></a>DT_DBDATE からの変換  
   
 |DT_DBDATE の変換|結果|  
 |---------------------------|------------|  
@@ -148,7 +148,7 @@ ms.locfileid: "67941468"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP データ型の時刻フィールドをゼロに設定します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の時刻フィールドとタイム ゾーン フィールドをゼロに設定します。|  
   
-#### <a name="converting-from-dtdbtime"></a>DT_DBTIME からの変換  
+#### <a name="converting-from-dt_dbtime"></a>DT_DBTIME からの変換  
   
 |DT_DBTIME の変換|結果|  
 |---------------------------|------------|  
@@ -161,7 +161,7 @@ ms.locfileid: "67941468"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 データ型の日付フィールドを現在の日付に設定します。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の日付フィールドとタイム ゾーン フィールドをそれぞれ現在の日付とゼロに設定します。|  
   
-#### <a name="converting-from-dtdbtime2"></a>DT_DBTIME2 からの変換  
+#### <a name="converting-from-dt_dbtime2"></a>DT_DBTIME2 からの変換  
   
 |DT_DBTIME2 の変換|結果|  
 |----------------------------|------------|  
@@ -174,7 +174,7 @@ ms.locfileid: "67941468"
 |DT_DBTIMESTAMP2|DT_DBTIMESTAMP2 データ型の日付フィールドを現在の日付に設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型の日付フィールドとタイム ゾーン フィールドをそれぞれ現在の日付とゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### <a name="converting-from-dtdbtimestamp"></a>DT_DBTIMESTAMP からの変換  
+#### <a name="converting-from-dt_dbtimestamp"></a>DT_DBTIMESTAMP からの変換  
   
 |DT_DBTIMESTAMP の変換|結果|  
 |--------------------------------|------------|  
@@ -187,7 +187,7 @@ ms.locfileid: "67941468"
 |DT_DBTIMESTAMP2|秒の小数点以下桁数が、DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### <a name="converting-from-dtdbtimestamp2"></a>DT_DBTIMESTAMP2 からの変換  
+#### <a name="converting-from-dt_dbtimestamp2"></a>DT_DBTIMESTAMP2 からの変換  
   
 |DT_DBTIMESTAMP2 の変換|結果|  
 |---------------------------------|------------|  
@@ -200,7 +200,7 @@ ms.locfileid: "67941468"
 |DT_DBTIMESTAMP2|秒の小数点以下桁数が、変換先の DT_DBTIMESTAMP2 データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
 |DT_DBTIMESTAMPOFFSET|DT_DBTIMESTAMPOFFSET データ型のタイム ゾーン フィールドをゼロに設定します。<br /><br /> 秒の小数点以下桁数が、DT_DBTIMESTAMPOFFSET データ型に含めることのできる秒の小数点以下桁数よりも大きい場合に、秒の小数部の値を削除します。 秒の小数部の値を削除した後、このデータの切り捨てに関するレポートを生成します。 詳細については、「 [データのエラー処理](../../integration-services/data-flow/error-handling-in-data.md)」を参照してください。|  
   
-#### <a name="converting-from-dtdbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET からの変換  
+#### <a name="converting-from-dt_dbtimestampoffset"></a>DT_DBTIMESTAMPOFFSET からの変換  
   
 |DT_DBTIMESTAMPOFFSET の変換|結果|  
 |--------------------------------------|------------|  

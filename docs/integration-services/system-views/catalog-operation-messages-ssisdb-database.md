@@ -11,16 +11,16 @@ helpviewer_keywords:
 - catalog.operation_messages view [Integration Services]
 - operation_messages view [Integration Services]
 ms.assetid: 0b3cbe38-ce24-47ca-83ef-6538a5299d1a
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 7e12e63be770a7547e61b1fd546171d4f5cae4ef
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: bfad11f3bcba41160fcb46ede37f6e7ea3c5ece4
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045228"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71295160"
 ---
-# <a name="catalogoperationmessages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
+# <a name="catalogoperation_messages-ssisdb-database"></a>catalog.operation_messages (SSISDB データベース)
 
 [!INCLUDE[ssis-appliesto](../../includes/ssis-appliesto-ssvrpluslinux-asdb-asdw-xxx.md)]
 
@@ -47,7 +47,7 @@ ms.locfileid: "68045228"
 |**message_type** 値|[説明]|  
 |-----------------------------|-----------------|  
 |-1|Unknown|  
-|120|Error|  
+|120|エラー|  
 |110|警告|  
 |70|[情報]|  
 |10|検証前|  
