@@ -1,5 +1,5 @@
 ---
-title: SQL Server Native Client の OLE db OUTPUT 句の使用 |マイクロソフトのドキュメント
+title: SQL Server Native Client | の OLE DB で OUTPUT 句を使用するMicrosoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql

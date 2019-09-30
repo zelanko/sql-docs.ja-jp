@@ -1,7 +1,7 @@
 ---
 title: bash スクリプトを使用して単一ノード kubeadm クラスターに展開する
 titleSuffix: SQL Server big data clusters
-description: Bash デプロイスクリプトを使用して、 [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]を1つのノード kubeadm クラスターにデプロイします。
+description: Bash デプロイスクリプトを使用して、1つのノード kubeadm クラスターに [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] をデプロイします。
 author: mihaelablendea
 ms.author: mihaelab
 ms.reviewer: mikeray
@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f6b6581eacad2fa9a65f64fdc29d6dfcde53852a
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 2379f96e3b5288fc33f5c925613bf9fd5d35612d
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69652340"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341839"
 ---
 # <a name="deploy-with-a-bash-script-to-a-single-node-kubeadm-cluster"></a>bash スクリプトを使用して単一ノード kubeadm クラスターに展開する
 
@@ -34,7 +34,7 @@ ms.locfileid: "69652340"
 - 次のコマンドを使用して既存のパッケージを更新し、OS イメージが最新の状態になっていることを確認します。
 
    ``` bash
-   sudo apt update&&apt upgrade -y
+   sudo apt update && sudo apt upgrade -y
    sudo systemctl reboot
    ```
 
@@ -85,4 +85,4 @@ ms.locfileid: "69652340"
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグデータクラスターの使用を開始するには[、次のチュートリアルを参照してください。SQL Server ビッグデータクラスター](tutorial-load-sample-data.md)にサンプルデータを読み込みます。
+ビッグデータクラスターの使用を開始するには、[Tutorial を参照してください。SQL Server ビッグデータクラスター @ no__t にサンプルデータを読み込みます。

@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: e4ad8e1ec6d70f6155afd49712fdd8b2b3d1626b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 8641b1466a4f836c32259ac4f46022d43f8fe216
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68770820"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174255"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -154,7 +154,7 @@ ms.locfileid: "68770820"
   
 -   サブスクリプションを再初期化するときに、オブジェクトを削除しないように指定します。 再初期化の前に、次のいずれかを実行します。  
   
-    -   [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) または [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@property** パラメーターの値として 'pre_creation_cmd' (**sp_changearticle**) または 'pre_creation_command' (**sp_changemergearticle**) を指定し、 **@value** パラメーターの値として 'none'、'delete'、または 'truncate' を指定します。  
+    -   [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md) または [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **\@property** パラメーターの値として「pre_creation_cmd」 (**sp_changearticle**) または「pre_creation_command」 (**sp_changemergearticle**) を指定し、 **\@value** パラメーターの値として「none」、「delete」、または「truncate」を指定します。  
   
     -   **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[対象オブジェクト]** セクションで、 **[既存のオブジェクトを変更せずに保持します]** 、 **[データを削除します。アーティクルに行フィルターがある場合は、フィルターに一致するデータのみを削除します]** または **[既存のオブジェクト内にあるすべてのデータを切り捨てます]** を **[名前が使用中である場合のアクション]** 」で選択します。 このダイアログ ボックスへのアクセスの詳細については、「[View and Modify Publication Properties](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」 (パブリケーションのプロパティの表示および変更) を参照してください。  
   

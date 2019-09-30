@@ -1,7 +1,7 @@
 ---
 title: インストーラーを使用して azdata を Linux にインストールする
 titleSuffix: SQL Server big data clusters
-description: インストーラー (Linux) を使用して、(プレビュー) [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]をインストールして管理するための azdata ツールをインストールする方法について説明します。
+description: インストーラー (Linux) を使用して [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) をインストールして管理するための azdata ツールをインストールする方法について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,33 +9,33 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: e11e4851294ac8ffd8efa66e2156dcd47bce3aa0
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 2795178cb975ecb620528c4a5dc8715b70d447fd
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70160680"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342006"
 ---
-# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Linux `azdata`で管理[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]するためのインストール
+# <a name="install-azdata-to-manage-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-linux"></a>Linux で [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] を管理するには `azdata` をインストールします
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、Linux `azdata`で SQL Server 2019 ビッグデータクラスターリリース候補をインストールする方法について説明します。 これらのパッケージマネージャーを使用できるようにする`azdata`に`pip`は、必須のがインストールされている必要があります。
+この記事では、Linux で SQL Server 2019 ビッグデータクラスターリリース候補の `azdata` をインストールする方法について説明します。 これらのパッケージマネージャーを使用できるようにするには、`azdata` のインストール `pip` が必要です。
 
 パッケージマネージャーは、さまざまなオペレーティングシステムおよびディストリビューション向けに設計されています。
 
-- Linux (Ubuntu) の場合は、[と共に`azdata` `apt`インストール](#azdata-apt)します。
+- Linux (Ubuntu) の場合は、 [`apt` を使用して `azdata` をインストール](#azdata-apt)します。
 
-現時点では、他のオペレーティングシステムまたはディストリビューション`azdata`にインストールするパッケージマネージャーはありません。 これらのプラットフォームについては、「[パッケージマネージャーを`azdata`使用しないインストール](./deploy-install-azdata.md)」を参照してください。
+現時点では、他のオペレーティングシステムまたはディストリビューションに `azdata` をインストールするパッケージマネージャーはありません。 これらのプラットフォームについては、「[パッケージマネージャーを使用しない `azdata` のインストール](./deploy-install-azdata.md)」を参照してください。
 
-## <a id="linux"></a>Linux `azdata`用のインストール
+## <a id="linux"></a>Linux 用の `azdata` のインストール
 
-`azdata`の Ubuntu では、 `apt`インストールパッケージを使用できます。
+`azdata` のインストールパッケージは、`apt` の Ubuntu で使用できます。
 
-### <a id="azdata-apt"></a>Apt `azdata`を使用したインストール (Ubuntu)
+### <a id="azdata-apt"></a>Apt (Ubuntu) を使用して `azdata` をインストールする
 
 >[!NOTE]
->`azdata`パッケージは、システム python を使用せず、独自の python インタープリターをインストールします。
+>`azdata` のパッケージは、システム Python を使用せず、独自の Python インタープリターをインストールします。
 
 1. インストールプロセスに必要なパッケージを取得します。
 
@@ -47,16 +47,16 @@ ms.locfileid: "70160680"
 2. 署名キーをダウンロードしてインストールします。
 
     ```bash
-    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add –
+    wget -qO- https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
     ```
 
-3. リポジトリの`azdata`情報を追加します。
+3. `azdata` のリポジトリ情報を追加します。
 
     ```bash
     sudo add-apt-repository "$(wget -qO- https://packages.microsoft.com/config/ubuntu/16.04/mssql-server-preview.list)"
     ```
 
-4. リポジトリ情報を更新し`azdata`てインストールします。
+4. リポジトリ情報を更新して `azdata` をインストールします。
 
     ```bash
     sudo apt-get update
@@ -71,7 +71,7 @@ ms.locfileid: "70160680"
 
 ### <a name="update"></a>更新
 
-アップグレード`azdata`のみ:
+`azdata` のみをアップグレードします。
 
 ```bash
 sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
@@ -85,10 +85,10 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
     sudo apt-get remove -y azdata-cli
     ```
 
-2. リポジトリの`azdata`情報を削除します。
+2. `azdata` のリポジトリ情報を削除します。
 
     >[!NOTE]
-    >今後のインストール`azdata`を予定している場合、この手順は必要ありません。
+    >今後 `azdata` をインストールする予定の場合、この手順は必要ありません。
 
     ```bash
     sudo rm /etc/apt/sources.list.d/azdata-cli.list
@@ -108,4 +108,4 @@ sudo apt-get update && sudo apt-get install --only-upgrade -y azdata-cli
 
 ## <a name="next-steps"></a>次の手順
 
-ビッグデータクラスターの詳細について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。
+ビッグデータクラスターの詳細については、「 [[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] とは](big-data-cluster-overview.md)」を参照してください。

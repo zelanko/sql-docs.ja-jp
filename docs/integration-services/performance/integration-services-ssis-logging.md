@@ -27,14 +27,14 @@ helpviewer_keywords:
 - Text File log provider
 - SQL Server log provider
 ms.assetid: 65e17889-371f-4951-9a7e-9932b2d0dcde
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2782537178c00055e1db7cb7c653fb863ead8724
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: baad15da62c4452361fe8ff3cdf46582dd3727ea
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67913632"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71282564"
 ---
 # <a name="integration-services-ssis-logging"></a>Integration Services (SSIS) のログ記録
 
@@ -71,7 +71,7 @@ ms.locfileid: "67913632"
   
  次の表に、 [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] に含まれるログ プロバイダーの ProgID と ClassID、およびログ プロバイダーが書き込むログの場所の一覧を示します。  
   
-|ログ プロバイダー|ProgID|ClassID|場所|  
+|ログ プロバイダー|ProgID|ClassID|Location|  
 |------------------|------------|-------------|--------------|  
 |テキスト ファイル|DTS.LogProviderTextFile|{0A039101-ACC1-4E06-943F-279948323883}|ログ プロバイダーが使用するファイル接続マネージャーでテキスト ファイルのパスを指定します。|  
 |SQL Server プロファイラー|DTS.LogProviderSQLProfiler|{E93F6300-AE0C-4916-A7BF-A8D0CE12C77A}|ログ プロバイダーが使用するファイル接続マネージャーで [!INCLUDE[ssSqlProfiler](../../includes/sssqlprofiler-md.md)]が使用するファイルのパスを指定します。|  

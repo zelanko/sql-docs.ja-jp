@@ -1,5 +1,5 @@
 ---
-title: STEndpoint (geography データ型) | Microsoft Docs
+title: STEndPoint (geography データ型) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -8,23 +8,23 @@ ms.reviewer: ''
 ms.technology: t-sql
 ms.topic: language-reference
 f1_keywords:
-- STEndpoint (geography Data Type)
-- STEndpoint_TSQL
+- STEndPoint (geography Data Type)
+- STEndPoint_TSQL
 dev_langs:
 - TSQL
 helpviewer_keywords:
-- STEndpoint method
+- STEndPoint method
 ms.assetid: 8974cd07-8ec4-4126-8fc2-fdcf322ccedd
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: efdc5658997bf0cf19637900c96c8f06d4a2e3ce
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eb5d28712e5d4132cd8be07ab1e5014d5cb26567
+ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68042279"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71118132"
 ---
-# <a name="stendpoint-geography-data-type"></a>STEndpoint (geography データ型)
+# <a name="stendpoint-geography-data-type"></a>STEndPoint (geography データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   **geography** インスタンスの終点を返します。  
@@ -49,7 +49,7 @@ ms.locfileid: "68042279"
  このメソッドは、空の **geometry** インスタンスに対して呼び出された場合は null を返します。  
   
 ## <a name="examples"></a>使用例  
- `STGeomFromText()` で `LineString` インスタンスを作成し、`STEndpoint()` を使用して、`LineString` の終点を取得する例を次に示します。  
+ `STGeomFromText()` で `LineString` インスタンスを作成し、`STEndPoint()` を使用して、`LineString` の終点を取得する例を次に示します。  
   
 ```  
 DECLARE @g geography;  

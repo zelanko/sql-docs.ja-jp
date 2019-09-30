@@ -1,5 +1,5 @@
 ---
-title: syspublications (システム ビュー) (TRANSACT-SQL) |Microsoft Docs
+title: syspublications (システム ビュー) (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/17/2017
 ms.prod: sql

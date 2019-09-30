@@ -10,14 +10,14 @@ ms.topic: conceptual
 f1_keywords:
 - sql13.ssis.designer.cdcsplitter.f1
 ms.assetid: 167bc5c6-fa36-439d-987c-b20acd1a77e2
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 40f9fd60bcfd5e25f841d0cda05089da5f73e268
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: beba1f54c4eae683e6b35eb44408d84c5d812b84
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045363"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293229"
 ---
 # <a name="cdc-splitter"></a>CDC スプリッター
 
@@ -33,7 +33,7 @@ ms.locfileid: "68045363"
 |3|更新|更新前の行 ( **"古い値を含むすべて"** CDC モードの場合のみ使用可)|  
 |4|更新|更新後の行 (更新前と同じ)|  
 |5|更新|マージ行 ( **"結合を含む差分"** CDC モードを使用する場合のみ使用可)|  
-|その他|Error||  
+|その他|エラー||  
   
  スプリッターを使用して、定義済みの挿入、削除、更新の各出力に接続し、さらに処理を実行することができます。  
   

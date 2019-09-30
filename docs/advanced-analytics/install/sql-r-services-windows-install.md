@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: =sql-server-2016||=sqlallproducts-allversions
-ms.openlocfilehash: 61dd49191e85d9fd4685904ae01b72d754d43318
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: a255b70b71f29f9cc28e4022ecfdf2741f9a838d
+ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715808"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71271883"
 ---
 # <a name="install-sql-server-2016-r-services"></a>SQL Server 2016 R Services のインストール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -68,23 +68,23 @@ SQL Server の前提条件としてインストールされる特定のバージ
     
    ![R Services (データベース内) のインストール](media/2016-setup-installation-rsvcs.png "R Services を使用してデータベースエンジンのインストールを開始")する
    
-3. [**機能の選択**] ページで、次のオプションを選択します。
+3. **[機能の選択]** ページで、次のオプションを選択します。
 
-   - [**データベースエンジン Services**] を選択します。 Machine learning を使用する各インスタンスには、データベースエンジンが必要です。
-   - [ **R Services (データベース内)** ] を選択します。 では、データベース内で R を使用するためのサポートがインストールされます。
+   - **[データベースエンジン Services]** を選択します。 Machine learning を使用する各インスタンスには、データベースエンジンが必要です。
+   - **[R Services (データベース内)]** を選択します。 では、データベース内で R を使用するためのサポートがインストールされます。
     
      ![R Services 機能の選択](media/2016setup-rsvcs-features.png "データベース内の R Services の機能を選択する")
 
     > [!IMPORTANT]
     > R Server と R Services を同時にインストールしないでください。 通常は、R Server (スタンドアロン) をインストールして、データ科学者または開発者が R ソリューションを SQL Server に接続してデプロイするために使用する環境を作成します。 そのため、両方を同一のコンピューターにインストールする必要はありません。
 
-4.  [ **Microsoft R Open のインストールに同意する**] ページで、[**同意**する] をクリックします。
+4.  **[Microsoft R Open のインストールに同意する]** ページで、 **[同意]** する をクリックします。
   
     Microsoft r Open をダウンロードするには、この使用許諾契約書が必要です。これには、Microsoft R 開発チームの拡張 R パッケージと接続プロバイダーと共に、オープンソースの R 基本パッケージとツールの配布が含まれます。
   
-5. 使用許諾契約書に同意した後、インストーラーが準備されている間、簡単に一時停止します。 ボタンが使用可能になったら、[**次へ**] をクリックします。
+5. 使用許諾契約書に同意した後、インストーラーが準備されている間、簡単に一時停止します。 ボタンが使用可能になったら、 **[次へ]** をクリックします。
 
-6. [**インストールの準備完了**] ページで、次の項目が含まれていることを確認し、[**インストール**] を選択します。
+6. **[インストールの準備完了]** ページで、次の項目が含まれていることを確認し、 **[インストール]** を選択します。
 
    + データベース エンジン サービス
    + R Services (データベース内)
@@ -97,7 +97,7 @@ SQL Server の前提条件としてインストールされる特定のバージ
 
 R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](https://software.intel.com/articles/introduction-to-the-conditional-numerical-reproducibility-cnr)、Intel MATH Kernel Library (MKL) 計算からの一貫した出力を確保する必要があります。
 
-1. コントロールパネルで、[**システムとセキュリティ** >  **] [システム]**  >  [システム**設定** > ] [**環境変数**] をクリックします。
+1. コントロールパネルで、[**システムとセキュリティ** >  > ] [システム] [システム**設定** > ] **[環境変数]** をクリックします。
 
 2. 新しいユーザー変数またはシステム変数を作成します。 
 
@@ -117,7 +117,7 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
     > 
     > また、 [Azure Data Studio](../../azure-data-studio/what-is.md)のプレビューリリースを試すこともできます。これにより、SQL Server に対する管理タスクとクエリがサポートされます。
   
-2. Machine Learning Services をインストールしたインスタンスに接続し、[**新しいクエリ**] をクリックしてクエリウィンドウを開き、次のコマンドを実行します。
+2. Machine Learning Services をインストールしたインスタンスに接続し、 **[新しいクエリ]** をクリックしてクエリウィンドウを開き、次のコマンドを実行します。
 
    ```sql
    sp_configure
@@ -137,7 +137,7 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
 
 サービスを再起動すると、関連[!INCLUDE[rsql_launchpad](../../includes/rsql-launchpad-md.md)]するサービスも自動的に再起動されます。
 
-サービスを再起動するには、SSMS でインスタンスの右クリック**restart**コマンドを使用するか、コントロールパネルの [**サービス**] パネルを使用するか、または[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)を使用します。
+サービスを再起動するには、SSMS でインスタンスの右クリック**restart**コマンドを使用するか、コントロールパネルの **[サービス]** パネルを使用するか、または[SQL Server 構成マネージャー](../../relational-databases/sql-server-configuration-manager.md)を使用します。
 
 ## <a name="verify-installation"></a>インストールの確認
 
@@ -153,7 +153,7 @@ R 機能の統合のみの場合、 **MKL_CBWR**環境変数を設定し[て](ht
 
     この時点で、**run_value** が 1 に設定されている必要があります。
 
-2. [**サービス**] パネルまたは SQL Server 構成マネージャーを開き、 **SQL Server Launchpad サービス**が実行されていることを確認します。 R または Python がインストールされているデータベースエンジンインスタンスごとに1つのサービスを用意する必要があります。 サービスの詳細については、「[機能拡張フレームワーク](../concepts/extensibility-framework.md)」を参照してください。
+2. **[サービス]** パネルまたは SQL Server 構成マネージャーを開き、 **SQL Server Launchpad サービス**が実行されていることを確認します。 R または Python がインストールされているデータベースエンジンインスタンスごとに1つのサービスを用意する必要があります。 サービスの詳細については、「[機能拡張フレームワーク](../concepts/extensibility-framework.md)」を参照してください。
 
 7. スタートパッドが実行されている場合は、単純な R を実行して、外部スクリプトランタイムが SQL Server と通信できることを確認できます。 
 
@@ -255,9 +255,9 @@ R パッケージのインストールと管理のプロセスは SQL Server 201
 
 ## <a name="next-steps"></a>次のステップ
 
-R 開発者は、いくつかの簡単な例を使って開始し、SQL Server での R の動作の基本を学習できます。 次の手順については、次のリンクを参照してください。
+R 開発者はいくつかの簡単な例を試して、SQL Server での R の動作方法の基本を確認できます。 次の手順については、以下のリンクをご覧ください。
 
-+ [チュートリアル: T-sql で R を実行する](../tutorials/rtsql-using-r-code-in-transact-sql-quickstart.md)
++ [チュートリアル: T-SQL での R の実行](../tutorials/quickstart-r-create-script.md)
 + [チュートリアル: R 開発者向けのデータベース内分析](../tutorials/sqldev-in-database-r-for-sql-developers.md)
 
-実際のシナリオに基づく機械学習の例については、「 [machine learning のチュートリアル](../tutorials/machine-learning-services-tutorials.md)」を参照してください。
+実際のシナリオに基づいた機械学習の例については、[機械学習のチュートリアル](../tutorials/machine-learning-services-tutorials.md)を参照してください。

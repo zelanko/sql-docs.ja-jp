@@ -13,14 +13,14 @@ helpviewer_keywords:
 - Select variables
 - Variable selection
 ms.assetid: e62083ec-d127-48ea-aaa4-cca6017a29cb
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 89553e2489f9ce65545686e83eee4ff017ef2799
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 544740f7a6e0d292b1764a9bdfb565d1e7ce0f18
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68023690"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71293950"
 ---
 # <a name="select-variables-page"></a>[変数の選択] ページ
 
@@ -38,7 +38,7 @@ ms.locfileid: "68023690"
  **[名前]**  
  変数の名前を指定します。  
   
- **型**  
+ **Type**  
  変数のデータ型を指定します。  
   
 ## <a name="see-also"></a>参照  

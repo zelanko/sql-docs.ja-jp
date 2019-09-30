@@ -18,12 +18,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811e7753e
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 28390d824e04287264b328878f888dbcfac1cdb1
-ms.sourcegitcommit: a1ddeabe94cd9555f3afdc210aec5728f0315b14
+ms.openlocfilehash: 6c09d18bc2b9413eb324e75abfb52e6fa361c357
+ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70123127"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71163902"
 ---
 # <a name="upgrading-databases-by-using-the-query-tuning-assistant"></a>クエリ調整アシスタントを使用したデータベースのアップグレード
 [!INCLUDE[tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md](../../includes/tsql-appliesto-ss2016-asdb-xxxx-xxx-md.md)]
@@ -41,7 +41,7 @@ ms.locfileid: "70123127"
 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] v18 以降では、新しい **クエリ調整アシスタント (QTA)** 機能を利用して、推奨されるワークフローに従うことで、新しい [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] バージョンへのアップグレード時のパフォーマンスの安定性を維持できます。これについては、「[クエリ ストアの使用シナリオ](../../relational-databases/performance/query-store-usage-scenarios.md#CEUpgrade)」の「*新しい SQL Server にアップグレードするときにパフォーマンスの安定性を維持する*」セクションに記載されています。 ただし、推奨されるワークフローの最後の手順で示されているように、QTA は以前の既知の適切なプランにロールバックしません。 代わりに、QTA は [クエリ ストアの **[機能低下したクエリ]** ](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed) ビューで見つかった回帰をすべて追跡し、適用できるオプティマイザー モデル バリエーションの可能な順列を反復処理することで、新しいより良いプランを作成できます。
 
 > [!IMPORTANT]
-> QTA では、ユーザー ワークロードは生成されません。 アプリケーションで使用されていない環境で QTA を実行する場合は、別の方法でターゲットとなる [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で代表的なテスト ワークロードを引き続き確実に実行できるようにします。 
+> QTA では、ユーザー ワークロードは生成されません。 アプリケーションで使用されていない環境で QTA を実行する場合は、別の方法でターゲットとなる [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] で代表的なテスト ワークロードを引き続き確実に実行できるようにします。 
 
 ## <a name="the-query-tuning-assistant-workflow"></a>クエリ調整アシスタントのワークフロー
 QTA の開始点では、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からデータベースが ([CREATE DATABASE ...FOR ATTACH](../..//relational-databases/databases/attach-a-database.md) または [RESTORE](../../t-sql/statements/restore-statements-transact-sql.md) を使用して) 新しいバージョンの [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] に移行され、アップグレード前のデータベース互換レベルがすぐには変更されないことが前提となります。 QTA を使用して、次のステップを行います。

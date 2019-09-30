@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: 4d8c31adb0dff16b84e4c606dc3b5479a43a1092
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
+ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68075211"
+ms.lasthandoff: 09/20/2019
+ms.locfileid: "71174288"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,11 +64,11 @@ FETCH
  LAST  
  カーソル内の最終行を返し、これを現在の行にします。  
   
- ABSOLUTE { *n*| @*nvar*}  
- *n* または @*nvar* が正の値の場合は、カーソルの先頭から *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、カーソルの終端から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、行を返しません。 *n* は整数の定数である必要があります。また、@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
+ ABSOLUTE { *n*| \@*nvar*}  
+ *n* または \@*nvar* が正の値の場合は、カーソルの先頭から *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または \@*nvar* が負の値の場合は、カーソルの終端から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または \@*nvar* が 0 の場合は、行を返しません。 *n* は整数の定数である必要があります。また、\@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
   
- RELATIVE { *n*| @*nvar*}  
- *n* または @*nvar* が正の値の場合は、現在の行を先頭に *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が負の値の場合は、現在の行から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または @*nvar* が 0 の場合は、現在の行を返します。 カーソルに対して実行する最初のフェッチで、*n* または @*nvar* を負の値または 0 に設定して `FETCH RELATIVE` を指定した場合は、行を返しません。 *n* は整数の定数である必要があります。また、@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
+ RELATIVE { *n*| \@*nvar*}  
+ *n* または \@*nvar* が正の値の場合は、現在の行を先頭に *n* 行目の行を返し、返した行を新しい現在の行にします。 *n* または \@*nvar* が負の値の場合は、現在の行から *n* 行前の行を返し、返した行を新しい現在の行にします。 *n* または \@*nvar* が 0 の場合は、現在の行を返します。 カーソルに対して実行する最初のフェッチで、*n* または \@*nvar* を負の値または 0 に設定して `FETCH RELATIVE` を指定した場合は、行を返しません。 *n* は整数の定数である必要があります。また、\@*nvar* は **smallint**、**tinyint**、または **int** である必要があります。  
   
  GLOBAL  
  *cursor_name* でグローバル カーソルを参照することを指定します。  

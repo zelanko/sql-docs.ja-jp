@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.assetid: 04ba51b6-cdc7-409c-8d7e-26ead13e614d
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 77c095ac35d9b3068882be81d0ddf6293904f8bb
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 9a12e327f9537ea25d84ec0db3e1d76381eb5f03
+ms.sourcegitcommit: 183d622fff36a22b882309378892010be3bdcd52
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68810336"
+ms.lasthandoff: 09/19/2019
+ms.locfileid: "71127358"
 ---
 # <a name="database-engine-errors"></a>データベース エンジンのエラー
 
@@ -4999,7 +4999,7 @@ ms.locfileid: "68810336"
 |   11297   |   16  |   いいえ  |   破損したメッセージを受け取りました。 プライベート変数のデータ セグメント オフセットが不適切です。   |
 |   11298   |   16  |   いいえ  |   破損したメッセージを受け取りました。 パブリック変数のデータ セグメント オフセットが不適切です。    |
 |   11299   |   10  |   いいえ  |   破損したメッセージを受け取りました。 シーケンスが付けられていないメッセージに 0 以外のシーケンス番号が含まれています。 この現象は、メッセージ交換 ID '%.*ls'、発信側: %d、メッセージ シーケンス番号: %I64d のメッセージで発生しました。 |
-|   11300   |   10  |   はい |   読み取り専用または TEMPDB XDES のコミット中にエラーが発生しました。サーバーをシャットダウンしています。    |
+|   11300   |   10  |   はい |   読み取り専用または TEMPDB XDES のコミット中にエラーが発生しました。サーバーをシャットダウンしています。   |
 |   11301   |   10  |   はい |   オブジェクト %p イベント %d のトランザクション通知を実行中にエラーが発生しました。 |
 |   11302   |   10  |   はい |   ロールバック中にエラーが発生しました。 データベースをシャットダウンしています (場所: %d)。   |
 |   11303   |   10  |   はい |   予約済みログ領域の解放エラー: %ls 領域 %I64d、コード %d、状態 %d。 |

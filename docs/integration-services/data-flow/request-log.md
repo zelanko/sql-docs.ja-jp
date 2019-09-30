@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: conceptual
 ms.assetid: 165d3833-0493-490c-9f63-8a134a7fafb8
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: f687cbc61971638cc91689b4c6b7d9d3a54e3b2e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 4a84025efefa397cd1f33a706073faceb0ad70ae
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034311"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71292127"
 ---
 # <a name="request-log"></a>[要求のログ]
 
@@ -49,7 +49,7 @@ ms.locfileid: "68034311"
  **[時刻]**  
  イベントが記録された時刻を表示します。  
   
- **型**  
+ **Type**  
  記録されたイベントの種類を表示します。 次の表は、使用可能なイベントの種類を示しています。  
   
 |[値]|[説明]|  

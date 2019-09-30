@@ -8,12 +8,12 @@ description: この記事では、ブランド パッケージを利用してビ
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 2303ae2f21f9bbdc9c15c2d60f62d10f65b5a624
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "68221725"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199420"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
@@ -27,7 +27,7 @@ ms.locfileid: "68221725"
   
 Reporting Services のブランド パッケージは 3 つのアイテムから構成されており、zip ファイルとしてパッケージされています。   
   
-- color.json  
+- colors.json  
 - metadata.xml  
 - logo.png (任意)  
   

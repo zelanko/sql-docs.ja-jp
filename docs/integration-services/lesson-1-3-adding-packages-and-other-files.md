@@ -8,14 +8,14 @@ ms.reviewer: ''
 ms.technology: integration-services
 ms.topic: tutorial
 ms.assetid: a7e6ec9c-d31d-4613-9525-8947a7b358f7
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 418b113429e31fdd0c6ad75bbc1707ef3a417b1c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: be3dcb5bd42624ee943db4393809e2889808a11e
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67902663"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71283837"
 ---
 # <a name="lesson-1-3---adding-packages-and-other-files"></a>レッスン 1-3 - パッケージとその他のファイルの追加
 
@@ -51,7 +51,7 @@ ms.locfileid: "67902663"
   
 2.  **[ファイル]** メニューの **[開く]** をクリックし、 **[プロジェクト/ソリューション]** をクリックします。次に、 **[Deployment Tutorial]** フォルダーをクリックして **[開く]** をクリックし、 **Deployment Tutorial.sln**をダブルクリックします。  
   
-3.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして **[追加]** をクリックし、 **[既存のパッケージ]** をクリックします。  
+3.  ソリューション エクスプローラーで、Deployment Tutorial を右クリックして  **追加** をクリックし、**既存のパッケージ** をクリックします。  
   
 4.  **[既存のパッケージのコピーを追加]** ダイアログ ボックスの **[パッケージの場所]** で、 **[ファイル システム]** をクリックします。  
   
@@ -63,13 +63,13 @@ ms.locfileid: "67902663"
   
 ### <a name="to-add-ancillary-files-to-the-deployment-tutorial-project"></a>Deployment Tutorial プロジェクトに付属ファイルを追加するには  
   
-1.  ソリューション エクスプローラーで、[Deployment Tutorial] を右クリックして **[追加]** をクリックし、 **[既存の項目]** をクリックします。  
+1.  ソリューション エクスプローラーで、Deployment Tutorial を右クリックして  **追加** をクリックし、**既存の項目** をクリックします。  
   
 2.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\Sample Data に移動し、orders.xml、orders.xsd、および NewCustomers.txt を選択して、 **[追加]** をクリックします。  
   
 3.  **[既存の項目の追加 - Deployment Tutorial]** ダイアログ ボックスで C:\Program Files\Microsoft SQL Server\100\Samples\Integration Services\Tutorial\Deployment Packages\\に移動し、Readme.txt を選択して、 **[追加]** をクリックします。  
   
-4.  [ファイル] メニューの **[すべてを保存]** をクリックします。  
+4.  ファイル メニューの  **すべてを保存** をクリックします。  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
 [手順 4:パッケージ構成の追加](../integration-services/lesson-1-4-adding-package-configurations.md)  

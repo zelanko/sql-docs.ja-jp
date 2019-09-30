@@ -10,14 +10,14 @@ ms.topic: conceptual
 helpviewer_keywords:
 - components [Integration Services], properties
 ms.assetid: 73000ef6-52a2-4dec-8320-0e79acf0c2c5
-author: janinezhang
-ms.author: janinez
-ms.openlocfilehash: 2fa1b13f006c5bae86613b56a313376e68bb00a1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+author: chugugrace
+ms.author: chugu
+ms.openlocfilehash: 10b397e4fdabefe333854fe04ab37c4bdd92cf38
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68034100"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71291841"
 ---
 # <a name="set-the-properties-of-a-data-flow-component"></a>データ フロー コンポーネントのプロパティを設定する
 
@@ -140,7 +140,7 @@ ms.locfileid: "68034100"
 |PipelineVersion|Integer|コンポーネントを実行するように設計されたデータ フロー タスクのバージョン。|  
 |UsesDispositions|Boolean|コンポーネントにエラー出力があるかどうかを示します。|  
 |[ValidateExternalMetadata]|Boolean|外部列のメタデータを検証するかどうかを示します。 このプロパティの既定値は **True**です。|  
-|バージョン|Integer|コンポーネントのバージョン。|  
+|Version|Integer|コンポーネントのバージョン。|  
   
 ###  <a name="inputs"></a> 入力プロパティ  
  [!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] のオブジェクト モデルでは、変換および変換先には入力があります。 データ フロー内のコンポーネントの入力は、<xref:Microsoft.SqlServer.Dts.Pipeline.Wrapper.IDTSInput100> インターフェイスを実装します。  
