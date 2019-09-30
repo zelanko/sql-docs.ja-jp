@@ -32,12 +32,12 @@ ms.assetid: 92d34f48-fa2b-47c5-89d3-a4c39b0f39eb
 author: pmasl
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1cd488c24da5e937bde1d7dd3e3bb2bd193bb3bb
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 515e0501e86d81a34cd9e0f14d720ba3024b241c
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149917"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71251087"
 ---
 # <a name="collation-and-unicode-support"></a>Collation and Unicode Support
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -79,7 +79,7 @@ ms.locfileid: "71149917"
 |バイナリコード ポイント (\_BIN2) <sup>1</sup> | Unicode データの Unicode コード ポイントに基づいて、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] テーブル内のデータが並べ替えられ、比較されます。 非 Unicode データの場合、バイナリ コード ポイントではバイナリ並べ替えと同一の比較が使用されます。<br/><br/> バイナリ コード ポイント並べ替え順を使用すると、並べ替えられた [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データを比較するアプリケーションでデータを再度並べ替える必要がないという利点があります。 このため、バイナリ コード ポイント並べ替え順を使用すると、アプリケーション開発が簡略化され、パフォーマンスを向上させることができます。 詳細については、このページの「[バイナリ照合順序](#Binary-collations)」セクションを参照してください。|
 |UTF-8 (\_UTF8)|UTF-8 でエンコードされたデータを [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に格納できるようにします。 このオプションを選択しなかった場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、適用可能なデータ型に対して既定の非 Unicode エンコード形式が使用されます。 詳細については、このページの「[UTF-8 サポート](#utf8)」セクションを参照してください。| 
 
-<sup>1</sup> バイナリまたはバイナリ コード ポイントが選択されている場合、大文字と小文字を区別する (\_CS)、アクセントを区別する (\_AS)、かなを区別する (\_KS)、文字幅を区別する (\WS) オプションは使用できません。      
+<sup>1</sup> バイナリまたはバイナリ コード ポイントが選択されている場合、大文字と小文字を区別する (\_CS)、アクセントを区別する (\_AS)、かなを区別する (\_KS)、文字幅を区別する (\_WS) オプションは使用できません。      
 
 #### <a name="examples-of-collation-options"></a>照合順序オプションの例
 各照合順序は、大文字小文字、アクセント、文字幅、かなの区別を定義する一連のサフィックスとして組み合わせられます。 次の例で、サフィックスのさまざまな組み合わせに対応する並べ替え順の動作を説明します。
