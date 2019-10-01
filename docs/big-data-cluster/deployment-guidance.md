@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: da0adf179cb85368d78a06688cc34cfa28b232e1
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 66aeb6b6e13de8cc076d2ff1b4c77d4fadf2b94a
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174269"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688308"
 ---
 # <a name="how-to-deploy-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd-on-kubernetes"></a>Kubernetes にデプロイ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]する方法
 
@@ -66,6 +66,9 @@ SQL Server 2019 ビッグ データ クラスターを展開する前に、ま�
 ```bash
 kubectl config view
 ```
+
+> [!Important] 
+> Kubeadm を使用してブートストラップしたマルチノード Kuberntes クラスターにをデプロイする場合は、ビッグデータクラスターのデプロイを開始する前に、デプロイが対象としているすべての Kubernetes ノード間でクロックが同期されていることを確認してください。 ビッグデータクラスターには、時間の影響を受けるさまざまなサービスの正常性プロパティが組み込まれており、時計の傾斜によって状態が正しくないことがあります。
 
 Kubernetes クラスターを構成したら、新しい SQL Server ビッグ データ クラスターの展開に進むことができます。 以前のリリースからアップグレードする場合は、「[アップグレード[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]方法](deployment-upgrade.md)」を参照してください。
 

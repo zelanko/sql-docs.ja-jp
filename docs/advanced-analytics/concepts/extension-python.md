@@ -3,17 +3,17 @@ title: Python プログラミング言語拡張機能
 description: SQL Server Machine Learning Services の Python コード実行と組み込み Python ライブラリについて説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/05/2018
+ms.date: 09/30/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 61a1a5629d4f0488b5f75a08578c39f2e68f2c7d
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: f3825a2b5085bf5a6e144a602c36cb20ccaca430
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715870"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688284"
 ---
 # <a name="python-language-extension-in-sql-server"></a>SQL Server の Python 言語拡張機能
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -92,9 +92,11 @@ Python の "内部" SQL Server を実行する場合は、Python スクリプト
 8. SQL サテライトは、関連するジョブオブジェクトの SQL Server とクリーンアップとの通信を管理します。
 9. SQL Server は、結果をクライアントに渡します。
 
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次の手順
 
 + [SQL Server の revoscalepy モジュール](../python/ref-py-revoscalepy.md)
 + [revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package) 
 + [SQL Server の機能拡張フレームワーク](extensibility-framework.md)
 + [SQL Server の R および machine learning 拡張機能](extension-r.md)
++ [Python パッケージ情報の取得](../package-management/python-package-information.md)
++ [Sqlmlutils を使用して Python パッケージをインストールする](../package-management/install-additional-python-packages-on-sql-server.md)
