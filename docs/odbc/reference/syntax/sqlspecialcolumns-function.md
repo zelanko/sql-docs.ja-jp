@@ -137,7 +137,7 @@ SQLRETURN SQLSpecialColumns(
 |IM018|**SQLCompleteAsync**このハンドルに対する前の非同期操作を完了が呼び出されていません。|通知モードが有効になっている場合、ハンドルでは、前の関数呼び出しに SQL_STILL_EXECUTING が返された場合と**SQLCompleteAsync**後処理を行い、操作を完了するハンドルで呼び出す必要があります。|  
   
 ## <a name="comments"></a>コメント  
- ときに、 *IdentifierType*引数は、SQL_BEST_ROWID **SQLSpecialColumns**列またはテーブル内の各行を一意に識別する列を返します。 これらの列で常に使用できる、*選択リスト*または**場所**句。 **SQLColumns**テーブルの列でさまざまな情報を返すために使用するは必ずしも返さない、各行を一意に識別する列またはによって行のいずれかの値に自動的に更新される列を更新します。トランザクションです。 たとえば、 **SQLColumns** Oracle の擬似列 ROWID を返さなかった可能性があります。 これは、ため**SQLSpecialColumns**これらの列を返すために使用します。 詳細については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
+ ときに、 *IdentifierType*引数は、SQL_BEST_ROWID **SQLSpecialColumns**列またはテーブル内の各行を一意に識別する列を返します。 これらの列で常に使用できる、*選択リスト*または**WHERE**句。 **SQLColumns**テーブルの列でさまざまな情報を返すために使用するは必ずしも返さない、各行を一意に識別する列またはによって行のいずれかの値に自動的に更新される列を更新します。トランザクションです。 たとえば、 **SQLColumns** Oracle の擬似列 ROWID を返さなかった可能性があります。 これは、ため**SQLSpecialColumns**これらの列を返すために使用します。 詳細については、次を参照してください。[カタログ データの使用](../../../odbc/reference/develop-app/uses-of-catalog-data.md)します。  
   
 > [!NOTE]  
 >  一般的な使用、引数、および ODBC カタログ関数の返されたデータの詳細については、次を参照してください。[カタログ関数](../../../odbc/reference/develop-app/catalog-functions.md)します。  
