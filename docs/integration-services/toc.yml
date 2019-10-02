@@ -14,7 +14,7 @@
       href: ../integration-services/integration-services-developer-documentation.md
     - name: Integration Services の旧バージョンとの互換性
       href: ../integration-services/integration-services-backward-compatibility.md
-- name: クイック スタート
+- name: クイックスタート
   items:
     - name: 配置
       items:
@@ -1558,6 +1558,8 @@
       href: ../integration-services/change-data-capture/the-oracle-cdc-instance.md
     - name: Oracle CDC データベース
       href: ../integration-services/change-data-capture/the-oracle-cdc-databases.md
+    - name: '[トラブルシューティング]'
+      href: ../integration-services/change-data-capture/known-issues-resolutions-with-cdc-for-oracle-attunity.md
     - name: Change Data Capture Designer for Oracle by Attunity の F1 ヘルプ参照
       href: ../integration-services/change-data-capture/change-data-capture-designer-for-oracle-by-attunity-f1-help-reference.md
       items:
