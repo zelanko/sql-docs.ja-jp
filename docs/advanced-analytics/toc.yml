@@ -255,28 +255,26 @@
               href: ../advanced-analytics/package-management/tips-for-using-r-packages.md
     - name: 管理
       items:
-        - name: 統合の管理
-          href: ../advanced-analytics/r/managing-and-monitoring-r-solutions.md
         - name: モニター
           items:
             - name: SSMS レポートを使用した監視
-              href: ../advanced-analytics/r/monitor-r-services-using-custom-reports-in-management-studio.md
+              href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-custom-reports-management-studio.md
             - name: DMV を使用した監視
               href: ../advanced-analytics/administration/monitor-sql-server-machine-learning-services-using-dynamic-management-views.md
             - name: 拡張イベント
               items:
-                - name: 拡張イベント
-                  href: ../advanced-analytics/r/extended-events-for-sql-server-r-services.md
-                - name: 拡張イベント PREDICT T-SQL
-                  href: ../advanced-analytics/xe-event-predict-tsql.md
+                - name: 拡張イベントを使用した監視
+                  href: ../advanced-analytics/administration/extended-events.md
+                - name: T-SQL の予測の監視
+                  href: ../advanced-analytics/administration/extended-events-predict-tsql.md
         - name: スクリプトの実行のスケーリング
-          href: ../advanced-analytics/administration/modify-user-account-pool.md
+          href: ../advanced-analytics/administration/scale-concurrent-execution-external-scripts.md
         - name: リソース ガバナー
           items:
             - name: リソース ガバナーの使用
-              href: ../advanced-analytics/administration/resource-governance.md
+              href: ../advanced-analytics/administration/resource-governor.md
             - name: リソース プールの作成
-              href: ../advanced-analytics/administration/how-to-create-a-resource-pool.md
+              href: ../advanced-analytics/administration/create-external-resource-pool.md
     - name: Security
       items:
         - name: ユーザーへの権限の付与
