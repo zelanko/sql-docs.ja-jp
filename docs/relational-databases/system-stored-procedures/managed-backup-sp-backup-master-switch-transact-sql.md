@@ -47,7 +47,7 @@ EXEC managed_backup.sp_backup_master_switch
   
 ##  <a name="Arguments"></a> 引数  
  @state  
- 状態を設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。 @stateパラメーターが**ビット**します。 値 0、操作が一時停止しに設定すると、値 1 は操作が再開に設定するとします。  
+ 状態を設定[!INCLUDE[ss_smartbackup](../../includes/ss-smartbackup-md.md)]します。 @stateパラメーターが **ビット** します。 値 0、操作が一時停止しに設定すると、値 1 は操作が再開に設定するとします。  
   
 ## <a name="return-code-value"></a>リターン コード値  
  0 (成功) または 1 (失敗)  
