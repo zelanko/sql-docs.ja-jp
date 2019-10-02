@@ -3,17 +3,17 @@ title: Dmv を使用した Python と R スクリプトの実行の監視
 description: 動的管理ビュー (Dmv) を使用して、SQL Server Machine Learning Services での Python および R 外部スクリプトの実行を監視します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/13/2019
+ms.date: 09/17/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 0e541e1d0eb2a8bb1ac512276fa395f8d8c6379f
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "70978403"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713177"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>動的管理ビュー (Dmv) を使用して SQL Server Machine Learning Services を監視する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -200,7 +200,7 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>メモリ構成
 
-SQL Server と外部リソースプールの割合での最大メモリ構成に関する情報を表示します。 SQL Server が既定値の`max server memory (MB)`で実行されている場合、OS メモリの 100% と見なされます。
+SQL Server と外部リソースプールの割合での最大メモリ構成に関する情報を表示します。 SQL Server が既定値の `max server memory (MB)` で実行されている場合、OS メモリの 100% と見なされます。
 
 ![メモリ構成クエリからの出力](media/dmv-memory-configuration.png "メモリ構成クエリからの出力")
 

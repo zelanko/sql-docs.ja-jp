@@ -1,5 +1,5 @@
 ---
-title: bcp_gettypename による |Microsoft Docs
+title: bcp_gettypename |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -15,17 +15,17 @@ apitype: DLLExport
 helpviewer_keywords:
 - bcp_gettypename function
 ms.assetid: 65f036d1-f60e-4b8a-97b3-76fccf0dfed4
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 57d2a7562efce015f5fb693cbb9a2f6114826e6d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4e80c1703ece500e849a8c107d858222eea45f6f
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67895552"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707464"
 ---
-# <a name="bcpgettypename"></a>bcp_gettypename
+# <a name="bcp_gettypename"></a>bcp_gettypename
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 [!INCLUDE[SNAC_Deprecated](../../includes/snac-deprecated.md)]
 
@@ -74,8 +74,8 @@ RETCODE bcp_gettypename (
 |**SQLTEXT**|接続前/接続後|**text**|  
 |**SQLBIGBINARY**|いいえ|**[バイナリ]**|  
 |**SQLBINARY**|いいえ|**Binary**|  
-|**SQLBIGVARBINARY**|いいえ|**varbinary**|  
-|**SQLVARBINARY**|いいえ|**varbinary**|  
+|**SQLBIGVARBINARY**|いいえ|**可変長**|  
+|**SQLVARBINARY**|いいえ|**可変長**|  
 |**SQLIMAGE**|接続前/接続後|**[イメージ]**|  
 |**SQLINTN**|接続前/接続後|**int-null**|  
 |**SQLDATETIMN**|接続前/接続後|**datetime-null**|  
@@ -87,12 +87,12 @@ RETCODE bcp_gettypename (
 |**SQLAOPMIN**|接続前/接続後|**Min**|  
 |**SQLAOPMAX**|接続前/接続後|**Max**|  
 |**SQLDATETIM4**|接続前/接続後|**smalldatetime**|  
-|**SQLMONEY4**|接続前/接続後|**smallmoney**|  
+|**SQLMONEY4**|接続前/接続後|**Smallmoney**|  
 |**SQLFLT4**|接続前/接続後|**本当の**|  
 |**SQLUNIQUEID**|接続前/接続後|**uniqueidentifier**|  
-|**SQLNCHAR**|いいえ|**nchar**|  
+|**SQLNCHAR**|いいえ|**Nchar**|  
 |**SQLNVARCHAR**|いいえ|**Nvarchar**|  
-|**SQLNTEXT**|接続前/接続後|**ntext**|  
+|**SQLNTEXT**|接続前/接続後|**Ntext**|  
 |**SQLVARIANT**|接続前/接続後|**sql_variant**|  
 |**SQLINT8**|接続前/接続後|**Bigint**|  
 |**SQLCHARACTER**|はい|**varchar(max)**|  
@@ -108,10 +108,10 @@ RETCODE bcp_gettypename (
 |**SQLXML**|はい|**Xml**|  
 |**SQLUDT**|接続前/接続後|**Udt**|  
   
-## <a name="bcpgettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename による機能強化された日付と時刻のサポート  
- 内のテーブルの「sqlncli.h の型」列の日付/時刻型のトークンのパラメーターの値が説明されている[強化された日付と時刻型向けの一括コピーの変更&#40;OLE DB および ODBC&#41;](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)します。 返される値は、対応する行の "ファイル ストレージ型" 列に示されています。  
+## <a name="bcp_gettypename-support-for-enhanced-date-and-time-features"></a>bcp_gettypename による機能強化された日付と時刻のサポート  
+ 日付型または時刻型のトークンパラメーター値については、「 [OLE DB および&#40;ODBC&#41;の拡張された日付と時刻の型に対する一括コピーの変更](../../relational-databases/native-client-odbc-date-time/bulk-copy-changes-for-enhanced-date-and-time-types-ole-db-and-odbc.md)」を参照してください。 返される値は、対応する行の "ファイル ストレージ型" 列に示されています。  
   
- 詳細については、次を参照してください。[日付と時刻の強化&#40;ODBC&#41;](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)します。  
+ 詳細については、「[日付と&#40;時刻&#41;の機能強化 ODBC](../../relational-databases/native-client-odbc-date-time/date-and-time-improvements-odbc.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [一括コピー関数](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/sql-server-driver-extensions-bulk-copy-functions.md)  

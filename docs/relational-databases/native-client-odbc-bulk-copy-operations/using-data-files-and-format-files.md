@@ -1,5 +1,5 @@
 ---
-title: データ ファイルとフォーマット ファイルを使用して |マイクロソフトのドキュメント
+title: データファイルとフォーマットファイルの使用 |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -15,15 +15,15 @@ helpviewer_keywords:
 - ODBC, bulk copy operations
 - bulk copy [ODBC], data files
 ms.assetid: c01b7155-3f0a-473d-90b7-87a97bc56ca5
-author: MightyPen
-ms.author: genemi
+author: markingmyname
+ms.author: maghan
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2fae3c62d923d2e52fd454493b7d1218608b233e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5110057262eb09acc40f3c546184f7ee75b784a8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134253"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71707794"
 ---
 # <a name="using-data-files-and-format-files"></a>データ ファイルとフォーマット ファイルの使用
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -31,33 +31,33 @@ ms.locfileid: "68134253"
 
   最も単純な一括コピー プログラムでは次の操作を実行します。  
   
-1.  呼び出し[bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を指定するテーブルからの一括コピー出力 (BCP_OUT を設定する) またはデータ ファイルを表示します。  
+1.  [Bcp_init](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-init.md)を呼び出して、テーブルまたはビューからデータファイルへの一括コピー (set BCP_OUT) を指定します。  
   
-2.  呼び出し[bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)一括コピー操作を実行します。  
+2.  [Bcp_exec](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-exec.md)を呼び出して、一括コピー操作を実行します。  
   
- データ ファイルはネイティブ モードで作成されるので、テーブルやビューのすべての列から取得したデータは、データベースと同じ形式でデータ ファイルに格納されます。 その後、同様の手順を使用して、このデータ ファイルをサーバーに一括コピーできます。ただし、DB_OUT ではなく DB_IN を設定します。 この操作は、コピー元のテーブルとコピー先のテーブルの構造が厳密に同じ場合にのみ機能します。 結果として得られるデータ ファイルできますへの入力としても、 **bcp**ユーティリティを使用して、 **/n** (ネイティブ モード) スイッチ。  
+ データ ファイルはネイティブ モードで作成されるので、テーブルやビューのすべての列から取得したデータは、データベースと同じ形式でデータ ファイルに格納されます。 その後、同様の手順を使用して、このデータ ファイルをサーバーに一括コピーできます。ただし、DB_OUT ではなく DB_IN を設定します。 この操作は、コピー元のテーブルとコピー先のテーブルの構造が厳密に同じ場合にのみ機能します。 結果のデータファイルは、 **/n** (ネイティブモード) スイッチを使用して**bcp**ユーティリティに入力することもできます。  
   
  テーブルやビューから直接取得するのではなく、[!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの結果セットを一括コピー出力するには、次の操作を実行します。  
   
-1.  呼び出す**bcp_init**一括コピーを指定する、出力が、テーブル名に NULL を指定します。  
+1.  **Bcp_init**を呼び出して一括コピーを指定しますが、テーブル名には NULL を指定します。  
   
-2.  呼び出す[bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)で*eOption*に BCPHINTS を設定し、 *iValue* TRANSACT-SQL ステートメントを含む SQLTCHAR 文字列へのポインターに設定します。  
+2.  *EOption*を BCPHINTS に設定し、 *ivalue*に transact-sql ステートメントを含む sqltchar 文字列へのポインターを設定して、 [bcp_control](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-control.md)を呼び出します。  
   
-3.  呼び出す**bcp_exec**一括コピー操作を実行します。  
+3.  **Bcp_exec**を呼び出して、一括コピー操作を実行します。  
 
 [!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  結果セットを生成するステートメントであればどのような [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントも使用できます。 作成されるデータ ファイルには [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントの最初の結果セットが格納されます。 [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメントで複数の結果セットが生成される場合、一括コピーでは、最初の結果セットよりも後にある結果セットは無視されます。  
   
- も、テーブル内の別の形式でデータを格納する列のデータ ファイルを作成するには[bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)列数は変更を指定する、呼び出す[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)各列の形式変更するには。 これは、呼び出した後**bcp_init**呼び出す前に**bcp_exec**します。 **bcp_colfmt**列のデータがデータ ファイルに格納されている形式を指定します。 これは、一括コピー入力または出力するときに使用できます。使用することも**bcp_colfmt**行と列のターミネータを設定します。 たとえば、データにタブ文字が含まれていない場合を作成、タブ区切りファイルを使用して**bcp_colfmt**として各列のターミネータがタブ文字を設定します。  
+ 列のデータがテーブルとは異なる形式で格納されるデータファイルを作成するには、 [bcp_columns](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-columns.md)を呼び出して、変更する列の数を指定します。次に、形式を変更する列ごとに[bcp_colfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-colfmt.md)を呼び出します。 これは、 **bcp_init**を呼び出した後、 **bcp_exec**を呼び出す前に行います。 **bcp_colfmt**は、列のデータをデータファイルに格納する形式を指定します。 これは、一括コピー時に使用できます。**Bcp_colfmt**を使用して、行ターミネータと列ターミネータを設定することもできます。 たとえば、データにタブ文字が含まれていない場合は、 **bcp_colfmt**を使用してタブ区切りファイルを作成し、各列のターミネータとしてタブ文字を設定できます。  
   
- ときに一括コピー出力を使用して**bcp_colfmt**、簡単に呼び出すことで作成したデータ ファイルを記述したフォーマット ファイルを作成することができます[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)を最後に呼び出した後**bcp_colfmt**.  
+ **Bcp_colfmt**を一括コピーして使用する場合、 **bcp_colfmt**を最後に呼び出した後に[bcp_writefmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-writefmt.md)を呼び出すことによって作成したデータファイルを記述するフォーマットファイルを簡単に作成できます。  
   
- 一括コピー フォーマット ファイルで説明されているデータ ファイルから、呼び出すことによって、フォーマット ファイルを読み取る[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)後**bcp_init**する前に**bcp_exec**します。  
+ フォーマットファイルで記述されたデータファイルからを一括コピーする場合は、フォーマットファイルを読み取ります。その際には、 **bcp_init**の後で**bcp_exec**の前に[bcp_readfmt](../../relational-databases/native-client-odbc-extensions-bulk-copy-functions/bcp-readfmt.md)を呼び出します。  
   
- **Bcp_control**関数への一括コピー時にいくつかのオプションを制御する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データ ファイルから。 **bcp_control**エラーの終了前に、一括コピー、停止、行、およびバッチ サイズを開始するファイルの行の最大数などのオプションを設定します。  
+ **Bcp_control**関数は、データファイルから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] に一括コピーするときに、いくつかのオプションを制御します。 **bcp_control**は、終了前のエラーの最大数、一括コピーを開始するファイル内の行、停止する行、バッチサイズなどのオプションを設定します。  
   
 ## <a name="see-also"></a>関連項目  
- [一括コピー操作を実行する&#40;ODBC&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
+ [一括コピー操作&#40;の実行 (ODBC)&#41;](../../relational-databases/native-client-odbc-bulk-copy-operations/performing-bulk-copy-operations-odbc.md)  
   
   
