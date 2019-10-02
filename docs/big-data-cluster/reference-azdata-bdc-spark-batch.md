@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 4fecf9d6beca3f4a46e49451fee0f554027e2e19
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 7f37518ff2b53e80622c4a6faca477a08719c3dc
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70155207"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708634"
 ---
 # <a name="azdata-bdc-spark-batch"></a>azdata bdc spark batch
 
@@ -53,7 +53,7 @@ azdata bdc spark batch create --file -f
 ### <a name="examples"></a>使用例
 新しい Spark バッチを作成します。
 ```bash
-azdata spark batch create --code "2+2"
+azdata bdc spark batch create --code "2+2"
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--file -f`
@@ -106,7 +106,7 @@ azdata bdc spark batch list
 ### <a name="examples"></a>使用例
 すべてのアクティブなバッチを一覧表示します。
 ```bash
-azdata spark batch list
+azdata bdc spark batch list
 ```
 ### <a name="global-arguments"></a>グローバル引数
 #### `--debug`
@@ -128,7 +128,7 @@ azdata bdc spark batch info --batch-id -i
 ### <a name="examples"></a>使用例
 ID が 0 のバッチのバッチ情報を取得します。
 ```bash
-azdata spark batch info --batch-id 0
+azdata bdc spark batch info --batch-id 0
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--batch-id -i`
@@ -153,7 +153,7 @@ azdata bdc spark batch log --batch-id -i
 ### <a name="examples"></a>使用例
 ID が 0 のバッチのバッチ ログを取得します。
 ```bash
-azdata spark batch log --batch-id 0
+azdata bdc spark batch log --batch-id 0
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--batch-id -i`
@@ -178,7 +178,7 @@ azdata bdc spark batch state --batch-id -i
 ### <a name="examples"></a>使用例
 ID が 0 のバッチのバッチ状態を取得します。
 ```bash
-azdata spark batch state --batch-id 0
+azdata bdc spark batch state --batch-id 0
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--batch-id -i`
@@ -203,7 +203,7 @@ azdata bdc spark batch delete --batch-id -i
 ### <a name="examples"></a>使用例
 バッチを削除します。
 ```bash
-azdata spark batch delete --batch-id 0
+azdata bdc spark batch delete --batch-id 0
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--batch-id -i`
@@ -216,7 +216,7 @@ Spark バッチの ID 番号。
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 

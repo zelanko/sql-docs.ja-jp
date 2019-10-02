@@ -1,26 +1,28 @@
 ---
-title: R および Python スクリプトの実行のためのリソースガバナンス
-description: SQL Server データベースエンジンインスタンスで、R および Python ワークロードの RAM メモリ、CPU、IO を割り当てます。
+title: Resource Governor を使用した Python と R のワークロードの管理
+description: Resource Governor を使用して、SQL Server Machine Learning Services での Python および R のワークロードに対する CPU、物理 IO、およびメモリリソースの割り当てを管理する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/10/2018
+ms.date: 10/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55a83e7e63a4e43afe1168aab3307f2806a55fca
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
+ms.openlocfilehash: eec3d2762366252fbc170c2a6c4176fe0283edce
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715261"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71714316"
 ---
-# <a name="resource-governance-for-machine-learning-in-sql-server"></a>SQL Server での機械学習のためのリソースガバナンス
+# <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server で Resource Governor を使用した Python と R のワークロードの管理 Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-データサイエンスと機械学習のアルゴリズムは、計算を集中的に行います。 ワークロードの優先度によっては、データサイエンスに使用できるリソースを増やす必要がある場合や、R および Python スクリプトの実行によって同時に実行されている他のサービスのパフォーマンスが損なう場合にリソースを減らすことが必要になる場合があります。 
+[Resource Governor](../../relational-databases/resource-governor/resource-governor.md)を使用して、SQL Server Machine Learning Services での Python および R のワークロードに対する CPU、物理 IO、およびメモリリソースの割り当てを管理する方法について説明します。
 
-複数のワークロード間でのシステムリソースの分散を再調整する必要がある場合は、 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)を使用して、R および Python の外部ランタイムによって消費される CPU、物理 IO、およびメモリリソースを割り当てることができます。 リソース割り当てをシフトする場合は、他のワークロードやサービス用に予約されているメモリの量を減らすことが必要になる場合があることに注意してください。 
+Python および R の機械学習アルゴリズムは、通常、多くのコンピューティング処理を要するものです。 ワークロードの優先度によっては、Machine Learning Services に使用できるリソースを増減することが必要になる場合があります。
+
+一般的な情報については、「 [Resource Governor](../../relational-databases/resource-governor/resource-governor.md)」を参照してください。
 
 > [!NOTE] 
 > Resource Governor は Enterprise Edition の機能です。
@@ -61,8 +63,7 @@ ms.locfileid: "68715261"
 > [!NOTE]
 > Resource Governor を使用したスタートパッドサービスのダイレクト管理はサポートされていません。 スタートパッドは、Microsoft によって提供されるランチャーのみをホストできる信頼されたサービスです。 信頼できるランチャーは、リソースが過剰に消費されるのを防ぐために明示的に構成されます。
   
-## <a name="see-also"></a>関連項目
+## <a name="next-steps"></a>次の手順
 
-+ [Machine learning の統合の管理](../r/managing-and-monitoring-r-solutions.md)
-+ [Machine Learning 用のリソース プールの作成](../r/how-to-create-a-resource-pool-for-r.md)
++ [Machine Learning 用のリソース プールの作成](create-external-resource-pool.md)
 + [リソースプールの Resource Governor](../../relational-databases/resource-governor/resource-governor-resource-pool.md)

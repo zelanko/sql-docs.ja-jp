@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: reference
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 272a633a347f767145476e770e2d9b64b7470e49
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 31368eab4f3cdd10c6d54456823120bcd1637c5a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70153079"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708457"
 ---
 # <a name="azdata-bdc-spark-statement"></a>azdata bdc spark statement
 
@@ -38,7 +38,7 @@ azdata bdc spark statement list --session-id -i
 ### <a name="examples"></a>使用例
 セッションのすべてのステートメントを一覧表示します。
 ```bash
-azdata spark statement list --session-id 0
+azdata bdc spark statement list --session-id 0
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--session-id -i`
@@ -63,7 +63,7 @@ azdata bdc spark statement create --session-id -i
 ### <a name="examples"></a>使用例
 ステートメントを実行します。
 ```bash
-azdata spark statement create --session-id 0 --code "2+2"
+azdata bdc spark statement create --session-id 0 --code "2+2"
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--session-id -i`
@@ -90,7 +90,7 @@ azdata bdc spark statement info --session-id -i
 ### <a name="examples"></a>使用例
 セッション ID が 0、ステートメント ID が 0 のステートメント情報を取得します。
 ```bash
-azdata spark statement info --session-id 0 --statement-id 0
+azdata bdc spark statement info --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--session-id -i`
@@ -117,7 +117,7 @@ azdata bdc spark statement cancel --session-id -i
 ### <a name="examples"></a>使用例
 ステートメントをキャンセルします。
 ```bash
-azdata spark statement cancel --session-id 0 --statement-id 0
+azdata bdc spark statement cancel --session-id 0 --statement-id 0
 ```
 ### <a name="required-parameters"></a>必要なパラメーター
 #### `--session-id -i`
@@ -132,7 +132,7 @@ Spark セッションの ID 番号。
 #### `--output -o`
 出力形式。  使用できる値: json、jsonc、table、tsv。  既定値: json。
 #### `--query -q`
-JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/]) を参照してください。
+JMESPath クエリ文字列。 詳細と例については、[http://jmespath.org/](http://jmespath.org/) を参照してください。
 #### `--verbose`
 ログの詳細レベルを上げます。 詳細なデバッグ ログを表示するには --debug を使います。
 

@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 7036a88ddb2940a16593806cfe1ec679653e30d9
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 90c13c270b1e2fe64290603e256027e945d98b84
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294996"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71688301"
 ---
 # <a name="configure-kubernetes-on-multiple-machines-for-sql-server-big-data-cluster-deployments"></a>SQL Server ビッグ データ クラスターの展開のために複数のマシン上に Kubernetes を構成する
 
@@ -33,6 +33,9 @@ ms.locfileid: "71294996"
    - 8 個の CPU
    - 64 GB のメモリ
    - 100 GB のストレージ
+ 
+> [!Important] 
+> ビッグデータクラスターのデプロイを開始する前に、デプロイが対象としているすべての Kubernetes ノード間でクロックが同期されていることを確認します。 ビッグデータクラスターには、時間の影響を受けるさまざまなサービスの正常性プロパティが組み込まれており、時計の傾斜によって状態が正しくないことがあります。
 
 ## <a name="prepare-the-machines"></a>マシンを準備する
 

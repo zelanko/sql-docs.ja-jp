@@ -1,38 +1,27 @@
 ---
-title: PREDICT ステートメントを監視するための拡張イベント
+title: 拡張イベントを使用した T-sql の予測を監視する
+description: 拡張イベントを使用して、SQL Server Machine Learning Services で T-sql ステートメントを予測する方法を監視およびトラブルシューティングする方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 04/15/2018
+ms.date: 09/24/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
-monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 283e128285fc50b9109d7950b171e30224fb9692
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
+ms.openlocfilehash: 958ac3e24a9deec231e7fd4d5da14477d693f4de
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714641"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71714306"
 ---
-# <a name="extended-events-for-monitoring-predict-statements"></a>PREDICT ステートメントを監視するための拡張イベント
+# <a name="monitor-predict-t-sql-statements-with-extended-events-in-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services の拡張イベントを使用した T-sql ステートメントの予測を監視します
 
-この記事では、SQL Server で提供される拡張イベントについて説明します。このイベントを使用して、SQL Server でのリアルタイムのスコアリングを実行するために[PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)を使用するジョブを監視および分析できます。
-
-リアルタイムスコアリングは、SQL Server に格納されている機械学習モデルからスコアを生成します。 PREDICT 関数では、R や Python などの外部の実行時間は必要ありません。特定のバイナリ形式を使用して作成されたモデルのみです。 詳細については、「[リアルタイムスコアリング](https://docs.microsoft.com/sql/advanced-analytics/real-time-scoring)」を参照してください。
-
-## <a name="prerequisites"></a>前提条件
-
-拡張イベント (Xevent とも呼ばれます) に関する一般的な情報と、セッションのイベントを追跡する方法については、次の記事を参照してください。
-
-+ [拡張イベントの概念とアーキテクチャ](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
-+ [SSMS でのイベントキャプチャの設定](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
-+ [オブジェクトエクスプローラーでのイベントセッションの管理](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)
+拡張イベントを使用して、SQL Server Machine Learning Services で T-sql ステートメントを[予測](../../t-sql/queries/predict-transact-sql.md)する方法を監視およびトラブルシューティングする方法について説明します。
 
 ## <a name="table-of-extended-events"></a>拡張イベントの表
 
-次の拡張イベントは、SQL Server on Linux、Azure SQL Database など、 [T-SQL PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)ステートメントをサポートするすべてのバージョンの SQL Server で使用できます。 
-
-T-sql PREDICT ステートメントは SQL Server 2017 で導入されました。 
+次の拡張イベントは、 [PREDICT](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql) t-sql ステートメントをサポートするすべてのバージョンの SQL Server で使用できます。 
 
 |NAME |object_type|description| 
 |----|----|----|
@@ -47,7 +36,9 @@ T-sql PREDICT ステートメントは SQL Server 2017 で導入されました�
 これらのイベントに対して返されたすべての列の一覧を表示するには、SQL Server Management Studio で次のクエリを実行します。
 
 ```sql
-SELECT * FROM sys.dm_xe_object_columns WHERE object_name LIKE `predict%'
+SELECT * 
+FROM sys.dm_xe_object_columns 
+WHERE object_name LIKE `predict%'
 ```
 
 ## <a name="examples"></a>使用例
@@ -84,3 +75,11 @@ FROM sys.dm_os_memory_objects
 WHERE TYPE = 'MEMOBJ_NATIVESCORING';
 ```
 
+## <a name="next-steps"></a>次の手順
+
+拡張イベント (Xevent とも呼ばれます) の詳細と、セッションのイベントを追跡する方法の詳細については、次の記事を参照してください。
+
++ [SQL Server Machine Learning Services で拡張イベントを使用して Python および R スクリプトを監視する](extended-events.md)
++ [拡張イベントの概念とアーキテクチャ](https://docs.microsoft.com/sql/relational-databases/extended-events/extended-events)
++ [SSMS でのイベントキャプチャの設定](https://docs.microsoft.com/sql/relational-databases/extended-events/quick-start-extended-events-in-sql-server)
++ [オブジェクトエクスプローラーでのイベントセッションの管理](https://docs.microsoft.com/sql/relational-databases/extended-events/manage-event-sessions-in-the-object-explorer)

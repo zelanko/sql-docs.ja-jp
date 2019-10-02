@@ -2406,14 +2406,14 @@
           href: ../connect/jdbc/validating-user-input.md
         - name: アプリケーション セキュリティ
           href: ../connect/jdbc/application-security.md
-        - name: SSL 暗号化の使用
+        - name: 暗号化の使用
           href: ../connect/jdbc/using-ssl-encryption.md
           items:
-            - name: SSL のサポートについて
+            - name: 暗号化のサポートについて
               href: ../connect/jdbc/understanding-ssl-support.md
-            - name: SSL 暗号化を使用した接続
+            - name: 暗号化を使用した接続
               href: ../connect/jdbc/connecting-with-ssl-encryption.md
-            - name: SSL 暗号化のためのクライアントの構成
+            - name: 暗号化のためのクライアントの構成
               href: ../connect/jdbc/configuring-the-client-for-ssl-encryption.md
         - name: FIPS モード
           href: ../connect/jdbc/fips-mode.md

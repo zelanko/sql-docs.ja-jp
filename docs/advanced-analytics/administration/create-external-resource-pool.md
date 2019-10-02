@@ -1,34 +1,36 @@
 ---
-title: R および Python 用のリソースプールを作成する方法
-description: SQL Server データベースエンジンインスタンス上の R または Python プロセスの SQL Server リソースプールを定義します。
+title: Python および R 用のリソースプールを作成する
+description: SQL Server Machine Learning Services で、Python および R のワークロードを管理するためにリソースプールを作成して使用する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 07/30/2019
+ms.date: 10/01/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 882b9b15fbba567f30172d625af3867b27ae387e
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 8e8c48665c2928a0c8133892cc0029b4bd82c4cc
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715903"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71714326"
 ---
-# <a name="how-to-create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services のリソースプールを作成する方法
+# <a name="create-a-resource-pool-for-sql-server-machine-learning-services"></a>SQL Server Machine Learning Services のリソースプールを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
 
-この記事では、SQL Server で R および Python machine learning ワークロードの管理専用のリソースプールを作成して使用する方法について説明します。 Machine learning の機能が既にインストールされ、有効になっていることを前提としています。また、R や Python などの外部プロセスで使用されるリソースの詳細な管理をサポートするようにインスタンスを再構成する必要があります。
+SQL Server Machine Learning Services で、Python および R のワークロードを管理するためにリソースプールを作成して使用する方法について説明します。 
 
 このプロセスには、次の複数の手順が含まれます。
 
-1.  既存のリソースプールの状態を確認します。 既存のリソースを使用しているサービスを理解することが重要です。
-2.  サーバーリソースプールを変更します。
-3.  外部プロセス用の新しいリソースプールを作成します。
-4.  外部スクリプト要求を識別する分類関数を作成します。
-5.  新しい外部リソースプールが、指定されたクライアントまたはアカウントから R ジョブまたは Python ジョブをキャプチャしていることを確認します。
+1. 既存のリソースプールの状態を確認します。 既存のリソースを使用しているサービスを理解することが重要です。
+2. サーバーリソースプールを変更します。
+3. 外部プロセス用の新しいリソースプールを作成します。
+4. 外部スクリプト要求を識別する分類関数を作成します。
+5. 新しい外部リソースプールが、指定されたクライアントまたはアカウントから R ジョブまたは Python ジョブをキャプチャしていることを確認します。
 
-##  <a name="bkmk_ReviewStatus"></a>既存のリソース プールの状態を確認する
+<a name="bkmk_ReviewStatus"></a>
+
+##  <a name="review-the-status-of-existing-resource-pools"></a>既存のリソースプールの状態を確認する
   
 1.  次のようなステートメントを使用して、サーバーの既定のプールに割り当てられているリソースを確認します。
   
@@ -193,9 +195,9 @@ ms.locfileid: "68715903"
 
 サーバーリソースの管理の詳細については、以下を参照してください。
 
-+  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md) 
++ [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md) 
 + [関連する動的管理ビュー &#40;の Resource Governor transact-sql&#41;](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)
 
 Machine learning のリソースガバナンスの概要については、次を参照してください。
 
-+  [Machine Learning Services のリソースガバナンス](../../advanced-analytics/r/resource-governance-for-r-services.md)
++ [SQL Server で Resource Governor を使用した Python と R のワークロードの管理 Machine Learning Services](resource-governor.md)

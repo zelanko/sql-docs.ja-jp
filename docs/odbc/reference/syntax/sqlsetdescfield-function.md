@@ -477,13 +477,13 @@ SQLRETURN SQLSetDescField(
  **SQL_DESC_SEARCHABLE [IRDs]**  
  この読み取り専用 SQLSMALLINT のレコードのフィールドは、次の値のいずれかに設定されます。  
   
--   SQL_PRED_NONE で列を使用できない場合、**場所**句。 (これは、ODBC 2 で SQL_UNSEARCHABLE 値として同じ *.x*)。  
+-   SQL_PRED_NONE で列を使用できない場合、**WHERE**句。 (これは、ODBC 2 で SQL_UNSEARCHABLE 値として同じ *.x*)。  
   
--   SQL_PRED_CHAR 列で使用できる場合は、**場所**しかない句、**など**述語。 (これは、ODBC 2 で SQL_LIKE_ONLY 値として同じ *.x*)。  
+-   SQL_PRED_CHAR 列で使用できる場合は、**WHERE**しかない句、**LIKE**述語。 (これは、ODBC 2 で SQL_LIKE_ONLY 値として同じ *.x*)。  
   
--   SQL_PRED_BASIC 列で使用できる場合は、**場所**を除くすべての比較演算子を含む句**など**します。 (これは、ODBC 2 で SQL_EXCEPT_LIKE 値として同じ *.x*)。  
+-   SQL_PRED_BASIC 列で使用できる場合は、**WHERE**を除くすべての比較演算子を含む句**LIKE**します。 (これは、ODBC 2 で SQL_EXCEPT_LIKE 値として同じ *.x*)。  
   
--   SQL_PRED_SEARCHABLE 列で使用できる場合は、**場所**任意の比較演算子を含む句。  
+-   SQL_PRED_SEARCHABLE 列で使用できる場合は、**WHERE**任意の比較演算子を含む句。  
   
  **SQL_DESC_TABLE_NAME [IRDs]**  
  この読み取り専用の SQLCHAR * レコード フィールドには、この列を格納するベース テーブルの名前が含まれています。 戻り値にはドライバーによって異なりますが、列が式の場合、または列がビューの一部である場合です。  
