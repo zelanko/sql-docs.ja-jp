@@ -3,17 +3,17 @@ title: Resource Governor を使用した Python と R のワークロードの�
 description: Resource Governor を使用して、SQL Server Machine Learning Services での Python および R のワークロードに対する CPU、物理 IO、およびメモリリソースの割り当てを管理する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/01/2019
+ms.date: 10/02/2019
 ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: eec3d2762366252fbc170c2a6c4176fe0283edce
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 9000ab8bb15e8f9910b8b780aa38d134fa984032
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71714316"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823542"
 ---
 # <a name="manage-python-and-r-workloads-with-resource-governor-in-sql-server-machine-learning-services"></a>SQL Server で Resource Governor を使用した Python と R のワークロードの管理 Machine Learning Services
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-winonly](../../includes/appliesto-ss-xxxx-xxxx-xxx-md-winonly.md)]
@@ -31,11 +31,11 @@ Python および R の機械学習アルゴリズムは、通常、多くのコ�
 
 既定では、machine learning の外部スクリプトランタイムは、合計マシンメモリの 20% 以下に制限されています。 システムによって異なりますが、一般的に、モデルのトレーニングや多数のデータ行の予測などの本格的な機械学習タスクでは、この制限が不十分である可能性があります。 
 
-## <a name="use-resource-governor-to-control-resourcing"></a>Resource Governor を使用したリソースの制御
+## <a name="manage-resources-with-resource-governor"></a>Resource Governor を使用したリソースの管理
  
 既定では、外部プロセスでは、ローカルサーバー上の合計ホストメモリの 20% までが使用されます。 既定のリソースプールを変更して、サーバー全体の変更を加えることができます。 R と Python のプロセスでは、外部プロセスで使用できるようにする容量を利用できます。
 
-または、関連するワークロードグループと分類子を使用してカスタム*外部リソースプール*を作成し、特定のプログラム、ホスト、またはその他の条件によって送信された要求のリソース割り当てを決定することもできます。 外部リソースプールは、で導入されたリソースプール[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]の一種であり、データベースエンジンの外部の R および Python プロセスを管理するのに役立ちます。
+または、関連するワークロードグループと分類子を使用してカスタム**外部リソースプール**を作成し、特定のプログラム、ホスト、またはその他の条件によって送信された要求のリソース割り当てを決定することもできます。 外部リソースプールは、で導入されたリソースプール[!INCLUDE[sssql15-md](../../includes/sssql15-md.md)]の一種であり、データベースエンジンの外部の R および Python プロセスを管理するのに役立ちます。
 
 1. [リソースガバナンスを有効にする](https://docs.microsoft.com/sql/relational-databases/resource-governor/enable-resource-governor)(既定ではオフになっています)。
 
