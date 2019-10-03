@@ -53,7 +53,7 @@ sp_monitor
 |**アイドル状態します。**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がアイドル状態だった秒数|  
 |**packets_received**|入力パケットの数によって読み取られた[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**packets_sent**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が書き込んだ出力パケット数|  
-|**@packet_errors**|発生したエラーの数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パケットを読み書き中にします。|  
+|**\@packet_errors**|発生したエラーの数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パケットを読み書き中にします。|  
 |**total_read**|読み取り回数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**total_write**|書き込み回数[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**total_errors**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の読み書き中に発生したエラー数|  
@@ -89,7 +89,7 @@ EXEC sp_monitor
   
 ||||  
 |-|-|-|  
-|**packets_received**|**packets_sent**|**@packet_errors**|  
+|**packets_received**|**packets_sent**|**\@packet_errors**|  
 |16(1)|20(2)|0(0)|  
   
 |||||  

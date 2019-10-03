@@ -49,7 +49,7 @@ ms.locfileid: "68769405"
   
 3.  同期するサブスクリプションを右クリックし、 **[同期の状態の表示]** をクリックします。  
   
-4.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、 **[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
+4.  **[同期の状態の表示 - \<Subscriber>:\<SubscriptionDatabase>]** ダイアログ ボックスで、**[開始]** をクリックします。 同期が完了したら、" **同期処理が完了しました** " というメッセージが表示されます。  
   
 5.  **[閉じる]** をクリックします。  
   
@@ -85,7 +85,7 @@ ms.locfileid: "68769405"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **\@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   
@@ -129,7 +129,7 @@ ms.locfileid: "68769405"
   
     -   **-DistributorPassword**  
   
-    -   **-DistributorSecurityMode** =  **@publisher_security_mode**  
+    -   **-DistributorSecurityMode** = **\@publisher_security_mode**  
   
     -   **-PublisherLogin**  
   

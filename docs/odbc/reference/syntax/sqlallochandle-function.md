@@ -90,7 +90,7 @@ SQLRETURN SQLAllocHandle(
 |--------------|-----------|-----------------|  
 |01000|一般警告|ドライバー固有の情報メッセージ。 (関数は SQL_SUCCESS_WITH_INFO を返します)。|  
 |08003|接続が開かれていません|(DM) *Handletype*引数が SQL_HANDLE_STMT または SQL_HANDLE_DESC でしたが、 *InputHandle*引数で指定された接続が開いていませんでした。 ドライバーがステートメントまたは記述子ハンドルを割り当てるには、接続プロセスが正常に完了し (接続が開いている必要があります) 必要があります。|  
-|HY000|一般エラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 **Messagetext*バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
+|HY000|一般エラー|特定の SQLSTATE がなく、実装固有の SQLSTATE が定義されていないエラーが発生しました。 \* *Messagetext*バッファーの**SQLGetDiagRec**によって返されるエラーメッセージには、エラーとその原因が記述されています。|  
 |HY001|メモリ割り当てエラー|(DM) ドライバーマネージャーは、指定されたハンドルにメモリを割り当てられませんでした。<br /><br /> ドライバーは、指定されたハンドルにメモリを割り当てられませんでした。|  
 |HY009|Null ポインターの使い方が正しくありません|(DM) *OutputHandlePtr*引数が null ポインターでした。|  
 |HY010|関数のシーケンスエラー|(DM) *Handletype*引数が SQL_HANDLE_DBC で、 **SQLSetEnvAttr**が呼び出されていないため、SQL_ODBC_VERSION 環境属性が設定されていません。<br /><br /> (DM) 非同期的に実行する関数が**InputHandle**に対して呼び出されましたが、 **HANDLETYPE**を SQL_HANDLE_STMT または SQL_HANDLE_DESC に設定して**SQLAllocHandle**関数が呼び出されたときに実行中でした。|  

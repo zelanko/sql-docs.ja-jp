@@ -26,8 +26,8 @@ ms.locfileid: "70274827"
 
 ## <a name="add-azure-data-studio-extensions"></a>Azure Data Studio の拡張機能を追加する
 
-1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスするには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。
-    `Ctrl+Shift+X` (Windows/Linux) か `Command+Shift+X` (Mac) を押すことで拡張機能マネージャーに簡単アクセスすることもできます。
+1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスするには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。\
+    `Ctrl+Shift+X` (Windows/Linux) か `Command+Shift+X` (Mac) を押すことで拡張機能マネージャーに簡単アクセスすることもできます。\
     ![拡張機能マネージャーのアイコン](media/extensions/extension-manager-icon.png)
 
 2. 使用可能な拡張機能を選択すると、その詳細が表示されます。

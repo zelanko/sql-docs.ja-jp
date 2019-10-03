@@ -92,7 +92,7 @@ GO
 | @language | 呼び出す言語拡張機能 (この場合は R) を定義します。 |
 | @script | R ランタイムに渡されるコマンドを定義します。 Unicode テキストとして、この引数で R スクリプト全体を囲む必要があります。 また、 **nvarchar**型の変数にテキストを追加し、その変数を呼び出すこともできます。 |
 | @input_data_1 | データフレームとして SQL Server するデータを返す R ランタイムに渡される、クエリによって返されるデータ |
-| WITH RESULT SETS | 句では、SQL Server に対して返されるデータテーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します。 |
+|WITH RESULT SETS | 句では、SQL Server に対して返されるデータテーブルのスキーマを定義し、列名として "Hello World" を追加し、データ型に **int** を追加します。 |
 
 このコマンドは、次のテキストを出力します。
 
@@ -102,9 +102,9 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>入力と出力を使用する
 
-既定では、`sp_execute_external_script` は 1 つのデータセットを入力として受け取ります。通常は、有効な SQL クエリの形式で指定します。 次に、1 つの R データフレームを出力として返します。
+既定では`sp_execute_external_script` 、は1つのデータセットを入力として受け取ります。通常は、有効な SQL クエリの形式で指定します。 次に、1つの R データフレームを出力として返します。
 
-ここでは、`sp_execute_external_script` の既定の入力変数と出力変数 **Inputdataset** と **outputdataset** を使用します。
+ここでは、`sp_execute_external_script` の既定の入力変数と出力変数**Inputdataset**と**outputdataset** を使用します。
 
 1. テストデータの小さなテーブルを作成します。
 

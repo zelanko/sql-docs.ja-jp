@@ -135,7 +135,7 @@ For information about configuring Windows Authentication, see [Security - Config
 **-f** *parameter_file_name*  
 コマンドラインパラメーターの代わりに、パラメーターファイル*parameter_file_name*を使用します。 *parameter_file_name*には、 *user_name*と*password*を除き、任意のコマンドラインパラメーターを含めることができます。 パラメーターがコマンドラインとパラメーターファイルに指定されている場合、コマンドラインはファイルパラメーターをオーバーライドします。  
   
-パラメーターファイルには、プレフィックスの **-** ない1つのパラメーターが行ごとに含まれています。  
+パラメーターファイルには、プレフィックスの**-** ない1つのパラメーターが行ごとに含まれています。  
   
 例 :  
   
@@ -143,7 +143,7 @@ For information about configuring Windows Authentication, see [Security - Config
   
 `rv=25`  
   
-**-S***target_appliance*  
+**-S** *target_appliance*  
 読み込まれたデータを受信する SQL Server PDW アプライアンスを指定します。  
   
 *Infiniband 接続の*場合、 *target_appliance*は < アプライアンス名 >-SQLCTL01 として指定されます。 この名前付き接続を構成するには、「 [Configure InfiniBand Network Adapters](configure-infiniband-network-adapters.md)」を参照してください。  
@@ -156,10 +156,10 @@ For information about configuring Windows Authentication, see [Security - Config
 For more information about this install option, see [Install dwloader Command-Line Loader](install-dwloader.md).  
 -->
   
-**-T** *target_database_name.* [*schema*].*table_name*  
+**-T** *target_database_name.*[*schema*].*table_name*  
 コピー先テーブルの3部構成の名前。  
   
-**-I***source_data_location*  
+**-I** *source_data_location*  
 読み込む1つ以上のソースファイルの場所。 各ソースファイルは、テキストファイルであるか、gzip で圧縮されたテキストファイルである必要があります。 各 gzip ファイルに圧縮できるソースファイルは1つだけです。  
   
 ソースファイルをフォーマットするには:  
@@ -603,7 +603,7 @@ dwloader.exe -U mylogin -P 123jkl -S 10.192.63.148  -i C:\SQLData\AWDimEmployees
 For more information, see [Install AdventureWorksPDW2012](install-adventureworkspdw2012.md).  
 -->
 
-次のスクリプトスニペットでは、dwloader を使用して、Dbo.dimaccount テーブルと DimCurrency テーブルにデータを読み込みます。 このスクリプトは、イーサネットアドレスを使用しています。 InfiniBand を使用していた場合、サーバーは*appliance_name >* `-SQLCTL01`< ます。  
+次のスクリプトスニペットでは、dwloader を使用して、Dbo.dimaccount テーブルと DimCurrency テーブルにデータを読み込みます。 このスクリプトは、イーサネットアドレスを使用しています。 InfiniBand を使用していた場合、サーバーは*appliance_name >*`-SQLCTL01`< ます。  
   
 ```  
 set server=10.193.63.134  
@@ -694,7 +694,7 @@ C:\Program Files\Microsoft SQL Server Parallel Data Warehouse\100\dwloader.exe -
   
 -   *-r \R\n* dbo.dimaccount の各行は、キャリッジリターンと改行文字で終了します。  
   
--   *-U < login_name >-P <password>* は、読み込みを実行する権限を持つログインのログインとパスワードを指定します。  
+-   *-U < login_name >-P <password> *は、読み込みを実行する権限を持つログインのログインとパスワードを指定します。  
   
 
 <!-- MISSING LINK

@@ -87,7 +87,7 @@ Azure Migrate のプロジェクトは、評価または移行しようとして
 
 ## <a name="assess-and-upload-assessment-results"></a>評価結果の評価とアップロード
 
-移行プロジェクトが正常に作成され**たら、**評価ツール** の Azure Migrate:データベース**評価 ボックス。 Data Migration Assistant ツールの表示をダウンロードして使用するための手順です。
+移行プロジェクトが正常に作成され **たら、**評価ツール** の Azure Migrate:データベース** 評価 ボックス。 Data Migration Assistant ツールの表示をダウンロードして使用するための手順です。
 
    ![Azure Migrate 評価ツールが追加されました](../dma/media//dma-assess-sql-data-estate-to-sqldb/dms-azure-migrate-assessment-tool-added.png)
 

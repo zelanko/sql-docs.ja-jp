@@ -65,7 +65,7 @@ EXEC managed_backup.sp_backup_config_advanced
  暗号化アルゴリズムの詳細については、「 [Choose an Encryption Algorithm](../../relational-databases/security/encryption/choose-an-encryption-algorithm.md)」をご覧ください。  
   
  @encryptor_type  
- '証明書' を指定できますが、暗号化機能の型または ' ASYMMETRIC_KEY"です。 @encryptor_typeは**nvarchar (32)** します。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
+ '証明書' を指定できますが、暗号化機能の型または ' ASYMMETRIC_KEY"です。 @encryptor_typeは **nvarchar (32)** します。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
   
  @encryptor_name  
  既存の証明書またはバックアップの暗号化に使用する非対称キーの名前。 @encryptor_nameは **SYSNAME** します。 非対称キーを使用して場合拡張キー管理 (EKM) が構成する必要があります。 このパラメーターは省略可能の NO_ENCRYPTION を指定する場合、@encryption_algorithmパラメーター。  
