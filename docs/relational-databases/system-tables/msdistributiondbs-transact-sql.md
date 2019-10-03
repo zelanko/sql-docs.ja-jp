@@ -1,5 +1,5 @@
 ---
-title: MSdistributiondbs (TRANSACT-SQL) |Microsoft Docs
+title: MSdistributiondbs (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67907342"
 ---
-# <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (TRANSACT-SQL)
+# <a name="msdistributiondbs-transact-sql"></a>MSdistributiondbs (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSdistributiondbs**テーブルには、ローカル ディストリビューターで定義されている各ディストリビューション データベースの 1 つの行が含まれています。 このテーブルに格納されます、 **msdb**データベース。  
@@ -37,7 +37,7 @@ ms.locfileid: "67907342"
 |**history_retention**|**int**|履歴を保持する期間 (時間単位)。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
