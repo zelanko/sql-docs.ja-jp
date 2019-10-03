@@ -1,5 +1,5 @@
 ---
-title: systranschemas (TRANSACT-SQL) |Microsoft Docs
+title: systranschemas (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -32,8 +32,8 @@ ms.locfileid: "68094755"
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**tabid**|**int**|スキーマの変更が発生したテーブル アーティクルを識別します。|  
-|**startlsn**|**[バイナリ]**|スキーマ変更開始時の LSN 値です。|  
-|**endlsn**|**[バイナリ]**|スキーマ変更の最後の LSN 値です。|  
+|**startlsn**|**binary**|スキーマ変更開始時の LSN 値です。|  
+|**endlsn**|**binary**|スキーマ変更の最後の LSN 値です。|  
 |**typeid**|**int**|スキーマ変更のタイプです。|  
   
 ## <a name="see-also"></a>関連項目  
