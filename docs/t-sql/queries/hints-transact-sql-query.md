@@ -55,12 +55,12 @@ helpviewer_keywords:
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 15135461eaad00ad38238b450c045dd8d4903535
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
+ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228406"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71207740"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -107,7 +107,8 @@ ms.locfileid: "70228406"
   | RECOMPILE  
   | ROBUST PLAN   
   | USE HINT ( '<hint_name>' [ , ...n ] )
-  | USE PLAN N'xml_plan'  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
+  | USE PLAN N'xml_plan'  
+  | TABLE HINT ( exposed_object_name [ , <table_hint> [ [, ]...n ] ] )  
 }  
   
 <table_hint> ::=  
@@ -264,7 +265,7 @@ ROBUST PLAN
 次のヒント名がサポートされています。    
  
 *  'ASSUME_JOIN_PREDICATE_DEPENDS_ON_FILTERS' <a name="use_hint_join_containment"></a>       
-   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のクエリ オプティマイザーの[基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルで、結合に対して、既定の基本含有の推定の代わりに、単純な含有の推定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にクエリ プランを生成させます。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 を指定した場合と同じです。 
+   [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のクエリ オプティマイザーの[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルで、結合に対して、既定の基本含有の推定の代わりに、単純な含有の推定を使用して、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にクエリ プランを生成させます。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9476 を指定した場合と同じです。 
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    相関関係を考慮するフィルターの AND 述語を見積もるときに、最低限の選択度を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にプランを生成させます。 このヒント名は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンのカーディナリティ推定モデルで[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 を使用した場合と同じで、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンのカーディナリティ推定モデルで使用した場合と同じ効果があります。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
@@ -301,7 +302,7 @@ ROBUST PLAN
 *  'FORCE_DEFAULT_CARDINALITY_ESTIMATION'      
    現在のデータベース互換性レベルに対応する[カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒントを使用して、[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)の `LEGACY_CARDINALITY_ESTIMATION = ON` 設定または[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 をオーバーライドします。
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
-   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンの [基数推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を `LEGACY_CARDINALITY_ESTIMATION = ON` に設定した場合と同じです。
+   [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンの [カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を `LEGACY_CARDINALITY_ESTIMATION = ON` に設定した場合と同じです。
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
  クエリ レベルでクエリ オプティマイザーの動作を強制します。 この動作は、クエリがデータベース互換レベル _n_ でコンパイルされている場合と同様に実行されます (_n_ はサポートされているデータベース互換レベルです)。 現在サポートされている _n_ の値の一覧については、「[sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)」をご覧ください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 以降)。    
 
@@ -327,7 +328,7 @@ ROBUST PLAN
 > [!IMPORTANT] 
 > 一部の USE HINT ヒントは、グローバルまたはセッション レベルで有効になっているトレース フラグや、データベース スコープ構成設定と競合する場合があります。 この場合、クエリ レベル ヒント (USE HINT) が常に優先されます。 USE HINT が別のクエリ ヒントまたはクエリ レベルで (QUERYTRACEON などによって) 有効になっているトレース フラグと競合する場合、クエリを実行しようとすると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] によってエラーが生成されます。 
 
-USE PLAN N'_xml\_plan_'  
+<a name="use-plan"></a> USE PLAN N'_xml\_plan_'  
  **'** _xml\_plan_ **'** で指定されているクエリの既存のクエリ プランを使用するように、クエリ オプティマイザーを設定します。 USE PLAN は、INSERT、UPDATE、MERGE、または DELETE の各ステートメントに指定することはできません。  
   
 TABLE HINT **(** _exposed\_object\_name_ [ **,** \<table_hint> [ **[,]** ..._n_ ] ] **)** では、_exposed\_object\_name_ に対応するテーブルまたはビューに、指定したテーブル ヒントを適用します。 [プラン ガイド](../../relational-databases/performance/plan-guides.md)のコンテキスト内でのみ、テーブル ヒントをクエリ ヒントとして使用することをお勧めします。  

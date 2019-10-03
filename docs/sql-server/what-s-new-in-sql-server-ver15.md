@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d65ca67e43c35f0997b3d0784c97e501606bd05b
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096890"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326186"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -77,11 +77,12 @@ ms.locfileid: "71096890"
 |再開可能なオンライン行ストア インデックスのビルド | [オンラインでのインデックス操作の実行](../relational-databases/indexes/perform-index-operations-online.md)に関するページを参照してください。 |
 | &nbsp; | &nbsp; |
 
-### <a name="in-memory-databases"></a>メモリ内のデータベース
+### <a name="in-memory-database"></a>メモリ内データベース
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|ハイブリッド バッファー プールの DDL コントロール |[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md)を使用すると、永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされます。|
+|ハイブリッド バッファー プール| 永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされる [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の新機能。 「[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md)」を参照してください。|
+|メモリ最適化 `tempdb` メタデータ| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[メモリ内データベース](../relational-databases/in-memory-database.md)機能ファミリの一部として、メモリ最適化 `tempdb` メタデータという新機能が導入されています。この機能により、効果的にこのボトルネックが除去され、`tempdb` が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。 「[メモリ最適化 `tempdb` メタデータ](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」を参照してください。|
 | &nbsp; | &nbsp; |
 
 ### <a name="unicode-support"></a>Unicode のサポート
@@ -99,13 +100,6 @@ ms.locfileid: "71096890"
 |UTF-8 文字エンコードのサポート|外部テーブルでの UTF-8 文字がサポートされます。 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)に関するページを参照してください。|
 | &nbsp; | &nbsp; |
 
-### <a name="server-settings"></a>サーバーの設定
-
-|新機能または更新 | 詳細 |
-|:---|:---|
-|ハイブリッド バッファー プール| 永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされる [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の新機能。 「[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md)」を参照してください。|
-| &nbsp; | &nbsp; |
-
 ### <a name="performance-monitoring"></a>パフォーマンスの監視
 
 |新機能または更新 | 詳細 |
@@ -117,6 +111,7 @@ ms.locfileid: "71096890"
 |`sys.dm_exec_query_plan_stats` |新しい DMF では、ほとんどのクエリについて最後の既知の実際の実行プランと同等のものが返されます。 [sys.dm_exec_query_plan_stats](../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) に関するページを参照してください。|
 |`LAST_QUERY_PLAN_STATS` | `sys.dm_exec_query_plan_stats` を有効にする新しいデータベース スコープの構成。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。|
 |`query_post_execution_plan_profile` | 拡張イベントでは、標準プロファイリングを使用する `query_post_execution_showplan` とは異なり、軽量プロファイリングに基づいて、実際の実行プランと同等のものを収集します。 [クエリ プロファイリング インフラストラクチャ](../relational-databases/performance/query-profiling-infrastructure.md)に関するページを参照してください。|
+|`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | 新しい DMF では、データベースのページに関する情報が返されます。 「[sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)」を参照してください。|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>言語拡張機能
@@ -147,7 +142,6 @@ ms.locfileid: "71096890"
 |リソース管理| `CREATE WORKLOAD GROUP` と `ALTER WORKLOAD GROUP` の `REQUEST_MAX_MEMORY_GRANT_PERCENT` オプションの構成可能値が整数から float データ型に変更されており、メモリ上限をさらに細かく制御できます。 「[ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md)」と「[CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。|
 |ワークロードの再コンパイルの削減| 複数のスコープを超えて一時テーブルを使用して改善します。 [ワークロードの再コンパイルの削減](../relational-databases/tables/tables.md#ctp23)に関するページを参照してください。 |
 |間接チェックポイントのスケーラビリティ |[間接チェックポイントのスケーラビリティの向上](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)に関するページを参照してください。|
-|メモリ最適化 `tempdb` メタデータ| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[メモリ内データベース](../relational-databases/in-memory-database.md)機能ファミリの一部として、メモリ最適化 `tempdb` メタデータという新機能が導入されています。この機能により、効果的にこのボトルネックが除去され、`tempdb` が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。 「[メモリ最適化 `tempdb` メタデータ](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」を参照してください。|
 |PFS の同時更新|[PFS ページ](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)はデータベース ファイル内の特別なページであり、オブジェクト用の領域を割り当てるときに空き領域を探すために SQL Server によって使用されます。 PFS ページでのページ ラッチの競合は、一般に [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) に関連付けられますが、多数の同時オブジェクト割り当てスレッドがあるときは、ユーザー データベースでも発生する可能性があります。 この機能強化により、PFS の更新でのコンカレンシー管理方法が変更され、排他的ラッチではなく共有ラッチで更新できるようになります。 この動作は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降のすべてのデータベース (`tempdb` を含む) で、既定でオンになります。|
 |行モード メモリ許可フィードバック |バッチ モードと行モード両方の演算子のメモリ許可サイズを調整することで、バッチ モード メモリ許可フィードバックの機能が拡張されます。 これにより、メモリが無駄になってコンカレンシーが低下する過度の許可を自動的に修正し、負荷の高いディスクへの書き込みが発生する原因になる不十分なメモリ許可を修正できます。 「[行モード メモリ許可フィードバック](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。 |
 |テーブル変数の遅延コンパイル|テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報によって、ダウンストリーム プラン操作が最適化されます。 「[テーブル変数の遅延コンパイル](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)」を参照してください。 |

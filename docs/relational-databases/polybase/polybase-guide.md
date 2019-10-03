@@ -18,12 +18,12 @@ author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: aboke
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions||>=aps-pdw-2016||=azure-sqldw-latest'
-ms.openlocfilehash: b414cf8eb783a64deb65010ab549c9791e82580c
-ms.sourcegitcommit: 63c6f3758aaacb8b72462c2002282d3582460e0b
+ms.openlocfilehash: c33e212ea513cbb5271c1271f938b1009855559c
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68495379"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326159"
 ---
 # <a name="what-is-polybase"></a>PolyBase とは
 
@@ -39,13 +39,13 @@ PolyBase を使用すると、SQL Server 2016 インスタンスで Hadoop か�
 PolyBase では、クエリ全体を最適化するために計算の一部が Hadoop ノードにプッシュされます。 しかし、PolyBase の外部アクセスは Hadoop だけではありません。 その他の構造化されていない非リレーショナル テーブルもサポートしています (区切られたテキスト ファイルなど)。
 
 > [!TIP]
-> SQL Server 2019 CTP 2.0 では、SQL Server、Oracle、Teradata、および MongoDB を含む新しい PolyBase 用のコネクタが導入されています。 詳細については、[ SQL Server 2019 CTP 2.0 用の PolyBase のドキュメント](polybase-guide.md?view=sql-server-ver15)を参照してください。
+> SQL Server 2019 では、SQL Server、Oracle、Teradata、および MongoDB を含む新しい PolyBase 用のコネクタが導入されています。 詳細については、[ SQL Server 2019 用の PolyBase のドキュメント](polybase-guide.md?view=sql-server-ver15)に関するページを参照してください。
 
 ::: moniker-end
 <!--SQL Server 2019-->
 ::: moniker range=">= sql-server-linux-ver15 || >= sql-server-ver15 || =sqlallproducts-allversions"
 
-PolyBase を使用すると、外部データ ソースからデータを読み取る Transact-SQL クエリを SQL Server インスタンスで処理できるようになります。 SQL Server 2016 以降は、Hadoop と Azure Blob Storage 内の外部データにアクセスできます。 SQL Server 2019 CTP 2.0 以降、PolyBase を使用して、[SQL Server](polybase-configure-sql-server.md)[Oracle](polybase-configure-oracle.md)[Teradata](polybase-configure-teradata.md)および [MongoDB](polybase-configure-mongodb.md)内の外部データにアクセスできるようになります。
+PolyBase を使用すると、外部データ ソースからデータを読み取る Transact-SQL クエリを SQL Server インスタンスで処理できるようになります。 SQL Server 2016 以降は、Hadoop と Azure Blob Storage 内の外部データにアクセスできます。 SQL Server 2019 以降、PolyBase を使用して、[SQL Server](polybase-configure-sql-server.md)、[Oracle](polybase-configure-oracle.md)、[Teradata](polybase-configure-teradata.md)、および [MongoDB](polybase-configure-mongodb.md) 内の外部データにアクセスできるようになりました。
 
 外部データにアクセスするのと同じクエリでは、SQL Server インスタンス内のリレーショナル テーブルを対象にすることもできます。 これにより、外部ソースのデータとデータベース内の高価値のリレーショナル データを組み合わせることができます。 SQL Server では、[外部テーブル](../../t-sql/statements/create-external-table-transact-sql.md)または[外部データ ソース](../../t-sql/statements/create-external-data-source-transact-sql.md)によって Hadoop と接続します。
 

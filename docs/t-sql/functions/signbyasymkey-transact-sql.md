@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: b1c46159-cc76-4205-a841-8f4a71742f80
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 0462829430f75f51764ffd318953f175ef857ab0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 804f8c1f2f7c59edec2c4e40c7d47f99ac71b5e7
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68139156"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314553"
 ---
 # <a name="signbyasymkey-transact-sql"></a>SIGNBYASYMKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ SignByAsymKey( Asym_Key_ID , @plaintext [ , 'password' ] )
  *Asym_Key_ID*  
  現在のデータベース内の非対称キーの ID を指定します。 *Asym_Key_ID* は**int**です。  
   
- **@plaintext**  
+ **\@plaintext**  
  非対称キーを使って署名するデータを格納する **nvarchar**、**char**、**varchar**、または **nchar** 型の変数を指定します。  
   
  *password*  

@@ -10,16 +10,16 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: 3d47ea0bc1c905516504c25e3a1f05ca5b74c28d
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 9ee5564479e1c4334466db7f5b1ce45a6913d68f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878614"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326029"
 ---
-# <a name="sql-server-2019-extension-preview"></a>SQL Server 2019 の拡張機能 (プレビュー)
+# <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Azure Data Studio 用の SQL Server 2019 の拡張機能 (プレビュー)
 
-SQL Server 2019 の拡張機能 (プレビュー) では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のサポートで提供される新しい機能とツールに対してプレビュー サポートを提供します。 これには、[SQL Server 2019 ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)、統合された[ノートブック エクスペリエンス](../big-data-cluster/notebooks-guidance.md)、および PolyBase の [[Create External Table]\(外部テーブルの作成\) ウィザード](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)のプレビュー サポートが含まれます。
+Azure Data Studio 用の SQL Server 2019 の拡張機能 (プレビュー) では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] のサポートで提供される新しい機能とツールに対してプレビュー サポートを提供します。 これには、[SQL Server 2019 ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)、統合された[ノートブック エクスペリエンス](../big-data-cluster/notebooks-guidance.md)、および PolyBase の [[Create External Table]\(外部テーブルの作成\) ウィザード](../relational-databases/polybase/data-virtualization.md?toc=/sql/toc/toc.json)のプレビュー サポートが含まれます。
 
 ## <a name="install-the-sql-server-2019-extension-preview"></a>SQL Server 2019 の拡張機能 (プレビュー) をインストールする
 
@@ -143,58 +143,3 @@ SQL Server 2019 のサポートが更新されました。 SQL Server ビッグ 
 * PolyBase が有効にされていない場合、またはターゲット サーバーで実行されていない場合は、[Create External Data]\(外部データの作成\) ウィザードの使用をブロックします。
 * SQL Server 2019 と [Create External Data]\(外部データの作成\) に関連するスペルおよび名前付けの修正プログラム。
 * Azure Data Studio デバッグ コンソールからエラーの多くが削除されました。
-
-##  <a name="sql-server-2019-big-data-cluster-support"></a>SQL Server 2019 ビッグ データ クラスターのサポート
-
-* **オブジェクト エクスプローラー**で *[接続の追加]* をクリックし、接続の種類として **[SQL Server ビッグ データ クラスター]** を選択します。
-
-   > [!TIP]
-   > **SQL Server ビッグ データ クラスター**の接続の種類が表示されない場合は、Azure Data Studio を再起動します。
-
-* クラスター エンドポイントのホスト名または IP アドレスと、接続に使用するユーザー名とパスワードを入力します。
-* 必要に応じて、 **[名前]** フィールドにわかりやすい表示名を含めます。
-* **[接続]** をクリックすると、ダッシュボードから一般的なタスクを起動し、オブジェクト エクスプローラー内で **HDFS** を参照し、そこからコンテキスト内のタスクを実行することができます。
-* クラスターに対して Spark ジョブを送信するには、*オブジェクト エクスプローラー*でサーバー ノードを右クリックし、 **[Submit Spark Job]\(Spark ジョブの送信\)** を選択して送信ダイアログを開きます。
-* Notebook を開くには、次のセクションを参照してください。
-
-詳細については、[ビッグ データ クラスター](../big-data-cluster/big-data-cluster-overview.md)に関するページを参照してください。
-
-
-## <a name="azure-data-studio-notebooks"></a>Azure Data Studio Notebooks
-
-* 次のいずれかの方法でノートブックを開きます。
-  * *コマンド パレット*から新しいノートブックを開きます。
-  * SQL Server 2019 ビッグ データ クラスターの HDFS オブジェクト エクスプローラー ツリーを開き、次のいずれかを行います。
-    * サーバー ノードを右クリックし、 **[New Jupyter Notebook]\(新しい Jupyter Notebook\)** を選択します。
-    * CSV ファイルを右クリックし、 **[Analyze in Notebook]\(Notebook で分析\)** を選択します。
-  * **[ファイル]** メニューまたはエクスプローラーから、既存の .ipynb ファイルを開きます *(正しく読み込むには、.ipynb ファイルをバージョン 4 以上にアップグレードする必要があります)*
-* カーネルを選択します。 ローカル ノートブックを実行する場合は、Python 3 を選択します。 リモート実行の場合は、PySpark または Spark | Scala を選択します。
-* リモートで実行する場合は、接続する SQL Server ビッグ データ クラスター エンドポイントを選択します (これは Python 3 を使用したローカル開発には必要ありません)。
-* ノートブック ヘッダーにあるボタンを使用して、コード セルまたは Markdown セルを追加します。 各セルの左側にあるごみ箱アイコンを使用してセルを削除します。
-* コード セルの [再生] ボタンを使用してセルを実行し、目のアイコンを使用して Markdown の編集とプレビューを切り替えます
-
-## <a name="polybase-create-external-table-wizard"></a>PolyBase の [Create External Table]\(外部テーブルの作成\) ウィザード
-
-* SQL Server 2019 インスタンスから、 *[Create External Table]\(外部テーブルの作成\)* ウィザードを開くには、次の 3 つの方法があります。
-  * サーバーを右クリックし、 **[管理]** を選択して、SQL Server 2019 (プレビュー) 用のタブをクリックし、 **[Create External Table]\(外部テーブルの作成\)** を選択します。
-  * *オブジェクト エクスプローラー*で SQL Server 2019 インスタンスを選択した状態で、*コマンド パレット*を使用して *[Create External Table]\(外部テーブルの作成\)* ウィザードを起動します。
-  * *オブジェクト エクスプローラー*で SQL Server 2019 データベースを右クリックし、 **[Create External Table]\(外部テーブルの作成\)** を選択します。
-* このバージョンの拡張機能では、外部テーブルを作成すれば、リモートの SQL Server および Oracle テーブルにアクセスすることができます。
-
-  > [!NOTE]
-  > 外部テーブル機能は SQL 2019 の機能ですが、リモート SQL Server では以前のバージョンの SQL Server が実行される場合があります。
-
-* ウィザードの最初のページで SQL Server または Oracle のどちらにアクセスするかを選択し、操作を続行します。
-* データベース マスター キーがまだ作成されていない場合は、それを作成するように求められます (複雑さが不十分なパスワードはブロックされます)。
-* リモート サーバー用にデータ ソース接続と名前付き資格情報を作成します。
-* ご自分の新しい外部テーブルにマップするオブジェクトを選択します。
-* **[スクリプトの生成]** または **[作成]** を選択してウィザードを終了します。
-* 外部テーブルを作成すると、その外部テーブルは、それが作成されたデータベースのオブジェクト ツリーにすぐに表示されます。
-
-
-## <a name="known-issues"></a>既知の問題
-
-* 接続の作成時にパスワードを保存しない場合、Spark ジョブの送信などの一部のアクションは成功しないことがあります。
-* ビューアーにコンテンツを読み込むには、既存の .ipynb ノートブックをバージョン 4 以上にアップグレードする必要があります。
-* **[Reinstall Notebook Dependencies]\(Notebook の依存関係の再インストール\)** コマンドを実行すると、[タスク] ビューに 2 つのタスクが表示されることがあります。そのうちの 1 つは失敗します。 これによってインストールが失敗することはありません
-* Notebook で **[新しい接続の追加]** を選択し、[キャンセル] をクリックすると、既に接続されている場合でも、 **[接続の選択]** が表示されます。

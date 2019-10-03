@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: b1289cc3-f5be-40bb-8801-0e3eed40336e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a1006e7cb677ec6d06af633191b10ab1f341ef1a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8608d91495ca255a0205247a557687ad32ac46df
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68020787"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227140"
 ---
 # <a name="upgrading-log-shipping-to-sql-server-2016-transact-sql"></a>SQL Server 2016 へのログ配布のアップグレード (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]

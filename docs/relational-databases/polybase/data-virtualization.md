@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2019 CTP 2.0 で外部データを仮想化する | Microsoft Docs
+title: SQL Server 2019 で外部データを仮想化する | Microsoft Docs
 description: このページでは、リレーショナル データ ソースに対して外部テーブルの作成ウィザードを使用する詳細な手順を説明します
 author: Abiola
 ms.author: aboke
@@ -9,16 +9,16 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: e58b90073baed1698ad6a047a025c327ee91bdb1
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 7d2abf18c7442a8f57448532e5211fc5c60e1ea7
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68418764"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341831"
 ---
 # <a name="use-the-external-table-wizard-with-relational-data-sources"></a>リレーショナル データ ソースで外部テーブル ウィザードを使用する
 
-SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想化する機能です。 このプロセスにより、データを元の場所に置いたままにすることができます。 SQL Server インスタンスでデータを*仮想化*して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 このプロセスにより、ETL プロセスの必要性が最小になります。 このプロセスは、PolyBase コネクタを使用することによって可能です。 データ仮想化の詳細については、「[PolyBase 入門](polybase-guide.md)」を参照してください。
+SQL Server 2019 の主なシナリオの 1 つは、データを仮想化する機能です。 このプロセスにより、データを元の場所に置いたままにすることができます。 SQL Server インスタンスでデータを*仮想化*して、SQL Server 内の他のテーブルと同じようにクエリを行うことができます。 このプロセスにより、ETL プロセスの必要性が最小になります。 このプロセスは、PolyBase コネクタを使用することによって可能です。 データ仮想化の詳細については、「[PolyBase 入門](polybase-guide.md)」を参照してください。
 
 ## <a name="start-the-external-table-wizard"></a>外部テーブル ウィザードを起動する
 
@@ -44,10 +44,7 @@ SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想�
 ![データベースのマスター キーを作成する](media/data-virtualization/virtualize-data-master-key.png)
 
 > [!IMPORTANT]
-> データベースのマスター キーを既にお持ちの場合は、入力フィールドは制限され、この手順をスキップすることができます。 **[次へ]** をクリックして続行します。
-
-> [!NOTE]
-> 強力なパスワードを選択しない場合、ウィザードの最後のステップで行われます。 これは既知の問題です。
+> データベースのマスター キーを既にお持ちの場合は、この手順は自動的に省略されます。
 
 ## <a name="enter-external-data-source-credentials"></a>外部データ ソースの資格情報を入力する
 
@@ -69,7 +66,7 @@ SQL Server 2019 CTP 2.0 の主なシナリオの 1 つは、データを仮想�
 > [!IMPORTANT]
 >外部テーブル ツールでは、写真型はサポートされていません。 写真型を持つ外部ビューを作成すると、テーブルの作成後にエラーが表示されます。 ただし、テーブルは作成されます。
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>概要
 
 このステップでは、選択内容の概要が表示されます。 データベース スコープの資格情報の名前と、出力先データベースに作成される外部データ ソース オブジェクトが提供されます。 **[スクリプトの生成]** を選択して、外部データ ソースを作成するために使用される構文を T-SQL でスクリプト化します。 **[作成]** を選択して、外部データ ソース オブジェクトを作成します。
 

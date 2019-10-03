@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5a2e4fd4583b7e43c04e03e6450c1fb958cf064b
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874318"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314498"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -124,7 +124,10 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
   
 2. **証明書のエクスポート ウィザード**を実行して、証明書ファイルを使いやすい場所に格納します。  
   
-## <a name="to-configure-the-server-to-force-encrypted-connections"></a>暗号化された接続を強制するサーバーを構成するには  
+## <a name="to-configure-the-server-to-force-encrypted-connections"></a>暗号化された接続を強制するサーバーを構成するには
+
+> [!IMPORTANT]
+> SQL Server サービス アカウントは、SQL Server で暗号化を強制するために使用される証明書の読み取りアクセス許可を持っている必要があります。 特権のないサービス アカウントの場合、読み取りアクセス許可を証明書に追加する必要があります。 この操作に失敗すると、SQL Server サービスを再起動できなくなる可能性があります。
   
 1. **SQL Server 構成マネージャー**で、 **[SQL Server ネットワークの構成]** を展開し、 **[** _\<server instance> のプロトコル]_ を右クリックします。次に **[プロパティ]** を選びます。  
   
@@ -143,7 +146,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
   
 2. クライアント コンピューターで、 **証明書** スナップインを使用して、ルート証明書またはエクスポートした証明書ファイルをインストールします。  
   
-3. SQL Server 構成マネージャーで <bpt id="p1">**</bpt>[SQL Server Native Client Configuration<ept id="p1">**</ept>]\(SQL Server Native Client の構成\) を右クリックし、次いで <bpt id="p2">**</bpt>[プロパティ]<ept id="p2">**</ept> をクリックします。  
+3. SQL Server 構成マネージャーを使用する場合、 **[SQL Server Native Client の構成]** を右クリックして、 **[プロパティ]** をクリックします。  
   
 4. **[フラグ]** ページの **[プロトコルの暗号化を設定する]** ボックスで、 **[はい]** をクリックします。  
   

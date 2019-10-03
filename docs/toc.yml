@@ -207,8 +207,6 @@
               items:
                 - name: azdata
                   href: big-data-cluster/reference-azdata.md
-                - name: control
-                  href: big-data-cluster/reference-azdata-control.md
                 - name: ノートブック
                   href: big-data-cluster/reference-azdata-notebook.md
                 - name: sql
@@ -4160,8 +4158,8 @@
           href: database-engine/deprecated-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016 の非推奨の機能
           href: database-engine/deprecated-database-engine-features-in-sql-server-2016.md
-        - name: SQL Server 2016 で廃止された機能
-          href: database-engine/discontinued-database-engine-functionality-in-sql-server-2016.md
+        - name: SQL Server で廃止された機能
+          href: database-engine/discontinued-database-engine-functionality-in-sql-server.md
         - name: SQL Server 2017 における重大な変更
           href: database-engine/breaking-changes-to-database-engine-features-in-sql-server-2017.md
         - name: SQL Server 2016 における重大な変更

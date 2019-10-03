@@ -1,6 +1,6 @@
 ---
 title: 分散型可用性グループの構成
-description: '分散型 Always On 可用性グループを作成および構成する方法について説明します。 '
+description: 'Always On 分散型可用性グループを作成および構成する方法について説明します。 '
 ms.custom: seodec18
 ms.date: 08/17/2017
 ms.prod: sql
@@ -10,14 +10,14 @@ ms.topic: conceptual
 ms.assetid: f7c7acc5-a350-4a17-95e1-e689c78a0900
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a90f9b303fa285c5fc826aab232abe3e07166992
-ms.sourcegitcommit: 67261229b93f54f9b3096890b200d1aa0cc884ac
+ms.openlocfilehash: 8b9e1151d5a757f42420c90519c79c3793cfef16
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/19/2019
-ms.locfileid: "68354605"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250960"
 ---
-# <a name="configure-a-distributed-always-on-availability-group"></a>分散型 Always On 可用性グループの構成  
+# <a name="configure-an-always-on-distributed-availability-group"></a>Always On 分散型可用性グループの構成  
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 分散型可用性グループを作成するには、それぞれに独自のリスナーがある可用性グループをそれぞれ 2 つ作成する必要があります。 次に、これらの可用性グループを分散型可用性グループに結合します。 次の手順は、Transact-SQL の基本的な例です。 この例では、可用性グループとリスナーを作成するすべての手順を取り上げていません。主な要件を強調することに重点を置いています。
@@ -178,6 +178,19 @@ GO
   
 > [!NOTE]  
 >  **LISTENER_URL** で、各可用性グループのリスナーと、可用性グループのデータベース ミラーリング エンドポイントを指定します。 この例では、ポート `5022` です (リスナーの作成に使用したポート `60173` ではありません)。 Azure でインスタンスにロード バランサーを使用している場合、[分散型可用性グループのポートの負荷分散の規則を追加します](https://docs.microsoft.com/azure/virtual-machines/windows/sql/virtual-machines-windows-portal-sql-alwayson-int-listener#add-load-balancing-rule-for-distributed-availability-group)。 SQL Server インスタンスのポートだけでなく、リスナー ポートの規則を追加します。 
+
+### <a name="cancel-automatic-seeding-to-forwarder"></a>フォワーダーへの自動シード処理を取り消す
+2 つの可用性グループを同期する前にフォワーダーの初期化を取り消す必要がある場合、フォワーダーの SEEDING_MODE パラメーターを MANUAL に設定することで分散型可用性グループを変更し、すぐにシード処理を取り消します。 グローバル プライマリでコマンドを実行します。 
+
+```sql
+-- Cancel automatic seeding.  Connect to global primary but specify DAG AG2
+ALTER AVAILABILITY GROUP [distributedag]   
+   MODIFY  
+   AVAILABILITY GROUP ON  
+   'ag2' WITH  
+   (  SEEDING_MODE = MANUAL  );   
+```
+
   
 ## <a name="join-distributed-availability-group-on-second-cluster"></a>2 つ目のクラスターの分散型可用性グループに参加する  
  次に、2 つ目の WSFC の分散型可用性グループに参加します。  
@@ -218,7 +231,7 @@ ALTER DATABASE [db1] SET HADR AVAILABILITY GROUP = [ag2];
 1. 分散型可用性グループが同期されるまで待ちます。
 1. グローバル プライマリ レプリカで、分散型可用性グループのロールを `SECONDARY` に設定します。
 1. フェールオーバーの準備ができたかテストします。
-1. プライマリ可用性グループをフェールオーバーします。
+1. プライマリ可用性グループにフェールオーバーします。
 
 次の Transact-SQL の例では、`distributedag` という名前の分散可用性グループをフェールオーバーする詳細な手順を示しています。
 

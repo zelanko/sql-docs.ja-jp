@@ -24,12 +24,12 @@ ms.assetid: abb0afa9-44f6-42a2-a871-5f471dfb222b
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 564edb184c5b9d56159c6b931557daf85beeb295
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0bb5b030b138fa49f90c77c13e12bf2f64968da3
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117715"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71342002"
 ---
 # <a name="stuff-transact-sql"></a>STUFF (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -52,7 +52,7 @@ STUFF ( character_expression , start , length , replaceWith_expression )
  削除と挿入を開始する位置を指定する整数値です。 *start* が負の値またはゼロの場合は、null 文字列が返されます。 *start* が最初の *character_expression* よりも長い場合は、null 文字列が返されます。 *start* には **bigint** 型を使用できます。  
   
  *length*  
- 削除する文字数を指定する整数です。 *length* が負の値の場合は、null 文字列が返されます。 *length* が最初の *character_expression* よりも長い場合、最後の *character_expression* の末尾の文字まで削除が実行されます。  *length* がゼロの場合、文字列の先頭の文字の前に挿入が実行されます。 *length* には **bigint** 型を使用できます。
+ 削除する文字数を指定する整数です。 *length* が負の値の場合は、null 文字列が返されます。 *length* が最初の *character_expression* よりも長い場合、最後の *character_expression* の末尾の文字まで削除が実行されます。  *length* がゼロの場合、挿入は *start* の場所で行われ、文字は一切削除されません。 *length* には **bigint** 型を使用できます。
 
  *replaceWith_expression*  
  文字データの[式](../../t-sql/language-elements/expressions-transact-sql.md)です。 *character_expression* には、文字データまたはバイナリ データの定数、変数、または列を使用できます。 この式は、*character_expression* の *start* から始まる *length* 文字を置き換えます。 `NULL` に *replaceWith_expression* を指定すると、何も挿入されず、文字が削除されます。   

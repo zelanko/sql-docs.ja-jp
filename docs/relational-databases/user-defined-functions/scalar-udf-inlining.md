@@ -2,7 +2,7 @@
 title: Microsoft SQL データベースでのスカラー UDF のインライン化 | Microsoft Docs
 description: SQL Server (2018 以降) および Azure SQL Database 内でスカラー UDF を呼び出すスカラー UDF インライン化機能を使用すると、クエリのパフォーマンスが向上します。
 ms.custom: ''
-ms.date: 02/28/2019
+ms.date: 09/13/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: e73a03eae61601f28578b23ac2f2afc1a80f5f76
-ms.sourcegitcommit: 823d7bdfa01beee3cf984749a8c17888d4c04964
+ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70030335"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299139"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
@@ -154,7 +154,8 @@ UDF 内のロジックの複雑さによっては、結果として得られる�
 - UDF で、`EXECUTE AS CALLER` 句が使用されている (`EXECUTE AS` 句が指定されていない場合の既定の動作)。
 - UDF で、テーブル変数またはテーブル値パラメーターが参照されていない。
 - スカラー UDF を呼び出すクエリの `GROUP BY` 句で、スカラー UDF 呼び出しが参照されていない。
-- `DISTINCT` 句でその選択リストのスカラー UDF を呼び出すクエリにより、その `ORDER BY` 句のスカラー UDF 呼び出しが参照されていない。
+- `DISTINCT` 句でその選択リストのスカラー UDF を呼び出すクエリには、`ORDER BY` 句は含まれません。
+- UDF は `ORDER BY` 句では使用されません。
 - UDF がネイティブでコンパイルされていない (相互運用機能はサポートされます)。
 - UDF が、計算列または CHECK 制約定義で使用されていない。
 - UDF で、ユーザー定義型が参照されていない。

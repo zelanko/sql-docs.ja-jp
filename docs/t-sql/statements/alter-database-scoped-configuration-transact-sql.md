@@ -1,7 +1,7 @@
 ---
 title: ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/22/2019
+ms.date: 09/23/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: cdd652c18af72c73566afac978c4dc00e2867a8a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68065850"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227187"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -44,8 +44,9 @@ ms.locfileid: "68065850"
 - ネイティブ コンパイル T-SQL モジュールの実行統計コレクションを有効または無効にします。
 - `ONLINE =` 構文に対応している DDL ステートメントの既定のオプションでオンラインの有効/無効を変更します。
 - `RESUMABLE =` 構文に対応している DDL ステートメントの既定のオプションで再開可能の有効/無効を変更します。
-- グローバル一時テーブルの自動削除機能を有効または無効にします。
 - [インテリジェントなクエリ処理](../../relational-databases/performance/intelligent-query-processing.md)の機能を有効または無効にします。
+- 高速プラン強制を有効または無効にします。
+- グローバル一時テーブルの自動削除機能を有効または無効にします。
 - [軽量クエリ プロファイリング インフラストラクチャ](../../relational-databases/performance/query-profiling-infrastructure.md)を有効または無効にします。
 - 新しい `String or binary data would be truncated` のエラー メッセージを有効または無効にします。
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) の最後の実際の実行プランのコレクションを有効または無効にします。
@@ -82,6 +83,7 @@ ALTER DATABASE SCOPED CONFIGURATION
     | ROW_MODE_MEMORY_GRANT_FEEDBACK = { ON | OFF }
     | BATCH_MODE_ON_ROWSTORE = { ON | OFF }
     | DEFERRED_COMPILATION_TV = { ON | OFF }
+    | ACCELERATED_PLAN_FORCING = { ON | OFF }
     | GLOBAL_TEMPORARY_TABLE_AUTODROP = { ON | OFF }
     | LIGHTWEIGHT_QUERY_PROFILING = { ON | OFF }
     | VERBOSE_TRUNCATION_WARNINGS = { ON | OFF }
@@ -287,11 +289,20 @@ DEFERRED_COMPILATION_TV **=** { **ON** | OFF}
 > [!NOTE]
 > データベース互換性レベルが 140 以下である場合は、このデータベース スコープの構成に影響がありません。
 
+ACCELERATED_PLAN_FORCING **=** { **ON** | OFF }
+
+**適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+
+[クエリ ストアのプラン強制](../../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#Regressed)、[自動チューニング](../../relational-databases/automatic-tuning/automatic-tuning.md#automatic-plan-correction)、[USE PLAN](../../t-sql/queries/hints-transact-sql-query.md#use-plan) クエリ ヒントなど、あらゆる形式のプラン強制に適用される、クエリ プラン強制のために最適化されたメカニズムを有効にします。 既定値は ON です。
+
+> [!NOTE]
+> 高速プラン強制を無効にしないことをお勧めします。
+
 GLOBAL_TEMPORARY_TABLE_AUTODROP **=** { **ON** | OFF }
 
 **適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
-[グローバル一時テーブル](create-table-transact-sql.md)の自動削除機能を設定できます。 既定値は ON で、グローバル一時テーブルはどのセッションでも使用中でないときに自動的に削除されることを意味します。 OFF に設定すると、グローバル一時テーブルは、DROP TABLE ステートメントを使用して明示的に削除する必要があります。または、サーバーの再起動時に自動的に削除されます。
+[グローバル一時テーブル](../../t-sql/statements/create-table-transact-sql.md#temporary-tables)の自動削除機能を設定できます。 既定値は ON で、グローバル一時テーブルはどのセッションでも使用中でないときに自動的に削除されることを意味します。 OFF に設定すると、グローバル一時テーブルは、DROP TABLE ステートメントを使用して明示的に削除する必要があります。または、サーバーの再起動時に自動的に削除されます。
 
 - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 単一データベースおよびエラスティック プールでは、このオプションを SQL Database サーバーの個々のユーザー データベース内で設定できます。
 - [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] マネージド インスタンス上では、このオプションは `TempDB` 内で設定され、個々のユーザー データベースの設定に影響を与えません。
@@ -356,7 +367,7 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 - `sp_configure` 設定は、Resource Governor 設定でオーバーライドされます。
 
-### <a name="queryoptimizerhotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
+### <a name="query_optimizer_hotfixes"></a>QUERY_OPTIMIZER_HOTFIXES
 
 `QUERYTRACEON` ヒントを使用して SQL Server 7.0 から [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] バージョンの既定のクエリ オプティマイザーまたはクエリ オプティマイザー修正プログラムを有効にするとき、クエリ ヒントとデータベース スコープ構成設定の OR 条件になります。つまり、いずれかが有効になっている場合、データベース スコープ構成が適用されます。
 
@@ -368,11 +379,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 
 `ALTER DATABASE SCOPED CONFIGURATION` は [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) の新しい機能であり、データベース スキーマに影響を与えます。スキーマのエクスポートは (データがあってもなくても)、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] や [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] など、以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にはインポートできません。 たとえば、[!INCLUDE[ssSDS](../../includes/sssds-md.md)] または [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] データベースから [DACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_3) または [BACPAC](https://msdn.microsoft.com/library/ee210546.aspx#Anchor_4) にエクスポートしたものは、下位レベルのサーバーにインポートできません。
 
-### <a name="elevateonline"></a>ELEVATE_ONLINE
+### <a name="elevate_online"></a>ELEVATE_ONLINE
 
 このオプションは、`WITH (ONLINE = <syntax>)` 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。
 
-### <a name="elevateresumable"></a>ELEVATE_RESUMABLE
+### <a name="elevate_resumable"></a>ELEVATE_RESUMABLE
 
 このオプションは、`WITH (RESUMABLE = <syntax>)` 対応の DDL ステートメントにのみ適用されます。 XML インデックスは影響を受けません。
 
@@ -404,7 +415,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = 4 ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET MAXDOP = PRIMARY ;
 ```
 
-### <a name="c-set-legacycardinalityestimation"></a>C. LEGACY_CARDINALITY_ESTIMATION の設定
+### <a name="c-set-legacy_cardinality_estimation"></a>C. LEGACY_CARDINALITY_ESTIMATION の設定
 この例では、geo レプリケーション シナリオで、セカンダリ データベースの LEGACY_CARDINALITY_ESTIMATION を ON に設定します。
 
 ```sql
@@ -417,7 +428,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMAT
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET LEGACY_CARDINALITY_ESTIMATION = PRIMARY ;
 ```
 
-### <a name="d-set-parametersniffing"></a>D. PARAMETER_SNIFFING の設定
+### <a name="d-set-parameter_sniffing"></a>D. PARAMETER_SNIFFING の設定
 この例では、geo レプリケーション シナリオで、プライマリ データベースの PARAMETER_SNIFFING を OFF に設定します。
 
 ```sql
@@ -436,7 +447,7 @@ ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION FOR SECONDARY SET PARAMETER_SNIFFING = PRIMARY ;
 ```
 
-### <a name="e-set-queryoptimizerhotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES の設定
+### <a name="e-set-query_optimizer_hotfixes"></a>E. QUERY_OPTIMIZER_HOTFIXES の設定
 geo レプリケーション シナリオで、プライマリ データベースの QUERY_OPTIMIZER_HOTFIXES を ON に設定します。
 
 ```sql
@@ -450,7 +461,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET QUERY_OPTIMIZER_HOTFIXES = ON ;
 ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ```
 
-### <a name="g-set-identitycache"></a>G. IDENTITY_CACHE の設定
+### <a name="g-set-identity_cache"></a>G. IDENTITY_CACHE の設定
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 この例では、ID キャッシュを無効にします。
@@ -459,7 +470,7 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE;
 ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ```
 
-### <a name="h-set-optimizeforadhocworkloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS の設定
+### <a name="h-set-optimize_for_ad_hoc_workloads"></a>H. OPTIMIZE_FOR_AD_HOC_WORKLOADS の設定
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] 
 
 この例では、バッチが初めてコンパイルされるとき、コンパイルしたプラン スタブのキャッシュ保存を有効にします。
@@ -468,7 +479,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET IDENTITY_CACHE = OFF ;
 ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ```
 
-### <a name="i-set-elevateonline"></a>I. ELEVATE_ONLINE を設定する
+### <a name="i-set-elevate_online"></a>I. ELEVATE_ONLINE を設定する
 **適用対象**: [!INCLUDE[ssSDSFull](../../includes/sssdsfull-md.md)] (機能はパブリック プレビュー段階)
 
 この例では、ELEVATE_ONLINE が FAIL_UNSUPPORTED に設定されます。
@@ -477,7 +488,7 @@ ALTER DATABASE SCOPED CONFIGURATION SET OPTIMIZE_FOR_AD_HOC_WORKLOADS = ON;
 ALTER DATABASE SCOPED CONFIGURATION SET ELEVATE_ONLINE = FAIL_UNSUPPORTED ;
 ```
 
-### <a name="j-set-elevateresumable"></a>J. ELEVATE_RESUMABLE を設定する
+### <a name="j-set-elevate_resumable"></a>J. ELEVATE_RESUMABLE を設定する
 **適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] と [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] (機能はパブリック プレビュー段階)
 
 この例では、ELEVATE_RESUMABLE が WHEN_SUPPORTED に設定されます。
@@ -502,26 +513,26 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 - [並列処理の次数](../../relational-databases/query-processing-architecture-guide.md#DOP)
 - [SQL Server の "max degree of parallelism" 構成オプションの推奨事項とガイドライン](https://support.microsoft.com/kb/2806535)
 
-### <a name="legacycardinalityestimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION リソース
+### <a name="legacy_cardinality_estimation-resources"></a>LEGACY_CARDINALITY_ESTIMATION リソース
 
 - [カーディナリティ推定 (SQL Server)](../../relational-databases/performance/cardinality-estimation-sql-server.md)
 - [SQL Server 2014 のカーディナリティ推定機能によるクエリプランの最適化](https://msdn.microsoft.com/library/dn673537.aspx)
 
-### <a name="parametersniffing-resources"></a>PARAMETER_SNIFFING リソース
+### <a name="parameter_sniffing-resources"></a>PARAMETER_SNIFFING リソース
 
 - [パラメーター スニッフィング](../../relational-databases/query-processing-architecture-guide.md#ParamSniffing)
 - ["I smell a parameter!"](https://blogs.msdn.microsoft.com/queryoptteam/2006/03/31/i-smell-a-parameter/) (パラメーターのにおいがする!)
 
-### <a name="queryoptimizerhotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES リソース
+### <a name="query_optimizer_hotfixes-resources"></a>QUERY_OPTIMIZER_HOTFIXES リソース
 
 - [トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md)
 - [SQL Server クエリ オプティマイザー修正プログラム トレース フラグ 4199 サービス モデル](https://support.microsoft.com/kb/974006)
 
-### <a name="elevateonline-resources"></a>ELEVATE_ONLINE リソース
+### <a name="elevate_online-resources"></a>ELEVATE_ONLINE リソース
 
 [オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-### <a name="elevateresumable-resources"></a>ELEVATE_RESUMABLE リソース
+### <a name="elevate_resumable-resources"></a>ELEVATE_RESUMABLE リソース
 
 [オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 

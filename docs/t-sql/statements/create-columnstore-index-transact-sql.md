@@ -1,7 +1,7 @@
 ---
 title: CREATE COLUMNSTORE INDEX (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 11/13/2018
+ms.date: 09/25/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -29,12 +29,12 @@ ms.assetid: 7e1793b3-5383-4e3d-8cef-027c0c8cb5b1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 3c3a4b8956be43328bba679eef2d1fb4304cc4b4
-ms.sourcegitcommit: 77293fb1f303ccfd236db9c9041d2fb2f64bce42
+ms.openlocfilehash: b17fe334b1261d463e8389564912e48b7553dc7f
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/12/2019
-ms.locfileid: "70929688"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326101"
 ---
 # <a name="create-columnstore-index-transact-sql"></a>CREATE COLUMNSTORE INDEX (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-all-md](../../includes/tsql-appliesto-ss2012-all-md.md)]
@@ -396,7 +396,7 @@ CREATE COLUMNSTORE INDEX ncci ON Sales.OrderLines (StockItemID, Quantity, UnitPr
 **[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] に固有の制限事項**  
 これらの制限は [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] にのみ適用されます。 このリリースでは、更新可能なクラスター化列ストア インデックスを導入しました。 非クラスター化列ストア インデックスは引き続き読み取り専用でした。  
 
--   変更の追跡。 読み取り専用のため、非クラスター化列ストア インデックス (NCCI) で変更履歴を使用することはできません。 クラスター化列ストア インデックス (CCI) では機能します。  
+-   変更の追跡。 列ストア インデックスで変更履歴を使用することはできません。  
 -   変更データ キャプチャ。 読み取り専用のため、非クラスター化列ストア インデックス (NCCI) に変更データ キャプチャを使用することはできません。 クラスター化列ストア インデックス (CCI) では機能します。  
 -   読み取り可能セカンダリ。 AlwaysOn 可用性グループの読み取り可能セカンダリからクラスター化列ストア インデックス (CCI) にアクセスすることはできません。  読み取り可能セカンダリから非クラスター化列ストア インデックス (NCCI) にアクセスできます。  
 -   複数のアクティブな結果セット (MARS)。 [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスを含むテーブルに読み取り専用で接続するために、MARS が使用されます。 ただし、[!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] では、列ストア インデックスを含むテーブルで DML (データ操作言語) を同時操作する場合、MARS を利用できません。 この場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は接続を強制終了し、トランザクションを中止します。  

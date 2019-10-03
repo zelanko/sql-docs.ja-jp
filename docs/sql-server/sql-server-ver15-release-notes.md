@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 65438f911246038cee272763e19be12b5860b463
-ms.sourcegitcommit: 75fe364317a518fcf31381ce6b7bb72ff6b2b93f
+ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70911195"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326127"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 プレビュー リリース ノート
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -60,17 +60,6 @@ Windows、Linux、およびコンテナーでの SQL Server 2019 RC のビルド
     - Microsoft .NET Framework 4.6.2。 [ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53344)から入手できます。
     - Linux については、[サポートされている Linux プラットフォーム](../linux/sql-server-linux-setup.md#supportedplatforms)に関する記事をご覧ください
 
-## <a name = "release-notes"></a>サポートから除外された機能
-
-- **問題とお客様への影響**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] では、次のコンポーネント、機能、シナリオのサポートが除外されています。
-  - SQL Server Analysis Services (SQL Server Analysis Services)
-  - SQL Server Reporting Services (SQL Server Reporting Services)
-  - Kubernetes での Always On 可用性グループ
-
-- **回避策**:[なし] : 除外は、SQL 早期導入者プログラムの参加者を含む、すべてのお客様に適用されます。
-
-- **適用対象**:リリース候補
-
 ## <a name="updated-compiler"></a>更新されたコンパイラ
 
 - **問題およびユーザーへの影響**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] は更新されたコンパイラで構築されています。 コンパイラの更新の結果、CTP 2.1 には浮動小数点数の結果と他の変換シナリオで、前のバージョンとは異なる値が返される場合があるという既知の問題がありました。 CTP 2.2 には、影響のあるシナリオで [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] の前のバージョンと同じ結果が返されるようにする作業が含まれています。 リリース候補リリースでは、もう問題は解決されたと考えています。 [!INCLUDE[ss2017](../includes/sssqlv14-md.md)] と比較した結果に異常がある場合、[[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] チーム](https://aka.ms/sqlfeedback)にすぐに報告してください。
@@ -114,7 +103,7 @@ Windows、Linux、およびコンテナーでの SQL Server 2019 RC のビルド
 
 ## <a name="sql-server-configuration-manager-may-not-start"></a>SQL Server 構成マネージャーが起動しない場合がある
 
-- **問題およびユーザーへの影響**:SQL Server 構成マネージャー (SSCM) は、VCRuntime 140 がないマシンでは起動しません。 SSCM を開始するときに、次のダイアログ ボックスが表示される場合があります。 
+- **問題およびユーザーへの影響**:SQL Server 構成マネージャー (SSCM) は、VCRuntime 140 (VCRUNTIME140.dll) ファイルのないマシンでは起動しません。 SSCM を開始するときに、次のダイアログ ボックスが表示される場合があります。 
 
 
   `MMC could not create the snap-in. The snap-in might not have been installed correctly.`

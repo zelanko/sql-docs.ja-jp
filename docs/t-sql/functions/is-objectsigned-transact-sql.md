@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: afbc4f7f-8266-4ee6-9802-14a2dbe69ef6
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 1891180d7fa3b1a064cf0cdebc5295303ecf7b5d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 274e6128ba57a92f6f2e1e84e160424571742787
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086700"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314611"
 ---
-# <a name="isobjectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
+# <a name="is_objectsigned-transact-sql"></a>IS_OBJECTSIGNED (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   オブジェクトが、指定した証明書または非対称キーで署名されているかどうかを示します。  
@@ -44,20 +44,20 @@ IS_OBJECTSIGNED (
  **'OBJECT'**  
  セキュリティ保護可能なクラスの型。  
   
- *@object_id*  
- テストされるオブジェクトの object_id。 *@object_id* のデータ型は **int** 型です。  
+ *\@object_id*  
+ テストされるオブジェクトの object_id。 *\@object_id* は **int** 型です。  
   
- *@class*  
+ *\@class*  
  オブジェクトのクラス :  
   
 -   'certificate'  
   
 -   'asymmetric key'  
   
- *@class* のデータ型は **sysname** です。  
+ *\@class* は **sysname** です。  
   
- *@thumbprint*  
- オブジェクトの SHA 拇印。 *@thumbprint* は **varbinary(32)** 型です。  
+ *\@thumbprint*  
+ オブジェクトの SHA 拇印。 *\@thumbprint* は **varbinary(32)** 型です。  
   
 ## <a name="returned-types"></a>返される型  
  **int**  

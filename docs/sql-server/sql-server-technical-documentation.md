@@ -1,6 +1,6 @@
 ---
 title: SQL Server のドキュメント | Microsoft Docs
-ms.date: 08/08/2019
+ms.date: 09/24/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -19,17 +19,17 @@ helpviewer_keywords:
 ms.assetid: 674933a8-e423-4d44-a39b-2a997e2c2333
 author: craigg-msft
 ms.author: jroth
-monikerRange: '>=sql-server-linux-2017||>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 580b54e761e3d728496d4fede2c758c378bcedd7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+monikerRange: =azuresqldb-current||=azuresqldb-mi-current||=azure-sqldw-latest||>= aps-pdw-2016||>=sql-server-2016||>=sql-server-linux-2017||=sql-server-previousversions||=sqlallproducts-allversions
+ms.openlocfilehash: 098f27712b99fd5606aeb367b284f3f5201b68e7
+ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70284594"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71299125"
 ---
 # <a name="sql-server-documentation"></a>SQL Server のドキュメント
 
-[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
 
 ::: moniker range=">= sql-server-linux-2017 || >= sql-server-2017 || = sqlallproducts-allversions"
 SQL Server は Microsoft データ プラットフォームの中心部です。 SQL Server は、オペレーション データベース管理システム (ODBMS) 業界のリーダーといえる製品です。 このドキュメントは、Windows および Linux の両方での SQL Server のインストール、構成、使用の際に役立ちます。 コンテンツには、エンド ツー エンドの例、コード サンプル、およびビデオが含まれています。 SQL Server 言語のトピックについては、「[言語リファレンス](../t-sql/language-reference.md)」を参照してください。
@@ -113,6 +113,27 @@ SQL Server 2014、および SQL Server 2005 などのさらに古いバージョ
 |![レプリケーション サービス](../sql-server/media/replication-services.png "レプリケーション サービス")|**[レプリケーション](../relational-databases/replication/sql-server-replication.md)**<br /><br /> レプリケーションは、あるデータベースから別のデータベースへデータ オブジェクトやデータベース オブジェクトのコピーと配布を行い、一貫性を維持するためにデータベース間の同期を行うテクノロジ セットです。 レプリケーションでは、LAN や WAN、ダイヤル アップ接続、ワイヤレス接続、およびインターネットを使用して、異なる場所およびリモート ユーザーやモバイル ユーザーにデータを配布することができます。|
 |![Data Quality Services](../sql-server/media/data-quality-services.png "Data Quality Services")|**[Data Quality Services](../data-quality-services/data-quality-services.md)**<br /><br /> SQL Server Data Quality Services (DQS) は、ナレッジ ドリブンのデータ クレンジング ソリューションを提供します。 DQS を使用すると、ナレッジ ベースを構築し、このナレッジ ベースを使用して、コンピューター支援型と対話形式の両方の方法で、データに対する修正および重複除去を行うことができます。 クラウドベースの Reference Data Services を使用すると、DQS を SQL Server Integration Services およびマスター データ サービスに統合するデータ管理ソリューションを構築できます。|
 |![マスター データ サービス](../sql-server/media/master-data-services.png)|**[マスター データ サービス](../master-data-services/master-data-services-installation-and-configuration.md)**<br /><br /> [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] は、マスター データ管理のための [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ソリューションです。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)] で構築されたソリューションを使用すると、正しい情報に基づいたレポート作成と分析を行うことができます。 [!INCLUDE[ssMDSshort](../includes/ssmdsshort-md.md)]を使用すると、マスター データの中央リポジトリを作成できます。これにより、時間と共に変化するマスター データの記録を、監査およびセキュリティ保護が可能な形で管理できます。|
+| &nbsp; | &nbsp; |
+
+## <a name="other-members-of-the-sql-server-family"></a>SQL Server ファミリのその他のメンバー
+
+| [オブジェクト名] | HTTPS URL ルート |
+| :--- | :------------- |
+| Azure SQL Database 単一データベース | [https://docs.microsoft.com/azure/sql-database/](/azure/sql-database/) |
+| Azure SQL Database マネージド インスタンス | [https://docs.microsoft.com/azure/sql-database/sql-database-managed-instance](/azure/sql-database/sql-database-managed-instance) |
+| 仮想マシン (VM) 上の SQL Server | [https://docs.microsoft.com/azure/virtual-machines/windows/sql/](/azure/virtual-machines/windows/sql/) |
+| SQL Data Warehouse | [https://docs.microsoft.com/azure/sql-data-warehouse/](/azure/sql-data-warehouse/) |
+| Analytics Platform System (APS) | [https://docs.microsoft.com/sql/analytics-platform-system/](../analytics-platform-system/index.md) <br/><br/> _注:_ APS では、超並列処理 (MPP) データ ウェアハウスを実行するソフトウェアである SQL Server [並列データ ウェアハウス (PDW)](../analytics-platform-system/parallel-data-warehouse-overview.md) をホストしています。 |
+| Linux 上の SQL Server | [https://docs.microsoft.com/sql/linux/](../linux/index.md) |
+| &nbsp; | &nbsp; |
+
+### <a name="cousins-of-sql-server"></a>SQL Server の類似品
+
+| [オブジェクト名] | HTTPS URL ルート |
+| :--- | :------------- |
+| PostgreSQL データベース | [https://docs.microsoft.com/azure/postgresql/](/azure/postgresql/) |
+| MySQL データベース | [https://docs.microsoft.com/azure/mysql/](/azure/mysql/) |
+| NoSQL: &nbsp; Azure Cosmos DB | [https://docs.microsoft.com/azure/cosmos-db/](/azure/cosmos-db/) |
 | &nbsp; | &nbsp; |
 
 ::: moniker range="= sql-server-2016 || = sqlallproducts-allversions"

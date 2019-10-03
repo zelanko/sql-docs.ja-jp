@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 1214bde9a4c36a928f21c43b63c067cbb7bd0340
-ms.sourcegitcommit: 7625f78617a5b4fd0ff68b2c6de2cb2c758bb0ed
+ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
+ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71163922"
+ms.lasthandoff: 09/24/2019
+ms.locfileid: "71227180"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -3041,7 +3041,9 @@ command|Like|%DWResultCacheDb%|
 1. 新しいクエリと、結果セットのキャッシュを生成した以前のクエリとの間に、完全一致がある。
 1. キャッシュされた結果セットの生成元のテーブルに対してデータやスキーマの変更が行われていない。  
 
-データベースに対して結果セットのキャッシュが ON にされると、DateTime.Now() などの非決定関数を使用したクエリを除き、すべてのクエリについて結果が、キャッシュがいっぱいになるまでキャッシュされます。   大きな結果セットを伴うクエリ (100 万行を超えるなど) の場合、結果のキャッシュが作成される最初の実行時にパフォーマンスが低下することがあります。
+データベースに対して結果セットのキャッシュが ON にされると、DateTime.Now() などの非決定関数を使用するクエリや、行サイズが 64KB を超えるデータを返すクエリを除くすべてのクエリに対して、キャッシュがいっぱいになるまで、結果がキャッシュされます。   
+
+大きな結果セットを伴うクエリ (100 万行を超えるなど) の場合、結果のキャッシュが作成される最初の実行時にパフォーマンスが低下することがあります。
 
 **<snapshot_option> ::=**        
 

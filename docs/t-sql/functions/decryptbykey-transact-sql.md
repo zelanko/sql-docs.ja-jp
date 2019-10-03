@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 6edf121f-ac62-4dae-90e6-6938f32603c9
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 76bb0b64f0a3405a20b9b05c8cb1e18d6ab242a3
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1bc96e1eaf22c304a4751bb39c40319da2f16659
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68118939"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314542"
 ---
 # <a name="decryptbykey-transact-sql"></a>DECRYPTBYKEY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -46,7 +46,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
 *ciphertext*  
 キーで暗号化されたデータを含む、型 **varbinary** の変数。  
   
-**@ciphertext**  
+**\@ciphertext**  
 キーで暗号化されたデータを含む、型 **varbinary** の変数。  
   
  *add_authenticator*  
@@ -55,7 +55,7 @@ DecryptByKey ( { 'ciphertext' | @ciphertext }
  *authenticator*  
 認証子の生成の基礎として使用されるデータ。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *authenticator* には、**sysname** データ型が与えられます。  
 
-**@authenticator**  
+**\@authenticator**  
 認証子の生成元となるデータを含む変数。 [ENCRYPTBYKEY (Transact-SQL)](./encryptbykey-transact-sql.md) に与えられた値と一致する必要があります。 *@authenticator* には、**sysname** データ型が与えられます。  
 
 ## <a name="return-types"></a>戻り値の型  

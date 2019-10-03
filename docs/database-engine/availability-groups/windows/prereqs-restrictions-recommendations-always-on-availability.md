@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: edbab896-42bb-4d17-8d75-e92ca11f7abb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 47ab25b42800eaf668f2b258cf51608e6d66e580
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 15f8ca09a12e90db4c9493b9283793f6e9677934
+ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68014468"
+ms.lasthandoff: 09/25/2019
+ms.locfileid: "71250983"
 ---
 # <a name="prerequisites-restrictions-and-recommendations-for-always-on-availability-groups"></a>Always On 可用性グループの前提条件、制限事項、推奨事項
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -268,7 +268,7 @@ ms.locfileid: "68014468"
   
 -   **コンピューターあたりの可用性グループおよび可用性データベースの最大数:** コンピューター (仮想マシンまたは物理コンピューター) に実際に配置できるデータベースおよび可用性グループの数はハードウェアとワークロードによって異なりますが、強制的な制限はありません。 Microsoft では物理マシンあたり最大 10 AG および 100 DB までをテストしていますが、これはバインドの上限ではありません。 サーバー上のハードウェア仕様とワークロードに応じて、SQL Server のインスタンス上により多くのデータベースと可用性グループを配置できます。 過剰な負荷がかかっているシステムには、ワーカー スレッドの枯渇、可用性グループ システム ビューおよび DMV の応答の遅延、ディスパッチャー システム ダンプの一時停止などの症状があります (ただし、これだけではありません)。 アプリケーション SLA 内でピーク ワークロード容量を処理できることを確認するために、実稼働環境と同様のワークロードを使用して環境を十分にテストしてください。 SLA を検討する際は、障害条件下の負荷や期待される応答時間を考慮してください。  
   
--   **フェールオーバー クラスター マネージャーを使用して可用性グループを操作しないでください。**  
+-   **可用性グループの操作のために、フェールオーバー クラスター マネージャーを使用してしないでください**。 SQL Server Failover Cluster Instance (FCI) の状態は SQL Server と Windows Failover Cluster (WSFC) の間で共有されます。SQL Server には、インスタンスに関する情報が、クラスターよりも詳細にわたって保存されます。 管理モデルは、SQL Server によるトランザクションの促進を必要とするものであり、クラスターの状態の表示を SQL Server の状態の表示に同期させたまま保持する役目を持っています。 クラスターの状態が SQL Server の外部で変更された場合、WSFC と SQL Server の間で状態が同期していないことがあり、予想外の動作が引き起こされることがあります。
   
      例:  
   

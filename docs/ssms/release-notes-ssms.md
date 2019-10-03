@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 09/04/2019
-ms.openlocfilehash: 10f5290275a921e923ca49492eab78e4fb019475
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.date: 09/24/2019
+ms.openlocfilehash: 776f251e574ae2fa8165e4dd4d4feee6a5cf9968
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149882"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326090"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -41,13 +41,68 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-182"></a>SSMS 18.2
+## <a name="ssms-183"></a>SSMS 18.3 
 
-ダウンロード:[SSMS 18.2 のダウンロード](download-sql-server-management-studio-ssms.md)  
+ダウンロード:[SSMS 18.3 のダウンロード](download-sql-server-management-studio-ssms.md)  
+ビルド番号:15.0.18178.0  
+リリース日:2019 年 9 月 23 日
+
+SSMS 18.3 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の以前のバージョンが必要な場合は、[以前のリリースの SSMS](release-notes-ssms.md#previous-ssms-releases) を参照してください。
+
+18.3 は、18.2 に次の新しい項目とバグ修正を加えた更新プログラムです。
+
+## <a name="whats-new-in-183"></a>18.3 の新機能
+
+| [新しい項目] | 詳細 |
+|---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| データ分類 | データ分類情報が列のプロパティ UI に追加されます ("*情報の種類*"、"*情報の種類 ID*"、"*機密ラベル*"、および "*機密ラベル ID*" は SSMS UI では公開されません)。 |
+| Intellisense/エディター | SQL Server 2019 に最近追加された機能のサポートを更新しました (たとえば、"ALTER SERVER CONFIGURATION")。 | 
+| Integration Services | 新しい選択メニュー項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec` が追加されます。これにより、Azure-SSIS Integration Runtime 上で SSIS パッケージ実行が ADF パイプラインでの SSIS パッケージの実行アクティビティとして呼び出されます。 |
+| SMO/スクリプト作成 | Azure SQL DW 固有の制約のスクリプト作成サポートに対するサポートを追加しました。 |
+| SMO/スクリプト作成 | データ分類 </br> - SQL バージョン 10 (SQL 2008) 以降のサポートを追加しました。 </br> - SQL バージョン 15 (SQL 2019) 以降および Azure SQL DB に新しい機密属性 ' rank' を追加しました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - ルールセットの形式にバージョン管理を追加しました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 新しいチェックを追加しました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Azure SQL Database Managed Instance のサポートを追加しました。 |
+| SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 結果を表で表示するようコマンドレットの既定のビューを更新しました。 |
+
+## <a name="bug-fixes-in-183"></a>18.3 でのバグの修正
+
+| 新しい項目 | 詳細 |
+|----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Analysis Services | MDX クエリ エディターの拡大縮小の問題を修正します。|
+| Analysis Services | ユーザーが新しいセッションを作成できない原因である XEvent UI の問題を修正しました。 |
+| SQL Azure へのデータベースの配置 | この機能が動作しない原因となっていた (DacFx の) 問題を修正しました。|
+| SSMS 全般 | XEvent ビューアーの並べ替え機能を使用すると SSMS がクラッシュする原因となっていた問題を修正しました。 |
+| SSMS 全般 | SSMS のデータベース復元が無期限にハングする可能性があるという、長い間未解決だった問題を修正しました。 </br></br> 詳細については、UserVoice 項目を参照してください:  </br> [データベースの復元 - [バックアップ デバイスの選択] で読み込み処理が遅い](https://feedback.azure.com/forums/908035/suggestions/32899099/)。  </br> [SSMS 2016 のデータベース復元ダイアログでの処理が遅い](https://feedback.azure.com/forums/908035/suggestions/32900767/)。 </br> [データベースの復元処理が遅い](https://feedback.azure.com/forums/908035/suggestions/32900224/)。  </br> [デバイスからのデータベース復元で "..." をクリックするとハングする](https://feedback.azure.com/forums/908035/suggestions/34281658/)。  |
+| SSMS 全般 | すべてのログインの既定の言語がアラビア語として表示される問題を修正しました。 </br></br> 詳細については、UserVoice 項目を参照してください: [SSMS 18.2 の既定言語の表示に関するバグ](https://feedback.azure.com/forums/908035/suggestions/38236363)。 |
+| SSMS 全般 | (ユーザーが T-SQL エディター ウィンドウを右クリックしたときに) " *[クエリ オプション]* " のダイアログが適切に表示されない問題を、サイズを変更可能にすることによって修正しました。|
+| SSMS 全般 | 結果グリッド/ファイル (SSMS 18.2 で導入) に表示される " *[完了時刻]* " メッセージが、[ツール] > [オプション] > [クエリ実行] > [SQL Server] > [詳細] > [完了時刻の表示] で構成できるようになりました。 |
+| SSMS 全般 | 接続ダイアログで、" *[Active Directory - パスワード]* " と " *[Active Directory - 統合]* " を、" *[Azure Active Directory - パスワード]* " と " *[Azure Active Directory - 統合]* " にそれぞれ置き換えました。 |
+| SSMS 全般 | 負の UTC オフセットの TZ にいるユーザーが SSMS を使用して SQL Azure マネージド インスタンスに対する監査を構成できない原因である問題を修正しました。 |
+| SSMS 全般 | XEvent UI で、グリッド上にカーソルを置いたときに行が選択されていた問題を修正しています。 </br></br> 詳細については、UserVoice 項目を参照してください: [SSMS 拡張イベント UI でのカーソルを置いたときの選択アクション](https://feedback.azure.com/forums/908035/suggestions/38262124)。 |
+| フラット ファイルのインポート | 単純または豊富なデータ型の検出をユーザーが選択できるようにすることで、フラット ファイルのインポートですべてのデータがインポートされない問題を修正しました。</br></br> 詳細については、UserVoice 項目を参照してください: [SSMS のフラット ファイルのインポートですべてのデータがインポートされない](https://feedback.azure.com/forums/908035/suggestions/38096989)。 |
+| Integration Services | 新しい操作の種類 *StartNonCatalogExecution* が SSIS 操作レポートに追加されます。|
+| SMO/スクリプト作成 | **SMO.Server.SetDefaultInitFields(true)** が使用されているときにプロパティをフェッチすると SMO からエラーがスローされる原因となっていた問題を修正しました。|
+| クエリ ストア UI | " *[追跡対象クエリ]* " ビューで " *[実行回数]* " メトリックが選択されている場合に Y 軸がスケーリングされない問題を修正しました。 |
+| 脆弱性評価 | Azure SQL DB のベースラインのクリアと承認が無効になりました。|
+
+### <a name="known-issues-183"></a>既知の問題 (18.3)
+
+- マシン A 上で実行されている SSMS から作成されたデータベース ダイアグラムは、マシン B からは変更できません (SSMS がクラッシュします)。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)」を参照してください。
+
+- 複数のクエリ ウィンドウを切り替えると再描画の問題が発生します。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)」を参照してください。 この問題を回避するには、[ツール] > [オプション] でハードウェア アクセラレータを無効にします。
+
+他の既知の問題と製品チームへのフィードバックの提供については、「[UserVoice](https://feedback.azure.com/forums/908035-sql-server)」を参照してください。
+
+## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
+
+以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
+
+## <a name="downloadssdtmediadownloadpng-ssms-182httpsgomicrosoftcomfwlinklinkid2099720"></a>![](../ssdt/media/download.png) [SSMS 18.2](https://go.microsoft.com/fwlink/?linkid=2099720) のダウンロード
+
+リリース番号:18.2  
 ビルド番号:15.0.18142.0  
 リリース日:2019 年 7 月 25 日
-
-SSMS 18.2 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の以前のバージョンが必要な場合は、[以前のリリースの SSMS](release-notes-ssms.md#previous-ssms-releases) を参照してください。
 
 18.2 は、18.1 に次の新しい項目とバグ修正を加えた更新プログラムです。
 
@@ -93,7 +148,7 @@ SSMS 18.2 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | SQL エージェント | ジョブ ステップの追加、挿入、編集、または削除時に、アクティブな行ではなく最初の行でフォーカスがリセットされる問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/38070892)」を参照してください。 |
 | SMO/スクリプト作成 | *CREATE OR ALTER* で拡張プロパティを持つオブジェクトがスクリプト化されない問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035-sql-server/suggestions/37236748)」を参照してください。 |
 | SMO/スクリプト作成 | SSMS が CREATE EXTERNAL LIBRARY を正しくスクリプト化できない問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37868089)」を参照してください。 |
-| SMO/スクリプト作成 |  数千のテーブルを持つデータベースに対して "*スクリプトの生成*" を実行しようとしたときの問題 (進行状況ダイアログが停止しているように見える) を修正しました。 |
+| SMO/スクリプト作成 | 数千のテーブルを持つデータベースに対して "*スクリプトの生成*" を実行しようとしたときの問題 (進行状況ダイアログが停止しているように見える) を修正しました。 |
 | SMO/スクリプト作成 | SQL 2019 で "*外部テーブル*" のスクリプトが機能しない問題を修正しました。 |
 | SMO/スクリプト作成 | SQL 2019 で "*外部データ ソース*" のスクリプトが機能しない問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/34295080)」を参照してください。 |
 | SMO/スクリプト作成 | Azure SQL DB をターゲットにしているときに列の "*拡張プロパティ*" がスクリプト化されない問題を修正しました。 詳細については「[stackoverflow](https://stackoverflow.com/questions/56952337/how-can-i-script-the-descriptions-of-columns-in-ms-sql-server-management-studio)」を参照してください。 |
@@ -105,19 +160,13 @@ SSMS 18.2 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 
 - マシン A 上で実行されている SSMS から作成されたデータベース ダイアグラムは、マシン B からは変更できません (SSMS がクラッシュします)。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)」を参照してください。
 
-- SSMS 18.0 では、複数のクエリ ウィンドウ間を切り替えると問題が再描画されます。 「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)」を参照してください この問題を回避するには、 **[ツール]**  >  **[オプション]** でハードウェア アクセラレータを無効にします。
+- 複数のクエリ ウィンドウを切り替えると再描画の問題が発生します。 「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)」を参照してください この問題を回避するには、 **[ツール]**  >  **[オプション]** でハードウェア アクセラレータを無効にします。
 
 - SSMS のグリッド、テキスト、またはファイルの結果のデータ サイズに制限があります。
 
-- オブジェクト エクスプローラーで Azure SQL Database を削除した場合、実際には成功しているにもかかわらず、エラーが表示される問題があります。 このタスクでは、不正なエラー メッセージが表示されます。
+- オブジェクト エクスプローラーで Azure SQL Database を削除した場合、実際には成功しているにもかかわらず、エラーが表示される問題があります。
 
 - 実際のログイン用の既定の言語設定にかかわらず、[ログインのプロパティ] ダイアログにアラビア語が SQL ログインの既定の言語として表示される場合があります。 このログインの実際の既定の言語を表示するには、T-SQL を使用して **master.sys.server_principles** からログインの **default_language_name** を選択します。
-
-他の既知の問題と製品チームへのフィードバックの提供については、「[UserVoice](https://feedback.azure.com/forums/908035-sql-server)」を参照してください。
-
-## <a name="previous-ssms-releases"></a>以前のリリースの SSMS
-
-以前のバージョンの SSMS をダウンロードするには、次のセクションのタイトル リンクをクリックします。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-181httpsgomicrosoftcomfwlinklinkid2094583"></a>[SSMS 18.1](https://go.microsoft.com/fwlink/?linkid=2094583) ![のダウンロード](../ssdt/media/download.png)
 
@@ -126,8 +175,6 @@ SSMS 18.2 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 - リリース日:2019 年 6 月 11 日  
 
 [中国語 (簡体字)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x804) | [中国語 (繁体字)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x404) | [英語 (米国)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x409) | [フランス語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40c) | [ドイツ語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x407) | [イタリア語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x410) | [日本語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x411) | [韓国語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x412) | [ポルトガル語 (ブラジル)](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x416) | [ロシア語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x419) | [スペイン語](https://go.microsoft.com/fwlink/?linkid=2094583&clcid=0x40a)
-
-SSMS 18.1 は SSMS の最新の一般公開 (GA) リリースです。 SSMS の以前のバージョンが必要な場合は、[以前のリリースの SSMS](release-notes-ssms.md#previous-ssms-releases) を参照してください。
 
 18.1 は 18.0 に対する小規模な更新であり、次の新しい項目とバグ修正が含まれています。
 
@@ -162,7 +209,7 @@ SSMS 18.1 は SSMS の最新の一般公開 (GA) リリースです。 SSMS の�
 | Intellisense/エディター | IntelliSense の Azure SQL データベースに対する SMO ベースのクエリ トラフィックを減らしました。 |
 | Intellisense/エディター | ユーザー作成のために T-SQL を入力しているときに表示されるヒントの文法エラーを修正しました。 また、ユーザーとログインの間を明確に区別するためのエラー メッセージを修正しました。 |
 | ログ ビューアー | オブジェクト エクスプローラーで古いアーカイブ サインインをダブルクリックしたときであっても、SSMS で常に現在のサーバー (またはエージェント) のログが開かれる問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37633648)」を参照してください。 |
-| SSMS セットアップ | 設定ログのパスにスペースが含まれている場合、SSMS の設定が失敗する原因となっていた問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110)」を参照してください。 |
+| SSMS セットアップ | セットアップ ログのパスにスペースが含まれている場合 SSMS セットアップが失敗する原因となっていた問題を修正しました。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37496110)」を参照してください。 |
 | SSMS セットアップ | スプラッシュ スクリーンの表示後すぐに SSMS が終了する問題を修正しました。 </br> 詳細については、次のサイトを参照してください。[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37502512)、「[SSMS Refuses to Start](https://dba.stackexchange.com/questions/238609/ssms-refuses-to-start)」 (SSMS が開始を拒否する)、「[Database Administrators](https://dba.stackexchange.com/questions/237086/sql-server-management-studio-18-wont-open-only-splash-screen-pops-up)」 (データベース管理者) のページ。 |
 | オブジェクト エクスプローラー | Linux 上で SQL に接続したときに *[PowerShell の起動]* を有効にするための制限を解除しました。 |
 | オブジェクト エクスプローラー | Polybase/スケールアウト グループ ノード (計算ノードに接続されている場合) を展開しようとしたときに SSMS がクラッシュする原因となっていた問題を修正しました。 |
@@ -188,6 +235,8 @@ SSMS 18.1 は SSMS の最新の一般公開 (GA) リリースです。 SSMS の�
 - [オプション]、[テキスト エディター]、[エディターのタブとステータス バー]、[ステータス バーのレイアウトと色] にある、 *[グループ接続]* と *[単一のサーバー接続]* の色オプションが、SSMS 18.1 を閉じた後に保持されません。 SSMS を再度開くと、[ステータス バーのレイアウトと色] のオプションは既定 (白) に戻ります。
 
 - SSMS の結果から表示されるデータのサイズには、グリッド、テキスト、またはファイルに制限があります。
+
+- マシン A 上で実行されている SSMS から作成されたデータベース ダイアグラムは、マシン B からは変更できません (SSMS がクラッシュします)。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)」を参照してください。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-180httpsgomicrosoftcomfwlinklinkid2088649"></a>![ダウンロード](../ssdt/media/download.png) [SSMS 18.0](https://go.microsoft.com/fwlink/?linkid=2088649)
 
@@ -455,6 +504,8 @@ SSMS 18.1 は SSMS の最新の一般公開 (GA) リリースです。 SSMS の�
 - バージョン 18.0 のインストールでは、SQL Server Management Studio を実行できないため、問題が発生する可能性があります。 この問題が発生した場合は、「[SSMS2018 - Installed, but will not run](https://feedback.azure.com/forums/908035-sql-server/suggestions/37502512-ssms2018-installed-but-will-not-run)」 (SSMS2018 - インストールされたが起動しない) の記事の手順に従ってください。
 
 - SSMS の結果から表示されるデータのサイズには、グリッド、テキスト、またはファイルに制限があります。
+
+- 複数のクエリ ウィンドウを切り替えると再描画の問題が発生します。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37474042)」を参照してください。 この問題を回避するには、[ツール] > [オプション] でハードウェア アクセラレータを無効にします。
 
 ## <a name="downloadssdtmediadownloadpng-ssms-1791httpsgomicrosoftcomfwlinklinkid2043154clcid0x409"></a>[SSMS 17.9.1](https://go.microsoft.com/fwlink/?linkid=2043154&clcid=0x409) ![のダウンロード](../ssdt/media/download.png)
 

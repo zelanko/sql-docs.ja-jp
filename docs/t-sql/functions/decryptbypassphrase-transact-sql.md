@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: ca34b5cd-07b3-4dca-b66a-ed8c6a826c95
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 4d24a636e47c6e969b339350caba0f8609a86d9f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9791a9672965757f5b86cbae60241ef7528ae565
+ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68079936"
+ms.lasthandoff: 09/26/2019
+ms.locfileid: "71314520"
 ---
 # <a name="decryptbypassphrase-transact-sql"></a>DECRYPTBYPASSPHRASE (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -64,19 +64,19 @@ DecryptByPassPhrase ( { 'passphrase' | @passphrase }
 キーで暗号化されたデータの文字列。 *ciphertext* には、**varbinary** データ型が与えられます。  
  
 @ciphertext  
-キーで暗号化されたデータを含む、型 **varbinary** の変数。 *@ciphertext* 変数の最大サイズは 8,000 バイトです。  
+キーで暗号化されたデータを含む、型 **varbinary** の変数。 *\@ciphertext* 変数の最大サイズは 8,000 バイトです。  
   
 *add_authenticator*  
 元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示します。 *add_authenticator* には、暗号化プロセスで認証子が使用された場合、値 1 が与えられます。 *add_authenticator* には、**int** データ型が与えられます。  
   
 @add_authenticator  
-元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示す変数。 *@add_authenticator* には、暗号化プロセスで認証子が使用された場合、値 1 が与えられます。 *@add_authenticator* には、**int** データ型が与えられます。  
+元の暗号化プロセスにプレーンテキストと共に認証子が含まれ、認証子が暗号化されたかどうかを示す変数。 *\@add_authenticator* には、暗号化プロセスで認証子が使用された場合、値 1 が与えられます。 *\@add_authenticator* には、**int** データ型が与えられます。  
 
 *authenticator*  
 認証子の生成の基礎として使用されるデータ。 *authenticator* には、**sysname** データ型が与えられます。  
   
 @authenticator  
-認証子の生成の基礎として使用されるデータを含む変数。 *@authenticator* には、**sysname** データ型が与えられます。  
+認証子の生成の基礎として使用されるデータを含む変数。 *\@authenticator* には、**sysname** データ型が与えられます。  
   
 ## <a name="return-types"></a>戻り値の型  
 最大サイズが 8,000 バイトの **varbinary**。  

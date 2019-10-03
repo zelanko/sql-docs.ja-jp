@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.reviewer: carlrab
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8197b243bc0789da9acb0e94069585d8619d5fa0
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 76fb1dcfaab16e560b67f92d7bc3a6203f93037b
+ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653773"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71326115"
 ---
 # <a name="tempdb-database"></a>tempdb データベース
 
@@ -47,7 +47,9 @@ ms.locfileid: "69653773"
   - オンライン インデックス操作、複数のアクティブな結果セット (MARS)、AFTER トリガーなどの機能に対してデータ変更トランザクションによって生成される行バージョン。  
   
 トランザクションをロールバックできるように、**tempdb** のログ記録は最小限に抑えられます。 **tempdb** は [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が起動されるたびに再作成され、システムが常にデータベースのクリーンなコピーで起動されるようにします。 一時テーブルと一時ストアド プロシージャは、切断時に自動的に削除され、システムのシャットダウン時にアクティブな接続はありません。 そのため、 **tempdb** には、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のあるセッションから別のセッションに保存されるものは一切含まれません。 **tempdb**では、バックアップ操作と復元操作は実行できません。  
-  
+
+[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+
 ## <a name="physical-properties-of-tempdb-in-sql-server"></a>SQL Server の tempdb の物理プロパティ
 
 次の表は、SQL Server の **tempdb** のデータ ファイルとログ ファイルの初期構成値 (Model データベースの既定値に基づく) の一覧です。 これらのファイルのサイズは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のエディションによって多少異なる場合があります。  
@@ -242,9 +244,7 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
     COMMIT TRAN
     ```
 3. メモリ最適化テーブルに対するクエリではロックと分離のヒントがサポートされていないため、メモリ最適化 tempdb カタログ ビューに対するクエリでは、ロックと分離のヒントは適用されません。 SQL Server 内の他のシステム カタログ ビューと同じように、システム ビューに対するすべてのトランザクションは、READ COMMITTED (または、このケースでは READ COMMITTED SNAPSHOT) の分離になります。
-4. メモリ最適化 tempdb メタデータが有効になっていると、一時テーブルの列ストア インデックスで問題が発生する場合あります。 このプレビュー リリースでは、メモリ最適化 tempdb メタデータを使用するときは、一時テーブルで列ストア インデックスを使用しないことをお勧めします。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+4. メモリ最適化 tempdb メタデータが有効になっている場合、一時テーブルに[列ストア インデックス](../indexes/columnstore-indexes-overview.md)を作成することはできません。
 
 > [!NOTE] 
 > これらの制限は、tempdb システム ビューを参照するときにのみ適用されます。ユーザー データベース内のメモリ最適化テーブルにアクセスするときは、必要であれば、同じトランザクションで一時テーブルを作成することができます。
@@ -253,6 +253,8 @@ ALTER SERVER CONFIGURATION SET MEMORY_OPTIMIZED TEMPDB_METADATA = ON
 ```
 SELECT SERVERPROPERTY('IsTempdbMetadataMemoryOptimized')
 ```
+
+メモリ最適化 TempDB メタデータを有効にした後で、何らかの理由でサーバーの起動に失敗した場合は、 **-f** スタートアップ オプションを使用して[最小構成](../../database-engine/configure-windows/start-sql-server-with-minimal-configuration.md)で SQL Server を開始することで、この機能を回避できます。 これにより、この機能を無効にしてから、通常モードで SQL Server を再起動することができます。
 
 ## <a name="capacity-planning-for-tempdb-in-sql-server"></a>SQL Server の tempdb に使用するディスク領域の計画
 

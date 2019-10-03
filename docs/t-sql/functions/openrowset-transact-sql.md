@@ -1,7 +1,7 @@
 ---
 title: OPENROWSET (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 09/07/2018
+ms.date: 09/26/2019
 ms.prod: sql
 ms.prod_service: sql-database
 ms.reviewer: ''
@@ -25,12 +25,12 @@ ms.assetid: f47eda43-33aa-454d-840a-bb15a031ca17
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: a6290a9b8b8ff71c05d52051ffa02f097575484e
-ms.sourcegitcommit: 12b7e3447ca2154ec2782fddcf207b903f82c2c0
+ms.openlocfilehash: 0cc57642bfa8b89861e79c72a1d8b378a1090042
+ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/12/2019
-ms.locfileid: "68957466"
+ms.lasthandoff: 09/27/2019
+ms.locfileid: "71341993"
 ---
 # <a name="openrowset-transact-sql"></a>OPENROWSET (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
@@ -44,7 +44,6 @@ ms.locfileid: "68957466"
 ## <a name="syntax"></a>構文  
   
 ```  
-  
 OPENROWSET   
 ( { 'provider_name' , { 'datasource' ; 'user_id' ; 'password'   
    | 'provider_string' }   
@@ -73,10 +72,12 @@ OPENROWSET
    [ , FORMATFILE = 'format_file_path' ]   
 ```
 
-  
 ## <a name="arguments"></a>引数  
  '*provider_name*'  
  レジストリの OLE DB プロバイダーの表示名 (または PROGID) を表す文字列を指定します。 *provider_name* 既定値はありません。  
+ 
+ > [!IMPORTANT]
+ > 以前の Microsoft OLE DB Provider for SQL Server (SQLOLEDB) と SQL Server Native Client OLE DB プロバイダー (SQLNCLI) は非推奨のままであり、新しい開発作業にはどちらの使用もお勧めできません。 代わりに、新しい [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) を使用します。これは、最新のサーバー機能で更新されます。
   
  '*datasource*'  
  特定の OLE DB データ ソースに対応する文字列定数を指定します。 *datasource* は DBPROP_INIT_DATASOURCE のプロパティで、プロバイダーの IDBProperties インターフェイスに渡され、プロバイダーの初期化に使用されます。 一般的に、この文字列にはデータベース ファイルの名前、データベース サーバーの名前、プロバイダーがデータベースを検索する際に認識する名前のいずれかを指定します。  
@@ -88,7 +89,7 @@ OPENROWSET
  OLE DB プロバイダーに渡されるユーザー パスワードを表す文字列定数を指定します。 *password* は DBPROP_AUTH_PASSWORD プロパティとして引き渡され、プロバイダーの初期化に使用されます。 *パスワード* Microsoft Windows のパスワードをすることはできません。  
   
  '*provider_string*'  
- プロバイダー固有の接続文字列を指定します。DBPROP_INIT_PROVIDERSTRING プロパティとして渡され、プロバイダーの初期化に使用されます。 *provider_string* 通常、プロバイダーの初期化に必要なすべての接続情報をカプセル化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーで認識されるキーワードの一覧については、「[初期化プロパティと承認プロパティ](../../relational-databases/native-client-ole-db-data-source-objects/initialization-and-authorization-properties.md)」を参照してください。  
+ プロバイダー固有の接続文字列を指定します。DBPROP_INIT_PROVIDERSTRING プロパティとして渡され、プロバイダーの初期化に使用されます。 *provider_string* 通常、プロバイダーの初期化に必要なすべての接続情報をカプセル化します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB プロバイダーで認識されるキーワードの一覧については、「[OLE DB Driver for SQL Server での接続文字列キーワードの使用](../../connect/oledb/applications/using-connection-string-keywords-with-oledb-driver-for-sql-server.md)」を参照してください。  
   
  *catalog*  
  指定したオブジェクトが存在するカタログまたはデータベースの名前を指定します。  
@@ -100,13 +101,13 @@ OPENROWSET
  操作するオブジェクトを一意に識別するオブジェクト名を指定します。  
   
  '*query*'  
- プロバイダーに送られ、プロバイダーによって実行される文字列定数を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスでは、このクエリは処理されず、プロバイダーから返されたクエリ結果が処理されます (パススルー クエリ)。 パススルー クエリは、表形式のデータをテーブル名ではなくコマンド言語のみで公開するプロバイダーで使用すると便利です。 パススルー クエリは、クエリ プロバイダーが OLE DB をサポートしていれば、リモート サーバーでサポートされてコマンド オブジェクトとその必須インターフェイス。 詳細については、[SQL Server Native Client &#40;OLE DB&#41; のリファレンス](../../relational-databases/native-client-ole-db-interfaces/sql-server-native-client-ole-db-interfaces.md)をご覧ください。  
+ プロバイダーに送られ、プロバイダーによって実行される文字列定数を指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のローカル インスタンスでは、このクエリは処理されず、プロバイダーから返されたクエリ結果が処理されます (パススルー クエリ)。 パススルー クエリは、表形式のデータをテーブル名ではなくコマンド言語のみで公開するプロバイダーで使用すると便利です。 パススルー クエリは、クエリ プロバイダーが OLE DB をサポートしていれば、リモート サーバーでサポートされてコマンド オブジェクトとその必須インターフェイス。 詳細については、「[OLE DB Driver for SQL Server のプログラミング](../../connect/oledb/ole-db/oledb-driver-for-sql-server-programming.md)」を参照してください。  
   
  BULK  
  ファイルからのデータ読み取りに OPENROWSET の BULK 行セット プロバイダーを使用します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、OPENROWSET を使用すると、データを対象テーブルに読み込むことなくデータ ファイルからの読み取りができます。 このため、OPENROWSET は簡単な SELECT ステートメントで使用できます。  
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Windows ファイルからの読み取りはサポートされません。
   
  BULK オプションの引数を使用すると、データの読み取りを開始および終了する場所や、エラーの取り扱い、データの解釈方法について、細かく制御することができます。 たとえば、データ ファイルを **varbinary**、**varchar**、**nvarchar** 型の単一行、単一列の行セットとして読み取るように指定できます。 既定の動作については、後の引数の説明を参照してください。  
   
@@ -119,11 +120,11 @@ OPENROWSET
   
  '*data_file*'  
  データを対象テーブルにコピーするデータ ファイルの完全なパスを指定します。   
- **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+ **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、data_file は Azure Blob Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Windows ファイルからの読み取りはサポートされません。
   
  \<bulk_options>  
  BULK オプションの引数を 1 つ以上指定します。  
@@ -145,23 +146,24 @@ OPENROWSET
 |*code_page*|データ ファイルの文字データのエンコードに使用されているソースのコード ページを示します (例 : 850)。<br /><br /> **重要** [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] より前のバージョンではコード ページ 65001 (UTF-8 エンコード) がサポートされません。|  
   
  ERRORFILE ='*file_name*'  
- 形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。  
+ **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降のビルド。 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。     
+
+形式エラーがあり、OLE DB 行セットに変換できない行を収集するときに使用するファイルを指定します。 該当する行は、データ ファイルからこのエラー ファイルに "そのまま" コピーされます。  
   
  エラー ファイルはコマンドの実行開始時に作成されます。 存在するファイルの場合にはエラーが発生し、 さらに、拡張子 .ERROR.txt の制御ファイルが作成されます。 このファイルにはエラー ファイルの各行の参照と、エラーの診断が含まれています。 エラーが修正されると、データは読み込み可能になります。  
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。 
 
 'errorfile_data_source_name'   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降のビルド。       
+
 名前付きの外部データ ソースで、インポート中に見つかったエラーを格納するエラー ファイルの Azure Blob Storage の場所を指しています。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
   
- FIRSTROW =*first_row*  
+ FIRSTROW =*first_row*      
  読み込み開始行の行番号を指定します。 既定値は 1 です。 指定したデータ ファイルの最初の行を示します。 行番号は行ターミネータの数をカウントして決定されます。 FIRSTROW は 1 から始まります。  
   
- LASTROW =*last_row*  
+ LASTROW =*last_row*      
  読み込み終了行の行番号を指定します。 既定値は 0 です。 指定したデータ ファイルの最後の行を示します。  
   
- MAXERRORS =*maximum_errors*  
+ MAXERRORS =*maximum_errors*     
  フォーマット ファイルで定義されている、構文エラーまたは違反行の許容最大数を指定します。この数を超えると、OPENROWSET で例外が発生することがあります。 OPENROWSET は、MAXERRORS に達するまで、違反行を読み込まずに無視し、違反行はエラーとしてカウントされます。  
   
  既定の *maximum_errors* は 10 です。  
@@ -197,7 +199,7 @@ OPENROWSET
  *data_file* の内容を、**varbinary(max)** 型の単一行、単一列の行セットとして返します。  
   
 > [!IMPORTANT]  
-> すべての Windows エンコード変換がサポートされるのは SINGLE_BLOB オプションだけなので、SINGLE_CLOB オプションや SINGLE_NCLOB オプションではなく、SINGLE_BLOB オプションだけを使用して XML データをインポートすることをお勧めします。  
+> すべての Windows エンコード変換がサポートされるのは SINGLE_BLOB オプションだけなので、SINGLE_CLOB オプションや SINGLE_NCLOB オプションではなく、SINGLE_BLOB オプションだけを使用して XML データをインポートすることを [!INCLUDE[msCoName](../../includes/msconame-md.md)] ではお勧めします。  
   
  SINGLE_CLOB  
  *data_file* を ASCII として読み取り、現在のデータベースの照合順序に従い、内容を **varchar(max)** 型の単一行、単一列の行セットとして返します。  
@@ -207,46 +209,48 @@ OPENROWSET
 
 ### <a name="input-file-format-options"></a>入力ファイル フォーマットのオプション
   
-FORMAT **=** 'CSV'   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
+FORMAT **=** 'CSV'      
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降のビルド         
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準に準拠しているコンマ区切り値ファイルを指定します。
 
  FORMATFILE ='*format_file_path*'  
- フォーマット ファイルの完全パスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます:XML と非 XML。  
+  **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1. [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blob Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。 
+  
+  フォーマット ファイルの完全パスを指定します。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、次の 2 種類のフォーマット ファイルがサポートされます:XML と非 XML。  
   
  フォーマット ファイルは、結果セットの列の型を定義する場合に必要となります。 ただし SINGLE_CLOB、SINGLE_BLOB、または SINGLE_NCLOB を指定した場合は例外で、この場合はフォーマット ファイルは必要ありません。  
   
  フォーマット ファイルについては、「[データの一括インポートでのフォーマット ファイルの使用 &#40;SQL Server&#41;](../../relational-databases/import-export/use-a-format-file-to-bulk-import-data-sql-server.md)」をご覧ください。  
 
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 以降では、format_file_path は Azure Blob Storage に格納することができます。 例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
-
 FIELDQUOTE **=** 'field_quote'   
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
-CSV ファイルで引用符文字として使用される文字を指定します。 指定されていない場合は、[RFC 4180](https://tools.ietf.org/html/rfc4180) 標準の定義に従って引用符文字 (") が引用符文字として使用されます。
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.       
 
+CSV ファイルで引用符文字として使用される文字を指定します。 指定されていない場合は、[RFC 4180](https://tools.ietf.org/html/rfc4180) 標準の定義に従って引用符文字 (") が引用符文字として使用されます。
   
 ## <a name="remarks"></a>Remarks  
- `OPENROWSET` は、OLE DB データ ソースからリモート データにアクセスするときに使用できます。ただしこの場合、指定したプロバイダーに対して **DisallowAdhocAccess** レジストリ オプションが明示的に 0 に設定されており、Ad Hoc Distributed Queries 詳細構成オプションが有効になっている必要があります。 これらのオプションが設定されていない場合は、既定でアドホック アクセスは許可されません。  
+`OPENROWSET` では、列の照合順序セットに関係なく、常にインスタンスの照合順序が継承されます。
+
+`OPENROWSET` は、OLE DB データ ソースからリモート データにアクセスするときに使用できます。ただしこの場合、指定したプロバイダーに対して **DisallowAdhocAccess** レジストリ オプションが明示的に 0 に設定されており、Ad Hoc Distributed Queries 詳細構成オプションが有効になっている必要があります。 これらのオプションが設定されていない場合は、既定でアドホック アクセスは許可されません。  
   
- リモートの OLE DB データ ソースにアクセスするとき、信頼関係接続のログイン ID は、クライアントの接続先サーバーからクエリの対象サーバーに自動的に委任されるわけではありません。 したがって、認証の委任を構成する必要があります。  
+リモートの OLE DB データ ソースにアクセスするとき、信頼関係接続のログイン ID は、クライアントの接続先サーバーからクエリの対象サーバーに自動的に委任されるわけではありません。 したがって、認証の委任を構成する必要があります。  
   
- 指定したデータ ソースにおいて、OLE DB プロバイダーが複数のカタログとスキーマをサポートする場合は、カタログ名とスキーマ名を指定する必要があります。 _カタログ_と_スキーマ_の値は、OLE DB プロバイダーではサポートしていない場合は省略できます。 プロバイダーがスキーマ名しかサポートしていない場合は、_スキーマ_ **.** _オブジェクト_ という形式の 2 部構成の名前を指定する必要があります。 プロバイダーがカタログ名しかサポートしていない場合は、_カタログ_ **.** _スキーマ_ **.** _オブジェクト_ という形式の 3 部構成の名前を指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用するパススルー クエリには、3 つの部分で構成される名前を指定する必要があります。 詳しくは、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」をご覧ください。  
+指定したデータ ソースにおいて、OLE DB プロバイダーが複数のカタログとスキーマをサポートする場合は、カタログ名とスキーマ名を指定する必要があります。 _カタログ_と_スキーマ_の値は、OLE DB プロバイダーではサポートしていない場合は省略できます。 プロバイダーがスキーマ名しかサポートしていない場合は、_スキーマ_ **.** _オブジェクト_ という形式の 2 部構成の名前を指定する必要があります。 プロバイダーがカタログ名しかサポートしていない場合は、_カタログ_ **.** _スキーマ_ **.** _オブジェクト_ という形式の 3 部構成の名前を指定する必要があります。 SQL Server OLE DB プロバイダーを使用するパススルー クエリには、3 つの部分で構成される名前を指定する必要があります。 詳しくは、「[Transact-SQL 構文表記規則 &#40;Transact-SQL&#41;](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」をご覧ください。  
   
- `OPENROWSET` の引数に変数は指定できません。  
+`OPENROWSET` の引数に変数は指定できません。    
   
- `FROM` 句での `OPENDATASOURCE`、`OPENQUERY`、または `OPENROWSET` の呼び出しは、更新のターゲットとして使用されるこれらの関数の呼び出しとは別に評価されます。これは、両方の呼び出しに同じ引数が指定されている場合にも当てはまります。 特に、いずれか一方の呼び出しの結果に適用されるフィルター条件または結合条件は、もう一方の結果に影響しません。  
+`FROM` 句での `OPENDATASOURCE`、`OPENQUERY`、または `OPENROWSET` の呼び出しは、更新のターゲットとして使用されるこれらの関数の呼び出しとは別に評価されます。これは、両方の呼び出しに同じ引数が指定されている場合にも当てはまります。 特に、いずれか一方の呼び出しの結果に適用されるフィルター条件または結合条件は、もう一方の結果に影響しません。  
   
 ## <a name="using-openrowset-with-the-bulk-option"></a>OPENROWSET を BULK オプションと共に使用する  
  次に示す [!INCLUDE[tsql](../../includes/tsql-md.md)] の機能拡張では、OPENROWSET(BULK...) 関数がサポートされます。  
   
--   `SELECT` と共に使用される FROM 句では、テーブル名の代わりに `OPENROWSET(BULK...)` を呼び出すことができます。このとき `SELECT` の機能に制限はありません。  
+-   `SELECT` と共に使用される `FROM` 句では、テーブル名の代わりに `OPENROWSET(BULK...)` を呼び出すことができます。このとき `SELECT` の機能に制限はありません。  
   
      `OPENROWSET` で `BULK` オプションを使用するには、`FROM` 句に相関名を指定する必要があります。これは範囲変数または別名とも呼ばれます。 列には別名を指定できます。 列の別名のリストを指定しない場合は、フォーマット ファイルに列名が必要です。 次のように、列の別名を指定した場合は、フォーマット ファイルの列名をオーバーライドして使用されます。  
   
      `FROM OPENROWSET(BULK...) AS table_alias`  
   
      `FROM OPENROWSET(BULK...) AS table_alias(column_alias,...n)`  
+     
 > [!IMPORTANT]  
 > `AS <table_alias>` への追加に失敗すると次のエラーが発生します:    
 > メッセージ 491、レベル 16、状態 1、行 20    
@@ -283,18 +287,32 @@ CSV ファイルで引用符文字として使用される文字を指定しま�
   
 ## <a name="examples"></a>使用例  
   
-### <a name="a-using-openrowset-with-select-and-the-sql-server-native-client-ole-db-provider"></a>A. OPENROWSET を SELECT および SQL Server Native Client OLE DB プロバイダーと共に使用する  
- 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用して、リモート サーバー `HumanResources.Department` のデータベース [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] のテーブル `Seattle1` にアクセスします (SQLNCLI を使用すると、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] により最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます)。`SELECT` ステートメントは、返す行セットの定義に使用します。 プロバイダーの文字列には、`Server` と `Trusted_Connection` キーワードが含まれます。 これらのキーワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって認識されます。  
+### <a name="a-using-openrowset-with-select-and-the-sql-server-ole-db-driver"></a>A. OPENROWSET を SELECT および SQL Server OLE DB Driver と共に使用する  
+ 次の例では、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) を使用して、リモート サーバー `Seattle1` の AdventureWorks2016 データベースの `HumanResources.Department` テーブルにアクセスします。 `SELECT` ステートメントは、返す行セットの定義に使用します。 プロバイダーの文字列には、`Server` と `Trusted_Connection` キーワードが含まれます。 これらのキーワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] OLE DB Driver によって認識されます。  
   
 ```sql  
 SELECT a.*  
-FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Trusted_Connection=yes;',  
+FROM OPENROWSET('MSOLEDBSQL', 'Server=Seattle1;Database=AdventureWorks2016;TrustServerCertificate=Yes;Trusted_Connection=Yes;',  
      'SELECT GroupName, Name, DepartmentID  
-      FROM AdventureWorks2012.HumanResources.Department  
+      FROM AdventureWorks2016.HumanResources.Department  
+      ORDER BY GroupName, Name') AS a;  
+```  
+
+### <a name="b-using-openrowset-with-select-and-the-deprecated-sql-server-native-client-ole-db-provider"></a>B. OPENROWSET を SELECT および非推奨の SQL Server Native Client OLE DB プロバイダーと共に使用する  
+ 次の例では、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーを使用して、リモート サーバー `Seattle1` の AdventureWorks2016 データベースの `HumanResources.Department` テーブルにアクセスします。 SQLNCLI と [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用すると、最新バージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーにリダイレクトされます。 `SELECT` ステートメントは、返す行セットの定義に使用します。 プロバイダーの文字列には、`Server` と `Trusted_Connection` キーワードが含まれます。 これらのキーワードは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Native Client OLE DB プロバイダーによって認識されます。  
+ 
+> [!IMPORTANT]
+> SQL Server Native Client OLE DB プロバイダー (SQLNCLI) は非推奨のままであり、新しい開発作業にはどちらの使用もお勧めできません。 代わりに、新しい [Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) (MSOLEDBSQL) を使用します。これは、最新のサーバー機能で更新されます。
+ 
+```sql  
+SELECT a.*  
+FROM OPENROWSET('SQLNCLI', 'Server=Seattle1;Database=AdventureWorks2012;Trusted_Connection=Yes;',  
+     'SELECT GroupName, Name, DepartmentID  
+      FROM AdventureWorks2016.HumanResources.Department  
       ORDER BY GroupName, Name') AS a;  
 ```  
   
-### <a name="b-using-the-microsoft-ole-db-provider-for-jet"></a>B. Microsoft OLE DB Provider for Jet を使用する  
+### <a name="c-using-the-microsoft-ole-db-provider-for-jet"></a>C. Microsoft OLE DB Provider for Jet を使用する  
  次の例では、[!INCLUDE[msCoName](../../includes/msconame-md.md)] OLE DB Provider for Jet を介して、[!INCLUDE[msCoName](../../includes/msconame-md.md)] Access `Northwind` データベース内のテーブル `Customers` にアクセスします。  
   
 > [!NOTE]  
@@ -308,16 +326,16 @@ SELECT CustomerID, CompanyName
 GO  
 ```  
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Windows ファイルからの読み取りはサポートされません。
   
-### <a name="c-using-openrowset-and-another-table-in-an-inner-join"></a>C. OPENROWSET と INNER JOIN 内の別のテーブルを使用する  
+### <a name="d-using-openrowset-and-another-table-in-an-inner-join"></a>D. OPENROWSET と INNER JOIN 内の別のテーブルを使用する  
  次の例では、ローカル インスタンスの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] `Northwind` データベース内の `Customers` テーブル 、および同じコンピューター上に格納されている Access `Northwind` データベースのテーブル `Orders` から、すべてのデータを選択します。  
   
 > [!NOTE]  
 > この例では、Access がインストールされていることを前提としています。 この例を実行するには、Northwind データベースをインストールする必要があります。  
   
 ```sql  
-USE Northwind  ;  
+USE Northwind;  
 GO  
 SELECT c.*, o.*  
 FROM Northwind.dbo.Customers AS c   
@@ -329,10 +347,9 @@ GO
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Windows ファイルからの読み取りはサポートされません。
 
-  
-### <a name="d-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>D. OPENROWSET を使用して、ファイル データを varbinary(max) 列に一括挿入する  
+### <a name="e-using-openrowset-to-bulk-insert-file-data-into-a-varbinarymax-column"></a>E. OPENROWSET を使用して、ファイル データを varbinary(max) 列に一括挿入する  
  次の例では、小さなテーブルを作成し、ルート ディレクトリ `C:` にあるファイル `Text1.txt` から `varbinary(max)` 列にファイル データを挿入します。  
   
 ```sql  
@@ -350,10 +367,10 @@ GO
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Windows ファイルからの読み取りはサポートされません。
   
 
-### <a name="e-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>E. OPENROWSET BULK プロバイダーをフォーマット ファイルと共に使用して、テキスト ファイルから行を取得する  
+### <a name="f-using-the-openrowset-bulk-provider-with-a-format-file-to-retrieve-rows-from-a-text-file"></a>F. OPENROWSET BULK プロバイダーをフォーマット ファイルと共に使用して、テキスト ファイルから行を取得する  
  次の例では、フォーマット ファイルを使用して、タブ区切りのテキスト ファイル `values.txt` から行を取得します。このテキスト ファイルには次のデータが含まれます。  
   
 ```sql  
@@ -379,10 +396,9 @@ SELECT a.* FROM OPENROWSET( BULK 'c:\test\values.txt',
 ```  
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Windows ファイルからの読み取りはサポートされません。
   
-
-### <a name="f-specifying-a-format-file-and-code-page"></a>F. フォーマット ファイルとコード ページを指定する  
+### <a name="g-specifying-a-format-file-and-code-page"></a>G. フォーマット ファイルとコード ページを指定する  
  次の例では、フォーマット ファイルとコード ページの両方のオプションを同時に使用する方法を示します。  
   
 ```sql  
@@ -390,8 +406,8 @@ INSERT INTO MyTable SELECT a.* FROM
 OPENROWSET (BULK N'D:\data.csv', FORMATFILE =   
     'D:\format_no_collation.txt', CODEPAGE = '65001') AS a;  
 ```  
-### <a name="g-accessing-data-from-a-csv-file-with-a-format-file"></a>G. フォーマット ファイルを使用して CSV ファイルのデータにアクセスする  
-**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
+### <a name="h-accessing-data-from-a-csv-file-with-a-format-file"></a>H. フォーマット ファイルを使用して CSV ファイルのデータにアクセスする  
+**適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.   
 ```sql
 SELECT *
 FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
@@ -401,10 +417,10 @@ FROM OPENROWSET(BULK N'D:\XChange\test-csv.csv',
 ```
 
 > [!IMPORTANT]
-> Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Windows ファイルからの読み取りはサポートされません。
 
 
-### <a name="h-accessing-data-from-a-csv-file-without-a-format-file"></a>H. フォーマット ファイルなしで CSV ファイルのデータにアクセスする
+### <a name="i-accessing-data-from-a-csv-file-without-a-format-file"></a>I. フォーマット ファイルなしで CSV ファイルのデータにアクセスする
 
 ```sql
 SELECT * FROM OPENROWSET(
@@ -422,10 +438,10 @@ from openrowset('MSDASQL'
 
 > [!IMPORTANT]
 > - ODBC ドライバーは 64 ビットである必要があります。 このことを確認するには、Windows で [OBDC データ ソース](../../integration-services/import-export-data/connect-to-an-odbc-data-source-sql-server-import-and-export-wizard.md) アプリケーションの **[ドライバー]** タブを開きます。 64 ビット バージョンの sqlservr.exe では機能しない、32 ビットの `Microsoft Text Driver (*.txt, *.csv)` があります。 
-> - Azure SQL Database では、Windows ファイルからの読み取りはサポートされません。
+> - [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、Windows ファイルからの読み取りはサポートされません。
 
 
-### <a name="i-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>I. Azure Blob Storage に格納されているファイルのデータにアクセスする   
+### <a name="j-accessing-data-from-a-file-stored-on-azure-blob-storage"></a>J. Azure Blob Storage に格納されているファイルのデータにアクセスする   
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1。   
 次の例では、Shared Access Signature に対して作成された Azure ストレージ アカウントとデータベース スコープ資格情報のコンテナーを指している外部データ ソースを使用します。     
 
@@ -435,10 +451,11 @@ SELECT * FROM OPENROWSET(
    DATA_SOURCE = 'MyAzureInvoices',
    SINGLE_CLOB) AS DataFile;
 ```   
+
 資格情報と外部データ ソースの構成などの `OPENROWSET` の詳細な例については、「[Azure BLOB ストレージのデータに一括アクセスする例](../../relational-databases/import-export/examples-of-bulk-access-to-data-in-azure-blob-storage.md)」をご覧ください。
  
 ### <a name="additional-examples"></a>その他の例  
- `INSERT...SELECT * FROM OPENROWSET(BULK...)` のその他の使用例については、次のトピックをご覧ください。  
+`INSERT...SELECT * FROM OPENROWSET(BULK...)` のその他の使用例については、次のトピックをご覧ください。  
   
 -   [XML ドキュメントの一括インポートと一括エクスポートの例 &#40;SQL Server&#41;](../../relational-databases/import-export/examples-of-bulk-import-and-export-of-xml-documents-sql-server.md)  
   

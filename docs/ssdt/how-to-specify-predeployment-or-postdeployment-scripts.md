@@ -10,15 +10,15 @@ ms.topic: conceptual
 ms.assetid: 7f78f517-f13d-4f4b-84b9-e804cb490b2c
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: a1531bffd50bb14838e74b5315c30a870563f86f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e8bbc783901c7dd93515424ae811fe66239e9f33
+ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68035006"
+ms.lasthandoff: 09/23/2019
+ms.locfileid: "71199299"
 ---
 # <a name="how-to-specify-predeployment-or-postdeployment-scripts"></a>方法:配置前スクリプトまたは配置後スクリプトを指定する
-配置前スクリプトと配置後スクリプトでは、データベース プロジェクトから生成されるメインの配置スクリプトの前後に Transact\-SQL ステートメントが実行されます。 1 つのプロジェクトに含めることができる配置前スクリプトと配置後スクリプトはそれぞれ 1 つだけです。 これらのスクリプトはさまざまな目的で使用できます。 例:  
+配置前スクリプトと配置後スクリプトでは、データベース プロジェクトから生成されるメインの配置スクリプトの前後に Transact\-SQL ステートメントが実行されます。 Visual Studio でスキーマ比較結果からターゲットを更新するとき、配置前スクリプトは実行されません。 1 つのプロジェクトに含めることができる配置前スクリプトと配置後スクリプトはそれぞれ 1 つだけです。 これらのスクリプトはさまざまな目的で使用できます。 例:  
   
 -   配置前スクリプトでは、配置後スクリプトでデータの書式を再設定して変更対象のテーブルに適用する前に、変更対象のテーブルのデータを一時テーブルにコピーできます。  
   
@@ -30,7 +30,7 @@ BEGIN
     DELETE FROM [dbo].[MyReferenceTable]  
 END  
 ```  
-  
+
 ## <a name="to-add-and-modify-a-pre--or-post-deployment-script"></a>配置前スクリプトまたは配置後スクリプトを追加および変更するには  
   
 1.  **ソリューション エクスプローラー**で、データベース プロジェクトを展開して Scripts フォルダーを表示します。  
