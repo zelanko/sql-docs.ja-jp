@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: eec38696-5e26-46fa-bc83-aa776f470ce8
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: baf802929aa4bf0becc5eece41a445f180580daf
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 4eab56329c2b51f792394ffc37921e8a1ed8e117
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890767"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952249"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>PowerPivot for SharePoint 2010 をインストールする
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、SharePoint 2010 ファームでの PowerPivot データ アクセスを提供する中間層のバックエンド サービスのコレクションです。 組織で分析データを格納するブックの作成にクライアント アプリケーション [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel 2010 を使用する場合、サーバー環境でそのデータにアクセスするには [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] が必要です。 このトピックでは、基本的なインストール プロセスについて説明し、PowerPivot を構成するために役立つその他のトピックに関する情報も示します。  
@@ -26,7 +26,7 @@ ms.locfileid: "68890767"
   
  
   
- と[ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を同じサーバーにインストールする手順については、「展開チェックリスト:[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]Reporting Services、Power View、および PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)。  
+ @No__t-0 と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じサーバーにインストールする手順については、「[Deployment チェックリスト:Reporting Services、Power View、および PowerPivot for SharePoint @ no__t-0。  
   
 ## <a name="prerequisites"></a>前提条件  
   
@@ -76,7 +76,7 @@ ms.locfileid: "68890767"
   
 8.  **[セットアップ ロール]** ページで、 **[SQL Server PowerPivot for SharePoint]** を選択します。  
   
-9. オプションで、データベース エンジンのインスタンスをインストールに追加することができます。 新しいファームを設定し、ファームの構成データベースとコンテンツデータベースを実行するためにデータベースサーバーが必要な場合は、この操作を行うことができます。 データベース エンジンを追加した場合は、PowerPivot 名前付きインスタンスとしてインストールされます。 このインスタンスへの接続を指定する必要がある場合 (たとえば、ファーム構成ウィザードを使用してファームを構成する場合)、データベース名を次の形式で入力します。`servername`< > \powerpivot  
+9. オプションで、データベース エンジンのインスタンスをインストールに追加することができます。 新しいファームを設定し、ファームの構成データベースとコンテンツデータベースを実行するためにデータベースサーバーが必要な場合は、この操作を行うことができます。 データベース エンジンを追加した場合は、PowerPivot 名前付きインスタンスとしてインストールされます。 このインスタンスへの接続を指定する必要がある場合 (たとえば、ファーム構成ウィザードを使用してファームを構成する場合) は、< `servername` > \Powerpivot の形式でデータベース名を入力します。  
   
      ![GMNI_SetupUI_FeatureRole](../../../2014/sql-server/install/media/gmni-setupui-featurerole.gif "GMNI_SetupUI_FeatureRole")  
   
@@ -92,7 +92,7 @@ ms.locfileid: "68890767"
   
      SQL Server Analysis Services については、ドメイン ユーザー アカウントを指定する必要があります。 ビルトイン アカウントを指定しないでください。 ドメインアカウントは、SharePoint サーバーの全体管理で*管理アカウント*として Analysis Services サービスアカウントを管理するために必要です。  
   
-     ![SSAS サーバーの構成](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS サーバーの構成")  
+     ![Ssas サーバー構成](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "ssas サーバー構成")  
   
      SQL Server データベース エンジンと SQL Server エージェントを追加した場合は、サービスがドメイン ユーザー アカウントまたは既定の仮想アカウントで実行されるように構成できます。  
   
@@ -128,7 +128,7 @@ ms.locfileid: "68890767"
   
 -   [Windows PowerShell を使用した PowerPivot の構成](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-using-windows-powershell)  
   
- **データベースエンジンインスタンスに接続しています。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールしたときに、SQL Server セットアップで、データベース エンジンのインスタンスをインストールに追加することができました。 新しいファームを設定し、ファームの構成データベースとコンテンツデータベースを実行するためにデータベースサーバーが必要な場合は、データベースエンジンインスタンスをインストールに追加した可能性があります。 データベース エンジンを追加した場合は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスとしてインストールされています。 このインスタンスへの接続を指定する必要がある場合 (たとえば、ファーム構成ウィザードを使用してファームを構成する場合)、必ずデータベース名を次の形式で入力してください:`servername`< > \powerpivot  
+ **データベースエンジンインスタンスに接続しています。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールしたときに、SQL Server セットアップで、データベース エンジンのインスタンスをインストールに追加することができました。 新しいファームを設定し、ファームの構成データベースとコンテンツデータベースを実行するためにデータベースサーバーが必要な場合は、データベースエンジンインスタンスをインストールに追加した可能性があります。 データベース エンジンを追加した場合は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスとしてインストールされています。 このインスタンスへの接続を指定する必要がある場合 (たとえば、ファーム構成ウィザードを使用してファームを構成する場合)、< `servername` > \Powerpivot の形式でデータベース名を入力してください。  
   
 ##  <a name="bkmk_redist"></a> ステップ 3:Excel Services アプリケーション サーバーへの Analysis Services OLE DB プロバイダーのインストール  
  個々のアプリケーション サーバーで Excel Calculation Services と [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を実行する場合は、追加のインストール手順が必要となります。 Excel Calculation Services を実行しているアプリケーション サーバーに、適切なバージョンの Analysis Services OLE DB (MSOLAP) プロバイダーをインストールします。  
@@ -147,8 +147,8 @@ ms.locfileid: "68890767"
   
 ## <a name="see-also"></a>参照  
  [PowerPivot for SharePoint 2010 のインストール](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- [展開のチェックリスト:Reporting Services、Power View、および PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
- [展開のチェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
- [展開のチェックリスト:PowerPivot for SharePoint 2010 のマルチサーバーインストール](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
+ @no__t 0Deployment のチェックリスト:Reporting Services、Power View、PowerPivot for SharePoint @ no__t-0 @ no__t-1  
+ @no__t 0Deployment のチェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト @ no__t-0 @ no__t-1  
+ @no__t 0Deployment のチェックリスト:PowerPivot for SharePoint 2010 のマルチサーバーインストール @ no__t-0  
   
   

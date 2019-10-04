@@ -1,10 +1,10 @@
 ---
 title: sys _exec_requests (Transact-sql) |Microsoft Docs
 ms.custom: ''
-ms.date: 06/03/2019
+ms.date: 10/01/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
-ms.reviewer: ''
+ms.reviewer: sstein
 ms.technology: system-objects
 ms.topic: language-reference
 f1_keywords:
@@ -18,14 +18,14 @@ helpviewer_keywords:
 - sys.dm_exec_requests dynamic management view
 ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
-ms.author: sstein
+ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: fbd23a685507b62529477d6ef92dbbbd1980c5c1
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
+ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326166"
+ms.lasthandoff: 10/03/2019
+ms.locfileid: "71923776"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys _exec_requests (Transact-sql)
 
@@ -47,7 +47,7 @@ ms.locfileid: "71326166"
 |database_id|**smallint**|要求の実行対象データベースの ID。 NULL 値は許可されません。|  
 |user_id|**int**|要求を送信したユーザーの ID。 NULL 値は許可されません。|  
 |connection_id|**uniqueidentifier**|要求を受信した接続の ID。 NULL 値が許可されます。|  
-|blocking_session_id|**smallint**|要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションによって所有されています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を現時点で特定できませんでした。|  
+|blocking_session_id|**smallint**|要求をブロックしているセッションの ID。 この列が NULL または0に等しい場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用できない (または識別できません)。<br /><br /> -2 = ブロックしているリソースは、孤立した分散トランザクションが所有しています。<br /><br /> -3 = ブロックしているリソースは、遅延復旧トランザクションによって所有されています。<br /><br /> -4 = 内部ラッチの状態遷移のため、ブロックしているラッチの所有者のセッション ID を現時点で特定できませんでした。|  
 |wait_type|**nvarchar(60)**|要求が現在ブロックされている場合の待機の種類。 NULL 値が許可されます。<br /><br /> 待機の種類の詳細については、「 [_os_wait_stats &#40;transact-sql&#41;](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。|  
 |wait_time|**int**|要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |last_wait_type|**nvarchar(60)**|要求がブロックされていた場合の最後の待機の種類。 NULL 値は許可されません。|  
@@ -77,7 +77,7 @@ ms.locfileid: "71326166"
 |ansi_padding|**bit**|1 = 要求に対して ANSI_PADDING 設定が ON です。<br /><br /> それ以外の場合は0になります。<br /><br /> NULL 値は許可されません。|  
 |ansi_nulls|**bit**|1 = 要求に対して ANSI_NULLS 設定が ON です。 それ以外の場合は0になります。<br /><br /> NULL 値は許可されません。|  
 |concat_null_yields_null|**bit**|1 = 要求に対して CONCAT_NULL_YIELDS_NULL 設定が ON です。 それ以外の場合は0になります。<br /><br /> NULL 値は許可されません。|  
-|transaction_isolation_level|**smallint**|この要求に対するトランザクションの作成に使用された分離レベル。 NULL 値は許可されません。<br /><br /> 0 = Unspecified<br /><br /> 1 = ReadUncomitted<br /><br /> 2 = ReadCommitted<br /><br /> 3 = Repeatable<br /><br /> 4 = Serializable<br /><br /> 5 = Snapshot|  
+|transaction_isolation_level|**smallint**|この要求に対するトランザクションの作成に使用された分離レベル。 NULL 値は許可されません。<br /> 0 = Unspecified<br /> 1 = ReadUncomitted<br /> 2 = ReadCommitted<br /> 3 = Repeatable<br /> 4 = Serializable<br /> 5 = Snapshot|  
 |lock_timeout|**int**|要求のロック タイムアウトまでの時間 (ミリ秒単位)。 NULL 値は許可されません。|  
 |deadlock_priority|**int**|要求の DEADLOCK_PRIORITY 設定。 NULL 値は許可されません。|  
 |row_count|**bigint**|この要求によってクライアントに返された行の数。 NULL 値は許可されません。|  
@@ -96,6 +96,7 @@ ms.locfileid: "71326166"
 |is_resumable |**bit** |**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 要求が再開可能なインデックス操作であるかどうかを示します。 |  
 |page_resource |**binary(8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 列に`wait_resource`ページが含まれている場合は、ページリソースの8バイトの16進数表現。 詳細については、「 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)」を参照してください。 |  
 |page_server_reads|**bigint**|**適用対象**:Azure SQL Database ハイパースケール<br /><br /> この要求によって実行されたページサーバーの読み取り回数。 NULL 値は許可されません。|  
+| &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>コメント 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時刻値には、プリエンプティブモードで費やされた時間は含まれません。
@@ -125,14 +126,14 @@ GO
 
 ### <a name="b-finding-all-locks-that-a-running-batch-is-holding"></a>B. 実行中のバッチが保持しているすべてのロックを検索する
 
-次の例では、 **_exec_requests**に対してクエリを行って、興味`transaction_id`深いバッチを見つけて、出力からコピーします。
+次の例では、 **_exec_requests**に対してクエリを行って、興味深いバッチを検索し、出力から `transaction_id` をコピーします。
 
 ```sql
 SELECT * FROM sys.dm_exec_requests;  
 GO
 ```
 
-次に、ロック情報を検索するには`transaction_id` 、システム関数でコピーされたを使用**します。**  
+次に、ロック情報を検索するには、コピーした `transaction_id` と**システム関数を使用します。**  
 
 ```sql
 SELECT * FROM sys.dm_tran_locks

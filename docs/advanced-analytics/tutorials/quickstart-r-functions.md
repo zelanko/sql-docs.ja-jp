@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: このクイックスタートでは、SQL Server Machine Learning Services を使用した高度な統計計算用の R 関数を記述する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/03/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cebd4ea6a356af6802a0e26f778667b2acc4b80c
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149906"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951862"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用した高度な R 関数の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -43,7 +43,7 @@ as.data.frame(rnorm(100, mean = 50, sd = 3));
 T-sql からこの r の行を呼び出すには、次のように、の`sp_execute_external_script`r スクリプトパラメーターに r 関数を追加します。
 
 ```sql
-EXEC sp_execute_external_script
+EXECUTE sp_execute_external_script
       @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(100, mean = 50, sd =3));'
@@ -62,7 +62,7 @@ CREATE PROCEDURE MyRNorm (
     , @param3 INT
     )
 AS
-EXEC sp_execute_external_script @language = N'R'
+EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'
          OutputDataSet <- as.data.frame(rnorm(mynumbers, mymean, mysd));'
     , @input_data_1 = N'   ;'
@@ -82,7 +82,7 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 ストアド プロシージャで R 関数をラップしたので、次のように関数を簡単に呼び出し、別の値を渡すことができます。
 
 ```sql
-EXEC MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
+EXECUTE MyRNorm @param1 = 100,@param2 = 50, @param3 = 3
 ```
 
 ## <a name="use-r-utility-functions-for-troubleshooting"></a>トラブルシューティングのための R ユーティリティ関数の使用
@@ -103,9 +103,7 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> `system.time` や`proc.time`などのシステムタイミング関数を使用して、r プロセスによって使用される時間をキャプチャし、パフォーマンスの問題を分析する多くのユーザー。
-
-例については、次のチュートリアルを参照してください。[データ機能を作成](../tutorials/walkthrough-create-data-features.md)します。 このチュートリアルでは、r のタイミング関数をソリューションに埋め込んで、R 関数とのパフォーマンスを比較します。データから機能を作成するための t-sql 関数。
+> `system.time` や`proc.time`などのシステムタイミング関数を使用して、r プロセスによって使用される時間をキャプチャし、パフォーマンスの問題を分析する多くのユーザー。 例については、「R タイミング関数がソリューションに埋め込まれる[データ機能の作成](../tutorials/walkthrough-create-data-features.md)」のチュートリアルを参照してください。
 
 ## <a name="next-steps"></a>次の手順
 

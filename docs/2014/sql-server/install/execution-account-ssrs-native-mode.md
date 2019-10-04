@@ -1,5 +1,5 @@
 ---
-title: 実行アカウント (SSRS ネイティブ モード) |Microsoft Docs
+title: 実行アカウント (SSRS ネイティブモード) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.executionaccount.F1
 ms.assetid: 440b5a09-5fd4-4c3a-b510-f3c33cbf1c82
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 17bbc891c54d28f5eedbebc1d51edf11d0ae405b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 0eff6dca788744b93d2d6d4a0a7175764e263f71
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095339"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952543"
 ---
 # <a name="execution-account-ssrs-native-mode"></a>実行アカウント (SSRS ネイティブ モード)
   このページを使用すると、自動処理に使用するアカウントを構成できます。 このアカウントは、他に使用できる資格情報のソースがないという特殊な状況で使用されます。  
@@ -53,7 +53,7 @@ ms.locfileid: "66095339"
  再度、パスワードを入力します。  
   
 ## <a name="see-also"></a>関連項目  
- [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+ [Reporting Services Configuration Manager の F1 ヘルプ&#40;トピック SSRS ネイティブ&#41;モード](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [暗号化されたレポート サーバー データの格納 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-store-encrypted-report-server-data.md)   
  [自動実行アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-unattended-execution-account-ssrs-configuration-manager.md)  
   

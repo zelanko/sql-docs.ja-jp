@@ -1,5 +1,5 @@
 ---
-title: スケール アウト配置 (ネイティブ モード レポート サーバー) |Microsoft Docs
+title: スケールアウト配置 (ネイティブモードのレポートサーバー) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -9,15 +9,15 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.scaleoutdeployment.F1
 ms.assetid: 4df38294-6f9d-4b40-9f03-1f01c1f0700c
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: f26787441fb93253b9ca944c479f9cf480ba0745
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: a9fe82102df73ddfa77b4636dd29793ac2694949
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092430"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952426"
 ---
 # <a name="scale-out-deployment-native-mode-report-server"></a>スケールアウト配置 (ネイティブ モードのレポート サーバー)
   **構成マネージャーの** [スケールアウト配置] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ページを使用して、スケールアウト配置の初期化状態を表示したり、レポート サーバーをスケールアウト配置に追加したりします。 *スケールアウト配置* とは、複数のレポート サーバー インスタンスが 1 つのレポート サーバー データベースを共有する状態を表しています。  
@@ -43,7 +43,7 @@ ms.locfileid: "66092430"
  **データベース名**  
  レポート サーバー インスタンスが現在接続されているデータベースの名前を指定します。  
   
- **サーバー モード**  
+ **サーバーモード**  
  サーバーとデータベースのモードを表示します。 サーバー モードはネイティブまたは SharePoint 統合のいずれかです。 スケールアウト配置は両方のモードでサポートされています。  
   
  **[サーバー]**  
@@ -63,7 +63,7 @@ ms.locfileid: "66092430"
   
      レポート サーバーが既にスケールアウト配置の一部である場合、このページを使用してノードの追加または削除を実行できます。  
   
- **初期化します。**  
+ **化**  
  **[初期化]** をクリックすると、レポート サーバーをスケールアウト配置に追加できます。 これにより、共有レポート サーバー データベース内の対称キーが使用されるようにレポート サーバーが構成されます。 **[初期化]** を使用すると、レポート サーバー インスタンスをスケールアウト配置に追加したり、移行やインストールで発生した問題のトラブルシューティングを行ったりすることができます。  
   
  レポート サーバー インスタンスは、共有レポート サーバー データベースへの接続が構成されている場合にのみ使用できます。 また、初期化は、レポート サーバー データベースを使用するように初期化済みのサーバーから実行する必要があります。  
@@ -73,7 +73,7 @@ ms.locfileid: "66092430"
   
  念のために、対称キーを削除する前に必ずバックアップ コピーを作成してください。 一覧の最後のレポート サーバーの暗号化キーを削除すると、その後は、そのデータベースのレポート サーバーを初期化するときに新しい手順が必要になります。 追加される手順とは、レポート サーバーを初期化した後に、対称キーのバックアップ コピーを復元することです。 レポート サーバー データベース内に現存する暗号化されたデータにアクセスするには、対称キーの復元が必要です。  
   
- 暗号化されたデータが不要になった場合、またはキーのバックアップ コピーがない場合は、暗号化されたデータを削除してください。 詳細については、次を参照してください。[暗号化キー &#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)します。  
+ 暗号化されたデータが不要になった場合、またはキーのバックアップ コピーがない場合は、暗号化されたデータを削除してください。 詳細については、「[暗号化キー &#40;SSRS&#41;ネイティブモード](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [レポート サーバーの初期化 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-initialize-a-report-server.md)   

@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 4380040a-1368-4a47-8930-47c65a192e59
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 33bbaf46bb4dee5e0e7b58f6dc179ae5647ee3e7
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: ed0cd8bad3a99c7f1f59b5121aafb06ccdee63b2
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890739"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952240"
 ---
 # <a name="deployment-checklist-multi-server-installation-of-powerpivot-for-sharepoint-2010"></a>配置のチェック リスト:PowerPivot for SharePoint 2010 のマルチサーバー インストール
-  このチェックリストでは、最初から構築[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]した3層の sharepoint 2010 ファームに for SharePoint を追加する手順について説明します。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 この[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]トポロジに追加するには SQL Server セットアップを実行し[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]てアプリケーション層にインストールする必要があります。 PowerPivot プログラムファイルは web 層に追加されますが、web アプリケーションソリューションを配置する場合は、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 実行する必要があるインストール手順は、アプリケーションサーバー [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]にをインストールすることだけです。  
+  このチェックリストでは、最初から構築した3層の SharePoint 2010 ファームに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for SharePoint を追加する手順について説明します。 3 層ファームには、データベース層、アプリケーション層、および Web 層が含まれています。 このトポロジに [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を追加するには SQL Server セットアップを実行して、アプリケーション層に [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールする必要があります。 PowerPivot プログラムファイルは web 層に追加されますが、web アプリケーションソリューションを配置する場合は、インストール後のタスクとしてのみ追加されます。 配置手順は必要ですが、Web 層またはデータ層のいずれかで実行する必要のある個別のインストール手順はありません。 実行する必要があるインストール手順は、アプリケーションサーバーに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールすることだけです。  
   
 ||  
 |-|  
@@ -148,7 +148,7 @@ ms.locfileid: "68890739"
   
  アプリケーション サーバーには常に PowerPivot for SharePoint をインストールします。 PowerPivot for SharePoint サーバー コンポーネントは Web フロントエンド サーバーでも実行されますが、Web フロントエンドで実行されるコンポーネントは、PowerPivot for SharePoint の構成手順で、ファームにソリューションを配置するときにインストールされます。 セットアップの詳細については、「 [Install PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)」を参照してください。  
   
- 配置トポロジに 2 つの PowerPivot for SharePoint インスタンスが必要な場合は、各アプリケーション サーバーで SQL Server セットアップを実行します。 1 台のコンピューターには PowerPivot for SharePoint のインスタンスを 1 つだけインストールできます。 複数のインスタンスが必要な場合は、追加のサーバーを使用する必要があります。 複数の PowerPivot for SharePoint サーバーを同じファームに追加する方法の詳細に[ついては、次を参照してください。展開チェックリスト:SharePoint 2010 ファーム](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)に PowerPivot サーバーを追加してスケールアウトします。  
+ 配置トポロジに 2 つの PowerPivot for SharePoint インスタンスが必要な場合は、各アプリケーション サーバーで SQL Server セットアップを実行します。 1 台のコンピューターには PowerPivot for SharePoint のインスタンスを 1 つだけインストールできます。 複数のインスタンスが必要な場合は、追加のサーバーを使用する必要があります。 複数の PowerPivot for SharePoint サーバーを同じファームに追加する方法の詳細については、「@no__t の展開チェックリスト:PowerPivot サーバーを SharePoint 2010 ファーム @ no__t に追加してスケールアウトします。  
   
 ##  <a name="installclientlib"></a>PowerPivot for SharePoint がインストールされていない SharePoint アプリケーションサーバーに Analysis Services クライアントライブラリをインストールする  
  同じコンピューターに PowerPivot for SharePoint がインストールされておらず、次のアプリケーションを実行している Web フロントエンドまたはアプリケーション サーバーを含むファーム トポロジには、PowerPivot データ アクセスおよび機能をサポートするための追加ソフトウェアが必要になります。  
@@ -189,7 +189,7 @@ ms.locfileid: "68890739"
   
  PowerPivot の SharePoint サイトとの統合を確認するには、次の操作を行います。  
   
-1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL\<アドレスに > コンピューター名を指定できます。  
+1.  ブラウザーで、作成した Web アプリケーションを開きます。 既定値を使用した場合は、URL アドレスに http://\<your name > を指定できます。  
   
 2.  PowerPivot データ アクセス機能と PowerPivot データ処理機能がアプリケーションで使用可能になっていることを確認します。 そのためには、PowerPivot によって提供されるライブラリ テンプレートがあるかどうかを確認します。  
   
@@ -211,7 +211,7 @@ ms.locfileid: "68890739"
   
 6.  [サーバーの種類] で **[Analysis Services]** を選択します。  
   
-7.  [サーバー名] に、「  **\<サーバー名 >** を入力します。ここ **\<** で、サーバー名 > は PowerPivot for SharePoint インストールされているコンピューターの名前です。  
+7.  サーバー名 に、 **\<server-name >** を入力します。ここで **\<server-name >** は、PowerPivot for SharePoint インストールされているコンピューターの名前です。  
   
 8.  **[接続]** をクリックします。  
   
@@ -265,7 +265,7 @@ ms.locfileid: "68890739"
   
 ## <a name="see-also"></a>参照  
  [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)   
- [PowerPivot for SharePoint 2010 をインストールする](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)   
- [展開のチェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)  
+ [PowerPivot for SharePoint 2010](../../../2014/sql-server/install/install-powerpivot-for-sharepoint-2010.md)  をインストールします。  
+ @no__t 0Deployment のチェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト @ no__t-0  
   
   

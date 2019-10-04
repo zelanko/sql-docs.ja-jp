@@ -1,5 +1,5 @@
 ---
-title: 直接参照するレポート サーバー (アップグレード アドバイザー) |Microsoft Docs
+title: レポートサーバーへの直接参照 (アップグレードアドバイザー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3d2814a4-318a-45ed-b093-1e852fab561f
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 870937f4dffe356ca2216335c74566efc73d2a52
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6945828b2eba829c32d717c13393c9fbda4fc43e
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66095536"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952211"
 ---
 # <a name="direct-browsing-to-report-server-upgrade-advisor"></a>レポート サーバーの直接参照 (アップグレード アドバイザー)
-  アップグレード アドバイザーには、現在インストールが検出された[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]がレポート サーバーの仮想ディレクトリを直接参照します。  
+  アップグレードアドバイザーによって @no__t の現在のインストールが検出されました-0 @no__t レポートサーバーの仮想ディレクトリを直接参照しています。  
   
 ||  
 |-|  
@@ -28,12 +28,12 @@ ms.locfileid: "66095536"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>説明  
- アップグレード アドバイザーには、現在インストールが検出された[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]などのレポート サーバーの仮想ディレクトリを直接参照は**http://\<サーバー名 >/ReportServer**します。 このような直接参照は現在のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ではサポートされていません。  
+ アップグレードアドバイザーによって @no__t の現在のインストールが検出されました-0 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] はレポートサーバーの仮想ディレクトリを直接参照しています (例: **http://\<server name >/ReportServer**)。 このような直接参照は現在のバージョンの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ではサポートされていません。  
   
 > [!NOTE]  
 >  この規則は警告であり、アップグレードはブロックされません。  
   
 ## <a name="corrective-action"></a>修正措置  
- ドキュメント ライブラリの SharePoint ユーザー インターフェイスを使用して参照または使用**http://\<サーバー名 >/sharepoint サイト >/_vti_bin/reportserver reportserver**します。  
+ ドキュメントライブラリの SharePoint ユーザーインターフェイスを使用して参照するか、 **http://\< サーバー名 >/SharePoint サイト >/_vti_bin/reportserver**を使用します。  
   
   

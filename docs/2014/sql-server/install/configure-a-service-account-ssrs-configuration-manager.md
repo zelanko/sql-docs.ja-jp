@@ -1,5 +1,5 @@
 ---
-title: サービス アカウント (SSRS 構成マネージャー) の構成 |Microsoft Docs
+title: サービスアカウントの構成 (SSRS Configuration Manager) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - Report Server Windows service, accounts
 - Web service [Reporting Services], report server
 ms.assetid: 25000ad5-3f80-4210-8331-d4754dc217e0
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 84f6f2bdb4c5c512cb75dfea554b5ae28e3c3f02
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 04dff943d1227f84ff514e593f65c2ce4d7a918f
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096095"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952585"
 ---
 # <a name="configure-a-service-account-ssrs-configuration-manager"></a>サービス アカウントの構成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] がインストールされた環境では、レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションが 1 つのサービス内で実行されます。 サービスの実行に使用するアカウントは、セットアップ時に [サービス ID] ページでアカウントを指定するときに定義されますが、使用するアカウントの変更やパスワードの更新を行う場合は、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用できます。  
   
- SharePoint 統合モードを使用するように構成されているレポート サーバーがあり、使用して、サービス アカウントを変更するかどうか、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]構成ツールも SharePoint サーバーの全体管理を開くし、使用する必要があります、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **データベース アクセスの許可**ページ、レポート サーバーとインスタンスの設定を再適用します。 この手順は、新しいサービス アカウント アクセスを許可、SharePoint データベースに統合するために必要な[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]で[!INCLUDE[SPF2010](../../includes/spf2010-md.md)]または[!INCLUDE[SPS2010](../../includes/sps2010-md.md)]します。  
+ SharePoint 統合モードを使用するように構成されているレポートサーバーがあり、@no__t 0 構成ツールを使用してサービスアカウントを変更する場合は、SharePoint サーバーの全体管理を開き、**データベースへのアクセスを許可**する [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を使用する必要があります。レポートサーバーとインスタンスの設定を再適用するためのページ。 この手順により、新しいサービスアカウントに SharePoint データベースへのアクセス権が付与されます。これは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] と [!INCLUDE[SPF2010](../../includes/spf2010-md.md)] または [!INCLUDE[SPS2010](../../includes/sps2010-md.md)] を統合するために必要です。  
   
  サービス アカウントを更新する際には、そのサービス ID に依存する他の設定も同時に更新できるように、必ず [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用してください。  
   
@@ -38,7 +38,7 @@ ms.locfileid: "66096095"
   
 1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、レポート サーバーに接続します。  
   
-2.  [サービス アカウント] ページで、使用するアカウントの種類を示すオプションを選択します。 参照を指定するアカウントの種類に関する推奨事項について[レポート サーバー サービス アカウントの構成&#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)します。  
+2.  [サービス アカウント] ページで、使用するアカウントの種類を示すオプションを選択します。 指定するアカウントの種類に関する推奨事項については、「[レポート&#40;サーバーサービス&#41;アカウントの SSRS Configuration Manager の構成](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)」を参照してください。  
   
 3.  Windows ユーザー アカウントを選択した場合は、新しいアカウントとパスワードを指定します。 アカウントは 20 文字以下にする必要があります。  
   
@@ -63,11 +63,11 @@ ms.locfileid: "66096095"
   
 -   URL 予約エラーは、サービス アカウントを更新するときに発生する可能性があります。 各 URL 予約には、URL に対する要求を受け入れる権限をサービス アカウントに許可する任意のアクセス制御リスト (DACL) を含むセキュリティ記述子が含まれています。 アカウントの更新時に、URL を再作成して新しいアカウント情報で DACL を更新する必要があります。 URL 予約を再作成できない場合、アカウントが有効であるとわかっているときは、コンピューターを再起動してください。 エラーが引き続き発生する場合は、別のアカウントを使用してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>関連項目  
  [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)   
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [レポート サーバー データベース接続の構成 &#40;SSRS構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-report-server-database-connection-ssrs-configuration-manager.md)   
- [サービス アカウント&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
+ [サービスアカウント&#40;SSRS ネイティブモード&#41;](../../../2014/sql-server/install/service-account-ssrs-native-mode.md)   
  [暗号化キーの構成と管理 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/ssrs-encryption-keys-manage-encryption-keys.md)  
   
   

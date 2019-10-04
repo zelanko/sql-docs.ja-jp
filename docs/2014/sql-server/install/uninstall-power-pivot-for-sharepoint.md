@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: install
 ms.topic: conceptual
 ms.assetid: 3941a2f0-0d0c-4d1a-8618-7a6a7751beac
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: dd1f843159e4fcbfc4d46c762647f21bd7fec843
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 837843ec91a5bce8475d8153a15f61ad62721f12
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68893495"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951994"
 ---
 # <a name="uninstall-powerpivot-for-sharepoint"></a>PowerPivot for SharePoint のアンインストール
   [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のアンインストールは、複数の手順で構成されるプロセスです。これには、アンインストールの準備、ファームからの機能およびソリューションの削除、プログラム ファイルおよびレジストリ設定の削除が含まれます。  
@@ -32,7 +32,7 @@ ms.locfileid: "68893495"
   
 -   [手順 3:SQL Server セットアップを実行してローカル コンピューターからプログラムを削除する](#bkmk_uninstall)  
   
--   [手順 4:PowerPivot for SharePoint アドインをアンインストールする](#bkmk_addin)  
+-   [手順 4:PowerPivot for SharePoint アドインをアンインストールする @ no__t-0  
   
 -   [手順 5:アンインストールの確認](#verify)  
   
@@ -188,7 +188,7 @@ Get-Service | where {$_.displayname -like "*sharepoint* administration*"}
      Analysis Services OLE DB プロバイダーはアンインストールしないでください。 SharePoint では、Analysis Services データベースに接続する Excel ブックの前提条件として OLE DB プロバイダーがインストールされます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] では、より新しいバージョンがインストールされますが、このバージョンは下位互換性があるため、後でデータ接続の問題が発生するのを避けるためにシステムに残しておく必要があります。  
   
 ## <a name="see-also"></a>参照  
- [PowerPivot for SharePoint アドイン&#40;SharePoint 2013 をインストールまたはアンインストールする&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
+ [PowerPivot for SharePoint &#40;アドイン SharePoint 2013&#41;をインストールまたはアンインストールする](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)   
  [PowerPivot 構成ツール](https://docs.microsoft.com/analysis-services/power-pivot-sharepoint/power-pivot-configuration-tools)  
   
   

@@ -1,5 +1,5 @@
 ---
-title: 互換性のないデータベース エンジンのサーバー照合順序 (アップグレード アドバイザー) |Microsoft Docs
+title: 互換性のないデータベースエンジンサーバーの照合順序 (アップグレードアドバイザー) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -7,18 +7,18 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 80f499d6-2c90-49eb-a5b3-0bb5b7faaa3b
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 235811baf7339416750a5e3795caae55b0ba70aa
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: fbd4c1e55bb49c6ae8f75d3d12cc243df963018a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66094750"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952236"
 ---
 # <a name="incompatible-database-engine-server-collation-upgrade-advisor"></a>互換性のないデータベース エンジン サーバーの照合順序 (アップグレード アドバイザー)
-  アップグレード アドバイザーが検出された[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンスを使用して、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]互換性のないサーバーの照合順序を使用して構成されています。  
+  アップグレードアドバイザーによって @no__t 0 @no__t が検出されました。-1 は、互換性のないサーバー照合順序を使用するように構成されている @no__t のインスタンスを使用しています。  
   
 ||  
 |-|  
@@ -28,15 +28,15 @@ ms.locfileid: "66094750"
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]  
   
 ## <a name="description"></a>説明  
- アップグレード アドバイザーが検出された[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]のインスタンスを使用して、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]互換性のないサーバーの照合順序を使用して構成されています。  
+ アップグレードアドバイザーによって @no__t 0 @no__t が検出されました。-1 は、互換性のないサーバー照合順序を使用するように構成されている @no__t のインスタンスを使用しています。  
   
- [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードでは、SharePoint 共有サービス アーキテクチャで使用します。 SharePoint では、大文字と小文字の区別、サーバー照合順序、またはバイナリ サーバー照合順序用に構成された [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はサポートされません。 互換性のない照合順序には、既定で大文字と小文字を区別するかバイナリである照合順序と、既定では互換性があるものの、次の照合順序指定子のいずれかで構成されている基本照合順序が含まれます。  
+ [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードでは、SharePoint 共有サービスアーキテクチャを利用します。 SharePoint では、大文字と小文字の区別、サーバー照合順序、またはバイナリ サーバー照合順序用に構成された [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] はサポートされません。 互換性のない照合順序には、既定で大文字と小文字を区別するかバイナリである照合順序と、既定では互換性があるものの、次の照合順序指定子のいずれかで構成されている基本照合順序が含まれます。  
   
 -   **Binary**  
   
--   **大文字**  
+-   **大文字と小文字を区別する**  
   
--   **バイナリ コード ポイント**  
+-   **バイナリコードポイント**  
   
  現在の [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サーバー照合順序は互換性がないため、アップグレードがブロックされます。  
   

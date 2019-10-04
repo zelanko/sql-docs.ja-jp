@@ -11,15 +11,15 @@ helpviewer_keywords:
 - report server database
 - databases [Reporting Services], creating
 ms.assetid: 8a3a6ffe-4001-46be-8548-94532550f6a5
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: e6a5c6544acae62a5a9ed7d2fbafe05bbd0f9f2e
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 638f96285f4dab2bb109353d7d648b9de8b6bb67
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66454674"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952303"
 ---
 # <a name="create-a-report-server-database--ssrs-configuration-manager"></a>レポート サーバー データベースの作成 (SSRS 構成マネージャー)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **ネイティブ モード** では、レポート サーバーのメタデータとオブジェクトを格納するため、2 つの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] リレーショナル データベースを使用します。 データベースの 1 つは主要な記憶域として使用され、もう 1 つは一時データの格納に使用されます。 この 2 つのデータベースは同時に作成され、データベース名によってバインドされます。 既定の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスでは、データベースの名前は `reportserver` および `reportservertempdb` です。 2 つのデータベースを併せて、"レポート サーバー データベース" や "レポート サーバー カタログ" といいます。  
@@ -35,7 +35,7 @@ ms.locfileid: "66454674"
 > [!IMPORTANT]  
 >  レポート サーバー データベースに対してクエリを実行するアプリケーションは作成しないでください。 レポート サーバー データベースは、パブリック スキーマではありません。 テーブル構造は、リリースごとに変更される可能性があります。 レポート サーバー データベースにアクセスする必要のあるアプリケーションを記述する場合、常に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] API を使用してレポート サーバー データベースにアクセスしてください。  
 >   
->  例外は実行ログのビューです。 詳細については、次を参照してください[レポート サーバー実行ログと ExecutionLog3 ビュー。](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md)  
+>  例外は実行ログのビューです。 詳細については、「[レポートサーバー実行ログと ExecutionLog3 ビュー](../../reporting-services/report-server/report-server-executionlog-and-the-executionlog3-view.md) 」を参照してください。  
   
 ## <a name="ways-to-create-the-report-server-database"></a>レポート サーバー データベースを作成する方法  
  **ネイティブ モード:** ネイティブ モードのレポート サーバー データベースは、次の方法で作成できます:  
@@ -69,9 +69,9 @@ ms.locfileid: "66454674"
 >  レポート サーバーと、レポート サーバー データベースをホストする [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスは、同じドメインに属していなくてもかまいません。 インターネット配置では、ファイアウォール内にあるサーバーを使用するのが一般的です。 レポート サーバーをインターネット アクセス用に構成する場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の資格情報を使用してファイアウォール内の [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに接続し、IPSEC を使用して接続をセキュリティで保護してください。  
   
 ## <a name="database-server-edition-requirements"></a>データベース サーバー エディションの要件  
- レポート サーバー データベースを作成するときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 詳細については、の「レポート サーバー データベースのサーバー エディション要件」セクションを参照してください。[機能は、SQL Server 2014 の各エディションでサポートされている](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ レポート サーバー データベースを作成するときは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのエディションでデータベースをホストできるわけではないことに注意してください。 詳細については、 [SQL Server 2014 の各エディションがサポートする機能](../../../2014/getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」の「レポートサーバーデータベースサーバーエディションの要件」セクションを参照してください。  
   
-## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャー &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  
+## <a name="see-also"></a>関連項目  
+ [Reporting Services Configuration Manager &#40;del&#41;](https://docs.microsoft.com/sql/sql-server/install/reporting-services-configuration-manager-native-mode)  
   
   

@@ -7,15 +7,15 @@ ms.reviewer: ''
 ms.technology: database-engine
 ms.topic: conceptual
 ms.assetid: 3166107c-30c2-468e-bb1b-bb42b79b37c3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 954f60e49f5bc94881fcdf66b7a381385fb40416
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 42bc370a4e1eebddb3293afe6843f3ed19338656
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68890142"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952139"
 ---
 # <a name="install-sql-server-bi-features-with-sharepoint-powerpivot-and-reporting-services"></a>SharePoint を使用した SQL Server の BI 機能のインストール (PowerPivot と Reporting Services)
   [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を Microsoft SharePoint ファームに統合することで、SharePoint のビジネス インテリジェンス (BI) 機能を有効にすることができます。 機能には、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]、 [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]が含まれます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、SharePoint ファーム内の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] データ アクセスに使用されます。 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] for Excel で作成され、SharePoint ライブラリからアクセスされるブック用のデータ エンジンです。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを SharePoint に保存したら、それを [!INCLUDE[ssCrescent](../../includes/sscrescent-md.md)] レポートのデータ ソースとして使用できます。  
@@ -26,7 +26,7 @@ ms.locfileid: "68890142"
 |-|  
 |**[!INCLUDE[applies](../../includes/applies-md.md)]**  SharePoint 2013 &#124; SharePoint 2010|  
   
- ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "メモ")最新のリリースノートについては、「 [SQL server 2014 リリースノート](https://go.microsoft.com/fwlink/?LinkID=296445)」を参照してください。  
+ ![注](../../../2014/reporting-services/media/rs-fyinote.png "最新のリリースノートについて")は、「 [SQL server 2014 リリースノート](https://go.microsoft.com/fwlink/?LinkID=296445)」を参照してください。  
   
 ##  <a name="bkmk_top"></a> このトピックの内容  
   
@@ -60,19 +60,19 @@ ms.locfileid: "68890142"
 |-|-----------|--------------|--------------------------|  
 |1|SharePoint のみ|Excel Services のネイティブ機能|SharePoint Server 2013 に含まれる Excel Services やその他のサービス。|  
 |**2**|SharePoint モードの Analysis Services が統合された SharePoint|ブラウザー内での対話型の PowerPivot ブック|[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] を SharePoint モードでインストールします。<br /><br /> Excel Services で Analysis Services サーバーを登録します。|  
-|**3**|SharePoint モードの Reporting Services が統合された SharePoint|Power View|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。<br /><br /> SharePoint [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]用のアドイン **(rssharepoint .msi)** をインストールします。 詳細については、「sharepoint [2010 および sharepoint 2013 &#40;&#41;用の Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。|  
+|**3**|SharePoint モードの Reporting Services が統合された SharePoint|Power View|[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。<br /><br /> SharePoint 用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン **(Rssharepoint .msi)** をインストールします。 詳細については、「sharepoint [2010 および sharepoint 2013 &#40;&#41;用の Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。|  
 |**4**|PowerPivot のすべての機能|ファームの外部からのデータ ソースとしてのブックへのアクセス。<br /><br /> 定期データ更新。<br /><br /> PowerPivot ギャラリー。<br /><br /> 管理ダッシュボード。<br /><br /> BISM リンク ファイルのコンテンツの種類。|PowerPivot for SharePoint 2013 アドイン **(Sppowerpivot .msi)** をデプロイします。 詳細については、以下を参照してください。<br /><br /> [PowerPivot for SharePoint アドイン&#40;SharePoint 2013 をインストールまたはアンインストールする&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/install-or-uninstall-the-power-pivot-for-sharepoint-add-in-sharepoint-2013)<br /><br /> **spPowerPivot.msi**のダウンロード方法の詳細については、 [SQL Server 2014 PowerPivot for SharePoint のダウンロード ページ](https://go.microsoft.com/fwlink/?LinkID=296473)を参照してください。|  
   
- 機能の有効化[!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]の詳細については、「 [SharePoint 2013 の SQL Server BI のライトアップストーリー](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) )」を参照してください。  
+ @No__t 0 機能の有効化の詳細については、「 [SharePoint 2013 の SQL SERVER BI のライトアップストーリー](https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) (https://blogs.msdn.com/b/analysisservices/archive/2012/07/27/introducing-the-bi-light-up-story-for-sharepoint-2013.aspx) 」を参照してください。  
   
 ##  <a name="bkmk_install_sharepoint2013_overview"></a>インストールの概要  
- [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の両方を使用する場合は、SQL Server インストール ウィザードを 2 回実行します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]と[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]は、SQL Server セットアップウィザードの **[セットアップロール]** ページで個別に選択できます。  
+ [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]の両方を使用する場合は、SQL Server インストール ウィザードを 2 回実行します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] および [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] は、SQL Server セットアップウィザードの **[セットアップロール]** ページで個別に選択できます。  
   
  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] は SharePoint 2010 と SharePoint 2013 の両方をサポートしますが、使用されるアーキテクチャとインストール プロセスは SharePoint のバージョンに応じて異なります。  
   
  シングル サーバーに [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] の BI 機能を配置するインストール手順の概要を以下に示します。  
   
- **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)]2013**  
+ **[!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] 2013**  
   
  **SharePoint 2013**の場合、 [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] のインストールは、SharePoint 製品がインストールされていないサーバーで実行できます。 SharePoint 2013 で使用されている [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] アーキテクチャは、SharePoint ファームの **外部** で実行されるため、SharePoint もインストールされているサーバーにインストールすることも、SharePoint がインストールされてないサーバーにインストールすることもできます。  
   
@@ -82,7 +82,7 @@ ms.locfileid: "68890142"
   
      SharePoint の両方のバージョンで、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] のインストール プロセスの開始時に **[SQL Server PowerPivot for SharePoint]** のロールを設定します。これには SQL Server インストール ウィザードを使用するか、コマンド プロンプトによる SQL Server のインストールを使用します。  
   
-     ![セットアップロール](../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "セットアップロール")  
+     ![ロール]の(../../../2014/sql-server/install/media/gmni-setupui-featurerole-sql2012sp1.gif "セットアップロール")のセットアップ  
   
 3.  SharePoint 2013 では、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の機能とエクスペリエンスを拡張できます。 **spPowerPivot.msi** をダウンロードして実行すると、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックに対するサーバー側のデータ更新処理、コラボレーション、および管理のサポートが追加されます。 詳細については、「 [Microsoft SQL Server 2014 PowerPivot for Microsoft® SharePoint](https://go.microsoft.com/fwlink/?LinkID=324854)」を参照してください。  
   
@@ -94,7 +94,7 @@ ms.locfileid: "68890142"
   
      ![2 つの PowerPivot 構成ツール](https://docs.microsoft.com/analysis-services/analysis-services/media/as-powerpivot-configtools-bothicons.gif "2 つの PowerPivot 構成ツール")  
   
-5.  SharePoint Server 2013 で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを使用するように Excel Services を構成します。 詳細については、「 [PowerPivot for SharePoint 2013 のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」の「基本的な Analysis Services SharePoint 統合の構成」、および「 [Excel Services のデータモデル設定の管理 (sharepoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) 」 (https://technet.microsoft.com/library/jj219780.aspx) ) を参照してください。  
+5.  SharePoint Server 2013 で、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] インスタンスを使用するように Excel Services を構成します。 詳細については、「 [PowerPivot for SharePoint 2013 のインストール](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」の「基本的な Analysis Services SharePoint 統合の構成」、および「 [Excel Services のデータモデル設定の管理 (sharepoint Server 2013)](https://technet.microsoft.com/library/jj219780.aspx) 」 (https://technet.microsoft.com/library/jj219780.aspx) を参照してください。  
   
 6.  詳しくは、「 [PowerPivot for SharePoint 2013 Installation](https://docs.microsoft.com/analysis-services/instances/install-windows/install-analysis-services-in-power-pivot-mode)」をご覧ください。  
   
@@ -134,7 +134,7 @@ ms.locfileid: "68890142"
   
     1.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint モードでインストールします。 [Sharepoint モードのインストール&#40;で sharepoint 2010 および sharepoint&#41; 2013 を Reporting Services](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)し、sharepoint [2010 用の sharepoint モード Reporting Services インストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2010.md)します。  
   
-    2.  SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン (rsSharePoint.msi) をインストールします。 「Sharepoint [2010 および sharepoint 2013 &#40;&#41;用の Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。 Sharepoint 用[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]アドインの現在のバージョンについては、「 [sharepoint 製品用の Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
+    2.  SharePoint 製品用 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドイン (rsSharePoint.msi) をインストールします。 「Sharepoint [2010 および sharepoint 2013 &#40;&#41;用の Reporting Services アドインのインストールまたはアンインストール](../../reporting-services/install-windows/install-or-uninstall-the-reporting-services-add-in-for-sharepoint.md)」を参照してください。 SharePoint 用の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] アドインの現在のバージョンについては、「 [Sharepoint 製品用の Reporting Services アドインの検索場所](../../reporting-services/install-windows/where-to-find-the-reporting-services-add-in-for-sharepoint-products.md)」を参照してください。  
   
     3.  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint サービスと 1 つ以上の [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] サービス アプリケーションを構成します。 詳細については、「 [sharepoint 2013 用 Reporting Services Sharepoint モードのインストール](../../../2014/sql-server/install/install-reporting-services-sharepoint-mode-for-sharepoint-2013.md)」の「Reporting Services サービスアプリケーションの作成」セクションを参照してください。  
   

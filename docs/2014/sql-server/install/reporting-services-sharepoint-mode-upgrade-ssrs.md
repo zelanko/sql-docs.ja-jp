@@ -10,15 +10,15 @@ helpviewer_keywords:
 - SharePoint Mode [Reporting Services]
 - Upgrade SharePoint Mode [Reporting Services]
 ms.assetid: 5f73fb9d-86bb-4d9e-8a8e-37b59d735df3
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 4a404903e7095b633633ec1dc398bc4af767c080
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 726c9c77f3f18ededa586f399d3fc3710cc6c006
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092616"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952432"
 ---
 # <a name="reporting-services-sharepoint-mode-upgrade-ssrs"></a>Reporting Services SharePoint モードのアップグレード (SSRS)
   **[Reporting Services SharePoint モード]** ページを使用して、すべての共有機能のアップグレードを確認します。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードは [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共有機能であり、その他のすべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共有機能と共にアップグレードされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インストール ウィザードでは 1 つの共有機能のみのアップグレードはサポートされていません。 すべての [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 共有機能は同時にアップグレードされます。  
@@ -26,7 +26,7 @@ ms.locfileid: "66092616"
 ## <a name="options"></a>および  
  **[次へ]** ボタンは **[アップグレードを続行する]** チェック ボックスをオンにした場合にのみ利用できます。 チェック ボックスがオフの場合、アップグレードは続行できません。  
   
- 詳細については、次を参照してください。 [Upgrade and Migrate Reporting Services](https://go.microsoft.com/fwlink/?LinkID=245628) (https://go.microsoft.com/fwlink/?LinkID=245628) します。  
+ 詳細については、「 [Reporting Services のアップグレードと移行](https://go.microsoft.com/fwlink/?LinkID=245628)」 (https://go.microsoft.com/fwlink/?LinkID=245628) を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [SQL Server セットアップ ログ ファイルの表示と読み取り](https://technet.microsoft.com/library/ms143702\(v=sql.110\).aspx)   

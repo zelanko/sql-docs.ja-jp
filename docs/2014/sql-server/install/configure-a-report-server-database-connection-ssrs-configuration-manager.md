@@ -14,15 +14,15 @@ helpviewer_keywords:
 - databases [Reporting Services], connections
 - security [Reporting Services], database connections
 ms.assetid: 9759a9fb-35e9-4215-969b-a9f1fea18487
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 6258ecd22d45195ad00c617e53c7ce9f9416315c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8b6f1fa1697898432479b524659383d81fc8836a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66096189"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952629"
 ---
 # <a name="configure-a-report-server-database-connection--ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
   レポート サーバーの各インスタンスには、レポート サーバーの管理対象であるレポート、レポート モデル、共有データ ソース、リソース、およびメタデータが保存された、レポート サーバー データベースへの接続が必要です。 既定の構成をインストールする場合、最初の接続はレポート サーバーのインストール中に作成することができます。 ほとんどの場合は、セットアップの完了後に、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールを使用して接続を構成します。 この接続は、いつでも変更して、アカウントの種類を変更したり資格情報をリセットしたりできます。 データベースを作成し、接続を構成する方法の詳しい手順については、「[ネイティブ モード レポート サーバー データベース &#40; を作成します。SSRS 構成マネージャー &#41;](../../reporting-services/install-windows/ssrs-report-server-create-a-native-mode-report-server-database.md).  
@@ -64,7 +64,7 @@ ms.locfileid: "66096189"
 ### <a name="storing-database-connection-information"></a>データベース接続情報の保存  
  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 次の RSreportserver.config 設定に接続情報が格納され暗号化されています。 これらの設定の暗号化された値を作成するには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成ツールまたは rsconfig ユーティリティを使用する必要があります。  
   
- すべての値がどの種類の接続に対しても設定されるとは限りません。 (つまり、接続するためにサービス アカウントを使用して)、既定値を使用して接続を構成する場合は、<`LogonUser`>、<`LogonDomain`>、および <`LogonCred`> 次のように、空になります。  
+ すべての値がどの種類の接続に対しても設定されるとは限りません。 既定値を使用して接続を構成した場合 (つまり、サービスアカウントを使用して接続を確立した場合)、< `LogonUser` >、< `LogonDomain` >、および < `LogonCred` > は次のように空になります。  
   
 ```  
 <Dsn></Dsn>  

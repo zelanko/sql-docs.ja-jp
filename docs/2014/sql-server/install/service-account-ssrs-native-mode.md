@@ -1,5 +1,5 @@
 ---
-title: サービス アカウント (SSRS ネイティブ モード) |Microsoft Docs
+title: サービスアカウント (SSRS ネイティブモード) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -9,22 +9,22 @@ ms.topic: conceptual
 f1_keywords:
 - SQL12.rsconfigtool.serviceaccount.F1
 ms.assetid: face8120-4d32-4c6c-a1e8-99f27d1ff15d
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 318e567e32ca66ba2d42e2e6333c8b2e2075f06c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: db98f9806f48699af996a33675138150803e8812
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66092178"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952394"
 ---
 # <a name="service-account-ssrs-native-mode"></a>サービス アカウント (SSRS ネイティブ モード)
   [サービス アカウント] ページを使用すると、レポート サーバー サービスを実行するアカウントを指定できます。 このアカウントは、最初はセットアップ中に構成されます。 アカウントまたはパスワードの変更が必要な場合は、変更を加えることができます。 レポート サーバー Web サービス、レポート マネージャー、およびバックグラウンド処理アプリケーションは、いずれもこのページで指定したサービス ID で実行されます。  
   
  [!INCLUDE[applies](../../includes/applies-md.md)] [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ネイティブ モード。  
   
- レポート サーバー サービス用に指定するアカウントには、レジストリ、レポート サーバー プログラム ファイル、およびレポート サーバー データベースにアクセスするための権限が必要です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してアカウントを設定すると、アカウントに対してすべての権限が自動的に構成されます。 Configuration Manager がデータベース ログイン、アカウントを作成しでの RSExecRole にアカウントを割り当てることによってデータベースのアクセス許可を構成しますサービス アカウントを使用して、レポート サーバー データベースに接続する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]をホストするインスタンス、。レポート サーバー データベース。 レポート サーバー データベースは、レポート サーバーが書き込みを行う唯一のデータ ストアです。 それ以外のデータ ストアに対する権限は、サービス アカウントには必要ありません。  
+ レポート サーバー サービス用に指定するアカウントには、レジストリ、レポート サーバー プログラム ファイル、およびレポート サーバー データベースにアクセスするための権限が必要です。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してアカウントを設定すると、アカウントに対してすべての権限が自動的に構成されます。 サービスアカウントを使用してレポートサーバーデータベースに接続する場合、Configuration Manager によってアカウントのデータベースログインが作成され、レポートをホストする @no__t 0 インスタンスの RSExecRole にアカウントが割り当てられてデータベース権限が構成されます。サーバーデータベース。 レポート サーバー データベースは、レポート サーバーが書き込みを行う唯一のデータ ストアです。 それ以外のデータ ストアに対する権限は、サービス アカウントには必要ありません。  
   
  このページを開くには、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを起動して、ナビゲーション ウィンドウでリンクを選択します。 詳細については、「 [Reporting Services 構成マネージャー &#40;ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-native-mode.md)」を参照してください。  
   
@@ -32,11 +32,11 @@ ms.locfileid: "66092178"
 >  アカウントまたはパスワードを更新する場合は、常に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用することを強くお勧めします。 構成マネージャーを使用してアカウントを更新すると、サービス ID に依存する他の内部設定が自動的に同時に更新されます。  
   
 ## <a name="options"></a>および  
- **ビルトイン アカウントを使用します。**  
+ **ビルトインアカウントを使用する**  
  一覧から **[ネットワーク サービス]** 、 **[ローカル システム]** 、または **[ローカル サービス]** を選択します。 推奨されるのは **[ネットワーク サービス]** だけですが、使用可能な任意のアカウントを使用するようにアカウントを構成できます。  
   
- **別のアカウントを使用して、**  
- Windows ユーザー アカウントを指定する場合は、このオプションを選択します。 ローカル Windows ユーザー アカウントまたはドメイン ユーザー アカウントを入力できます。 この形式でドメイン アカウントを指定: *\<ドメイン >\\< ユーザー\>* します。 この形式でローカル Windows ユーザー アカウントを指定: *\<コンピューター名 >\\< ユーザー\>* します。 このとき選択できるのは、既存のアカウントのみです。[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成で新しいアカウントを作成することはできません。  
+ **別のアカウントを使用する**  
+ Windows ユーザー アカウントを指定する場合は、このオプションを選択します。 ローカル Windows ユーザー アカウントまたはドメイン ユーザー アカウントを入力できます。 次の形式でドメインアカウントを指定してください: *\< ドメイン > \\ < ユーザー @ no__t-3*。 ローカル Windows ユーザーアカウントを次の形式で指定してください: *\<computer name > \\ < user @ no__t-3* このとき選択できるのは、既存のアカウントのみです。[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成で新しいアカウントを作成することはできません。  
   
  アカウントの文字数の上限は 20 文字です。  
   
@@ -45,9 +45,9 @@ ms.locfileid: "66092178"
  たとえば、ある Windows アカウントを別のアカウントで置き換えたり、ビルトイン アカウントを Windows ドメイン アカウントで置き換えたりするなどしてアカウントの種類を切り替えると、暗号化キーのバックアップ コピーを作成するように求めるプロンプトが表示されます。 新しいアカウントを選択すると、バックアップ コピーが自動的に復元されます。  
   
 > [!NOTE]  
->  サービス アカウントを変更するたびに、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーから暗号化キーのバックアップと復元を求められます。 この手順は、暗号化されたデータをレポート サーバーが使用できるようにするために必要です。 これらのアクションの詳細については、次を参照してください。[暗号化キー &#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)します。  
+>  サービス アカウントを変更するたびに、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーから暗号化キーのバックアップと復元を求められます。 この手順は、暗号化されたデータをレポート サーバーが使用できるようにするために必要です。 これらのアクションの詳細については、「[暗号化&#40;キー&#41;SSRS ネイティブモード](../../../2014/sql-server/install/encryption-keys-ssrs-native-mode.md)」を参照してください。  
   
- さらに、SharePoint 統合モードで実行するように構成されているレポート サーバーを使用している場合に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してサービス アカウントを変更するには、SharePoint サーバーの全体管理を開き、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[データベース アクセスの許可]** ページを使用してレポート サーバーとインスタンスの設定を再適用する必要もあります。 この操作により、新しいサービス アカウントには、SharePoint データベースへのアクセスが許可されます。これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint の製品またはテクノロジと統合する場合に必要です。 SharePoint サーバーの全体管理でデータベースへのアクセスを付与する方法についての詳細については、次を参照してください[レポート サーバーの構成と管理&#40;Reporting Services SharePoint モード&#41;](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)と[。Reporting Services の SharePoint モード インストール&#40;SharePoint 2010 および SharePoint 2013&#41;](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)します。  
+ さらに、SharePoint 統合モードで実行するように構成されているレポート サーバーを使用している場合に [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用してサービス アカウントを変更するには、SharePoint サーバーの全体管理を開き、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] **[データベース アクセスの許可]** ページを使用してレポート サーバーとインスタンスの設定を再適用する必要もあります。 この操作により、新しいサービス アカウントには、SharePoint データベースへのアクセスが許可されます。これは、 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を SharePoint の製品またはテクノロジと統合する場合に必要です。 Sharepoint サーバーの全体管理でデータベースへのアクセス権を付与する方法の詳細については、「[レポート&#40;サーバー&#41;の構成と管理」 Reporting Services 「sharepoint モード](../../../2014/reporting-services/configure-administer-report-server-reporting-services-sharepoint-mode.md)と[Reporting Services sharepoint モード」を参照してください。Sharepoint &#40;2010 および sharepoint&#41;2013 をインストール](../../reporting-services/install-windows/install-reporting-services-sharepoint-mode.md)します。  
   
 ## <a name="choosing-an-account"></a>アカウントの選択  
  最良の結果を得るには、ネットワーク接続権限があり、ネットワーク ドメイン コントローラーおよび会社の SMTP サーバーまたはゲートウェイにアクセスできるアカウントを指定します。 次の表に、アカウントの概要およびアカウントの使用に関する推奨事項を示します。  
@@ -73,6 +73,6 @@ ms.locfileid: "66092178"
 ## <a name="see-also"></a>参照  
  [レポート サーバー サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-the-report-server-service-account-ssrs-configuration-manager.md)   
  [サービス アカウントの構成 &#40;SSRS 構成マネージャー&#41;](../../../2014/sql-server/install/configure-a-service-account-ssrs-configuration-manager.md)   
- [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
+ [Reporting Services Configuration Manager の F1 ヘルプ&#40;トピック SSRS ネイティブモード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)  
   
   

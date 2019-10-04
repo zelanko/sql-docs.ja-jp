@@ -1,5 +1,5 @@
 ---
-title: Web サービスの URL (SSRS ネイティブ モード) |Microsoft Docs
+title: Web サービス URL (SSRS ネイティブモード) |Microsoft Docs
 ms.custom: ''
 ms.date: 04/27/2017
 ms.prod: sql-server-2014
@@ -11,15 +11,15 @@ f1_keywords:
 helpviewer_keywords:
 - Reporting Services, Web service
 ms.assetid: 9d210b5d-2a08-4e56-a4f5-c16715b00d79
-author: markingmyname
-ms.author: maghan
+author: maggiesMSFT
+ms.author: maggies
 manager: craigg
-ms.openlocfilehash: 2ab81c33b3aea946fe85c94139acc891aa05a083
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 01e5393ae638ddcecd04211a0a7e01e8116346a9
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66090984"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952359"
 ---
 # <a name="web-service-url-ssrs-native-mode"></a>Web サービス URL (SSRS ネイティブ モード)
   [Web サービス URL] ページを使用すると、レポート サーバーへのアクセスに使用する URL を構成または変更できます。 *URL 予約* は、指定した URL に基づいて作成されます。 URL 予約は、その後のレポート サーバー Web サービスへのアクセスに使用できるすべての URL の構文と規則を定義し、 レポート サーバー Web サービスのプレフィックス、ホスト、ポート、および仮想ディレクトリを指定します。 ホストの指定方法によっては、1 つの予約で複数の URL を定義できます。 ホストの既定値では、強いワイルドカードが指定されます。 強いワイルドカードを使用すると、レポート サーバーをホストするコンピューターに解決できるあらゆるホスト名を URL に指定できます。 構成と URL 予約の詳細については、次を参照してください[URL の構成&#40;SSRS 構成マネージャー&#41; ](../../reporting-services/install-windows/configure-a-url-ssrs-configuration-manager.md)と[レポート サーバー Url の構成&#40;SSRS 構成マネージャー&#41; ](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)。  
@@ -47,7 +47,7 @@ ms.locfileid: "66090984"
   
 -   **[127.0.0.1]** は、localhost にアクセスする場合に使用します。 この値は、レポート サーバー コンピューターでのローカル管理をサポートします。 この値のみを選択すると、レポート サーバー コンピューターにローカルにログオンしているユーザーだけがアプリケーションにアクセスできるようになります。  
   
--   "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの IPv4 アドレスです。 IP アドレスは、次の形式のような 4 バイト フィールドが 8 の 128 ビット値になります、ネットワークが IPv6 のアドレス指定を使用する場合:\<ヘッダー >:*nnnn:nnnn:nnnn:nnnn*  
+-   "*nnn.nnn.nnn.nnn* " は、コンピューターのネットワーク アダプター カードの IPv4 アドレスです。 ネットワークで IPv6 アドレス指定を使用している場合、IP アドレスは 8 4 バイトの128ビット値になります。 \<header >: nnnn: nnnn: nnnn *: nnnn*という形式になります。  
   
      複数のカードがある場合は、それぞれに IP アドレスが割り当てられます。 この値のみを選択すると、アプリケーション アクセスがその IP アドレス (およびドメイン ネーム サーバーによってそのアドレスにマップされるホスト名) に限定されます。 localhost を使用してレポート サーバーにアクセスすることはできません。また、レポート サーバー コンピューターにインストールされている他のネットワーク アダプター カードの IP アドレスは使用できません。  
   
@@ -62,7 +62,7 @@ ms.locfileid: "66090984"
  **[SSL ポート]**  
  SSL 接続のポートを指定します。  
   
- **Url**  
+ **ハイパーリンク**  
  現在のレポート サーバー インスタンスに対して定義されている URL が表示されます。  
   
  **詳細設定**  
@@ -81,8 +81,8 @@ ms.locfileid: "66090984"
 > 
 >  この問題を修正するには、すべてのバインドを削除し、一意の設定で新しいバインドを作成するか、ワイルドカードを使用して Reporting Services の URL 登録を構成してください。  
   
-## <a name="see-also"></a>参照  
- [Reporting Services 構成マネージャーの F1 ヘルプ トピック&#40;SSRS ネイティブ モード&#41;](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
+## <a name="see-also"></a>関連項目  
+ [Reporting Services Configuration Manager の F1 ヘルプ&#40;トピック SSRS ネイティブ&#41;モード](../../../2014/sql-server/install/reporting-services-configuration-manager-f1-help-topics-ssrs-native-mode.md)   
  [レポート サーバー URL の構成 &#40;SSRS 構成マネージャー&#41;](../../reporting-services/install-windows/configure-report-server-urls-ssrs-configuration-manager.md)  
   
   

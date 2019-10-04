@@ -9,12 +9,12 @@ ms.topic: tutorial
 ms.author: davidph
 author: dphansen
 monikerRange: '>=sql-server-ver15||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 04393e7a43ef240fb8a48de49352b183d79a9208
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 3395b237e08a10033819eeed74057cc7319d7f11
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68714738"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952021"
 ---
 # <a name="tutorial-create-partition-based-models-in-r-on-sql-server"></a>チュートリアル:SQL Server の R でパーティションベースのモデルを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,7 +33,7 @@ SQL Server 2019 では、パーティションベースのモデリングは、�
 > * 各パーティションでモデルを作成およびトレーニングし、データベースにオブジェクトを格納します。
 > * 各パーティションモデルのチップの結果の確率を予測します。その目的のために予約されているサンプルデータを使用します。
 
-## <a name="prerequisites"></a>必須コンポーネント
+## <a name="prerequisites"></a>前提条件
  
 このチュートリアルを完了するには、次のものが必要です。
 
@@ -167,14 +167,12 @@ GO
 
 ### <a name="parallel-execution"></a>並列実行
 
-[Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)入力には、並列処理を有効にするために使用される **@parallel= 1**が含まれていることに注意してください。 以前のリリースとは異なり、SQL Server 2019 では、  **@parallel= 1**に設定すると、クエリオプティマイザーに対してより強力なヒントが提供されるため、並列実行ではより多くの結果が得られます。
+[Sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)の入力には `@parallel=1` が含まれ、並列処理を有効にするために使用されることに注意してください。 以前のリリースとは異なり、SQL Server 2019 では、`@parallel=1` に設定すると、クエリオプティマイザーに対してより強力なヒントが提供されるため、並列実行ではより多くの結果が得られます。
 
-既定では、256行を超えるテーブルでは、クエリオプティマイザーは **@parallel= 1**で動作する傾向がありますが、このスクリプトで示すように **@parallel= 1**を設定して明示的に処理できます。
+既定では、クエリオプティマイザーは、256行を超えるテーブルでは @no__t 0 未満で動作する傾向がありますが、このスクリプトで示すように `@parallel=1` を設定することによって明示的に処理することができます。
 
 > [!Tip]
-> トレーニング作業では、Microsoft rx 以外の **@parallel** アルゴリズムを使用している場合でも、任意のトレーニングスクリプトと共にを使用できます。 通常、SQL Server のトレーニングシナリオでは、RevoScaleR アルゴリズム (rx プレフィックスを持つ) のみが並列処理を提供します。 ただし、新しいパラメーターを使用すると、その機能を使用して特に設計されていないオープンソースの R 関数を含む関数を呼び出すスクリプトを並列化できます。 これは、パーティションが特定のスレッドに関係しているため、スクリプト内で呼び出されるすべての操作は、指定されたスレッドでパーティション単位で実行されるためです。
-
-<a name="training-step"></a>
+> トレーニング作業については、Microsoft rx 以外のアルゴリズムを使用している場合でも、任意のトレーニングスクリプトで `@parallel` を使用できます。 通常、SQL Server のトレーニングシナリオでは、RevoScaleR アルゴリズム (rx プレフィックスを持つ) のみが並列処理を提供します。 ただし、新しいパラメーターを使用すると、その機能を使用して特に設計されていないオープンソースの R 関数を含む関数を呼び出すスクリプトを並列化できます。 これは、パーティションが特定のスレッドに関係しているため、スクリプト内で呼び出されるすべての操作はパーティション単位で実行されるため、@ no__t を指定する必要があります。<a name="training-step"></a>
 
 ## <a name="run-the-procedure-and-train-the-model"></a>プロシージャを実行してモデルをトレーニングする
 
