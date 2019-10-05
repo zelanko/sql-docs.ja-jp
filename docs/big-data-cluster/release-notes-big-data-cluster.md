@@ -1,7 +1,7 @@
 ---
 title: リリース ノート
 titleSuffix: SQL Server big data clusters
-description: この記事では、(プレビュー) の最新[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]の更新プログラムと既知の問題について説明します。
+description: この記事では、[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)] (プレビュー) の最新の更新プログラムと既知の問題について説明します。
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: mihaelab
@@ -9,18 +9,18 @@ ms.date: 08/28/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: bcbc3537a6ba26dc907bf348c565939ff869ea43
-ms.sourcegitcommit: da8bb7abd256b2bebee7852dc0164171eeff11be
+ms.openlocfilehash: 758e87a0c74df695c06cb0f0005f6a19d8978625
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/14/2019
-ms.locfileid: "70988094"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974394"
 ---
 # <a name="release-notes-for-sql-server-big-data-clusters"></a>SQL Server ビッグデータクラスターのリリースノート
 
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
 
-この記事では、の[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]最新リリースに関する更新プログラムと既知の問題の一覧を示します。
+この記事では [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] の最新リリースに関する更新プログラムと既知の問題の一覧を示します。
 
 ## <a id="rc"></a>リリース候補 (8 月)
 
@@ -31,13 +31,13 @@ ms.locfileid: "70988094"
 |新機能または更新 | 詳細 |
 |:---|:---|
 |Always On 可用性グループの SQL Server |SQL Server ビッグデータクラスターをデプロイするときに、次の機能を提供する可用性グループを作成するようにデプロイを構成できます。<br/><br/>-高可用性 <br/><br/>-読み取り-スケールアウト <br/><br/>-データプールへのデータ挿入のスケールアウト<br/><br>「[高可用性を使用したデプロイ」を](../big-data-cluster/deployment-high-availability.md)参照してください。 |
-|`azdata` |[インストールマネージャー](./deploy-install-azdata-linux-package.md)を使用したツールのインストールの簡略化<br/><br/>[`azdata notebook`メニュー](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status`メニュー](./reference-azdata-bdc-status.md) |
+|`azdata` |[インストールマネージャー](./deploy-install-azdata-linux-package.md)を使用したツールのインストールの簡略化<br/><br/>[`azdata notebook` コマンド](./reference-azdata-notebook.md)<br/><br/>[`azdata bdc status` コマンド](./reference-azdata-bdc-status.md) |
 |Azure Data Studio|[Azure Data Studio のリリース候補ビルドをダウンロード](deploy-big-data-tools.md#download-and-install-azure-data-studio-sql-server-2019-release-candidate-rc)します。<br/><br/>SQL Server 2019 ガイド Jupyter Book を通じて、トラブルシューティングノートブックを追加しました。<br/><br/>コントローラーのログインエクスペリエンスが追加されました。<br/><br/>サービスエンドポイントを表示したり、クラスターの正常性状態を表示したり、トラブルシューティングノートブックにアクセスしたりするためのコントローラーダッシュボードを追加しました。<br/><br/>ノートブックセルの出力/編集のパフォーマンスが向上しました。|
 | &nbsp; | &nbsp; |
 
 ### <a name="known-issues"></a>既知の問題
 
-* SQL Server 2019 ビッグデータクラスターリリース候補更新ビルド番号は`15.0.1900.47`です。
+* SQL Server 2019 ビッグデータクラスターリリース候補更新ビルド番号が `15.0.1900.47` です。
 
 * "Kubeadm" デプロイプロファイルは、上記のビルド番号の SQL Server 2019 ビッグデータクラスターリリース候補ではサポートされていません。 代わりに、Kubeadm デプロイには "kubeadm" プロファイルを使用してください。
 
@@ -49,7 +49,7 @@ ms.locfileid: "70988094"
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|パブリック プレビュー |CTP 3.2 より前の SQL Server ビッグ データ クラスターは、登録した早期導入者に提供されていました。 このリリースでは、あらゆるユーザーが SQL Server ビッグ データ クラスターの機能を操作できるようにします。 <br/><br/> 「[使用を開始[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](deploy-get-started.md)する」を参照してください。|
+|パブリック プレビュー |CTP 3.2 より前の SQL Server ビッグ データ クラスターは、登録した早期導入者に提供されていました。 このリリースでは、あらゆるユーザーが SQL Server ビッグ データ クラスターの機能を操作できるようにします。 <br/><br/> 「 [@No__t-1 の概要」を](deploy-get-started.md)参照してください。|
 |`azdata` |CTP 3.2 での `azdata` の導入 - Python で作成されたコマンドライン ユーティリティを使用して、クラスター管理者が REST API 経由でビッグ データ クラスターをブートストラップし、管理できるようにします。 `mssqlctl` が `azdata` に置き換えられます。 [`azdata` のインストール](deploy-install-azdata.md)に関するページを参照してください。 |
 |PolyBase |外部テーブルの列名は、SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースに対してクエリを実行するために使用されるようになりました。 以前の CTP リリースでは、外部データ ソース内の列は序数位置に基づいてのみバインドされ、EXTERNAL TABLE の定義で指定された名前は使用されませんでした。 |
 |HDFS の階層の更新 |リモート データの最新のスナップショットに対して既存のマウントを更新できるように、HDFS の階層に対して更新機能を導入しました。 [HDFS の階層](hdfs-tiering.md)に関するページを参照してください。 |
@@ -169,7 +169,7 @@ ms.locfileid: "70988094"
 
 #### <a name="kibana-logs-dashboards"></a>Kibana ログのダッシュボード
 
-- Aris CTP 3.0 および 3.1 の間で、Kibana バージョンが 6.3.1 から 7.0.1 にアップグレードされました。  これにより、Microsoft Edge ブラウザーと Kibana との互換性がなくなりました。 Microsoft Edge で Kibana ダッシュボードの現在のバージョンを読み込むと、空のページが表示されます。 Kibana.rs でサポートされるブラウザーについては、[こちら]( https://www.elastic.co/support/matrix#matrix_browse)を参照してください。 
+- CTP 3.0 と3.1 の間では、Kibana バージョンが6.3.1 から7.0.1 にアップグレードされました。  これにより、Microsoft Edge ブラウザーと Kibana との互換性がなくなりました。 Microsoft Edge で Kibana ダッシュボードの現在のバージョンを読み込むと、空のページが表示されます。 Kibana でサポートされているブラウザーについて[は、こちら]( https://www.elastic.co/support/matrix#matrix_browse)を参照してください。
 
 
 ## <a id="ctp30"></a> CTP 3.0 (5 月)
@@ -498,9 +498,9 @@ make: *** [deploy-clean] Error 2
 
 | 新機能または更新 | 詳細 |
 | :---------- | :------ |
-| IntelliJ のビッグ データ クラスターでの Spark ジョブの送信。 | [IntelliJ で Spark ジョブ[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]を送信する](spark-submit-job-intellij-tool-plugin.md) |
-| アプリケーションの展開およびクラスター管理の一般的な CLI。 | [アプリを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-create-apps.md) |
-| ビッグ データ クラスターにアプリケーションを展開するための VS Code の拡張機能。 | [VS Code を使用してアプリケーションを展開する方法[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]](app-deployment-extension.md) |
+| IntelliJ のビッグ データ クラスターでの Spark ジョブの送信。 | [IntelliJ の [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] で Spark ジョブを送信する](spark-submit-job-intellij-tool-plugin.md) |
+| アプリケーションの展開およびクラスター管理の一般的な CLI。 | [@No__t にアプリを展開する方法-1](big-data-cluster-create-apps.md) |
+| ビッグ データ クラスターにアプリケーションを展開するための VS Code の拡張機能。 | [VS Code を使用してアプリケーションを [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] に展開する方法](app-deployment-extension.md) |
 | **azdata** ツール コマンドの使用法の変更。 | 詳細については、[azdata の既知の問題](#azdatactp23)を参照してください。 |
 | ビッグ データ クラスターで Sparklyr を使用する | [SQL Server 2019 のビッグ データ クラスターで Sparklyr を使用する](sparklyr-from-RStudio.md) |
 | **HDFS 階層**を使用した、外部の HDFS 互換ストレージのビッグ データ クラスターへのマウント。 | [HDFS 階層](hdfs-tiering.md)に関するページを参照してください。 |
@@ -693,7 +693,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>既知の問題
 
-以下のセクションでは、CTP [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 2.1 でのに関する既知の問題について説明します。
+以下のセクションでは、CTP 2.1 の @no__t 0 に関する既知の問題について説明します。
 
 #### <a name="deployment"></a>展開
 
@@ -768,7 +768,7 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ### <a name="known-issues"></a>既知の問題
 
-以下のセクションでは、CTP [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] 2.0 でのに関する既知の問題について説明します。
+以下のセクションでは、CTP 2.0 の @no__t 0 に関する既知の問題について説明します。
 
 #### <a name="deployment"></a>展開
 
@@ -818,4 +818,4 @@ kubectl get svc endpoint-master-pool -n <your-big-data-cluster-name>
 
 ## <a name="next-steps"></a>次の手順
 
-の詳細[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)]について[は[!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]](big-data-cluster-overview.md)、「」を参照してください。
+@No__t-0 の詳細については、「 [@no__t](big-data-cluster-overview.md)について」を参照してください。
