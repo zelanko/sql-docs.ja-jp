@@ -1,5 +1,5 @@
 ---
-title: sp_showpendingchanges (TRANSACT-SQL) |Microsoft Docs
+title: sp_showpendingchanges (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -64,9 +64,9 @@ sp_showpendingchanges [ [ @destination_server = ] 'destination_server' ]
 |destination_db_name|**sysname**|変更がレプリケートされているデータベースの名前。|  
 |is_dest_subscriber|**bit**|ことを示します、変更がサブスクライバーにレプリケートされています。 値**1**変更がサブスクライバーにレプリケートされていることを示します。 **0**変更がパブリッシャーにレプリケートされていることを意味します。|  
 |article_name|**sysname**|変更が行われたテーブルのアーティクルの名前です。|  
-|場合、pending_deletes|**int**|レプリケートするを待機している削除の数。|  
+|pending_deletes|**int**|レプリケートするを待機している削除の数。|  
 |pending_ins_and_upd|**int**|挿入とレプリケートを待機している更新プログラムの数。|  
-|is_delete 列|**bit**|保留中の変更が削除かどうかを示します。 値**1**変更が削除であることを示します。 値が必要です**1**の@show_rowsします。|  
+|is_delete|**bit**|保留中の変更が削除かどうかを示します。 値**1**変更が削除であることを示します。 値が必要です**1**の@show_rowsします。|  
 |rowguid|**uniqueidentifier**|変更された行を識別する GUID です。 値が必要です**1**の@show_rowsします。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
