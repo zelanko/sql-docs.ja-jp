@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: ab5ebab1-7ee4-41f4-999b-b4f0c420c921
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 0b7ea891c0c4ee5dfbcd8301cff4e364dcd5cae7
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f621bf9839e5f0e36051461f144a4070ff715489
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909236"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710400"
 ---
 # <a name="switch-between-update-modes-for-an-updatable-transactional-subscription"></a>更新可能トランザクション サブスクリプションの更新モードの切り替え
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -82,7 +82,7 @@ ms.locfileid: "67909236"
   
 1.  プル サブスクリプションの場合は [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) 、プッシュ サブスクリプションの場合は [sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) を実行して、サブスクリプションでフェールオーバーがサポートされていることを確認します。 結果セットの **update mode** の値が **3** または **4**の場合、フェールオーバーがサポートされます。  
   
-2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** を指定し、 **@failover_mode** に次のいずれかの値を指定します。  
+2.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_setreplfailovermode](../../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)を実行します。 `@publisher`、 `@publisher_db`、 `@publication`を指定し、 `@failover_mode`に次のいずれかの値を指定します。  
   
     -   **queued** - 接続が一時的に失われた場合、キュー更新にフェールオーバーします。  
   

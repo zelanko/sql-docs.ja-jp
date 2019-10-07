@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: e5c71f55-0be3-4c93-97e9-7b3455c8f581
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: caf70d087a7df27248457df40f6ceb4d3ab9e3d1
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 099f8e4bfb71dbf3d9dda385d6981985197756e2
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67909726"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816693"
 ---
 # <a name="index-disk-space-example"></a>インデックスのディスク領域の例
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -72,9 +72,7 @@ ms.locfileid: "67909726"
   
 3.  並べ替え用の追加の一時ディスク領域を判断します。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-     Space requirements are shown for sorting in **tempdb** (with SORT_IN_TEMPDB set to ON) and sorting in the target location (with SORT_IN_TEMPDB set to OFF).  
+     **tempdb** での並べ替え (SORT_IN_TEMPDB を ON に設定) と、対象の場所での並べ替え (SORT_IN_TEMPDB を OFF に設定) に必要な領域を示します。  
   
     1.  SORT_IN_TEMPDB が ON の場合、 **tempdb** には最大のインデックス (100 万行 * 200 バイト ～ 200 MB) を格納できるだけのディスク領域が必要です。 並べ替え操作では、FILL FACTOR については考慮されません。  
   

@@ -1,20 +1,20 @@
 ---
 title: SQL Server 2019 CTP 2.0 で外部データを仮想化する | Microsoft Docs
 description: このページでは、CSV ファイルに対して外部テーブルの作成ウィザードを使用する詳細な手順を説明します
-author: Abiola
-ms.author: aboke
+author: MikeRayMSFT
+ms.author: mikeray
 ms.reviewer: mikeray
 ms.date: 06/26/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: polybase
 monikerRange: '>= sql-server-ver15 || = sqlallproducts-allversions'
-ms.openlocfilehash: df014d179faa5321e3f4e472045eb64a9e9894be
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6a8ce50e4e359c8ce8dc2b0015300f9a7afb88d1
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68041143"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710606"
 ---
 # <a name="use-the-external-table-wizard-with-csv-files"></a>CSV ファイルで外部テーブル ウィザードを使用する
 
@@ -74,7 +74,7 @@ IP アドレスを使用して HDFS ルートに接続します。 オブジェ�
 ![外部データ ソースの資格情報](media/data-virtualization/csv-modify-columns.png)
 
 
-## <a name="summary"></a>[概要]
+## <a name="summary"></a>概要
 
 このステップでは、選択内容の要約が提供されます。 SQL マスター インスタンスと提案される外部テーブルの情報が提供されます。 このステップでは、 **[スクリプトの生成]** オプションを選択すると外部データ ソースを作成する構文が T-SQL でスクリプト化され、 **[作成]** を選択すると外部データ ソース オブジェクトが作成されます。
 

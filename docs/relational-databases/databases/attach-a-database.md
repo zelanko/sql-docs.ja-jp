@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: b4efb0ae-cfe6-4d81-a4b4-6e4916885caa
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: ca1ff898841b946c0823b71b065f360a59e69696
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d3d470a42d21e5c9946cd3b90dbd488bde515b8
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68071704"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816761"
 ---
 # <a name="attach-a-database"></a>データベースのインポート
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,71 +56,69 @@ ms.locfileid: "68071704"
   
 2.  **[データベース]** を右クリックし、 **[アタッチ]** をクリックします。  
   
-3.  アタッチするデータベースを指定するには、 **[データベースのインポート]** ダイアログ ボックスで **[追加]** をクリックし、 **[データベース ファイルの検索]** ダイアログ ボックスで目的のデータベースが常駐するディスク ドライブを選択します。次に、そのディレクトリ ツリーを展開し、そのデータベースの .mdf ファイルを選択します。たとえば、次のように指定します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
+3.  アタッチするデータベースを指定するには、 **[データベースのインポート]** ダイアログ ボックスで **[追加]** をクリックし、 **[データベース ファイルの検索]** ダイアログ ボックスで目的のデータベースが常駐するディスク ドライブを選択します。次に、そのディレクトリ ツリーを展開し、そのデータベースの .mdf ファイルを選択します。たとえば、次のように指定します。
 
      `C:\Program Files\Microsoft SQL Server\MSSQL13.MSSQLSERVER\MSSQL\DATA\AdventureWorks2012_Data.mdf`  
   
     > [!IMPORTANT]  
-    > Trying to select a database that is already attached generates an error.  
+    > 既にアタッチされているデータベースを選択しようとすると、エラーが発生します。  
   
-     **Databases to attach**  
-     Displays information about the selected databases.  
+     **[アタッチするデータベース]**  
+     選択されたデータベースに関する情報を表示します。  
   
-     \<no column header>  
-     Displays an icon indicating the status of the attach operation. The possible icons are described in the **Status** description, below).  
+     \<空白の列ヘッダー>  
+     アタッチ操作の状態を示すアイコンが表示されます。 表示されるアイコンの種類は、下の **[状態]** の説明に示します。  
   
-     **MDF File Location**  
-     Displays the path and file name of the selected MDF file.  
+     **[MDF ファイルの場所]**  
+     選択した MDF ファイルのパスとファイル名が表示されます。  
   
      **Database Name**  
-     Displays the name of the database.  
+     データベースの名前が表示されます。  
   
-     **Attach As**  
-     Optionally, specifies a different name for the database to attach as.  
+     **[次の名前でアタッチ]**  
+     データベースを別の名前でアタッチする場合に、その名前を指定します。  
   
-     **Owner**  
-     Provides a drop-down list of possible database owners from which you can optionally select a different owner.  
+     **[所有者]**  
+     データベースの所有者のドロップダウン リストです。これを使用して、必要に応じて別の所有者を選択できます。  
   
-     **Status**  
-     Displays the status of the database according to the following table.  
+     **ステータス**  
+     次の表に示すように、データベースの状態を表示します。  
   
     |アイコン|状態テキスト|[説明]|  
     |----------|-----------------|-----------------|  
     |(アイコンなし)|(テキストなし)|このオブジェクトのアタッチ操作が開始されていないか、保留されています。 これは、ダイアログ ボックスを開いたときの既定の状態です。|  
     |緑の右向き三角形|[実行中]|アタッチ操作が開始されましたが、完了していません。|  
     |緑のチェック マーク|成功|オブジェクトは正常にアタッチされました。|  
-    |赤い丸の中に白い×印|Error|アタッチ操作でエラーが発生し、正常に完了しませんでした。|  
+    |赤い丸の中に白い×印|エラー|アタッチ操作でエラーが発生し、正常に完了しませんでした。|  
     |4 つに区切られた丸印 (左右の領域が黒、上下の領域が白)|停止|ユーザーがアタッチ操作を停止したため、正常に完了しませんでした。|  
     |丸の中に反時計回りの矢印|[ロールバックされました]|アタッチ操作は正常に完了しましたが、他のオブジェクトのアタッチ中にエラーが発生したため、ロールバックされました。|  
   
-     **Message**  
-     Displays either a blank message or a "File not found" hyperlink.  
+     **メッセージ**  
+     空白のメッセージ、または "ファイルが見つかりません" のハイパーリンクが表示されます。  
   
-     **Add**  
-     Find the necessary main database files. When the user selects an .mdf file, applicable information is automatically filled in the respective fields of the **Databases to attach** grid.  
+     **[追加]**  
+     主な必須データベース ファイルを検索します。 ユーザーが .mdf ファイルを選択した場合、 **[アタッチするデータベース]** グリッドの対応するフィールドに、対応する情報が自動的に入力されます。  
   
-     **Remove**  
-     Removes the selected file from the **Databases to attach** grid.  
+     **[削除]**  
+     選択したファイルを **[アタッチするデータベース]** グリッドから削除します。  
   
-     **"** *<database_name>* **" database details**  
-     Displays the names of the files to be attached. To verify or change the pathname of a file, click the **Browse** button (**...**).  
+     **"** *<database_name>* **" データベースの詳細**  
+     デタッチするファイルの名前を表示します。 ファイルのパス名を確認または変更するには、**参照**ボタン ( **[...]** ) をクリックしてください。  
   
     > [!NOTE]  
-    > If a file does not exist, the **Message** column displays "Not found." If a log file is not found, it exists in another directory or has been deleted. You need to either update the file path in the **database details** grid to point to the correct location or remove the log file from the grid. If an .ndf data file is not found, you need to update its path in the grid to point to the correct location.  
+    > ファイルが存在しなかった場合、 **[メッセージ]** 列に "見つかりませんでした" と表示されます。 ログ ファイルが見つからない場合は、ログ ファイルが別のディレクトリに置かれているか、削除されています。 **[データベースの詳細]** グリッドでファイル パスを更新し、正しい場所を指定するか、そのログ ファイルをグリッドから削除します。 .ndf データ ファイルが見つからない場合、グリッドのパスを更新して、正しい場所を指定する必要があります。  
   
-     **Original File Name**  
-     Displays the name of the attached file belonging to the database.  
+     **[元のファイル名]**  
+     データベースに属している、アタッチされたファイルの名前が表示されます。  
   
-     **File Type**  
-     Indicates the type of file, **Data** or **Log**.  
+     **[ファイルの種類]**  
+     ファイルの種類を表します。 **[データ]** または **[ログ]** になります。  
   
-     **Current File Path**  
-     Displays the path to the selected database file. The path can be edited manually.  
+     **[現在のファイル パス]**  
+     選択されているデータベース ファイルのパスを表示します。 このパスは手作業で編集できます。  
   
-     **Message**  
-     Displays either a blank message or a "**File not found**" hyperlink.  
+     **メッセージ**  
+     空白のメッセージ、または **"ファイルが見つかりません"** ハイパーリンクが表示されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

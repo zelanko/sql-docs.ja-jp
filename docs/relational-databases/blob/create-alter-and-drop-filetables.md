@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 47d69e37-8778-4630-809b-2261b5c41c2c
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 03fa6e342eab136bbeb90e06d6a6ef4d5325b1d5
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: 7ed2d476be0ba9a22b42e5c7e60789a4059ea73c
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811176"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816735"
 ---
 # <a name="create-alter-and-drop-filetables"></a>FileTable の作成、変更、および削除
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,8 +56,6 @@ ms.locfileid: "68811176"
     2.  **FILETABLE_COLLATE_FILENAME**の値を指定しない場合、または、 **database_default**を指定した場合は、現在のデータベースの照合順序が列に継承されます。 現在のデータベースの照合順序で大文字と小文字が区別される場合は、エラーが発生し、 **CREATE TABLE** 操作は失敗します。  
   
 3.  自動的に作成される 3 つの主キーと一意の制約で使用する名前を指定することもできます。 名前を指定しなかった場合、このトピックで後述するように、システムで名前が自動生成されます。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     -   **FILETABLE_PRIMARY_KEY_CONSTRAINT_NAME**  
   
