@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68032900"
 ---
-# <a name="spshowpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
+# <a name="sp_showpendingchanges-transact-sql"></a>sp_showpendingchanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   レプリケートするを待機している変更を示す結果セットを返します。 このストアド プロシージャは、パブリッシャー側のパブリケーション データベースとサブスクライバーのサブスクリプション データベースで実行されます。  

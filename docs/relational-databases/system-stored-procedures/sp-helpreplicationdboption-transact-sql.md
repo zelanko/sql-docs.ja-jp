@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771530"
 ---
-# <a name="sphelpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
+# <a name="sp_helpreplicationdboption-transact-sql"></a>sp_helpreplicationdboption (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   パブリッシャー側のデータベースでレプリケーションが有効になっているかどうかを示します。 このストアドプロシージャは、パブリッシャー側で任意のデータベースに対して実行されます。 *Oracle パブリッシャーではサポートされていません。*  
@@ -74,7 +74,7 @@ sp_helpreplicationdboption [ [ @dbname =] 'dbname' ]
  **Sysadmin**固定サーバーロールのメンバーは、任意のデータベースに対して**sp_helpreplicationdboption**を実行できます。 **Db_owner**固定データベースロールのメンバーは、そのデータベースの**sp_helpreplicationdboption**を実行できます。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_replicationdboption &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
+ [sp_replicationdboption &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-replicationdboption-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68021084"
 ---
-# <a name="spsetsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
+# <a name="sp_setsubscriptionxactseqno-transact-sql"></a>sp_setsubscriptionxactseqno (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   トラブルシューティングの際に使用すると、次のトランザクションで提供を開始するディストリビューション エージェントを許可するログ シーケンス番号 (LSN) を使用して、最後に配信されたトランザクションを指定します。 、再起動時に、ディストリビューション エージェントを返すトランザクションこの透かし (LSN) より大きい、ディストリビューション データベースのキャッシュ (msrepl_commands) から。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。 SQL Server 以外のサブスクライバーをサポートされていません。  

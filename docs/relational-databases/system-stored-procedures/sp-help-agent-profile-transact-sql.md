@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771464"
 ---
-# <a name="sphelpagentprofile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
+# <a name="sp_help_agent_profile-transact-sql"></a>sp_help_agent_profile (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   指定されたエージェントのプロファイルを表示します。 このストアドプロシージャは、ディストリビューター側で任意のデータベースに対して実行されます。  
