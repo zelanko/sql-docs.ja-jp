@@ -1,5 +1,5 @@
 ---
-title: sp_setsubscriptionxactseqno (TRANSACT-SQL) |Microsoft Docs
+title: sp_setsubscriptionxactseqno (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -55,9 +55,9 @@ sp_setsubscriptionxactseqno [ @publisher = ] 'publisher'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**元の XACT_SEQNO**|**varbinary(16)**|サブスクライバーで適用される次のトランザクションの元の LSN。|  
-|**更新された XACT_SEQNO**|**varbinary(16)**|サブスクライバー側で適用される次のトランザクションの、更新された LSN。|  
-|**サブスクリプション ストリームの数**|**int**|最後の同期中に使用されたサブスクリプション ストリームの数。|  
+|**ORIGINAL XACT_SEQNO**|**varbinary(16)**|サブスクライバーで適用される次のトランザクションの元の LSN。|  
+|**UPDATED XACT_SEQNO**|**varbinary(16)**|サブスクライバー側で適用される次のトランザクションの、更新された LSN。|  
+|**SUBSCRIPTION STREAM COUNT**|**int**|最後の同期中に使用されたサブスクリプション ストリームの数。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
