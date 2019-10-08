@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: このクイックスタートでは、R でデータ型とデータオブジェクトを操作する方法と、SQL Server Machine Learning Services を使用して SQL Server する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85bfe26826e6e8ed04579526462babe2b5dcf009
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: 0e490821194e909643e5307e833f093363cb9558
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71149960"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006011"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-r-in-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services で R を使用してデータ型とオブジェクトを処理する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -119,7 +119,7 @@ R 構文のわずかな変更が結果のスキーマに大きな影響をもた
 ここでは、R オブジェクトをデータ フレームに変換する際に予想される結果を確認する必要があることに留意してください。
 
 > [!TIP]
-> また、、などの R id 関数`is.matrix` `is.vector`を使用して、内部データ構造に関する情報を返すこともできます。
+> また、R id 関数 (`is.matrix`、`is.vector` など) を使用して、内部データ構造に関する情報を返すこともできます。
 
 ## <a name="implicit-conversion-of-data-objects"></a>データ オブジェクトの暗黙的な変換
 
@@ -164,7 +164,7 @@ EXECUTE sp_execute_external_script
 |120|130|140|150|
 |1200|1300|1400|1500|
 
-ただし、配列`y`のサイズを変更するとどうなるかに注意してください。
+ただし、配列のサイズを変更するとどうなるかに注意してください `y`。
 
 ```sql
 execute sp_execute_external_script
@@ -197,7 +197,7 @@ execute sp_execute_external_script
 
 R は、さまざまなサイズのベクターを操作したり、これらの列のような構造をデータフレームに結合したりするための優れた柔軟性を提供します。 ベクトルのリストはテーブルのような外見ですが、データベース テーブルを管理するすべてのルールに従うわけではありません。
 
-たとえば、次のスクリプトでは、長さが 6 の数値配列を定義し、R 変数 `df1` に格納します。 次に、数値配列が RTestData テーブルの整数と結合され`df2`ます。このテーブルには3つの値が含まれ、新しいデータフレームが作成されます。
+たとえば、次のスクリプトでは、長さが 6 の数値配列を定義し、R 変数 `df1` に格納します。 次に、数値配列は RTestData テーブルの整数と結合されます。このテーブルには3つの値が含まれ、新しいデータフレームを作成するには `df2` を使用します。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -283,7 +283,7 @@ STDOUT message(s) from external script: $ Amount       : num  3400 16925 20350 1
 ```
 
 - 日時列は R データ型 **POSIXct** を使用して処理されました。
-- テキスト列 "ProductSeries" は、カテゴリ変数として識別されています。 文字列値は、既定では因子として処理されます。 R に渡した文字列は、内部で使用するために整数に変換され、出力時に再度文字列にマップされます。
+- テキスト列 "ProductSeries"**は、カテゴリ**変数として識別されています。 文字列値は、既定では因子として処理されます。 R に渡した文字列は、内部で使用するために整数に変換され、出力時に再度文字列にマップされます。
 
 ### <a name="summary"></a>まとめ
 
@@ -305,6 +305,7 @@ SQL Server で高度な R 関数を作成する方法については、次のク
 > [!div class="nextstepaction"]
 > [SQL Server Machine Learning Services を使用した高度な R 関数の作成](quickstart-r-functions.md)
 
-SQL Server Machine Learning Services の詳細については、以下を参照してください。
+SQL Server Machine Learning Services での R の使用の詳細については、次の記事を参照してください。
 
+- [SQL Server Machine Learning Services を使用して R で予測モデルを作成およびスコア付けする](quickstart-r-train-score-model.md)
 - [SQL Server Machine Learning Services (Python と R) とは何ですか?](../what-is-sql-server-machine-learning.md)

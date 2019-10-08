@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: SQL Server Machine Learning Services を使用して R で簡単な予測モデルを作成した後、新しいデータを使用して結果を予測します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 5aad027f84bc1116aa57c6b0bc0d7b0893519c36
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150335"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005981"
 ---
 # <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成およびスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,7 +61,7 @@ ms.locfileid: "71150335"
    );
    ```
 
-1. 組み込みデータセット`mtcars`からデータを挿入します。
+1. 組み込みデータセットからデータを挿入 `mtcars`
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,7 +72,7 @@ ms.locfileid: "71150335"
    ```
 
    > [!TIP]
-   > 小規模と大規模の多くのデータセットが R ランタイムに付属しています。 R と共にインストールされたデータセットの`library(help="datasets")`一覧を取得するには、r コマンドプロンプトから「」と入力します。
+   > 小規模と大規模の多くのデータセットが R ランタイムに付属しています。 R と共にインストールされたデータセットの一覧を取得するには、R コマンドプロンプトで「`library(help="datasets")`」と入力します。
 
 ### <a name="create-and-train-the-model"></a>モデルの作成とトレーニング
 
@@ -98,7 +98,7 @@ END;
 GO
 ```
 
-- の最初の引数`glm`は、に`hp + wt`依存するように`am`定義する*数式*パラメーターです。
+- @No__t-0 の最初の引数は、`hp + wt` に依存する @no__t 2 を定義する*数式*パラメーターです。
 - 入力データは、SQL クエリによって設定される変数 `MTCarsData` に格納されます。 入力データに特定の名前を割り当てない場合、既定の変数名は "_InputDataSet_" になります。
 
 ### <a name="store-the-model-in-the-sql-database"></a>SQL データベースにモデルを格納する
@@ -170,7 +170,7 @@ GO
 1. 新しい入力データを取得します。
 1. そのモデルと互換性がある R 予測関数を呼び出します。
 
-時間の経過と共に、テーブルには複数の R モデルが含まれ、さまざまなパラメーターまたはアルゴリズムを使用して構築されるか、データの異なるサブセットに対してトレーニングされることがあります。 この例では、という名前`default model`のモデルを使用します。
+時間の経過と共に、テーブルには複数の R モデルが含まれ、さまざまなパラメーターまたはアルゴリズムを使用して構築されるか、データの異なるサブセットに対してトレーニングされることがあります。 この例では、`default model` という名前のモデルを使用します。
 
 ```sql
 DECLARE @glmmodel varbinary(max) = 
@@ -201,7 +201,7 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 - 適切な引数を使用して `predict` 関数をモデルに適用し、新しい入力データを提供します。
 
 > [!NOTE]
-> この例`str`では、関数はテストフェーズ中に追加され、R から返されるデータのスキーマを確認します。このステートメントは後で削除できます。
+> この例では、テストフェーズ中に `str` 関数を追加して、R から返されるデータのスキーマを確認します。このステートメントは後で削除できます。
 >
 > R スクリプトで使用される列名は、ストアドプロシージャの出力に必ずしも渡されるとは限りません。 ここでは、WITH RESULTS 句を使用して、新しい列名を定義します。
 
@@ -213,12 +213,6 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server での R データ型の処理の詳細については、次のクイックスタートを参照してください。
+SQL Server Machine Learning Services の詳細については、以下を参照してください。
 
-> [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services で R を使用してデータ型とオブジェクトを処理する](quickstart-r-data-types-and-objects.md)
-
-SQL Server Machine Learning Services の詳細については、次の記事を参照してください。
-
-- [SQL Server Machine Learning Services を使用した高度な R 関数の作成](quickstart-r-functions.md)
 - [SQL Server Machine Learning Services (Python と R) とは何ですか?](../what-is-sql-server-machine-learning.md)

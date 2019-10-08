@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: SQL Server Machine Learning Services を使用して、SQL Server インスタンスで単純な R スクリプトを作成して実行します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: d723fa9b90659eb31e96626a3a85c1299c17fa2f
-ms.sourcegitcommit: 1661c3e1bb38ed12f8485c3860fc2d2b97dd2c9d
+ms.openlocfilehash: e49b01d3c3a4ac743d6614d66cc7864aee946460
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71150315"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006041"
 ---
 # <a name="quickstart-create-and-run-simple-r-scripts-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用した単純な R スクリプトの作成と実行
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -47,7 +47,7 @@ print(c(c, d))
 
 1. **SQL Server Management Studio**を開き、SQL Server インスタンスに接続します。
 
-1. 完全な R スクリプトを`sp_execute_external_script`ストアドプロシージャに渡します。
+1. 完全な R スクリプトを `sp_execute_external_script` ストアドプロシージャに渡します。
 
    スクリプトは `@script` 引数を通じて渡されます。 `@script` 引数内のすべては、有効な R コードである必要があります。
 
@@ -62,7 +62,7 @@ print(c(c, d))
     '
     ```
 
-1. 正しい結果が計算され、R `print`関数によって結果が**Messages**ウィンドウに返されます。
+1. 正しい結果が計算され、R `print` 関数によって結果が**Messages**ウィンドウに返されます。
 
    次のようになります。
 
@@ -102,7 +102,7 @@ GO
 
 ## <a name="use-inputs-and-outputs"></a>入力と出力を使用する
 
-既定では`sp_execute_external_script` 、は1つのデータセットを入力として受け取ります。通常は、有効な SQL クエリの形式で指定します。 次に、1つの R データフレームを出力として返します。
+既定では、`sp_execute_external_script` は1つのデータセットを入力として受け入れます。通常は、有効な SQL クエリの形式で指定します。 次に、1つの R データフレームを出力として返します。
 
 ここでは、`sp_execute_external_script` の既定の入力変数と出力変数**Inputdataset**と**outputdataset** を使用します。
 
@@ -122,7 +122,7 @@ GO
     GO
     ```
 
-1. テーブルに対してクエリを実行するには、`SELECT` ステートメントを使用します。
+1. テーブルに対してクエリを実行するには、`SELECT`ステートメントを使用します。
   
     ```sql
     SELECT *
@@ -178,7 +178,7 @@ GO
 
     **結果**
 
-    ![入力とし@scriptてを使用したクエリ結果](./media/r-data-generated-output.png)
+    ![@No__t-0 を入力として使用したクエリ結果](./media/r-data-generated-output.png)
 
 ## <a name="check-r-version"></a>R バージョンの確認
 
@@ -190,7 +190,7 @@ EXECUTE sp_execute_external_script @language = N'R'
 GO
 ```
 
-R `print`関数は、バージョンを **[メッセージ]** ウィンドウに返します。 次の出力例では、R バージョン3.4.4 がインストールされていることがわかります。
+R `print` 関数は、 **[メッセージ]** ウィンドウにバージョンを返します。 次の出力例では、R バージョン3.4.4 がインストールされていることがわかります。
 
 **結果**
 
@@ -232,7 +232,7 @@ WITH result sets((
             ));
 ```
 
-出力は R の`installed.packages()`からのものであり、結果セットとして返されます。
+出力は R の `installed.packages()` から生成され、結果セットとして返されます。
 
 **結果**
 
@@ -240,13 +240,13 @@ WITH result sets((
 
 ## <a name="next-steps"></a>次の手順
 
-SQL Server で R を使用して機械学習モデルを作成するには、次のクイックスタートに従ってください。
+SQL Server Machine Learning Services で R を使用する場合のデータ構造の使用方法については、次のクイックスタートを参照してください。
 
 > [!div class="nextstepaction"]
-> [SQL Server Machine Learning Services を使用して R で予測モデルを作成およびスコア付けする](quickstart-r-train-score-model.md)
+> [SQL Server Machine Learning Services で R を使用してデータ型とオブジェクトを処理する](quickstart-r-data-types-and-objects.md)
 
-SQL Server Machine Learning Services の詳細については、次の記事を参照してください。
+SQL Server Machine Learning Services での R の使用の詳細については、次の記事を参照してください。
 
-- [SQL Server Machine Learning Services で R を使用してデータ型とオブジェクトを処理する](quickstart-r-data-types-and-objects.md)
 - [SQL Server Machine Learning Services を使用した高度な R 関数の作成](quickstart-r-functions.md)
+- [SQL Server Machine Learning Services を使用して R で予測モデルを作成およびスコア付けする](quickstart-r-train-score-model.md)
 - [SQL Server Machine Learning Services (Python と R) とは何ですか?](../what-is-sql-server-machine-learning.md)

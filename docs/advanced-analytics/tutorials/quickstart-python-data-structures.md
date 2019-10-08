@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: このクイックスタートでは、Python でデータ型とデータオブジェクトを操作する方法と、SQL Server Machine Learning Services を使用して SQL Server する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 09/17/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: e3606072fefa9b74adcfdb914d02e4e82c11e0eb
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
-ms.translationtype: MT
+ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199432"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006057"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services での Python を使用したデータ型とオブジェクトの処理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,9 +26,9 @@ SQL Server は、表形式のデータを操作するのに最適な Python **pa
 
 前もって理解しておくべき概念は次のとおりです。
 
-+ データフレームは、_複数_の列を含むテーブルです。
-+ データフレームの1つの列は、系列と呼ばれるリストのようなオブジェクトです。
-+ データフレームの単一の値はセルと呼ばれ、インデックスによってアクセスされます。
+- データフレームは、_複数_の列を含むテーブルです。
+- データフレームの1つの列は、系列と呼ばれるリストのようなオブジェクトです。
+- データフレームの単一の値はセルと呼ばれ、インデックスによってアクセスされます。
 
 データフレームにテーブル構造が必要な場合、計算の1つの結果をデータフレームとして公開するにはどうすればよいでしょうか。 1つの答えは、単一のスカラー値を系列として表すことです。これは、データフレームに簡単に変換できます。 
 
@@ -203,11 +203,12 @@ SQL Server は、表形式のデータを操作するのに最適な Python **pa
 
 ## <a name="next-steps"></a>次の手順
 
-次に、SQL Server で Python を使用して予測モデルを作成します。
+SQL Server で高度な Python 関数を記述する方法については、次のクイックスタートを参照してください。
 
 > [!div class="nextstepaction"]
-> [Python で予測モデルを作成してスコア付けする](quickstart-python-train-score-model.md)
+> [SQL Server Machine Learning Services を使用した高度な Python 関数の作成](quickstart-python-functions.md)
 
-SQL Server Machine Learning Services の詳細については、以下を参照してください。
+SQL Server Machine Learning Services での Python の使用の詳細については、次の記事を参照してください。
 
+- [Python で予測モデルを作成してスコア付けする](quickstart-python-train-score-model.md)
 - [SQL Server Machine Learning Services (Python と R) とは何ですか?](../what-is-sql-server-machine-learning.md)

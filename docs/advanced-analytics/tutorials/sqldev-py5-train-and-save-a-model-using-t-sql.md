@@ -8,12 +8,12 @@ ms.topic: tutorial
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 85115d55f10ebafde4fe2da9c0311425c5e870dc
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 470d7be0e1777d029f406e183aad644359c82f13
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715340"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005994"
 ---
 # <a name="train-and-save-a-python-model-using-t-sql"></a>T-sql を使用した Python モデルのトレーニングと保存
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -22,7 +22,7 @@ ms.locfileid: "68715340"
 
 この手順では、Python パッケージ**scikit-learn**と**revoscalepy**を使用して機械学習モデルをトレーニングする方法について説明します。 これらの Python ライブラリは、SQL Server Machine Learning Services と共に既にインストールされています。
 
-モジュールを読み込み、必要な関数を呼び出して、SQL Server ストアドプロシージャを使用してモデルを作成およびトレーニングします。 このモデルには、前のレッスンで設計したデータ機能が必要です。 最後に、トレーニング済みのモデルを[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]テーブルに保存します。
+モジュールを読み込み、必要な関数を呼び出して、SQL Server ストアドプロシージャを使用してモデルを作成およびトレーニングします。 このモデルには、前のレッスンで設計したデータ機能が必要です。 最後に、トレーニング済みのモデルを @no__t 0 のテーブルに保存します。
  
 
 ## <a name="split-the-sample-data-into-training-and-testing-sets"></a>サンプルデータをトレーニングセットとテストセットに分割する
@@ -63,11 +63,11 @@ ms.locfileid: "68715340"
 
 各ストアドプロシージャは、指定した入力データを使用して、ロジスティック回帰モデルを作成およびトレーニングします。 すべての Python コードは、システムストアドプロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)にラップされます。
 
-新しいデータでモデルを再トレーニングしやすくするために、別のストアドプロシージャで sp_execute_exernal_script への呼び出しをラップし、新しいトレーニングデータをパラメーターとして渡します。 このセクションでは、そのプロセスについて説明します。
+新しいデータでモデルを再トレーニングしやすくするために、別のストアドプロシージャで sp_execute_external_script への呼び出しをラップし、新しいトレーニングデータをパラメーターとして渡します。 このセクションでは、そのプロセスについて説明します。
 
 ### <a name="pytrainscikit"></a>PyTrainScikit
 
-1.  で[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しい**クエリ**ウィンドウを開き、次のステートメントを実行してストアドプロシージャ**PyTrainScikit**を作成します。  ストアドプロシージャには入力データの定義が含まれているので、入力クエリを指定する必要はありません。
+1.  @No__t 0 の場合は、新しい**クエリ**ウィンドウを開き、次のステートメントを実行してストアドプロシージャ**PyTrainScikit**を作成します。  ストアドプロシージャには入力データの定義が含まれているので、入力クエリを指定する必要はありません。
 
     ```sql
     DROP PROCEDURE IF EXISTS PyTrainScikit;
@@ -106,7 +106,7 @@ ms.locfileid: "68715340"
     GO
     ```
 
-2. 次の SQL ステートメントを実行して、トレーニング済みのモデル\_をテーブル nyc taxi_models に挿入します。
+2. 次の SQL ステートメントを実行して、トレーニング済みのモデルをテーブル nyc @ no__t-0taxi_models に挿入します。
 
     ```sql
     DECLARE @model VARBINARY(MAX);
@@ -114,14 +114,14 @@ ms.locfileid: "68715340"
     INSERT INTO nyc_taxi_models (name, model) VALUES('SciKit_model', @model);
     ```
 
-    データの処理とモデルの調整には、数分かかることがあります。 Python の**stdout**ストリームにパイプされるメッセージは、の[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[メッセージ]** ウィンドウに表示されます。 例 :
+    データの処理とモデルの調整には、数分かかることがあります。 Python の**stdout**ストリームにパイプされるメッセージは、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[メッセージ]** ウィンドウに表示されます。 例 :
 
     *外部スクリプトからの STDOUT メッセージ:* 
-  *C:\Program ・ SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
+  *C:\Program Server\MSSQL14. SQLMSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
-3. *Nyc\_taxi_models*テーブルを開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
+3. *Nyc @ no__t-1taxi_models*テーブルを開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 
-    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561.* ...
+    *SciKit_model* *0x800363736B6C6561726E2E6C696E6561....*
 
 ### <a name="traintippredictionmodelrxpy"></a>TrainTipPredictionModelRxPy
 
@@ -129,7 +129,7 @@ ms.locfileid: "68715340"
 
 **Revoscalepy**を使用すると、リモートの計算コンテキストの作成、コンピューティングコンテキスト間でのデータの移動、データの変換、およびロジスティックや線形回帰、デシジョンツリーなどの一般的なアルゴリズムを使用した予測モデルのトレーニングを行うことができます。 詳細については、「 [revoscalepy module in SQL Server](../python/ref-py-revoscalepy.md) and [revoscalepy 関数リファレンス](https://docs.microsoft.com/r-server/python-reference/revoscalepy/revoscalepy-package)」を参照してください。
 
-1. で[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)]、新しい**クエリ**ウィンドウを開き、次のステートメントを実行してストアドプロシージャ_TrainTipPredictionModelRxPy_を作成します。  ストアドプロシージャには既に入力データの定義が含まれているので、入力クエリを指定する必要はありません。
+1. @No__t 0 の場合は、新しい**クエリ**ウィンドウを開き、次のステートメントを実行してストアドプロシージャ_TrainTipPredictionModelRxPy_を作成します。  ストアドプロシージャには既に入力データの定義が含まれているので、入力クエリを指定する必要はありません。
 
     ```sql
     DROP PROCEDURE IF EXISTS TrainTipPredictionModelRxPy;
@@ -166,9 +166,9 @@ ms.locfileid: "68715340"
 
     このストアドプロシージャは、モデルのトレーニングの一環として次の手順を実行します。
 
-    - SELECT クエリはカスタムスカラー関数_fnCalculateDistance_を適用して、取得場所と削除場所の間の直接距離を計算します。 クエリの結果は、 `InputDataset`既定の Python 入力変数であるに格納されます。
-    - バイナリ_変数は_*ラベル*または結果列として使用され、モデルは_passenger_count_、 _trip_distance_、 _trip_time_in_secs_、 _direct_distance_という特徴列を使用して適合します。
-    - トレーニング済みのモデルはシリアル化され、Python `logitObj`変数に格納されます。 T-sql キーワードの出力を追加することにより、ストアドプロシージャの出力として変数を追加できます。 次の手順では、その変数を使用して、モデルのバイナリコードをデータベーステーブル_nyc_taxi_models_に挿入します。 このメカニズムにより、モデルの格納と再利用が容易になります。
+    - SELECT クエリはカスタムスカラー関数_fnCalculateDistance_を適用して、取得場所と削除場所の間の直接距離を計算します。 クエリの結果は、既定の Python 入力変数である `InputDataset` に格納されます。
+    - バイナリ変数は*ラベル*または結果列として使用_され、_ モデルは_passenger_count_、 _trip_distance_、 _trip_time_in_secs_、 _direct_distance_という特徴列を使用して適合します。
+    - トレーニング済みのモデルはシリアル化され、Python 変数 `logitObj` に格納されます。 T-sql キーワードの出力を追加することにより、ストアドプロシージャの出力として変数を追加できます。 次の手順では、その変数を使用して、モデルのバイナリコードをデータベーステーブル_nyc_taxi_models_に挿入します。 このメカニズムにより、モデルの格納と再利用が容易になります。
 
 2. 次のようにストアドプロシージャを実行して、トレーニング済みの**revoscalepy**モデルを*nyc_taxi_models*テーブルに挿入します。
 
@@ -178,10 +178,10 @@ ms.locfileid: "68715340"
     INSERT INTO nyc_taxi_models (name, model) VALUES('revoscalepy_model', @model);
     ```
 
-    データの処理とモデルの調整には時間がかかることがあります。 Python の**stdout**ストリームにパイプされるメッセージは、の[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] **[メッセージ]** ウィンドウに表示されます。 例 :
+    データの処理とモデルの調整には時間がかかることがあります。 Python の**stdout**ストリームにパイプされるメッセージは、[!INCLUDE[ssManStudio](../../includes/ssmanstudio-md.md)] の **[メッセージ]** ウィンドウに表示されます。 例 :
 
     *外部スクリプトからの STDOUT メッセージ:* 
-  *C:\Program ・ SQL Server\MSSQL14.MSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
+  *C:\Program Server\MSSQL14. SQLMSSQLSERVER\PYTHON_SERVICES\lib\site-packages\revoscalepy*
 
 3. テーブル *nyc_taxi_models*を開きます。 _model_列にシリアル化されたモデルを含む新しい行が 1 つ追加されます。
 

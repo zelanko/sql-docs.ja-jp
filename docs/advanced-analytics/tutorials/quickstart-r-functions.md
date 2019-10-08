@@ -4,18 +4,18 @@ titleSuffix: SQL Server Machine Learning Services
 description: このクイックスタートでは、SQL Server Machine Learning Services を使用した高度な統計計算用の R 関数を記述する方法について説明します。
 ms.prod: sql
 ms.technology: machine-learning
-ms.date: 10/03/2019
+ms.date: 10/04/2019
 ms.topic: quickstart
 author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 55849cec8b3362b3a5f2786e007f08f0c376b8a5
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 747a6b06d1c9ad198971ff50068ac48d862a83da
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71951862"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006029"
 ---
 # <a name="quickstart-write-advanced-r-functions-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用した高度な R 関数の作成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -32,7 +32,7 @@ ms.locfileid: "71951862"
 
 ## <a name="create-a-stored-procedure-to-generate-random-numbers"></a>乱数を生成するストアド プロシージャを作成する
 
-わかりやすくするために、r `stats`パッケージを使用して、既定でインストールされていて、r がインストールされた SQL Server Machine Learning Services に読み込まれています。 パッケージには、一般的な統計タスク用の数百の関数が含まれますが、その中の `rnorm` 関数は、指定された標準偏差と平均に対し、正規分布を使用して、指定された個数の乱数を生成します。
+わかりやすくするために、r `stats` パッケージを使用します。これは、R がインストールされている SQL Server Machine Learning Services に既定でインストールされ、読み込まれます。 パッケージには、一般的な統計タスク用の数百の関数が含まれますが、その中の `rnorm` 関数は、指定された標準偏差と平均に対し、正規分布を使用して、指定された個数の乱数を生成します。
 
 たとえば、次の R コードでは、標準偏差が3の場合、50の平均で100の数値が返されます。
 
@@ -40,7 +40,7 @@ ms.locfileid: "71951862"
 as.data.frame(rnorm(100, mean = 50, sd = 3));
 ```
 
-T-sql からこの r の行を呼び出すには、次のように、の`sp_execute_external_script`r スクリプトパラメーターに r 関数を追加します。
+T-sql からこの R の行を呼び出すには、次のように `sp_execute_external_script` の R スクリプトパラメーターに R 関数を追加します。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -103,9 +103,14 @@ WITH RESULT SETS (([Col1] int not null));
 ```
 
 > [!TIP]
-> `system.time` や`proc.time`などのシステムタイミング関数を使用して、r プロセスによって使用される時間をキャプチャし、パフォーマンスの問題を分析する多くのユーザー。 例については、「R タイミング関数がソリューションに埋め込まれる[データ機能の作成](../tutorials/walkthrough-create-data-features.md)」のチュートリアルを参照してください。
+> R のシステムタイミング関数 (`system.time` や `proc.time` など) を使用して、R プロセスによって使用される時間をキャプチャし、パフォーマンスの問題を分析するユーザーが多くいます。 例については、「R タイミング関数がソリューションに埋め込まれる[データ機能の作成](../tutorials/walkthrough-create-data-features.md)」のチュートリアルを参照してください。
 
 ## <a name="next-steps"></a>次の手順
+
+SQL Server で R を使用して機械学習モデルを作成するには、次のクイックスタートに従ってください。
+
+> [!div class="nextstepaction"]
+> [SQL Server Machine Learning Services を使用して R で予測モデルを作成およびスコア付けする](quickstart-r-train-score-model.md)
 
 SQL Server Machine Learning Services の詳細については、以下を参照してください。
 
