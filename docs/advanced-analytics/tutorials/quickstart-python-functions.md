@@ -80,7 +80,7 @@ WITH RESULT SETS(([Density] FLOAT NOT NULL));
 
 - 最初の行では、ストアド プロシージャが実行されるときに必要な各 SQL 入力パラメーターを定義します。
 
-- @No__t-0 で始まる行は、Python コードによって使用されるすべての変数と、対応する SQL データ型を定義します。
+- `@params` で始まる行は、Python コードによって使用されるすべての変数と、対応する SQL データ型を定義します。
 
 - 直後に続く行は、SQL パラメーター名を対応する Python 変数名にマップします。
 
@@ -94,7 +94,7 @@ EXECUTE MyPyNorm @param1 = 100,@param2 = 50, @param3 = 3
 
 Python パッケージには、現在の Python 環境を調査するためのさまざまなユーティリティ関数が用意されています。 これらの関数は、SQL Server と外部環境での Python コードの実行方法が矛盾している場合に役立ちます。
 
-たとえば、@no__t 0 のパッケージでシステムタイミング関数を使用して、Python プロセスによって使用される時間を計測し、パフォーマンスの問題を分析することができます。
+たとえば、`time` のパッケージでシステムタイミング関数を使用して、Python プロセスによって使用される時間を計測し、パフォーマンスの問題を分析することができます。
 
 ```sql
 EXECUTE sp_execute_external_script
@@ -115,7 +115,7 @@ elapsed_time = time.time() - start_time
 SQL Server で Python を使用して機械学習モデルを作成するには、次のクイックスタートに従ってください。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server Machine Learning Services @ no__t を使用して Python で予測モデルを作成およびスコア付けする
+> [クイック スタート:SQL Server Machine Learning Services を使用して Python で予測モデルを作成およびスコア付けする
 
 SQL Server Machine Learning Services の詳細については、以下を参照してください。
 
