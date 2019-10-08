@@ -1,33 +1,33 @@
 ---
-title: SSL 暗号化用にクライアントを構成する |Microsoft Docs
+title: 暗号化用にクライアントを構成する |Microsoft Docs
 ms.custom: ''
-ms.date: 08/12/2019
+ms.date: 09/12/2019
 ms.prod: sql
 ms.prod_service: connectivity
-ms.reviewer: ''
+ms.reviewer: vanto
 ms.technology: connectivity
 ms.topic: conceptual
 ms.assetid: ae34cd1f-3569-4759-80c7-7c9b33b3e9eb
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 50c1a24dfbfb925cbda961f8a566e0d1bcd26bdf
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 123e847e01c07ab04bf5be97593af838abfdc4bd
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028202"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713285"
 ---
-# <a name="configuring-the-client-for-ssl-encryption"></a>SSL 暗号化のためのクライアントの構成
+# <a name="configuring-the-client-for-encryption"></a>暗号化のためのクライアントの構成
 [!INCLUDE[Driver_JDBC_Download](../../includes/driver_jdbc_download.md)]
 
-  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)]またはクライアントは、サーバーが正しいサーバーであること、およびクライアントが信頼する証明機関によって証明書が発行されていることを検証する必要があります。 サーバー証明書を検証するには、接続時に信頼マテリアルを指定する必要があります。 また、サーバー証明書の発行者が、クライアントによって信頼されている証明機関である必要があります。  
+  [!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] またはクライアントは、サーバーが正しいサーバーであること、およびクライアントが信頼する証明機関によって証明書が発行されていることを検証する必要があります。 サーバー証明書を検証するには、接続時に信頼マテリアルを指定する必要があります。 また、サーバー証明書の発行者が、クライアントによって信頼されている証明機関である必要があります。  
   
- このトピックでは、まず、クライアント コンピューターのトラスト マテリアルを提供する方法を説明します。 次に、SQL Server のインスタンスの SSL (Secure Sockets Layer) 証明書が民間の証明機関によって発行されている場合にサーバー証明書をクライアント コンピューターのトラスト ストアにインポートする方法を説明します。  
+ このトピックでは、まず、クライアント コンピューターのトラスト マテリアルを提供する方法を説明します。 次に、SQL Server のインスタンスのトランスポート層セキュリティ (TLS) 証明書が民間の証明機関によって発行されている場合にサーバー証明書をクライアント コンピューターのトラスト ストアにインポートする方法を説明します。  
   
- サーバー証明書の検証の詳細については、「[SSL のサポートについて](../../connect/jdbc/understanding-ssl-support.md)」の「サーバーの SSL 証明書の検証」セクションを参照してください。  
+ サーバー証明書の検証の詳細については、「[暗号化のサポートについて](../../connect/jdbc/understanding-ssl-support.md)」にあるサーバーの TLS 証明書の検証に関するセクションを参照してください。  
   
 ## <a name="configuring-the-client-trust-store"></a>クライアントのトラスト ストアの構成 
- サーバー証明書を検証するには、**trustStore** 接続プロパティと **trustStorePassword** 接続プロパティを明示的に使用するか、または基になる Java 仮想マシンのトラスト ストアを暗黙的に使用して、接続時にトラスト マテリアルを提供する必要があります。 接続文字列内に **trustStore** プロパティと **trustStorePassword** プロパティを設定する方法の詳細については、「[SSL 暗号化を使用した接続](../../connect/jdbc/connecting-with-ssl-encryption.md)」を参照してください。  
+ サーバー証明書を検証するには、**trustStore** 接続プロパティと **trustStorePassword** 接続プロパティを明示的に使用するか、または基になる Java 仮想マシンのトラスト ストアを暗黙的に使用して、接続時にトラスト マテリアルを提供する必要があります。 接続文字列内に **trustStore** プロパティと **trustStorePassword** プロパティを設定する方法の詳細については、「[暗号化を使用した接続](../../connect/jdbc/connecting-with-ssl-encryption.md)」を参照してください。  
   
  **trustStore** プロパティが指定されていないか null に設定されている場合、[!INCLUDE[jdbcNoVersion](../../includes/jdbcnoversion_md.md)] では、基になる JVM のセキュリティ プロバイダー Java Secure Socket Extension (SunJSSE) を信頼します。 SunJSSE プロバイダーによって提供される既定の TrustManager を使用して、SQL Server から返される X.509 証明書を、トラスト ストアで提供されるトラスト マテリアルに対して検証します。  
   
@@ -53,9 +53,9 @@ java -Djavax.net.ssl.trustStorePassword=storePassword
  これ以外に、"\<java-home>/lib/security/jssecacerts" や "\<java-home>/lib/security/cacerts" など、既定のトラスト ストア ファイルを構成および管理することもできます。 そのためには、JRE (Java ランタイム環境) と共にインストールされる JAVA "keytool" ユーティリティを使用します。 "keytool" ユーティリティの詳細については、Sun Microsystems の Web サイトで keytool についてのドキュメントを参照してください。  
   
 ### <a name="importing-the-server-certificate-to-trust-store"></a>トラスト ストアへのサーバー証明書のインポート  
- サーバーは、SSL ハンドシェイクの際にクライアントに公開キー証明書を送信します。 公開キー証明書の発行者は証明機関 (CA) と呼ばれます。 クライアントは、その証明機関が信頼されている証明機関であることを確認する必要があります。 この確認は、信頼されている CA の公開キーを事前に把握しておくことによって行われます。 通常、JVM では、一連の信頼されている証明機関があらかじめ定義されています。  
+ サーバーでは、TLS ハンドシェイクの際にクライアントに公開キー証明書が送信されます。 公開キー証明書の発行者は証明機関 (CA) と呼ばれます。 クライアントは、その証明機関が信頼されている証明機関であることを確認する必要があります。 この確認は、信頼されている CA の公開キーを事前に把握しておくことによって行われます。 通常、JVM では、一連の信頼されている証明機関があらかじめ定義されています。  
   
- SQL Server のインスタンスの SSL 証明書が私的な証明機関によって発行されている場合は、クライアント コンピューターのトラスト ストアの信頼された証明書の一覧にその証明機関の証明書を追加する必要があります。  
+ SQL Server のインスタンスの TLS 証明書が私的な証明機関によって発行されている場合は、クライアント コンピューターのトラスト ストアの信頼された証明書の一覧にその証明機関の証明書を追加する必要があります。  
   
  そのためには、JRE (Java ランタイム環境) と共にインストールされる JAVA "keytool" ユーティリティを使用します。 次のコマンド プロンプトは、"keytool" ユーティリティを使用してファイルから証明書をインポートする方法を示しています。  
   
@@ -84,7 +84,5 @@ keytool -import -v -trustcacerts -alias myServer -file caCert.cer -keystore trus
 9. [次へ] をクリックし、[完了] をクリックすると、証明書がエクスポートされます。  
   
 ## <a name="see-also"></a>参照  
- [SSL 暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)   
- [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)  
-  
-  
+ [暗号化の使用](../../connect/jdbc/using-ssl-encryption.md)   
+ [JDBC ドライバー アプリケーションのセキュリティ保護](../../connect/jdbc/securing-jdbc-driver-applications.md)

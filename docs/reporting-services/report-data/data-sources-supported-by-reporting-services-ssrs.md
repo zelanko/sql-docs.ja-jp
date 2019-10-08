@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 9d11d055-a3be-45aa-99a7-46447a94ed42
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: c00b9536ad5a97e5e0d3d302e2960bc1b1a9f077
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 26a9703bea3e2c5647f2a96bac5e3673a55e09b7
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500459"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71951784"
 ---
 # <a name="data-sources-supported-by-reporting-services-ssrs"></a>Reporting Services でサポートされるデータ ソース (SSRS)
   [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] でレポート データをデータ ソースから取得する処理は、データ処理拡張機能を使用するモジュール式の拡張可能なデータ レイヤーを通して行われます。 レポート データをデータ ソースから取得するには、対象となるデータ ソースの種類 (データ ソースで動作しているバージョンのソフトウェア) およびデータ ソース プラットフォーム (32 ビットまたは 64 ビット [!INCLUDE[vcprx64](../../includes/vcprx64-md.md)]) がサポートされているデータ処理拡張機能を選択する必要があります。  
@@ -113,7 +113,7 @@ ms.locfileid: "66500459"
 |SAP 多次元データベース|SAP BW|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|プラットフォームのサポートについては、SAP のマニュアルを参照してください。|なし|なし|SAP BW 7.0 - 7.5|Y|なし|  
 |[!INCLUDE[extEssbase](../../includes/extessbase-md.md)]|[Hyperion Essbase](#Hyperion)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|プラットフォームのサポートについては、Hyperion のマニュアルを参照してください。|Y|なし|[!INCLUDE[extEssbase](../../includes/extessbase-md.md)] 9.3.1|Y|なし|  
 |Oracle リレーショナル データベース|[Oracle](#OracleClient)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|Oracle クライアント コンポーネント 12c 以降が必要です。|Y|なし|Oracle 11g、11g R2、12c|Y|Y|  
-|Teradata リレーショナル データベース|[Teradata](#Teradata)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|Teradata からの .NET Data Provider for Teradata を拡張<br /><br /> Teradata からの .NET Data Provider for Teradata が必要です。<br /><br /> プラットフォームのサポートについては、Teradata のマニュアルを参照してください。|Y|なし|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|×|  
+|Teradata |[Teradata](#Teradata)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|Teradata からの .NET Data Provider for Teradata を拡張<br /><br /> Teradata からの .NET Data Provider for Teradata が必要です。<br /><br /> プラットフォームのサポートについては、Teradata のマニュアルを参照してください。|Y|なし|Teradata v15<br /><br />Teradata v14<br /><br /> Teradata v13|Y|×|  
 |DB2 リレーショナル データベース|登録済みのカスタマイズされたデータ拡張機能名||2004 Host Integration (HI) Server<br /><br /> [HI Server のマニュアル](https://msdn.microsoft.com/library/gg241192\(v=bts.10\).aspx)を参照してください。|Y|なし|なし|Y|×|  
 |汎用 OLE DB データ ソース|OLEDB|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|OLE DB をサポートする任意のデータ ソース。<br /><br /> プラットフォームのサポートについては、データ ソースのマニュアルを参照してください。|Y|なし|OLE DB をサポートする任意のデータ ソース。 詳細については、「 [注意](#OLEDBStandard)」を参照してください。|Y|なし|  
 |汎用 ODBC データ ソース|[ODBC](#ODBCGeneric)|組み込みの [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能|ODBC をサポートする任意のデータ ソース。<br /><br /> プラットフォームのサポートについては、データ ソースのマニュアルを参照してください。|Y|なし|ODBC をサポートする任意のデータ ソース。 詳細については、「 [注意](#ODBCGeneric)」を参照してください。|Y|Y|  
@@ -244,13 +244,13 @@ Oracle クライアント ツールをインストールするには、次のよ
  [データ ソースの表に戻る](#DataSourcesTable)  
   
 ###  <a name="Teradata"></a> Teradata データ処理拡張機能  
- データ ソースの種類に **[Teradata]** を選択した場合は、.NET Framework Data Provider for Teradata を拡張した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能が選択されます。 Teradata データベースからレポート データを取得するには、システム管理者はレポート作成クライアントに .NET Framework Data Provider for Teradata をインストールしてクライアント上でレポートを編集およびプレビューし、レポート サーバー上でパブリッシュされたレポートを表示する必要があります。  
+ データ ソースの種類に **[Teradata]** を選択した場合は、.NET Framework Data Provider for Teradata を拡張した [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] データ処理拡張機能が選択されます。 Teradata からレポート データを取得するには、システム管理者はレポート作成クライアントに .NET Framework Data Provider for Teradata をインストールしてクライアント上でレポートを編集およびプレビューし、レポート サーバー上でパブリッシュされたレポートを表示する必要があります。  
   
  レポート サーバー プロジェクトには、この拡張で使用できるグラフィカル クエリ デザイナーはありません。 クエリを作成するにはテキストベースのクエリ デザイナーを使用する必要があります。  
   
  次の表に、 [!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)]のレポート定義でデータ ソースを定義する場合にサポート対象となる .NET Data Provider for Teradata のバージョンを示します。  
   
-|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] のバージョン|Teradata データベースのバージョン|.NET Framework Data Provider for Teradata のバージョン|  
+|[!INCLUDE[ss_dtbi](../../includes/ss-dtbi-md.md)] のバージョン|Teradata のバージョン|.NET Framework Data Provider for Teradata のバージョン|  
 |-----------------------------------|-------------------------------|-------------------------------------------------------|    
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|12.00|12.00.01|  
 |[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]|6.20|12.00.01|  
@@ -269,9 +269,7 @@ Oracle クライアント ツールをインストールするには、次のよ
  この拡張機能では、複数値パラメーターがサポートされます。 クエリ モード TEXT の EXECUTE コマンドを使用すると、クエリでマクロを指定できます。  
   
  詳細については、「[Teradata の接続の種類 &#40;SSRS&#41;](../../reporting-services/report-data/teradata-connection-type-ssrs.md)」を参照してください。  
-  
- Teradata データベースに基づくモデルを作成することもできます。 詳細については、Teradata サイトにあるホワイト ペーパー「 [Microsoft SQL Server 2012 Reporting Services and Teradata Corporation (Microsoft SQL Server 2012 Reporting Services と Teradata 社)](https://www.teradata.com/white-papers/Microsoft-SQL-Server-2012-Reporting-Services-and-Teradata-Corporation/?type=WP)」を参照してください。  
-  
+ 
  [データ ソースの表に戻る](#DataSourcesTable)  
   
 ###  <a name="SharePointList"></a> SharePoint リスト データ拡張機能  

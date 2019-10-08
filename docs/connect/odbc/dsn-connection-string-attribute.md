@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.reviewer: MightyPen
 ms.author: v-jizho2
 author: karinazhou
-ms.openlocfilehash: 7350fd7556040cded7f84db3ab9112ddfe7f816d
-ms.sourcegitcommit: 00350f6ffb73c2c0d99beeded61c5b9baa63d171
+ms.openlocfilehash: c06f6e9f95af02ba6240f9f71ac6a92c25bec755
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/02/2019
-ms.locfileid: "68702792"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712925"
 ---
 # <a name="dsn-and-connection-string-keywords-and-attributes"></a>DSN と接続文字列のキーワードと属性
 
@@ -45,8 +45,8 @@ ms.locfileid: "68702792"
 | [Failover_Partner](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssfailoverpartner) | W |
 | [FailoverPartnerSPN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | [SQL_COPT_SS_FAILOVER_PARTNER_SPN](../../relational-databases/native-client/odbc/service-principal-names-spns-in-client-connections-odbc.md) | W |
 | [FileDSN](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md) | | LMW |
-| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)(v 17.4 +、DSN のみ)| | LMW |
-| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md)(v 17.4 +、DSN のみ) | | LMW |
+| [KeepAlive](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +、DSN のみ)| | LMW |
+| [KeepAliveInterval](../../connect/odbc/linux-mac/connection-string-keywords-and-data-source-names-dsns.md) (v 17.4 +、DSN のみ) | | LMW |
 | [KeystoreAuthentication](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystorePrincipalId](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
 | [KeystoreSecret](../../connect/odbc/using-always-encrypted-with-the-odbc-driver.md#connection-string-keywords) | | LMW |
@@ -116,6 +116,8 @@ ms.locfileid: "68702792"
 | | [SQL_COPT_SS_TXN_ISOLATION](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsstxnisolation) | LMW |
 | | [SQL_COPT_SS_USER_DATA](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptssuserdata) | LMW |
 | | [SQL_COPT_SS_WARN_ON_CP_ERROR](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md#sqlcoptsswarnoncperror) | LMW |
+| [ClientCertificate](../../connect/odbc/dsn-connection-string-attribute.md#clientcertificate) | | LMW | 
+| [ClientKey](../../connect/odbc/dsn-connection-string-attribute.md#clientkey) | | LMW | 
 
 
 以下では、「[SQL Server Native Client での接続文字列キーワードの使用](../../relational-databases/native-client/applications/using-connection-string-keywords-with-sql-server-native-client.md)」、「[SQLSetConnectAttr](../../relational-databases/native-client-odbc-api/sqlsetconnectattr.md)」、「[SQLSetConnectAttr 関数](../../odbc/reference/syntax/sqlsetconnectattr-function.md)」に記載されていないいくつかの接続文字列キーワードと接続属性を示します。
@@ -190,6 +192,31 @@ SQL Server 2012 以降に接続するときの、メタデータに対する SET
 |-|-|
 |いいえ|(既定値) 使用可能な場合は、メタデータに sp_describe_first_result_set を使用します。 |
 |はい| メタデータに SET FMTONLY を使用します。 |
+
+
+## <a name="clientcertificate"></a>ClientCertificate
+
+認証に使用する証明書を指定します。 使用可能なオプションは次のとおりです。 
+
+| オプション値 | [説明] |
+|-|-|
+| sha1:`<hash_value>` | ODBC ドライバーは SHA1 ハッシュを使用して Windows 証明書ストア内の証明書を検索します。 |
+| subject:`<subject>` | ODBC ドライバーは、サブジェクトを使用して Windows 証明書ストアで証明書を検索します。 |
+| ファイル: `<file_location>` [、パスワード: `<password>`] | ODBC ドライバーは、証明書ファイルを使用します。 |
+
+証明書が PFX 形式であり、PFX 証明書内の秘密キーがパスワードで保護されている場合は、password キーワードが必要です。 PEM および DER 形式の証明書の場合、ClientKey 属性が必要です
+
+
+## <a name="clientkey"></a>ClientKey
+
+ClientCertificate 属性によって指定された PEM または DER 証明書の秘密キーのファイルの場所を指定します。 形式: 
+
+| オプション値 | [説明] |
+|-|-|
+| ファイル: `<file_location>` [、パスワード: `<password>`] | 秘密キーファイルの場所を指定します。 |
+
+秘密キーファイルがパスワードで保護されている場合は、password キーワードが必要です。 パスワードに "," 文字が含まれている場合は、その後に "," という文字が追加されます。 たとえば、パスワードが "a, b, c" の場合、接続文字列に含まれるエスケープされたパスワードは "a,, b,, c" になります。 
+    
 
 ### <a name="sql_copt_ss_access_token"></a>SQL_COPT_SS_ACCESS_TOKEN
 
