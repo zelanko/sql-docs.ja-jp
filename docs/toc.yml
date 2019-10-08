@@ -2416,7 +2416,7 @@
               href: relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md
             - name: LOCALDB_ERROR_XEVENT_FAILED
               href: relational-databases/express-localdb-error-messages/localdb-error-xevent-failed.md
-        - name: 'インスタンス API:'
+        - name: 'インスタンス API: '
           href: relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
           items:
             - name: 'コマンド ライン管理ツール: SqlLocalDB.exe'
@@ -8368,6 +8368,8 @@
               href: azure-data-studio/schema-compare-extension.md
             - name: PowerShell の拡張機能
               href: azure-data-studio/powershell-extension.md
+            - name: Managed Instance の拡張機能 (プレビュー)
+              href: azure-data-studio/azure-sql-managed-instance-extension.md
             - name: SandDance の拡張機能 (プレビュー)
               href: azure-data-studio/sanddance-extension.md
         - name: 拡張機能のオーサリング

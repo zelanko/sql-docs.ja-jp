@@ -51,6 +51,8 @@
           href: ../advanced-analytics/tutorials/quickstart-python-create-script.md
         - name: データ型とオブジェクトの処理
           href: ../advanced-analytics/tutorials/quickstart-python-data-structures.md
+        - name: Python 関数を記述する
+          href: ../advanced-analytics/tutorials/quickstart-python-functions.md
         - name: モデルのトレーニングとスコア付け
           href: ../advanced-analytics/tutorials/quickstart-python-train-score-model.md
     - name: R
