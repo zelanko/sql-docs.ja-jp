@@ -10,12 +10,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 06540305d84ea16b76363ebb21cea0a246fd9ed8
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
-ms.translationtype: HT
+ms.openlocfilehash: c09c9ad4625520054f2d3f103ec055c37764aed2
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
+ms.translationtype: MT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006057"
+ms.locfileid: "72008431"
 ---
 # <a name="quickstart-handle-data-types-and-objects-using-python-in-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services での Python を使用したデータ型とオブジェクトの処理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -31,6 +31,9 @@ SQL Server は、表形式のデータを操作するのに最適な Python **pa
 - データフレームの単一の値はセルと呼ばれ、インデックスによってアクセスされます。
 
 データフレームにテーブル構造が必要な場合、計算の1つの結果をデータフレームとして公開するにはどうすればよいでしょうか。 1つの答えは、単一のスカラー値を系列として表すことです。これは、データフレームに簡単に変換できます。 
+
+> [!NOTE]
+> 日付を返す場合、SQL の Python では DATETIME が使用されます。この DATETIME の日付の範囲は 1753-01-01 (-53690) ~ 9999-12-31 (2958463) です。 
 
 ## <a name="prerequisites"></a>前提条件
 
