@@ -1,5 +1,5 @@
 ---
-title: sp_setreplfailovermode (TRANSACT-SQL) |Microsoft Docs
+title: sp_setreplfailovermode (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68104375"
 ---
-# <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (TRANSACT-SQL)
+# <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   即時更新フェールオーバーとしてキュー更新を有効にしたサブスクリプションのフェールオーバー操作モードを設定することができます。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。 フェールオーバー モードの詳細については、次を参照してください。[更新可能な Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。  
@@ -47,13 +47,13 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [ **@failover_mode=** ] **'***failover_mode***'**  
+ [**@failover_mode=**] **'***failover_mode***'**  
  サブスクリプションのフェールオーバー モードです。 *failover_mode*は**nvarchar (10)** これらの値のいずれかを指定できます。  
   
 |値|説明|  
 |-----------|-----------------|  
-|**イミディ エイト**または**同期**|サブスクライバーで行われたデータ変更は、変更の発生時にパブリッシャーに一括コピーされます。|  
-|**キューに登録**|データの変更は、格納、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー。|  
+|**immediate**または**sync**|サブスクライバーで行われたデータ変更は、変更の発生時にパブリッシャーに一括コピーされます。|  
+|**queued**|データの変更は、格納、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]キュー。|  
   
 > [!NOTE]  
 >  [!INCLUDE[msCoName](../../includes/msconame-md.md)] メッセージ キューは、非推奨とされましたし、現在サポートされていません。  
