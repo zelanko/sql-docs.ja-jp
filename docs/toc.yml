@@ -2416,7 +2416,7 @@
               href: relational-databases/express-localdb-error-messages/localdb-error-wait-timeout.md
             - name: LOCALDB_ERROR_XEVENT_FAILED
               href: relational-databases/express-localdb-error-messages/localdb-error-xevent-failed.md
-        - name: 'インスタンス API: '
+        - name: 'インスタンス API:'
           href: relational-databases/express-localdb-instance-apis/sql-server-express-localdb-reference-instance-apis.md
           items:
             - name: 'コマンド ライン管理ツール: SqlLocalDB.exe'
@@ -4286,6 +4286,8 @@
               href: database-engine/install-windows/change-the-database-compatibility-mode-and-use-the-query-store.md
             - name: クエリ調整アシスタントを使用してデータベース互換性モードを変更する
               href: relational-databases/performance/upgrade-dbcompat-using-qta.md
+            - name: SQL Server の最新の更新プログラム
+              href: database-engine/install-windows/latest-updates-for-microsoft-sql-server.md
     - name: 構成
       href: database-engine/configure-windows/database-engine-instances-sql-server.md
       items:
@@ -5064,10 +5066,6 @@
                   href: relational-databases/replication/publish/automatically-generate-join-filters-between-merge-articles.md
                 - name: 論理レコード リレーションシップの定義
                   href: relational-databases/replication/publish/define-a-logical-record-relationship-between-merge-table-articles.md
-                - name: Web 同期の構成
-                  href: relational-databases/replication/configure-web-synchronization.md
-                - name: Web 同期用の IIS の構成
-                  href: relational-databases/replication/configure-iis-for-web-synchronization.md
                 - name: Web 同期用の IIS 7 の構成
                   href: relational-databases/replication/configure-iis-7-for-web-synchronization.md
                 - name: データの競合の解決

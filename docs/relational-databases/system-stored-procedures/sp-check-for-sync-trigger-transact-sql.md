@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 54a1e2fd-c40a-43d4-ac64-baed28ae4637
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 7af80b51c651bd98fd2ac143ac0631901828b6fb
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: fe8cf327ff3db175c57382201ca3918a86770433
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771284"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251244"
 ---
-# <a name="spcheckforsynctrigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-sql)
+# <a name="sp_check_for_sync_trigger-transact-sql"></a>sp_check_for_sync_trigger (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   ユーザー定義トリガーまたはストアド プロシージャが、即時更新サブスクリプションに使われるレプリケーション トリガーのコンテキストで呼び出されているかどうかを判別します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して実行されるか、サブスクライバー側でサブスクリプションデータベースに対して実行されます。  
@@ -39,23 +39,23 @@ sp_check_for_sync_trigger [ @tabid = ] 'tabid'
 ```  
   
 ## <a name="arguments"></a>引数  
- **[@tabid =** ] '*tabid*'  
+ [ **@tabid =** ]'*tabid*'  
  即時更新トリガーに対してチェックされるテーブルのオブジェクト ID です。 *tabid*は**int**で、既定値はありません。  
   
- **[@trigger_op =** ] '*trigger_output_parameters*' 出力  
+ [ **@trigger_op =** ]'*trigger_output_parameters*' 出力  
  出力パラメーターが呼び出し元のトリガーの種類を返すかどうかを指定します。 *trigger_output_parameters*は**char (10)** で、次のいずれかの値を指定できます。  
   
-|[値]|説明|  
+|値|説明|  
 |-----------|-----------------|  
 |**アドイン**|INSERT トリガーです。|  
 |**Upd**|UPDATE トリガーです。|  
 |**Delete**|DELETE トリガーです。|  
 |NULL (既定値)||  
   
-`[ @fonpublisher = ] fonpublisher`ストアドプロシージャが実行される場所を指定します。 この場合、既定値は0です。 0の場合、サブスクライバーで実行されます。1の場合、パブリッシャーで実行されます。  
+`[ @fonpublisher = ] fonpublisher` ストアドプロシージャを実行する場所を指定します。 この**場合、既定***値は 0*です。 0の場合、サブスクライバーで実行されます。1の場合、パブリッシャーで実行されます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
- 0は、ストアドプロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1は、即時更新トリガーのコンテキスト内で呼び出されることを示し *@trigger_op* ます。は、返されるトリガーの種類です。  
+ 0は、ストアドプロシージャが即時更新トリガーのコンテキスト内で呼び出されていないことを示します。 1は、即時更新トリガーのコンテキスト内で呼び出されることを示します。また *\@ triggerop*で返されるトリガーの種類です。  
   
 ## <a name="remarks"></a>コメント  
  **sp_check_for_sync_trigger**は、スナップショットレプリケーションおよびトランザクションレプリケーションで使用します。  

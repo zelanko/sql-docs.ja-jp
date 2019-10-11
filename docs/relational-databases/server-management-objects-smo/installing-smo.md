@@ -15,12 +15,12 @@ ms.assetid: 140e9971-4940-4866-89b9-5cec938e2a16
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 2785054fa9cc445b6ff03c46f7f145b4f422cb60
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: cabd2d1ebbe726971e7837ff3e268ad3c2cee89f
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148636"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041260"
 ---
 # <a name="installing-smo"></a>SMO のインストール
 
@@ -35,7 +35,7 @@ ms.locfileid: "70148636"
 これは、SQL Server の各リリースの SQL Feature Pack の一部としてリリースされた SharedManagementObjects の後継です。 SMO を使用するアプリケーションは、代わりに NuGet パッケージを使用するように更新する必要があり、開発中のアプリケーションと共にバイナリが確実にインストールされるようにします。
 
 >>[!Important]
->>「[ファイルとバージョン番号](files-and-version-numbers.md)」ページで説明したように、SMO アセンブリを GAC にインストールすることはできません。 これを行うと、他のアプリケーションで問題が発生する可能性があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]これらのアプリケーションは、これらのバージョンの SMO (Management Studio など) も使用します。
+>>「[ファイルとバージョン番号](files-and-version-numbers.md)」ページで説明したように、SMO アセンブリを GAC にインストールすることはできません。 このようにすると、他のアプリケーションで問題が発生する可能性があります。これらのアプリケーションでも、これらのバージョンの SMO ([!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Management Studio など) を使用します。
 
 ## <a name="installing-the-package"></a>パッケージのインストール
 
@@ -43,5 +43,5 @@ Nuget パッケージのインストールと使用の手順と例について�
   
 ## <a name="system-requirements"></a>システム要件
   
- SMO で[!INCLUDE[dnprdnshort](../../includes/dnprdnshort-md.md)]は、4.0 を実行する必要があるため、これを使用するアプリケーションでは、クライアントコンピューターでそのバージョン以降がインストールされていることを確認する必要があります。 NetFx SMO ライブラリと共にインストールされる一部のネイティブバイナリでは、VC 2013 ランタイムもインストールする必要があります。このランタイムはパッケージに含まれていません。 ターゲットアーキテクチャに適した再頒布可能ファイルは、 https://www.microsoft.com/download/details.aspx?id=40784
+ SMO を実行するには @no__t 0 4.0 または .NET Core 2.0 が必要です。そのため、これを使用するアプリケーションでは、クライアントコンピューターのバージョンがインストールされていることを確認する必要があります。 NetFx SMO ライブラリと共にインストールされる一部のネイティブバイナリでは、VC 2013 ランタイムもインストールする必要があります。このランタイムはパッケージに含まれていません。 ターゲットアーキテクチャに適した再頒布可能パッケージは、 https://www.microsoft.com/download/details.aspx?id=40784 からダウンロードできます。
   

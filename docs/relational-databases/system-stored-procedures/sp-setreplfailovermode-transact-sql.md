@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.openlocfilehash: a32c5eb0a7dcd18558b3d1a931d9a8c83cfeca0c
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68104375"
 ---
-# <a name="spsetreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
+# <a name="sp_setreplfailovermode-transact-sql"></a>sp_setreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   即時更新フェールオーバーとしてキュー更新を有効にしたサブスクリプションのフェールオーバー操作モードを設定することができます。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。 フェールオーバー モードの詳細については、次を参照してください。[更新可能な Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。  
@@ -47,7 +47,7 @@ sp_setreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @publication = ] 'publication'` パブリケーションの名前です。 *パブリケーション*は**sysname**、既定値はありません。  
   
- [**@failover_mode=**] **'***failover_mode***'**  
+ [ **@failover_mode=** ] **'***failover_mode***'**  
  サブスクリプションのフェールオーバー モードです。 *failover_mode*は**nvarchar (10)** これらの値のいずれかを指定できます。  
   
 |値|説明|  

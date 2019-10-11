@@ -20,19 +20,19 @@ ms.assetid: 4161dc57-f3e7-4492-8972-8cfb77b29643
 author: pmasl
 ms.author: pelopes
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 17dea47b6659122e02b092f5825d5c05497f28a3
-ms.sourcegitcommit: 071065bc5433163ebfda4fdf6576349f9d195663
+ms.openlocfilehash: dbd8e8898bf6453e456156e7c6c070a4867761b9
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/03/2019
-ms.locfileid: "71923776"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261561"
 ---
 # <a name="sysdm_exec_requests-transact-sql"></a>sys _exec_requests (Transact-sql)
 
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 内で実行中の各要求に関する情報を返します。  
-  
+@No__t-0 で実行されている各要求に関する情報を返します。 要求の詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |session_id|**smallint**|この要求が関連付けられているセッションの ID。 NULL 値は許可されません。|  
@@ -94,17 +94,17 @@ ms.locfileid: "71923776"
 |parallel_worker_count |**int** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 並列クエリの場合は、予約済みの並列ワーカーの数。  |  
 |external_script_request_id |**uniqueidentifier** |**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 現在の要求に関連付けられている外部スクリプト要求 ID。 |  
 |is_resumable |**bit** |**適用対象**: [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]<br /><br /> 要求が再開可能なインデックス操作であるかどうかを示します。 |  
-|page_resource |**binary(8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> 列に`wait_resource`ページが含まれている場合は、ページリソースの8バイトの16進数表現。 詳細については、「 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)」を参照してください。 |  
+|page_resource |**binary(8)** |**適用対象**: [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)]<br /><br /> @No__t 0 の列にページが含まれている場合は、ページリソースの8バイトの16進数表現。 詳細については、「 [fn_PageResCracker](../../relational-databases/system-functions/sys-fn-pagerescracker-transact-sql.md)」を参照してください。 |  
 |page_server_reads|**bigint**|**適用対象**:Azure SQL Database ハイパースケール<br /><br /> この要求によって実行されたページサーバーの読み取り回数。 NULL 値は許可されません。|  
 | &nbsp; | &nbsp; | &nbsp; |
 
 ## <a name="remarks"></a>コメント 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 外部のコード (拡張ストアド プロシージャや分散クエリなど) を実行するには、スレッドを非プリエンプティブ スケジューラの制御外で実行する必要があります。 このとき、ワーカーはプリエンプティブ モードに切り替えられます。 この動的管理ビューによって返される時刻値には、プリエンプティブモードで費やされた時間は含まれません。
 
-[行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行する[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]場合、は、割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の**読み取り**、**書き込み**、 **logical_reads**、および**row_count**は、コーディネータースレッドに対して更新され**ません**。 列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および**granted_query_memory**は、コーディネータースレッドに対して**のみ更新**されます。 詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+[行モード](../../relational-databases/query-processing-architecture-guide.md#row-mode-execution)で並列要求を実行すると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、割り当てられたタスクを完了するワーカースレッドを調整するワーカースレッドを割り当てます。 この DMV では、コーディネーターのスレッドのみが要求に対して表示されます。 列の**読み取り**、**書き込み**、 **logical_reads**、および**row_count**は、コーディネータースレッドに対して更新され**ません**。 列**wait_type**、 **wait_time**、 **last_wait_type**、 **wait_resource**、および**granted_query_memory**は、コーディネータースレッドに対して**のみ更新**されます。 詳細については、「[スレッドおよびタスクアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
 
 ## <a name="permissions"></a>アクセス許可
-ユーザーがサーバーに`VIEW SERVER STATE`対する権限を持っている場合、ユーザーにはのインスタンスで実行中[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのセッションが表示されます。それ以外の場合、ユーザーには現在のセッションのみが表示されます。 `VIEW SERVER STATE`はで[!INCLUDE[ssSDS_md](../../includes/sssds-md.md)]許可され`sys.dm_exec_requests`ないため、常に現在の接続に限定されます。
+ユーザーがサーバーに対して @no__t 0 のアクセス許可を持っている場合、ユーザーにはのインスタンスで実行中のすべてのセッションが表示され [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)];それ以外の場合、ユーザーには現在のセッションのみが表示されます。 `VIEW SERVER STATE` は [!INCLUDE[ssSDS_md](../../includes/sssds-md.md)] で許可されないため、`sys.dm_exec_requests` は常に現在の接続に制限されます。
   
 ## <a name="examples"></a>使用例  
   
@@ -117,7 +117,7 @@ SELECT * FROM sys.dm_exec_requests;
 GO  
 ```  
 
-次に、ステートメントテキストを取得するために、 `sql_handle`コピーした`sys.dm_exec_sql_text(sql_handle)`をシステム関数と共に使用します。  
+次に、ステートメントのテキストを取得するには、コピーした `sql_handle` とシステム関数 `sys.dm_exec_sql_text(sql_handle)` を使用します。  
 
 ```sql
 SELECT * FROM sys.dm_exec_sql_text(< copied sql_handle >);  
@@ -183,12 +183,13 @@ FROM sys.dm_exec_requests AS req
 GO
 ```
 
-## <a name="see-also"></a>参照
-
-- [動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)
-- [実行関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)
-- [sys.dm_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)
-- [sys.dm_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)
-- [sys.dm_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)
-- [sys.dm_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)
-- [sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)  
+## <a name="see-also"></a>関連項目
+[動的管理ビューおよび関数](~/relational-databases/system-dynamic-management-views/system-dynamic-management-views.md)    
+[実行関連の動的管理ビューおよび関数](../../relational-databases/system-dynamic-management-views/execution-related-dynamic-management-views-and-functions-transact-sql.md)     
+[クエリ処理アーキテクチャ ガイド](../../relational-databases/query-processing-architecture-guide.md#DOP)       
+[スレッドおよびタスクのアーキテクチャガイド](../../relational-databases/thread-and-task-architecture-guide.md)    
+[_os_memory_clerks](../../relational-databases/system-dynamic-management-views/sys-dm-os-memory-clerks-transact-sql.md)    
+[_os_sys_info](../../relational-databases/system-dynamic-management-views/sys-dm-os-sys-info-transact-sql.md)    
+[_exec_query_memory_grants](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-memory-grants-transact-sql.md)    
+[_exec_query_plan](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-transact-sql.md)    
+[sys.dm_exec_sql_text](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sql-text-transact-sql.md)      

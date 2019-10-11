@@ -1,5 +1,5 @@
 ---
-title: 展開し、SSIS パッケージを実行ストアド プロシージャを使用して |Microsoft Docs
+title: ストアドプロシージャを使用した SSIS パッケージの配置と実行 |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -10,12 +10,12 @@ ms.assetid: 60914b0c-1f65-45f8-8132-0ca331749fcc
 author: janinezhang
 ms.author: janinez
 manager: craigg
-ms.openlocfilehash: 56141595c62e5190bf3ef797059acd602f801ed7
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 8cc6c9a2961696512c69f9c3e9de6d229eabb509
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66059613"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251315"
 ---
 # <a name="deploy-and-execute-ssis-packages-using-stored-procedures"></a>ストアド プロシージャを使用した SSIS パッケージの配置と実行
   [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを、プロジェクト配置モデルを使用するように構成すると、[!INCLUDE[ssIS](../includes/ssis-md.md)] カタログのストアド プロシージャを使用して、プロジェクトの配置とパッケージの実行を行うことができます。 プロジェクト配置モデルの詳細については、「[プロジェクトとパッケージの展開](packages/deploy-integration-services-ssis-projects-and-packages.md)」を参照してください。  
@@ -36,9 +36,9 @@ ms.locfileid: "66059613"
   
 1.  [catalog.deploy_project (SSISDB データベース)](/sql/integration-services/system-stored-procedures/catalog-deploy-project-ssisdb-database) を呼び出して、パッケージを含む [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクトを [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーに配置します。  
   
-     [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] プロジェクト配置ファイルのバイナリ コンテンツを取得するには、 *@project_stream* パラメーターの場合、SELECT ステートメントと、OPENROWSET 関数および BULK 行セット プロバイダーを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
+     @No__t-0 のプロジェクト配置ファイルのバイナリコンテンツを取得するには、 *\@project/stream*パラメーターに対して、OPENROWSET 関数と一括行セットプロバイダーで SELECT ステートメントを使用します。 BULK 行セット プロバイダーを使用すると、ファイルからデータを読み取ることができます。 BULK 行セット プロバイダーの SINGLE_BLOB 引数は、データ ファイルの内容を、varbinary(max) 型の単一行、単一列の行セットとして返します。 詳細については、「[OPENROWSET (Transact-SQL)](/sql/t-sql/functions/openrowset-transact-sql)」を参照してください。  
   
-     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリ データは、プロジェクト ファイル (SSISPackage_ProjectDeployment.ispac) から読み取られ、varbinary(max) 型の *@ProjectBinary* パラメーターに格納されます。 *@ProjectBinary* パラメーター値は、 *@project_stream* パラメーターに割り当てられます。  
+     次の例では、SSISPackages_ProjectDeployment プロジェクトを、 [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] サーバーの SSIS パッケージ フォルダーに配置します。 バイナリデータは、プロジェクトファイル (SSISPackage_ProjectDeployment) から読み取られ、varbinary (max) 型の *\@ProjectBinary*パラメーターに格納されます。 *@No__t-1 Projectbinary*パラメーターの値が *\@projectstream*パラメーターに割り当てられます。  
   
     ```  
     DECLARE @ProjectBinary as varbinary(max)  

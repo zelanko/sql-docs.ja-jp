@@ -8,12 +8,12 @@ ms.topic: conceptual
 author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 536be600d319335173dbf112ec2d8f67cc7bf14b
-ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
+ms.openlocfilehash: 713c5cc8de5daecec77ff984a22f85b220ece2a2
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68715747"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251343"
 ---
 # <a name="convert-r-code-for-execution-in-sql-server-in-database-instances"></a>SQL Server (データベース内) のインスタンスで実行する R コードの変換
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ R コードを R Studio または別の環境から SQL Server に移動する�
 
 + ネットワークにアクセスするか、SQL Server にインストールできない R ライブラリを使用しています。
 + このコードでは、Excel ワークシート、共有上のファイル、その他のデータベースなど、SQL Server 外部のデータソースに対して個別の呼び出しを行います。 
-+ *@script* [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)のパラメーターでコードを実行し、ストアドプロシージャもパラメーター化する必要があります。
++ [Sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)の *\@ スクリプト*パラメーターでコードを実行し、ストアドプロシージャもパラメーター化する必要があります。
 + 元のソリューションには、データの準備、特徴エンジニアリング、モデルのトレーニング、スコアリング、レポート作成など、独立して実行した場合に、運用環境でより効率的な複数の手順が含まれています。
 + ライブラリを変更したり、並列実行を使用したり、一部の処理を SQL Server にオフロードしたりすることにより、パフォーマンスを最適化できます。 
 
@@ -56,9 +56,9 @@ R コードを R Studio または別の環境から SQL Server に移動する�
 
 + 起こり得るデータ型の問題のチェックリストを作成します。
 
-    すべての R データ型は、SQL Server machine Learning サービスでサポートされています。 ただし、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、R よりも多くのデータ型がサポートされています。そのため、データを R に送信[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]するときに、暗黙的なデータ型変換が実行されます。その逆も同様です。 一部のデータを明示的にキャストまたは変換することが必要になる場合があります。 
+    すべての R データ型は、SQL Server machine Learning サービスでサポートされています。 ただし、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、R よりも多くのデータ型がサポートされます。そのため、@no__t 1 つのデータを R に送信するときに、暗黙的なデータ型変換が実行されます。その逆も同様です。 一部のデータを明示的にキャストまたは変換することが必要になる場合があります。 
 
-    NULL 値がサポートされます。 ただし、R はデータ`na`構造を使用して欠損値を表します。これは null に似ています。
+    NULL 値がサポートされます。 ただし、R は @no__t 0 のデータ構造を使用して欠損値を表します。これは null に似ています。
 
 + R で使用できないデータへの依存関係を排除することを検討してください。たとえば、SQL Server の rowid および GUID データ型を R で使用してエラーを生成することはできません。
 
@@ -72,7 +72,7 @@ R コードを R Studio または別の環境から SQL Server に移動する�
 
 + ストアドプロシージャで R を実行する場合は、複数の**スカラー**入力を使用して渡すことができます。 出力で使用するパラメーターについては、 **output**キーワードを追加します。 
 
-    たとえば、次のスカラー入力`@model_name`には、モデル名が含まれています。これは、結果の独自の列にも出力されます。
+    たとえば、次のスカラー入力 `@model_name` には、モデル名が含まれます。これは、結果の独自の列にも出力されます。
 
     ```sql
     EXEC sp_execute_external_script @model_name="DefaultModel" OUTPUT, @language=N'R', @script=N'R code here'
@@ -92,7 +92,7 @@ R コードを R Studio または別の環境から SQL Server に移動する�
 
     たとえば、データをテーブルに挿入するには、 **WITH RESULT SET**句を使用してスキーマを指定する必要があります。
 
-    R スクリプトで引数`@parallel=1`を使用する場合は、出力スキーマも必要です。 理由は、クエリを並列で実行するために SQL Server が複数のプロセスを作成し、最後に結果を収集する可能性があるためです。 したがって、並列処理を作成するには、事前に出力スキーマを準備しておく必要があります。
+    R スクリプトで引数 `@parallel=1` を使用する場合は、出力スキーマも必要です。 理由は、クエリを並列で実行するために SQL Server が複数のプロセスを作成し、最後に結果を収集する可能性があるためです。 したがって、並列処理を作成するには、事前に出力スキーマを準備しておく必要があります。
     
     それ以外の場合は、結果**セットが定義**されていないオプションを使用して、結果スキーマを省略できます。 このステートメントは、列に名前を付けたり SQL データ型を指定したりせずに、R スクリプトからデータセットを返します。
 
@@ -106,7 +106,7 @@ R コードを R Studio または別の環境から SQL Server に移動する�
 
 + すべてのクエリを事前に実行し、SQL Server のクエリプランをレビューして、並列で実行できるタスクを特定します。
 
-    入力クエリを並列化できる場合は、 `@parallel=1`引数の一部として[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)に設定します。 
+    入力クエリを並列化できる場合は、引数の一部として `@parallel=1` を[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)に設定します。 
 
     このフラグによる並列処理は、SQL Server がパーティション分割されたテーブルを操作できるか、クエリを複数のプロセスに分散して最後に結果を集計できるときは、通常はいつでも実行できます。 このフラグによる並列処理は、すべてのデータを読み取る必要があるアルゴリズムを使用するモデルをトレーニングする場合、または集計を作成する必要がある場合は、通常は実行できません。
 
@@ -149,7 +149,7 @@ R コードを R Studio または別の環境から SQL Server に移動する�
 
 + T-sql ツールと ETL プロセスを活用します。 データワークフローの一部として、機能エンジニアリング、特徴抽出、データクレンジングを事前に実行します。
 
-    [!INCLUDE[rsql_rtvs_md](../../includes/rsql-rtvs-md.md)]や rstudio などの専用の R 開発環境で作業している場合、データをコンピューターにプルし、データを繰り返し分析して、結果を書き出すか表示することができます。 
+    @No__t-0 や RStudio などの専用の R 開発環境で作業している場合、データをコンピューターにプルし、データを繰り返し分析して、結果を書き出すか表示することができます。 
     
     ただし、スタンドアロンの R コードを SQL Server に移行すると、このプロセスの大部分を簡素化したり、他の SQL Server ツールに委任したりすることができます。 
 

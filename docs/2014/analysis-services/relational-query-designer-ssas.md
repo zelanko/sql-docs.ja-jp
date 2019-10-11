@@ -1,5 +1,5 @@
 ---
-title: リレーショナル クエリ デザイナー (SSAS) |Microsoft Docs
+title: リレーショナルクエリデザイナー (SSAS) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql-server-2014
@@ -12,12 +12,12 @@ ms.assetid: 9399b1d1-1ad2-44df-bd11-bef60fbf01ec
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: 8063df9c748ca6838cd21b0a5daa249fdc49134c
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: d9d3ea17d614a9c5cff48c35ae1864f1672bf8bc
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66070459"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251212"
 ---
 # <a name="relational-query-designer-ssas"></a>リレーショナル クエリ デザイナー (SSAS)
   リレーショナル クエリ デザイナーを使用すると、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] リレーショナル データベース、[!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssSDSfull](../includes/sssdsfull-md.md)] リレーショナル データベース、および [!INCLUDE[msCoName](../includes/msconame-md.md)] [!INCLUDE[ssDWfull](../includes/ssdwfull-md.md)]から取得するデータを指定するクエリを作成できます。 メタデータを検索してクエリを対話的に作成し、クエリの結果を表示する場合は、グラフィカル クエリ デザイナーを使用します。  グラフィカル クエリ デザイナーで作成されたクエリの表示や、クエリの変更を行う場合は、テキスト ベースのクエリ デザイナーを使用します。 ファイルまたはレポートから既存のクエリをインポートすることもできます。  
@@ -203,7 +203,7 @@ ms.locfileid: "66070459"
 |**[テキストとして編集]**|テキスト ベースのクエリ デザイナーと、グラフィカル クエリ デザイナー間で切り替えます。 すべての種類のデータ ソースでグラフィカル クエリ デザイナーがサポートされているとは限りません。|  
 |**[インポート]**|ファイルまたはレポートから既存のクエリをインポートします。 サポートされているファイルの種類は sql と rdl だけです。|  
 |![クエリを実行する](media/rsqdicon-run.gif "クエリを実行する")|クエリを実行し、その結果セットを結果ペインに表示します。|  
-|**[コマンドの種類]**|**[Text]** 、 **[StoredProcedure]** 、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。<br /><br /> ストアド プロシージャが 1 つ以上の結果セットを返す場合に、データセットを作成する最初の結果セットのみが使用することに注意してください。 また、 <br />                      **[Tabledirect]** は OLE DB データ ソースの種類でのみ使用できます。|  
+|**[コマンドの種類]**|**[Text]** 、 **[StoredProcedure]** 、または **[TableDirect]** を選択します。 パラメーターを受け取るストアド プロシージャの場合、ツール バーの **[実行]** をクリックすると、 **[クエリ パラメーターの定義]** ダイアログ ボックスが表示され、必要な値を入力できます。<br /><br /> ストアドプロシージャから複数の結果セットが返された場合は、最初の結果セットのみを使用してデータセットが設定されることに注意してください。 また、 <br />                      **Tabledirect**は、データソースの種類 OLE DB でのみ使用できます。|  
   
 #### <a name="command-type-text"></a>コマンドの種類 (Text)  
  [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データセットを作成するとき、既定ではリレーショナル クエリ デザイナーが表示されます。 テキスト ベースのクエリ デザイナーに切り替えるには、ツール バーの **[テキストとして編集]** 切り替えボタンをクリックします。 テキスト ベースのクエリ デザイナーは、クエリ ペインと結果ペインの 2 つのペインで構成されています。 次の図に各ペインの名称を示します。  
@@ -247,12 +247,12 @@ SELECT Name FROM ContactType
 uspGetWhereUsedProductID  
 ```  
   
- **[実行]** ( **!** ) ボタンをクリックします。 次の表の例を示します`uspGetWhereUsedProductID`で値を指定するパラメーター、**クエリ パラメーターの定義** ダイアログ ボックス。  
+ **[実行]** ( **!** ) ボタンをクリックします。 次の表に、 **[クエリパラメーターの定義]** ダイアログボックスで値を指定する @no__t 0 パラメーターの例を示します。  
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@ Checkdate*|20010115|  
   
 #### <a name="command-type-tabledirect"></a>コマンドの種類 (TableDirect)  
  **[コマンドの種類] で [TableDirect]** を選択した場合、テキスト ベースのクエリ デザイナーには、クエリ ペインと結果ペインの 2 つのペインが表示されます。 テーブルを入力し、 **[実行]** ボタンをクリックすると、そのテーブルのすべての列が返されます。  
