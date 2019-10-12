@@ -83,9 +83,9 @@ sp_helpsubscription [ [ @publication = ] 'publication' ]
 |**dts_package_location**|**int**|DTS パッケージの場所 (サブスクリプションに割り当てられている場合)。 パッケージがある場合、値**0**は**ディストリビューター**でのパッケージの場所を指定します。 値**1**は**サブスクライバー**を指定します。|  
 |**subscriber_security_mode**|**smallint**|サブスクライバーのセキュリティモードを指定します。 **1**は Windows 認証を、 **0**は[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証を意味します。|  
 |**subscriber_login**|**sysname**|サブスクライバーのログイン名を指定します。|  
-|**subscriber_password**||実際のサブスクライバーパスワードは返されません。 結果は **&#42;&#42;&#42;"&#42;" という文字列でマスクされます。&#42;**|  
+|**subscriber_password**||実際のサブスクライバーパスワードは返されません。 結果は "**&#42;&#42;&#42;&#42;&#42;&#42;**" という文字列でマスクされます。|  
 |**job_login**|**sysname**|ディストリビューションエージェントの実行に使用する Windows アカウントの名前。|  
-|**job_password**||実際のジョブ パスワードは返されません。 結果は **&#42;&#42;&#42;"&#42;" という文字列でマスクされます。&#42;**|  
+|**job_password**||実際のジョブ パスワードは返されません。 結果は "**&#42;&#42;&#42;&#42;&#42;&#42;**" という文字列でマスクされます。|  
 |**distrib_agent_name**|**nvarchar(100)**|サブスクリプションを同期するエージェントジョブの名前。|  
 |**subscriber_type**|**tinyint**|サブスクライバーの種類。次のいずれかを指定できます。<br /><br /> **0** = SQL Server サブスクライバー<br /><br /> **1** = ODBC データソースサーバー<br /><br /> **2** = Microsoft JET データベース (非推奨)<br /><br /> **3** = OLE DB プロバイダー|  
 |**subscriber_provider**|**sysname**|SQL Server 以外のデータソースの OLE DB プロバイダーが登録されている一意のプログラム識別子 (PROGID)。|  
