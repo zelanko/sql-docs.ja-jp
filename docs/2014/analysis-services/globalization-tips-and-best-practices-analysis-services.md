@@ -70,7 +70,7 @@ ms.locfileid: "70874415"
   
      台湾では、繁体字中国語を使用する方が一般的ですが、推奨される並べ替え順序はストローク数に基づいています。Chinese_Taiwan_Stroke (SQL Server 2000 の場合)、Chinese_Taiwan_Stroke_90 (SQL Server 2005 の場合)、または Chinese_Traditional_Stroke_Count_100 (SQL Server 2008 以降の場合)。  
   
-     その他の地域 (香港やマカオなど) でも、繁体字中国語が使用されます。 香港特別行政区では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、Chinese_Traditional_Stroke_Count_100 (2008 以降) が非常 SQL Server に頻繁に使用されています。  
+     その他の地域 (香港特別行政区やマカオなど) でも、繁体字中国語が使用されます。 香港特別行政区では、照合順序に Chinese_Hong_Kong_Stroke_90 (SQL Server 2005 上) が使用されることも珍しくありません。 マカオでは、Chinese_Traditional_Stroke_Count_100 (2008 以降) が非常 SQL Server に頻繁に使用されています。  
   
 -   日本語では、最もよく使用される照合順序は Japanese_CI_AS です。 [JIS2004](http://en.wikipedia.org/wiki/JIS_X_0213)をサポートするシステムでは、Japanese_XJIS_100 が使用されます。 Japanese_BIN2 は、通常、Windows 以外のプラットフォームからのデータ、または SQL Server リレーショナル データベース エンジン以外のデータ ソースからのデータを移行するプロジェクトで使用されるのが一般的です。  
   
