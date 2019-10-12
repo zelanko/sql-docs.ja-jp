@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: abcb1407-ff78-4c76-b02e-509c86574462
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 195da55ed9d4d76298e3a5cbbd44ed562f69da06
-ms.sourcegitcommit: 01c8df19cdf0670c02c645ac7d8cc9720c5db084
+ms.openlocfilehash: ec7758ad2f9443ad29f0da799e3f286612f95cab
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70000808"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278183"
 ---
 # <a name="sp_detach_db-transact-sql"></a>sp_detach_db (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -45,16 +45,16 @@ sp_detach_db [ @dbname= ] 'database_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @dbname = ] 'database_name'`デタッチするデータベースの名前を指定します。 *database_name*は**sysname**値で、既定値は NULL です。  
+`[ @dbname = ] 'database_name'` は、デタッチするデータベースの名前です。 *database_name*は**sysname**値で、既定値は NULL です。  
   
-`[ @skipchecks = ] 'skipchecks'`更新プログラムの統計をスキップするか実行するかを指定します。 *skipchecks*は**nvarchar (10)** 値で、既定値は NULL です。 統計の更新をスキップするには、 **true**を指定します。 UPDATE STATISTICS を明示的に実行するには、 **false**を指定します。  
+`[ @skipchecks = ] 'skipchecks'` 更新プログラムの統計をスキップするか実行するかを指定します。 *skipchecks*は**nvarchar (10)** 値で、既定値は NULL です。 統計の更新をスキップするには、 **true**を指定します。 UPDATE STATISTICS を明示的に実行するには、 **false**を指定します。  
   
  既定では、UPDATE STATISTICS は、テーブルとインデックスのデータに関する情報を更新するために実行されます。 UPDATE STATISTICS の実行は、データベースを読み取り専用メディアに移動する場合に使用すると便利です。  
   
-`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'`デタッチされているデータベースに関連付けられているフルテキストインデックスファイルが、データベースのデタッチ操作中に削除されないように指定します。 *KeepFulltextIndexFile*は**nvarchar (10)** 値、既定値は**true**です。 *KeepFulltextIndexFile*が**false**の場合、データベースに関連付けられているすべてのフルテキストインデックスファイルとフルテキストインデックスのメタデータは、データベースが読み取り専用でない限り削除されます。 NULL または**true**の場合、フルテキスト関連のメタデータが保持されます。  
+`[ @keepfulltextindexfile = ] 'KeepFulltextIndexFile'` に指定すると、デタッチされているデータベースに関連付けられているフルテキストインデックスファイルは、データベースのデタッチ操作中に削除されません。 *KeepFulltextIndexFile*は**nvarchar (10)** 値、既定値は**true**です。 *KeepFulltextIndexFile*が**false**の場合、データベースに関連付けられているすべてのフルテキストインデックスファイルとフルテキストインデックスのメタデータは、データベースが読み取り専用でない限り削除されます。 NULL または**true**の場合、フルテキスト関連のメタデータが保持されます。  
   
 > [!IMPORTANT]
->  このパラメーターは、将来のバージョンの[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では削除される予定です。 **@keepfulltextindexfile** 新しい開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く変更してください。  
+>  **@No__t 1keepfulltextindexfile**パラメーターは、今後のバージョンの @no__t で削除される予定です。 新しい開発作業ではこのパラメーターを使用しないようにし、現在このパラメーターを使用しているアプリケーションはできるだけ早く変更してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  0 (成功) または 1 (失敗)  
@@ -102,7 +102,7 @@ sp_detach_db [ @dbname= ] 'database_name'
 
  データベースを SINGLE_USER に設定する前に、AUTO_UPDATE_STATISTICS_ASYNC オプションが OFF に設定されていることを確認します。 このオプションが ON に設定されていると、統計の更新に使用されるバックグラウンド スレッドによってデータベースへの接続が使用されるため、シングル ユーザー モードではデータベースにアクセスできなくなります。 詳細については、「[データベースをシングルユーザーモードに設定する](../databases/set-a-database-to-single-user-mode.md)」を参照してください。
 
- たとえば、次`ALTER DATABASE`のステートメントは、すべての現在の[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)]ユーザーがデータベースから切断された後に、データベースへの排他アクセスを取得します。  
+ たとえば、次の `ALTER DATABASE` ステートメントは、すべての現在のユーザーがデータベースから切断された後に、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースへの排他アクセスを取得します。  
   
 ```  
 USE master;  
@@ -121,13 +121,13 @@ GO
  **Sysadmin**固定サーバーロールのメンバーシップ、またはデータベースの**db_owner**ロールのメンバーシップが必要です。  
   
 ## <a name="examples"></a>使用例  
- 次の例では[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 、 *skipchecks チェック*を true に設定してデータベースをデタッチします。  
+ 次の例では、 *skipchecks*を true に設定して、0のデータベースをデタッチします。  
   
 ```  
 EXEC sp_detach_db 'AdventureWorks2012', 'true';  
 ```  
   
- 次の例では[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] 、データベースをデタッチし、フルテキストインデックスファイルとフルテキストインデックスのメタデータを保持します。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
+ 次の例では、[!INCLUDE[ssSampleDBnormal](../../includes/sssampledbnormal-md.md)] データベースをデタッチし、フルテキストインデックスファイルとフルテキストインデックスのメタデータを保持します。 このコマンドでは、UPDATE STATISTICS が実行されます。これは既定の動作です。  
   
 ```  
 exec sp_detach_db @dbname='AdventureWorks2012'  
