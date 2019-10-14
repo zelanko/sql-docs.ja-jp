@@ -1,5 +1,5 @@
 ---
-title: パブリッシャー情報、[サブスクリプション ウォッチ リスト](マージ パブリケーション) | Microsoft Docs
+title: パブリッシャー情報、[サブスクリプション ウォッチ リスト] (マージ パブリケーション) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/07/2017
 ms.prod: sql
@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 4ec956bf-5cef-4377-a1d1-8c7f0107a6cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: dca1dfc281ac4ea63c2c28b35dc93805f2c19b2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 0f6caf3862d42d4245e4b2657448b2d5beb22667
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021404"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710793"
 ---
 # <a name="publisher-information-subscription-watch-list-merge-publication"></a>パブリッシャー情報、[サブスクリプション ウォッチ リスト]\(マージ パブリケーション)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -73,12 +73,12 @@ ms.locfileid: "68021404"
  各サブスクリプションの名前です。*SubscriberName:SubscriptionDatabaseName* という形式になります。  
   
  **表示名**  
- 各サブスクリプションの説明です。 この説明は、 **[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、 **@description** または [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) の [@description](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)と表示されます。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
+ 各サブスクリプションの説明です。 この説明は、 **[サブスクリプションのプロパティ]** ダイアログ ボックスで入力するか、[sp_addmergesubscription](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md) または [sp_addmergepullsubscription](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md) の `@description` パラメーターで示します。 多くの場合、この説明は "表示名"、つまりサブスクリプションの通称として使用されます。  
   
  **パブリケーション**  
  サブスクリプションと同期するパブリケーションの名前です。*PublicationDatabaseName:PublicationName* という形式になります。  
   
- **[パフォーマンス]**  
+ **パフォーマンス**  
  各サブスクリプションのパフォーマンス評価です。これはレプリケーション モニターにより取得された、最新の配信率の計測結果に基づいています。 パフォーマンス評価は、接続の種類が同じ (ダイヤルアップまたは LAN) パブリケーションに対するサブスクリプションの履歴の平均パフォーマンスと、個々のサブスクリプションのパフォーマンスを比較することで決定されます。 レプリケーション モニターには、50 以上の変更を伴う同期がそれぞれ同じ種類の接続により 5 回行われた後で、値が表示されます。 50 以上の変更を伴う同期が 5 回未満の場合、または最新の同期における変更が 50 未満の場合には、この列は空白になります。  
   
 > [!NOTE]  

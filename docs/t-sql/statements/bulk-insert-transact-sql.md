@@ -26,12 +26,12 @@ helpviewer_keywords:
 ms.assetid: be3984e1-5ab3-4226-a539-a9f58e1e01e2
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: fced431a88222cc5f12c7446a827a71109988fc2
-ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
+ms.openlocfilehash: 2c48c045b65b554533a8824ec0ea967ed8fae884
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/30/2019
-ms.locfileid: "71680945"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252011"
 ---
 # <a name="bulk-insert-transact-sql"></a>BULK INSERT (Transact-SQL)
 
@@ -54,7 +54,7 @@ BULK INSERT
    [ [ , ] CODEPAGE = { 'ACP' | 'OEM' | 'RAW' | 'code_page' } ]
    [ [ , ] DATAFILETYPE =
       { 'char' | 'native'| 'widechar' | 'widenative' } ]
-   [ [ , ] DATASOURCE = 'data_source_name' ]
+   [ [ , ] DATA_SOURCE = 'data_source_name' ]
    [ [ , ] ERRORFILE = 'file_name' ]
    [ [ , ] ERRORFILE_DATA_SOURCE = 'data_source_name' ]
    [ [ , ] FIRSTROW = first_row ]
@@ -154,7 +154,7 @@ ERRORFILE **='** _file_name_ **'** 形式エラーがあり、OLE DB 行セッ�
 **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] 以降では、`error_file_path` は Azure Blob Storage に格納することができます。
 
-'errorfile_data_source_name' **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+'errorfile_data_source_name' **以下に適用されます:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 名前付きの外部データ ソースで、インポート中に見つかったエラーを格納するエラー ファイルの Azure Blob Storage の場所を指しています。 外部データ ソースは、[!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1 で追加された `TYPE = BLOB_STORAGE` オプションを使用して作成する必要があります。 詳しくは、「[CREATE EXTERNAL DATA SOURCE](../../t-sql/statements/create-external-data-source-transact-sql.md)」をご覧ください。
 
 FIRSTROW **=** _first_row_ 最初に読み込む行の番号を指定します。 既定値は、指定されたデータ ファイルの先頭行です。 FIRSTROW は 1 から始まります。
@@ -198,7 +198,7 @@ TABLOCK 一括インポート操作中にテーブル レベルのロックを�
 
 ### <a name="input-file-format-options"></a>入力ファイル フォーマットのオプション
 
-FORMAT **=** 'CSV' **適用対象:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
+FORMAT **=** 'CSV' **以下に適用されます:** [!INCLUDE[ssSQLv14_md](../../includes/sssqlv14-md.md)] CTP 1.1.
 [RFC 4180](https://tools.ietf.org/html/rfc4180) 標準に準拠しているコンマ区切り値ファイルを指定します。
 
 ```sql
@@ -443,7 +443,7 @@ WITH (FORMAT = 'CSV'
 
 ### <a name="f-importing-data-from-a-file-in-azure-blob-storage"></a>F. Azure Blob Storage 内のファイルからデータをインポートする
 
-次の例では、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示します。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスターキーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
+次の例では、SAS キーを作成した Azure Blob Storage の場所にある csv ファイルからデータを読み込む方法を示します。 Azure Blob Storage の場所は、外部データ ソースとして構成されます。 これには、ユーザー データベース内でマスター キーを使用して暗号化された共有アクセス署名を使用するデータベース スコープ資格情報が必要です。
 
 ```sql
 --> Optional - a MASTER KEY is not requred if a DATABASE SCOPED CREDENTIAL is not required because the blob is configured for public (anonymous) access!

@@ -10,12 +10,12 @@ ms.topic: tutorial
 ms.assetid: e3751e53-77c7-47d0-8fe8-73ed1a53413a
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 17c69ca2ecb09f734f5d2018baea299d282917ed
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 3a67d7593ca63a2271fc94fc7203e9bb55d6efcc
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71283816"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680975"
 ---
 # <a name="lesson-1-8-annotate-and-format-the-lesson-1-package"></a>レッスン 1-8:レッスン 1 パッケージに注釈を付け、書式を設定する 
 
@@ -55,9 +55,9 @@ ms.locfileid: "71283816"
   
     注釈ボックスのテキストを折り返すには、改行する場所にカーソルを置いて、**Enter** を押します。  
   
-    注釈ボックスにテキストを追加しない場合、注釈ボックスの外側をクリックするとボックスの表示が消えます。  
+    注釈ボックスにテキストを追加しない場合、注釈ボックスの外側をクリックするとボックスの表示が消えます。  この動作により、注釈ボックスにテキストを貼り付けたい場合は、[注釈の追加] を選択する前にテキストをクリップボードにコピーします。 
   
-## <a name="go-to-next-task"></a>次の実習に進む
+## <a name="go-to-next-task"></a>次のタスクに進む
 [手順 9:レッスン 1 パッケージをテストする](../integration-services/lesson-1-9-testing-the-lesson-1-tutorial-package.md)  
   
   
