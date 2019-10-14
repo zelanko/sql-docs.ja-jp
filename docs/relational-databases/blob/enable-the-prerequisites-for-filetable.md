@@ -11,12 +11,12 @@ ms.assetid: 6286468c-9dc9-4eda-9961-071d2a36ebd6
 author: MikeRayMSFT
 ms.author: mikeray
 ms.reviewer: ''
-ms.openlocfilehash: 4f339b343da4adc12b7b5cf692d217c5fb0419c8
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: dab00f633a72df1a0c799a2d074befee73cf561e
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68085370"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974311"
 ---
 # <a name="enable-the-prerequisites-for-filetable"></a>FileTable の前提条件の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -56,31 +56,31 @@ ms.locfileid: "68085370"
   
 ###  <a name="HowToCheckAccess"></a> 方法:データベースで非トランザクション アクセスが有効かどうかを確認する  
  カタログ ビュー [sys.database_filestream_options &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-database-filestream-options-transact-sql.md) に対してクエリを実行し、**non_transacted_access** 列と **non_transacted_access_desc** 列をチェックします。  
-  
-```sql  
+
+```sql
 SELECT DB_NAME(database_id), non_transacted_access, non_transacted_access_desc  
     FROM sys.database_filestream_options;  
 GO  
-```  
-  
+```
+
 ###  <a name="HowToNTAccess"></a>方法:データベース レベルで非トランザクション アクセスを有効にする  
  使用できる非トランザクション アクセスのレベルは、FULL、READ_ONLY、および OFF です。  
   
  **Transact-SQL を使用して非トランザクション アクセスのレベルを指定する**  
- -   **新しいデータベースを作成**するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントを呼び出します。  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
--   **既存のデータベースを変更**するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを呼び出します。  
-  
-    ```sql  
-    ALTER DATABASE database_name  
-        SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
-    ```  
-  
+ - **新しいデータベースを作成**するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントを呼び出します。
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
+- **既存のデータベースを変更**するときに、**NON_TRANSACTED_ACCESS** FILESTREAM オプションを使用して [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを呼び出します。
+
+   ```sql
+   ALTER DATABASE database_name  
+     SET FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' )  
+   ```
+
  **SQL Server Management Studio を使用して非トランザクション アクセスのレベルを指定する**  
  **[データベースのプロパティ]** ダイアログ ボックスの **[オプション]** ページの **[FILESTREAM 非トランザクション アクセス]** ボックスで、非トランザクション アクセスのレベルを指定できます。 このダイアログ ボックスの詳細については、「[[データベースのプロパティ] &#40;[オプション] ページ&#41;](../../relational-databases/databases/database-properties-options-page.md)」を参照してください。  
   
@@ -92,15 +92,15 @@ GO
 ###  <a name="HowToDirectory"></a>方法:データベース レベルで FileTable のディレクトリを指定する  
  指定する名前は、データベース レベルで存在するディレクトリに対して一意であることが必要です。  
   
- **Transact-SQL を使用して FileTable のディレクトリを指定する**  
- -   **新しいデータベースを作成**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントを呼び出します。  
-  
-    ```sql  
-    CREATE DATABASE database_name  
-        WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
-    GO  
-    ```  
-  
+**Transact-SQL を使用して FileTable のディレクトリを指定する**  
+- **新しいデータベースを作成**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [CREATE DATABASE &#40;SQL Server Transact-SQL&#41;](../../t-sql/statements/create-database-sql-server-transact-sql.md) ステートメントを呼び出します。
+
+   ```sql
+   CREATE DATABASE database_name  
+     WITH FILESTREAM ( NON_TRANSACTED_ACCESS = FULL, DIRECTORY_NAME = N'directory_name' );  
+   GO  
+   ```
+
 -   **既存のデータベースを変更**するときに、**DIRECTORY_NAME** FILESTREAM オプションを使用して [ALTER DATABASE &#40;Transact-SQL&#41;](../../t-sql/statements/alter-database-transact-sql.md) ステートメントを呼び出します。 これらのオプションを使用してディレクトリ名を変更するとき、データベースを排他的にロックして、開いているファイル ハンドルがないことを確認する必要があります。  
   
     ```sql  

@@ -17,12 +17,12 @@ ms.assetid: b58a0877-4e43-4fab-a281-24e6022d3fb1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7cfc7873669eb49d3fc3e160ff33f56371517e6c
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d7311d16a888b0adfbb2952c6f6027cdcf08fa00
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768108"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710268"
 ---
 # <a name="execute-scripts-during-synchronization-replication-transact-sql-programming"></a>同期中のスクリプトの実行 (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -34,7 +34,7 @@ ms.locfileid: "68768108"
   
 2.  スクリプト ファイルを、パブリケーションのスナップショット エージェントがアクセスできる場所に保存します。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) を実行します。 **@publication** を指定し、手順 2. で作成したスクリプト ファイル名を完全 UNC パスで **@scriptfile** に指定して、さらに、次のいずれかの値を **@skiperror** に指定します。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addscriptexec &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addscriptexec-transact-sql.md) を実行します。 `@publication` を指定し、`@scriptfile` に対して手順 2 で作成したスクリプト ファイルの名前と完全な UNC パスを指定し、`@skiperror` に対して次のいずれかの値を指定します。  
   
     -   **0** - エラーが発生した場合、エージェントがスクリプトの実行を停止します。  
   

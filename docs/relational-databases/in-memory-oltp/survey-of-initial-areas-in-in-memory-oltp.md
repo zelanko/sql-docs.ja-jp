@@ -1,7 +1,7 @@
 ---
-title: 'クイック スタート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ | Microsoft Docs'
+title: '簡単なアンケート 1: Transact-SQL のパフォーマンスを向上させるインメモリ OLTP テクノロジ | Microsoft Docs'
 ms.custom: ''
-ms.date: 09/05/2017
+ms.date: 09/27/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -11,14 +11,15 @@ ms.assetid: 1c25a164-547d-43c4-8484-6b5ee3cbaf3a
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1cfa9f47e92852929bddb4e3aa3105d8dbf9508e
-ms.sourcegitcommit: 97e94b76f9f48d161798afcf89a8c2ac0f09c584
+ms.openlocfilehash: ebbf3c4bd5bbe4672734733fd8bd082954877e4b
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "68661479"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71712946"
 ---
 # <a name="survey-of-initial-areas-in-in-memory-oltp"></a>インメモリ OLTP での初期領域の調査
+
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
   
@@ -211,7 +212,7 @@ Microsoft SQL Server では、メモリ最適化テーブルを作成する前�
   
 Azure SQL Database では、このようなファイルグループを作成する必要はありません (作成できません)。  
 
-次のサンプルの T-SQL スクリプトでは、インメモリ OLTP のデータベースを有効にし、すべての推奨設定を構成します。 SQL Server と Azure SQL Database の両方で機能します: [enable-in-memory-oltp.sql](https://raw.githubusercontent.com/Microsoft/sql-server-samples/master/samples/features/in-memory/t-sql-scripts/enable-in-memory-oltp.sql)。
+次のサンプルの T-SQL スクリプトでは、インメモリ OLTP のデータベースを有効にし、すべての推奨設定を構成します。 SQL Server と Azure SQL Database の両方で機能します: [enable-in-memory-oltp.sql](https://github.com/microsoft/sql-server-samples/blob/master/samples/features/in-memory-database/in-memory-oltp/t-sql-scripts/enable-in-memory-oltp.sql)。
 
 MEMORY_OPTIMIZED_DATA ファイル グループのデータベースでは、サポートされていない SQL Server 機能もあります。 制限の詳細については、次を参照してください: [インメモリ OLTP に対してサポートされていない SQL Server の機能](unsupported-sql-server-features-for-in-memory-oltp.md)
   

@@ -17,12 +17,12 @@ ms.assetid: c9fa81b1-6c81-4c11-927b-fab16301a8f5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 9750e85aefab0db07978cbba6a98a845888cec3d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b12d35d27fd4c90603cce6d798d8011ad1e65b81
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769792"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710830"
 ---
 # <a name="replicate-partitioned-tables-and-indexes"></a>パーティション テーブルとパーティション インデックスのレプリケート
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -72,9 +72,9 @@ ms.locfileid: "68769792"
 ### <a name="enabling-partition-switching"></a>パーティション切り替えの有効化  
  トランザクション パブリケーションの次のプロパティを使用すると、レプリケーション環境でのパーティション切り替えの動作を制御できます。  
   
--   **@allow_partition_switch** を **[テーブル分割構成のコピー]** に設定すると、パブリケーション データベースに対して SWITCH PARTITION を実行できます。  
+-   `@allow_partition_switch` を `true` に設定すると、パブリケーション データベースに対して SWITCH PARTITION を実行できます。  
   
--   **@replicate_partition_switch** は、SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートするかどうかを決定します。 このオプションは、 **@allow_partition_switch** が **[テーブル分割構成のコピー]** 」を参照してください。  
+-   `@replicate_partition_switch` では、SWITCH PARTITION DDL ステートメントをサブスクライバーにレプリケートするかどうかを決定します。 このオプションは、`@allow_partition_switch` が `true` に設定されている場合にのみ有効です。  
   
  これらのプロパティは、パブリケーションの作成時に [sp_addpublication](../../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) を使用するか、パブリケーションの作成後に [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を使用することによって設定できます。 既に述べたとおり、マージ レプリケーションではパーティション切り替えがサポートされません。 マージ レプリケーションが有効になっているテーブルで SWITCH PARTITION を実行するには、パブリケーションからテーブルを削除します。  
   

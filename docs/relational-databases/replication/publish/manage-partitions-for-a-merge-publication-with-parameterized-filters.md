@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fb5566fe-58c5-48f7-8464-814ea78e6221
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 2e454850de56674a594b23585aaf1f5af1f3549a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1171d30f7b21b99a3d4a396937b1e94c58787859
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68002686"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710897"
 ---
 # <a name="manage-partitions-for-a-merge-publication-with-parameterized-filters"></a>パラメーター化されたフィルターによるマージ パブリケーションのパーティションの管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -103,25 +103,25 @@ ms.locfileid: "68002686"
   
 #### <a name="to-view-information-on-existing-partitions"></a>既存のパーティションに関する情報を表示するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication** 」をご覧ください。 (省略可) 1 つのフィルター条件に基づく情報のみが返されるように、 **@suser_sname** または **@host_name** を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_helpmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helpmergepartition-transact-sql.md) を実行します。 `@publication` にパブリケーション名を指定します。 (省略可能) 1 つのフィルター条件に基づく情報のみが返されるように、`@suser_sname` または `@host_name` を指定します。  
   
 #### <a name="to-define-a-new-partition-and-generate-a-new-partitioned-snapshot"></a>新しいパーティションを定義して、新しいパーティション スナップショットを生成するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication** にパブリケーションの名前を指定し、次のいずれかのパラメーターに、パーティションを定義するパラメーター値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepartition-transact-sql.md) を実行します。 `@publication` にパブリケーションの名前を指定し、次のいずれかのパラメーターにパーティションを定義するパラメーター値を指定します。  
   
-    -   **@suser_sname** - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
+    -   `@suser_sname` - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   
-    -   **@host_name** - [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
+    -   `@host_name` - [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   
 2.  この新しいパーティションのパラメーター化スナップショットを作成し、初期化します。 詳しくは、「 [パラメーター化されたフィルターを使用したパブリケーションのスナップショットの作成](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)」をご覧ください。  
   
 #### <a name="to-delete-a-partition"></a>パーティションを削除するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md) を実行します。 パブリケーションの名前を **@publication** にパブリケーションの名前を指定し、次のいずれかのパラメーターに、パーティションを定義するパラメーター値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、[sp_dropmergepartition &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-dropmergepartition-transact-sql.md) を実行します。 `@publication` にパブリケーションの名前を指定し、次のいずれかのパラメーターにパーティションを定義するパラメーター値を指定します。  
   
-    -   **@suser_sname** - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
+    -   `@suser_sname` - [SUSER_SNAME &#40;Transact-SQL&#41;](../../../t-sql/functions/suser-sname-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   
-    -   **@host_name** - [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
+    -   `@host_name` - [HOST_NAME &#40;Transact-SQL&#41;](../../../t-sql/functions/host-name-transact-sql.md) から返される値でパラメーター化されたフィルターを定義する場合。  
   
      これにより、そのパーティションのスナップショット ジョブおよびすべてのスナップショット ファイルも削除されます。  
   
@@ -165,5 +165,6 @@ ms.locfileid: "68002686"
 ## <a name="see-also"></a>参照  
  [Parameterized Row Filters](../../../relational-databases/replication/merge/parameterized-filters-parameterized-row-filters.md)   
  [Snapshots for Merge Publications with Parameterized Filters](../../../relational-databases/replication/create-a-snapshot-for-a-merge-publication-with-parameterized-filters.md)  
+  
   
   

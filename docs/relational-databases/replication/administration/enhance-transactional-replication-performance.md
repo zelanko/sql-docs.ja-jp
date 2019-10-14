@@ -22,12 +22,12 @@ ms.assetid: 67084a67-43ff-4065-987a-3b16d1841565
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 2db87395b7170315e14e10db075a4d6ca5721ab3
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f50978c19295f5973e787bdaab46efea6367308a
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768794"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710377"
 ---
 # <a name="enhance-transactional-replication-performance"></a>トランザクション レプリケーションのパフォーマンスの向上
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,7 +116,7 @@ ms.locfileid: "68768794"
   
 **–SubscriptionStreams** パラメーターを使用すると、集計レプリケーションのスループットを大幅に向上できます。 このパラメーターを使用すると、単一のスレッドを使用するときに存在するトランザクション特性の多くを維持しつつ、変更のバッチをサブスクライバーへの複数の接続で並列的に適用できます。 いずれかの接続が実行またはコミットに失敗した場合、進行中のバッチがすべての接続について中止されます。その場合、エージェントは、単一のストリームを使用して、失敗したバッチを再試行します。 この再試行フェーズが完了するまでは、サブスクライバー側に、トランザクションの一時的な不整合が存在する可能性があります。 サブスクライバーのトランザクション一貫性は、前回失敗したバッチが正常にコミットされた後で復元されます。  
   
-このエージェント パラメーターの値は、[sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の **@subscriptionstreams** を使用して指定できます。  
+このエージェント パラメーターの値は、[sp_addsubscription &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addsubscription-transact-sql.md) の `@subscriptionstreams` を使用して指定できます。  
 
 サブスクリプション ストリームの実装について詳しくは、「[Navigating SQL replication subscriptionStream setting](https://blogs.msdn.microsoft.com/repltalk/2010/03/01/navigating-sql-replication-subscriptionstreams-setting)」(SQL レプリケーション サブスクリプション ストリームの設定のナビゲーション) をご覧ください。
   

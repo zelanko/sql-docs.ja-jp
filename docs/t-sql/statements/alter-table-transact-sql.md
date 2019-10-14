@@ -1,7 +1,7 @@
 ---
 title: ALTER TABLE (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 05/18/2019
+ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -59,12 +59,12 @@ ms.assetid: f1745145-182d-4301-a334-18f799d361d1
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 63f1b415471e8793e66bd3e90acc6f6be987904e
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 7683610745cf63ff67eeda6296684a6d2737a5b8
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68889821"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823621"
 ---
 # <a name="alter-table-transact-sql"></a>ALTER TABLE (Transact-SQL)
 
@@ -473,6 +473,9 @@ ALTER COLUMN
 *column_name*  
 変更、追加、または削除する列の名前です。 *column_name* の最大値は 128 文字です。 新しい列の場合、**timestamp** データ型を使って作成した列の *column_name* は省略できます。 **timestamp** データ型の列に *column_name* を指定していない場合は、**timestamp** という名前が使われます。
 
+> [!NOTE]
+> テーブルの既存の列がすべて変更された後、新しい列が追加されます。
+
 [ _type\_schema\_name_ **.** ] _type\_name_  
 変更する列の新しいデータ型、または追加する列のデータ型です。 パーティション テーブルの既存の列に *type_name* を指定することはできません。 *type_name* には次の型のいずれかを指定できます。
 
@@ -614,6 +617,9 @@ ALTER INDEX *index_name*
 
 ADD  
 1 つ以上の列定義、計算列定義、またはテーブル制約を追加します。 または、システムがシステムのバージョン管理用に使う列が追加されます。 メモリ最適化テーブルでは、インデックスを追加することができます。
+
+> [!NOTE]
+> テーブルの既存の列がすべて変更された後、新しい列が追加されます。
 
 > [!IMPORTANT]
 > ALTER TABLE ステートメントを使用しない場合、メモリ最適化テーブル上のインデックスに対してステートメント [CREATE INDEX](create-index-transact-sql.md)、[DROP INDEX](drop-index-transact-sql.md)、[ALTER INDEX](alter-index-transact-sql.md)、[PAD_INDEX](alter-table-index-option-transact-sql.md) を使用することはできません。

@@ -24,12 +24,12 @@ helpviewer_keywords:
 ms.assetid: c17996d6-56a6-482f-80d8-086a3423eecc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: e6585b6a50701ac4583bdbb02d9bd2529ee08f01
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 0a49bef9dc75beea0e098908362f198b60a8b92c
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653356"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680835"
 ---
 # <a name="merge-transact-sql"></a>MERGE (Transact-SQL)
 
@@ -223,8 +223,8 @@ WHEN MATCHED THEN \<merge_matched>
 MERGE ステートメントには、最大 2 つの WHEN MATCHED 句を指定できます。 句を 2 つ指定する場合、最初の句は AND \<search_condition> 句と共に使用する必要があります。 任意の行に対し、最初の WHEN MATCHED 句が適用されなかった場合にのみ、2 番目の WHEN MATCHED 句が適用されます。 WHEN MATCHED 句が 2 つある場合は、一方で UPDATE 操作を、もう一方で DELETE 操作を指定する必要があります。 \<merge_matched> 句で UPDATE が指定されており、\<merge_search_condition> に基づいて \<table_source> の複数の行が *target_table* の 1 つの行に一致する場合、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] からエラーが返されます。 MERGE ステートメントで、同じ行を複数回更新することや、同じ行の更新と削除を行うことはできません。  
   
 WHEN NOT MATCHED [ BY TARGET ] THEN \<merge_not_matched>  
-\<table_source> ON \<merge_search_condition> で返される行のうち、*target_table* 内の行とは一致しないが、追加の検索条件 (存在する場合) は満たす行ごとに、*target_table*に 1 行を挿入するように指定します。 挿入する値は、\<merge_not_matched> 句で指定します。 MERGE ステートメントに指定できる WHEN NOT MATCHED 句は 1 つだけです。  
-  
+\<table_source> ON \<merge_search_condition> で返される行のうち、*target_table* 内の行とは一致しないが、追加の検索条件 (存在する場合) は満たす行ごとに、*target_table*に 1 行を挿入するように指定します。 挿入する値は、\<merge_not_matched> 句で指定します。 MERGE ステートメントに指定できる WHEN NOT MATCHED [ BY TARGET ] 句は 1 つだけです。
+
 WHEN NOT MATCHED BY SOURCE THEN \<merge_matched>  
 \<table_source> ON \<merge_search_condition> で返される行には一致しないが、追加の検索条件は満たす \<target_table のすべての行を、merge_matched> 句に従って更新または削除するように指定します。  
   

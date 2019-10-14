@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 49349605-ebd0-4757-95be-c0447f30ba13
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: df643e5881a4c53ee2a55c2cda53cdc3b3279ef5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08bc847d6b3bffe57df7fc0c70be622365f156d0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68059437"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710867"
 ---
 # <a name="optimize-parameterized-row-filters"></a>パラメーター化された行フィルターの最適化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,34 +112,34 @@ ms.locfileid: "68059437"
   
 #### <a name="to-set-optimize-synchronization"></a>[同期の最適化] を設定するには  
   
-1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、 **[同期の最適化]** オプションに対して **[True]** の値を選択します。  
+1.  **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスの **[サブスクリプション オプション]** ページで、 **[同期の最適化]** オプションに対して `True` の値を選択します。  
   
 2.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
- **@keep_partition_changes** と **@use_partition_groups** のフィルタ オプションの定義については「[sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)」を参照してください。  
+ `@keep_partition_changes` と `@use_partition_groups` のフィルター オプションの定義については「[sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)」を参照してください。  
   
 #### <a name="to-specify-merge-filter-optimizations-when-creating-a-new-publication"></a>新しいパブリケーションを作成するときにマージ フィルターの最適化を指定するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)を実行します。 以下のパラメーターのいずれかに、 **@publication** と **true** の値を指定します。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergepublication](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)を実行します。 以下のパラメーターのいずれかに、`@publication` と `true` の値を指定します。  
   
-    -   **@use_partition_groups** - アーティクルが事前計算済みパーティションの要件を満たしている場合、パフォーマンスが最も最適化されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
+    -   `@use_partition_groups` - アーティクルが事前計算済みパーティションの要件を満たしている場合、パフォーマンスが最も最適化されます。 詳細については、「[事前計算済みパーティションによるパラメーター化されたフィルターのパフォーマンス最適化](../../../relational-databases/replication/merge/parameterized-filters-optimize-for-precomputed-partitions.md)」を参照してください。  
   
-    -   **@keep_partition_changes** - 事前計算済みパーティションを使用できない場合、この最適化を使用します。  
+    -   `@keep_partition_changes` - 事前計算済みパーティションを使用できない場合、この最適化を使用します。  
   
 2.  パブリケーション用のスナップショット ジョブを追加します。 詳細については、「[Publisher で文書を作成するには](../../../relational-databases/replication/publish/create-a-publication.md)」を参照してください。  
   
 3.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。次のパラメーターを指定します。  
   
-    -   **@publication** - 手順 1. で指定したパブリケーション名  
+    -   `@publication` - 手順 1 で指定したパブリケーション名  
   
-    -   **@article** - アーティクルの名前  
+    -   `@article` - アーティクルの名前  
   
-    -   **@source_object** - パブリッシュするデータベース オブジェクト  
+    -   `@source_object` - パブリッシュするデータベース オブジェクト  
   
-    -   **@subset_filterclause** - アーティクルを行方向にフィルター選択するために使用する、オプションのパラメーター化されたフィルター句  
+    -   `@subset_filterclause` - アーティクルを行方向にフィルター選択するために使用する、オプションのパラメーター化されたフィルター句  
   
-    -   **@partition_options** - フィルター選択されるアーティクルのパーティション オプション  
+    -   `@partition_options` - フィルター選択されるアーティクルのパーティション オプション  
   
 4.  パブリケーションの各アーティクルに対し、手順 3. を実行します。  
   
@@ -147,16 +147,16 @@ ms.locfileid: "68059437"
   
 #### <a name="to-view-and-modify-merge-filter-behaviors-for-an-existing-publication"></a>既存のパブリケーションに対するマージ フィルターの動作を表示して変更するには  
   
-1.  (省略可) パブリッシャー側のパブリケーション データベースに対して [@publication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md)を指定して **@publication** を使用して、パラメーター化された行フィルターを最適化する方法について説明します。 結果セットの **keep_partition_changes** および **use_partition_groups** の値を調べます。  
+1.  (省略可能) パブリッシャーのパブリケーション データベースに対して、`@publication` を指定して [sp_helpmergepublication](../../../relational-databases/system-stored-procedures/sp-helpmergepublication-transact-sql.md) を実行します。 結果セットの `keep_partition_changes` と `use_partition_groups` の値を確認します。  
   
-2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 **@property** には **use_partition_groups** を指定し、 **@value** には **true** または **false** を指定します。  
+2.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 `@property` の値に `use_partition_groups` を、`@value` に `true` または `false` のいずれかを指定します。  
   
-3.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 **@property** には **keep_partition_changes** を指定し、 **@value** には **true** または **false** を指定します。  
+3.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergepublication](../../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md)を実行します。 `@property` の値に `keep_partition_changes` を、`@value` に `true` または `false` のいずれかを指定します。  
   
     > [!NOTE]  
-    >  **keep_partition_changes** を有効にする場合、まず **use_partition_groups** を無効にして、 **@force_reinit_subscription** に **1** を指定します。  
+    >  `keep_partition_changes` を有効にしている場合、まず `use_partition_groups` を無効にして、`@force_reinit_subscription` の値を `1` に指定する必要があります。  
   
-4.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@property** に **partition_options** を指定し、 **@value** に適切な値を指定します。 このフィルター選択オプションの定義については、「 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 」を参照してください。  
+4.  (省略可) パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 `@property` の値に `partition_options` を指定し、*@value` に適切な値を指定します。 このフィルター選択オプションの定義については、「 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) 」を参照してください。  
   
 5.  (省略可) 必要に応じてスナップショット エージェントを開始し、スナップショットを再生成してください。 新しいスナップショットの生成が必要な変更の詳細については、「[変更パブリケーションとアーティクルのプロパティ](../../../relational-databases/replication/publish/change-publication-and-article-properties.md)」 (パブリケーションおよびアーティクルのプロパティの変更) を参照してください。  
   

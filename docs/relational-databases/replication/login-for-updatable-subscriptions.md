@@ -12,12 +12,12 @@ f1_keywords:
 ms.assetid: 301ea227-0455-40ba-9009-d38f8676b325
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 6776cea91288d22ed6765e8c4651266c0bcffa7e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3bdb3585647e64ad1a175900263628b607eb0041
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67943704"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710363"
 ---
 # <a name="login-for-updatable-subscriptions"></a>[更新可能なサブスクリプション] のログイン
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "67943704"
   
 -   レプリケーションによって作成されるリンク サーバー。サブスクライバーで変更を行うユーザーの資格情報を使用して接続を行います。  
   
- 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) を使用した場合にだけ指定できます。 **@security_mode** パラメーターに値 **1** を指定します。  
+ 最初の 2 つのオプションは、このウィザードで指定できます。 最後のオプションは、[sp_link_publication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) を使用した場合にだけ指定できます。`@security_mode` パラメーターに値 **1** を指定します。  
   
 ## <a name="options"></a>オプション  
  **[SQL Server 認証を使用して接続するリンク サーバーを作成する]**  

@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 7b976a84-7381-43a6-a828-ba83ada71cbe
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: aaf2c556af354cf9b928cf9f2cb945e1ab6737a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a6444a2a91a17f4f24ff9b70c713c22c7c894435
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126620"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952190"
 ---
 # <a name="set-a-trace-filter-transact-sql"></a>トレース フィルターの設定 (Transact-SQL)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -26,7 +26,7 @@ ms.locfileid: "68126620"
   
 ### <a name="to-set-a-trace-filter"></a>トレース フィルターを設定するには  
   
-1.  トレースが既に実行中の場合は、 **@status = 0** を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
+1.  トレースが既に実行中の場合は、`@status = 0` を指定して **sp_trace_setstatus** を実行し、トレースを停止します。  
   
 2.  **sp_trace_setfilter** を実行して、トレース中のイベントに関して取得する情報の種類を構成します。  
 

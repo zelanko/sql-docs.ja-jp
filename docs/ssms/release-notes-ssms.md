@@ -9,13 +9,13 @@ ms.assetid: 3dc76cc1-3b4c-4719-8296-f69ec1b476f9
 author: markingmyname
 ms.author: maghan
 ms.custom: ''
-ms.date: 09/24/2019
-ms.openlocfilehash: 776f251e574ae2fa8165e4dd4d4feee6a5cf9968
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.date: 10/03/2019
+ms.openlocfilehash: eedec59438b13f9a2e9ac92562921ef0504b8f58
+ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326090"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71816792"
 ---
 # <a name="release-notes-for-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のリリース ノート
 
@@ -41,22 +41,22 @@ Thank you.
 GeneMi. 2019/04/02.
 -->
 
-## <a name="ssms-183"></a>SSMS 18.3 
+## <a name="ssms-1831"></a>SSMS 18.3.1
 
-ダウンロード:[SSMS 18.3 のダウンロード](download-sql-server-management-studio-ssms.md)  
-ビルド番号:15.0.18178.0  
-リリース日:2019 年 9 月 23 日
+ダウンロード:[SSMS 18.3.1 のダウンロード](download-sql-server-management-studio-ssms.md)  
+ビルド番号:15.0.18183.0  
+リリース日:2019 年 10 月 2 日
 
-SSMS 18.3 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の以前のバージョンが必要な場合は、[以前のリリースの SSMS](release-notes-ssms.md#previous-ssms-releases) を参照してください。
+SSMS 18.3.1 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の以前のバージョンが必要な場合は、[以前のリリースの SSMS](release-notes-ssms.md#previous-ssms-releases) を参照してください。
 
-18.3 は、18.2 に次の新しい項目とバグ修正を加えた更新プログラムです。
+18.3.1 は、18.2 に次の新しい項目とバグ修正を加えた更新プログラムです。
 
-## <a name="whats-new-in-183"></a>18.3 の新機能
+## <a name="whats-new-in-1831"></a>18.3.1 の新機能
 
 | [新しい項目] | 詳細 |
 |---------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | データ分類 | データ分類情報が列のプロパティ UI に追加されます ("*情報の種類*"、"*情報の種類 ID*"、"*機密ラベル*"、および "*機密ラベル ID*" は SSMS UI では公開されません)。 |
-| Intellisense/エディター | SQL Server 2019 に最近追加された機能のサポートを更新しました (たとえば、"ALTER SERVER CONFIGURATION")。 | 
+| Intellisense/エディター | SQL Server 2019 に最近追加された機能のサポートを更新しました (たとえば、"ALTER SERVER CONFIGURATION")。 |
 | Integration Services | 新しい選択メニュー項目 `Tools > Migrate to Azure > Configure Azure-enabled DTExec` が追加されます。これにより、Azure-SSIS Integration Runtime 上で SSIS パッケージ実行が ADF パイプラインでの SSIS パッケージの実行アクティビティとして呼び出されます。 |
 | SMO/スクリプト作成 | Azure SQL DW 固有の制約のスクリプト作成サポートに対するサポートを追加しました。 |
 | SMO/スクリプト作成 | データ分類 </br> - SQL バージョン 10 (SQL 2008) 以降のサポートを追加しました。 </br> - SQL バージョン 15 (SQL 2019) 以降および Azure SQL DB に新しい機密属性 ' rank' を追加しました。 |
@@ -65,7 +65,7 @@ SSMS 18.3 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - Azure SQL Database Managed Instance のサポートを追加しました。 |
 | SMO/スクリプト作成 | [SQL Assessment API](../sql-assessment-api/sql-assessment-api-overview.md) - 結果を表で表示するようコマンドレットの既定のビューを更新しました。 |
 
-## <a name="bug-fixes-in-183"></a>18.3 でのバグの修正
+## <a name="bug-fixes-in-1831"></a>18.3.1 でのバグの修正
 
 | 新しい項目 | 詳細 |
 |----------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -82,11 +82,12 @@ SSMS 18.3 は SSMS の最新の一般提供 (GA) リリースです。 SSMS の�
 | SSMS 全般 | XEvent UI で、グリッド上にカーソルを置いたときに行が選択されていた問題を修正しています。 </br></br> 詳細については、UserVoice 項目を参照してください: [SSMS 拡張イベント UI でのカーソルを置いたときの選択アクション](https://feedback.azure.com/forums/908035/suggestions/38262124)。 |
 | フラット ファイルのインポート | 単純または豊富なデータ型の検出をユーザーが選択できるようにすることで、フラット ファイルのインポートですべてのデータがインポートされない問題を修正しました。</br></br> 詳細については、UserVoice 項目を参照してください: [SSMS のフラット ファイルのインポートですべてのデータがインポートされない](https://feedback.azure.com/forums/908035/suggestions/38096989)。 |
 | Integration Services | 新しい操作の種類 *StartNonCatalogExecution* が SSIS 操作レポートに追加されます。|
+| Integration Services | Azure 対応の `DTExec` ユーティリティによって生成される Azure Data Factory パイプラインの問題を修正して、適切なパラメーターの型が使用されるようにしました。 (18.3.1 の場合は明示的) |
 | SMO/スクリプト作成 | **SMO.Server.SetDefaultInitFields(true)** が使用されているときにプロパティをフェッチすると SMO からエラーがスローされる原因となっていた問題を修正しました。|
 | クエリ ストア UI | " *[追跡対象クエリ]* " ビューで " *[実行回数]* " メトリックが選択されている場合に Y 軸がスケーリングされない問題を修正しました。 |
 | 脆弱性評価 | Azure SQL DB のベースラインのクリアと承認が無効になりました。|
 
-### <a name="known-issues-183"></a>既知の問題 (18.3)
+### <a name="known-issues-1831"></a>既知の問題 (18.3.1)
 
 - マシン A 上で実行されている SSMS から作成されたデータベース ダイアグラムは、マシン B からは変更できません (SSMS がクラッシュします)。 詳細については、「[UserVoice](https://feedback.azure.com/forums/908035/suggestions/37992649)」を参照してください。
 

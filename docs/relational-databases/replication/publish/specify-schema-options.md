@@ -16,12 +16,12 @@ ms.assetid: 1f85a479-bd6e-4023-abf7-7435a7e5b567
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 516434ca2bb44701b432cb095d252f16278134a0
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b427d9cdf471133d78db71159041b03f8cddebf8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68764105"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710842"
 ---
 # <a name="specify-schema-options-for-sql-server-replication"></a>SQL Server レプリケーションのスキーマ オプションを指定する
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -52,7 +52,7 @@ ms.locfileid: "68764105"
   
 ###  <a name="Recommendations"></a> 推奨事項  
   
--   すべてのスキーマ オプションの一覧については、「[sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」および「[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」の **@schema_option** パラメーターをご覧ください。  
+-   すべてのスキーマ オプションの一覧については、「[sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」および「[sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)」の `@schema_option` パラメーターをご覧ください。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
  スキーマ オプション (制約やトリガーをサブスクライバーにコピーするかどうかなど) は、 **[アーティクルのプロパティ - \<Article>]** ダイアログ ボックスの **[プロパティ]** タブで指定します。 このタブは、パブリケーションの新規作成ウィザードおよび **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスで使用できます。 ウィザードの使用およびダイアログ ボックスへのアクセスの詳細については、「[パブリケーションの作成](../../../relational-databases/replication/publish/create-a-publication.md)」および「[パブリケーション プロパティの表示および変更](../../../relational-databases/replication/publish/view-and-modify-publication-properties.md)」を参照してください。  
@@ -86,15 +86,15 @@ ms.locfileid: "68764105"
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのアーティクルを定義するときにスキーマ オプションを指定するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 **@publication** にアーティクルが属しているパブリケーションの名前、 **@article** にアーティクル名、 **@source_object** にパブリッシュするデータベース オブジェクト、 **@type** にデータベース オブジェクトの型を指定し、さらに、1 つまたは複数のスキーマ オプションに対する [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) の実行結果を **@schema_option** に指定します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 `@publication` にアーティクルが属しているパブリケーションの名前、`@article` にアーティクル名、`@source_object` にパブリッシュするデータベース オブジェクト、`@type` にデータベース オブジェクトの型を指定し、さらに、1 つまたは複数のスキーマ オプションに対する [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) の結果を `@schema_option` に指定します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-specify-schema-options-when-defining-an-article-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義するときにスキーマ オプションを指定するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 **@publication** にアーティクルが属しているパブリケーションの名前、 **@article** にアーティクル名、 **@source_object** にパブリッシュするデータベース オブジェクトを指定し、さらに、1 つまたは複数のスキーマ オプションに対する [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) の実行結果を **@schema_option** に指定します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 `@publication` にアーティクルが属しているパブリケーションの名前、`@article` にアーティクル名、`@source_object` にパブリッシュするデータベース オブジェクトを指定し、さらに、1 つまたは複数のスキーマ オプションに対する [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) の結果を `@schema_option` に指定します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションの既存のアーティクルに設定されているスキーマ オプションを変更するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行します。 **@publication** と **@article** に、それぞれアーティクルが属しているパブリケーションの名前およびアーティクル名を指定します。 結果セットの **schema_option** 列の値を確認してください。  
+1.  パブリッシャー側のパブリケーション データベースに対して [sp_helparticle](../../../relational-databases/system-stored-procedures/sp-helparticle-transact-sql.md)を実行します。 `@publication` と `@article` に、それぞれアーティクルが属しているパブリケーションの名前およびアーティクル名を指定します。 結果セットの `schema_option` 列の値を確認します。  
   
 2.  手順 1 の値、および必要なスキーマ オプションの値を使って [& (ビット演算 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 演算を実行し、対象のオプションが設定されているかどうかを確認します。  
   
@@ -104,13 +104,13 @@ ms.locfileid: "68764105"
   
 3.  オプションが設定されていなかった場合は、手順 1. の値と、必要なスキーマ オプション値を使って [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 演算を実行します。  
   
-4.  パブリッシャーのパブリケーション データベースで [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)を実行します。 **@publication** にアーティクルが属しているパブリケーションの名前を、 **@article** にアーティクル名を、 **@property** に **schema_option** を指定し、さらに、手順 3 で得られた 16 進数値を **@value** に指定します。  
+4.  パブリッシャーのパブリケーション データベースで [sp_changearticle](../../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)を実行します。 `@publication` にアーティクルが属しているパブリケーションの名前を、`@article` にアーティクル名を、`@property` の値に `schema_option` を指定し、さらに、手順 3 で得られた 16 進数値を `@value` に指定します。  
   
 5.  スナップショット エージェントを実行して、新しいスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
 #### <a name="to-change-schema-options-for-an-existing-article-in-a-merge-publication"></a>マージ パブリケーションの既存のアーティクルのスキーマ オプションを変更するには  
   
-1.  パブリッシャーのパブリケーション データベースで [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)を実行します。 **@publication** と **@article** に、それぞれアーティクルが属しているパブリケーションの名前およびアーティクル名を指定します。 結果セットの **schema_option** 列の値を確認してください。  
+1.  パブリッシャーのパブリケーション データベースで [sp_helpmergearticle](../../../relational-databases/system-stored-procedures/sp-helpmergearticle-transact-sql.md)を実行します。 `@publication` と `@article` に、それぞれアーティクルが属しているパブリケーションの名前およびアーティクル名を指定します。 結果セットの **schema_option** 列の値を確認してください。  
   
 2.  手順 1 の値、および必要なスキーマ オプションの値を使って [& (ビット演算 AND)](../../../t-sql/language-elements/bitwise-and-transact-sql.md) 演算を実行し、対象のオプションが設定されているかどうかを確認します。  
   
@@ -120,7 +120,7 @@ ms.locfileid: "68764105"
   
 3.  オプションが設定されていなかった場合は、手順 1. の値と、必要なスキーマ オプション値を使って [| (ビット演算 OR)](../../../t-sql/language-elements/bitwise-or-transact-sql.md) 演算を実行します。  
   
-4.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 **@publication** にアーティクルが属しているパブリケーションの名前を、 **@article** にアーティクル名を、 **@property** に **schema_option** を指定し、さらに、手順 3 で得られた 16 進数値を **@value** に指定します。  
+4.  パブリッシャー側のパブリケーション データベースに対して、 [sp_changemergearticle](../../../relational-databases/system-stored-procedures/sp-changemergearticle-transact-sql.md)を実行します。 `@publication` にアーティクルが属しているパブリケーションの名前を、`@article` にアーティクル名を、`@property` の値に `schema_option` を指定し、さらに、手順 3 で得られた 16 進数値を `@value` に指定します。  
   
 5.  スナップショット エージェントを実行して、新しいスナップショットを生成します。 詳細については、「 [Create and Apply the Initial Snapshot](../../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」をご参照ください。  
   

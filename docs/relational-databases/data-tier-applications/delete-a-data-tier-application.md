@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 16fe1c18-4486-424d-81d6-d276ed97482f
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 17e12a45f8f5aa9e94936a85f62d21c88ccb8c08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 07a4d09e55999c9e6f85e059f576c1460baf750a
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68134830"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823559"
 ---
 # <a name="delete-a-data-tier-application"></a>データ層アプリケーションの削除
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -134,102 +134,96 @@ ms.locfileid: "68134830"
   
  [データ層アプリケーションの削除ウィザードの使用](#UsingDeleteDACWizard)  
   
-##  <a name="DeleteDACPowerShell"></a> PowerShell による DAC の削除  
- **PowerShell スクリプトを使用して DAC を削除するには**  
+##  <a name="DeleteDACPowerShell"></a> PowerShell の使用  
+
+1. SMO サーバー オブジェクトを作成し、削除する DAC を含んだインスタンスに設定します。  
   
-1.  SMO サーバー オブジェクトを作成し、削除する DAC を含んだインスタンスに設定します。  
+1. **ServerConnection** オブジェクトを開いて、同じインスタンスに接続します。  
   
-2.  **ServerConnection** オブジェクトを開いて、同じインスタンスに接続します。  
+1. `add_DacActionStarted` および `add_DacActionFinished` を使用して、DAC アップグレード イベントをサブスクライブします。  
   
-3.  **add_DacActionStarted** と **add_DacActionFinished** を使用して、DAC アップグレード イベントをサブスクライブします。  
+1. 削除する DAC を指定します。  
   
-4.  削除する DAC を指定します。  
+1. どの削除オプションが適切かに応じて、3 つの例のいずれかを使用します。  
   
-5.  どの削除オプションが適しているかによって、これらの 3 つのコードのいずれかを使用します。  
+   - DAC 登録を削除し、データベースをそのままにするには、`Unmanage` メソッドを使用します。  
+   - DAC 登録を削除し、データベースをデタッチするには、`Uninstall` メソッドを使用し、`DetachDatabase` を指定します。  
+   - DAC 登録を削除し、データベースを削除するには、`Uninstall` メソッドを使用し、`DropDatabase` を指定します。
   
-    -   DAC 登録を削除し、データベースをそのままにするには、 **Unmanage()** メソッドを使用します。  
+### <a name="delete-the-dac-and-leave-the-database"></a>DAC を削除してデータベースを終了する
+
+次の例では、`Unmanage` メソッドを使用して `<myApplication>` という名前の DAC を削除します。これにより、DAC は削除されますが、データベースはそのまま残ります。  
   
-    -   DAC 登録を削除し、データベースをデタッチするには、 **Uninstall()** メソッドを使用し、 **DetachDatabase**を指定します。  
-  
-    -   DAC 登録を削除し、データベースを削除するには、 **Uninstall()** メソッドを使用し、 **DropDatabase**を指定します。  
-  
-### <a name="example-deleting-the-dac-but-leaving-the-database-powershell"></a>DAC のみ削除してデータベースはそのまま残す例 (PowerShell)  
- 次の例では、MyApplication という DAC を削除します。 **Unmanage()** メソッドを使用して DAC のみ削除し、データベースはそのままにします。  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Only delete the DAC definition from msdb, the associated database remains active.  
-$dacstore.Unmanage($dacName)  
-```  
+$dacStore.Unmanage($dacName)  
+```
   
- [PowerShell による DAC の削除](#DeleteDACPowerShell)  
+### <a name="delete-the-dac-and-detach-the-database"></a>DAC を削除し、データベースをデタッチする
+
+次の例では、`Uninstall` メソッドを使用して `<myApplication>` という名前の DAC を削除します。これにより、DAC は削除され、データベースはデタッチされます。  
   
-### <a name="example-deleting-the-dac-and-detaching-the-database-powershell"></a>DAC を削除してデータベースをデタッチする例 (PowerShell)  
- 次の例では、MyApplication という DAC を削除します。 **Uninstall()** メソッドを使用して DAC を削除し、データベースをデタッチします。  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Delete the DAC definition from msdb and detach the associated database.  
-$dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DetachDatabase)  
-```  
+$dacStore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DetachDatabase)  
+```
   
- [PowerShell による DAC の削除](#DeleteDACPowerShell)  
+### <a name="delete-the-dac-and-drop-the-database"></a>DAC を削除し、データベースをドロップする
+
+次の例では、`Uninstall` メソッドを使用して `<myApplication>` という名前の DAC を削除します。これにより、DAC は削除され、データベースはドロップされます。  
   
-### <a name="example-deleting-the-dac-and-dropping-the-database-powershell"></a>DAC を削除してデータベースを削除する例 (PowerShell)  
- 次の例では、MyApplication という DAC を削除します。 **Uninstall()** メソッドを使用して DAC を削除し、データベースを削除します。  
-  
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$server = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
-$serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
-$serverconnection.Connect()  
-$dacstore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverconnection)  
+$serverConnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($server.ConnectionContext.SqlConnectionObject)  
+$serverConnection.Connect()  
+$dacStore = New-Object Microsoft.SqlServer.Management.Dac.DacStore($serverConnection)  
   
 ## Subscribe to the DAC delete events.  
-$dacstore.add_DacActionStarted({Write-Host `n`nStarting at $(get-date) :: $_.Description})  
-$dacstore.add_DacActionFinished({Write-Host Completed at $(get-date) :: $_.Description})  
+$dacStore.add_DacActionStarted({Write-Host `n`nStarting at $(Get-Date) :: $_.Description})  
+$dacStore.add_DacActionFinished({Write-Host Completed at $(Get-Date) :: $_.Description})  
   
 ## Specify the DAC to delete.  
-$dacName  = "MyApplication"  
+$dacName  = "<myApplication>"  
   
 ## Delete the DAC definition from msdb and drop the associated database.  
-## $dacstore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
-```  
-  
- [PowerShell による DAC の削除](#DeleteDACPowerShell)  
+$dacStore.Uninstall($dacName, [Microsoft.SqlServer.Management.Dac.DacUninstallMode]::DropDatabase)  
+```
   
 ## <a name="see-also"></a>参照  
  [[データ層アプリケーション]](../../relational-databases/data-tier-applications/data-tier-applications.md)   

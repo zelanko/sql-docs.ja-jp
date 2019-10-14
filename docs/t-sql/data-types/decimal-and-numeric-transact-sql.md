@@ -1,7 +1,7 @@
 ---
 title: decimal 型と numeric 型 (Transact-SQL) | Microsoft Docs
 ms.custom: ''
-ms.date: 07/23/2017
+ms.date: 09/10/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -23,12 +23,12 @@ ms.assetid: 9d862a90-e6b7-4692-8605-92358dccccdf
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 48080db61a91a13cd04d436784ce74a7e45e3135
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c2836dc2d57ef5844463c303c6432698bf05a4d1
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68086739"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682102"
 ---
 # <a name="decimal-and-numeric-transact-sql"></a>decimal 型と numeric 型 (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -67,7 +67,7 @@ p (precision)
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定で、数値を **decimal** 型または **numeric** 型の値に変換する場合、有効桁数と小数点以下桁数が少なくなって丸められます。 反対に、SET ARITHABORT オプションが ON に設定されている場合は、オーバーフローが起こると [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ではエラーが生成されます。 有効桁数と小数点以下桁数が失われただけではエラーは生成されません。
   
-浮動小数値または実数値を小数値または数値に変換する場合、小数値が 17 桁を超えることはありません。 すべての浮動小数値 < 5E-18 は常に 0 として変換されます。
+[!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] より前では、**float** 値から **decimal** または **numeric** への変換は、有効桁数 17 桁までの値に制限されます。 5E-18 未満の **float** 値はすべて (5E-18 の科学的記数法または 0.0000000000000000050000000000000005 の小数点表記のいずれかを使用して設定されている場合) 0 に丸められます。 これは [!INCLUDE[ssSQL16](../../includes/sssql16-md.md)] の時点で制限がなくなりました。
   
 ## <a name="examples"></a>使用例  
 次の例では、**decimal** および **numeric** データ型を使用してテーブルを作成します。  各列に値が挿入されます。 結果は、SELECT ステートメントを使用して返されます。

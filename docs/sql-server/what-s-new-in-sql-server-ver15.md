@@ -8,12 +8,12 @@ ms.topic: article
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 4ef11893ca08e32c7aed177f53ea63305add4d14
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: e85461ef0a6395904b0f80590a01f035eb51dc3a
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326186"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952757"
 ---
 # <a name="whats-new-in-includesql-server-2019includessssqlv15-mdmd"></a>[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] の新機能
 
@@ -36,46 +36,33 @@ ms.locfileid: "71326186"
 
 以下のセクションでは、これらの機能の概要について説明します。
 
-## [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+## <a name="data-virtualization-and-includebig-data-clusters-2019includesssbigdataclusters-ver15md"></a>データの仮想化と [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ver15.md)]
+
+現代の企業はしばしば、データという財産を大量に管理しています。その財産はさまざまなデータ セットからなりますが、サイロ化されたデータ ソースでホストされるデータ セットは会社全体で増加の一途をたどります。 [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] では、機械学習機能や人工知能機能など、大量のデータ セットを処理する完全な環境が与えられ、あらゆるデータから分析情報をほぼリアルタイムで取得できます。
 
 | 新機能または更新 | 詳細 |
 |:---|:---|
-| スケーラブルなビッグ データ ソリューション | Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置する](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行う<br/><br/> 大量のビッグ データを使用して、価値の高いリレーショナル データを簡単に組み合わせて分析する<br/><br/>外部データ ソースを照会する<br/><br/>SQL Server によって管理される HDFS にビッグ データを格納する<br/><br/>クラスターを介して複数の外部データ ソースからデータを照会する<br/><br/> AI、機械学習、その他の分析タスクにデータを使用する<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] にアプリケーションをデプロイして実行する <br/><br/> SQL Server マスター インスタンス データベースで Always On 可用性グループを使用する<br/>|
+| スケーラブルなビッグ データ ソリューション | Kubernetes で実行している SQL Server、Spark、HDFS コンテナーの[スケーラブルなクラスターを配置する](../big-data-cluster/deploy-get-started.md) <br/><br/> Transact-SQL または Spark からビッグ データの読み取り、書き込み、処理を行う<br/><br/> 大量のビッグ データを使用して、価値の高いリレーショナル データを簡単に組み合わせて分析する<br/><br/>外部データ ソースを照会する<br/><br/>SQL Server によって管理される HDFS にビッグ データを格納する<br/><br/>クラスターを介して複数の外部データ ソースからデータを照会する<br/><br/> AI、機械学習、その他の分析タスクにデータを使用する<br/><br/> [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] に[アプリケーションをデプロイして実行する](../big-data-cluster/concept-application-deployment.md) <br/><br/> SQL Server マスター インスタンスからは、Always On 可用性グループ テクノロジを利用した、あらゆるデータベースを対象とする、高可用性とディザスター リカバリーが与えられます<br/>|
+|Polybase によるデータ仮想化 | 外部の SQL Server、Oracle、Teradata、MongoDB、ODBC データ ソースと外部のテーブルにデータを問い合わせる。新しく [UTF-8 エンコード対応](../relational-databases/collations/collation-and-unicode-support.md)になりました。 詳細については、「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」を参照してください。|
 | &nbsp; | &nbsp; |
 
 詳細については、「[SQL Server [!INCLUDE[big-data-clusters](../includes/ssbigdataclusters-nover.md)] とは](../big-data-cluster/big-data-cluster-overview.md)」を参照してください。
 
 [[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] (CTP) アナウンス アーカイブ](what-s-new-in-sql-server-ver15-prerelease.md)には、この機能の以前のすべての CTP リリースで発表および変更された機能の一覧が含まれています。
 
-## <a name="database-engine"></a>データベース エンジン
+## <a name="intelligent-database"></a>インテリジェント データベース
 
-### <a name="security"></a>セキュリティ
-
-|新機能または更新 | 詳細 |
-|:---|:---|
-|セキュア エンクレーブを使用する Always Encrypted|Always Encrypted、インプレース暗号化、さまざまな計算法を基盤に拡張し、サーバー側のセキュア エンクレーブ内でプレーンテキスト データの計算を可能にします。 インプレース暗号化では、データをデータベースの外に移動することが回避されるため、暗号操作 (列の暗号化、列のローテーション、暗号化鍵など) の性能と信頼度が上がります。 さまざまな計算法 (パターン一致や比較演算) がサポートされることで、機密データの保護が求められ、同時に Transact-SQL クエリで豊富な機能性が求められる幅広いシナリオや用途に Always Encrypted が対応できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)」をご覧ください。|
-|Transparent Data Encryption (TDE) に対する初期スキャンの一時停止および再開|[Transparent Data Encryption (TDE) スキャンの一時停止と再開](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)に関するページを参照してください。|
-|SQL Server 構成マネージャーでの証明書管理|[証明書の管理 (SQL Server 構成マネージャー)](../database-engine/configure-windows/manage-certificates.md) に関するページを参照してください。|
-| &nbsp; | &nbsp; |
-
-### <a name="graph"></a>グラフ
+### <a name="intelligent-query-processing"></a>インテリジェントなクエリ処理
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|エッジ制約のカスケード削除アクション |グラフ データベースでのエッジ制約で連鎖削除操作を定義します。 「[エッジ制約](../relational-databases/tables/graph-edge-constraints.md)」を参照してください。 |
-|新しいグラフ関数 - `SHORTEST_PATH` | `MATCH` 内で `SHORTEST_PATH` を使用し、グラフ内の任意の 2 ノード間の最短パスを検索するか、任意の長さのトラバーサルを実行します。|
-|パーティション テーブルとパーティション インデックス| パーティション テーブルとパーティション インデックスのデータは、グラフ データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 |
-|グラフ一致クエリで派生テーブルまたはビューの別名を使用する |[グラフ一致クエリ](../t-sql/queries/match-sql-graph.md)に関するページを参照してください。 |
+|行モード メモリ許可フィードバック |バッチ モードと行モード両方の演算子のメモリ許可サイズを調整することで、バッチ モード メモリ許可フィードバックの機能が拡張されます。 これにより、メモリが無駄になってコンカレンシーが低下する過度の許可を自動的に修正し、負荷の高いディスクへの書き込みが発生する原因になる不十分なメモリ許可を修正できます。 「[行モード メモリ許可フィードバック](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。 |
+|テーブル変数の遅延コンパイル|テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報によって、ダウンストリーム プラン操作が最適化されます。 「[テーブル変数の遅延コンパイル](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)」を参照してください。 |
+|`APPROX_COUNT_DISTINCT ` による概数クエリ処理|絶対精度は重要でないが応答性は重要であるシナリオでは、優れたコンカレンシーのための `COUNT(DISTINCT())` よりリソース使用量が少ない `APPROX_COUNT_DISTINCT` で大規模なデータセットを集計します。 「[概数クエリ処理](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)」を参照してください。|
+|行ストアでのバッチ モード|行ストアのバッチ モードでは、列ストア インデックスを必要とせずに、バッチ モードで実行できます。 バッチ モードの実行では、分析ワークロードの間の CPU 使用効率が向上しますが、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] までは、クエリに列ストア インデックスを使用する操作が含まれている場合にのみ使用されました。 ただし、一部のアプリケーションでは、列ストア インデックスでサポートされていない機能が使用されている可能性があるため、バッチ モードを利用できませんでした。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降では、任意の種類のインデックス (行ストアまたは列ストア) を使用する操作がクエリに含まれる適格な分析ワークロードで、バッチ モードが有効になります。 「[行ストアでのバッチ モード](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)」を参照してください。 |
+|スカラー UDF のインライン化|スカラー UDF が関係式に自動的に変換され、それらが呼び出し元の SQL クエリに埋め込まれます。 この変換により、スカラー UDF を利用するワークロードのパフォーマンスが向上します。 [スカラー UDF のインライン化](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)に関するページを参照してください。|
 | &nbsp; | &nbsp; |
 
-### <a name="indexes"></a>インデックス
-
-|新機能または更新 | 詳細 |
-|:---|:---|
-|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|インデックスへの高コンカレンシーの挿入のスループット向上に役立つ、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 内での最適化を有効にします。 このオプションは、最終ページ挿入の競合が起きやすいインデックスを対象としています。これは、一般に、ID 列、シーケンス、または日付/時刻列などの連続したキーを持つインデックスでよく見られます。 詳しくは、「[CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)」をご覧ください。|
-|オンラインでのクラスター化列ストア インデックスのビルドとリビルド | [オンラインでのインデックス操作の実行](../relational-databases/indexes/perform-index-operations-online.md)に関するページを参照してください。 |
-|再開可能なオンライン行ストア インデックスのビルド | [オンラインでのインデックス操作の実行](../relational-databases/indexes/perform-index-operations-online.md)に関するページを参照してください。 |
-| &nbsp; | &nbsp; |
 
 ### <a name="in-memory-database"></a>メモリ内データベース
 
@@ -83,24 +70,22 @@ ms.locfileid: "71326186"
 |:---|:---|
 |ハイブリッド バッファー プール| 永続的なメモリ (PMEM) デバイス上に置かれたデータベース ファイル上のデータベース ページが必要に応じて直接アクセスされる [!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] の新機能。 「[ハイブリッド バッファー プール](../database-engine/configure-windows/hybrid-buffer-pool.md)」を参照してください。|
 |メモリ最適化 `tempdb` メタデータ| [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、[メモリ内データベース](../relational-databases/in-memory-database.md)機能ファミリの一部として、メモリ最適化 `tempdb` メタデータという新機能が導入されています。この機能により、効果的にこのボトルネックが除去され、`tempdb` が多用されるワークロードに対して新たなレベルのスケーラビリティが実現されます。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、一時テーブルのメタデータの管理に関連するシステム テーブルを、ラッチ フリーの非持続的メモリ最適化テーブルに移動できます。 「[メモリ最適化 `tempdb` メタデータ](../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)」を参照してください。|
+| データベース スナップショットのためのメモリ内 OLTP サポート | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、メモリ最適化されたファイルグループが含まれるデータベースの[データベース スナップショット](../relational-databases/databases/database-snapshots-sql-server.md)を作成するためのサポートが導入されました。 |
 | &nbsp; | &nbsp; |
 
-### <a name="unicode-support"></a>Unicode のサポート
+### <a name="intelligent-performance"></a>インテリジェントなパフォーマンス
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|UTF-8 文字エンコードのサポート |インポート エンコードとエクスポート エンコードに対する UTF-8 文字、および文字列データのデータベース レベルまたは列レベルの照合順序がサポートされます。 これにより、グローバルな多言語データベース アプリケーションとサービスを提供する必要性が、顧客の要求と特定の市場規制を満たすために重要である、グローバルなスケールへのアプリケーションの拡張がサポートされます。 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)に関するページを参照してください。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース候補では、Polybase 外部テーブルおよび Always Encrypted に対する UTF-8 のサポートが有効になります。|
+|`OPTIMIZE_FOR_SEQUENTIAL_KEY`|インデックスへの高コンカレンシーの挿入のスループット向上に役立つ、[!INCLUDE[ssDEnoversion](../includes/ssdenoversion-md.md)] 内での最適化を有効にします。 このオプションは、最終ページ挿入の競合が起きやすいインデックスを対象としています。これは、一般に、ID 列、シーケンス、または日付/時刻列などの連続したキーを持つインデックスでよく見られます。 詳しくは、「[CREATE INDEX](../t-sql/statements/create-index-transact-sql.md#sequential-keys)」をご覧ください。|
+|高速順方向カーソルと静的カーソルを強制する | 高速順方向カーソルと静的カーソルのサポートを強制するクエリ ストア プラン [高速順方向カーソルと静的カーソルのサポートを強制するプラン](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23)に関するページを参照してください。|
+|リソース管理| `CREATE WORKLOAD GROUP` と `ALTER WORKLOAD GROUP` の `REQUEST_MAX_MEMORY_GRANT_PERCENT` オプションの構成可能値が整数から float データ型に変更されており、メモリ上限をさらに細かく制御できます。 「[ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md)」と「[CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。|
+|ワークロードの再コンパイルの削減| 複数のスコープを超えて一時テーブルを使用して改善します。 [ワークロードの再コンパイルの削減](../relational-databases/tables/tables.md#ctp23)に関するページを参照してください。 |
+|間接チェックポイントのスケーラビリティ |[間接チェックポイントのスケーラビリティの向上](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)に関するページを参照してください。|
+|PFS の同時更新|[PFS ページ](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)はデータベース ファイル内の特別なページであり、オブジェクト用の領域を割り当てるときに空き領域を探すために SQL Server によって使用されます。 PFS ページでのページ ラッチの競合は、一般に [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) に関連付けられますが、多数の同時オブジェクト割り当てスレッドがあるときは、ユーザー データベースでも発生する可能性があります。 この機能強化により、PFS の更新でのコンカレンシー管理方法が変更され、排他的ラッチではなく共有ラッチで更新できるようになります。 この動作は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降のすべてのデータベース (`tempdb` を含む) で、既定でオンになります。|
 | &nbsp; | &nbsp; |
 
-### <a name="polybase"></a>PolyBase
-
-|新機能または更新 | 詳細 |
-|:---|:---|
-|外部テーブルのクエリを実行する |外部テーブルの列名は、SQL Server、Oracle、Teradata、MongoDB および ODBC データ ソースのクエリに使用されるようになりました。 「[PolyBase とは](../relational-databases/polybase/polybase-guide.md)」を参照してください。|
-|UTF-8 文字エンコードのサポート|外部テーブルでの UTF-8 文字がサポートされます。 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)に関するページを参照してください。|
-| &nbsp; | &nbsp; |
-
-### <a name="performance-monitoring"></a>パフォーマンスの監視
+### <a name="monitoring"></a>監視
 
 |新機能または更新 | 詳細 |
 |:---|:---|
@@ -112,6 +97,25 @@ ms.locfileid: "71326186"
 |`LAST_QUERY_PLAN_STATS` | `sys.dm_exec_query_plan_stats` を有効にする新しいデータベース スコープの構成。 「[ALTER DATABASE SCOPED CONFIGURATION (ALTER データベース スコープ ベースの構成)](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。|
 |`query_post_execution_plan_profile` | 拡張イベントでは、標準プロファイリングを使用する `query_post_execution_showplan` とは異なり、軽量プロファイリングに基づいて、実際の実行プランと同等のものを収集します。 [クエリ プロファイリング インフラストラクチャ](../relational-databases/performance/query-profiling-infrastructure.md)に関するページを参照してください。|
 |`sys.dm_db_page_info(database_id, file_id, page_id, mode)` | 新しい DMF では、データベースのページに関する情報が返されます。 「[sys.dm_db_page_info (Transact-SQL)](../relational-databases/system-dynamic-management-views/sys-dm-db-page-info-transact-sql.md)」を参照してください。|
+| &nbsp; | &nbsp; |
+
+## <a name="developer-experience"></a>開発者エクスペリエンス
+
+### <a name="graph"></a>グラフ
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+|エッジ制約のカスケード削除アクション |グラフ データベースでのエッジ制約で連鎖削除操作を定義します。 「[エッジ制約](../relational-databases/tables/graph-edge-constraints.md)」を参照してください。 |
+|新しいグラフ関数 - `SHORTEST_PATH` | `MATCH` 内で `SHORTEST_PATH` を使用し、グラフ内の任意の 2 ノード間の最短パスを検索するか、任意の長さのトラバーサルを実行します。|
+|パーティション テーブルとパーティション インデックス| パーティション テーブルとパーティション インデックスのデータは、グラフ データベース内の複数のファイル グループに分散できるように、複数の単位に分割されます。 |
+|グラフ一致クエリで派生テーブルまたはビューの別名を使用する |[グラフ一致クエリ](../t-sql/queries/match-sql-graph.md)に関するページを参照してください。 |
+| &nbsp; | &nbsp; |
+
+### <a name="unicode-support"></a>Unicode のサポート
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+|UTF-8 文字エンコードのサポート |インポート エンコードとエクスポート エンコードに対する UTF-8 文字、および文字列データのデータベース レベルまたは列レベルの照合順序がサポートされます。 これにより、グローバルな多言語データベース アプリケーションとサービスを提供する必要性が、顧客の要求と特定の市場規制を満たすために重要である、グローバルなスケールへのアプリケーションの拡張がサポートされます。 [照合順序と Unicode のサポート](../relational-databases/collations/collation-and-unicode-support.md)に関するページを参照してください。<br/><br/> [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] リリース候補では、Polybase 外部テーブルおよび Always Encrypted に対する UTF-8 のサポートが有効になります。|
 | &nbsp; | &nbsp; |
 
 ### <a name="language-extensions"></a>言語拡張機能
@@ -133,22 +137,22 @@ ms.locfileid: "71326186"
 | 新しい Spatial Reference Identifier (SRID) |[Australian GDA2020](http://www.ga.gov.au/scientific-topics/positioning-navigation/geodesy/datums-projections/gda2020) により、全地球測位システム (GPS) に対しさらに緊密に配置された、より堅牢で正確な測量基準点が提供されます。 新しい SRID は次のとおりです。<br/><br/> - 7843: 地理 2D 用<br/> - 7844: 地理 3D 用 <br/><br/>[sys.spatial_reference_systems](../relational-databases/system-catalog-views/sys-spatial-reference-systems-transact-sql.md) ビューには、新しい SRID の定義が含まれています。 |
 | &nbsp; | &nbsp; |
 
-### <a name="performance"></a>パフォーマンス
+### <a name="error-messages"></a>エラー メッセージ
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-|高速データベース復旧 | データベースごとに高速データベース復旧を有効にする [高速データベース復旧](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)に関するページを参照してください。|
-|高速順方向カーソルと静的カーソルを強制する | 高速順方向カーソルと静的カーソルのサポートを強制するクエリ ストア プラン [高速順方向カーソルと静的カーソルのサポートを強制するプラン](../relational-databases/performance/monitoring-performance-by-using-the-query-store.md#ctp23)に関するページを参照してください。|
-|リソース管理| `CREATE WORKLOAD GROUP` と `ALTER WORKLOAD GROUP` の `REQUEST_MAX_MEMORY_GRANT_PERCENT` オプションの構成可能値が整数から float データ型に変更されており、メモリ上限をさらに細かく制御できます。 「[ALTER WORKLOAD GROUP](../t-sql/statements/alter-workload-group-transact-sql.md)」と「[CREATE WORKLOAD GROUP](../t-sql/statements/create-workload-group-transact-sql.md)」を参照してください。|
-|ワークロードの再コンパイルの削減| 複数のスコープを超えて一時テーブルを使用して改善します。 [ワークロードの再コンパイルの削減](../relational-databases/tables/tables.md#ctp23)に関するページを参照してください。 |
-|間接チェックポイントのスケーラビリティ |[間接チェックポイントのスケーラビリティの向上](../relational-databases/logs/database-checkpoints-sql-server.md#ctp23)に関するページを参照してください。|
-|PFS の同時更新|[PFS ページ](https://techcommunity.microsoft.com/t5/SQL-Server/Under-the-covers-GAM-SGAM-and-PFS-pages/ba-p/383125)はデータベース ファイル内の特別なページであり、オブジェクト用の領域を割り当てるときに空き領域を探すために SQL Server によって使用されます。 PFS ページでのページ ラッチの競合は、一般に [`tempdb`](https://support.microsoft.com/en-us/help/2154845/recommendations-to-reduce-allocation-contention-in-sql-server-tempdb-d) に関連付けられますが、多数の同時オブジェクト割り当てスレッドがあるときは、ユーザー データベースでも発生する可能性があります。 この機能強化により、PFS の更新でのコンカレンシー管理方法が変更され、排他的ラッチではなく共有ラッチで更新できるようになります。 この動作は、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降のすべてのデータベース (`tempdb` を含む) で、既定でオンになります。|
-|行モード メモリ許可フィードバック |バッチ モードと行モード両方の演算子のメモリ許可サイズを調整することで、バッチ モード メモリ許可フィードバックの機能が拡張されます。 これにより、メモリが無駄になってコンカレンシーが低下する過度の許可を自動的に修正し、負荷の高いディスクへの書き込みが発生する原因になる不十分なメモリ許可を修正できます。 「[行モード メモリ許可フィードバック](../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。 |
-|テーブル変数の遅延コンパイル|テーブル変数を参照するクエリのプランの品質および全体的なパフォーマンスが向上します。 最適化と最初のコンパイルの実行中に、この機能は実際テーブル変数の行数に基づくカーディナリティの推定を反映します。 この正確な行数の情報によって、ダウンストリーム プラン操作が最適化されます。 「[テーブル変数の遅延コンパイル](../relational-databases/performance/intelligent-query-processing.md#table-variable-deferred-compilation)」を参照してください。 |
-|`APPROX_COUNT_DISTINCT `|絶対精度は重要でないが応答性は重要であるシナリオでは、優れたコンカレンシーのための `COUNT(DISTINCT())` よりリソース使用量が少ない `APPROX_COUNT_DISTINCT` で大規模なデータセットを集計します。 「[概数クエリ処理](../relational-databases/performance/intelligent-query-processing.md#approximate-query-processing)」を参照してください。|
-|行ストアでのバッチ モード|行ストアのバッチ モードでは、列ストア インデックスを必要とせずに、バッチ モードで実行できます。 バッチ モードの実行では、分析ワークロードの間の CPU 使用効率が向上しますが、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] までは、クエリに列ストア インデックスを使用する操作が含まれている場合にのみ使用されました。 ただし、一部のアプリケーションでは、列ストア インデックスでサポートされていない機能が使用されている可能性があるため、バッチ モードを利用できませんでした。 [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] 以降では、任意の種類のインデックス (行ストアまたは列ストア) を使用する操作がクエリに含まれる適格な分析ワークロードで、バッチ モードが有効になります。 「[行ストアでのバッチ モード](../relational-databases/performance/intelligent-query-processing.md#batch-mode-on-rowstore)」を参照してください。 |
-|スカラー UDF のインライン化|スカラー UDF が関係式に自動的に変換され、それらが呼び出し元の SQL クエリに埋め込まれます。 この変換により、スカラー UDF を利用するワークロードのパフォーマンスが向上します。 [スカラー UDF のインライン化](../relational-databases/performance/intelligent-query-processing.md#scalar-udf-inlining)に関するページを参照してください。|
+|詳細な切り捨ての警告 | 切り捨てエラー メッセージに、テーブル名および列名と切り捨てられた値が既定で含まれます。 [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)に関するページを参照してください。|
 | &nbsp; | &nbsp; |
+
+## <a name="mission-critical-security"></a>ミッション クリティカル セキュリティ
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+|セキュア エンクレーブを使用する Always Encrypted|Always Encrypted、インプレース暗号化、さまざまな計算法を基盤に拡張し、サーバー側のセキュア エンクレーブ内でプレーンテキスト データの計算を可能にします。 インプレース暗号化では、データをデータベースの外に移動することが回避されるため、暗号操作 (列の暗号化、列のローテーション、暗号化鍵など) の性能と信頼度が上がります。 さまざまな計算法 (パターン一致や比較演算) がサポートされることで、機密データの保護が求められ、同時に Transact-SQL クエリで豊富な機能性が求められる幅広いシナリオや用途に Always Encrypted が対応できます。 「[セキュリティで保護されたエンクレーブが設定された Always Encrypted](../relational-databases/security/encryption/always-encrypted-enclaves.md)」をご覧ください。|
+|SQL Server 構成マネージャーでの証明書管理|[証明書の管理 (SQL Server 構成マネージャー)](../database-engine/configure-windows/manage-certificates.md) に関するページを参照してください。|
+| &nbsp; | &nbsp; |
+
+## <a name="high-availability"></a>高可用性
 
 ### <a name="availability-groups"></a>可用性グループ
 
@@ -158,7 +162,23 @@ ms.locfileid: "71326186"
 |セカンダリからプライマリ レプリカへの接続のリダイレクト| 接続文字列に指定されたターゲット サーバーに関係なく、クライアント アプリケーションの接続先をプライマリ レプリカにすることができます。 詳しくは、「[セカンダリからプライマリ レプリカへの読み取り/書き込み接続のリダイレクト (Always On 可用性グループ)](../database-engine/availability-groups/windows/secondary-replica-connection-redirection-always-on-availability-groups.md)」をご覧ください。|
 | &nbsp; | &nbsp; |
 
-### <a name="setup"></a>セットアップ 
+### <a name="recovery"></a>Recovery
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+|高速データベース復旧 | データベースごとに高速データベース復旧を有効にする [高速データベース復旧](../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#adr)に関するページを参照してください。|
+| &nbsp; | &nbsp; |
+
+### <a name="resumable-operations"></a>再開可能な操作
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+|オンラインでのクラスター化列ストア インデックスのビルドとリビルド | [オンラインでのインデックス操作の実行](../relational-databases/indexes/perform-index-operations-online.md)に関するページを参照してください。 |
+|再開可能なオンライン行ストア インデックスのビルド | [オンラインでのインデックス操作の実行](../relational-databases/indexes/perform-index-operations-online.md)に関するページを参照してください。 |
+|Transparent Data Encryption (TDE) に対する初期スキャンの一時停止および再開|[Transparent Data Encryption (TDE) スキャンの一時停止と再開](../relational-databases/security/encryption/transparent-data-encryption.md#scan-suspend-resume)に関するページを参照してください。|
+| &nbsp; | &nbsp; |
+
+## <a name="setup"></a>セットアップ 
 
 |新機能または更新 | 詳細 | 
 |:---|:---| 
@@ -166,14 +186,9 @@ ms.locfileid: "71326186"
 |新しい並列処理セットアップ オプション | インストールの間に "*並列処理の最大限度*" サーバー構成オプションを設定します。 詳細については、「[[データベース エンジンの構成] - [MAXDOP] ページ](https://docs.microsoft.com/sql/sql-server/install/instance-configuration?view=sql-server-ver15#maxdop)」および「[コマンド プロンプトからの SQL Server のインストール](../database-engine/install-windows/install-sql-server-from-the-command-prompt.md#Install)」の `SQLMAXDOP` パラメーターを参照してください。 既定値は、「[max degree of parallelism サーバー構成オプションの構成](../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)」の並列処理の最大限度ガイドラインと一致します。| 
 | &nbsp; | &nbsp; |
 
-### <a name="error-messages"></a>エラー メッセージ
+## <a name="platform-choice"></a>プラットフォームの選択肢
 
-|新機能または更新 | 詳細 |
-|:---|:---|
-|詳細な切り捨ての警告 | 切り捨てエラー メッセージに、テーブル名および列名と切り捨てられた値が既定で含まれます。 [VERBOSE_TRUNCATION_WARNINGS](../t-sql/statements/alter-database-scoped-configuration-transact-sql.md#verbose-truncation)に関するページを参照してください。|
-| &nbsp; | &nbsp; |
-
-## <a name="sql-server-on-linux"></a>Linux 上の SQL Server
+### <a id="sql-server-on-linux"></a>Linux
 
 | 新機能または更新 | 詳細 |
 |:-----|:-----|
@@ -185,6 +200,14 @@ ms.locfileid: "71326186"
 |`tempdb` の強化機能 | 既定では、Linux 上に SQL Server を新しくインストールすると、論理コアの数に基づいて複数の `tempdb` データ ファイルが作成されます (最大で 8 個のデータ ファイル)。 これは、マイナー バージョンまたはメジャー バージョンのインプレース アップグレードには適用されません。 各 `tempdb` ファイルは 8 MB で、64 MB まで自動拡張されます。 この動作は、Windows への SQL Server の既定のインストールに似ています。 |
 | Linux での PolyBase | 非 Hadoop コネクタ向けに Linux に [PolyBase をインストール](../relational-databases/polybase/polybase-linux-setup.md)します。<br/><br/>[PolyBase 型のマッピング](../relational-databases/polybase/polybase-type-mapping.md) |
 | 変更データ キャプチャ (CDC) のサポート | SQL Server 2019 では、変更データ キャプチャ (CDC) が Linux でサポートされるようになりました。 |
+| &nbsp; | &nbsp; |
+
+### <a name="containers"></a>[SSIS ログの構成]
+
+|新機能または更新 | 詳細 |
+|:---|:---|
+| Microsoft Container Registry | [Microsoft Container Registry](https://www.ntweekly.com/2019/09/23/microsoft-container-registry-to-replace-docker-hub-for-new-images/) では、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] など、Microsoft の新しい公式コンテナー イメージのために Docker Hub が取り替えられます。 |
+| ルート以外のコンテナー | [!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] では、既定でルート以外のユーザーとして [!INCLUDE[sql-server](../includes/ssnoversion-md.md)] を起動することで、より安全なコンテナーを作成できるようになりました。 詳細については、「[非ルート ユーザーとして SQL Server コンテナーを作成して実行する](../linux/sql-server-linux-configure-docker.md#buildnonrootcontainer)」を参照してください。 |
 | &nbsp; | &nbsp; |
 
 ## <a id="ml"></a> SQL Server Machine Learning Services
@@ -203,7 +226,7 @@ ms.locfileid: "71326186"
 |新しい HTML コントロール| HTML コントロールでは、以前の Silverlight コンポーネントがすべて置き換えられます。 Silverlight の依存関係が削除されました。|
 | &nbsp; | &nbsp; |
 
-## <a name="analysis-services"></a>Analysis Services
+## <a name="sql-server-analysis-services"></a>SQL Server Analysis Services (SQL Server Analysis Services)
 
 | 新機能または更新 | 詳細 |
 |:---|:---|

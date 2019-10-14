@@ -17,12 +17,12 @@ ms.assetid: 4addd426-7523-4067-8d7d-ca6bae4c9e34
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c349569d2f0973a3085337eb171a17d9cee21c82
-ms.sourcegitcommit: 632ff55084339f054d5934a81c63c77a93ede4ce
+ms.openlocfilehash: eef53dd48e960ac15e68e28e0be7265a8f25ba74
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69633402"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71711024"
 ---
 # <a name="measure-latency-and-validate-connections-for-transactional-replication"></a>トランザクション レプリケーションの待機時間の計測および接続の検証
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -127,7 +127,7 @@ ms.locfileid: "69633402"
   
 1.  パブリッシャー側のパブリケーション データベースに対して、 **\@publication** を指定して、[sp_helptracertokens &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md) を実行します。 パブリケーションに通知されたすべてのトレーサー トークンのリストが返されます。 結果セットの削除するトレーサー トークンの **tracer_id** を確認します。  
   
-2.  パブリッシャー側のパブリケーション データベースで、 **\@publication** を指定し、 **@tracer_id** に手順 2 の削除するトレーサー トークン ID を指定して、[sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) を実行します。  
+2.  パブリッシャー側のパブリケーション データベースで、 **\@publication** を指定し、`@tracer_id` に手順 2 の削除するトレーサー トークン ID を指定して、[sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md) を実行します。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トレーサー トークン レコードを通知し、返された通知済みトレーサー トークンの ID を使用して待機時間情報を表示します。  

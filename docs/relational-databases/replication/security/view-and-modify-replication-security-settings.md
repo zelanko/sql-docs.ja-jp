@@ -17,12 +17,12 @@ ms.assetid: 67d79532-1482-4de1-ac9f-4a23d162c85e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 904ca2ccc3992ae6c4f03f03da8c70761ec5e907
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 2e0407382f1a0986add69a4b47e9cbb2eebc4d34
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768396"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710739"
 ---
 # <a name="view-and-modify-replication-security-settings"></a>レプリケーションのセキュリティ設定の表示および変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -252,10 +252,10 @@ ms.locfileid: "68768396"
   
 #### <a name="to-change-all-instances-of-a-stored-password-at-a-replication-server"></a>レプリケーション サーバーに格納されたパスワードのインスタンスをすべて変更するには  
   
-1.  レプリケーション トポロジ内のサーバーの master データベースで、 [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)を実行します。 **@login** に、パスワードを変更する [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows アカウントまたは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを指定し、 **@password** に、そのアカウントまたはログインの新しいパスワードを入力します。 これにより、トポロジ内の他のサーバーに接続すると、サーバーのすべてのエージェントで使用されるパスワードの各インスタンスが変更されます。  
+1.  レプリケーション トポロジ内のサーバーの master データベースで、 [sp_changereplicationserverpasswords](../../../relational-databases/system-stored-procedures/sp-changereplicationserverpasswords-transact-sql.md)を実行します。 `@login` に、パスワードを変更する [!INCLUDE[msCoName](../../../includes/msconame-md.md)] Windows アカウントまたは [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを指定し、`@password` に、そのアカウントまたはログインの新しいパスワードを指定します。 これにより、トポロジ内の他のサーバーに接続すると、サーバーのすべてのエージェントで使用されるパスワードの各インスタンスが変更されます。  
   
     > [!NOTE]  
-    >  ディストリビューターやサブスクライバーなど、トポロジ内の特定のサーバーへの接続に対するログインおよびパスワードのみを変更するには、 **@server** 」を参照してください。  
+    >  ディストリビューターやサブスクライバーなど、トポロジ内の特定のサーバーへの接続に対するログインおよびパスワードのみを変更するには、`@server` にサーバーの名前を指定します。  
   
 2.  パスワードの更新が必要なレプリケーション トポロジ内の各サーバーで手順 1. を繰り返します。  
   
@@ -264,30 +264,30 @@ ms.locfileid: "68768396"
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent"></a>スナップショット エージェントのセキュリティ設定を変更するには  
   
-1.  パブリッシャーで、 [@publication](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md)を指定して **@publication** 」を参照してください。 これにより、スナップショット エージェントの現在のセキュリティ設定が返されます。  
+1.  パブリッシャーで、`@publication` を指定して [sp_helppublication_snapshot](../../../relational-databases/system-stored-procedures/sp-helppublication-snapshot-transact-sql.md) を実行します。 これにより、スナップショット エージェントの現在のセキュリティ設定が返されます。  
   
-2.  パブリッシャーで、 [@publication](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md)を指定して **@publication** を実行します。  
+2.  パブリッシャーで、`@publication` を指定し、次のセキュリティ設定から変更するものを 1 つ以上指定して、[sp_changepublication_snapshot](../../../relational-databases/system-stored-procedures/sp-changepublication-snapshot-transact-sql.md) を実行します。  
   
-    -   エージェントの実行時に使用する Windows アカウント、またはこのアカウントのパスワードだけを変更するには、 **@job_login** 」および「 **@job_password** 」を参照してください。  
+    -   エージェントの実行に使用する Windows アカウント、またはこのアカウントのパスワードだけを変更するには、`@job_login` および `@job_password` を指定します。  
   
-    -   パブリッシャーへの接続時に使用するセキュリティ モードを指定するには、 **@publisher_security_mode** オプションの **1** または **@publisher_security_mode** 」を参照してください。  
+    -   パブリッシャーへの接続時に使用するセキュリティ モードを変更するには、`@publisher_security_mode` に対して値 **1** または **0** を指定します。  
   
-    -   パブリッシャーへの接続時に使用するセキュリティ モードを **@publisher_security_mode** から **1** に変更する場合、またはこの接続に使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを変更する場合は、 **@publisher_login** 」および「 **@publisher_password** 」を参照してください。  
+    -   パブリッシャーへの接続時に使用するセキュリティ モードを **1** から **0** に変更する場合、またはこの接続に使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを変更する場合は、`@publisher_login` および `@publisher_password` を指定します。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
   
 #### <a name="to-change-security-settings-for-the-log-reader-agent"></a>ログ リーダー エージェントのセキュリティ設定を変更するには  
   
-1.  パブリッシャーで、 [@publisher](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md)を指定して **@publisher** 」を参照してください。 これにより、ログ リーダー エージェントの現在のセキュリティ設定が返されます。  
+1.  パブリッシャーで、`@publisher` を指定して [sp_helplogreader_agent](../../../relational-databases/system-stored-procedures/sp-helplogreader-agent-transact-sql.md) を実行します。 これにより、ログ リーダー エージェントの現在のセキュリティ設定が返されます。  
   
-2.  パブリッシャーで、 [@publication](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md)を指定して **@publication** を実行します。  
+2.  パブリッシャーで、`@publication` を指定し、次のセキュリティ設定から変更するものを 1 つ以上指定して、[sp_changelogreader_agent](../../../relational-databases/system-stored-procedures/sp-changelogreader-agent-transact-sql.md) を実行します。  
   
-    -   エージェントの実行時に使用する Windows アカウント、またはこのアカウントのパスワードだけを変更するには、 **@job_login** 」および「 **@job_password** 」を参照してください。  
+    -   エージェントの実行に使用する Windows アカウント、またはこのアカウントのパスワードだけを変更するには、`@job_login` および `@job_password` を指定します。  
   
-    -   パブリッシャーへの接続時に使用するセキュリティ モードを指定するには、 **@publisher_security_mode** オプションの **1** または **@publisher_security_mode** 」を参照してください。  
+    -   パブリッシャーへの接続時に使用するセキュリティ モードを変更するには、`@publisher_security_mode` に対して値 **1** または **0** を指定します。  
   
-    -   パブリッシャーへの接続時に使用するセキュリティ モードを **@publisher_security_mode** から **1** に変更する場合、またはこの接続に使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを変更する場合は、 **@publisher_login** 」および「 **@publisher_password** 」を参照してください。  
+    -   パブリッシャーへの接続時に使用するセキュリティ モードを **1** から **0** に変更する場合、またはこの接続に使用する [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを変更する場合は、`@publisher_login` および `@publisher_password` を指定します。  
   
     > [!NOTE]  
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
@@ -297,17 +297,17 @@ ms.locfileid: "68768396"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-push-subscription"></a>プッシュ サブスクリプションに対するディストリビューション エージェントのセキュリティ設定を変更するには  
   
-1.  パブリッシャーのパブリケーション データベースで、 [@publication](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)を指定して **@publication** 」および「 **@subscriber** 」を参照してください。 これにより、ディストリビューターで実行されるディストリビューション エージェントのセキュリティ設定を含むサブスクリプションのプロパティが返されます。  
+1.  パブリケーション データベースのパブリッシャーで、`@publication` および `@subscriber` を指定して、[sp_helpsubscription](../../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md) を実行します。 これにより、ディストリビューターで実行されるディストリビューション エージェントのセキュリティ設定を含むサブスクリプションのプロパティが返されます。  
   
-2.  パブリッシャーのパブリケーション データベースで、 [sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md)を指定して **@publication** 、 **@subscriber** 、 **@subscriber_db** を指定し、 **@article** または **@article** を、 **@property** にセキュリティ プロパティの名前を、 **@value** 」を参照してください。  
+2.  パブリケーション データベースのパブリッシャーで、[sp_changesubscription](../../../relational-databases/system-stored-procedures/sp-changesubscription-transact-sql.md) を実行します。`@publication`、`@subscriber`、`@subscriber_db**` を指定し、`@article` には値 `all`、`@property` にはセキュリティ プロパティの名前、`@value` にはプロパティの新しい値を指定します。  
   
 3.  次のセキュリティ プロパティから変更するものに対してそれぞれ手順 2. を繰り返します。  
   
-    -   エージェントの実行時に使用する Windows アカウントまたはそのアカウントのパスワードだけを変更するには、 **@property** または **@property** を、 **@value** 」を参照してください。 アカウント自体を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。  
+    -   エージェントの実行に使用する Windows アカウントまたはこのアカウントのパスワードだけを変更するには、`@property` に値 **distrib_job_password** を指定し、`@value` に新しいパスワードを指定します。 アカウント自体を変更する場合は、`@property` に値 **distrib_job_login** を指定し、`@value` に新しい Windows アカウントを指定して、手順 2 を繰り返します。  
   
-    -   サブスクライバーへの接続時に使用するセキュリティ モードを変更するには、 **@property** または **@property** を、 **@publisher_security_mode** に **1** (Windows 統合認証) または **@value** 」を参照してください。  
+    -   サブスクライバーへの接続時に使用するセキュリティ モードを変更するには、`@property` に値 **subscriber_security_mode** を指定し、`@value` に値 **1** (Windows 統合認証) または **0** (SQL Server 認証) を指定します。  
   
-    -   サブスクライバーのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。 **@property** に **subscriber_login** を、 **@value** に新しいログインを指定して、手順 2 を繰り返します。  
+    -   サブスクライバーのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、`@property` に値 **subscriber_password** を指定し、`@value` に新しいパスワードを指定します。 `@property` には値 **subscriber_login** を、`@value` には新しいログインを指定して、手順 2 を繰り返します。  
   
     > [!NOTE]  
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
@@ -317,38 +317,38 @@ ms.locfileid: "68768396"
   
 #### <a name="to-change-security-settings-for-the-distribution-agent-for-a-pull-subscription"></a>プル サブスクリプションに対するディストリビューション エージェントのセキュリティ設定を変更するには  
   
-1.  サブスクライバーで、 [@publication](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)を指定して **@publication** 」を参照してください。 これにより、サブスクライバーで実行されるディストリビューション エージェントのセキュリティ設定を含むサブスクリプションのプロパティが返されます。  
+1.  サブスクライバーで、`@publication` を指定して [sp_helppullsubscription](../../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md) を実行します。 これにより、サブスクライバーで実行されるディストリビューション エージェントのセキュリティ設定を含むサブスクリプションのプロパティが返されます。  
   
-2.  サブスクライバーのサブスクリプション データベースで、 [@publisher](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)を指定して **@publisher** 、 **@publisher_db** 、 **@publication** を、 **@property** にセキュリティ プロパティの名前を、 **@value** 」を参照してください。  
+2.  サブスクリプション データベースのサブスクライバーで、[sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md) を実行します。`@publisher`、`@publisher_db`、`@publication` を指定し、`@property` にはセキュリティ プロパティの名前、`@value` にはプロパティの新しい値を指定します。  
   
 3.  次のセキュリティ プロパティから変更するものに対してそれぞれ手順 2. を繰り返します。  
   
-    -   エージェントの実行時に使用する Windows アカウントまたはそのアカウントのパスワードだけを変更するには、 **@property** または **@property** を、 **@value** 」を参照してください。 アカウント自体を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。  
+    -   エージェントの実行に使用する Windows アカウントまたはこのアカウントのパスワードだけを変更するには、`@property` に値 **distrib_job_password** を指定し、`@value` に新しいパスワードを指定します。 アカウント自体を変更する場合は、`@property` に値 **distrib_job_login** を指定し、`@value` に新しい Windows アカウントを指定して、手順 2 を繰り返します。  
   
-    -   ディストリビューターへの接続時に使用するセキュリティ モードを変更するには、 **@property** または **@property** を、 **@publisher_security_mode** に **1** (Windows 統合認証) または **@value** 」を参照してください。  
+    -   ディストリビューターへの接続時に使用するセキュリティ モードを変更するには、`@property` に値 **distributor_security_mode** を指定し、`@value` に値 **1** (Windows 統合認証) または **0**(SQL Server 認証) を指定します。  
   
-    -   ディストリビューターのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。 **@property** に **distributor_login** を、 **@value** に新しいログインを指定して、手順 2 を繰り返します。  
+    -   ディストリビューターのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、`@property` に値 **distributor_password** を指定し、`@value` に新しいパスワードを指定します。 `@property` には値 **distributor_login**、`@value` には新しいログインを指定して、手順 2 を繰り返します。  
   
     > [!NOTE]  
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-push-subscription"></a>プッシュ サブスクリプションに対するマージ エージェントのセキュリティ設定を変更するには  
   
-1.  パブリッシャーのパブリケーション データベースで、 [@publication](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)を指定して **@publication** 、 **@subscriber** を指定して、 **@subscriber_db** 」を参照してください。 これにより、ディストリビューターで実行されるマージ エージェントのセキュリティ設定を含むサブスクリプションのプロパティが返されます。  
+1.  パブリケーション データベースのパブリッシャーで、`@publication`、`@subscriber,`、`@subscriber_db` を指定して、[sp_helpmergesubscription](../../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) を実行します。 これにより、ディストリビューターで実行されるマージ エージェントのセキュリティ設定を含むサブスクリプションのプロパティが返されます。  
   
-2.  パブリッシャーのパブリケーション データベースで、 [@publication](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)を指定して **@publication** 、 **@subscriber** 、 **@subscriber_db** を、 **@property** にセキュリティ プロパティの名前を、 **@value** 」を参照してください。  
+2.  パブリケーション データベースのパブリッシャーで、[sp_changemergesubscription](../../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md) を実行します。`@publication`、`@subscriber`、`@subscriber_db` を指定し、`@property` にはセキュリティ プロパティの名前、`@value` にはプロパティの新しい値を指定します。  
   
 3.  次のセキュリティ プロパティから変更するものに対してそれぞれ手順 2. を繰り返します。  
   
-    -   エージェントの実行時に使用する Windows アカウントまたはそのアカウントのパスワードだけを変更するには、 **@property** または **@property** を、 **@value** 」を参照してください。 アカウント自体を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。  
+    -   エージェントの実行に使用する Windows アカウントまたはこのアカウントのパスワードだけを変更するには、`@property` に値 **merge_job_password** を指定し、`@value` に新しいパスワードを指定します。 アカウント自体を変更する場合は、`@property` に値 **merge_job_login** を指定し、`@value` に新しい Windows アカウントを指定して、手順 2 を繰り返します。  
   
-    -   サブスクライバーへの接続時に使用するセキュリティ モードを変更するには、 **@property** または **@property** を、 **@publisher_security_mode** に **1** (Windows 統合認証) または **@value** 」を参照してください。  
+    -   サブスクライバーへの接続時に使用するセキュリティ モードを変更するには、`@property` に値 **subscriber_security_mode** を指定し、`@value` に値 **1** (Windows 統合認証) または **0** (SQL Server 認証) を指定します。  
   
-    -   サブスクライバーのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。 **@property** に **subscriber_login** を、 **@value** に新しいログインを指定して、手順 2 を繰り返します。  
+    -   サブスクライバーのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、`@property` に値 **subscriber_password** を指定し、`@value` に新しいパスワードを指定します。 `@property` には値 **subscriber_login** を、`@value` には新しいログインを指定して、手順 2 を繰り返します。  
   
-    -   パブリッシャーへの接続時に使用するセキュリティ モードを指定するには、 **@property** または **@property** を、 **@publisher_security_mode** に **1** (Windows 統合認証) または **@value** 」を参照してください。  
+    -   パブリッシャーへの接続時に使用するセキュリティ モードを変更するには、`@property` に値 **publisher_security_mode** を指定し、`@value` に値 **1** (Windows 統合認証) または **0** (SQL Server 認証) を指定します。  
   
-    -   パブリッシャーのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。 **@property** に **publisher_login** を、 **@value** に新しいログインを指定して、手順 2 を繰り返します。  
+    -   パブリッシャーのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、`@property` に値 **publisher_password** を指定し、`@value` に新しいパスワードを指定します。 `@property` に値 **publisher_login**、`@value` に新しいログインを指定して、手順 2 を繰り返します。  
   
     > [!NOTE]  
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
@@ -358,30 +358,30 @@ ms.locfileid: "68768396"
   
 #### <a name="to-change-security-settings-for-the-merge-agent-for-a-pull-subscription"></a>プル サブスクリプションに対するマージ エージェントのセキュリティ設定を変更するには  
   
-1.  サブスクライバーで、 [@publication](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)を指定して **@publication** 」を参照してください。 これにより、サブスクライバーで実行されるマージ エージェントのセキュリティ設定を含むサブスクリプションのプロパティが返されます。  
+1.  サブスクライバーで、``@publication`` を指定して、[sp_helpmergepullsubscription](../../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md) を実行します。 これにより、サブスクライバーで実行されるマージ エージェントのセキュリティ設定を含むサブスクリプションのプロパティが返されます。  
   
-2.  サブスクライバーのサブスクリプション データベースで、 [@publisher](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)を指定して **@publisher** 、 **@publisher_db** 、 **@publication** を、 **@property** にセキュリティ プロパティの名前を、 **@value** 」を参照してください。  
+2.  サブスクリプション データベースのサブスクライバーで、[sp_change_subscription_properties](../../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md) を実行します。`@publisher`、`@publisher_db`、`@publication` を指定し、`@property` にはセキュリティ プロパティの名前、`@value` にはプロパティの新しい値を指定します。  
   
 3.  次のセキュリティ プロパティから変更するものに対してそれぞれ手順 2. を繰り返します。  
   
-    -   エージェントの実行時に使用する Windows アカウントまたはそのアカウントのパスワードだけを変更するには、 **@property** または **@property** を、 **@value** 」を参照してください。 When changing the account itself, repeat Step 2 specifying a value of **@property** または **@property** を、 **@value** 」を参照してください。  
+    -   エージェントの実行に使用する Windows アカウントまたはこのアカウントのパスワードだけを変更するには、`@property` に値 **merge_job_password** を指定し、`@value` に新しいパスワードを指定します。 アカウント自体を変更する場合は、`@property` に値 **merge_job_login** を指定し、`@value` に新しい Windows アカウントを指定して、手順 2 を繰り返します。  
   
-    -   ディストリビューターへの接続時に使用するセキュリティ モードを変更するには、 **@property** または **@property** を、 **@publisher_security_mode** に **1** (Windows 統合認証) または **@value** 」を参照してください。  
+    -   ディストリビューターへの接続時に使用するセキュリティ モードを変更するには、`@property` に値 **distributor_security_mode** を指定し、`@value` に値 **1** (Windows 統合認証) または **0**(SQL Server 認証) を指定します。  
   
-    -   ディストリビューターのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。 **@property** に **distributor_login** を、 **@value** に新しいログインを指定して、手順 2 を繰り返します。  
+    -   ディストリビューターのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、`@property` に値 **distributor_password** を指定し、`@value` に新しいパスワードを指定します。 `@property` には値 **distributor_login**、`@value` には新しいログインを指定して、手順 2 を繰り返します。  
   
-    -   パブリッシャーへの接続時に使用するセキュリティ モードを指定するには、 **@property** または **@property** を、 **@publisher_security_mode** に **1** (Windows 統合認証) または **@value** 」を参照してください。  
+    -   パブリッシャーへの接続時に使用するセキュリティ モードを変更するには、`@property` に値 **publisher_security_mode** を指定し、`@value` に値 **1** (Windows 統合認証) または **0** (SQL Server 認証) を指定します。  
   
-    -   パブリッシャーのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、 **@property** または **@property** を、 **@value** 」を参照してください。 **@property** に **publisher_login** を、 **@value** に新しいログインを指定して、手順 2 を繰り返します。  
+    -   パブリッシャーのセキュリティ モードを SQL Server 認証に変更する場合、または SQL Server 認証のログイン情報を変更する場合は、`@property` に値 **publisher_password** を指定し、`@value` に新しいパスワードを指定します。 `@property` に値 **publisher_login**、`@value` に新しいログインを指定して、手順 2 を繰り返します。  
   
     > [!NOTE]  
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。  
   
 #### <a name="to-change-security-settings-for-the-snapshot-agent-to-generate-a-filtered-snapshot-for-a-subscriber"></a>サブスクライバーのフィルター選択されたスナップショットを生成する、スナップショット エージェントのセキュリティ設定を変更するには  
   
-1.  パブリッシャーで、 [@publication](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md)を指定して **@publication** 」を参照してください。 結果セットで、変更するサブスクライバーのパーティションの **job_name** の値を確認します。  
+1.  パブリッシャーで、`@publication` を指定して、[sp_helpdynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-helpdynamicsnapshot-job-transact-sql.md) を実行します。 結果セットで、変更するサブスクライバーのパーティションの **job_name** の値を確認します。  
   
-2.  パブリッシャーで、 [@publication](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md)を指定して **@publication** に手順 1. で取得した値を、 **@dynamic_snapshot_jobname** に新しい値を、または **@job_password** および **@job_login** 」および「 **@job_password** 」を参照してください。  
+2.  パブリッシャーで、[sp_changedynamicsnapshot_job](../../../relational-databases/system-stored-procedures/sp-changedynamicsnapshot-job-transact-sql.md) を実行します。`@publication` を指定し、`dynamic_snapshot_jobname` に手順 1 で取得した値を指定して、`@job_password` に新しいパスワードを指定するか、または `@job_login` と `@job_password` にエージェントの実行に使用する Windows アカウントのログインとパスワードを指定します。  
   
     > [!IMPORTANT]  
     >  リモート ディストリビューターを使用するパブリッシャーを構成する場合は、 *job_login* および *job_password*を含むすべてのパラメーターに指定された値がディストリビューターにプレーン テキストとして送信されます。 このストアド プロシージャを実行する前に、パブリッシャーとリモート ディストリビューターの間の接続を暗号化する必要があります。 詳細については、「[データベース エンジンへの暗号化接続の有効化 &#40;SQL Server 構成マネージャー&#41;](../../../database-engine/configure-windows/enable-encrypted-connections-to-the-database-engine.md)」を参照してください。  
@@ -390,7 +390,7 @@ ms.locfileid: "68768396"
   
 1.  ディストリビューターで、 [sp_helpqreader_agent](../../../relational-databases/system-stored-procedures/sp-helpqreader-agent-transact-sql.md)を実行します。 これにより、キュー リーダー エージェントの実行時に使用される現在の Windows アカウントが返されます。  
   
-    -   ディストリビューターで、 [@job_login](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md)および **@job_login** 」および「 **@job_passwsord** 」を参照してください。  
+    -   ディストリビューターで、`@job_login` および `@job_password` に Windows アカウントの設定を指定して、[sp_changeqreader_agent](../../../relational-databases/system-stored-procedures/sp-changeqreader-agent-transact-sql.md) を実行します。  
   
     > [!NOTE]  
     >  エージェントのログインまたはパスワードを変更した後、変更を有効にするには、エージェントを停止して再起動する必要があります。 ディストリビューション データベースには、それぞれ 1 つのキュー リーダー エージェントがあります。 エージェントのセキュリティ設定を変更すると、このディストリビューション データベースを使用するすべてのパブリッシャーのすべてのパブリケーションの設定に影響が及びます。  
@@ -399,9 +399,9 @@ ms.locfileid: "68768396"
   
 #### <a name="to-change-security-mode-used-by-an-immediate-updating-subscriber-when-connecting-to-the-publisher"></a>パブリッシャーへの接続時に即時更新サブスクライバーで使用するセキュリティ モードを変更するには  
   
-1.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)を実行します。 **@publisher** 、 **@publication** を指定し、 **@publisher_db** にパブリケーション データベース名を、 **@security_mode** に次のいずれかの値を指定します。  
+1.  サブスクライバー側のサブスクリプション データベースに対して、 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md)を実行します。 `@publisher`、 `@publication`、 `@publisher_db`のパブリケーション データベース名、および `@security_mode`の次のいずれかの値を指定します。  
   
-    -   **0** - パブリッシャーで更新を作成する場合に SQL Server  認証を使用します。 このオプションの場合、パブリッシャーで、 **@login** 」および「 **@password** 」を参照してください。  
+    -   **0** - パブリッシャーで更新を作成する場合に SQL Server  認証を使用します。 このオプションの場合、パブリッシャーで、 `@login` および `@password`に有効なログインを指定する必要があります。  
   
     -   **1** - パブリッシャーへの接続時にサブスクライバーで変更するユーザーのセキュリティ コンテキストを使用します。 このセキュリティ モードに関連する制限の詳細については、 [sp_link_publication](../../../relational-databases/system-stored-procedures/sp-link-publication-transact-sql.md) のトピックを参照してください。  
   
@@ -409,12 +409,12 @@ ms.locfileid: "68768396"
   
 #### <a name="to-change-the-password-for-a-remote-distributor"></a>リモート ディストリビューターのパスワードを変更するには  
   
-1.  ディストリビューターのディストリビューション データベースで、 [@password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)にこのログインの新しいパスワードを指定して、 **@password** 」を参照してください。  
+1.  ディストリビューション データベースのディストリビューターで、`@password` にこのログインの新しいパスワードを指定して、[sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) を実行します。  
   
     > [!IMPORTANT]  
     >  **distributor_admin** のパスワードを直接変更しないでください。  
   
-2.  このリモート ディストリビューターを使用する各パブリッシャーで、 [@password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md)に手順 1. のパスワードを指定して、 **@password** 」を参照してください。  
+2.  このリモート ディストリビューターを使用するすべてのパブリッシャーで、`@password` に手順 1 のパスワードを指定して、[sp_changedistributor_password](../../../relational-databases/system-stored-procedures/sp-changedistributor-password-transact-sql.md) を実行します。  
   
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
   

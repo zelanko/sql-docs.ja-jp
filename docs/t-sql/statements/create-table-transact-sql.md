@@ -46,12 +46,12 @@ helpviewer_keywords:
 ms.assetid: 1e068443-b9ea-486a-804f-ce7b6e048e8b
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 8be2e837ff71237cf6d39f8593e8b852cc08ed2e
-ms.sourcegitcommit: 5e838bdf705136f34d4d8b622740b0e643cb8d96
+ms.openlocfilehash: 22a2009b4728cfd0e1fdf9eb1623a3fb43b74904
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/20/2019
-ms.locfileid: "69653374"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71680909"
 ---
 # <a name="create-table-transact-sql"></a>CREATE TABLE (Transact-SQL)
 
@@ -67,7 +67,7 @@ ms.locfileid: "69653374"
 ## <a name="simple-syntax"></a>簡単な構文
 
 ```
---Simple CREATE TABLE Syntax (common if not using options)
+-- Simple CREATE TABLE Syntax (common if not using options)
 CREATE TABLE
     { database_name.schema_name.table_name. | schema_name.table_name | table_name }
     ( { <column_definition> } [ ,...n ] )
@@ -77,7 +77,7 @@ CREATE TABLE
 ## <a name="full-syntax"></a>完全な構文
 
 ```
---Disk-Based CREATE TABLE Syntax
+-- Disk-Based CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     [ AS FileTable ]
@@ -265,7 +265,7 @@ column_set_name XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
 ```
 
 ```
---Memory optimized CREATE TABLE Syntax
+-- Memory optimized CREATE TABLE Syntax
 CREATE TABLE
     { database_name.schema_name.table_name | schema_name.table_name | table_name }
     ( { <column_definition>
@@ -345,43 +345,36 @@ column_name <data_type>
 
 ## <a name="arguments"></a>引数
 
-*database_name*      
-テーブルが作成されたデータベースの名前を指定します。 *database_name* には、既存のデータベース名を指定する必要があります。 指定しない場合、*database_name* は現在のデータベースに設定されます。 現在の接続に対するログインには、*database_name* で指定されたデータベース内の既存のユーザー ID を関連付け、そのユーザー ID に CREATE TABLE 権限を許可しておく必要があります。
+*database_name*: テーブルが作成されるデータベースの名前です。 *database_name* には、既存のデータベース名を指定する必要があります。 指定しない場合、*database_name* は現在のデータベースに設定されます。 現在の接続に対するログインには、*database_name* で指定されたデータベース内の既存のユーザー ID を関連付け、そのユーザー ID に CREATE TABLE 権限を許可しておく必要があります。
 
-*schema_name*     
-新しいテーブルが所属するスキーマの名前です。
+*schema_name*: 新しいテーブルが所属するスキーマの名前です。
 
-*table_name*    
-新しいテーブルの名前です。 テーブル名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 116 文字までしか使用できないローカル一時テーブル名 (名前の先頭に 1 つの番号記号 (#) が付加されます) を除き、*table_name* には、最大 128 文字を使用できます。
+*table_name*: 新しいテーブルの名前です。 テーブル名は[識別子](../../relational-databases/databases/database-identifiers.md)の規則に従っている必要があります。 116 文字までしか使用できないローカル一時テーブル名 (名前の先頭に 1 つの番号記号 (#) が付加されます) を除き、*table_name* には、最大 128 文字を使用できます。
 
-AS FileTable    
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] まで)。
+AS FileTable **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)])。
 
 新しいテーブルを FileTable として作成します。 FileTable には固定スキーマがあるため、列は指定しません。 詳細については、「[FileTables](../../relational-databases/blob/filetables-sql-server.md)」を参照してください。
 
-*column_name*      
-*computed_column_expression*    
-計算列の値を定義する式です。 計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 この列は、同じテーブルの他の列を使用する式から計算されます。 たとえば、計算列は **cost** AS **price** \* **qty** として定義されます。式には、非計算列の名前、定数、関数、変数、および 1 つ以上の演算子によってこれらを結合した組み合わせを使用できます。 式をサブクエリにすることはできません。また、別名データ型を含めることはできません。
+*column_name*
+*computed_column_expression*: 計算列の値を定義する式です。 計算列は、PERSISTED とマークされていない限り、テーブルに物理的に保存されない仮想列です。 この列は、同じテーブルの他の列を使用する式から計算されます。 たとえば、計算列は **cost** AS **price** \* **qty** として定義されます。式には、非計算列の名前、定数、関数、変数、および 1 つ以上の演算子によってこれらを結合した組み合わせを使用できます。 式をサブクエリにすることはできません。また、別名データ型を含めることはできません。
 
 計算列は、選択リスト、WHERE 句、ORDER BY 句、その他標準式が使用できる任意の位置で使用できます。ただし、次の場合は除きます。
 
--  FOREIGN KEY 制約または CHECK 制約で使用される計算列は、PERSISTED に設定する必要があります。
--  計算列の値が決定的な式によって定義され、その結果のデータ型がインデックス列で許可される場合、計算列は、インデックスのキー列として、または任意の PRIMARY KEY 制約や UNIQUE 制約の一部として使用できます。
+- FOREIGN KEY 制約または CHECK 制約で使用される計算列は、PERSISTED に設定する必要があります。
+- 計算列の値が決定的な式によって定義され、その結果のデータ型がインデックス列で許可される場合、計算列は、インデックスのキー列として、または任意の PRIMARY KEY 制約や UNIQUE 制約の一部として使用できます。
 
    たとえば、テーブルに整数型の列 **a** と **b** がある場合、計算列 **a+b** にはインデックスを作成できますが、計算列 **a+DATEPART(dd, GETDATE())** にインデックスを作成することはできません。これは、この計算列の値が次の呼び出しで変更される可能性があるためです。
 
--  計算列を INSERT ステートメントまたは UPDATE ステートメントの対象にすることはできません。
+- 計算列を INSERT ステートメントまたは UPDATE ステートメントの対象にすることはできません。
 
 > [!NOTE]
 > テーブル内の各行は、計算列に関係する列に対して異なる値を持つ場合があります。そのため、計算列が各行について同じ値を持たない場合があります。
 
 計算列で NULL 値を許容するかどうかは、使用されている式に基づいて[!INCLUDE[ssDE](../../includes/ssde-md.md)]によって自動的に決定されます。 null 値を許容しない列しかない場合でも、ほとんどの式の結果は null 値を許容すると見なされます。これは、アンダーフローやオーバーフローによって結果が null 値になる場合があるためです。 テーブルの任意の計算列で NULL 値が許容されるかどうかを調べるには、`COLUMNPROPERTY` 関数で **AllowsNull** プロパティを使用します。 NULL 値が許容される式を、NULL 値を許容しない式に変換するには、`ISNULL` に *check_expression* 定数を指定します。この定数は、NULL 値の結果の代わりに使用される NULL 以外の値です。 共通言語ランタイム (CLR) のユーザー定義型の式に基づく計算列では、その型に対する REFERENCES 権限が必要です。
 
-PERSISTED    
-[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]で、計算値をテーブルに物理的に保存し、依存する計算列のいずれかが更新された場合にその値を更新するように指定します。 計算列を `PERSISTED` とマークすることで、計算列に対して決定論的なインデックスを作成することができますが、正確ではありません。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。 パーティション テーブルのパーティション分割列として使用される計算列は、明示的に `PERSISTED` に設定する必要があります。 `PERSISTED` が指定されている場合、*computed_column_expression* は決定論的である必要があります。
+PERSISTED: [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] により計算値が物理的にテーブルに格納され、計算列が依存している他の列のいずれかが更新されるとその値が更新されることを指定します。 計算列を `PERSISTED` とマークすることで、計算列に対して決定論的なインデックスを作成することができますが、正確ではありません。 詳細については、「 [計算列のインデックス](../../relational-databases/indexes/indexes-on-computed-columns.md)」を参照してください。 パーティション テーブルのパーティション分割列として使用される計算列は、明示的に `PERSISTED` に設定する必要があります。 `PERSISTED` が指定されている場合、*computed_column_expression* は決定論的である必要があります。
 
-ON { *partition_scheme* | *filegroup* |  **"default"** }     
-テーブルが格納されるパーティション構成またはファイル グループを指定します。 *partition_scheme* を指定すると、テーブルはパーティション テーブルとなり、各パーティションは *partition_scheme* で指定した 1 つ以上のファイル グループに格納されます。 *filegroup* を指定すると、テーブルは指定されたファイル グループに格納されます。 ファイル グループがデータベース内に存在している必要があります。 **"default"** を指定するか、ON をまったく指定しないと、テーブルは既定のファイル グループに格納されます。 CREATE TABLE で指定したテーブルの格納方法を後から変更することはできません。
+ON { *partition_scheme* | *filegroup* |  **"default"** } テーブルが格納されるパーティション構成またはファイル グループを指定します。 *partition_scheme* を指定すると、テーブルはパーティション テーブルとなり、各パーティションは *partition_scheme* で指定した 1 つ以上のファイル グループに格納されます。 *filegroup* を指定すると、テーブルは指定されたファイル グループに格納されます。 ファイル グループがデータベース内に存在している必要があります。 **"default"** を指定するか、ON をまったく指定しないと、テーブルは既定のファイル グループに格納されます。 CREATE TABLE で指定したテーブルの格納方法を後から変更することはできません。
 
 ON {*partition_scheme* | *filegroup* |  **"default"** } は、PRIMARY KEY 制約または UNIQUE 制約で指定することもできます。 これらの制約はインデックスを作成します。 *filegroup* を指定すると、インデックスは指定されたファイル グループに格納されます。 **"default"** を指定するか、ON を指定しなかった場合、インデックスはテーブルと同じファイル グループに格納されます。 `PRIMARY KEY` または `UNIQUE` 制約によりクラスター化インデックスが作成される場合、テーブルのデータ ページはインデックスと同じファイル グループに格納されます。 `CLUSTERED` を指定するか、制約によりクラスター化インデックスを作成し、テーブル定義の *partition_scheme* または *filegroup* とは異なる *partition_scheme* (またはその逆) を指定すると、制約定義だけが優先され、それ以外は無視されます。
 
@@ -390,8 +383,7 @@ ON {*partition_scheme* | *filegroup* |  **"default"** } は、PRIMARY KEY 制約
 >
 > パーティション テーブルを作成した後、テーブルの `LOCK_ESCALATION` オプションを `AUTO` に設定することを検討してください。 これにより、テーブルではなくパーティション (HoBT) レベルにロックをエスカレートできるようにすることで、コンカレンシーを向上させることができます。 詳細については、「[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)」を参照してください。
 
-TEXTIMAGE_ON { *filegroup*|  **"default"** }    
-**text** 列、**ntext** 列、**image** 列、**xml** 列、**varchar(max)** 列、**nvarchar(max)** 列、**varbinary(max)** 、および CLR ユーザー定義型の列 (geometry 型や geography 型など) が、指定したファイル グループに格納されることを示します。
+TEXTIMAGE_ON { *filegroup*|  **"default"** } **text**、**ntext**、**image**、**xml**、**varchar(max)** 、**nvarchar(max)** 、**varbinary(max)** 、および CLR ユーザー定義型の列 (geometry や geography など) が、指定したファイル グループに格納されることを示します。
 
 テーブル内に値の大きな列がない場合は、`TEXTIMAGE_ON` は指定できません。 *partition_scheme* を指定した場合は、`TEXTIMAGE_ON` を指定できません。 **"default"** を指定するか、`TEXTIMAGE_ON` をまったく指定しないと、値の大きな列は既定のファイル グループに格納されます。 `CREATE TABLE` で指定した値の大きな列のデータのストレージを、後から変更することはできません。
 
@@ -935,10 +927,10 @@ HASH
 
 ```sql
 CREATE TABLE #MyTempTable (
-  col1 INT PRIMARY KEY
+    col1 INT PRIMARY KEY
 );
 
-INSERT INTO #MyTempTable 
+INSERT INTO #MyTempTable
 VALUES (1);
 ```
 
@@ -959,17 +951,17 @@ VALUES (1);
 ```sql
 CREATE PROCEDURE dbo.Test2
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (2);
     SELECT Test2Col = x FROM #t;
 GO
 
 CREATE PROCEDURE dbo.Test1
 AS
-    CREATE TABLE #t(x INT PRIMARY KEY);
+    CREATE TABLE #t (x INT PRIMARY KEY);
     INSERT INTO #t VALUES (1);
     SELECT Test1Col = x FROM #t;
- EXEC Test2;
+    EXEC Test2;
 GO
 
 CREATE TABLE #t(x INT PRIMARY KEY);
@@ -1131,16 +1123,16 @@ CREATE TABLE を使用してパーティション テーブルを作成するに
 次の例では、`Employee` テーブルの `EmployeeID` 列にクラスター化インデックスを持つ PRIMARY KEY 制約の列定義を示しています。 制約名を指定していないため、制約名はシステムによって提供されます。
 
 ```sql
-CREATE TABLE dbo.Employee (EmployeeID int
-PRIMARY KEY CLUSTERED);
+CREATE TABLE dbo.Employee (
+    EmployeeID INT PRIMARY KEY CLUSTERED
+);
 ```
 
 ### <a name="b-using-foreign-key-constraints"></a>B. FOREIGN KEY 制約の使用
 FOREIGN KEY 制約は、他のテーブルを参照するために使用します。 外部キーは単一列キーの場合も複数列キーの場合もあります。 次の例では、`SalesPerson` テーブルを参照する `SalesOrderHeader` テーブルに対する単一列 FOREIGN KEY 制約を示しています。 単一列 FOREIGN KEY 制約では、REFERENCES 句のみが必要とされます。
 
 ```sql
-SalesPersonID int NULL
-REFERENCES SalesPerson(SalesPersonID)
+SalesPersonID INT NULL REFERENCES SalesPerson(SalesPersonID)
 ```
 
 FOREIGN KEY 句を明示的に使用して、列属性を書き換えることもできます。 列名が両方のテーブルで同じである必要はないことに注意してください。
@@ -1152,16 +1144,16 @@ FOREIGN KEY (SalesPersonID) REFERENCES SalesPerson(SalesPersonID)
 複数列キー制約はテーブル制約として作成されます。 [!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベース内の `SpecialOfferProduct` テーブルには、複数列 PRIMARY KEY が含まれています。 次の例は、このキーを他のテーブルから参照する方法を示しています。明示的な制約名は省略可能です。
 
 ```sql
-CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail FOREIGN KEY
- (ProductID, SpecialOfferID)
-REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
+CONSTRAINT FK_SpecialOfferProduct_SalesOrderDetail
+    FOREIGN KEY (ProductID, SpecialOfferID)
+    REFERENCES SpecialOfferProduct (ProductID, SpecialOfferID)
 ```
 
 ### <a name="c-using-unique-constraints"></a>C. UNIQUE 制約の使用
 UNIQUE 制約は、非主キー列に一意性を設定するために使用します。 次の例では、`Name` テーブルの `Product` 列が一意でなくてはならないという制限を課しています。
 
 ```sql
-Name nvarchar(100) NOT NULL
+Name NVARCHAR(100) NOT NULL
 UNIQUE NONCLUSTERED
 ```
 
@@ -1175,7 +1167,7 @@ DEFAULT 'New Position - title not formalized yet'
 DEFAULT 定義には、定数だけでなく関数を含めることができます。 エントリの現在の日付を取得するには、次の例を使います。
 
 ```sql
-DEFAULT (getdate())
+DEFAULT (GETDATE())
 ```
 
 ニラディック関数のスキャンによってデータ整合性を向上させることもできます。 行を挿入したユーザーを追跡するには、USER 用ニラディック関数を使用します。 ニラディック関数をかっこで囲まないでください。
@@ -1194,16 +1186,19 @@ CHECK (CreditRating >= 1 and CreditRating <= 5)
 この例は、テーブルの列に入力される文字データのパターンを制限する名前付き制約を示しています。
 
 ```sql
-CONSTRAINT CK_emp_id CHECK (emp_id LIKE
-'[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
-OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]')
+CONSTRAINT CK_emp_id CHECK (
+    emp_id LIKE '[A-Z][A-Z][A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+    OR emp_id LIKE '[A-Z]-[A-Z][1-9][0-9][0-9][0-9][0-9][FM]'
+)
 ```
 
 この例では、値が特定のリスト内にあるか、指定したパターンに従う必要があることを指定しています。
 
 ```sql
-CHECK (emp_id IN ('1389', '0736', '0877', '1622', '1756')
-OR emp_id LIKE '99[0-9][0-9]')
+CHECK (
+    emp_id IN ('1389', '0736', '0877', '1622', '1756')
+    OR emp_id LIKE '99[0-9][0-9]'
+)
 ```
 
 ### <a name="f-showing-the-complete-table-definition"></a>F. 完全なテーブル定義の表示
@@ -1223,9 +1218,9 @@ CREATE TABLE dbo.PurchaseOrderDetail
     RejectedQty float NULL,
     DueDate datetime NULL,
     rowguid uniqueidentifier ROWGUIDCOL NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (newid()),
+        CONSTRAINT DF_PurchaseOrderDetail_rowguid DEFAULT (NEWID()),
     ModifiedDate datetime NOT NULL
-        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (getdate()),
+        CONSTRAINT DF_PurchaseOrderDetail_ModifiedDate DEFAULT (GETDATE()),
     LineTotal AS ((UnitPrice*OrderQty)),
     StockedQty AS ((ReceivedQty-RejectedQty)),
     CONSTRAINT PK_PurchaseOrderDetail_PurchaseOrderID_LineNumber
@@ -1240,8 +1235,11 @@ ON PRIMARY;
 
 ```sql
 CREATE TABLE HumanResources.EmployeeResumes
-   (LName nvarchar(25), FName nvarchar(25),
-    Resume xml( DOCUMENT HumanResources.HRResumeSchemaCollection) );
+(
+    LName nvarchar(25),
+    FName nvarchar(25),
+    Resume xml(DOCUMENT HumanResources.HRResumeSchemaCollection)
+);
 ```
 
 ### <a name="h-creating-a-partitioned-table"></a>H. パーティション テーブルの作成
@@ -1249,16 +1247,16 @@ CREATE TABLE HumanResources.EmployeeResumes
 
 ```sql
 CREATE PARTITION FUNCTION myRangePF1 (int)
-    AS RANGE LEFT FOR VALUES (1, 100, 1000) ;
+    AS RANGE LEFT FOR VALUES (1, 100, 1000);
 GO
 
 CREATE PARTITION SCHEME myRangePS1
     AS PARTITION myRangePF1
-    TO (test1fg, test2fg, test3fg, test4fg) ;
+    TO (test1fg, test2fg, test3fg, test4fg);
 GO  
   
 CREATE TABLE PartitionTable (col1 int, col2 char(10))
-    ON myRangePS1 (col1) ;
+    ON myRangePS1 (col1);
 GO
 ```
 
@@ -1274,11 +1272,13 @@ GO
 
 ```sql
 CREATE TABLE dbo.Globally_Unique_Data
-    (guid uniqueidentifier
+(
+    GUID UNIQUEIDENTIFIER
         CONSTRAINT Guid_Default DEFAULT
         NEWSEQUENTIALID() ROWGUIDCOL,
-    Employee_Name varchar(60)
-    CONSTRAINT Guid_PK PRIMARY KEY (guid) );
+    Employee_Name VARCHAR(60)
+    CONSTRAINT Guid_PK PRIMARY KEY (GUID)
+);
 ```
 
 ### <a name="j-using-an-expression-for-a-computed-column"></a>J. 計算列に式を使用する
@@ -1286,7 +1286,11 @@ CREATE TABLE dbo.Globally_Unique_Data
 
 ```sql
 CREATE TABLE dbo.mytable
-    ( low int, high int, myavg AS (low + high)/2 ) ;
+(
+    low INT,
+    high INT,
+    myavg AS (low + high)/2
+);
 ```
 
 ### <a name="k-creating-a-computed-column-based-on-a-user-defined-type-column"></a>K. ユーザー定義型の列に基づく計算列の作成
@@ -1294,7 +1298,10 @@ CREATE TABLE dbo.mytable
 
 ```sql
 CREATE TABLE UDTypeTable
-    ( u utf8string, ustr AS u.ToString() PERSISTED ) ;
+(
+    u UTF8STRING,
+    ustr AS u.ToString() PERSISTED
+);
 ```
 
 ### <a name="l-using-the-user_name-function-for-a-computed-column"></a>L. 計算列に対する USER_NAME 関数の使用
@@ -1302,7 +1309,11 @@ CREATE TABLE UDTypeTable
 
 ```sql
 CREATE TABLE dbo.mylogintable
-    ( date_in datetime, user_id int, myuser_name AS USER_NAME() ) ;
+(
+    date_in DATETIME,
+    user_id INT,
+    myuser_name AS USER_NAME()
+);
 ```
 
 ### <a name="m-creating-a-table-that-has-a-filestream-column"></a>M. FILESTREAM 列を含むテーブルを作成する
@@ -1310,12 +1321,11 @@ CREATE TABLE dbo.mylogintable
 
 ```sql
 CREATE TABLE dbo.EmployeePhoto
-    (
-     EmployeeId int NOT NULL PRIMARY KEY
-    ,Photo varbinary(max) FILESTREAM NULL
-    ,MyRowGuidColumn uniqueidentifier NOT NULL ROWGUIDCOL
-        UNIQUE DEFAULT NEWID()
-    );
+(
+    EmployeeId INT NOT NULL PRIMARY KEY,
+    Photo VARBINARY(MAX) FILESTREAM NULL,
+    MyRowGuidColumn UNIQUEIDENTIFIER NOT NULL ROWGUIDCOL UNIQUE DEFAULT NEWID()
+);
 ```
 
 ### <a name="n-creating-a-table-that-uses-row-compression"></a>N. 行の圧縮を使用するテーブルの作成
@@ -1323,7 +1333,10 @@ CREATE TABLE dbo.EmployeePhoto
 
 ```sql
 CREATE TABLE dbo.T1
-(c1 int, c2 nvarchar(200) )
+(
+    c1 INT,
+    c2 NVARCHAR(200)
+)
 WITH (DATA_COMPRESSION = ROW);
 ```
 
@@ -1336,18 +1349,22 @@ WITH (DATA_COMPRESSION = ROW);
 
 ```sql
 CREATE TABLE dbo.T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL ) ;
+(
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL
+);
 ```
 
 次の例では、2 つのスパース列と `CSet` という 1 つの列セットを含むテーブルを作成します。
 
 ```sql
 CREATE TABLE T1
-    (c1 int PRIMARY KEY,
-    c2 varchar(50) SPARSE NULL,
-    c3 int SPARSE NULL,
-    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS ) ;
+(
+    c1 INT PRIMARY KEY,
+    c2 VARCHAR(50) SPARSE NULL,
+    c3 INT SPARSE NULL,
+    CSet XML COLUMN_SET FOR ALL_SPARSE_COLUMNS
+);
 ```
 
 ### <a name="p-creating-a-system-versioned-disk-based-temporal-table"></a>P. システム バージョン管理されたディスク ベースのテンポラル テーブルの作成
@@ -1360,13 +1377,13 @@ CREATE TABLE T1
 ```sql
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH (SYSTEM_VERSIONING = ON);
 ```
@@ -1374,31 +1391,29 @@ WITH (SYSTEM_VERSIONING = ON);
 この例では、既存の履歴テーブルにリンクされた新しいテンポラル テーブルを作成します。
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
-    DepartmentNumber char(10) NOT NULL,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 NOT NULL,
-    SysEndTime datetime2 NOT NULL
+    DepartmentNumber CHAR(10) NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 NOT NULL,
+    SysEndTime DATETIME2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
-WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+WITH (SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON));
 ```
 
 ### <a name="q-creating-a-system-versioned-memory-optimized-temporal-table"></a>Q. システム バージョン管理されたメモリ最適化テンポラル テーブルの作成
@@ -1409,53 +1424,56 @@ WITH
 この例では、新しい履歴テーブルにリンクされた新しいテンポラル テーブルを作成します。
 
 ```sql
-CREATE SCHEMA History
+CREATE SCHEMA History;
 GO
+
 CREATE TABLE dbo.Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY NONCLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY NONCLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH
-    (
-        MEMORY_OPTIMIZED = ON, DURABILITY = SCHEMA_AND_DATA,
-            SYSTEM_VERSIONING = ON ( HISTORY_TABLE = History.DepartmentHistory )
-    );
+(
+    MEMORY_OPTIMIZED = ON,
+    DURABILITY = SCHEMA_AND_DATA,
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = History.DepartmentHistory)
+);
 ```
 
 この例では、既存の履歴テーブルにリンクされた新しいテンポラル テーブルを作成します。
 
 ```sql
---Existing table
+-- Existing table
 CREATE TABLE Department_History
 (
-    DepartmentNumber char(10) NOT NULL,
-    DepartmentName varchar(50) NOT NULL,
-    ManagerID int NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 NOT NULL,
-    SysEndTime datetime2 NOT NULL
+    DepartmentNumber CHAR(10) NOT NULL,
+    DepartmentName VARCHAR(50) NOT NULL,
+    ManagerID INT NULL,
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 NOT NULL,
+    SysEndTime DATETIME2 NOT NULL
 );
---Temporal table
+
+-- Temporal table
 CREATE TABLE Department
 (
-    DepartmentNumber char(10) NOT NULL PRIMARY KEY CLUSTERED,
-    DepartmentName varchar(50) NOT NULL,
+    DepartmentNumber CHAR(10) NOT NULL PRIMARY KEY CLUSTERED,
+    DepartmentName VARCHAR(50) NOT NULL,
     ManagerID INT NULL,
-    ParentDepartmentNumber char(10) NULL,
-    SysStartTime datetime2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
-    SysEndTime datetime2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
-    PERIOD FOR SYSTEM_TIME (SysStartTime,SysEndTime)
+    ParentDepartmentNumber CHAR(10) NULL,
+    SysStartTime DATETIME2 GENERATED ALWAYS AS ROW START HIDDEN NOT NULL,
+    SysEndTime DATETIME2 GENERATED ALWAYS AS ROW END HIDDEN NOT NULL,
+    PERIOD FOR SYSTEM_TIME (SysStartTime, SysEndTime)
 )
 WITH
-    (SYSTEM_VERSIONING = ON
-        (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON )
-    );
+(
+    SYSTEM_VERSIONING = ON (HISTORY_TABLE = dbo.Department_History, DATA_CONSISTENCY_CHECK = ON)
+);
 ```
 
 ### <a name="r-creating-a-table-with-encrypted-columns"></a>R. 暗号化された列を含むテーブルの作成
@@ -1463,21 +1481,19 @@ WITH
 
 ```sql
 CREATE TABLE Customers (
-    CustName nvarchar(60)
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = RANDOMIZED,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
-    SSN varchar(11) COLLATE Latin1_General_BIN2
-        ENCRYPTED WITH
-            (
-             COLUMN_ENCRYPTION_KEY = MyCEK,
-             ENCRYPTION_TYPE = DETERMINISTIC ,
-             ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
-            ),
-    Age int NULL
+    CustName NVARCHAR(60)
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = RANDOMIZED,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
+    SSN VARCHAR(11) COLLATE Latin1_General_BIN2
+        ENCRYPTED WITH (
+            COLUMN_ENCRYPTION_KEY = MyCEK,
+            ENCRYPTION_TYPE = DETERMINISTIC ,
+            ALGORITHM = 'AEAD_AES_256_CBC_HMAC_SHA_256'
+        ),
+    Age INT NULL
 );
 ```
 
@@ -1487,7 +1503,7 @@ CREATE TABLE Customers (
 ```sql
 CREATE TABLE t1
 (
-    c1 int,
+    c1 INT,
     index IX1 (c1) WHERE c1 > 0
 );
 ```
@@ -1496,22 +1512,22 @@ CREATE TABLE t1
 ディスク ベース テーブルで NONCLUSTERED インラインを使用する方法を次に示します。
 
 ```sql
-CREATE TABLE t1 
+CREATE TABLE t1
 (
-    c1 int, 
+    c1 INT,
     INDEX ix_1 NONCLUSTERED (c1)
 );
 
-CREATE TABLE t2 
+CREATE TABLE t2
 (
-    c1 int, 
-    c2 int INDEX ix_1 NONCLUSTERED
+    c1 INT,
+    c2 INT INDEX ix_1 NONCLUSTERED
 );
 
-CREATE TABLE t3 
+CREATE TABLE t3
 (
-    c1 int, 
-    c2 int, 
+    c1 INT,
+    c2 INT,
     INDEX ix_1 NONCLUSTERED (c1,c2)
 );
 ```
@@ -1522,8 +1538,8 @@ CREATE TABLE t3
 ```sql
 CREATE TABLE #tmp
 (
-    c1 int,
-    c2 int,
+    c1 INT,
+    c2 INT,
     PRIMARY KEY CLUSTERED ([c1], [c2])
 );
 GO
@@ -1545,13 +1561,14 @@ Could not create constraint or index. See previous errors.
 
 ```sql
 CREATE TABLE ##test (
-    a int, 
-    b int
+    a INT,
+    b INT
 );
-INSERT INTO ##test 
-VALUES (1,1);
 
---Obtain object ID for temp table ##test
+INSERT INTO ##test
+VALUES (1, 1);
+
+-- Obtain object ID for temp table ##test
 SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
@@ -1562,26 +1579,27 @@ SELECT OBJECT_ID('tempdb.dbo.##test') AS 'Object ID';
 ```
 
 tempdb (2) で指定されたオブジェクト ID 1253579504 のグローバル一時テーブル名を取得します
+
 ```sql
-SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504
+SELECT name FROM tempdb.sys.objects WHERE object_id = 1253579504;
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
+```sql
 ##test
 ```
 
 セッション B は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb1 に接続し、セッション A によって作成されたテーブル ##test にアクセスできます
 
 ```sql
-SELECT * FROM ##test
+SELECT * FROM ##test;
 ```
 
 [!INCLUDE[ssResult](../../includes/ssresult-md.md)]
 
-```
-1,1
+```sql
+1, 1
 ```
 
 セッション C は、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] testdb2 内の別のデータベースに接続し、testdb1 で作成された ##test にアクセスしようとします。 この選択は、グローバル一時テーブルのデータベース スコープが原因で失敗します
@@ -1589,6 +1607,7 @@ SELECT * FROM ##test
 ```sql
 SELECT * FROM ##test
 ```
+
 これにより、次のエラーが生成されます。
 
 ```
@@ -1599,26 +1618,26 @@ Invalid object name '##test'
 現在のユーザー データベース testdb1 からの [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] tempdb 内のシステム オブジェクトのアドレス指定
 
 ```sql
-SELECT * FROM tempdb.sys.objects
-SELECT * FROM tempdb.sys.columns
-SELECT * FROM tempdb.sys.database_files
+SELECT * FROM tempdb.sys.objects;
+SELECT * FROM tempdb.sys.columns;
+SELECT * FROM tempdb.sys.database_files;
 ```
 
 ## <a name="see-also"></a>参照
-[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)    
-[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)    
-[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)    
-[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)    
-[データ型](../../t-sql/data-types/data-types-transact-sql.md)    
-[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)    
-[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)    
-[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)    
-[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)    
-[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)    
-[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)    
-[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)    
-[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)    
-[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)    
-[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)    
-[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)    
-[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)    
+[ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md)
+[COLUMNPROPERTY](../../t-sql/functions/columnproperty-transact-sql.md)
+[CREATE INDEX](../../t-sql/statements/create-index-transact-sql.md)
+[CREATE VIEW](../../t-sql/statements/create-view-transact-sql.md)
+[Data Types](../../t-sql/data-types/data-types-transact-sql.md)
+[DROP INDEX](../../t-sql/statements/drop-index-transact-sql.md)
+[sys.dm_sql_referenced_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referenced-entities-transact-sql.md)
+[sys.dm_sql_referencing_entities](../../relational-databases/system-dynamic-management-views/sys-dm-sql-referencing-entities-transact-sql.md)
+[DROP TABLE](../../t-sql/statements/drop-table-transact-sql.md)
+[CREATE PARTITION FUNCTION](../../t-sql/statements/create-partition-function-transact-sql.md)
+[CREATE PARTITION SCHEME](../../t-sql/statements/create-partition-scheme-transact-sql.md)
+[CREATE TYPE](../../t-sql/statements/create-type-transact-sql.md)
+[EVENTDATA](../../t-sql/functions/eventdata-transact-sql.md)
+[sp_help](../../relational-databases/system-stored-procedures/sp-help-transact-sql.md)
+[sp_helpconstraint](../../relational-databases/system-stored-procedures/sp-helpconstraint-transact-sql.md)
+[sp_rename](../../relational-databases/system-stored-procedures/sp-rename-transact-sql.md)
+[sp_spaceused](../../relational-databases/system-stored-procedures/sp-spaceused-transact-sql.md)

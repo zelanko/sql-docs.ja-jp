@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: f7f23415-43ff-40f5-b3e0-0be1d148ee5b
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 4155bdd03dfc809eee26e505cb842404524cbe59
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d695ccd9545c6bc839edcc1b0644c1f1a4d84ab8
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907806"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710900"
 ---
 # <a name="define-and-modify-a-join-filter-between-merge-articles"></a>マージ アーティクル間の結合フィルターの定義および変更
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -117,7 +117,7 @@ ms.locfileid: "67907806"
   
 2.  パブリッシャーのパブリケーション データベースで [sp_addmergearticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md) を実行し、関連アーティクル (パブリケーションの子アーティクル) を少なくとも 1 つ定義します。 詳しくは、「 [アーティクルを定義](../../../relational-databases/replication/publish/define-an-article.md)」をご覧ください。  
   
-3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行します。 **@publication** を指定し、 **@filtername** にはこのフィルターの一意の名前を、 **@article** には手順 2 で作成した子アーティクルの名前を、 **@join_articlename** には結合対象の親アーティクルの名前を指定し、 **@join_unique_key** に次のいずれかの値を指定します。  
+3.  パブリッシャー側のパブリケーション データベースに対して、[sp_addmergefilter &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行します。 `@publication` を指定し、`@filtername` にはこのフィルターの一意の名前を、`@article` には手順 2 で作成した子アーティクルの名前を、`@join_articlename` には結合対象の親アーティクルの名前を指定し、`@join_unique_key` に次のいずれかの値を指定します。  
   
     -   **0** - 親アーティクルと子アーティクル間の多対一または多対多の結合を示します。  
   
@@ -126,7 +126,7 @@ ms.locfileid: "67907806"
      これにより、2 つのアーティクル間の結合フィルターが定義されます。  
   
     > [!CAUTION]  
-    >  親アーティクルの基になるテーブルで、結合する列に一意性を保証する制約が割り当てられている場合にのみ、 **@join_unique_key** を **1** に設定します。 **@join_unique_key** を **1** に正しく設定しなかった場合は、データの非収束が発生する可能性があります。  
+    >  親アーティクルの基になるテーブルで、結合する列に一意性を保証する制約が割り当てられている場合にのみ、`@join_unique_key` を **1** に設定します。 `@join_unique_key` を **1** に正しく設定しなかった場合は、データの非収束が発生する可能性があります。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、マージ パブリケーションのアーティクルを定義しています。 `SalesOrderDetail` テーブルのアーティクルが、 `SalesOrderHeader` テーブルと比較されてフィルター選択されます (このテーブル自体が静的行フィルターを使ってフィルター選択されています)。 詳しくは、「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」をご覧ください。  

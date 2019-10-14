@@ -11,12 +11,12 @@ ms.assetid: d1e08f88-64ef-4001-8a66-372249df2533
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: dcef896bed81f094f1ab0e22f40ec5ac31bfb9d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7b9e469cd522ecf28684a6e34ded51a41356fec5
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68116973"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961802"
 ---
 # <a name="create-table-as-select-azure-sql-data-warehouse"></a>CREATE TABLE AS SELECT (Azure SQL Data Warehouse)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-pdw-md.md)]
@@ -46,7 +46,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
       <distribution_option> -- required
       [ , <table_option> [ ,...n ] ]    
     )  
-    AS <select_statement>   
+    AS <select_statement>  
+    OPTION <query_hint> 
 [;]  
 
 <distribution_option> ::=
@@ -59,16 +60,21 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 <table_option> ::= 
     {   
         CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column[,...n])
       | HEAP --default for Parallel Data Warehouse   
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) --default is ASC 
     }  
-    | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
+      | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] --default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) ) 
   
 <select_statement> ::=  
     [ WITH <common_table_expression> [ ,...n ] ]  
     SELECT select_criteria  
 
+<query_hint> ::=
+    {
+        MAXDOP 
+    }
 ```  
 
 <a name="arguments-bk"></a>
@@ -102,7 +108,7 @@ CTAS ステートメントは、ソース テーブルがパーティション�
 
 <a name="select-options-bk"></a>
 
-### <a name="select-options"></a>SELECT のオプション
+### <a name="select-statement"></a>Select ステートメント
 SELECT ステートメントは、CTAS と CREATE TABLE の基本的な違いです。  
 
  `WITH` *common_table_expression*  
@@ -110,7 +116,11 @@ SELECT ステートメントは、CTAS と CREATE TABLE の基本的な違いで
   
  `SELECT` *select_criteria*  
  SELECT ステートメントの結果を新しいテーブルに追加します。 *select_criteria* は、新しいテーブルにコピーするデータを決定する SELECT ステートメントの本文です。 SELECT ステートメントについては、「[SELECT &#40;Transact-SQL&#41;](../../t-sql/queries/select-transact-sql.md)」を参照してください。  
-  
+ 
+### <a name="query-hint"></a>クエリ ヒント
+ユーザーは MAXDOP を整数値に設定し、並列処理の最大値を制御できます。  MAXDOP が 1 に設定されていると、クエリは 1 つのスレッドによって実行されます。
+
+ 
 <a name="permissions-bk"></a>  
   
 ## <a name="permissions"></a>アクセス許可  
@@ -820,6 +830,14 @@ OPTION (LABEL = 'CTAS : Partition IN table : Create');
 ```
 
 したがって、型の一貫性と、CTAS で NULL 値の許容プロパティを維持することが適切なエンジニアリングのベスト プラクティスであることがわかります。 計算の整合性を維持するのに役立ち、また、確実にパーティションを切り替えることができます。
+
+### <a name="n-create-an-ordered-clustered-columnstore-index-with-maxdop-1"></a>N. MAXDOP 1 で順序指定クラスター化列ストア インデックスを作成する  
+```sql
+CREATE TABLE Table1 WITH (DISTRIBUTION = HASH(c1), CLUSTERED COLUMNSTORE INDEX ORDER(c1) )
+AS SELECT * FROM ExampleTable
+OPTION (MAXDOP 1);
+```
+
  
 ## <a name="see-also"></a>参照  
  [CREATE EXTERNAL DATA SOURCE &#40;Transact-SQL&#41;](../../t-sql/statements/create-external-data-source-transact-sql.md)   

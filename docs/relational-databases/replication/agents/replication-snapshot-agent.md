@@ -16,12 +16,12 @@ ms.assetid: 2028ba45-4436-47ed-bf79-7c957766ea04
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 4f79bab916e955dfced1fc5bd01df65f98473c54
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: e777b49ab8c27abff81f54fef52f2a2a7c4dec31
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768274"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710352"
 ---
 # <a name="replication-snapshot-agent"></a>レプリケーション スナップショット エージェント
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md.md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -185,7 +185,7 @@ snapshot [ -?]
  無関係な削除がサブスクライバーに送られたかどうかを示します。 無関係な削除とは、サブスクライバーのパーティションに属さない行に対する DELETE コマンドがサブスクライバーに送られたことを表します。 無関係な削除はデータの整合性や収束には影響しませんが、不要なネットワーク トラフィックを生じます。 **MaxNetworkOptimization** の既定値は **0**です。 **MaxNetworkOptimization** を **1** に設定すると、無関係な削除が発生する可能性が最小限に抑えられ、ネットワーク トラフィックが減少し、最もネットワークが最適化されます。 ただし、このパラメーターを **1** に設定するとメタデータの保存領域が増加するため、複数レベルの結合フィルターと複雑なサブセット フィルターが存在する場合、パブリッシャーのパフォーマンスが低下します。 レプリケーション トポロジを慎重に評価する必要があります。無関係な削除によるネットワーク トラフィックが容認できないほど大きい場合に限り、 **MaxNetworkOptimization** を **1** に設定してください。  
   
 > [!NOTE]
->  このパラメーターを **1** に設定することが役立つのは、マージ パブリケーションの同期最適化オプション ([sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の **@keep_partition_changes** パラメーター) が **true** に設定されている場合のみです。  
+>  このパラメーターを **1** に設定することが役立つのは、マージ パブリケーションの同期最適化オプション ([sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@keep_partition_changes**` パラメーター) が **true** に設定されている場合のみです。  
   
  **-Output** _output_path_and_file_name_  
  エージェントの出力ファイルのパスです。 ファイル名が指定されていない場合、出力はコンソールに送られます。 指定された名前のファイルが存在する場合、出力はそのファイルに追加されます。  
@@ -250,7 +250,7 @@ snapshot [ -?]
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 一括コピーで扱うデータ ファイルの各行の末尾を示す 1 文字または文字列です。 既定値は \n\<,@g>\n です。  
   
  **-StartQueueTimeout** _start_queue_timeout_seconds_  
- 実行中の同時実行動的スナップショット処理のメンバー数が、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の **@max_concurrent_dynamic_snapshots** プロパティの設定による制限に達している場合に、スナップショット エージェントの最大待機時間を秒単位で指定します。 最大秒数に達したときにスナップショット エージェントがまだ待機している場合、スナップショット エージェントは待機を終了します。 値が 0 の場合は、このエージェントが無期限に待機することを意味しますが、取り消すこともできます。  
+ 実行中の同時実行動的スナップショット処理のメンバー数が、[sp_addmergepublication &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@max_concurrent_dynamic_snapshots` プロパティの設定による制限に達している場合に、スナップショット エージェントの最大待機時間を秒単位で指定します。 最大秒数に達したときにスナップショット エージェントがまだ待機している場合、スナップショット エージェントは待機を終了します。 値が 0 の場合は、このエージェントが無期限に待機することを意味しますが、取り消すこともできます。  
   
  \- **UsePerArticleContentsView** _use_per_article_contents_view_  
  このパラメーターは非推奨とされます。旧バージョンとの互換性のためにサポートされています。  

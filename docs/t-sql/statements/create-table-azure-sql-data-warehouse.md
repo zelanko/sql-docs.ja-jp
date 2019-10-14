@@ -11,12 +11,12 @@ ms.assetid: ea21c73c-40e8-4c54-83d4-46ca36b2cf73
 author: julieMSFT
 ms.author: jrasnick
 monikerRange: '>= aps-pdw-2016 || = azure-sqldw-latest || = sqlallproducts-allversions'
-ms.openlocfilehash: 1e913f7c09327be46ab7e4b67ec903fc60e30975
-ms.sourcegitcommit: 1f222ef903e6aa0bd1b14d3df031eb04ce775154
+ms.openlocfilehash: 5b9c22a366ad6757821783ba2cf077d251193d55
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/23/2019
-ms.locfileid: "68419612"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961789"
 ---
 # <a name="create-table-azure-sql-data-warehouse"></a>CREATE TABLE (Azure SQL Data Warehouse)
 
@@ -51,7 +51,8 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
   
 <table_option> ::=
     {
-        <cci_option> --default for Azure SQL Data Warehouse
+       CLUSTERED COLUMNSTORE INDEX --default for SQL Data Warehouse 
+      | CLUSTERED COLUMNSTORE INDEX ORDER (column [,...n])  
       | HEAP --default for Parallel Data Warehouse
       | CLUSTERED INDEX ( { index_column_name [ ASC | DESC ] } [ ,...n ] ) -- default is ASC
     }  
@@ -63,8 +64,6 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
     | PARTITION ( partition_column_name RANGE [ LEFT | RIGHT ] -- default is LEFT  
         FOR VALUES ( [ boundary_value [,...n] ] ) )
 
-<cci_option> ::= [CLUSTERED COLUMNSTORE INDEX] [ORDER (column [,…n])]
-  
 <data type> ::=
       datetimeoffset [ ( n ) ]  
     | datetime2 [ ( n ) ]  
@@ -165,7 +164,7 @@ CREATE TABLE { database_name.schema_name.table_name | schema_name.table_name | t
 
 ### <a name="ordered-clustered-columnstore-index-option-preview-for-azure-sql-data-warehouse"></a>クラスター化列ストア インデックスの順序付けオプション (Azure SQL Data Warehouse のプレビュー)
 
-クラスター化列ストア インデックスは、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  ORDER 指定の規定値は COMPOUND キーです。  並べ替えは常に昇順です。 ORDER 句を指定しなかった場合、列ストアは並べ替えられません。 順序付けのプロセスによっては、順序付けされていないクラスター化列ストア インデックスよりも、順序付けされたクラスター化列ストア インデックスを使用するテーブルの方がデータの読み込み時間が長い場合があります。 データの読み込み中に追加の tempdb 領域が必要な場合は、挿入ごとのデータ量を減らすことができます。
+クラスター化列ストア インデックス (CCI) は、Azure SQL Data Warehouse でテーブルを作成するための既定値です。  CCI 内のデータは、列ストアセグメントに圧縮される前に並べ替えられることはありません。  ORDER を指定して CCI を作成すると、データは並べ替えられてからインデックス セグメントに追加されるため、パフォーマンスが向上することがあります。 詳細については、「[順序指定クラスター化列ストア インデックスを使用したパフォーマンス チューニング](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-ordered-cci)」を参照してください。  
 
 ユーザーは、sys.index_columns の column_store_order_ordinal 列に対して、テーブルが順序付けられている列とその順序でクエリを実行できます。  
 
@@ -379,17 +378,6 @@ WITH ( CLUSTERED COLUMNSTORE INDEX )
 ;  
 ```
 
-### <a name="OrderedClusteredColumnstoreIndex"></a> C. 順序付けされたクラスター化列ストア インデックスを作成する
-
-以下の例は、順序付けされたクラスター化列ストア インデックスを作成する方法を示しています。 インデックスは SHIPDATE で順序付けされます。
-
-```sql
-CREATE TABLE Lineitem  
-WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
-AS  
-SELECT * FROM ext_Lineitem
-```
-
 <a name="ExamplesTemporaryTables"></a> 
 ## <a name="examples-for-temporary-tables"></a>一時テーブルの例
 
@@ -432,11 +420,22 @@ WITH
   )  
 ;  
 ```  
- 
+
+### <a name="OrderedClusteredColumnstoreIndex"></a> E. 順序付けされたクラスター化列ストア インデックスを作成する
+
+以下の例は、順序付けされたクラスター化列ストア インデックスを作成する方法を示しています。 インデックスは SHIPDATE で順序付けされます。
+
+```sql
+CREATE TABLE Lineitem  
+WITH (DISTRIBUTION = ROUND_ROBIN, CLUSTERED COLUMNSTORE INDEX ORDER(SHIPDATE))  
+AS  
+SELECT * FROM ext_Lineitem
+```
+
 <a name="ExTableDistribution"></a> 
 ## <a name="examples-for-table-distribution"></a>テーブルの分散例
 
-### <a name="RoundRobin"></a> E. ROUND_ROBIN テーブルを作成する  
+### <a name="RoundRobin"></a> F. ROUND_ROBIN テーブルを作成する  
  次の例では、3 つの列を含みパーティションのない ROUND_ROBIN テーブルを作成します。 データはすべてのディストリビューションに分散されます。 テーブルは CLUSTERED COLUMNSTORE INDEX で作成されており、ヒープまたは行ストア クラスター化インデックスより、パフォーマンスとデータ圧縮が優れています。  
   
 ```sql
@@ -449,7 +448,7 @@ CREATE TABLE myTable
 WITH ( CLUSTERED COLUMNSTORE INDEX );  
 ```  
   
-### <a name="HashDistributed"></a> F. ハッシュ分散テーブルを作成する
+### <a name="HashDistributed"></a> G. ハッシュ分散テーブルを作成する
 
  次の例では、前の例と同じテーブルを作成します。 ただし、このテーブルの場合、行は ROUND_ROBIN テーブルのようにランダムに分散されるのではなく、(`id` 列上に) 配布されます。 テーブルは CLUSTERED COLUMNSTORE INDEX で作成されており、ヒープまたは行ストア クラスター化インデックスより、パフォーマンスとデータ圧縮が優れています。  
   
@@ -467,7 +466,7 @@ WITH
   );  
 ```  
   
-### <a name="Replicated"></a> G. レプリケート テーブルを作成します。  
+### <a name="Replicated"></a> H. レプリケート テーブルを作成します。  
  次の例では、前の例のようなレプリケート テーブルを作成します。 レプリケート テーブルは、各計算ノードに完全にコピーされます。 各計算ノードにこのコピーがあれば、クエリにおけるデータ移動を減らすことができます。 この例は CLUSTERED INDEX を使用して作成され、ヒープよりもデータの圧縮率が高くなっています。 ヒープでは、適切な CLUSTERED COLUMNSTORE INDEX 圧縮を実現するための十分な列が含まれていない場合があります。  
   
 ```sql
@@ -487,7 +486,7 @@ WITH
 <a name="ExTablePartitions"></a> 
 ## <a name="examples-for-table-partitions"></a>テーブル パーティションの例
 
-###  <a name="PartitionedTable"></a> H. パーティション テーブルを作成します。
+###  <a name="PartitionedTable"></a> I. パーティション テーブルを作成します。
 
  次の例では、例 A で示したのと同じテーブルを作成し、`id` 列に RANGE LEFT パーティションを追加します。 4 つのパーティション境界値が指定されており、5 つのパーティションが作成されます。  
   
@@ -522,7 +521,7 @@ WITH
 - パーティション 4:30 <= col < 40
 - パーティション 5:40 <= col  
   
-### <a name="OnePartition"></a> I. パーティションが 1 つのパーティション テーブルを作成する
+### <a name="OnePartition"></a> J. パーティションが 1 つのパーティション テーブルを作成する
 
  次の例では、1 つのパーティションを持つパーティション テーブルを作成します。 境界値は指定されていないため、結果は 1 つのパーティションになります。  
   
@@ -539,7 +538,7 @@ WITH
 ;  
 ```  
   
-### <a name="DatePartition"></a> J. 日付のパーティション分割でテーブルを作成する
+### <a name="DatePartition"></a> K. 日付のパーティション分割でテーブルを作成する
 
  次の例では、`myTable` という名前の新しいテーブルを作成し、`date` 列に基づいてパーティション分割を行います。 RANGE RIGHT を使用し、境界値として日付を使用することで、各パーティションにデータの月が格納されます。  
   

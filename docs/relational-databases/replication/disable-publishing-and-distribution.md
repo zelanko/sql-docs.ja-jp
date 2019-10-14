@@ -19,12 +19,12 @@ ms.assetid: 6d4a1474-4d13-4826-8be2-80050fafa8a5
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: bec94a3aaa6faab3fa88d4cd2b0d21a2bdcfd29e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: d5b1f22408ecffd2ec3250441239bb423e921b66
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768613"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710278"
 ---
 # <a name="disable-publishing-and-distribution"></a>パブリッシングおよびディストリビューションの無効化
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -91,7 +91,7 @@ ms.locfileid: "68768613"
 7.  ディストリビューターで [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md) を実行して、サーバーからディストリビューターの指定を削除します。  
   
     > [!NOTE]  
-    >  [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) および [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)の実行前にレプリケーションのパブリッシング オブジェクトおよびディストリビューション オブジェクトがすべて削除されていなかった場合は、これらのプロシージャからエラーが返されます。 パブリッシャーまたはディストリビューターの削除時に、レプリケーション関連のオブジェクトをすべて削除するには、 **@no_checks** パラメーターを **1**」をご覧ください。 パブリッシャーまたはディストリビューターがオフラインになっているか、なんらかの原因でアクセスできない場合、 **@ignore_distributor** パラメーターを **1** に設定すれば削除できます。ただし、その場合、パブリッシング オブジェクトおよびディストリビューション オブジェクトが削除されずに残るため、これらを手動で削除する必要があります。  
+    > [sp_dropdistpublisher](../../relational-databases/system-stored-procedures/sp-dropdistpublisher-transact-sql.md) および [sp_dropdistributor](../../relational-databases/system-stored-procedures/sp-dropdistributor-transact-sql.md)の実行前にレプリケーションのパブリッシング オブジェクトおよびディストリビューション オブジェクトがすべて削除されていなかった場合は、これらのプロシージャからエラーが返されます。 パブリッシャーまたはディストリビューターの削除時に、レプリケーション関連のオブジェクトをすべて削除するには、`@no_checks` パラメーターを **1** に設定する必要があります。 パブリッシャーまたはディストリビューターがオフラインになっているか、アクセスできない場合は、`@ignore_distributor` パラメーターを **1** に設定して削除できます。ただし、パブリッシング オブジェクトおよびディストリビューション オブジェクトは削除されずに残るため、手動で削除する必要があります。  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例は、サブスクリプション データベースからレプリケーション オブジェクトを削除するスクリプトです。  

@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 9b88baea-b7c6-4e5d-88f9-93d6a0ff0368
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: c41452c3303dff2225528f2c894c3104fa7fb794
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 972e250e97e8f94b3de3a453137c21cc9fc099c2
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67939367"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710443"
 ---
 # <a name="clean-up-merge-metadata-replication-transact-sql-programming"></a>マージ メタデータのクリーンアップ (レプリケーション Transact-SQL プログラミング)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -30,7 +30,7 @@ ms.locfileid: "67939367"
   
 1.  パブリッシャーのパブリケーション データベースで [sp_mergemetadataretentioncleanup](../../../relational-databases/system-stored-procedures/sp-mergemetadataretentioncleanup-transact-sql.md)を実行します。  
   
-2.  (省略可) 手順 1. で [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)、 [MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)、 [MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) の各システム テーブルから削除された行数は、それぞれ、 **@num_genhistory_rows** 、 **@num_contents_rows** 、 **@num_tombstone_rows** の各出力パラメーターとして返されます。  
+2.  (省略可能) 手順 1 で [MSmerge_genhistory](../../../relational-databases/system-tables/msmerge-genhistory-transact-sql.md)、[MSmerge_contents](../../../relational-databases/system-tables/msmerge-contents-transact-sql.md)、[MSmerge_tombstone](../../../relational-databases/system-tables/msmerge-tombstone-transact-sql.md) の各システム テーブルから削除された行数は、それぞれ `@num_genhistory_rows`、`@num_contents_rows`、`@num_tombstone_rows` の各出力パラメーターでて返されることに注意してください。  
   
 3.  サブスクライバーで手順 1. と手順 2. を繰り返し、サブスクリプション データベースのメタデータをクリーンアップします。  
   

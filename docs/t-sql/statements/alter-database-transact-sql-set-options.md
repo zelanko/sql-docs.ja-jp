@@ -1,6 +1,6 @@
 ---
 title: ALTER DATABASE の SET オプション (Transact-SQL) | Microsoft Docs
-description: SQL Server と Azure SQL Database で自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します
+description: SQL Server と Azure SQL Database で自動調整、暗号化、クエリ ストアなどのデータベースのオプションを設定する方法について説明します。
 ms.custom: ''
 ms.date: 09/19/2019
 ms.prod: sql
@@ -21,7 +21,7 @@ helpviewer_keywords:
 - offline database state [SQL Server]
 - snapshot isolation framework option
 - checksums [SQL Server]
-- Automatic Tuning
+- Automatic tuning
 - query plan regression correction
 - auto_create_statistics
 - auto_update_statistics
@@ -30,24 +30,24 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: dc330893a5857062161c45fc6775d6f26140ee11
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
+ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227180"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71952752"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
-[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でデータベース オプションを設定します。 ALTER DATABASE の他のオプションについては、「[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。
+Microsoft [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]、[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSDW](../../includes/sssdw-md.md)] でデータベース オプションを設定します。 ALTER DATABASE の他のオプションについては、「[ALTER DATABASE](../../t-sql/statements/alter-database-transact-sql.md)」をご覧ください。
 
-お使いの特定バージョンの SQL の構文、引数、注釈、権限、例を表示するには、以下のいずれかのタブをクリックします。
+お使いの特定バージョンの SQL の構文、引数、注釈、権限、例を表示するには、以下のいずれかのタブを選択します。
 
 構文表記規則の詳細については、「[Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)」を参照してください。
 
-## <a name="click-a-product"></a>製品をクリックしてください
+## <a name="select-a-product"></a>製品を選択する
 
-次の行から興味がある製品名をクリックしてみてください。 この Web ページでは、クリックした製品に合わせて、異なるコンテンツが表示されます。
+次の行から関心がある製品名を選択してみてください。 この Web ページでは、選択した製品に合わせて、異なるコンテンツが表示されます。
 
 ::: moniker range=">=sql-server-2016||>=sql-server-linux-2017||=sqlallproducts-allversions"
 
@@ -58,12 +58,12 @@ ms.locfileid: "71227180"
 &nbsp;
 
 ## <a name="sql-server"></a>SQL Server
-データベース ミラーリング、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルは `SET` オプションですが、長くなるため別の記事で説明します。 詳しくは、「[ALTER DATABASE データベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)」、「[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)」、および「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。
+データベース ミラーリング、[!INCLUDE[ssHADR](../../includes/sshadr-md.md)]、および互換性レベルは `SET` オプションですが、長くなるため別の記事で説明します。 詳しくは、「[ALTER DATABASE データベース ミラーリング](../../t-sql/statements/alter-database-transact-sql-database-mirroring.md)」、「[ALTER DATABASE SET HADR](../../t-sql/statements/alter-database-transact-sql-set-hadr.md)」、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」をご覧ください。
 
 データベース スコープ構成は、複数のデータベース構成を個々のデータベース レベルで設定するために使用されます。 詳細については、「[ALTER DATABASE SCOPED CONFIGURATION](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)」を参照してください。
 
 > [!NOTE]
-> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
+> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
 
 ## <a name="syntax"></a>構文
 
@@ -293,7 +293,7 @@ ACCELERATED_DATABASE_RECOVERY = {ON | OFF}
 ## <a name="arguments"></a>引数
 
 *database_name*        
-変更するデータベースの名前です。
+変更するデータベースの名前。
 
 CURRENT        
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)
@@ -303,7 +303,7 @@ CURRENT
 **\<accelerated_database_recovery> ::=**         
 **適用対象**:[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
 
-データベースごとに[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md) (ADR) を有効にする。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、ADR は既定で**オフ**になっています。 この構文を使用すると、必要に応じて、永続的なバージョン ストア (PVS) データの特定のファイル グループを指定できます。 ファイル グループが指定されていない場合、PVS はプライマリ ファイル グループに格納されます。 例と詳細については、[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md)に関するページを参照してください。
+データベースごとに[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md) (ADR) を有効にする。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では、ADR は既定で OFF に設定されています。 この構文を使用すると、永続的なバージョン ストア (PVS) データの特定のファイル グループを指定できます。 ファイル グループが指定されていない場合、PVS はプライマリ ファイル グループに格納されます。 例と詳細については、[高速データベース復旧](../../relational-databases/accelerated-database-recovery-management.md)に関するページを参照してください。
 
 **\<auto_option> ::=**        
 
@@ -313,7 +313,7 @@ CURRENT
 ON        
 データベースが正常にシャットダウンされ、最後のユーザーが終了した後、データベースのリソースが解放されます。
 
-ユーザーが再びそのデータベースを使用しようとすると、そのデータベースが自動的に再度開かれます。 たとえば、`USE database_name` ステートメントを発行する場合などです。 AUTO_CLOSE を ON に設定すると、データベースを正常にシャットダウンすることができます。 その場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)] の次回起動時にユーザーがデータベースを使用しようとするまでデータベースは再び開くことがありません。
+ユーザーが再びそのデータベースを使用しようとすると、そのデータベースが自動的に再度開かれます。 たとえば、ユーザーが `USE database_name` ステートメントを発行したときに、再度開くというこの動作が発生します。 AUTO_CLOSE を ON に設定すると、データベースを正常にシャットダウンすることができます。 その場合、ユーザーが次に [!INCLUDE[ssDE](../../includes/ssde-md.md)] を再起動するときにデータベースを使おうとするまで、データベースは再び開かれません。
 
 OFF        
 最後のユーザーが終了した後も、データベースは開いたままになります。
@@ -324,7 +324,7 @@ AUTO_CLOSE オプションを使用すると、データベース ファイル�
 > AUTO_CLOSE オプションは、包含データベースまたは [!INCLUDE[ssSDS](../../includes/sssds-md.md)] では使用できません。
 > [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_auto_close_on` 列または [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数の `IsAutoClose` プロパティを調べることでこのオプションの状態を判断できます。
 >
-> AUTO_CLOSE が ON の場合、データベースからデータを取得できないため、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの一部の列と [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数は NULL を返します。 これを解決するには、USE ステートメントを実行してデータベースを開きます。
+> AUTO_CLOSE が ON に設定されている場合、データベースからデータを取得できないため、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの一部の列と [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) 関数は NULL を返します。 この問題を解決するには、USE ステートメントを実行してデータベースを開きます。
 >
 > データベースをミラー化するには、AUTO_CLOSE を OFF に設定する必要があります。
 
@@ -334,7 +334,7 @@ AUTO_CLOSE オプションを使用すると、データベース ファイル�
 ON        
 クエリ プランを改善してクエリのパフォーマンスを向上させるために、クエリ オプティマイザーが必要に応じてクエリ述語内の列に対して 1 列ずつ統計を作成します。 これらの 1 列ずつの統計は、クエリ オプティマイザーがクエリをコンパイルする場合に作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
 
-既定値は **ON** です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
+既定の設定は ON です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
 
 OFF        
 クエリ オプティマイザーがクエリをコンパイルするときにクエリ述語内の列の 1 列ずつの統計が作成されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
@@ -346,14 +346,14 @@ OFF
 INCREMENTAL = ON | **OFF**        
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-AUTO_CREATE_STATISTICS を ON に設定し、INCREMENTAL を ON に設定します。 増分統計がサポートされている場合、この設定で、自動的に作成される統計情報は、常に増分として作成されます。 既定値は **OFF** です。 詳しくは、「[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
+AUTO_CREATE_STATISTICS を ON に設定し、INCREMENTAL を ON に設定します。 これにより、増分統計がサポートされている場合は常に、自動的に作成された統計情報が増分として設定されます。 既定値は OFF です。 詳しくは、「[CREATE STATISTICS](../../t-sql/statements/create-statistics-transact-sql.md)」をご覧ください。
 
 <a name="auto_shrink"></a> AUTO_SHRINK { ON | **OFF** } ON        
 データベース ファイルを定期的な圧縮処理の対象とします。
 
-データ ファイルとログ ファイルの両方を、自動的に圧縮できます。 AUTO_SHRINK では、データベースを単純復旧モデルに設定している場合、またはログをバックアップしている場合にのみ、トランザクション ログのサイズが圧縮されます。 OFF: 未使用領域の定期チェックの際に、データベース ファイルは自動的に圧縮されません。
+データ ファイルとログ ファイルの両方を、自動的に圧縮できます。 AUTO_SHRINK では、データベースを単純復旧モデルに設定している場合、またはログをバックアップしている場合にのみ、トランザクション ログのサイズが圧縮されます。 AUTO_SHRINK を OFF に設定すると、未使用領域の定期チェックの際、データベース ファイルは自動的に圧縮されません。
 
-AUTO_SHRINK オプションを使用すると、ファイル領域の 25% を超える領域が未使用の場合にファイルが圧縮されます。 このオプションを指定すると、ファイルは 2 つのサイズのいずれかまで縮小されます。 次のいずれか大きい方に縮小されます。
+AUTO_SHRINK オプションを使用すると、ファイル領域の 25% を超える領域が未使用の場合にファイルが圧縮されます。 ファイルは次の 2 つのサイズのいずれかに圧縮されます (どちらか大きい方)。
 
 - ファイルの 25% が未使用領域であるサイズ
 - ファイルが作成されたときのサイズ
@@ -372,11 +372,11 @@ OFF
 ON        
 クエリで使用される場合、および統計が古くなっている可能性がある場合に、クエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
-クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、古くなっている可能性がある統計を判断するため、クエリ述語内の列、テーブル、およびインデックス付きビューが使用されます。 この情報は、クエリがコンパイルされる前にクエリ オプティマイザーによって判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
+クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、古くなっている可能性がある統計を判断するため、クエリ述語内の列、テーブル、インデックス付きビューが使用されます。 この情報は、クエリがコンパイルされる前にクエリ オプティマイザーによって判断されます。 キャッシュされたクエリ プランを実行する前は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
 
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計、クエリ述語内の列に対して 1 列ずつ作成された統計、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。
 
-既定値は **ON** です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
+既定値は ON です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
 
 統計を同期的に更新するか非同期的に更新するかを指定するには、AUTO_UPDATE_STATISTICS_ASYNC オプションを使用します。
 
@@ -389,11 +389,11 @@ OFF
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。
+AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待たずにクエリをコンパイルします。
 
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを ON に設定しても、効果はありません。
 
-既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは **OFF** であり、クエリ オプティマイザーによる統計は同期更新となります。
+既定では、AUTO_UPDATE_STATISTICS_ASYNC オプションは OFF であり、クエリ オプティマイザーによる統計は同期更新となります。
 
 OFF        
 AUTO_UPDATE_STATISTICS オプションの統計の更新を同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待ってからクエリをコンパイルします。
@@ -417,7 +417,7 @@ ON
 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
 
 OFF        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 既定値は **OFF** です。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決できます。 既定値は OFF です。
 
 **\<change_tracking_option> ::=**         
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] と [!INCLUDE[ssSDSFull](../../includes/sssds-md.md)]
@@ -451,7 +451,7 @@ OFF
 
 CONTAINMENT = { **NONE** | PARTIAL}        
 なし        
-データベースは包含データベースではありません。
+データベースは非包含データベースです。
 
 PARTIAL        
 データベースは包含データベースです。 レプリケーション、変更データ キャプチャ、または変更の追跡が有効になっているデータベースの包含状態を PARTIAL に設定すると失敗します。 エラー チェックは、エラーを 1 つ検出すると停止します。 包含データベースの詳細については、「 [Contained Databases](../../relational-databases/databases/contained-databases.md)」をご覧ください。
@@ -482,7 +482,7 @@ LOCAL を指定し、カーソルを作成するときにカーソルを GLOBAL 
 カーソルは、バッチ、ストアド プロシージャ、またはトリガー内のローカル カーソル変数からか、ストアド プロシージャの OUTPUT パラメーターから参照できます。 バッチ、ストアド プロシージャ、またはトリガーが終了すると、カーソルは暗黙的に割り当てを解除されます。 カーソルが OUTPUT パラメーターで戻されない限り、カーソルは割り当てを解除されます。 カーソルは OUTPUT パラメーターで戻すことができます。 カーソルがこの方法で戻された場合は、カーソルを参照している最後の変数が割り当て解除されるか、スコープ外になったときに、カーソルの割り当てが解除されます。
 
 GLOBAL        
-GLOBAL を指定すると、カーソルが作成時に LOCAL として定義されていない場合、カーソルのスコープはその接続に対してグローバルになります。 カーソル名は、その接続によって実行されるストアド プロシージャやバッチの中で参照できます。
+カーソルが作成時に LOCAL として定義されていない場合、カーソルのスコープはその接続に対してグローバルになります。 カーソル名は、その接続によって実行されるストアド プロシージャやバッチの中で参照できます。
 
 接続が切断されたときだけカーソルが暗黙的に割り当てを解除されます。 詳しくは、「[DECLARE CURSOR](../../t-sql/language-elements/declare-cursor-transact-sql.md)」をご覧ください。
 
@@ -530,7 +530,7 @@ RESUME
 
 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
 
-データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに **READ ONLY** に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
+データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに READ ONLY に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
 データベースの暗号化の状態や暗号化スキャンの状態を確認するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使用します。
 
@@ -638,11 +638,11 @@ ON
 権限借用コンテキストを使用するデータベース モジュール (ユーザー定義関数やストアド プロシージャなど) は、データベース外部のリソースにアクセスできます。
 
 OFF        
-権限借用コンテキスト内にあるデータベース モジュールは、データベース外部のリソースにアクセスできません。
+権限借用のコンテキスト内のデータベース モジュールは、データベース外のリソースにアクセスできません。
 
 データベースがアタッチされている場合は常に、TRUSTWORTHY は OFF に設定されます。
 
-既定では、msdb データベースを除くすべてのシステム データベースで TRUSTWORTHY は OFF に設定されています。 model および tempdb データベースでは、この値は変更できません。 master データベースでは、TRUSTWORTHY オプションを ON に設定しないことを強くお勧めします。
+既定では、msdb データベースを除くすべてのシステム データベースで TRUSTWORTHY は OFF に設定されています。 model データベースおよび tempdb データベースのこの値は変更できません。 master データベースでは、TRUSTWORTHY オプションを ON に設定しないことを強くお勧めします。
 
 このオプションを設定するには、データベースに対する `CONTROL SERVER` 権限が必要です。
 
@@ -711,7 +711,7 @@ OFF
 ON        
 データベースは、混合エクステントを使用して最初のページを作成できます。
 
-この設定は、すべてのシステム データベースに対して **ON** です。 **tempdb** は OFF に対応する唯一のシステム データベースです。
+この設定は、すべてのシステム データベースに対して ON です。 **tempdb** は OFF に対応する唯一のシステム データベースです。
 
 **\<PARAMETERIZATION_option> ::=**        
 
@@ -736,7 +736,7 @@ ON
 クエリのストアを有効にします。
 
 OFF        
-クエリのストアを無効にします。 **OFF** が既定値です。
+クエリのストアを無効にします。 既定値は OFF です。
 
 CLEAR        
 クエリ ストアの内容を削除します。
@@ -759,6 +759,10 @@ DATA_FLUSH_INTERVAL_SECONDS
 MAX_STORAGE_SIZE_MB        
 クエリ ストアに発行される領域を示します。 MAX_STORAGE_SIZE_MB は **bigint** 型です。
 
+> [!NOTE]
+> MAX_STORAGE_SIZE_MB 制限は、厳密には適用されません。 ストレージ サイズは、クエリ ストアでディスクにデータが書き込まれる場合にのみ確認されます。 この間隔は DATA_FLUSH_INTERVAL_SECONDS オプションか、[!INCLUDE[ssManStudio](../../includes/ssManStudio-md.md)] クエリ ストアのダイアログ ボックス オプションである **[データのフラッシュ間隔]** によって設定されます。 間隔の既定値は 900 秒 (15 分) です。       
+> クエリ ストアでストレージ サイズの確認の合間に MAX_STORAGE_SIZE_MB の制限を超えた場合は、読み取り専用モードに移行します。 SIZE_BASED_CLEANUP_MODE が有効になっている場合、MAX_STORAGE_SIZE_MB 制限を適用するクリーンアップ メカニズムもトリガーされます。 
+
 INTERVAL_LENGTH_MINUTES        
 クエリのストアにランタイムの実行の統計データを集計する時間間隔を決定します。 領域使用量を最適化するため、ランタイム統計情報ストアのランタイム実行統計情報は、一定の時間枠で集計されます。 この固定間隔の構成に、INTERVAL_LENGTH_MINUTES 引数を使用します。 INTERVAL_LENGTH_MINUTES は **bigint** 型です。
 
@@ -766,7 +770,7 @@ SIZE_BASED_CLEANUP_MODE { **AUTO** | OFF }
 データの総量が最大サイズに近づいたときにクリーンアップを自動的にアクティブにするかどうかを制御します。
 
 AUTO        
-ディスクのサイズが **max_storage_size_mb** の 90% に達すると、サイズ ベースのクリーンアップが自動的にアクティブ化されます。 サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 **max_storage_size_mb** の約 80% で停止します。この値が既定の構成値です。
+ディスクのサイズが **MAX_STORAGE_SIZE_MB** の 90% に達すると、サイズ ベースのクリーンアップが自動的にアクティブ化されます。 サイズのクリーンアップでは、まず最も安価で最も古いクエリを削除します。 **MAX_STORAGE_SIZE_MB** の約 80% で停止します。この値が既定の構成値です。
 
 OFF        
 サイズ ベースのクリーンアップは自動的にアクティブ化されません。
@@ -841,7 +845,7 @@ ON
 [!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、不完全なページを検出できます。
 
 OFF        
-[!INCLUDE[ssDE](../../includes/ssde-md.md)] は不完全なページを検出できません。
+[!INCLUDE[ssDE](../../includes/ssde-md.md)] によって、不完全なページを検出できません。
 
 > [!IMPORTANT]
 > 構文構造 TORN_PAGE_DETECTION ON | OFF は、将来のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では削除される予定です。 新しい開発作業ではこの構文構造の使用を避け、現在この構文構造を使用しているアプリケーションは修正するようにしてください。 代わりに、PAGE_VERIFY オプションを使用してください。
@@ -958,7 +962,7 @@ ON
 データベース レベルでのスナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、トランザクションで SNAPSHOT トランザクション分離レベルを指定できます。 SNAPSHOT 分離レベルでトランザクションが実行されると、すべてのステートメントはトランザクション開始時のデータのスナップショットを参照します。 SNAPSHOT 分離レベルで実行されているトランザクションが複数のデータベースのデータにアクセスする場合は、すべてのデータベースで ALLOW_SNAPSHOT_ISOLATION が ON に設定されている必要があります。ALLOW_SNAPSHOT_ISOLATION が OFF になっているデータベース内のテーブルにアクセスする場合は、トランザクション内の各ステートメントで、FROM 句内のすべての参照に対してロック ヒントを使用する必要があります。
 
 OFF        
-データベース レベルでのスナップショット オプションを無効にします。 トランザクションに、SNAPSHOT トランザクション分離レベルを指定できません。
+データベース レベルでのスナップショット オプションを無効にします。 トランザクションでは、SNAPSHOT トランザクション分離レベルを指定できません。
 
 ALLOW_SNAPSHOT_ISOLATION を新しい状態に (ON から OFF へ、または OFF から ON へ) 設定した場合、ALTER DATABASE は、データベース内にあるすべての既存のトランザクションがコミットされるまで、呼び出し元に制御を返しません。 データベースが既に ALTER DATABASE ステートメントで指定した状態にある場合には、制御は呼び出し元に直ちに返されます。 ALTER DATABASE ステートメントがすぐに制御を返さない場合には、[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) を使用して、長時間実行されているトランザクションがあるかどうかを確認できます。 ALTER DATABASE ステートメントが取り消された場合、データベースは、ALTER DATABASE が開始された時点での状態に留まります。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューに、データベース内のスナップショット分離トランザクションの状態が表示されます。 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON の場合、ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF は 6 秒間待ってから、操作を再試行します。
 
@@ -974,7 +978,7 @@ master データベースと msdb データベースでは、このオプショ�
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-データベース レベルでの Read Committed スナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ_COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
+データベース レベルでの Read Committed スナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
 
 OFF        
 データベース レベルでの Read Committed スナップショット オプションを無効にします。 READ COMMITTED 分離レベルを指定しているトランザクションは、ロックを使用します。
@@ -1001,7 +1005,7 @@ OFF
 
 データベースが OFFLINE の場合には、MEMORY_OPTIMIZED_ELEVATE_TO_SNAPSHOT の状態を変更できません。
 
-既定のオプションは **OFF** です。
+既定のオプションは OFF です。
 
 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューの `is_memory_optimized_elevate_to_snapshot_on` 列を調べることでこのオプションの現在の設定を判断できます。
 
@@ -1090,7 +1094,7 @@ COMPATIBILITY_LEVEL = { 150 | 140 | 130 | 120 | 110 | 100 | 90 }
 
 CONCAT_NULL_YIELDS_NULL { ON | **OFF** }        
 ON        
-オペランドのいずれかが NULL の場合、連結操作の結果は NULL になります。 たとえば、文字列 "This is" と NULL を連結すると、結果は "This is" ではなく NULL になります。
+オペランドのいずれかが NULL の場合、連結操作の結果は NULL になります。 たとえば、文字列 "This is" と NULL を連結すると、"This is" という値ではなく NULL という値が返されます。
 
 OFF        
 null 値は空の文字列として扱われます。
@@ -1108,10 +1112,10 @@ QUOTED_IDENTIFIER { ON | OFF }
 ON        
 識別子を囲む二重引用符を使用できます。
 
-二重引用符で囲まれた文字列はすべて、オブジェクト識別子として解釈されます。 引用符で囲まれた識別子は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子の規則に従う必要はありません。 キーワードを含めることができます。また、[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子には使用できない文字を含めることもできます。 単一引用符 (') がリテラル文字列の一部になっている場合は、それを二重引用符 (") で表記できます。
+二重引用符で囲まれた文字列はすべて、オブジェクト識別子として解釈されます。 引用符で囲まれた識別子は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子の規則に従う必要はありません。 これはキーワードにすることができます。また、[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子では許可されない文字を含めることができます。 単一引用符 (') がリテラル文字列の一部になっている場合は、それを二重引用符 (") で表記できます。
 
 OFF        
-識別子は、引用符で囲むことはできず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
+識別子を引用符で囲むことができず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
 
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では識別子を角かっこ ([ ]) で囲むこともできます。 角かっこで囲まれた識別子は、QUOTED_IDENTIFIER 設定に関係なくいつでも使用できます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 
@@ -1126,7 +1130,7 @@ ON
 式で有効桁数の損失が発生する場合にエラーが生成されます。
 
 OFF        
-有効桁数が失われてもエラー メッセージが生成されず、結果を格納する列または変数の有効桁数に丸められます。
+有効桁数の損失が発生してもエラー メッセージが生成されず、結果を格納する列または変数の有効桁数に丸められます。
 
 > [!IMPORTANT]
 > NUMERIC_ROUNDABORT は、計算列やインデックス付きビューのインデックスを作成または変更する場合は、OFF に設定する必要があります。
@@ -1179,7 +1183,7 @@ NO_WAIT
 ## <a name="SettingOptions"></a> オプションの設定
 データベース オプションの現在の設定を取得するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューまたは [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) を使用します。
 
-データベース オプションを設定すると、変更は直ちに有効になります。
+データベース オプションを設定すると、新しい設定は直ちに有効になります。
 
 新しく作成されるすべてのデータベースについて、任意のデータベース オプションの既定値を変更できます。 これを実行するには、モデル データベース内の適切なデータベース オプションを変更します。
 
@@ -1409,7 +1413,7 @@ SET QUERY_STORE = ON
 互換性レベルは `SET` のオプションですが、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」で説明されています。
 
 > [!NOTE]
-> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
+> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
 
 ## <a name="syntax"></a>構文
 
@@ -1596,7 +1600,7 @@ OFF
 ON        
 クエリで使用される場合、および統計が古くなっている可能性がある場合に、クエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
-クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、古くなっている可能性がある統計を判断するため、クエリ述語内の列、テーブル、およびインデックス付きビューが使用されます。 この情報は、クエリがコンパイルされる前にクエリ オプティマイザーによって判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
+クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、古くなっている可能性がある統計を判断するため、クエリ述語内の列、テーブル、インデックス付きビューが使用されます。 この情報は、クエリがコンパイルされる前にクエリ オプティマイザーによって判断されます。 キャッシュされたクエリ プランを実行する前は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
 
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計、クエリ述語内の列に対して 1 列ずつ作成された統計、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。
 
@@ -1613,7 +1617,7 @@ OFF
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。
+AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待たずにクエリをコンパイルします。
 
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを ON に設定しても、効果はありません。
 
@@ -1638,10 +1642,10 @@ AUTO
 自動チューニングの値を AUTO に設定すると、自動チューニングに Azure 構成の既定値が適用されます。
 
 INHERIT        
-値 INHERIT を使用すると、親サーバーから既定の構成が継承されます。 親サーバー上の自動調整の構成をカスタマイズする必要があり、これらのカスタム設定を継承 (INHERIT) する、このようなサーバー上にデータベースがすべて存在する場合に特に便利です。 継承が機能するために、3 つの個別の調整オプションである FORCE_LAST_GOOD_PLAN、CREATE_INDEX、DROP_INDEX をデータベース上で DEFAULT に設定する必要があることに注意してください。
+INHERIT 値を使用すると、親サーバーから既定の構成が継承されます。 親サーバー上の自動調整の構成をカスタマイズする必要があり、これらのカスタム設定を継承 (INHERIT) する、このようなサーバー上にデータベースがすべて存在する場合に特に便利です。 継承が機能するために、3 つの個別の調整オプションである FORCE_LAST_GOOD_PLAN、CREATE_INDEX、DROP_INDEX をデータベース上で DEFAULT に設定する必要があることに注意してください。
 
 CUSTOM        
-値 CUSTOM を使用すると、データベース上で利用可能なそれぞれの自動調整オプションを手動でカスタムに構成する必要があります。
+CUSTOM 値を使用すると、データベース上で利用可能なそれぞれの自動調整オプションをカスタムに構成する必要があります。
 
 [自動調整](../../relational-databases/automatic-tuning/automatic-tuning.md)の自動インデックス管理 `CREATE_INDEX` オプションを有効または無効になります。
 
@@ -1677,7 +1681,7 @@ ON
 新しいクエリ プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
 
 OFF        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決できます。 これが既定値です。
 
 **\<change_tracking_option> ::=**        
 
@@ -1691,7 +1695,7 @@ ON
 指定した保有期間を過ぎると、変更追跡情報が自動的に削除されます。
 
 OFF        
-変更追跡データがデータベースから削除されません。
+変更追跡データはデータベースから削除されません。
 
 CHANGE_RETENTION = *retention_period* { **DAYS** | HOURS | MINUTES }        
 データベースに変更追跡情報を保持する最低限の期間を指定します。 データは、AUTO_CLEANUP の値が ON のときにのみ削除されます。
@@ -1725,7 +1729,7 @@ SET ステートメントを使用した接続レベルの設定は、CURSOR_CLO
 ENCRYPTION { ON | OFF }        
 データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
 
-データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに **READ ONLY** に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
+データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに READ ONLY に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
 データベースの暗号化の状態を確認するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使用します。
 
@@ -1800,7 +1804,7 @@ CLEAR
 クエリ ストアの内容を削除します。
 
 OPERATION_MODE        
-クエリのストアの操作モードについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集され、保持されます。 READ_ONLY モードでは、クエリのストアから情報を読み取ることができますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
+クエリのストアの操作モードについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集され、保持されます。 READ_ONLY モードでは、クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
 
 CLEANUP_POLICY        
 クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS により、クエリ ストアにクエリの情報が保持される日数が決定されます。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
@@ -1851,7 +1855,7 @@ ON
 データベース レベルでのスナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、トランザクションで SNAPSHOT トランザクション分離レベルを指定できます。 SNAPSHOT 分離レベルでトランザクションが実行されると、すべてのステートメントはトランザクション開始時のデータのスナップショットを参照します。 SNAPSHOT 分離レベルで実行されているトランザクションが複数のデータベースのデータにアクセスする場合は、すべてのデータベースで ALLOW_SNAPSHOT_ISOLATION が ON に設定されている必要があります。ALLOW_SNAPSHOT_ISOLATION が OFF になっているデータベース内のテーブルにアクセスする場合は、トランザクション内の各ステートメントで、FROM 句内のすべての参照に対してロック ヒントを使用する必要があります。
 
 OFF        
-データベース レベルでのスナップショット オプションを無効にします。 トランザクションに、SNAPSHOT トランザクション分離レベルを指定できません。
+データベース レベルでのスナップショット オプションを無効にします。 トランザクションでは、SNAPSHOT トランザクション分離レベルを指定できません。
 
 ALLOW_SNAPSHOT_ISOLATION を新しい状態に (ON から OFF へ、または OFF から ON へ) 設定した場合、ALTER DATABASE は、データベース内にあるすべての既存のトランザクションがコミットされるまで、呼び出し元に制御を返しません。 データベースが既に ALTER DATABASE ステートメントで指定した状態にある場合には、制御は呼び出し元に直ちに返されます。 ALTER DATABASE ステートメントがすぐに制御を返さない場合には、[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) を使用して、長時間実行されているトランザクションがあるかどうかを確認できます。 ALTER DATABASE ステートメントが取り消された場合、データベースは、ALTER DATABASE が開始された時点での状態に留まります。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューに、データベース内のスナップショット分離トランザクションの状態が表示されます。 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON の場合、ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF は 6 秒間待ってから、操作を再試行します。
 
@@ -1867,7 +1871,7 @@ master および msdb データベースでは、このオプションは既定�
 
 READ_COMMITTED_SNAPSHOT { ON | OFF }        
 ON        
-データベース レベルでの Read Committed スナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ_COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
+データベース レベルでの Read Committed スナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
 
 OFF        
 データベース レベルでの Read Committed スナップショット オプションを無効にします。 READ COMMITTED 分離レベルを指定しているトランザクションは、ロックを使用します。
@@ -2003,7 +2007,7 @@ ON
 二重引用符で囲まれた文字列はすべて、オブジェクト識別子として解釈されます。 引用符で囲まれた識別子は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子の規則に従う必要はありません。 キーワードを含めることができます。また、[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子には使用できない文字を含めることもできます。 単一引用符 (') がリテラル文字列の一部になっている場合は、それを二重引用符 (") で表記できます。
 
 OFF        
-識別子は、引用符で囲むことはできず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
+識別子を引用符で囲むことができず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では識別子を角かっこ ([ ]) で囲むこともできます。 角かっこで囲まれた識別子は、QUOTED_IDENTIFIER 設定に関係なくいつでも使用できます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 
@@ -2070,7 +2074,7 @@ NO_WAIT
 
 データベース オプションの現在の設定を取得するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューまたは [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) を使用します。
 
-データベース オプションを設定すると、変更は直ちに有効になります。
+データベース オプションを設定すると、新しい設定は直ちに有効になります。
 
 新しく作成されるすべてのデータベースについて、任意のデータベース オプションの既定値を変更できます。 これを実行するには、モデル データベース内の適切なデータベース オプションを変更します。
 
@@ -2205,7 +2209,7 @@ SET QUERY_STORE = ON
 互換性レベルは `SET` のオプションですが、「[ALTER DATABASE 互換性レベル](../../t-sql/statements/alter-database-transact-sql-compatibility-level.md)」で説明されています。
 
 > [!NOTE]
-> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
+> 多くのデータベース設定オプションは、[SET ステートメント](../../t-sql/statements/set-statements-transact-sql.md)を使用して現在のセッション用に構成できます。これらは多くの場合、接続するアプリケーションによって構成されます。 セッション レベルの SET オプションは、**ALTER DATABASE SET** の値をオーバーライドします。 次のセクションで説明されているデータベース オプションは、セッション用に設定できる値であり、他の SET オプションの値は明示的に指定されていません。
 
 ## <a name="syntax"></a>構文
 
@@ -2337,7 +2341,7 @@ CURRENT
 ON        
 クエリ プランを改善してクエリのパフォーマンスを向上させるために、クエリ オプティマイザーが必要に応じてクエリ述語内の列に対して 1 列ずつ統計を作成します。 これらの 1 列ずつの統計は、クエリ オプティマイザーがクエリをコンパイルする場合に作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
 
-既定値は **ON** です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
+既定値は ON です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
 
 OFF        
 クエリ オプティマイザーがクエリをコンパイルするときにクエリ述語内の列の 1 列ずつの統計が作成されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
@@ -2374,7 +2378,7 @@ OFF
 ON        
 クエリで使用される場合、および統計が古くなっている可能性がある場合に、クエリ オプティマイザーによって更新されるように指定します。 挿入、更新、削除、またはマージの各操作によってテーブルまたはインデックス付きビューのデータの分布が変わると、統計は古くなったと判断されます。 クエリ オプティマイザーでは、統計が前回更新されてから発生したデータ変更の数をカウントし、その変更の数をしきい値と比較することで、統計が古くなっている可能性がないかを判断します。 このしきい値は、テーブルまたはインデックス付きビューの行数に基づいて決められます。
 
-クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、古くなっている可能性がある統計を判断するため、クエリ述語内の列、テーブル、およびインデックス付きビューが使用されます。 この情報は、クエリがコンパイルされる前にクエリ オプティマイザーによって判断されます。 キャッシュされたクエリ プランを実行する前は、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
+クエリ オプティマイザーによる古い統計の確認は、クエリをコンパイルする前と、キャッシュされたクエリ プランを実行する前に行われます。 クエリ オプティマイザーでは、古くなっている可能性がある統計を判断するため、クエリ述語内の列、テーブル、インデックス付きビューが使用されます。 この情報は、クエリがコンパイルされる前にクエリ オプティマイザーによって判断されます。 キャッシュされたクエリ プランを実行する前は、[!INCLUDE[ssDE](../../includes/ssde-md.md)] で、クエリ プランが最新の統計を参照しているかどうかが確認されます。
 
 AUTO_UPDATE_STATISTICS オプションは、インデックスに対して作成された統計、クエリ述語内の列に対して 1 列ずつ作成された統計、および CREATE STATISTICS ステートメントを使用して作成された統計に適用されます。 また、フィルター選択された統計情報にも適用されます。
 
@@ -2391,7 +2395,7 @@ OFF
 
 <a name="auto_update_statistics_async"></a> AUTO_UPDATE_STATISTICS_ASYNC { ON | **OFF** }        
 ON        
-AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーは、統計の更新が完了するのを待たずにクエリをコンパイルします。
+AUTO_UPDATE_STATISTICS オプションの統計の更新を非同期更新にするように指定します。 クエリ オプティマイザーでは、統計の更新が完了するのを待たずにクエリをコンパイルします。
 
 AUTO_UPDATE_STATISTICS が ON に設定されていなければ、このオプションを ON に設定しても、効果はありません。
 
@@ -2416,7 +2420,7 @@ ON
 新しいクエリ プランがパフォーマンスの低下を引き起こしている [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリに対して、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランが自動的に強制されます。 [!INCLUDE[ssde_md](../../includes/ssde_md.md)] では、強制プランを使用する [!INCLUDE[tsql-md](../../includes/tsql-md.md)] クエリのクエリ パフォーマンスが継続的に監視されます。 パフォーマンスが向上した場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] では最後の既知の正常なプランの使用が続けられます。 パフォーマンスの向上が検出されない場合、[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は新しいクエリ プランを生成します。 クエリ ストアが有効でない場合、または*読み取り/書き込み*モードでない場合は、ステートメントは失敗します。
 
 OFF        
-[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決することができます。 これが既定値です。
+[!INCLUDE[ssde_md](../../includes/ssde_md.md)] は、[sys.dm_db_tuning_recommendations](../../relational-databases/system-dynamic-management-views/sys-dm-db-tuning-recommendations-transact-sql.md) ビューのクエリ プランの変更によって引き起こされる、潜在的なクエリ パフォーマンスの低下をレポートします。 ただし、これらの推奨事項は自動的には適用されません。 ユーザーは、ビューに表示される [!INCLUDE[tsql-md](../../includes/tsql-md.md)] スクリプトを適用することによって、アクティブな推奨事項を監視し、特定された問題を解決できます。 これが既定値です。
 
 **\<change_tracking_option> ::=**        
 
@@ -2430,7 +2434,7 @@ ON
 指定した保有期間を過ぎると、変更追跡情報が自動的に削除されます。
 
 OFF        
-変更追跡データがデータベースから削除されません。
+変更追跡データはデータベースから削除されません。
 
 CHANGE_RETENTION = *retention_period* { **DAYS** | HOURS | MINUTES }        
 データベースに変更追跡情報を保持する最低限の期間を指定します。 データは、AUTO_CLEANUP の値が ON のときにのみ削除されます。
@@ -2464,7 +2468,7 @@ SET ステートメントを使用した接続レベルの設定は、CURSOR_CLO
 ENCRYPTION { ON | **OFF** }        
 データベースを暗号化する (ON) か、暗号化しない (OFF) かを設定します。 データベース暗号化について詳しくは、「[透過的なデータ暗号化](../../relational-databases/security/encryption/transparent-data-encryption.md)」および「[Azure SQL Database での Transparent Data Encryption](../../relational-databases/security/encryption/transparent-data-encryption-azure-sql.md)」をご覧ください。
 
-データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに **READ ONLY** に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
+データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに READ ONLY に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
 
 データベースの暗号化の状態を確認するには、[sys.dm_database_encryption_keys](../../relational-databases/system-dynamic-management-views/sys-dm-database-encryption-keys-transact-sql.md) 動的管理ビューを使用します。
 
@@ -2535,7 +2539,7 @@ CLEAR
 クエリ ストアの内容を削除します。
 
 OPERATION_MODE        
-クエリのストアの操作モードについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集され、保持されます。 READ_ONLY モードでは、クエリのストアから情報を読み取ることができますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
+クエリのストアの操作モードについて説明します。 有効な値は、READ_ONLY、READ_WRITE はします。 READ_WRITE モードでは、クエリのストアでクエリ プランとランタイム実行の統計情報が収集され、保持されます。 READ_ONLY モードでは、クエリ ストアから情報を読み取ることはできますが、新しい情報は追加されません。 クエリのストアを変更は、最大値が割り当てられているクエリのストアの領域が不足している場合は操作モードを READ_ONLY にします。
 
 CLEANUP_POLICY        
 クエリ ストアのデータ保持ポリシーを表します。 STALE_QUERY_THRESHOLD_DAYS により、クエリ ストアにクエリの情報が保持される日数が決定されます。 STALE_QUERY_THRESHOLD_DAYS は **bigint** 型です。
@@ -2586,7 +2590,7 @@ ON
 データベース レベルでのスナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、トランザクションで SNAPSHOT トランザクション分離レベルを指定できます。 SNAPSHOT 分離レベルでトランザクションが実行されると、すべてのステートメントはトランザクション開始時のデータのスナップショットを参照します。 SNAPSHOT 分離レベルで実行されているトランザクションが複数のデータベースのデータにアクセスする場合は、すべてのデータベースで ALLOW_SNAPSHOT_ISOLATION が ON に設定されている必要があります。ALLOW_SNAPSHOT_ISOLATION が OFF になっているデータベース内のテーブルにアクセスする場合は、トランザクション内の各ステートメントで、FROM 句内のすべての参照に対してロック ヒントを使用する必要があります。
 
 OFF        
-データベース レベルでのスナップショット オプションを無効にします。 トランザクションに、SNAPSHOT トランザクション分離レベルを指定できません。
+データベース レベルでのスナップショット オプションを無効にします。 トランザクションでは、SNAPSHOT トランザクション分離レベルを指定できません。
 
 ALLOW_SNAPSHOT_ISOLATION を新しい状態に (ON から OFF へ、または OFF から ON へ) 設定した場合、ALTER DATABASE は、データベース内にあるすべての既存のトランザクションがコミットされるまで、呼び出し元に制御を返しません。 データベースが既に ALTER DATABASE ステートメントで指定した状態にある場合には、制御は呼び出し元に直ちに返されます。 ALTER DATABASE ステートメントがすぐに制御を返さない場合には、[sys.dm_tran_active_snapshot_database_transactions](../../relational-databases/system-dynamic-management-views/sys-dm-tran-active-snapshot-database-transactions-transact-sql.md) を使用して、長時間実行されているトランザクションがあるかどうかを確認できます。 ALTER DATABASE ステートメントが取り消された場合、データベースは、ALTER DATABASE が開始された時点での状態に留まります。 [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューに、データベース内のスナップショット分離トランザクションの状態が表示されます。 **snapshot_isolation_state_desc** = IN_TRANSITION_TO_ON の場合、ALTER DATABASE ALLOW_SNAPSHOT_ISOLATION OFF は 6 秒間待ってから、操作を再試行します。
 
@@ -2602,7 +2606,7 @@ master および msdb データベースでは、このオプションは既定�
 
 READ_COMMITTED_SNAPSHOT { ON | **OFF** }        
 ON        
-データベース レベルでの Read Committed スナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ_COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
+データベース レベルで READ COMMITTED スナップショット オプションを有効にします。 有効にした場合、スナップショット分離を使用するトランザクションがなくても、DML ステートメントによって、行バージョンの生成が開始されます。 このオプションを有効にすると、READ COMMITTED 分離レベルを指定しているトランザクションは、ロックではなく、行のバージョン管理を使用します。 トランザクションが READ COMMITTED 分離レベルで実行されている場合、すべてのステートメントは、ステートメントの開始時に存在していたデータのスナップショットを参照します。
 
 OFF        
 データベース レベルでの Read Committed スナップショット オプションを無効にします。 READ COMMITTED 分離レベルを指定しているトランザクションは、ロックを使用します。
@@ -2738,7 +2742,7 @@ ON
 二重引用符で囲まれた文字列はすべて、オブジェクト識別子として解釈されます。 引用符で囲まれた識別子は、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子の規則に従う必要はありません。 キーワードを含めることができます。また、[!INCLUDE[tsql](../../includes/tsql-md.md)] 識別子には使用できない文字を含めることもできます。 単一引用符 (') がリテラル文字列の一部になっている場合は、それを二重引用符 (") で表記できます。
 
 OFF        
-識別子は、引用符で囲むことはできず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
+識別子を引用符で囲むことができず、[!INCLUDE[tsql](../../includes/tsql-md.md)] の識別子に関するすべての規則に従う必要があります。 リテラルは単一引用符と二重引用符のどちらで区切ることもできます。
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では識別子を角かっこ ([ ]) で囲むこともできます。 角かっこで囲まれた識別子は、QUOTED_IDENTIFIER 設定に関係なくいつでも使用できます。 詳細については、「[データベース識別子](../../relational-databases/databases/database-identifiers.md)」を参照してください。
 
@@ -2798,7 +2802,7 @@ NO_WAIT
 
 データベース オプションの現在の設定を取得するには、[sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) カタログ ビューまたは [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md) を使用します。
 
-データベース オプションを設定すると、変更は直ちに有効になります。
+データベース オプションを設定すると、新しい設定は直ちに有効になります。
 
 新しく作成されるすべてのデータベースについて、任意のデータベース オプションの既定値を変更できます。 これを実行するには、モデル データベース内の適切なデータベース オプションを変更します。
 
@@ -2942,24 +2946,18 @@ SET
 
 <query_store_option> ::=
 {
-    QUERY_STORE
-    {
- = OFF
-        | = ON
-    }
+    QUERY_STORE { OFF |  ON }
 }
 
 <result_set_caching_option> ::=
 {
-    RESULT_SET_CACHING { ON | OFF }
+    RESULT_SET_CACHING {ON | OFF}
 }
 
 <snapshot_option> ::=
 {
     READ_COMMITTED_SNAPSHOT {ON | OFF }
 }
-
-
 
 ```
 
@@ -2973,10 +2971,11 @@ SET
 自動オプションを制御します。
 
 AUTO_CREATE_STATISTICS { **ON** | OFF }        
+
 ON        
 クエリ プランを改善してクエリのパフォーマンスを向上させるために、クエリ オプティマイザーが必要に応じてクエリ述語内の列に対して 1 列ずつ統計を作成します。 これらの 1 列ずつの統計は、クエリ オプティマイザーがクエリをコンパイルする場合に作成されます。 1 列ずつの統計は、まだ既存の統計オブジェクトの最初の列になっていない列についてのみ作成されます。
 
-既定値は **ON** です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
+既定値は ON です。 ほとんどのデータベースで既定の設定を使用することをお勧めします。
 
 OFF        
 クエリ オプティマイザーがクエリをコンパイルするときにクエリ述語内の列の 1 列ずつの統計が作成されません。 このオプションを OFF に設定すると、最適ではないクエリ プランが作成されて、クエリのパフォーマンスが低下することがあります。
@@ -2990,6 +2989,7 @@ OFF
 データベース暗号化の状態を制御します。
 
 ENCRYPTION { ON | OFF }        
+
 ON        
 暗号化するデータベースを設定します。
 
@@ -2999,26 +2999,31 @@ OFF
 データベース暗号化について詳しくは、「透過的なデータ暗号化」と「Azure SQL Database での Transparent Data Encryption」をご覧ください。
 
 データベース レベルで暗号化を有効にすると、すべてのファイル グループが暗号化されます。 すべての新しいファイル グループに、その暗号化プロパティが継承されます。 データベースに READ ONLY に設定されているファイル グループがあると、データベースの暗号化操作は失敗します。
+
 データベースの暗号化の状態や暗号化スキャンの状態を確認するには、sys.dm_database_encryption_keys 動的管理ビューを使用します。
 
-**\<query_store_option> ::=**        
+**<query_store_option> ::=**        
 
-ON | **OFF**        
 このデータ ウェアハウスでクエリ ストアを有効にするかどうかを制御します。
+
+QUERY_STORE { ON |  **OFF**  }
 
 ON        
 クエリのストアを有効にします。
 
 OFF        
+
 クエリのストアを無効にします。 既定値は OFF です。
 
 > [!NOTE]
 > [!INCLUDE[ssSDW](../../includes/sssdw-md.md)] の場合、ユーザー データベースから `ALTER DATABASE SET QUERY_STORE` を実行する必要があります。 別のデータ ウェアハウス インスタンスからのステートメントの実行は、サポートされていません。
 
-**\<result_set_caching_option> ::=**         
+**<result_set_caching_option> ::=**         
 **適用対象**:Azure SQL Data Warehouse (プレビュー)
 
-このコマンドは、`master` データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という新しい列が [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) に導入され、データベースの結果キャッシュ設定を示します。  
+クエリ結果をデータベースにキャッシュするかどうかを制御します。
+
+RESULT_SET_CACHING {ON | OFF}
 
 ON        
 このデータベースから返されたクエリの結果セットが Azure SQL Data Warehouse ストレージにキャッシュされることを指定します。
@@ -3035,9 +3040,11 @@ command|Like|%DWResultCacheDb%|
 | | |
 
 ### <a name="remarks"></a>Remarks
+このコマンドは、`master` データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という新しい列が [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) に導入され、データベースの結果キャッシュ設定を示します。  
+
 次の要件がすべて満たされる場合、キャッシュされた結果セットはクエリに再利用されます。
 
-1. クエリを実行しているユーザーが、クエリで参照されているすべてのテーブルに対してアクセス権がある。
+1. クエリを実行しているユーザーに、クエリで参照されているすべてのテーブルに対するアクセス権がある。
 1. 新しいクエリと、結果セットのキャッシュを生成した以前のクエリとの間に、完全一致がある。
 1. キャッシュされた結果セットの生成元のテーブルに対してデータやスキーマの変更が行われていない。  
 
@@ -3045,22 +3052,23 @@ command|Like|%DWResultCacheDb%|
 
 大きな結果セットを伴うクエリ (100 万行を超えるなど) の場合、結果のキャッシュが作成される最初の実行時にパフォーマンスが低下することがあります。
 
-**<snapshot_option> ::=**        
+**<snapshot_option> ::=**         
+**適用対象**:Azure SQL Data Warehouse (プレビュー)
 
-トランザクション分離レベルを計算します。
+データベースのトランザクション分離レベルを制御します。
 
 READ_COMMITTED_SNAPSHOT  { ON | **OFF** }        
-**適用対象**:Azure SQL Data Warehouse (プレビュー)
 
 ON        
 データベース レベルで READ_COMMITTED_SNAPSHOT オプションを有効にします。
 
 OFF        
-データベース レベルで READ_COMMITTED_SNAPSHOT オプションをオフにします。
+データベース レベルで READ_COMMITTED_SNAPSHOT オプションを無効にします。
 
-データベースの READ_COMMITTED_SNAPSHOT のオン/オフを切り替えると、このデータベースにつながっている接続がすべて切断されます。 この変更はデータベースのメンテナンス期間中に行うか、ALTER DATABSE コマンドを実行している接続を除き、データベースへのアクティブな接続がなくなるまで待つことをお勧めします。  データベースをシングル ユーザー モードにする必要はありません。  セッションレベルで READ_COMMITTED_SNAPSHOT 設定を変更することはできません。  データベースのこの設定は、sys.databases の is_read_committed_snapshot_on 列で確認します。
+### <a name="remarks"></a>Remarks
+このコマンドは、`master` データベースに接続しているときに実行する必要があります。 ユーザー データベースの READ_COMMITTED_SNAPSHOT のオン/オフを切り替えると、このデータベースにつながっている接続がすべて切断されます。 この変更はデータベースのメンテナンス期間中に行うか、ALTER DATABSE コマンドを実行している接続を除き、データベースへのアクティブな接続がなくなるまで待つことをお勧めします。  データベースをシングル ユーザー モードにする必要はありません。 セッションレベルで READ_COMMITTED_SNAPSHOT 設定を変更することはできません。  データベースのこの設定は、sys.databases の is_read_committed_snapshot_on 列で確認します。
 
-データベースで READ_COMMITTED_SNAPSHOT が有効になっている場合、複数のデータ バージョンが存在するとき、各バージョンのスキャンのため、クエリのパフォーマンスが遅くなることがあります。 トランザクションが長時間開いている状態になるときも、トランザクションによってデータが変更され、バージョンのクリーンアップが阻止される場合、データベースのサイズが増えることがあります。  
+データベースで READ_COMMITTED_SNAPSHOT が有効になっている場合、複数のデータ バージョンが存在するとき、各バージョンのスキャンのため、クエリのパフォーマンスが遅くなることがあります。 トランザクションが長時間になると、データベースが増大することもあります。 この問題は、バージョン クリーンアップをブロックするこのようなトランザクションでデータが変更される場合に発生します。  
 
 ## <a name="permissions"></a>アクセス許可
 
@@ -3070,56 +3078,33 @@ READ_COMMITTED_SNAPSHOT オプションを設定するには、ユーザーに�
 
 ## <a name="examples"></a>使用例
 
-### <a name="a-enabling-the-query-store"></a>A. クエリのストアを有効にする
-次の例では、クエリ ストアを有効にします。
+### <a name="check-statistics-setting-for-a-database"></a>データベースの統計設定を確認する
+
+```sql
+SELECT name, is_auto_create_stats_on FROM sys.databases
+```
+### <a name="enable-query-store-for-a-database"></a>データベースのクエリ ストアを有効にする
 
 ```sql
 ALTER DATABASE [database_name]
 SET QUERY_STORE = ON;
 ```
 
-### <a name="b-enable-result-set-caching-for-a-database"></a>B. データベースに対して結果セットのキャッシュを有効にする
+### <a name="enable-result-set-caching-for-a-database"></a>データベースに対して結果セットのキャッシュを有効にする
 
 ```sql
 ALTER DATABASE [database_name]
 SET RESULT_SET_CACHING ON;
 ```
 
-### <a name="c-disable-result-set-caching-for-a-database"></a>C. データベースに対して結果セットのキャッシュを無効にする
-
-```sql
-ALTER DATABASE [database_name]  
-SET RESULT_SET_CACHING OFF;
-```
-
-### <a name="d-check-result-set-caching-setting-for-a-database"></a>D. データベースに対する結果セットのキャッシュを確認する
+### <a name="check-result-set-caching-setting-for-a-database"></a>データベースに対する結果セットのキャッシュを確認する
 
 ```sql
 SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="e-check-for-number-of-queries-with-result-set-cache-hit-and-cache-miss"></a>E. 結果セットのキャッシュ ヒットとキャッシュ ミスと共にクエリの数を確認する
-
-```sql
-SELECT  
-Queries=CacheHits+CacheMisses,
-CacheHits,
-CacheMisses
-CacheHitPct=CacheHits*1.0/(CacheHits+CacheMisses)
-FROM  
-(SELECT  
-CacheHits=count(distinct case when s.command like '%DWResultCacheDb%' and
-r.resource_class IS NULL and s.operation_type = 'ReturnOperation' and  
-s.step_index = 0 then s.request_id else null end) ,
-CacheMisses=count(distinct case when r.resource_class IS NOT NULL then  
-s.request_id else null end)
-     FROM sys.dm_pdw_request_steps s  
-     JOIN sys.dm_pdw_exec_requests r  
-     ON s.request_id = r.request_id) A;
-```
-
-### <a name="f-check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>F. あるクエリに対する結果セットのキャッシュ ヒットまたはキャッシュ ミスを確認する
+### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>あるクエリに対する結果セットのキャッシュ ヒットまたはキャッシュ ミスを確認する
 
 ```sql
 If
@@ -3131,7 +3116,7 @@ ELSE
 SELECT 0 as is_cache_hit;
 ```
 
-### <a name="g-check-for-all-queries-with-result-set-cache-hits"></a>G. 結果セットにキャッシュ ヒットがあるクエリをすべて確認する
+### <a name="check-for-all-queries-with-result-set-cache-hits"></a>結果セットにキャッシュ ヒットがあるクエリをすべて確認する
 
 ```sql
 SELECT *  
@@ -3139,7 +3124,7 @@ FROM sys.dm_pdw_request_steps
 WHERE command like '%DWResultCacheDb%' and step_index = 0;
 ```
 
-### <a name="h-enable-read_committed_snapshot-option-for-a-database"></a>H. データベースの Read_Committed_Snapshot オプションを有効にする
+### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>データベースの Read_Committed_Snapshot オプションを有効にする
 
 ```sql
 ALTER DATABASE MyDatabase  

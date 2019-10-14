@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 220584d8-b291-43ae-b036-fbba3cc07a2e
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: f08360562112b23344543d2c63c28ebfa39bc88d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 69766a9278b09f081bbfaaced90e45acd1cf91c5
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67907843"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710988"
 ---
 # <a name="define-an-article"></a>アーティクルの定義
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -106,7 +106,7 @@ ms.locfileid: "67907843"
   
 #### <a name="to-define-an-article-for-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションのアーティクルを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 アーティクルが属しているパブリケーションの名前を **@publication** に、アーティクルの名前を **@article** に、パブリッシュされるデータベース オブジェクトを **@source_object** に指定し、さらにその他のオプション パラメーターを指定します。 **dbo** 以外の場合は、 **@source_owner** を使用してオブジェクトのスキーマ所有権を指定します。 アーティクルがログベースのテーブル アーティクルでない場合は、アーティクルの種類を **@type** に指定します。詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addarticle](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)を実行します。 `@publication` にアーティクルが属しているパブリケーションの名前を、`@article` にアーティクル名を、`@source_object` にパブリッシュするデータベース オブジェクトを指定し、さらにその他のオプション パラメーターを指定します。 **dbo** 以外の場合は、`@source_owner` を使用してオブジェクトのスキーマ所有権を指定します。 アーティクルがログベースのテーブル アーティクルでない場合は、`@type` にアーティクルの種類を指定します。詳細については、「[アーティクルの種類の指定 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)」をご覧ください。  
   
 2.  テーブル内の行を行方向にフィルター選択する場合、またはアーティクルを表示する場合は、 [sp_articlefilter](../../../relational-databases/system-stored-procedures/sp-articlefilter-transact-sql.md) を使用してフィルター句を定義します。 詳しくは、「 [Define and Modify a Static Row Filter](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」をご覧ください。  
   
@@ -123,7 +123,7 @@ ms.locfileid: "67907843"
   
 #### <a name="to-define-an-article-for-a-merge-publication"></a>マージ パブリケーションのアーティクルを定義するには  
   
-1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 パブリケーションの名前を **@publication** に、アーティクルの名前を **@article** に、パブリッシュするオブジェクトを **@source_object** 」を参照してください。 テーブル行を行方向にフィルター選択する場合は、 **@subset_filterclause** 」を参照してください。 詳細については、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 」および「 [静的行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」を参照してください。 アーティクルがテーブル アーティクルでない場合、 **@type** 」を参照してください。 詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
+1.  パブリッシャー側のパブリケーション データベースに対して、 [sp_addmergearticle](../../../relational-databases/system-stored-procedures/sp-addmergearticle-transact-sql.md)を実行します。 `@publication` にパブリケーション名を、`@article` にアーティクルの名前を、`@source_object` にパブリッシュするオブジェクトを指定します。 テーブル行を行方向にフィルター選択する場合は、`@subset_filterclause` の値を指定します。 詳細については、「 [マージ アーティクルのパラメーター化された行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-parameterized-row-filter-for-a-merge-article.md) 」および「 [静的行フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-static-row-filter.md)」を参照してください。 このアーティクルがテーブル アーティクルでない場合、`@type` にアーティクルの種類を指定します。 詳細については、「[Specify Article Types &#40;Replication Transact-SQL Programming&#41;](../../../relational-databases/replication/publish/specify-article-types-replication-transact-sql-programming.md)」(アーティクルの種類の指定 (レプリケーション Transact-SQL プログラミング)) をご覧ください。  
   
 2.  (省略可) パブリッシャー側のパブリケーション データベースに対して [sp_addmergefilter](../../../relational-databases/system-stored-procedures/sp-addmergefilter-transact-sql.md) を実行し、2 つのアーティクル間に結合フィルターを定義します。 詳細については、「 [マージ アーティクル間の結合フィルターの定義および変更](../../../relational-databases/replication/publish/define-and-modify-a-join-filter-between-merge-articles.md)」をご参照ください。  
   

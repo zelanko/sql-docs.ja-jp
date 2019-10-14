@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: aeee9546-4480-49f9-8b1e-c71da1f056c7
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: a66a95a1b2f0561d7598c5a6e400641833e5a221
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e3de9c6652de3ddd8d80bbc2d09b003acfe5220
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68115170"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710687"
 ---
 # <a name="conflict-resolution-for-merge-replication"></a>マージ レプリケーションの競合の解決
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -27,9 +27,9 @@ ms.locfileid: "68115170"
   
  競合データは、競合の保有期間に指定した期間内 (既定では 14 日間) はレプリケーション競合表示モジュールで利用できます。 競合の保有期間を設定するには、次のいずれかを実行します。  
   
--   [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の **@conflict_retention** パラメーターに保有期間の値を指定します。  
+-   [sp_addmergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@conflict_retention` パラメーターに保有期間の値を指定します。  
   
--   [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) の **@property** パラメーターに **conflict_retention** を、 **@value** パラメーターに保有期間の値を指定します。  
+-   [sp_changemergepublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepublication-transact-sql.md) の `@property` パラメーターに **conflict_retention** を、`@value` パラメーターに保有期間の値を指定します。  
   
  競合情報の既定の保存先は次のとおりです。    
 -   パブリケーションの互換性レベルが 90 RTM 以上の場合は、パブリッシャーおよびサブスクライバーに保存されます。   
@@ -85,9 +85,9 @@ ms.locfileid: "68115170"
     -   **decentralized_conflicts** - 1 は競合する行がサブスクライバーに格納されていることを示し、0 は競合する行がサブスクライバーに格納されていないことを示します。  
   
         > [!NOTE]  
-        >  マージ パブリケーションの競合ログの動作は、 **@conflict_logging** の [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)」を参照してください。 Use of the **@centralized_conflicts** parameter has been deprecated.  
+        >  マージ パブリケーションの競合ログの動作は、[sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@conflict_logging` パラメーターを使用して設定します。 `@centralized_conflicts` パラメータの使用は非推奨です。  
   
-     次の表で、 **@conflict_logging** 」を参照してください。  
+     次の表では、`@conflict_logging` に対して指定された値に基づくこれらの列の値について説明します。  
   
     |@conflict_logging 値|centralized_conflicts|decentralized_conflicts|  
     |------------------------------|----------------------------|------------------------------|  
@@ -95,13 +95,13 @@ ms.locfileid: "68115170"
     |**サブスクライバー**|0|1|  
     |**両方**|1|1|  
   
-2.  パブリッシャー側のパブリケーション データベースまたはサブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)を実行します。 特定のパブリケーションに属するアーティクルの競合情報のみが返されるようにするには、 **@publication** に値を指定します。 これにより、競合を持つアーティクルに対応する競合テーブル情報が返されます。 目的のアーティクルに対応する **conflict_table** の値を確認します。 アーティクルに対応する **conflict_table** の値が NULL の場合、そのアーティクル内では削除競合のみが発生しています。  
+2.  パブリッシャー側のパブリケーション データベースまたはサブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)を実行します。 特定のパブリケーションに属するアーティクルの競合情報のみが返されるようにするには、`@publication` に値を指定します。 これにより、競合を持つアーティクルに対応する競合テーブル情報が返されます。 目的のアーティクルに対応する **conflict_table** の値を確認します。 アーティクルに対応する **conflict_table** の値が NULL の場合、そのアーティクル内では削除競合のみが発生しています。  
   
 3.  (省略可) 目的のアーティクルで競合する行を確認します。 手順 1. の **centralized_conflicts** および **decentralized_conflicts** の値に応じて、次のいずれかの操作を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)を実行します。 手順 1. で確認したアーティクルの競合テーブルを **@conflict_table** 」を参照してください。 (省略可) 特定のパブリケーションの競合情報が返されるように制限するには、 **@publication** に値を指定します。 これにより、優先されなかった行の行データとその他の情報が返されます。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)を実行します。 手順 1 で確認したアーティクルの競合テーブルを `@conflict_table` に指定します。 (省略可) 特定のパブリケーションの競合情報が返されるように制限するには、`@publication` の値を指定します。 これにより、優先されなかった行の行データとその他の情報が返されます。  
   
-    -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)を実行します。 手順 1. で確認したアーティクルの競合テーブルを **@conflict_table** 」を参照してください。 これにより、優先されなかった行の行データとその他の情報が返されます。  
+    -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergeconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergeconflictrows-transact-sql.md)を実行します。 手順 1 で確認したアーティクルの競合テーブルを `@conflict_table` に指定します。 これにより、優先されなかった行の行データとその他の情報が返されます。  
   
 ## <a name="conflict-where-delete-failed"></a>削除が失敗した場合の競合   
   
@@ -112,15 +112,15 @@ ms.locfileid: "68115170"
     -   **decentralized_conflicts** - 1 は競合する行がサブスクライバーに格納されていることを示し、0 は競合する行がサブスクライバーに格納されていないことを示します。  
   
         > [!NOTE]  
-        >  マージ パブリケーションの競合ログの動作は、 **@conflict_logging** の [@conflict_logging](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md)」を参照してください。 Use of the **@centralized_conflicts** parameter has been deprecated.  
+        >  マージ パブリケーションの競合ログの動作は、[sp_addmergepublication](../../relational-databases/system-stored-procedures/sp-addmergepublication-transact-sql.md) の `@conflict_logging` パラメーターを使用して設定します。 `@centralized_conflicts` パラメータの使用は非推奨です。  
   
-2.  パブリッシャー側のパブリケーション データベースまたはサブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)を実行します。 特定のパブリケーションに属するアーティクルの競合情報のみが返されるようにするには、 **@publication** に値を指定します。 これにより、競合を持つアーティクルに対応する競合テーブル情報が返されます。 目的のアーティクルに対応する **source_object** の値を確認します。 アーティクルに対応する **conflict_table** の値が NULL の場合、そのアーティクル内では削除競合のみが発生しています。  
+2.  パブリッシャー側のパブリケーション データベースまたはサブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergearticleconflicts](../../relational-databases/system-stored-procedures/sp-helpmergearticleconflicts-transact-sql.md)を実行します。 特定のパブリケーションに属するアーティクルの競合テーブル情報のみが返されるようにするには、`@publication` に値を指定します。 これにより、競合を持つアーティクルに対応する競合テーブル情報が返されます。 目的のアーティクルに対応する **source_object** の値を確認します。 アーティクルに対応する **conflict_table** の値が NULL の場合、そのアーティクル内では削除競合のみが発生しています。  
   
 3.  (省略可) 削除競合の競合情報を確認します。 手順 1. の **centralized_conflicts** および **decentralized_conflicts** の値に応じて、次のいずれかの操作を実行します。  
   
-    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)を実行します。 手順 1. で確認した、競合が発生しているソース テーブルの名前を **@source_object** 」を参照してください。 (省略可) 特定のパブリケーションの競合情報が返されるように制限するには、 **@publication** に値を指定します。 これにより、パブリッシャーに格納されている削除競合の情報が返されます。  
+    -   パブリッシャー側のパブリケーション データベースに対して、 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)を実行します。 手順 1 で確認した、競合が発生しているソース テーブルの名前を、`@source_object` に指定します。 (省略可) 特定のパブリケーションの競合情報が返されるように制限するには、`@publication` の値を指定します。 これにより、パブリッシャーに格納されている削除競合の情報が返されます。  
   
-    -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)を実行します。 手順 1. で確認した、競合が発生しているソース テーブルの名前を **@source_object** 」を参照してください。 (省略可) 特定のパブリケーションの競合情報が返されるように制限するには、 **@publication** に値を指定します。 これにより、サブスクライバーに格納されている削除競合の情報が返されます。  
+    -   サブスクライバー側のサブスクリプション データベースに対して、 [sp_helpmergedeleteconflictrows](../../relational-databases/system-stored-procedures/sp-helpmergedeleteconflictrows-transact-sql.md)を実行します。 手順 1 で確認した、競合が発生しているソース テーブルの名前を、`@source_object` に指定します。 (省略可) 特定のパブリケーションの競合情報が返されるように制限するには、`@publication` の値を指定します。 これにより、サブスクライバーに格納されている削除競合の情報が返されます。  
   
 ## <a name="see-also"></a>参照  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   

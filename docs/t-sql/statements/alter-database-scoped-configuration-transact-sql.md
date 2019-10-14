@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: decb69879ca80e599fa90f1eb1aa150ccf7f49a5
-ms.sourcegitcommit: 853c2c2768caaa368dce72b4a5e6c465cc6346cf
+ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71227187"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713209"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -91,6 +91,12 @@ ALTER DATABASE SCOPED CONFIGURATION
 }
 ```
 
+> [!IMPORTANT]
+> [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、一部のオプション名が変更されています。      
+> -  `DISABLE_INTERLEAVED_EXECUTION_TVF` を `INTERLEAVED_EXECUTION_TVF` に変更しました
+> -  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を `BATCH_MODE_MEMORY_GRANT_FEEDBACK` に変更しました
+> -  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` を `BATCH_MODE_ADAPTIVE_JOINS` に変更しました
+
 ## <a name="arguments"></a>引数
 
 セカンダリの場合
@@ -113,6 +119,9 @@ MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 max degree of parallelism オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 SQL Server は、クエリ、インデックス データ定義言語 (DDL) の操作、並列挿入、オンライン列変更、並行統計コレクション、静的およびキーセット ドリブン カーソルの作成の場合に並列実行プランを検討します。
 
 インスタンス レベルでこのオプションを設定する方法については、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。
+
+> [!NOTE]
+> Azure SQL Database では、サーバーレベルの **[並列処理の最大限度]** 構成は常に 0 に設定されます。 MAXDOP は、現在の記事で説明されているように、データベースごとに構成できます。 MAXDOP の最適な構成に関する推奨事項については、「[その他のリソース](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources)」を参照してください。
 
 > [!TIP]
 > これをクエリ レベルで行うには、**MAXDOP** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加してください。
@@ -351,6 +360,11 @@ LAST_QUERY_PLAN_STATS **=** { ON | **OFF**}
 `ALTER_DATABASE_SCOPED_CONFIGURATION` イベントは、DDL トリガーの始動に使用できる DDL イベントとして追加されます。`ALTER_DATABASE_EVENTS` トリガー グループの子です。
 
 データベース スコープ構成設定がデータベースに継承されるので、特定のデータベースが復元またはアタッチされたときに、既存の構成設定が残ります。
+
+[!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降。[!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、一部のオプション名が変更されています。      
+-  `DISABLE_INTERLEAVED_EXECUTION_TVF` を `INTERLEAVED_EXECUTION_TVF` に変更しました
+-  `DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK` を `BATCH_MODE_MEMORY_GRANT_FEEDBACK` に変更しました
+-  `DISABLE_BATCH_MODE_ADAPTIVE_JOINS` を `BATCH_MODE_ADAPTIVE_JOINS` に変更しました
 
 ## <a name="limitations-and-restrictions"></a>制限事項と制約事項
 

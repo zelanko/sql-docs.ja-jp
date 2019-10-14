@@ -53,14 +53,14 @@ helpviewer_keywords:
 - USE HINT query hint
 - QUERY_PLAN_PROFILE query hint
 ms.assetid: 66fb1520-dcdf-4aab-9ff1-7de8f79e5b2d
-author: VanMSFT
+author: pmasl
 ms.author: vanto
-ms.openlocfilehash: 559a39d1748835e422822fcef1c73e1b3113cb4a
-ms.sourcegitcommit: 816ff47eeab157c66e0f75f18897a63dc8033502
+ms.openlocfilehash: 6c219db3dd5deda9201c0c629eb057b3162b0e49
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/24/2019
-ms.locfileid: "71207740"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713188"
 ---
 # <a name="hints-transact-sql---query"></a>ヒント (Transact-SQL) - Query
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -182,23 +182,23 @@ KEEP PLAN を指定することによって、テーブルに複数の更新が�
 KEEPFIXED PLAN  
 統計情報の変更に応じてクエリを再コンパイルしないようにクエリ オプティマイザーを設定します。 KEEPFIXED PLAN を指定することによって、クエリの基になるテーブルのスキーマが変更された場合、またはそのテーブルに対して **sp_recompile** が実行された場合のみ、クエリが再コンパイルされます。  
   
-IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX  
-**適用対象**: [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+IGNORE_NONCLUSTERED_COLUMNSTORE_INDEX       
+**適用先**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]まで)。  
   
 クエリで非クラスター化メモリ最適化列ストア インデックスが使用されないようにします。 クエリに、列ストア インデックスの使用を回避するクエリ ヒントと、列ストア インデックスを使用するインデックス ヒントがある場合、ヒントが競合してクエリはエラーを返します。  
   
-MAX_GRANT_PERCENT = _percent_  
+MAX_GRANT_PERCENT = _percent_     
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
+
 最大メモリ サイズ (% 単位) を付与します。 クエリは、この制限を超えることはできないことが保証されます。 Resource Governor の設定がこのヒントで指定されている値より小さい場合、実際の制限はこれよりも小さくなる可能性があります。 有効な値では、0.0 ～ 100.0 します。  
   
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
-  
-MIN_GRANT_PERCENT = _percent_  
+MIN_GRANT_PERCENT = _percent_        
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
+
 最低限のメモリ サイズ (% 単位) を付与する = 既定の制限の % です。 クエリは、少なくとも、クエリの開始に必要なメモリが必要となるために、(必要なメモリ、最小の許可) の最大値を取得することが保証します。 有効な値では、0.0 ～ 100.0 します。  
-  
-**適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
-  
-MAXDOP _number_  
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+ 
+MAXDOP _number_      
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。  
   
 **sp_configure** の **max degree of parallelism** 構成オプションをオーバーライドします。 また、このオプションを指定してクエリの Resource Governor もオーバーライドします。 MAXDOP クエリ ヒントは、sp_configure で構成されている値を超えて指定できます。 MAXDOP の値がリソース ガバナーで構成されている値を超える場合は、「[ALTER WORKLOAD GROUP &#40;Transact-SQL&#41;](../../t-sql/statements/alter-workload-group-transact-sql.md)」で説明されているように、[!INCLUDE[ssDE](../../includes/ssde-md.md)]でリソース ガバナーの MAXDOP 値が使用されます。 MAXDOP クエリ ヒントを使用している場合は、**max degree of parallelism** 構成オプションで使用されるすべての意味ルールを適用できます。 詳細については、「 [max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。  
   
@@ -215,7 +215,7 @@ MAXRECURSION _number_
 詳細については、「[WITH common_table_expression &#40;Transact-SQL&#41;](../../t-sql/queries/with-common-table-expression-transact-sql.md)」を参照してください。     
   
 NO_PERFORMANCE_SPOOL    
- **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
   
 Spool 操作は、(を除く、計画、スプールが有効な更新のセマンティクスを保証するために必要な場合) のクエリ プランに追加されないようにします。 一部のシナリオでは、spool 演算子を使用するとパフォーマンスが低下する可能性があります。 たとえば、スプールで tempdb が使用され、スプール操作が実行されている多くの同時実行クエリがある場合に、tempdb の競合が発生することがあります。  
   
@@ -269,13 +269,17 @@ ROBUST PLAN
 *  'ASSUME_MIN_SELECTIVITY_FOR_FILTER_ESTIMATES' <a name="use_hint_correlation"></a>      
    相関関係を考慮するフィルターの AND 述語を見積もるときに、最低限の選択度を使用して [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] にプランを生成させます。 このヒント名は、[!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンのカーディナリティ推定モデルで[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4137 を使用した場合と同じで、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9471 を [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] 以降のバージョンのカーディナリティ推定モデルで使用した場合と同じ効果があります。
 *  'DISABLE_BATCH_MODE_ADAPTIVE_JOINS'       
-   バッチ モード アダプティブ結合を無効にします。 詳細については、「[バッチ モード アダプティブ結合](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
+   バッチ モード アダプティブ結合を無効にします。 詳細については、「[バッチ モード アダプティブ結合](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-adaptive-joins)」を参照してください。     
+   **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 *  'DISABLE_BATCH_MODE_MEMORY_GRANT_FEEDBACK'       
-   バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
+   バッチ モード メモリ許可フィードバックを無効にします。 詳細については、「[バッチ モード メモリ許可フィードバック](../../relational-databases/performance/intelligent-query-processing.md#batch-mode-memory-grant-feedback)」を参照してください。     
+   **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 * 'DISABLE_DEFERRED_COMPILATION_TV'    
-  テーブル変数の遅延コンパイルを無効にします。 詳細については、「[テーブル変数の遅延コンパイル](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)」をご覧ください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
+  テーブル変数の遅延コンパイルを無効にします。 詳細については、「[テーブル変数の遅延コンパイル](../../t-sql/data-types/table-transact-sql.md#table-variable-deferred-compilation)」をご覧ください。     
+  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 *  'DISABLE_INTERLEAVED_EXECUTION_TVF'      
-   複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
+   複数ステートメントのテーブル値関数のインターリーブ実行を無効にします。 詳細については、「[複数ステートメントのテーブル値関数のインターリーブ実行](../../relational-databases/performance/intelligent-query-processing.md#interleaved-execution-for-mstvfs)」を参照してください。     
+   **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。   
 *  'DISABLE_OPTIMIZED_NESTED_LOOP'      
    クエリ プランを生成するときに、最適化された入れ子になったループ結合に対して並べ替え操作 (バッチ ソート) を使用しないように、クエリ プロセッサに指示します。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 2340 を指定した場合と同じです。
 *  'DISABLE_OPTIMIZER_ROWGOAL' <a name="use_hint_rowgoal"></a>      
@@ -290,11 +294,14 @@ ROBUST PLAN
 *  'DISABLE_PARAMETER_SNIFFING'      
    1 つまたは複数のパラメーターを指定してクエリをコンパイルする際に、平均データ分布を使用するようにクエリ オプティマイザーに指示します。 この指示により、クエリをコンパイルするときに最初に使用されていたパラメーター値にクエリ プランが依存しなくなります。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4136 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を `PARAMETER_SNIFFING = OFF` に設定した場合と同じです。
 * 'DISABLE_ROW_MODE_MEMORY_GRANT_FEEDBACK'    
-  行モード メモリ許可フィードバックを無効にします。 詳細については、「[行モード メモリ許可フィードバック](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。     
+  行モード メモリ許可フィードバックを無効にします。 詳細については、「[行モード メモリ許可フィードバック](../../relational-databases/performance/intelligent-query-processing.md#row-mode-memory-grant-feedback)」を参照してください。      
+  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。     
 * 'DISABLE_TSQL_SCALAR_UDF_INLINING'    
-  スカラー UDF のインライン化を無効にします。 詳細については、「[スカラー UDF のインライン化](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)。    
+  スカラー UDF のインライン化を無効にします。 詳細については、「[スカラー UDF のインライン化](../../relational-databases/user-defined-functions/scalar-udf-inlining.md)」を参照してください。     
+  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)。    
 * 'DISALLOW_BATCH_MODE'    
-  バッチ モード実行を無効にします。 詳細については、「[実行モード](../../relational-databases/query-processing-architecture-guide.md#execution-modes)」を参照してください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。     
+  バッチ モード実行を無効にします。 詳細については、「[実行モード](../../relational-databases/query-processing-architecture-guide.md#execution-modes)」を参照してください。     
+  **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降) および [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]。     
 *  'ENABLE_HIST_AMENDMENT_FOR_ASC_KEYS'      
    カーディナリティ推定が必要なすべての先頭のインデックス列に対して、クイック統計情報 (ヒストグラム修正) を自動的に生成できるようにします。 カーディナリティを推定するために使用されるヒストグラムは、この列の実際の最大値または最小値を考慮するクエリのコンパイル時に調整されます。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 4139 を指定した場合と同じです。 
 *  'ENABLE_QUERY_OPTIMIZER_HOTFIXES'     
@@ -304,7 +311,8 @@ ROBUST PLAN
 *  'FORCE_LEGACY_CARDINALITY_ESTIMATION' <a name="use_hint_ce70"></a>      
    [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)] 以前のバージョンの [カーディナリティ推定](../../relational-databases/performance/cardinality-estimation-sql-server.md)モデルを使用するようにクエリ オプティマイザーを設定します。 このヒント名は、[トレース フラグ](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) 9481 を指定した場合、または[データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を `LEGACY_CARDINALITY_ESTIMATION = ON` に設定した場合と同じです。
 *  'QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n'          
- クエリ レベルでクエリ オプティマイザーの動作を強制します。 この動作は、クエリがデータベース互換レベル _n_ でコンパイルされている場合と同様に実行されます (_n_ はサポートされているデータベース互換レベルです)。 現在サポートされている _n_ の値の一覧については、「[sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)」をご覧ください。 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 以降)。    
+ クエリ レベルでクエリ オプティマイザーの動作を強制します。 この動作は、クエリがデータベース互換レベル _n_ でコンパイルされている場合と同様に実行されます (_n_ はサポートされているデータベース互換レベルです)。 現在サポートされている _n_ の値の一覧については、「[sys.dm_exec_valid_use_hints](../../relational-databases/system-dynamic-management-views/sys-dm-exec-valid-use-hints-transact-sql.md)」をご覧ください。      
+   **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU10 以降)。    
 
    > [!NOTE]
    > 既定またはレガシのカーディナリティ推定の設定が、データベース スコープ構成、トレース フラグ、または QUERYTRACEON などの別のクエリ ヒントによって適用されている場合、QUERY_OPTIMIZER_COMPATIBILITY_LEVEL_n ヒントはそれをオーバーライドしません。   
@@ -312,7 +320,8 @@ ROBUST PLAN
    > このヒントの詳細については、「[Developer’s Choice:Hinting Query Execution model](https://blogs.msdn.microsoft.com/sql_server_team/developers-choice-hinting-query-execution-model)」(開発者の選択: クエリ ヒント実行モデル) をご覧ください。
     
 *  'QUERY_PLAN_PROFILE'      
- クエリの軽量プロファイリングを有効にします。 この新しいヒントを含むクエリが完了したら、新しい拡張イベントである query_plan_profile が起動されます。 この拡張イベントでは、実行の統計と query_post_execution_showplan 拡張イベントのような実際の実行プラン XML が公開されますが、新しいヒントを含むクエリのみが対象です。 **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降)。 
+ クエリの軽量プロファイリングを有効にします。 この新しいヒントを含むクエリが完了したら、新しい拡張イベントである query_plan_profile が起動されます。 この拡張イベントでは、実行の統計と query_post_execution_showplan 拡張イベントのような実際の実行プラン XML が公開されますが、新しいヒントを含むクエリのみが対象です。    
+   **適用対象:** [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU11 以降)。 
 
    > [!NOTE]
    > query_post_execution_showplan 拡張イベントの収集を有効にした場合は、サーバー上で実行しているすべてのクエリに標準的なプロファイリング インフラストラクチャが追加されるので、全体的なサーバー パフォーマンスに影響する可能性があります。      
@@ -453,8 +462,6 @@ GO
 ### <a name="f-using-maxdop"></a>F. MAXDOP を使用する  
  次の例では、MAXDOP クエリ ヒントを使用します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  
   
-**適用対象**: [!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]  
-  
 ```sql  
 SELECT ProductID, OrderQty, SUM(LineTotal) AS Total  
 FROM Sales.SalesOrderDetail  
@@ -582,8 +589,6 @@ GO
 ```  
 ### <a name="l-using-use-hint"></a>L. USE HINT の使用  
  次の例では、RECOMPILE および USE HINT のクエリ ヒントを使用します。 この例では、[!INCLUDE[ssSampleDBobject](../../includes/sssampledbobject-md.md)] データベースを使用します。  
-  
-**適用対象**: [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]。  
   
 ```sql  
 SELECT * FROM Person.Address  

@@ -13,14 +13,14 @@ ms.assetid: 4215e2b1-cd30-441f-9671-9afc742adf6e
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ff2f443d5aa1811b55c9202d902b8713f6195621
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: b81f630227c0c8732414c237e31e6efc84593e09
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68766048"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710970"
 ---
-# <a name="mssqleng014152"></a>MSSQL_ENG014152
+# <a name="mssql_eng014152"></a>MSSQL_ENG014152
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
     
 ## <a name="message-details"></a>メッセージの詳細  
@@ -48,7 +48,7 @@ ms.locfileid: "68766048"
 ## <a name="user-action"></a>ユーザーの操作  
  この再試行のメッセージの発生頻度が低い場合、ユーザー操作は不要です。  
   
- [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) を使用して、指定されたレプリケーション エージェントの **[エージェントを実行します。]** ステップが再試行される最大回数の現在の設定を表示します。 [sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) ストアド プロシージャの **@retry_attempts** パラメーターを使用して、ジョブ ステップが再試行される回数を調整することができます。  
+ [sp_help_jobstep](../../relational-databases/system-stored-procedures/sp-help-jobstep-transact-sql.md) を使用して、指定されたレプリケーション エージェントの **[エージェントを実行します。]** ステップが再試行される最大回数の現在の設定を表示します。 [sp_update_jobstep](../../relational-databases/system-stored-procedures/sp-update-jobstep-transact-sql.md) ストアド プロシージャの `@retry_attempts` パラメーターを使用して、ジョブ ステップが再試行される回数を調整することができます。  
   
  再試行のメッセージが頻繁に表示される場合は、再試行が発生するメッセージに基づく問題のトラブルシューティングを行います。 エージェントの履歴で、再試行をスケジュール設定する必要があった理由を示すメッセージを確認します。 場合によっては、レプリケーション エージェントに対してより詳細なログ記録を有効にする必要があります。 レプリケーションのログ記録を構成する方法については、サポート技術情報の資料 [312292](https://support.microsoft.com/kb/312292)を参照してください。  
   

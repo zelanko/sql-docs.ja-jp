@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: ''
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 31e3101499ff046d6741dbbc7b86fdf196deec3e
-ms.sourcegitcommit: c0fd28306a3b42895c2ab673734fbae2b56f9291
+ms.openlocfilehash: c163c54bb6ee6276ce39286c1b7743587f94f695
+ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/18/2019
-ms.locfileid: "71096928"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71713271"
 ---
 # <a name="configure-distributed-transactions-for-an-always-on-availability-group"></a>Always On 可用性グループ用に分散トランザクションを構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -39,6 +39,8 @@ ms.locfileid: "71096928"
 
 可用性グループが分散トランザクション用に構成されていない場合であっても、[!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] は可用性グループ内のデータベースに対する分散トランザクションを妨げません。 ただし、可用性グループが分散トランザクション対応に構成されていない場合は、一部の状況でフェールオーバーが失敗する可能性があります。 具体的には、新しいプライマリ レプリカの [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンスが、DTC からトランザクションの結果を取得できない場合があります。 [!INCLUDE[SQLServer](../../../includes/ssnoversion-md.md)] インスタンスがフェールオーバー後に DTC から未確定トランザクションの結果を取得できるようにするには、可用性グループを分散トランザクション対応に構成します。 
 
+データベースがフェールオーバー クラスターのメンバーでもある場合を除き、DTC は可用性グループの処理には関与しません。 可用性グループ内では、可用性グループのロジックによってレプリカ間の整合性が維持されます。永続的なストレージにログ レコードが永続化されたことをセカンダリが確認して初めて、プライマリはコミットを完了し、呼び出し元へのコミットを確認します。 その後で初めて、プライマリはトランザクションの完了を宣言します。 非同期モードでは、セカンダリからの肯定応答を待たないため、少量のデータが失われる可能性が明示的に存在します。
+
 ## <a name="prerequisites"></a>Prerequisites
 
 分散トランザクションをサポートするように可用性グループを構成するには、次の前提条件が満たされている必要があります。
@@ -50,6 +52,8 @@ ms.locfileid: "71096928"
 ## <a name="create-an-availability-group-for-distributed-transactions"></a>分散トランザクション対応の可用性グループを作成する
 
 分散トランザクションをサポートするように可用性グループを構成します。 各データベースがリソース マネージャーとして登録するのを許可するように、可用性グループを設定します。 この記事では、各データベースが DTC のリソース マネージャーになることができるように、可用性グループを構成する方法について説明します。
+
+
 
 [!INCLUDE[SQL2016](../../../includes/sssql15-md.md)] 以降では、分散トランザクション対応の可用性グループを作成できます。 分散トランザクション対応の可用性グループを作成するには、可用性グループの定義に `DTC_SUPPORT = PER_DB` を追加します。 次のスクリプトは、分散トランザクション対応の可用性グループを作成します。 
 

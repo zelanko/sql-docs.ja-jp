@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: 5d68dac2-f91b-4342-bb4e-209ee132665f
 author: rothja
 ms.author: jroth
-ms.openlocfilehash: aa0ec88e64c317c2106a4a6a2a4d204e7192f114
-ms.sourcegitcommit: 0ea19d8e3bd9d91a416311e00a5fb0267d41949e
+ms.openlocfilehash: 8fd770d8f1af098d4328df12a11cdcff609f2328
+ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/20/2019
-ms.locfileid: "71174288"
+ms.lasthandoff: 10/05/2019
+ms.locfileid: "71974398"
 ---
 # <a name="fetch-transact-sql"></a>FETCH (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -76,10 +76,10 @@ FETCH
  *cursor_name*  
  フェッチが行われる、開いているカーソルの名前です。 *cursor_name* という名前のグローバル カーソルとローカル カーソルの両方がある場合、GLOBAL が指定されると *cursor_name* はグローバル カーソルを参照します。GLOBAL が指定されない場合は、ローカル カーソルを参照します。  
   
- @*cursor_variable_name*  
+ \@*cursor_variable_name*  
  フェッチが行われる、開いているカーソルを参照するカーソル変数の名前です。  
   
- INTO @*variable_name*[ ,...*n*]  
+ INTO \@*variable_name*[ ,...*n*]  
  フェッチの列で得られたデータを、ローカル変数に設定します。 リスト内の各変数は、左から右に向かって、カーソル結果セット内の対応する列に関連付けられます。 各変数のデータ型は、対応する結果セット列のデータ型に一致するか、または暗黙的な型変換がサポートされていなければなりません。 変数の個数は、カーソル選択リスト内の列の個数と一致している必要があります。  
   
 ## <a name="remarks"></a>Remarks  

@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: 13e95046-0e76-4604-b561-d1a74dd824d7
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0d8baf8700afde2b6534a173a5d81912dbe61a13
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 08097b4aac0d14a3da21443a4903df90797b9316
+ms.sourcegitcommit: 36c3ead6f2a3628f58040acf47f049f0b0957b8a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68045645"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71687365"
 ---
 # <a name="maximum-capacity-specifications-for-sql-server"></a>SQL Server の最大容量仕様
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -61,12 +61,12 @@ ms.locfileid: "68045645"
 |GROUP BY、ORDER BY の列数||バイト数のみによって制限されます。||  
 |GROUP BY WITH CUBE または WITH ROLLUP ステートメント内の列または式の数||10||  
 |インデックス キーごとの列数||32|テーブルに 1 つ以上の XML インデックスが含まれている場合は、XML 列がプライマリ XML インデックスのクラスター化キーに追加されるため、ユーザー テーブルのクラスター化キーが 31 列までに制限されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]では、キー列数が最大キー列数制限の 32 を越えないように、非クラスター化インデックスに非キー列を含めることができます。 詳細については、「 [付加列インデックスの作成](../relational-databases/indexes/create-indexes-with-included-columns.md)」を参照してください。|  
-|外部キーごとの列数||32||  
-|主キーごとの列数||32||  
-|幅の狭いテーブルごとの列数||1,024||  
-|幅の広いテーブルごとの列数||30,000||  
-|SELECT ステートメントごとの列数||4,096||  
-|INSERT ステートメントごとの列数||4,096||  
+|外部キーまたは主キーごとの列数||32||  
+|`INSERT` ステートメントごとの列数||4,096||  
+|`SELECT` ステートメントごとの列数||4,096||  
+|テーブルごとの列数||1,024|スパース列セットを含むテーブルには、最大 30,000 列が含まれます。 「[スパース列セット](../relational-databases/tables/use-column-sets.md)」を参照してください。|  
+|`UPDATE` ステートメントごとの列数||4,096|[スパース列セット](../relational-databases/tables/use-column-sets.md)には、異なる制限が適用されます。|  
+|ビューごとの列数||1,024||  
 |クライアントごとの接続数||構成した接続の最大値||  
 |データベース サイズ||524,272 テラバイト||  
 |インスタンスごとのデータベース数 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]||32,767||  
@@ -99,7 +99,6 @@ ms.locfileid: "68045645"
 |インデックス付けされていない列の統計||30,000|| 
 |SELECT ステートメントごとのテーブル数||使用可能なリソースのみによって制限されます。||  
 |テーブルごとのトリガー数||データベース内のオブジェクト数によって制限されます。|データベース オブジェクトには、テーブル、ビュー、ストアド プロシージャ、ユーザー定義関数、トリガー、ルール、デフォルト、制約などのオブジェクトが含まれます。 1 つのデータベース内のオブジェクトの合計数は 2,147,483,647 以下にする必要があります。|  
-|UPDATE ステートメント (幅の広いテーブル) ごとの列数||4096||  
 |ユーザー接続数||32,767||  
 |XML インデックス数||249||  
   

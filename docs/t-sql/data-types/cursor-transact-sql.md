@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: fbea16ef-f2cc-4734-9149-ec2598fd3cca
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: f97fdcba1cfed8ca28c39afdec92275aa6ba5d7b
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c25550ed5e985f643f81b0b41e749f007eef0df3
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125947"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682079"
 ---
 # <a name="cursor-transact-sql"></a>cursor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -28,7 +28,7 @@ ms.locfileid: "68125947"
   
 ## <a name="remarks"></a>Remarks  
 **cursor** 型の変数とパラメーターを参照できる操作は次のとおりです。
--   DECLARE *@local_variable* および SET *@local_variable* ステートメント。  
+-   DECLARE *\@local_variable* ステートメントと SET *\@local_variable* ステートメント。  
 -   OPEN、FETCH、CLOSE、DEALLOCATE cursor ステートメント。  
 -   ストアド プロシージャの出力パラメーター。  
 -   CURSOR_STATUS 関数。  

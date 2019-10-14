@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 23e7e8c1-002f-4e69-8c99-d63e4100de64
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 20469bf6d6d7050c79346afea0f96e4167708f08
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 4dcb5f8bd05b5cd1b5b68927abfef49576d6b072
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68121334"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710720"
 ---
 # <a name="peer-to-peer---transactional-replication"></a>ピア ツー ピア トランザクション レプリケーション
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -139,19 +139,19 @@ ms.locfileid: "68121334"
   
 -   ディストリビューション エージェントのパラメーター **-SubscriptionStreams** とログ リーダー エージェントのパラメーター **-MaxCmdsInTran**  
   
--   アーティクルのプロパティ **@destination_owner** 」および「 **@destination_table** ) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。
+-   アーティクルの `@destination_owner` および `@destination_table` プロパティ。
 
 -   ピア ツー ピア トランザクション レプリケーションでは、ピア ツー ピア パブリケーションの一方向トランザクション サブスクリプションを作成できません   
   
  次のプロパティには特別な注意が必要です。  
   
--   パブリケーションのプロパティ **@allow_initialize_from_backup** には値 **true**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   パブリケーションの `@allow_initialize_from_backup` プロパティの値は、**true** にする必要があります。  
   
--   アーティクルのプロパティ **@replicate_ddl** には値 **true**が必要です。 **@identityrangemanagementoption** には値 **manual**が必要です。 **@status** にはオプション **24** を設定する必要があります。  
+-   アーティクルでは、`@replicate_ddl` プロパティを値 **true** にし、`@identityrangemanagementoption` を値 **manual** にして、`@status` のオプション **24** を設定する必要があります。  
   
--   アーティクルのプロパティ **@ins_cmd** 、 **@del_cmd** 、および **@upd_cmd** の値は **SQL**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   アーティクルのプロパティ `@ins_cmd`、`@del_cmd`、および `@upd_cmd` の値を、**SQL** に設定することはできません。  
   
--   サブスクリプションのプロパティ **@sync_type** には値 **none** または **automatic**) で保持することにより、可用性の高いスケールアウト ソリューションを実現します。  
+-   サブスクリプションの `@sync_type` プロパティの値は、**none** または **automatic** にする必要があります。  
   
 ### <a name="maintenance-considerations"></a>メンテナンスの注意事項  
  いくつかのアクションを実行する場合は、システムを休止状態にする必要があります。 システムの停止を実行するには、すべてのノードのパブリッシュされたテーブルで処理を停止し、他のすべてのノードからのすべての変更を各ノードが受信しているかどうかを確認します。  

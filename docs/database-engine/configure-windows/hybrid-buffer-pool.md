@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: ''
 author: briancarrig
 ms.author: brcarrig
-ms.openlocfilehash: 8bbc7670f3a4d6d8a017e7284c5a661d38594f08
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.openlocfilehash: d03c66219330df3cca892bd005d1e9a456959c83
+ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71251056"
+ms.lasthandoff: 10/02/2019
+ms.locfileid: "71823572"
 ---
 # <a name="hybrid-buffer-pool"></a>ハイブリッド バッファー プール
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -76,10 +76,8 @@ ALTER DATABASE <databaseName> SET MEMORY_OPTIMIZED = OFF;
 次の例では、SQL Server のインスタンス用のハイブリッド バッファー プールのシステム構成について、現在の状態が返されます。
 
 ```sql
-SELECT *
-FROM sys.configurations
-WHERE
-    name = 'hybrid_buffer_pool';
+SELECT * FROM
+sys.server_memory_optimized_hybrid_buffer_pool_configuration;
 ```
 
 次の例では、2 つのテーブルが返されます。
@@ -95,9 +93,9 @@ SELECT name, is_memory_optimized_enabled FROM sys.databases;
 
 ## <a name="best-practices-for-hybrid-buffer-pool"></a>ハイブリッド バッファー プールのベスト プラクティス
 
-16 GB 未満の RAM を持つインスタンスでハイブリッド バッファー プールを有効にすることは推奨されません。
-
 Windows 上でご利用の PMEM デバイスをフォーマットする場合、NTFS に利用できる最大のアロケーション ユニット サイズ (Windows Server 2019 では 2 MB) を使用して、デバイスが DAX (Direct Access) 用に確実にフォーマットされているようにします。
+
+最適なパフォーマンスを得るには、Windows 上で [[メモリ内のページのロック]](./enable-the-lock-pages-in-memory-option-windows.md) を有効にします。
 
 ファイル サイズは 2 MB の倍数である必要があります (剰余 2 MB はゼロと等しい)。
 

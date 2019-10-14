@@ -23,12 +23,12 @@ helpviewer_keywords:
 ms.assetid: e1e55519-97ec-4404-81ef-881da3b42006
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: d8135706b5fa220fa4e62bbcaf9ad677681fe029
-ms.sourcegitcommit: a24f6e12357979f1134a54a036ebc58049484a4f
+ms.openlocfilehash: 3572c6f9476fb450e0090e88019412c03af145ac
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71314498"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708516"
 ---
 # <a name="enable-encrypted-connections-to-the-database-engine"></a>データベース エンジンへの暗号化接続の有効化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -80,7 +80,7 @@ TLS 暗号化を有効にすると、[!INCLUDE[ssNoVersion](../../includes/ssnov
 
 - 証明書が **AT_KEYEXCHANGE** の **KeySpec** オプションを使用して作成されていること。 通常、証明書のキー使用法プロパティ (**KEY_USAGE**) には、キーの暗号化 (**CERT_KEY_ENCIPHERMENT_KEY_USAGE**) も含まれます。
 
-- 証明書の **Subject** プロパティで、共通名 (CN) がサーバー コンピューターのホスト名または完全修飾ドメイン名 (FQDN) と同一であると示されていること。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフェールオーバー クラスターで実行されている場合、共通名は仮想サーバーのホスト名または FQDN と同じである必要があり、証明書がフェールオーバー クラスター内のすべてのノードにプロビジョニングされる必要があります。
+- 証明書の **Subject** プロパティで、共通名 (CN) がサーバー コンピューターのホスト名または完全修飾ドメイン名 (FQDN) と同一であると示されていること。 ホスト名を使用するときは、証明書で DNS サフィックスを指定する必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] がフェールオーバー クラスターで実行されている場合、共通名は仮想サーバーのホスト名または FQDN と同じである必要があり、証明書がフェールオーバー クラスター内のすべてのノードにプロビジョニングされる必要があります。
 
 - ワイルドカード証明書は、[!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] および [!INCLUDE[ssKilimanjaro](../../includes/ssKilimanjaro-md.md)] Native Client (SNAC) でサポートされています。 その後、SNAC は廃止され、[Microsoft OLE DB Driver for SQL Server](../../connect/oledb/oledb-driver-for-sql-server.md) と [Microsoft ODBC Driver for SQL Server](../../connect/odbc/microsoft-odbc-driver-for-sql-server.md) に置き換わりました。 他のクライアントでは、ワイルドカード証明書がサポートされていない可能性があります。 詳細については、クライアントのドキュメントと [KB 258858](http://support.microsoft.com/kb/258858) を参照してください。       
   SQL Server 構成マネージャーを使用して、ワイルドカード証明書を選択することはできません。 ワイルドカード証明書を使うには、`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Microsoft SQL Server\MSSQL12.MSSQLSERVER\MSSQLServer\SuperSocketNetLib` のレジストリ キーを編集し、**Certificate** の値に証明書の拇印を (スペースを含めずに) 入力する必要があります。  

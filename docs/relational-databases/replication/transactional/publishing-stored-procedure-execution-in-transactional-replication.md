@@ -15,12 +15,12 @@ ms.assetid: f4686f6f-c224-4f07-a7cb-92f4dd483158
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 25aa20472daec1e20113627b4cbd778dfa142002
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 93377a86d55086f2f3af501a962c6973f0d66234
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769330"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710731"
 ---
 # <a name="publishing-stored-procedure-execution-in-transactional-replication"></a>トランザクション レプリケーションにおけるパブリッシング ストアド プロシージャの実行
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -54,7 +54,7 @@ EXEC give_raise
   
 -   SQL Server Management Studio:[トランザクション パブリケーションでのストアド プロシージャの実行のパブリッシュ (SQL Server Management Studio)](../../../relational-databases/replication/publish/publish-execution-of-stored-procedure-in-transactional-publication.md)  
   
--   レプリケーション Transact-SQL プログラミング: [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) を実行し、パラメーター **@type** に対して「serializable proc exec」(推奨) または「proc exec」の値を指定します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
+-   レプリケーション Transact-SQL プログラミング: [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) を実行し、パラメーター `@type` に対して値 "serializable proc exec" (推奨) または "proc exec" を指定します。 アーティクルの定義の詳細については、「[Define an Article](../../../relational-databases/replication/publish/define-an-article.md)」 (アーティクルの定義) を参照してください。  
   
 ## <a name="modifying-the-procedure-at-the-subscriber"></a>サブスクライバーでのプロシージャの変更  
  既定では、パブリッシャー上のストアド プロシージャの定義は各サブスクライバーに反映されます。 ただし、サブスクライバーでストアド プロシージャを変更することもできます。 これは、パブリッシャーとサブスクライバーで異なるロジックを実行する場合に便利です。 たとえば、2 つの関数を持つパブリッシャー上のストアド プロシージャ、 **sp_big_delete**を考えてみます。このストアド プロシージャはレプリケートされたテーブル **big_table1** から 100 万行を削除し、レプリケートされていないテーブル **big_table2**を更新します。 ネットワーク リソースの需要を削減するには、 **sp_big_delete**をパブリッシュすることによって、100 万行の削除をストアド プロシージャとして反映する方が効率的です。 サブスクライバーでは、100 万行だけを削除し、 **big_table2** への更新を実行しないように **sp_big_delete**を変更できます。  
@@ -90,7 +90,7 @@ COMMIT TRANSACTION T2
   
  シリアル化可能なトランザクション内でプロシージャを実行するときにはロックがより長く保持されるので、コンカレンシーが少なくなることもあります。  
   
-## <a name="the-xactabort-setting"></a>XACT_ABORT の設定  
+## <a name="the-xact_abort-setting"></a>XACT_ABORT の設定  
  ストアド プロシージャの実行をレプリケートする場合、ストアド プロシージャを実行するセッションの設定では XACT_ABORT を ON に指定する必要があります。 XACT_ABORT が OFF に設定されていて、パブリッシャーでプロシージャの実行中にエラーが発生した場合、サブスクライバーでも同じエラーが発生し、ディストリビューション エージェントは失敗します。 XACT_ABORT を  ON に指定すると、パブリッシャーでプロシージャの実行中にエラーが発生した場合、実行全体がロールバックされ、ディストリビューション エージェントの失敗を回避できます。 XACT_ABORT 設定の詳細については、「[SET XACT_ABORT &#40;Transact-SQL&#41;](../../../t-sql/statements/set-xact-abort-transact-sql.md)」を参照してください。  
   
  XACT_ABORT を OFF に設定する必要がある場合は、ディストリビューション エージェントの **-SkipErrors** パラメーターを指定してください。 これで、エラーが発生した場合でも、エージェントは引き続きサブスクライバーに変更を適用できます。  

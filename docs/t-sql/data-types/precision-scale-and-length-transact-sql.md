@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: fbc9ad2c-0d3b-4e98-8fdd-4d912328e40a
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 0f3689bdad636d7df4281975167984425a8049aa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 65154f6e4ffd67a207db9a3b6c5044710249c1eb
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68000624"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682058"
 ---
 # <a name="precision-scale-and-length-transact-sql"></a>有効桁数、小数点以下桁数、および長さ (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -35,11 +35,11 @@ precision は、数値全体の桁数です。 scale は、数値の中で小数
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、**numeric** および **decimal** データ型の precision の既定の最大値は 38 です。 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、既定の最大値は 28 桁です。
   
-数値データ型の長さは、数値の格納に使用されるバイト数です。 文字列または Unicode データ型の長さは文字数です。 **binary**、**varbinary**、および **image** データ型の長さはバイト数です。 たとえば、**int** データ型は 10 桁を保持することができ、4 バイトに格納され、小数点は許可されません。 **Int** データ型の precision は 10、長さは 4、scale は 0 です。
+数値データ型の長さは、数値の格納に使用されるバイト数です。 varchar および char の場合、文字列の長さはバイト数です。 nvarchar および nchar の場合、文字列の長さはバイトペアの数です。 **binary**、**varbinary**、および **image** データ型の長さはバイト数です。 たとえば、**int** データ型は 10 桁を保持することができ、4 バイトに格納され、小数点は許可されません。 **Int** データ型の precision は 10、長さは 4、scale は 0 です。
   
-**char**、**varchar**、**binary**、または **varbinary** 式を 2 つ連結する場合、結果として得られる式の長さは 2 つのソース式の長さの合計 (上限は 8,000 文字) です。
+**char**、**varchar**、**binary**、または **varbinary** 式を 2 つ連結する場合、結果として得られる式の長さは 2 つのソース式の長さの合計 (上限は 8,000 バイト) です。
   
-**nchar** または **nvarchar** 式を 2 つ連結する場合、結果として得られる式の長さは 2 つのソース式の長さの合計 (上限は 4,000 文字) です。
+**nchar** または **nvarchar** 式を 2 つ連結する場合、結果として得られる式の長さは 2 つのソース式の長さの合計 (上限は 4,000 バイトペア) です。
   
 同じデータ型で長さが異なる 2 つの式が、UNION、EXCEPT、または INTERSECT を使って比較される場合、結果の長さは 2 つの式のうち長い方です。
   

@@ -54,12 +54,12 @@ ms.assetid: d2297805-412b-47b5-aeeb-53388349a5b9
 author: pmasl
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: a2e6a20ac4fb319119692ce41eeef80b1912de33
-ms.sourcegitcommit: 594cee116fa4ee321e1f5e5206f4a94d408f1576
+ms.openlocfilehash: 1678db946145ae7780ed35fcf142f915aa2a8fa7
+ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/23/2019
-ms.locfileid: "70009325"
+ms.lasthandoff: 10/04/2019
+ms.locfileid: "71961945"
 ---
 # <a name="create-index-transact-sql"></a>CREATE INDEX (Transact-SQL)
 
@@ -77,8 +77,10 @@ ms.locfileid: "70009325"
 ```sql
 -- Create a nonclustered index on a table or view
 CREATE INDEX i1 ON t1 (col1);
---Create a clustered index on a table and use a 3-part name for the table
+
+-- Create a clustered index on a table and use a 3-part name for the table
 CREATE CLUSTERED INDEX i1 ON d1.s1.t1 (col1);
+
 -- Syntax for SQL Server and Azure SQL Database
 -- Create a nonclustered index with a unique constraint
 -- on 3 columns and specify the sort order for each column
@@ -192,11 +194,21 @@ CREATE [ UNIQUE ] [ CLUSTERED | NONCLUSTERED ] INDEX index_name
 ### <a name="syntax-for-azure-sql-data-warehouse-and-parallel-data-warehouse"></a>Azure SQL Data Warehouse と Parallel Data Warehouse の構文
 
 ```
+
+CREATE CLUSTERED COLUMNSTORE INDEX INDEX index_name
+    ON [ database_name . [ schema ] . | schema . ] table_name
+    [ORDER (column[,...n])]
+    [WITH ( DROP_EXISTING = { ON | OFF } )]
+[;]
+
+
 CREATE [ CLUSTERED | NONCLUSTERED ] INDEX index_name
     ON [ database_name . [ schema ] . | schema . ] table_name
         ( { column [ ASC | DESC ] } [ ,...n ] )
     WITH ( DROP_EXISTING = { ON | OFF } )
 [;]
+
+
 ```
 
 ## <a name="arguments"></a>引数
@@ -376,7 +388,7 @@ SORT_IN_TEMPDB = { ON | **OFF** }
 
 **適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)] から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)]) と [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)]
 
-**tempdb** に一時的な並べ替え結果を格納するかどうかを指定します。 既定値は OFF です。
+**tempdb** に一時的な並べ替え結果を格納するかどうかを指定します。 Azure SQL Database Hyperscale を除き、既定は OFF です。Hyperscale のインデックス作成操作についてはすべて、再開可能なインデックス リビルドが使用されていない限り、SORT_IN_TEMPDB は常に ON になります。
 
 ON      
 インデックス構築に使用される中間の並べ替え結果が **tempdb** に格納されます。 **tempdb** がユーザー データベースとは異なるディスク セットにある場合は、インデックスの作成に要する時間が削減されます。 インデックスの構築中に使用されるディスク領域のサイズは増加します。
@@ -585,9 +597,9 @@ DATA_COMPRESSION 設定を適用するパーティションを指定します。
 ```sql
 REBUILD WITH
 (
-DATA_COMPRESSION = NONE ON PARTITIONS (1),
-DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
-DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
+  DATA_COMPRESSION = NONE ON PARTITIONS (1),
+  DATA_COMPRESSION = ROW ON PARTITIONS (2, 4, 6 TO 8),
+  DATA_COMPRESSION = PAGE ON PARTITIONS (3, 5)
 );
 ```
 
@@ -612,7 +624,7 @@ CREATE INDEX ステートメントは、他のクエリと同じように最適�
 
 - クラスター化列ストア インデックスとして格納されたテーブルに非クラスター化インデックスを作成する場合、`FILESTREAM_ON` オプションが無効です。
 
-## <a name="unique-indexes"></a>一意のインデックス
+## <a name="unique-indexes"></a>一意なインデックス
 一意のインデックスが存在する場合、[!INCLUDE[ssDE](../../includes/ssde-md.md)]は、挿入操作によってデータが追加されるたびに、重複した値がないかをチェックします。 重複キー値を生成する挿入操作はロールバックされ、[!INCLUDE[ssDE](../../includes/ssde-md.md)]はエラー メッセージを表示します。 挿入操作で多くの行が変更された場合でも、重複が 1 つでもあれば、ロールバックが行われます。 IGNORE_DUP_KEY 句が ON に設定されている一意のインデックスにデータを入力しようとすると一意のインデックスに違反する行だけが失敗します。
 
 ## <a name="partitioned-indexes"></a>パーティション インデックス
@@ -691,14 +703,14 @@ XML インデックスについては、「[CREATE XML INDEX](../../t-sql/statem
 計算列にインデックスを作成すると、以前は機能していた挿入または更新の操作が失敗することがあります。 このような失敗は、計算列の結果が算術エラーになる場合に発生する可能性があります。 たとえば、次のテーブルでは、計算列 `c` は計算エラーになりますが、INSERT ステートメントは正常に実行されます。
 
 ```sql
-CREATE TABLE t1 (a int, b int, c AS a/b);
+CREATE TABLE t1 (a INT, b INT, c AS a/b);
 INSERT INTO t1 VALUES (1, 0);
 ```
 
 これに対し、テーブルの作成後に計算列 `c` にインデックスを作成すると、同じ `INSERT` ステートメントは失敗します。
 
 ```sql
-CREATE TABLE t1 (a int, b int, c AS a/b);
+CREATE TABLE t1 (a INT, b INT, c AS a/b);
 CREATE UNIQUE CLUSTERED INDEX Idx1 ON t1(c);
 INSERT INTO t1 VALUES (1, 0);
 ```
@@ -852,12 +864,12 @@ CREATE CLUSTERED INDEX IX_ProductVendor_VendorID ON Purchasing..ProductVendor (V
 次の例では、dbo.FactFinance テーブルの 2 つの列でインデックス IX_FF を作成します。 次のステートメントでは、1 つ以上の列でインデックスを再構築し、既存の名前を保持します。
 
 ```sql
-CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey ASC, DateKey ASC );
+CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey ASC, DateKey ASC);
 
---Rebuild and add the OrganizationKey
-CREATE INDEX IX_FF ON dbo.FactFinance ( FinanceKey, DateKey, OrganizationKey DESC)
-WITH ( DROP_EXISTING = ON );
- ```
+-- Rebuild and add the OrganizationKey
+CREATE INDEX IX_FF ON dbo.FactFinance (FinanceKey, DateKey, OrganizationKey DESC)
+  WITH (DROP_EXISTING = ON);
+```
 
 ## <a name="examples-sql-server-azure-sql-database"></a>例 :SQL Server、Azure SQL Database
 
@@ -872,11 +884,12 @@ CREATE UNIQUE INDEX AK_UnitMeasure_Name
 次のクエリでは、既存の行と同じ値の行を挿入することによって、一意性の制約をテストします。
 
 ```sql
---Verify the existing value.
+-- Verify the existing value.
 SELECT Name FROM Production.UnitMeasure WHERE Name = N'Ounces';
 GO
+
 INSERT INTO Production.UnitMeasure (UnitMeasureCode, Name, ModifiedDate)
-  VALUES ('OC', 'Ounces', GetDate());
+  VALUES ('OC', 'Ounces', GETDATE());
 ```
 
 結果のエラー メッセージは次のようになります。
@@ -890,16 +903,20 @@ Cannot insert duplicate key row in object 'UnitMeasure' with unique index 'AK_Un
 次の例では、最初に `IGNORE_DUP_KEY` オプションを `ON` に設定し、次にこのオプションを `OFF` に設定して、複数の行を一時テーブルに挿入したときのこのオプションの影響を検証します。 2 番目の複数行の `#Test` ステートメントを実行するときには、`INSERT` テーブルに、重複する値となる 1 行を意図的に挿入します。 テーブル内の行数としては、挿入された行数が返されます。
 
 ```sql
-CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);
+CREATE TABLE #Test (C1 NVARCHAR(10), C2 NVARCHAR(50), C3 DATETIME);
 GO
+
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)
   WITH (IGNORE_DUP_KEY = ON);
 GO
+
 INSERT INTO #Test VALUES (N'OC', N'Ounces', GETDATE());
 INSERT INTO #Test SELECT * FROM Production.UnitMeasure;
 GO
-SELECT COUNT(*)AS [Number of rows] FROM #Test;
+
+SELECT COUNT(*) AS [Number of rows] FROM #Test;
 GO
+
 DROP TABLE #Test;
 GO
 ```
@@ -919,16 +936,20 @@ Number of rows
 次に、`IGNORE_DUP_KEY` を `OFF` に設定して同じステートメントを実行します。
 
 ```sql
-CREATE TABLE #Test (C1 nvarchar(10), C2 nvarchar(50), C3 datetime);
+CREATE TABLE #Test (C1 NVARCHAR(10), C2 NVARCHAR(50), C3 DATETIME);
 GO
+
 CREATE UNIQUE INDEX AK_Index ON #Test (C2)
   WITH (IGNORE_DUP_KEY = OFF);
 GO
+
 INSERT INTO #Test VALUES (N'OC', N'Ounces', GETDATE());
 INSERT INTO #Test SELECT * FROM Production.UnitMeasure;
 GO
-SELECT COUNT(*)AS [Number of rows] FROM #Test;
+
+SELECT COUNT(*) AS [Number of rows] FROM #Test;
 GO
+
 DROP TABLE #Test;
 GO
 ```
@@ -968,40 +989,45 @@ SET NUMERIC_ROUNDABORT OFF;
 SET ANSI_PADDING, ANSI_WARNINGS, CONCAT_NULL_YIELDS_NULL, ARITHABORT,
   QUOTED_IDENTIFIER, ANSI_NULLS ON;
 GO
+
 -- Create view with schemabinding
 IF OBJECT_ID ('Sales.vOrders', 'view') IS NOT NULL
-DROP VIEW Sales.vOrders ;
+  DROP VIEW Sales.vOrders;
 GO
+
 CREATE VIEW Sales.vOrders
-WITH SCHEMABINDING
+  WITH SCHEMABINDING
 AS
-  SELECT SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Revenue,
+  SELECT SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Revenue,
     OrderDate, ProductID, COUNT_BIG(*) AS COUNT
   FROM Sales.SalesOrderDetail AS od, Sales.SalesOrderHeader AS o
   WHERE od.SalesOrderID = o.SalesOrderID
   GROUP BY OrderDate, ProductID;
 GO
+
 -- Create an index on the view
 CREATE UNIQUE CLUSTERED INDEX IDX_V1
   ON Sales.vOrders (OrderDate, ProductID);
 GO
+
 -- This query can use the indexed view even though the view is
 -- not specified in the FROM clause.
-SELECT SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Rev,
+SELECT SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Rev,
   OrderDate, ProductID
 FROM Sales.SalesOrderDetail AS od
-  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID=o.SalesOrderID
-    AND ProductID BETWEEN 700 and 800
-    AND OrderDate >= CONVERT(datetime,'05/01/2002',101)
+  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID = o.SalesOrderID
+    AND ProductID BETWEEN 700 AND 800
+    AND OrderDate >= CONVERT(DATETIME, '05/01/2002', 101)
 GROUP BY OrderDate, ProductID
 ORDER BY Rev DESC;
 GO
+
 -- This query can use the above indexed view
-SELECT OrderDate, SUM(UnitPrice*OrderQty*(1.00-UnitPriceDiscount)) AS Rev
+SELECT OrderDate, SUM(UnitPrice * OrderQty * (1.00 - UnitPriceDiscount)) AS Rev
 FROM Sales.SalesOrderDetail AS od
-  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID=o.SalesOrderID
-    AND DATEPART(mm,OrderDate)= 3
-  AND DATEPART(yy,OrderDate) = 2002
+  JOIN Sales.SalesOrderHeader AS o ON od.SalesOrderID = o.SalesOrderID
+    AND DATEPART(mm, OrderDate) = 3
+  AND DATEPART(yy, OrderDate) = 2002
 GROUP BY OrderDate
 ORDER BY OrderDate ASC;
 GO
@@ -1015,6 +1041,7 @@ CREATE NONCLUSTERED INDEX IX_Address_PostalCode
   ON Person.Address (PostalCode)
   INCLUDE (AddressLine1, AddressLine2, City, StateProvinceID);
 GO
+
 SELECT AddressLine1, AddressLine2, City, StateProvinceID, PostalCode
 FROM Person.Address
 WHERE PostalCode BETWEEN N'98000' and N'99999';
@@ -1048,7 +1075,7 @@ CREATE NONCLUSTERED INDEX "FIBillOfMaterialsWithEndDate"
 ```sql
 CREATE NONCLUSTERED INDEX IX_INDEX_1
   ON T1 (C2)
-WITH ( DATA_COMPRESSION = ROW );
+  WITH (DATA_COMPRESSION = ROW);
 GO
 ```
 
@@ -1056,8 +1083,8 @@ GO
 
 ```sql
 CREATE CLUSTERED INDEX IX_PartTab2Col1
-ON PartitionTable1 (Col1)
-WITH ( DATA_COMPRESSION = ROW );
+  ON PartitionTable1 (Col1)
+  WITH (DATA_COMPRESSION = ROW);
 GO
 ```
 
@@ -1065,9 +1092,11 @@ GO
 
 ```sql
 CREATE CLUSTERED INDEX IX_PartTab2Col1
-ON PartitionTable1 (Col1)
-WITH (DATA_COMPRESSION = PAGE ON PARTITIONS(1),
-  DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4 ) ) ;
+  ON PartitionTable1 (Col1)
+  WITH (
+    DATA_COMPRESSION = PAGE ON PARTITIONS(1),
+    DATA_COMPRESSION = ROW ON PARTITIONS (2 TO 4)
+  );
 GO
 ```
 
@@ -1076,24 +1105,24 @@ GO
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
-CREATE INDEX test_idx1 on test_table (col1) WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
+CREATE INDEX test_idx1 ON test_table (col1) WITH (ONLINE = ON, MAXDOP = 1, RESUMABLE = ON);
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
 -- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
-CREATE INDEX test_idx2 on test_table (col2) WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)
+CREATE INDEX test_idx2 ON test_table (col2) WITH (ONLINE = ON, RESUMABLE = ON, MAX_DURATION = 240);
 
 -- Pause a running resumable online index creation
-ALTER INDEX test_idx1 on test_table PAUSE
-ALTER INDEX test_idx2 on test_table PAUSE
+ALTER INDEX test_idx1 ON test_table PAUSE;
+ALTER INDEX test_idx2 ON test_table PAUSE;
 
 -- Resume a paused online index creation
-ALTER INDEX test_idx1 on test_table RESUME
-ALTER INDEX test_idx2 on test_table RESUME
+ALTER INDEX test_idx1 ON test_table RESUME;
+ALTER INDEX test_idx2 ON test_table RESUME;
 
 -- Abort resumable index create operation which is running or paused
-ALTER INDEX test_idx1 on test_table ABORT
-ALTER INDEX test_idx2 on test_table ABORT
+ALTER INDEX test_idx1 ON test_table ABORT;
+ALTER INDEX test_idx2 ON test_table ABORT;
 ```
 
 ## <a name="examples-includesssdwfullincludessssdwfull-mdmd-and-includesspdwincludessspdw-mdmd"></a>例: [!INCLUDE[ssSDWfull](../../includes/sssdwfull-md.md)] および [!INCLUDE[ssPDW](../../includes/sspdw-md.md)]
@@ -1105,21 +1134,21 @@ ALTER INDEX test_idx2 on test_table ABORT
 
 ```sql
 -- Execute a resumable online index create statement with MAXDOP=1
-CREATE INDEX test_idx on test_table WITH (ONLINE=ON, MAXDOP=1, RESUMABLE=ON)
+CREATE INDEX test_idx ON test_table WITH (ONLINE = ON, MAXDOP = 1, RESUMABLE = ON);
 
 -- Executing the same command again (see above) after an index operation was paused, resumes automatically the index create operation.
 
 -- Execute a resumable online index creates operation with MAX_DURATION set to 240 minutes. After the time expires, the resumable index create operation is paused.
-CREATE INDEX test_idx on test_table WITH (ONLINE=ON, RESUMABLE=ON, MAX_DURATION=240)
+CREATE INDEX test_idx ON test_table WITH (ONLINE = ON, RESUMABLE = ON, MAX_DURATION = 240);
 
 -- Pause a running resumable online index creation
-ALTER INDEX test_idx on test_table PAUSE
+ALTER INDEX test_idx ON test_table PAUSE;
 
 -- Resume a paused online index creation
-ALTER INDEX test_idx on test_table RESUME
+ALTER INDEX test_idx ON test_table RESUME;
 
 -- Abort resumable index create operation which is running or paused
-ALTER INDEX test_idx on test_table ABORT
+ALTER INDEX test_idx ON test_table ABORT;
 ```
 
 ### <a name="o-create-a-nonclustered-index-on-a-table-in-the-current-database"></a>O. 現在のデータベース内のテーブルに非クラスター化インデックスを作成する
@@ -1136,6 +1165,24 @@ CREATE INDEX IX_ProductVendor_VendorID
 ```sql
 CREATE CLUSTERED INDEX IX_ProductVendor_VendorID
   ON Purchasing..ProductVendor (VendorID);
+```
+### <a name="q-create-an-ordered-clustered-index-on-a-table"></a>Q. 順序を付けてクラスター化したインデックスをテーブルで作成する  
+次の例では、順序を付けてクラスター化したインデックスが `MyDB` データベースの `T1` テーブルの `c1` 列と `c2` 列で作成されます。
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T1 
+ORDER (c1, c2);
+
+```
+
+### <a name="r-convert-a-cci-to-an-ordered-clustered-index-on-a-table"></a>R. 順序を付けてクラスター化したインデックスに CCI をテーブルで変換する  
+次の例では、クラスター化された既存の列ストア インデックスが、`MyDB` データベースの `T2` テーブルの `c1` 列と `c2` 列で、順序を付けてクラスター化した、`MyOrderedCCI` という名称の列ストア インデックスに変換されます。
+
+```sql
+CREATE CLUSTERED COLUMNSTORE INDEX MyOrderedCCI ON MyDB.dbo.T2
+ORDER (c1, c2)
+WITH (DROP_EXISTING = ON);
+
 ```
 
 ## <a name="see-also"></a>参照

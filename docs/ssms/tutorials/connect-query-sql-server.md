@@ -11,12 +11,12 @@ ms.prod: sql
 ms.technology: ssms
 ms.custom: ''
 ms.date: 03/13/2018
-ms.openlocfilehash: 105bcea172a91496c664578befc33f022b5c8d9e
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.openlocfilehash: eaf544085bfe6040bdf9f54300eb733ee4fd92f0
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68256714"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71708330"
 ---
 # <a name="tutorial-connect-to-and-query-a-sql-server-instance-by-using-sql-server-management-studio-ssms"></a>チュートリアル:SQL Server Management Studio (SSMS) を使用して SQL Server インスタンスに接続し、クエリを行う
 
@@ -109,9 +109,10 @@ SQL Server 接続の成功を確認するには、**オブジェクト エクス
    ![データベースの変更](media/connect-query-sql-server/changedb.png)
 
 2. 次の T-SQL コード スニペットをクエリ ウィンドウに貼り付けて選択し、 **[実行]** を選択します (または、キーボードの F5 キーを押します)。  
-   クエリ ウィンドウの既存のテキストを置き換えても、末尾に追加してもかまいません。 クエリ ウィンドウ内のすべてを実行する場合は、 **[実行]** を選択します。 テキストの一部を実行する場合は、その部分を強調表示にしてから、 **[実行]** を選択します。  
+   クエリ ウィンドウの既存のテキストを置き換えても、末尾に追加してもかまいません。 クエリ ウィンドウ内のすべてを実行する場合は、 **[実行]** を選択します。 テキストを追加した場合は、テキストの一部だけを実行したいので、その部分を強調表示にしてから、 **[実行]** を選択します。  
   
    ```sql
+   USE [TutorialDB]
    -- Create a new table called 'Customers' in schema 'dbo'
    -- Drop the table if it already exists
    IF OBJECT_ID('dbo.Customers', 'U') IS NOT NULL

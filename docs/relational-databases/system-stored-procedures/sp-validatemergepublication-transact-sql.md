@@ -38,7 +38,7 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **\@publication =** ] **'***publication***'**  
+ [ **\@publication=** ] **'***publication***'**  
  パブリケーションの名前です。 *publication* は **sysname** 、既定値はありません。  
   
 `[ @level = ] level` は、実行する検証の種類です。 *レベル*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  

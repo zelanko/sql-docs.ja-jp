@@ -19,12 +19,12 @@ ms.assetid: 1601e54f-86f0-49e8-b023-87a5d1def033
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: fa478de897ee47c3c2ea2d634aa7a30815133143
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5c1bf9c758eae4664269787a6905f24911cb3d02
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769238"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710677"
 ---
 # <a name="view-and-modify-pull-subscription-properties"></a>プル サブスクリプションのプロパティの表示または変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -80,29 +80,29 @@ ms.locfileid: "68769238"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプル サブスクリプションのプロパティを表示するには  
   
-1.  サブスクライバーで、 [sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)を実行します。 **@publisher** 、 **@publisher_db** 、および **@publication** を指定します。 これにより、サブスクライバーのシステム テーブルに格納されている、サブスクリプションに関する情報が返されます。  
+1.  サブスクライバーで、 [sp_helppullsubscription](../../relational-databases/system-stored-procedures/sp-helppullsubscription-transact-sql.md)を実行します。 `@publisher`、 `@publisher_db`、および `@publication`を指定します。 これにより、サブスクライバーのシステム テーブルに格納されている、サブスクリプションに関する情報が返されます。  
   
-2.  サブスクライバーで、 [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** を指定し、 **@publication_type** に次のいずれかの値を指定します。  
+2.  サブスクライバーで、 [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)を実行します。 `@publisher`、 `@publisher_db`、 `@publication`を指定し、 `@publication_type`に次のいずれかの値を指定します。  
   
     -   **0** - サブスクリプションがトランザクション パブリケーションに属します。  
   
     -   **1** - サブスクリプションがスナップショット パブリケーションに属します。  
   
-3.  パブリッシャーで、 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)を実行します。 **@publication** および **@subscriber** を指定します。  
+3.  パブリッシャーで、 [sp_helpsubscription](../../relational-databases/system-stored-procedures/sp-helpsubscription-transact-sql.md)を実行します。 `@publication` および `@subscriber` を指定します。  
   
-4.  パブリッシャーで、 [@subscriber](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)を指定して **@subscriber** から表示できます。 これにより、サブスクライバーに関する情報が表示されます。  
+4.  パブリッシャーで、`@subscriber` を指定して [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md) を実行します。 これにより、サブスクライバーに関する情報が表示されます。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-snapshot-or-transactional-publication"></a>スナップショット パブリケーションまたはトランザクション パブリケーションに対するプル サブスクリプションのプロパティを変更するには  
   
-1.  サブスクライバーで、 [sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md)を指定して **@publisher** 、 **@publisher_db** 、 **@publication** を指定し、 **0** に **1** (トランザクション) または **@publication_type** (スナップショット) を指定します。変更するサブスクリプション プロパティを **@property** に、新しい値を **@value** から表示できます。  
+1.  サブスクライバーで、[sp_change_subscription_properties](../../relational-databases/system-stored-procedures/sp-change-subscription-properties-transact-sql.md) を実行します。`@publisher`、`@publisher_db`、`@publication` を指定し、`@publication_type` には **0** (トランザクション) または **1**(スナップショット) を指定し、`@property` として変更するサブスクリプション プロパティを、`@value` として新しい値を指定します。  
   
-2.  (省略可) サブスクライバー側のサブスクリプション データベースに対して、 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md)を実行します。 ディストリビューション エージェント ジョブの ID を **@jobid** に指定し、次のデータ変換サービス (DTS) パッケージ プロパティを指定します。  
+2.  (省略可) サブスクライバー側のサブスクリプション データベースに対して、 [sp_changesubscriptiondtsinfo](../../relational-databases/system-stored-procedures/sp-changesubscriptiondtsinfo-transact-sql.md)を実行します。 ディストリビューション エージェント ジョブの ID を `@jobid` に指定し、次のデータ変換サービス (DTS) パッケージ プロパティを指定します。  
   
-    -   **@dts_package_name**  
+    -   `@dts_package_name`  
   
-    -   **@dts_package_password**  
+    -   `dts_package_password`  
   
-    -   **@dts_package_location**  
+    -   `@dts_package_location`  
   
      これにより、サブスクリプションの DTS パッケージ プロパティが変更されます。  
   
@@ -111,17 +111,17 @@ ms.locfileid: "68769238"
   
 #### <a name="to-view-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションのプロパティを表示するには  
   
-1.  サブスクライバーで、 [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** を指定します。  
+1.  サブスクライバーで、 [sp_helpmergepullsubscription](../../relational-databases/system-stored-procedures/sp-helpmergepullsubscription-transact-sql.md)を実行します。 `@publisher`、 `@publisher_db`、および `@publication`を指定します。  
   
-2.  サブスクライバーで、 [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)を実行します。 **@publisher** 、 **@publisher_db** 、 **@publication** を指定し、 **@publication_type** に 2 を指定します。  
+2.  サブスクライバーで、 [sp_helpsubscription_properties](../../relational-databases/system-stored-procedures/sp-helpsubscription-properties-transact-sql.md)を実行します。 `@publisher`、`@publisher_db`、`@publication` を指定し、`@publication_type` に値 2 を指定します。  
   
-3.  パブリッシャーで [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) を実行し、サブスクリプション情報を表示します。 特定のサブスクリプションに関する情報を取得するには、 **@publication** 、 **@subscriber** を指定し、 **@subscription_type** に **@subscription_type** から表示できます。  
+3.  パブリッシャーで [sp_helpmergesubscription](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md) を実行し、サブスクリプション情報を表示します。 特定のサブスクリプションに関する情報を取得するには、`@publication` と `@subscriber` を指定し、@subscription_type に対して値 **pull** を指定する必要があります。  
   
-4.  パブリッシャーで、 [@subscriber](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md)を指定して **@subscriber** から表示できます。 これにより、サブスクライバーに関する情報が表示されます。  
+4.  パブリッシャーで、`@subscriber` を指定して [sp_helpsubscriberinfo](../../relational-databases/system-stored-procedures/sp-helpsubscriberinfo-transact-sql.md) を実行します。 これにより、サブスクライバーに関する情報が表示されます。  
   
 #### <a name="to-change-the-properties-of-a-pull-subscription-to-a-merge-publication"></a>マージ パブリケーションに対するプル サブスクリプションのプロパティを変更するには  
   
-1.  サブスクライバーで、 [sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)を実行します。 **@publication** 、 **@publisher** 、 **@publisher_db** を指定し、 **@property** に変更するサブスクリプション プロパティを、 **@value** に新しい値を指定します。  
+1.  サブスクライバーで、 [sp_changemergepullsubscription](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)を実行します。 `@publication`、`@publisher`、`@publisher_db` を指定し、`@property` には変更するサブスクリプション プロパティを、`@value` には新しい値を指定します。  
   
 ##  <a name="RMOProcedure"></a> レプリケーション管理オブジェクト (RMO) の使用  
  プル サブスクリプションのプロパティを表示または変更する際に使用する RMO のクラスは、プル サブスクリプションがサブスクライブされるパブリケーションの種類によって異なります。  

@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 25357798ed5a0340b46e787ad041ae6d9f19d7ab
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67903098"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710306"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -157,7 +157,7 @@ ms.locfileid: "67903098"
   
      エージェントに必要な権限の詳細については、「 [Replication Agent Security Model](../../relational-databases/replication/security/replication-agent-security-model.md)」を参照してください。  
   
--   サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページでアカウントとパスワードを指定するとき、または **@internet_url** 」および「 **@internet_login** および [@internet_login](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md)」を参照してください。 このアカウントには、スナップショット共有の読み取り権限が必要です。  
+-   サブスクリプションの新規作成ウィザードの **[Web サーバー情報]** ページでアカウントとパスワードを指定するとき、または [sp_addpullsubscription_agent](../../relational-databases/system-stored-procedures/sp-addpullsubscription-agent-transact-sql.md) の `@internet_url` および `@internet_login` パラメーターの値を指定するときに、マージ エージェントで使用されるドメイン アカウントと同じアカウントを指定します。 このアカウントには、スナップショット共有の読み取り権限が必要です。  
   
 -   各パブリケーションでは、IIS 用に個別の仮想ディレクトリを使用する必要があります。  
   

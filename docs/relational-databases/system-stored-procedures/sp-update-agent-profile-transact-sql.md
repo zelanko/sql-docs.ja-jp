@@ -37,7 +37,7 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **\@agent_type =** ] **'***agent_type***'**  
+ [ **\@agent_type=** ] **'***agent_type***'**  
  エージェントの種類を指定します。 *agent_type*は**int**,、既定値はありませんが、これらの値のいずれかを指定することができます。  
   
 |値|説明|  
@@ -48,10 +48,10 @@ sp_update_agent_profile [@agent_type=] agent_type, [ @agent_id= ] agent_id, [ @p
 |**4**|マージエージェント。|  
 |**9**|キュー リーダー エージェント|  
   
- [ **\@agent_id =** ]*agent_id*  
+ [ **\@agent_id=** ]*agent_id*  
  エージェントの ID を指定します。 *agent_id*は**int**,、既定値はありません。  
   
- [ **\@profile_id =** ]*profile_id*  
+ [ **\@profile_id=** ]*profile_id*  
  エージェントで使用する必要のあるプロファイルの ID を指定します。 *profile_id*は**int**,、既定値はありません。 各エージェントに対して定義されているプロファイルの一覧を表示するには、 [sp_help_agent_profile &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md)を使用します。 システムプロファイルの詳細については、「[レプリケーションエージェントプロファイル](../../relational-databases/replication/agents/replication-agent-profiles.md)」を参照してください。  
   
 ## <a name="return-code-values"></a>リターン コードの値  

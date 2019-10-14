@@ -9,12 +9,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: 0da3a3225e3ef47bd4a38d1ccbcc2d074d543a55
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 1df7f6a53bb8d634b5d347f7a043605f7610ed78
+ms.sourcegitcommit: 445842da7c7d216b94a9576e382164c67f54e19a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154576"
+ms.lasthandoff: 09/30/2019
+ms.locfileid: "71682115"
 ---
 # <a name="operate-failover-cluster-instance---sql-server-on-linux"></a>フェールオーバー クラスター インスタンスの操作 - SQL Server on Linux
 
@@ -35,7 +35,7 @@ FCI を別のノードに手動でフェールオーバーすることが必要�
 
 ## <a name="manual-failover-rhel-or-ubuntu"></a>手動フェールオーバー (RHEL または Ubuntu)
 
-手動フェールオーバーを実行するには、Red Hat Enterprise Linux (RHEL) サーバーまたは Ubuntu サーバーで、次の手順を実行します。
+Red Hat Enterprise Linux (RHEL) サーバーまたは Ubuntu サーバーで手動フェールオーバーを実行するには、次の手順を実行します。
 1.  次のコマンドを実行します。 
 
    ```bash

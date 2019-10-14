@@ -15,12 +15,12 @@ ms.assetid: ccf68a13-e748-4455-8168-90e6d2868098
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: ef3e6d3daae23e48feae3e1723326c990e427075
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: ff1a4e5c9c185e97f3dd31c8c2ec96d10bceda42
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769320"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710708"
 ---
 # <a name="transactional-articles---regenerate-to-reflect-schema-changes"></a>トランザクション アーティクル - 再生成によるスキーマ変更の反映
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -30,17 +30,17 @@ ms.locfileid: "68769320"
   
 -   1 つ目のオプションは、カスタム スクリプト作成プロシージャを使用して、レプリケーションで使用する既定のプロシージャを置き換える方法です。  
   
-    1.  [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) を実行する場合は、 **@schema_option** 0x02 ビットが **true** であることを確認します。  
+    1.  [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) を実行する場合は、`@schema_option` の 0x02 ビットを確実に **true** にします。  
   
-    2.  [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) を実行し、 **@type** パラメーターの値に 'insert'、'update'、または 'delete' を指定し、 **@value** パラメーターにカスタム スクリプト作成プロシージャの名前を指定します。  
+    2.  [sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) を実行し、`@type` パラメーターには値 "insert"、"update"、または "delete" を、`@value` パラメーターにはカスタム スクリプト作成プロシージャの名前を指定します。  
   
      次回にスキーマが変更されると、レプリケーションによってこのストアド プロシージャが呼び出され、新しくユーザーが定義したカスタム ストアド プロシージャの定義がスクリプト化されて、プロシージャが各サブスクライバーに反映されます。  
   
 -   2 つ目のオプションは、新しいカスタム プロシージャの定義を含むスクリプトを使用する方法です。  
   
-    1.  [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) を実行する際に、 **@schema_option** 0x02 ビットに **false** を設定し、レプリケーションによってカスタム プロシージャがサブスクライバーで自動的に生成されないようにします。  
+    1.  [sp_addarticle &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md) を実行するときに、`@schema_option` の 0x02 ビットを **false** に設定し、レプリケーションによってカスタム プロシージャがサブスクライバーで自動的に生成されないようにします。  
   
-    2.  各スキーマ変更の前に、新しいスクリプト ファイルを作成し、[sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) を実行してスクリプトをレプリケーションに登録します。 **@type** パラメーターの値として 'custom_script' を指定し、 **@value** パラメーターにパブリッシャー上のスクリプトのパスを指定します。  
+    2.  各スキーマ変更の前に、新しいスクリプト ファイルを作成し、[sp_register_custom_scripting &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-register-custom-scripting-transact-sql.md) を実行してスクリプトをレプリケーションに登録します。 `@type` パラメーターの値として "custom_script" を指定し、`@value` パラメーターにパブリッシャー上のスクリプトのパスを指定します。  
   
      次回に関連スキーマが変更されると、各サブスクライバーでは、DDL コマンドと同じトランザクション内でこのスクリプトが実行されます。 スキーマ変更が完了すると、スクリプトの登録が解除されます。 以降のスキーマ変更でこのスクリプトを実行するには、スクリプトを再登録する必要があります。  
   

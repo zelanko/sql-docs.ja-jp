@@ -15,12 +15,12 @@ ms.assetid: a1485cf4-b1c4-49e9-ab06-8ccfaad998f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: c96a881443c03362f58fdfa857d6244789a7fe7e
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 9173073074957d448be8bd28cf92b16f18f4e2f3
+ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769631"
+ms.lasthandoff: 10/01/2019
+ms.locfileid: "71710776"
 ---
 # <a name="republish-data"></a>データの再パブリッシュ
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -68,7 +68,7 @@ ms.locfileid: "68769631"
 |マージ パブリケーション|マージ サブスクリプション/マージ パブリケーション|マージ サブスクリプション|  
 |マージ パブリケーション|マージ サブスクリプション/トランザクション パブリケーション|トランザクション サブスクリプション|  
   
- \*マージ パブリケーションの **@published_in_tran_pub** プロパティを設定する必要があります。 既定では、トランザクション レプリケーションにより、サブスクライバーでテーブルが読み取り専用として処理されることが予測されます。 マージ レプリケーションにより、トランザクション サブスクリプションのテーブルでデータの変更が行われる場合、データが集約できなくなる可能性があります。 このリスクを回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
+ \* マージ パブリケーションで `@published_in_tran_pub` プロパティを設定する必要があります。 既定では、トランザクション レプリケーションにより、サブスクライバーでテーブルが読み取り専用として処理されることが予測されます。 マージ レプリケーションにより、トランザクション サブスクリプションのテーブルでデータの変更が行われる場合、データが集約できなくなる可能性があります。 このリスクを回避するため、マージ パブリケーションではこのようなテーブルをダウンロードのみとして指定することをお勧めします。 これはマージ サブスクライバーがテーブルにデータの変更をアップロードすることを防ぎます。 詳細については、「[ダウンロード専用アーティクルを使用したマージ レプリケーションのパフォーマンス最適化](../../relational-databases/replication/merge/optimize-merge-replication-performance-with-download-only-articles.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [[ディストリビューションの構成]](../../relational-databases/replication/configure-distribution.md)   
