@@ -7,13 +7,13 @@ author: maggiesMSFT
 ms.author: maggies
 ms.reviewer: ''
 ms.custom: seodec18
-ms.date: 04/26/2019
-ms.openlocfilehash: 86f3d1834212ff17125abc9a124eb10d3f7e9be5
-ms.sourcegitcommit: e7d921828e9eeac78e7ab96eb90996990c2405e9
+ms.date: 10/09/2019
+ms.openlocfilehash: 7c781721ff9dcd2ec82844e8e0604aca83a186e4
+ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/16/2019
-ms.locfileid: "68264980"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72239378"
 ---
 # <a name="configure-a-report-server-database-connection-ssrs-configuration-manager"></a>レポート サーバー データベース接続の構成 (SSRS 構成マネージャー)
 
@@ -105,6 +105,13 @@ Windows 統合セキュリティを使用すると、レポート サーバー �
 #### <a name="using-a-sql-server-login"></a>SQL Server ログインの使用
 
 レポート サーバー データベースに接続する [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ログインを 1 つだけ指定できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 認証を使用しており、レポート サーバー データベースがリモート コンピューター上にある場合は、サーバー間のデータ転送をセキュリティで保護するため、IPSec を使用してください。 データベース ログインを使用する場合、パスワードまたはアカウントを変更するたびにレポート サーバー データベース接続を更新する必要があります。  
+
+::: moniker range=">=sql-server-ver15||=sqlallproducts-allversions"
+
+> [!NOTE]
+> Azure SQL Managed Instance を使用して Reporting Services 2019 データベースをホストする場合、サポートは、接続に SQL Server ログイン資格情報の使用に制限されます。
+
+::: moniker-end
 
 ### <a name="database-permissions"></a>データベース権限
 

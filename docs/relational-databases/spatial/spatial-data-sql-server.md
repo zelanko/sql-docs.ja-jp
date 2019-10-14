@@ -1,6 +1,6 @@
 ---
 title: 空間データ (SQL Server) | Microsoft Docs
-ms.date: 03/14/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -18,12 +18,12 @@ ms.assetid: 41a132a1-09e2-4426-b9df-225270cb8e15
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 505785e4b0460d2a59e4d42898d950bc55b25de5
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f600f45241016bc2f5bb59faa89b5f45b317c90d
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68048502"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278140"
 ---
 # <a name="spatial-data-sql-server"></a>空間データ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -37,9 +37,6 @@ ms.locfileid: "68048502"
 -   **geography** 型は、球体地球座標系のデータを表します。  
   
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]では、どちらのデータ型も .NET 共通言語ランタイム (CLR) のデータ型として実装されています。  
-  
-> [!IMPORTANT]  
->  [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]で導入された空間機能の詳細な説明とサンプルについては、ホワイト ペーパー「 [New Spatial Features in SQL Server 2012](https://go.microsoft.com/fwlink/?LinkId=226407)」 (SQL Server 2012 の新しい空間機能) をダウンロードして参照してください。  
   
 ##  <a name="reltasks"></a> 関連タスク  
  [geometry インスタンスの作成、構築、およびクエリ](../../relational-databases/spatial/create-construct-and-query-geometry-instances.md)  

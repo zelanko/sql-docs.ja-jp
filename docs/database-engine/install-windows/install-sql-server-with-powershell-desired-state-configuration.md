@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: randomnote1
 ms.author: dareist
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 560e752e5559b0e79a4f123443d200ca70532ef5
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c3966d681b9001b2bded09c6c92aa665eec7a2d9
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "63221967"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041062"
 ---
 # <a name="install-sql-server-with-powershell-desired-state-configuration"></a>PowerShell Desired State Configuration での SQL Server をインストールする
 
@@ -28,7 +28,7 @@ ms.locfileid: "63221967"
 
 さらに悪いことは、インストール全体への信頼が揺らぐことです。 "他に何か忘れていないか?" 自問するのではないでしょうか。
 
-[PowerShell Desired State Configuration (DSC)](https://docs.microsoft.com/powershell/dsc/overview) に関するページを参照してください。 DSC を使用して、数百、数千のサーバーで再利用できる 1 つの構成テンプレートをビルドします。 ビルドによっては、いくつかの設定パラメーターを調整する必要があります。 ただし、すべての標準設定を適切に維持できるため、これは重要な問題ではありません。 この場合、重要なパラメーターの入力を忘れるという可能性は排除されます。
+[PowerShell Desired State Configuration (DSC)](/powershell/scripting/dsc/overview/overview) に関するページを参照してください。 DSC を使用して、数百、数千のサーバーで再利用できる 1 つの構成テンプレートをビルドします。 ビルドによっては、いくつかの設定パラメーターを調整する必要があります。 ただし、すべての標準設定を適切に維持できるため、これは重要な問題ではありません。 この場合、重要なパラメーターの入力を忘れるという可能性は排除されます。
 
 この記事では、**SqlServerDsc** DSC リソースを使用して、Windows Server 2016 上の SQL Server 2017 のスタンドアロン インスタンスの初期設定を参照します。 DSC がどのように動作するかを調べないときは、いくつかの DSC の予備知識があると役立ちます。
 
@@ -213,7 +213,7 @@ PS C:\> & sqlcmd -S $env:COMPUTERNAME
 
 ## <a name="see-also"></a>参照
 
-[Windows PowerShell Desired State Configuration の概要](https://docs.microsoft.com/powershell/dsc/overview)
+[Windows PowerShell Desired State Configuration の概要](/powershell/scripting/dsc/overview/overview)
 
 [コマンド プロンプトからの SQL Server のインストール](../../database-engine/install-windows/install-sql-server-from-the-command-prompt.md)
 

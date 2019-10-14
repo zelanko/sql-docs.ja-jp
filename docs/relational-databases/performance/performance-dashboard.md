@@ -14,12 +14,12 @@ ms.assetid: 07f8f594-75b4-4591-8c29-d63811d7753e
 author: pelopes
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: 4b5e2a9dbb6963b63d6dfac8d76d9c01e839a8fe
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 1d3a404aecf987be2fa0c2638fa3abb8c6f3ea0c
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559479"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041169"
 ---
 # <a name="performance-dashboard"></a>パフォーマンス ダッシュボード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -78,7 +78,7 @@ ms.locfileid: "67559479"
 基になる DMV 内のデータがクリアされたために [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] が再起動すると、 **[コストの高いクエリ]** レポートはリセットされます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] 以降、コストの高いクエリに関する詳細情報はクエリ ストアで見つけることができます。 
 
 > [!NOTE]
-> パフォーマンス ダッシュボードは最初に、[SQL Server 2005](http://www.microsoft.com/download/details.aspx?id=22602) 向けのスタンドアロン ダウンロードとしてリリースされ、その後、[SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063) 向けに更新されました。
+> パフォーマンス ダッシュボードは最初に、[SQL Server 2005](https://techcommunity.microsoft.com/t5/SQL-Server-Support/SQL-Server-2005-Performance-Dashboard-Reports/ba-p/315415) 向けのスタンドアロン ダウンロードとしてリリースされ、その後、[SQL Server 2012](https://www.microsoft.com/en-us/download/details.aspx?id=29063) 向けに更新されました。
 
 ## <a name="permissions"></a>アクセス許可  
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 上では、`VIEW SERVER STATE` および `ALTER TRACE` アクセス許可が必要です。 [!INCLUDE[ssazure_md](../../includes/ssazure_md.md)] 上では、データベース内の `VIEW DATABASE STATE` アクセス許可が必要です。

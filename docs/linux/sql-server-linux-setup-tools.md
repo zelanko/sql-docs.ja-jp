@@ -10,12 +10,12 @@ ms.prod: sql
 ms.custom: sqlfreshmay19
 ms.technology: linux
 ms.assetid: eff8e226-185f-46d4-a3e3-e18b7a439e63
-ms.openlocfilehash: c10b97116cfde197a332d873fba5a807a2eb4ce9
-ms.sourcegitcommit: a154b3050b6e1993f8c3165ff5011ff5fbd30a7e
+ms.openlocfilehash: 23610c3144c7cf03a4c93be900bfc60a449448ed
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/30/2019
-ms.locfileid: "70910792"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041251"
 ---
 # <a name="install-sqlcmd-and-bcp-the-sql-server-command-line-tools-on-linux"></a>Linux に SQL Server コマンドライン ツール sqlcmd および bcp をインストールする
 
@@ -219,7 +219,7 @@ brew install mssql-tools
    | SLES | [https://packages.microsoft.com/sles/12/prod](https://packages.microsoft.com/sles/12/prod)|
    | Ubuntu 16.04 | [**msodbcsql**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/m/msodbcsql)<br/>[**unixodbc-dev**](https://packages.microsoft.com/ubuntu/16.04/prod/pool/main/u/unixodbc/) |
 
-1. **ダウンロードしたパッケージを Linux マシンに移動します**。 別のマシンを使用してパッケージをダウンロードした場合、パッケージを Linux マシンに移動する方法の 1 つは **scp** コマンドの使用です。
+1. **ダウンロードしたパッケージを Linux マシンに移動します**。 別のコンピューターを使用してパッケージをダウンロードした場合、パッケージをお使いの Linux コンピューターに移動する 1 つの方法は **scp** コマンドを使用することです。
 
 1. **パッケージをインストールします**。**mssql-tools** および **msodbc** パッケージをインストールします。 依存関係のエラーが発生した場合は無視して次の手順に進みます。
 
