@@ -8,12 +8,12 @@ description: この記事では、ブランド パッケージを利用してビ
 ms.topic: conceptual
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 65429cd58796d27025a929e95c6682449e456425
-ms.sourcegitcommit: 9221a693d4ab7ae0a7e2ddeb03bd0cf740628fd0
+ms.openlocfilehash: 47fc9ba65aca128a7e812f85c5bd06ca38131cbf
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/23/2019
-ms.locfileid: "71199420"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251914"
 ---
 # <a name="branding-the-web-portal"></a>Web ポータルのブランド化
 
@@ -75,7 +75,7 @@ metadata.xml ファイルにより、ブランド パッケージの名前を設
     "primary":"#009900",   
     "primaryContrast":"#ffffff"   
   
-出力が処理されるとき、LESS 変数の **@primaryButtonBg** が検索され、 **primary**と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
+処理された出力では、LESS 変数の **\@primaryButtonBg** が検索され、**primary** と呼ばれる json プロパティにマッピングされていることが確認されます (この例では、#009900)。 その後、適切な CSS が出力されます。  
   
     .btn-primary {   
         color:#ffffff;   

@@ -10,12 +10,12 @@ ms.topic: conceptual
 author: v-makouz
 ms.author: v-jizho2
 manager: kenvh
-ms.openlocfilehash: a22cf1c2da261805309c8ac223a8535afbcd34d1
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: e7a3d7b7f67abae251041ff2b702d93b60228958
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70152739"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173145"
 ---
 # <a name="release-notes-for-the-microsoft-odbc-driver-to-sql-server-on-linux-and-macos"></a>Linux および macOS 上の Microsoft ODBC Driver for SQL Server のリリース ノートです
 
@@ -35,6 +35,19 @@ NOW NEW FILE NAME:    linux-mac/release-notes-odbc-sql-server-linux-mac.md
 Thank you.
 GeneMi.  2019/04/03.
 -->
+## <a name="1742-october-2019"></a>17.4.2、2019 年 10 月
+
+| 追加された機能 | 詳細 |
+| :------------ | :------ |
+| 追加の Azure Key Vault エンドポイントのサポート | [ODBC ドライバーでの Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページをご覧ください。 |
+| データ分類バージョンの設定のサポート | 「[データ分類](../data-classification.md#bkmk-version)」を参照してください。 |
+| バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| &nbsp; | &nbsp; |
+
+**既知の問題:**
+
+Secure enclaves と Azure Key Vault で Always Encrypted を使用する場合、奇数キーのパスの長さによって CMK 署名検証エラーが発生する可能性があります。 この問題が発生した場合は、AKV キーの名前を変更して、キーパスの長さを1文字に変更してみてください。
+
 ## <a name="174-august-2019"></a>17.4、2019 年 8 月
 
 | 追加された機能 | 詳細 |

@@ -11,12 +11,12 @@ ms.reviewer: v-jizho2, v-chojas, genemi
 author: v-makouz
 ms.author: v-makouz
 manager: kenvh
-ms.openlocfilehash: d6eebce61ede6e1e3dd76028a653a00ffa06990e
-ms.sourcegitcommit: e821cd8e5daf95721caa1e64c2815a4523227aa4
+ms.openlocfilehash: 98e7aec7883bc12d04ce24aba7b9a93244f707f6
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/01/2019
-ms.locfileid: "68702752"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041157"
 ---
 # <a name="release-notes-for-odbc-to-sql-server-on-windows"></a>Windows 上の SQL Server に対する ODBC のリリース ノート
 
@@ -43,6 +43,16 @@ By the way, in GitHub, the file name is changing today 2019/03/30:
 Thank you.
 GeneMi (and CraigG).  2019/03/30.
 -->
+
+## <a name="1742-october-2019"></a>17.4.2、2019 年 10 月
+
+| 追加された機能 | 詳細 |
+| :------------ | :------ |
+| 追加の Azure Key Vault エンドポイントのサポート | [ODBC ドライバーでの Always Encrypted の使用](../using-always-encrypted-with-the-odbc-driver.md)に関するページをご覧ください。 |
+| データ分類バージョンの設定のサポート | 「[データ分類](../data-classification.md#bkmk-version)」を参照してください。 |
+| Azure への認証に使用する Azure Active Drirectory Authentication Library (adal) がドライバーによってインストールされるようになりました | |
+| バグの修正。 | 「[Bug fixes (バグの修正)](../bug-fixes.md)」をご覧ください。 |
+| &nbsp; | &nbsp; |
 
 ## <a name="174-july-2019"></a>17.4、2019 年 7 月
 

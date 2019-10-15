@@ -1,7 +1,7 @@
 ---
 title: 'ステップ 3: pyodbc を使用した SQL への接続を概念実証する | Microsoft Docs'
 ms.custom: ''
-ms.date: 08/08/2017
+ms.date: 10/09/2019
 ms.prod: sql
 ms.prod_service: connectivity
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 4bfd6e52-817d-4f0a-a33d-11466e3f0484
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: 30ba3db5e23d95128aecbb5cc8974faeb6d58d75
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: faa2d63e0d1104665768ea436986b8fd3a52c107
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016840"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251785"
 ---
 # <a name="step-3-proof-of-concept-connecting-to-sql-using-pyodbc"></a>ステップ 3: pyodbc を使用した SQL への接続を概念実証する
 
@@ -76,7 +76,24 @@ while row:
     print 'Inserted Product key is ' + str(row[0]) 
     row = cursor.fetchone()
 ```  
-  `      
-  ## <a name="next-steps"></a>次の手順  
+
+## <a name="azure-active-directory-aad-and-the-connection-string"></a>Azure Active Directory (AAD) と接続文字列
+
+pyODBC では、Microsoft ODBC Driver for SQL Server が使用されます。
+ODBC ドライバーのバージョンが17.1 以降の場合は、pyODBC を介して、ODBC ドライバーの AAD interactive モードを使用できます。
+この AAD interactive オプションは、Python と pyODBC で、ODBC ドライバーがダイアログをポップアップ表示することを許可している場合に機能します。
+このオプションは、Windows オペレーティングシステムでのみ使用できます。
+
+### <a name="example-connection-string-for-aad-interactive-authentication"></a>AAD interactive authentication の接続文字列の例
+
+AAD interactive authentication を指定する ODBC 接続文字列の例を次に示します。
+
+- `server=Server;database=Database;UID=UserName;Authentication=ActiveDirectoryInteractive;`
+
+ODBC ドライバーの AAD 認証オプションの詳細については、次の記事を参照してください。
+
+- [ODBC ドライバーでの Azure Active Directory の使用](../../odbc/using-azure-active-directory.md#new-andor-modified-dsn-and-connection-string-keywords)
+
+## <a name="next-steps"></a>次の手順
   
 詳細については、 [Python デベロッパーセンター](https://azure.microsoft.com/develop/python/)を参照してください。

@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: b7fdd216dd93863e2c783de5da315b2ac208a449
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71713209"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72261017"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -114,17 +114,22 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-ステートメントで使用される MAXDOP 設定の既定値を指定します。 0 が初期設定値であり、サーバー構成が代わりに使用されることを示します。 データベース スコープの MAXDOP は、サーバー レベルで設定されている**並列処理の最大限度**を p_configure によってオーバーライドします (0 に設定されていない限り)。 別の設定を必要とする特定のクエリを調整する目的で、クエリ ヒントは引き続き、DB スコープの MAXDOP をオーバーライドできます。 これらすべての設定の上限は、ワークロード グループに設定されている MAXDOP によって決定されます。
+ステートメントで使用される**並列処理の最大限度 (MAXDOP)** 設定の既定値を指定します。 0 が初期設定値であり、サーバー構成が代わりに使用されることを示します。 データベース スコープの MAXDOP は、サーバー レベルで設定されている**並列処理の最大限度**を p_configure によってオーバーライドします (0 に設定されていない限り)。 別の設定を必要とする特定のクエリを調整する目的で、クエリ ヒントでは引き続き、データベース スコープの MAXDOP をオーバーライドできます。 これらすべての設定の上限は、[ワークロード グループ]()に設定されている MAXDOP によって決定されます。
 
-max degree of parallelism オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 SQL Server は、クエリ、インデックス データ定義言語 (DDL) の操作、並列挿入、オンライン列変更、並行統計コレクション、静的およびキーセット ドリブン カーソルの作成の場合に並列実行プランを検討します。
+MAXDOP オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリ、インデックス データ定義言語 (DDL) の操作、並列挿入、オンライン列変更、並行統計コレクション、静的およびキーセット ドリブン カーソルの作成の場合に並列実行プランが検討されます。
+
+> [!NOTE]
+> **並列処理の最大限度 (MAXDOP)** の制限は[タスク](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)ごとに設定されます。 この設定は、[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)ごとまたはクエリ制限ごとではありません。 つまり、並列クエリ実行中に、1 つの要求で、[スケジューラ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)に割り当てられてた複数のタスクを生成することができます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。 
 
 インスタンス レベルでこのオプションを設定する方法については、「[max degree of parallelism サーバー構成オプションの構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)」を参照してください。
 
 > [!NOTE]
-> Azure SQL Database では、サーバーレベルの **[並列処理の最大限度]** 構成は常に 0 に設定されます。 MAXDOP は、現在の記事で説明されているように、データベースごとに構成できます。 MAXDOP の最適な構成に関する推奨事項については、「[その他のリソース](https://docs.microsoft.com/en-us/sql/t-sql/statements/alter-database-scoped-configuration-transact-sql?view=sql-server-2017#additional-resources)」を参照してください。
+> [!INCLUDE[ssSDSfull](../../includes/sssdsfull-md.md)] では、サーバーレベルの**並列処理の最大限度**構成は常に 0 に設定されます。 MAXDOP は、現在の記事で説明されているように、データベースごとに構成できます。 MAXDOP の最適な構成に関する推奨事項については、「[その他のリソース](#additional-resources)」を参照してください。
 
 > [!TIP]
-> これをクエリ レベルで行うには、**MAXDOP** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を追加してください。
+> これをクエリ レベルで行うには、**MAXDOP** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を使用します。    
+> これをサーバー レベルで行うには、**並列処理の最大限度 (MAXDOP)** [サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を使用します。     
+> これをワークロード レベルで行うには、**MAX_DOP** [Resource Governor ワークロード グループ構成オプション](../../t-sql/statements/create-workload-group-transact-sql.md) 使用します。    
 
 PRIMARY
 
@@ -550,13 +555,13 @@ ALTER DATABASE SCOPED CONFIGURATION CLEAR PROCEDURE_CACHE 0x06000500F443610F003B
 
 [オンライン インデックス操作のガイドライン](../../relational-databases/indexes/guidelines-for-online-index-operations.md)
 
-## <a name="more-information"></a>詳細情報
-
-- [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)
-- [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)
-- [データベースとファイルのカタログ ビュー](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)
-- [サーバー構成オプション](../../database-engine/configure-windows/server-configuration-options-sql-server.md)
-- [オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)
-- [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)
-- [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)
-- [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)
+## <a name="more-information"></a>詳細情報   
+ [sys.database_scoped_configurations](../../relational-databases/system-catalog-views/sys-database-scoped-configurations-transact-sql.md)      
+ [SQL Server の "並列処理の最大限度" 構成オプションの推奨事項とガイドライン](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md#Guidelines)      
+ [sys.configurations](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)    
+ [データベースとファイルのカタログ ビュー](../../relational-databases/system-catalog-views/databases-and-files-catalog-views-transact-sql.md)    
+ [サーバー構成オプション](../../database-engine/configure-windows/server-configuration-options-sql-server.md)    
+ [オンライン インデックス操作の動作原理](../../relational-databases/indexes/how-online-index-operations-work.md)    
+ [オンラインでのインデックス操作の実行](../../relational-databases/indexes/perform-index-operations-online.md)    
+ [ALTER INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/alter-index-transact-sql.md)    
+ [CREATE INDEX &#40;Transact-SQL&#41;](../../t-sql/statements/create-index-transact-sql.md)    

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 89fddca5-bd96-4128-9072-5348d1b6e02c
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: 318f1bae413dad632f5cd93ebefde0cc7cfd4d29
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 6fd76ce7d20349301d3bfeb70b4ed1c24325cbdc
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66500119"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251205"
 ---
 # <a name="text-based-query-designer-user-interface-report-builder"></a>テキストベースのクエリ デザイナーのユーザー インターフェイス (レポート ビルダー)
   デザイン時に、データ ソースでサポートされているクエリ言語でクエリを指定し、クエリを実行し、結果を表示するには、テキスト ベースのクエリ デザイナーを使用します。 複数の [!INCLUDE[tsql](../../includes/tsql-md.md)] ステートメント、カスタム データ処理拡張機能のクエリまたはコマンド構文、および式としてのクエリを指定できます。 テキスト ベースのクエリ デザイナーはクエリを前処理せず、あらゆる種類のクエリ構文に対応できるため、これは多くの種類のデータ ソースで既定のクエリ デザイナー ツールになっています。  
@@ -87,8 +87,8 @@ uspGetWhereUsedProductID
   
 |||  
 |-|-|  
-|*@StartProductID*|820|  
-|*@CheckDate*|20010115|  
+|*\@StartProductID*|820|  
+|*\@CheckDate*|20010115|  
   
  指定した日付について、結果セットには、指定したコンポーネント番号を使用している 13 の製品 ID の一覧が表示されます。  
   

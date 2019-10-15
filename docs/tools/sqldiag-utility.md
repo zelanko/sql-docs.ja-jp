@@ -29,12 +29,12 @@ helpviewer_keywords:
 ms.assetid: 45ba1307-33d1-431e-872c-a6e4556f5ff2
 author: markingmyname
 ms.author: maghan
-ms.openlocfilehash: 5df0001449d5ec1d2fded885fb932436a313bbfe
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 7eadacbf0e3137cf22c9a870783da41a046c86fb
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67986298"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251368"
 ---
 # <a name="sqldiag-utility"></a>SQLdiag ユーティリティ
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,10 +112,10 @@ sqldiag
 > [!NOTE]  
 >  **SQLdiag** は起動時に、現在の出力フォルダーに出力を追加しません。 既定の出力フォルダーを上書きするか (オプション 1)、または既定のフォルダー名を変更して (オプション 2)、SQLDIAG という名前の新しい既定の出力フォルダーに出力を書き込むかのどちらかです。  
   
- **/M** _machine1_ [ *machine2* *machineN*] | *@machinelistfile*  
+ **/M** _machine1_ [ *machine2* *machineN*] | *\@machinelistfile*  
  構成ファイルで指定されたコンピューターをオーバーライドします。 既定では、構成ファイルは SQLDiag.Xml です。または **/I** パラメーターで設定されます。 複数のコンピューターを指定する場合、それぞれのコンピューター名をスペースで区切ります。  
   
- *@machinelistfile* を使用すると、構成ファイルに保存するコンピューター一覧のファイル名が指定されます。  
+ *\@machinelistfile* を使用すると、構成ファイルに保存するコンピューター一覧のファイル名が指定されます。  
   
  **/C** _file_compression_type_  
  **SQLdiag** 出力フォルダー ファイルで使用されるファイル圧縮の種類を設定します。 使用できるオプションは次のとおりです。  

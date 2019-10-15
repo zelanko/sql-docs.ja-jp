@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 9f1aefd6b05e5bace4bfc296c14c881645030f5e
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71952752"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251355"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -3029,18 +3029,36 @@ ON
 このデータベースから返されたクエリの結果セットが Azure SQL Data Warehouse ストレージにキャッシュされることを指定します。
 
 OFF        
-このデータベースから返されたクエリの結果セットが Azure SQL Data Warehouse ストレージにキャッシュされないことを指定します。 特定の request_id で sys.pdw_request_steps を問い合わせることで、クエリを実行した結果、結果キャッシュにデータが見つかるかどうかを確認できます。   キャッシュに該当するデータが見つかる場合、クエリ結果には、次の詳細を含むステップが 1 つ与えられます。
-
-|**列名** |**[オペレーター]** |**Value** |
-|----|----|----|
-| operation_type|=|ReturnOperation|
-|step_index|=|0|
-|location_type|=|Control|
-command|Like|%DWResultCacheDb%|
-| | |
+このデータベースから返されたクエリの結果セットが Azure SQL Data Warehouse ストレージにキャッシュされないことを指定します。 
 
 ### <a name="remarks"></a>Remarks
-このコマンドは、`master` データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 is_result_set_caching_on という新しい列が [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md) に導入され、データベースの結果キャッシュ設定を示します。  
+このコマンドは、`master` データベースに接続しているときに実行する必要があります。  このデータベースの設定変更はすぐに適用されます。  クエリの結果セットをキャッシュすることでストレージ コストが発生します。 データベースの結果キャッシュを無効にすると、直後に、前に永続させた結果キャッシュが Azure SQL Data Warehouse ストレージから削除されます。 
+
+データベースの結果セットのキャッシュ構成を確認するには、次のコマンドを実行します。  結果セットのキャッシュが ON になっている場合は、is_result_set_caching_on によって 1 が返されます。
+
+```sql
+
+SELECT name, is_result_set_caching_on FROM sys.databases 
+WHERE name = <'Your_Database_Name'>
+
+```
+
+クエリを実行した結果のキャッシュ ヒットまたはキャッシュ ミスを確認するには、次のコマンドを実行します。  キャッシュ ヒットがあった場合は、result_cache_hit によって 1 が返されます。 
+
+```sql
+
+SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests 
+WHERE request_id = <'Your_Query_Request_ID'>
+
+```
+
+データベースに対して結果セットのキャッシュが ON になると、次のクエリを除くすべてのクエリについて、キャッシュがいっぱいになるまで結果がキャッシュされます。
+
+- DateTime.Now() などの非決定論的関数を使用したクエリ 
+- ユーザー定義関数を使用したクエリ
+- 64 KB を超える行サイズのデータを返すクエリ   
+
+大きな結果セットを伴うクエリ (100 万行を超えるなど) の場合、結果のキャッシュが作成される最初の実行時にパフォーマンスが低下することがあります。
 
 次の要件がすべて満たされる場合、キャッシュされた結果セットはクエリに再利用されます。
 
@@ -3048,9 +3066,6 @@ command|Like|%DWResultCacheDb%|
 1. 新しいクエリと、結果セットのキャッシュを生成した以前のクエリとの間に、完全一致がある。
 1. キャッシュされた結果セットの生成元のテーブルに対してデータやスキーマの変更が行われていない。  
 
-データベースに対して結果セットのキャッシュが ON にされると、DateTime.Now() などの非決定関数を使用するクエリや、行サイズが 64KB を超えるデータを返すクエリを除くすべてのクエリに対して、キャッシュがいっぱいになるまで、結果がキャッシュされます。   
-
-大きな結果セットを伴うクエリ (100 万行を超えるなど) の場合、結果のキャッシュが作成される最初の実行時にパフォーマンスが低下することがあります。
 
 **<snapshot_option> ::=**         
 **適用対象**:Azure SQL Data Warehouse (プレビュー)

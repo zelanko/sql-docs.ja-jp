@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: f3059e42-5f6f-4a64-903c-86dca212a4b4
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 06237e28f9ba75e798da1af57964cc8b251d0b26
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: ef4bf385e2ce0ecd140ad402c43d0039669c56e8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974410"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72006066"
 ---
 # <a name="alter-server-configuration-transact-sql"></a>ALTER SERVER CONFIGURATION (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -258,7 +258,7 @@ OFF
 
 **\<memory_optimized> ::=**
 
-**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)
+**適用対象**: [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] 以降)。
 
 ON <br>
 [メモリ内データベース](../../relational-databases/in-memory-database.md)機能ファミリの一部である、インスタンスレベルのすべての機能を有効にします。 これには現在、[メモリ最適化 tempdb メタデータ](../../relational-databases/databases/tempdb-database.md#memory-optimized-tempdb-metadata)と[ハイブリッド バッファー プール](../../database-engine/configure-windows/hybrid-buffer-pool.md)が含まれます。 有効にするには再起動が必要です。
@@ -284,9 +284,11 @@ HYBRID_BUFFER_POOL = ON | OFF <br>
 このステートメントは、DDL トリガーをサポートしません。  
   
 ## <a name="permissions"></a>アクセス許可  
-プロセス関係オプションに対する ALTER SETTINGS 権限が必要です。 診断ログとフェールオーバー クラスター プロパティ オプションに対する ALTER SETTINGS 権限と VIEW SERVER STATE 権限、および HADR クラスター コンテキスト オプションに対する CONTROL SERVER 権限。  
-  
-バッファー プール拡張オプションに対する ALTER SERVER STATE 権限が必要です。  
+必須:
+- プロセス関係オプションに対する `ALTER SETTINGS` 権限。
+- 診断ログとフェールオーバー クラスター プロパティのオプションに対する `ALTER SETTINGS` 権限と `VIEW SERVER STATE` 権限。
+- HADR クラスター コンテキスト オプションに対する `CONTROL SERVER` 権限。  
+- バッファー プール拡張オプションに対する `ALTER SERVER STATE` 権限。  
   
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssDE](../../includes/ssde-md.md)]のリソース DLL は、ローカル システム アカウントで実行されます。 そのため、ローカル システム アカウントには、診断ログ オプションで指定されたパスに対する読み取りアクセス権と書き込みアクセス権が必要です。  
   
@@ -337,14 +339,14 @@ SET PROCESS AFFINITY CPU=60 TO 200;
 #### <a name="d-setting-affinity-to-cpu-0-on-a-system-that-has-two-cpus"></a>D. CPU が 2 個搭載されたシステムの CPU 0 に関係を設定する  
 次の例では、CPU を 2 個搭載しているコンピューターの `CPU=0` に関係を設定します。 次のステートメントを実行する前の内部関係ビットマスクは 00 です。  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION SET PROCESS AFFINITY CPU=0;  
 ```  
   
 #### <a name="e-setting-affinity-to-auto"></a>E. 関係を AUTO に設定する  
 次の例では、関係を `AUTO` に設定します。  
   
-```  
+```sql  
 ALTER SERVER CONFIGURATION  
 SET PROCESS AFFINITY CPU=AUTO;  
 ```  

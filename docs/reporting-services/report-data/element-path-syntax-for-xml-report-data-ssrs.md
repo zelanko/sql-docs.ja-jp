@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 07bd7a4e-fd7a-4a72-9344-3258f7c286d1
 author: maggiesMSFT
 ms.author: maggies
-ms.openlocfilehash: bc3d4122d276053a12cfcb98f58a3374634f4e5b
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: bdff469a4a96fb7fe5111c619ad1895bcc200c25
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "65573167"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173834"
 ---
 # <a name="element-path-syntax-for-xml-report-data-ssrs"></a>XML レポート データの要素パス構文 (SSRS)
   レポート デザイナーでは、大文字と小文字が区別される要素パスを定義して、レポートに使用するデータを XML データ ソースから指定します。 要素パスとは、XML データ ソースにおける XML 階層のノードとその属性の走査方法を指定するものです。 データセット クエリを空にするか、XML **Query** の XML **ElementPath** を空にした場合、既定の要素パスが使用されます。 XML データ ソースからデータが取得されると、テキスト値を持つ要素ノードおよび要素ノードの属性が、結果セットにおける列になります。 クエリを実行すると、これらのノードと属性の値が、行データになります。 [レポート データ] ペインでは、列がデータセット フィールド コレクションとして表示されます。 このトピックでは、要素パス構文について説明します。  
@@ -78,10 +78,10 @@ XMLLocalName :: =
 |**[エンコード]**|この要素の **Value** はエンコードされた XML であり、この要素のサブ要素としてデコードおよび追加する必要があることを示します。|  
 |**FieldList**|データの取得に使用する一連の要素と属性を定義します。<br /><br /> 指定しなかった場合は、すべての属性およびサブ要素がフィールドとして使用されます。 空のフィールド リストが指定されている場合 ( **{}** )、このノードのフィールドは使用されません。<br /><br /> **FieldList** には、 **Value** と **Element** または **ElementNode**の両方が含まれない場合があります。|  
 |**フィールド**|データセットのフィールドとして取得するデータを指定します。|  
-|**属性**|**ElementNode**内に指定される名前と値のペアです。 たとえば、要素ノード \<Customer ID="1"> において、**ID** は属性です。 **@ID(Integer)** は、対応するデータ フィールド (**ID**) に整数型の "1" を返します。|  
+|**属性**|**ElementNode**内に指定される名前と値のペアです。 たとえば、要素ノード \<Customer ID="1"> において、**ID** は属性です。 **\@ID(Integer)** は、対応するデータ フィールド **ID** に整数型の "1" を返します。|  
 |**Value**|要素の値です。 **Value** は、要素パス内で最後の **ElementNode** でのみ使用できます。 たとえば、\<Return> はリーフ ノードであるため、これを要素パスの最後に追加した場合、**Return {@}** は **Chair** になります。|  
 |**Element**|指定されたサブ要素の値です。 たとえば、Customers {}/Customer {}/LastName とすると、LastName 要素についてのみ値が取得されます。|  
-|**型**|この要素から作成されたフィールドに使用するデータ型 (省略可) です。|  
+|**Type**|この要素から作成されたフィールドに使用するデータ型 (省略可) です。|  
 |**NamespacePrefix**|**NamespacePrefix** は XML Query 要素で定義されます。 XML Query 要素が存在しない場合、XML **ElementPath** の名前空間は無視されます。 XML Query 要素が存在する場合は、XML **ElementPath** に属性 **IgnoreNamespaces**を使用できます (省略可)。 IgnoreNamespaces が **true**の場合、XML **ElementPath** と XML ドキュメントの名前空間は無視されます。 詳細については、「[XML レポート データの XML クエリ構文 &#40;SSRS&#41;](../../reporting-services/report-data/xml-query-syntax-for-xml-report-data-ssrs.md)」を参照してください。|  
   
 ## <a name="example---no-namespaces"></a>例 - 名前空間なし  

@@ -14,12 +14,12 @@ ms.assetid: 5a9e4ddf-3cb1-4baf-94d6-b80acca24f64
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 7553b584a37685fd7fb9455423e55c27c8343e72
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 7ff8009136f95247bc13c213d9b656abfab28ae0
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710389"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041198"
 ---
 # <a name="frequently-asked-questions-for-replication-administrators"></a>レプリケーションの管理者に関してよく寄せられる質問
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -116,14 +116,14 @@ ms.locfileid: "71710389"
 ## <a name="logins-and-object-ownership"></a>ログインとオブジェクトの所有権  
   
 ### <a name="are-logins-and-passwords-replicated"></a>ログインとパスワードはレプリケートされますか。  
- 不可。 ただし、DTS パッケージを作成することで、ログインとパスワードをパブリッシャーから 1 つ以上のサブスクライバーに転送することができます。  
+ 不可。 ただし、SSIS パッケージを作成することで、ログインとパスワードをパブリッシャーから 1 つ以上のサブスクライバーに転送することができます。  
   
 ### <a name="what-are-schemas-and-how-are-they-replicated"></a>スキーマとは何ですか。また、スキーマはどのようにレプリケートされますか。  
  [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)], *スキーマ* には次の 2 つの意味があります。  
   
--   CREATE TABLE ステートメントなどの、オブジェクトの定義。 既定では、レプリケートされるすべてのオブジェクトの定義がサブスクライバーにコピーされます。  
+-   `CREATE TABLE` ステートメントなどの、オブジェクトの定義。 既定では、レプリケートされるすべてのオブジェクトの定義がサブスクライバーにコピーされます。  
   
--   オブジェクトが作成される\<Database>.\<Schema>.\<Object> の名前空間です。 スキーマは、CREATE SCHEMA ステートメントで定義します。  
+-   オブジェクトが作成される\<Database>.\<Schema>.\<Object> の名前空間です。 スキーマは、`CREATE SCHEMA` ステートメントで定義します。  
   
 -   既定では、パブリケーションの新規作成ウィザードは、スキーマとオブジェクトの所有権に関して、以下のように動作します。  
   
@@ -178,7 +178,7 @@ ms.locfileid: "71710389"
  インデックスの再構築にはいくつかのメカニズムがあります。 どのメカニズムもレプリケーションに関して特別な注意をせずに使用できます。ただし、トランザクション パブリケーションのテーブルでは主キーが必要なため、主キーの削除や再作成を行うことはできません。  
   
 ### <a name="how-do-i-add-or-change-indexes-on-publication-and-subscription-databases"></a>パブリケーション データベースとサブスクリプション データベース上でインデックスを追加または変更するにはどうすればよいですか。  
- レプリケーションに関して特別な注意をしなくても、パブリッシャーまたはサブスクライバーでインデックスを追加できます (インデックスがパフォーマンスに影響する点に注意してください)。 CREATE INDEX および ALTER INDEX はレプリケートされないため、たとえばパブリッシャーでインデックスを追加または変更した場合、サブスクライバーに反映するためには、同じ追加または変更を行う必要があります。  
+ レプリケーションに関して特別な注意をしなくても、パブリッシャーまたはサブスクライバーでインデックスを追加できます (インデックスがパフォーマンスに影響する点に注意してください)。 `CREATE INDEX` および `ALTER INDEX` はレプリケートされないため、たとえばパブリッシャーでインデックスを追加または変更した場合、サブスクライバーに反映するには、同じ追加または変更を行う必要があります。  
   
 ### <a name="how-do-i-move-or-rename-files-for-databases-involved-in-replication"></a>レプリケーションに関連するデータベースのファイルは、どのように移動または名前の変更を行うのですか。  
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]では、データベース ファイルの移動または名前の変更を行うには、データベースのデタッチと再アタッチが必要でした。 レプリケートされたデータベースはデタッチできないため、まずデータベースからレプリケーションを削除する必要がありました。 [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)]以降では、データベースのデタッチと再アタッチを行わなくてもファイルの移動や名前の変更が行え、レプリケーションに影響を与えることもありません。 ファイルの移動と名前の変更については、「[ALTER DATABASE &#40;Transact-SQL&#41;](../../../t-sql/statements/alter-database-transact-sql.md)」を参照してください。  
@@ -187,7 +187,7 @@ ms.locfileid: "71710389"
  まず [sp_droparticle](../../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)、[sp_dropmergearticle](../../../relational-databases/system-stored-procedures/sp-dropmergearticle-transact-sql.md)、 **[パブリケーションのプロパティ - \<Publication>]** ダイアログ ボックスのいずれかを使用してパブリケーションからアーティクルを削除し、次に `DROP <Object>` を使用してデータベースからアーティクルを削除します。 サブスクリプションを追加した後で、スナップショット パブリケーションまたはトランザクション パブリケーションからアーティクルを削除することはできません。まずサブスクリプションを削除する必要があります。 詳細については、「[Add Articles to and Drop Articles from Existing Publications](../../../relational-databases/replication/publish/add-articles-to-and-drop-articles-from-existing-publications.md)」 (既存のパブリケーションでのアーティクルの追加および削除) を参照してください。  
   
 ### <a name="how-do-i-add-or-drop-columns-on-a-published-table"></a>パブリッシュされたテーブル上の列を追加または削除するにはどうすればよいですか。  
- [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、列の追加や削除などの、パブリッシュされたオブジェクトに対するスキーマのさまざまな変更がサポートされています。 たとえば、ALTER TABLE … DROP COLUMN をパブリッシャーで実行すると、ステートメントがサブスクライバーにレプリケートされて実行され、列が削除されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が実行されているサブスクライバーでは、ストアド プロシージャ [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) および [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)で列の追加と削除がサポートされています。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
+ [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] では、列の追加や削除などの、パブリッシュされたオブジェクトに対するスキーマのさまざまな変更がサポートされています。 たとえば、`ALTER TABLE … DROP COLUMN` をパブリッシャーで実行すると、ステートメントがサブスクライバーにレプリケートされて実行され、列が削除されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] より前のバージョンの [!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] が実行されているサブスクライバーでは、ストアド プロシージャ [sp_repladdcolumn](../../../relational-databases/system-stored-procedures/sp-repladdcolumn-transact-sql.md) および [sp_repldropcolumn](../../../relational-databases/system-stored-procedures/sp-repldropcolumn-transact-sql.md)で列の追加と削除がサポートされています。 詳細については、「[パブリケーション データベースでのスキーマの変更](../../../relational-databases/replication/publish/make-schema-changes-on-publication-databases.md)」を参照してください。  
   
 ## <a name="replication-maintenance"></a>レプリケーションのメンテナンス  
   
