@@ -1,5 +1,5 @@
 ---
-title: sys.column_store_dictionaries (TRANSACT-SQL) |Microsoft Docs
+title: column_store_dictionaries (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -19,42 +19,42 @@ helpviewer_keywords:
 ms.assetid: 56efd563-2f72-4caf-94e3-8a182385c173
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: f675e4d0d40bf9e1db4bf2de6b66b1acfc039873
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2348633a2c357868e4688d7b37c5cf28aed6441a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140022"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304758"
 ---
-# <a name="syscolumnstoredictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
+# <a name="syscolumn_store_dictionaries-transact-sql"></a>sys.column_store_dictionaries (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
 
-  XVelocity メモリ最適化列ストア インデックスで使用される各ディクショナリの行が含まれています。 ディクショナリは、すべてのデータ型ではなく一部のデータ型のエンコードに使用されるため、列ストア インデックスのすべての列にディクショナリがあるわけではありません。 ディクショナリは、プライマリ ディクショナリ (すべてのセグメント用) として、および列のセグメントのサブセットに対して使用される別のセカンダリ ディクショナリ用として存在する可能性があります。  
+  XVelocity メモリ最適化列ストアインデックスで使用されるディクショナリごとに1行の値を格納します。 ディクショナリは、すべてのデータ型ではなく一部のデータ型のエンコードに使用されるため、列ストア インデックスのすべての列にディクショナリがあるわけではありません。 ディクショナリは、プライマリ ディクショナリ (すべてのセグメント用) として、および列のセグメントのサブセットに対して使用される別のセカンダリ ディクショナリ用として存在する可能性があります。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**hobt_id**|**bigint**|この列ストア インデックスを保持するテーブルのヒープまたは B ツリー インデックス (hobt) の ID。|  
-|**column_id**|**int**|1 から始まる列ストア列の ID。 最初の列が ID = 1、2 番目の列が ID = 2 など。|  
-|**dictionary_id**|**int**|グローバルとローカルの列セグメントに関連付けられている辞書の 2 種類があります。 0 の dictionary_id では、すべての列セグメント (行グループごとに 1 つ) その列の間で共有されているグローバル辞書を表します。|  
+|**hobt_id**|**bigint**|この列ストアインデックスを持つテーブルのヒープまたは B ツリーインデックス (HoBT) の ID。|  
+|**column_id**|**int**|1から始まる列ストア列の ID。 最初の列の ID が1、2番目の列の ID が2、など。|  
+|**dictionary_id**|**int**|列セグメントに関連付けられている辞書には、グローバルとローカルの2種類があります。 Dictionary_id が0の場合は、その列のすべての列セグメント (行グループごとに1つ) 間で共有されるグローバルディクショナリを表します。|  
 |**version**|**int**|ディクショナリの形式のバージョン。|  
-|**type**|**int**|ディクショナリの種類:<br /><br /> 1-ハッシュ ディクショナリを格納している**int**値<br /><br /> 2-非使用<br /><br /> 3-ハッシュ ディクショナリの文字列値を含む<br /><br /> 4-ハッシュ ディクショナリを格納している**float**値<br /><br /> ディクショナリの詳細については、次を参照してください。[列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)します。|  
+|**type**|**int**|ディクショナリの種類:<br /><br /> 1- **int**値を含むハッシュディクショナリ<br /><br /> 2-使用されていません<br /><br /> 3-文字列値を含むハッシュディクショナリ<br /><br /> 4- **float**値を含むハッシュディクショナリ<br /><br /> ディクショナリの詳細については、「[列ストアインデックスガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)」を参照してください。|  
 |**last_id**|**int**|ディクショナリ内の最後のデータ ID。|  
 |**entry_count**|**bigint**|ディクショナリ内のエントリの数。|  
 |**on_disc_size**|**bigint**|ディクショナリのサイズ (バイト単位)。|  
 |**partition_id**|**bigint**|パーティション ID を示します。 データベース内で一意です。|  
   
 ## <a name="permissions"></a>アクセス許可  
- すべての列で、少なくともテーブルに対する VIEW DEFINITION 権限が必要です。 ユーザーがあるない限り、列は null を返します**選択**アクセス許可。 持っていない場合、entry_count、data_ptr の各します。  
+テーブルに対する @no__t 0 権限が必要です。 次の列は、ユーザーが last_id、entry_count、data_ptr の権限も @no__t 持っていない限り、null を返します。  
   
  [!INCLUDE[ssCatViewPerm](../../includes/sscatviewperm-md.md)] 詳細については、「 [Metadata Visibility Configuration](../../relational-databases/security/metadata-visibility-configuration.md)」を参照してください。  
   
 ## <a name="see-also"></a>参照  
  [オブジェクト カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/object-catalog-views-transact-sql.md)   
  [カタログ ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md)   
- [SQL Server のシステム カタログよく寄せられる質問のクエリを実行します。](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
+ [SQL Server システムカタログに対するクエリについてよく寄せられる質問](../../relational-databases/system-catalog-views/querying-the-sql-server-system-catalog-faq.md)   
  [sys.columns (Transact-SQL)](../../relational-databases/system-catalog-views/sys-columns-transact-sql.md)   
- [sys.all_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
- [sys.computed_columns &#40;TRANSACT-SQL&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
+ [すべての列&#40;(& a) transact-sql&#41;](../../relational-databases/system-catalog-views/sys-all-columns-transact-sql.md)   
+ [computed_columns &#40;transact-sql&#41;](../../relational-databases/system-catalog-views/sys-computed-columns-transact-sql.md)   
  [列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)   
  [列ストア インデックス ガイド](~/relational-databases/indexes/columnstore-indexes-overview.md)   
  [sys.column_store_segments &#40;Transact-SQL&#41;](../../relational-databases/system-catalog-views/sys-column-store-segments-transact-sql.md)  

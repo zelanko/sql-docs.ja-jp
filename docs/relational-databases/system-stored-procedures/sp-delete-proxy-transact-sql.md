@@ -1,5 +1,5 @@
 ---
-title: sp_delete_proxy (TRANSACT-SQL) |Microsoft Docs
+title: sp_delete_proxy (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -18,14 +18,14 @@ helpviewer_keywords:
 ms.assetid: 44a1db13-b7f2-4dab-a1b5-b8dafb41737c
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: a5750e7a2346f55d97e19ba58db548f726b38cd2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: fd717f645b9e53d08f6dabbfc1ea5779c373056e
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009190"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305110"
 ---
-# <a name="spdeleteproxy-transact-sql"></a>sp_delete_proxy (TRANSACT-SQL)
+# <a name="sp_delete_proxy-transact-sql"></a>sp_delete_proxy (Transact-sql)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定したプロキシを削除します。  
@@ -40,9 +40,9 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @proxy_id = ] id` 削除するプロキシのプロキシ識別番号。 *Proxy_id*は**int**、既定値は NULL です。  
+`[ @proxy_id = ] id` 削除するプロキシのプロキシ識別番号を指定します。 *Proxy_id*は**int**,、既定値は NULL です。  
   
-`[ @proxy_name = ] 'proxy_name'` 削除するプロキシの名前。 *Proxy_name*は**sysname**、既定値は NULL です。  
+`[ @proxy_name = ] 'proxy_name'` 削除するプロキシの名前。 *Proxy_name*の部分は**sysname**で、既定値は NULL です。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -51,15 +51,15 @@ sp_delete_proxy [ @proxy_id = ] id , [ @proxy_name = ] 'proxy_name'
  なし  
   
 ## <a name="remarks"></a>コメント  
- いずれか **@proxy_name** または **@proxy_id** 指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
+ **@No__t-1proxy_name**または **\@proxy_id**を指定する必要があります。 両方の引数を指定する場合は、両方とも同じプロキシを参照する必要があります。異なるプロキシを参照する場合、ストアド プロシージャは失敗します。  
   
- ジョブ ステップは、指定したプロキシを参照している場合は、プロキシを削除することはできませんし、ストアド プロシージャは失敗します。  
+ 指定されたプロキシをジョブステップが参照している場合、プロキシを削除することはできず、ストアドプロシージャは失敗します。  
   
 ## <a name="permissions"></a>アクセス許可  
- 既定のメンバーだけで、 **sysadmin**固定サーバー ロールが実行できる**sp_delete_proxy**します。  
+ 既定では、 **sp_delete_proxy**を実行できるのは、 **sysadmin**固定サーバーロールのメンバーだけです。  
   
 ## <a name="examples"></a>使用例  
- 次の例は、プロキシを削除します。`Catalog application proxy`します。  
+ 次の例では、プロキシを削除 `Catalog application proxy` です。  
   
 ```  
 USE msdb ;  
@@ -71,6 +71,6 @@ GO
 ```  
   
 ## <a name="see-also"></a>関連項目  
- [sp_add_proxy &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
+ [sp_add_proxy &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-add-proxy-transact-sql.md)  
   
   

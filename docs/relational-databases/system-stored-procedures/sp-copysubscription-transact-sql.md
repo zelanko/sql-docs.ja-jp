@@ -15,14 +15,14 @@ helpviewer_keywords:
 ms.assetid: 3c56cd62-2966-4e87-a986-44cb3fd0b760
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: d1a093364192e3bab32a2fa0234c7198d8e0f3ff
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 5d3f67794eb2825c10b822ce719459b563f046d2
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68771430"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304827"
 ---
-# <a name="spcopysubscription-transact-sql"></a>sp_copysubscription (Transact-sql)
+# <a name="sp_copysubscription-transact-sql"></a>sp_copysubscription (Transact-sql)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
     
@@ -43,11 +43,11 @@ sp_copysubscription [ @filename = ] 'file_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @filename = ] 'file_name'`データファイル (.mdf) のコピーの保存先となる完全なパス (ファイル名を含む) を指定する文字列を指定します。 *ファイル名*は**nvarchar (260)** ,、既定値はありません。  
+`[ @filename = ] 'file_name'` は、データファイル (.mdf) のコピーの保存先となる完全なパス (ファイル名を含む) を指定する文字列です。 *ファイル名*は**nvarchar (260)** ,、既定値はありません。  
   
-`[ @temp_dir = ] 'temp_dir'`一時ファイルが格納されているディレクトリの名前を指定します。 *temp_dir*は**nvarchar (260)** ,、既定値は NULL です。 NULL の場合、 [!INCLUDE[msCoName](../../includes/msconame-md.md)]既定の[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]データディレクトリが使用されます。 このディレクトリは、すべてのサブスクライバー データベース ファイルを合わせたファイル サイズを格納できるだけの領域を備えている必要があります。  
+`[ @temp_dir = ] 'temp_dir'` は、一時ファイルが格納されているディレクトリの名前です。 *temp_dir*は**nvarchar (260)** ,、既定値は NULL です。 NULL の場合、[!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の既定のデータディレクトリが使用されます。 このディレクトリは、すべてのサブスクライバー データベース ファイルを合わせたファイル サイズを格納できるだけの領域を備えている必要があります。  
   
-`[ @overwrite_existing_file = ] 'overwrite_existing_file'`に **@filename** 指定された同じ名前の既存のファイルを上書きするかどうかを指定する、省略可能なブールフラグです。 *overwrite_existing_file*は**ビット**,、既定値は**0**です。 **1**の場合、によって **@filename** 指定されたファイルが存在する場合は、そのファイルを上書きします。 **0**の場合、ファイルが存在する場合、ストアドプロシージャは失敗し、ファイルは上書きされません。  
+`[ @overwrite_existing_file = ] 'overwrite_existing_file'` は、 **\@filename**で指定された同じ名前の既存のファイルを上書きするかどうかを指定する、省略可能なブールフラグです。 *overwrite_existing_file*は**ビット**,、既定値は**0**です。 **1**の場合、 **\@filename**によって指定されたファイルを上書きします (存在する場合)。 **0**の場合、ファイルが存在する場合、ストアドプロシージャは失敗し、ファイルは上書きされません。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  

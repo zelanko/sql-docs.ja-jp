@@ -1,5 +1,5 @@
 ---
-title: sp_add_jobserver (TRANSACT-SQL) |Microsoft Docs
+title: sp_add_jobserver (Transact-sql) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -17,14 +17,14 @@ helpviewer_keywords:
 ms.assetid: 485252cc-0081-490a-9bd1-cbbd68eea286
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: fecd704d5f6b6f0384ecb17787bd8423852356ae
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: bc4d3bca563079c7e1dd7f3ee93e5947f65700b5
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68078203"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305241"
 ---
-# <a name="spaddjobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
+# <a name="sp_add_jobserver-transact-sql"></a>sp_add_jobserver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   指定されたジョブを、特定のサーバーにおける対象ジョブにします。  
@@ -40,14 +40,14 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
 ```  
   
 ## <a name="arguments"></a>引数  
-`[ @job_id = ] job_id` ジョブの識別番号。 *job_id*は**uniqueidentifier**、既定値は NULL です。  
+`[ @job_id = ] job_id` ジョブの識別番号。 *job_id*は**uniqueidentifier**,、既定値は NULL です。  
   
-`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**、既定値は NULL です。  
+`[ @job_name = ] 'job_name'` ジョブの名前。 *job_name*は**sysname**,、既定値は NULL です。  
   
 > [!NOTE]  
->  いずれか*job_id*または*job_name*指定する必要がありますが、両方を指定することはできません。  
+>  *Job_id*または*job_name*のいずれかを指定する必要がありますが、両方を指定することはできません。  
   
-`[ @server_name = ] 'server'` ジョブの対象サーバーの名前。 *server*は**nvarchar (30)** 、既定値は、(local) ' です。 *server*かまいません **(LOCAL)** ローカル サーバーの場合、または既存の対象サーバーの名前。  
+`[ @server_name = ] 'server'` ジョブを対象とするサーバーの名前。 *サーバー*は**nvarchar (30)** ,、既定値は N ' (LOCAL) ' です。 *サーバー*には、ローカルサーバーの場合は **(local)** 、または既存の対象サーバーの名前を指定できます。  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -56,7 +56,7 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
  なし  
   
 ## <a name="remarks"></a>コメント  
- **@automatic_post** 内に存在する**sp_add_jobserver**は引数の下に記載されていません。 **@automatic_post** 内部使用のため予約されています。  
+ **1automatic_post**は**sp_add_jobserver**に存在しますが、[引数] の下には表示されません。 @no__t **\@automatic_post は、** 内部で使用するために予約されています。  
   
  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)] は、ジョブを簡単に管理できるグラフィカルなツールです。ジョブのインフラストラクチャを作成し、管理するには、このツールを使用することをお勧めします。  
   
@@ -71,15 +71,15 @@ sp_add_jobserver [ @job_id = ] job_id | [ @job_name = ] 'job_name'
   
  これらのロールの権限の詳細については、「 [SQL Server エージェントの固定データベース ロール](../../ssms/agent/sql-server-agent-fixed-database-roles.md)」を参照してください。  
   
- メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_add_jobserver**の複数のサーバーに関連するジョブ。  
+ **Sysadmin**固定サーバーロールのメンバーだけが、複数のサーバーを含むジョブに対して**sp_add_jobserver**を実行できます。  
   
 ## <a name="examples"></a>使用例  
   
 ### <a name="a-assigning-a-job-to-the-local-server"></a>A. ローカル サーバーにジョブを割り当てる  
- 次の例には、ジョブが割り当てられます。`NightlyBackups`ローカル サーバー上で実行します。  
+ 次の例では、ジョブ `NightlyBackups` を割り当ててローカルサーバーで実行します。  
   
 > [!NOTE]  
->  この例では、`NightlyBackups`ジョブが既に存在します。  
+>  この例では、`NightlyBackups` ジョブが既に存在していることを前提としています。  
   
 ```  
 USE msdb ;  
@@ -91,7 +91,7 @@ GO
 ```  
   
 ### <a name="b-assigning-a-job-to-run-on-a-different-server"></a>B. 異なるサーバーで実行するようジョブを割り当てる  
- 次の例には、マルチ サーバー ジョブが割り当てられます。`Weekly Sales Backups`サーバーに`SEATTLE2`します。  
+ 次の例では、マルチサーバージョブ `Weekly Sales Backups` をサーバー `SEATTLE2` に割り当てます。  
   
 > [!NOTE]  
 >  この例では、`Weekly Sales Backups` ジョブが既に存在し、`SEATTLE2` が現在のインスタンスに対するターゲット サーバーとして登録されていることを前提としています。  
@@ -107,8 +107,8 @@ GO
 ```  
   
 ## <a name="see-also"></a>参照  
- [sp_apply_job_to_targets &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
- [sp_delete_jobserver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
+ [sp_apply_job_to_targets &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-apply-job-to-targets-transact-sql.md)   
+ [sp_delete_jobserver &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-delete-jobserver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
