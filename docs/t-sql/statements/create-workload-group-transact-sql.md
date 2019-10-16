@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: d949e540-9517-4bca-8117-ad8358848baa
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: ea6501c4bfd516b99d53f9ac7e90a2cd0d59ba8c
-ms.sourcegitcommit: 8c1c6232a4f592f6bf81910a49375f7488f069c4
+ms.openlocfilehash: e78ab71081c991b5e42726ed4dd594e016f324f0
+ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/26/2019
-ms.locfileid: "70026218"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72260330"
 ---
 # <a name="create-workload-group-transact-sql"></a>CREATE WORKLOAD GROUP (Transact-SQL)
 
@@ -96,7 +96,8 @@ REQUEST_MAX_CPU_TIME_SEC = *value*
 要求が使用できる最大 CPU 時間を秒単位で指定します。 *value* は、0 または正の整数にする必要があります。 *value* の既定の設定が 0 の場合は、無制限を示します。
 
 > [!NOTE]
-> 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。
+> 既定では、リソース ガバナーでは最大時間を超過しても、要求は継続されます。 ただし、イベントが生成されます。 詳細については、「[CPU Threshold Exceeded イベント クラス](../../relational-databases/event-classes/cpu-threshold-exceeded-event-class.md)」を参照してください。     
+
 > [!IMPORTANT]
 > [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU3 以降では、[トレース フラグ 2422](../../t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql.md) を使用すると、最大時間を超えたときにリソース ガバナーが要求を中止します。
 
@@ -107,13 +108,17 @@ REQUEST_MEMORY_GRANT_TIMEOUT_SEC = *value*
 > メモリ許可のタイムアウトに達しても、常にクエリが失敗するとは限りません。 クエリが失敗するのは、同時実行クエリ数が多すぎる場合だけです。 それ以外の場合、クエリは最小限のメモリ許可しか取得できないので、クエリのパフォーマンスが低下します。
 
 MAX_DOP = *value*     
-並列要求の最大 DOP (並列処理の次数) を指定します。 *value* は、0 または正の整数にする必要があります。 *value* の許容範囲は 0 から 64 です。 *value* の既定の設定は 0 で、グローバル設定が使用されます。 MAX_DOP は次のように処理されます。
+並列クエリ実行に対する**並列処理の最大限度 (MAXDOP)** を指定します。 *value* は、0 または正の整数にする必要があります。 *value* の許容範囲は 0 から 64 です。 *value* の既定の設定は 0 で、グローバル設定が使用されます。 MAX_DOP は次のように処理されます。
 
-- ワークロード グループの MAX_DOP を超えない限り、クエリ ヒントとしての MAX_DOP が有効です。 MAXDOP クエリ ヒントの値がリソース ガバナーを使用して構成されている値を超える場合は、データベース エンジンがリソース ガバナーの MAXDOP 値を使用します。
-- クエリ ヒントとしての MAX_DOP は、sp_configure の 'max degree of parallelism' を常にオーバーライドします。
-- ワークロード グループの MAX_DOP は、sp_configure の 'max degree of parallelism' をオーバーライドします。
-- コンパイル時にクエリが直列としてマークされている場合は、ワークロード グループまたは sp_configure の設定にかかわらず、実行時に並列に変更することはできません。
-- DOP は、構成した後、許可メモリの不足時にのみ低くすることができます。 ワークロード グループの再構成は、許可メモリ キューで待機している間は認識されません。
+> [!NOTE]
+> ワークロード グループの MAX_DOP では、[並列処理の最大限度に対するサーバー構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)と、**MAXDOP** [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)がオーバーライドされます。
+
+> [!TIP]
+> これをクエリ レベルで行うには、**MAXDOP** [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)を使用します。 ワークロード グループの MAX_DOP を超えない限り、クエリ ヒントとして並列処理の最大限度を設定することは有効です。 MAXDOP クエリ ヒントの値が Resource Governor を使用して構成されている値を超える場合、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] ではリソース ガバナーの `MAX_DOP` の値が使用されます。 MAXDOP [クエリ ヒント](../../t-sql/queries/hints-transact-sql-query.md)では常に、[並列処理の最大限度のサーバー構成](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)がオーバーライドされます。      
+>   
+> データベース レベルでこれを行うには、**MAXDOP** [データベース スコープ構成](../../t-sql/statements/alter-database-scoped-configuration-transact-sql.md)を使用します。      
+>   
+> これをサーバー レベルで行うには、**並列処理の最大限度 (MAXDOP)** [サーバー構成オプション](../../database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option.md)を使用します。     
 
 GROUP_MAX_REQUESTS = *value*     
 ワークロード グループで実行を許可する同時要求の最大数を指定します。 *value* には、0 または正の整数を指定する必要があります。 *value* の既定の設定は 0 であり、これでは無制限の要求が許可されます。 同時要求の最大数に達した場合、そのグループのユーザーはログインできますが、同時要求数が指定した値を下回るまで待機状態になります。
@@ -137,19 +142,20 @@ EXTERNAL external_pool_name | "default"
 ## <a name="remarks"></a>Remarks
 `REQUEST_MEMORY_GRANT_PERCENT` が使用される場合、インデックスの作成では、パフォーマンスの改善のために最初に付与されたのよりも多くのワークスペース メモリを使用できます。 この特別な処理は、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] のリソース ガバナーでサポートされています。 ただし、最初のメモリ許可も追加のメモリ許可も、リソース プール設定およびワークロード グループ設定によって制限されます。
 
+`MAX_DOP` の制限は、[タスク](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)ごとに設定されます。 この設定は、[要求](../../relational-databases/system-dynamic-management-views/sys-dm-exec-requests-transact-sql.md)ごとまたはクエリ制限ごとではありません。 つまり、並列クエリ実行中に、1 つの要求で、[スケジューラ](../../relational-databases/system-dynamic-management-views/sys-dm-os-tasks-transact-sql.md)に割り当てられてた複数のタスクを生成することができます。 詳細については、「[スレッドおよびタスクのアーキテクチャ ガイド](../../relational-databases/thread-and-task-architecture-guide.md)」を参照してください。
+
+`MAX_DOP` が使用されていて、コンパイル時にクエリが直列としてマークされている場合は、ワークロード グループまたはサーバー構成の設定にかかわらず、実行時に並列に変更することはできません。 構成後の `MAX_DOP` は、メモリの不足時にのみ低くすることができます。 ワークロード グループの再構成は、許可メモリ キューで待機している間は認識されません。
+
 ### <a name="index-creation-on-a-partitioned-table"></a>パーティション テーブルのインデックス作成
 
 非固定パーティション テーブルのインデックス作成によって消費されるメモリは、含まれるパーティションの数に比例します。 必要なメモリの合計が、Resource Governor のワークロード グループの設定によって課せられているクエリごとの制限 `REQUEST_MAX_MEMORY_GRANT_PERCENT` を超えると、このインデックス作成の実行に失敗します。 *"default"* ワークロード グループでは、クエリごとの制限を超えてもクエリの開始に必要な最低限のメモリを使用できるようになっているので、そのようなクエリを実行するのに十分な量のメモリが *"default"* リソース プールに対して構成されていれば、同じインデックス作成を *"default"* ワークロード グループで実行できる可能性があります。
 
 ## <a name="permissions"></a>アクセス許可
-
 `CONTROL SERVER` 権限が必要です。
 
 ## <a name="example"></a>例
 
-- newReports という名前のワークロード グループを作成する
-
-ここでは Resource Governor の既定の設定を使用し、リソース ガバナーの既定のプールに配置されます。 この例では `default` プールを指定していますが、必須ではありません。
+Resource Governor の既定の設定を使用し、Resource Governor の既定のプールに配置される、`newReports` という名前のワークロード グループを作成します。 この例では `default` プールを指定していますが、必須ではありません。
 
 ```sql
 CREATE WORKLOAD GROUP newReports

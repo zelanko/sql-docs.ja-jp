@@ -1,6 +1,6 @@
 ---
 title: SQL Server 2019 リリース ノート | Microsoft Docs
-ms.date: 08/21/2019
+ms.date: 10/07/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.technology: release-landing
@@ -9,12 +9,12 @@ ms.assetid: 13942af8-5a40-4cef-80f5-918386767a47
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: = sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: c7efb49870e148b6a854547d39d4a01139829a89
-ms.sourcegitcommit: 4c7151f9f3f341f8eae70cb2945f3732ddba54af
+ms.openlocfilehash: 9b6895abfa0b09459911eba03b52837379f2d162
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71326127"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72041191"
 ---
 # <a name="sql-server-2019-preview-release-notes"></a>SQL Server 2019 プレビュー リリース ノート
 [!INCLUDE[tsql-appliesto-ssver15-xxxx-xxxx-xxx](../includes/tsql-appliesto-ssver15-xxxx-xxxx-xxx.md)]
@@ -59,6 +59,22 @@ Windows、Linux、およびコンテナーでの SQL Server 2019 RC のビルド
     - Windows Server 2016 以降。 その他の要件については、[SQL Server のインストール要件](../sql-server/install/hardware-and-software-requirements-for-installing-sql-server.md)に関する記事をご覧ください
     - Microsoft .NET Framework 4.6.2。 [ダウンロード センター](https://www.microsoft.com/download/details.aspx?id=53344)から入手できます。
     - Linux については、[サポートされている Linux プラットフォーム](../linux/sql-server-linux-setup.md#supportedplatforms)に関する記事をご覧ください
+
+## <a name="sql-server-installation-may-fail-if-ssms-18x-is-installed"></a>SSMS 18.x がインストールされていると SQL Server のインストールが失敗する場合がある
+
+- **問題およびユーザーへの影響**: 次のインストールをこの順序で実行すると、[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] のインストールが失敗します。
+  1. SQL Server Management Studio (SSMS) バージョン 18.0、18.1、18.2、または 18.3 がサーバーにインストールされています。
+  1. リムーバブル メディアから [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] のインストールを試みます。 たとえば、DVD などのインストール メディアです。
+
+- **回避策**:
+  1. SSMS 18.3.1 より古いバージョンの SSMS をすべてアンインストールします。
+  1. 新しいバージョンの SSMS (18.3.1 以降) をインストールします。 最新のバージョンについては、[SSMS のダウンロード](../ssms/download-sql-server-management-studio-ssms.md)に関するページを参照してください。
+  1. [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] を普通にインストールします。
+
+  >[!NOTE]
+  >アンインストールする必要があります。
+
+- **適用対象**: [!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] リリース候補。
 
 ## <a name="updated-compiler"></a>更新されたコンパイラ
 
@@ -111,7 +127,7 @@ Windows、Linux、およびコンテナーでの SQL Server 2019 RC のビルド
 - **回避策**:最新の VC ランタイム 2013 (x86) をインストールします。
 
   - [詳細](https://support.microsoft.com/help/2977003/the-latest-supported-visual-c-downloads)
-  - [直接](https://support.microsoft.com/en-us/help/4032938/update-for-visual-c-2013-redistributable-package)
+  - [直接](https://support.microsoft.com/help/4032938/update-for-visual-c-2013-redistributable-package)
 
 - **適用対象**:[!INCLUDE[SQL Server 2019](../includes/sssqlv15-md.md)] CTP 3.1、CTP 3.0、CTP 2.5。
 
@@ -132,6 +148,10 @@ Windows、Linux、およびコンテナーでの SQL Server 2019 RC のビルド
 - **回避策**:MDS ポータルを開き、リソースに手動で移動します。
 
 - **適用対象**:SQL Server 2019 リリース候補。
+
+## <a name="machine-learning-services"></a>Machine Learning Services
+
+SQL Server Machine Learning Services での問題については、「[SQL Server Machine Learning Services の既知の問題](../advanced-analytics/known-issues-for-sql-server-machine-learning-services.md)」を参照してください。
 
 [!INCLUDE[get-help-options-msft-only](../includes/paragraph-content/get-help-options.md)]
 

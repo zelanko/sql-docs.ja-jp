@@ -10,12 +10,12 @@ ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
 ms.date: 09/24/2018
-ms.openlocfilehash: b4778d54fe3853f2560159a83dae42c4fd8e55e2
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 06554c42bb7f98263fe48aa43f2366059ad5541f
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959010"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278245"
 ---
 # <a name="tutorial-use-the-transact-sql-editor-to-create-database-objects---includename-sosincludesname-sos-shortmd"></a>チュートリアル:Transact-SQL エディターを使用し、データベース オブジェクトを作成する - [!INCLUDE[name-sos](../includes/name-sos-short.md)]
 
@@ -54,7 +54,7 @@ ms.locfileid: "67959010"
 
    ![クイック検索ウィジェット](./media/tutorial-sql-editor/quick-search-widget.png)
 
-1. 最初の行で **[電子メール]** 列を編集し、「 *orlando0@adventure-works.com* 」と入力し、**Enter** を押して変更内容を保存します。
+1. 最初の行の **[電子メール]** 列を編集して「*orlando0\@adventure-works.com*」と入力し、**Enter** キーを押して変更を保存します。
 
    ![データの編集](./media/tutorial-sql-editor/edit-data.png)
 
@@ -182,7 +182,7 @@ ms.locfileid: "67959010"
 
 ## <a name="use-save-query-results-as-json-to-test-the-setcustomer-stored-procedure"></a>クエリ結果を JSON として保存し、setCustomer ストアド プロシージャをテストする
 
-前のセクションで作成した *setCustomer* ストアド プロシージャでは、JSON データを *@json_val* パラメーターに渡す必要があります。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡す目的で正しく書式設定した JSON を用意する方法について説明します。
+前のセクションで作成した *setCustomer* ストアド プロシージャでは、JSON データを *\@json_val* パラメーターに渡す必要があります。 このセクションでは、ストアド プロシージャをテストできるように、パラメーターに渡す目的で正しく書式設定した JSON を用意する方法について説明します。
 
 1. **[サーバー]** サイドバーで、 *[dbo.Customers]* テーブルを右クリックし、 **[SELECT TOP 1000 Rows]\(上位 1000 行を選択する\)** をクリックします。
 

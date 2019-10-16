@@ -23,12 +23,12 @@ author: dnethi
 ms.author: dinethi
 ms.custom: ''
 ms.date: 10/03/2019
-ms.openlocfilehash: 3f5b4cbe56d395b88dc756d823b526b05b2fde74
-ms.sourcegitcommit: ffb87aa292fc9b545c4258749c28df1bd88d7342
+ms.openlocfilehash: b3fa70eb83ddd46c0901cfe5d5499a0a12f33db8
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71816805"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251395"
 ---
 # <a name="download-sql-server-management-studio-ssms"></a>SQL Server Management Studio (SSMS) のダウンロード
 
@@ -44,7 +44,7 @@ SSMS は無料です。
 
 **SSMS 18.3.1 をご利用いただけるようになりました。これは *SQL Server Management Studio* の GA (一般提供) 最新版であり、[!INCLUDE[sql-server-2019](../includes/sssqlv15-md.md)] に対応しています。**
 
-**[![ダウンロード](../ssdt/media/download.png) SQL Server Management Studio 18.3.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2105412)**
+**[SQL Server Management Studio 18.3.1 のダウンロード](https://go.microsoft.com/fwlink/?linkid=2105412)**
 
 SSMS 18.3.1 は SSMS の GA (一般提供) 最新版です。 以前の GA バージョンの SSMS 18 がインストールされている場合、SSMS 18.3.1 をインストールして 18.3.1 にアップグレードします。以前の "*プレビュー*" 版の SSMS 18.x がインストールされている場合は、それをアンインストールしてから SSMS 18.3.1 をインストールしてください。
 

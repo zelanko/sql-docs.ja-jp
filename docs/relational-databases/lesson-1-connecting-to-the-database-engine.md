@@ -10,12 +10,12 @@ ms.topic: quickstart
 ms.assetid: e8db82f0-50ed-4531-9209-940006ed34cb
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 549b8d9e18db73cb91c9707ac51f2db52d368d0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1ab78eab73526568736dea8c4aef1525b2607c93
+ms.sourcegitcommit: 512acc178ec33b1f0403b5b3fd90e44dbf234327
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68073735"
+ms.lasthandoff: 10/08/2019
+ms.locfileid: "72162559"
 ---
 # <a name="lesson-1-connecting-to-the-database-engine"></a>レッスン 1:データベース エンジンへの接続
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -57,7 +57,7 @@ ms.locfileid: "68073735"
 1.  Administrators グループのメンバーとして Windows にログインし、 [!INCLUDE[ssManStudio](../includes/ssmanstudio-md.md)]を起動します。  
 2.  **[サーバーへの接続]** ダイアログ ボックスで、 **[キャンセル]** をクリックします。  
 3.  [登録済みサーバー] が表示されていない場合は、 **[表示]** メニューの **[登録済みサーバー]** をクリックします。
-4.  [登録済みサーバー] ツール バーで **[データベース エンジン]** を選択した状態で、 **[データベース エンジン]** を展開して **[ローカル サーバー グループ]** を右クリックし、 **[タスク]** をポイントして **[ローカル サーバーの登録]** をクリックします。 コンピューターにインストールされている [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのインスタンスが表示されます。 既定のインスタンスには名前がなく、コンピューター名で表示されます。 名前付きインスタンスは、コンピューター名の後に円記号 (\\)、その後にインスタンスの名前が続く形式で表示されます。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の場合は、セットアップ中に変更されない限り、インスタンス名は *<computer_name>* \sqlexpress の形式になります。  
+4.  [登録済みサーバー] ツール バーで **[データベース エンジン]** を選択した状態で、 **[データベース エンジン]** を展開して **[ローカル サーバー グループ]** を右クリックし、 **[タスク]** をポイントして **[ローカル サーバーの登録]** をクリックします。 **[ローカル サーバー グループ]** を展開し、表示されているコンピューターにインストールされている [!INCLUDE[ssDE](../includes/ssde-md.md)] のすべてのインスタンスを表示します。 既定のインスタンスには名前がなく、コンピューター名で表示されます。 名前付きインスタンスは、コンピューター名の後に円記号 (\\)、その後にインスタンスの名前が続く形式で表示されます。 [!INCLUDE[ssExpress](../includes/ssexpress-md.md)] の場合は、セットアップ中に変更されない限り、インスタンス名は *<computer_name>* \sqlexpress の形式になります。  
 
 [!INCLUDE[fresh-note-steps-feedback](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 

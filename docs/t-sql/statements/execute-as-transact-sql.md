@@ -24,12 +24,12 @@ author: CarlRabeler
 ms.author: carlrab
 manager: craigg
 monikerRange: = azuresqldb-current || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions||=azure-sqldw-latest
-ms.openlocfilehash: d9ec87979d0f91653d5f287749ccfb5b7f806dc4
-ms.sourcegitcommit: 71fac5fee00e0eca57e555f44274dd7e08d47e1e
+ms.openlocfilehash: 9d174dab31e6a3f508d3d3858b87844854f6ee7e
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70161336"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72252220"
 ---
 # <a name="execute-as-transact-sql"></a>EXECUTE AS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
@@ -69,8 +69,7 @@ ms.locfileid: "70161336"
 > [!IMPORTANT]  
 >  データベース ユーザーに対するコンテキスト スイッチがアクティブであるときに、データベース外部のリソースへアクセスを試みると、ステートメントが失敗する原因となります。 たとえば、USE *database* ステートメントや分散クエリ、3 部または 4 部構成の識別子を使用する別のデータベースを参照するクエリなどは実行しないでください。  
   
- **'** *name* **'**  
- 有効なユーザーまたはログイン名を指定します。 *name* は、**sysadmin** 固定サーバー ロールのメンバーであるか、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) または [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) のプリンシパルとして存在する必要があります。  
+ '*name*' は、有効なユーザー名またはログイン名です。 *name* は、**sysadmin** 固定サーバー ロールのメンバーであるか、[sys.database_principals](../../relational-databases/system-catalog-views/sys-database-principals-transact-sql.md) または [sys.server_principals](../../relational-databases/system-catalog-views/sys-server-principals-transact-sql.md) のプリンシパルとして存在する必要があります。  
   
  *name* はローカル変数として指定できます。  
   
@@ -83,10 +82,10 @@ ms.locfileid: "70161336"
   
  以前のコンテキストに戻す方法について詳しくは、「[REVERT &#40;Transact-SQL&#41;](../../t-sql/statements/revert-transact-sql.md)」をご覧ください。  
   
- COOKIE INTO * *@***varbinary_variable*  
- REVERT WITH COOKIE ステートメントの呼び出し時に適切な * *@***varbinary_variable* 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻せることを示します。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、Cookie を * *@***varbinary_variable* に渡します。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
+ COOKIE INTO @*varbinary_variable*  
+ REVERT WITH COOKIE ステートメントの呼び出し時に適切な @*varbinary_variable* 値が含まれている場合にのみ、実行コンテキストを以前のコンテキストに戻すことができます。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]では、Cookie が @*varbinary_variable* に渡されます。 **COOKIE INTO** オプションを使用できるのは、アドホック レベルでのみです。  
   
- **@** *varbinary_variable* は **varbinary(8000)** です。  
+ @*varbinary_variable* は **varbinary(8000)** です。  
   
 > [!NOTE]  
 >  Cookie の **OUTPUT** パラメーターは現在、適切な最大長である **varbinary(8000)** としてドキュメントに記載されています。 ただし、現在の実装では **varbinary(100)** を返します。 将来のリリースでクッキーの戻り値のサイズが増えた場合にアプリケーションが引き続き正常に動作するように、アプリケーションでは **varbinary(8000)** を予約しておく必要があります。  

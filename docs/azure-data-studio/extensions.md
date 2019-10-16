@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18
-ms.date: 09/24/2018
-ms.openlocfilehash: e114c4991d5f3df10537e459263b49152c466f99
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.date: 10/03/2019
+ms.openlocfilehash: 6f0a2ab021873a2a9414bfbcdb7aed63c2d31056
+ms.sourcegitcommit: cf268c4e39edf00a8552466e9440e79e6a5d0084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70274827"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72166705"
 ---
 # <a name="extend-the-functionality-of-includename-sosincludesname-sos-shortmd"></a>[!INCLUDE[name-sos](../includes/name-sos-short.md)] の機能を拡張する
 
@@ -26,9 +26,11 @@ ms.locfileid: "70274827"
 
 ## <a name="add-azure-data-studio-extensions"></a>Azure Data Studio の拡張機能を追加する
 
-1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスするには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。\
-    `Ctrl+Shift+X` (Windows/Linux) か `Command+Shift+X` (Mac) を押すことで拡張機能マネージャーに簡単アクセスすることもできます。\
+1. 使用可能な拡張機能にアクセスするには、[拡張機能] アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。
+
     ![拡張機能マネージャーのアイコン](media/extensions/extension-manager-icon.png)
+
+    `Ctrl+Shift+X` キー (Windows/Linux) または `Command+Shift+X` キー (Mac) を押すことによって、拡張機能マネージャーに簡単アクセスすることもできます。
 
 2. 使用可能な拡張機能を選択すると、その詳細が表示されます。
     ![拡張機能の詳細](media/extensions/extension-details.png)
@@ -36,6 +38,8 @@ ms.locfileid: "70274827"
 3. 必要な拡張機能を選択して**インストール**します。
 
 4. インストール後、 **[再度読み込む]** をクリックすると、Azure Data Studio で拡張機能が有効になります (初めて拡張機能をインストールするときにのみ必須)。
+
+Azure Data Studio での拡張機能マネージャーへのアクセスに問題がある場合は、[GitHub Wiki](https://github.com/microsoft/azuredatastudio/wiki/List-of-Extensions) で必要な拡張機能をダウンロードできます。
 
 
 ## <a name="access-installed-azure-data-studio-extensions"></a>インストールした Azure Data Studio の拡張機能にアクセスする

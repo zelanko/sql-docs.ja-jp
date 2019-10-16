@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: ffd0ad4ddcdae91071811e57cdb8c5f6aaaea656
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/24/2019
-ms.locfileid: "68476306"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72174657"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -42,7 +42,12 @@ DBCC SHOWRESULTCACHESPACEUSED
 - 結果セットが使用されていない場合は、48 時間ごと。
 - 結果セットのキャッシュが最大サイズに接近した場合。
 
-データベースの結果セットのキャッシュを手動で空にするには、結果セットのキャッシュ機能をオフにするか、または `DBCC DROPRESULTSETCACHE` コマンドを使用します。   データベースを一時停止しても、結果セットのキャッシュは空になりません。  
+データベースの結果セット キャッシュを手動で空にするには、次のいずれかのオプションを使用します。
+
+- データベースの結果セット キャッシュ機能を無効にする
+- データベースに接続した状態で `DBCC DROPRESULTSETCACHE` を実行する 
+
+データベースを一時停止しても、結果セットのキャッシュは空になりません。  
 
 ## <a name="permissions"></a>アクセス許可
 

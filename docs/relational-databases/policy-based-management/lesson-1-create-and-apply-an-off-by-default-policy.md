@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: d31367db-b7db-44c4-8df2-f1240474cf78
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: fd8f7ff879e3e5a6ec2729abce4c294f69ad2c83
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: d79c212b1bc960f46e816ad6d99ee4ee24722eac
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087112"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251282"
 ---
 # <a name="lesson-1-create-and-apply-an-off-by-default-policy"></a>レッスン 1:"既定でオフ" ポリシーの作成と適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -35,7 +35,7 @@ ms.locfileid: "68087112"
   
 2.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **メールをオフ**」と入力します。   
     1. **[ファセット]** ボックスで、 **[セキュリティ構成]** ファセットが選択されていることを確認します。
-    1. **[式]** 領域の **[フィールド]** ボックスで **@DatabaseMailEnabled** を選択し、 **[演算子]** ボックスで **=** を選択し、 **[値]** ボックスで **[False]** を選択します。  
+    1. **[式]** 領域の **[フィールド]** ボックスで **\@DatabaseMailEnabled** を選択し、 **[演算子]** ボックスで **=** を選択して、 **[値]** ボックスで **[False]** を選択します。  
     1. **[説明]** ページで条件の説明を入力し、 **[OK]** をクリックして条件を作成します。  
 
     ![メールをオフ条件](Media/lesson-1-create-and-apply-an-off-by-default-policy/mail-off-condition.png) 

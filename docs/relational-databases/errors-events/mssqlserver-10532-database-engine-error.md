@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: 01da29ee-bf67-433f-8148-587a7e8d1d76
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: fa07d4adada303c9e1b2470879574f554992bf36
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 050f1c4e1c47458e513e02d16eb3ea6dc7e842a8
+ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68060760"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72005987"
 ---
-# <a name="mssqlserver10532"></a>MSSQLSERVER_10532
+# <a name="mssqlserver_10532"></a>MSSQLSERVER_10532
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   
 ## <a name="details"></a>詳細  
@@ -30,13 +30,13 @@ ms.locfileid: "68060760"
 |イベント ソース|MSSQLSERVER|  
 |コンポーネント|SQLEngine|  
 |シンボル名|PG_NO_ELIGIBLE_STMT|  
-|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **@plan_handle** で指定されたバッチまたはモジュールに、プラン ガイドに適したステートメントが含まれていません。 **@plan_handle** に別の値を指定します。|  
+|メッセージ テキスト|プラン ガイド '%.\*ls' を作成できません。 **\@plan_handle** で指定されたバッチまたはモジュールに、プラン ガイドに適したステートメントが含まれていません。 **\@plan_handle** に別の値を指定してください。|  
   
 ## <a name="explanation"></a>説明  
-**@plan_handle** で指定されたバッチまたはモジュールに、プラン ガイドに適したステートメントが含まれていません。  
+**\@plan_handle** で指定されたバッチまたはモジュールに、プラン ガイドに適したステートメントが含まれていません。  
   
 ## <a name="user-action"></a>ユーザーの操作  
-**@plan_handle** に別の値を指定します。  
+**\@plan_handle** に別の値を指定してください。  
   
 ## <a name="see-also"></a>参照  
 [プラン ガイド](~/relational-databases/performance/plan-guides.md)  

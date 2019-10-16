@@ -11,12 +11,12 @@ ms.assetid: 7bb78b25-3433-4edb-a2ec-c8b2fa58dea1
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 18a70b5ec95c382bc37d4bec894f9953389a664a
-ms.sourcegitcommit: 6413b7495313830ad1ae5aefe0c09e8e7a284b07
+ms.openlocfilehash: 4bad2f6cf7f36141b4f5a1d42f648c1631175d36
+ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/16/2019
-ms.locfileid: "71016854"
+ms.lasthandoff: 10/10/2019
+ms.locfileid: "72251537"
 ---
 # <a name="quickstart-extended-events-in-sql-server"></a>クイック スタート: SQL Server の拡張イベント
 
@@ -410,7 +410,7 @@ SSMS **オブジェクト エクスプローラー**で、イベント セッシ
 拡張イベントの効果的な使用には、多くのシナリオがあります。 次の記事では、クエリ中に取得したロックに関連するシナリオの例を示します。
 
 
-ロックの評価を目的としたイベント セッションの具体的なシナリオは、次の記事で説明しています。 これらの記事では、 **@dbid** の使用や、動的な `EXECUTE (@YourSqlString)`の使用など、高度な技法もいくつか紹介しています。
+ロックの評価を目的としたイベント セッションの具体的なシナリオは、次の記事で説明しています。 これらの記事では、 **\@dbid** の使用や、動的な `EXECUTE (@YourSqlString)` の使用など、高度な技法もいくつか紹介されています。
 
 - [ロックの大半を取得しているオブジェクトを見つける](../../relational-databases/extended-events/find-the-objects-that-have-the-most-locks-taken-on-them.md)
   - このシナリオでは、生のイベント データを表示する前に処理するターゲット package0.histogram を使用します。

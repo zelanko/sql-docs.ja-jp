@@ -16,12 +16,12 @@ ms.assetid: 9926a4f7-bcd8-4b9b-9dcf-5426a5857116
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 5426210ad558e776dd2ad92246bc526ebf37c2d4
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 46156a9e7b1180d5ed70f0dbcb6b25d2f608f0fc
+ms.sourcegitcommit: 84e6922a57845a629391067ca4803e8d03e0ab90
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934764"
+ms.lasthandoff: 10/07/2019
+ms.locfileid: "72008455"
 ---
 # <a name="upgrade-or-patch-replicated-databases"></a>レプリケートされたデータベースのアップグレードまたは修正プログラム
 
@@ -88,7 +88,7 @@ SQL Server へのアップグレード パスは、配置のパターンによ�
 ## <a name="steps-to-upgrade-a-replication-topology"></a>レプリケーション トポロジをアップグレードする手順
 以下の手順では、レプリケーション トポロジ内のサーバーをアップグレードする順序の概要を示します。 トランザクション レプリケーションまたはマージ レプリケーションのどちらを実行している場合でも、同じ手順が適用されます。 ただし、以下の手順は、ピア ツー ピア レプリケーション、キュー更新サブスクリプション、または即時更新サブスクリプションには適用されません。 
 
-### <a name="in-place-upgrade"></a>インプレース アップグレード 
+### <a name="in-place-upgrade"></a>一括アップグレード 
 1. ディストリビューターを更新します。 
 2. パブリッシャーとサブスクライバーを更新します。 これらは、任意の順序でアップグレードできます。 
 
@@ -104,7 +104,7 @@ SQL Server へのアップグレード パスは、配置のパターンによ�
 
 
 ## <a name="steps-for-side-by-side-migration-of-the-distributor-to-windows-server-2012-r2"></a>Windows Server 2012 R2 へのディストリビューターのサイド バイ サイド移行の手順
-SQL Server インスタンスを SQL 2016 (またはそれ以降) にアップグレードしようとしていて、現在の OS が Windows 2008 (または 2008 R2) である場合は、Windows Server 2012 R2 以降への OS のサイド バイ サイド アップグレードを実行する必要があります。 この中間 OS アップグレードの理由は、SQL Server 2016 は Windows Server 2008/2008 R2 にインストールできず、Windows Server 2008/20008 R2 ではフェールオーバー クラスターをインプレース アップグレードできないためです。 以下の手順は、スタンドアロン SQL Server インスタンス上、または Always On フェールオーバー クラスター インスタンス (FCI) 内のいずれかで実行できます。
+SQL Server インスタンスを SQL Server 2016 (またはそれ以降) にアップグレードしようとしていて、現在の OS が Windows 2008 (または 2008 R2) である場合は、Windows Server R2 以降への OS のサイド バイ サイド アップグレードを実行する必要があります。 この中間 OS アップグレードの理由は、SQL Server 2016 は Windows Server 2008/2008 R2 にインストールできず、Windows Server 2008/20008 R2 では Windows Server 2016 に直接インプレース アップグレードできないためです。 Windows Server 2008/2008 R2 から Windows server 2012 へのインプレース アップグレードを実行してから、Windows Server 2016 にアップグレードすることは可能ですが、ダウンタイムが発生し、複雑さが増してロールバック パスが容易にならないため、通常は推奨されません。 フェールオーバー クラスターに参加している SQL Server インスタンスで使用できるアップグレード パスは、サイド バイ サイド アップグレードだけです。  以下の手順は、スタンドアロン SQL Server インスタンス上、または Always On フェールオーバー クラスター インスタンス (FCI) 内のいずれかで実行できます。
 
 1. Windows Server 2012 R2/2016 上のディストリビューターとして、新しい SQL Server インスタンス (スタンドアロンまたは Always On フェールオーバー クラスター)、エディション、およびバージョンを、異なる Windows クラスターと SQL Server FCI 名またはスタンドアロン ホスト名で設定します。 レプリケーション エージェントの実行可能ファイル、レプリケーション フォルダー、およびデータベース ファイルのパスが、新しい環境でも同じパスで見つかるように、ディレクトリ構造を古いディストリビューターと同じにする必要があります。 これにより、移行/アップグレード後に必要な手順が減ります。
 1. レプリケーションが同期されていることを確認した後、すべてのレプリケーション エージェントをシャットダウンします。 

@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 87e51f4e-156c-4def-8572-76a15075d75e
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: be32b0412b71f4f6e6ca2044bfdd6ead682572c2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9da0204a19161b918c1a19d5babe28f707f3af52
+ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68087176"
+ms.lasthandoff: 10/09/2019
+ms.locfileid: "72173663"
 ---
 # <a name="lesson-2-create-and-apply-a-naming-standards-policy"></a>レッスン 2:名前付け基準ポリシーの作成と適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,7 +49,7 @@ ms.locfileid: "68087176"
   
 2.  **[新しい条件の作成]** ダイアログ ボックスで、 **[名前]** ボックスに「 **Finance のテーブル**」と入力します。  
     1. **[ファセット]** ボックスの一覧で **[マルチパート名]** を選択します。 
-    1. すべてのテーブル名が文字列 **fintbl** で始まるように、 **[式]** 領域の **[フィールド]** ボックスで **@Name** を選択し、 **[演算子]** ボックスで **[次のパターンに一致]** を選択し、 **[値]** ボックスに ```'fintbl%'``` と入力します。
+    1. すべてのテーブル名が文字列 **fintbl** で始まるように、 **[式]** 領域の **[フィールド]** ボックスで **\@Name** を選択し、 **[演算子]** ボックスで **[次のパターンに一致]** を選択し、 **[値]** ボックスに ```'fintbl%'``` と入力します。
     1. **[説明]** ページで、「 **Finance のテーブル名は必ず fintbl で始める**」と入力し、 **[OK]** をクリックして条件を作成します。  
 
     ![Finance テーブルの条件](Media/lesson-2-create-and-apply-a-naming-standards-policy/finance-tables-condition.png)
@@ -152,7 +152,7 @@ ms.locfileid: "68087176"
   
 3.  [!INCLUDE[clickOK](../../includes/clickok-md.md)] これで Finance カテゴリがすべてのデータベースに適用されるようになります。ただし、作成した条件により、Finance の名前ポリシーは Finance データベースにのみ適用されることになります。 これは、条件を複雑に組み合わせることで、多数のサーバーに対して適切な方法でポリシーを適用できるということを示しています。  
   
-## <a name="summary"></a>[概要]  
+## <a name="summary"></a>まとめ  
 このチュートリアルでは、ポリシー ベースの管理の条件、ポリシー、およびポリシー グループを作成する方法と、フィルターを適用してポリシー ベースの管理対象がポリシーに準拠しているかどうかを調べる方法について学習しました。  
   
 ## <a name="next"></a>Next  

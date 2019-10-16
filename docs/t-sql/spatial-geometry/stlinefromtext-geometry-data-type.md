@@ -1,7 +1,7 @@
 ---
 title: STLineFromText (geometry データ型) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/03/2017
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 430508ad-207b-4dee-a4d1-4ddf25e6b4a9
 author: MladjoA
 ms.author: mlandzic
-ms.openlocfilehash: 9c3dfad17abfe2113807bf8eb9a1570ed0a2f7a9
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a0a912e4ab228617537e9c28e9a5cecc4a0278fe
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68129463"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278132"
 ---
 # <a name="stlinefromtext-geometry-data-type"></a>STLineFromText (geometry データ型)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -51,17 +51,38 @@ STLineFromText ( 'linestring_tagged_text' , SRID )
  OGC の型:**LineString**  
   
 ## <a name="remarks"></a>Remarks  
- このメソッドでは、入力が正しい形式でない場合に、**FormatException** をスローします。  
+このメソッドでは、入力が整形式でない場合に、**FormatException** がスローされます。 SQL 仕様バージョン 1.2.1 の Open Geospatial Consortium (OGC) Simple Features の 3 次元ジオメトリと測定ジオメトリの WKT 表記はサポートされていません。 Z (標高) 値と M (メジャー) 値のサポートされている表現の例を参照してください。
   
 ## <a name="examples"></a>使用例  
- `STLineFromText()` を使用して `geometry` インスタンスを作成する例を次に示します。  
-  
+ `STLineFromText()` を使用して `geometry` インスタンスを作成する例を次に示します。
+
+### <a name="example-1-two-dimension-geometry-wkt"></a>例 1 : 2 次元ジオメトリ WKT
 ```  
 DECLARE @g geometry;  
 SET @g = geometry::STLineFromText('LINESTRING (100 100, 200 200)', 0);  
 SELECT @g.ToString();  
 ```  
   
+### <a name="example-2-three-dimension-geometry-wkt"></a>例 2:3 次元ジオメトリ WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100, 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### <a name="example-3-two-dimension-measured-geometry-wkt"></a>例 3: 2 次元測定ジオメトリ WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 NULL 100, 200 200 NULL 200)', 0);  
+SELECT @g.ToString();  
+``` 
+
+### <a name="example-4-three-dimension-measured-geometry-wkt"></a>例 4: 3 次元測定ジオメトリ WKT
+```  
+DECLARE @g geometry;  
+SET @g = geometry::STLineFromText('LINESTRING (100 100 100 100, 200 200 200 200)', 0);  
+SELECT @g.ToString();  
+``` 
 ## <a name="see-also"></a>参照  
  [OGC の静的なジオメトリ メソッド](../../t-sql/spatial-geometry/ogc-static-geometry-methods.md)  
   

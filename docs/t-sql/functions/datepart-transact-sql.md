@@ -27,12 +27,12 @@ ms.assetid: 15f1a5bc-4c0c-4c48-848d-8ec03473e6c1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 2b9443f1c33a89dd5eb51c143f23e65c2a12e3d2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cfb568170a549fe7c952807e7aa7dda6b7fca854
+ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68119143"
+ms.lasthandoff: 10/11/2019
+ms.locfileid: "72278193"
 ---
 # <a name="datepart-transact-sql"></a>DATEPART (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -150,7 +150,7 @@ SET DATEFIRST 7 -- ( Sunday )
 ## <a name="year-month-and-day-datepart-arguments"></a>year、month、day (datepart 引数)  
 DATEPART (**year**, *date*)、DATEPART (**month**, *date*)、DATEPART (**day**, *date*) で返される値は、それぞれ [YEAR](../../t-sql/functions/year-transact-sql.md)、[MONTH](../../t-sql/functions/month-transact-sql.md)、[DAY](../../t-sql/functions/day-transact-sql.md) の各関数で返される値と同じです。
   
-## <a name="isoweek-datepart"></a>ISO_WEEK (datepart)  
+## <a name="iso_week-datepart"></a>ISO_WEEK (datepart)  
 ISO 8601 には、ISO 週日付方式 (週番号方式) が規定されています。 それぞれの週は、木曜日が出現する年と関連付けられます。 たとえば、2004 年の第 1 週 (2004W01) は、2003 年 12 月 29 日月曜日から 2004 年 1 月 4 日 日曜日です。 ヨーロッパの国/地域では、通常、このスタイルの付番方式が使用されます。 通常、ヨーロッパ以外の国/地域はこの方式を使用しません。
 
 注: 1 年の最大週番号は 52 または 53 のいずれかになります。
@@ -194,7 +194,7 @@ SELECT DATEPART(year, '12:10:30.123')
     ,DATEPART(weekday, '12:10:30.123');  
 ```  
   
-*date* が変数またはテーブル列として指定され、その変数または列のデータ型に *datepart* が指定されていない場合、`DATEPART` はエラー 9810 を返します。 この例では、変数 *\@t* に **time** データ型があります。 **time** データ型の日付部分の年度が無効なため、この例は失敗します。
+*date* が変数またはテーブル列として指定され、その変数または列のデータ型に *datepart* が指定されていない場合、`DATEPART` はエラー 9810 を返します。 この例では、変数 *\@t* は **time** データ型です。 **time** データ型の日付部分の年度が無効なため、この例は失敗します。
   
 ```sql
 DECLARE @t time = '12:10:30.123';   
