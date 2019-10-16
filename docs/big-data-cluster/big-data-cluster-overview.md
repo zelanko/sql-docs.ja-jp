@@ -9,12 +9,12 @@ ms.date: 08/28/2019
 ms.topic: overview
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: f7790c133ae9f686f2551de8744c6836ffc8ae25
-ms.sourcegitcommit: c4875c097e3aae1b76233777d15e0a0ec8e0d681
+ms.openlocfilehash: cffb1bcf353932183703f810c876b6adacaa7bbf
+ms.sourcegitcommit: 873504573569546eb7223d3afefd89bb3d422d6f
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/27/2019
-ms.locfileid: "71342028"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72359529"
 ---
 # <a name="what-are-includebig-data-clusters-2019includesssbigdataclusters-ss-novermd"></a>@No__t-0 とは何ですか?
 
@@ -90,7 +90,7 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 
 ### <a id="controlplane"></a> コントローラー
 
-コントローラーには、クラスターの管理とセキュリティ機能があります。 これには、制御サービス、構成ストア、およびその他のクラスターレベル サービス (Kibana、Grafana、Elastic Search など) が含まれます。
+コントローラーには、クラスターの管理とセキュリティ機能があります。 これには、制御サービス、構成ストア、および Kibana、Grafana、エラスティック検索などのその他のクラスターレベルサービスが含まれています。
 
 ### <a id="computeplane"></a> コンピューティング プール
 
@@ -105,8 +105,8 @@ Kubernetes はオープン ソースのコンテナー オーケストレータ�
 記憶域プールは、SQL Server on Linux、Spark、および HDFS で構成される記憶域プール ポッドで構成されます。 SQL Server ビッグ データ クラスター内のすべての記憶域ノードは、HDFS クラスターのメンバーです。
 
 > [!TIP]
-> ビッグ データ クラスターのアーキテクチャとインストールの詳細については、「[ワークショップ:Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] アーキテクチャ @ no__t-1.
+> ビッグデータクラスターのアーキテクチャとインストールの詳細については、「[ワークショップ: Microsoft [!INCLUDE[big-data-clusters-2019](../includes/ssbigdataclusters-ss-nover.md)] のアーキテクチャ](https://github.com/Microsoft/sqlworkshops/tree/master/sqlserver2019bigdataclusters)」を参照してください。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 ビッグデータクラスター SQL Server のデプロイの詳細については、「 [SQL Server ビッグデータクラスターの概要](deploy-get-started.md)」を参照してください。

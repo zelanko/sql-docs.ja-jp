@@ -17,19 +17,19 @@ helpviewer_keywords:
 ms.assetid: 65e15e2e-107c-49c3-b12c-f4edf0eb1617
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 32b8c8b1bbac53b099afc64f06a0eb5137292555
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: d382d8ee7a871244213467b7a46bdc5b864c55cb
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72006093"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381898"
 ---
 # <a name="sysmail_add_account_sp-transact-sql"></a>sysmail_add_account_sp (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   SMTP アカウントに関する情報を保持する新しいデータベースメールアカウントを作成します。  
   
- ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピックリンクアイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -50,14 +50,14 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
     [ , [ @account_id = ] account_id OUTPUT ]  
 ```  
   
-## <a name="arguments"></a>引数  
+## <a name="arguments"></a>[引数]  
 `[ @account_name = ] 'account_name'` 追加するアカウントの名前。 *account_name*は**sysname**,、既定値はありません。  
   
-`[ @email_address = ] 'email_address'` メッセージの送信元の電子メールアドレス。 このアドレスは、インターネット電子メールアドレスである必要があります。 *email_address*は**nvarchar (128)** ,、既定値はありません。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアカウントは、アドレス **SqlAgent@Adventure-Works.com** から電子メールを送信できます。  
+`[ @email_address = ] 'email_address'` メッセージの送信元の電子メールアドレス。 このアドレスは、インターネット電子メールアドレスである必要があります。 *email_address*は**nvarchar (128)** ,、既定値はありません。 たとえば、@no__t 0 のエージェントのアカウントは、アドレス**SqlAgent\@Adventure-Works.com**から電子メールを送信できます。  
   
 `[ @display_name = ] 'display_name'` このアカウントからの電子メールメッセージに使用する表示名。 *display_name*は**nvarchar (128)** ,、既定値は NULL です。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアカウントには、電子メールメッセージに**自動メーラー SQL Server エージェント**名前が表示される場合があります。  
   
-`[ @replyto_address = ] 'replyto_address'` このアカウントからのメッセージに対する応答の送信先アドレス。 *replyto_address*は**nvarchar (128)** ,、既定値は NULL です。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアカウントへの返信は、データベース管理者である **danw@Adventure-Works.com** に送られる場合があります。  
+`[ @replyto_address = ] 'replyto_address'` このアカウントからのメッセージに対する応答の送信先アドレス。 *replyto_address*は**nvarchar (128)** ,、既定値は NULL です。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントのアカウントへの返信は、データベース管理者**danw\@Adventure-Works.com**に送られます。  
   
 `[ @description = ] 'description'` は、アカウントの説明です。 *説明*は**nvarchar (256)** ,、既定値は NULL です。  
   
@@ -80,7 +80,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
   
-## <a name="remarks"></a>コメント  
+## <a name="remarks"></a>備考  
  データベースメールには、 **@no__t 1email_address**、 **\@display_name**、および **\@replyto_address**に個別のパラメーターが用意されています。 **@No__t 1email_address**パラメーターは、メッセージの送信元のアドレスです。 **@No__t 1display_name**パラメーターは、電子メールメッセージの **[差出人]** フィールドに表示される名前です。 **@No__t 1replyto_address**パラメーターは、電子メールメッセージへの返信が送信されるアドレスです。 たとえば、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用するアカウントでは、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントでのみ使用される電子メール アドレスから電子メール メッセージを送信できます。 そのアドレスからのメッセージにはフレンドリ名が表示されるので、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントがメッセージを送信したことを受信者が簡単に判断できます。 受信者がメッセージに返信した場合、その返信は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントで使用されるアドレスではなくデータベース管理者に送られます。 このシナリオでは、アカウントは電子メールアドレスとして **SqlAgent@Adventure-Works.com** を使用します。 表示名は**SQL Server エージェント自動メーラ**に設定されます。 アカウントは **danw@Adventure-Works.com** を返信アドレスとして使用するので、このアカウントから送信されたメッセージへの返信は、@no__t エージェントの電子メールアドレスではなく、データベース管理者に送られます。 これら3つのパラメーターに個別の設定を指定することにより、データベースメールによって、必要に応じてメッセージを構成できます。  
   
  1mailserver_type パラメーターは、値 **' SMTP '** をサポートし **@no__t**ています。  
@@ -89,7 +89,7 @@ sysmail_add_account_sp  [ @account_name = ] 'account_name',
   
  ストアドプロシージャ**sysmail_add_account_sp**は**msdb**データベースにあり、 **dbo**スキーマが所有しています。 現在のデータベースが**msdb**でない場合は、3つの部分で構成される名前を使用してプロシージャを実行する必要があります。  
   
-## <a name="permissions"></a>アクセス許可  
+## <a name="permissions"></a>Permissions  
  このプロシージャの実行権限は、既定では**sysadmin**固定サーバーロールのメンバーに与えています。  
   
 ## <a name="examples"></a>使用例  
@@ -104,7 +104,7 @@ EXECUTE msdb.dbo.sysmail_add_account_sp
     @mailserver_name = 'smtp.Adventure-Works.com' ;  
 ```  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [データベース メール](../../relational-databases/database-mail/database-mail.md)   
  [データベースメールアカウント   を作成し](../../relational-databases/database-mail/create-a-database-mail-account.md)ます。  
  [ストアドプロシージャ&#40;のデータベースメール transact-sql&#41;](../../relational-databases/system-stored-procedures/database-mail-stored-procedures-transact-sql.md)  
