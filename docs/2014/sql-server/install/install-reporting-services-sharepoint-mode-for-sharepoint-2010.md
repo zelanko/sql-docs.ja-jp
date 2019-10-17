@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: b69c6193720dd9975c364f5f4d729bba1e35d821
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952518"
 ---
 # <a name="install-reporting-services-sharepoint-mode-for-sharepoint-2010"></a>SharePoint 2010 用 Reporting Services の SharePoint モードのインストール
@@ -31,7 +31,7 @@ ms.locfileid: "71952518"
   
 
   
-##  <a name="bkmk_prereq"></a> 前提条件  
+##  <a name="bkmk_prereq"></a> Prerequisites  
   
 -   > [!IMPORTANT]  
     >  [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] SharePoint モードを構成および管理するために、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] 構成マネージャーを使用するまたはサポートする必要はなくなりました。 SharePoint モードでレポート サーバーを構成するには、SharePoint サーバーの全体管理を使用します。 詳細については、「 [Reporting Services SharePoint サービスアプリケーションの管理](../../../2014/reporting-services/manage-a-reporting-services-sharepoint-service-application.md)」を参照してください。  
@@ -48,7 +48,7 @@ ms.locfileid: "71952518"
   
 -   Windows サーバーマネージャーで**SharePoint 2010 管理**サービスが開始されていることを確認します。  
   
- 1台の![サーバー上の ssrs コンポーネント]1 台のサーバーにインストールされる(../../../2014/sql-server/install/media/rs-deployment-1-server.gif "ssrs コンポーネント")  
+ ![1台のサーバーにインストールされる SSRS コンポーネント](../../../2014/sql-server/install/media/rs-deployment-1-server.gif "1台のサーバーにインストールされる SSRS コンポーネント")  
   
 ### <a name="database-considerations-for-a-single-server-configuration"></a>単一のサーバー構成に関するデータベースの注意事項  
   
@@ -86,19 +86,19 @@ ms.locfileid: "71952518"
   
      **[次へ]** をクリックします。  
   
-     ![セットアップ ロールの SQL Server 機能のインストール](../../../2014/sql-server/install/media/rs-setuprole.gif "セットアップ ロールの SQL Server 機能のインストール")  
+     ![セットアップロールの SQL Server 機能のインストール](../../../2014/sql-server/install/media/rs-setuprole.gif "セットアップロールの SQL Server 機能のインストール")  
   
 9. **[機能の選択]** ページで、次のオプションを選択します。  
   
     -   **Reporting Services - SharePoint**  
   
-    -   **SharePoint 2010 製品用の Reporting Services アドイン**。 ![注]アドインをインストールするためのインストールウィザードオプション(../../../2014/reporting-services/media/rs-fyinote.png "は、@no__t")2 リリースの新機能です。  
+    -   **SharePoint 2010 製品用の Reporting Services アドイン**。 ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "n注)アドインをインストールするためのインストールウィザードオプションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースの新機能です。  
   
     -   SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスがまだインストールされていない場合は、 **[データベース エンジン サービス]** および **[管理ツール - 完全]** をクリックして完全な環境をインストールすることもできます。  
   
      **[次へ]** をクリックします。  
   
-     ![Sharepoint モードの Ssrs 機能の選択](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "sharepoint モードでの Ssrs 機能の選択")  
+     ![SharePoint モードの SSRS 機能の選択](../../../2014/sql-server/install/media/rs-setupfeatureselection-sharepoint-with-circles.gif "SharePoint モードの SSRS 機能の選択")  
   
 10. **[インストールルール]** ページで **[次へ]** をクリックします。 警告やインストールの障害となる問題を確認します。  
   
@@ -197,11 +197,11 @@ ms.locfileid: "71952518"
   
 9. **[Web アプリケーションの関連付け]** セクションで、現在の Reporting Services サービス アプリケーションによるアクセス用に準備する Web アプリケーションを選択します。 1 つの Reporting Services サービス アプリケーションを 1 つの Web アプリケーションに関連付けることができます。 現在のすべての Web アプリケーションが既に Reporting Services サービス アプリケーションと関連付けられている場合は、警告メッセージが表示されます。  
   
-10. **[OK]** をクリックします。  
+10. クリックして **OK**です。  
   
 11. サービス アプリケーションの作成処理には数分かかることがあります。 完了すると、確認メッセージと、 **[サブスクリプションと警告の準備]** ページへのリンクが表示されます。 [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] のサブスクリプション機能と警告機能を使用する場合は、準備手順を行います。 詳細については、「[SSRS サービス アプリケーションを使用するためのサブスクリプションと警告の準備](../../reporting-services/install-windows/provision-subscriptions-and-alerts-for-ssrs-service-applications.md)」を参照してください。  
   
- Powershell![関連コンテンツ](../../../2014/reporting-services/media/rs-powershellicon.jpg "powershell 関連コンテンツ")powershell を使用して @no__t 2 サービスアプリケーションを作成する方法については、「 [powershell を使用して Reporting Services サービスアプリケーションを作成するに](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)は」を参照してください。  
+ ![PowerShell 関連コンテンツ](../../../2014/reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")PowerShell を使用して @no__t 1 のサービスアプリケーションを作成する方法の詳細については、「 [powershell を使用して Reporting Services サービスアプリケーションを作成するに](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md#bkmk_powershell_create_ssrs_serviceapp)は」を参照してください。  
   
 
   
@@ -247,7 +247,7 @@ ms.locfileid: "71952518"
 ### <a name="activate-the-file-sync-feature"></a>ファイル同期機能のアクティブ化  
  ユーザーがパブリッシュ済みレポート アイテムを SharePoint ドキュメント ライブラリに頻繁に直接アップロードする場合は、レポート サーバーのファイル同期機能が役立ちます。 ファイル同期機能では、レポート サーバー カタログとドキュメント ライブラリのアイテムの同期が、より頻繁に行われます。 詳しくは、「 [SharePoint サーバーの全体管理でレポート サーバーのファイル同期機能をアクティブにする](../../../2014/reporting-services/activate-report-server-file-sync-feature-sharepoint-central-administration.md)」をご覧ください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [Reporting Services SharePoint モード用の PowerShell コマンドレット](../../../2014/reporting-services/powershell-cmdlets-for-reporting-services-sharepoint-mode.md)   
  [SQL Server 2012 の各エディションがサポートする機能](https://go.microsoft.com/fwlink/?linkid=232473)   
  [Reporting Services の SharePoint サービスとサービス アプリケーション](../../../2014/reporting-services/reporting-services-sharepoint-service-and-service-applications.md)  

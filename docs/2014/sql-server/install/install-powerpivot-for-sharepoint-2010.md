@@ -11,10 +11,10 @@ author: maggiesMSFT
 ms.author: maggies
 manager: craigg
 ms.openlocfilehash: 4eab56329c2b51f792394ffc37921e8a1ed8e117
-ms.sourcegitcommit: ffe2fa1b22e6040cdbd8544fb5a3083eed3be852
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
+ms.lasthandoff: 10/16/2019
 ms.locfileid: "71952249"
 ---
 # <a name="install-powerpivot-for-sharepoint-2010"></a>PowerPivot for SharePoint 2010 をインストールする
@@ -26,9 +26,9 @@ ms.locfileid: "71952249"
   
  
   
- @No__t-0 と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じサーバーにインストールする手順については、「[Deployment チェックリスト:Reporting Services、Power View、および PowerPivot for SharePoint @ no__t-0。  
+ @No__t-0 と [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] を同じサーバーにインストールする手順については、「[展開チェックリスト: Reporting Services、Power View、および PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)」を参照してください。  
   
-## <a name="prerequisites"></a>前提条件  
+## <a name="prerequisites"></a>[前提条件]  
   
 1.  SQL Server セットアップを実行するには、ローカル管理者である必要があります。  
   
@@ -50,7 +50,7 @@ ms.locfileid: "71952249"
   
     -   [SharePoint 2010 ファームで SQL Server BI 機能を使用するためのガイド](../../../2014/sql-server/install/guidance-for-using-sql-server-bi-features-in-a-sharepoint-2010-farm.md)  
   
-##  <a name="InstallSQL"></a> ステップ 1:PowerPivot for SharePoint のインストール  
+##  <a name="InstallSQL"></a>手順 1: PowerPivot for SharePoint をインストールする  
  この手順では、SQL Server セットアップを実行して [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールします。 後続の手順では、サーバーをインストール後のタスクとして構成します。  
   
 1.  インストールメディアを挿入するか、SQL Server のセットアップファイルが格納されているフォルダーを開き、 **setup.exe**をダブルクリックします。  
@@ -92,7 +92,7 @@ ms.locfileid: "71952249"
   
      SQL Server Analysis Services については、ドメイン ユーザー アカウントを指定する必要があります。 ビルトイン アカウントを指定しないでください。 ドメインアカウントは、SharePoint サーバーの全体管理で*管理アカウント*として Analysis Services サービスアカウントを管理するために必要です。  
   
-     ![Ssas サーバー構成](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "ssas サーバー構成")  
+     ![SSAS サーバーの構成](../../../2014/sql-server/install/media/ssas-powerpivotsetupsql2012sp1-serverconfiguration.gif "SSAS サーバーの構成")  
   
      SQL Server データベース エンジンと SQL Server エージェントを追加した場合は、サービスがドメイン ユーザー アカウントまたは既定の仮想アカウントで実行されるように構成できます。  
   
@@ -115,12 +115,12 @@ ms.locfileid: "71952249"
 > [!TIP]  
 >  SQL Server インストールの問題を解決する必要がある場合は、「 [SQL Server セットアップログファイルの表示と読み取り](../../database-engine/install-windows/view-and-read-sql-server-setup-log-files.md)」を参照してください。  
   
-##  <a name="bkmk_config"></a> ステップ 2:サーバーを構成する  
+##  <a name="bkmk_config"></a>手順 2: サーバーを構成する  
   
 > [!IMPORTANT]  
 >  [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] データベース サーバーを使用する [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] または SharePoint ファームを構成する前に、SharePoint 2010 SP2 をインストールする必要があります。 サービス パックをインストールしていない場合は、サーバーの構成を始める前にここでインストールしてください。  
   
- サーバーが構成されるまでは、インストールは完了しません。 このリリースでは、サーバーの構成は常に、次の方法のいずれかを使用して、インストール後のタスクとして実行します。[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)]構成ツール、サーバーの全体管理、または PowerShell。 続行するには、次のいずれかのアプローチを使用します。  
+ サーバーが構成されるまでは、インストールは完了しません。 このリリースでは、サーバーの構成は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] 構成ツール、サーバーの全体管理、PowerShell のいずれかの方法を使用して、常にインストール後のタスクとして実行されます。 続行するには、次のいずれかのアプローチを使用します。  
   
 -   [PowerPivot for SharePoint 2010 &#40;PowerPivot 構成ツールの構成または修復&#41;](../../../2014/analysis-services/configure-repair-powerpivot-sharepoint-2010.md)  
   
@@ -130,7 +130,7 @@ ms.locfileid: "71952249"
   
  **データベースエンジンインスタンスに接続しています。** [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] をインストールしたときに、SQL Server セットアップで、データベース エンジンのインスタンスをインストールに追加することができました。 新しいファームを設定し、ファームの構成データベースとコンテンツデータベースを実行するためにデータベースサーバーが必要な場合は、データベースエンジンインスタンスをインストールに追加した可能性があります。 データベース エンジンを追加した場合は、[!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] の名前付きインスタンスとしてインストールされています。 このインスタンスへの接続を指定する必要がある場合 (たとえば、ファーム構成ウィザードを使用してファームを構成する場合)、< `servername` > \Powerpivot の形式でデータベース名を入力してください。  
   
-##  <a name="bkmk_redist"></a> ステップ 3:Excel Services アプリケーション サーバーへの Analysis Services OLE DB プロバイダーのインストール  
+##  <a name="bkmk_redist"></a>手順 3: Excel Services アプリケーションサーバーに Analysis Services OLE DB プロバイダーをインストールする  
  個々のアプリケーション サーバーで Excel Calculation Services と [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] を実行する場合は、追加のインストール手順が必要となります。 Excel Calculation Services を実行しているアプリケーション サーバーに、適切なバージョンの Analysis Services OLE DB (MSOLAP) プロバイダーをインストールします。  
   
 -   [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの MSOLAP は SQL Server セットアップに含まれているため、アプリケーション サーバーが PowerPivot アプリケーション サーバーではない場合にのみ、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] バージョンの MSOLAP を明示的にインストールする必要があります。  
@@ -142,13 +142,13 @@ ms.locfileid: "71952249"
   
  検証手順を含め、プロバイダーのインストールの詳細については、「 [SharePoint サーバーへの Analysis Services OLE DB Provider のインストール](../../../2014/sql-server/install/install-the-analysis-services-ole-db-provider-on-sharepoint-servers.md)」を参照してください。  
   
-##  <a name="bkmk_verify"></a> 手順 4:インストールを確認する  
+##  <a name="bkmk_verify"></a>手順 4: インストールを確認する  
  この最後の手順では、SharePoint 2010 と [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] の両方が完全に機能することを確認します。 手順については、「 [PowerPivot for SharePoint のインストールの検証](https://docs.microsoft.com/analysis-services/instances/install-windows/verify-a-power-pivot-for-sharepoint-installation)」を参照してください。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [PowerPivot for SharePoint 2010 のインストール](../../../2014/sql-server/install/powerpivot-for-sharepoint-2010-installation.md)   
- @no__t 0Deployment のチェックリスト:Reporting Services、Power View、PowerPivot for SharePoint @ no__t-0 @ no__t-1  
- @no__t 0Deployment のチェックリスト:SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト @ no__t-0 @ no__t-1  
- @no__t 0Deployment のチェックリスト:PowerPivot for SharePoint 2010 のマルチサーバーインストール @ no__t-0  
+ [展開チェックリスト: Reporting Services、Power View、PowerPivot for SharePoint](deployment-checklist-reporting-services-power-view-power-pivot-for-sharepoint.md)   
+ [配置のチェックリスト: SharePoint 2010 ファームへの PowerPivot サーバーの追加によるスケールアウト](../../../2014/sql-server/install/deployment-checklist-scale-out-adding-powerpivot-servers-sharepoint-2010-farm.md)   
+ [展開チェックリスト: PowerPivot for SharePoint 2010 のマルチサーバーインストール](../../../2014/sql-server/install/deployment-checklist-multiserver-installation-powerpivot-sharepoint-2010.md)  
   
   
