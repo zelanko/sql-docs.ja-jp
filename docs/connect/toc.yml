@@ -11,15 +11,135 @@
 - name: ADO.NET
   items:
     - name: Microsoft ADO.NET for SQL Server
-      href: ../connect/ado-net/microsoft-ado-net-for-sql-server.md
-    - name: '手順 1:ADO.NET 開発用に開発環境を構成する'
-      href: ../connect/ado-net/step-1-configure-development-environment-for-ado-net-development.md
-    - name: '手順 2:ADO.NET 開発用の SQL データベースを作成する'
-      href: ../connect/ado-net/step-2-create-a-sql-database-for-ado-net-development.md
-    - name: '手順 3:ADO.NET を使用した SQL への接続を概念実証する'
-      href: ../connect/ado-net/step-3-proof-of-concept-connecting-to-sql-using-ado-net.md
-    - name: '手順 4:ADO.NET で SQL に弾性的に接続する'
-      href: ../connect/ado-net/step-4-connect-resiliently-to-sql-with-ado-net.md
+      href: ../connect/ado-net/microsoft-ado-net-sql-server.md
+    - name: SqlClient ドライバーの概要
+      href: ../connect/ado-net/get-started-sqlclient-driver.md
+      items:
+        - name: '手順 1:ADO.NET 開発用に開発環境を構成する'
+          href: ../connect/ado-net/step-1-configure-development-environment-ado-net-development.md
+        - name: '手順 2:ADO.NET 開発用の SQL データベースを作成する'
+          href: ../connect/ado-net/step-2-create-sql-database-ado-net-development.md
+        - name: '手順 3:ADO.NET を使用した SQL への接続を概念実証する'
+          href: ../connect/ado-net/step-3-connect-sql-ado-net.md
+        - name: '手順 4:ADO.NET で SQL に弾性的に接続する'
+          href: ../connect/ado-net/step-4-connect-resiliently-sql-ado-net.md
+    - name: SqlClient ドライバーの概要
+      href: ../connect/ado-net/overview-sqlclient-driver.md
+      items:
+        - name: Microsoft.Data.SqlClient 名前空間の概要
+          href: ../connect/ado-net/introduction-microsoft-data-sqlclient-namespace.md
+        - name: Microsoft SqlClient Data Provider for SQL Server をダウンロードする
+          href: ../connect/ado-net/download-microsoft-sqlclient-data-provider.md
+        - name: SqlClient ドライバーのサポート ライフサイクル
+          href: ../connect/ado-net/sqlclient-driver-support-lifecycle.md
+        - name: 追加の SqlClient ドライバー情報の検索
+          href: ../connect/ado-net/find-additional-sqlclient-driver-information.md
+    - name: SQL Server と ADO.NET
+      href: ../connect/ado-net/sql/index.md
+      items:
+        - name: SQL Server のセキュリティ
+          href: ../connect/ado-net/sql/sql-server-security.md
+          items:
+            - name: SQL Server での認証
+              href: ../connect/ado-net/sql/authentication-sql-server.md
+            - name: SQL Server におけるアプリケーション セキュリティのシナリオ
+              href: ../connect/ado-net/sql/application-security-scenarios-sql-server.md
+              items:
+                - name: SQL Server での安全な動的 SQL の作成
+                  href: ../connect/ado-net/sql/writing-secure-dynamic-sql.md
+            - name: SQL Server Express のセキュリティ
+              href: ../connect/ado-net/sql/sql-server-express-security.md
+        - name: SQL Server のデータ型と ADO.NET
+          href: ../connect/ado-net/sql/sql-server-data-types.md
+          items:
+            - name: SqlTypes とデータセット
+              href: ../connect/ado-net/sql/sqltypes-dataset.md
+            - name: null 値の処理
+              href: ../connect/ado-net/sql/handle-null-values.md
+            - name: GUID と uniqueidentifier 値の比較
+              href: ../connect/ado-net/sql/compare-guid-uniqueidentifier-values.md
+            - name: 日付型と時刻型のデータ
+              href: ../connect/ado-net/sql/date-time-data.md
+            - name: 大きな UDT
+              href: ../connect/ado-net/sql/large-udts.md
+            - name: SQL Server における XML データ
+              href: ../connect/ado-net/sql/xml-data-sql-server.md
+              items:
+                - name: SQL XML 列の値
+                  href: ../connect/ado-net/sql/sql-xml-column-values.md
+                - name: パラメーターとしての XML 値の指定
+                  href: ../connect/ado-net/sql/specify-xml-values-parameters.md
+        - name: SQL Server のバイナリ データと大きな値のデータ
+          href: ../connect/ado-net/sql/sql-server-binary-large-value-data.md
+          items:
+            - name: ADO.NET での大きな値 (max) データの変更
+              href: ../connect/ado-net/sql/modify-large-value-max-data.md
+            - name: FILESTREAM データ
+              href: ../connect/ado-net/sql/filestream-data.md
+            - name: ファイルからのイメージの挿入
+              href: ../connect/ado-net/sql/insert-image-file.md
+        - name: ADO.NET での SQL Server のデータ操作
+          href: ../connect/ado-net/sql/sql-server-data-operations.md
+          items:
+            - name: SQL Server での一括コピー操作
+              href: ../connect/ado-net/sql/bulk-copy-operations-sql-server.md
+              items:
+                - name: 一括コピーのセットアップ例
+                  href: ../connect/ado-net/sql/bulk-copy-example-setup.md
+                - name: 単一の一括コピー操作
+                  href: ../connect/ado-net/sql/single-bulk-copy-operations.md
+                - name: 複数の一括コピー操作
+                  href: ../connect/ado-net/sql/multiple-bulk-copy-operations.md
+                - name: トランザクションと一括コピー操作
+                  href: ../connect/ado-net/sql/transaction-bulk-copy-operations.md
+            - name: 複数のアクティブな結果セット (MARS)
+              href: ../connect/ado-net/sql/multiple-active-result-sets-mars.md
+              items:
+                - name: 複数のアクティブな結果セットの有効化
+                  href: ../connect/ado-net/sql/enable-multiple-active-result-sets.md
+                - name: データの操作
+                  href: ../connect/ado-net/sql/manipulate-data.md
+            - name: 非同期操作
+              href: ../connect/ado-net/sql/asynchronous-operations.md
+              items:
+                - name: コールバックを使用する Windows アプリケーション
+                  href: ../connect/ado-net/sql/windows-applications-callbacks.md
+                - name: 待機ハンドルを使用する ASP.NET アプリケーション
+                  href: ../connect/ado-net/sql/aspnet-apps-use-wait-handles.md
+                - name: コンソール アプリケーションでのポーリング
+                  href: ../connect/ado-net/sql/poll-console-applications.md
+            - name: テーブル値パラメーター
+              href: ../connect/ado-net/sql/table-valued-parameters.md
+        - name: SQL Server の機能と ADO.NET
+          href: ../connect/ado-net/sql/sql-server-features-adonet.md
+          items:
+            - name: SQL Server のインスタンスの列挙 (ADO.NET)
+              href: ../connect/ado-net/sql/enumerate-instances-sql-server.md
+            - name: SQL Server のプロバイダー統計情報
+              href: ../connect/ado-net/sql/provider-statistics-sql-server.md
+            - name: SQL Server Express のユーザー インスタンス
+              href: ../connect/ado-net/sql/sql-server-express-user-instances.md
+            - name: SQL Server のデータベース ミラーリング
+              href: ../connect/ado-net/sql/database-mirroring-sql-server.md
+            - name: コンテキスト接続
+              href: ../connect/ado-net/sql/context-connection.md
+            - name: SQL Server でのクエリ通知
+              href: ../connect/ado-net/sql/query-notifications-sql-server.md
+              items:
+                - name: クエリ通知の有効化
+                  href: ../connect/ado-net/sql/enable-query-notifications.md
+                - name: ASP.NET アプリケーションでの SqlDependency
+                  href: ../connect/ado-net/sql/sqldependency-aspnet-app.md
+                - name: SqlDependency を使用した変更の検出
+                  href: ../connect/ado-net/sql/detect-changes-sqldependency.md
+                - name: SqlCommand の実行と SqlNotificationRequest
+                  href: ../connect/ado-net/sql/sqlcommand-execution-sqlnotificationrequest.md
+            - name: SQL Server でのスナップショット分離
+              href: ../connect/ado-net/sql/snapshot-isolation-sql-server.md
+            - name: 高可用性、ディザスター リカバリーのための SqlClient のサポート
+              href: ../connect/ado-net/sql/sqlclient-support-high-availability-disaster-recovery.md
+            - name: SqlClient による LocalDB のサポート
+              href: ../connect/ado-net/sql/sqlclient-support-localdb.md
 - name: JDBC
   items:
     - name: Microsoft SQL Server 用 JDBC Driver
