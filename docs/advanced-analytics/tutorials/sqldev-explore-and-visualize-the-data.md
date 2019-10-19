@@ -9,20 +9,20 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2c204e06edd830d8036b6d0119ce1aff1a9c6833
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715368"
 ---
-# <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1:データの探索と視覚化
+# <a name="lesson-1-explore-and-visualize-the-data"></a>レッスン 1: データの探索と視覚化
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事は、SQL Server で R を使用する方法に関する SQL 開発者向けのチュートリアルの一部です。
 
-この手順では、サンプルデータを確認し、 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)の[RxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)と Base R の汎用[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)関数を使用して、いくつかのプロットを生成します。これらの R 関数は、既[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]にに含まれています。
+この手順では、サンプルデータを確認し、 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)の[RxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)と Base R の汎用[Hist](https://www.rdocumentation.org/packages/graphics/versions/3.5.0/topics/hist)関数を使用して、いくつかのプロットを生成します。これらの R 関数は、既に [!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)] に含まれています。
 
-このレッスンの主な目的は、ストアドプロシージャ[!INCLUDE[tsql](../../includes/tsql-md.md)]で R 関数を呼び出し、結果をアプリケーションファイル形式で保存する方法を示すことです。
+このレッスンの主な目的は、ストアドプロシージャの [!INCLUDE[tsql](../../includes/tsql-md.md)] から R 関数を呼び出し、結果をアプリケーションファイル形式で保存する方法を示すことです。
 
 + **RxHistogram**を使用して、データとして R プロットを生成するストアドプロシージャを作成します。 **Bcp**を使用して、バイナリストリームをイメージファイルにエクスポートします。
 + **Hist**を使用してプロットを生成し、結果を JPG および PDF 出力として保存するストアドプロシージャを作成します。
@@ -34,13 +34,13 @@ ms.locfileid: "68715368"
 
 データ科学ソリューションの開発には、通常、集中的なデータの探索とデータの視覚化が伴います。 まず、サンプルデータを確認してください (まだ作成していない場合)。
 
-元のパブリックデータセットでは、タクシーの識別子と旅行レコードが個別のファイルで提供されていました。 ただし、サンプルデータの使用を容易にするために、2つの元のデータセットが_medallion_、_ハッキング\_ライセンス_、および_集配\__ の各列に結合されています。  レコードもサンプリングされており、元のレコード数の 1% だけが取得されています。 結果的にダウンサンプリングされたデータセットは 1,703,957 行と 23 列です。
+元のパブリックデータセットでは、タクシーの識別子と旅行レコードが個別のファイルで提供されていました。 ただし、サンプルデータを簡単に使用できるようにするために、2つの元のデータセットは、 _medallion_、_ハック \_license_、および_pickup \_datetime_列に結合されています。  レコードもサンプリングされており、元のレコード数の 1% だけが取得されています。 結果的にダウンサンプリングされたデータセットは 1,703,957 行と 23 列です。
 
 **タクシーの識別子**
   
 -   _Medallion_列は、タクシーの一意の id 番号を表します。
   
--   [_ハッキング\_ライセンス_] 列には、タクシードライバーのライセンス番号 (匿名化) が含まれています。
+-   [_ハッキング \_license_ ] 列には、タクシードライバーのライセンス番号 (匿名化) が含まれています。
   
 **乗車と料金の記録**
   
@@ -48,11 +48,11 @@ ms.locfileid: "68715368"
   
 -   各料金記録には、支払の種類、支払の合計額、チップ額など、支払情報が含まれています。
   
--   最後の 3 つの列はさまざまな機械学習タスクに利用できます。 [ _Tip\_amount_ ] 列には連続する数値が含まれており、回帰分析の**ラベル**列として使用できます。 _tipped_ 列には yes/no 値のみが含まれ、二項分類に利用されます。 _Tip\_class_列には複数の**クラスラベル**があるため、多クラス分類タスクのラベルとして使用できます。
+-   最後の 3 つの列はさまざまな機械学習タスクに利用できます。 _Tip \_amount_列には連続する数値が含まれており、回帰分析の**ラベル**列として使用できます。 _tipped_ 列には yes/no 値のみが含まれ、二項分類に利用されます。 _Tip \_class_列には複数の**クラスラベル**があるため、多クラス分類タスクのラベルとして使用できます。
   
     このチュートリアルでは、二項分類タスクのみを紹介します。他の 2 つの機械学習タスク (回帰と複数クラスの分類) でもモデルの構築をお試しください。
   
--   ラベル列に使用される値はすべて、次のビジネスルールを使用して、[ _tip\_amount_ ] 列に基づいています。
+-   ラベル列に使用される値はすべて、次のビジネスルールを使用して、 _tip \_amount_列に基づいています。
   
     |派生列名|Rule|
     |-|-|
@@ -61,11 +61,11 @@ ms.locfileid: "68715368"
 
 ## <a name="create-a-stored-procedure-using-rxhistogram-to-plot-the-data"></a>RxHistogram を使用してデータをプロットするストアドプロシージャを作成する
 
-プロットを作成するには、 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)で提供されている拡張 R 関数の1つである[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)を使用します。 この手順では、 [!INCLUDE[tsql](../../includes/tsql-md.md)]クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアドプロシージャである "保存" にラップすることができ**ます。**
+プロットを作成するには、 [RevoScaleR](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/revoscaler)で提供されている拡張 R 関数の1つである[rxHistogram](https://docs.microsoft.com/machine-learning-server/r-reference/revoscaler/rxhistogram)を使用します。 この手順では、[!INCLUDE[tsql](../../includes/tsql-md.md)] クエリのデータに基づいてヒストグラムをプロットします。 この関数は、ストアド**プロシージャである**"保存" にラップすることができます。
 
-1. のオブジェクトエクスプローラーで、 **NYCTaxi_Sample**データベースを右クリックし、 **[新しいクエリ]** をクリックします。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+1. @No__t_0 のオブジェクトエクスプローラーで、 **NYCTaxi_Sample**データベースを右クリックし、 **[新しいクエリ]** を選択します。
 
-2. 次のスクリプトを貼り付けて、ヒストグラムをプロットするストアドプロシージャを作成します。 この例の名前は、* rの "r" という名前です。
+2. 次のスクリプトを貼り付けて、ヒストグラムをプロットするストアドプロシージャを作成します。 この例の名前は、**rの "r"* という名前です。
 
     ```sql
     CREATE PROCEDURE [dbo].[RxPlotHistogram]
@@ -94,7 +94,7 @@ ms.locfileid: "68715368"
   
 + 変数 `@query` によりクエリ テキスト (`'SELECT tipped FROM nyctaxi_sample'`) が定義され、スクリプト入力変数 `@input_data_1`の引数として R スクリプトに渡されます。 外部プロセスとして実行される R スクリプトの場合、スクリプトへの入力と、SQL Server で R セッションを開始する[sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql)システムストアドプロシージャへの入力の間に1対1のマッピングが必要です。
   
-+ R スクリプト内では、イメージを`image_file`格納するための変数 () が定義されています。 
++ R スクリプト内には、イメージを格納するための変数 (`image_file`) が定義されています。 
 
 + RevoScaleR ライブラリの**rxHistogram**関数が、プロットを生成するために呼び出されます。
   
@@ -112,7 +112,7 @@ ms.locfileid: "68715368"
     EXEC [dbo].[RxPlotHistogram]
     ```
   
-    **結果**
+    **[結果]**
     
     *プロット* *0xFFD8FFE000104A4649...*
   
@@ -143,7 +143,7 @@ ms.locfileid: "68715368"
     Host filename [bcp.fmt]:
     ```
   
-    **結果**
+    **[結果]**
     
     ```powershell
     Starting copy...
@@ -157,7 +157,7 @@ ms.locfileid: "68715368"
   
 4.  出力ファイルは、PowerShell コマンドを実行した同じディレクトリに作成されます。 プロットを表示するには、ファイル plot.jpg を開きます。
   
-    ![チップありとチップなしのタクシー乗車](media/rsql-devtut-tippedornot.jpg "チップありとチップなしのタクシー乗車")  
+    ![ヒントの有無にかかわらず、タクシーへの旅行](media/rsql-devtut-tippedornot.jpg "ヒントの有無にかかわらず、タクシーへの旅行")  
   
 ## <a name="create-a-stored-procedure-using-hist-and-multiple-output-formats"></a>Hist と複数の出力形式を使用したストアドプロシージャの作成
 
@@ -165,9 +165,9 @@ ms.locfileid: "68715368"
 
 このストアドプロシージャは、 **Hist**関数を使用してヒストグラムを作成し、などの一般的な形式にバイナリデータをエクスポートします。JPG、。PDF、および.PNG. 
 
-1. のオブジェクトエクスプローラーで、 **NYCTaxi_Sample**データベースを右クリックし、 **[新しいクエリ]** をクリックします。 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]
+1. @No__t_0 のオブジェクトエクスプローラーで、 **NYCTaxi_Sample**データベースを右クリックし、 **[新しいクエリ]** を選択します。
 
-2. 次のスクリプトを貼り付けて、ヒストグラムをプロットするストアドプロシージャを作成します。 この例の名前は、r"r" になります。
+2. 次のスクリプトを貼り付けて、ヒストグラムをプロットするストアドプロシージャを作成します。 この例の名前は、 **r"r"** になります。
   
     ```sql
     CREATE PROCEDURE [dbo].[RPlotHist]  
@@ -247,7 +247,7 @@ ms.locfileid: "68715368"
 EXEC RPlotHist
 ```
 
-**結果**
+**[結果]**
     
 ```sql
 STDOUT message(s) from external script:
@@ -264,21 +264,21 @@ C:\temp\plots\rXYPlots_Tip_vs_Fare_Amount_18887c9d517b.pdf
 
 プロットを表示するには、変換先フォルダーを開き、ストアドプロシージャの R コードによって作成されたファイルを確認します。
 
-1. STDOUT メッセージに示されているフォルダーにアクセスします (例では、これは C:\temp\plots です。\)
+1. STDOUT メッセージに示されているフォルダーにアクセスします (この例では、C:\temp\plots になってい \)
 
-2. を`rHistogram_Tipped.jpg`開くと、ヒントが表示されたトリップの数と、先端のないトリップの数が表示されます。 (このヒストグラムは、前の手順で生成したものとよく似ています)。
+2. @No__t_0 を開いて、ヒントが表示されているトリップの数と、先端のないトリップの数を表示します。 (このヒストグラムは、前の手順で生成したものとよく似ています)。
 
-3. を`rHistograms_Tip_and_Fare_Amount.pdf`開くと、料金の金額に対してプロットされた、チップの金額の分布が表示されます。
+3. @No__t_0 を開き、料金量に対してプロットされた、チップの金額の分布を表示します。
     
   ![tip_amount と fare_amount を示すヒストグラム](media/rsql-devtut-tipamtfareamt.PNG "tip_amount と fare_amount を示すヒストグラム")
 
-4. を`rXYPlots_Tip_vs_Fare_Amount.pdf`開くと、x 軸の料金 amount と y 軸のチップの金額を含む散布図が表示されます。
+4. @No__t_0 を開いて、x 軸の料金 amount と y 軸のチップの金額を含む散布図を表示します。
 
-   ![料金 amount をプロットしたチップの金額](media/rsql-devtut-tipamtbyfareamt.PNG "料金 amount をプロット")したチップの金額
+   ![料金 amount をプロットしたチップの金額](media/rsql-devtut-tipamtbyfareamt.PNG "料金 amount をプロットしたチップの金額")
 
 ## <a name="next-lesson"></a>次のレッスン
 
-[レッスン 2:T-sql を使用してデータ機能を作成する](sqldev-create-data-features-using-t-sql.md)
+[レッスン 2: T-sql を使用してデータ機能を作成する](sqldev-create-data-features-using-t-sql.md)
 
 ## <a name="previous-lesson"></a>前のレッスン
 

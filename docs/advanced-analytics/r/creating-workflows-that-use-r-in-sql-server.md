@@ -9,16 +9,16 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 2b8d55e95991437e4d76911fd26afb5b1bc9c550
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68715172"
 ---
 # <a name="create-ssis-and-ssrs-workflows-with-r-on-sql-server"></a>SQL Server で R を使用して SSIS および SSRS ワークフローを作成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
-この記事では、SQL Server Machine Learning Services の言語およびデータサイエンス機能を使用して、埋め込み R と Python スクリプトを使用する方法について、次の2つの重要な SQL Server 機能を使用して説明します。SQL Server Integration Services (SSIS) と SQL Server Reporting Services SSRS。 SQL Server の R および Python ライブラリには、統計関数と予測関数が用意されています。 SSIS と SSRS は、それぞれ、連携した ETL 変換と視覚化を提供します。 この記事では、これらのすべての機能をこのワークフローパターンにまとめる方法について説明します。
+この記事では、SQL Server Machine Learning Services の言語およびデータサイエンス機能を使用して、SQL Server Integration Services (SSIS) と SQL Server Reporting Services という2つの重要な SQL Server 機能を使用して、埋め込み R と Python スクリプトを使用する方法について説明します。SSRS. SQL Server の R および Python ライブラリには、統計関数と予測関数が用意されています。 SSIS と SSRS は、それぞれ、連携した ETL 変換と視覚化を提供します。 この記事では、これらのすべての機能をこのワークフローパターンにまとめる方法について説明します。
 
 > [!div class="checklist"]
 > * 実行可能 R または Python を含むストアドプロシージャを作成する
@@ -32,9 +32,9 @@ ms.locfileid: "68715172"
 
 データ サイエンス ワークフローは何度も繰り返され、スケーリング、集計、確率計算、および属性の名前変更とマージなど、多くのデータ変換を含みます。 データ サイエンティストはこのようなタスクの多くを R、Python または他の言語で実行することに慣れていますが、これらのワークフローをエンタープライズ データで実行するには、ETL ツールとプロセスのシームレスな統合が必要になります。
 
-を[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]使用すると、transact-sql とストアドプロシージャを使用して R で複雑な操作を実行できるため、データサイエンスタスクを既存の ETL プロセスと統合できます。 メモリを集中的に使用するタスクのチェーンを実行するのではなく、や[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] [!INCLUDE[tsql](../../includes/tsql-md.md)]など、最も効率的なツールを使用してデータの準備を最適化することができます。 
+@No__t_0 を使用すると、Transact-sql とストアドプロシージャを使用して R で複雑な操作を実行できるため、データサイエンスタスクを既存の ETL プロセスと統合できます。 メモリを集中的に使用するタスクのチェーンを実行するのではなく、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] や [!INCLUDE[tsql](../../includes/tsql-md.md)] など、最も効率的なツールを使用してデータの準備を最適化できます。 
 
-次に、を使用して[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)]データ処理とモデリングパイプラインを自動化する方法に関するいくつかのヒントを示します。
+ここでは、[!INCLUDE[ssISnoversion](../../includes/ssisnoversion-md.md)] を使用してデータ処理とモデリングパイプラインを自動化する方法について、いくつかのアイデアを示します。
 
 + オンプレミスまたはクラウドのソースからデータを抽出してトレーニングデータを構築する 
 + データ統合ワークフローの一部として R または Python モデルを構築して実行する
@@ -45,7 +45,7 @@ ms.locfileid: "68715172"
 
 ## <a name="ssis-example"></a>SSIS の例
 
-次の例は、この URL で Jimmy Wong によって作成された、提供終了になった MSDN ブログ投稿を基にしています。`https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/`
+次の例は、この URL で Jimmy Wong によって作成された、提供終了になった MSDN ブログの投稿を基にしてい `https://blogs.msdn.microsoft.com/ssis/2016/01/11/operationalize-your-machine-learning-project-using-sql-server-2016-ssis-and-r-services/` ます。
 
 この例では、SSIS を使用してタスクを自動化する方法を示します。 SQL Server Management Studio を使用して R を埋め込んだストアドプロシージャを作成し、それらのストアドプロシージャを SSIS パッケージの[t-sql タスクを実行](https://docs.microsoft.com/sql/integration-services/control-flow/execute-t-sql-statement-task)して実行します。
 
@@ -135,7 +135,7 @@ exec generate_iris_rx_model;
 update ssis_iris_models set model_name = 'rxLinMod' where model_name = 'default model';
 ```
 
-![線形モデルを生成し](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "線形モデルを生成し")
+![線形モデルを生成します](../media/create-workflows-using-r-in-sql-server/ssis-exec-rxlinmod.png "線形モデルを生成します")
 
 チェックポイントとして、このタスクが完了したら、ssis_iris_models に対してクエリを実行し、1つのバイナリモデルが含まれていることを確認できます。
 
@@ -191,13 +191,13 @@ SSIS デザイナーで、F5 キーを押してパッケージを実行します
 
 R はグラフや興味深い視覚エフェクトを作成できますが、外部データソースとは適切に統合されていません。つまり、各グラフまたはグラフを個別に生成する必要があります。 共有も困難な可能性があります。
 
-を使用[!INCLUDE[rsql_productname](../../includes/rsql-productname-md.md)]すると、 [!INCLUDE[tsql](../../includes/tsql-md.md)]ストアドプロシージャを使用して R で複雑な操作を実行できます。ストアドプロシージャは、や Power BI を[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]含むさまざまなエンタープライズレポートツールで簡単に使用できます。
+@No__t_0 を使用すると、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] や Power BI を含むさまざまなエンタープライズレポートツールで簡単に使用できる [!INCLUDE[tsql](../../includes/tsql-md.md)] ストアドプロシージャを使用して、R で複雑な操作を実行できます。
 
 ### <a name="ssrs-example"></a>SSRS の例
 
 [R Graphics Device for Microsoft Reporting Services (SSRS)](https://rgraphicsdevice.codeplex.com/) (Microsoft Reporting Services (SSRS) 用の R グラフィックス デバイス)
 
-この CodePlex プロジェクトでは、R のグラフィックス出力をレポートで[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)]使用できるイメージとしてレンダリングするカスタムレポートアイテムを作成するためのコードを提供しています。  カスタム レポート アイテムを使用すると、次の操作を実行できます。
+この CodePlex プロジェクトは、[!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] レポートで使用できる画像として R のグラフィックス出力をレンダリングするカスタムレポートアイテムを作成するためのコードを提供します。  カスタム レポート アイテムを使用すると、次の操作を実行できます。
 
 + R グラフィックス デバイスを使用して作成したグラフとプロットを [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] ダッシュボードに公開する
 

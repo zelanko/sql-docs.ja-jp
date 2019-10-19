@@ -17,14 +17,14 @@ author: mikeraymsft
 ms.author: mikeray
 manager: craigg
 ms.openlocfilehash: 87d19bc837219b5573dd237310b11dab9f146406
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68811039"
 ---
 # <a name="columnstore-indexes-described"></a>Columnstore Indexes Described
-  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] *インメモリ列ストアインデックス*は、列ベースのデータストレージと列ベースのクエリ処理を使用して、データを格納および管理します。 列ストア インデックスは、主に一括読み込みと読み取り専用のクエリを実行するデータ ウェアハウスのワークロードで適切に動作します。 従来の行指向ストレージの最大 **10 倍のクエリ パフォーマンス** と、非圧縮データ サイズの最大 **7 倍のデータ圧縮** を達成するために列ストア インデックスを使用します。  
+  @No__t_0*インメモリ列ストアインデックス*は、列ベースのデータストレージと列ベースのクエリ処理を使用して、データを格納および管理します。 列ストア インデックスは、主に一括読み込みと読み取り専用のクエリを実行するデータ ウェアハウスのワークロードで適切に動作します。 従来の行指向ストレージの最大 **10 倍のクエリ パフォーマンス**と、非圧縮データ サイズの最大 **7 倍のデータ圧縮**を達成するために列ストア インデックスを使用します。  
   
 > [!NOTE]  
 >  大規模なデータ ウェアハウス ファクト テーブルを格納するために、クラスター化列ストア インデックスが標準とされており、ほとんどのデータ ウェアハウス シナリオで使用されることが予想されます。 クラスター化列ストア インデックスは更新可能であるため、ワークロードで多数の挿入、更新、および削除操作を実行できます。  
@@ -90,7 +90,7 @@ ms.locfileid: "68811039"
   
 -   インデックス内の列のコピーを格納する追加ストレージが必要です。  
   
--   インデックスの再構築またはパーティションの切り替えによって更新されます。挿入、更新、削除などの DML 操作によっては更新されません。  
+-   は、インデックスの再構築またはパーティションの切り替えによって更新されます。挿入、更新、削除などの DML 操作を使用して更新することはできません。  
   
 -   テーブルの他のインデックスと組み合わせることができます。  
   
@@ -125,19 +125,19 @@ ms.locfileid: "68811039"
   
 -   それぞれの列セグメントは一緒に圧縮され、物理メディアに格納されます。  
   
- ![Column segment](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "Column segment")  
+ ![列セグメント](../../database-engine/media/sql-server-pdw-columnstore-columnsegment.gif "列セグメント")  
   
  非クラスター化列ストア インデックス  
  *非クラスター化列ストアインデックス*は、既存のクラスター化インデックスまたはヒープテーブルに作成された読み取り専用のインデックスです。 このインデックスには、テーブル内のすべての列について、列のサブセットのコピーが含まれます。 非クラスター化列ストアインデックスが含まれているテーブルは読み取り専用です。  
   
  非クラスター化列ストア インデックスは、分析クエリを実行しながら、同時に元のテーブルに対して読み取り専用操作を実行できる列ストア インデックスを提供します。  
   
- ![非クラスター化列ストアインデックス](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "非クラスター化列ストアインデックス")  
+ ![非クラスター化列ストアインデックス](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage-nonclustered.gif "非クラスター化列ストア インデックス")  
   
  クラスター化列ストア インデックス  
  *クラスター化列ストアインデックス*は、テーブル全体の物理ストレージであり、テーブルの唯一のインデックスです。 クラスター化インデックスは更新可能です。 インデックスに対して挿入、削除、および更新操作を実行したり、インデックスへのデータの一括読み込みを行ったりできます。  
   
- ![Clustered Columnstore Index](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "Clustered Columnstore Index")  
+ ![クラスター化列ストアインデックス](../../database-engine/media/sql-server-pdw-columnstore-physicalstorage.gif "クラスター化列ストア インデックス")  
   
  列セグメントの断片化を低減し、パフォーマンスを高めるために、列ストア インデックスでは、一部のデータおよび削除された行に対応する ID の B-Tree を一時的に行ストア テーブルに格納することがあります。 デルタストア操作は内部で処理されます。 列ストア インデックスは、正しいクエリ結果を返すために、列ストアとデルタストアの両方からのクエリ結果を結合します。  
   
@@ -155,18 +155,18 @@ ms.locfileid: "68811039"
   
  ![列ストアインデックスへのデータの読み込み](../../database-engine/media/sql-server-pdw-columnstore-loadprocess-nonclustered.gif "列ストアインデックスへのデータの読み込み")  
   
- 非クラスター化列ストア インデックスを持つテーブルは、インデックスが削除または無効化されるまで読み取り専用になります。 テーブルと非クラスター化列ストア インデックスを更新する場合は、パーティションを切り替えることができます。また、インデックスを無効にし、テーブルを更新してから、インデックスを再構築する方法もあります。  
+ 非クラスター化列ストア インデックスを持つテーブルは、インデックスが削除または無効化されるまで読み取り専用になります。 テーブルと非クラスター化列ストアインデックスを更新するには、パーティションを切り替えることができます。また、インデックスを無効にし、テーブルを更新してから、インデックスを再構築することもできます。  
   
  詳細については、「 [Using Nonclustered Columnstore Indexes](indexes.md)」を参照してください。  
   
 ###  <a name="dataload_cci"></a>クラスター化列ストアインデックスへのデータの読み込み  
- ![クラスター化列ストア インデックスへの読み込み](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "Loading into a clustered columnstore index")  
+ ![クラスター化列ストアインデックスへの読み込み](../../database-engine/media/sql-server-pdw-columnstore-loadprocess.gif "クラスター化列ストアインデックスへの読み込み")  
   
  図が示すように、クラスター化列ストア インデックスにデータを読み込むには、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は次のように動作します。  
   
 1.  最大サイズの行グループを列ストアに直接挿入します。 データが読み込まれると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は開いている行グループに先着順でデータ行を割り当てます。  
   
-2.  それぞれの行グループが最大サイズに到達すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] は次の処理を行います。  
+2.  それぞれの行グループが最大サイズに到達すると、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]は次の処理を行います。  
   
     1.  行グループを CLOSED としてマークします。  
   
@@ -219,7 +219,7 @@ ms.locfileid: "68811039"
   
 -   [DELETE &#40;Transact-SQL&#41;](/sql/t-sql/statements/delete-transact-sql)  
   
-### <a name="metadata"></a>メタデータ  
+### <a name="metadata"></a>[ブラウザー]  
  列ストア インデックス内のすべての列は、付加列としてメタデータに格納されます。 列ストア インデックスにキー列はありません。  
   
 -   [sys.indexes &#40;Transact-SQL&#41;](/sql/relational-databases/system-catalog-views/sys-indexes-transact-sql)  

@@ -6,7 +6,7 @@
   href: toc/previous-versions-sql-server.md
 - name: 概要
   items:
-    - name: SQL Server の新機能
+    - name: 新機能
       items:
         - name: SQL Server 2019
           href: sql-server/what-s-new-in-sql-server-ver15.md
@@ -23,6 +23,8 @@
           href: database-engine/whats-new-in-sql-server-2016.md
     - name: エディションと機能
       items:
+        - name: SQL Server 2019
+          href: sql-server/editions-and-components-of-sql-server-version-15.md
         - name: SQL Server 2017
           href: sql-server/editions-and-components-of-sql-server-2017.md
         - name: SQL Server 2016
@@ -89,8 +91,6 @@
                   href: big-data-cluster/deploy-on-aks.md
                 - name: Kubeadm
                   href: big-data-cluster/deploy-with-kubeadm.md
-                - name: Minikube
-                  href: big-data-cluster/deploy-on-minikube.md
             - name: 展開スクリプト
               items:
                 - name: AKS Python スクリプト
@@ -8348,27 +8348,27 @@
         - name: 拡張機能
           href: azure-data-studio/extensions.md
           items:
-            - name: PostgreSQL の拡張機能 (プレビュー)
+            - name: PostgreSQL の拡張機能
               href: azure-data-studio/postgres-extension.md
-            - name: SQL Server 2019 (プレビュー)
+            - name: SQL Server 2019
               href: azure-data-studio/sql-server-2019-extension.md
-            - name: SQL Server エージェント (プレビュー)
+            - name: SQL Server エージェント
               href: azure-data-studio/sql-server-agent-extension.md
-            - name: SQL Server 中央管理サーバーの拡張機能 (プレビュー)
+            - name: SQL Server 中央管理サーバーの拡張機能
               href: azure-data-studio/sql-server-cms-extension.md
-            - name: SQL Server dacpac の拡張機能 (プレビュー)
+            - name: SQL Server dacpac の拡張機能
               href: azure-data-studio/sql-server-dacpac-extension.md
-            - name: SQL Server インポート (プレビュー)
+            - name: SQL Server インポート
               href: azure-data-studio/sql-server-import-extension.md
-            - name: SQL Server Profiler (プレビュー)
+            - name: SQL Server プロファイラー
               href: azure-data-studio/sql-server-profiler-extension.md
-            - name: スキーマ比較の拡張機能 (プレビュー)
+            - name: スキーマ比較の拡張機能
               href: azure-data-studio/schema-compare-extension.md
             - name: PowerShell の拡張機能
               href: azure-data-studio/powershell-extension.md
-            - name: Managed Instance の拡張機能 (プレビュー)
+            - name: Managed Instance の拡張機能
               href: azure-data-studio/azure-sql-managed-instance-extension.md
-            - name: SandDance の拡張機能 (プレビュー)
+            - name: SandDance の拡張機能
               href: azure-data-studio/sanddance-extension.md
         - name: 拡張機能のオーサリング
           items:
@@ -10293,7 +10293,7 @@
           items:
             - name: SQL Server 2017
               href: linux/sql-server-linux-release-notes.md
-            - name: SQL Server 2019 プレビュー
+            - name: SQL Server 2019
               href: linux/sql-server-linux-release-notes-2019.md
         - name: 新機能
           href: linux/sql-server-linux-whats-new.md
