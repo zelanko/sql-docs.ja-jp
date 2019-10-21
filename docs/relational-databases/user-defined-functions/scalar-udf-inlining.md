@@ -15,16 +15,16 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: 6492c08242e927ac7f5356f96f4da02465ece547
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71299139"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517998"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
-[!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 この記事では、インテリジェントなクエリ処理機能スイートに含まれる機能であるスカラー UDF のインライン化について説明します。 この機能により、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ([!INCLUDE[ssSQLv15](../../includes/sssqlv15-md.md)] 以降) および [!INCLUDE[ssSDS](../../includes/sssds-md.md)] でスカラー UDF を呼び出すクエリのパフォーマンスが向上します。
 

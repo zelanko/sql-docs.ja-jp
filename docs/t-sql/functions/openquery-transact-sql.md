@@ -22,15 +22,15 @@ helpviewer_keywords:
 ms.assetid: b805e976-f025-4be1-bcb0-3a57b0c57717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: a8cdb93274b8db61d62194b412543cccca79e155
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 1276b80c4a668173f5a0b7055e789ab3f521dd9e
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67914810"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313739"
 ---
 # <a name="openquery-transact-sql"></a>OPENQUERY (Transact-SQL)
-[!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdbmi-xxxx-xxx-md.md)]
 
   指定されたパススルー クエリを、指定されたリンク サーバーで実行します。 このサーバーは OLE DB データ ソースです。 OPENQUERY は、テーブル名と同じように、クエリの FROM 句で参照できます。 OPENQUERY は、INSERT、UPDATE、または DELETE ステートメントの対象のテーブルとしても参照できます。 これは OLE DB プロバイダーの機能により制限されます。 クエリでは複数の結果セットが返されることがありますが、OPENQUERY では最初の 1 つのみが返されます。  
   

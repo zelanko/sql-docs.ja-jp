@@ -11,12 +11,12 @@ ms.topic: conceptual
 author: tmichael-ms
 ms.author: tmichael
 mtps_version: v=MSDN.10
-ms.openlocfilehash: 948604fbd548a2fb614fd4a671f512c4a4890d52
-ms.sourcegitcommit: 3cde6aa3159beb761a19bc568d7e402bfa7aeb41
+ms.openlocfilehash: 58ae65590f99d7fc330adca7f1db1898b8874571
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72245580"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586727"
 ---
 # <a name="latest-updates-for-microsoft-sql-server"></a>Microsoft SQL Server の最新の更新プログラム
 
@@ -49,7 +49,7 @@ SQL Server 製品の更新プログラムを 1 か所で検索して管理しま
 |SQL Server 2005 |SP4 [(KB 2463332)](http://support.microsoft.com/kb/2463332)|なし|なし|なし|[SQL Server 2005 のインストール](https://msdn.microsoft.com/en-us/library/ms143516(sql.90).aspx)|
 |SQL Server 2000|SP4 [(KB 290211)](http://support.microsoft.com/kb/290211)|なし|なし|なし|[SQL Server 2000 のインストール](https://technet.microsoft.com/en-us/library/aa197941(sql.80).aspx)|
 
-**更新プログラムをテストする方法:**  [ISV アプリケーションに関するサポート可能性のテストと開発のロードマップ (PDF)](http://blogs.technet.com/cfs-file.ashx/__key/communityserver-blogs-components-weblogfiles/00-00-00-85-48-files/0827.testing-and-developing-supportability-roadmaps-for-isv-applications.pdf)
+**更新プログラムをテストする方法:**  [ISV アプリケーションに関するサポート可能性のテストと開発のロードマップ (PDF)](https://msdnshared.blob.core.windows.net/media/TNBlogsFS/prod.evol.blogs.technet.com/CommunityServer.Blogs.Components.WeblogFiles/00/00/00/85/48/Files/0827.Testing%20And%20Developing%20Supportability%20Roadmaps%20for%20ISV%20Applications.pdf)
 
 ### <a name="knowledge-base"></a>サポート技術情報
 

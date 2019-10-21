@@ -8,12 +8,12 @@ ms.date: 11/27/2017
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: 339473439fe1afa20ab618fe49d53f213e1b1a6f
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: 2f5f14134c0932e44160076a36f5de72cbde5a04
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70809955"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586753"
 ---
 # <a name="sql-server-availability-basics-for-linux-deployments"></a>Linux デプロイでの SQL Server 可用性の基本
 
@@ -76,7 +76,7 @@ scp MyAGCert.cer username@servername:/folder/subfolder
 
 Windows ベースの SMB 共有を使用することもできます。[!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] をホストしている Linux サーバー 上で Samba のクライアント部分が適切に構成されていて、共有に適切なアクセス権があれば、SMB 共有が Linux ベースである必要はありません。 混合環境では、これは Linux ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイの既存のインフラストラクチャを利用するための 1 つの方法です。
 
-重要なのは、デプロイされた Samba のバージョンが SMB 3.0 に準拠している必要があるということです。 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] で SMB サポートが追加されたときには、すべての共有で SMB 3.0 をサポートする必要がありました。 Windows Server ではなく、共有に Samba を使用する場合は、Samba ベースの共有で、SMB 3.1.1 をサポートしている Samba 4.0 以降 (できれば 4.3 以降) を使用する必要があります。 「[SMB3 in Samba](https://events.linuxfoundation.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)」は、SMB と Linux に関する情報源として有用です。
+重要なのは、デプロイされた Samba のバージョンが SMB 3.0 に準拠している必要があるということです。 [!INCLUDE[sssql11-md](../includes/sssql11-md.md)] で SMB サポートが追加されたときには、すべての共有で SMB 3.0 をサポートする必要がありました。 Windows Server ではなく、共有に Samba を使用する場合は、Samba ベースの共有で、SMB 3.1.1 をサポートしている Samba 4.0 以降 (できれば 4.3 以降) を使用する必要があります。 「[SMB3 in Samba](https://events.static.linuxfound.org/sites/events/files/slides/smb3-in-samba.pr__0.pdf)」は、SMB と Linux に関する情報源として有用です。
 
 最後に、ネットワーク ファイル システム (NFS) 共有を使用することもできます。 NFS は、Windows ベースの [!INCLUDE[ssnoversion-md](../includes/ssnoversion-md.md)] デプロイでは使用できず、Linux ベースのデプロイでのみ使用できます。
 
