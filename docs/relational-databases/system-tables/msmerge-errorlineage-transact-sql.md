@@ -24,7 +24,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68044760"
 ---
-# <a name="msmergeerrorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
+# <a name="msmerge_errorlineage-transact-sql"></a>MSmerge_errorlineage (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   **MSmerge_errorlineage**テーブルに行がサブスクライバーで、削除するが、その削除がパブリッシャーに反映されません。 このテーブルは、パブリケーション データベースとサブスクリプション データベースに保存されます。  
@@ -36,7 +36,7 @@ ms.locfileid: "68044760"
 |**lineage**|**varbinary(501)**|履歴リストがサブスクライバーとパブリッシャーの更新プログラムに行った行を格納します。 検出および競合の状態を解決するために使用します。|  
   
 ## <a name="see-also"></a>関連項目  
- [レプリケーション テーブル &#40;Transact-SQL&#41;](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
+ [レプリケーション テーブル &#40; です。TRANSACT-SQL と &#41; です。](../../relational-databases/system-tables/replication-tables-transact-sql.md)   
  [レプリケーション ビュー &#40;Transact-SQL&#41;](../../relational-databases/system-views/replication-views-transact-sql.md)  
   
   
