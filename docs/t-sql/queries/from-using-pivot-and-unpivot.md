@@ -1,7 +1,7 @@
 ---
 title: PIVOT および UNPIVOT の使用 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/16/2017
+ms.date: 10/14/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -24,12 +24,12 @@ ms.assetid: 24ba54fc-98f7-4d35-8881-b5158aac1d66
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 6e4ec1c90f49de20707690825f9e5ba802965278
-ms.sourcegitcommit: 869d4de6c807a37873b66e5479d2c5ceff9efb85
+ms.openlocfilehash: 10ab5b2359d272eb53c7cad3d9c1fc5936c8c71a
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/03/2019
-ms.locfileid: "67559416"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305180"
 ---
 # <a name="from---using-pivot-and-unpivot"></a>FROM - PIVOT および UNPIVOT の使用
 
@@ -153,7 +153,7 @@ SELECT PurchaseOrderID, EmployeeID, VendorID
 FROM PurchaseOrderHeader;  
 ```  
   
-`EmployeeID` 列から返される一意の値が、最終的な結果セットのフィールドになります。 そのため、PIVOT 句で指定した `EmployeeID` 番号 (この例では、`164`、`198`、`223`、`231`、および `233`) ごとに列ができます。 `PurchaseOrderID` 列は、最終的な出力に返される列をグループ化する (この列をグループ化列といいます) のための値列です。 この例では、グループ化列を `COUNT` 関数で集計しています。 従業員ごとに `PurchaseOrderID` 関数を計算する際に `COUNT` 列に表示されている NULL 値を無視したことを示す警告メッセージが表示されます。  
+`EmployeeID` 列から返される一意の値が、最終的な結果セットのフィールドになります。 そのため、PIVOT 句で指定した `EmployeeID` 番号 (この例では、`250`、`251`、`256`、`257`、および `260`) ごとに列ができます。 `PurchaseOrderID` 列は、最終的な出力に返される列をグループ化する (この列をグループ化列といいます) のための値列です。 この例では、グループ化列を `COUNT` 関数で集計しています。 従業員ごとに `PurchaseOrderID` 関数を計算する際に `COUNT` 列に表示されている NULL 値を無視したことを示す警告メッセージが表示されます。  
   
 > [!IMPORTANT]  
 >  `PIVOT` 関係演算子と集計関数を併用する場合、値列に存在する NULL 値は集計を実行する際に無視されます。  
