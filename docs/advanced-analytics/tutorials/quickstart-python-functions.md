@@ -115,7 +115,7 @@ elapsed_time = time.time() - start_time
 SQL Server で Python を使用して機械学習モデルを作成するには、次のクイックスタートに従ってください。
 
 > [!div class="nextstepaction"]
-> [クイック スタート:SQL Server Machine Learning Services を使用して Python で予測モデルを作成およびスコア付けする
+> [クイック スタート:SQL Server Machine Learning Services ](quickstart-python-train-score-model.md) を使用して Python で予測モデルを作成およびスコア付けする
 
 SQL Server Machine Learning Services の詳細については、以下を参照してください。
 
