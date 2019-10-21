@@ -10,19 +10,19 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: cb564d7dc8564b31a90a09f53aedaba953519f76
-ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
+ms.openlocfilehash: cfaf672abd7c68e396b5049ced2d812a43d27d48
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/15/2019
-ms.locfileid: "72313671"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542133"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用した Python での予測モデルの作成とスコア付け
+# <a name="quickstart-create-and-score-a-predictive-model-in-python-with-sql-server-machine-learning-services"></a>クイックスタート: SQL Server Machine Learning Services を使用した Python で予測モデルを作成およびスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 このクイックスタートでは、Python を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存した後、モデルを使用して[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)を使用して新しいデータから値を予測します。
 
-SQL で実行されている2つのストアドプロシージャを作成して実行します。 最初の例では、クラシック虹彩花のデータセットを使用して、花の特性に基づいて虹彩を予測するための、単純な Bayes モデルを生成します。 2番目の手順では、スコア付けを行うために、最初の手順で生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 ストアドプロシージャにコードを配置することで、操作が含まれ、再利用可能になり、他のストアドプロシージャやクライアントアプリケーションから呼び出すことができます。
+SQL で実行されている2つのストアドプロシージャを作成して実行します。 最初の例では、クラシック虹彩花のデータセットを使用して、花の特性に基づいて虹彩を予測するための、単純な Bayes モデルを生成します。 2番目の手順では、スコア付けを行うために、最初の手順で生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアドプロシージャに Python コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアドプロシージャやクライアントアプリケーションから呼び出すことができます。
 
 このクイックスタートを完了すると、次のことを学習できます。
 
@@ -31,7 +31,7 @@ SQL で実行されている2つのストアドプロシージャを作成して
 > - ストアドプロシージャの入力を使用してコードに入力を渡す方法
 > - ストアドプロシージャを使用してモデルを運用化する方法
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
 
 - このクイックスタートでは、Python 言語がインストールされている[SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)で SQL Server のインスタンスにアクセスする必要があります。
 
@@ -43,7 +43,9 @@ SQL で実行されている2つのストアドプロシージャを作成して
 
 この手順では、結果を予測するためのモデルを生成するストアドプロシージャを作成します。
 
-1. **Irissql**データベースに接続されている SSMS で、新しいクエリウィンドウを開きます。 
+1. SSMS を開き、SQL Server インスタンスに接続して、新しいクエリウィンドウを開きます。
+
+1. Irissql データベースに接続します。
 
     ```sql
     USE irissql
@@ -89,7 +91,7 @@ SQL で実行されている2つのストアドプロシージャを作成して
 
 SQL Server で再利用するために格納されているモデルは、バイトストリームとしてシリアル化され、データベーステーブルの VARBINARY (MAX) 列に格納されます。 モデルの作成、トレーニング、シリアル化、およびデータベースへの保存が完了すると、他のプロシージャ、またはスコアリングワークロードの[t-sql の予測](https://docs.microsoft.com/sql/t-sql/queries/predict-transact-sql)関数で呼び出すことができます。
 
-1. 次のスクリプトを実行してプロシージャを実行します。 ストアドプロシージャを実行するための特定のステートメントは、4行目の `EXECUTE` です。
+1. 次のスクリプトを実行してプロシージャを実行します。 ストアドプロシージャを実行するための特定のステートメントは、4行目に `EXECUTE` ます。
 
    この特定のスクリプトは、同じ名前の既存のモデル ("Naive Bayes") を削除して、同じプロシージャを再実行することによって作成された新しいものを確保します。 モデルを削除しないと、オブジェクトが既に存在することを示すエラーが発生します。 このモデルは、 **irissql**データベースを作成したときにプロビジョニングされた**iris_models**という名前のテーブルに格納されます。
 
@@ -109,7 +111,7 @@ SQL Server で再利用するために格納されているモデルは、バイ
     SELECT * FROM dbo.iris_models
     ```
 
-    **結果**
+    **[結果]**
 
     | model_name  | model |
     |---|-----------------|
@@ -117,9 +119,9 @@ SQL Server で再利用するために格納されているモデルは、バイ
 
 ## <a name="create-and-execute-a-stored-procedure-for-generating-predictions"></a>予測を生成するためのストアドプロシージャを作成および実行する
 
-モデルの作成、トレーニング、保存が完了したので、次の手順「予測を生成するストアドプロシージャの作成」に進みます。 これを行うには `sp_execute_external_script` を呼び出して、シリアル化されたモデルを読み込み、スコア付けする新しいデータ入力を提供する Python スクリプトを実行します。
+モデルの作成、トレーニング、保存が完了したので、次の手順「予測を生成するストアドプロシージャの作成」に進みます。 これを行うには、`sp_execute_external_script` を呼び出して、シリアル化されたモデルを読み込み、スコア付けする新しいデータ入力を提供する Python スクリプトを実行します。
 
-1. 次のコードを実行して、スコアリングを実行するストアドプロシージャを作成します。 この手順では、実行時にバイナリモデルを読み込み、列 @no__t 入力として使用し、列 `[0,5,6]` を出力として指定します。
+1. 次のコードを実行して、スコアリングを実行するストアドプロシージャを作成します。 実行時に、このプロシージャはバイナリモデルを読み込み、列 `[1,2,3,4]` を入力として使用し、`[0,5,6]` 列を出力として指定します。
 
    ```sql
    CREATE PROCEDURE predict_species (@model VARCHAR(100))
@@ -160,17 +162,17 @@ SQL Server で再利用するために格納されているモデルは、バイ
    GO
    ```
 
-   ストアドプロシージャを実行すると、Python データフレームが返されます。 T-sql の次の行は、返される結果のスキーマを指定します。 `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));` です。 結果を新しいテーブルに挿入するか、アプリケーションに返すことができます。
+   ストアドプロシージャを実行すると、Python データフレームが返されます。 T-sql の次の行は、返される結果のスキーマを指定します: `WITH RESULT SETS ( ("id" int, "SpeciesId" int, "SpeciesId.Predicted" int));`。 結果を新しいテーブルに挿入するか、アプリケーションに返すことができます。
 
    ![実行中のストアドプロシージャからの結果セット](media/train-score-using-python-NB-model-results.png)
 
    結果は、フローラル特性を入力として使用している動物に関する150予測です。 観測の大部分については、予測された動物が実際の条件に一致します。
 
-   この例は、トレーニングとスコアリングの両方に Python の虹彩データセットを使用することによって単純になっています。 より一般的な方法では、SQL クエリを実行して新しいデータを取得し、それを Python に `InputDataSet` として渡します。
+   この例は、トレーニングとスコアリングの両方に Python の虹彩データセットを使用することによって単純になっています。 より一般的な方法では、SQL クエリを実行して新しいデータを取得し、それを `InputDataSet` として Python に渡します。
 
 ## <a name="conclusion"></a>まとめ
 
-この演習では、さまざまなタスク専用のストアドプロシージャを作成する方法を学習しました。各ストアドプロシージャでシステムストアドプロシージャを使用する場合は、Python プロセスを開始するために-0 @no__t ます。 Python プロセスへの入力は、パラメーターとして `sp_execute_external` に渡されます。 SQL Server データベースの Python スクリプト自体とデータ変数は両方とも入力として渡されます。
+この演習では、各ストアドプロシージャがシステムストアドプロシージャ `sp_execute_external_script` 使用して Python プロセスを開始する、さまざまなタスク専用のストアドプロシージャを作成する方法について学習しました。 Python プロセスへの入力は、パラメーターとして `sp_execute_external` に渡されます。 SQL Server データベースの Python スクリプト自体とデータ変数は両方とも入力として渡されます。
 
 一般に、SSMS は洗練された Python コードと共に使用するか、行ベースの出力を返す単純な Python コードでのみ計画する必要があります。 ツールとして、SSMS は T-sql などのクエリ言語をサポートし、フラット化された行セットを返します。 コードで散布図やヒストグラムなどのビジュアル出力を生成する場合は、イメージをレンダリングできるツールまたはエンドユーザーアプリケーションが必要です。
 
@@ -180,7 +182,7 @@ SQL Server で再利用するために格納されているモデルは、バイ
 
 最終的な利点は、パラメーターを使用してプロセスを変更できることです。 この演習では、モデルを作成した Python コード (この例では "Naive Bayes" という名前) が、スコア付けプロセスでモデルを呼び出す2番目のストアドプロシージャに入力として渡されました。 この演習では1つのモデルのみを使用しますが、スコア付けタスクでモデルをパラメーター化することによってスクリプトの有用性が向上することを想像できます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server Machine Learning Services の詳細については、以下を参照してください。
 

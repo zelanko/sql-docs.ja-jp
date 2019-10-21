@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: ff1b386d0f85f1073b533921d690462c9ed25dc0
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493894"
 ---
 # <a name="defining-named-sets"></a>名前付きセットの定義
@@ -32,11 +32,11 @@ ms.locfileid: "69493894"
   
      **[計算]** タブで新しい計算を定義する場合、計算は **[スクリプト オーガナイザー]** ペインに表示されている順序で解決されることに注意してください。 新しい計算を作成するときにペイン内でフォーカスが置かれている位置によって、計算の実行順序が決まります。新しい計算は、フォーカスが置かれている計算の直後に定義されます。  
   
-3.  [**名前**] ボックスで、新しい名前付きセットの名前をに`[Core Products]`変更します。  
+3.  **[名前]** ボックスで、新しい名前付きセットの名前を「`[Core Products]`」に変更します。  
   
      **[スクリプト オーガナイザー]** ペインには、スクリプト コマンドまたは計算されるメンバーとは異なる、名前付きセットの固有のアイコンが表示されます。  
   
-4.  [**計算ツール**] ペインの [**メタデータ**] タブで、[ **Product**] `Members`、[ **Category**]、[]、[ **All Products**] の順に展開します。  
+4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Product]** 、 **[Category]** 、[`Members`]、 **[All Products]** の順に展開します。  
   
     > [!NOTE]  
     >  **[計算ツール]** ペインにメタデータが表示されない場合、ツール バーの **[再接続]** をクリックします。 それでも表示されない場合は、キューブを処理するか、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]のインスタンスを開始する必要があります。  
@@ -47,11 +47,11 @@ ms.locfileid: "69493894"
   
 ## <a name="defining-a-large-resellers-named-set"></a>Large Resellers 名前付きセットの定義  
   
-1.  [ `[Core Products]` **スクリプトオーガナイザー** ] ペイン内を右クリックし、[**新しい名前付きセット**] をクリックします。  
+1.  **[スクリプトオーガナイザー]** ペインで `[Core Products]` を右クリックし、 **[新しい名前付きセット]** をクリックします。  
   
-2.  [**名前**] ボックスで、この名前付きセットの名前を`[Large Resellers]`に変更します。  
+2.  **[名前]** ボックスで、この名前付きセットの名前を `[Large Resellers]` に変更します。  
   
-3.  [**式**] ボックスに「 `Exists()`」と入力します。  
+3.  **[式]** ボックスに「`Exists()`」と入力します。  
   
      Exists 関数を使用して、Number of Employees 属性階層内の従業員数が多数であるメンバーのセットと交差する、Reseller Name 属性階層のメンバーのセットを返すようにします。  
   
@@ -69,29 +69,29 @@ ms.locfileid: "69493894"
   
      これで、Exists セット式の最初のセットが定義されたので、2番目のセット (最も多くの従業員を含む再販業者ディメンションのメンバーのセット) を追加する準備が整いました。  
   
-7.  [**計算ツール**] ペインの [**メタデータ**] タブで、[リセラー] ディメンション`Members`の [ **Number of Employees** ] を展開し、[]、[ **All リセラー**] の順に展開します。  
+7.  **[計算ツール]** ペインの **[メタデータ]** タブで、リセラー ディメンションの  **[Number of Employees]** を展開し、[`Members`]、 **[All リセラー]** の順に展開します。  
   
      この属性階層のメンバーはグループ化されていません。  
   
 8.  **Reseller** ディメンションのディメンション デザイナーを開いて、 **[属性]** ペインの **[Number of Employees]** をクリックします。  
   
-9. プロパティウィンドウで、 `DiscretizationMethod`プロパティを**Automatic**に変更し、 `DiscretizationBucketCount`プロパティをに`5`変更します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
+9. プロパティウィンドウで、`DiscretizationMethod` プロパティを**Automatic**に変更し、`DiscretizationBucketCount` プロパティを `5` に変更します。 詳細については、[「属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
   
-10. **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+10. [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、 **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 11. 配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[計算]** タブのツール バーで **[再接続]** をクリックします。  
   
-12. [**計算ツール**] ペインの [**メタデータ**] タブで、[**リセラー** ] ディメンション`Members`の [ **Number of Employees** ] を展開し、[]、[ **All リセラー**] の順に展開します。  
+12. **[計算ツール]** ペインの **[メタデータ]** タブで、 **[リセラー]** ディメンションの **[Number of Employees]** を展開し、[`Members`]、 **[All リセラー]** の順に展開します。  
   
      この属性階層のメンバーには、0 から 4 までの番号が付いた 5 つのグループが含まれるようになりました。 グループの番号は、グループ上にポインターを合わせると表示されるヒントで確認できます。 `2 -17`の範囲では、ヒントに `[Reseller].[Number of Employees].&[0]`が含まれている必要があります。  
   
-     この属性階層のメンバーは、DiscretizationBucketCount プロパティがに`5`設定され、DiscretizationMethod プロパティが**Automatic**に設定されているため、グループ化されます。  
+     DiscretizationBucketCount プロパティが `5` に設定され、DiscretizationMethod プロパティが**Automatic**に設定されているため、この属性階層のメンバーはグループ化されます。  
   
 13. **[式]** ボックスで、Exists セット式内の Members 関数の後ろ、右かっこの直前にコンマを追加します。次に、 **[メタデータ]** ペインから **[83 - 100]** をドラッグしてコンマの後に置きます。  
   
      これで、Exists セット式は完成です。この式は、Large Resellers 名前付きセットが軸に設定された場合に、これらの指定された 2 つのセット、つまり全再販業者のセットと 83 から 100 人の従業員を持つ再販業者のセットで交差するメンバーのセットを返します。  
   
-     次の図は、 `[Large Resellers]`名前付きセットの**計算式**ペインを示しています。  
+     次の図は、`[Large Resellers]` 名前付きセットの**計算式**ペインを示しています。  
   
      ![[大規模な再販業者] の計算式ペイン](../../2014/tutorials/media/l6-named-set-02.gif "[大規模な再販業者] の計算式ペイン")  
   
@@ -107,7 +107,7 @@ ms.locfileid: "69493894"
   
 ## <a name="browsing-the-cube-by-using-the-new-named-sets"></a>新しい名前付きセットを使用したキューブの表示  
   
-1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 **[ブラウザー]** タブをクリックして、 **[再接続]** をクリックします。  
   
@@ -129,13 +129,13 @@ ms.locfileid: "69493894"
   
      データ ペインの Reseller Sales Amount メジャーには、自転車の大規模な再販業者の売上高だけが表示されるようになります。 また、次の図のように、フィルター ペインには、この特定のサブキューブを定義するために使用される 2 つの名前付きセットが表示されています。  
   
-     ![2 つの名前付きセットを含むフィルターペイン](../../2014/tutorials/media/l6-named-set-05.gif "2 つの名前付きセットを含むフィルターペイン")  
+     ![2つの名前付きセットを含むフィルターペイン](../../2014/tutorials/media/l6-named-set-05.gif "2つの名前付きセットを含むフィルターペイン")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
- [レッスン 7: 主要業績評価指標&#40;kpi の定義&#41;](lesson-7-defining-key-performance-indicators-kpis.md)  
+ [レッスン 7: 主要業績評価指標 (KPI) の定義](lesson-7-defining-key-performance-indicators-kpis.md)  
   
-## <a name="see-also"></a>関連項目  
- [Custom](multidimensional-models-olap-logical-cube-objects/calculations.md)   
+## <a name="see-also"></a>「  
+ [計算](multidimensional-models-olap-logical-cube-objects/calculations.md)   
  [名前付きセットの作成](multidimensional-models/create-named-sets.md)  
   
   

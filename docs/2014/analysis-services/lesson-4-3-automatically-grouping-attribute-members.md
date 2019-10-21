@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 6dc768188f25640a3685c8526bfceb3874154f40
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69890833"
 ---
 # <a name="automatically-grouping-attribute-members"></a>属性メンバーの自動的なグループ化
@@ -28,7 +28,7 @@ ms.locfileid: "69890833"
  **Clusters**  
  [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] K-Means クラスタリング法とガウス分布を使用し、入力値に対して 1 次元クラスタリングが実行されます。 このオプションは、数値列でのみ使用できます。  
   
- グループ化方法を指定したら、 **DiscretizationBucketCount** プロパティでグループの数を指定します。 詳細については、「[属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)」を参照してください。  
+ グループ化方法を指定したら、 **DiscretizationBucketCount** プロパティでグループの数を指定します。 詳細については、「 [属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
  このトピックの実習では、 **Customer** ディメンションの年収値、 **Employees** ディメンションの病気休暇時間、および **Employees** ディメンションの休暇時間でグループ化を行います。 その後、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを処理して表示し、メンバー グループの効果を確認します。 最後に、メンバー グループのプロパティを変更し、グループの種類を変更した場合の影響を確認します。  
   
@@ -44,11 +44,11 @@ ms.locfileid: "69890833"
   
 4.  **[属性]** ペインで、 **[Yearly Income]** を選択します。  
   
-5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Automatic**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。  
+5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Automatic**に変更し、 **DiscretizationBucketCount**プロパティの値を `5` に変更します。  
   
      次の図は、変更後の **Yearly Income**プロパティを示しています。  
   
-     ![年収の変更]されたプロパティ(../../2014/tutorials/media/l4-discretizationmethod-1.gif "年収の変更")されたプロパティ  
+     ![年収の変更されたプロパティ](../../2014/tutorials/media/l4-discretizationmethod-1.gif "年収の変更されたプロパティ")  
   
 ## <a name="grouping-attribute-hierarchy-members-in-the-employee-dimension"></a>Employee ディメンションにおける属性階層メンバーのグループ化  
   
@@ -62,15 +62,15 @@ ms.locfileid: "69890833"
   
 4.  **[属性]** ペインで、 **[Sick Leave Hours]** を選択します。  
   
-5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**クラスター**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。  
+5.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**クラスター**に変更し、 **DiscretizationBucketCount**プロパティの値を `5` に変更します。  
   
 6.  **[属性]** ペインで、 **[Vacation Hours]** を選択します。  
   
-7.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Equal Areas**に変更し、 **DiscretizationBucketCount**プロパティの値をに`5`変更します。  
+7.  プロパティウィンドウで、 **DiscretizationMethod**プロパティの値を**Equal Areas**に変更し、 **DiscretizationBucketCount**プロパティの値を `5` に変更します。  
   
 ## <a name="browsing-the-modified-attribute-hierarchies"></a>変更した属性階層の表示  
   
-1.  **で、** [ビルド] [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+1.  [!INCLUDE[ssBIDevStudioFull](../includes/ssbidevstudiofull-md.md)] で、 **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 2.  配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに切り替え、 **[ブラウザー]** タブのツール バーで **[再接続]** をクリックします。  
   
@@ -108,7 +108,7 @@ ms.locfileid: "69890833"
   
 2.  [プロパティ] ウィンドウで、 **DiscretizationBucketCount** プロパティの値を **10**に変更します。  
   
-3.  **で、** [ビルド] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
+3.  [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)] で、 **[ビルド]** メニューの **[Analysis Services Tutorial の配置]** をクリックします。  
   
 4.  配置が正常に完了したら、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブのキューブ デザイナーに戻ります。  
   
@@ -125,7 +125,7 @@ ms.locfileid: "69890833"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [属性階層の非表示化と無効化](lesson-4-4-hiding-and-disabling-attribute-hierarchies.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [属性メンバーのグループ化 (分離)](multidimensional-models/attribute-properties-group-attribute-members.md)  
   
   

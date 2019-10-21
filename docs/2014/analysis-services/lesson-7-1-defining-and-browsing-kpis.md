@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4f5d61b3880474851aa0c7302e402ff2f0ac0a47
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493793"
 ---
 # <a name="defining-and-browsing-kpis"></a>KPI の定義と表示
@@ -39,7 +39,7 @@ ms.locfileid: "69493793"
  これらの KPI 要素の定義に加えて、いくつかの KPI プロパティも定義します。 定義するプロパティには、表示フォルダー、親 KPI (他の KPI から計算される KPI の場合)、現在の時間メンバー (存在する場合)、KPI の重み (存在する場合)、KPI についての説明などがあります。  
   
 > [!NOTE]  
->  KPI の詳しいサンプルについては、[計算ツール] ペインの [テンプレート] タブの KPI サンプル、または **Adventure Works DW 2012** サンプル データ ウェアハウスの KPI サンプルを参照してください。 このデータベースのインストールの詳細については、「[Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)」を参照してください。  
+>  KPI の詳しいサンプルについては、[計算ツール] ペインの [テンプレート] タブの KPI サンプル、または **Adventure Works DW 2012** サンプル データ ウェアハウスの KPI サンプルを参照してください。 このデータベースのインストールの詳細については、「 [Analysis Services 多次元モデリング チュートリアル用のサンプル データおよびプロジェクトのインストール](install-sample-data-and-projects.md)」を参照してください。  
   
  このレッスンの実習では、KPI を [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial プロジェクト内で定義した後、これらの KPI を使用して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを表示します。 次の KPI を定義します。  
   
@@ -59,7 +59,7 @@ ms.locfileid: "69493793"
   
      次の図は、キューブ デザイナーの **[KPI]** タブを示しています。  
   
-     ![キューブデザイナーの [kpi] タブ](../../2014/tutorials/media/l7-kpi-1.gif "キューブデザイナーの [kpi] タブ")  
+     ![キューブデザイナーの [Kpi] タブ](../../2014/tutorials/media/l7-kpi-1.gif "キューブデザイナーの [Kpi] タブ")  
   
 2.  **[KPI]** タブのツール バーで **[新しい KPI]** ボタンをクリックします。  
   
@@ -67,7 +67,7 @@ ms.locfileid: "69493793"
   
      ![表示ウィンドウの空白の KPI テンプレート](../../2014/tutorials/media/l7-kpi-2.gif "表示ウィンドウの空白の KPI テンプレート")  
   
-3.  **[名前]** ボックスに「 `Reseller Revenue`」と入力し、 **[関連付けられているメジャーグループ]** ボックスの一覧で **[再販業者の売上]** を選択します。  
+3.  **[名前]** ボックスに「`Reseller Revenue`」と入力し、 **[関連付けられたメジャーグループ]** ボックスの一覧で **[再販業者の売上]** を選択します。  
   
 4.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **[Measures]** 、 **[Reseller Sales]** の順に展開します。次に、 **Reseller Sales-Sales Amount** メジャーを **[値式]** ボックスにドラッグします。  
   
@@ -152,7 +152,7 @@ ms.locfileid: "69493793"
   
 1.  **[KPI]** タブのツール バーの **[フォーム ビュー]** ボタンをクリックして、 **[新しい KPI]** ボタンをクリックします。  
   
-2.  **[名前]** ボックスに「 `Product Gross Profit Margin`」  **\<** と入力し、すべての > が **[関連付けら]** れているメジャーグループ ボックスに表示されていることを確認します。  
+2.  **名前** ボックスに「`Product Gross Profit Margin`」と入力し、**関連付けられているメジャーグループ** ボックスの一覧に  **\<All >** が表示されていることを確認します。  
   
 3.  **[計算ツール]** ペインの **[メタデータ]** タブで、 **Total GPM** メジャーを **[値式]** ボックスにドラッグします。  
   
@@ -261,13 +261,13 @@ ms.locfileid: "69493793"
   
 2.  配置が正常に完了したら、 **[KPI]** タブのツール バーの **[再接続]** をクリックして、 **[ブラウザー ビュー]** をクリックします。  
   
-     Kpi が表示され、 **Q3 CY 2007**と北米販売区域の kpi 値が表示されます。 `Product Gross Profit Margin`  
+     @No__t_0 KPI が表示され、 **Q3 CY 2007**と**北米**販売区域の kpi 値が表示されます。  
   
 3.  **[フィルター]** ペインで、 **[ディメンション]** ボックスの一覧の **[Product]** をクリックし、 **[階層]** ボックスの一覧の **[Category]** をクリックし、 **[演算子]** ボックスの一覧の **[等しい]** をクリックします。次に、 **[フィルター式]** ボックスの一覧で **[Bikes]** チェック ボックスをオンにし、 **[OK]** をクリックします。  
   
      Q3 CY 2007 の North America における小売店のバイクの売上総利益率が表示されます。  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 8: アクションの定義](lesson-8-defining-actions.md)  
+ [レッスン 8 : アクションの定義](lesson-8-defining-actions.md)  
   
   

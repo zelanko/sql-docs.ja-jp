@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2017||=sqlallproducts-allversions'
-ms.openlocfilehash: 90bc0d33b00f77f942dd736ff1e1904f5d2e7396
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 2e3452a6aad04d0d524e4eb0e6bd473fd39a2bf7
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70276458"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542152"
 ---
 # <a name="install-python-packages-with-sqlmlutils"></a>Sqlmlutils を使用して Python パッケージをインストールする
 
@@ -25,9 +25,9 @@ ms.locfileid: "70276458"
 パッケージの場所とインストールパスの詳細については、「 [Python パッケージ情報の取得](../package-management/python-package-information.md)」を参照してください。
 
 > [!NOTE]
-> SQL Server に python `pip install`パッケージを追加する場合は、標準の python コマンドを使用しないことをお勧めします。 代わりに、この記事で説明されているように**sqlmlutils**を使用します。
+> Python パッケージを SQL Server に追加する場合は、標準の Python `pip install` コマンドを使用しないことをお勧めします。 代わりに、この記事で説明されているように**sqlmlutils**を使用します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
 
 + [SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)を Python 言語オプションと共にインストールする必要があります。
 
@@ -35,7 +35,7 @@ ms.locfileid: "70276458"
 
 + SQL Server への接続に使用するクライアントコンピューターに、 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)または[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) をインストールします。 他のデータベース管理ツールまたはクエリツールを使用することもできますが、この記事では Azure Data Studio または SSMS を前提としています。
 
-### <a name="other-considerations"></a>その他の注意事項
+### <a name="other-considerations"></a>その他の考慮事項
 
 + パッケージは Python 3.5 に準拠し、Windows 上で実行する必要があります。
 
@@ -58,9 +58,9 @@ ms.locfileid: "70276458"
 
 **Sqlmlutils**を使用するには、最初に、SQL Server への接続に使用するクライアントコンピューターにインストールする必要があります。
 
-1. から https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist クライアントコンピューターに最新の**sqlmlutils** zip ファイルをダウンロードします。 ファイルを解凍しないでください。
+1. 最新の**sqlmlutils** zip ファイルを https://github.com/Microsoft/sqlmlutils/tree/master/Python/dist からクライアントコンピューターにダウンロードします。 ファイルを解凍しないでください。
 
-1. **コマンドプロンプト**を開き、次のコマンドを実行して**sqlmlutils**パッケージをインストールします。 ダウンロードした**sqlmlutils** zip ファイルの完全なパスに置き換えます。この例では、 `c:\temp\sqlmlutils_0.6.0.zip`ダウンロードしたファイルがであることを前提としています。
+1. **コマンドプロンプト**を開き、次のコマンドを実行して**sqlmlutils**パッケージをインストールします。 ダウンロードした**sqlmlutils** zip ファイルの完全なパスに置き換えます。この例では、ダウンロードしたファイルが `c:\temp\sqlmlutils_0.6.0.zip` であることを前提としています。
 
    ```console
    pip install --upgrade --upgrade-strategy only-if-needed c:\temp\sqlmlutils_0.6.0.zip
@@ -76,11 +76,11 @@ SQL Server への接続に使用するクライアントコンピューターが
 
 1. クライアントコンピューターで、 **python**または python 環境を開きます。
 
-1. 次のコマンドを使用して、**テキストツール**パッケージをインストールします。 独自の SQL Server データベース接続情報に置き換えます。
+1. 次のコマンドを使用して、**テキストツール**パッケージをインストールします。 独自の SQL Server データベース接続情報を置き換えます (Windows 認証を使用しない場合は、`uid` パラメーターと `pwd` パラメーターを追加します)。
 
    ```python
    import sqlmlutils
-   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+   connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
    sqlmlutils.SQLPackageManager(connection).install("text-tools")
    ```
 
@@ -90,31 +90,31 @@ SQL Server への接続に使用するクライアントコンピューターに
 
 #### <a name="on-a-computer-with-internet-access"></a>インターネットに接続されているコンピューター
 
-1. **コマンドプロンプト**を開き、次のコマンドを実行して、**テキストツール**パッケージを含むローカルフォルダーを作成します。 この例では、 `c:\temp\text-tools`フォルダーを作成します。
+1. **コマンドプロンプト**を開き、次のコマンドを実行して、**テキストツール**パッケージを含むローカルフォルダーを作成します。 この例では、`c:\temp\text-tools` フォルダーを作成します。
 
    ```console
    pip download text-tools -d c:\temp\text-tools
    ```
 
-1. `text-tools`フォルダをクライアントコンピュータにコピーします。 次の例では、をに`c:\temp\packages\text-tools`コピーしていることを前提としています。
+1. @No__t_0 フォルダーをクライアントコンピューターにコピーします。 次の例では、`c:\temp\packages\text-tools` にコピーしたことを前提としています。
 
 #### <a name="on-the-client-computer"></a>クライアントコンピューターの場合
 
 **Sqlmlutils**を使用して、 **pip**が作成したローカルフォルダーにある各パッケージ (whl ファイル) をインストールします。 どのような順序でパッケージをインストールするかは関係ありません。
 
-この例では、**テキストツール**に依存関係がないため、インストールする`text-tools`フォルダーのファイルは1つだけです。 これに対して、 **scikit-learn**などのパッケージには11個の依存関係があるため、フォルダー ( **scikit-learn**パッケージと11の依存パッケージ) に12個のファイルがあり、それぞれをインストールします。
+この例では、**テキストツール**に依存関係がないため、`text-tools` フォルダーのファイルは1つしかインストールできません。 これに対して、 **scikit-learn**などのパッケージには11個の依存関係があるため、フォルダー ( **scikit-learn**パッケージと11の依存パッケージ) に12個のファイルがあり、それぞれをインストールします。
 
-次の Python スクリプトを実行します。 独自の SQL Server データベース接続情報、およびパッケージの実際のファイルパスと名前に置き換えます。 フォルダー内の各パッケージファイルに対してステートメントを繰り返します。`sqlmlutils.SQLPackageManager`
+次の Python スクリプトを実行します。 パッケージの実際のファイルパスと名前、および独自の SQL Server データベースの接続情報に置き換えます (Windows 認証を使用しない場合は、`uid` パラメーターと `pwd` パラメーターを追加します)。 フォルダー内のパッケージファイルごとに `sqlmlutils.SQLPackageManager` ステートメントを繰り返します。
 
 ```python
 import sqlmlutils
-connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase", uid="yoursqluser", pwd="yoursqlpassword")
+connection = sqlmlutils.ConnectionInfo(server="yourserver", database="yourdatabase")
 sqlmlutils.SQLPackageManager(connection).install("c:/temp/packages/text-tools/text_tools-1.0.0-py3-none-any.whl")
 ```
 
 ## <a name="use-the-package-in-sql-server"></a>SQL Server でパッケージを使用する
 
-これで、SQL Server の Python スクリプトでパッケージを使用できるようになりました。 以下に例を示します。
+これで、SQL Server の Python スクリプトでパッケージを使用できるようになりました。 例 :
 
 ```python
 EXECUTE sp_execute_external_script
@@ -136,7 +136,7 @@ print(first_match)
 sqlmlutils.SQLPackageManager(connection).uninstall("text-tools")
 ```
 
-## <a name="see-also"></a>関連項目
+## <a name="see-also"></a>参照
 
 + SQL Server Machine Learning Services にインストールされている Python パッケージに関する情報を表示するには、「 [python パッケージ情報を取得](../package-management/python-package-information.md)する」を参照してください。
 

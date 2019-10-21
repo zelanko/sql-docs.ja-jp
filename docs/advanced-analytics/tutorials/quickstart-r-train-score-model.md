@@ -10,24 +10,31 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: fc968c9364f23826b366721590f72ac1b0af0391
-ms.sourcegitcommit: 454270de64347db917ebe41c081128bd17194d73
+ms.openlocfilehash: 9acfe1e546c332801e9a5c1a7d97758053d9a0f4
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/07/2019
-ms.locfileid: "72005981"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542122"
 ---
-# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>クイック スタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成およびスコア付けする
+# <a name="quickstart-create-and-score-a-predictive-model-in-r-with-sql-server-machine-learning-services"></a>クイックスタート: SQL Server Machine Learning Services を使用して R で予測モデルを作成およびスコア付けする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
 
 このクイックスタートでは、R を使用して予測モデルを作成してトレーニングし、SQL Server インスタンスのテーブルにモデルを保存した後、モデルを使用して[SQL Server Machine Learning Services](../what-is-sql-server-machine-learning.md)を使用して新しいデータの値を予測します。
 
-このクイックスタートで使用するモデルは、車両が手動で転送された確率を予測する単純な汎用線形モデル (GLM) です。 R に含まれる**mtcars**データセットを使用します。
+SQL で実行されている2つのストアドプロシージャを作成して実行します。 最初の例では、R に含まれる**mtcars**データセットを使用して、車両が手動で転送された確率を予測する単純な汎用線形モデル (GLM) を生成します。 2番目の手順では、スコア付けを行うために、最初の手順で生成されたモデルを呼び出して、新しいデータに基づいて一連の予測を出力します。 SQL ストアドプロシージャに R コードを配置することで、操作は SQL に格納され、再利用可能になり、他のストアドプロシージャやクライアントアプリケーションから呼び出すことができます。
 
 > [!TIP]
-> 線形モデルのリフレッシャーが必要な場合は、rxLinMod を使用してモデルを調整するプロセスについて説明した次のチュートリアルを試してください。[線形モデルを調整する](/machine-learning-server/r/how-to-revoscaler-linear-model)
+> 線形モデルのリフレッシャーが必要な場合は、rxLinMod を使用してモデルを継ぎ手するプロセスについて説明するこのチュートリアルを試してください。[線形モデル](/machine-learning-server/r/how-to-revoscaler-linear-model)
 
-## <a name="prerequisites"></a>前提条件
+このクイックスタートを完了すると、次のことを学習できます。
+
+> [!div class="checklist"]
+> - ストアドプロシージャに R コードを埋め込む方法
+> - ストアドプロシージャの入力を使用してコードに入力を渡す方法
+> - ストアドプロシージャを使用してモデルを運用化する方法
+
+## <a name="prerequisites"></a>[前提条件]
 
 - このクイックスタートでは、R 言語がインストールされている[SQL Server Machine Learning Services](../install/sql-machine-learning-services-windows-install.md)で SQL Server のインスタンスにアクセスする必要があります。
 
@@ -41,7 +48,7 @@ ms.locfileid: "72005981"
 
 ### <a name="create-the-source-data"></a>ソース データを作成する
 
-1. **SQL Server Management Studio**を開き、SQL Server インスタンスに接続します。
+1. SSMS を開き、SQL Server インスタンスに接続して、新しいクエリウィンドウを開きます。
 
 1. トレーニングデータを保存するテーブルを作成します。
 
@@ -61,7 +68,7 @@ ms.locfileid: "72005981"
    );
    ```
 
-1. 組み込みデータセットからデータを挿入 `mtcars`
+1. 組み込みデータセット `mtcars` からデータを挿入します。
 
    ```SQL
    INSERT INTO dbo.MTCars
@@ -72,7 +79,7 @@ ms.locfileid: "72005981"
    ```
 
    > [!TIP]
-   > 小規模と大規模の多くのデータセットが R ランタイムに付属しています。 R と共にインストールされたデータセットの一覧を取得するには、R コマンドプロンプトで「`library(help="datasets")`」と入力します。
+   > 小規模と大規模の多くのデータセットが R ランタイムに付属しています。 R と共にインストールされたデータセットの一覧を取得するには、R コマンドプロンプトから「`library(help="datasets")`」と入力します。
 
 ### <a name="create-and-train-the-model"></a>モデルの作成とトレーニング
 
@@ -98,7 +105,7 @@ END;
 GO
 ```
 
-- @No__t-0 の最初の引数は、`hp + wt` に依存する @no__t 2 を定義する*数式*パラメーターです。
+- @No__t_0 の最初の引数は、`hp + wt` に依存する `am` を定義する*数式*パラメーターです。
 - 入力データは、SQL クエリによって設定される変数 `MTCarsData` に格納されます。 入力データに特定の名前を割り当てない場合、既定の変数名は "_InputDataSet_" になります。
 
 ### <a name="store-the-model-in-the-sql-database"></a>SQL データベースにモデルを格納する
@@ -124,7 +131,7 @@ GO
    ```
 
    > [!TIP]
-   > このコードをもう一度実行すると、次のエラーが発生します。"PRIMARY KEY 制約の違反...オブジェクト stopping_distance_models に重複するキーを挿入することはできません。 このエラーを避ける 1 つのオプションは、新しいモデルごとに名前を更新することです。 たとえば、わかりやすい名前に変更し、モデルの種類や作成日などを含めることができます。
+   > このコードをもう一度実行すると、次のエラーが発生します。 "PRIMARY KEY 制約の違反...オブジェクト stopping_distance_models に重複するキーを挿入することはできません。 このエラーを避ける 1 つのオプションは、新しいモデルごとに名前を更新することです。 たとえば、わかりやすい名前に変更し、モデルの種類や作成日などを含めることができます。
 
      ```sql
      UPDATE GLM_models
@@ -201,17 +208,17 @@ WITH RESULT SETS ((new_hp INT, new_wt DECIMAL(10,3), predicted_am DECIMAL(10,3))
 - 適切な引数を使用して `predict` 関数をモデルに適用し、新しい入力データを提供します。
 
 > [!NOTE]
-> この例では、テストフェーズ中に `str` 関数を追加して、R から返されるデータのスキーマを確認します。このステートメントは後で削除できます。
+> この例では、`str` 関数は、R から返されるデータのスキーマを確認するために、テストフェーズ中に追加されます。このステートメントは後で削除できます。
 >
 > R スクリプトで使用される列名は、ストアドプロシージャの出力に必ずしも渡されるとは限りません。 ここでは、WITH RESULTS 句を使用して、新しい列名を定義します。
 
-**結果**
+**[結果]**
 
 ![Properbility の手動送信を予測するための結果セット](./media/r-predict-am-resultset.png)
 
 また、 [PREDICT (transact-sql)](../../t-sql/queries/predict-transact-sql.md)ステートメントを使用して、格納されているモデルに基づいて予測値またはスコアを生成することもできます。
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 SQL Server Machine Learning Services の詳細については、以下を参照してください。
 

@@ -9,12 +9,12 @@ author: garyericson
 ms.author: garye
 ms.reviewer: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
-ms.openlocfilehash: 3b5a55ec16c7dfa2f16dbae62674a475fb39c5d7
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: f8ce5c7bcf12a2431c2de779912d2e309c628cb1
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70275676"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542145"
 ---
 # <a name="install-new-r-packages-with-sqlmlutils"></a>Sqlmlutils を使用して新しい R パッケージをインストールする
 
@@ -23,15 +23,15 @@ ms.locfileid: "70275676"
 この記事では、 [**sqlmlutils**](https://github.com/Microsoft/sqlmlutils)パッケージの関数を使用して、SQL Server Machine Learning Services または SQL Server R Services のインスタンスに新しい R パッケージをインストールする方法について説明します。 インストールするパッケージは、 [sp_execute_external_script](https://docs.microsoft.com/sql/relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql) t-sql ステートメントを使用して、データベース内で実行されている R スクリプトで使用できます。
 
 > [!NOTE]
-> SQL Server に r `install.packages`パッケージを追加する場合は、標準の r コマンドを使用しないことをお勧めします。 代わりに、この記事で説明されているように**sqlmlutils**を使用します。
+> SQL Server に R パッケージを追加する場合は、標準の R `install.packages` コマンドを使用しないことをお勧めします。 代わりに、この記事で説明されているように**sqlmlutils**を使用します。
 
-## <a name="prerequisites"></a>前提条件
+## <a name="prerequisites"></a>[前提条件]
 
 - SQL Server に接続するために使用するクライアントコンピューターに、 [R](https://www.r-project.org)と[rstudio Desktop](https://www.rstudio.com/products/rstudio/download/)をインストールします。 スクリプトの実行には任意の R IDE を使用できますが、この記事では RStudio を前提としています。
 
 - SQL Server への接続に使用するクライアントコンピューターに、 [Azure Data Studio](https://docs.microsoft.com/sql/azure-data-studio/what-is)または[SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/sql-server-management-studio-ssms) (SSMS) をインストールします。 他のデータベース管理ツールまたはクエリツールを使用することもできますが、この記事では Azure Data Studio または SSMS を前提としています。
 
-### <a name="other-considerations"></a>その他の注意事項
+### <a name="other-considerations"></a>その他の考慮事項
 
 - SQL Server で実行されている R スクリプトでは、既定のインスタンスライブラリにインストールされているパッケージのみを使用できます。 SQL Server、そのライブラリが同じコンピューター上にある場合でも、外部ライブラリからパッケージを読み込むことはできません。 これには、他の Microsoft 製品と共にインストールされる R ライブラリも含まれます。
 
@@ -50,7 +50,7 @@ ms.locfileid: "70275676"
 
 クライアントコンピューターがインターネットにアクセスできる場合は、 **sqlmlutils**とその依存パッケージをオンラインでダウンロードしてインストールすることができます。
 
-1. から https://github.com/Microsoft/sqlmlutils/tree/master/R/dist クライアントコンピューターに最新の**sqlmlutils** zip ファイルをダウンロードします。 ファイルを解凍しないでください。
+1. 最新の**sqlmlutils** zip ファイルを https://github.com/Microsoft/sqlmlutils/tree/master/R/dist からクライアントコンピューターにダウンロードします。 ファイルを解凍しないでください。
 
 1. **コマンドプロンプト**を開き、次のコマンドを実行して、 **Sqlmlutils**と**rodbcext**パッケージをインストールします。 ダウンロードした**sqlmlutils** zip ファイルの完全なパスに置き換えます (この例では、ファイルがドキュメントフォルダーにあることを前提としています)。 **Rodbcext**パッケージはオンラインであり、インストールされています。
 
@@ -72,7 +72,7 @@ ms.locfileid: "70275676"
 
 1. **MiniCRAN**をインストールします。 詳細については、「 [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 」を参照してください。
 
-1. RStudio で、次の R スクリプトを実行して、 **Rodbcext**パッケージのローカルリポジトリを作成します。 この例では、フォルダー `c:\downloads\rodbcext`にリポジトリを作成します。
+1. RStudio で、次の R スクリプトを実行して、 **Rodbcext**パッケージのローカルリポジトリを作成します。 この例では、`c:\downloads\rodbcext` フォルダーにリポジトリを作成します。
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -100,16 +100,16 @@ ms.locfileid: "70275676"
 
    ::: moniker-end
 
-   値と`Rversion`して、SQL Server にインストールされている R のバージョンを使用します。 インストールされているバージョンを確認するには、次の T-sql コマンドを使用します。
+   @No__t_0 値には、SQL Server にインストールされている R のバージョンを使用します。 インストールされているバージョンを確認するには、次の T-sql コマンドを使用します。
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. から https://github.com/Microsoft/sqlmlutils/tree/master/R/dist 最新の**sqlmlutils** zip ファイルをダウンロードします (ファイルを解凍しないでください)。 たとえば、ファイルをに`c:\downloads\sqlmlutils_0.7.1.zip`ダウンロードします。
+1. 最新の**sqlmlutils** zip ファイルを https://github.com/Microsoft/sqlmlutils/tree/master/R/dist からダウンロードします (ファイルを解凍しないでください)。 たとえば、`c:\downloads\sqlmlutils_0.7.1.zip` にファイルをダウンロードします。
 
-1. **Rodbcext**リポジトリフォルダー (`c:\downloads\rodbcext`) と**sqlmlutils** zip ファイル (`c:\downloads\sqlmlutils_0.7.1.zip`) 全体をクライアントコンピューターにコピーします。 たとえば、クライアントコンピューターのフォルダー `c:\temp\packages`にコピーします。
+1. **Rodbcext**リポジトリフォルダー全体 (`c:\downloads\rodbcext`) と**sqlmlutils** zip ファイル (`c:\downloads\sqlmlutils_0.7.1.zip`) をクライアントコンピューターにコピーします。 たとえば、クライアントコンピューターのフォルダー `c:\temp\packages` にコピーします。
 
 SQL Server に接続するために使用するクライアントコンピューターで、コマンドプロンプトを開き、次のコマンドを実行して**Rodbcext**と**sqlmlutils**をインストールします。
 
@@ -120,23 +120,21 @@ R CMD INSTALL c:\temp\packages\sqlmlutils_0.7.1.zip
 
 ## <a name="add-an-r-package-on-sql-server"></a>SQL Server に R パッケージを追加する
 
-次の例では、SQL Server に[**glue**](https://cran.r-project.org/web/packages/glue/)パッケージを追加します。
+次の例では、SQL Server に[**グルー**](https://cran.r-project.org/web/packages/glue/)パッケージを追加します。
 
 ### <a name="add-the-package-online"></a>パッケージをオンラインで追加する
 
-SQL Server への接続に使用するクライアントコンピューターがインターネットにアクセスできる場合は、 **sqlmlutils**を使用して、インターネット経由で**glue**パッケージと依存関係を検索し、そのパッケージを SQL Server インスタンスにリモートでインストールすることができます。
+SQL Server への接続に使用するクライアントコンピューターがインターネットにアクセスできる場合は、 **sqlmlutils**を使用して、インターネット経由で**グルー**パッケージと依存関係を検索し、そのパッケージを SQL Server インスタンスにリモートでインストールすることができます。
 
 1. クライアントコンピューターで RStudio を開き、新しい**R スクリプト**ファイルを作成します。
 
-1. **Sqlmlutils**を使用して**glue**パッケージをインストールするには、次の R スクリプトを使用します。 独自の SQL Server データベース接続情報に置き換えます。
+1. **Sqlmlutils**を使用して**グルー**パッケージをインストールするには、次の R スクリプトを使用します。 独自の SQL Server データベース接続情報を置き換えます (Windows 認証を使用しない場合は、`uid` パラメーターと `pwd` パラメーターを追加します)。
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC")
    ```
@@ -146,12 +144,12 @@ SQL Server への接続に使用するクライアントコンピューターが
 
 ### <a name="add-the-package-offline"></a>パッケージをオフラインで追加する
 
-クライアントコンピューターがインターネットに接続されていない場合は、 **miniCRAN**を使用して、インターネットにアクセスできるコンピューターを使用して、**glue**パッケージをダウンロードできます。 次に、パッケージをクライアントコンピューターにコピーして、パッケージをオフラインでインストールできるようにします。
+クライアントコンピューターがインターネットに接続されていない場合は、 **miniCRAN**を使用して、インターネットにアクセスできるコンピューターを使用して、**グルー**パッケージをダウンロードできます。 次に、パッケージをクライアントコンピューターにコピーして、パッケージをオフラインでインストールできるようにします。
 **MiniCRAN**のインストールについては、「 [Install miniCRAN](create-a-local-package-repository-using-minicran.md#install-minicran) 」を参照してください。
 
 インターネットにアクセスできるコンピューターの場合:
 
-1. 次の R スクリプトを実行して、**glue**のローカルリポジトリを作成します。 この例では、に`c:\downloads\glue`リポジトリフォルダーを作成します。
+1. 次の R スクリプトを実行して、**グルー**のローカルリポジトリを作成します。 この例では、`c:\downloads\glue` にリポジトリフォルダーを作成します。
 
    ::: moniker range=">=sql-server-2016||=sqlallproducts-allversions"
 
@@ -180,28 +178,26 @@ SQL Server への接続に使用するクライアントコンピューターが
    ::: moniker-end
 
 
-   値と`Rversion`して、SQL Server にインストールされている R のバージョンを使用します。 インストールされているバージョンを確認するには、次の T-sql コマンドを使用します。
+   @No__t_0 値には、SQL Server にインストールされている R のバージョンを使用します。 インストールされているバージョンを確認するには、次の T-sql コマンドを使用します。
 
    ```sql
    EXECUTE sp_execute_external_script @language = N'R'
     , @script = N'print(R.version)'
    ```
 
-1. **glue**リポジトリフォルダー全体 (`c:\downloads\glue`) をクライアントコンピューターにコピーします。 たとえば、フォルダー `c:\temp\packages\glue`にコピーします。
+1. **グルー**リポジトリフォルダー全体 (`c:\downloads\glue`) をクライアントコンピューターにコピーします。 たとえば、`c:\temp\packages\glue` フォルダーにコピーします。
 
 クライアントコンピューターで、次のようにします。
 
 1. RStudio を開き、新しい**R スクリプト**ファイルを作成します。
 
-1. **Sqlmlutils**を使用して**glue**パッケージをインストールするには、次の R スクリプトを使用します。 独自の SQL Server データベース接続情報に置き換えます。
+1. **Sqlmlutils**を使用して**グルー**パッケージをインストールするには、次の R スクリプトを使用します。 独自の SQL Server データベース接続情報を置き換えます (Windows 認証を使用しない場合は、`uid` パラメーターと `pwd` パラメーターを追加します)。
 
    ```R
    library(sqlmlutils)
    connection <- connectionInfo(
      server= "yourserver",
-     database = "yourdatabase",
-     uid = "yoursqluser",
-     pwd = "yoursqlpassword")
+     database = "yourdatabase")
    localRepo = "c:/temp/packages/glue"
 
    sql_install.packages(connectionString = connection, pkgs = "glue", verbose = TRUE, scope = "PUBLIC", repos=paste0("file:///",localRepo))
@@ -212,7 +208,7 @@ SQL Server への接続に使用するクライアントコンピューターが
 
 ## <a name="use-the-package"></a>パッケージを使用する
 
-**glue**パッケージがインストールされたら、t-sql **sp_execute_external_script**コマンドを使用して SQL Server の R スクリプトで使用できます。
+**グルー**パッケージがインストールされたら、t-sql **sp_execute_external_script**コマンドを使用して SQL Server の R スクリプトで使用できます。
 
 1. Azure Data Studio または SSMS を開き、SQL Server データベースに接続します。
 
@@ -232,7 +228,7 @@ SQL Server への接続に使用するクライアントコンピューターが
          ';
    ```
 
-    **結果**
+    **[結果]**
 
     ```text
     My name is Fred and my birthday is Sunday, June 14, 2020.
@@ -240,13 +236,13 @@ SQL Server への接続に使用するクライアントコンピューターが
 
 ## <a name="remove-the-package"></a>パッケージを削除する
 
-**glue**パッケージを削除する場合は、次の R スクリプトを実行します。 前に定義したのと同じ**接続**変数を使用します。
+**グルー**パッケージを削除する場合は、次の R スクリプトを実行します。 前に定義したのと同じ**接続**変数を使用します。
 
 ```R
 sql_remove.packages(connectionString = connection, pkgs = "glue", scope = "PUBLIC")
 ```
 
-## <a name="next-steps"></a>次の手順
+## <a name="next-steps"></a>次のステップ
 
 - インストールされている R パッケージの詳細については、「 [Get r package information](r-package-information.md) 」を参照してください。
 - R パッケージの操作の詳細については、「 [r パッケージの使用に関するヒント](tips-for-using-r-packages.md)」を参照してください。

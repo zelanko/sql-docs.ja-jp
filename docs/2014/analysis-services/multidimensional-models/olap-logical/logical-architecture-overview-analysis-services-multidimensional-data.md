@@ -14,10 +14,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "68889610"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
@@ -26,7 +26,7 @@ ms.locfileid: "68889610"
  このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 他のモードの詳細については、「 [ &#40;テーブル&#41;モデリング ssas テーブル](../../tabular-models/tabular-models-ssas.md)」と「[テーブルソリューションと多次元ソリューション&#40;の比較 (ssas&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas))」を参照してください。  
   
 ## <a name="basic-architecture"></a>基本アーキテクチャ  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、複数のデータベースを含めることができます。また、1 つのデータベース内に OLAP オブジェクトとデータ マイニング オブジェクトを同時に格納できます。 アプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の指定インスタンスおよび指定データベースに接続します。 サーバー コンピューターは [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の複数のインスタンスをホストできます。 の[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]インスタンスには、"\<ServerName >\\< InstanceName\>" という名前が付けられます。 次の図は、オブジェクト間の[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)]すべての関係を示しています。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、複数のデータベースを含めることができます。また、1 つのデータベース内に OLAP オブジェクトとデータ マイニング オブジェクトを同時に格納できます。 アプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の指定インスタンスおよび指定データベースに接続します。 サーバー コンピューターは [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の複数のインスタンスをホストできます。 @No__t_0 のインスタンスには、"\<ServerName > \\ < InstanceName \>" という名前が付けられます。 次の図は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクト間のすべての関係を示しています。  
   
  ![AMO 実行オブジェクトの関係](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 実行オブジェクトの関係")  
   
@@ -46,7 +46,7 @@ ms.locfileid: "68889610"
  各データベース オブジェクトには 1 つ以上のキューブ オブジェクトが含まれています。 キューブは、メジャーとディメンションによって定義されます。 キューブのメジャーとディメンションは、そのキューブの基になっているか、またはメジャー定義とディメンション定義から生成されたデータ ソース ビュー内のテーブルおよびビューから派生します。  
   
 ## <a name="object-inheritance"></a>オブジェクトの継承  
- ASSL オブジェクト モデルには繰り返される多くの要素グループがあります。 たとえば、要素グループ "`Dimensions`を含む`Hierarchies`" は、要素のディメンション階層を定義します。 `Cubes` と `MeasureGroups` のどちらにも、"`Dimensions` contain `Hierarchies`" という要素グループがあります。  
+ ASSL オブジェクト モデルには繰り返される多くの要素グループがあります。 たとえば、要素グループ "`Dimensions` には `Hierarchies` が含まれます" は、要素のディメンション階層を定義します。 `Cubes` と `MeasureGroups` のどちらにも、"`Dimensions` contain `Hierarchies`" という要素グループがあります。  
   
  明示的にオーバーライドされない限り、要素はこれらの繰り返される要素グループの詳細を上位レベルから継承します。 たとえば、`Translations` の `CubeDimension` は、先祖要素である `Translations` の `Cube` と同じです。  
   
@@ -61,14 +61,14 @@ ms.locfileid: "68889610"
 ## <a name="example"></a>例  
  Imports キューブには、Packages と Last という 2 つのメジャーと、Route、Source、および Time という 3 つの関連ディメンションが含まれています。  
   
- ![Cube の例 1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Cube の例 1")  
+ ![Cube の例1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Cube の例1")  
   
  キューブの周囲の小さい英数字の値はディメンションのメンバーです。 この例のメンバーは、ground (Route ディメンションのメンバー)、Africa (Source ディメンションのメンバー)、および 1st quarter (Time ディメンションのメンバー) です。  
   
-### <a name="measures"></a>メジャー  
+### <a name="measures"></a>メジャー グループ  
  キューブ セル内の値は、Packages と Last という 2 つのメジャーを表します。 Packages メジャーは輸入されるパッケージ数を表し、`Sum` 関数はファクトを集計するために使用されます。 Last メジャーは受入日を表し、`Max` 関数はファクトを集計するために使用されます。  
   
-### <a name="dimensions"></a>ディメンション  
+### <a name="dimensions"></a>Dimensions  
  Route ディメンションは、輸入品が宛先に搬送される手段を表します。 このディメンションのメンバーには、ground、nonground、air、sea、road、rail があります。 Source ディメンションは、Africa または Asia など、輸入品の製造場所を表します。 Time ディメンションは、年間の四半期と上半期または下半期を表します。  
   
 ### <a name="aggregates"></a>集計  
@@ -94,7 +94,7 @@ ms.locfileid: "68889610"
 ### <a name="mapping-measures-attributes-and-hierarchies"></a>メジャー、属性、および階層のマッピング  
  キューブの例のメジャー、属性、および階層は、キューブのファクト テーブルおよびディメンション テーブルの次の列から派生します。  
   
-|メジャーまたは属性 (レベル)|Members|基になるテーブル|基になる列|サンプル列の値|  
+|メジャーまたは属性 (レベル)|メンバー|基になるテーブル|基になる列|サンプル列の値|  
 |------------------------------------|-------------|------------------|-------------------|-------------------------|  
 |パッケージメジャー|適用なし|ImportsFactTable|パッケージ|12|  
 |Last メジャー|適用なし|ImportsFactTable|Last|May-03-99|  
@@ -110,20 +110,20 @@ ms.locfileid: "68889610"
 |||||||  
 |-|-|-|-|-|-|  
 |Import_ReceiptKey|RouteKey|SourceKey|TimeKey|パッケージ|Last|  
-|3516987|1|6|1|15|Jan-10-99|  
-|3554790|1|6|1|40|Jan-19-99|  
-|3572673|1|6|1|34|Jan-27-99|  
-|3600974|1|6|1|45|Feb-02-99|  
-|3645541|1|6|1|20|Feb-09-99|  
-|3674906|1|6|1|36|Feb-17-99|  
+|3516987|@shouldalert|6|@shouldalert|15|Jan-10-99|  
+|3554790|@shouldalert|6|@shouldalert|40|Jan-19-99|  
+|3572673|@shouldalert|6|@shouldalert|34|Jan-27-99|  
+|3600974|@shouldalert|6|@shouldalert|45|Feb-02-99|  
+|3645541|@shouldalert|6|@shouldalert|20|Feb-09-99|  
+|3674906|@shouldalert|6|@shouldalert|36|Feb-17-99|  
   
  上の表では、行ごとに、 **Routekey**、 **sourcekey**、および**timekey**列の値が同じで、これらの行が同じキューブセルに寄与することを示しています。  
   
- ここで示す例は、非常に単純なキューブを表します。つまり、キューブに 1 つのメジャー グループがあり、すべてのディメンション テーブルがスター スキーマのファクト テーブルに結合されています。 別の一般的なスキーマとして、スノーフレーク スキーマがあります。このスキーマでは、1 つ以上のディメンション テーブルがファクト テーブルに直接結合されるのではなく、それぞれ別のディメンション テーブルに結合されます。 **関連トピック:** [次元&#40;Analysis Services-多次元データ&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
+ ここで示す例は、非常に単純なキューブを表します。つまり、キューブに 1 つのメジャー グループがあり、すべてのディメンション テーブルがスター スキーマのファクト テーブルに結合されています。 別の一般的なスキーマとして、スノーフレーク スキーマがあります。このスキーマでは、1 つ以上のディメンション テーブルがファクト テーブルに直接結合されるのではなく、それぞれ別のディメンション テーブルに結合されます。 **関連トピック:** [ディメンション&#40;Analysis Services-多次元データ&#41;](../../multidimensional-models-olap-logical-dimension-objects/dimensions-analysis-services-multidimensional-data.md)。  
   
- ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:** [ディメンションのリレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
+ ここで示す例には、1 つのファクト テーブルだけが含まれています。 キューブに複数のファクト テーブルがある場合、各ファクト テーブルからのメジャーはメジャー グループに編成され、メジャー グループは定義済みのディメンション リレーションシップによって、特定のセットのディメンションに関連付けられます。 これらのリレーションシップは、データ ソース ビューの参加テーブルとリレーションシップの粒度を指定することによって定義します。 **関連トピック:** [ディメンションリレーションシップ](../../multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [多次元モデル データベース &#40;SSAS&#41;](../multidimensional-model-databases-ssas.md)  
   
   

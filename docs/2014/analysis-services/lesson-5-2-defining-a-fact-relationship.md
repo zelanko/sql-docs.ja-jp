@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 4408e9b884e2cb5a0b47d9e6f95a16dec2bd20f6
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493863"
 ---
 # <a name="defining-a-fact-relationship"></a>ファクト リレーションシップの定義
@@ -63,15 +63,15 @@ ms.locfileid: "69493863"
   
 13. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-14. **Internet Sales Order Details**ディメンションのディメンションデザイナーの [**属性**] ペインで、[ **Sales order Number**] を選択し、プロパティウィンドウの**Name**プロパティをに変更します。`Item Description.`  
+14. **Internet Sales Order Details**ディメンションのディメンションデザイナーの **[属性]** ペインで、 **[Sales order Number]** を選択し、プロパティウィンドウの**Name**プロパティをに変更し `Item Description.`  
   
-15. **NameColumn**プロパティセルで、参照ボタン ([. **..])** をクリックします。**[名前列]** ダイアログ ボックスの **[基になるテーブル]** ボックスの一覧から **[Product]** を選択し、 **[基になる列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
+15. **NameColumn**プロパティセルで、参照ボタン ([. **..])** をクリックします。 **[名前列]** ダイアログボックスで、基に **[なるテーブル]** ボックスの一覧から **[Product]** を選択し、基になる **[列]** で **[EnglishProductName]** を選択して、 **[OK]** をクリックします。  
   
 16. **[データ ソース ビュー]** ペインで、 **InternetSales** テーブルの **SalesOrderNumber** 列をクリックし、 **[属性]** ペインにドラッグします。これにより、 **Sales Order Number** 属性がディメンションに追加されます。  
   
-17. 新しい**Sales Order Number** `Order Number`属性の**Name**プロパティをに変更し、 **OrderBy**プロパティを**Key**に変更します。  
+17. 新しい**Sales Order Number**属性の**Name**プロパティを `Order Number` に変更し、 **OrderBy**プロパティを**Key**に変更します。  
   
-18. [**階層**] ペインで、および**項目の説明**の`Order Number`レベルを含む**Internet Sales Orders**ユーザー階層をこの順序で作成します。  
+18. **[階層]** ペインで、`Order Number` と**項目の説明**のレベルを含む**Internet Sales Orders**ユーザー階層をこの順序で作成します。  
   
 19. **[属性]** ペインで **Internet Sales Order Details**をクリックします。次に、[プロパティ] ウィンドウで、 **StorageMode** プロパティの値を確認します。  
   
@@ -87,13 +87,13 @@ ms.locfileid: "69493863"
   
      以下のアイコンが示すように、 **Internet Sales Order Details** キューブ ディメンションがファクト リレーションシップを保持するよう、自動的に構成されます。  
   
-2.  **Internet sales**メジャーグループと**Internet sales Order Details**ディメンションが交差する位置にある**Item Description**セルで参照ボタン ([.**..**]) をクリックし、ファクトリレーションシップのプロパティを確認します。  
+2.  **Internet sales**メジャーグループと**Internet sales Order Details**ディメンションが交差する位置にある**Item Description**セルで参照ボタン ([. **..** ]) をクリックし、ファクトリレーションシップのプロパティを確認します。  
   
      **[リレーションシップの定義]** ダイアログ ボックスが開きます。 構成できるプロパティはありません。  
   
      次の図は **[リレーションシップの定義]** ダイアログ ボックスのファクト リレーションシップのプロパティです。  
   
-     ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-factrelationship-2.gif "[リレーションシップの定義] ダイアログボックス")  
+     ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-factrelationship-2.gif "[リレーションシップの定義] ダイアログ ボックス")  
   
 3.  **[キャンセル]** をクリックします。  
   
@@ -105,7 +105,7 @@ ms.locfileid: "69493863"
   
 3.  データ ペインからすべてのメジャーと階層を消去します。次に、データ ペインのデータ領域に **Internet Sales-Sales Amount** メジャーを追加します。  
   
-4.  メタデータ ペインで、 **[Customer]**、 **[Location]**、 **[Customer Geography]**、 **[Members]**、 **[All Customers]**、 **[Australia]**、 **[Queensland]**、 **[Brisbane]**、 **[4000]** の順にクリックし、 **[Adam Powell]** を右クリックして **[フィルターに追加]** をクリックします。  
+4.  メタデータ ペインで、 **[Customer]** 、 **[Location]** 、 **[Customer Geography]** 、 **[Members]** 、 **[All Customers]** 、 **[Australia]** 、 **[Queensland]** 、 **[Brisbane]** 、 **[4000]** の順にクリックし、 **[Adam Powell]** を右クリックして **[フィルターに追加]** をクリックします。  
   
      フィルタリングを使用し、1 顧客から返される販売注文数を制限すると、クエリ パフォーマンスを大幅に犠牲にすることなく、基となる詳細情報を大規模なファクト テーブルから検索できます。  
   
@@ -115,12 +115,12 @@ ms.locfileid: "69493863"
   
      次の図は、前の手順の結果を示します。  
   
-     ![Internet sales-Sales Amount の寸法](../../2014/tutorials/media/l5-factrelationship-3.gif "Internet sales-Sales Amount の寸法")  
+     ![Internet Sales-Sales Amount の寸法](../../2014/tutorials/media/l5-factrelationship-3.gif "Internet Sales-Sales Amount の寸法")  
   
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [多対多関係の定義](lesson-5-3-defining-a-many-to-many-relationship.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
  [ファクト リレーションシップとファクト リレーションシップのプロパティの定義](multidimensional-models/define-a-fact-relationship-and-fact-relationship-properties.md)  
   

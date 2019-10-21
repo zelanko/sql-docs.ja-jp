@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 305ae31522a54a776c989f4b8f4b0c4ceabe6658
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "70874403"
 ---
 # <a name="create-and-customize-powerpivot-gallery"></a>PowerPivot ギャラリーの作成およびカスタマイズ
@@ -34,7 +34,7 @@ ms.locfileid: "70874403"
   
 -   [シアター ビューまたはギャラリー ビューへの切り替え](#switch)  
   
-##  <a name="prereq"></a> 前提条件  
+##  <a name="prereq"></a> Prerequisites  
   
 -   Silverlight が必要です。 Silverlight は、Microsoft Update でダウンロードし、インストールできます。 Silverlight がインストールされていない状態でブラウザーを使用して [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリー ライブラリを表示する場合は、Silverlight をインストールするためのページ上のリンクをクリックします。 Silverlight をインストールしたら、ブラウザーを閉じてもう一度開く必要があります。  
   
@@ -42,7 +42,7 @@ ms.locfileid: "70874403"
     >  Power Pivot ギャラリーには、Microsoft Silverlight が必要です。  Microsoft Edge ブラウザーでは、Silverlight がサポートされていません。   
     > Microsoft Edge でライブラリの内容を表示するには、Power Pivot ギャラリーの **[ライブラリ]** タブをクリックし、ドキュメントライブラリ ビューを **[すべてのドキュメント]** に変更します。    
     > 既定のビューを変更するには、 **[ライブラリ]** タブをクリックしてから、[ビューの変更] をクリックします。 [このビューを既定のビューにする] をクリックし、[OK] をクリックして既定のビューを保存します。  
-    >  Microsoft Edge でサポートされている機能の詳細について[は、Windows のブログ「過去からの休憩、パート 2:ActiveX、VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/)  
+    >  Microsoft Edge でサポートされている機能の詳細については、Windows のブログ「[過去の休憩、第2部: ActiveX、VBScript...](http://blogs.windows.com/msedgedev/2015/05/06/a-break-from-the-past-part-2-saying-goodbye-to-activex-vbscript-attachevent/) 」を参照してください。  
   
 -   ライブラリを作成するには、サイト所有者である必要があります。  
   
@@ -59,18 +59,18 @@ ms.locfileid: "70874403"
   
  プレビュー イメージは、Excel Services がブックを表示する方法に基づいています。 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーでの表示は、通常、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックをブラウザーで表示したときと同じです。 ただし、プレビュー領域は限られており、 使用可能な領域に合わせてブックやレポートの一部が省略される場合があります。 ドキュメント全体を表示するために、ブックまたはレポートを開くことが必要になる場合があります。  
   
- [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーでは、外部データ ソースの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのデータを更新する操作が完全にサポートされていますが、追加の構成が必要です。 ファームまたはサービスの管理者は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを Excel Services の信頼できる場所として追加する必要があります。 詳細については、「 [サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
+ [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーでは、外部データ ソースの [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックのデータを更新する操作が完全にサポートされていますが、追加の構成が必要です。 ファームまたはサービスの管理者は [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーを Excel Services の信頼できる場所として追加する必要があります。 詳細については、「 [Create a trusted location for PowerPivot sites in Central Administration](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)」を参照してください。  
   
 ##  <a name="createlib"></a>PowerPivot ギャラリーを作成する  
  [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] をインストールすると、 [!INCLUDE[ssGeminiLong](../../includes/ssgeminilong-md.md)] ギャラリーが自動的に作成されます。 既存のファームに [!INCLUDE[ssGeminiShort](../../includes/ssgeminishort-md.md)] を追加した場合、または追加のライブラリが必要な場合は、アプリケーションまたはサイト用の新しいライブラリを作成できます。  
   
-1.  1.  **SharePoint 2010**:サイトのホームページの左上隅にある **[サイトの操作]** をクリックします。  
+1.  1.  **SharePoint 2010**: サイトのホーム ページの左上にある **[サイトの操作]** をクリックします。  
   
     2.  **[その他のオプション]** をクリックします。  
   
     3.  [ライブラリ] の **[PowerPivot ギャラリー]** をクリックします。  
   
-    1.  **SharePoint 2013**:設定アイコン [ ![sharepoint の設定]] [(../media/as-sharepoint2013-settings-gear.gif "sharepoint の設定")] の順にクリックします。 **[サイト コンテンツ]** をクリックします。  
+    1.  **Sharepoint 2013**: 設定アイコン [ ![sharepoint の設定](../media/as-sharepoint2013-settings-gear.gif "SharePoint の設定")] をクリックします。 **[サイト コンテンツ]** をクリックします。  
   
     2.  **[アプリケーションの追加]** をクリックします。  
   
@@ -104,7 +104,7 @@ ms.locfileid: "70874403"
   
 2.  リボンで、 **[ライブラリ]** をクリックします。  
   
-3.  **SharePoint 2010:** カスタムビュー で、**このビューの変更** をクリックします。  
+3.  **SharePoint 2010:** [ユーザー設定のビュー] で、 **[このビューの変更]** をクリックします。  
   
      **SharePoint 2013:** **[ビューの管理]** で、 **[ビューの変更]** をクリックします。  
   
@@ -132,11 +132,11 @@ ms.locfileid: "70874403"
   
  プレビューした各ページのサムネイル スケッチを表示する各種レイアウトの説明を次の表に示します。  
   
-|表示|説明|  
+|[表示]|Description|  
 |----------|-----------------|  
 |ギャラリー ビュー (既定)|ギャラリーは、 [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ギャラリーの既定のビューです。 プレビューは左側に表示されます。 その横に、各ワークシートの小さいサムネイルが左から右の順に表示されます。|  
 |[すべてのドキュメント]|これはドキュメント ライブラリの標準のレイアウトです。 個々のドキュメントを管理する場合、またはライブラリ コンテンツを一覧形式で表示する場合にこのビューを選択できます。<br /><br /> プロパティを編集したり、個々のドキュメントを削除または移動するには、このビューを使用します。<br /><br /> バージョン管理を有効にしている場合は、このビューを使用して、ライブラリでドキュメントをチェックインまたはチェックアウトする必要があります。|  
-|シアター ビューとカルーセル ビュー|これらのビューは、少数の関連ドキュメントを表示する場合に最も適した特殊なビューです。 サムネイルの 360 度回転には、ライブラリ内のすべてのドキュメントのすべてのページが含まれます。 ドキュメント数が多い場合、特定の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを検索するか開く必要があるユーザーにとってこれらのビューは非実用的である可能性があります。<br /><br /> シアター ビュー:プレビュー領域が中央に表示されます。 各ワークシートの小さいサムネイルがページの下部の右側または左側に表示されます。<br /><br /> カルーセル ビュー:プレビュー領域が中央に表示されます。 現在のサムネイルの直前および直後のサムネイルがプレビュー領域に隣接します。|  
+|シアター ビューとカルーセル ビュー|これらのビューは、少数の関連ドキュメントを表示する場合に最も適した特殊なビューです。 サムネイルの 360 度回転には、ライブラリ内のすべてのドキュメントのすべてのページが含まれます。 ドキュメント数が多い場合、特定の [!INCLUDE[ssGemini](../../includes/ssgemini-md.md)] ブックを検索するか開く必要があるユーザーにとってこれらのビューは非実用的である可能性があります。<br /><br /> シアター ビュー: プレビュー領域は中央にあります。 各ワークシートの小さいサムネイルがページの下部の右側または左側に表示されます。<br /><br /> カルーセル ビュー: プレビュー領域は中央にあります。 現在のサムネイルの直前および直後のサムネイルがプレビュー領域に隣接します。|  
   
 ### <a name="switch-to-a-different-view"></a>別のビューへの切り替え  
   
@@ -146,10 +146,10 @@ ms.locfileid: "70874403"
   
 3.  [ビューの管理] の [現在のビュー] で、使用するビューを一覧から選択します。 デザイン済みのビューは、ギャラリー ビュー、シアター ビュー、およびカルーセル ビューです。 また、ライブラリのドキュメントを移動、削除、管理する場合は、[すべてのドキュメント] を選択することもできます。  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [PowerPivot for SharePoint インストールのトラブルシューティング](../../sql-server/install/troubleshoot-a-powerpivot-for-sharepoint-installation.md)   
- [PowerPivot ギャラリーの使用](use-power-pivot-gallery.md)   
- [サーバーの全体管理での PowerPivot サイト用の信頼できる場所の作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
+ [PowerPivot ギャラリーの   を使用する](use-power-pivot-gallery.md)  
+ [サーバーの全体管理で PowerPivot サイト用の信頼できる場所を作成](create-a-trusted-location-for-power-pivot-sites-in-central-administration.md)   
  [PowerPivot ギャラリーの削除](delete-power-pivot-gallery.md)  
   
   

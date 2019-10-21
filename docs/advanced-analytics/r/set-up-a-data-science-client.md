@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 7c81a69181d1bc723e622bac9ffeb5ff67fd0280
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69633633"
 ---
 # <a name="set-up-a-data-science-client-for-r-development-on-sql-server"></a>SQL Server で R 開発用のデータサイエンスクライアントをセットアップする
@@ -29,7 +29,7 @@ SQL Server 用の R ソリューションを開発してデプロイするには
 インストールを検証するには、この記事で説明されている組み込みの**Rgui**ツールを使用するか、通常使用する rgui または他の IDE に[ライブラリをリンク](#install-ide)します。
 
 > [!Note]
-> クライアントライブラリのインストールの代わりに、[スタンドアロンサーバー](../install/sql-machine-learning-standalone-windows-install.md)をリッチクライアントとして使用することもできます。これにより、より高度なシナリオの作業に適しています。 スタンドアロンサーバーは SQL Server から完全に切り離されていますが、同じ R ライブラリがあるため、データベース内分析 SQL Server のクライアントとして使用できます。 また、他のデータプラットフォームからデータをインポートおよびモデル化する機能など、SQL に関連しない作業にも使用できます。 スタンドアロンサーバーをインストールする場合は、R 実行可能ファイルを次の場所`C:\Program Files\Microsoft SQL Server\140\R_SERVER`で見つけることができます。 インストールを検証するには、 [r コンソールアプリを開い](#R-tools)て、その場所にある r を使用してコマンドを実行します。
+> クライアントライブラリのインストールの代わりに、[スタンドアロンサーバー](../install/sql-machine-learning-standalone-windows-install.md)をリッチクライアントとして使用することもできます。これにより、より高度なシナリオの作業に適しています。 スタンドアロンサーバーは SQL Server から完全に切り離されていますが、同じ R ライブラリがあるため、データベース内分析 SQL Server のクライアントとして使用できます。 また、他のデータプラットフォームからデータをインポートおよびモデル化する機能など、SQL に関連しない作業にも使用できます。 スタンドアロンサーバーをインストールした場合、R 実行可能ファイルは、`C:\Program Files\Microsoft SQL Server\140\R_SERVER` の場所にあります。 インストールを検証するには、 [r コンソールアプリを開い](#R-tools)て、その場所にある r を使用してコマンドを実行します。
 
 ## <a name="commonly-used-tools"></a>一般的に使用されるツール
 
@@ -51,7 +51,7 @@ Microsoft の R パッケージは、複数の製品とサービスで利用で�
 
 3. MKL_CBWR システム環境変数を作成して、Intel Math Kernel Library (MKL) 計算での一貫した出力を確認します。
 
-  + コントロールパネルで、[**システムとセキュリティ** >  > ] [システム] [システム**設定** > ] **[環境変数]** をクリックします。
+  + コントロールパネルで、[**システムと  >  セキュリティ**] **、[システム  >  の** **詳細システム設定** > **環境変数**] の順にクリックします。
   + **[自動]** に設定された値を使用して、 **MKL_CBWR**という名前の新しいシステム変数を作成します。
 
 ## <a name="2---locate-executables"></a>2-実行可能ファイルの検索
@@ -75,7 +75,7 @@ SQL Server と共に R をインストールすると、RGui、Rgui などの R 
 
   Microsoft program フォルダーから R セッションを開始すると、RevoScaleR を含むいくつかのパッケージが自動的に読み込まれます。 
 
-2. コマンド`print(Revo.version)`プロンプトで「」と入力して、RevoScaleR パッケージのバージョン情報を返します。 RevoScaleR にはバージョン9.2.1 または9.3.0 が必要です。
+2. RevoScaleR パッケージのバージョン情報を返すには、コマンドプロンプトで「`print(Revo.version)`」と入力します。 RevoScaleR にはバージョン9.2.1 または9.3.0 が必要です。
 
 3. インストールされているパッケージの一覧を表示するには、R プロンプトで **「search ()** 」と入力します。
 
@@ -106,9 +106,9 @@ SQL Server に既定でインストールされていないパッケージがコ
 
 次の手順では、デモデータベース、 [NYCTaxi_Sample](../tutorials/demo-data-nyctaxi-in-sql.md)、および Windows 認証を想定しています。
 
-1. クライアントワークステーションで**Rgui**を開きます。 たとえば、を`~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64`開き、 **rgui**をダブルクリックして起動します。
+1. クライアントワークステーションで**Rgui**を開きます。 たとえば、`~\Program Files\Microsoft SQL Server\140\R_SERVER\bin\x64` にアクセスし、 **Rgui**をダブルクリックして開始します。
 
-2. RevoScaleR は自動的に読み込まれます。 次のコマンドを実行して、RevoScaleR が動作可能であることを確認します。`print(Revo.version)`
+2. RevoScaleR は自動的に読み込まれます。 次のコマンドを実行して、RevoScaleR が動作していることを確認します `print(Revo.version)`。
 
 3. リモートサーバーで実行するデモスクリプトを入力します。 リモート SQL Server インスタンスの有効な名前を含めるには、次のサンプルスクリプトを変更する必要があります。 このセッションはローカルセッションとして開始されますが、 **rxSummary**関数はリモート SQL Server インスタンスで実行されます。
 
@@ -128,7 +128,7 @@ SQL Server に既定でインストールされていないパッケージがコ
 
   **結果:**
 
-  このスクリプトは、リモートサーバー上のデータベースに接続し、クエリを提供し、リモート`cc`コード実行用のコンピューティングコンテキスト命令を作成します。次に、RevoScaleR 関数**rxSummary**を提供してクエリの統計サマリーを返します。生じ.
+  このスクリプトは、リモートサーバー上のデータベースに接続し、クエリを提供し、リモートコード実行のためのコンピューティングコンテキスト `cc` 命令を作成します。次に、RevoScaleR 関数**rxSummary**を提供してクエリ結果の統計サマリーを返します。
 
   ```R
     Call:
@@ -201,7 +201,7 @@ IDE でローカル R ライブラリをポイントします (base R、RevoScal
 
 1. SQL Server にインストールされている R パッケージのバージョンを確認します。 詳細については、「 [Get R package information](../package-management/r-package-information.md)」を参照してください。
 
-1. Microsoft R Client またはスタンドアロンサーバーオプションの1つをインストールして、SQL Server インスタンスで使用される base R ディストリビューションなど、RevoScaleR およびその他の R パッケージを追加します。 同じレベル以下のバージョンを選択してください (パッケージは下位互換性があります)。サーバーと同じバージョンのパッケージを提供します。 バージョン情報については、この記事のバージョンマップを参照してください。[R および Python コンポーネントをアップグレード](../install/upgrade-r-and-python.md)します。
+1. Microsoft R Client またはスタンドアロンサーバーオプションの1つをインストールして、SQL Server インスタンスで使用される base R ディストリビューションなど、RevoScaleR およびその他の R パッケージを追加します。 同じレベル以下のバージョンを選択してください (パッケージは下位互換性があります)。サーバーと同じバージョンのパッケージを提供します。 バージョン情報については、この記事のバージョンマップ「 [Upgrade R And Python components](../install/upgrade-r-and-python.md)」を参照してください。
 
 1. RStudio で、r[パスを更新して](https://support.rstudio.com/hc/articles/200486138-Using-Different-Versions-of-R)、RevoScaleR、Microsoft R Open、およびその他の microsoft パッケージを提供する r 環境をポイントします。 
 
@@ -227,11 +227,11 @@ R に適した IDE がまだない場合は、 **R Tools for Visual Studio**を�
 
 1. **[ファイル]** メニューの **[新規作成]** をポイントし、 **[プロジェクト]** を選択します。
 
-2. 左側のウィンドウには、プレインストールされたテンプレートの一覧が表示されます。 **[R]** をクリックし、 **[r プロジェクト]** を選択します。 **[名前]** ボックスに「 `dbtest` 」と入力し、[ **OK]** をクリックします。 
+2. 左側のウィンドウには、プレインストールされたテンプレートの一覧が表示されます。 **[R]** をクリックし、 **[r プロジェクト]** を選択します。 **[名前]** ボックスに「`dbtest`」と入力し、[ **OK]** をクリックします。 
 
-  Visual Studio によって、新しいプロジェクトフォルダーと既定のスクリプト`Script.R`ファイルが作成されます。 
+  Visual Studio によって、新しいプロジェクトフォルダーと既定のスクリプトファイル `Script.R` が作成されます。 
 
-3. スクリプト`.libPaths()`ファイルの最初の行に「」と入力し、CTRL + enter キーを押します。
+3. スクリプトファイルの最初の行に `.libPaths()` を入力し、CTRL + ENTER キーを押します。
 
   現在の R ライブラリのパスは、 **[R インタラクティブ]** ウィンドウに表示されます。 
 
