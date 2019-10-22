@@ -57,7 +57,7 @@ sp_enumdsn
  メンバーのみ、 **sysadmin**固定サーバー ロールが実行できる**sp_enumdsn**します。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_dsninfo &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
+ [sp_dsninfo &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dsninfo-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
