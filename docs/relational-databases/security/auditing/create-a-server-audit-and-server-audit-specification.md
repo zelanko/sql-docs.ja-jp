@@ -1,7 +1,7 @@
 ---
 title: サーバー監査およびサーバー監査の仕様を作成する方法 | Microsoft Docs
 ms.custom: ''
-ms.date: 03/14/2017
+ms.date: 10/16/2019
 ms.prod: sql
 ms.prod_service: security
 ms.reviewer: ''
@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 6624b1ab-7ec8-44ce-8292-397edf644394
 author: VanMSFT
 ms.author: vanto
-ms.openlocfilehash: 5eefebaf1d68a29a654bb407c46ad5871164d2d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b237b2d5511ef1547687289e00b4a695375e3754
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095191"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517975"
 ---
 # <a name="create-a-server-audit-and-server-audit-specification"></a>サーバー監査およびサーバー監査の仕様を作成する方法
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -112,7 +112,7 @@ ms.locfileid: "68095191"
      作成する監査ファイル数を指定します (2,147,483,647 まで)。 このオプションは、 **[無制限]** がオフの場合にのみ利用可能です。  
   
      **[最大ファイル サイズ]**  
-     監査ファイルの最大サイズをメガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) 単位で指定します。 1024 MB ～ 2,147,483,647 TB の範囲で指定できます。 **[無制限]** チェック ボックスをオンにした場合、ファイルのサイズに制限は設定されません。 1024 MB 未満の値を指定すると、失敗し、エラーが返されます。 既定では、 **[無制限]** チェック ボックスはオンになっています。  
+     監査ファイルの最大サイズをメガバイト (MB)、ギガバイト (GB)、またはテラバイト (TB) 単位で指定します。 最大 2,147,483,647 TB までの数値を指定できます。 **[無制限]** チェック ボックスをオンにした場合、ファイルのサイズに制限は設定されません。 既定では、 **[無制限]** チェック ボックスはオンになっています。  
   
      **[ディスク領域を予約する]** チェック ボックス  
      指定した最大ファイル サイズと等しい領域が、ディスク上に事前に割り当てられるように指定します。 この設定は、 **[最大ファイル サイズ]** の **[無制限]** チェック ボックスがオフの場合にのみ使用できます。 既定では、このチェック ボックスはオフになっています。  

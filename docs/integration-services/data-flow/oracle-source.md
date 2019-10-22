@@ -9,12 +9,12 @@ ms.technology: integration-services
 ms.topic: conceptual
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 7444c5710663eb601aa3c8ce2287869a8083f814
-ms.sourcegitcommit: 57e20b7d02853ec9af46b648106578aed133fb45
+ms.openlocfilehash: 4898a61b0f64f79b32a9efc81f0a41a025e6d2ad
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69553212"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545067"
 ---
 # <a name="oracle-source"></a>Oracle ソース
 
@@ -54,7 +54,7 @@ Oracle ソースのカスタム プロパティは次のとおりです。 す�
 |AccessMode|Integer (列挙)|データベースへのアクセスに使用するモード。 指定できる値は、 **[テーブル名]** と **[SQL コマンド]** です。 既定値は **[テーブル名]** です。|
 |BatchSize|Integer|一括読み込みのバッチのサイズ。 これは、配列として抽出されるレコード数です。 <br>このプロパティは、**詳細エディター**によってのみ設定されます|
 |DefaultCodePage|Integer|データ ソースにコード ページ情報がない場合に使用されるコード ページ。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
-|PreFetchCount|Integer|プリフェッチされた (先読みの) 行の数。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
+|PreFetchCount|Integer|プリフェッチされた行の数。 <br>このプロパティは、**詳細エディター**によってのみ設定されます。|
 |SqlCommand|String|AccessMode が SQL コマンドに設定されている場合に実行される SQL コマンド。|
 |TableName|String|AccessMode がテーブル名に設定されている場合に使用されるデータを含んだテーブルの名前。|
 

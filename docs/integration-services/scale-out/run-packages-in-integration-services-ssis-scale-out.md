@@ -12,12 +12,12 @@ author: haoqian
 ms.author: haoqian
 f1_keywords:
 - sql13.ssis.ssms.ispackageexecuteinscaleout.f1
-ms.openlocfilehash: 25dc76122c8b4d1e68df4e83e3e1bd01d6f51890
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 68a24188a307dd84a28342d89559630efa9a9d80
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092635"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305077"
 ---
 # <a name="run-packages-in-integration-services-ssis-scale-out"></a>Integration Services (SSIS) Scale Out でパッケージを実行する
 
@@ -65,7 +65,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
 1.  実行を作成します。
 
-    パッケージごとに `[catalog].[create_execution]` を呼び出します。 パラメーター **@runinscaleout** を `True` に設定します。 一部の Scale Out Worker コンピューターでパッケージを実行できない場合は、パラメーター **@useanyworker** を `False` に設定します。 このストアド プロシージャと **@useanyworker** パラメーターの詳細については、「[catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)」を参照してください。 
+    パッケージごとに `[catalog].[create_execution]` を呼び出します。 パラメーター **\@runinscaleout**  を `True` に設定します。 一部の Scale Out Worker コンピューターでパッケージを実行できない場合は、パラメーター **\@useanyworker** を `False` に設定します。 このストアド プロシージャと **\@useanyworker** パラメーターの詳細については、「[catalog.create_execution](../system-stored-procedures/catalog-create-execution-ssisdb-database.md)」を参照してください。 
 
 2. 実行パラメーターを設定します。
 
@@ -77,7 +77,7 @@ Integration Services サーバーにパッケージを配置すると、次の�
 
 4. 実行を開始します。
 
-    `[catalog].[start_execution]` を呼び出します。 パッケージの実行が失敗した場合に再試行される回数を、パラメーター **@retry_count** で設定します。
+    `[catalog].[start_execution]` を呼び出します。 パッケージの実行が失敗した場合に再試行される回数を、パラメーター **\@retry_count** で設定します。
     
 ### <a name="example"></a>例
 次の例では、1 つの Scale Out Worker を使用して、Scale Out で `package1.dtsx` および `package2.dtsx` という 2 つのパッケージを実行します。  
@@ -118,7 +118,7 @@ Scale Out でパッケージを実行するには、次のアクセス許可の�
 
 2.  **[カタログ プロパティ]** ダイアログ ボックスで、 **[サーバー全体の既定の実行モード]** を **[Scale Out]** に設定します。
 
-この既定の実行モードを設定したら、`[catalog].[create_execution]` ストアド プロシージャを呼び出すときに、 **@runinscaleout** パラメーターを指定する必要がなくなります。 パッケージは、Scale Out で自動的に実行されます。 
+この既定の実行モードを設定したら、`[catalog].[create_execution]` ストアド プロシージャを呼び出すときに、 **\@runinscaleout** パラメーターを指定する必要がなくなります。 パッケージは、Scale Out で自動的に実行されます。 
 
 ![実行モード](media/exe-mode.PNG)
 

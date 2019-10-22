@@ -21,12 +21,12 @@ helpviewer_keywords:
 ms.assetid: 63373c2f-9a0b-431b-b9d2-6fa35641571a
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 0637a5f421dd1301314f4da3b3d899bfcf0cab93
-ms.sourcegitcommit: aece9f7db367098fcc0c508209ba243e05547fe1
+ms.openlocfilehash: 6ef351fc564f4d097cf4ae28c4ba890cb082eac0
+ms.sourcegitcommit: 49fd567e28bfd6e94efafbab422eaed4ce913eb3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72261017"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72589993"
 ---
 # <a name="alter-database-scoped-configuration-transact-sql"></a>ALTER DATABASE SCOPED CONFIGURATION (Transact-SQL)
 
@@ -51,7 +51,7 @@ ms.locfileid: "72261017"
 - 新しい `String or binary data would be truncated` のエラー メッセージを有効または無効にします。
 - [sys.dm_exec_query_plan_stats](../../relational-databases/system-dynamic-management-views/sys-dm-exec-query-plan-stats-transact-sql.md) の最後の実際の実行プランのコレクションを有効または無効にします。
 
-![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
+![リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "[リンク] アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)
 
 ## <a name="syntax"></a>構文
 
@@ -114,7 +114,7 @@ CLEAR PROCEDURE_CACHE [plan_handle]
 
 MAXDOP **=** {\<value> | PRIMARY } **\<value>**
 
-ステートメントで使用される**並列処理の最大限度 (MAXDOP)** 設定の既定値を指定します。 0 が初期設定値であり、サーバー構成が代わりに使用されることを示します。 データベース スコープの MAXDOP は、サーバー レベルで設定されている**並列処理の最大限度**を p_configure によってオーバーライドします (0 に設定されていない限り)。 別の設定を必要とする特定のクエリを調整する目的で、クエリ ヒントでは引き続き、データベース スコープの MAXDOP をオーバーライドできます。 これらすべての設定の上限は、[ワークロード グループ]()に設定されている MAXDOP によって決定されます。
+ステートメントで使用される**並列処理の最大限度 (MAXDOP)** 設定の既定値を指定します。 0 が初期設定値であり、サーバー構成が代わりに使用されることを示します。 データベース スコープの MAXDOP は、サーバー レベルで設定されている**並列処理の最大限度**を p_configure によってオーバーライドします (0 に設定されていない限り)。 別の設定を必要とする特定のクエリを調整する目的で、クエリ ヒントでは引き続き、データベース スコープの MAXDOP をオーバーライドできます。 これらすべての設定の上限は、[ワークロード グループ](create-workload-group-transact-sql.md)に設定されている MAXDOP によって決定されます。
 
 MAXDOP オプションを使用すると、並列プラン実行で使用するプロセッサの数を制限できます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、クエリ、インデックス データ定義言語 (DDL) の操作、並列挿入、オンライン列変更、並行統計コレクション、静的およびキーセット ドリブン カーソルの作成の場合に並列実行プランが検討されます。
 

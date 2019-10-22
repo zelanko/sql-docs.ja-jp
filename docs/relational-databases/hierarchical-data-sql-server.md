@@ -18,12 +18,12 @@ ms.assetid: 19aefa9a-fbc2-4b22-92cf-67b8bb01671c
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 36fea2a22bddcf130725e6092314e00fbb0b6a8f
-ms.sourcegitcommit: f6bfe4a0647ce7efebaca11d95412d6a9a92cd98
+ms.openlocfilehash: 089de803bee02d241e1d7b56578c7e8bf8b15649
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/05/2019
-ms.locfileid: "71974250"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72304952"
 ---
 # <a name="hierarchical-data-sql-server"></a>階層データ (SQL Server)
 
@@ -325,7 +325,7 @@ GO
   
   
 #### <a name="example-using-a-serializable-transaction"></a>シリアル化可能なトランザクションの使用例  
- **Org_BreadthFirst** インデックスによって、 **@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションでチェックできるその他のエラーの場合だけでなく、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を追加しようとしていることを示します。したがって、 **@last_child** を再計算する必要があります。 次のコードでは、シリアル化可能なトランザクション内の新しいノード値が計算されます。  
+ **Org_BreadthFirst** インデックスによって、 **\@last_child** が範囲シークを使用するかどうかを判断できるようになります。 アプリケーションでチェックできるその他のエラーの場合だけでなく、挿入後の重複キー違反は、同じ ID を持つ複数の従業員を追加しようとしていることを示します。したがって、 **\@last_child** を再計算する必要があります。 次のコードでは、シリアル化可能なトランザクション内の新しいノード値が計算されます。  
   
 ```sql
 CREATE TABLE Org_T2  
@@ -512,7 +512,7 @@ WHERE OrgNode = dbo.CommonAncestor(@h1, @h2) ;
   
   
 ###  <a name="BKMK_MovingSubtrees"></a> サブツリーの移動  
- もう 1 つの一般的な操作は、サブツリーの移動です。 次の手順では、 **@oldMgr** のサブツリーを取得し、それ ( **@oldMgr** を含む) を **@newMgr** を使用した方がはるかに高速です。  
+ もう 1 つの一般的な操作は、サブツリーの移動です。 次の手順では、 **\@oldMgr** のサブツリーを取得し、それ ( **\@oldMgr** を含む) を **\@newMgr** のサブツリーにしています。  
   
 ```sql
 CREATE PROCEDURE MoveOrg(@oldMgr nvarchar(256), @newMgr nvarchar(256) )  

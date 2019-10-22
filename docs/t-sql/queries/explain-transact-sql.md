@@ -10,18 +10,18 @@ ms.assetid: 4846a576-57ea-4068-959c-81e69e39ddc1
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: 6cb2bdc652eb77908c044b640d315a90da8cf428
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: da38a5171694f1f563e67d4be6a852527fd0377b
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68809809"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72542191"
 ---
 # <a name="explain-transact-sql"></a>EXPLAIN (Transact-SQL) 
 
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
-  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを実行せずに、ステートメントのクエリ プランを返します。 **EXPLAIN** を使用して、どの操作でデータの移動が必要になるかをプレビューし、クエリ操作の推定コストを表示します。 `WITH RECOMMENDATIONS` は、Azure SQL Data Warehouse (プレビュー) に適用されます。
+  [!INCLUDE[ssDW](../../includes/ssdw-md.md)] [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントを実行せずに、ステートメントのクエリ プランを返します。 EXPLAIN を使用して、どの操作でデータ移動が必要になるかをプレビューし、クエリ操作の推定コストを表示します。 `WITH RECOMMENDATIONS` は、Azure SQL Data Warehouse (プレビュー) に適用されます。
   
  クエリ プランの詳細については、[!INCLUDE[pdw-product-documentation_md](../../includes/pdw-product-documentation-md.md)]にある「Understanding Query Plans」 (クエリ プランについて) を参照してください。  
   
@@ -35,9 +35,12 @@ EXPLAIN [WITH_RECOMMENDATIONS] SQL_statement
 ## <a name="arguments"></a>引数
 
  *SQL_statement*  
- **EXPLAIN** を実行する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントです。 *SQL_statement* には、次のいずれかのコマンドを使用できます:**SELECT**、**INSERT**、**UPDATE**、**DELETE**、**CREATE TABLE AS SELECT**、**CREATE REMOTE TABLE**。
 
-*WITH_RECOMMENDATIONS* SQL ステートメントのパフォーマンスを最適化するための推奨事項と共にクエリ プランを返します。  
+ EXPLAIN を実行する [!INCLUDE[DWsql](../../includes/dwsql-md.md)] ステートメントです。 *SQL_statement* には、次のいずれかのコマンドを使用できます:SELECT、INSERT、UPDATE、DELETE、CREATE TABLE AS SELECT、CREATE REMOTE TABLE。
+
+"*WITH_RECOMMENDATIONS* " (プレビュー)
+
+SQL ステートメントのパフォーマンスを最適化するための推奨事項と共にクエリ プランを返します。  
   
 ## <a name="permissions"></a>アクセス許可
 
@@ -310,7 +313,7 @@ GO
 **EXPLAIN ステートメント WITH_RECOMMENDATIONS の送信**
 
 ```sql
--- EXPLAIN WITH_RECOMMENDATIONS
+EXPLAIN WITH_RECOMMENDATIONS
 select count(*)
 from ((select distinct c_last_name, c_first_name, d_date
        from store_sales, date_dim, customer
@@ -326,7 +329,7 @@ from ((select distinct c_last_name, c_first_name, d_date
 ) top_customers
 ```
 
-**EXPLAIN WITH_RECOMMENDATIONS の出力例** (プレビュー)
+**EXPLAIN WITH_RECOMMENDATIONS の出力例**  
 
 以下の出力には、View1 という名前の推奨される具体化されたビューの作成が含まれています。  
 

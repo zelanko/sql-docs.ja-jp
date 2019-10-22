@@ -13,18 +13,18 @@ helpviewer_keywords:
 ms.assetid: a655225d-8c54-4b30-95fd-31f588167899
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: e30bc0e3dd0402d4b62ac55a897268c021507560
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5d2fe2d80b0f9d54e877d6bc1be9a05c8c34c584
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68063988"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517941"
 ---
 # <a name="before-installing-failover-clustering"></a>フェールオーバー クラスタリングをインストールする前に
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
   SQL Server フェールオーバー クラスターをインストールする前に、SQL Server を実行するハードウェアとオペレーティング システムを選択する必要があります。 また、Windows Server フェールオーバー クラスタリング (WSFC) を構成し、ネットワーク、セキュリティ、およびフェールオーバー クラスターで実行するその他のソフトウェアに関する考慮事項を見直す必要があります。  
   
- Windows クラスターにローカル ディスク ドライブがあり、共有ドライブと同じドライブ文字が 1 つ以上のクラスター ノードでも使用されている場合、そのドライブに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールできません。  
+ Windows クラスターにローカル ディスク ドライブがあり、共有ドライブと同じドライブ文字が 1 つ以上のクラスター ノードでも使用されている場合、そのドライブに [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] をインストールできません。 この制限は、Windows フェールオーバー クラスター インスタンスの一部であるサーバー上の SQL Server フェールオーバー クラスター インスタンスとスタンドアロン インスタンスの両方に適用されます。
   
  [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスタリングの概念、機能、およびタスクについて詳しく学習するには、次のトピックも確認してください。  
   

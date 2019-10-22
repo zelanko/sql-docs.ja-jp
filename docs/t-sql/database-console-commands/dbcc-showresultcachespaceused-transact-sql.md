@@ -12,12 +12,12 @@ ms.assetid: 73f598cf-b02a-4dba-8d89-9fc0b55a12b8
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: = azure-sqldw-latest || = sqlallproducts-allversions
-ms.openlocfilehash: c2dd0389f4ec3287fbe23875458ab5d34ef269f7
-ms.sourcegitcommit: 79e6d49ae4632f282483b0be935fdee038f69cc2
+ms.openlocfilehash: 0a8e9207e22a0e9bb4fbb75d872697fc9d2ff76e
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/09/2019
-ms.locfileid: "72174657"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72452833"
 ---
 # <a name="dbcc-showresultcachespaceused-transact-sql"></a>DBCC SHOWRESULTCACHESPACEUSED (Transact-SQL)
 
@@ -37,18 +37,6 @@ DBCC SHOWRESULTCACHESPACEUSED
 
 `DBCC SHOWRESULTCACHESPACEUSED` コマンドは、パラメーターがなく、このコマンドを実行したデータベースで使用されるスペースが返されます。
 
-結果セットのキャッシュの最大サイズは、データベースあたり 1 TB です。  Azure SQL Data Warehouse では、結果セットのキャッシュ内のエントリが以下の条件で自動的に削除されます。
-
-- 結果セットが使用されていない場合は、48 時間ごと。
-- 結果セットのキャッシュが最大サイズに接近した場合。
-
-データベースの結果セット キャッシュを手動で空にするには、次のいずれかのオプションを使用します。
-
-- データベースの結果セット キャッシュ機能を無効にする
-- データベースに接続した状態で `DBCC DROPRESULTSETCACHE` を実行する 
-
-データベースを一時停止しても、結果セットのキャッシュは空になりません。  
-
 ## <a name="permissions"></a>アクセス許可
 
 VIEW SERVER STATE 権限が必要です。
@@ -65,6 +53,7 @@ VIEW SERVER STATE 権限が必要です。
 
 ## <a name="see-also"></a>参照
 
+[結果セットのキャッシュを使用したパフォーマンス チューニング](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)</br>
 [ALTER DATABASE SET のオプション &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql-set-options?view=azure-sqldw-latest)</br>
 [ALTER DATABASE &#40;Transact-SQL&#41;](/sql/t-sql/statements/alter-database-transact-sql?view=azure-sqldw-latest)</br>
 [SET RESULT SET CACHING &#40;Transact-SQL&#41;](/sql/t-sql/statements/set-result-set-caching-transact-sql)</br>

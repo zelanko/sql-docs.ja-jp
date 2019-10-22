@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 86858982-6af1-4e80-9a93-87451f0d7ee9
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 61b8ccb7a52cee68e709200c4d1d376379b5dd0f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c3be8b96e35dda7d5a1037543d750b2ccd020e64
+ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68013895"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72517962"
 ---
 # <a name="suspend-an-availability-database-sql-server"></a>可用性データベースの中断 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -100,9 +100,9 @@ ms.locfileid: "68013895"
   
 1.  中断するデータベースのレプリカをホストするサーバー インスタンスに接続します。 詳細については、このトピックの「 [前提条件](#Prerequisites)」をご覧ください。  
   
-2.  次の [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md)ステートメントを使用して、データベースを中断します。  
+2.  次の [ALTER DATABASE](../../../t-sql/statements/alter-database-transact-sql-set-hadr.md) ステートメントを使用して、データベースを中断します。  
   
-     ALTER DATABASE *database_name* SET HADR SUSPEND  
+     ALTER DATABASE *database_name* SET HADR SUSPEND;
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
  **データベースを中断するには**  

@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: ac673a94b0d85eb4ac2623139231392ba7da4b0e
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: f76f03e2953c6fe460aa958858709d0ca5943bbc
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68117100"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586750"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -287,19 +287,19 @@ CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress) WITH FULLSCAN;  
 ```  
 
-### <a name="e-using-create-statistics-with-fullscan-and-persistsamplepercent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
+### <a name="e-using-create-statistics-with-fullscan-and-persist_sample_percent"></a>E. CREATE STATISTICS を FULLSCAN および PERSIST_SAMPLE_PERCENT と共に使用する  
  次の例では、`Person` テーブルの `BusinessEntityID` 列と `EmailPromotion` 列のすべての行について `NamePurchase` 統計を作成し、サンプリング率を明示的に指定しない後続のすべての更新について 100 パーセントのサンプリング率を設定します。  
   
 ```sql  
 CREATE STATISTICS NamePurchase  
     ON AdventureWorks2012.Person.Person (BusinessEntityID, EmailPromotion)  
     WITH FULLSCAN, PERSIST_SAMPLE_PERCENT = ON;  
-```  
+```  
   
-### Examples using AdventureWorksDW database. 
+### <a name="examples-using-adventureworksdw-database"></a>AdventureWorksDW データベースの使用例。 
   
-### F. Create statistics on two columns  
- The following example creates the `CustomerStats1` statistics, based on the `CustomerKey` and `EmailAddress` columns of the `DimCustomer` table. The statistics are created based on a statistically significant sampling of the rows in the `Customer` table.  
+### <a name="f-create-statistics-on-two-columns"></a>F. 2 つの列の統計を作成する  
+ 次の例では、`DimCustomer` テーブルの `CustomerKey` 列と `EmailAddress` 列に基づいて、`CustomerStats1` 統計を作成します。 統計は、`Customer` テーブルの行の統計的に優位なサンプリングに基づいて作成されます。  
   
 ```sql  
 CREATE STATISTICS CustomerStats1 ON DimCustomer (CustomerKey, EmailAddress);  

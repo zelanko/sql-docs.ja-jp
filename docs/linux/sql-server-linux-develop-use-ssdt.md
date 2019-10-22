@@ -8,22 +8,22 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1e924704-e07c-4a8b-b243-8c1dd8cff0d3
-ms.openlocfilehash: b98980837f6dce2ebd9f39be142b816f37f16cd8
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: c6d5789092ea2bbfc6fd9a8bb20cc7d078eaf6de
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68077403"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545046"
 ---
 # <a name="use-visual-studio-to-create-databases-for-sql-server-on-linux"></a>Visual Studio を使用して SQL Server on Linux 用のデータベースを作成する
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-SQL Server Data Tools (SSDT) によって、Visual Studio を SQL Server on Linux 用の強力な開発およびデータベース ライフサイクル管理 (DLM) 環境として使用できます。 アプリケーション コードを開発する場合と同様に、ソース管理されたプロジェクトからデータベースを開発、ビルド、テスト、および発行できます。
+SQL Server Data Tools (SSDT) によって、Visual Studio を SQL Server on Linux 用の強力な開発およびデータベース ライフサイクル管理 (DLM) 環境として使用できます。 ソース管理されたプロジェクトからデータベースを開発、ビルド、テスト、および発行できます。 アプリケーション コードを開発する場合と同様です。
 
 ## <a name="install-visual-studio-and-sql-server-data-tools"></a>Install Visual Studio と SQL Server Data Tools をインストールする
 
-1. お使いの Windows コンピューターに Visual Studio がまだインストールされていない場合は、[Visual Studio をダウンロードしてインストールする]します。 Visual Studio のライセンスをお持ちでない場合は、学生、オープンソースの開発者、個人の開発者向けの全機能を備えた無料の IDE Visual Studio Community エディションを使用できます。
+1. お使いの Windows コンピューターに Visual Studio がまだインストールされていない場合は、[Visual Studio をダウンロードしてインストール](https://visualstudio.microsoft.com/downloads/)します。 Visual Studio のライセンスをお持ちでない場合は、学生、オープンソースの開発者、個人の開発者向けの全機能を備えた無料の IDE である Visual Studio Community エディションを使用できます。
 
 2. Visual Studio のインストール中に、 **[インストールの種類を選択してください]** オプションで **[カスタム]** を選択します。 **[次へ]** をクリックします。
 
@@ -105,12 +105,12 @@ SQL Server on Linux は、SSDT バージョン 17.0 RC 以降でサポートさ�
 
 ## <a name="next-steps"></a>次の手順
 
-T-SQL を初めて使用する場合は、「[チュートリアル: Transact-SQL ステートメントの作成]」と「[Transact-SQL リファレンス (データベース エンジン)]」を参照してください。
+T-SQL を初めて使用する場合は、「[チュートリアル:Transact-SQL ステートメントの作成](../t-sql/tutorial-writing-transact-sql-statements.md)」を参照してください。
 
-SQL Data Tools を使用したデータベースの開発の詳細については、[SSDT MSDN のドキュメント]を参照してください。
+SQL Data Tools を使用したデータベースの開発の詳細については、以下の記事を参照してください。
 
-[Visual Studio をダウンロードしてインストールする]: https://www.visualstudio.com/downloads/
-[Download and Install SSDT]:https://aka.ms/ssdt-download
-[SSDT MSDN のドキュメント]: https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx
-[チュートリアル: Transact-SQL ステートメントの作成]: https://msdn.microsoft.com/library/ms365303.aspx
-[Transact-SQL リファレンス (データベース エンジン)]: https://msdn.microsoft.com/library/bb510741.aspx
+* [Visual Studio をダウンロードしてインストールする](https://www.visualstudio.com/downloads/)
+* [SSDT をダウンロードしてインストールする](https://aka.ms/ssdt-download)
+* [SSDT MSDN のドキュメント](https://msdn.microsoft.com/library/hh272686(v=vs.103).aspx)
+* [チュートリアル: Transact-SQL ステートメントの作成](https://msdn.microsoft.com/library/ms365303.aspx)
+* [Transact-SQL リファレンス (データベース エンジン)](https://msdn.microsoft.com/library/bb510741.aspx)

@@ -10,12 +10,12 @@ ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: fffd79a18ca839816105242c054e74031828274f
-ms.sourcegitcommit: 5d9ce5c98c23301c5914f142671516b2195f9018
+ms.openlocfilehash: 17a618fb10f234d839243b0523260d19d0a2b599
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/04/2019
-ms.locfileid: "71961959"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381783"
 ---
 # <a name="sql-server-2019-extension-for-azure-data-studio-preview"></a>Azure Data Studio 用の SQL Server 2019 の拡張機能 (プレビュー)
 
@@ -32,6 +32,9 @@ SQL Server 2019 の拡張機能 (プレビュー) をインストールするに
    |Windows|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103613)|2019 年 9 月 11 日 |0.16.0
    |macOS|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103612)|2019 年 9 月 11 日 |0.16.0
    |Linux|[.vsix](https://go.microsoft.com/fwlink/?linkid=2103709)|2019 年 9 月 11 日 |0.16.0
+
+   > [!NOTE]
+   > Internet Explorer には、VSIX が zip ファイルとしてダウンロードされるという既知の問題があります。 Edge または別のブラウザーを使用して、VSIX を正しくダウンロードします。 
 
 1. Azure Data Studio では、 **[ファイル]** メニューから **[Install Extension from VSIX Package]\(VSIX パッケージから拡張機能をインストールする)** を選択し、ダウンロードした .vsix ファイルを選択します。
 

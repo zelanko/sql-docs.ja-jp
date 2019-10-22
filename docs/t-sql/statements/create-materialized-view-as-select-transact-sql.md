@@ -37,12 +37,12 @@ ms.assetid: aecc2f73-2ab5-4db9-b1e6-2f9e3c601fb9
 author: XiaoyuMSFT
 ms.author: xiaoyul
 monikerRange: =azure-sqldw-latest||=sqlallproducts-allversions
-ms.openlocfilehash: d841f7aa8a5aacfa684b984791a15128b306ab1d
-ms.sourcegitcommit: 52d3902e7b34b14d70362e5bad1526a3ca614147
+ms.openlocfilehash: a0bf701395723b1d21efea38f969024a1921c3f6
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/28/2019
-ms.locfileid: "70109762"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545075"
 ---
 # <a name="create-materialized-view-as-select-transact-sql-preview"></a>CREATE MATERIALIZED VIEW AS SELECT (Transact-SQL) (プレビュー)
 
@@ -111,8 +111,8 @@ CREATE MATERIALIZED VIEW [ schema_name. ] materialized_view_name
 Azure データ ウェアハウスの具体化されたビューは、SQL Server のインデックス付きビューによく似ています。  具体化されたビューで集計関数がサポートされる点を除き、インデックス付きビューとほぼ同じ制限が共有されています (詳細については、「[Create Indexed Views (インデックス付きビューを作成する)](/sql/relational-databases/views/create-indexed-views)」 を参照してください)。   ここでは、具体化されたビューのその他の考慮事項について説明します。  
  
 具体化されたビューでは、CLUSTERED COLUMNSTORE INDEX のみがサポートされます。 
- 
-具体化されたビューは、DROP VIEW でドロップできます。  ALTER MATERIALIZED VIEW を使用して、具体化されたビューを無効にしたり、リビルドしたりできます。   
+
+具体化されたビューでは、他のビューを参照できません。  
  
 具体化されたビューは、パーティション テーブル上で作成できます。  具体化されたビューで参照されるテーブル上では、SPLIT/MERGE 操作がサポートされます。  具体化されたビューで参照されるテーブル上では、SWITCH はサポートされません。 試行した場合、`Msg 106104, Level 16, State 1, Line 9` というエラーが表示されます
  
@@ -129,6 +129,8 @@ Azure データ ウェアハウスの具体化されたビューは、SQL Server
 具体化されたビューは、一度作成されると、SQL Server Management Studio 内の Azure SQL Data Warehouse インスタンスのビュー フォルダーの下に表示されます。
 
 [SP_SPACEUSED](/sql/relational-databases/system-stored-procedures/sp-spaceused-transact-sql?view=azure-sqldw-latest) および [DBCC PDW_SHOWSPACEUSED](/sql/t-sql/database-console-commands/dbcc-pdw-showspaceused-transact-sql?view=azure-sqldw-latest) を実行すると、具体化されたビューで使用されるスペースを決定できます。  
+
+具体化されたビューは、DROP VIEW でドロップできます。  ALTER MATERIALIZED VIEW を使用して、具体化されたビューを無効にしたり、リビルドしたりできます。   
 
 SQL Server Management Studio 内の説明プランとグラフィカルな推定実行プランを見ると、クエリ実行の際、具体化されたビューがクエリ オプティマイザーで考慮されるかどうかがわかります。 SQL Server Management Studio 内のグラフィカルな推定実行プランを見ると、クエリ実行の際、具体化されたビューがクエリ オプティマイザーで考慮されるかどうかがわかります。
 

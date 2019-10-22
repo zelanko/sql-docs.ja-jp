@@ -15,12 +15,12 @@ ms.assetid: bf3b98a6-51ed-4f2d-9c26-92f07f1fa947
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: eca3bed56e39330199d491836ac32fadabea1cce
-ms.sourcegitcommit: c2052b2bf7261b3294a3a40e8fed8b9e9c588c37
+ms.openlocfilehash: 4d829b32941ad1bc64df4e2e86cddb26d7468281
+ms.sourcegitcommit: c7a202af70fd16467a498688d59637d7d0b3d1f3
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/10/2019
-ms.locfileid: "68941137"
+ms.lasthandoff: 10/15/2019
+ms.locfileid: "72313699"
 ---
 # <a name="extended-events-overview"></a>拡張イベントの概要
 
@@ -108,6 +108,23 @@ ms.locfileid: "68941137"
 |拡張イベントを Event Tracing for Windows と共に使用してシステムの使用状況を監視する方法について説明します。|[拡張イベントを使用したシステムの使用状況の監視](../../relational-databases/extended-events/monitor-system-activity-using-extended-events.md)|  
 |拡張イベントに対するカタログ ビューと動的管理ビュー (DMV) の使用。 | [SQL Server の拡張イベントに対するシステム ビューからの SELECT と JOIN](../../relational-databases/extended-events/selects-and-joins-from-system-views-for-extended-events-in-sql-server.md) |
 | &nbsp; | &nbsp; |
+
+次の Transact-SQL (T-SQL) クエリを使用して、可能なすべての拡張イベントとその説明を一覧表示します。
+
+```sql
+SELECT
+     obj1.name as [XEvent-name],
+     col2.name as [XEvent-column],
+     obj1.description as [Descr-name],
+     col2.description as [Descr-column]
+  FROM
+               sys.dm_xe_objects        as obj1
+      JOIN sys.dm_xe_object_columns as col2 on col2.object_name = obj1.name
+  ORDER BY
+    obj1.name,
+    col2.name
+```
+
 
 ## <a name="code-examples-can-differ-for-azure-sql-database"></a>Azure SQL Database では、コード例が異なる可能性があります。
 

@@ -3,39 +3,72 @@ title: スキーマ比較の拡張機能
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用のスキーマ比較の拡張機能 (プレビュー) をインストールして使用します
 ms.custom: seodec18
-ms.date: 06/06/2019
+ms.date: 10/03/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: a51d64202d3d906b3106092084628b0a961297ea
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 031bdc19762213ff2c85e6fe4612ded294fcaaa9
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959324"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381818"
 ---
 # <a name="schema-compare-extension-preview"></a>スキーマ比較の拡張機能 (プレビュー)
-スキーマ比較の拡張機能により、.dacpac ファイルやデータベースを比較し、ソースからターゲットに変更を適用するための使いやすいエクスペリエンスが提供されます。
+スキーマ比較の拡張機能では、2 つのデータベース定義を比較して、ソースとターゲットの相違を適用するための使いやすいエクスペリエンスが提供されます。
 
 このエクスペリエンスは、現在、初期のプレビュー段階にあります。 問題の報告や機能の要求を行うには、[ここ](https://github.com/microsoft/azuredatastudio/issues)にアクセスしてください。
 
-## <a name="install-the-schema-compare-extension"></a>スキーマ比較の拡張機能のインストール
 
-1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスするには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。
-2. 使用可能な拡張機能を選択すると、その詳細が表示されます。
-1. 必要な拡張機能 (スキーマ比較) を選択して**インストール**します。
+## <a name="features"></a>[機能]
 
-## <a name="how-do-i-start-a-schema-comparison"></a>スキーマ比較を開始する方法
-* スキーマ比較のメインのエントリ ポイントは、オブジェクト エクスプローラーでデータベースを右クリックして、 **[スキーマ比較]** をクリックすることです。
-* ユーザーは、**スキーマ比較**を検索して、コマンド パレット (Ctrl + Shift + P) から [スキーマ比較] ダイアログを起動することもできます。
+* 2 つの .dacpac ファイルまたはデータベースのスキーマを比較する
+* ソースと一致させるためにターゲットに対して実行する必要がある一連のアクションとして結果を表示する
+* 結果に一覧表示されるアクションを選択的に除外する
+* 比較のスコープを制御するオプションを設定する
+* ターゲットに変更を適用するか、同じ効果でスクリプトを生成する
+* 比較を保存する
 
-## <a name="why-would-i-use-the-schema-compare"></a>スキーマ比較を使用する理由
-スキーマ比較は、.dacpac ファイルとデータベースのスキーマを比較して変更を適用する機能を追加するために作成されました。
+![スキーマ比較:比較例](media/extensions/schema-compare-extension/schema-compare.png)
+
+
+## <a name="why-would-i-use-the-schema-compare-extension"></a>スキーマ比較の拡張機能を使用する理由
+
+異なるデータベース バージョンを手動で管理し、同期するのは面倒な場合があります。 スキーマ比較の拡張機能を使用すると、データベースを比較するプロセスが簡略化され、同期時に完全に制御できます。変更を適用する前に、特定の相違点とカテゴリを選択的にフィルター処理できます。 スキーマ比較の拡張機能は、時間とコードを節約する信頼性の高いツールです。
+
+![スキーマ比較:[オプション] ダイアログ](media/extensions/schema-compare-extension/schema-compare-options.png)
+
+
+## <a name="install-the-extension"></a>拡張機能をインストールする
+
+1. 拡張機能アイコンを選択すると、使用可能な拡張機能が表示されます。
+
+    ![拡張機能マネージャーのアイコン](media/extensions/extension-manager-icon.png)
+
+2. **スキーマ比較**の拡張機能を検索し、それを選択して詳細を表示します。 **[インストール]** をクリックして、拡張機能を追加します。
+
+3. インストール後、 **[再度読み込む]** をクリックすると、Azure Data Studio で拡張機能が有効になります (初めて拡張機能をインストールするときにのみ必須)。
+
+
+## <a name="launch-a-schema-compare"></a>スキーマ比較を開始する
+
+1. [スキーマ比較] ダイアログを開くには、オブジェクト エクスプローラーでデータベースを**右クリック**して、 **[スキーマ比較]** をクリックします。 選択したデータベースは、比較でソース データベースとして設定されます。
+
+    ![スキーマ比較の起動メニュー](media/extensions/schema-compare-extension/schema-compare-launch.png)
+
+
+2. 省略記号 (...) のいずれかを選択して、スキーマ比較のソースとターゲットを変更し、[OK] をクリックします。
+
+    ![スキーマ比較のソース/ターゲットの選択](media/extensions/schema-compare-extension/schema-compare-select-source-target.png)
+
+3. 比較をカスタマイズするには、ツールバーの **[オプション]** ボタンをクリックします。
+
+4. 比較の結果を表示するには、 **[比較]** をクリックします。
+
 
 ## <a name="next-steps"></a>次の手順
+
 スキーマ比較の詳細については、[Microsoft のドキュメントを参照してください。](https://docs.microsoft.com/sql/ssdt/how-to-use-schema-compare-to-compare-different-database-definitions)
-
-

@@ -14,12 +14,12 @@ ms.assetid: 83a4aa90-1c10-4de6-956b-7c3cd464c2d2
 author: rothja
 ms.author: jroth
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ba569631723bc456ceae2429d7c0fa8acac9769
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9bc8b582effc2ba96a03a2a7b76e33118c0222ee
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68031671"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586779"
 ---
 # <a name="pages-and-extents-architecture-guide"></a>ページとエクステントのアーキテクチャ ガイド
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -30,11 +30,13 @@ ms.locfileid: "68031671"
 
 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のデータ ストレージの基本単位はページです。 データベースのデータ ファイル (.mdf または .ndf) に割り当てられたディスク領域は、0 ～ n の連番が付けられたページに論理的に分割されます。 ディスク I/O 操作は、このページ レベルで実行されます。 つまり、SQL Server では、データ ページ全体に対して読み取りや書き込みが行われます。
 
-エクステントは、物理的に連続する 8 ページをまとめたもので、ページを効率的に管理するために使用されます。 すべてのページは、エクステントに格納されます。
+エクステントは、物理的に連続する 8 ページをまとめたもので、ページを効率的に管理するために使用されます。 すべてのページは、エクステントで構成されます。
 
 ### <a name="pages"></a>ページ
 
-[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ページのサイズは 8 KB です。 したがって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースには 1 MB あたり 128 ページあります。 各ページの先頭には 96 バイトのヘッダーがあり、ここには各ページに関するシステム情報が格納されています。 この情報には、ページ番号、ページの種類、ページ上の空き容量、そのページを所有しているオブジェクトのアロケーション ユニット ID が含まれます。
+1 冊の本を考えてみてください。その中のすべての内容は複数のページに書き込まれています。 本と同様に、SQL Server では、すべてのデータ行が複数のページに書き込まれています。 本では、すべてのページのサイズは物理的に同じです。 同様に SQL Server では、すべてのデータ ページのサイズが同じ 8 KB になります。 本では、ほとんどのページにデータが含まれています。本の内容と、目次やインデックスなど、内容に関するメタデータが含まれているページがあります。 これも、SQL Server で違いがありません。ほとんどのページには、ユーザーによって保存された実際のデータ行が含まれています。これらは、データ ページとテキスト/イメージ ページ (特殊なケースの場合) と呼ばれます。 インデックス ページには、データの場所に関するインデックス参照が含まれています。最後に、データの編成 (PFS、GAM、SGAM、IAM、DCM、BCM ページ) に関するさまざまなメタデータを格納するシステム ページがあります。 ページの種類とその説明については、以下に示す表を参照してください。
+
+前述したように、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] では、ページのサイズは 8 KB です。 したがって、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースには 1 MB あたり 128 ページあります。 各ページの先頭には 96 バイトのヘッダーがあり、ここには各ページに関するシステム情報が格納されています。 この情報には、ページ番号、ページの種類、ページ上の空き容量、そのページを所有しているオブジェクトのアロケーション ユニット ID が含まれます。
 
 次の表に、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] データベースのデータ ファイルで使用されるページの種類を示します。
 

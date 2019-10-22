@@ -9,13 +9,13 @@ author: markingmyname
 ms.author: maghan
 ms.reviewer: alayu; sstein
 ms.custom: seodec18, sqlfreshmay19
-ms.date: 05/14/2019
-ms.openlocfilehash: a7fbde0a4dab0becdaa9fb7b59221e57fd81c59e
-ms.sourcegitcommit: 2604e13627fbc9f3bda3926b67045fceb7b04e37
+ms.date: 10/15/2019
+ms.openlocfilehash: 9a82168afd82d4670521e1a84f87ae1bea57281e
+ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68822617"
+ms.lasthandoff: 10/17/2019
+ms.locfileid: "72545056"
 ---
 # <a name="what-is-azure-data-studio"></a>Azure Data Studio とは
 
@@ -68,6 +68,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 - sqlcmd または PowerShell を使用して統合ターミナル経由でほとんどの管理タスクを実行することができる
 - ウィザード エクスペリエンスの必要は最小限である
 - 詳細な管理構成を行う必要はない
+- 実行したい操作がある 
 
 **SQL Server Management Studio は次の場合に使用します。**
 - ほとんどの時間をデータベース管理タスクに費やしている
@@ -117,6 +118,8 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |[結果をテキストで表示]||はい|
 |空間ビューアー||はい|
 |sqlcmd||はい|
+|ノートブック|はい||
+|スニペットとしてクエリを保存|はい||
 
 ### <a name="operating-system-support"></a>オペレーティング システムのサポート
 
@@ -139,6 +142,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |機能|Azure Data Studio|SSMS|
 |:---|:---|:---|
 |バックアップ/復元|はい|はい|
+|ビッグ データ クラスターのサポート|はい||
 |フラット ファイルのインポート|プレビュー|はい|
 |SQL エージェント|プレビュー|はい|
 |SQL Profiler|プレビュー|はい|
@@ -160,6 +164,7 @@ SQL コード スニペットにより、データベース、テーブル、ビ
 |テンプレート エクスプローラー||はい|
 |脆弱性評価||はい|
 |XEvent 管理||はい|
+|SQL Assessment API の統合||はい|
 
 ## <a name="next-steps"></a>次の手順
 

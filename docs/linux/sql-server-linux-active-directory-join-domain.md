@@ -9,12 +9,12 @@ ms.date: 04/01/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: d5cd6356f4bc691518f11e1e6fb00add527cc595
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 90a2bcdac4fd1870adc4eeaa888b906857ef9854
+ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68027342"
+ms.lasthandoff: 10/14/2019
+ms.locfileid: "72305279"
 ---
 # <a name="join-sql-server-on-a-linux-host-to-an-active-directory-domain"></a>Linux ホスト上の SQL Server を Active Directory ドメインに参加させる
 
@@ -197,9 +197,9 @@ SQL Server ホストを Active Directory ドメイン に参加させるには�
    ```
 
    > [!NOTE]
-   > - **id user@contoso.com** で `No such user` が返される場合は、`sudo systemctl status sssd` コマンドを実行して、SSSD サービスが正常に開始されていることを確認します。 サービスが実行されているのにエラーが表示される場合は、SSSD の詳細ログを有効にしてみます。 詳しくは、[SSSD のトラブルシューティング](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)に関する Red Hat のドキュメントを参照してください。
+   > - **id user\@contoso.com** で `No such user` が返される場合は、`sudo systemctl status sssd` コマンドを実行して、SSSD サービスが正常に開始されていることを確認します。 サービスが実行されているのにエラーが表示される場合は、SSSD の詳細ログを有効にしてみます。 詳しくは、[SSSD のトラブルシューティング](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/System-Level_Authentication_Guide/trouble.html#SSSD-Troubleshooting)に関する Red Hat のドキュメントを参照してください。
    >
-   > - **kinit user@CONTOSO.COM** から `KDC reply did not match expectations while getting initial credentials` が返される場合は、領域を大文字で指定したことを確認します。
+   > - **kinit user\@CONTOSO.COM** から `KDC reply did not match expectations while getting initial credentials` が返される場合は、領域を大文字で指定したことを確認します。
 
 詳しくは、[ID ドメインの検出と参加](https://access.redhat.com/documentation/Red_Hat_Enterprise_Linux/7/html/Windows_Integration_Guide/realmd-domain.html)に関する Red Hat のドキュメントを参照してください。
 

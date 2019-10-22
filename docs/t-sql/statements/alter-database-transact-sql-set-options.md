@@ -30,12 +30,12 @@ ms.assetid: f76fbd84-df59-4404-806b-8ecb4497c9cc
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: =azuresqldb-current||=azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azure-sqldw-latest||=azuresqldb-mi-current
-ms.openlocfilehash: 330fa479beb3dc86ba290d36baa54870e8e61d6e
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 62074eb9c621c2243a079a21ae9bbcba66c930cd
+ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251355"
+ms.lasthandoff: 10/18/2019
+ms.locfileid: "72586708"
 ---
 # <a name="alter-database-set-options-transact-sql"></a>ALTER DATABASE の SET オプション (Transact-SQL)
 
@@ -3051,20 +3051,8 @@ SELECT request_id, command, result_cache_hit FROM sys.pdw_exec_requests
 WHERE request_id = <'Your_Query_Request_ID'>
 
 ```
-
-データベースに対して結果セットのキャッシュが ON になると、次のクエリを除くすべてのクエリについて、キャッシュがいっぱいになるまで結果がキャッシュされます。
-
-- DateTime.Now() などの非決定論的関数を使用したクエリ 
-- ユーザー定義関数を使用したクエリ
-- 64 KB を超える行サイズのデータを返すクエリ   
-
-大きな結果セットを伴うクエリ (100 万行を超えるなど) の場合、結果のキャッシュが作成される最初の実行時にパフォーマンスが低下することがあります。
-
-次の要件がすべて満たされる場合、キャッシュされた結果セットはクエリに再利用されます。
-
-1. クエリを実行しているユーザーに、クエリで参照されているすべてのテーブルに対するアクセス権がある。
-1. 新しいクエリと、結果セットのキャッシュを生成した以前のクエリとの間に、完全一致がある。
-1. キャッシュされた結果セットの生成元のテーブルに対してデータやスキーマの変更が行われていない。  
+### <a name="permissions"></a>アクセス許可
+RESULT_SET_CACHING オプションを設定するには、ユーザーにサーバーレベルのプリンシプル ログインを与えるか (プロビジョニング プロセスで作成されるもの)、ユーザーが `dbmanager` データベース ロールのメンバーになる必要があります。  
 
 
 **<snapshot_option> ::=**         
@@ -3085,10 +3073,7 @@ OFF
 
 データベースで READ_COMMITTED_SNAPSHOT が有効になっている場合、複数のデータ バージョンが存在するとき、各バージョンのスキャンのため、クエリのパフォーマンスが遅くなることがあります。 トランザクションが長時間になると、データベースが増大することもあります。 この問題は、バージョン クリーンアップをブロックするこのようなトランザクションでデータが変更される場合に発生します。  
 
-## <a name="permissions"></a>アクセス許可
-
-RESULT_SET_CACHING オプションを設定するには、ユーザーにサーバーレベルのプリンシプル ログインを与えるか (プロビジョニング プロセスで作成されるもの)、ユーザーが `dbmanager` データベース ロールのメンバーになる必要があります。  
-
+### <a name="permissions"></a>アクセス許可
 READ_COMMITTED_SNAPSHOT オプションを設定するには、ユーザーにデータベースの ALTER 権限を与える必要があります。
 
 ## <a name="examples"></a>使用例
@@ -3119,26 +3104,6 @@ SELECT name, is_result_set_caching_on
 FROM sys.databases;
 ```
 
-### <a name="check-for-result-set-cache-hit-or-cache-miss-for-a-query"></a>あるクエリに対する結果セットのキャッシュ ヒットまたはキャッシュ ミスを確認する
-
-```sql
-If
-(SELECT step_index  
-FROM sys.dm_pdw_request_steps  
-WHERE request_id = 'QID58286' and operation_type = 'ReturnOperation' and command like '%DWResultCacheDb%') = 0
-SELECT 1 as is_cache_hit  
-ELSE
-SELECT 0 as is_cache_hit;
-```
-
-### <a name="check-for-all-queries-with-result-set-cache-hits"></a>結果セットにキャッシュ ヒットがあるクエリをすべて確認する
-
-```sql
-SELECT *  
-FROM sys.dm_pdw_request_steps  
-WHERE command like '%DWResultCacheDb%' and step_index = 0;
-```
-
 ### <a name="enable-the-read_committed_snapshot-option-for-a-database"></a>データベースの Read_Committed_Snapshot オプションを有効にする
 
 ```sql
@@ -3148,6 +3113,7 @@ SET READ_COMMITTED_SNAPSHOT ON
 
 ## <a name="see-also"></a>参照
 
+- [結果セットのキャッシュを使用したパフォーマンス チューニング](https://docs.microsoft.com/en-us/azure/sql-data-warehouse/performance-tuning-result-set-caching)
 - [DATABASEPROPERTYEX](../../t-sql/functions/databasepropertyex-transact-sql.md)
 - [DROP DATABASE](../../t-sql/statements/drop-database-transact-sql.md)
 - [sys.databases](../../relational-databases/system-catalog-views/sys-databases-transact-sql.md)
