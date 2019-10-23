@@ -125,7 +125,7 @@ ms.locfileid: "68121217"
     -   競合が予想され、"サブスクライバー優先" の競合解決方法を使用する場合は、パブリッシャーまたはサブスクライバーで外部キーの制約は使用しないでください。"パブリッシャー優先" の競合解決方法を使用する場合は、サブスクライバーで外部キーの制約は使用しないでください。  
   
 ## <a name="see-also"></a>参照  
- [ピア ツー ピア トランザクション レプリケーション](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
+ [Peer-to-Peer Transactional Replication](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)   
  [トランザクション レプリケーション](../../../relational-databases/replication/transactional/transactional-replication.md)   
  [データとデータベース オブジェクトのパブリッシュ](../../../relational-databases/replication/publish/publish-data-and-database-objects.md)   
  [パブリケーションのサブスクライブ](../../../relational-databases/replication/subscribe-to-publications.md)  
