@@ -27,7 +27,7 @@ ms.locfileid: "72239452"
 - 無料の [Azure アカウント](https://azure.microsoft.com/offers/ms-azr-0044p/)を取得する。
 - [Azure ストレージ アカウント](https://docs.microsoft.com/azure/storage/common/storage-quickstart-create-account?tabs=portal)を作成する。
 - [SQL Server Management Studio](https://docs.microsoft.com/sql/ssms/download-sql-server-management-studio-ssms) をインストールする。
-- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールするか、[Azure SQL 仮想マシン](/azure/sql-database/sql-database-managed-instance-configure-vm)または[ポイント対サイト[によって確立された接続を使用して](/azure/sql-database/sql-database-managed-instance-get-started)マネージド インスタンス](/azure/sql-database/sql-database-managed-instance-configure-p2s)をデプロイします。
+- [SQL Server 2017 Developer Edition](https://www.microsoft.com/sql-server/sql-server-downloads) をインストールするか、[Azure SQL 仮想マシン](/azure/sql-database/sql-database-managed-instance-configure-vm)または[ポイント対サイト](/azure/sql-database/sql-database-managed-instance-configure-p2s) [によって確立された接続を使用して](/azure/sql-database/sql-database-managed-instance-get-started)マネージド インスタンスをデプロイします。
 - ユーザー アカウントを [db_backupoperator](https://docs.microsoft.com/sql/relational-databases/security/authentication-access/database-level-roles) のロールに割り当て、[alter any credential](https://docs.microsoft.com/sql/t-sql/statements/alter-credential-transact-sql) 権限を付与する。 
 
 [!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
