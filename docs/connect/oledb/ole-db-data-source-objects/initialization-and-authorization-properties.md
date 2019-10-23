@@ -2,7 +2,7 @@
 title: 初期化プロパティと承認プロパティ |Microsoft Docs
 description: 初期化プロパティと承認プロパティ
 ms.custom: ''
-ms.date: 02/06/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 - initialization properties [OLE DB]
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: d2c8c3bbd3c65ea1f31830191b113d4204ebb894
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 28923ccb78e3edfa4de7b7e780195a643ec9914e
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68015902"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381874"
 ---
 # <a name="initialization-and-authorization-properties"></a>初期化プロパティと承認プロパティ
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -33,9 +33,9 @@ ms.locfileid: "68015902"
 |プロパティ ID|[説明]|  
 |-----------------|-----------------|  
 |DBPROP_AUTH_CACHE_AUTHINFO|SQL Server の OLE DB ドライバーでは、認証情報はキャッシュされません。<br /><br /> OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
-|DBPROP_AUTH_ENCRYPT_PASSWORD|SQL Server 用の OLE DB ドライバーは、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]標準[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のセキュリティメカニズムを使用してパスワードを隠します。<br /><br /> OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
+|DBPROP_AUTH_ENCRYPT_PASSWORD|SQL Server 用の OLE DB ドライバーは、標準の [!INCLUDE[msCoName](../../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ機構を使用してパスワードを隠します。<br /><br /> OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_AUTH_INTEGRATED|DBPROP_AUTH_INTEGRATED に NULL ポインター、NULL 文字列、または 'SSPI' VT_BSTR 値を設定すると、OLE DB Driver for SQL Server は、Windows 認証モードを使用して、DBPROP_INIT_DATASOURCE プロパティと DBPROP_INIT_CATALOG プロパティで指定されている [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへのユーザー アクセスを承認します。<br /><br /> VT_EMPTY (既定値) に設定すると、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティが使用されます。 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインとパスワードは、DBPROP_AUTH_USERID プロパティと DBPROP_AUTH_PASSWORD プロパティで指定されます。|  
-|DBPROP_AUTH_MASK_PASSWORD|SQL Server 用の OLE DB ドライバーは、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]標準のセキュリティメカニズムを使用してパスワードを隠します。<br /><br /> OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
+|DBPROP_AUTH_MASK_PASSWORD|SQL Server 用の OLE DB ドライバーは、標準の [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] セキュリティ機構を使用してパスワードを隠します。<br /><br /> OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_AUTH_PASSWORD|[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに割り当てられたパスワードです。 このプロパティは、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] データベースへのアクセスの承認に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が選択された場合に使用されます。|  
 |DBPROP_AUTH_PERSIST_ENCRYPTED|SQL Server の OLE DB ドライバーは、永続化されるときに認証情報を暗号化しません。<br /><br /> OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_AUTH_PERSIST_SENSITIVE_AUTHINFO|OLE DB Driver for SQL Server は、認証値を保存するよう要求された場合に、パスワードのイメージを含めて、この値を保存します。 暗号化は行われません。|  
@@ -50,7 +50,7 @@ ms.locfileid: "68015902"
 |DBPROP_INIT_LOCATION|OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_INIT_MODE|OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_INIT_PROMPT|OLE DB Driver for SQL Server では、データソースを初期化するためのすべてのプロンプトモードがサポートされています。 SQL Server の OLE DB ドライバーは、プロパティの既定の設定として DBPROMPT_NOPROMPT を使用します。|  
-|DBPROP_INIT_PROTECTION_LEVEL|SQL Server の OLE DB ドライバーは、のインスタンスへの[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]接続で保護レベルをサポートしていません。<br /><br /> OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
+|DBPROP_INIT_PROTECTION_LEVEL|OLE DB Driver for SQL Server は [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの接続で保護レベルをサポートしていません。<br /><br /> OLE DB Driver for SQL Server は、プロパティ値を設定しようとしたときに DB_S_ERRORSOCCURRED を返します。 DBPROP 構造体の *dwStatus* メンバーは、DBPROPSTATUS_NOTSUPPORTED を示します。|  
 |DBPROP_INIT_PROVIDERSTRING|このトピックで後述する「OLE DB Driver for SQL Server 文字列」を参照してください。|  
 |DBPROP_INIT_TIMEOUT|OLE DB Driver for SQL Server は、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] のインスタンスへの接続が指定された時間 (秒単位) 内に確立できなかった場合、初期化時にエラーを返します。|  
   
@@ -58,8 +58,8 @@ ms.locfileid: "68015902"
   
 |プロパティ ID|[説明]|  
 |-----------------|-----------------|  
-|SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|型 : VT_BSTR<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明: Azure Active Directory に対する認証に使用されるアクセストークン。 <br/><br/>**注:** このプロパティを指定`UID`すると`Trusted_Connection`、、、、また`PWD`は接続文字列`Authentication`キーワード、またはそれに対応する properties/キーワードを指定するとエラーになります。|
-|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|型 : VT_BSTR<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明: 使用する SQL 認証または Active Directory 認証を指定します。 有効な値は、<br/><ul><li>`(not set)`: 他のキーワードによって決定される認証モード。</li><li>`(empty string)`: 以前に設定した認証モードを解除します。</li><li>`ActiveDirectoryPassword:`ログイン ID とパスワードを使用して認証を Active Directory します。</li><li>`ActiveDirectoryIntegrated:`現在ログインしているユーザーの Windows アカウントの資格情報を使用して Active Directory するための統合認証。</li><br/>**注:** (または`ActiveDirectoryIntegrated` `Integrated Security` `Trusted_Connection`) 認証キーワードまたは`Authentication`対応するプロパティを使用するアプリケーションでは、キーワード (またはそれに対応するプロパティ) の値をに設定して、新しいを有効にすることを**お勧め**します。暗号化と証明書の検証動作。<br/><br/><li>`SqlPassword:`ログイン ID とパスワードを使用した認証。</li><br/>**注:** 認証を使用`SQL Server`するアプリケーションでは、 `Authentication`キーワード (またはそれに対応するプロパティ) の値`SqlPassword`をに設定して、新しい暗号化と証明書の検証動作を有効にすることを**お勧め**します。</ul>|
+|SSPROP_AUTH_ACCESS_TOKEN<a href="#table1_1"><sup>**1**</sup></a>|型 : VT_BSTR<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明: Azure Active Directory に対する認証に使用されるアクセストークン。 <br/><br/>**注:** このプロパティを指定すると、`UID`、`PWD`、`Trusted_Connection`、`Authentication` 接続文字列のキーワード、またはそれらに対応する properties/keywords にも、エラーが発生します。|
+|SSPROP_AUTH_MODE<a href="#table1_1"><sup>**1**</sup></a>|型 : VT_BSTR<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明: 使用する SQL 認証または Active Directory 認証を指定します。 有効な値は、<br/><ul><li>`(not set)`: 他のキーワードによって決定される認証モード。</li><li>`(empty string)`: 解除認証モードを設定しています。</li><li>Azure Active Directory id を使用した `ActiveDirectoryPassword:`User ID とパスワード認証。</li><li>Azure Active Directory id を使用して統合認証を `ActiveDirectoryIntegrated:` します。</li><br/>**注:** @No__t_1 キーワードは、Windows 認証で SQL Server するためにも使用できます。 これは、`Integrated Security` (または `Trusted_Connection`) 認証キーワードに代わるものです。 @No__t_1 (または `Trusted_Connection`) のキーワードを使用するアプリケーションまたは対応するプロパティを使用して `Authentication` キーワード (または対応するプロパティ) の値を `ActiveDirectoryIntegrated` に設定し、新しい暗号化と証明書の検証動作を有効にすることを**お勧め**します。.<br/><br/><li>Azure Active Directory id を使用した対話型認証を `ActiveDirectoryInteractive:` します。 この方法では、Azure multi-factor authentication (MFA) がサポートされます。 </li><li>[マネージドサービス ID (MSI)](https://docs.microsoft.com/azure/active-directory/managed-identities-azure-resources/overview)認証を `ActiveDirectoryMSI:` します。 ユーザー割り当て id の場合は、ユーザー id のオブジェクト ID にユーザー ID を設定する必要があります。</li><li>ユーザー ID とパスワードを使用して認証を `SqlPassword:` します。</li><br/>**注:** @No__t_2 認証を使用するアプリケーションでは、`Authentication` キーワード (またはそれに対応するプロパティ) の値を `SqlPassword` に設定して、[新しい暗号化と証明書の検証動作](../features/using-azure-active-directory.md#encryption-and-certificate-validation)を有効にすることを**お勧め**します。</ul>|
 |SSPROP_AUTH_OLD_PASSWORD|型 : VT_BSTR<br /><br /> R/W: 書き込み<br /><br /> 既定値 : VT_EMPTY<br /><br /> 説明: 現在のパスワードまたは有効期限が切れたパスワードです。 詳細については、「[プログラムによるパスワードの変更](../../oledb/features/changing-passwords-programmatically.md)」を参照してください。|  
 |SSPROP_INIT_APPNAME|型 : VT_BSTR<br /><br /> R/W: 読み取り/書き込み<br /><br /> 説明: クライアント アプリケーション名です。|  
 |SSPROP_INIT_AUTOTRANSLATE|型 : VT_BOOL<br /><br /> R/W: 読み取り/書き込み<br /><br /> 既定値 : VARIANT_TRUE<br /><br /> 説明: OEM/ANSI 文字変換です。<br /><br /> VARIANT_TRUE: OLE DB Driver for SQL Server は、クライアントとサーバーの間で送信される ANSI 文字列の変換に Unicode を使用することで、クライアントとサーバーのコード ページ間で拡張文字の対応付けに生じる問題を最小限に抑えます。<br /><br /> クライアントの DBTYPE_STR データを [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **char** 型、**varchar** 型、または **text** 型の変数、パラメーター、列のインスタンスに送信する場合、クライアントの ANSI コード ページ (ACP) に基づいて文字が Unicode に変換され、その後で、サーバーの ACP に基づいて Unicode から文字に変換されます。<br /><br /> [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] の **char** 型、**varchar** 型、または **text** 型のデータをクライアントの DBTYPE_STR 変数に送信する場合は、サーバーの ACP に基づいて文字が Unicode に変換され、その後で、クライアントの ACP に基づいて Unicode から文字に変換されます。<br /><br /> これらの変換は、SQL Server 用の OLE DB ドライバーによってクライアント上で実行されます。 そのため、サーバーで使用しているものと同じ ACP がクライアントでも使用可能になっている必要があります。<br /><br /> 次の設定は、送受信時の変換に影響しません。<br /><br /> サーバーの **char** 型、**varchar** 型、または **text** 型に送信される、Unicode の DBTYPE_WSTR クライアント データ。<br /><br /> クライアントの Unicode の DBTYPE_WSTR 変数に送信される、**char** 型、**varchar** 型、または **text** 型のサーバー データ。<br /><br /> サーバーの Unicode の **nchar** 型、**nvarchar** 型、または **ntext** 型に送信される、ANSI DBTYPE_STR クライアント データ。<br /><br /> クライアントの ANSI DBTYPE_STR 変数に送信される、Unicode の **char** 型、**varchar** 型、または **text** 型のサーバー データ。<br /><br /> VARIANT_FALSE: SQL Server の OLE DB ドライバーは、文字の変換を実行しません。<br /><br /> OLE DB Driver for SQL Server では、サーバーの **char** 型、**varchar** 型、または **text** 型の変数、パラメーター、列のいずれかに送信される、クライアントの ANSI 文字の DBTYPE_STR データは変換されません。 また、サーバーからクライアントの DBTYPE_STR 変数に送信される、**char** 型、**varchar** 型、**text** 型のデータも変換されません。<br /><br /> クライアントと [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インスタンスが使用する ACP が異なる場合、拡張文字の解釈が正しく行われない場合があります。|  

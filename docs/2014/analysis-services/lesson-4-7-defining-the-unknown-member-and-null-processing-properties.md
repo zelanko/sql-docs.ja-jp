@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: d0d97b7fea9557e1ce462fcc540e51a1ee4b0228
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "69493922"
 ---
 # <a name="defining-the-unknown-member-and-null-processing-properties"></a>不明なメンバーと NULL 処理のプロパティの定義
@@ -24,7 +24,7 @@ ms.locfileid: "69493922"
   
  ただし、このチュートリアルで Product ディメンションに対して行っているようにスノーフレーク ディメンションを段階的に構築する場合、またはディメンション デザイナーを使用してディメンションを定義してこれらの既存のディメンションをキューブに組み込む場合は、 **UnknownMember** プロパティおよび **NullProcessing** プロパティを手動で設定する必要があります。  
   
- このトピックの実習では、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW のデータ ソース ビューに追加するスノーフレーク テーブルから、製品カテゴリおよび製品サブカテゴリの属性を取得し、それらの属性を Product ディメンションに追加します。 次に、product ディメンションの**UnknownMember**プロパティを有効にし、 `Assembly Components` `Subcategory` **UnknownMemberName**プロパティの値としてを指定し、 `Category`属性と属性を product name 属性に関連付けます。次に、スノーフレークテーブルをリンクするメンバーキー属性のカスタムエラー処理を定義します。  
+ このトピックの実習では、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW のデータ ソース ビューに追加するスノーフレーク テーブルから、製品カテゴリおよび製品サブカテゴリの属性を取得し、それらの属性を Product ディメンションに追加します。 次に、Product ディメンションの**UnknownMember**プロパティを有効にし、 **UnknownMemberName**プロパティの値として `Assembly Components` を指定し、`Subcategory` と `Category` 属性を product name 属性に関連付けて、カスタムを定義します。スノーフレークテーブルをリンクするメンバーキー属性のエラー処理。  
   
 > [!NOTE]  
 >  キューブ ウィザードを使用して [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブを最初に定義したときに Subcategory 属性と Category 属性を追加していれば、これらの手順は自動的に実行されます。  
@@ -49,9 +49,9 @@ ms.locfileid: "69493922"
   
      次の図は、 **ErrorConfiguration** プロパティ コレクションのプロパティ設定を示しています。  
   
-     ![Errorconfiguration プロパティコレクション](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "Errorconfiguration プロパティコレクション")  
+     ![ErrorConfiguration プロパティコレクション](../../2014/tutorials/media/l4-productdimensionerrorconfig-1.gif "ErrorConfiguration プロパティコレクション")  
   
-5.  [**ブラウザー** ] タブをクリックし、[**階層**] ボックスの一覧で [ **Product Model Lines** ] `All Products`が選択されていることを確認して、を展開します。  
+5.  **[ブラウザー]** タブをクリックし、 **[階層]** ボックスの一覧で **[Product Model Lines]** が選択されていることを確認し、[`All Products`] を展開します。  
   
      Product Line レベルには 5 つのメンバーが存在します。  
   
@@ -75,7 +75,7 @@ ms.locfileid: "69493922"
   
      **[含まれているオブジェクト]** の一覧に **DimProductCategory (dbo)** テーブルが追加されます。  
   
-4.  [**OK**] をクリックします。  
+4.  **[OK]** をクリックします。  
   
 5.  **の** [書式] [!INCLUDE[ssBIDevStudio](../includes/ssbidevstudio-md.md)]メニューで **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
@@ -87,23 +87,23 @@ ms.locfileid: "69493922"
   
 8.  **[データ ソース ビュー]** ペインで、 **DimProductCategory** テーブルを探します。次に、このテーブルの **ProductCategoryKey** を右クリックし、 **[列から新しい属性を作成]** をクリックします。  
   
-9. [**属性**] ペインで、この新しい属性の名前をに`Category`変更します。  
+9. **[属性]** ペインで、この新しい属性の名前を `Category` に変更します。  
   
-10. プロパティウィンドウで、[ **NameColumn** ] プロパティフィールドをクリックし、参照ボタン ([.**..**]) をクリックして、[**名前列**] ダイアログボックスを開きます。  
+10. プロパティウィンドウで、 **[NameColumn]** プロパティフィールドをクリックし、参照ボタン (. **[..]** ) をクリックして、 **[名前列]** ダイアログボックスを開きます。  
   
 11. **[基になる列]** ボックスの一覧で **[EnglishProductCategoryName]** を選択し、 **[OK]** をクリックします。  
   
 12. **[データ ソース ビュー]** ペインで、 **DimProductSubcategory** テーブルを探します。このテーブルの **ProductSubcategoryKey** を右クリックし、 **[列から新しい属性を作成]** をクリックします。  
   
-13. [**属性**] ペインで、この新しい属性の名前をに`Subcategory`変更します。  
+13. **[属性]** ペインで、この新しい属性の名前を `Subcategory` に変更します。  
   
-14. プロパティウィンドウで、[ **NameColumn** ] プロパティフィールドをクリックし、参照ボタン ([. **..])** をクリックして、[**名前列**] ダイアログボックスを開きます。  
+14. プロパティウィンドウで、 **[NameColumn]** プロパティフィールドをクリックし、参照ボタン ([. **..])** をクリックして、 **[名前列]** ダイアログボックスを開きます。  
   
 15. **[基になる列]** ボックスの一覧で **[EnglishProductSubcategoryName]** を選択し、 **[OK]** をクリックします。  
   
-16. **Product Categories**という名前の新しいユーザー定義階層を作成します。次のレベルは、上から`Category`下`Subcategory`に、、、および**製品名**の順に並べ替えられています。  
+16. **Product Categories**という名前の新しいユーザー定義階層を作成します。次のレベルは、上から下に、`Category`、`Subcategory`、および**製品名**の順に並べ替えます。  
   
-17. Product `All Products` Categories ユーザー定義階層の**allmembername**プロパティの値としてを指定します。  
+17. Product Categories ユーザー定義階層の**Allmembername**プロパティの値として、`All Products` を指定します。  
   
 ## <a name="browsing-the-user-defined-hierarchies-in-the-product-dimension"></a>Product ディメンションのユーザー定義階層の表示  
   
@@ -123,27 +123,27 @@ ms.locfileid: "69493922"
   
 6.  **Product** ディメンションのディメンション デザイナーで、 **[ブラウザー]** タブをクリックします。次に、 **[再接続]** をクリックします。  
   
-7.  [**階層** `All Products`] ボックスの一覧で [ **Product Model Lines** ] が表示されていることを確認し、[]、[ **Components**] の順に展開します。  
+7.  **[階層]** ボックスの一覧に **[Product Model Lines]** が表示されていることを確認し、[`All Products`]、 **[コンポーネント]** の順に展開します。  
   
-8.  [**階層** `All Products`] の一覧で [**製品カテゴリ**] を選択し、[]、[**コンポーネント**] の順に展開します。  
+8.  **[階層]** ボックスの一覧で **[製品カテゴリ]** を選択し、[`All Products`]、 **[コンポーネント]** の順に展開します。  
   
      アセンブリ部品は何も表示されません。  
   
- 前のタスクで説明されている動作を変更するには、Products ディメンションの**UnknownMember**プロパティを有効にし、 **UnknownMemberName**プロパティの値を設定して、 `Subcategory`およびの**nullprocessing**プロパティを設定します。**モデル名**属性を**UnknownMember**に設定し`Category` 、属性を`Subcategory`属性の関連属性として定義します。次に、**製品ライン**属性を**モデル名**の関連属性として定義します。属性. 以上の操作により、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、 **SubcategoryKey** 列に値を持たないそれぞれの製品について、不明なメンバーの名前の値が使用されるようになります。次の実習でそれを確認します。  
+ 前のタスクで説明した動作を変更するには、Products ディメンションの**UnknownMember**プロパティを有効にし、 **UnknownMemberName**プロパティの値を設定して、`Subcategory` の**nullprocessing**プロパティを設定し**ます。モデル名**属性を**UnknownMember**に設定し、`Category` 属性を `Subcategory` 属性の関連属性として定義します。次に、 **Product Line**属性を**Model Name**属性の関連属性として定義します。 以上の操作により、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] では、 **SubcategoryKey** 列に値を持たないそれぞれの製品について、不明なメンバーの名前の値が使用されるようになります。次の実習でそれを確認します。  
   
 ## <a name="enabling-the-unknown-member-defining-attribute-relationships-and-specifying-custom-processing-properties-for-nulls"></a>不明なメンバーの有効化、属性リレーションシップの定義、および NULL のカスタム処理プロパティの指定  
   
 1.  **Product** ディメンションのディメンション デザイナーで **[ディメンション構造]** タブをクリックし、 **[属性]** ペインで **[Product]** をクリックします。  
   
-2.  [**プロパティ**] ウィンドウで、 **UnknownMember**プロパティを**Visible**に変更し、 **UnknownMemberName**プロパティの値をに`Assembly Components`変更します。  
+2.  **[プロパティ]** ウィンドウで、 **UnknownMember**プロパティを**Visible**に変更し、 **UnknownMemberName**プロパティの値を `Assembly Components` に変更します。  
   
      **UnknownMember** プロパティを **Visible** または **Hidden** に変更すると、ディメンションの **[UnknownMember]** プロパティが有効になります。  
   
 3.  **[属性リレーションシップ]** タブをクリックします。  
   
-4.  ダイアグラムで`Subcategory`属性を右クリックし、[**新しい属性リレーションシップ**] をクリックします。  
+4.  ダイアグラムで、[`Subcategory`] 属性を右クリックし、 **[新しい属性リレーションシップ]** をクリックします。  
   
-5.  [**属性リレーションシップの作成**] ダイアログボックスで、[基`Subcategory`になる**属性**] を選択します。 **関連属性**をに`Category`設定します。 リレーションシップの種類の設定は **[可変]** のままにします。  
+5.  **属性リレーションシップの作成** ダイアログボックスで、基になる**属性** に `Subcategory` ます。 **関連属性**`Category` に設定します。 リレーションシップの種類の設定は **[可変]** のままにします。  
   
 6.  [!INCLUDE[clickOK](../includes/clickok-md.md)]  
   
@@ -159,7 +159,7 @@ ms.locfileid: "69493922"
   
 12. **NullProcessing** プロパティを **UnknownMember**に変更します。  
   
-     これらの変更により、 [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)]が処理中に`Subcategory`属性または**モデル名**属性に対して null 値を検出した場合、不明なメンバー値はキー値として置き換えられ、ユーザー定義階層は次のようになります。正しく構築されています。  
+     これらの変更により、[!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] が `Subcategory` 属性または**モデル名**属性に対して処理中に null 値を検出した場合、不明なメンバーの値はキー値として置き換えられ、ユーザー定義階層が構築されます。なく.  
   
 ## <a name="browsing-the-product-dimension-again"></a>Product ディメンションの再表示  
   
@@ -167,17 +167,17 @@ ms.locfileid: "69493922"
   
 2.  配置が正常に完了したら、 **Product** ディメンションのディメンション デザイナーで **[ブラウザー]** タブをクリックし、 **[再接続]** をクリックします。  
   
-3.  [**階層**] ボックスの一覧で [**製品カテゴリ**] が選択さ`All Products`れていることを確認し、を展開します。  
+3.  **[階層]** ボックスの一覧で **[製品カテゴリ]** が選択されていることを確認し、[`All Products`] を展開します。  
   
      Category レベルの新しいメンバーとして Assembly Components が表示されています。  
   
-4.  レベルのメンバーを展開し`Subcategory` 、レベルのメンバーを展開します。`Assembly Components` `Assembly Components` `Category`  
+4.  @No__t_1 レベルの `Assembly Components` メンバーを展開し、`Subcategory` レベルの `Assembly Components` メンバーを展開します。  
   
      次の図のように、 **Product Name** レベルにアセンブリ部品が表示されるようになりました。  
   
      ![アセンブリコンポーネントを示す製品名のレベル](../../2014/tutorials/media/l4-assemblycomponents-1.gif "アセンブリコンポーネントを示す製品名のレベル")  
   
 ## <a name="next-lesson"></a>次のレッスン  
- [レッスン 5: ディメンションとメジャーグループ間のリレーションシップの定義](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
+ [レッスン 5: ディメンションとメジャーグループ間のリレーションシップの定義 ](lesson-5-defining-relationships-between-dimensions-and-measure-groups.md)  
   
   

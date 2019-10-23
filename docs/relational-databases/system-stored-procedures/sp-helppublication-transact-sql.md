@@ -27,7 +27,7 @@ ms.locfileid: "72689046"
 
   パブリケーションに関する情報を返します。 @No__t_0 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] パブリケーションの場合、このストアドプロシージャはパブリッシャー側でパブリケーションデータベースに対して実行されます。 Oracle パブリケーションの場合、このストアド プロシージャは、任意のデータベース上のディストリビューター側で実行されます。  
   
- ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピックリンクアイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
