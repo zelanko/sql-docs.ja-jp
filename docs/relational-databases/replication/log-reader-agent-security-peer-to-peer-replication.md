@@ -45,6 +45,6 @@ ms.locfileid: "68127921"
   
 ## <a name="see-also"></a>参照  
  [ピア ツー ピア トポロジの管理 &#40;レプリケーション Transact-SQL プログラミング&#41;](../../relational-databases/replication/administration/administer-a-peer-to-peer-topology-replication-transact-sql-programming.md)   
- [@loopback_detection](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [ピア ツー ピア トランザクション レプリケーション](../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   
