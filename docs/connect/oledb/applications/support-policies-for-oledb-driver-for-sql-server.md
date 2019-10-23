@@ -1,7 +1,7 @@
 ---
 title: OLE DB Driver for SQL Server のサポート ポリシー | Microsoft Docs
 description: OLE DB Driver for SQL Server のサポート ポリシー
-ms.date: 02/12/2019
+ms.date: 10/11/2019
 ms.prod: sql
 ms.prod_service: database-engine, sql-database, sql-data-warehouse, pdw
 ms.reviewer: ''
@@ -10,12 +10,12 @@ ms.technology: connectivity
 ms.topic: reference
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 1ae0e332de1d1e673cfd4fff1e288acafa4a0619
-ms.sourcegitcommit: b016c01c47bc08351d093a59448d895cc170f8c3
+ms.openlocfilehash: b02789c787266a3370e3c5c9bfae50ea337d19db
+ms.sourcegitcommit: 4c75b49599018124f05f91c1df3271d473827e4d
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/19/2019
-ms.locfileid: "71118143"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72381859"
 ---
 # <a name="support-policies-for-ole-db-driver-for-sql-server"></a>OLE DB Driver for SQL Server のサポート ポリシー
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -25,7 +25,7 @@ ms.locfileid: "71118143"
   この記事では、さまざまなデータアクセスコンポーネントを OLE DB Driver for SQL Server と共に使用する方法について説明します。  
 
 ## <a name="server-support"></a>サーバー サポート  
- OLE DB Driver for SQL Server は[!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] [!INCLUDE[ssSQL15](../../../includes/sssql15-md.md)]、 [!INCLUDE[ssSQL14](../../../includes/sssql14-md.md)] [!INCLUDE[ssSQL17](../../../includes/sssql17-md.md)]、、、、および[!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)]への接続をサポートしています。
+ OLE DB Driver for SQL Server では、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)]、および [!INCLUDE[ssSDSfull](../../../includes/sssdsfull-md.md)] を介した [!INCLUDE[ssSQL11](../../../includes/sssql11-md.md)] への接続がサポートされています。
 
 ## <a name="supported-operating-system-versions"></a>サポートされるオペレーティング システムのバージョン  
  次の表に、SQL Server 用の OLE DB ドライバーをサポートしているオペレーティングシステムを示します。  
@@ -38,7 +38,7 @@ ms.locfileid: "71118143"
 ## <a name="ado-support-policies"></a>ADO サポート ポリシー  
  ADO アプリケーションでは、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] 以降の機能を必要としない場合に、Windows に付属している SQLOLEDB OLE DB プロバイダーを使用できます。  
 
- ADO アプリケーションでは、SQL Server に OLE DB ドライバーを使用できますが、その場合は`DataTypeCompatibility=80`接続文字列でを指定する必要があります。 `DataTypeCompatibility=80` が接続文字列に含まれている場合は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の機能しか使用できません。  
+ ADO アプリケーションでは、SQL Server に OLE DB ドライバーを使用できますが、その場合は接続文字列に `DataTypeCompatibility=80` を指定する必要があります。 `DataTypeCompatibility=80` が接続文字列に含まれている場合は、[!INCLUDE[ssVersion2005](../../../includes/ssversion2005-md.md)] の機能しか使用できません。  
 
 ## <a name="ole-db-support-policies"></a>OLE DB サポート ポリシー  
 アプリケーションは Windows オペレーティング システムに付属している OLE DB プロバイダー (SQLOLEDB) を使用することができます。 ただし、これはメンテナンスモードであり、更新されていません。 代わりに、OLE DB Driver for SQL Server (MSOLEDBSQL) を使用してください。

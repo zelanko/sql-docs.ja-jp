@@ -8,12 +8,12 @@ ms.technology: connectivity
 ms.topic: conceptual
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: c0fcc2172cca192c8c7580450ab50b4416f9ec2d
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: a0eb869cf19f128515951421efddc229aa785cdd
+ms.sourcegitcommit: 9c993112842dfffe7176decd79a885dbb192a927
 ms.translationtype: MTE75
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154184"
+ms.lasthandoff: 10/16/2019
+ms.locfileid: "72451837"
 ---
 # <a name="driver-history-for-microsoft-sql-server"></a>Microsoft SQL Server のドライバー履歴
 
@@ -39,7 +39,7 @@ SQL Server 向けの Microsoft OLE DB プロバイダーには 3 つの世代が
 
 ## <a name="adonet"></a>ADO.NET
 
-ADO.NET は Microsoft .NET Framework で導入されたものであり、引き続き改善され、維持されます。 これは、Microsoft .NET Framework の中核となるコンポーネントです。 詳細については、「 [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-for-sql-server.md)」を参照してください。
+ADO.NET は Microsoft .NET Framework で導入されたものであり、引き続き改善され、維持されます。 これは、Microsoft .NET Framework の中核となるコンポーネントです。 詳細については、「 [Microsoft ADO.NET for SQL Server](ado-net/microsoft-ado-net-sql-server.md)」を参照してください。
 
 ## <a name="jdbc"></a>JDBC
 
@@ -71,9 +71,9 @@ Microsoft/Windows Data Access Components (MDAC/WDAC) は、アプリケーショ
 
 このドキュメントでは、テクノロジと製品に基づいて、MDAC/WDAC スタックを次のコンポーネントに分割できます。
 
-* **ADO**(ADOMD と ADOX を含む)
-* **OLE DB**(OLE DB コアサービス、SQL Server OLE DB プロバイダー、Oracle OLE DB プロバイダー、OLE DB Provider for ODBC Drivers、Data Shape Provider、および Remote Data Provider を含む)
-* **ODBC**(ODBC ドライバーマネージャー、SQL ODBC ドライバー、Oracle ODBC ドライバーなど)
+* **ADO** (ADOMD および ADOX を含む)
+* **OLE DB** (OLE DB コアサービス、SQL Server OLE DB プロバイダー、Oracle OLE DB プロバイダー、ODBC ドライバーの OLE DB プロバイダー、データシェイププロバイダー、およびリモート Data Provider を含む)
+* **Odbc** (Odbc ドライバーマネージャー、SQL odbc ドライバー、および Oracle odbc ドライバーを含む)
 
 ### <a name="mdacwdac-components"></a>MDAC/WDAC コンポーネント
 
@@ -108,7 +108,7 @@ MDAC/WDAC には、次のコンポーネントが含まれています。
 * **MSDADS:** Microsoft OLE DB Provider for Data 整形 (MSDADS) を使用すると、アプリケーション内のキー、フィールド、または行セットの間に階層リレーションシップを作成できます。 MDAC 2.1 以降、機能に関する主な機能強化は行われていません。 このプロバイダーは非推奨とされます。 Microsoft では、MSDADS の代わりに XML を使用することをお勧めします。
 * **ORACLE ODBC および oracle OLE DB:** Microsoft Oracle ODBC Driver (Oracle ODBC) および Microsoft OLE DB Provider for Oracle (Oracle OLE DB) を使用すると、Oracle データベースサーバーにアクセスできます。 これらは、Oracle Call Interface (OCI) バージョン7を使用して構築され、Oracle 7 の完全なサポートを提供します。 また、oracle 7 エミュレーションを使用して、Oracle 8 データベースの制限付きサポートを提供しています。 Oracle では、OCI バージョン7の呼び出しを使用するアプリケーションはサポートされなくなりました。 これらのテクノロジは非推奨とされます。 Oracle データソースを使用している場合は、Oracle によって提供されるドライバーおよびプロバイダーに移行する必要があります。
 * **RDS:** リモート データ サービス (RDS) は、インターネットまたはイントラネットの間でリモートの ADO レコード セット オブジェクトにアクセスするための独自の Microsoft メカニズムです。 RDS は非推奨とされます。MDAC 2.1 以降、RDS には、機能に関する主な機能強化は加えられていません。 Microsoft は、広範な SOAP 機能を備え、RDS コンポーネントを置き換える .NET Framework をリリースしました。 すべての RDS サーバーコンポーネントは、Windows 7 以降のオペレーティングシステムから削除されます。
-* **JRO:** Jet レプリケーションオブジェクト (JRO) は非推奨とされます。 JRO は、jet データベース (.mdb)*を作成および圧縮し、jet レプリケーション管理を実行するために、jet (.mdb) データベースで ADO 内で使用されます。MDAC 2.7 は、最新のリリースになります。64ビットの Windows オペレーティングシステムでは、JRO は使用できません。Microsoft access 2007 ファイル形式 (* .accdb) では、JRO はサポートされていません。
+* **JRO:** Jet レプリケーションオブジェクト (JRO) は非推奨とされます。 JRO は、jet データベース (.mdb) を作成および圧縮し、jet レプリケーション管理を実行するために、Jet ( *.mdb) データベースと共に ADO 内で使用されます。MDAC 2.7 は、最新のリリースになります。64ビットの Windows オペレーティングシステムでは、JRO は使用できません。Microsoft Access 2007 ファイル形式 (* .accdb) では、JRO はサポートされていません。
 * **16 ビット ODBC のサポート:** 16ビットアプリケーションを使用している場合は、32ビットアプリケーションに移行する必要があります。 16ビットの機能は非推奨となり、64ビットのオペレーティングシステムから削除されます。 詳細については、[サポート技術情報の記事 896458](https://support.microsoft.com/kb/896458) を参照してください。
 * **OLEDB Simple Provider (MSDAOSP):** OLEDB Simple Provider は、単純なデータを介して OLE DB プロバイダーをすばやく構築するためのフレームワークを提供します。 MSDAOSP は非推奨とされます。
 * **ODBC カーソルライブラリ:** ODBC Cursor Library (ODBCCR32) では、クライアント側のデータカーソルが制限されています。 ODBC カーソルライブラリの使用は非推奨とされました。アプリケーションでは、代替としてサーバー側のカーソル実装を使用できます。
