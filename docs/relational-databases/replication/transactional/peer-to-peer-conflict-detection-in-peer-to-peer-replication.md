@@ -91,7 +91,7 @@ ms.locfileid: "68041091"
   
     2.  ディストリビューション エージェントを再起動します。  
   
-    3.  競合表示モジュールを使用して検出された競合を確認し、関係する行、競合の種類、および優先されたデータを特定します。 競合は、構成時に指定した発信元 ID 値に基づいて解決されます。つまり、最も ID の大きいノードの行が競合で優先されます。 詳細については、「[トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」 を参照してください。  
+    3.  競合表示モジュールを使用して検出された競合を確認し、関係する行、競合の種類、および優先されたデータを特定します。 競合は、構成時に指定した発信元 ID 値に基づいて解決されます。つまり、最も ID の大きいノードの行が競合で優先されます。 詳細については、「[View Data Conflicts for Transactional Publications &#40;SQL Server Management Studio&#41;](../../../relational-databases/replication/view-data-conflicts-for-transactional-publications-sql-server-management-studio.md)」 (トランザクション パブリケーションのデータの競合の表示 &#40;SQL Server Management Studio&#41;) を参照してください。  
   
     4.  検証を実行して、競合する行が正しく収束したことを確認します。 詳細については、「[レプリケートされたデータの検証](../../../relational-databases/replication/validate-data-at-the-subscriber.md)」 を参照してください。  
   
@@ -101,6 +101,6 @@ ms.locfileid: "68041091"
     5.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、@value パラメーターに **false** を指定します。  
   
 ## <a name="see-also"></a>参照  
- [ピア ツー ピア トランザクション レプリケーション](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   
