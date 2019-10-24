@@ -12,17 +12,17 @@ ms.assetid: 5f6fee72-01bf-4f6c-85d2-7863c46c136b
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: 5f7b7b6e12e6905492a1ea7d48a75ebc6be0e689
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: e37dcf69a09d92236e0b8f4f97cb99541f1c7532
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "66101038"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783253"
 ---
 # <a name="change-the-default-reporting-services-delivery-extension"></a>Reporting Services の既定の配信拡張機能を変更する
   サブスクリプション定義ページの [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] [配信者] **リストに表示される既定の配信拡張機能は** の構成設定で変更できます。 たとえば、ユーザーが新しいサブスクリプションを作成したときに電子メール配信ではなくファイル共有配信が既定で選択されるように構成を変更することができます。 また、ユーザー インターフェイスにおける配信拡張機能の表示順を変更することもできます。  
   
- **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] ネイティブ モード | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint モード  
+ **[!INCLUDE[applies](../../includes/applies-md.md)]**  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] Native mode | [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] SharePoint mode  
   
  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] には、電子メールの配信拡張機能と Windows ファイル共有の配信拡張機能があります。 カスタム配信をサポートするため、独自の拡張機能またはサード パーティの拡張機能を配置している場合は、これら以外の配信拡張機能もレポート サーバーに含まれている可能性があります。 配信拡張機能を使用できるかどうかは、配信拡張機能がレポート サーバーに配置されているかどうかによって決まります。  
   
@@ -33,7 +33,7 @@ ms.locfileid: "66101038"
   
  以下に示すコードは、 **RSReportServer.config** の既定のセクションです。既定の配信拡張機能とレポート マネージャーにおける表示順がこのセクションで制御されます。 このファイルで電子メールが先に記述され、なおかつ既定として設定されていることに注目してください。  
   
-```  
+```xml
 <DeliveryUI>  
      <Extension Name="Report Server Email" Type="Microsoft.ReportingServices.EmailDeliveryProvider.EmailDeliveryProviderControl,ReportingServicesEmailDeliveryProvider">  
           <DefaultDeliveryExtension>True</DefaultDeliveryExtension>  
@@ -53,7 +53,7 @@ ms.locfileid: "66101038"
   
      テキスト エディターで RSReportServer.config ファイルを開きます。 構成ファイルの詳細については、「 [RSReportServer Configuration File](../report-server/rsreportserver-config-configuration-file.md)」を参照してください。 以下の画像は、構成変更後の UI を示しています。  
   
-     ![配信拡張機能の変更した一覧](../media/ssrs-modified-delivery.png "配信拡張機能の変更した一覧")  
+     ![配信拡張機能の変更された一覧](../media/ssrs-modified-delivery.png "配信拡張機能の変更された一覧")  
   
 2.  DeliveryUI セクションを以下の例のように変更します。主な変更点は次のとおりです。  
   
@@ -87,7 +87,7 @@ ms.locfileid: "66101038"
   
      **イベント ID:** 109  
   
-     **ソース:** レポート サーバー Windows サービス (インスタンス名)  
+     **ソース:** Report Server Windows Service (インスタンス名)  
   
      RSReportServer.config ファイルが変更されました。  
   
@@ -100,22 +100,20 @@ ms.locfileid: "66101038"
   
 2.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーションの名前が既にわかっている場合、この手順は省略してかまいません。 次の PowerShell コマンドを使用して、SharePoint ファーム内の [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーションを一覧表示します。  
   
-    ```  
-    get-sprsserviceapplication | format-list *  
+    ```powershell
+    Get-SPRSServiceApplication | Format-List *  
     ```  
   
 3.  [!INCLUDE[ssRSnoversion](../../../includes/ssrsnoversion-md.md)] サービス アプリケーション "ssrsapp" に使用されている現在の既定の配信拡張機能を次の PowerShell コードで確認します。  
   
+    ```powershell
+    $app = Get-SPRSServiceApplication | Where {$_.name -Like "ssrsapp*"};
+    Get-SPRSExtension -Identity $app | Where {$_.ServerDirectivesXML -Like "<DefaultDelivery*"} | Format-List *
     ```  
-    $app=get-sprsserviceapplication | where {$_.name -like "ssrsapp*"};Get-SPRSExtension -identity $app | where{$_.ServerDirectivesXML -like "<DefaultDelivery*"} | format-list *  
   
-    ```  
-  
-## <a name="see-also"></a>参照  
- [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
- [RSReportServer 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
+## <a name="see-also"></a>「  
+ [Rsreportserver 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
+ [Rsreportserver 構成ファイル](../report-server/rsreportserver-config-configuration-file.md)   
  [Reporting Services でのファイル共有の配信](file-share-delivery-in-reporting-services.md)   
  [Reporting Services の電子メール配信](e-mail-delivery-in-reporting-services.md)   
- [レポート サーバー電子メール配信用に構成&#40;SSRS 構成マネージャー&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
-  
-  
+ [電子メール配信&#40;SSRS 用にレポートサーバーを構成する Configuration Manager&#41;](../../sql-server/install/configure-a-report-server-for-e-mail-delivery-ssrs-configuration-manager.md)  
