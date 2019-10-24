@@ -15,12 +15,12 @@ ms.assetid: 419f655d-3f9a-4e7d-90b9-f0bab47b3178
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 386e07bd1be4eaac4c75541665fc6951e2a24fd3
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: c81f5b22aa61dce596896ccd90bfb1d56054742d
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62789343"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782971"
 ---
 # <a name="perform-a-planned-manual-failover-of-an-availability-group-sql-server"></a>可用性グループの計画的な手動フェールオーバーの実行 (SQL Server)
   このトピックでは、[!INCLUDE[ssCurrent](../../../includes/sscurrent-md.md)] の [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、[!INCLUDE[tsql](../../../includes/tsql-md.md)]、または PowerShell を使用して、AlwaysOn 可用性グループ上でデータを失わずに手動フェールオーバー (*計画的な手動フェールオーバー*) を実行する方法について説明します。 可用性グループは、可用性レプリカのレベルでフェールオーバーします。 [!INCLUDE[ssHADR](../../../includes/sshadr-md.md)] フェールオーバーのような計画的な手動フェールオーバーでは、セカンダリ レプリカはプライマリ ロールに移行し、同時に、それまでのプライマリ レプリカはセカンダリ ロールに移行します。  
@@ -53,9 +53,9 @@ ms.locfileid: "62789343"
   
 -   このタスクは、ターゲット セカンダリ レプリカ上でのみサポートされます。 ターゲット セカンダリ レプリカをホストするサーバー インスタンスに接続されている必要があります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  可用性グループの ALTER AVAILABILITY GROUP 権限、CONTROL AVAILABILITY GROUP 権限、ALTER ANY AVAILABILITY GROUP 権限、または CONTROL SERVER 権限が必要です。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
@@ -82,7 +82,7 @@ ms.locfileid: "62789343"
   
      次の例では、接続されているセカンダリ レプリカに *MyAg* 可用性グループを手動でフェールオーバーします。  
   
-    ```  
+    ```sql
     ALTER AVAILABILITY GROUP MyAg FAILOVER;  
     ```  
   
@@ -98,7 +98,7 @@ ms.locfileid: "62789343"
   
      次の例では、指定したパスのセカンダリ レプリカに *MyAg* 可用性グループを手動でフェールオーバーします。  
   
-    ```  
+    ```powershell
     Switch-SqlAvailabilityGroup -Path SQLSERVER:\Sql\SecondaryServer\InstanceName\AvailabilityGroups\MyAg  
     ```  
   
@@ -106,14 +106,12 @@ ms.locfileid: "62789343"
   
 -   [SQL Server PowerShell プロバイダー](../../../powershell/sql-server-powershell-provider.md)  
   
--   [Get Help SQL Server PowerShell](../../../powershell/sql-server-powershell.md)  
+-   [SQL Server PowerShell のヘルプの参照](../../../powershell/sql-server-powershell.md)  
   
-##  <a name="FollowUp"></a>補足情報: 可用性グループを手動でフェールオーバーした後  
- 可用性グループの [!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)] の外側でフェールオーバーした場合、WSFC ノードのクォーラム投票を調整して新しい可用性グループの構成を反映します。 詳細については、「[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)」を参照してください。  
+##  <a name="FollowUp"></a> 補足情報: 可用性グループの手動フェールオーバー後  
+ 可用性グループの[!INCLUDE[ssFosAuto](../../../includes/ssfosauto-md.md)]の外側でフェールオーバーした場合、WSFC ノードのクォーラム投票を調整して新しい可用性グループの構成を反映します。 詳細については、「[Windows Server フェールオーバー クラスタリング &#40;WSFC&#41; と SQL Server](../../../sql-server/failover-clusters/windows/windows-server-failover-clustering-wsfc-with-sql-server.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [AlwaysOn 可用性グループの概要&#40;SQL Server&#41;](overview-of-always-on-availability-groups-sql-server.md)   
- [フェールオーバーとフェールオーバー モード&#40;AlwaysOn 可用性グループ&#41;](failover-and-failover-modes-always-on-availability-groups.md)   
+## <a name="see-also"></a>「  
+ [AlwaysOn 可用性グループ&#40;SQL Server&#41;の概要](overview-of-always-on-availability-groups-sql-server.md)   
+ [フェールオーバーとフェール&#40;オーバー&#41;モード AlwaysOn 可用性グループ](failover-and-failover-modes-always-on-availability-groups.md)   
  [可用性グループの強制手動フェールオーバーの実行 &#40;SQL Server&#41;](perform-a-forced-manual-failover-of-an-availability-group-sql-server.md)  
-  
-  

@@ -17,21 +17,21 @@ ms.assetid: 726ffcc2-9221-424a-8477-99e3f85f03bd
 author: stevestein
 ms.author: sstein
 manager: craigg
-ms.openlocfilehash: a5560379c07e3f6a5ff21ca2db19dbe0e8a420a1
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 56655f7d75635668d266b44853fc29969fd741ed
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62917916"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72782669"
 ---
 # <a name="validate-a-dac-package"></a>DAC パッケージの検証
   DAC パッケージを運用環境に配置する前にパッケージの内容を確認し、既存の DAC をアップグレードする前にアップグレード処理を検証するようにしてください。 これは、特に、外部で開発されたパッケージを配置する場合に当てはまります。  
   
-1.  **作業を開始する準備:** [前提条件](#Prerequisites)  
+1.  **Before you begin:**  [Prerequisites](#Prerequisites)  
   
-2.  **DAC のアップグレード:** [DAC の内容の表示](#ViewDACContents)、[データベースの変更の表示](#ViewDBChanges)、[アップグレード処理の表示](#ViewUpgradeActions)、[Compare DACs](#CompareDACs)  
+2.  **DAC のアップグレード:**  [DAC の内容の表示](#ViewDACContents)、 [データベースの変更の表示](#ViewDBChanges)、 [アップグレード処理の表示](#ViewUpgradeActions)、 [Compare DACs](#CompareDACs)  
   
-##  <a name="Prerequisites"></a> 前提条件  
+##  <a name="Prerequisites"></a> Prerequisites  
  ソースが不明または信頼されていない DAC パッケージは配置しないことをお勧めします。 こうした DAC には、意図しない [!INCLUDE[tsql](../../includes/tsql-md.md)] コードを実行したり、スキーマを変更してエラーを発生させるような、悪意のあるコードが含まれている可能性があります。 DAC のソースが不明または信頼されていない場合は、使用する前に、[!INCLUDE[ssDE](../../includes/ssde-md.md)]の隔離されたテスト インスタンスに DAC を配置し、データベースに対して [DBCC CHECKDB &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-checkdb-transact-sql) を実行してください。また、ストアド プロシージャやその他のユーザー定義コードなど、データベースのコードを確認してください。  
   
 ##  <a name="ViewDACContents"></a> DAC の内容の表示  
@@ -74,7 +74,7 @@ ms.locfileid: "62917916"
   
 4.  ウィザードの使用方法については、「 [データ層アプリケーションのアップグレード](upgrade-a-data-tier-application.md)」を参照してください。  
   
- **PowerShell の使用によるデータベースの変更の表示**  
+### <a name="view-database-changes-by-using-powershell"></a>PowerShell の使用によるデータベースの変更の表示
   
 1.  SMO サーバー オブジェクトを作成し、表示する DAC を含んだインスタンスに設定します。  
   
@@ -84,15 +84,14 @@ ms.locfileid: "62917916"
   
 4.  `GetDatabaseChanges()` メソッドを使用して `ChangeResults` オブジェクトを取得し、そのオブジェクトをテキスト ファイルにパイプして、新しいオブジェクト、削除したオブジェクト、および変更したオブジェクトを含む簡単なレポートを生成します。  
   
-### <a name="view-database-changes-example-powershell"></a>データベースの変更の表示の例 (PowerShell)  
- **データベースの変更の表示の例 (PowerShell)**  
+### <a name="view-database-changes-example-powershell"></a>データベースの変更の表示の例 (PowerShell)
   
  次の例は、MyApplicaiton という名前の配置された DAC で行われた、データベースのすべての変更のレポートを生成します。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -133,15 +132,14 @@ $dacChanges = $dacstore.GetDatabaseChanges($dacName) | Out-File -Filepath C:\DAC
   
 6.  DAC パッケージ ファイルの読み取りに使用するファイル ストリームを閉じます。  
   
-### <a name="view-upgrade-actions-example-powershell"></a>アップグレード処理の表示の例 (PowerShell)  
- **アップグレード処理の表示の例 (PowerShell)**  
+### <a name="view-upgrade-actions-example-powershell"></a>アップグレード処理の表示の例 (PowerShell)
   
  次の例は、MyApplicaiton という名前の DAC を MyApplicationVNext.dacpac ファイルで定義されているスキーマにアップグレードするために実行される Transact-SQL ステートメントのレポートを生成します。  
   
-```  
+```powershell
 ## Set a SMO Server object to the default instance on the local computer.  
 CD SQLSERVER:\SQL\localhost\DEFAULT  
-$srv = get-item .  
+$srv = Get-Item .  
   
 ## Open a Common.ServerConnection to the same instance.  
 $serverconnection = New-Object Microsoft.SqlServer.Management.Common.ServerConnection($srv.ConnectionContext.SqlConnectionObject)  
@@ -170,9 +168,7 @@ $fileStream.Close()
   
  または、DAC を別々のフォルダーにアンパックします。 その後、WinDiff ユーティリティなどの比較ツールを使用して、相違を分析できます。  
   
-## <a name="see-also"></a>参照  
- [[データ層アプリケーション]](data-tier-applications.md)   
+## <a name="see-also"></a>「  
+ [オブジェクト エクスプローラー](data-tier-applications.md)   
  [データ層アプリケーションの配置](deploy-a-data-tier-application.md)   
  [データ層アプリケーションのアップグレード](upgrade-a-data-tier-application.md)  
-  
-  

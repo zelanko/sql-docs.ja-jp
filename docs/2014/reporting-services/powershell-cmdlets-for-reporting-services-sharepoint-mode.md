@@ -10,12 +10,12 @@ ms.assetid: 7835bc97-2827-4215-b0dd-52f692ce5e02
 author: maggiesMSFT
 ms.author: maggies
 manager: kfile
-ms.openlocfilehash: fb6a91b5ef9d97bbceafd57f5665b06336f37e94
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: 8cb603eebc75c03420300757bd09cae25fce3c52
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68891059"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783304"
 ---
 # <a name="powershell-cmdlets-for-reporting-services-sharepoint-mode"></a>Reporting Services SharePoint モードの PowerShell コマンドレット
   [!INCLUDE[ssCurrent](../includes/sscurrent-md.md)] [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint モードをインストールすると、SharePoint モードのレポート サーバーをサポートするために PowerShell コマンドレットがインストールされます。 コマンドレットは 3 つのカテゴリの機能をサポートしています。  
@@ -56,12 +56,12 @@ ms.locfileid: "68891059"
   
 ##  <a name="bkmk_cmdlet_sum"></a> コマンドレットの概要  
 
- コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)** ) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)) を使用することもできます。 次のコマンドレットの概要では、サービスアプリケーション "データベース" への参照は、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスアプリケーションによって作成および使用されるすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
+ コマンドレットを実行するには、SharePoint 管理シェルを開く必要があります。 Microsoft Windows に付属しているグラフィカル ユーザー インターフェイス エディター ( **Windows PowerShell Integrated Scripting Environment (ISE)** ) を使用することもできます。 詳細については、「 [Windows Server での Windows PowerShell の開始](https://docs.microsoft.com/powershell/scripting/getting-started/starting-windows-powershell)) を使用することもできます。 次のコマンドレットの概要では、サービスアプリケーション "データベース" への参照は、[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスアプリケーションによって作成および使用されるすべてのデータベースを参照します。 これには、構成、警告、および一時データベースが含まれます。  
 
   
  PowerShell の例を入力すると、次のようなエラー メッセージが表示されます。  
   
--   Install-SPRSService:用語 'Install-SPRSService' は、  
+-   Install-SPRSService : 用語 'Install-SPRSService' は、  
     コマンドレット、関数、スクリプト ファイル、または操作可能なプログラムの名前として認識されません。 名前が正しく記述されていることを確認し、パスが含まれている場合はそのパスが正しいことを確認してから、再試行してください。  
   
  次のいずれかの問題が発生しています。  
@@ -70,7 +70,7 @@ ms.locfileid: "68891059"
   
 -   SharePoint 管理シェルでなく、Windows PowerShell または Windows PowerShell ISE で PowerShell コマンドを実行しました。 SharePoint 管理シェルを使用するか、次のコマンドで SharePoint スナップインを Windows PowerShell ウィンドウに追加します。  
   
-    ```  
+    ```powershell
     Add-PSSnapin Microsoft.SharePoint.PowerShell  
     ```  
   
@@ -91,9 +91,9 @@ ms.locfileid: "68891059"
 ###  <a name="bkmk_sharedservice_cmdlets"></a> 共有サービスとプロキシ コマンドレット  
  次の表に、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint 共有サービス用の PowerShell コマンドレットを示します。  
   
-|コマンドレット|説明|  
+|Cmdlet|Description|  
 |------------|-----------------|  
-|Install-SPRSService|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> 1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスがファームにインストールされていること。<br /><br /> 2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスインスタンスが現在のコンピューターにインストールされていること。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br />1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスは、現在のコンピューターからアンインストールされます。<br />2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)]サービスがファームからアンインストールされます。<br /><br /> <br /><br /> 注:[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスがインストールされているファーム内に他のコンピューターが存在する場合や [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションがファーム内で引き続き実行されている場合は、警告メッセージが表示されます。|  
+|Install-SPRSService|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスをインストールして登録するか、アンインストールします。 この操作は、SharePoint モードの SQL Server [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] がインストールされているコンピューター上でのみ行うことができます。 インストールの場合は、以下の 2 つの操作が行われます。<br /><br /> 1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスがファームにインストールされています。<br /><br /> 2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスインスタンスが現在のコンピューターにインストールされています。<br /><br /> アンインストールの場合は、以下の 2 つの操作が行われます。<br />1) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスは、現在のコンピューターからアンインストールされます。<br />2) [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスはファームからアンインストールされます。<br /><br /> <br /><br /> メモ: [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスがインストールされているファーム内に他のコンピューターが存在する場合や [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションがファーム内で引き続き実行されている場合は、警告メッセージが表示されます。|  
 |Install-SPRSServiceProxy|SharePoint ファーム内で Reporting Services サービス プロキシをインストールして登録するか、アンインストールします。|  
 |Get-SPRSProxyUrl|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスにアクセスするための URL を取得します。|  
 |Get-SPRSServiceApplicationServers|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 共有サービスのインストールを含む、ローカル SharePoint ファーム内のすべてのサーバーを取得します。 このコマンドレットは、どのサーバーで共有サービスを実行していてアップグレードする必要があるかを調べる目的に適しており、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] のアップグレードに役立ちます。|  
@@ -101,10 +101,10 @@ ms.locfileid: "68891059"
 ###  <a name="bkmk_serviceapp_cmdlets"></a> サービス アプリケーションとプロキシ コマンドレット  
  次の表には、 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションとそれらに関連付けられたプロキシ用の PowerShell コマンドレットが含まれています。  
   
-|コマンドレット|説明|  
+|コマンドレット|Description|  
 |------------|-----------------|  
 |Get-SPRSServiceApplication|1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション オブジェクトを取得します。|  
-|New-SPRSServiceApplication|新しい Reporting Services サービス アプリケーションと、それに関連付けられたデータベースを作成します。<br /><br /> LogonType パラメーター:レポート サーバーが、レポート サーバー データベースへのアクセスに SSRS Application Pool アカウントと SQL Server ログインのどちらを使用するかを指定します。 次のいずれかを指定できます。<br /><br /> 0 Windows 認証<br /><br /> 1 SQL Server<br /><br /> 2 アプリケーション プール アカウント (既定)|  
+|New-SPRSServiceApplication|新しい Reporting Services サービス アプリケーションと、それに関連付けられたデータベースを作成します。<br /><br /> LogonType パラメーター: レポート サーバーが、レポート サーバー データベースへのアクセスに SSRS Application Pool アカウントと SQL Server ログインのどちらを使用するかを指定します。 次のいずれかを指定できます。<br /><br /> 0 Windows 認証<br /><br /> 1 SQL Server<br /><br /> 2 アプリケーション プール アカウント (既定)|  
 |Remove-SPRSServiceApplication|指定した Reporting Services サービス アプリケーションを削除します。 これを実行すると、関連付けられたデータベースも削除されます。|  
 |Set-SPRSServiceApplication|既存の Reporting Services サービス アプリケーションのプロパティを編集します。|  
 |New-SPRSServiceApplicationProxy|新しい Reporting Services サービス アプリケーション プロキシを作成します。|  
@@ -121,7 +121,7 @@ ms.locfileid: "68891059"
   
 ###  <a name="bkmk_ssrsfeatures_cmdlets"></a> Reporting Services カスタム機能コマンドレット  
   
-|コマンドレット|説明|  
+|Cmdlet|Description|  
 |------------|-----------------|  
 |Update-SPRSEncryptionKey|指定した Reporting Services サービス アプリケーションの暗号化キーを更新し、そのデータを再暗号化します。|  
 |Restore-SPRSEncryptionKey|以前にバックアップした、Reporting Services サービス アプリケーションの暗号化キーを復元します。|  
@@ -130,42 +130,42 @@ ms.locfileid: "68891059"
 |New-SPRSExtension|新しい拡張機能を Reporting Services サービス アプリケーションに登録します。|  
 |Set-SPRSExtension|既存の Reporting Services 拡張機能のプロパティを設定します。|  
 |Remove-SPRSExtension|Reporting Services サービス アプリケーションから拡張機能を削除します。|  
-|Get-SPRSExtension|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション用の、1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 拡張機能を取得します。<br /><br /> 有効な値は、<br /><br /> **伝達**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **\[認証]**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
+|Get-SPRSExtension|[!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーション用の、1 つ以上の [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] 拡張機能を取得します。<br /><br /> 以下の値が有効です。<br /><br /> **伝達**<br /><br /> **DeliveryUI**<br /><br /> **Render**<br /><br /> **Data**<br /><br /> **Security**<br /><br /> **[認証]**<br /><br /> **EventProcessing**<br /><br /> **ReportItems**<br /><br /> **Designer**<br /><br /> **ReportItemDesigner**<br /><br /> **ReportItemConverter**<br /><br /> **ReportDefinitionCustomization**|  
 |Get-SPRSSite|"ReportingService" 機能が有効になっているかどうかに基づいて SharePoint サイトを取得します。 既定では、"ReportingService" 機能が有効になっているサイトが返されます。|  
   
 ##  <a name="bkmk_basic_samples"></a>基本的なサンプル  
  名前に 'SPRS' を含んでいるコマンドレットの一覧を返します。 これは [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] コマンドレットの完全な一覧になります。  
   
-```  
+```powershell
 Get-command -noun *SPRS*  
 ```  
   
  または、より詳細な情報を使用して、commandlist.txt という名前のテキスト ファイルにパイプします。  
   
-```  
-Get-command -noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
+```powershell
+Get-Command -Noun *SPRS* | Select name, definition | Format-List | Out-File c:\commandlist.txt  
 ```  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] SharePoint サービスおよびサービス プロキシをインストールします。  
   
-```  
+```powershell
 Install-SPRSService  
 ```  
   
-```  
+```powershell
 Install-SPRSServiceProxy  
 ```  
   
  [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービスを開始します。  
   
-```  
-get-spserviceinstance -all |where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
+```powershell
+Get-SPServiceInstance -all | where {$_.TypeName -like "SQL Server Reporting*"} | Start-SPServiceInstance  
 ```  
   
  SharePoint 管理シェルから次のコマンドを入力すると、フィルター処理された行のリストがログ ファイルから返されます。 このコマンドを実行すると、"ssrscustomactionerror" を含む行がフィルター処理されます。 この例では、rssharepoint.msi のインストール時に作成されたログ ファイルが検索対象となっています。  
   
-```  
-Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-string "ssrscustomactionerror"  
+```powershell
+Get-Content -Path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | Select-String "ssrscustomactionerror"  
 ```  
   
 ##  <a name="bkmk_detailedsamples"></a>詳細なサンプル  
@@ -178,9 +178,9 @@ Get-content -path C:\Users\testuser\AppData\Local\Temp\rs_sp_0.log | select-stri
   
 2.  作成したプロキシを既定のプロキシ グループに追加する。  
   
-3.  ポート 80 の Web アプリケーションのコンテンツ データベースに、サービス アプリケーション アクセス権を付与する。 このスクリプトは、サイト http://sitename "" が既に存在することを前提としています。  
+3.  ポート 80 の Web アプリケーションのコンテンツ データベースに、サービス アプリケーション アクセス権を付与する。 このスクリプトは、サイト "http://sitename" が既に存在することを前提としています。  
   
-```  
+```powershell
 # Create service application and service application proxy  
 $appPool = Get-SPServiceApplicationPool "My App Pool"  
 $serviceApp = New-SPRSServiceApplication "My RS Service App" -ApplicationPool $appPool  
@@ -192,50 +192,49 @@ Get-SPServiceApplicationProxyGroup -default | Add-SPServiceApplicationProxyGroup
 # Grant application pool account access to the port 80 web application's content database.  
 $webApp = Get-SPWebApplication "http://sitename"  
 $appPoolAccountName = $appPool.ProcessAccount.LookupName()  
-$webApp.GrantAccessToProcessIdentity($appPoolAccountName)  
-  
+$webApp.GrantAccessToProcessIdentity($appPoolAccountName)
 ```  
   
 ###  <a name="bkmk_example_delivery_extension"></a>Reporting Services 配信拡張機能の確認と更新  
  次の PowerShell スクリプトの例では、 `My RS Service App`という名前のサービス アプリケーションについて、レポート サーバーの電子メール配信拡張機能の構成を更新します。 SMTP サーバー (`<email server name>`) と差出人の電子メール別名 (`<your FROM email address>`) の値を更新します。  
   
-```  
-$app=get-sprsserviceapplication -Name "My RS Service App"  
-$emailCfg = Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml   
-$emailXml = [xml]$emailCfg   
+```powershell
+$app = Get-SPRSServiceApplication -Name "My RS Service App"  
+$emailCfg = Get-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml
+$emailXml = [xml]$emailCfg
 $emailXml.SelectSingleNode("//SMTPServer").InnerText = "<email server name>"  
 $emailXml.SelectSingleNode("//SendUsing").InnerText = "2"  
 $emailXml.SelectSingleNode("//SMTPAuthenticate").InnerText = "2"  
 $emailXml.SelectSingleNode("//From").InnerText = '<your FROM email address>'  
-Set-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
+Set-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" -ExtensionConfiguration $emailXml.OuterXml  
 ```  
   
  上の例で、サービス アプリケーションの正確な名前がわからない場合は、最初のステートメントを書き換えて、サービス アプリケーションを部分名検索に基づいて取得することもできます。 例 :  
   
-```  
-$app=get-sprsserviceapplication | where {$_.name -like " ssrs_testapp *"}  
+```powershell
+$app = Get-SPRSServiceApplication | Where {$_.name -like " ssrs_testapp *"}  
 ```  
   
  次のスクリプトは、"Reporting Services Application" という名前のサービス アプリケーションについて、レポート サーバーの電子メール配信拡張機能の現在の構成値を返します。 最初のステップでは、"My RS Service App" という名前のサービス アプリケーションのオブジェクトに、変数 $app の値が設定されます。  
   
  2 番目のステートメントは、変数 $app 内のサービス アプリケーション オブジェクト用の "レポート サーバー電子メール" 配信拡張機能を取得し、configurationXML を選択します。  
   
-```  
-$app=get-sprsserviceapplication -Name "Reporting Services Application"  
-Get-SPRSExtension -identity $app -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+```powershell
+$app = Get-SPRSServiceapplication -Name "Reporting Services Application"  
+Get-SPRSExtension -Identity $app -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml  
 ```  
   
  上の 2 つのステートメントを次のように書き直して 1 つのステートメントにすることもできます。  
   
-```  
-get-sprsserviceapplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -name "Report Server Email" | select -ExpandProperty ConfigurationXml  
+```powershell
+Get-SPRSServiceApplication -Name "Reporting Services Application" | Get-SPRSExtension -ExtensionType "Delivery" -Name "Report Server Email" | Select -ExpandProperty ConfigurationXml  
 ```  
   
 ###  <a name="bkmk_example_db_properties"></a>Reporting Servicea アプリケーションデータベースのプロパティの取得と設定 (データベースのタイムアウトなど)  
  次の例では、set コマンドに指定するデータベースの GUID (ID) を確認できるように、最初にデータベースとプロパティの一覧を返します。 プロパティの一覧については、「 `Get-SPRSDatabase | format-list`」を参照してください。  
   
-```  
-get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, ServiceInstance   
+```powershell
+Get-SPRSDatabase | Select id, querytimeout,connectiontimeout, status, server, ServiceInstance
 ```  
   
  出力の例を次に示します。 変更するデータベースの ID を確認し、SET コマンドレットでその ID を使用します。  
@@ -252,25 +251,25 @@ get-SPRSDatabase | select id, querytimeout,connectiontimeout, status, server, Se
   
      `ServiceInstance   : SPDatabaseServiceInstance`  
   
-```  
-Set-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
+```powershell
+Set-SPRSDatabase -Identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 -QueryTimeout 300  
 ```  
   
  値が設定されていることを確認するには、もう一度 GET コマンドレットを実行します。  
   
-```  
-Get-SPRSDatabase -identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
+```powershell
+Get-SPRSDatabase -Identity 56f8d1bc-cb04-44cf-bd41-a873643c5a14 | Select id, querytimeout,connectiontimeout, status, server, ServiceInstance  
 ```  
   
 ###  <a name="bkmk_example_list_data_extensions"></a>Reporting services データ拡張機能の一覧表示-SharePoint モード  
  次の例では、各 [!INCLUDE[ssRSnoversion](../includes/ssrsnoversion-md.md)] サービス アプリケーションの間をループし、それぞれの現在のデータ拡張機能を一覧表示します。  
   
-```  
+```powershell
 $apps = Get-SPRSServiceApplication  
-foreach ($app in $apps)   
+foreach ($app in $apps)
 {  
 Write-host -ForegroundColor "yellow" Service App Name $app.Name  
-Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensiontype | Format-Table -AutoSize  
+Get-SPRSExtension -identity $app -ExtensionType "Data" | select name, extensiontype | Format-Table -AutoSize  
 }  
 ```  
   
@@ -301,10 +300,8 @@ Get-SPRSExtension -identity $app -ExtensionType "Data" | select name,extensionty
 ###  <a name="bkmk_change_subscription_owner"></a>サブスクリプション所有者の変更と一覧表示  
  「 [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)」を参照してください。  
   
-## <a name="see-also"></a>参照  
- [PowerShell を使用した Reporting Services サブスクリプション所有者の変更および一覧表示とサブスクリプションの実行](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
- [項目PowerShell を使用して PowerPivot for SharePoint を確認する](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)   
+## <a name="see-also"></a>「  
+ [Use PowerShell to Change and List Reporting Services Subscription Owners and Run a Subscription](subscriptions/manage-subscription-owners-and-run-subscription-powershell.md)   
+ [チェックリスト: PowerShell を使用して PowerPivot for SharePoint の   を確認する](https://docs.microsoft.com/analysis-services/instances/install-windows/checklist-use-powershell-to-verify-power-pivot-for-sharepoint)  
  [CodePlex SharePoint 管理 PowerShell スクリプト](http://sharepointpsscripts.codeplex.com/)   
  [PowerShell を使用して SSRS を管理する方法](https://curatedviews.cloudapp.net/13107/how-to-administer-ssrs-using-powershell)  
-  
-  

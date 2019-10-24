@@ -14,12 +14,12 @@ ms.assetid: 3426b5eb-6327-4c7f-88aa-37030be69fbf
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 0479b16e7cc767b8e036a9632c0e9c80177c7837
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 78472cf0a270ffbb83ddf744956e7d2c5a1a1f64
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62877342"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783119"
 ---
 # <a name="back-up-a-transaction-log-sql-server"></a>トランザクション ログのバックアップ (SQL Server)
   このトピックでは、 [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 [!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell を使用して、トランザクション ログをバックアップする方法について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "62877342"
   
      [Security](#Security)  
   
--   **トランザクション ログ バックアップを使用します。**  
+-   **トランザクションログをバックアップするために使用するもの:**  
   
      [SQL Server Management Studio](#SSMSProcedure)  
   
@@ -47,7 +47,7 @@ ms.locfileid: "62877342"
   
 -   [関連タスク](#RelatedTasks)  
   
-##  <a name="BeforeYouBegin"></a> 作業を開始する準備  
+##  <a name="BeforeYouBegin"></a> はじめに  
   
 ###  <a name="Restrictions"></a> 制限事項と制約事項  
   
@@ -59,12 +59,12 @@ ms.locfileid: "62877342"
   
 -   既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 ログを頻繁にバックアップすると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。 そのような場合、これらのエントリに依存するスクリプトがなければ、トレース フラグ 3226 を使用することによってこれらのログ エントリを除外できます。 詳細については、「[トレース フラグ &#40;Transact-SQL&#41;](/sql/t-sql/database-console-commands/dbcc-traceon-trace-flags-transact-sql)」を参照してください。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  BACKUP DATABASE 権限と BACKUP LOG 権限は、既定では、 **sysadmin** 固定サーバー ロール、 **db_owner** 固定データベース ロール、および **db_backupoperator** 固定データベース ロールのメンバーに与えられています。  
   
- バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql)では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
+ バックアップ デバイスの物理ファイルに対する所有と許可の問題によって、バックアップ操作が妨げられることがあります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、デバイスに対して読み書きを実行できる必要があります。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] サービスが実行されているアカウントには書き込み権限が必要です。 ただし、システム テーブルにバックアップ デバイスのエントリを追加する [sp_addumpdevice](/sql/relational-databases/system-stored-procedures/sp-addumpdevice-transact-sql) では、ファイル アクセスの権限は確認されません。 バックアップ デバイスの物理ファイルに関するこのような問題は、バックアップや復元が試行され、物理リソースがアクセスされるまで、表面化しない可能性があります。  
   
 ##  <a name="SSMSProcedure"></a> SQL Server Management Studio の使用  
   
@@ -93,7 +93,7 @@ ms.locfileid: "62877342"
   
 10. バックアップ セットの有効期限を指定します。  
   
-    -   バックアップ セットが指定の日数後に期限切れになるようにするには、 **[期間指定]** \(既定のオプション) をクリックし、セットを作成してからセットが期限切れになるまでの日数を入力します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。  
+    -   バックアップ セットが指定の日数後に期限切れになるようにするには、 **[期間指定]** (既定のオプション) をクリックし、セットを作成してからセットが期限切れになるまでの日数を入力します。 0 ～ 99,999 日の値を指定できます。0 日を指定すると、バックアップ セットの有効期限は無期限になります。  
   
          既定値は、 **[サーバーのプロパティ]** ダイアログ ボックス ( **[データベースの設定]** ページ) の **[バックアップ メディアの既定の保有期間 (日)]** オプションで設定されています。 このダイアログ ボックスを開くには、オブジェクト エクスプローラーでサーバー名を右クリックし、[プロパティ] をクリックして、 **[データベースの設定]** ページを選択します。  
   
@@ -119,7 +119,7 @@ ms.locfileid: "62877342"
   
     -   **[新しいメディア セットにバックアップし、すべての既存のバックアップ セットを消去する]**  
   
-         このオプションでは、 **[新しいメディア セット名]** ボックスに名前を入力し、必要に応じて **[新しいメディア セットの説明]** ボックスにメディア セットの説明を入力します。 詳細については、「[メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
+         このオプションでは、 **[新しいメディア セット名]** ボックスに名前を入力し、必要に応じて **[新しいメディア セットの説明]** ボックスにメディア セットの説明を入力します。 詳細については、「 [メディア セット、メディア ファミリ、およびバックアップ セット &#40;SQL Server&#41;](media-sets-media-families-and-backup-sets-sql-server.md)」を参照してください。  
   
 14. **[信頼性]** セクションで、必要に応じて次の項目をオンにします。  
   
@@ -170,7 +170,7 @@ ms.locfileid: "62877342"
 > [!IMPORTANT]  
 >  この例では、単純復旧モデルを使用する [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベースを使用しています。 ただし、ログ バックアップを可能にするために、データベースの完全バックアップを行う前に、データベースが完全復旧モデルを使用するように設定されています。 詳細については、「[データベースの復旧モデルの表示または変更 &#40;SQL Server&#41;](view-or-change-the-recovery-model-of-a-database-sql-server.md)」を参照してください。  
   
- この例では、 [!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベースのトランザクション ログ バックアップを、以前作成した名前付きバックアップ デバイスである `MyAdvWorks_FullRM_log1`に作成します。  
+ この例では、[!INCLUDE[ssSampleDBobject](../../../includes/sssampledbobject-md.md)] データベースのトランザクション ログ バックアップを、以前作成した名前付きバックアップ デバイスである `MyAdvWorks_FullRM_log1` に作成します。  
   
 ```sql  
 BACKUP LOG AdventureWorks2012  
@@ -180,18 +180,15 @@ GO
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
-1.  `Backup-SqlDatabase` コマンドレットを使用して、`Log` パラメーターの値に `-BackupAction` を指定します。  
+`Backup-SqlDatabase` コマンドレットを使用して、`Log` パラメーターの値に `-BackupAction` を指定します。  
   
-     次の例では、 `MyDB` データベースのログのバックアップを、サーバー インスタンス `Computer\Instance`の既定のバックアップ場所に作成します。  
+次の例では、 `MyDB` データベースのログのバックアップを、サーバー インスタンス `Computer\Instance`の既定のバックアップ場所に作成します。  
   
-    ```  
-    --Enter this command at the PowerShell command prompt, C:\PS>  
+    ```powershell
     Backup-SqlDatabase -ServerInstance Computer\Instance -Database MyDB -BackupAction Log  
     ```  
   
- **SQL Server PowerShell プロバイダーを設定して使用するには**  
-  
--   [SQL Server PowerShell プロバイダー](../../powershell/sql-server-powershell-provider.md)  
+SQL Server PowerShell プロバイダーを設定して使用する方法については、「 [SQL Server PowerShell プロバイダー](../../powershell/sql-server-powershell-provider.md)」を参照してください。
   
 ##  <a name="RelatedTasks"></a> 関連タスク  
   
@@ -201,10 +198,8 @@ GO
   
 -   [満杯になったトランザクション ログのトラブルシューティング &#40;SQL Server エラー 9002&#41;](../logs/troubleshoot-a-full-transaction-log-sql-server-error-9002.md)  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [BACKUP &#40;Transact-SQL&#41;](/sql/t-sql/statements/backup-transact-sql)   
  [トランザクション ログ バックアップの適用 &#40;SQL Server&#41;](transaction-log-backups-sql-server.md)   
  [メンテナンス プラン](../maintenance-plans/maintenance-plans.md)   
  [ファイルの完全バックアップ &#40;SQL Server&#41;](full-file-backups-sql-server.md)  
-  
-  
