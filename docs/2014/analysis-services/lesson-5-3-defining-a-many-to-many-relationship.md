@@ -11,10 +11,10 @@ author: minewiskan
 ms.author: owend
 manager: craigg
 ms.openlocfilehash: 1b7b091c6e963af043533bfe362a801d7d4c91f2
-ms.sourcegitcommit: 1c3f56deaa4c1ffbe5d7f75752ebe10447c3e7af
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
+ms.lasthandoff: 10/22/2019
 ms.locfileid: "69493877"
 ---
 # <a name="defining-a-many-to-many-relationship"></a>多対多関係の定義
@@ -35,7 +35,7 @@ ms.locfileid: "69493877"
   
 1.  データ ソース ビュー デザイナーを開き、 **Adventure Works DW 2012** データ ソース ビューを表示します。  
   
-2.  **[ダイアグラムオーガナイザー]** ペイン内の任意の場所を右クリックし、[ `Internet Sales Order Reasons` **新しいダイアグラム**] をクリックして、この新しいダイアグラムの名前としてを指定します。  
+2.  **[ダイアグラムオーガナイザー]** ペイン内の任意の場所を右クリックし、 **[新しいダイアグラム]** をクリックして、この新しいダイアグラムの名前として `Internet Sales Order Reasons` を指定します。  
   
 3.  **[テーブル]** ペインの **[InternetSales]** テーブルを、 **[ダイアグラム]** ペインにドラッグします。  
   
@@ -47,13 +47,13 @@ ms.locfileid: "69493877"
   
 6.  **[書式]** メニューで **[自動レイアウト]** をポイントし、 **[ダイアグラム]** をクリックします。  
   
-7.  プロパティウィンドウで、 **DimSalesReason**テーブル`SalesReason`の**friendlyname**プロパティをに変更し、 **FactInternetSalesReason**テーブルの`InternetSalesReason` **friendlyname**プロパティをに変更します。  
+7.  プロパティウィンドウで、 **DimSalesReason**テーブルの**friendlyname**プロパティを `SalesReason` に変更し、 **FactInternetSalesReason**テーブルの**friendlyname**プロパティを `InternetSalesReason` に変更します。  
   
 8.  **[テーブル]** ペインで **[InternetSalesReason (dbo.FactInternetSalesReason)]** を展開し、 **[SalesOrderNumber]** をクリックします。次に、[プロパティ] ウィンドウで、このデータ列の **DataType** プロパティを確認します。  
   
      **[SalesOrderNumber]** 列のデータ型は文字列になっています。  
   
-9. `InternetSalesReason`テーブル内の他の列のデータ型を確認します。  
+9. @No__t_0 テーブル内の他の列のデータ型を確認します。  
   
      このテーブルでは、他の 2 つの列のデータ型が数値型になっています。  
   
@@ -69,7 +69,7 @@ ms.locfileid: "69493877"
   
 2.  **[メジャー]** ペイン内を右クリックし、 **[新しいメジャー グループ]** をクリックします。 詳細については、「 [多次元モデル内のメジャーおよびメジャー グループの作成](multidimensional-models/create-measures-and-measure-groups-in-multidimensional-models.md)」を参照してください。  
   
-3.  **新しいメジャーグループ** ダイアログボックスで、 `InternetSalesReason` **データソースビュー** ボックスの一覧から テーブルの選択 を選択し、 **OK** をクリックします。  
+3.  **[新しいメジャーグループ]** ダイアログボックスの **[データソースビューからテーブルを選択]** ボックスの一覧の [`InternetSalesReason`] をクリックし、[ **OK]** をクリックします。  
   
      **Internet Sales Reason** メジャー グループが **[メジャー]** ペインに表示されます。  
   
@@ -99,7 +99,7 @@ ms.locfileid: "69493877"
   
 4.  **[基になる情報の指定]** ページで、 [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] DW 2012 データ ソース ビューが選択されていることを確認します。  
   
-5.  **[メインテーブル]** ボックスの一覧`SalesReason`で、を選択します。  
+5.  **[メインテーブル]** ボックスの一覧で、[`SalesReason`] を選択します。  
   
 6.  **[キー列]** ボックスの一覧に **[SalesReasonKey]** が表示されていることを確認します。  
   
@@ -107,19 +107,19 @@ ms.locfileid: "69493877"
   
 8.  **[次へ]** をクリックします。  
   
-9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales reason reason Type**属性の横にあるチェックボックスをオンにし、 `Sales Reason Type`その名前をに変更して、 **[次へ]** をクリックします。  
+9. **[ディメンション属性の選択]** ページで、 **Sales Reason Key** 属性が自動的に選択されます。これは、この属性がキー属性であるためです。 **Sales Reason Reason Type**属性の横にあるチェックボックスをオンにし、名前を `Sales Reason Type` に変更して、 **[次へ]** をクリックします。  
   
 10. **[ウィザードの完了]** ページで **[完了]** をクリックすると、Sales Reason ディメンションが作成されます。  
   
 11. **[ファイル]** メニューの **[すべてを保存]** をクリックします。  
   
-12. **Sales reason**ディメンションのディメンションデザイナーの **[属性]** ペインで、 **[sales reason Key]** を選択し、プロパティウィンドウの**Name**プロパティをに変更します。`Sales Reason.`  
+12. **Sales reason**ディメンションのディメンションデザイナーの **[属性]** ペインで、 **[sales reason Key]** を選択し、プロパティウィンドウの**Name**プロパティをに変更し `Sales Reason.`  
   
-13. ディメンションデザイナーの **[階層]** ペインで`Sales Reason Type` 、レベルと**販売理由**レベルを含む**sales** Reason ユーザー階層をこの順序で作成します。  
+13. ディメンションデザイナーの **[階層]** ペインで、`Sales Reason Type` レベルと**sales Reason**レベルを含む**sales** Reason ユーザー階層をこの順序で作成します。  
   
-14. プロパティウィンドウで、Sales 理由`All Sales Reasons`階層の**allmembername**プロパティの値としてを定義します。  
+14. プロパティウィンドウで、Sales 理由階層の**Allmembername**プロパティの値として `All Sales Reasons` を定義します。  
   
-15. Sales `All Sales Reasons` Reason ディメンションの**attributeallmembername**プロパティの値としてを定義します。  
+15. Sales Reason ディメンションの**Attributeallmembername**プロパティの値として、`All Sales Reasons` を定義します。  
   
 16. 新しく作成したディメンションをキューブ ディメンションとして [!INCLUDE[ssASnoversion](../includes/ssasnoversion-md.md)] Tutorial キューブに追加するには、 **キューブ デザイナー**に切り替えます。 **[キューブ構造]** タブの **[ディメンション]** ペイン内で右クリックし、 **[キューブ ディメンションの追加]** をクリックします。  
   
@@ -143,9 +143,9 @@ ms.locfileid: "69493877"
   
      次の図は、 **[リレーションシップの定義]** ダイアログ ボックスでの操作を示しています。  
   
-     ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-many-to-many-3.gif "[リレーションシップの定義] ダイアログボックス")  
+     ![[リレーションシップの定義] ダイアログボックス](../../2014/tutorials/media/l5-many-to-many-3.gif "[リレーションシップの定義] ダイアログ ボックス")  
   
-5.  **[OK]** をクリックします。  
+5.  クリックして **OK**です。  
   
      多対多アイコンにより、Sales Reason ディメンションと Internet Sales メジャー グループの間のリレーションシップが表されます。  
   
@@ -161,7 +161,7 @@ ms.locfileid: "69493877"
   
 5.  メタデータ ペインで、 **[Customer]** 、 **[Location]** 、 **[Customer Geography]** 、 **[Members]** 、 **[All Customers]** 、 **[Australia]** の順にクリックし、 **[Queensland]** を右クリックして **[フィルターに追加]** をクリックします。  
   
-6.  `Sales Reason Type`レベルの各メンバーを展開し、Queensland の顧客がインターネット経由で[!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)]製品を購入するために使用した各理由に関連付けられているドル値を確認します。  
+6.  @No__t_0 レベルの各メンバーを展開し、Queensland の顧客がインターネット経由で [!INCLUDE[ssSampleDBCoShort](../includes/sssampledbcoshort-md.md)] 製品を購入するために使用した各理由に関連付けられているドル値を確認します。  
   
      購入理由に関連付けられている売上金額をすべて加算すると、総売上額を上回ります。 これは、製品の購入理由を複数選択した顧客がいたためです。  
   
@@ -172,9 +172,9 @@ ms.locfileid: "69493877"
 ## <a name="next-task-in-lesson"></a>このレッスンの次の作業  
  [メジャー グループでのディメンション粒度の定義](lesson-5-4-defining-dimension-granularity-within-a-measure-group.md)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [データ ソース ビュー デザイナーでのダイアグラムの操作 (Analysis Services)](multidimensional-models/work-with-diagrams-in-data-source-view-designer-analysis-services.md)   
  [ディメンション リレーションシップ](multidimensional-models-olap-logical-cube-objects/dimension-relationships.md)   
- [多対多リレーションシップと多対多リレーションシップのプロパティの定義](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
+ [多対多のリレーションシップと多対多のリレーションシップのプロパティの定義](multidimensional-models/define-a-many-to-many-relationship-and-many-to-many-relationship-properties.md)  
   
   
