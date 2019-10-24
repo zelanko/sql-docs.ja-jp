@@ -31,7 +31,7 @@ ms.locfileid: "68115077"
   
 -   キュー更新サブスクリプションの場合は、すべての競合のデータを表示できます。 競合データは、競合の保有期間に指定した期間 (既定では 14 日間)、レプリケーション競合表示モジュールで表示できます。 競合の保有期間を設定するには、次のいずれかを実行します。  
   
-    -   @conflict_retention sp_addpublication [の](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)パラメーターに保有期間の値を指定します。  
+    -   [sp_addpublication](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md) の @conflict_retention パラメーターに保有期間の値を指定します。  
   
     -   [sp_changepublication](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) の @property パラメーターに **'conflict_retention'** を指定し、@value パラメーターに保有期間の値を指定します。  
   
