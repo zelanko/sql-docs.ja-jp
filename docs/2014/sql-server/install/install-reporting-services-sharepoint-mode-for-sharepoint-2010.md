@@ -92,7 +92,7 @@ ms.locfileid: "72798349"
   
     -   **Reporting Services - SharePoint**  
   
-    -   **SharePoint 2010 製品用の Reporting Services アドイン**。 ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "n注)アドインをインストールするためのインストールウィザードオプションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースで新しく追加されました。  
+    -   **SharePoint 2010 製品用の Reporting Services アドイン**。 ![メモ](../../../2014/reporting-services/media/rs-fyinote.png "n注")アドインをインストールするためのインストールウィザードオプションは、[!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] リリースで新しく追加されました。  
   
     -   SQL Server [!INCLUDE[ssDE](../../includes/ssde-md.md)]のインスタンスがまだインストールされていない場合は、 **[データベース エンジン サービス]** および **[管理ツール - 完全]** をクリックして完全な環境をインストールすることもできます。  
   
