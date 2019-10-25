@@ -52,21 +52,21 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |ASE のデータ型|SQL Server データ型|  
 |-----------------|------------------------|  
 |**bigint**|**bigint**|  
-|**[バイナリ]**|**[バイナリ]**|  
+|**binary**|**binary**|  
 |**binary[\*..8000]**|**binary[\*]**|  
 |**binary[8001..\*]**|**varbinary(max)**|  
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**char のさまざまな [\*..8000]**|**varchar[\*]**|  
-|**char のさまざまな [8001...\*]**|**varchar(max)**|  
+|**character varying [\*..8000]**|**varchar[\*]**|  
+|**character varying [8001...\*]**|**varchar(max)**|  
 |**char [\*..8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
-|**文字がさまざまな**|**varchar**|  
-|**文字がさまざまな [\*..8000]**|**varchar[\*]**|  
-|**文字がさまざまな [8001...\*]**|**varchar(max)**|  
-|**文字 [\*..8000]**|**char[\*]**|  
+|**character varying**|**varchar**|  
+|**character varying [\*..8000]**|**varchar[\*]**|  
+|**character varying [8001...\*]**|**varchar(max)**|  
+|**character[\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
@@ -76,13 +76,13 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**decimal**|**decimal**|  
 |**decimal[\*..\*]**|**decimal[\*]**|  
 |**decimal [\*..\*][\*..\*]**|**decimal[\*][\*]**|  
-|**倍精度**|**float[53]**|  
+|**double precision**|**float[53]**|  
 |**float**|**float[53]**|  
 |**float[\*..15]**|**float[24]**|  
 |**float [16..\*]**|**float[53]**|  
 |**image**|**image**|  
 |**int**|**int**|  
-|**整数 (integer)**|**int**|  
+|**integer**|**int**|  
 |**longsysname**|**nvarchar[255]**|  
 |**money**|**money**|  
 |**national char**|**nchar**|  
@@ -91,19 +91,19 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**varying、national char [\*..4000]**|**nvarchar[\*]**|  
 |**varying、national char [4001...\*]**|**nvarchar(max)**|  
 |**national char [4001...\*]**|**nvarchar(max)**|  
-|**各国語文字**|**nchar**|  
-|**各国語文字 [\*..4000]**|**nchar[\*]**|  
-|**各国語文字 [4001...\*]**|**nvarchar(max)**|  
-|**各国語文字がさまざまな**|**nvarchar**|  
-|**各国語文字がさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**各国語文字がさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**national character**|**nchar**|  
+|**national character [\*..4000]**|**nchar[\*]**|  
+|**national character [4001...\*]**|**nvarchar(max)**|  
+|**national character varying**|**nvarchar**|  
+|**national character varying [\*..4000]**|**nvarchar[\*]**|  
+|**national character varying [4001...\*]**|**nvarchar(max)**|  
 |**national varchar**|**nvarchar**|  
 |**national varchar [\*..4000]**|**nvarchar[\*]**|  
 |**national varchar [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
-|**nchar の変化**|**nvarchar**|  
-|**nchar のさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**nchar のさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**nchar varying**|**nvarchar**|  
+|**nchar varying [\*..4000]**|**nvarchar[\*]**|  
+|**nchar varying [4001...\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -123,19 +123,19 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**timestamp**|**rowversion**|  
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
-|**unichar 可変**|**nvarchar**|  
-|**unichar がさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**unichar がさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**unichar varying**|**nvarchar**|  
+|**unichar varying [\*..4000]**|**nvarchar[\*]**|  
+|**unichar varying [4001...\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
 |**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
 |**univarchar**|**nvarchar**|  
 |**univarchar[\*..4000]**|**nvarchar[\*]**|  
 |**univarchar[4001..\*]**|**nvarchar(max)**|  
-|**符号なし bigint**|**numeric[20][0]**|  
+|**unsigned bigint**|**numeric[20][0]**|  
 |**unsigned int**|**bigint**|  
 |**unsigned smallint**|**int**|  
-|**符号なしの tinyint**|**tinyint**|  
+|**unsigned tinyint**|**tinyint**|  
 |**varbinary**|**varbinary**|  
 |**varbinary[\*..8000]**|**varbinary[\*]**|  
 |**varbinary[8001..\*]**|**varbinary(max)**|  
