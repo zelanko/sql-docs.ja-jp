@@ -1680,7 +1680,7 @@ ms.locfileid: "71284422"
 |0xC0208294|-1071611244|DTS_E_SETEODFAILED|バッファーによる出力 "%1" (%2!d!) のデータの終了フラグを設定中にエラーが発生しました。|  
 |0xC0208296|-1071611242|DTS_E_CANTCLONE|入力バッファーを複製できませんでした。 メモリが不足しているか、内部エラーが発生しました。|  
 |0xC02082F9|-1071611143|DTS_E_TXCHARMAP_CANTKATAKANAHIRAGANA|列 "%1" で、カタカナ文字列とひらがな文字列を同時に生成するように要求しています。|  
-|0xC02082FA|-1071611142|DTS_E_TXCHARMAP_CANTSIMPLECOMPLEX|列 "%1" で、簡体字中国語と繁体字中国語を同時に生成するように要求しています。|  
+|0xC02082FA|-1071611142|DTS_E_TXCHARMAP_CANTSIMPLECOMPLEX|列 "%1" で、簡体中国語と繁体中国語を同時に生成するように要求しています。|  
 |0xC02082FB|-1071611141|DTS_E_TXCHARMAP_CANTFULLHALF|列 "%1" で、全角文字列と半角文字列の両方を生成する操作を要求しています。|  
 |0xC02082FC|-1071611140|DTS_E_TXCHARMAP_CANTCHINAJAPAN|列 "%1" で、日本語文字列での操作と中国語文字列での操作を組み合わせています。|  
 |0xC02082FD|-1071611139|DTS_E_TXCHARMAP_CANTCASECHINESE|列 "%1" で、中国語文字列の操作と、大文字および小文字の操作を組み合わせています。|  

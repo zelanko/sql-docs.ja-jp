@@ -28,7 +28,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68220507"
 ---
-# <a name="sysfulltextlanguages-transact-sql"></a>sys.fulltext_languages (TRANSACT-SQL)
+# <a name="sysfulltext_languages-transact-sql"></a>sys.fulltext_languages (TRANSACT-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   このカタログ ビューには、ワード ブレーカーに登録されている言語ごとに 1 行が含まれています。[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。 各行には、LCID と言語の名前が表示されます。 言語、その他の言語リソースのステミング機能、ノイズ ワード (ストップ ワード)、および類義語辞典のファイルになるのワード ブレーカーの登録時に、フルテキスト インデックス/クエリ操作に使用できます。 値**名前**または**lcid** 、フルテキスト クエリとフルテキスト インデックスで指定できます[!INCLUDE[tsql](../../includes/tsql-md.md)]ステートメント。  
@@ -83,7 +83,7 @@ ms.locfileid: "68220507"
 |ロシア語|1049|  
 |セルビア語 (キリル)|3098|  
 |セルビア語 (ラテン)|2074|  
-|簡体字中国語|2052|  
+|簡体中国語|2052|  
 |スロバキア語|1051|  
 |スロベニア語|1060|  
 |スペイン語|3082|  

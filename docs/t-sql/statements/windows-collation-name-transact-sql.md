@@ -139,7 +139,7 @@ SELECT * FROM sys.fn_helpcollations() WHERE [name] NOT LIKE N'SQL%';
 |アムハラ語 (エチオピア)|Latin1_General_100_|使用不可|
 |アルメニア語 (アルメニア)|Cyrillic_General_100_|使用不可|
 |アッサム語 (インド)|Assamese_100_ <sup>1</sup>|使用不可|
-|バングラ語 (バングラデシュ)|Bengali_100_<sup>1</sup>|使用不可|
+|ベンガル語 (バングラデシュ)|Bengali_100_<sup>1</sup>|使用不可|
 |バシキール語 (ロシア)|Bashkir_100_|使用不可|
 |バスク語 (バスク)|Latin1_General_100_|使用不可|
 |ベンガル語 (インド)|Bengali_100_<sup>1</sup>|使用不可|

@@ -145,7 +145,7 @@ Web パーツでサポートされている言語は以下のとおりです。
 * 韓国語 (ko)
 * ポルトガル語 (pt)
 * ロシア語 (ru)
-* 簡体字中国語 (zh-HANS および zh-CHS)
+* 簡体中国語 (zh-HANS および zh-CHS)
 * 繁体中国語 (zh-HANT および zh-CHT)
 
 ## <a name="troubleshoot"></a>[トラブルシューティング]
