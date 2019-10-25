@@ -10,18 +10,18 @@ ms.assetid: cfb9e431-7d4c-457c-b090-6f2528b2f315
 author: mashamsft
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: 761e2e6ee0da9597433c0f0805aa1d8caf42fbac
-ms.sourcegitcommit: 5e45cc444cfa0345901ca00ab2262c71ba3fd7c6
+ms.openlocfilehash: 25e45e5877d528d1f01fe8695d8575466991c381
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/29/2019
-ms.locfileid: "70154091"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798039"
 ---
-# <a name="monitor-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージバックアップの監視
+# <a name="monitor-sql-server-managed-backup-to-azure"></a>Azure への SQL Server マネージド バックアップの監視
   [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、バックアップ プロセス中に問題やエラーを特定し、可能な限り修正措置によって解消するための方法が組み込まれています。  ただし、ユーザーの介入が必要になる場合もあります。 このトピックでは、バックアップの全体的な正常性状態を判定し、解決する必要があるエラーを特定するために使用できるツールについて説明します。  
   
 ## <a name="overview-of-includess_smartbackupincludesss-smartbackup-mdmd-built-in-debugging"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の組み込みデバッグの概要  
- [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、スケジュールされたバックアップを定期的に確認して、失敗したバックアップのスケジュールを組み直します。 ストレージアカウントを定期的にポーリングして、データベースの復旧に影響するログチェーンの中断を特定し、それに応じて新しいバックアップをスケジュールします。 また、Azure の調整ポリシーを考慮し、複数のデータベースのバックアップを管理するためのメカニズムが用意されています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、拡張イベントを使用してすべてのアクティビティを追跡します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] エージェントで使用される拡張イベント チャネルには、管理、運用、分析、およびデバッグが含まれます。 管理カテゴリに分類されるイベントは、通常、エラーに関連しているため、ユーザーの介入を必要とし、既定で有効になっています。 分析イベントも既定で有効になっていますが、通常、ユーザーの介入を必要とするエラーには関連していません。 一般的に、運用イベントは情報イベントです。 たとえば、運用イベントには、バックアップのスケジュール、バックアップの正常な完了などがあります。デバッグは最も詳細なイベントで、問題を特定して必要に応じて修正するために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]によって内部的に使用されます。  
+ [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、スケジュールされたバックアップを定期的に確認して、失敗したバックアップのスケジュールを組み直します。 ストレージアカウントを定期的にポーリングして、データベースの復旧に影響するログチェーンの中断を特定し、それに応じて新しいバックアップをスケジュールします。 また、Azure の調整ポリシーを考慮し、複数のデータベースのバックアップを管理するためのメカニズムが用意されています。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]では、拡張イベントを使用してすべてのアクティビティを追跡します。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] エージェントで使用される拡張イベント チャネルには、管理、運用、分析、およびデバッグが含まれます。 管理カテゴリに分類されるイベントは、通常、エラーに関連しているため、ユーザーの介入を必要とし、既定で有効になっています。 分析イベントも既定で有効になっていますが、通常、ユーザーの介入を必要とするエラーには関連していません。 一般的に、運用イベントは情報イベントです。 たとえば、運用イベントには、バックアップのスケジュール設定、バックアップの正常な完了などがあります。デバッグは最も詳細であり、問題を特定して必要に応じて修正するために [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] によって内部的に使用されます。  
   
 ### <a name="configure-monitoring-parameters-for-includess_smartbackupincludesss-smartbackup-mdmd"></a>[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の監視パラメーターの構成  
  **Smart_admin sp_set_parameter**システムストアドプロシージャを使用すると、監視設定を指定できます。 以下のセクションでは、拡張イベントの有効化、およびエラーと警告の電子メール通知の有効化の手順について説明します。  
@@ -34,7 +34,7 @@ ms.locfileid: "70154091"
   
 3.  次の例をコピーしてクエリ ウィンドウに貼り付け、 **[実行]** をクリックします。 これにより、拡張イベントの現在の構成、および電子メール通知が返されます。  
   
-```  
+```sql
 Use msdb  
 Go  
 SELECT * FROM smart_admin.fn_get_parameter (NULL)  
@@ -53,7 +53,7 @@ GO
   
 1.  使用可能な拡張イベント チャネルとその現在の状態を表示するには、次のクエリを実行します。  
   
-    ```  
+    ```sql
     SELECT * FROM smart_admin.fn_get_current_xevent_settings()  
     ```  
   
@@ -61,32 +61,30 @@ GO
   
 2.  デバッグ イベントを有効にするには、次のクエリを実行します。  
   
-    ```  
+    ```sql
     --  to enable debug events  
     Use msdb;  
-    Go  
-             EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
-  
+    GO 
+    EXEC smart_admin.sp_set_parameter 'FileRetentionDebugXevent', 'True'  
     ```  
   
      ストアドプロシージャの詳細については、「smart_admin」を参照してください。 [sp_set_parameter &#40;transact-sql&#41;](/sql/relational-databases/system-stored-procedures/managed-backup-sp-set-parameter-transact-sql)です。  
   
 3.  ログに記録されたイベントを表示するには、次のクエリを実行します。  
   
-    ```  
+    ```sql
     --  View all events in the current week  
     Use msdb;  
     Go  
     DECLARE @startofweek datetime  
     DECLARE @endofweek datetime  
-    SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)   
+    SET @startofweek = DATEADD(Day, 1-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)
     SET @endofweek = DATEADD(Day, 7-DATEPART(WEEKDAY, CURRENT_TIMESTAMP), CURRENT_TIMESTAMP)  
   
-    EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;  
-  
+    EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek;
     ```  
   
-    ```  
+    ```sql
     --  view all admin events  
     Use msdb;  
     Go  
@@ -106,13 +104,12 @@ GO
     EXEC smart_admin.sp_get_backup_diagnostics @begin_time = @startofweek, @end_time = @endofweek  
   
     SELECT * from @eventresult  
-    WHERE event_type LIKE '%admin%'  
-  
+    WHERE event_type LIKE '%admin%'
     ```  
   
 ### <a name="aggregated-error-countshealth-status"></a>集計されたエラー数/正常性状態  
- **Smart_admin**関数は、の[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]正常性状態の監視に使用できる各カテゴリの集計されたエラー数のテーブルを返します。 この関数は、このトピックの後半で説明する、システムで構成された電子メール通知メカニズムでも使用されます。   
-このような集計されたカウントは、システム正常性の監視に使用できます。 たとえば、number_of_retention_loops 列が 30 分間 0 だった場合、保有期間の管理に長時間がかかる可能性や保有期間の管理が正常に動作しない可能性があります。 エラー列が 0 以外の場合は問題を示す可能性があるため、拡張イベント ログで問題がないかどうかをチェックする必要があります。 または、 **smart_admin**ストアドプロシージャを呼び出して、エラーの詳細を検索します。  
+ Smart_admin 関数は、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]の正常性状態の監視に使用できる各カテゴリの集計されたエラー数のテーブルを返します **。** この関数は、このトピックの後半で説明する、システムで構成された電子メール通知メカニズムでも使用されます。   
+これらの集計数は、システムの正常性を監視するために使用できます。 たとえば、number_of_retention_loops 列が 30 分間 0 だった場合、保有期間の管理に長時間がかかる可能性や保有期間の管理が正常に動作しない可能性があります。 エラー列が 0 以外の場合は問題を示す可能性があるため、拡張イベント ログで問題がないかどうかをチェックする必要があります。 または、 **smart_admin**ストアドプロシージャを呼び出して、エラーの詳細を検索します。  
   
 ### <a name="using-agent-notification-for-assessing-backup-status-and-health"></a>バックアップ状態と正常性の評価にエージェント通知を使用する  
  [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]には、SQL Server ポリシー ベースの管理ポリシーに基づく通知メカニズムが含まれています。  
@@ -125,30 +122,29 @@ GO
   
  **通知アーキテクチャ:**  
   
--   **ポリシーベースの管理:** バックアップの正常性を監視するために、次の2つのポリシーが設定されます。**Smart Admin システム正常性ポリシー**、および**Smart Admin ユーザー操作正常性ポリシー**。 Smart Admin システム正常性ポリシーは、重大なエラー (SQL 資格情報が存在しない、無効な SQL 資格情報、接続エラーなど) を評価して、システムの正常性を報告します。 これらは、通常、根本的な問題を修正するために手動による操作を必要とします。 Smart Admin ユーザー操作正常性ポリシーは、バックアップの破損などの警告を評価します。  これらは、操作を必要とせず、単なる警告だけの場合もあります。 このような問題は [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] エージェントによって自動的に対処されることが予想されます。  
+-   **ポリシーベースの管理:** バックアップの正常性を監視するために、 **Smart Admin システム正常性ポリシー**と**Smart Admin ユーザー操作正常性ポリシー**という2つのポリシーが設定されています。 Smart Admin システム正常性ポリシーは、重大なエラー (SQL 資格情報が存在しない、無効な SQL 資格情報、接続エラーなど) を評価して、システムの正常性を報告します。 これらは、通常、根本的な問題を修正するために手動による操作を必要とします。 Smart Admin ユーザー操作正常性ポリシーは、バックアップの破損などの警告を評価します。  これらは、操作を必要とせず、単なる警告だけの場合もあります。 このような問題は [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] エージェントによって自動的に対処されることが予想されます。  
   
--   **SQL Server エージェント**補足この通知は、3つのジョブステップを持つ SQL Server エージェントジョブを使用して実行されます。 最初のジョブ ステップでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]がデータベースまたはインスタンスに対して構成されているかどうかが検出されます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が有効であり構成済みであることが検出されると、2 番目のステップが実行されます。これにより、SQL Server ポリシー ベースの管理ポリシーを評価して正常性状態を判断する PowerShell コマンドレットが実行されます。 エラーまたは警告が検出されると失敗し、3番目の手順がトリガーされます。3番目のステップでは、エラー/警告レポートを含む電子メール通知を送信します。  ただし、この SQL Server エージェント ジョブは、既定では有効になっていません。 電子メール通知ジョブを有効にするには、 **sp_set_backup_parameter**システムストアドプロシージャを使用します。  手順については、次で詳しく説明します。  
+-   **SQL Server エージェント**Job: 通知は、3つのジョブステップを持つ SQL Server エージェントジョブを使用して実行されます。 最初のジョブ ステップでは、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]がデータベースまたはインスタンスに対して構成されているかどうかが検出されます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]が有効であり構成済みであることが検出されると、2 番目のステップが実行されます。これにより、SQL Server ポリシー ベースの管理ポリシーを評価して正常性状態を判断する PowerShell コマンドレットが実行されます。 エラーまたは警告が検出されると失敗になり、これによって 3 番目の手順が開始されます。3 番目の手順では、エラー/警告レポートが含まれた電子メール通知が送信されます。  ただし、この SQL Server エージェント ジョブは、既定では有効になっていません。 電子メール通知ジョブを有効にするには、 **sp_set_backup_parameter**システムストアドプロシージャを使用します。  手順については、次で詳しく説明します。  
   
 ##### <a name="enabling-email-notification"></a>電子メール通知を有効にする  
   
 1.  データベースメールがまだ構成されていない場合は、「 [Configure データベースメール](../relational-databases/database-mail/configure-database-mail.md)」で説明されている手順を使用します。  
   
-2.  SQL Server 警告システムのメールシステムとしてデータベースを設定します。**SQL Server エージェント**を右クリックして **[警告システム]** を選択し、 **[メールプロファイルを有効にする]** チェックボックスをオンにして、**メールシステム**として **[データベースメール]** を選択し、以前に作成したメールプロファイルを選択します。  
+2.  SQL Server 警告システムのメールシステムとしてデータベースを設定する: **SQL Server エージェント**を右クリックし、 **[警告システム]** を選択します。次に、 **[メールプロファイルを有効にする]** チェックボックスをオンにし、**メールシステム**として **[データベースメール]** を選択し、以前のを選択します。メールプロファイルが作成されました。  
   
 3.  クエリ ウィンドウで次のクエリを実行し、通知の送信先となる電子メール アドレスを指定します。  
   
-    ```  
+    ```sql
     Use msdb  
     Go  
-    EXEC smart_admin.sp_set_parameter @parameter_name = 'SSMBackup2WANotificationEmailIds', @parameter_value = '<email address>'  
-  
+    EXEC smart_admin.sp_set_parameter @parameter_name = 'SSMBackup2WANotificationEmailIds', @parameter_value = '<email address>'
     ```  
   
      これにより、SQL Server エージェント ジョブが作成されます。このジョブは、正常性状態を収集し、バックアップでエラーまたは問題が発生しているときに通知を送信するために使用されます。  
   
  データベース メールを有効にして、SQL Server エージェント ジョブによる電子メール通知を設定するサンプル スクリプトを次に示します。  
   
-```  
+```sql
 -- Prereq: Make sure that SQL Server service runs in a service account that has  
 --  access to SMTP Server   
 -- set SQL Server service account as domain account   
@@ -192,8 +188,7 @@ EXEC msdb.smart_admin.sp_set_parameter
 @parameter_value = @emailid  
   
 -- To test is you are receiving notifications  
--- delete few backup files from your storage container, Wait for 15 minutes & see if you get any email notification  
-  
+-- delete few backup files from your storage container, Wait for 15 minutes & see if you get any email notification
 ```  
   
 ### <a name="using-powershell-to-setup-custom-health-monitoring"></a>PowerShell を使用してカスタムの正常性状態の監視を設定する  
@@ -203,27 +198,25 @@ EXEC msdb.smart_admin.sp_set_parameter
   
  システム ポリシーと作成されたユーザー ポリシーに基づいてエラーと警告のレポートを返す PowerShell のサンプル スクリプトを次に示します。  
   
+```powershell
+$policyResults = Get-SqlSmartAdmin | Test-SqlSmartAdmin -AllowUserPolicies  
+$policyResults.PolicyEvaluationDetails | Select Name, Category, Expression, Result, Exception | fl
 ```  
-$policyResults = get-sqlsmartadmin | test-sqlsmartadmin -AllowUserPolicies  
-$policyResults.PolicyEvaluationDetails | select Name, Category, Expression, Result, Exception | fl  
   
-```  
+ 次のスクリプトは、既定のインスタンス (`\SQL\COMPUTER\DEFAULT`) のエラーと警告の詳細レポートを返します。  
   
- 次のスクリプトでは、既定のインスタンスのエラーと警告の詳細なレポートが返されます。  
-  
-```  
-PS C:\>PS SQLSERVER:\SQL\COMPUTER\DEFAULT> (get-sqlsmartadmin ).EnumHealthStatus()  
+```powershell
+(Get-SqlSmartAdmin ).EnumHealthStatus()  
 ```  
   
 ### <a name="objects-in-msdb-database"></a>MSDB データベース内のオブジェクト  
  機能を実装するためにインストールされているオブジェクトがあります。 これらのオブジェクトは内部使用のために予約されています。 ただし、バックアップの状態を監視する際に役立つ smart_backup_files というシステム テーブルが 1 つあります。 このテーブルに格納されている、バックアップの種類、データベース名、最初と最後の lsn、バックアップの有効期限日などの監視に関連する情報の大部分は、システム関数 smart_admin によって公開され[ます。 fn_available_backups &#40;transact-sql&#41;](/sql/relational-databases/system-functions/managed-backup-fn-available-backups-transact-sql). ただし、この関数を使用して、バックアップ ファイルの状態を示す smart_backup_files テーブルの状態列を利用することはできません。 状態などの一部の情報は、次に示すサンプル クエリを使用してシステム テーブルから取得できます。  
   
-```  
+```sql
 USE msdb  
 GO  
 SELECT  
- database_name AS [Database Name]  
-,backup_path AS [Backup Destination and File]  
+ database_name AS [Database Name] ,backup_path AS [Backup Destination and File]  
 ,[Backup Type] =  
 CASE backup_type  
 WHEN 1 THEN 'FULL'  
@@ -244,8 +237,7 @@ END
 ,backup_finish_date AS [Backup Completion Time]  
 ,expiration_date AS [Backup Expiry Date/Time]  
 FROM  
-smart_backup_files;  
-  
+smart_backup_files;
 ```  
   
  返される各種状態の詳細を以下に示します。  
@@ -256,10 +248,8 @@ smart_backup_files;
   
 -   **コピーに失敗しました-F:** コピーの進行状況と同様に、これは可用性グループの特定のデータベースです。 コピー プロセスが失敗した場合、状態は F としてマークされます。  
   
--   **破損-C:** が[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]複数回試行された後でも RESTORE HEADER_ONLY コマンドを実行して、ストレージ内のバックアップファイルを確認できない場合、このファイルは破損しているとマークされます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、破損したファイルによってバックアップ チェーンが中断されないように、バックアップをスケジュールします。  
+-   **破損-C:** 複数回試行した後でも RESTORE HEADER_ONLY コマンドを実行してストレージ内のバックアップファイルを確認でき [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] ない場合、このファイルは破損しているとマークされます。 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]は、破損したファイルによってバックアップ チェーンが中断されないように、バックアップをスケジュールします。  
   
 -   **削除済み-D:** 対応するファイルが Azure storage に見つかりません。 ファイルの削除によってバックアップ チェーンが中断された場合、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)]はバックアップをスケジュールします。  
   
--   **不明-U:** この状態は、 [!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] Azure storage 内のファイルの存在とそのプロパティをまだ確認できていないことを示しています。 プロセスが次回実行されたときに (約 15 分間隔)、この状態が更新されます。  
-  
-  
+-   **不明-U:** この状態は、[!INCLUDE[ss_smartbackup](../includes/ss-smartbackup-md.md)] が Azure storage のファイルの存在とプロパティをまだ確認できていないことを示しています。 プロセスが次回実行されたときに (約 15 分間隔)、この状態が更新されます。  

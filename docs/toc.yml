@@ -1,8 +1,8 @@
-- name: SQL Server へようこそ
-  href: sql-server/sql-server-technical-documentation.md
-- name: SQL ドキュメントのナビゲーションに関するヒント
+- name: SQL Server
+  href: sql-server/index.yml
+- name: ドキュメントのナビゲーションに関するヒント
   href: sql-server/sql-docs-navigation-guide.md
-- name: 以前のバージョン 2014-2005
+- name: 以前のバージョン 2005-2014
   href: toc/previous-versions-sql-server.md
 - name: 概要
   items:
@@ -10376,18 +10376,18 @@
               href: linux/sql-server-linux-configure-mssql-conf.md
             - name: 環境変数
               href: linux/sql-server-linux-configure-environment-variables.md
-            - name: Docker コンテナーの構成
-              href: linux/sql-server-linux-configure-docker.md
-            - name: MSDTC
-              items:
-                - name: MSDTC の構成
-                  href: linux/sql-server-linux-configure-msdtc.md
-                - name: MSDTC 用の Docker の構成
-                  href: linux/sql-server-linux-configure-msdtc-docker.md
+            - name: MSDTC の構成
+              href: linux/sql-server-linux-configure-msdtc.md
             - name: 永続的なメモリ PMEM の構成
               href: linux/sql-server-linux-configure-pmem.md
             - name: 使用状況と診断データを Microsoft に送信するように構成する
               href: linux/usage-and-diagnostic-data-configuration-for-sql-server-linux.md
+        - name: '[SSIS ログの構成]'
+          items:
+            - name: Docker コンテナーの構成
+              href: linux/sql-server-linux-configure-docker.md
+            - name: MSDTC 用の Docker の構成
+              href: linux/sql-server-linux-configure-msdtc-docker.md
         - name: 開発
           href: linux/sql-server-linux-develop-overview.md
           items:

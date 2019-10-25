@@ -1,5 +1,5 @@
 ---
-title: 開始、停止、一時停止、再開、データベース エンジン、SQL Server エージェント、または SQL Server Browser サービスを再起動 |Microsoft Docs
+title: データベースエンジン、SQL Server エージェント、または SQL Server Browser サービスを開始、停止、一時停止、再開、再起動する |Microsoft Docs
 ms.custom: ''
 ms.date: 06/13/2017
 ms.prod: sql-server-2014
@@ -40,15 +40,15 @@ ms.assetid: 32660a02-e5a1-411a-9e57-7066ca459df6
 author: MikeRayMSFT
 ms.author: mikeray
 manager: craigg
-ms.openlocfilehash: 341640e4aff44fbc14c85f61b5a98246f857538a
-ms.sourcegitcommit: 3026c22b7fba19059a769ea5f367c4f51efaf286
+ms.openlocfilehash: 11d146144a05c9185a360b2791f9e162a94ff59a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 06/15/2019
-ms.locfileid: "62808748"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797948"
 ---
 # <a name="start-stop-pause-resume-restart-the-database-engine-sql-server-agent-or-sql-server-browser-service"></a>データベース エンジン、SQL Server エージェント、SQL Server Browser サービスの開始、停止、一時停止、再開、および再起動
-  このトピックでは、開始、停止、一時停止、再開、または再起動する方法を説明します、 [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]エージェント、または[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Browser サービスを使用して[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]Configuration Manager、 [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンド プロンプトでコマンド[!INCLUDE[tsql](../../includes/tsql-md.md)]、または PowerShell。  
+  このトピックでは、コマンドプロンプトから [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Configuration Manager、[!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]、 **net**コマンドを使用して、[!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント、または [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスを開始、停止、一時停止、再開、または再起動する方法について説明し [!INCLUDE[tsql](../../includes/tsql-md.md)]、、または PowerShell。  
   
 -   **作業を開始する準備:**  
   
@@ -79,7 +79,7 @@ ms.locfileid: "62808748"
  [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)]である実行可能プロセスです。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] は、既定のインスタンス (1 台のコンピューターにつき 1 つのみ) にすることも、 [!INCLUDE[ssDE](../../includes/ssde-md.md)]の多数の名前付きインスタンスの 1 つにすることもできます。 コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のインスタンスを判別するには、 [!INCLUDE[ssDE](../../includes/ssde-md.md)] 構成マネージャーを使用します。 既定のインスタンス (インストールした場合) は、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (MSSQLSERVER)** として表示されます。 名前付きインスタンス (インストールした場合) は、 **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (<instance_name>)** として表示されます。 既定では、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Express は **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] (SQLEXPRESS)** としてインストールされます。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェント サービス**  
- ジョブおよび警告と呼ばれる管理タスクをスケジュールに従って実行する Windows サービスです。 詳しくは、「 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 エディションでサポートされている機能の一覧については[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を参照してください[機能は、SQL Server 2014 の各エディションでサポートされている](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)します。  
+ ジョブおよび警告と呼ばれる管理タスクをスケジュールに従って実行する Windows サービスです。 詳しくは、「 [SQL Server Agent](../../ssms/agent/sql-server-agent.md)」をご覧ください。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エージェントは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]のすべてのエディションで使用できるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の各エディションでサポートされている機能の一覧については、「 [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)」を参照してください。  
   
  **[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービス**  
  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の各種リソースに関する着信要求を受信し、コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] インスタンスに関するクライアント情報を提供する Windows サービスです。 コンピューターにインストールされている [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のすべてのインスタンスに対して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] Browser サービスのインスタンスが 1 つ使用されます。  
@@ -112,12 +112,12 @@ ms.locfileid: "62808748"
   
 -   クラスターで実行中の [!INCLUDE[ssDEnoversion](../../includes/ssdenoversion-md.md)] サービスを管理するには、クラスター アドミニストレーターを使用するのが最適です。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
   
-####  <a name="Permissions"></a> Permissions  
+####  <a name="Permissions"></a> アクセス許可  
  サービスを開始、停止、一時停止、再開、または再起動できるのは、既定ではローカル管理者グループのメンバーだけです。 管理者以外のユーザーがサービスを管理できるようにする方法については、「 [[HOWTO] Windows Server 2003 でサービスを管理する権利をユーザーに付与する](https://support.microsoft.com/kb/325349)」をご覧ください (Windows の他のバージョンでも処理は同じです)。  
   
- [!INCLUDE[tsql](../../includes/tsql-md.md)] の `SHUTDOWN` コマンドを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには、 **sysadmin** または **serveradmin** 固定サーバー ロールのメンバーシップが必要です。この権限は譲渡できません。  
+ [!INCLUDE[tsql](../../includes/tsql-md.md)]`SHUTDOWN` コマンドを使用して [!INCLUDE[ssDE](../../includes/ssde-md.md)] を停止するには、 **sysadmin**または**serveradmin**固定サーバーロールのメンバーシップが必要ですが、譲渡できません。  
   
 ##  <a name="SSCMProcedure"></a>[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] 構成マネージャーの使用  
   
@@ -172,7 +172,7 @@ ms.locfileid: "62808748"
 3.  アクションを実行するかどうかを確認するメッセージが表示されたら、 **[はい]** をクリックします。  
   
 ##  <a name="CommandPrompt"></a> コマンド プロンプト ウィンドウからの net コマンドの使用  
- [!INCLUDE[msCoName](../../includes/msconame-md.md)] Windows の **net** コマンドを使用して、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサービスを開始、停止、または一時停止できます。  
+ [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] net [!INCLUDE[msCoName](../../includes/msconame-md.md)] コマンドを使用して、 **、** サービスを開始、停止、または一時停止できます。  
   
 ###  <a name="dbDefault"></a> 既定のインスタンスを開始するには [!INCLUDE[ssDE](../../includes/ssde-md.md)]  
   
@@ -180,7 +180,7 @@ ms.locfileid: "62808748"
   
      **net start "SQL Server (MSSQLSERVER)"**  
   
-     \- または -  
+     -または-  
   
      **net start MSSQLSERVER**  
   
@@ -190,7 +190,7 @@ ms.locfileid: "62808748"
   
      **net start "SQL Server (** *instancename* **)"**  
   
-     \- または -  
+     -または-  
   
      **net start MSSQL$** *instancename*  
   
@@ -200,7 +200,7 @@ ms.locfileid: "62808748"
   
      **net start "SQL Server (MSSQLSERVER)" /f /m**  
   
-     \- または -  
+     -または-  
   
      **net start MSSQLSERVER /f /m**  
   
@@ -213,7 +213,7 @@ ms.locfileid: "62808748"
   
      **net start "SQL Server Agent (MSSQLSERVER)"**  
   
-     \- または -  
+     -または-  
   
      **net start SQLSERVERAGENT**  
   
@@ -223,7 +223,7 @@ ms.locfileid: "62808748"
   
      **net start "SQL Server Agent(** *instancename* **)"**  
   
-     \- または -  
+     -または-  
   
      **net start SQLAgent$** *instancename*  
   
@@ -235,7 +235,7 @@ ms.locfileid: "62808748"
   
      **net start "SQL Server Browser"**  
   
-     \- または -  
+     -または-  
   
      **net start SQLBrowser**  
   
@@ -264,7 +264,7 @@ ms.locfileid: "62808748"
     SHUTDOWN WITH NOWAIT;   
     ```  
   
- 詳細については、`SHUTDOWN`ステートメントを参照してください[シャット ダウン&#40;TRANSACT-SQL&#41;](/sql/t-sql/language-elements/shutdown-transact-sql)します。  
+ `SHUTDOWN` ステートメントの詳細については、 [「 &#40;transact-sql&#41;のシャットダウン](/sql/t-sql/language-elements/shutdown-transact-sql)」を参照してください。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
@@ -281,8 +281,7 @@ ms.locfileid: "62808748"
     ```powershell  
     # Get a reference to the ManagedComputer class.  
     CD SQLSERVER:\SQL\computername  
-    $Wmi = (get-item .).ManagedComputer  
-  
+    $Wmi = (Get-Item .).ManagedComputer
     ```  
   
 3.  停止または開始するサービスを指定します。 以下のいずれかの行を選択してください。 `instancename` は名前付きインスタンスの名前に置き換えます。  
@@ -338,8 +337,6 @@ ms.locfileid: "62808748"
     $DfltInstance  
     ```  
   
-## <a name="see-also"></a>参照  
+## <a name="see-also"></a>「  
  [最小構成での SQL Server の起動](start-sql-server-with-minimal-configuration.md)   
  [SQL Server 2014 の各エディションがサポートする機能](../../getting-started/features-supported-by-the-editions-of-sql-server-2014.md)  
-  
-  

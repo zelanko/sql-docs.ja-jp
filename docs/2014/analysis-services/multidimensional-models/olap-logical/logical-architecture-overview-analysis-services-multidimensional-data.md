@@ -13,12 +13,12 @@ ms.assetid: 1a547bce-dacf-4d32-bc0f-3829f4b026e1
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: b945aa26f0cd9137763a3a8d84b0f74c7d2311bc
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: b4eea3e75ed57dcf69c8d8c5bcaedf3aef1fa9f5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "68889610"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797641"
 ---
 # <a name="logical-architecture-overview-analysis-services---multidimensional-data"></a>論理アーキテクチャの概要 (Analysis Services - 多次元データ)
   Analysis Services は、さまざまな種類の Analysis Services モデルで使用されるメモリ アーキテクチャとランタイム環境を指定する、サーバー配置モードで動作します。 サーバー モードは、インストール時に決定されます。 **多次元およびデータマイニングモードで**は、従来の OLAP およびデータマイニングがサポートされます。 **表形式モード**では、テーブルモデルがサポートされます。 **SharePoint 統合モード**は、ブック内の Excel または PowerPivot データモデルの読み込みとクエリを実行するために使用される PowerPivot for SharePoint としてインストールされた Analysis Services のインスタンスを参照します。  
@@ -26,9 +26,9 @@ ms.locfileid: "68889610"
  このトピックでは、多次元モードとデータ マイニング モードで動作する場合の Analysis Services の基本アーキテクチャについて説明します。 他のモードの詳細については、「 [ &#40;テーブル&#41;モデリング ssas テーブル](../../tabular-models/tabular-models-ssas.md)」と「[テーブルソリューションと多次元ソリューション&#40;の比較 (ssas&#41;](https://docs.microsoft.com/analysis-services/comparing-tabular-and-multidimensional-solutions-ssas))」を参照してください。  
   
 ## <a name="basic-architecture"></a>基本アーキテクチャ  
- [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、複数のデータベースを含めることができます。また、1 つのデータベース内に OLAP オブジェクトとデータ マイニング オブジェクトを同時に格納できます。 アプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の指定インスタンスおよび指定データベースに接続します。 サーバー コンピューターは [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の複数のインスタンスをホストできます。 @No__t_0 のインスタンスには、"\<ServerName > \\ < InstanceName \>" という名前が付けられます。 次の図は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクト間のすべての関係を示しています。  
+ [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、複数のデータベースを含めることができます。また、1 つのデータベース内に OLAP オブジェクトとデータ マイニング オブジェクトを同時に格納できます。 アプリケーションは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の指定インスタンスおよび指定データベースに接続します。 サーバー コンピューターは [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] の複数のインスタンスをホストできます。 [!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] のインスタンスには、"\<ServerName >\\< InstanceName\>" という名前が付けられます。 次の図は、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] オブジェクト間のすべての関係を示しています。  
   
- ![AMO 実行オブジェクトの関係](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/amo-runningobjects.gif "AMO 実行オブジェクトの関係")  
+ ![AMO 実行オブジェクトの関係](../../dev-guide/media/amo-runningobjects.gif "AMO 実行オブジェクトの関係")  
   
  基本クラスは、キューブの構築に必要な最小限のオブジェクト セットです。 この最小限のオブジェクト セットは、ディメンション、メジャー グループ、およびパーティションです。 集計は省略可能です。  
   
@@ -61,7 +61,7 @@ ms.locfileid: "68889610"
 ## <a name="example"></a>例  
  Imports キューブには、Packages と Last という 2 つのメジャーと、Route、Source、および Time という 3 つの関連ディメンションが含まれています。  
   
- ![Cube の例1](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro1.gif "Cube の例1")  
+ ![Cube の例1](../../dev-guide/media/cubeintro1.gif "Cube の例1")  
   
  キューブの周囲の小さい英数字の値はディメンションのメンバーです。 この例のメンバーは、ground (Route ディメンションのメンバー)、Africa (Source ディメンションのメンバー)、および 1st quarter (Time ディメンションのメンバー) です。  
   
@@ -74,7 +74,7 @@ ms.locfileid: "68889610"
 ### <a name="aggregates"></a>集計  
  キューブのビジネス ユーザーは、ディメンション内のメンバーのレベルに関係なく、すべてのディメンションのメンバーごとにすべてのメジャーの値を決定できます。これは、[!INCLUDE[ssASnoversion](../../../includes/ssasnoversion-md.md)] が必要に応じて上位レベルで値を集計するためです。 たとえば、前の図のメジャー値は、次の図に示すように、時間ディメンションの Calendar Time 階層を使用して、標準のカレンダー階層に従って集計できます。  
   
- ![時間ディメンションに従って編成されたメジャーのダイアグラム](https://docs.microsoft.com/analysis-services/analysis-services/dev-guide/media/cubeintro2.gif "時間ディメンションに従って編成されたメジャーのダイアグラム")  
+ ![時間ディメンションに従って編成されたメジャーのダイアグラム](../../dev-guide/media/cubeintro2.gif "時間ディメンションに従って編成されたメジャーのダイアグラム")  
   
  1 つのディメンションを使用してメジャーを集計するだけでなく、さまざまなディメンションのメンバーを組み合わせて使用し、メジャーを集計できます。 これにより、ビジネス ユーザーは複数のディメンション内で同時にメジャーを評価できます。 たとえば、ビジネス ユーザーが Eastern Hemisphere と Western Hemisphere から air によって搬送された輸入品を四半期別に分析する必要があれば、キューブ上でクエリを実行して次のデータセットを取得できます。  
   

@@ -10,12 +10,12 @@ ms.assetid: f698ceb1-d53e-4717-a3a0-225b346760d0
 author: minewiskan
 ms.author: owend
 manager: craigg
-ms.openlocfilehash: db1cdc1f10d53f11e06e37196d938667fb96327a
-ms.sourcegitcommit: a1adc6906ccc0a57d187e1ce35ab7a7a951ebff8
+ms.openlocfilehash: f792790e6bdc8c116c629910cdd64ec9aa0e6701
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/09/2019
-ms.locfileid: "68888516"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797260"
 ---
 # <a name="migrate-powerpivot-to-sharepoint-2013"></a>SharePoint 2013 への PowerPivot の移行
   
@@ -28,7 +28,7 @@ ms.locfileid: "68888516"
   
 ### <a name="migration-overview"></a>移行の概要  
   
-|1|2|3|4|  
+|@shouldalert|2|3|4|  
 |-------|-------|-------|-------|  
 |SharePoint 2013 ファームを準備する|データベースをバックアップ、コピー、および復元する|コンテンツ データベースをマウントする|[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] のスケジュールを移行する|  
 ||[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]|SharePoint サーバーの全体管理<br /><br /> Windows PowerShell|SharePoint アプリケーション ページ<br /><br /> Windows PowerShell|  
@@ -61,15 +61,15 @@ ms.locfileid: "68888516"
 ##  <a name="bkmk_backup_restore"></a> 2) データベースをバックアップ、コピー、および復元する  
  "SharePoint のデータベースアタッチアップグレード" プロセスは、PowerPivot 関連のコンテンツとサービスアプリケーションデータベースを SharePoint 2013 ファームにバックアップ、コピー、および復元する一連の手順です。  
   
-1.  **データベースを読み取り専用に設定します。** で[!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]、データベース名を右クリックし、 **[プロパティ]** をクリックします。 **[オプション]** ページで、 **[読み取り専用データベース]** プロパティを **[True]** に設定します。  
+1.  **データベースを読み取り専用に設定する** : [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[プロパティ]** をクリックします。 **[オプション]** ページで、 **[読み取り専用データベース]** プロパティを **[True]** に設定します。  
   
-2.  **バックアップ：** SharePoint 2013 ファームに移行する各コンテンツデータベースとサービスアプリケーションデータベースをバックアップします。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[タスク]** 、 **[バックアップ]** を順にクリックします。  
+2.  **バックアップする** : SharePoint 2013 ファームに移行する各コンテンツ データベースとサービス アプリケーション データベースをバックアップします。 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]で、データベース名を右クリックし、 **[タスク]** 、 **[バックアップ]** を順にクリックします。  
   
 3.  データベース バックアップ ファイル (.bak) をバックアップ先サーバーにファイル コピーします。  
   
-4.  **復元**データベースをコピー先[!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に復元します。 この手順は、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して行うことができます。  
+4.  **復元する** : データベースを復元先の [!INCLUDE[ssDEnoversion](../../../includes/ssdenoversion-md.md)]に復元します。 この手順は、 [!INCLUDE[ssManStudioFull](../../../includes/ssmanstudiofull-md.md)]を使用して行うことができます。  
   
-5.  **データベースを読み取り/書き込みに設定する:** データベースを**読み取り**専用に設定します。  
+5.  **データベースを読み取り/書き込み用に設定する** : **[読み取り専用データベース]** を **[False]** に設定します。  
   
 ##  <a name="bkmk_prepare_mount_databases"></a> 3) Web アプリケーションを準備して、コンテンツ データベースをマウントする  
  次の手順の詳細については、「 [sharepoint 2010 から sharepoint 2013 にデータベースをアップグレードする](https://go.microsoft.com/fwlink/p/?LinkId=256690)」 (https://go.microsoft.com/fwlink/p/?LinkId=256690) を参照してください。  
@@ -90,15 +90,15 @@ ms.locfileid: "68888516"
   
 -   **コンテンツ データベースをマウントする:**  
   
-     移行したコンテンツ データベースをマウントするには、SharePoint 2013 管理シェルで PowerShell コマンドレットを使用します。 マウントする必要があるのはコンテンツ データベースのみで、サービス アプリケーション データベースをマウントする必要はありません。![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
+     移行したコンテンツ データベースをマウントするには、SharePoint 2013 管理シェルで PowerShell コマンドレットを使用します。 サービスアプリケーションデータベースは、コンテンツデータベースのみをマウントする必要はありません。 ![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")  
   
-    ```  
+    ```powershell
     Mount-SPContentDatabase "SharePoint_Content_O14-KJSP1" -DatabaseServer "[server name]\powerpivot" -WebApplication [web application URL]  
     ```  
   
-     詳細については、「[コンテンツデータベースを接続またはデタッチする (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) 」 (https://technet.microsoft.com/library/ff628582.aspx) 「」を参照してください。  
+     詳細については、「[コンテンツデータベースを接続またはデタッチする (SharePoint Server 2010)](https://technet.microsoft.com/library/ff628582.aspx) 」 (https://technet.microsoft.com/library/ff628582.aspx) を参照してください。  
   
-     **ステップが完了したときの状態:** マウント操作が完了すると、ユーザーは古いコンテンツデータベース内のファイルを表示できます。 そのため、ユーザーはドキュメント ライブラリのブックを表示して開くことができます。  
+     **手順の完了後の状態**  : マウント操作が完了すると、前のコンテンツ データベースに格納されていたファイルが表示されます。 そのため、ユーザーはドキュメント ライブラリのブックを表示して開くことができます。  
   
     > [!TIP]  
     >  移行したブックの新しいスケジュールは、移行プロセスのこの時点で作成することができます。 ただし、スケジュールは、前の SharePoint ファームからコピーしたデータベースではなく、新しい [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] サービス アプリケーション データベースで作成されるため、 古いスケジュールは含められません。 前のデータベースを使用して古いスケジュールを移行する次の手順を完了すると、新しいスケジュールは使用できなくなります。  
@@ -106,9 +106,9 @@ ms.locfileid: "68888516"
 ### <a name="troubleshoot-issues-when-you-attempt-to-mount-databases"></a>データベースをマウントしようとすると発生する問題のトラブルシューティング  
  ここでは、データベースをマウントするときに発生する可能性のある問題についてまとめます。  
   
-1.  **認証エラー:** 認証に関連するエラーが発生した場合は、ソース web アプリケーションが使用している認証モードを確認します。 エラーは、SharePoint 2013 と SharePoint 2010 の Web アプリケーション間の認証の不一致によって発生する可能性があります。 詳細については、「 [1) SharePoint 2013 ファームを準備する](#bkmk_prepare_sharepoint2013) 」を参照してください。  
+1.  **認証エラー** : 認証関連のエラーが発生する場合は、元の Web アプリケーションで使用している認証モードを確認します。 エラーは、SharePoint 2013 と SharePoint 2010 の Web アプリケーション間の認証の不一致によって発生する可能性があります。 詳細については、「 [1) SharePoint 2013 ファームを準備する](#bkmk_prepare_sharepoint2013) 」を参照してください。  
   
-2.  **PowerPivot ファイルがありません:** 不足している powerpivot .dll に関連するエラーが発生した場合は、 **sppowerpivot .msi**がインストール[!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)]されていないか、構成ツールを使用して powerpivot が構成されていません。  
+2.  **PowerPivot ファイルの不足:** PowerPivot の .dll ファイルの不足に関連するエラーが発生する場合は、 **spPowerPivot.msi** がインストールされていないか、 [!INCLUDE[ssGemini](../../../includes/ssgemini-md.md)] 構成ツールを使用して PowerPivot が構成されていません。  
   
 ##  <a name="bkmk_upgrade_powerpivot_schedules"></a>4) PowerPivot のスケジュールをアップグレードする  
  ここでは、PowerPivot のスケジュールの移行に関する詳細とオプションについて説明します。 スケジュールを移行するには、2 つの手順を実行します。 まず、移行したサービス アプリケーション データベースを使用するように PowerPivot サービス アプリケーションを構成し、 次に、スケジュールを移行する 2 つの方法のうちいずれかを選択します。  
@@ -127,12 +127,12 @@ ms.locfileid: "68888516"
   
  更新スケジュールを移行するには、PowerPivot サービス アプリケーションを構成します。  
   
--   **スケジュールの移行オプション 1:SharePoint ファーム管理者**  
+-   **スケジュールを移行するオプション 1: SharePoint ファームの管理者**  
   
-    1.  SharePoint 2013 管理`Set-PowerPivotServiceApplication`で、 `-StartMigratingRefreshSchedules`スイッチを使用してコマンドレットを実行します。 ![powershell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "powershell")関連コンテンツの自動移行を有効にします。 次の Windows PowerShell スクリプトは、PowerPivot サービス アプリケーションが 1 つだけであることを前提としています。  
+    1.  SharePoint 2013 管理で、`Set-PowerPivotServiceApplication` コマンドレットを `-StartMigratingRefreshSchedules` スイッチを使用して実行し、オンデマンドスケジュール移行![PowerShell 関連コンテンツ](../../../reporting-services/media/rs-powershellicon.jpg "PowerShell 関連コンテンツ")を有効にします。 次の Windows PowerShell スクリプトは、PowerPivot サービス アプリケーションが 1 つだけであることを前提としています。  
   
-        ```  
-        $app=Get-PowerPivotServiceApplication  
+        ```powershell
+        $app = Get-PowerPivotServiceApplication  
         Set-PowerPivotServiceApplication $app -StartMigratingRefreshSchedules  
         ```  
   
@@ -140,13 +140,12 @@ ms.locfileid: "68888516"
   
     2.  StartMigratingRefreshSchedules プロパティの現在値を確認する場合は、次の PowerShell スクリプトを実行します。 このスクリプトは、すべての PowerPivot サービス アプリケーション オブジェクトをループし、名前とプロパティ値を表示します。  
   
-        ```  
+        ```powershell
         $apps = Get-PowerPivotServiceApplication  
-        foreach ($app in $apps){}  
-        Get-PowerPivotServiceApplication $appp | format-table -property displayname,id,StartMigratingRefreshSchedules  
+        foreach ($app in $apps){ Get-PowerPivotServiceApplication $app | Format-Table -Property displayname, id, StartMigratingRefreshSchedules }
         ```  
   
-     **スケジュールの移行 option2:ユーザーが各ブックを更新する**  
+     **スケジュールを移行するオプション 2: ユーザーが各ブックを更新する**  
   
     1.  スケジュールを移行するもう 1 つの方法は、ブックごとに定期更新を有効にすることです。 ブックがあるドキュメント ライブラリに移動します。  
   
@@ -171,10 +170,8 @@ ms.locfileid: "68888516"
   
 -   [ブックのアップグレードと定期データ更新 &#40;SharePoint 2013&#41;](https://docs.microsoft.com/analysis-services/instances/install-windows/upgrade-workbooks-and-scheduled-data-refresh-sharepoint-2013)  
   
--   [SharePoint 2013 へのアップグレードプロセスの概要](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688).  
+-   [SharePoint 2013 へのアップグレードプロセスの概要](https://go.microsoft.com/fwlink/p/?LinkId=256688)(https://go.microsoft.com/fwlink/p/?LinkId=256688) 。  
   
--   [SharePoint 2013 へのアップグレードの前に準備を整える](https://go.microsoft.com/fwlink/p/?LinkId=256689)(https://go.microsoft.com/fwlink/p/?LinkId=256689).  
+-   [SharePoint 2013 (https://go.microsoft.com/fwlink/p/?LinkId=256689) にアップグレードする前に準備を整える](https://go.microsoft.com/fwlink/p/?LinkId=256689)。  
   
--   [Sharepoint 2010 から sharepoint 2013 にデータベースをアップグレードする](https://go.microsoft.com/fwlink/p/?LinkId=256690)(https://go.microsoft.com/fwlink/p/?LinkId=256690).  
-  
-  
+-   [Sharepoint 2010 から sharepoint 2013 (https://go.microsoft.com/fwlink/p/?LinkId=256690) にデータベースをアップグレード](https://go.microsoft.com/fwlink/p/?LinkId=256690)します。

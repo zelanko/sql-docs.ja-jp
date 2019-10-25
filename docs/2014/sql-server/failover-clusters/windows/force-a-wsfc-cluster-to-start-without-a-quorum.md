@@ -13,28 +13,28 @@ ms.assetid: 4a121375-7424-4444-b876-baefa8fe9015
 author: MashaMSFT
 ms.author: mathoma
 manager: craigg
-ms.openlocfilehash: fe9a196424a8d3488a49c86f0996dece71eee0f7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: 9c63930883642cf7f5e675cb57d5f83648a5787a
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69028531"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72797466"
 ---
 # <a name="force-a-wsfc-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずに WSFC クラスターを強制的に起動する
   このトピックでは、クォーラムを使用せずに Windows Server フェールオーバー クラスタリング (WSFC) クラスター ノードを強制的に起動する方法について説明します。  この処理が必要になるのは、ディザスター リカバリーとマルチサブネットのシナリオにおいて、[!INCLUDE[ssHADR](../../../includes/sshadr-md.md)]および [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンスのデータを復旧し、高可用性を完全に再確立する場合です。  
   
--   **開始前の準備:** [推奨事項](#Recommendations)、[セキュリティ](#Security)  
+-   **開始前の準備:**  [推奨事項](#Recommendations)、 [セキュリティ](#Security)  
   
--   **クォーラムを使用せずにクラスターを強制的に起動するには、次を使用:** [フェールオーバー クラスター マネージャーの使用](#FailoverClusterManagerProcedure)、[PowerShell の使用](#PowerShellProcedure)、[Net.exe の使用](#CommandPromptProcedure)  
+-   **クォーラムを使用せずにクラスターを強制的に起動する方法:**  [フェールオーバー クラスター マネージャーの使用](#FailoverClusterManagerProcedure)、 [PowerShell の使用](#PowerShellProcedure)、 [net.exe の使用](#CommandPromptProcedure)  
   
--   **補足情報:** [補足情報: クォーラムを使用せずにクラスターを強制的に起動した後](#FollowUp)  
+-   **補足情報:**  [補足情報: クォーラムを使用せずにクラスターを強制的に起動した後](#FollowUp)  
   
 ##  <a name="BeforeYouBegin"></a> 開始前の準備  
   
 ###  <a name="Recommendations"></a> 推奨事項  
  明示的に指定されている場合を除き、このトピックの手順は、WSFC クラスター内のノードから実行する必要があります。  ただし、クォーラムを使用せずに強制的に起動する対象となるノードからこれらの手順を実行することにより、適切な結果が得られ、ネットワークの問題の発生を回避できる場合もあります。  
   
-###  <a name="Security"></a> セキュリティ  
+###  <a name="Security"></a> Security  
  ユーザーは、WSFC クラスターの各ノードのローカル Administrators グループのメンバーであるドメイン アカウントを使用する必要があります。  
   
 ##  <a name="FailoverClusterManagerProcedure"></a> フェールオーバー クラスター マネージャーの使用  
@@ -47,7 +47,7 @@ ms.locfileid: "69028531"
   
 3.  左ペインにある **[フェールオーバー クラスター マネージャー]** ツリーで、クラスター名をクリックします。  
   
-4.  概要ペインで、 **[クォーラムの構成]** の現在の値が **[警告: クラスターは ForceQuorum 状態で実行中です]** であることを確認します。  
+4.  概要ペインで、 **[クォーラムの構成]** の現在の値が  **[警告: クラスターは ForceQuorum 状態で実行中です]** であることを確認します。  
   
 ##  <a name="PowerShellProcedure"></a> PowerShell の使用  
   
@@ -78,13 +78,12 @@ Start-ClusterNode -Name $node -FixQuorum
 (Get-ClusterNode $node).NodeWeight = 1  
   
 $nodes = Get-ClusterNode -Cluster $node  
-$nodes | Format-Table -property NodeName, State, NodeWeight  
-  
+$nodes | Format-Table -property NodeName, State, NodeWeight
 ```  
   
 ##  <a name="CommandPromptProcedure"></a> net.exe の使用  
   
-##### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
+### <a name="to-force-a-cluster-to-start-without-a-quorum"></a>クォーラムを使用せずにクラスターを強制的に起動するには  
   
 1.  リモート デスクトップを使用して、強制的にオンラインにする目的のクラスター ノードに接続します。  
   
@@ -97,12 +96,12 @@ $nodes | Format-Table -property NodeName, State, NodeWeight
 ### <a name="example-netexe"></a>例 (net.exe)  
  次の例では、クォーラムを使用せずにノードのクラスター サービスを強制的に起動します。また、 `NodeWeight = 1`を設定し、新しく強制的に起動されたノードからクラスター ノードの状態を列挙します。  
   
-```ms-dos  
+```cmd
 net.exe stop clussvc  
 net.exe start clussvc /forcequorum  
 ```  
   
-##  <a name="FollowUp"></a>補足情報: クォーラムを使用せずにクラスターを強制的に起動した後  
+##  <a name="FollowUp"></a> 補足情報: クォーラムを使用せずにクラスターを強制的に起動した後  
   
 -   他のノードをオンラインに戻す前に、NodeWeight の値を再評価および再構成して、新しいクォーラムを正しく構築する必要があります。 この処理を行わないと、クラスターが再びオフラインに戻る場合があります。  
   
@@ -126,9 +125,7 @@ net.exe start clussvc /forcequorum
   
 -   [Get-ClusterLog フェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee461045.aspx)  
   
-## <a name="see-also"></a>関連項目  
+## <a name="see-also"></a>「  
  [WSFC の強制クォーラムによる災害復旧 &#40;SQL Server&#41;](wsfc-disaster-recovery-through-forced-quorum-sql-server.md)   
  [クラスター クォーラムの NodeWeight の設定の構成](configure-cluster-quorum-nodeweight-settings.md)   
  [タスク フォーカスによって一覧表示される Windows PowerShell でのフェールオーバー クラスター コマンドレット](https://technet.microsoft.com/library/ee619761\(WS.10\).aspx)  
-  
-  
