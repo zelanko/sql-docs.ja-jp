@@ -1,7 +1,7 @@
 - name: SQL Server Machine Learning Services のドキュメント
   href: ../advanced-analytics/index.yml
 - name: SQL Server へようこそ >
-  href: ../sql-server/sql-server-technical-documentation.md?toc=../toc.json
+  href: ../sql-server/index.yml
 - name: 概要
   expanded: true
   items:
@@ -113,7 +113,7 @@
           href: ../advanced-analytics/tutorials/r-tutorial-create-models-per-partition.md
         - name: T-SQL での R の使用
           items:
-            - name: 1. 概要
+            - name: 1. はじめに
               href: ../advanced-analytics/tutorials/sqldev-in-database-r-for-sql-developers.md
             - name: 2. データの探索
               href: ../advanced-analytics/tutorials/sqldev-explore-and-visualize-the-data.md
@@ -125,7 +125,7 @@
               href: ../advanced-analytics/tutorials/sqldev-operationalize-the-model.md
         - name: R ツールでの SQL ML の使用
           items:
-            - name: 1. 概要
+            - name: 1. はじめに
               href: ../advanced-analytics/tutorials/walkthrough-data-science-end-to-end-walkthrough.md
             - name: 2. データの探索
               href: ../advanced-analytics/tutorials/walkthrough-view-and-summarize-data-using-r.md
@@ -139,7 +139,7 @@
               href: ../advanced-analytics/tutorials/walkthrough-deploy-and-use-the-model.md
         - name: RevoScaleR の詳細情報
           items:
-            - name: 1. 概要
+            - name: 1. はじめに
               href: ../advanced-analytics/tutorials/deepdive-data-science-deep-dive-using-the-revoscaler-packages.md
             - name: 2. データベースとアクセス許可の作成
               href: ../advanced-analytics/tutorials/deepdive-work-with-sql-server-data-using-r.md
