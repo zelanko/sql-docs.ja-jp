@@ -1,5 +1,5 @@
 ---
-title: sp_helplogins (TRANSACT-SQL) |Microsoft Docs
+title: sp_helplogins (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -53,17 +53,17 @@ sp_helplogins [ [ @LoginNamePattern = ] 'login' ]
 |**SID**|**varbinary(85)**|ログイン セキュリティ識別子 (SID)。|  
 |**DefDBName**|**sysname**|既定のデータベースを**LoginName**のインスタンスに接続するときは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**DefLangName**|**sysname**|既定の言語で使用される**LoginName**します。|  
-|**Auser**|**char (5)**|Yes = **LoginName**データベースに関連付けられているユーザー名を持っています。<br /><br /> いいえ = **LoginName**関連付けられているユーザー名がありません。|  
-|**ARemote**|**char (7)**|Yes = **LoginName**が関連付けられたリモート ログインします。<br /><br /> いいえ = **LoginName**関連付けられたログインはありません。|  
+|**Auser**|**char (5)**|Yes = **LoginName**データベースに関連付けられているユーザー名を持っています。<br /><br /> No = **LoginName**関連付けられているユーザー名がありません。|  
+|**ARemote**|**char (7)**|Yes = **LoginName**が関連付けられたリモート ログインします。<br /><br /> No = **LoginName**関連付けられたログインはありません。|  
   
  2 番目のレポートには、次の表に示すとおり、各ログインにマップされているユーザーに関する情報、およびログインのロール メンバーシップが含まれています。  
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**LoginName**|**sysname**|ログイン名です。|  
-|**データベース名**|**sysname**|既定のデータベースを**LoginName**のインスタンスに接続するときは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
+|**DBName**|**sysname**|既定のデータベースを**LoginName**のインスタンスに接続するときは[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]します。|  
 |**UserName**|**sysname**|ユーザー アカウントは、 **LoginName**でマップが**DBName**、およびロールを**LoginName**でのメンバーである**DBName**します。|  
-|**UserOrAlias**|**char (8)**|MemberOf = **UserName**は、ロールです。<br /><br /> ユーザー = **UserName**はユーザー アカウントです。|  
+|**UserOrAlias**|**char (8)**|MemberOf = **UserName**は、ロールです。<br /><br /> User = **UserName**はユーザー アカウントです。|  
   
 ## <a name="remarks"></a>コメント  
  ログインを削除する前に、使用して**sp_helplogins**ログインにマップされているユーザー アカウントを特定します。  
@@ -101,8 +101,8 @@ John        pubs     John       User
   
 ## <a name="see-also"></a>関連項目  
  [セキュリティ ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/security-stored-procedures-transact-sql.md)   
- [sp_helpdb &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
- [sp_helpuser &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
+ [sp_helpdb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpdb-transact-sql.md)   
+ [sp_helpuser &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpuser-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
