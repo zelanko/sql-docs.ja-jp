@@ -38,7 +38,7 @@ ms.locfileid: "66077741"
   
  次の図は、同じモデルに対するカスタム ビューアーと汎用ビューアーを示しています。  
   
--   上の図では、Microsoft タイム シリーズ アルゴリズムに基づくマイニング モデルのビューアーを示しています。 この特定のカスタム ビューアーによってタイム シリーズのグラフが自動的に作成され、5 つの予測が提供されます。  
+-   上の図では、Microsoft Time Series アルゴリズムに基づくマイニング モデルのビューアーを示しています。 この特定のカスタム ビューアーによってタイム シリーズのグラフが自動的に作成され、5 つの予測が提供されます。  
   
 -   下の図では、 **Microsoft 汎用コンテンツ ツリー ビューアー**を使用して表示される同じモデルを示しています。 このビューアーは、標準スキーマに従ってマイニング モデルのコンテンツを表示します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](microsoft-generic-content-tree-viewer-data-mining.md)」を参照してください。  
   
@@ -133,7 +133,7 @@ ms.locfileid: "66077741"
   
     -   [シーケンス クラスターの状態遷移 タブをクラスター&#40;マイニング モデル ビューアー&#41;](sequence-clustering-cluster-transition-tab-mining-model-viewer.md)  
   
-### <a name="microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズム  
+### <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series アルゴリズム  
   
 -   [Microsoft タイム シリーズ ビューアーを使用したモデルの参照](data-mining/browse-a-model-using-the-microsoft-time-series-viewer.md)  
   

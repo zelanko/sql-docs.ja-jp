@@ -26,7 +26,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 06/15/2019
 ms.locfileid: "66083769"
 ---
-# <a name="microsoft-time-series-algorithm"></a>Microsoft タイム シリーズ アルゴリズム
+# <a name="microsoft-time-series-algorithm"></a>Microsoft Time Series アルゴリズム
   [!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが時間の経過と共に製品売上などの連続値の予測用に最適化された回帰アルゴリズムを提供します。 デシジョン ツリーなどの他の [!INCLUDE[msCoName](../../includes/msconame-md.md)] アルゴリズムでは、傾向を予測するために新しい情報を含む列を追加する必要がありますが、タイム シリーズ モデルでは必要ありません。 タイム シリーズ モデルでは、モデルの作成に使用された元のデータセットのみを使用して傾向を予測できます。 予測を実行するときに新しいデータをモデルに追加することで、新しいデータを自動的に傾向分析に組み込むこともできます。  
   
  次の図は、4 つの販売地域における一定期間の製品売上を予測するための一般的なモデルを示しています。 図に示したモデルでは、各地域の売上が赤、黄、紫、青の線で表されています。 各地域を表す線は、次の 2 つの部分で構成されます。  
@@ -47,7 +47,7 @@ ms.locfileid: "66083769"
  この会社では、四半期ごとに最新の売上データを使ってモデルを更新し、予測を更新して、最新の傾向をモデル化することを計画しています。 売上データを正確に更新していない、または一貫して更新していない販売店のデータを修正するために、汎用予測モデルを作成し、それを使用して全地域の予測を作成します。  
   
 ## <a name="how-the-algorithm-works"></a>アルゴリズムの動作  
- [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP、1 つのアルゴリズムを使用します。 ARTXP アルゴリズムは短期的な予測が最適化されていましたし、そのため、一連の次の可能性が高い値を予測します。 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP アルゴリズムと 2 番目のアルゴリズム、ARIMA の両方を使用します。 ARIMA アルゴリズムは、長期的な予測に適しています。 ARTXP アルゴリズムと ARIMA アルゴリズムの実装の詳細については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ [!INCLUDE[ssVersion2005](../../includes/ssversion2005-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP、1 つのアルゴリズムを使用します。 ARTXP アルゴリズムは短期的な予測が最適化されていましたし、そのため、一連の次の可能性が高い値を予測します。 以降で[!INCLUDE[ssKatmai](../../includes/sskatmai-md.md)]、[!INCLUDE[msCoName](../../includes/msconame-md.md)]タイム シリーズ アルゴリズムが ARTXP アルゴリズムと 2 番目のアルゴリズム、ARIMA の両方を使用します。 ARIMA アルゴリズムは、長期的な予測に適しています。 ARTXP アルゴリズムと ARIMA アルゴリズムの実装の詳細については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
  既定では、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムはアルゴリズムを組み合わせて使用し、パターンの分析と予測を実行します。 同じデータを 2 つの異なるモデルをトレーニングします。 1 つのモデルは ARTXP アルゴリズムを使用すると、1 つのモデルは、ARIMA アルゴリズムを使用します。 この 2 つのモデルの結果を統合して、さまざまな数のタイム スライスに対して最適な予測を出力します。 ARTXP アルゴリズムは短期的な予測に適しているため、予測シリーズの初めのうちに高い割合で使用されます。 一方、さらに将来のタイム スライスを予測対象とするにつれて、ARIMA が使用される割合が高くなります。  
   
@@ -71,7 +71,7 @@ ms.locfileid: "66083769"
   
  2 つのアルゴリズムを使用することで、データの周期性を複数レベルで検出できます。 たとえば、データに年周期性があり、さらに月周期性もある場合があります。 このような周期性を検出するために、周期性のヒントを指定することや、アルゴリズムでの周期性の自動検出を指定することができます。  
   
- 周期性に加え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、周期性の検出、予測の実行、事例の分析の際の動作を制御するパラメーターが他にもあります。 アルゴリズムのパラメーターを設定する方法については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ 周期性に加え、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムには、周期性の検出、予測の実行、事例の分析の際の動作を制御するパラメーターが他にもあります。 アルゴリズムのパラメーターを設定する方法については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
 ## <a name="data-required-for-time-series-models"></a>タイム シリーズ モデルに必要なデータ  
  データ マイニング モデルのトレーニングに使用するデータを用意する際には、特定のモデルにおける要件と、データの使用方法を把握しておいてください。  

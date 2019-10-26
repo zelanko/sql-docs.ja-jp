@@ -14,17 +14,17 @@ ms.assetid: 13a35511-3987-426b-a3b7-3b2e83900dc7
 author: markingmyname
 ms.author: maghan
 monikerRange: =azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 6c6c99edd1d52e3175dcd8793bd4bf7afcd605b7
-ms.sourcegitcommit: f3f83ef95399d1570851cd1360dc2f072736bef6
+ms.openlocfilehash: 63f6e86f08ea93525704159483b939c79c6575d8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/13/2019
-ms.locfileid: "70148336"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909041"
 ---
 # <a name="scripting"></a>スクリプトの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-xxx-md](../../../includes/appliesto-ss-asdb-asdw-xxx-md.md)]
 
-  SMO でのスクリプト作成は、 <xref:Microsoft.SqlServer.Management.Smo.Scripter>オブジェクトとその子オブジェクト、または個々のオブジェクトの**スクリプト**メソッドによって制御されます。 オブジェクト<xref:Microsoft.SqlServer.Management.Smo.Scripter>は、 [!INCLUDE[msCoName](../../../includes/msconame-md.md)]の[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]インスタンス上のオブジェクトに対する依存関係からのマッピングを制御します。  
+  SMO でのスクリプト作成は、<xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトとその子オブジェクト、または個々のオブジェクトの**スクリプト**メソッドによって制御されます。 <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクトは、[!INCLUDE[msCoName](../../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)]のインスタンス上のオブジェクトの依存関係からのマッピングを制御します。  
   
  <xref:Microsoft.SqlServer.Management.Smo.Scripter> オブジェクト、およびその子オブジェクトを使用する高度なスクリプティング プロセスには、次の 3 つのフェーズがあります。  
   
@@ -33,8 +33,6 @@ ms.locfileid: "70148336"
 2.  リスト生成  
   
 3.  スクリプト生成  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  検索フェーズでは、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> オブジェクトが使用されます。 オブジェクトの URN リストが指定されている場合、<xref:Microsoft.SqlServer.Management.Smo.DependencyWalker.DiscoverDependencies%2A> オブジェクトの <xref:Microsoft.SqlServer.Management.Smo.DependencyWalker> メソッドは、URN リスト内のオブジェクトに対応する <xref:Microsoft.SqlServer.Management.Smo.DependencyTree> オブジェクトを返します。 ブール型の*Fparents*パラメーターを使用して、指定したオブジェクトの親または子を検出するかどうかを選択します。 依存関係ツリーはこの段階で変更することができます。  
   

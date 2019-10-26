@@ -31,7 +31,7 @@ ms.locfileid: "66083533"
 ## <a name="understanding-the-structure-of-a-time-series-model"></a>タイム シリーズ モデルの構造について  
  タイム シリーズ モデルには、モデルとそのメタデータを表す 1 つの親ノードがあります。 その親ノードの下には、モデルの作成に使用したアルゴリズムに応じて 1 つまたは 2 つのタイム シリーズ ツリーがあります。  
   
- 混合モデルを作成した場合は、ARIMA と ARTXP のそれぞれに 1 つずつ、2 つの個別のツリーがモデルに追加されます。 ARTXP または ARIMA のアルゴリズムのみを使用するように選択した場合は、そのアルゴリズムに対応する 1 つのツリーが含まれます。 どちらのアルゴリズムを使用するかは、FORECAST_METHOD パラメーターを設定して指定します。 ARTXP、ARIMA、または混合モデルのどれを使用するかについては、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+ 混合モデルを作成した場合は、ARIMA と ARTXP のそれぞれに 1 つずつ、2 つの個別のツリーがモデルに追加されます。 ARTXP または ARIMA のアルゴリズムのみを使用するように選択した場合は、そのアルゴリズムに対応する 1 つのツリーが含まれます。 どちらのアルゴリズムを使用するかは、FORECAST_METHOD パラメーターを設定して指定します。 ARTXP、ARIMA、または混合モデルのどれを使用するかについては、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
  次の図は、既定の設定 (混合モデルが作成されます) を使用して作成したタイム シリーズ データ マイニング モデルの例を示しています。 ここでは、2 つのモデルの違いを比較しやすいように、図の左側に ARTXP モデルが、右側に ARIMA モデルが示されています。  ARTXP は、しだいに小さな分岐に分割されていくツリー状の構造であるのに対し、ARIMA アルゴリズムによって作成される構造はむしろ、小さな構成要素から積み上げられていくピラミッドに似ています。  
   
@@ -75,9 +75,9 @@ ms.locfileid: "66083533"
   
 -   *移動平均* (MA) のノード  
   
- これらの用語の意味については、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+ これらの用語の意味については、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
- *差分の次数* は数式の重要な一部であり、式で表されます。 差分の次数の使用方法の詳細については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ *差分の次数* は数式の重要な一部であり、式で表されます。 差分の次数の使用方法の詳細については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
 ## <a name="model-content-for-time-series"></a>タイム シリーズ モデルのモデル コンテンツ  
  ここでは、マイニング モデル コンテンツの列のうち、タイム シリーズ モデルに関連する列についてのみ詳細と例を紹介します。  

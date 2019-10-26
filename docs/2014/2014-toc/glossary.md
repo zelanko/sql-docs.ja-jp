@@ -987,7 +987,7 @@ ms.technology:
 |Microsoft SQL Server Reporting Services レポート ビルダー (Microsoft SQL Server Reporting Services Report Builder)|Microsoft Office と同様の作成環境を備えたレポート作成ツールです。新しいスパークライン、データ バー、インジケーター データの視覚化、レポート アイテムをレポート パーツとして保存する機能、マップを作成するためのウィザード、入れ子になった集計、式のサポート強化など、さまざまな機能を搭載しています。|  
 |Microsoft SQL Server Service Broker (Microsoft SQL Server Service Broker)|スケーラブルでセキュアなデータベース アプリケーションを開発者が構築するのに役立つテクノロジ。|  
 |Microsoft SQL Server System CLR Types (Microsoft SQL Server System CLR Types)|SQL Server 2008 R2 Feature Pack に含まれるスタンドアロン パッケージ。SQL Server に geometry 型、geography 型、および階層 ID 型を実装するコンポーネントが含まれています。|  
-|Microsoft タイム シリーズ アルゴリズム (Microsoft Time Series algorithm)|線形回帰デシジョン ツリー手法を使用して、時間に関するデータ (月間売上高や年間収益) を分析するアルゴリズム。 検出されたパターンを使用して、将来の期間の値を予測できます。|  
+|Microsoft Time Series アルゴリズム|線形回帰デシジョン ツリー手法を使用して、時間に関するデータ (月間売上高や年間収益) を分析するアルゴリズム。 検出されたパターンを使用して、将来の期間の値を予測できます。|  
 |ミドルウェア (middleware)|複数の種類のソフトウェア上に存在し、それらの間で情報を変換するソフトウェア。 ミドルウェアは多様なソフトウェアに対応し、一般に、アプリケーションとオペレーティング システム、ネットワーク オペレーティング システム、またはデータベース管理システムの間で機能します。|  
 |マイニング モデル|データ マイニング処理の定義とトレーニングの結果を保持するオブジェクト。 たとえば、データ マイニング モデルは、入力、出力、アルゴリズムなどのプロセスのプロパティを指定し、トレーニング中に収集されるデシジョン ツリーなどの情報を保持することができます。|  
 |マイニング構造 (mining structure)|マイニング モデルの作成の基になるデータ ドメインを定義するデータ マイニング オブジェクト。|  

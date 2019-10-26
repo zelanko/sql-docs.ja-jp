@@ -44,7 +44,7 @@ ms.locfileid: "66086511"
 |Microsoft ロジスティック回帰アルゴリズム|バイナリ結果に寄与する要素を見つけ、それらの要素が結果にどのような影響を及ぼすかを研究します。<br /><br /> [https://msdn.microsoft.com/library/ms174828.aspx](https://msdn.microsoft.com/library/ms174828.aspx)|  
 |Microsoft Naïve Bayes アルゴリズム|データ内のリレーションシップを探索し、結果との関連性が最も強いリレーションシップを見つけます。<br /><br /> [https://msdn.microsoft.com/library/ms174806.aspx](https://msdn.microsoft.com/library/ms174806.aspx)|  
 |Microsoft ニューラル ネットワーク アルゴリズム|複数の入力と複数の出力の間に存在する隠されたリレーションシップを見つけます。 探索または予測の目的で使用します。<br /><br /> [https://msdn.microsoft.com/library/ms174941.aspx](https://msdn.microsoft.com/library/ms174941.aspx)|  
-|Microsoft タイム シリーズ アルゴリズム (Microsoft Time Series algorithm)|履歴データを使用して将来の値を予測します。<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
+|Microsoft Time Series アルゴリズム|履歴データを使用して将来の値を予測します。<br /><br /> [https://msdn.microsoft.com/library/ms174923.aspx](https://msdn.microsoft.com/library/ms174923.aspx)|  
   
 ## <a name="advanced-options"></a>[詳細設定オプション]  
  Excel 用のデータ マイニング クライアントを使用する場合は、独自のデータ マイニング構造およびモデルを作成したり、アルゴリズムのパラメーターを調整したりすることができます。  

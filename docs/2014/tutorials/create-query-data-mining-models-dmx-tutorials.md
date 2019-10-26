@@ -36,7 +36,7 @@ ms.locfileid: "63180555"
   
 -   [時系列予測の DMX のチュートリアル](../../2014/tutorials/time-series-prediction-dmx-tutorial.md)  
   
-     このチュートリアルでは、予測モデルを作成して CREATE MODEL (DMX) ステートメントの使用方法を説明します。 次に、関連するモデルを追加し、Microsoft タイム シリーズ アルゴリズムのパラメーターを変更して各モデルの動作をカスタマイズします。 最後に、予測を作成し、新しいデータで予測を更新します。 予測の際に時系列を更新する機能は、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] で追加されました。  
+     このチュートリアルでは、予測モデルを作成して CREATE MODEL (DMX) ステートメントの使用方法を説明します。 次に、関連するモデルを追加し、Microsoft Time Series アルゴリズムのパラメーターを変更して各モデルの動作をカスタマイズします。 最後に、予測を作成し、新しいデータで予測を更新します。 予測の際に時系列を更新する機能は、[!INCLUDE[ssKatmai](../includes/sskatmai-md.md)] で追加されました。  
   
 ## <a name="reference"></a>リファレンス  
  [データ マイニング アルゴリズム &#40;Analysis Services - データ マイニング&#41;](../../2014/analysis-services/data-mining/data-mining-algorithms-analysis-services-data-mining.md)  

@@ -41,7 +41,7 @@ ms.locfileid: "66084683"
  [データベースの同期の使用](#bkmk_Synch)  
   
 ##  <a name="bkmk_TimeSeries"></a> タイム シリーズ モデルの配置  
- Microsoft タイム シリーズのアルゴリズムは、SQL Server 2008 で補完的なアルゴリズムの ARIMA が追加され、機能が拡張されています。 タイム シリーズ アルゴリズムの変更に関する詳細については、「 [Microsoft タイム シリーズ アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
+ Microsoft Time Series アルゴリズムは、SQL Server 2008 で補完的なアルゴリズムの ARIMA が追加され、機能が拡張されています。 タイム シリーズ アルゴリズムの変更に関する詳細については、「 [Microsoft Time Series アルゴリズム](microsoft-time-series-algorithm.md)」を参照してください。  
   
  したがって、新しい ARIMA アルゴリズムを使用するタイム シリーズ マイニング モデルを SQL Server 2005 Analysis Services のインスタンスに配置すると、動作が異なる場合があります。  
   
@@ -51,7 +51,7 @@ ms.locfileid: "66084683"
   
  したがって、モデルが変更されないようにするには、モデルを参照するだけにして、決して処理を行わないようにします。 あるいは、FORECAST_METHOD パラメーターまたは PREDICTION_SMOOTHING パラメーターを明示的に設定することもできます。  
   
- 混合モデルを設定する方法については、「 [Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
+ 混合モデルを設定する方法については、「 [Microsoft Time Series アルゴリズム テクニカル リファレンス](microsoft-time-series-algorithm-technical-reference.md)」を参照してください。  
   
  モデルのデータ ソースに使用されるプロバイダーが SQL Client Data Provider 10 の場合、データ ソース定義も変更して、SQL Server Native Client の前のバージョンを指定する必要があります。 そうしないと、 [!INCLUDE[ssBIDevStudio](../../includes/ssbidevstudio-md.md)] で、プロバイダーが登録されていないことを示すエラーが発生します。  
   

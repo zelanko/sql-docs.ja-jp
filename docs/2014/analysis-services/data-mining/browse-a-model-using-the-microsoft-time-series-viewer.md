@@ -26,7 +26,7 @@ ms.lasthandoff: 06/15/2019
 ms.locfileid: "66085976"
 ---
 # <a name="browse-a-model-using-the-microsoft-time-series-viewer"></a>Microsoft タイム シリーズ ビューアーを使用したモデルの参照
-   [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タイム シリーズ ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムは回帰アルゴリズムであり、予測シナリオで製品売上などの連続列を予測するデータ マイニング モデルを作成します。 これらの時系列モデルには、次のようなアルゴリズムに基づく情報を含めることができます。  
+  [!INCLUDE[msCoName](../../includes/msconame-md.md)]  [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)] タイム シリーズ ビューアーには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムを使用して作成されたマイニング モデルが表示されます。 [!INCLUDE[msCoName](../../includes/msconame-md.md)] タイム シリーズ アルゴリズムは回帰アルゴリズムであり、予測シナリオで製品売上などの連続列を予測するデータ マイニング モデルを作成します。 これらの時系列モデルには、次のようなアルゴリズムに基づく情報を含めることができます。  
   
 -   ARTxp アルゴリズム。短期的な予測に適しています。  
   
@@ -34,7 +34,7 @@ ms.locfileid: "66085976"
   
 -   ARTxp アルゴリズムと ARIMA アルゴリズムの組み合わせ。  
   
- これらのアルゴリズムの詳細については、「 [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md) 」(Microsoft タイム シリーズ アルゴリズム) および「 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)」(Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス) を参照してください。  
+ これらのアルゴリズムの詳細については、「 [Microsoft Time Series Algorithm](microsoft-time-series-algorithm.md) 」(Microsoft Time Series アルゴリズム) および「 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)」(Microsoft Time Series アルゴリズム テクニカル リファレンス) を参照してください。  
   
 > [!NOTE]  
 >  モデルで使用された式と、検出されたパターンの詳細情報を表示するには、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] 汎用コンテンツ ツリー ビューアーを使用します。 詳細については、「[Microsoft 汎用コンテンツ ツリー ビューアーを使用したモデルの参照](browse-a-model-using-the-microsoft-generic-content-tree-viewer.md)」または「[Microsoft 汎用コンテンツ ツリー ビューアー (データ マイニング)](../microsoft-generic-content-tree-viewer-data-mining.md)」を参照してください。  
@@ -57,7 +57,7 @@ ms.locfileid: "66085976"
   
  ARIMA だけを使用してモデルを作成した場合、 **[モデル]** タブには、 **[すべて]** というキャプションの 1 つのノードが含まれています。 ルート ノードの **[マイニング凡例]** には、ARIMA 式が含まれています。  
   
- アルゴリズムを混用するモデルを作成した場合、ルート ノードには、ケースの数と ARIMA 式だけが含まれています。 ルート ノードの後、ツリーは周期的構造ごとに個別のノードに分かれます。 ルート以外の各ノードの [マイニング凡例] には、ARTxp と ARIMA の両方のアルゴリズム、ノードの式、およびノード内のケースの数が含まれています。 最初に ARTxp 式が表示され、ツリー ノード式のラベルが付いています。 その後に ARIMA 式が表示されます。 この情報を解釈する方法の詳細については、「 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)」(Microsoft タイム シリーズ アルゴリズム テクニカル リファレンス) を参照してください。  
+ アルゴリズムを混用するモデルを作成した場合、ルート ノードには、ケースの数と ARIMA 式だけが含まれています。 ルート ノードの後、ツリーは周期的構造ごとに個別のノードに分かれます。 ルート以外の各ノードの [マイニング凡例] には、ARTxp と ARIMA の両方のアルゴリズム、ノードの式、およびノード内のケースの数が含まれています。 最初に ARTxp 式が表示され、ツリー ノード式のラベルが付いています。 その後に ARIMA 式が表示されます。 この情報を解釈する方法の詳細については、「 [Microsoft Time Series Algorithm Technical Reference](microsoft-time-series-algorithm-technical-reference.md)」(Microsoft Time Series アルゴリズム テクニカル リファレンス) を参照してください。  
   
  一般に、デシジョン ツリー グラフでは、最も重要な分割である **[すべて]** ノードが、ビューアーの左側に表示されます。 デシジョン ツリーにおいて、 **[すべて]** ノードの後にある分割が最も重要です。トレーニング データ内のケースを分割するための最も強い条件が含まれているためです。 時系列モデルでは、メインの分岐は最も可能性の高い周期性を表します。 **[すべて]** ノードの後の分割が、分岐の右側に表示されます。  
   
