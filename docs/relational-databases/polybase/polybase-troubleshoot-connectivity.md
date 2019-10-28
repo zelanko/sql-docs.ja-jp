@@ -10,12 +10,12 @@ ms.date: 10/02/2019
 ms.prod: sql
 ms.prod_service: polybase, sql-data-warehouse, pdw
 monikerRange: '>= sql-server-2016 || =sqlallproducts-allversions'
-ms.openlocfilehash: f937ba5ff6fe4d9c0837d861bf75253f24bbf33b
-ms.sourcegitcommit: af5e1f74a8c1171afe759a4a8ff2fccb5295270a
+ms.openlocfilehash: 631cfbf59cedddc699d82f36d4ea42ff23b0119c
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/02/2019
-ms.locfileid: "71823590"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909151"
 ---
 # <a name="troubleshoot-polybase-kerberos-connectivity"></a>PolyBase Kerberos の接続性のトラブルシューティング
 
@@ -35,9 +35,7 @@ Kerberos でセキュリティが強化された Hadoop クラスターに対し
 1. [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] RTM CU6/[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU3/[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以上 (PolyBase がインストールされていること)
 1. Kerberos (Active Directory または MIT) によるセキュリティで保護された Hadoop クラスター (Cloudera または Hortonworks)
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
-## <a name="introduction"></a>概要
+## <a name="introduction"></a>はじめに
 まず Kerberos プロトコルの概要を理解することが役に立ちます。 次の 3 つのアクターが関係します。
 
 1. Kerberos クライアント (SQL Server)

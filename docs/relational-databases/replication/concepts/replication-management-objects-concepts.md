@@ -21,12 +21,12 @@ ms.assetid: 37476d50-fb47-49e3-9504-3b163ac381d8
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 0d494427e4963dcd1a6afbde4195255ca4f3585d
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 1696860fd97d1622389cd7ac02ed96919663b5d6
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768183"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908531"
 ---
 # <a name="replication-management-objects-concepts"></a>Replication Management Objects Concepts
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -92,8 +92,6 @@ ms.locfileid: "68768183"
 9. **[表示]** メニューの **[コード]** をクリックします。  
   
 10. コード内で、名前空間のステートメントの前に次の **using** ステートメントを入力し、RMO 名前空間内の型を修飾します。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     ```  
     // These namespaces are required.  

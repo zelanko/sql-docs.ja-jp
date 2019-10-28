@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: 47f9d9a7-80b0-416d-9d9a-9e265bc190dc
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 481a6a0a109683c94ef754ea679a801a92a8aabc
-ms.sourcegitcommit: 495913aff230b504acd7477a1a07488338e779c6
+ms.openlocfilehash: a160fe7fbf98a428c9cfacecd00305ce83ba0a5a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/06/2019
-ms.locfileid: "68811360"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907035"
 ---
 # <a name="view-and-work-with-the-output-from-the-database-engine-tuning-advisor"></a>データベース エンジン チューニング アドバイザーからの出力の表示および操作
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68811360"
 5.  **[推奨設定]** タブ ページの下部にある **[既存のオブジェクトを表示する]** をオフにします。 これによって、推奨設定で参照されるデータベース オブジェクトのみがグリッドに表示されます。 下部のスクロール バーを使用して推奨設定のグリッド内の右端の列を表示し、 **[定義]** 列の項目をクリックして、データベース内にそのオブジェクトを作成する [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトの表示またはコピーを行います。  
   
 6.  この推奨設定内のすべてのデータベース オブジェクトの作成または削除を行う [!INCLUDE[tsql](../../includes/tsql-md.md)] スクリプトを 1 つのスクリプト ファイルにすべて保存するには、 **[アクション]** メニューの **[推奨設定の保存]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-tuning-summary-and-reports-with-the-database-engine-tuning-advisor-gui"></a>データベース エンジン チューニング アドバイザーの GUI を使用してチューニング サマリーとレポートを表示するには  
   

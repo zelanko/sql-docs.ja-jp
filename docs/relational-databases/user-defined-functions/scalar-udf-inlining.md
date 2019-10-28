@@ -15,12 +15,12 @@ ms.assetid: ''
 author: s-r-k
 ms.author: karam
 monikerRange: = azuresqldb-current || >= sql-server-ver15 || = sqlallproducts-allversions
-ms.openlocfilehash: cfc56126ae84cc8674e7316b45e855584fdabde7
-ms.sourcegitcommit: 4c5fb002719627f1a1594f4e43754741dc299346
+ms.openlocfilehash: c778894dbe532a64c4907c9e4281ecf076da70dc
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72517998"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909321"
 ---
 # <a name="scalar-udf-inlining"></a>スカラー UDF のインライン化
 
@@ -134,8 +134,6 @@ SQL Server 2017 (互換性レベル 140 およびそれ以前) でのこのク�
 1. SQL Server により、`CUSTOMER` と `ORDERS` の間に暗黙の結合が推論され、それが結合演算子によって明示化されています。
 2. また、暗黙の `GROUP BY O_CUSTKEY on ORDERS` が推論され、IndexSpool と StreamAggregate を使用して実装されています。
 3. すべての演算子で並列処理が使用されるようになっています。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 UDF 内のロジックの複雑さによっては、結果として得られるクエリ プランがさらに大きくて複雑になる可能性があります。 ご覧のように、UDF の内部の演算がブラック ボックス化されなくなっており、そのため、クエリ オプティマイザーでコストを計算でき、これらの演算を最適化できます。 また、UDF がプランに含まれなくなったため、反復的な UDF の呼び出しは、関数呼び出しのオーバーヘッドがまったくないプランに置き換えられています。
 

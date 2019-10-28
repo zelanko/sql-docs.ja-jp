@@ -11,12 +11,12 @@ ms.assetid: 47c64144-4432-4778-93b5-00496749665b
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||=azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 12fea405001214a3f380c204b27c9932b9e59470
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c50fb79383890a2e09cb465c89b459b3bea9a3ca
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68009365"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907997"
 ---
 # <a name="targets-for-extended-events-in-sql-server"></a>SQL Server の拡張イベントのターゲット
 
@@ -73,7 +73,7 @@ Transact-SQL で拡張イベントの中心になるのは [CREATE EVENT SESSION
 
 <a name="h2_target_etw_classic_sync_target"></a>
 
-## <a name="etwclassicsynctarget-target"></a>etw_classic_sync_target ターゲット
+## <a name="etw_classic_sync_target-target"></a>etw_classic_sync_target ターゲット
 
 
 SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携してシステムの使用状況を監視できます。 詳細については、以下をご覧ください。
@@ -91,7 +91,7 @@ SQL Server の拡張イベントは、Event Tracing for Windows (ETW) と連携�
 
 <a name="h2_target_event_counter"></a>
 
-## <a name="eventcounter-target"></a>event_counter ターゲット
+## <a name="event_counter-target"></a>event_counter ターゲット
 
 
 event_counter ターゲットは、指定された各イベントが発生した回数をカウントするだけです。
@@ -107,7 +107,7 @@ event_counter ターゲットは、指定された各イベントが発生した
     - データベース エンジンは、処理が遅く、データベース エンジンのパフォーマンスが低下する可能性のあるターゲットからは切断します。 これは、ほとんどのターゲットが *非同期*処理である理由の 1 つです。
 
 
-#### <a name="example-output-captured-by-eventcounter"></a>event_counter によってキャプチャされる出力の例
+#### <a name="example-output-captured-by-event_counter"></a>event_counter によってキャプチャされる出力の例
 
 
 ```
@@ -139,7 +139,7 @@ CREATE EVENT SESSION [event_counter_1]
 
 <a name="h2_target_event_file"></a>
 
-## <a name="eventfile-target"></a>event_file ターゲット
+## <a name="event_file-target"></a>event_file ターゲット
 
 
 **event_file** ターゲットは、イベント セッションの出力をバッファーからディスク ファイルに書き込みます。
@@ -161,7 +161,7 @@ CREATE EVENT SESSION [event_counter_1]
 ::: moniker-end
 
 
-#### <a name="create-event-session-with-eventfile-target"></a>CREATE EVENT SESSION と **event_file** ターゲット
+#### <a name="create-event-session-with-event_file-target"></a>CREATE EVENT SESSION と **event_file** ターゲット
 
 
 次に示すのは、テストに使用した CREATE EVENT SESSION です。 ADD TARGET 句の 1 つで、event_file を指定しています。
@@ -213,7 +213,7 @@ CREATE EVENT SESSION [locks_acq_rel_eventfile_22]
 ```
 
 
-#### <a name="sysfnxefiletargetreadfile-function"></a>sys.fn_xe_file_target_read_file 関数
+#### <a name="sysfn_xe_file_target_read_file-function"></a>sys.fn_xe_file_target_read_file 関数
 
 
 event_file ターゲットは、人間が読むことのできないバイナリ形式で、受信したデータを格納します。 [**sys.fn_xe_file_target_read_file**](../../relational-databases/system-functions/sys-fn-xe-file-target-read-file-transact-sql.md) 関数に対して SELECT と FROM を使用して、.xel ファイルの内容を取得できます。
@@ -249,7 +249,7 @@ SELECT f.*
 もちろん、SSMS UI を使用して手動で .xel データを見ることはできます。
 
 
-#### <a name="data-stored-in-the-eventfile-target"></a>event_file ターゲットに格納されているデータ
+#### <a name="data-stored-in-the-event_file-target"></a>event_file ターゲットに格納されているデータ
 
 
 SQL Server 2016 で **sys.fn_xe_file_target_read_file**に SELECT を使用した結果を次に示します。
@@ -412,7 +412,7 @@ sqlserver      checkpoint_end     database_id  NULL
 
 <a name="h2_target_pair_matching"></a>
 
-## <a name="pairmatching-target"></a>pair_matching ターゲット
+## <a name="pair_matching-target"></a>pair_matching ターゲット
 
 
 pair_matching ターゲットを使用すると、対応する終了イベントのない開始イベントを検出できます。 たとえば、lock_acquired イベントが発生した後に適切なタイミングで対応する lock_released イベントが発生しないと、問題になる可能性があります。
@@ -450,7 +450,7 @@ sqlserver   lock_acquired   resource_type            NULL
 ```
 
 
-### <a name="example-of-pairmatching"></a>pair_matching の例
+### <a name="example-of-pair_matching"></a>pair_matching の例
 
 
 次の CREATE EVENT SESSION ステートメントでは、2 つのイベントと 2 つのターゲットが指定されています。 pair_matching ターゲットでは、イベントをペアにするために 2 つのフィールド セットが指定されています。 **begin_matching_columns=** と **end_matching_columns=** に割り当てるコンマ区切りフィールドのシーケンスは同じでなければなりません。 コンマ区切り値で示されるフィールドの間にタブや改行文字があってはなりませんが、スペースは許されます。
@@ -520,8 +520,6 @@ CREATE EVENT SESSION [pair_matching_lock_a_r_33]
 3. ターゲットを調べる終わるまで、意図的に COMMIT TRANSACTION を発行しない
 4. テストの後で、COMMIT TRANSACTION を発行する
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 簡単な **event_counter** ターゲットでは次のような出力行が得られました。 52-50=2 なので、この出力からは、pair-matching ターゲットからの出力を調べるときにペアになっていない 2 つの lock_acquired イベントを探す必要があることがわかります。
 
 
@@ -549,7 +547,7 @@ sqlserver      lock_acquired   2016-08-05 12:45:47.9980000   InMemTest2      0  
 
 <a name="h2_target_ring_buffer"></a>
 
-## <a name="ringbuffer-target"></a>ring_buffer ターゲット
+## <a name="ring_buffer-target"></a>ring_buffer ターゲット
 
 
 ring_buffer ターゲットは、簡単なイベントのテストに便利です。 イベント セッションを停止すると、格納されている出力は破棄されます。
@@ -557,7 +555,7 @@ ring_buffer ターゲットは、簡単なイベントのテストに便利で�
 この ring_buffer のセクションでは、XQuery の Transact-SQL 実装を使用して ring_buffer の XML の内容をもっと読みやすいリレーショナル行セットにコピーする方法も示します。
 
 
-#### <a name="create-event-session-with-ringbuffer"></a>CREATE EVENT SESSION と ring_buffer
+#### <a name="create-event-session-with-ring_buffer"></a>CREATE EVENT SESSION と ring_buffer
 
 
 ring_buffer を使用するこの CREATE EVENT SESSION ステートメントに関して特別なことは何もありません。
@@ -591,7 +589,7 @@ CREATE EVENT SESSION [ring_buffer_lock_acquired_4]
 ```
 
 
-### <a name="xml-output-received-for-lockacquired-by-ringbuffer"></a>ring_buffer が受け取る lock_acquired に関する XML 形式の出力
+### <a name="xml-output-received-for-lock_acquired-by-ring_buffer"></a>ring_buffer が受け取る lock_acquired に関する XML 形式の出力
 
 
 SELECT から取得する内容は XML 形式の文字列です。 このテストで ring_buffer ターゲットが格納した XML 文字列を次に示します。 ただし、簡潔にするため、2 つの &#x3c;event&#x3e; 要素以外はすべて除去してあります。 さらに、各 &#x3c;event&#x3e; に含まれる関係のない &#x3c;data&#x3e; 要素も削除してあります。

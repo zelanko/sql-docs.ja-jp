@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: dc842a10-0586-4b0f-9775-5ca0ecc761d9
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 9af9e8f2a1e54b4fbcbc935a3256d6cf3b100178
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: de6e6a237c0aa80e2793f33373ec664dfe93f953
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68125121"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908709"
 ---
 # <a name="load-files-into-filetables"></a>FileTable へのファイルの読み込み
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -54,8 +54,6 @@ ms.locfileid: "68125121"
 2.  xcopy または同様のツールを使用して、ディレクトリ構造を保ったまま .jpg ファイルを FileTable のルート ディレクトリにコピーします。  
   
 3.  次の例のようなコードを使って、**PhotoMetadata** テーブル内のメタデータを修正します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ```sql  
 --  Add a path locator column to the PhotoMetadata table.  

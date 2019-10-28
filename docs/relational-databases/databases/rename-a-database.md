@@ -14,12 +14,12 @@ ms.assetid: 44c69d35-abcb-4da3-9370-5e0bc9a28496
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1da717e212e03fce4550e7af1a8810980f1b8321
-ms.sourcegitcommit: df1f71231f8edbdfe76e8851acf653c25449075e
+ms.openlocfilehash: a2cfe01b4df32e0966084866a67cea4bfd57bc11
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/09/2019
-ms.locfileid: "70810127"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907428"
 ---
 # <a name="rename-a-database"></a>データベースの名前変更
 
@@ -74,8 +74,6 @@ SQL Server Management Studio を使用して SQL Server または Azure SQL デ�
 4. 新しいデータベース名を入力し、 **[OK]** をクリックします。  
   
 5. 任意で、データベースがご利用の既定のデータベースであった場合、「[名称変更後、既定のデータベースを再設定する](#reset-your-default-database-after-rename)」を参照してください。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="rename-a-database-using-transact-sql"></a>Transact-SQL を使用してデータベースの名前を変更する  
   

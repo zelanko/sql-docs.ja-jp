@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: 93af982c-b4fe-4be0-8268-11f86dae27e1
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: cf28fc78055a2650c1f2ffa6ab13485bf9a71c15
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ef64d09c7f99f5081ebd1cbcdd7418614c3b41f1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68022493"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908746"
 ---
 # <a name="manage-filetables"></a>FileTable の管理
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -114,8 +114,6 @@ GO
 2.  データベース レベルで非トランザクション アクセスが有効になっている。  
   
 3.  データベース レベルで有効なディレクトリが指定されている。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="BasicsEnabling"></a> テーブル レベルでの FileTable 名前空間の無効化および再有効化  
  FileTable 名前空間を無効にすると、FileTable に対して作成されたすべてのシステム定義制約およびトリガーが無効になります。 これは、FileTable セマンティクスの適用を行うことなく [!INCLUDE[tsql](../../includes/tsql-md.md)] 操作を使用して FileTable を大幅に再編成する必要がある場合に便利です。 ただし、これらの操作によって FileTable の一貫性が損なわれ、FileTable 名前空間の再有効化が妨げられる可能性があります。  

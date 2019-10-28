@@ -3,16 +3,16 @@ title: SQL Server on Linux に関する FAQ
 description: この記事では、Linux で実行されている SQL Server に関してよく寄せられる質問への回答を提供します。
 author: VanMSFT
 ms.author: vanto
-ms.date: 01/10/2019
+ms.date: 10/23/2019
 ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
-ms.openlocfilehash: c6d9ea0eb36c212d3312522adafc50406c7a646d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 4fe5ea36b2e60a3a0531e247acc303b70e0db801
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67952630"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72929903"
 ---
 # <a name="sql-server-on-linux-frequently-asked-questions-faq"></a>SQL Server on Linux に関してよく寄せられる質問 (FAQ)
 
@@ -32,7 +32,7 @@ ms.locfileid: "67952630"
 
 1. **SQL Server on Linux は Windows の場合と同じですか?**
 
-   Linux 上の SQL Server のコア データベース エンジンは、Windows の場合と同じです。 しかし、一部の機能は現在、Linux ではサポートされていません。 Linux でサポートされていない機能のリストについては、「[サポートされていない機能 & サービス](sql-server-linux-release-notes.md#Unsupported)」を参照してください。 また、「[既知の問題](sql-server-linux-release-notes.md#known-issues)」も確認してください。 これらのリストで指定されていない限り、Linux では他の SQL Server 機能やサービスがサポートされます。
+   Linux 上の SQL Server のコア データベース エンジンは、Windows の場合と同じです。 しかし、一部の機能は現在、Linux ではサポートされていません。 Linux でサポートされていない機能のリストについては、「[サポートされていない機能 & サービス](sql-server-linux-editions-and-components-2019.md#Unsupported)」を参照してください。 また、「[既知の問題](sql-server-linux-release-notes.md#known-issues)」も確認してください。 これらのリストで指定されていない限り、Linux では他の SQL Server 機能やサービスがサポートされます。
 
 1. **SQL Server のサポート ポリシーは何ですか?**
 

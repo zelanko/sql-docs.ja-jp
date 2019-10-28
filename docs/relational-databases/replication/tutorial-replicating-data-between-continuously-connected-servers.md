@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 7b18a04a-2c3d-4efe-a0bc-c3f92be72fd0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 379a7fe83694307c9f4d981d000dc8b9457fa6c9
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: f85dfc4a05b8affad4ef814c1871f504d619cdb8
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769410"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907710"
 ---
 # <a name="tutorial-configure-replication-between-two-fully-connected-servers-transactional"></a>チュートリアル:2 つの常時接続サーバー間のレプリケーション (トランザクション) を構成する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -115,8 +115,6 @@ ms.locfileid: "68769410"
     ![パブリケーション名が表示された [ウィザードの完了] ページ](media/tutorial-replicating-data-between-continuously-connected-servers/advworksproducttrans.png)
   
 14. パブリケーションが作成されたら、 **[閉じる]** を選択してウィザードを閉じます。 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 パブリケーションを作成しようとしたときに、SQL Server エージェントが実行されていないと、次のエラーが発生する可能性があります。 このエラーは、パブリケーションは正常に作成されたが、スナップショット エージェントが起動できなかったことを示しています。 これが発生した場合は、SQL Server エージェントを起動してから、手動でスナップショット エージェントを起動する必要があります。 次のセクションで手順について説明します。 
 

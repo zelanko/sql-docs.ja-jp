@@ -17,12 +17,12 @@ ms.assetid: 37574aac-181d-4aca-a2cc-8abff64237dc
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7e1aefc7661b21f6fc6b93e74239820020796151
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 64ad4f4ac71b88966f3ff9a963332619d7663917
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68056067"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909286"
 ---
 # <a name="get-information-about-dml-triggers"></a>DML トリガーに関する情報の取得
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
@@ -63,8 +63,6 @@ ms.locfileid: "68056067"
 2.  目的のデータベースを展開し、 **[テーブル]** を展開します。次に、定義を表示するトリガーが格納されているテーブルを展開します。  
   
 3.  **[トリガー]** を展開します。目的のトリガーを右クリックし、 **[変更]** をクリックします。 DML トリガーの定義がクエリ ウィンドウに表示されます。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-view-the-dependencies-of-a-dml-trigger"></a>DML トリガーの依存関係を表示するには  
   

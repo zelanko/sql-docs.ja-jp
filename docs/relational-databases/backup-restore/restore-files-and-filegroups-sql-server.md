@@ -17,12 +17,12 @@ helpviewer_keywords:
 ms.assetid: 72603b21-3065-4b56-8b01-11b707911b05
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 31f28bf80d03516051206f6e88de6f32de614bed
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 5398b371ea4c969fedf54502d160ebd183cc2bdb
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278755"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908858"
 ---
 # <a name="restore-files-and-filegroups-sql-server"></a>ファイルとファイル グループの復元 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -137,8 +137,6 @@ ms.locfileid: "70278755"
     |**[復元先]**|復元されるデータベース ファイルのフル パスです。 新しい復元ファイルを指定するには、テキスト ボックスをクリックして、指定されているパスおよびファイル名を編集します。 **[復元先]** 列でパスまたはファイル名を変更することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで MOVE オプションを使用することと同じです。|  
   
 11. **[復旧状態]** パネルの選択内容により、復元操作後のデータベースの状態が決まります。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   **[コミットされていないトランザクションをロールバックして、データベースを使用可能な状態にする。別のトランザクション ログは復元できません。(RESTORE WITH RECOVERY)]**  
   データベースを復旧します。 これは既定の動作です。 このオプションは、必要なすべてのバックアップをすべて復元する場合のみ選択します。 このオプションを選択することは、 [!INCLUDE[tsql](../../includes/tsql-md.md)] RESTORE ステートメントで WITH RECOVERY を使用することと同じです。  

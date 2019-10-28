@@ -12,12 +12,12 @@ author: yualan
 ms.author: alayu
 ms.reviewer: maghan
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 962ed44bad714125f78cac5adff5af42b0c76685
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 98be5f404118ab217ae7700dbf6ec8f02012610f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68138437"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907097"
 ---
 # <a name="import-flat-file-to-sql-wizard"></a>SQL のフラット ファイルのインポート ウィザード
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -43,8 +43,6 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 1. **SQL Server Management Studio** を開きます。
 2. SQL Server Database Engine または localhost のインスタンスに接続します。
 3. **[データベース]** を展開し、データベース (下の例では test) を右クリックし、 **[タスク]** をポイントして、[データのインポート] の上の **[フラット ファイルのインポート]** をクリックします。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ![ウィザードのメニュー](media/import-flat-file-wizard/importffmenu.png)
 
@@ -81,7 +79,7 @@ PROSE は、入力ファイルのデータ パターンを分析し、列の名�
 
 ![ウィザードの変更](media/import-flat-file-wizard/importffmodify.png)
 
-### <a name="step-5-summary"></a>手順 5:[概要]
+### <a name="step-5-summary"></a>手順 5:まとめ
 これは、現在の構成が表示される概要ページです。 問題がある場合は、前のセクションに戻ることができます。 問題がない場合は、[完了] をクリックします。インポート プロセスが開始されます。
 
 ![ウィザードの概要](media/import-flat-file-wizard/importffsummary.png)

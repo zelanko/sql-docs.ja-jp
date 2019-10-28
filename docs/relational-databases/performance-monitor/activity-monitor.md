@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 1e6c430d-3a2a-468e-a3d5-ef5459c36c15
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 05a034bfb174ef3a1d7240bd1d8a3607e9001ddb
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 184ead5d82ddad99e3fae781cd41b46569c1dead
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024844"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907488"
 ---
 # <a name="activity-monitor"></a>利用状況モニター
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -33,8 +33,6 @@ ms.locfileid: "68024844"
 2.  列を並べ替えるには、列名をクリックします。  
   
 3.  1 つ以上の列をフィルター処理するには、列見出しの下矢印をクリックして値を選択します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="more-information"></a>詳細情報  
    

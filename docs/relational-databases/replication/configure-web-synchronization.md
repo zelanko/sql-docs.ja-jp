@@ -32,12 +32,12 @@ helpviewer_keywords:
 ms.assetid: 21f8e4d4-cd07-4856-98f0-9c9890ebbc82
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b987fef5bfb36fc84f55f5058f956a691f446a2c
-ms.sourcegitcommit: 8732161f26a93de3aa1fb13495e8a6a71519c155
+ms.openlocfilehash: 95acac097d1c3ec5ffd4989058db0c2927441554
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
-ms.locfileid: "71710306"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907235"
 ---
 # <a name="configure-web-synchronization"></a>Web 同期の構成
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ ms.locfileid: "71710306"
 3.  Web 同期が許可されるようにマージ パブリケーションを構成します。  
   
 4.  Web 同期が使用されるように 1 つ以上のサブスクリプションを構成します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]  
 >  大量のデータや **varchar(max)** などのサイズの大きなデータ型を含むデータをレプリケートする場合は、このトピックの「大量のデータのレプリケート」を参照してください。  

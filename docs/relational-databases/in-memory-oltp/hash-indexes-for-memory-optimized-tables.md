@@ -11,12 +11,12 @@ ms.assetid: e922cc3a-3d6e-453b-8d32-f4b176e98488
 author: MightyPen
 ms.author: genemi
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47560883fa845abb2758c7d96b8892c1bebbde2
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 16e3ab81700ca9fed1870a6a98d0aab704b2c1db
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68092141"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909276"
 ---
 # <a name="troubleshooting-hash-indexes-for-memory-optimized-tables"></a>メモリ最適化テーブルのハッシュ インデックスのトラブルシューティング
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -116,8 +116,6 @@ SELECT の結果を、次の統計ガイドラインと比較します。
     A. モジュロ演算子を使用して、StatusCode 列の重複する値の割合を構成します。  
     B. INSERT ループは、262,144 行を約 1 分間で挿入します。  
 3. PRINT は、前述の SELECT を **sys.dm_db_xtp_hash_index_stats**から実行することを指示するメッセージを出力します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ```sql
 DROP TABLE IF EXISTS SalesOrder_Mem;  

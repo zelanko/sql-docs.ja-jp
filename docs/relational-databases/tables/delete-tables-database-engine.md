@@ -16,12 +16,12 @@ ms.assetid: ca6aa3e9-9885-44c3-bafc-aec441fd97ec
 author: stevestein
 ms.author: sstein
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 96dfdf1b2bd608d96152366a6886d596879381b0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3c9dc1c5650c98a925ff79a9bc78917a80d73656
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68126659"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909899"
 ---
 # <a name="delete-tables-database-engine"></a>テーブルの削除 (データベース エンジン)
 [!INCLUDE[tsql-appliesto-ss2016-all-md](../../includes/tsql-appliesto-ss2016-all-md.md)]
@@ -74,10 +74,8 @@ ms.locfileid: "68126659"
   
 3.  削除の確認を要求するメッセージ ボックスが表示されます。 **[はい]** をクリックします。  
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
     > [!NOTE]  
-    >  Deleting a table automatically removes any relationships to it.  
+    >  テーブルを削除すると、テーブルへのリレーションシップが自動的に削除されます。  
   
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
   

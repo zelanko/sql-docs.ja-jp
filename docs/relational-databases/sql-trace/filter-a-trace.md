@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 019c10ab-68f6-4e40-a5e8-735b2e1270db
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: 9f2589588a2caa0c8a4132954b7897a7c128110d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5e518050759aea98d249e93374a6335bddf30c75
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68072896"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909485"
 ---
 # <a name="filter-a-trace"></a>トレースへのフィルターの適用
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -44,8 +44,6 @@ ms.locfileid: "68072896"
 2.  必要な情報を保存するデータおよびデータ列を決めます。  
   
 3.  必要なデータのサブセットを決め、そのデータのサブセットに基づいてフィルターを設定します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  たとえば、ある一定の時間よりも長くかかるイベントをトレースで出力するとします。 その場合、 **Duration** データ列が 300 ミリ秒よりも長いイベントを出力するトレースを作成できます。 300 ミリ秒以内に完了したイベントはトレースから除外されます。  
   
@@ -136,7 +134,7 @@ ms.locfileid: "68072896"
 |**TargetUserName**|LIKE、NOT LIKE|  
 |**TextData** *|LIKE、NOT LIKE|  
 |**TransactionID**|=、<>、>=、<=|  
-|**型**|=、<>、>=、<=|  
+|**Type**|=、<>、>=、<=|  
 |**Writes**|=、<>、>=、<=|  
 |**XactSequence**|=、<>、>=、<=|  
   

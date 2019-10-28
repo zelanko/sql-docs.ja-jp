@@ -15,12 +15,12 @@ helpviewer_keywords:
 ms.assetid: 8f8f0fba-f750-4533-9b76-a9cdbcdc3b14
 author: stevestein
 ms.author: sstein
-ms.openlocfilehash: 8396b30122a393ea3532113e261a908d8079432a
-ms.sourcegitcommit: 2da98f924ef34516f6ebf382aeb93dab9fee26c1
+ms.openlocfilehash: 14089cb8f302fbfee3f3a58c3f28edf634cbaa10
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/03/2019
-ms.locfileid: "70228485"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909227"
 ---
 # <a name="create-a-sql-server-agent-job-to-archive-database-mail-messages-and-event-logs"></a>データベース メール メッセージやイベント ログをアーカイブする SQL Server エージェント ジョブの作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -47,11 +47,11 @@ ms.locfileid: "70228485"
   
 -   まず、次のステップから構成される "データベース メールのアーカイブ" という名前のジョブを作成します。  
   
-    1.  すべてのメッセージをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_**_<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
+    1.  すべてのメッセージをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_** _<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
   
-    2.  最初のステップでコピーしたメッセージに関連する添付ファイルをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Attachments_**_<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
+    2.  最初のステップでコピーしたメッセージに関連する添付ファイルをデータベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Attachments_** _<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
   
-    3.  最初のステップでコピーしたメッセージに関連するデータベース メール イベント ログからのイベントを、データベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Log_**_<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
+    3.  最初のステップでコピーしたメッセージに関連するデータベース メール イベント ログからのイベントを、データベース メールのテーブルから新しいテーブルにコピーします。新しいテーブルには、**DBMailArchive_Log_** _<年_月>_ の形式で、前の月を表す文字列を付加した名前を付けます。  
   
     4.  移し変えたメール アイテムのレコードをデータベース メールのテーブルから削除します。  
   
@@ -71,8 +71,6 @@ ms.locfileid: "70228485"
 4.  **[カテゴリ]** ボックスで **[データベースのメンテナンス]** をクリックします。  
   
 5.  **[説明]** ボックスに「 **データベース メール メッセージのアーカイブ**」と入力し、 **[ステップ]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  [概要](#Process_Overview)  
   
@@ -210,7 +208,7 @@ ms.locfileid: "70228485"
   
 5.  **[頻度]** 領域で、たとえば毎月 1 回など、定期的にジョブを実行するオプションを選択します。  
   
-6.  **[一日のうちの頻度]** 領域で、**[Occurs once at <time\<]** (<時刻> に 1 度実行) を選びます。  
+6.  **[一日のうちの頻度]** 領域で、 **[Occurs once at <time\<]** (<時刻> に 1 度実行) を選びます。  
   
 7.  その他のオプションが目的どおりに構成されていることを確認し、 **[OK]** をクリックしてスケジュールを保存します。  
   
