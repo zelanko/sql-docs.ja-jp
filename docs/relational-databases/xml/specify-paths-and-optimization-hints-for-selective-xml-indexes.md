@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 486ee339-165b-4aeb-b760-d2ba023d7d0a
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: cab94f3f628f1b3423af25467c12ba7b595ede77
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: acea8d44048de35ecbc3214712f699217838e60d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68021074"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905233"
 ---
 # <a name="specify-paths-and-optimization-hints-for-selective-xml-indexes"></a>選択的 XML インデックスのパスと最適化ヒントの指定
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -235,8 +235,6 @@ node1223 = '/a/b/d' as SQL NVARCHAR(200) SINGLETON
     -   ノード `b`。述語が、XQuery 式の中でノード`b` に適用されるため。  
   
 2.  **原則 2**: 最大限のパフォーマンスを得るには、特定の XQuery 式を評価するために必要なすべてのノードにインデックスを設定します。 ノードの一部にのみインデックスを設定した場合、選択的 XML インデックスは、インデックス付きノードのみを含むサブ式の評価を向上させます。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  上に示した SELECT ステートメントのパフォーマンスを向上させるには、次に示す選択的 XML インデックスを作成します。  
   

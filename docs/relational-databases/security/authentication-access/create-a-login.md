@@ -23,12 +23,12 @@ ms.assetid: fb163e47-1546-4682-abaa-8c9494e9ddc7
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: c0ed09a881d0bbf7a1f284b3b2971077725e6d91
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8f0f45200e32fe61f9a8a19fd2cd3a6ff17fa9cd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094964"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903030"
 ---
 # <a name="create-a-login"></a>ログインの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -96,8 +96,6 @@ ms.locfileid: "68094964"
 10. **[既定の言語]** の一覧から、ログインの既定の言語を選択します。  
   
 11. [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="additional-options"></a>追加オプション  
  **[ログイン - 新規作成]** ダイアログ ボックスでは、 **[サーバー ロール]** 、 **[ユーザー マッピング]** 、 **[セキュリティ保護可能なリソース]** 、 **[状態]** の 4 つの追加ページにもオプションがあります。  
@@ -187,7 +185,7 @@ ms.locfileid: "68094964"
  **[名前]**  
  グリッドに追加される各プリンシパルまたはセキュリティ保護可能なリソースの名前です。  
   
- **型**  
+ **Type**  
  各アイテムの種類について説明します。  
   
  **[明示的] タブ**  
@@ -208,7 +206,7 @@ ms.locfileid: "68094964"
  **Deny**  
  この権限をログインに対して拒否する場合はオンにします。 この権限を取り消す場合はオフにします。  
   
-### <a name="status"></a>状態  
+### <a name="status"></a>Status  
  **[状態]** ページには、選択した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインに対して構成できる認証オプションと承認オプションの一部が表示されます。  
   
  このページで使用できるオプションを次に示します。  

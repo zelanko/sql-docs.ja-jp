@@ -15,12 +15,12 @@ ms.assetid: 27a1bc38-e498-4fff-8082-04b52aa4b22c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: eff19816330eb512c48cc6a37237ecf6030d7e4f
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 37aecafd3506d2cd47b7b4efd93a89f50ce4ec2d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68768542"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905208"
 ---
 # <a name="initialize-a-subscription-manually"></a>手動によるサブスクリプションの初期化
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -43,8 +43,6 @@ ms.locfileid: "68768542"
 1.  スキーマとデータがサブスクリプション データベースにコピーされていることを確認します。  
   
 2.  サブスクリプションの新規作成ウィザードの **[サブスクリプションの初期化]** ページで、 **[初期化]** チェック ボックスをオフにします。 この操作を、レプリケーション オブジェクトとメタデータのみをコピーする必要がある各サブスクリプションに対して行います。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="TsqlProcedure"></a> Transact-SQL の使用  
  サブスクリプションは、レプリケーションのストアド プロシージャを使用して手動で初期化できます。  

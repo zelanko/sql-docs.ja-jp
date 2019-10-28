@@ -23,12 +23,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a1c5a46dda4c9b2c5793ff62aaf6eb8606efbe9a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: e82b1b58fb4ed880f288ae98148f6c16da1907fd
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68095279"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903818"
 ---
 # <a name="use-the-full-text-indexing-wizard"></a>フルテキスト インデックス作成ウィザードの使用
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68095279"
 4. **[ワード ブレーカーの言語]。** ドロップダウン リストから言語を選択します。 この選択は、インデックスに適したワード ブレーカーを識別するために使用されます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] は、ワード ブレーカーを使用してフルテキスト インデックス付きデータ内の単語の境界を識別します。  
   
 5.  **[型列]。** フルテキスト インデックスの付いた列の文書型を保持する列の名前を選択します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > **注:** **[型列]** は、 **[使用できる列]** 列内の名前の付いた列の型が **varbinary(max)** または **image** である場合のみ有効です。  
   

@@ -12,12 +12,12 @@ ms.reviewer: ''
 ms.custom: ''
 ms.date: 08/15/2019
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||=azuresqldb-mi-current'
-ms.openlocfilehash: 7ddf814a849dfd0272f87dec2e2d7650c557d0be
-ms.sourcegitcommit: c4258a644ac588fc222abee2854f89a81325814c
+ms.openlocfilehash: a79940fa5696a65ed580d8550984d090a48eebdf
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72545082"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807446"
 ---
 # <a name="download-and-install-sql-server-data-tools-ssdt-for-visual-studio"></a>Visual Studio の SQL Server Data Tools (SSDT) をダウンロードし、インストールする
 
@@ -32,12 +32,12 @@ Visual Studio 2019 では、Analysis Services、Integration Services、Reporting
 Visual Studio 2019 のライセンスが既にある場合:
 
 - SQL Database プロジェクトでは、Visual Studio の [データの保存と処理] ワークロードをインストールする
-- Analysis Services、Integration Services または Reporting Services のプロジェクトでは、マーケットプレースから適切な[拡張機能](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions)をインストールする
+- Analysis Services、Integration Services または Reporting Services のプロジェクトでは、マーケットプレースから適切な[拡張機能](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)をインストールする
 
 Visual Studio 2019 のライセンスがまだない場合:
 
 - [Visual Studio 2019 Community](https://visualstudio.microsoft.com/downloads/) をインストールする
-- Analysis Services、Integration Services、Reporting Services [拡張機能](https://docs.microsoft.com/en-us/==visualstudio/ide/finding-and-using-visual-studio-extensions)を適宜インストールする
+- Analysis Services、Integration Services、Reporting Services [拡張機能](https://docs.microsoft.com/visualstudio/ide/finding-and-using-visual-studio-extensions)を適宜インストールする
 
 ## <a name="changes-in-ssdt-for-visual-studio-2017"></a>SSDT for Visual Studio 2017 の変更点
 
@@ -78,8 +78,8 @@ SSDT for Visual Studio 2017 の[システム要件](https://docs.microsoft.com/v
 
 **SSDT for VS 2017** の今回のリリースは、次の言語でインストールできます。
 
-- [中国語 (簡体字)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
-- [中国語 (繁体字)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
+- [簡体中国語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x804)
+- [繁体中国語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x404)
 - [英語 (米国)]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x409)
 - [フランス語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x40c)
 - [ドイツ語]( https://go.microsoft.com/fwlink/?linkid=2095463&clcid=0x407)

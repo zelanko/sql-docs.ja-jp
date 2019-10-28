@@ -11,12 +11,12 @@ ms.assetid: 856e8061-c604-4ce4-b89f-a11876dd6c88
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 50e5fd4eaf56bebb430d2d2153038a7128d34398
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a8f9dbfc7f75d853232e0074d52735e9e38d68d5
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68049980"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72902963"
 ---
 # <a name="create-and-store-column-master-keys-always-encrypted"></a>列マスター キーを作成して保存する (Always Encrypted)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,8 +108,6 @@ SSMS を使用し、Windows 証明書ストアに Always Encrypted キーを格�
 7.  **[スナップインの追加と削除]** ダイアログ ボックスで **[OK]** をクリックします。
 8.  **[証明書]** スナップインで、 **[証明書] > [個人]** フォルダーで証明書を探し、その証明書を右クリックします。次に **[すべてのタスク]** をポイントし、 **[秘密キーの管理]** をクリックします。
 9.  **[セキュリティ]** ダイアログ ボックスで、必要に応じてユーザー アカウントの読み取りアクセス許可を追加します。
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="creating-column-master-keys-in-azure-key-vault"></a>Azure Key Vault で列マスター キーを作成する
 

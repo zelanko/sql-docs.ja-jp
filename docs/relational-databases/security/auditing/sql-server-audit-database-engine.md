@@ -16,12 +16,12 @@ ms.assetid: 0c1fca2e-f22b-4fe8-806f-c87806664f00
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-mi-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017
-ms.openlocfilehash: 46fb32fcd6f3aa0d78f748f1ef1e8ec419084f46
-ms.sourcegitcommit: dacf6c57f6a2e3cf2005f3268116f3c609639905
+ms.openlocfilehash: 4d9319ef90263e6513661c4d9a24be7f530b917f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/11/2019
-ms.locfileid: "70878690"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903847"
 ---
 # <a name="sql-server-audit-database-engine"></a>SQL Server Audit (データベース エンジン)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -109,8 +109,6 @@ ms.locfileid: "70878690"
 3.  監査を有効にします。  
   
 4.  Windows **イベント ビューアー**、 **[ログ ファイルの表示]** 、または fn_get_audit_file 関数を使用して、監査イベントを閲覧します。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  詳細については、「 [サーバー監査およびサーバー監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-server-audit-specification.md) 」および「 [サーバー監査およびデータベース監査の仕様を作成する](../../../relational-databases/security/auditing/create-a-server-audit-and-database-audit-specification.md)」を参照してください。  
   

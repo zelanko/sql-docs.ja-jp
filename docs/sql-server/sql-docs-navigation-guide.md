@@ -1,7 +1,7 @@
 ---
 title: SQL Server ドキュメント ナビゲーションのヒント
 description: SQL Server 技術ドキュメントを参照する際のヒントとテクニックです。ハブ ページ、目次、ヘッダー、階層リンクの使用方法、バージョン フィルターの使用方法などについて説明します。
-ms.date: 07/11/2019
+ms.date: 10/15/2019
 ms.prod: sql
 ms.reviewer: ''
 ms.custom: ''
@@ -9,12 +9,12 @@ ms.topic: conceptual
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>= aps-pdw-2016 || = azuresqldb-current || = azure-sqldw-latest || >= sql-server-2016 || >= sql-server-linux-2017 || = sqlallproducts-allversions'
-ms.openlocfilehash: 42bf8211f8b5907d21f98e12bd058eedb658bbe2
-ms.sourcegitcommit: cdbb0ee5ee5259119ad21695f549207457990f71
+ms.openlocfilehash: e0a18b05395cffaa4154e8f4a7d74ed04750e430
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/19/2019
-ms.locfileid: "69621716"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72904311"
 ---
 # <a name="sql-server-docs-navigation-guide"></a>SQL Server ドキュメント ナビゲーション ガイド 
 
@@ -93,6 +93,6 @@ SQL Server 技術ドキュメントには、SQL Server のいくつかのサポ�
 
 ## <a name="next-steps"></a>次の手順
 
-- [SQL Server の技術ドキュメント](sql-server-technical-documentation.md)を使い始めます。 
+- [SQL Server の技術ドキュメント](index.yml)を使い始めます。
 - SQL Server に関するフィードバックの送信方法または支援を受ける方法の詳細については、[支援を受ける方法](sql-server-get-help.md)のページを参照してください。 
 - すべてのクイックスタートとチュートリアルにすばやくアクセスするには、[SQL Server 教育センター](../lp/sql-server/sql-education-center.md)をアクセスしてください。

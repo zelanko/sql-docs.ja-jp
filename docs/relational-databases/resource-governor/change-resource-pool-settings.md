@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 49438285-a011-4dac-bd4f-f35cd90fda61
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 328d61171c28f89083712c7f46c7b97394a7de84
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 8549b5a3a1675353ad0adce42fc63a460f893cae
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68137002"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905018"
 ---
 # <a name="change-resource-pool-settings"></a>リソース プールの設定の変更
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -50,8 +50,6 @@ ms.locfileid: "68137002"
 4.  変更する行のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
 5.  変更を保存するには、 **[OK]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="ChgRPTSQL"></a> Transact-SQL を使用してリソース プールの設定を変更する  
  **リソース プールの設定を変更するには - [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

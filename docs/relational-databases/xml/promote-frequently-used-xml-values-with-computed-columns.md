@@ -13,12 +13,12 @@ helpviewer_keywords:
 ms.assetid: f5111896-c2fd-4209-b500-f2baa45489ad
 author: MightyPen
 ms.author: genemi
-ms.openlocfilehash: a4b68ca111fc14682f5e11a6a865d15c0356a954
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 66526a14c6057be1c99b8690cd6df0db07c40a81
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67995319"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905532"
 ---
 # <a name="promote-frequently-used-xml-values-with-computed-columns"></a>計算列を使用した使用頻度の高い XML 値の昇格
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -172,8 +172,6 @@ WHERE    tblPropAuthor.propAuthor = 'David'
 2.  CLR クラスを起動するため、アセンブリおよび Transact-SQL ユーザー定義関数を作成します。  
   
 3.  ユーザー定義関数を使用して、プロパティ テーブルのメンテナンスに使用する挿入トリガー、更新トリガー、および削除トリガーを定義します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  まず、ストリーミング CLR 関数を作成します。 **xml** データ型は ADO.NET のマネージド クラス SqlXml として公開します。このデータ型は XmlReader を返す **CreateReader()** メソッドをサポートします。  
   

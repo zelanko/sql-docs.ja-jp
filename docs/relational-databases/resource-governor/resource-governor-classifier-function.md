@@ -14,12 +14,12 @@ helpviewer_keywords:
 ms.assetid: 64c25012-7068-476f-afa2-0b4f3adde9a4
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: ae4caa882a2618ea57c84a33e8c9cb7e87db7c0a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: eeb3d08f0a14434fa5d071d88a3d26ec6fcaf6c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099221"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903913"
 ---
 # <a name="resource-governor-classifier-function"></a>リソース ガバナーの分類子関数
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -73,8 +73,6 @@ ms.locfileid: "68099221"
 2.  LOGON トリガー実行  
   
 3.  分類  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  分類が開始されると、リソース ガバナーは分類子関数を実行し、関数から返された値を使用して適切なワークロード グループに要求を送信します。  
   

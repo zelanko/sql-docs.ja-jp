@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: 2c2d2db0-34a5-4f50-b783-17693e3ce3f1
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 13016fa1baf3dd01f7e00c11a322f10ba720c57c
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b746c7ed116627f8fe57cdb43724c619eeb5dd4
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099241"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903928"
 ---
 # <a name="disable-resource-governor"></a>リソース ガバナーを無効にしたとき
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -55,8 +55,6 @@ ms.locfileid: "68099241"
 1.  [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]でオブジェクト エクスプローラーを開き、 **[管理]** ノードを **[リソース ガバナー]** ノードまで再帰的に展開します。  
   
 2.  **[リソース ガバナー]** を右クリックし、 **[無効化]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="RGOffProp"></a> リソース ガバナーのプロパティを使用してリソース ガバナーを無効にする  
  **[リソース ガバナーのプロパティ] ページでリソース ガバナーを無効にするには**  

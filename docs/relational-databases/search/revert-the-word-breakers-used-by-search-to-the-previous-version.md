@@ -10,12 +10,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 8d66dad7c13187711cf1422c9ad932cfe0ed4ed8
-ms.sourcegitcommit: f76b4e96c03ce78d94520e898faa9170463fdf4f
+ms.openlocfilehash: bf635c951c4705fcb726d4122414740b5293cc47
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/10/2019
-ms.locfileid: "70874906"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903807"
 ---
 # <a name="revert-the-word-breakers-used-by-search-to-the-previous-version"></a>検索で使用するワード ブレーカーを以前のバージョンに戻す
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -108,8 +108,6 @@ ms.locfileid: "70874906"
     >  この変更は、現在と以前のバージョンの両方で NaturalLanguage6.dll を使用するすべての言語に影響します。  
   
 4.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="nl6nl6restore"></a> 現在のコンポーネントを復元するには  
   
@@ -261,7 +259,7 @@ ms.locfileid: "70874906"
   
 |[言語]|省略形<br />(レジストリで<br />使用)|LCID|  
 |--------------|---------------------------------------|----------|  
-|Simplified Chinese|chs|2052|  
+|簡体中国語|chs|2052|  
 |繁体字中国語|cht|1028|  
 |タイ語|tha|1054|  
 |繁体字中国語|zh-hk|3076|  
@@ -325,7 +323,7 @@ ms.locfileid: "70874906"
   
  次の一覧は、各言語に使用される省略形を基準としてアルファベット順に並べられています。  
   
- **簡体字中国語 (chs)、LCID 2052**  
+ **簡体中国語 (chs)、LCID 2052**  
   
 |コンポーネント|ワード ブレーカー|  
 |---------------|------------------|  
@@ -370,7 +368,7 @@ ms.locfileid: "70874906"
 |現在の CLSID|E9B1DF65-08F1-438b-8277-EF462B23A792|  
 |現在のファイル名|MsWb70404.dll|  
   
- **簡体字中国語 (zh-sg)、LCID 4100**  
+ **簡体中国語 (zh-sg)、LCID 4100**  
   
 |コンポーネント|ワード ブレーカー|  
 |---------------|------------------|  

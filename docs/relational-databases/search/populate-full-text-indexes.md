@@ -24,12 +24,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 0b3115fa833f657236939200b262c862182d9117
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 52fc7d3d43c1f0adcf7ab94d78cf301254a9a18d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68132192"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903876"
 ---
 # <a name="populate-full-text-indexes"></a>フルテキスト インデックスの作成
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -207,8 +207,6 @@ ALTER FULLTEXT INDEX ON Production.Document
     -   既存のスケジュールを**削除**するには、それを選択し、 **[削除]** をクリックします。  
   
 2.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]   
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="crawl"></a> フルテキスト作成 (クロール) で発生したエラーのトラブルシューティング  
 クロール時にエラーが発生すると、フルテキスト検索クロール ログ記録機能によってクロール ログが作成および保持されます。このログはプレーンテキスト ファイルです。 各クロール ログは特定のフルテキスト カタログに対応します。 既定では、所与のインスタンス (この例では、既定のインスタンス) のクロール ログは `%ProgramFiles%\Microsoft SQL Server\MSSQL15.MSSQLSERVER\MSSQL\LOG` フォルダーにあります。

@@ -10,12 +10,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7142d63b70a6d70d64566eec2105c8b4fb90e323
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: b0d8299581c5394b5528e9c42a41a64445fae800
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68093398"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903901"
 ---
 # <a name="change-the-word-breaker-used-for-us-english-and-uk-english"></a>米国英語と英国英語に使用されるワード ブレーカーを変更する方法
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -23,7 +23,7 @@ ms.locfileid: "68093398"
   
  前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、米国英語 (LCID 1033) と英国英語 (LCID 2057) に対し、異なる CLSID で表される異なるワード ブレーカーが使用されていました。 このリリースでは、次の表に示すように、両方の LCID で同じ CLSID を持つ同じコンポーネントが使用されます。  
   
-|LCID (LCID)|以前のバージョンでインストールされたワード ブレーカー<br /><br /> バージョン 12.0.6828.0|以前のバージョンでインストールされたステマー|このバージョンでインストールされるワード ブレーカー<br /><br /> バージョン 14.0.4999.1038|このバージョンでインストールされるステマー|  
+|LCID|以前のバージョンでインストールされたワード ブレーカー<br /><br /> バージョン 12.0.6828.0|以前のバージョンでインストールされたステマー|このバージョンでインストールされるワード ブレーカー<br /><br /> バージョン 14.0.4999.1038|このバージョンでインストールされるステマー|  
 |----------|-------------------------------------------------------------------------|--------------------------------------------|-----------------------------------------------------------------------|---------------------------------------|  
 |1033<br />(米国英語)|188D6CC5-CB03-4C01-912E-47D21295D77E|EEED4C20-7F1B-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
 |2057<br />(英国英語)|173C97E2-AEBE-437C-9445-01B237ABF2F6|D99F7670-7F1A-11CE-BE57-00AA0051FE20|9faed859-0b30-4434-ae65-412e14a16fb8|e1e5ef84-c4a6-4e50-8188-99aef3de2659|  
@@ -55,8 +55,6 @@ ms.locfileid: "68093398"
 5.  **StemmerClass** キー値を **{EEED4C20-7F1B-11CE-BE57-00AA0051FE20}** に更新します。  
   
 6.  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]を再起動します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="to-switch-from-the-current-version-of-the-uk-english-word-breaker-to-the-previous-version"></a>英国英語用のワード ブレーカーを現在のバージョンから前のバージョンに切り替えるには  
   

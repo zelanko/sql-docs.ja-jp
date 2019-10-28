@@ -16,12 +16,12 @@ ms.assetid: 54757c91-615b-468f-814b-87e5376a960f
 author: aliceku
 ms.author: aliceku
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 1ded5b442a6a61ba1a6cf2c0313834cce85f674f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ca2c6f4967368489e49014e7a97267cb64b9a235
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68043189"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903170"
 ---
 # <a name="always-encrypted-database-engine"></a>Always Encrypted (Database Engine) (Always Encrypted (データベース エンジン))
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -82,8 +82,6 @@ Operand type clash: char(11) encrypted with (encryption_type = 'DETERMINISTIC', 
 
 1. SELECT を使用して SSN 列からデータを選択し、結果セットとしてアプリケーションに格納します。 こうすることで、アプリケーション (クライアント *ドライバー*) は列を復号化できます。
 2. INSERT を使用して結果セットのデータを SQL Server に挿入します。 
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  >[!IMPORTANT]
  > このシナリオで、対象の列は暗号化されたデータを受け入れない通常の varchar なので、データをサーバーに戻すと、暗号化は解除されます。 

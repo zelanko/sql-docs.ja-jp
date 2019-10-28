@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 072868ec-ceff-4db6-941b-281af731a067
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 6fa3223751de2b8b9019cd48473dc0b07d9d72d0
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 5b43793d8d43ca56d8001b986ecdb02af4b463e1
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136877"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903955"
 ---
 # <a name="create-a-workload-group"></a>ワークロード グループの作成
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -56,8 +56,6 @@ ms.locfileid: "68136877"
 6.  既定値から変更する場合は、その対象となる行の他のセルをクリックまたはダブルクリックし、新しい値を入力します。  
   
 7.  変更を保存するには、 **[OK]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="CreRPTSQL"></a> Transact-SQL を使用してワークロード グループを作成する  
  **ワークロード グループを作成するには [!INCLUDE[tsql](../../includes/tsql-md.md)]**  

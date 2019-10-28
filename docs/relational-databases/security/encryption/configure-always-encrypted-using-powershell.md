@@ -10,12 +10,12 @@ ms.assetid: 12f2bde5-e100-41fa-b474-2d2332fc7650
 author: VanMSFT
 ms.author: vanto
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 702bc2a5dd5578bff85d7e386e2abe3a4a0a658f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 6ad4a50d8aeca225ae0d00574a62cc428593ebb2
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68050077"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903012"
 ---
 # <a name="configure-always-encrypted-using-powershell"></a>Configure Always Encrypted using PowerShell
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -52,8 +52,6 @@ Import-Module "SqlServer"
 一部の Always Encrypted コマンドレットはデータベースのデータまたはメタデータを操作するので、最初にデータベースに接続する必要があります。 SqlServer モジュールを使用して Always Encrypted を構成するときに推奨されるデータベース接続方法は次の 2 つです。 
 1. SQL Server PowerShell を使用して接続します。
 2. SQL Server 管理オブジェクト (SMO) を使用して接続します。
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="using-sql-server-powershell"></a>SQL Server PowerShell の使用
 

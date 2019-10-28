@@ -18,12 +18,12 @@ ms.assetid: ed2a5522-f4d2-4111-95a4-d3e1e5081739
 author: VanMSFT
 ms.author: vanto
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 207bb036ad89e135a7bdcbeaba7e5fb29bd41571
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 980b179f39edc3e93e5cb0bc105b6b2f8d12bb58
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68094979"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903751"
 ---
 # <a name="create-a-database-schema"></a>データベース スキーマの作成
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -60,8 +60,6 @@ ms.locfileid: "68094979"
 5.  **[スキーマの所有者]** ボックスに、スキーマを所有するデータベース ユーザーまたはロールの名前を入力します。 または、 **[検索]** をクリックして **[ロールとユーザーの検索]** ダイアログ ボックスを開きます。  
   
 6.  [!INCLUDE[clickOK](../../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 > [!NOTE]
 > **Azure SQL Database** または **Azure SQL Data Warehouse** に対する SSMS を使用してスキーマを作成している場合、ダイアログ ボックスは表示されません。 生成されたスキーマ テンプレート作成 T-SQL ステートメントを実行する必要があります。

@@ -15,12 +15,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: d5115149afbcfb2796c8e821bd22c84e72eb2315
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 349e00b7734ed8e8176585c55018b7565649cc1f
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082750"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903824"
 ---
 # <a name="get-started-with-full-text-search"></a>フルテキスト検索の概要
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -30,8 +30,6 @@ SQL Server データベースでは、フルテキストが既定で有効にな
 フルテキスト検索をセットアップする基本的な手順は 2 つあります。  
 1.  フルテキスト カタログを作成します。  
 2.  検索するテーブルまたはインデックス付きビューにフルテキスト インデックスを作成します。 
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 各フルテキスト インデックスは、フルテキスト カタログに属している必要があります。 フルテキスト インデックスごとにテキスト カタログを作成するか、複数のフルテキスト インデックスを特定のカタログに関連付けることができます。 フルテキスト カタログは仮想オブジェクトであり、ファイル グループには属しません。 カタログは、フルテキスト インデックスのグループを指す論理的概念です。
 

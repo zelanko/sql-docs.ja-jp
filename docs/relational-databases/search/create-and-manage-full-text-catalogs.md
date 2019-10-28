@@ -13,12 +13,12 @@ author: pmasl
 ms.author: pelopes
 ms.reviewer: mikeray
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 085e17c420b1edad10b988bbba1a15a339977624
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ed7e7f31da9cacaf4862c29ada9c98df9559f9c9
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082961"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903860"
 ---
 # <a name="create-and-manage-full-text-catalogs"></a>フルテキスト カタログの作成と管理
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -51,8 +51,6 @@ GO
     >  フルテキスト カタログ ID は、00005 から始まり、新しいカタログが作成されるたびに 1 ずつ増加します。  
   
 5.  [!INCLUDE[clickOK](../../includes/clickok-md.md)]  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ##  <a name="props"></a>フルテキスト カタログのプロパティの取得  
 [!INCLUDE[tsql](../../includes/tsql-md.md)] 関数 **FULLTEXTCATALOGPROPERTY** を使用して、フルテキスト インデックスに関連するさまざまなプロパティの値を取得します。 詳細については、「[FULLTEXTCATALOGPROPERTY](../../t-sql/functions/fulltextcatalogproperty-transact-sql.md)」を参照してください。

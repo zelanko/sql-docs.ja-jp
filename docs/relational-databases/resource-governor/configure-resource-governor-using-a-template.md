@@ -11,12 +11,12 @@ helpviewer_keywords:
 ms.assetid: f342dec2-d1d6-483e-b44e-98eb7d168b5e
 author: julieMSFT
 ms.author: jrasnick
-ms.openlocfilehash: 2d9317dba8c319e9af4d3068e183b6639c28fe34
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 2b26aba44ff43de115268dcafa5ecc51e3f13c02
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68136941"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72903948"
 ---
 # <a name="configure-resource-governor-using-a-template"></a>テンプレートを使用してリソース ガバナーを構成する
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -46,8 +46,6 @@ ms.locfileid: "68136941"
 5.  テンプレートに加えた変更を保存するには、 **[OK]** をクリックします。  
   
 6.  クエリを実行するには、 **[実行]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="see-also"></a>参照  
  [リソース ガバナー](../../relational-databases/resource-governor/resource-governor.md)   
