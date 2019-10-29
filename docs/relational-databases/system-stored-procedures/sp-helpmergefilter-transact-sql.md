@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergefilter (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpmergefilter (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -51,14 +51,14 @@ sp_helpmergefilter [ @publication= ] 'publication'
 |-----------------|---------------|-----------------|  
 |**join_filterid**|**int**|結合フィルターの ID。|  
 |**filtername**|**sysname**|フィルターの名前。|  
-|**結合アーティクル名**|**sysname**|結合アーティクルの名前です。|  
+|**join article name**|**sysname**|結合アーティクルの名前です。|  
 |**join_filterclause**|**nvarchar(2000)**|結合を修飾するフィルター句。|  
 |**join_unique_key**|**int**|一意なキーを基に結合を行うかどうかを示します。|  
-|**ベース テーブルの所有者**|**sysname**|ベース テーブルの所有者の名前。|  
-|**ベース テーブルの名前**|**sysname**|ベース テーブルの名前です。|  
-|**結合テーブルの所有者**|**sysname**|ベース テーブルに結合するテーブルの所有者の名前。|  
-|**結合テーブルの名前**|**sysname**|ベース テーブルに結合するテーブルの名前。|  
-|**アーティクルの名前**|**sysname**|ベース テーブルに結合するテーブル アーティクルの名前です。|  
+|**base table owner**|**sysname**|ベース テーブルの所有者の名前。|  
+|**base table name**|**sysname**|ベース テーブルの名前です。|  
+|**join table owner**|**sysname**|ベース テーブルに結合するテーブルの所有者の名前。|  
+|**join table name**|**sysname**|ベース テーブルに結合するテーブルの名前。|  
+|**article name**|**sysname**|ベース テーブルに結合するテーブル アーティクルの名前です。|  
 |**filter_type**|**tinyint**|マージ フィルターは、次のいずれかの種類です。<br /><br /> **1** = 結合フィルターのみ<br /><br /> **2** = 論理レコードのリレーションシップ<br /><br /> **3** = 両方|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
