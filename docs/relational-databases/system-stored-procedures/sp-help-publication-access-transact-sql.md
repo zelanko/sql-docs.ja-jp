@@ -1,5 +1,5 @@
 ---
-title: sp_help_publication_access (Transact-sql) |Microsoft Docs
+title: sp_help_publication_access (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -56,7 +56,7 @@ sp_help_publication_access [ @publication = ] 'publication'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**ログイン**|**nvarchar (256)**|実際のログイン名。|  
+|**Loginname**|**nvarchar (256)**|実際のログイン名。|  
 |**Isntname**|**int**|**0** = ログインは Windows ユーザーではありません。<br /><br /> **1** = ログインは Windows ユーザーです。|  
 |**Isntgroup**|**int**|**0** = ログインは Windows グループではありません。<br /><br /> **1** = ログインは Windows グループです。|  
   
@@ -72,8 +72,8 @@ sp_help_publication_access [ @publication = ] 'publication'
  **Sp_help_publication_access**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_grant_publication_access &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
