@@ -137,7 +137,7 @@ SQL Server エージェントが実行されている場合、既定でパブリ
     -   **-DistributorSecurityMode** =  **\@publisher_security_mode**    
     -   **-PublisherLogin**    
     -   **-PublisherPassword**    
-    -   **-PublisherSecurityMode** =  **@publisher_security_mode**  
+    -   **-PublisherSecurityMode** =  **\@publisher_security_mode**  
   
 ###  <a name="TsqlExample"></a> 例 (Transact-SQL)  
  次の例では、トランザクション パブリケーションを作成し、 **sqlcmd** スクリプト変数を使用して、新しいパブリケーション用にスナップショット エージェント ジョブを追加します。 ジョブを開始するコードも含まれています。  
