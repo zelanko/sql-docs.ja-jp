@@ -1,5 +1,5 @@
 ---
-title: sp_helppeerresponses (TRANSACT-SQL) |Microsoft Docs
+title: sp_helppeerresponses (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/06/2017
 ms.prod: sql
@@ -44,7 +44,7 @@ sp_helppeerresponses [ @request_id = ] request_id
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**request_id**|**int**|状態要求の ID。|  
-|**ピア**|**sysname**|応答を生成したピアの名前。|  
+|**peer**|**sysname**|応答を生成したピアの名前。|  
 |**peer_db**|**sysname**|応答を生成したピアのデータベース名。|  
 |**received_date**|**datetime**|要求元が送信先のピアから応答を受信した日付と時刻。|  
   
@@ -60,7 +60,7 @@ sp_helppeerresponses [ @request_id = ] request_id
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helppeerresponses**します。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_deletepeerrequesthistory &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
- [sp_helppeerrequests &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
+ [sp_deletepeerrequesthistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletepeerrequesthistory-transact-sql.md)   
+ [sp_helppeerrequests &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helppeerrequests-transact-sql.md)  
   
   
