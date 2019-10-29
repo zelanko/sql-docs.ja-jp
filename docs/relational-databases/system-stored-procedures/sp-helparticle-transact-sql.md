@@ -1,5 +1,5 @@
 ---
-title: sp_helparticle (Transact-sql) |Microsoft Docs
+title: sp_helparticle (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 06/10/2016
 ms.prod: sql
@@ -58,20 +58,20 @@ sp_helparticle [ @publication = ] 'publication'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**アーティクル id**|**int**|アーティクルの ID。|  
-|**アーティクル名**|**sysname**|アーティクルの名前。|  
-|**基本オブジェクト**|**nvarchar(257)**|アーティクルまたはストアドプロシージャによって表される、基になるテーブルの名前。|  
-|**対象オブジェクト**|**sysname**|宛先 (サブスクリプション) テーブルの名前。|  
-|**同期オブジェクト**|**nvarchar(257)**|パブリッシュされたアーティクルを定義するビューの名前。|  
+|**article id**|**int**|アーティクルの ID。|  
+|**article name**|**sysname**|アーティクルの名前。|  
+|**base object**|**nvarchar(257)**|アーティクルまたはストアドプロシージャによって表される、基になるテーブルの名前。|  
+|**destination object**|**sysname**|宛先 (サブスクリプション) テーブルの名前。|  
+|**synchronization object**|**nvarchar(257)**|パブリッシュされたアーティクルを定義するビューの名前。|  
 |**type**|**smallint**|アーティクルのタイプです。<br /><br /> **1** = ログベース。<br /><br /> **3** = 手動フィルターを使用したログベース。<br /><br /> **5** = ログベースの手動ビュー。<br /><br /> **7** = 手動フィルターと手動ビューを使用したログベース。<br /><br /> **8** = ストアドプロシージャの実行。<br /><br /> **24** = シリアル化可能なストアドプロシージャの実行。<br /><br /> **32** = ストアドプロシージャ (スキーマのみ)。<br /><br /> **64** = ビュー (スキーマのみ)。<br /><br /> **96** = 集計関数 (スキーマのみ)。<br /><br /> **128** = 関数 (スキーマのみ)。<br /><br /> **257** = ログベースのインデックス付きビュー。<br /><br /> **259** = 手動フィルターを使用したログベースのインデックス付きビュー。<br /><br /> **261** = 手動ビューを使用したログベースのインデックス付きビュー。<br /><br /> **263** = 手動フィルターと手動ビューを使用するログベースのインデックス付きビュー。<br /><br /> **320** = インデックス付きビュー (スキーマのみ)。<br /><br />|  
 |**status**|**tinyint**|1つ以上のアーティクルプロパティの[& (ビットごとの and)](../../t-sql/language-elements/bitwise-and-transact-sql.md)の結果にすることができます。<br /><br /> **0x00** = [!INCLUDE[ssInternalOnly](../../includes/ssinternalonly-md.md)]<br /><br /> **0x01** = アーティクルはアクティブです。<br /><br /> **0x08** = insert ステートメントに列名を含めます。<br /><br /> **0x16** = パラメーター化されたステートメントを使用します。<br /><br /> **0x32** = パラメーター化されたステートメントを使用し、insert ステートメントに列名を含めます。|  
-|**フィルター (filter)**|**nvarchar(257)**|テーブルを行方向にフィルター選択するために使用されるストアドプロシージャです。 このストアドプロシージャは、FOR REPLICATION 句を使用して作成されている必要があります。|  
+|**filter**|**nvarchar(257)**|テーブルを行方向にフィルター選択するために使用されるストアドプロシージャです。 このストアドプロシージャは、FOR REPLICATION 句を使用して作成されている必要があります。|  
 |**description**|**nvarchar (255)**|記事の内容を示すエントリ。|  
 |**insert_command**|**nvarchar (255)**|Insert をテーブルアーティクルと共にレプリケートするときに使用されるレプリケーションコマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**update_command**|**nvarchar (255)**|テーブルアーティクルで更新をレプリケートするときに使用されるレプリケーションコマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
 |**delete_command**|**nvarchar (255)**|テーブル アーティクルの削除をレプリケートするときに使用されるレプリケーション コマンドの種類です。 詳細については、「[トランザクション アーティクルに変更を反映する方法の指定](../../relational-databases/replication/transactional/transactional-articles-specify-how-changes-are-propagated.md)」を参照してください。|  
-|**作成スクリプトのパス**|**nvarchar (255)**|ターゲットテーブルを作成するために使用されるアーティクルスキーマスクリプトのパスと名前です。|  
-|**列方向のパーティション分割**|**bit**|アーティクルに対して列方向のパーティション分割を有効にするかどうかを指定します。値が**1**の場合は、列方向のパーティション分割が有効になります。|  
+|**creation script path**|**nvarchar (255)**|ターゲットテーブルを作成するために使用されるアーティクルスキーマスクリプトのパスと名前です。|  
+|**vertical partition**|**bit**|アーティクルに対して列方向のパーティション分割を有効にするかどうかを指定します。値が**1**の場合は、列方向のパーティション分割が有効になります。|  
 |**pre_creation_cmd**|**tinyint**|DROP TABLE、DELETE TABLE、または TRUNCATE TABLE の事前作成コマンドです。|  
 |**filter_clause**|**ntext**|行方向のフィルター選択を指定する WHERE 句。|  
 |**schema_option**|**binary(8)**|指定されたアーティクルのスキーマ生成オプションのビットマップ。 **Schema_option**値の完全な一覧については、「 [ &#40;sp_addarticle&#41;transact-sql](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)」を参照してください。|  
@@ -103,7 +103,7 @@ sp_helparticle [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>参照  
  [アーティクルのプロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-article-properties.md)   
- [sp_addarticle &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
+ [sp_addarticle &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addarticle-transact-sql.md)   
  [sp_articlecolumn (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-articlecolumn-transact-sql.md)   
  [sp_changearticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changearticle-transact-sql.md)   
  [sp_droparticle (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-droparticle-transact-sql.md)   
