@@ -1,5 +1,5 @@
 ---
-title: sp_getqueuedrows (TRANSACT-SQL) |Microsoft Docs
+title: sp_getqueuedrows (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -53,9 +53,9 @@ sp_getqueuedrows [ @tablename = ] 'tablename'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**操作**|**nvarchar(10)**|同期を実行するときに行われるアクションの種類。<br /><br /> INS= 挿入<br /><br /> DEL = 削除<br /><br /> UPD = 更新|  
-|**tranid**|**nvarchar(70)**|コマンドを実行したトランザクション ID。|  
-|**テーブルの列 1... n**||指定したテーブルの各列の値*tablename*します。|  
+|**Action**|**nvarchar(10)**|同期を実行するときに行われるアクションの種類。<br /><br /> INS= 挿入<br /><br /> DEL = 削除<br /><br /> UPD = 更新|  
+|**Tranid**|**nvarchar(70)**|コマンドを実行したトランザクション ID。|  
+|**table column1...n**||指定したテーブルの各列の値*tablename*します。|  
 |**msrepl_tran_version**|**uniqueidentifier**|この列は、レプリケートされたデータをパブリッシャーで競合検出を実行する変更の追跡に使用されます。 この列は、テーブルに自動的に追加されます。|  
   
 ## <a name="remarks"></a>コメント  
