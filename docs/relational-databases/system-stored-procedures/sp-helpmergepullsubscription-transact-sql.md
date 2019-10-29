@@ -1,5 +1,5 @@
 ---
-title: sp_helpmergepullsubscription (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpmergepullsubscription (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -53,10 +53,10 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**subscription_name**|**nvarchar(1000)**|サブスクリプションの名前。|  
-|**パブリケーション**|**sysname**|パブリケーションの名前。|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
+|**publication**|**sysname**|パブリケーションの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
 |**publisher_db**|**sysname**|パブリッシャー データベースの名前です。|  
-|**サブスクライバー**|**sysname**|サブスクライバーの名前。|  
+|**subscriber**|**sysname**|サブスクライバーの名前。|  
 |**subscription_db**|**sysname**|サブスクリプション データベースの名前。|  
 |**status**|**int**|サブスクリプションの状態:<br /><br /> **0** = 非アクティブなサブスクリプション<br /><br /> **1** = アクティブなサブスクリプション<br /><br /> **2** = 削除されたサブスクリプション<br /><br /> **3** = デタッチされたサブスクリプション<br /><br /> **4** = アタッチされたサブスクリプション<br /><br /> **5** = アップロードと共に再初期化のマークされているサブスクリプション<br /><br /> **6** = 失敗したサブスクリプションのアタッチ<br /><br /> **7** = バックアップから復元されたサブスクリプション|  
 |**subscriber_type**|**int**|サブスクライバーの種類。<br /><br /> **1** = グローバル<br /><br /> **2** = ローカル<br /><br /> **3** = 匿名|  
@@ -70,7 +70,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**publisher_login**|**sysname**|パブリッシャーのログイン名。|  
 |**publisher_password**|**sysname**|パブリッシャーのパスワード。|  
 |**publisher_security_mode**|**int**|パブリッシャーのセキュリティ モードを指定します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
-|**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
+|**distributor**|**sysname**|ディストリビューターの名前。|  
 |**distributor_login**|**sysname**|ディストリビューターのログイン名。|  
 |**distributor_password**|**sysname**|ディストリビューターのパスワード。|  
 |**distributor_security_mode**|**int**|ディストリビューターのセキュリティ モードを指定します。<br /><br /> **0**  =  [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証<br /><br /> **1** = Windows 認証|  
@@ -94,7 +94,7 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
 |**internet_password**|**nvarchar(524)**|マージ エージェントが基本認証を使用して Web 同期をホストしている Web サーバーに接続するときに使用するログインのパスワードです。|  
 |**internet_security_mode**|**int**|Web 同期をホストしている Web サーバーに接続するときに使用する認証モードです。 値**1** 、Windows 認証を示し、値の**0**意味[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]認証します。|  
 |**internet_timeout**|**int**|Web 同期要求の有効期限が切れるまでの秒数で、時間の長さ。|  
-|**ホスト名**|**nvarchar(128)**|オーバー ロードの値を指定します[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化された行フィルターの WHERE 句でこの関数を使用する場合。|  
+|**hostname**|**nvarchar(128)**|オーバー ロードの値を指定します[HOST_NAME](../../t-sql/functions/host-name-transact-sql.md)パラメーター化された行フィルターの WHERE 句でこの関数を使用する場合。|  
 |**job_login**|**nvarchar(512)**|形式で返される、マージ エージェントを実行する Windows アカウントは、*ドメイン*\\*username*します。|  
 |**job_password**|**sysname**|セキュリティ上の理由の値" **\*\*\*\*\*\*\*\*\*\*** "が常に返されます。|  
   
@@ -108,9 +108,9 @@ sp_helpmergepullsubscription [ [ @publication=] 'publication']
  メンバーのみ、 **sysadmin**固定サーバー ロールおよび**db_owner**固定データベース ロールが実行できる**sp_helpmergepullsubscription**します。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_addmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
- [sp_changemergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
- [sp_dropmergepullsubscription &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
+ [sp_addmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergepullsubscription-transact-sql.md)   
+ [sp_changemergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergepullsubscription-transact-sql.md)   
+ [sp_dropmergepullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergepullsubscription-transact-sql.md)   
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   
