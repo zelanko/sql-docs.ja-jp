@@ -21,19 +21,19 @@ ms.assetid: d6a78d14-bb1f-4987-b7b6-579ddd4167f5
 author: rothja
 ms.author: jroth
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 7fa19a06d3743e91665ee2355eb5f6c380df413d
-ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
+ms.openlocfilehash: 358b08fe10f29d6a8aaec40f6a80e92c5950e7b7
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/17/2019
-ms.locfileid: "72542237"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989509"
 ---
 # <a name="sysfn_get_audit_file-transact-sql"></a>fn_get_audit_file (Transact-sql)
-[!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
+[!INCLUDE[tsql-appliesto-ss2008-asdb-asdw-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-asdw-xxx-md.md)]
 
   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] のサーバー監査で作成された監査ファイルからの情報を返します。 詳しくは、「[SQL Server Audit &#40;データベース エンジン&#41;](../../relational-databases/security/auditing/sql-server-audit-database-engine.md)」を参照してください。  
   
- ![トピックリンクアイコン](../../database-engine/configure-windows/media/topic-link.gif "トピックリンクアイコン") [Transact-sql 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
+ ![トピック リンク アイコン](../../database-engine/configure-windows/media/topic-link.gif "トピック リンク アイコン") [Transact-SQL 構文表記規則](../../t-sql/language-elements/transact-sql-syntax-conventions-transact-sql.md)  
   
 ## <a name="syntax"></a>構文  
   
@@ -57,13 +57,13 @@ fn_get_audit_file ( file_pattern,
   
     -   **\<path>\LoginsAudit_{GUID}_00_29384.sqlaudit** - Collect a specific audit file.  
   
- - **Azure SQL Database**:
+ - **Azure SQL Database または Azure SQL Data Warehouse**:
  
     この引数は、blob の URL (ストレージエンドポイントとコンテナーを含む) を指定するために使用されます。 アスタリスクのワイルドカードはサポートされていませんが、完全な blob 名ではなく、部分的なファイル (blob) 名プレフィックスを使用して、このプレフィックスで始まる複数のファイル (blob) を収集できます。 例 :
  
-      - **\<Storage_endpoint \> / \<Container \>** / \<ServerName \> / 0DatabaseName 1 2-特定のデータベースのすべての監査ファイル (blob) を収集します。    
+      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\>/** -特定のデータベースのすべての監査ファイル (blob) を収集します。    
       
-      - **\<Storage_endpoint \> / \<Container \> / \<ServerName \> / 0DatabaseName 1 2 3AuditName 4 5 6CreationDate 7 89FileName 0 xel** -特定の監査ファイル (blob) を収集します。
+      - **\<Storage_endpoint\>/\<コンテナー\>/\<ServerName\>/\<DatabaseName\>/\<AuditName\>/\<CreationDate\>/\<ファイル名\>xel** -特定の監査ファイル (blob) を収集します。
   
 > [!NOTE]  
 >  ファイル名のパターンがないパスを渡すとエラーが発生します。  
@@ -86,7 +86,7 @@ fn_get_audit_file ( file_pattern,
 | 列名 | 説明に「 | Description |  
 |-------------|------|-------------|  
 | action_id | **varchar (4)** | アクションの ID。 Null 値は許容されません。 |  
-| additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 少数の監査可能なアクションには、この種の情報が含まれています。<br /><br /> Tsql スタックが関連付けられているアクションに対して、1レベルの TSQL スタックが XML 形式で表示されます。 XML 形式は次のようになります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、3つの部分形式 (database_name、schema_name、object_name) で表されます。  モジュール名は、`'\<'`、`'>'`、`'/'`、`'_x'` などの無効な xml 文字をエスケープするために解析されます。 これらは `_xHHHH\_` としてエスケープされます。 HHHH は、文字の4桁の16進数の UCS 2 コードを表します。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。 |
+| additional_information | **nvarchar (4000)** | 単一のイベントに対してだけ適用される固有の情報が XML として返されます。 少数の監査可能なアクションには、この種の情報が含まれています。<br /><br /> Tsql スタックが関連付けられているアクションに対して、1レベルの TSQL スタックが XML 形式で表示されます。 XML 形式は次のようになります。<br /><br /> `<tsql_stack><frame nest_level = '%u' database_name = '%.*s' schema_name = '%.*s' object_name = '%.*s' /></tsql_stack>`<br /><br /> frame nest_level は、フレームの現在の入れ子レベルを示します。 モジュール名は、3つの部分形式 (database_name、schema_name、object_name) で表されます。  モジュール名は、`'\<'`、`'>'`、`'/'`、`'_x'`などの無効な xml 文字をエスケープするために解析されます。 これらは `_xHHHH\_`としてエスケープされます。 HHHH は、文字の4桁の16進数の UCS 2 コードを表します。<br /><br /> NULL 値が許可されます。 イベントから追加情報が報告されない場合は NULL を返します。 |
 | affected_rows | **bigint** | **適用対象**: AZURE SQL DB のみ<br /><br /> 実行されたステートメントの影響を受けた行の数。 |  
 | application_name | **nvarchar(128)** | **適用対象**: AZURE SQL DB + SQL Server (2017 以降)<br /><br /> 監査イベントの原因となったステートメントを実行したクライアントアプリケーションの名前 |  
 | audit_file_offset | **bigint** | **適用対象**: SQL Server のみ<br /><br /> 監査レコードを格納しているファイル内のバッファーオフセット。 NULL 値は許可されません。 |  
@@ -151,7 +151,7 @@ fn_get_audit_file ( file_pattern,
 
 - **Azure SQL データベース**
 
-  この例では、`ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel` という名前のファイルを読み取ります。  
+  この例では、`ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel`という名前のファイルを読み取ります。  
   
   ```  
   SELECT * FROM sys.fn_get_audit_file ('https://mystorage.blob.core.windows.net/sqldbauditlogs/ShiraServer/MayaDB/SqlDbAuditing_Audit/2017-07-14/10_45_22_173_1.xel',default,default);

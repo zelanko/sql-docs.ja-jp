@@ -11,12 +11,12 @@ helpviewer_keywords:
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-mi-current||>=sql-server-2014||=sqlallproducts-allversions
-ms.openlocfilehash: 705bf95c2bcff4062962166249055ec940f00d5b
-ms.sourcegitcommit: 728a4fa5a3022c237b68b31724fce441c4e4d0ab
+ms.openlocfilehash: 7c9924d2062b3c4fa41c8731df17b49fe9a86b07
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/03/2019
-ms.locfileid: "68769348"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907287"
 ---
 # <a name="troubleshooter-find-errors-with-sql-server-transactional-replication"></a>トラブルシューティング ツール:トラブルシューティング ツール: SQL Server トランザクション レプリケーション エラーを検出する 
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -27,8 +27,6 @@ ms.locfileid: "68769348"
 1. レプリケートされるオブジェクトでトランザクションが発生し、トランザクション ログで "レプリケーション用" とマークされます。 
 2. ログ リーダー エージェントがトランザクション ログをスキャンし、"レプリケーション用" とマークされたトランザクションを探します。 これらのトランザクションはディストリビューション データベースに保存されます。 
 3. ディストリビューション エージェントは、リーダー スレッドを使用してディストリビューション データベースをスキャンします。 次に、ライター スレッドを使用することにより、このエージェントはサブスクライバーに接続して、変更をサブスクライバーに適用します。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 このプロセスのどのステップにおいてもエラーが発生する可能性があります。 これらのエラーを見つけることは、同期に関する問題のトラブルシューティングの最も困難な側面です。 レプリケーション モニターを使うとこのプロセスが簡単になります。 
 

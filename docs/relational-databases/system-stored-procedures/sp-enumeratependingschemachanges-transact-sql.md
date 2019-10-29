@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68124575"
 ---
-# <a name="spenumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
+# <a name="sp_enumeratependingschemachanges-transact-sql"></a>sp_enumeratependingschemachanges (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   保留中のすべてのスキーマ変更に関する一覧を返します。 このストアド プロシージャを使用できる[sp_markpendingschemachange](../../relational-databases/system-stored-procedures/sp-markpendingschemachange-transact-sql.md)、これにより、管理者がレプリケートされないように選択した保留中のスキーマの変更をスキップします。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -66,6 +66,6 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   

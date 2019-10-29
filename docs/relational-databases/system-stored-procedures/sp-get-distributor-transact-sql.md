@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68124115"
 ---
-# <a name="spgetdistributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
+# <a name="sp_get_distributor-transact-sql"></a>sp_get_distributor (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ディストリビューターがサーバーにインストールされているかどうかを調べます。 このストアド プロシージャは、任意のデータベース上の、ディストリビューターを検索しているコンピューターで実行されます。  
@@ -40,11 +40,11 @@ sp_get_distributor
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**installed**|**int**|**0** = はありません。**1** = [はい]|  
+|**インストールされています。**|**int**|**0** = はありません。**1** = [はい]|  
 |**distribution server**|**sysname**|ディストリビューター サーバーの名前。|  
-|**distribution db installed。**|**int**|**0** = はありません。**1** = [はい]|  
-|**is distribution publisher**|**int**|**0** = はありません。**1** = [はい]|  
-|**has remote distribution publisher**|**int**|**0** = はありません。**1** = [はい]|  
+|**ディストリビューション db がインストールされています。**|**int**|**0** = はありません。**1** = [はい]|  
+|**ディストリビューション パブリッシャーは、します。**|**int**|**0** = はありません。**1** = [はい]|  
+|**リモート ディストリビューション パブリッシャーがあります。**|**int**|**0** = はありません。**1** = [はい]|  
   
 ## <a name="remarks"></a>コメント  
  **sp_get_distributor**で主に使用される、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スナップショット、トランザクション、およびマージ レプリケーションでします。  

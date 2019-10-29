@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770991"
 ---
-# <a name="sphelppublicationaccess-transact-sql"></a>sp_help_publication_access (Transact-SQL)
+# <a name="sp_help_publication_access-transact-sql"></a>sp_help_publication_access (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   パブリケーションに対して許可されているすべてのログインの一覧を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -72,8 +72,8 @@ sp_help_publication_access [ @publication = ] 'publication'
  **Sp_help_publication_access**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_grant_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
- [sp_revoke_publication_access &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
+ [sp_grant_publication_access &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-grant-publication-access-transact-sql.md)   
+ [sp_revoke_publication_access &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-revoke-publication-access-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   

@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: fb420903-df54-4016-bab6-49e6dfbdedc7
 author: aliceku
 ms.author: aliceku
-ms.openlocfilehash: d405373dbd22b66310768a727f236d7596d05809
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 32a4c21e924769a5e498b9fd597be0d51fca8de7
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111662"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908368"
 ---
 # <a name="move-a-tde-protected-database-to-another-sql-server"></a>別の SQL Server への TDE で保護されたデータベースの移動
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -74,8 +74,6 @@ ms.locfileid: "68111662"
      データベースを変更して TDE をオンまたはオフにします。  
   
 8.  完了したら、 **[OK]** をクリックします。  
-
-[!INCLUDE[freshInclude](../../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ###  <a name="TsqlCreate"></a> Transact-SQL の使用  
   
@@ -221,7 +219,7 @@ ms.locfileid: "68111662"
     |(アイコンなし)|(テキストなし)|このオブジェクトのアタッチ操作が開始されていないか、保留されています。 これは、ダイアログ ボックスを開いたときの既定の状態です。|  
     |緑の右向き三角形|[実行中]|アタッチ操作が開始されましたが、完了していません。|  
     |緑のチェック マーク|成功|オブジェクトは正常にアタッチされました。|  
-    |赤い丸の中に白い×印|Error|アタッチ操作でエラーが発生し、正常に完了しませんでした。|  
+    |赤い丸の中に白い×印|エラー|アタッチ操作でエラーが発生し、正常に完了しませんでした。|  
     |4 つに区切られた丸印 (左右の領域が黒、上下の領域が白)|停止|ユーザーがアタッチ操作を停止したため、正常に完了しませんでした。|  
     |丸の中に反時計回りの矢印|[ロールバックされました]|アタッチ操作は正常に完了しましたが、他のオブジェクトのアタッチ中にエラーが発生したため、ロールバックされました。|  
   

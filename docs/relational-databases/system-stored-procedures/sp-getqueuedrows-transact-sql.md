@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68123940"
 ---
-# <a name="spgetqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
+# <a name="sp_getqueuedrows-transact-sql"></a>sp_getqueuedrows (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   キューで保留中の更新プログラムのあるサブスクライバーの行を取得します。 このストアド プロシージャは、サブスクライバーのサブスクリプション データベースで実行されます。  
