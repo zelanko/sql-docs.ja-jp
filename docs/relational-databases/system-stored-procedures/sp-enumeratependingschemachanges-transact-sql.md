@@ -1,5 +1,5 @@
 ---
-title: sp_enumeratependingschemachanges (TRANSACT-SQL) |Microsoft Docs
+title: sp_enumeratependingschemachanges (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -50,8 +50,8 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
 |**schemaversion**|**int**|保留中のスキーマ変更の数。|  
 |**schematype**|**sysname**|スキーマの種類を表すテキスト値を変更します。|  
 |**schematext**|**nvarchar(max)**|[!INCLUDE[tsql](../../includes/tsql-md.md)] スキーマの変更について説明します。|  
-|**schemastatus**|**nvarchar(10)**|スキーマ変更がアーティクルに対して保留になっているかどうかを示します。次のいずれかの値をとります。<br /><br /> **アクティブな**= スキーマ変更が保留中<br /><br /> **非アクティブな**= スキーマ変更がアクティブでないです。<br /><br /> **スキップ**= スキーマ変更はレプリケートされません|  
-|**される**|**uniqueidentifier**|スキーマの変更を識別します。|  
+|**schemastatus**|**nvarchar(10)**|スキーマ変更がアーティクルに対して保留になっているかどうかを示します。次のいずれかの値をとります。<br /><br /> **active**= スキーマ変更が保留中<br /><br /> **inactive**= スキーマ変更がアクティブでないです。<br /><br /> **skip**= スキーマ変更はレプリケートされません|  
+|**schemaguid**|**uniqueidentifier**|スキーマの変更を識別します。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
@@ -66,6 +66,6 @@ sp_enumeratependingschemachanges [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>関連項目  
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)   
- [sysmergeschemachange &#40;TRANSACT-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
+ [sysmergeschemachange &#40;Transact-SQL&#41;](../../relational-databases/system-tables/sysmergeschemachange-transact-sql.md)  
   
   
