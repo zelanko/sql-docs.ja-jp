@@ -1,5 +1,5 @@
 ---
-title: sp_helppullsubscription (Transact-sql) |Microsoft Docs
+title: sp_helppullsubscription (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771443"
 ---
-# <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-sql)
+# <a name="sphelppullsubscription-transact-sql"></a>sp_helppullsubscription (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   サブスクライバーの1つ以上のサブスクリプションに関する情報を表示します。 このストアドプロシージャは、サブスクライバー側のサブスクリプションデータベースで実行されます。  
@@ -52,26 +52,26 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**パブリッシャー**|**sysname**|パブリッシャーの名前。|  
-|**パブリッシャーデータベース**|**sysname**|パブリッシャーデータベースの名前。|  
-|**レプリケーション**|**sysname**|パブリケーションの名前。|  
+|**publisher**|**sysname**|パブリッシャーの名前。|  
+|**publisher database**|**sysname**|パブリッシャーデータベースの名前。|  
+|**publication**|**sysname**|パブリケーションの名前。|  
 |**independent_agent**|**bit**|このパブリケーションに対してスタンドアロンのディストリビューションエージェントがあるかどうかを示します。|  
-|**サブスクリプションの種類**|**int**|パブリケーションへのサブスクリプションの種類。|  
-|**ディストリビューションエージェント**|**nvarchar(100)**|サブスクリプションを処理ディストリビューションエージェント。|  
-|**パブリケーションの説明**|**nvarchar (255)**|パブリケーションの説明です。|  
-|**最終更新時刻**|**date**|サブスクリプション情報が更新された時刻。 ISO 日付 (114) + ODBC 時刻 (121) の UNICODE 文字列です。 形式は yyyymmdd hh: mi: sss. mmm です。 ' yyyy ' は年、' mm ' は月、' dd ' は日、' hh ' は時間、' mi ' は分、' sss ' は秒、' mmm ' はミリ秒です。|  
-|**サブスクリプション名**|**varchar(386)**|サブスクリプションの名前。|  
-|**最後のトランザクションのタイムスタンプ**|**varbinary(16)**|最後にレプリケートされたトランザクションのタイムスタンプ。|  
-|**更新モード**|**tinyint**|許可される更新の種類。|  
-|**ディストリビューションエージェント job_id**|**int**|ディストリビューション エージェントのジョブ ID。|  
+|**subscription type**|**int**|パブリケーションへのサブスクリプションの種類。|  
+|**distribution agent**|**nvarchar(100)**|サブスクリプションを処理ディストリビューションエージェント。|  
+|**publication description**|**nvarchar (255)**|パブリケーションの説明です。|  
+|**last updating time**|**date**|サブスクリプション情報が更新された時刻。 ISO 日付 (114) + ODBC 時刻 (121) の UNICODE 文字列です。 形式は yyyymmdd hh: mi: sss. mmm です。 ' yyyy ' は年、' mm ' は月、' dd ' は日、' hh ' は時間、' mi ' は分、' sss ' は秒、' mmm ' はミリ秒です。|  
+|**subscription name**|**varchar(386)**|サブスクリプションの名前。|  
+|**last transaction timestamp**|**varbinary(16)**|最後にレプリケートされたトランザクションのタイムスタンプ。|  
+|**update mode**|**tinyint**|許可される更新の種類。|  
+|**distribution agent job_id**|**int**|ディストリビューション エージェントのジョブ ID。|  
 |**enabled_for_synmgr**|**int**|同期マネージャーを[!INCLUDE[msCoName](../../includes/msconame-md.md)]使用してサブスクリプションを同期できるかどうかを指定します。|  
-|**サブスクリプション guid**|**binary(16)**|パブリケーションのサブスクリプションのバージョンのグローバル識別子。|  
+|**subscription guid**|**binary(16)**|パブリケーションのサブスクリプションのバージョンのグローバル識別子。|  
 |**subid**|**binary(16)**|匿名サブスクリプションのグローバル識別子。|  
 |**immediate_sync**|**bit**|スナップショット エージェントを実行するたびに、同期ファイルを作成または再作成するかどうかを示します。|  
-|**パブリッシャーログイン**|**sysname**|パブリッシャーで認証に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されるログイン ID。|  
-|**パブリッシャーのパスワード**|**nvarchar(524)**|認証のため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にパブリッシャーで使用されるパスワード (暗号化)。|  
-|**パブリッシャー security_mode**|**int**|パブリッシャーで実装されているセキュリティ モード。<br /><br /> **0**  = 認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 認証<br /><br /> **2** = 同期トリガーは、静的な**sysservers**エントリを使用してリモートプロシージャコール (RPC) を実行します。また、*パブリッシャー*は、 **sysservers**テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
-|**ディストリビューター**|**sysname**|ディストリビューターの名前。|  
+|**publisher login**|**sysname**|パブリッシャーで認証に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されるログイン ID。|  
+|**publisher password**|**nvarchar(524)**|認証のため[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]にパブリッシャーで使用されるパスワード (暗号化)。|  
+|**publisher security_mode**|**int**|パブリッシャーで実装されているセキュリティ モード。<br /><br /> **0**  = 認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 認証<br /><br /> **2** = 同期トリガーは、静的な**sysservers**エントリを使用してリモートプロシージャコール (RPC) を実行します。また、*パブリッシャー*は、 **sysservers**テーブルのリモートサーバーまたはリンクサーバーとして定義されている必要があります。|  
+|**distributor**|**sysname**|ディストリビューターの名前。|  
 |**distributor_login**|**sysname**|ディストリビューターで認証に[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]使用されるログイン ID。|  
 |**distributor_password**|**nvarchar(524)**|認証のために[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]ディストリビューターで使用されるパスワード (暗号化)。|  
 |**distributor_security_mode**|**int**|ディストリビューターで実装されているセキュリティモード:<br /><br /> **0**  = 認証[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]<br /><br /> **1** = Windows 認証|  
@@ -103,8 +103,8 @@ sp_helppullsubscription [ [ @publisher = ] 'publisher' ]
  **Sp_helppullsubscription**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>関連項目  
- [sp_addpullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
- [sp_droppullsubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
+ [sp_addpullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpullsubscription-transact-sql.md)   
+ [sp_droppullsubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-droppullsubscription-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
