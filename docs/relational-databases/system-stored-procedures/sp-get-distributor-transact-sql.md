@@ -1,5 +1,5 @@
 ---
-title: sp_get_distributor (TRANSACT-SQL) |Microsoft Docs
+title: sp_get_distributor (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -40,11 +40,11 @@ sp_get_distributor
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**インストールされています。**|**int**|**0** = はありません。**1** = [はい]|  
-|**ディストリビューション サーバー**|**sysname**|ディストリビューター サーバーの名前。|  
-|**ディストリビューション db がインストールされています。**|**int**|**0** = はありません。**1** = [はい]|  
-|**ディストリビューション パブリッシャーは、します。**|**int**|**0** = はありません。**1** = [はい]|  
-|**リモート ディストリビューション パブリッシャーがあります。**|**int**|**0** = はありません。**1** = [はい]|  
+|**installed**|**int**|**0** = はありません。**1** = [はい]|  
+|**distribution server**|**sysname**|ディストリビューター サーバーの名前。|  
+|**distribution db installed。**|**int**|**0** = はありません。**1** = [はい]|  
+|**is distribution publisher**|**int**|**0** = はありません。**1** = [はい]|  
+|**has remote distribution publisher**|**int**|**0** = はありません。**1** = [はい]|  
   
 ## <a name="remarks"></a>コメント  
  **sp_get_distributor**で主に使用される、 [!INCLUDE[msCoName](../../includes/msconame-md.md)] [!INCLUDE[ssManStudioFull](../../includes/ssmanstudiofull-md.md)]スナップショット、トランザクション、およびマージ レプリケーションでします。  
