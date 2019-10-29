@@ -1,5 +1,5 @@
 ---
-title: sp_helpdistributiondb (Transact-sql) |Microsoft Docs
+title: sp_helpdistributiondb (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/03/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68770930"
 ---
-# <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-sql)
+# <a name="sphelpdistributiondb-transact-sql"></a>sp_helpdistributiondb (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   指定されたディストリビューションデータベースのプロパティを返します。 このストアド プロシージャは、ディストリビューター側でディストリビューション データベースについて実行されます。  
@@ -46,7 +46,7 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
 |**name**|**sysname**|ディストリビューションデータベースの名前。|  
 |**min_distretention**|**int**|トランザクションが削除されるまでの最小保有期間 (時間単位)。|  
 |**max_distretention**|**int**|トランザクションが削除されるまでの最大保有期間 (時間単位)。|  
-|**履歴の保有期間**|**int**|履歴を保持する時間数。|  
+|**history retention**|**int**|履歴を保持する時間数。|  
 |**history_cleanup_agent**|**sysname**|履歴クリーンアップエージェントの名前。|  
 |**distribution_cleanup_agent**|**sysname**|ディストリビューションクリーンアップエージェントの名前。|  
 |**status**|**int**|内部使用のみです。|  
@@ -68,9 +68,9 @@ sp_helpdistributiondb [ [ @database= ] 'database_name' ]
   
 ## <a name="see-also"></a>関連項目  
  [View and Modify Distributor and Publisher Properties (ディストリビューターとパブリッシャーのプロパティの表示および変更)](../../relational-databases/replication/view-and-modify-distributor-and-publisher-properties.md)   
- [sp_adddistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
- [sp_changedistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
- [sp_dropdistributiondb &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
+ [sp_adddistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-adddistributiondb-transact-sql.md)   
+ [sp_changedistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changedistributiondb-transact-sql.md)   
+ [sp_dropdistributiondb &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropdistributiondb-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
