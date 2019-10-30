@@ -45,7 +45,7 @@ Null は不明と見なされるため、相互に比較した2つの null 値�
 ![真理値表](../media/truthtable-bpuedev11.gif "|::ref1::|")  
   
 ### <a name="understanding-the-ansi_nulls-option"></a>ANSI_NULLS オプションについて  
-<xref:System.Data.SqlTypes> は、SQL Server で ANSI_NULLS オプションが on に設定されている場合と同じセマンティクスを提供します。 すべての算術演算子 (+、-、*、/、%)、ビット演算子 (~、&、&#124)、およびほとんどの関数では、プロパティ `IsNull` を除き、オペランドまたは引数が NULL であった場合に NULL を返します。  
+<xref:System.Data.SqlTypes> は、SQL Server で ANSI_NULLS オプションが on に設定されている場合と同じセマンティクスを提供します。 すべての算術演算子 (+、-、*、/、%)、ビット演算子 (~、&、&#124;)、およびほとんどの関数では、プロパティ `IsNull` を除き、オペランドまたは引数が NULL であった場合に NULL を返します。  
   
 ANSI SQL-92 標準では、WHERE 句で *columnName* = NULL とすることは認められていません。 SQL Server では、ANSI_NULLS オプションは、データベースの既定の null 値許容と null 値に対する比較の評価を制御します。 ANSI_NULLS が有効になっている場合 (既定)、null 値をテストするときに IS NULL 演算子を式で使用する必要があります。 たとえば、ANSI_NULLS を ON にした場合、次の比較では、必ず UNKNOWN が返されます。  
   
