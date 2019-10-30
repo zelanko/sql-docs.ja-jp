@@ -121,7 +121,7 @@ sp_helppublication [ [ @publication = ] 'publication' ]
  [パブリケーション プロパティの表示および変更](../../relational-databases/replication/publish/view-and-modify-publication-properties.md)   
  [sp_addpublication &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addpublication-transact-sql.md)   
  [sp_changepublication (Transact-SQL)](../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md)   
- [sp_droppublication &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)    
+ [sp_droppublication &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-droppublication-transact-sql.md)    
  [レプリケーション ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/replication-stored-procedures-transact-sql.md)  
   
   

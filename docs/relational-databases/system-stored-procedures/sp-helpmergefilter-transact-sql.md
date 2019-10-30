@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68137688"
 ---
-# <a name="sphelpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
+# <a name="sp_helpmergefilter-transact-sql"></a>sp_helpmergefilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   マージ フィルターに関する情報を返します。 このストアド プロシージャは、任意のデータベースのパブリッシャーで実行されます。  
