@@ -12,12 +12,12 @@ helpviewer_keywords:
 ms.assetid: 11f8017e-5bc3-4bab-8060-c16282cfbac1
 author: pelopes
 ms.author: harinid
-ms.openlocfilehash: 21cf6f634fd9caa40f3d5685372f24d09567ca2a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 915dde0b6b2083c45b5bfe4196e7578537a91379
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68006136"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909155"
 ---
 # <a name="post-migration-validation-and-optimization-guide"></a>移行後の検証および最適化ガイド
 
@@ -107,8 +107,6 @@ SARGable ではない述語の例を次に示します。
   -   これには、データベースに格納されるユーザー定義のコード構造 (ストアド プロシージャ、ユーザー定義関数、ビューなど) と、基になるテーブルで使われるデータ型についての情報を保持するシステム テーブル ([sys.columns](../relational-databases/system-catalog-views/sys-columns-transact-sql.md) など) の比較が含まれる場合があります。
 2. 前のポイントまですべてのコードをスキャンできない場合は、同じ目的で、変数/パラメーターの宣言と一致するように、テーブルのデータ型を変更します。
 3. 次の構造の有用性を熟考します。
-
-[!INCLUDE[freshInclude](../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
   -   述語として使われている関数
   -   ワイルドカード検索

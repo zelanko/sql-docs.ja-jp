@@ -27,12 +27,12 @@ ms.assetid: 98a80238-7409-4708-8a7d-5defd9957185
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: 034e4c9ed8df53c6600896b4a5877f1b48a3288d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 604a882daffeb2a9031aa9cc7e4d577e1e4e2663
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68084084"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916015"
 ---
 # <a name="database-checkpoints-sql-server"></a>データベース チェックポイント (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
@@ -59,7 +59,7 @@ ms.locfileid: "68084084"
 > 実行時間の長い、コミットされていないトランザクションがあると、すべての種類のチェックポイントで復旧時間が長くなります。   
   
 ##  <a name="InteractionBwnSettings"></a> TARGET_RECOVERY_TIME オプションと 'recovery interval' オプションの相互作用  
- 次の表は、サーバー全体の **sp_configure'** recovery interval **'** 設定とデータベース固有の ALTER DATABASE ...TARGET_RECOVERY_TIME 設定の相互作用をまとめたものです。  
+ 次の表は、サーバー全体の **sp_configure '** recovery interval **'** 設定とデータベース固有の `ALTER DATABASE ... TARGET_RECOVERY_TIME` 設定の間の相互作用をまとめたものです。  
   
 |target_recovery_time|'recovery interval'|使用されるチェックポイントの種類|  
 |----------------------------|-------------------------|-----------------------------|  
@@ -81,7 +81,7 @@ ms.locfileid: "68084084"
 ###  <a name="PerformanceImpact"></a> 復旧のパフォーマンスに対する復旧間隔の影響  
 短いトランザクションを使用するオンライン トランザクション処理 (OLTP) システムでは、 **recovery interval** の設定が復旧にかかる時間を決定する主な要因になります。 ただし、 **recovery interval** オプションは、実行時間が長いトランザクションを元に戻すために必要な時間には影響しません。 実行時間が長いトランザクションが行われたデータベースの復旧は、**recovery interval** 設定で指定された時間よりも長くかかることがあります。 
  
-たとえば、実行時間の長いトランザクションが 2 時間かけて更新した後にサーバー インスタンスが使用不能になった場合、長いトランザクションを復旧することになるので、実際の復旧時間は **recovery interval** 値よりもはるかに長くなります。 実行時間が長いトランザクションの復旧時間への影響の詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。  
+たとえば、実行時間の長いトランザクションが 2 時間かけて更新した後にサーバー インスタンスが使用不能になった場合、長いトランザクションを復旧することになるので、実際の復旧時間は **recovery interval** 値よりもはるかに長くなります。 実行時間が長いトランザクションの復旧時間への影響の詳細については、「 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)」を参照してください。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
   
 通常は、既定値によって復旧の最適なパフォーマンスが得られます。 ただし、次のような状況では recovery interval を変更するとパフォーマンスが向上する可能性があります。  
   
@@ -92,7 +92,6 @@ ms.locfileid: "68084084"
 **recovery interval** 設定を長くする場合には、少しずつ値を増やして、そのたびに復旧のパフォーマンスへの影響を評価することをお勧めします。 **recovery interval** の設定を長くすると、完了するまでに何倍もの時間がかかるため、この方法で進めることが重要です。 たとえば、**recovery interval** の値を 10 分に変更すると、復旧には **recovery interval** が 1 分に設定された場合の約 10 倍かかります。  
   
 ##  <a name="IndirectChkpt"></a> 間接チェックポイント
-  
 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]に導入された間接チェックポイントは、自動チェックポイントの代わりに使用できる、構成可能なデータベース レベルのチェックポイントです。 これは、**ターゲットの復旧時間**データベース構成オプションを指定して構成できます。 詳細については、「 [データベースのターゲットの復旧時間の変更 &#40;SQL Server&#41;](../../relational-databases/logs/change-the-target-recovery-time-of-a-database-sql-server.md)サーバー構成オプションを構成する方法について説明します。
 間接チェックポイントでは、自動チェックポイントに比べて、システム障害時の復旧時間が短く、予測可能です。 間接チェックポイントには次の利点があります。  
   
@@ -111,7 +110,6 @@ ms.locfileid: "68084084"
 > インプレース アップグレードまたは以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] から復元されたデータベースは、間接チェックポイントを使用するように明示的に変更しない限り、以前の自動チェックポイントを使用します。       
 
 ### <a name="ctp23"></a> 間接チェックポイントのスケーラビリティの向上
-
 [!INCLUDE[ssNoVersion](../../includes/sssqlv15-md.md)] より前のバージョンでは、`tempdb` のように多数のダーティ ページを生成するデータベースがあると、応答停止スケジューラ エラーが発生することがあります。 [!INCLUDE[sql-server-2019](../../includes/sssqlv15-md.md)] では間接チェックポイントのスケーラビリティが向上しており、`UPDATE`/`INSERT` のワークロードが大きいデータベースでのエラー回避に役立つはずです。
   
 ##  <a name="EventsCausingChkpt"></a> 内部チェックポイント  
@@ -129,7 +127,6 @@ ms.locfileid: "68084084"
   
 -   [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] フェールオーバー クラスター インスタンス (FCI) がオフラインになった場合。      
   
-
 ##  <a name="RelatedTasks"></a> 関連タスク  
  **サーバー インスタンスで復旧間隔を変更するには**  
   
@@ -143,9 +140,7 @@ ms.locfileid: "68084084"
   
 -   [CHECKPOINT &#40;Transact-SQL&#41;](../../t-sql/language-elements/checkpoint-transact-sql.md)  
 
-  
 ## <a name="see-also"></a>参照  
 [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)            
-[トランザクション ログの物理アーキテクチャ](https://technet.microsoft.com/library/ms179355.aspx) ( [!INCLUDE[ssKilimanjaro](../../includes/sskilimanjaro-md.md)] オンライン ブックからですが、適用可能です)       
-  
-  
+[SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
+ 

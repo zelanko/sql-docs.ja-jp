@@ -13,14 +13,14 @@ ms.assetid: b6a21c3c-fdb8-4187-8229-1c488454fdfb
 author: MladjoA
 ms.author: mlandzic
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: a82789da3207fc42a820a18ff6d7da438f84cdd7
-ms.sourcegitcommit: 9348f79efbff8a6e88209bb5720bd016b2806346
+ms.openlocfilehash: bd7b379df56f94710a22684c9cc8d662cfb0a396
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/14/2019
-ms.locfileid: "69026140"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907210"
 ---
-# <a name="polygon"></a>Polygon
+# <a name="polygon"></a>多角形
 
 [!INCLUDE[appliesto-ss-asdb-xxxx-xxx-md](../../includes/appliesto-ss-asdb-xxxx-xxx-md.md)]
 
@@ -42,8 +42,6 @@ ms.locfileid: "69026140"
 2.  図 2 は、1 つの外部リングと 2 つの内部リングによって境界が定義されている **Polygon** インスタンスです。 内部リングの内側の領域は、 **Polygon** インスタンスの外部の一部です。  
   
 3.  図 3 の **Polygon** インスタンスは、内部リングが 1 つの接点で交差しているため有効です。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ### <a name="accepted-instances"></a>許容されるインスタンス  
  許容される **Polygon** インスタンスとは、例外をスローすることなく **geometry** 変数または **geography** 変数に格納できるインスタンスです。 次に示す **Polygon** インスタンスは許容されます。  

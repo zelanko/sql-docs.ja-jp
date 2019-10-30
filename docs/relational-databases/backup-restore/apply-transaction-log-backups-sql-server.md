@@ -1,7 +1,7 @@
 ---
 title: トランザクション ログ バックアップの適用 (SQL Server) | Microsoft Docs
 ms.custom: ''
-ms.date: 08/14/2016
+ms.date: 10/23/2019
 ms.prod: sql
 ms.prod_service: backup-restore
 ms.reviewer: ''
@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 9b12be51-5469-46f9-8e86-e938e10aa3a1
 author: mashamsft
 ms.author: mathoma
-ms.openlocfilehash: 0b59c6973c8b1662d61a0ec022eba830558d51cd
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 62d90931cdc1d7748f47edabb31e5f9404b1262d
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67934549"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916198"
 ---
 # <a name="apply-transaction-log-backups-sql-server"></a>トランザクション ログ バックアップの適用 (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -29,7 +29,6 @@ ms.locfileid: "67934549"
   
  このトピックでは、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] データベースの復元の一環として行う、トランザクション ログ バックアップの適用について説明します。  
  
-  
 ##  <a name="Requirements"></a> トランザクション ログ バックアップを復元するための要件  
  トランザクション ログ バックアップを適用するには、次の要件を満たしている必要があります。  
   
@@ -39,14 +38,16 @@ ms.locfileid: "67934549"
   
 -   **データベースはまだ復旧されていない:** データベースは、最後のトランザクション ログが適用されるまで復旧できません。 いずれかの中間トランザクション ログ バックアップを復元した後 (ログ チェーンが終わる前) にデータベースを復旧する場合、その時点以降にデータベースを復元するには、データベースの完全バックアップから復元シーケンス全体を再度開始する必要があります。  
   
-    > **ヒント!** すべてのログ バックアップを復元することをお勧めします (RESTORE LOG *database_name* WITH NORECOVERY) 。 最後のログ バックアップを復元した後、別の操作でデータベースを復旧します (RESTORE DATABASE *database_name* WITH RECOVERY)。  
+    > [!TIP]
+    > ベスト プラクティスとして、すべてのログ バックアップを復元することをお勧めします (`RESTORE LOG *database_name* WITH NORECOVERY`)。 次に、最後のログ バックアップを復元した後、別の操作でデータベースを復旧します (`RESTORE DATABASE *database_name* WITH RECOVERY`)。  
   
 ##  <a name="RecoveryAndTlogs"></a> 復旧とトランザクション ログ  
- 復元操作を完了してデータベースを復旧すると、すべての不完全なトランザクションがロールバックされます。 これを *元に戻すフェーズ*と呼びます。 データベースの整合性を復元するためにロールバックが必要です。 ロールバック後、データベースはオンラインになり、そのデータベースにそれ以上のトランザクション ログ バックアップを適用できなくなります。  
+ 復元操作を完了してデータベースを復旧すると、データベースの整合性を確保するために、復旧プロセスが実行されます。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
+ 
+ 復旧プロセスが完了すると、データベースはオンラインになり、そのデータベースにそれ以上のトランザクション ログ バックアップを適用できなくなります。 たとえば、一連のトランザクション ログ バックアップに、実行時間が長いトランザクションが含まれているとします。 トランザクションの開始は最初のトランザクション ログ バックアップに記録されていますが、トランザクションの終了は 2 番目のトランザクション ログ バックアップに記録されています。 最初のトランザクション ログ バックアップには、コミットやロールバック操作は記録されていません。 最初のトランザクション ログ バックアップが適用されたときに復旧操作を実行すると、実行時間が長いトランザクションは不完全だと見なされ、そのトランザクションに関して最初のトランザクション ログ バックアップに記録されたデータ変更がロールバックされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この時点より後で 2 番目のトランザクション ログ バックアップを適用することはできません。  
   
- たとえば、一連のトランザクション ログ バックアップに、実行時間が長いトランザクションが含まれているとします。 トランザクションの開始は最初のトランザクション ログ バックアップに記録されていますが、トランザクションの終了は 2 番目のトランザクション ログ バックアップに記録されています。 最初のトランザクション ログ バックアップには、コミットやロールバック操作は記録されていません。 最初のトランザクション ログ バックアップが適用されたときに復旧操作を実行すると、実行時間が長いトランザクションは不完全だと見なされ、そのトランザクションに関して最初のトランザクション ログ バックアップに記録されたデータ変更がロールバックされます。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] では、この時点より後で 2 番目のトランザクション ログ バックアップを適用することはできません。  
-  
-> **注:** 状況によっては、ログの復元中にファイルを明示的に追加できます。  
+> [!NOTE]
+> 状況によっては、ログの復元中にファイルを明示的に追加できます。  
   
 ##  <a name="PITrestore"></a> ログ バックアップを使用し、障害発生時まで復元する  
  次のような一連のイベントが発生したとします。  
@@ -63,8 +64,6 @@ ms.locfileid: "67934549"
 > この一連のバックアップの例の詳細については、「[トランザクション ログのバックアップ &#40;SQL Server&#41;](../../relational-databases/backup-restore/transaction-log-backups-sql-server.md)」を参照してください。  
   
  午後 9時 45分の状態にデータベースを復元するには (障害の時点)、次の代替手順のいずれかを使用します。  
-
-[!INCLUDE[Freshness](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
  **代替手順 1: データベースの最新の完全バックアップを使用したデータベースの復元**  
   
@@ -106,6 +105,6 @@ ms.locfileid: "67934549"
 -   [データを復元しないデータベースの復旧 &#40;Transact-SQL&#41;](../../relational-databases/backup-restore/recover-a-database-without-restoring-data-transact-sql.md)  
   
 ## <a name="see-also"></a>参照  
- [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)  
-  
+ [トランザクション ログ &#40;SQL Server&#41;](../../relational-databases/logs/the-transaction-log-sql-server.md)     
+ [SQL Server トランザクション ログのアーキテクチャと管理ガイド](../../relational-databases/sql-server-transaction-log-architecture-and-management-guide.md)      
   

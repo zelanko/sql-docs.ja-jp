@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: 294975b7-e7d1-491b-b66a-fdb1100d2acc
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 10a54ea4326c3fb3c1a9400568ac9aa7e904aa2d
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 03974bc83cb9c7d9b6202f04db84ae96fe791eb3
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68111792"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72908439"
 ---
 # <a name="restore-and-recovery-of-memory-optimized-tables"></a>メモリ最適化テーブルの復元と復旧
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -49,8 +49,6 @@ ms.locfileid: "68111792"
     先行のディスク ベース テーブルおよびメモリ最適化テーブルでの操作が完了すると、データベースにアクセスできます。  
   
 3.  **元に戻す**。 このフェーズでは、コミットされていないトランザクションはロールバックされます。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 ## <a name="process-for-improving-load-time"></a>読み込み時間を改善するためのプロセス
 メモリ最適化テーブルをメモリに読み込むと、目標復旧時間 (RTO) のパフォーマンスに影響する可能性があります。 データ ファイルおよびデルタ ファイルからメモリ最適化データを読み込む時間を短縮するために、インメモリ OLTP エンジンは次のように並行してデータ ファイルおよびデルタ ファイルを読み込みます。  

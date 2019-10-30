@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 76bd8524-ebc1-4d80-b5a2-4169944d6ac0
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: b36d610912f518f0586739e0380e300efefbed40
-ms.sourcegitcommit: 3d189b68c0965909d167de61546b574af1ef7a96
+ms.openlocfilehash: 1b7e530386a2c0a6dae21b370b89d4f5542faa8d
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/16/2019
-ms.locfileid: "69561140"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72905114"
 ---
 # <a name="implement-a-custom-conflict-resolver-for-a-merge-article"></a>マージ アーティクルのカスタム競合回避モジュールを実装する
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -59,8 +59,6 @@ ms.locfileid: "69561140"
      このストアド プロシージャでは、マージ エージェントによってこれらのパラメーターに渡された値を使用して、カスタム競合解決ロジックが実装されます。 ベース テーブルと構造が同じであり、行の競合するバージョンのデータ値が格納されている単一行の結果セットが返される必要があります。  
   
 2.  サブスクライバーでパブリッシャーへの接続に使用される任意のログインに対して、ストアド プロシージャの EXECUTE 権限を許可します。  
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
 #### <a name="use-a-custom-conflict-resolver-with-a-new-table-article"></a>新しいテーブル アーティクルでカスタム競合回避モジュールを使用する  
   

@@ -40,12 +40,12 @@ ms.assetid: 877ecd57-3f2e-4237-890a-08f16e944ef1
 author: MikeRayMSFT
 ms.author: mikeray
 monikerRange: '>=sql-server-2016||>=sql-server-linux-2017||=azuresqldb-mi-current||>=aps-pdw-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c43f8296c6bb4d25c58ba65516601c37381d7b4f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9e21af82bf762f8945c9d00232e63d9970054c31
+ms.sourcegitcommit: e7c3c4877798c264a98ae8d51d51cb678baf5ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68082465"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72916173"
 ---
 # <a name="restore-statements-transact-sql"></a>RESTORE ステートメント (Transact-SQL)
 
@@ -306,25 +306,23 @@ Note: URL is the format used to specify the location and the file name for the M
 
 ### <a name="restore-log"></a>RESTORE LOG
 
-RESTORE LOG でファイル一覧を含めて、ロールフォワード中にファイルを作成することができます。 この機能は、データベースへファイルを追加するときに書き込まれたログ レコードが、ログ バックアップに含まれている場合に使用します。
+RESTORE LOG にファイル リストを含めて、ロールフォワード中にファイルを作成することができます。 この機能は、データベースへファイルを追加するときに書き込まれたログ レコードが、ログ バックアップに含まれている場合に使用します。
 
 > [!NOTE]
 > データベースで完全な復旧モデルまたは一括ログ復旧モデルを使用しているときは、多くの場合、データベースの復元前にログ末尾のバックアップが必要になります。 RESTORE DATABASE ステートメントに WITH REPLACE 句または WITH STOPAT 句が指定されていない場合、最初にログ末尾のバックアップを行わずに、データベースを復元しようとするとエラーが発生します。これらの句は、データのバックアップ終了後の時間またはトランザクションの指定が必要となる句です。 ログ末尾のバックアップの詳細については、[ログ末尾のバックアップ](../../relational-databases/backup-restore/tail-log-backups-sql-server.md)に関するページを参照してください。
 
 ### <a name="comparison-of-recovery-and-norecovery"></a>RECOVERY と NORECOVERY の比較
+ロールバックは、RESTORE ステートメントの [ RECOVERY | NORECOVERY ] オプションで制御されます。
 
-ロールバックは、RESTORE ステートメントの RECOVERY および NORECOVERY オプションで制御されます。
-
-- NORECOVERY では、ロールバックを実行しないことを指定します。 こうすると、ロールフォワードしてそのままシーケンス内の次のステートメントを実行できます。
+- NORECOVERY では、ロールバックを行わないように指定します。 これにより、ロールフォワードをシーケンス内の次のステートメントに進めることができます。
 
   この場合、復元シーケンスでは他のバックアップを復元してそれらをロールフォワードできます。
 
-- RECOVERY (既定) では、現在のバックアップのロールフォワードが完了した後ロールバックを実行するよう指定します。
+- RECOVERY (規定値) では、現在のバックアップのロールフォワードが完了した後にロールバックを実行するように指定します。
 
-  データベースを復旧するには、復元されるデータセット全体 (*ロールフォワード セット*) とデータベースの間で一貫性が保たれている必要があります。 ロールフォワード セットがデータベースと一貫性を保つことができる時点まで十分にロールフォワードされていない場合は、RECOVERY を指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)]によってエラーが返されます。
+  データベースを復旧するには、復元されるデータセット全体 ("*ロールフォワード セット*") とデータベースの間で一貫性が保たれている必要があります。 ロールフォワード セットがデータベースと一貫性を保つことができる時点まで十分にロールフォワードされていない場合は、RECOVERY を指定すると、[!INCLUDE[ssDE](../../includes/ssde-md.md)] によってエラーが生成されます。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
 
 ## <a name="compatibility-support"></a>互換性サポート
-
 以前のバージョンの [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] を使用して作成された **master**、**model**、および **msdb** のバックアップを [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] で復元することはできません。
 
 > [!NOTE]
@@ -337,14 +335,11 @@ RESTORE LOG でファイル一覧を含めて、ロールフォワード中に�
 データベースが最初に [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の新しいインスタンスにアタッチまたは復元されるとき、データベース マスター キー (サービス マスター キーにより暗号化されたもの) のコピーはまだサーバーに格納されていません。 **OPEN MASTER KEY** を使用して、データベース マスター キー (DMK) を暗号化解除する必要があります。 DMK の暗号化が解除されると、 **ALTER MASTER KEY REGENERATE** ステートメントを使用して、サービス マスター キー (SMK) で暗号化された DMK のコピーをサーバーに提供することにより、将来、自動的に暗号化解除することも可能となります。 データベースを以前のバージョンからアップグレードした場合、新しい AES アルゴリズムを使用するように DMK を再作成する必要があります。 DMK を再作成する方法の詳細については、[ALTER MASTER KEY](../../t-sql/statements/alter-master-key-transact-sql.md) に関するページを参照してください。 DMK キーを再作成して AES にアップグレードするのに必要な時間は、DMK によって保護されているオブジェクトの数によって異なります。 DMK キーを再作成して AES にアップグレードする作業は、1 回限りで済み、今後のキー ローテーション方法には影響を与えません。
 
 ## <a name="general-remarks"></a>全般的な解説
-
 オフライン復元を実行しているときに、指定したデータベースが使用中の場合、RESTORE を実行してしばらくするとユーザーは強制的に切断されます。 プライマリ ファイル グループ以外のオンライン復元では、復元するファイル グループがオフラインにならなければ、データベースの使用を続けることができます。 指定したデータベース内のデータはすべて、復元されたデータに置き換えられます。
-
-データベースの復旧の詳細については、[復元と復旧の概要](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md)に関するページを参照してください。
 
 1 つのプラットフォームから別のプラットフォームへの復元操作は、異なる種類のプロセッサ間でも、オペレーティング システムでデータベースの照合順序がサポートされていれば実行できます。
 
-エラーが発生した場合は RESTORE を再開できます。 また、エラーに関係なく RESTORE を続行することもできます。この場合は、復元可能なデータが復元されます (CONTINUE_AFTER_ERROR オプションを参照してください)。
+エラーが発生した場合は RESTORE を再開できます。 また、エラーに関係なく RESTORE を続行するよう指示することもできます。この場合は、復元可能なデータが復元されます (`CONTINUE_AFTER_ERROR` オプションを参照)。
 
 RESTORE は、明示的または暗黙的なトランザクションでは使用できません。
 
@@ -384,7 +379,6 @@ RESTORE ステートメントでは、フルテキスト データに対し、�
 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] には、各サーバー インスタンスのバックアップおよび復元動作を追跡する、バックアップおよび復元の履歴テーブルが含まれています。 復元を実行すると、バックアップ履歴テーブルも変更されます。 これらのテーブルについては、[バックアップの履歴とヘッダーの情報](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)に関するページを参照してください。
 
 ## <a name="REPLACEoption"></a> REPLACE オプションによる影響
-
 REPLACE は頻繁に使用すべきではありません。使用するのは十分に検討した後のみに限定してください。 通常、復元により、誤ってデータベースを別のデータベースで上書きしてしまうのを防ぐことができます。 RESTORE ステートメントで指定したデータベースが現在のサーバーに既に存在し、指定したデータベースのファミリ GUID がバックアップ セットに記録されているデータベースのファミリ GUID と異なる場合、そのデータベースは復元されません。 これは重要な保護機能です。
 
 REPLACE オプションは、通常は復元によって実行されるいくつかの重要な安全性チェックをオーバーライドします。 オーバーライドされるチェックは次のとおりです。
@@ -402,21 +396,18 @@ REPLACE オプションは、通常は復元によって実行されるいくつ
   たとえば、間違った種類のファイル (.xls ファイルなど) や、別のデータベースによって使用されているオンラインになっていないファイルを誤って上書きしてしまう場合があります。 復元されたデータベースが完全であっても、既存のファイルが上書きされた場合はデータが失われている可能性があります。
 
 ## <a name="redoing-a-restore"></a>復元の再実行
-
-復元の結果を元に戻すことはできませんが、ファイル単位で最初からやり直して、データ コピーとロールフォワードの結果を取り消すことができます。 最初からやり直すには、目的のファイルを復元してもう一度ロールフォワードを実行します。 たとえば、間違って必要以上のログ バックアップを復元し、予定の停止ポイントを過ぎてしまった場合は、復元シーケンスを再開する必要があります。
+復元の結果を元に戻すことはできませんが、ファイル単位で最初からやり直して、データ コピーとロールフォワードの結果を取り消すことができます。 最初からやり直すには、目的のファイルを復元して、もう一度ロールフォワードを実行します。 たとえば、間違って必要以上のログ バックアップを復元し、予定の停止ポイントを過ぎてしまった場合は、復元シーケンスを再開する必要があります。
 
 復元シーケンスは途中で中断でき、影響があったファイルの内容全体を復元することで再開できます。
 
 ## <a name="reverting-a-database-to-a-database-snapshot"></a>データベースをデータベース スナップショットに戻す
-
-*データベースを元に戻す操作* (DATABASE_SNAPSHOT オプションを使用して指定) では、ソース データベース全体をデータベース スナップショットの時点に戻します。つまり、指定したデータベース スナップショットの時点で保持されていたデータでソース データベースを上書きします。 データベースを戻すスナップショットは、現時点で存在する唯一のスナップショットである必要があります。 その後、この操作ではログが再構成されます (したがって、後でこのデータベースをユーザー エラーの時点にロールフォワードすることはできません)。
+*データベースを元に戻す操作* (DATABASE_SNAPSHOT オプションを使用して指定) では、ソース データベース全体をデータベース スナップショットの時点に戻します。つまり、指定したデータベース スナップショットの時点で保持されていたデータでソース データベースを上書きします。 データベースを戻すスナップショットは、現時点で存在する唯一のスナップショットである必要があります。 その後、この元に戻す操作によりログが再構成されます (したがって、元に戻したデータベースを後からユーザー エラーの時点にロールフォワードすることはできません)。
 
 失われるデータは、スナップショットの作成時点よりも後に行ったデータベースへの更新内容だけです。 この操作を行った後のデータベースのメタデータは、スナップショット作成時点のメタデータと同じになります。 ただし、スナップショットに戻すと、すべてのフルテキスト カタログが削除されます。
 
 データベース スナップショットに戻す操作はメディアの復旧を目的としたものではありません。 標準的なバックアップ セットとは異なり、データベース スナップショットはデータベース ファイルの不完全なコピーです。 データベースまたはデータベース スナップショットが壊れた場合、スナップショットに戻すことはほぼ不可能です。 戻すことができても、データベースまたはデータベース スナップショットが壊れている場合は、問題が解決しない可能性が高くなります。
 
 ### <a name="restrictions-on-reverting"></a>元に戻す操作の制限
-
 元に戻す操作は、次の状況ではサポートされません。
 
 - ソース データベースに読み取り専用のファイル グループまたは圧縮されたファイル グループがある。
@@ -426,19 +417,18 @@ REPLACE オプションは、通常は復元によって実行されるいくつ
 詳細については、「[データベースをデータベース スナップショットに戻す](../../relational-databases/databases/revert-a-database-to-a-database-snapshot.md)」を参照してください。
 
 ## <a name="security"></a>Security
-
 バックアップ操作では、オプションで、メディア セットとバックアップ セットにそれぞれパスワードを設定できます。 メディア セットまたはバックアップ セットにパスワードが設定されている場合は、RESTORE ステートメントで正しいパスワードを指定する必要があります。 これらのパスワードを設定しておくと、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使って不正に復元操作が行われたり、メディアにバックアップ セットが不正に追加されたりするのを防ぐことができます。 ただし、パスワードで保護されたメディアは、BACKUP ステートメントの FORMAT オプションで上書きできます。
 
 > [!IMPORTANT]
 > パスワードによる保護は強力なものではありません。 権限の有無にかかわらず、ユーザーが [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] ツールを使用して不適切な復元を行わないようにすることを目的としています。 その他の手段によるバックアップ データの読み取りやパスワードの置き換えを防ぐわけではありません。 [!INCLUDE[ssNoteDepFutureAvoid](../../includes/ssnotedepfutureavoid-md.md)]バックアップ保護に最適な方法は、バックアップ テープを安全な場所に保管するか、バックアップしたディスク ファイルを適切なアクセス制御リスト (ACL) で保護することです。 ACL は、バックアップを作成するディレクトリのルートに設定する必要があります。
+
 > [!NOTE]
 > Microsoft Azure Blob Storage を使用した SQL Server のバックアップと復元に固有の情報については、「[Microsoft Azure Blob ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。
 
 ### <a name="permissions"></a>アクセス許可
+復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる `CREATE DATABASE` 権限を持っている必要があります。 データベースが存在する場合、RESTORE 権限は既定で、`sysadmin` および `dbcreator` 固定サーバー ロールのメンバーと、データベースの所有者 (`dbo`) に付与されます (`FROM DATABASE_SNAPSHOT` オプションを使用する場合、データベースは常に存在します)。
 
-復元するデータベースが存在しない場合、ユーザーは RESTORE を実行できる CREATE DATABASE 権限を使用する必要があります。 データベースが存在する場合、既定では、RESTORE 権限は **sysadmin** 固定サーバー ロールおよび **dbcreator** 固定サーバー ロールのメンバーと、データベースの所有者 (**dbo**) に与えられています (FROM DATABASE_SNAPSHOT オプションを使用する場合、データベースは常に存在します)。
-
-RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。
+RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、これは RESTORE の実行時に必ずしも保証されないため、`db_owner` 固定データベース ロールのメンバーには RESTORE 権限は付与されません。
 
 ## <a name="examples"></a> 使用例
 
@@ -625,7 +615,7 @@ RESTORE DATABASE AdventureWorks2012
 データベース バックアップは、`MyDatabaseBackups` という名前の論理バックアップ デバイス上のメディア セットにある 9 番目のバックアップ セットです。 次に、`MyDatabaseBackups` デバイス上にある次の 3 つのバックアップ セット (`10`、`11`、および `12`) にある 3 つのログ バックアップを、`WITH NORECOVERY` を使用して復元します。 最後のログ バックアップを復元した後、データベースを復旧します。
 
 > [!NOTE]
-> すべてのログ バックアップが復元される前に復旧してしまわないように、復旧は別のステップとして実行します。
+> すべてのログ バックアップが復元される前に復旧してしまわないように、復旧は別のステップとして実行します。 復旧プロセスの詳細については、「[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)」を参照してください。
 
 `RESTORE DATABASE` には、2 種類の `FILE` オプションがあることに注意してください。 `FILE` のように、バックアップ デバイス名より前の `FILE = 'MyDatabase_data_1'` オプションでは、バックアップ セットから復元するデータベース ファイルの論理ファイル名を指定します。 このバックアップ セットは、メディア セット内の最初のデータベース バックアップではありません。したがって、メディア セット内での位置は、`FILE=9` のように `WITH` 句の `FILE` オプションを使用して示されます。
 
@@ -683,7 +673,8 @@ GO
 
 次の 3 つの例では、Microsoft Azure ストレージ サービスを使用します。 ストレージ アカウント名は `mystorageaccount`です。 データ ファイルのコンテナーは `myfirstcontainer` と呼ばれます。 バックアップ ファイルのコンテナーは `mysecondcontainer` と呼ばれます。 保存されているアクセス ポリシーは、各コンテナーの読み取り、書き込み、削除、および一覧表示権で作成されています。 SQL Server 資格情報は、保存されているアクセス ポリシーに関連付けられている Shared Access Signature を使用して作成されています。 Microsoft Azure Blob Storage を使用した SQL Server のバックアップと復元に固有の情報については、「[Microsoft Azure Blob ストレージ サービスを使用した SQL Server のバックアップと復元](../../relational-databases/backup-restore/sql-server-backup-and-restore-with-microsoft-azure-blob-storage-service.md)」を参照してください。
 
-**K1.Microsoft Azure Storage サービスからデータベースの完全バックアップを復元する**`Sales` の `mysecondcontainer` にあるデータベースの完全バックアップは、`myfirstcontainer` に復元されます。 現在、`Sales` はサーバーに存在しません。
+**K1.Microsoft Azure ストレージ サービスからデータベースの完全バックアップを復元する**    
+`Sales` のデータベース バックアップ全体 (`mysecondcontainer` にある) は、`myfirstcontainer` に復元されます。 現在、`Sales` はサーバーに存在しません。
 
 ```sql
 RESTORE DATABASE Sales
@@ -717,18 +708,19 @@ RESTORE DATABASE Sales
 
 ## <a name="more-information"></a>詳細情報
 
-- [SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)
-- [システム データベースのバックアップと復元 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)
-- [SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)
-- [フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)
-- [レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)
-- [BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)
-- [メディア セット、メディア ファミリ、およびバックアップ セット](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)
-- [RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)
-- [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)
-- [RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)
-- [RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)
-- [バックアップの履歴とヘッダーの情報](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)
+[復元と復旧の概要 (SQL Server)](../../relational-databases/backup-restore/restore-and-recovery-overview-sql-server.md#TlogAndRecovery)     
+[SQL Server データベースのバックアップと復元](../../relational-databases/backup-restore/back-up-and-restore-of-sql-server-databases.md)    
+[システム データベースのバックアップと復元 (SQL Server)](../../relational-databases/backup-restore/back-up-and-restore-of-system-databases-sql-server.md)      
+[SSMS を使用してデータベース バックアップを復元する](../../relational-databases/backup-restore/restore-a-database-backup-using-ssms.md)     
+[フルテキスト カタログとフルテキスト インデックスのバックアップおよび復元](../../relational-databases/search/back-up-and-restore-full-text-catalogs-and-indexes.md)      
+[レプリケートされたデータベースのバックアップと復元](../../relational-databases/replication/administration/back-up-and-restore-replicated-databases.md)      
+[BACKUP](../../t-sql/statements/restore-statements-transact-sql.md)      
+[メディア セット、メディア ファミリ、およびバックアップ セット](../../relational-databases/backup-restore/media-sets-media-families-and-backup-sets-sql-server.md)      
+[RESTORE REWINDONLY](../../t-sql/statements/restore-statements-rewindonly-transact-sql.md)     
+[RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md)     
+[RESTORE FILELISTONLY (Transact-SQL)](../../t-sql/statements/restore-statements-filelistonly-transact-sql.md)     
+[RESTORE HEADERONLY (Transact-SQL)](../../t-sql/statements/restore-statements-headeronly-transact-sql.md)     
+[バックアップの履歴とヘッダーの情報](../../relational-databases/backup-restore/backup-history-and-header-information-sql-server.md)       
 
 ::: moniker-end
 ::: moniker range="=azuresqldb-mi-current||=sqlallproducts-allversions"
@@ -780,7 +772,7 @@ FROM URL
 
 ## <a name="general-remarks"></a>全般的な解説
 
-前提条件として、Blob Storage アカウントの URL と一致する名前、およびシークレットとして配置された Shared Access Signature を使用して、資格情報を作成する必要があります。 RESTORE コマンドは、Blob Storage の URL を使用して資格情報を検索し、バックアップ デバイスの読み取りに必要な情報を探します。
+前提条件として、Blob Storage アカウントの URL と一致する名前、およびシークレットとして配置された Shared Access Signature を使用して、資格情報を作成する必要があります。 RESTORE コマンドでは、Blob Storage の URL を使用して資格情報が検索され、バックアップ デバイスの読み取りに必要な情報が検索されます。
 
 復元操作は非同期です。クライアント接続が切断された場合でも復元は続行されます。 接続が切断された場合は、[sys.dm_operation_status](../../relational-databases/system-dynamic-management-views/sys-dm-operation-status-azure-sql-database.md) ビューで復元操作の状態 (と CREATE および DROP DATABASE) を確認できます。
 
@@ -806,19 +798,17 @@ FROM URL
 詳細については、[マネージド インスタンス](/azure/sql-database/sql-database-managed-instance)に関するトピックを参照してください
 
 ## <a name="restoring-an-encrypted-database"></a>暗号化されたデータベースの復元
-
 暗号化されたデータベースを復元するには、データベースの暗号化に使用された証明書または非対称キーにアクセスできることが必要です。 証明書または非対称キーがないと、データベースは復元できません。 このため、バックアップが必要である間は、データベース暗号化キーの暗号化に使用する証明書を保持しておく必要があります。 詳細については、「 [SQL Server Certificates and Asymmetric Keys](../../relational-databases/security/sql-server-certificates-and-asymmetric-keys.md)」をご覧ください。
 
 ## <a name="permissions"></a>アクセス許可
-
-ユーザーは、RESTORE を実行できるためには、CREATE DATABASE 権限を持っている必要があります。
+RESTORE を実行できるようにするには、ユーザーが `CREATE DATABASE` 権限を持っている必要があります。
 
 ```sql
 CREATE LOGIN mylogin WITH PASSWORD = 'Very Strong Pwd123!';
 GRANT CREATE ANY DATABASE TO [mylogin];
 ```
 
-RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、RESTORE の実行時にはデータベースがアクセス可能で損傷していないことが必ずしも保証されないため、 **db_owner** 固定データベース ロールのメンバーには RESTORE 権限は与えられません。
+RESTORE 権限は、サーバーでメンバーシップ情報を常に確認できるロールに与えられます。 固定データベース ロールのメンバーシップは、データベースがアクセス可能で破損していない場合にのみ確認することができますが、これは RESTORE の実行時に必ずしも保証されないため、`db_owner` 固定データベース ロールのメンバーには RESTORE 権限は付与されません。
 
 ## <a name="examples"></a> 使用例
 
@@ -935,8 +925,7 @@ RESTORE HEADERONLY: ユーザー データベースの 1 つのバックアッ�
 RESTORE HEADERONLY の結果は、[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果の後でパターン化されます。 結果には 50 を超える列が含まれます。ただし、全部が [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] で使用されるわけではありません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] RESTORE HEADERONLY の結果に含まれる列の説明については、[RESTORE HEADERONLY](../../t-sql/statements/restore-statements-headeronly-transact-sql.md) に関するページを参照してください。
 
 ## <a name="permissions"></a>アクセス許可
-
-**CREATE ANY DATABASE** アクセス許可が必要です。
+`CREATE ANY DATABASE` アクセス許可が必要です。
 
 バックアップ ディレクトリにアクセスし、そこから読み取るための権限を有する Windows アカウントが必要です。 [!INCLUDE[ssPDW](../../includes/sspdw-md.md)] に Windows アカウント名とパスワードを保存する必要もあります。
 
@@ -983,14 +972,13 @@ RESTORE DATABASE を実行すると、次の条件下でエラーが発生しま
 - SQL Server 2012 PDW のハードウェアを備えるアプライアンスで作成したバックアップを、SQL Server 2008 R2 のハードウェアを備えるアプライアンスに復元することはできません。 この制約は、当初 SQL Server 2008 R2 PDW のハードウェアを備えたアプライアンスを購入し、今はこのアプライアンスで SQL Server 2012 PDW のソフトウェアを実行している場合であっても適用されます。
 
 ## <a name="locking"></a>ロック
-
 DATABASE オブジェクトに対して排他的ロックを実行します。
 
 ## <a name="examples"></a>使用例
 
 ### <a name="a-simple-restore-examples"></a>A. RESTORE の単純な例
 
-次の例では、完全バックアップを `SalesInvoices2013` データベースに復元します。 バックアップ ファイルは、\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full ディレクトリに格納されています。 SalesInvoices2013 データベースはターゲット アプライアンス上に存在することがまだ許可されていないので、このコマンドを実行しても失敗しエラーが返されます。
+次の例では、完全バックアップを `SalesInvoices2013` データベースに復元します。 バックアップ ファイルは、`\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` ディレクトリに格納されます。 SalesInvoices2013 データベースはターゲット アプライアンス上に存在することがまだ許可されていないので、このコマンドを実行しても失敗しエラーが返されます。
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1001,7 +989,7 @@ FROM DISK = '\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full';
 
 次の例では、完全バックアップを復元してから、差分バックアップを SalesInvoices2013 データベースに復元します。
 
-データベースの完全バックアップは、'\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' ディレクトリに格納されている完全バックアップから復元されます。 復元が正常に完了した場合、差分バックアップは SalesInvoices2013 データベースに復元されます。差分バックアップは、"\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff" ディレクトリに格納されています。
+データベースの完全バックアップは、`\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` ディレクトリに格納されている完全バックアップから復元されます。 この復元が正常に完了すると、差分バックアップが SalesInvoices2013 データベースに復元されます。 差分バックアップは、`\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Diff` ディレクトリに格納されます。
 
 ```sql
 RESTORE DATABASE SalesInvoices2013
@@ -1013,7 +1001,7 @@ RESTORE DATABASE SalesInvoices2013
 
 ### <a name="c-restoring-the-backup-header"></a>C. バックアップ ヘッダーの復元
 
-この例では、データベース バックアップ '\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full' のヘッダー情報を復元します。 コマンドを実行すると、Invoices2013Full バックアップに関する情報を含む行が 1 つ生成されます。
+次の例では、データベース バックアップ `\\\xxx.xxx.xxx.xxx\backups\yearly\Invoices2013Full` のヘッダー情報が復元されます。 コマンドを実行すると、Invoices2013Full バックアップに関する情報を含む行が 1 つ生成されます。
 
 ```sql
 RESTORE HEADERONLY
@@ -1024,7 +1012,6 @@ RESTORE HEADERONLY
 ヘッダー情報を使用すれば、バックアップの内容を確認したり、バックアップの復元を試みる前にターゲット復元アプライアンスが、ソース バックアップ アプライアンスと互換性があるかどうかを確認したりすることができます。
 
 ## <a name="see-also"></a>参照
-
-- [BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)
+[BACKUP DATABASE - Analytics Platform System](../../t-sql/statements/backup-transact-sql.md?view=aps-pdw-2016-au7)     
 
 ::: moniker-end

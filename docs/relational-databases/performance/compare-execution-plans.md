@@ -17,12 +17,12 @@ ms.assetid: 9e583a18-5f4a-4054-bfe1-4b2a76630db6
 author: pmasl
 ms.author: pelopes
 manager: amitban
-ms.openlocfilehash: fc0eb0e3e8cd6a095a6f30f44ee08c520db19e45
-ms.sourcegitcommit: 43c3d8939f6f7b0ddc493d8e7a643eb7db634535
+ms.openlocfilehash: b0590a46fe9e5037f5bec1895aa6602bcd8c568a
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/12/2019
-ms.locfileid: "72289296"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72907664"
 ---
 # <a name="compare-execution-plans"></a>実行プランの比較
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -55,13 +55,13 @@ ms.locfileid: "72289296"
 
 2.  実行プランの何もない領域を右クリックし、 **[プラン表示の比較]** をクリックします。 
 
-    ![[プラン表示の比較] を右クリックする](../../relational-databases/performance/media/plancomparisonmenuoption.png "[プラン表示の比較] を右クリックする")   
+    ![右クリックの [プラン表示の比較]](../../relational-databases/performance/media/plancomparisonmenuoption.png "右クリックの [プラン表示の比較]")   
 
 3.  比較対象にする 2 つ目のクエリ プラン ファイルを選択します。 2 つ目のファイルが開いたら、プランを比較できます。
 
 4.  プランが比較されると、新しいウィンドウが開きます。既定では、プランが上下に分かれて表示されます。 比較されるプランで一般的な演算子またはノードで最初に現れるものが既定で選択され、プラン間の違いが表示されます。 ハイライトされた演算子とノードはすべて両方の比較対象プランに存在します。 上または左のプランでハイライトされた演算子を選択すると、下または右のプランで該当する演算子が自動的に選択されます。 一方の比較対象プランでルート ノード演算子を選択すると (下の画像では SELECT ノード)、もう一方の比較対象プランでもルート ノード演算子が各自選択されます。
 
-    ![2 つの保存済みプラン ファイルのプランを比較](../../relational-databases/performance/media/plancomparison-plans.png "2 つの保存済みプラン ファイルのプランを比較")  
+    ![保存された 2 つのプラン ファイルのプランを比較する](../../relational-databases/performance/media/plancomparison-plans.png "保存された 2 つのプラン ファイルのプランを比較する")  
 
      > [!TIP]
      > 実行プラン比較の表示を横並びに切り替えることができます。その場合、実行プランの何もない領域を右クリックし、 **[分割の方向の切り替え]** を選択します。
@@ -71,11 +71,9 @@ ms.locfileid: "72289296"
 
 5.  また、既定の選択では、右側にプロパティ ウィンドウが 2 つ開きます。 両方の比較対象演算子に存在するが違いがあるプロパティには、見分けやすいように先頭に "*不等号*" (&ne;) が付けられます。
 
-    ![2 つのプロパティ ウィンドウ](../../relational-databases/performance/media/plancomparison-properties.png "2 つのプロパティ ウィンドウ")  
+    ![デュアル プロパティ ウィンドウ](../../relational-databases/performance/media/plancomparison-properties.png "デュアル プロパティ ウィンドウ")  
 
 6.  下では、 **[プラン表示の分析]** 比較ナビゲーション ウィンドウも開きます。 3 つのタブを使用できます。
-
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
 
     1.  **[ステートメント オプション]** タブでは、既定で *[類似演算子の強調表示]* が選択されます。比較対象プランでハイライトされている同じ演算子またはノードで同じ色と線パターンが使用されます。 線パターンをクリックし、比較対象プランの類似領域間を移動します。 *[類似セグメントに一致しない演算子の強調表示]* を選択することで、類似性ではなく、プランの相違点をハイライトすることもできます。 
     
@@ -86,11 +84,11 @@ ms.locfileid: "72289296"
 
     2.  **[複数ステートメント]** タブは、ステートメントが複数含まれるプランを比較するときに便利です。適切なステートメント ペアを比較できます。
 
-        ![比較対象プランの複数ステートメント](../../relational-databases/performance/media/plancomparison-multiple.png "比較対象プランの複数ステートメント")  
+        ![比較されるプラン内の複数のステートメント](../../relational-databases/performance/media/plancomparison-multiple.png "比較されるプラン内の複数のステートメント")  
 
-    3.  **[シナリオ]** タブでは、比較対象プランの [[カーディナリティ推定]](../../relational-databases/performance/cardinality-estimation-sql-server.md) の相違点に関連することで最も関連性の高い側面がいくつか自動分析されています。 左側ウィンドウの一覧にある各演算子に対して、右側ウィンドウに *[このシナリオの詳細については、ここをクリックしてください]* リンクのシナリオに関する詳細と、そのシナリオが一覧に含まれる考えられる理由が表示されます。 
+    3.  **[シナリオ]** タブでは、比較対象プランの [[カーディナリティ推定]](../../relational-databases/performance/cardinality-estimation-sql-server.md) の相違点に関連することで最も関連性の高い側面がいくつか自動分析されています。 左側ウィンドウの一覧にある各演算子に対して、右側ウィンドウに *[このシナリオの詳細については、ここをクリックしてください]* リンクのシナリオに関する詳細と、そのシナリオが一覧に含まれる理由として考えられることが表示されます。 
 
-        ![推定行数が異なる](../../relational-databases/performance/media/plancomparison-scenarios.png "推定行数が異なる")  
+        ![さまざまな推定行](../../relational-databases/performance/media/plancomparison-scenarios.png "さまざまな推定行")  
 
     このウィンドウが閉じられている場合、比較対象プランの何もない領域を右クリックし、 **[プラン表示の比較オプション]** を選択して再び開きます。
 
@@ -102,7 +100,7 @@ ms.locfileid: "72289296"
 
 2.  SHIFT キーとマウスを組み合わせると、同じクエリに対して 2 つのプランを選択できます。 
 
-    ![クエリ ストアで 2 つのプランを選択する](../../relational-databases/performance/media/plancomparison-querystore.png "クエリ ストアで 2 つのプランを選択する")   
+    ![クエリ ストアでプランを 2 つ選択する](../../relational-databases/performance/media/plancomparison-querystore.png "クエリ ストアでプランを 2 つ選択する")   
 
 3.  **[Compare the plans for the selected query in a seperate window]\(選択したクエリのプランを別のウィンドウで比較する\)** ボタンを使用し、プラン比較を開始します。 「*実行プランを比較するには*」の手順 4 から 6 が該当します。 
 

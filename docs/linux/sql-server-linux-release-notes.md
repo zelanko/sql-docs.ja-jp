@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: 1314744f-fcaf-46db-800e-2918fa7e1b6c
-ms.openlocfilehash: 568790caac848c0823c58bd004ffca8546650340
-ms.sourcegitcommit: 710d60e7974e2c4c52aebe36fceb6e2bbd52727c
+ms.openlocfilehash: 839d789e633e8f8794ec6fde70980e6c1a43ce91
+ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/11/2019
-ms.locfileid: "72278263"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72930485"
 ---
 # <a name="release-notes-for-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のリリース ノート
 
@@ -101,7 +101,7 @@ CU リポジトリ (**mssql-server-2017**) を構成済みの場合は、新規�
 
 |新機能または更新 | 詳細 |
 |:---|:---|
-| MSDTC のサポート | SQL Sever 2017 の Microsoft 分散トランザクション コーディネーター (MSDTC) のサポートです。 詳細については、「[Linux 上の Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法](sql-server-linux-configure-msdtc.md)」を参照してください。 |
+| MSDTC のサポート | SQL Server 2017 の Microsoft 分散トランザクション コーディネーター (MSDTC) のサポートです。 詳細については、「[Linux で Microsoft 分散トランザクション コーディネーター (MSDTC) を構成する方法](sql-server-linux-configure-msdtc.md)」をご覧ください。 |
 
 ### <a name="package-details"></a>パッケージの詳細
 
@@ -392,7 +392,7 @@ sudo systemctl start mssql-server
 
 ### <a name="package-details"></a>パッケージの詳細
 
-次の表に、RPM パッケージと Debian パッケージのパッケージの詳細とダウンロード場所を示します。 次のインストール ガイドの手順を使用する場合は、これらのパッケージを直接ダウンロードする必要はありません。
+次の表に、RPM パッケージと Debian パッケージのパッケージの詳細とダウンロード場所を示します。 次のインストール ガイドに記載されている手順を使用する場合は、これらのパッケージを直接ダウンロードする必要はありません。
 
 - [SQL Server パッケージのインストール](sql-server-linux-setup.md)
 - [フルテキスト検索パッケージのインストール](sql-server-linux-setup-full-text-search.md)
@@ -404,42 +404,6 @@ sudo systemctl start mssql-server
 | Red Hat RPM パッケージ | 14.0.1000.169-2 | [エンジン RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm)</br>[SSIS パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-is-14.0.1000.169-1.x86_64.rpm) | 
 | SLES RPM パッケージ | 14.0.1000.169-2 | [mssql-server エンジン RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-14.0.1000.169-2.x86_64.rpm)</br>[高可用性 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-ha-14.0.1000.169-2.x86_64.rpm)</br>[フルテキスト検索 RPM パッケージ](https://packages.microsoft.com/sles/12/mssql-server-2017/mssql-server-fts-14.0.1000.169-2.x86_64.rpm)</br>[SQL Server エージェント RPM パッケージ](https://packages.microsoft.com/rhel/7/mssql-server-2017/mssql-server-agent-14.0.1000.169-2.x86_64.rpm) | 
 | Ubuntu 16.04 Debian パッケージ | 14.0.1000.169-2 | [エンジン Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server/mssql-server_14.0.1000.169-2_amd64.deb)</br>[高可用性 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-ha/mssql-server-ha_14.0.1000.169-2_amd64.deb)</br>[フルテキスト検索 Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-fts/mssql-server-fts_14.0.1000.169-2_amd64.deb)</br>[SQL Server エージェント Debian パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-agent/mssql-server-agent_14.0.1000.169-2_amd64.deb)<br/>[SSIS パッケージ](https://packages.microsoft.com/ubuntu/16.04/mssql-server-2017/pool/main/m/mssql-server-is/mssql-server-is_14.0.1000.169-1_amd64.deb) |
-
-## <a name="Unsupported"></a> サポートされていない機能とサービス
-
-次の機能は、GA リリースの時点で Linux では利用できません。 これらの機能のサポートは、今後ますます使用可能になります。
-
-| 領域 | サポートされていない機能またはサービス |
-|-----|-----|
-| **データベース エンジン** | トランザクション レプリケーション |
-| &nbsp; | マージ レプリケーション |
-| &nbsp; | 変更データ キャプチャ (SQL Server エージェントを参照) |
-| &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
-| &nbsp; | サード パーティの接続を使用した分散クエリ |
-| &nbsp; | [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のデータ ソースへのリンク サーバー  |
-| &nbsp; | システム拡張ストアド プロシージャ (XP_CMDSHELL など) |
-| &nbsp; | Filetable、FILESTREAM |
-| &nbsp; | EXTERNAL_ACCESS 権限または UNSAFE 権限が設定された CLR アセンブリ |
-| &nbsp; | バッファー プール拡張 |
-| **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
-| &nbsp; | 警告 |
-| &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
-| &nbsp; | 変更データ キャプチャ (CDC) |
-| &nbsp; | 管理対象のバックアップ |
-| **高可用性** | データベース ミラーリング  |
-| **セキュリティ** | 拡張キー管理 |
-| &nbsp; | リンク サーバーに対する AD 認証 | 
-| &nbsp; | 可用性グループに対する AD 認証 (AG) | 
-| &nbsp; | サード パーティの AD ツール (Centrify、Vintela、Powerbroker) | 
-| **サービス** | SQL Server Browser |
-| &nbsp; | SQL Server R サービス |
-| &nbsp; | StreamInsight |
-| &nbsp; | Analysis Services |
-| &nbsp; | Reporting Services |
-| &nbsp; | Data Quality Services |
-| &nbsp; | マスター データ サービス |
-| &nbsp; | 分散トランザクション コーディネーター (DTC) |
 
 ## <a name="known-issues"></a>既知の問題
 
@@ -467,13 +431,11 @@ sudo systemctl start mssql-server
 
 #### <a name="databases"></a>データベース
 
-- マスター データベースは mssql-conf ユーティリティを使用して移動することはできません。 他のシステム データベースは mssql-conf で移動できます。
+- mssql-conf ユーティリティを使って master データベースを移動することはできません。 他のシステム データベースは mssql-conf で移動できます。
 
 - Windows 上の [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にバックアップされたデータベースを復元する場合は、Transact-SQL ステートメントで **WITH MOVE** 句を使用する必要があります。
 
-- Microsoft 分散トランザクション コーディネーターを必要とする分散トランザクションは、Linux で実行されている [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] ではサポートされていません。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] から [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] へのリンク サーバーは、DTC が関係している場合以外はサポートされています。 詳細については、[Microsoft 分散トランザクション コーディネーターを必要とする分散トランザクションが Linux で実行されている SQL Server ではサポートされていない](https://blogs.msdn.microsoft.com/bobsql/2017/12/11/sql-server-linux-distributed-transactions-requiring-the-microsoft-distributed-transaction-coordinator-service-are-not-supported-on-sql-server-running-on-linux-sql-server-to-sql-server-distributed-tr/)ことに関する記事を参照してください。
-
-- トランスポート層セキュリティ (TLS) の特定のアルゴリズム (暗号スイート) は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux では適切に機能しません。 この結果、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しようとすると接続エラーが発生し、高可用性グループのレプリカ間の接続を確立する際に問題が発生します。
+- トランスポート層セキュリティ (TLS) の特定のアルゴリズム (暗号スイート) は、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux では正常に機能しません。 この結果、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] に接続しようとすると接続エラーが発生し、高可用性グループのレプリカ間の接続を確立する際に問題が発生します。
 
    - **解決方法**:次の手順を実行して、[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux 用の **mssql.conf** 構成スクリプトを変更して、問題のある暗号スイートを無効にします。
 
@@ -493,7 +455,7 @@ sudo systemctl start mssql-server
       sudo systemctl restart mssql-server
       ```
 
-- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] で復元することはできません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] または [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に移動します。
+- インメモリ OLTP を使用する Windows 上の [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースは、Linux 上の [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] では復元できません。 インメモリ OLTP を使用する [!INCLUDE[ssSQL14](../includes/sssql14-md.md)] データベースを復元するには、最初に Windows 上でデータベースを [!INCLUDE[ssSQL15](../includes/sssql15-md.md)] または [!INCLUDE[ssSQL17](../includes/sssql17-md.md)] にアップグレードしてから、バックアップ/復元またはデタッチ/アタッチを使用して [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] on Linux に移動します。
 
 - ユーザー権限 **ADMINISTER BULK OPERATIONS** は、現時点で Linux ではサポートされていません。
 
@@ -515,13 +477,13 @@ sudo systemctl start mssql-server
 
 1. ホスト名ではなく IP を使用して、TCP 接続のターゲットを指定します。
 
-1. ブート コマンドラインから `ipv6.disable=1` を削除して、カーネルで IPv6 を有効にします。 これを行う方法は、Linux ディストリビューションとブートローダー (grub など) によって異なります。 IPv6 を無効にする場合でも、`sysctl` 構成で `net.ipv6.conf.all.disable_ipv6 = 1` を設定することによって無効にすることもできます (例: `/etc/sysctl.conf`)。 この場合も、システムのネットワーク アダプターが IPv6 アドレスを取得できませんが、sqlservr の機能を使用できるようになります。
+1. ブート コマンドラインから `ipv6.disable=1` を削除して、カーネルで IPv6 を有効にします。 これを行う方法は、Linux ディストリビューションとブートローダー (grub など) によって異なります。 IPv6 を無効にする場合でも、`sysctl` 構成 (たとえば、`/etc/sysctl.conf`) で `net.ipv6.conf.all.disable_ipv6 = 1` を設定することによって無効にすることもできます。 この場合も、システムのネットワーク アダプターが IPv6 アドレスを取得できませんが、sqlservr の機能を使用できるようになります。
 
 #### <a name="network-file-system-nfs"></a>Network File System (NFS)
 運用環境で **Network File System (NFS)** のリモート共有を使用する場合は、次のサポート要件に注意してください。
 
-- NFS バージョン **4.2 以上**を使用してください。 前のバージョンの NFS では、最新のファイル システムに共通する fallocate やスパース ファイルの作成などの必要な機能がサポートされていません。
-- NFS マウント上の **/var/opt/mssql** ディレクトリのみを検索してください。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム バイナリなどの他のファイルはサポートされていません。
+- NFS バージョン **4.2 以上**を使用してください。 前のバージョンの NFS では、最新のファイル システムに共通する、fallocate やスパース ファイルの作成などの必要な機能がサポートされていません。
+- NFS マウント上の **/var/opt/mssql** ディレクトリのみが検索されます。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] システム バイナリなどの他のファイルはサポートされていません。
 - リモート共有をマウントするときに NFS クライアントが 'nolock' オプションを使用していることを確認してください。
 
 #### <a name="localization"></a>ローカリゼーション
@@ -532,7 +494,7 @@ sudo systemctl start mssql-server
    UnicodeEncodeError: 'ascii' codec can't encode character u'\xf1' in position 8: ordinal not in range(128)
    ```
 
-   UTF-8 エンコードを使用できない場合は、MSSQL_LCID 環境変数を使用してセットアップを実行し、任意の言語を指定します。
+   UTF-8 エンコードを使用できない場合は、MSSQL_LCID 環境変数を使用してセットアップを実行し、使用する言語選択を指定します。
 
    ```bash
    sudo MSSQL_LCID=<LcidValue> /opt/mssql/bin/mssql-conf setup
@@ -550,7 +512,7 @@ sudo systemctl start mssql-server
 
 - Linux CTP 2.1 Refresh 以降の [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] の場合、[!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] パッケージでは、Linux で ODBC 接続を使用できます。 この機能は [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] と MySQL ODBC ドライバーでテストされていますが、ODBC 仕様に準拠するあらゆる Unicode ODBC ドライバーでも動作することが予想されます。 デザイン時、DSN または接続文字列を指定し、ODBC データに接続できます。Windows 認証を使用することもできます。 詳細については、[Linux での ODBC サポートの告知ブログ記事](https://blogs.msdn.microsoft.com/ssis/2017/06/16/odbc-is-supported-in-ssis-on-linux-ssis-helsinki-ctp2-1-refresh/)を参照してください。
 
-- Linux で SSIS パッケージを実行する場合、このリリースでは次の機能はサポートされていません。
+- Linux 上で SSIS パッケージを実行する場合、このリリースでは次の機能はサポートされていません。
   - [!INCLUDE[ssISnoversion](../includes/ssisnoversion-md.md)] カタログ データベース
   - SQL エージェントでスケジュールされたパッケージの実行
   - [Windows 認証]
@@ -574,9 +536,9 @@ Linux の SSIS の詳細については、次の記事を参照してくださ�
 
 - メンテナンス プランはサポートされていません。
 
-- 管理データ ウェアハウス (MDW) と [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] のデータ コレクターはサポートされていません。 
+- [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の管理データ ウェアハウス (MDW) とデータ コレクターはサポートされていません。 
 
-- Windows 認証または Windows イベント ログ オプションを備えた [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] UI コンポーネントは、Linux では機能しません。 これらの機能は、SQL ログインなどの他のオプションと共に引き続き使用できます。 
+- Windows 認証または Windows イベント ログ オプションを備えた [!INCLUDE[ssManStudioFull](../includes/ssmanstudiofull-md.md)] の UI コンポーネントは、Linux では機能しません。 これらの機能は、SQL ログインなどの他のオプションと共に引き続き使用できます。 
 
 - 保持するログ ファイルの数は変更できません。
 

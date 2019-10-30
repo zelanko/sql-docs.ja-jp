@@ -1,5 +1,5 @@
 ---
-title: SQL Server 2017 の各エディションとサポートされる機能 - Linux
+title: SQL Server 2019 の各エディションとサポートされる機能 - Linux
 ms.date: 10/23/2019
 ms.prod: sql
 ms.technology: linux
@@ -21,33 +21,33 @@ helpviewer_keywords:
 - installing SQL Server, editions
 - editions [SQL Server], about edition options
 - Setup [SQL Server]
-author: MikeRayMSFT
-ms.author: mikeray
-ms.reviewer: vanto
-ms.openlocfilehash: 661d74060d9bb6f7097a5fe50291bdde23e0a591
+author: VanMSFT
+ms.author: vanto
+ms.reviewer: mikeray
+ms.openlocfilehash: 18ec5ca6700008bb2b1ebe3709db0c49123f4fec
 ms.sourcegitcommit: 39630fddc69141531eddca2a3c156ccf8536f49c
 ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 10/25/2019
-ms.locfileid: "72928905"
+ms.locfileid: "72954994"
 ---
-# <a name="editions-and-supported-features-of-sql-server-2017-on-linux"></a>Linux 上の SQL Server 2017 のエディションとサポートされる機能
+# <a name="editions-and-supported-features-of-sql-server-2019-on-linux"></a>SQL Server 2019 on Linux のエディションとサポートされる機能
 
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md-linuxonly](../includes/appliesto-ss-xxxx-xxxx-xxx-md-linuxonly.md)]
 
-この記事では、SQL Server 2017 on Linux のさまざまなエディションでサポートされている機能の詳細を説明します。 SQL Server on Windows の各エディションとサポートされている機能については、「[SQL Server 2017 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)」を参照してください。  
+この記事では、SQL Server 2019 on Linux のさまざまなエディションでサポートされている機能の詳細を説明します。 SQL Server on Windows の各エディションとサポートされている機能については、[SQL Server 2019 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md) に関する記事をご覧ください。  
   
 インストールの前提条件は、アプリケーションのニーズによって異なります。 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] にはさまざまなエディションがあり、組織や個人の独自のパフォーマンス、ランタイム、および価格に関する要件に対応できます。 インストールする [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] コンポーネントは、ユーザーの特定の要件によっても異なります。 この後のセクションでは、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]の最適なエディションおよびコンポーネントを選択する方法について説明します。  
 
 最新のリリース ノートと新機能については、以下の情報を参照してください。
-- [SQL Server 2017 on Linux のリリース ノート](sql-server-linux-release-notes.md)
-- [SQL Server 2017 on Linux の新機能](sql-server-linux-whats-new.md)
+- [SQL Server 2019 on Linux のリリース ノート](sql-server-linux-release-notes-2019.md)
+- [SQL Server 2019 on Linux の新機能](sql-server-linux-whats-new-2019.md)
 
 Linux 上で使用できない SQL Server の機能の一覧については、[「サポートされていない機能とサービス](#Unsupported)」を参照してください。
 
 ### <a name="try-sql-server"></a>SQL Server を試してください    
     
-[SQL Server 2017 をダウンロードする](https://www.microsoft.com/sql-server/sql-server-2017)
+[SQL Server 2019 のダウンロード](https://www.microsoft.com/sql-server/sql-server-2019)
 
 ## <a name="includessnoversionincludesssnoversion-mdmd-editions"></a>[!INCLUDE[ssNoVersion](../includes/ssNoVersion-md.md)] のエディション  
  次の表で、 [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)]のエディションについて説明します。 
@@ -66,7 +66,7 @@ Linux 上で使用できない SQL Server の機能の一覧については、[�
   
 ## <a name="includessnoversionincludesssnoversion-mdmd-components"></a>[!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] のコンポーネント  
 
-SQL Server 2017 on Linux では、SQL Server データベース エンジンがサポートされています。 次の表で、データベース エンジンの機能について説明します。   
+SQL Server 2019 on Linux では、SQL Server データベース エンジンがサポートされています。 次の表で、データベース エンジンの機能について説明します。   
   
 |サーバー コンポーネント|[説明]|  
 |-----------------------|-----------------|  
@@ -209,17 +209,15 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 |平面データ型と測地データ型|はい|はい|はい|はい| 
 |高度な空間的なライブラリ|はい|はい|はい|はい|   
 |業界標準の空間データ形式のインポート/エクスポート|はい|はい|はい|はい|   
+
 ## <a name="Unsupported"></a> サポートされていない機能とサービス
 
-次の機能とサービスは、SQL Server 2017 on Linux では利用できません。 これらの機能のサポートは、今後ますます使用可能になります。
+次の機能とサービスは、SQL Server 2019 on Linux では利用できません。 これらの機能のサポートは、今後ますます使用可能になります。
 
 | 領域 | サポートされていない機能またはサービス |
 |-----|-----|
-| **データベース エンジン** | トランザクション レプリケーション |
-| &nbsp; | マージ レプリケーション |
-| &nbsp; | 変更データ キャプチャ (SQL Server エージェントを参照) |
+| **データベース エンジン** | マージ レプリケーション |
 | &nbsp; | Stretch DB |
-| &nbsp; | PolyBase |
 | &nbsp; | サード パーティの接続を使用した分散クエリ |
 | &nbsp; | [!INCLUDE[ssNoVersion](../includes/ssnoversion-md.md)] 以外のデータ ソースへのリンク サーバー  |
 | &nbsp; | システム拡張ストアド プロシージャ (XP_CMDSHELL など) |
@@ -228,25 +226,28 @@ Developer Edition では引き続き、[SQL Server 分散再生](../tools/distri
 | &nbsp; | バッファー プール拡張 |
 | **SQL Server エージェント** |  サブシステム: CmdExec、PowerShell、キュー リーダー、SSIS、SSAS、SSRS |
 | &nbsp; | 警告 |
-| &nbsp; | ログ リーダー エージェント (Log Reader Agent) |
-| &nbsp; | 変更データ キャプチャ (CDC) |
 | &nbsp; | 管理対象のバックアップ |
 | **高可用性** | データベース ミラーリング  |
 | **セキュリティ** | 拡張キー管理 |
 | &nbsp; | リンク サーバーに対する AD 認証 | 
 | &nbsp; | 可用性グループに対する AD 認証 (AG) | 
 | **サービス** | SQL Server Browser |
-| &nbsp; | SQL Server R サービス |
+| &nbsp; | SQL Server R サービス<sup>1</sup> |
 | &nbsp; | StreamInsight |
 | &nbsp; | Analysis Services |
 | &nbsp; | Reporting Services |
 | &nbsp; | Data Quality Services |
 | &nbsp; | マスター データ サービス |
+
+<sup>1</sup> SQL Server 内では SQL Server R がサポートされていますが、個別のパッケージとしての SQL Server R サービスはサポートされていません。
   
 ## <a name="next-steps"></a>次の手順
+ [SQL Server 2017 の各エディションとサポートされる機能 - Linux](sql-server-linux-editions-and-components-2017.md)  
  [SQL Server 2019 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-version-15.md)  
  [SQL Server 2017 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2017.md)  
  [SQL Server 2016 の各エディションとサポートされる機能 - Windows](../sql-server/editions-and-components-of-sql-server-2016.md)  
  [SQL Server 2014 の各エディションとサポートされる機能 - Windows](https://msdn.microsoft.com/library/cc645993(v=sql.120).aspx)  
  [SQL Server をインストールする](../database-engine/install-windows/installation-for-sql-server-2016.md)  
  [SQL Server の製品仕様](https://msdn.microsoft.com/library/6445fd53-6844-4170-a86b-7fe76a9f64cb)
+
+
