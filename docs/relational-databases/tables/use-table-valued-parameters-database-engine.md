@@ -16,12 +16,12 @@ ms.assetid: 5e95a382-1e01-4c74-81f5-055612c2ad99
 author: stevestein
 ms.author: sstein
 monikerRange: =azuresqldb-current||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current
-ms.openlocfilehash: b47d53f088089ed348e01ae380e0f21dcca420fa
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: c01f99fc2f1964e1a459de12d77f0bfc3ea40ca6
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68140319"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72796643"
 ---
 # <a name="use-table-valued-parameters-database-engine"></a>テーブル値パラメーターの使用 (データベース エンジン)
 
@@ -57,6 +57,9 @@ ms.locfileid: "68140319"
 - 厳密に型指定されます。
 - クライアントで並べ替え順序と一意キーを指定できます。
 - ストアド プロシージャで使用すると、一時テーブルのようにキャッシュされます。 [!INCLUDE[ssSQL11](../../includes/sssql11-md.md)]以降では、テーブル値パラメーターはパラメーター化クエリ用にもキャッシュされます。
+
+## <a name="Permissions"></a> Permissions
+ユーザー定義テーブル型のインスタンスを作成したり、テーブル値パラメーターを使用してストアド プロシージャを呼び出したりするには、その型、またはその型を含むスキーマまたはデータベースに対する EXECUTE 権限が必要です。
 
 ## <a name="Restrictions"></a> 制限
 

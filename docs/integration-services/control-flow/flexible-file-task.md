@@ -12,12 +12,12 @@ f1_keywords:
 - SQL14.DTS.DESIGNER.AFPEXTFILETASK.F1
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: 3aaa746be1453f874a77af6bbfdf318da0731623
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: 4ed8ba34e8e50d6414d68cae4aa386848f88b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71298275"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807412"
 ---
 # <a name="flexible-file-task"></a>柔軟なファイル タスク
 
@@ -35,7 +35,9 @@ ms.locfileid: "71298275"
 パッケージに柔軟なファイル タスクを追加するには、SSIS ツールボックスからデザイナー キャンバスにドラッグします。 次に、タスクをダブルクリックするか、右クリックして **[編集]** を選択し、 **[Flexible File Task Editor]\(柔軟なファイル タスク エディター\)** ダイアログ ボックスを開きます。
 
 **[操作]** プロパティでは、実行するファイル操作を指定します。
-現在サポートされているのは、**コピー**操作のみです。
+現在サポートされている操作は、次のとおりです。
+- **コピー**操作
+- **削除**操作
 
 **コピー**操作に対して使用できるプロパティは次のとおりです。
 
@@ -48,6 +50,12 @@ ms.locfileid: "71298275"
 - **DestinationConnection:** 送信先接続マネージャーを指定します。
 - **DestinationFolderPath:** 送信先フォルダーのパスを指定します。
 - **DestinationFileName:** 送信先ファイル名を指定します。
+
+**削除**操作に対して使用できるプロパティは次のとおりです。
+- **ConnectionType:** 接続マネージャーの種類を指定します。
+- **Connection:** 接続マネージャーを指定します。
+- **FolderPath:** フォルダーのパスを指定します。
+- **FileName:** ファイル名を指定します。 空白のままにすると、フォルダーが削除されます。 Azure Blob Storage の場合、フォルダーの削除はサポートされていません。
 
 ***サービス プリンシパルのアクセス許可の構成に関する注意事項***
 

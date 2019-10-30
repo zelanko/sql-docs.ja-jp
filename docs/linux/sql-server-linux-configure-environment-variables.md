@@ -8,12 +8,12 @@ ms.topic: conceptual
 ms.prod: sql
 ms.technology: linux
 ms.assetid: ''
-ms.openlocfilehash: f6e78603aee684a9db3dc89e94f331275d1cd0bf
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 019878cd1dde4425ba69e0c69ce7a4a4a1d0dd62
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "68476217"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807469"
 ---
 # <a name="configure-sql-server-settings-with-environment-variables-on-linux"></a>Linux 上で環境変数を使って SQL Server の設定を構成する
 
@@ -94,7 +94,7 @@ Linux では、いくつかの異なる環境変数を使って SQL Server 2019 
 この例では、構成済みの環境変数を使って `mssql-conf setup` を実行します。 以下の環境変数が指定されています。
 
 - **ACCEPT_EULA**: エンド ユーザー使用許諾契約に同意します。
-- **MSSSQL_PID**: 非運用環境で使用するために、無料でライセンスが付与される Developer Edition の SQL Server を指定します。
+- **MSSQL_PID**: 非運用環境で使用するために、無料でライセンスが付与される Developer Edition の SQL Server を指定します。
 - **MSSQL_SA_PASSWORD**: 強力なパスワードを設定します。
 - **MSSQL_TCP_PORT**: SQL Server がリッスンする TCP ポートを 1234 に設定します。
 
@@ -107,7 +107,7 @@ sudo ACCEPT_EULA='Y' MSSQL_PID='Developer' MSSQL_SA_PASSWORD='<YourStrong!Passw0
 この docker コマンドの例では、以下の環境変数を使って新しい SQL Server コンテナーを作成します。
 
 - **ACCEPT_EULA**: エンド ユーザー使用許諾契約に同意します。
-- **MSSSQL_PID**: 非運用環境で使用するために、無料でライセンスが付与される Developer Edition の SQL Server を指定します。
+- **MSSQL_PID**: 非運用環境で使用するために、無料でライセンスが付与される Developer Edition の SQL Server を指定します。
 - **MSSQL_SA_PASSWORD**: 強力なパスワードを設定します。
 - **MSSQL_TCP_PORT**: SQL Server がリッスンする TCP ポートを 1234 に設定します。 つまり、この例では、ホストのポートにポート 1433 (既定値) をマップするのではなく、`-p 1234:1234` コマンドを使ってカスタム TCP ポートをマップする必要があります。
 

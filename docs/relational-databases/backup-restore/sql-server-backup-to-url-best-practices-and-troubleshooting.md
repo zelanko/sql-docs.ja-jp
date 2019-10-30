@@ -10,12 +10,12 @@ ms.topic: conceptual
 ms.assetid: de676bea-cec7-479d-891a-39ac8b85664f
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 2d5ca430aa06e3f8a0072bff474e67e6f9defc74
-ms.sourcegitcommit: 3b1f873f02af8f4e89facc7b25f8993f535061c9
+ms.openlocfilehash: a31d11a469411e13f357f87d1112d608c94f5aa4
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 08/30/2019
-ms.locfileid: "70176367"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717240"
 ---
 # <a name="sql-server-backup-to-url-best-practices-and-troubleshooting"></a>SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
@@ -76,7 +76,7 @@ ms.locfileid: "70176367"
   
 -   同じ BLOB への並列バックアップを実行すると、バックアップの 1 つが " **初期化に失敗しました** " エラーで失敗します。  
   
--   次のエラー ログを使用して、バックアップ エラーのトラブルシューティングに役立ててください。  
+-   ページ BLOB (`BACKUP... TO URL... WITH CREDENTIAL` など) を使用している場合は、次のエラー ログを使用して、バックアップ エラーのトラブルシューティングに役立ててください。  
   
     -   トレース フラグ 3051 を設定して、次の形式の特定のエラー ログへの記録を有効にします。  
   

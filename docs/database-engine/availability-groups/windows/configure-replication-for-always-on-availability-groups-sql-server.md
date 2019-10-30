@@ -14,12 +14,12 @@ ms.assetid: 4e001426-5ae0-4876-85ef-088d6e3fb61c
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: c6481b7e94c2d9b8d7e1df99a4a38026a9d6edee
-ms.sourcegitcommit: c426c7ef99ffaa9e91a93ef653cd6bf3bfd42132
+ms.openlocfilehash: 7975474859081eb5567c2ee12adf26f9e6501556
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/10/2019
-ms.locfileid: "72251928"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689660"
 ---
 # <a name="configure-replication-with-always-on-availability-groups"></a>Always On 可用性グループでレプリケーションを構成する
 
@@ -52,7 +52,7 @@ ms.locfileid: "72251928"
         @security_mode = 1;  
     ```  
   
-3.  リモート パブリッシャーを構成します。 ストアド プロシージャを使用してディストリビューターを構成する場合は、 **sp_adddistpublisher**を実行します。 *@security_mode* パラメーターを使用して、レプリケーション エージェントから実行されるパブリッシャーの検証ストアド プロシージャを現在のプライマリに接続する方法を指定します。 1 に設定すると、現在のプライマリへの接続に Windows 認証が使用されます。 0 に設定すると、指定した [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] @login *@login* @password *@password* 認証が使用されます。 検証ストアド プロシージャをセカンダリ レプリカに正常に接続するには、各レプリカで有効なログインとパスワードを指定する必要があります。  
+3.  リモート パブリッシャーを構成します。 ストアド プロシージャを使用してディストリビューターを構成する場合は、 **sp_adddistpublisher**を実行します。 *\@security_mode* パラメーターを使用して、レプリケーション エージェントから実行されるパブリッシャーの検証ストアド プロシージャを現在のプライマリに接続する方法を指定します。 1 に設定すると、現在のプライマリへの接続に Windows 認証が使用されます。 0 に設定すると、指定した *\@login* と *\@password* の値を使用して [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] 認証が使用されます。 検証ストアド プロシージャをセカンダリ レプリカに正常に接続するには、各レプリカで有効なログインとパスワードを指定する必要があります。  
   
     > [!NOTE]  
     >  変更されたレプリケーション エージェントをディストリビューター以外のコンピューターで実行する場合、プライマリへの接続に Windows 認証を使用するには、レプリカのホスト コンピューター間の通信に使用する Kerberos 認証を構成する必要があります。 現在のプライマリへの接続に [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] ログインを使用する場合は、Kerberos 認証は必要ありません。  
@@ -72,7 +72,7 @@ ms.locfileid: "72251928"
   
  **元のパブリッシャーでのパブリッシャーの構成**  
   
-1.  リモート ディストリビューションを構成します。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、 **sp_adddistributor**を実行します。 *@password* には、ディストリビューターでディストリビューションを設定するために **sp_adddistrbutor** を実行したときと同じ値を指定します。  
+1.  リモート ディストリビューションを構成します。 ストアド プロシージャを使用してパブリッシャーを構成する場合は、 **sp_adddistributor**を実行します。 *\@password* には、ディストリビューションを設定するためにディストリビューターで **sp_adddistrbutor** を実行したときに使ったのと同じ値を指定します。  
   
     ```  
     exec sys.sp_adddistributor  
@@ -122,10 +122,10 @@ EXEC @installed = sys.sp_MS_replication_installed;
 SELECT @installed;  
 ```  
   
- 元のパブリッシャーに *@installed* が 0 の場合、 [!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストールにレプリケーションを追加する必要があります。  
+ *\@installed* が 0 の場合、[!INCLUDE[ssNoVersion](../../../includes/ssnoversion-md.md)] インストールにレプリケーションを追加する必要があります。  
   
 ##  <a name="step4"></a> 4.セカンダリ レプリカのホストをレプリケーションのパブリッシャーとして構成する  
- セカンダリ レプリカはレプリケーションのパブリッシャーまたはリパブリッシャーとしては機能しませんが、フェールオーバー後にセカンダリで処理を引き継ぐようにレプリケーションを構成する必要があります。 ディストリビューターで、セカンダリ レプリカの各ホストのディストリビューションを構成します。 ディストリビューション データベースと作業ディレクトリは、元のパブリッシャーをディストリビューターに追加したときと同じものを指定します。 ストアド プロシージャを使用してディストリビューションを構成する場合は、 **sp_adddistpublisher** を使用してリモート パブリッシャーをディストリビューターに関連付けます。 元のパブリッシャーに *@login* @password *@password* を使用した場合は、セカンダリ レプリカのホストをパブリッシャーとして追加する際に同じ値をそれぞれ指定します。  
+ セカンダリ レプリカはレプリケーションのパブリッシャーまたはリパブリッシャーとしては機能しませんが、フェールオーバー後にセカンダリで処理を引き継ぐようにレプリケーションを構成する必要があります。 ディストリビューターで、セカンダリ レプリカの各ホストのディストリビューションを構成します。 ディストリビューション データベースと作業ディレクトリは、元のパブリッシャーをディストリビューターに追加したときと同じものを指定します。 ストアド プロシージャを使用してディストリビューションを構成する場合は、 **sp_adddistpublisher** を使用してリモート パブリッシャーをディストリビューターに関連付けます。 元のパブリッシャーに *\@login* と *\@password* を使用した場合は、セカンダリ レプリカのホストをパブリッシャーとして追加する際に同じ値をそれぞれ指定します。  
   
 ```  
 EXEC sys.sp_adddistpublisher  
@@ -136,7 +136,7 @@ EXEC sys.sp_adddistpublisher
     @password = '**Strong password for publisher**';  
 ```  
   
- セカンダリ レプリカの各ホストで、ディストリビューションを構成します。 リモート ディストリビューターには、元のパブリッシャーのディストリビューターを指定します。 パスワードは、ディストリビューターで最初に **sp_adddistributor** を実行したときと同じものを使用します。 ストアド プロシージャを使用してディストリビューションを構成する場合は、 *@password* の **sp_adddistributor** パラメーターを使用してパスワードを指定します。  
+ セカンダリ レプリカの各ホストで、ディストリビューションを構成します。 リモート ディストリビューターには、元のパブリッシャーのディストリビューターを指定します。 パスワードは、ディストリビューターで最初に **sp_adddistributor** を実行したときと同じものを使用します。 ストアド プロシージャを使用してディストリビューションを構成する場合は、**sp_adddistributor** の *\@password* パラメーターを使用してパスワードを指定します。  
   
 ```  
 EXEC sp_adddistributor   

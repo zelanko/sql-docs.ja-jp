@@ -20,12 +20,12 @@ helpviewer_keywords:
 ms.assetid: b971b540-1ac2-435b-b191-24399eb88265
 author: pmasl
 ms.author: pelopes
-ms.openlocfilehash: 06a8737ee336579847efc6ba874e5de389538251
-ms.sourcegitcommit: 2f56848ec422845ee81fb84ed321a716c677aa0e
+ms.openlocfilehash: 05efb4fe4bc6d67c9642463675028d8fa29eb931
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/25/2019
-ms.locfileid: "71271931"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798401"
 ---
 # <a name="dbcc-traceon---trace-flags-transact-sql"></a>DBCC TRACEON - トレース フラグ (Transact-SQL)
 
@@ -116,7 +116,7 @@ ms.locfileid: "71271931"
 |**3051**|SQL Server Backup to URL が特定のエラー ログ ファイルにログを記録できるようにします。 詳しくは、「[SQL Server Backup to URL に関するベスト プラクティスとトラブルシューティング](../../relational-databases/backup-restore/sql-server-backup-to-url-best-practices-and-troubleshooting.md)」をご覧ください。<br /><br />**スコープ**: グローバルのみ|  
 |**3205**|既定では、テープ ドライブでハードウェア圧縮がサポートされている場合、DUMP または BACKUP ステートメントではハードウェア圧縮が行われます。 このトレース フラグを使用すると、テープ デバイスのハードウェア圧縮を無効にできます。 この機能は、圧縮がサポートされていないサイトやテープ ドライブとの間でテープを交換する場合に便利です。<br /><br />**スコープ**: グローバル、セッション|  
 |**3226**|既定では、バックアップ操作が成功するたびに、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] エラー ログおよびシステム イベント ログにエントリが 1 つ追加されます。 頻度の高いログ バックアップを作成すると、これらの成功メッセージがすぐに蓄積され、他のメッセージを探すのが困難になるほどエラー ログが大きくなることがあります。<br /><br />このトレース フラグを使用すると、これらのログ エントリを除外できます。 この機能は、頻度の高いログ バックアップを実行している場合やスクリプトがこれらのエントリに依存していない場合に役立ちます。<br /><br />**スコープ**: グローバルのみ|   
-|**3427**|temp テーブルにデータを挿入する多数の連続するトランザクションが、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] または [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] では [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] のときより多くの CPU を消費する場合に、問題を解決できるようにします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/help/3216543)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 以降のビルドに適用されます。 [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降には、このトレース フラグは影響しません。<br /><br />**スコープ**: グローバルのみ|  
+|**3427**|[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] で多数の連続するトランザクションによって一時テーブルにデータが挿入される場合に、この操作により [!INCLUDE[ssSQL14](../../includes/sssql14-md.md)] よりも多くの CPU が消費される問題の修正を有効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/help/3216543)をご覧ください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU2 から [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU2 に適用されます。 [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP2 CU3 および [!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降では、このトレース フラグによる影響はありません。<br /><br />**スコープ**: グローバルのみ|  
 |**3459**|並列再実行を無効にします。 詳しくは、こちらの [Microsoft サポート技術情報](https://support.microsoft.com/help/3200975)および [Microsoft サポート技術情報](https://support.microsoft.com/help/4101554)を参照してください。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)]、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] 以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ| 
 |**3468**|TempDB で[間接チェックポイント](../../relational-databases/logs/database-checkpoints-sql-server.md#IndirectChkpt)を無効にします。<br /><br />**注:** このトレース フラグは、[!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU5、[!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1、およびそれ以降のビルドに適用されます。<br /><br />**スコープ**: グローバルのみ|  
 |**3608**|[!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] で、**master** データベース以外のすべてのデータベースを自動的に開始および復旧しないようにします。 **TempDB** を必要とする操作が開始されると、**model** が復旧され、**TempDB** が作成されます。 他のデータベースはアクセス時に開始および復旧されます。 スナップショット分離や READ COMMITTED スナップショットなど、一部の機能を使用できない場合があります。 [システム データベースの移動](../../relational-databases/databases/move-system-databases.md)と[ユーザー データベースの移動](../../relational-databases/databases/move-user-databases.md)の場合に使用します。<br /><br />**注:** 通常の運用中は使用しないでください。<br /><br />**スコープ**: グローバルのみ|   

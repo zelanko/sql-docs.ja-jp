@@ -15,12 +15,12 @@ ms.assetid: 702359c4-6ca9-42a8-860c-a95a802898a1
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=sql-server-2016||=sqlallproducts-allversions'
-ms.openlocfilehash: 68c18f0be55716f668e47576b3abd041bfb1c076
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 3b8e9f5f6682b8d44785d9b2600f15013a2f615c
+ms.sourcegitcommit: d0e5543e8ebf8627eebdfd1e281adb47d6cc2084
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67990812"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72717226"
 ---
 # <a name="supported-version-and-edition-upgrades-for-sql-server-2017"></a>SQL Server 2017 のサポートされているバージョンとエディションのアップグレード
 
@@ -42,7 +42,7 @@ ms.locfileid: "67990812"
   
 ## <a name="unsupported-scenarios"></a>サポートされていないシナリオ  
   
--   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)]、 [!INCLUDE[ssASnoversion](../../includes/ssasnoversion-md.md)]、および [!INCLUDE[ssRSnoversion](../../includes/ssrsnoversion-md.md)] コンポーネントのバージョン番号は [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)]のインスタンス内で同一であることが必要です。  
+-   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] の複数バージョンにまたがるインスタンスの使用はサポートされていません。 [!INCLUDE[ssDE](../../includes/ssde-md.md)] コンポーネントのバージョン番号は、[!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] のインスタンス内で同一である必要があります。  
   
 -   [!INCLUDE[sssqlv14-md](../../includes/sssqlv14-md.md)] は、64 ビット プラットフォームでのみ利用できます。 クロスプラットフォームのアップグレードはサポートされていません。 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] セットアップを使用して、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の 32 ビット インスタンスをネイティブ 64 ビットにアップグレードすることはできません。 ただし、データベースがレプリケーションでパブリッシュされていない場合は、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]の 32 ビット インスタンスのデータベースをバックアップまたはデタッチしてから、 [!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)] の新しいインスタンス (64 ビット) に復元またはアタッチすることができます。 master、msdb、および model の各システム データベースにある、すべてのログインとその他のユーザー オブジェクトを再作成する必要があります。  
   

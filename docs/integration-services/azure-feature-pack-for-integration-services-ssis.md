@@ -13,12 +13,12 @@ f1_keywords:
 ms.assetid: 31de555f-ae62-4f2f-a6a6-77fea1fa8189
 author: chugugrace
 ms.author: chugu
-ms.openlocfilehash: e8188dd6b26b3eb81596394ce8b7947654b00df5
-ms.sourcegitcommit: e8af8cfc0bb51f62a4f0fa794c784f1aed006c71
+ms.openlocfilehash: cef051bcd3e7de6f381bba3f15f4e2e720f2a254
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/26/2019
-ms.locfileid: "71294951"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807437"
 ---
 # <a name="azure-feature-pack-for-integration-services-ssis"></a>Integration Services (SSIS) 用の Azure Feature Pack
 
@@ -27,8 +27,9 @@ ms.locfileid: "71294951"
 
 SQL Server Integration Services (SSIS) Feature Pack for Azure は、このページにリストされている SSIS のコンポーネントを提供して、Azure サービスへの接続、Azure とオンプレミスのデータ ソース間でのデータ転送、および Azure に格納されたデータの処理を行うための拡張機能です。
 
-[![SSIS Feature Pack for Azure のダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=54798) **ダウンロード**
+[![SSIS Feature Pack for Azure のダウンロード](https://docs.microsoft.com/analysis-services/analysis-services/media/download.png)](https://www.microsoft.com/download/details.aspx?id=100430) **ダウンロード**
 
+- SQL Server 2019 の場合 - [Microsoft SQL Server 2019 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=100430)
 - SQL Server 2017 の場合 - [Microsoft SQL Server 2017 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=54798)
 - SQL Server 2016 の場合 - [Microsoft SQL Server 2016 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=49492)
 - SQL Server 2014 の場合 - [Microsoft SQL Server 2014 Integration Services Feature Pack for Azure](https://www.microsoft.com/download/details.aspx?id=47366)
@@ -177,3 +178,16 @@ Expand-Archive zulu8.33.0.1-jdk8.0.192-win_x64.zip -DestinationPath C:\
 
 ![SSIS-AzureConnector-CloudArchive-3](../integration-services/media/ssis-azureconnector-cloudarchive-3.png)
   
+## <a name="release-notes"></a>リリース ノート
+
+### <a name="version-1150"></a>バージョン 1.15.0
+
+#### <a name="improvements"></a>機能強化
+
+1. 柔軟なファイル タスクに、フォルダー/ファイルの削除操作が追加されます
+1. 柔軟なファイル ソースに、外部/出力データ型の変換機能が追加されます
+
+#### <a name="bugfixes"></a>バグ修正
+
+1. 特定のケースで、"配列と互換性のない型の要素にアクセスしようとしました" というエラー メッセージと共に発生する Data Lake Storage Gen2 の接続障害がテストされます
+1. Azure ストレージ エミュレーターのサポートが再開されます

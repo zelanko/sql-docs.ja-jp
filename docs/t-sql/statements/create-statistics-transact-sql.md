@@ -26,12 +26,12 @@ ms.assetid: b23e2f6b-076c-4e6d-9281-764bdb616ad2
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: f76f03e2953c6fe460aa958858709d0ca5943bbc
-ms.sourcegitcommit: ac90f8510c1dd38d3a44a45a55d0b0449c2405f5
+ms.openlocfilehash: d232d3985a1a4ab27f5cc69e9fd9e486e41f8fe4
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/18/2019
-ms.locfileid: "72586750"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798377"
 ---
 # <a name="create-statistics-transact-sql"></a>CREATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -165,6 +165,9 @@ CREATE STATISTICS statistics_name
  PERSIST_SAMPLE_PERCENT = { ON | OFF }  
  **ON** の場合、統計では、サンプリング率が明示的に指定されていない後続の更新の作成サンプリング率が保持されます。 **OFF** の場合、統計サンプリング率は、サンプリング率が明示的に指定されていない後続の更新で既定のサンプリングにリセットされます。 既定値は **OFF** です。 
  
+ > [!NOTE]
+ > テーブルが切り捨てられた場合、切り捨てられた HoBT に基づいて作成されたすべての統計は、既定のサンプリング率を使用するように戻されます。
+
  **適用対象**: [!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] ([!INCLUDE[ssSQL15](../../includes/sssql15-md.md)] SP1 CU4 以降) から [!INCLUDE[ssCurrent](../../includes/sscurrent-md.md)] ([!INCLUDE[ssSQL17](../../includes/sssql17-md.md)] CU1 以降)。    
   
  STATS_STREAM **=** _stats_stream_  

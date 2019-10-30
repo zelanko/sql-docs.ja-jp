@@ -21,12 +21,12 @@ ms.assetid: 919158f2-38d0-4f68-82ab-e1633bd0d308
 author: CarlRabeler
 ms.author: carlrab
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 41cc9d68ad0ad9c39795f156a17291ce6cdeb33f
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: cd6ab74a1009862be44950bd77bd105acf76b6d5
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68099782"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72798410"
 ---
 # <a name="update-statistics-transact-sql"></a>UPDATE STATISTICS (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-all-md](../../includes/tsql-appliesto-ss2008-all-md.md)]
@@ -125,6 +125,9 @@ PERSIST_SAMPLE_PERCENT = { ON | OFF }
  > AUTO_UPDATE_STATISTICS が実行された場合、保存されたサンプリング率が使用可能な場合はそのサンプリング率が使用され、そうでない場合は既定のサンプリング率が使用されます。
  > RESAMPLE の動作は、このオプションの影響を受けません。
  
+ > [!NOTE]
+ > テーブルが切り捨てられた場合、切り捨てられた HoBT に基づいて作成されたすべての統計は、既定のサンプリング率を使用するように戻されます。
+ 
  > [!TIP] 
  > [DBCC SHOW_STATISTICS](../../t-sql/database-console-commands/dbcc-show-statistics-transact-sql.md) と [sys.dm_db_stats_properties](../../relational-databases/system-dynamic-management-views/sys-dm-db-stats-properties-transact-sql.md) は、選択した統計について保存されたサンプル率値を公開します。
  
@@ -190,7 +193,7 @@ MAXDOP = *max_degree_of_parallelism*
 * `MAXDOP` オプションは、`STATS_STREAM`、`ROWCOUNT`、および `PAGECOUNT` の各オプションと互換性がありません。
 * `MAXDOP` オプションは、Resource Governor ワークロード グループの `MAX_DOP` の設定によって制限されます (使用されている場合)。
 
-### <a name="updating-all-statistics-with-spupdatestats"></a>sp_updatestats によるすべての統計の更新  
+### <a name="updating-all-statistics-with-sp_updatestats"></a>sp_updatestats によるすべての統計の更新  
 データベース内のすべてのユーザー定義および内部テーブルの統計を更新する方法については、ストアド プロシージャ [sp_updatestats &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-updatestats-transact-sql.md) の説明を参照してください。 たとえば、次のコマンドは、sp_updatestats を呼び出してデータベースのすべての統計を更新します。  
   
 ```sql  

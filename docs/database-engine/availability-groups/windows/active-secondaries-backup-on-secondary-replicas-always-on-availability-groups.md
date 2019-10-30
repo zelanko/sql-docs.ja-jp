@@ -18,12 +18,12 @@ helpviewer_keywords:
 ms.assetid: 82afe51b-71d1-4d5b-b20a-b57afc002405
 author: MashaMSFT
 ms.author: mathoma
-ms.openlocfilehash: ccaf0091472ed0b7c87dbb790228024d0224e91a
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: a93e00b590dfd6f9dc083f5443e6074894184afd
+ms.sourcegitcommit: f912c101d2939084c4ea2e9881eb98e1afa29dad
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67991693"
+ms.lasthandoff: 10/23/2019
+ms.locfileid: "72807429"
 ---
 # <a name="offload-supported-backups-to-secondary-replicas-of-an-availability-group"></a>可用性グループのセカンダリ レプリカにサポートされているバックアップをオフロードする
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -38,7 +38,9 @@ ms.locfileid: "67991693"
   
 -   セカンダリ レプリカで実行されたときに**BACKUP DATABASE** でサポートされるのは、データベース、ファイル、またはファイル グループのコピーのみの完全バックアップだけです。 コピーのみのバックアップはログ チェーンには影響しません。また、コピーのみのバックアップを実行しても、差分ビットマップは消去されません。  
   
--   差分バックアップは、セカンダリ レプリカではサポートされていません。  
+-   差分バックアップは、セカンダリ レプリカではサポートされていません。
+
+-   同時バックアップ (プライマリ レプリカでトランザクション ログ バックアップを実行しながら、セカンダリ レプリカでデータベースの完全バックアップを実行するなど) は、現在サポートされていません。 
   
 -   **BACKUP LOG** でサポートされるのは通常のログ バックアップだけです (セカンダリ レプリカでのログ バックアップでは、COPY_ONLY オプションはサポートされていません)。  
   
