@@ -9,10 +9,10 @@ author: dphansen
 ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: 8333da0bd3b5b4ad4f0b377edec110e30565c273
-ms.sourcegitcommit: fd3e81c55745da5497858abccf8e1f26e3a7ea7d
+ms.sourcegitcommit: 8cb26b7dd40280a7403d46ee59a4e57be55ab462
 ms.translationtype: MT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/01/2019
+ms.lasthandoff: 10/17/2019
 ms.locfileid: "71713177"
 ---
 # <a name="monitor-sql-server-machine-learning-services-using-dynamic-management-views-dmvs"></a>動的管理ビュー (Dmv) を使用して SQL Server Machine Learning Services を監視する
@@ -38,17 +38,17 @@ Dmv に関する一般的な情報については、「[システム動的管理
 
 ## <a name="dynamic-management-views"></a>動的管理ビュー
 
-SQL Server で machine learning ワークロードを監視するときに、次の動的管理ビューを使用できます。 Dmv に対してクエリを実行`VIEW SERVER STATE`するには、インスタンスに対する権限が必要です。
+SQL Server で machine learning ワークロードを監視するときに、次の動的管理ビューを使用できます。 Dmv に対してクエリを実行するには、インスタンスに対する `VIEW SERVER STATE` 権限が必要です。
 
 | 動的管理ビュー | 型 | 説明 |
 |-------------------------|------|-------------|
 | [sys.dm_external_script_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md) | 実行 | 外部スクリプトを実行しているアクティブなワーカー アカウントごとに行を返します。 |
 | [sys.dm_external_script_execution_stats](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-execution-stats.md) | 実行 | 外部スクリプト要求の種類ごとに 1 つの行を返します。 |
-| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 実行 | サーバーで管理されているパフォーマンス カウンターごとに 1 行のデータを返します。 検索条件`WHERE object_name LIKE '%External Scripts%'`を使用する場合は、この情報を使用して、実行されたスクリプトの数、認証モードを使用して実行されたスクリプト、またはインスタンス全体に対して発行された R または Python の呼び出しの数を確認できます。 |
+| [sys.dm_os_performance_counters](../../relational-databases/system-dynamic-management-views/sys-dm-os-performance-counters-transact-sql.md) | 実行 | サーバーによって管理されているパフォーマンスカウンターごとに1行の値を返します。 検索条件 `WHERE object_name LIKE '%External Scripts%'` を使用する場合、この情報を使用して、実行されたスクリプトの数、認証モードを使用して実行されたスクリプト、またはインスタンス全体に対して発行された R または Python の呼び出しの数を確認できます。 |
 | [sys.dm_resource_governor_external_resource_pools](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pools.md) | [リソース ガバナー] | Resource Governor 内の現在の外部リソースプールの状態、リソースプールの現在の構成、およびリソースプールの統計に関する情報を返します。 |
 | [sys.dm_resource_governor_external_resource_pool_affinity](../../relational-databases/system-dynamic-management-views/sys-dm-resource-governor-external-resource-pool-affinity-transact-sql.md) | [リソース ガバナー] | Resource Governor 内の現在の外部リソースプールの構成に関する CPU の関係情報を返します。 [!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] のスケジューラごとに 1 行のデータを返します。各スケジューラは個別のプロセッサにマップされています。 このビューは、スケジューラの状況の監視やランナウェイ タスクの特定に使用できます。 |
 
-インスタンスの監視[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)]の詳細については、「[カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) 」および「 [Resource Governor 関連の動的管理ビュー](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)」を参照してください。
+@No__t_0 インスタンスの監視の詳細については、「[カタログビュー](../../relational-databases/system-catalog-views/catalog-views-transact-sql.md) 」および「 [Resource Governor 関連する動的管理ビュー](../../relational-databases/system-dynamic-management-views/resource-governor-related-dynamic-management-views-transact-sql.md)」を参照してください。
 
 ## <a name="settings-and-configuration"></a>設定と構成
 
@@ -91,7 +91,7 @@ WHERE name = 'external scripts enabled';
 
 ![アクティブな設定クエリからの出力](media/dmv-active-sessions.png "アクティブな設定クエリからの出力")
 
-この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「 [_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)」 、「[_exec_sessions](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」、および「 [_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)」を参照してください。
+この出力を取得するには、次のクエリを実行します。 使用される動的管理ビューの詳細については、「 [sys.dm_exec_requests](../../relational-databases/system-dynamic-management-views/sys-dm-external-script-requests.md)」 、「[sys.dm_external_script_request](../../relational-databases/system-catalog-views/sys-configurations-transact-sql.md)」、および「 [sys.dm_exec_sessions](../../relational-databases/system-dynamic-management-views/sys-dm-exec-sessions-transact-sql.md)」を参照してください。
 
 ```sql
 SELECT r.session_id, r.blocking_session_id, r.status, DB_NAME(s.database_id) AS database_name
@@ -108,19 +108,19 @@ ON s.session_id = r.session_id;
 
 | [列] | 説明 |
 |--------|-------------|
-| session_id | アクティブな各プライマリ接続に関連付けられたセッションの識別子。 |
-| blocking_session_id | 要求をブロックしているセッションの ID。 この列が NULL の場合は、要求がブロックされていないか、ブロックしているセッションのセッション情報が使用または識別できません。 |
-| status | 要求の状態。 |
+| session_id | アクティブな各プライマリ接続に関連付けられているセッションを識別します。 |
+| blocking_session_id | 要求をブロックしているセッションの ID。 この列が NULL の場合、要求はブロックされません。または、ブロックしているセッションのセッション情報が使用できません (または識別できません)。 |
+| ステータス | 要求の状態。 |
 | database_name | 各セッションの現在のデータベースの名前。 |
 | login_name | セッションを現在実行しているログイン名 SQL Server ます。 |
 | wait_time | 要求が現在ブロックされている場合の現時点での待機時間 (ミリ秒単位)。 NULL 値は許可されません。 |
-| wait_type | 要求が現在ブロックされている場合の待機の種類。 待機の種類の詳細については、「 [_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 |
-| last_wait_type | 要求がブロックされていた場合の最後の待機の種類。 |
-| total_elapsed_time | 要求を受信してから経過した総時間 (ミリ秒単位)。 |
-| cpu_time | 要求で使用される CPU 時間 (ミリ秒単位)。 |
-| reads | 要求で実行された読み取りの数。 |
-| logical_reads | 要求で実行された論理読み取りの数。 |
-| writes | 要求で実行された書き込みの数。 |
+| wait_type | 要求が現在ブロックされている場合、この列は待機の種類を返します。 待機の種類の詳細については、「 [_os_wait_stats](../../relational-databases/system-dynamic-management-views/sys-dm-os-wait-stats-transact-sql.md)」を参照してください。 |
+| last_wait_type | この要求が既にブロックされている場合、この列は最後の待機の種類を返します。 |
+| total_elapsed_time | 要求が到着してから経過した合計時間 (ミリ秒単位)。 |
+| cpu_time | 要求で使用された CPU 時間 (ミリ秒単位)。 |
+| 読ん | この要求で実行された読み取りの数。 |
+| logical_reads | 要求によって実行された論理読み取りの数。 |
+| よる | この要求で実行された書き込みの数。 |
 | language | サポートされているスクリプト言語を表すキーワードです。 |
 | degree_of_parallelism | 作成された並列処理の数を示す数値です。 この値は、要求された並列処理の数と異なる場合があります。 |
 | external_user_name | スクリプトが実行されたときの Windows ワーカー アカウント。 |
@@ -167,10 +167,10 @@ WHERE object_name LIKE '%External Scripts%'
 | カウンター | 説明 |
 |---------|-------------|
 | Total Executions | ローカル呼び出しまたはリモート呼び出しによって開始された外部プロセスの数。 |
-| Parallel Executions | スクリプトに _\@並列_仕様が含まれており[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 、並列クエリプランを生成して使用できる回数。 |
+| Parallel Executions | スクリプトに _\@parallel_指定が含まれており、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] が並列クエリプランを生成して使用することができた回数。 |
 | Streaming Executions | ストリーミング機能が呼び出された回数。 |
 | SQL CC Executions | 呼び出しがリモートでインスタンス化され、SQL Server が計算コンテキストとして使用された場合に実行される外部スクリプトの数。 |
-| Implied Auth.Login | 暗黙の認証を使用して ODBC ループバック呼び出しが行われた回数。つまり、は[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] 、スクリプト要求を送信するユーザーの代わりに呼び出しを実行します。 |
+| Implied Auth.Login | 暗黙の認証を使用して ODBC ループバック呼び出しが行われた回数。つまり、[!INCLUDE[ssNoVersion_md](../../includes/ssnoversion-md.md)] は、スクリプト要求を送信するユーザーの代わりに呼び出しを実行します。 |
 | Total Execution Time (ms) | 呼び出しから呼び出しの完了までの経過時間。 |
 | Execution Errors | スクリプトがエラーを報告した回数。 この数には、R または Python のエラーは含まれません。 |
 
@@ -200,7 +200,7 @@ FROM sys.dm_os_sys_info;
 
 ## <a name="memory-configuration"></a>メモリ構成
 
-SQL Server と外部リソースプールの割合での最大メモリ構成に関する情報を表示します。 SQL Server が既定値の `max server memory (MB)` で実行されている場合、OS メモリの 100% と見なされます。
+SQL Server と外部リソースプールの割合での最大メモリ構成に関する情報を表示します。 SQL Server が既定値の `max server memory (MB)` で実行されている場合、OS メモリの100% と見なされます。
 
 ![メモリ構成クエリからの出力](media/dmv-memory-configuration.png "メモリ構成クエリからの出力")
 
@@ -248,10 +248,10 @@ FROM sys.dm_resource_governor_external_resource_pools AS ep;
 
 | [列] | 説明 |
 |--------|-------------|
-| pool_name | リソースプールの名前。 SQL Server リソースプールにはプレフィックス`SQL Server`が付き、外部リソースプールに`External Pool`はプレフィックスが付きます。
+| pool_name | リソースプールの名前。 SQL Server リソースプールの先頭には `SQL Server` が付けられ、外部リソースプールには `External Pool` がプレフィックスとして付けられます。
 | total_cpu_usage_hours | リソースガバナー統計がリセットされた後の累積 CPU 使用率 (ミリ秒単位)。 |
 | read_io_completed_total | リソース ガバナー統計がリセットされた後に完了した読み取り IO の合計。 |
-| write_io_completed_total | リソース ガバナー統計がリセットされた後に完了した書き込み IO の合計。 |
+| write_io_completed_total | リソースガバナー統計がリセットされた後に完了した書き込み Io の合計。 |
 
 ## <a name="installed-packages"></a>インストールされたパッケージ
 
@@ -278,7 +278,7 @@ WITH result sets((Package NVARCHAR(255), Version NVARCHAR(100), Depends NVARCHAR
 | [列] | 説明 |
 |--------|-------------|
 | [パッケージ] | インストールされているパッケージの名前。 |
-| バージョン | パッケージのバージョン。 |
+| Version | パッケージのバージョン。 |
 | 依存 | インストールされているパッケージが依存しているパッケージを一覧表示します。 |
 | ライセンス | インストールされているパッケージのライセンス。 |
 | LibPath | パッケージが格納されているディレクトリ。 |
@@ -304,8 +304,8 @@ WITH result sets((Package NVARCHAR(128), Version NVARCHAR(128), Location NVARCHA
 | [列] | 説明 |
 |--------|-------------|
 | [パッケージ] | インストールされているパッケージの名前。 |
-| バージョン | パッケージのバージョン。 |
-| 場所 | パッケージが格納されているディレクトリ。 |
+| Version | パッケージのバージョン。 |
+| Location | パッケージが格納されているディレクトリ。 |
 
 ## <a name="next-steps"></a>次の手順
 

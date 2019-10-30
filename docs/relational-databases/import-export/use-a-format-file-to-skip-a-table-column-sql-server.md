@@ -14,12 +14,12 @@ ms.assetid: 30e0e7b9-d131-46c7-90a4-6ccf77e3d4f3
 author: MashaMSFT
 ms.author: mathoma
 monikerRange: '>=aps-pdw-2016||=azuresqldb-current||=azure-sqldw-latest||>=sql-server-2016||=sqlallproducts-allversions||>=sql-server-linux-2017||=azuresqldb-mi-current'
-ms.openlocfilehash: 1f1e1c469b7864ed9a454cd8f18fa81903865be6
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 9acac3eca271c8bb8c20df7e429dd830d19bdd43
+ms.sourcegitcommit: 2a06c87aa195bc6743ebdc14b91eb71ab6b91298
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68024979"
+ms.lasthandoff: 10/25/2019
+ms.locfileid: "72909253"
 ---
 # <a name="use-a-format-file-to-skip-a-table-column-sql-server"></a>フォーマット ファイルを使用したテーブル列のスキップ (SQL Server)
 [!INCLUDE[appliesto-ss-asdb-asdw-pdw-md](../../includes/appliesto-ss-asdb-asdw-pdw-md.md)]
@@ -59,8 +59,6 @@ XML 以外のフォーマット ファイルまたは XML フォーマット フ
 
 2.   テキスト エディターで、既定のフォーマット ファイルを変更します。
 
-[!INCLUDE[freshInclude](../../includes/paragraph-content/fresh-note-steps-feedback.md)]
-
 変更後のフォーマット ファイルで、存在するそれぞれのフィールドをインポート先のテーブルの対応する列にマップする必要があります。 どのテーブル列 (複数可) をスキップするかも指定する必要があります。 
 
 たとえば、`myTestSkipCol2.dat` から `myTestSkipCol` テーブルにデータを一括インポートするには、フォーマット ファイルで最初のデータ フィールドを `Col1` にマップし、`Col2` をスキップして、2 番目のフィールドを `Col3` にマップする必要があります。  
@@ -81,7 +79,7 @@ bcp WideWorldImporters..myTestSkipCol format nul -f myTestSkipCol_Default.fmt -c
   
  次のスクリーンショットに、この既定のフォーマット ファイルのサンプルで使用されている値を示します。 
   
- ![myTestSkipCol 用の既定の XML 以外のフォーマット ファイル](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol 用の既定の XML 以外のフォーマット ファイル")  
+ ![myTestSkipCol 用の既定の非 XML 形式ファイル](../../relational-databases/import-export/media/mytestskipcol-f-c-default-fmt.gif "myTestSkipCol 用の既定の非 XML 形式ファイル")  
   
 > [!NOTE]  
 >  フォーマット ファイル フィールドの詳細については、「[XML 以外のフォーマット ファイル &#40;SQL Server&#41;](../../relational-databases/import-export/non-xml-format-files-sql-server.md)」をご覧ください。  
