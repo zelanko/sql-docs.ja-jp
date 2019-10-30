@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplfailovermode (TRANSACT-SQL) |Microsoft Docs
+title: sp_helpreplfailovermode (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -67,6 +67,6 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helpreplfailovermode**します。  
   
 ## <a name="see-also"></a>参照  
- [sp_setreplfailovermode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   
