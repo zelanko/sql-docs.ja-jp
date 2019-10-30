@@ -3,46 +3,60 @@ title: SQL Server dacpac の拡張機能
 titleSuffix: Azure Data Studio
 description: Azure Data Studio 用の SQL Server dacpac の拡張機能 (プレビュー) をインストールして使用する
 ms.custom: seodec18
-ms.date: 03/18/2019
+ms.date: 10/21/2019
 ms.reviewer: alayu; sstein
 ms.prod: sql
 ms.technology: azure-data-studio
 ms.topic: conceptual
 author: yualan
 ms.author: alayu
-ms.openlocfilehash: e40e377310b33034b4abecdc5e58eab17d39695d
-ms.sourcegitcommit: db9bed6214f9dca82dccb4ccd4a2417c62e4f1bd
+ms.openlocfilehash: 769e6157e7d84702716dfce79d0217efeee83076
+ms.sourcegitcommit: a165052c789a327a3a7202872669ce039bd9e495
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/25/2019
-ms.locfileid: "67959192"
+ms.lasthandoff: 10/22/2019
+ms.locfileid: "72783328"
 ---
 # <a name="sql-server-dacpac-extension-preview"></a>SQL Server dacpac の拡張機能 (プレビュー)
 
-**データ層アプリケーション ウィザード**では、使いやすいエクスペリエンスによって、.dacpac ファイルの配置と抽出、および bacpac ファイルのインポートとエクスポートを行うことができます。
+**データ層アプリケーション ウィザード**には、dacpac ファイルの配置と抽出、および bacpac ファイルのインポートとエクスポートを行うための、使いやすいウィザード エクスペリエンスが用意されています。
 
 このエクスペリエンスは、現在、初期のプレビュー段階にあります。 問題と機能に関する要望を[こちら](https://github.com/microsoft/azuredatastudio/issues)にご報告ください。
 
-![data-actions](media/sql-server-dacpac-extension/data-tier-application-actions.png)
 
- ### <a name="requirements"></a>必要条件
- * このウィザードを開始するには、SQL Server インスタンスへのアクティブな接続が必要です。
+## <a name="features"></a>[機能]
 
- ### <a name="how-do-i-start-the-data-tier-application-wizard"></a>データ層アプリケーション ウィザードを開始するにはどうすればよいですか?
- * このウィザードのメイン エントリ ポイントは、オブジェクト エクスプローラーでデータベースを右クリックし、**データ層アプリケーション ウィザード**をクリックします。
- * SQL Server インスタンスに接続されているユーザーの場合は、コマンド パレット (Ctrl + Shift + P) から、**データ層アプリケーション ウィザード**を検索することで、そのウィザードを起動することもできます。
+* dacpac を SQL Server インスタンスに配置する
+* SQL Server インスタンスを dacpac に抽出する
+* bacpac からデータベースを作成する
+* bacpac にスキーマとデータをエクスポートする
 
- ### <a name="why-would-i-use-the-data-tier-application-wizard"></a>データ層アプリケーション ウィザードを使用する理由
- .dacpac ファイルを抽出および展開し、.bacpac ファイルをインポートおよびエクスポートする機能を Azure Data Studio に追加するために、このウィザードは作成されました。
+![dacpac 拡張機能のデモ gif](media/extensions/sql-server-dacpac-extension/dacpac-extension-demo.gif)
 
-## <a name="install-the-sql-server-dacpac-extension"></a>SQL Server dacpac の拡張機能をインストールする
 
-1. 拡張機能マネージャーを開いて、使用可能な拡張機能にアクセスするには、拡張機能アイコンを選択するか、 **[表示]** メニューの **[拡張機能]** を選択します。
-2. SQL Server dacpac の拡張機能を選択し、 **[インストール]** をクリックします。
-1. **[再読み込み]** を選択して拡張機能を有効にします (拡張機能を初めてインストールするときにのみ必要です)。
-2. ご利用のサーバーまたはデータベースを右クリックし、 **[管理]** を選択することで、ご利用の管理ダッシュボードに移動します。
-3. インストールされた拡張機能が、ご利用の管理ダッシュボード上にタブとして表示されます。
+## <a name="why-would-i-use-the-data-tier-application-wizard"></a>データ層アプリケーション ウィザードを使用する理由
+
+このウィザードを使用すると、dacpac および bacpac ファイルを管理しやすくなり、お客様のアプリケーションをサポートするデータ層要素の開発と配置が簡単になります。 データ層アプリケーションの使用方法について詳しくは、[Microsoft のドキュメントを参照してください。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)
+
+
+## <a name="install-the-extension"></a>拡張機能をインストールする
+
+1. 拡張機能アイコンを選択すると、使用可能な拡張機能が表示されます。
+
+    ![拡張機能マネージャーのアイコン](media/extensions/extension-manager-icon.png)
+
+2. **SQL Server dacpac** の拡張機能を検索し、それを選択して詳細を表示します。 **[インストール]** をクリックして、拡張機能を追加します。
+
+3. インストール後、 **[再度読み込む]** をクリックすると、Azure Data Studio で拡張機能が有効になります (初めて拡張機能をインストールするときにのみ必須)。
+
+
+## <a name="launch-the-data-tier-application-wizard"></a>データ層アプリケーション ウィザードを起動する
+
+ウィザードを起動するには、[データベース] フォルダーを右クリックするか、オブジェクト エクスプローラーで特定のデータベースを右クリックします。 次に、 **[Data-tier Application Wizard]\(データ層アプリケーション ウィザード\)** をクリックします。
+
+![dacpac 拡張機能の起動メニュー](media/extensions/sql-server-dacpac-extension/dacpac-extension-launch.png)
+
 
 ## <a name="next-steps"></a>次の手順
 
-dacpac の詳細については、[こちらのドキュメント](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)を参照してください。
+dacpac について詳しくは、[Microsoft のドキュメントを参照してください。](https://docs.microsoft.com/sql/relational-databases/data-tier-applications/data-tier-applications?view=sql-server-2017)

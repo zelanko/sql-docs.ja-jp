@@ -16,12 +16,12 @@ helpviewer_keywords:
 ms.assetid: 390eef67-1a49-4185-a971-e07765be9717
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 30a66dbcf9126031caa84cdf0ff7623d2dd16046
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: ebe6db6130b3d9f058c1c8c65572263348f3dd99
+ms.sourcegitcommit: 82a1ad732fb31d5fa4368c6270185c3f99827c97
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "67927778"
+ms.lasthandoff: 10/21/2019
+ms.locfileid: "72689842"
 ---
 # <a name="data-type-synonyms-transact-sql"></a>データ型のシノニム (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2012-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2012-xxxx-xxxx-xxx-md.md)]
@@ -48,7 +48,7 @@ ISO との互換性を保つために、[!INCLUDE[ssNoVersion](../../includes/ss
 |**national text**|**ntext**|  
 |**timestamp**|rowversion|  
   
-データ型のシノニムは、データ定義言語 (DDL) ステートメントの中で、対応する基本データ型の名前の代わりに使用できます。 これらのステートメントには、CREATE TABLE、CREATE PROCEDURE、および DECLARE *@variable* があります。 ただし、オブジェクトの作成後は、シノニムを確認できなくなります。 オブジェクトが作成されると、オブジェクトにはシノニムに関連付けられている基本データ型が割り当てられます。 オブジェクトを作成したステートメント内にシノニムが指定されたという記録は存在しません。
+データ型のシノニムは、データ定義言語 (DDL) ステートメントの中で、対応する基本データ型の名前の代わりに使用できます。 このようなステートメントには、CREATE TABLE、CREATE PROCEDURE、および DECLARE *\@variable* などがあります。 ただし、オブジェクトの作成後は、シノニムを確認できなくなります。 オブジェクトが作成されると、オブジェクトにはシノニムに関連付けられている基本データ型が割り当てられます。 オブジェクトを作成したステートメント内にシノニムが指定されたという記録は存在しません。
   
 結果セット列や式など、元のオブジェクトから派生したオブジェクトには、基本データ型が割り当てられます。 元のオブジェクトまたは派生したオブジェクトを使用するすべてのメタデータ関数では、シノニムではなく、基本データ型が報告されます。
 
