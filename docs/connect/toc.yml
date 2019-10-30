@@ -2507,8 +2507,6 @@
           href: ../connect/jdbc/understanding-java-ee-support.md
         - name: JDBC Driver の展開
           href: ../connect/jdbc/deploying-the-jdbc-driver.md
-        - name: Microsoft JDBC Driver の再配布
-          href: ../connect/jdbc/redistributing-the-microsoft-jdbc-driver.md
         - name: JDBC ドライバーの追加情報の検索
           href: ../connect/jdbc/finding-additional-jdbc-driver-information.md
         - name: Microsoft SQL Server 用 JDBC Driver のサポート表
