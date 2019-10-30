@@ -1,5 +1,5 @@
 ---
-title: sp_helptracertokenhistory (Transact-sql) |Microsoft Docs
+title: sp_helptracertokenhistory (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -42,7 +42,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'`トレーサートークンが挿入されたパブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
-`[ @tracer_id = ] tracer_id`履歴情報が返される[MStracer_tokens &#40;transact-sql&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)テーブル内のトレーサートークンの ID を指定します。 *tracer_id*は**int**,、既定値はありません。  
+`[ @tracer_id = ] tracer_id`履歴情報が返される[MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)テーブル内のトレーサートークンの ID を指定します。 *tracer_id*は**int**,、既定値はありません。  
   
 `[ @publisher = ] 'publisher'`パブリッシャーの名前です。 *publisher*は**sysname**で、既定値は NULL です。  
   
@@ -56,7 +56,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
 |**distributor_latency**|**bigint**|トレーサートークンレコードがパブリッシャーでコミットされてからディストリビューター側でコミットされるまでの秒数。|  
-|**サブスクライバー**|**sysname**|トレーサートークンを受け取ったサブスクライバーの名前。|  
+|**subscriber**|**sysname**|トレーサートークンを受け取ったサブスクライバーの名前。|  
 |**subscriber_db**|**sysname**|トレーサートークンレコードが挿入されたサブスクリプションデータベースの名前。|  
 |**subscriber_latency**|**bigint**|トレーサートークンレコードがディストリビューター側でコミットされてからサブスクライバー側でコミットされるまでの秒数。|  
 |**overall_latency**|**bigint**|トレーサートークンレコードがパブリッシャーでコミットされてから、サブスクライバーでトークンレコードがコミットされるまでの秒数。|  
@@ -67,7 +67,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>コメント  
  **sp_helptracertokenhistory**は、トランザクションレプリケーションで使用します。  
   
- [Sp_helptracertokens &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)を実行して、パブリケーションのトレーサートークンの一覧を取得します。  
+ [Sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)を実行して、パブリケーションのトレーサートークンの一覧を取得します。  
   
  結果セットの値が NULL の場合は、待機時間の統計を計算できないことを意味します。 これは、トレーサートークンがディストリビューターまたはいずれかのサブスクライバーで受信されていないためです。  
   
@@ -79,6 +79,6 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>関連項目  
  [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   
