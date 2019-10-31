@@ -10,7 +10,7 @@ ms.author: davidph
 monikerRange: '>=sql-server-2016||>=sql-server-linux-ver15||=sqlallproducts-allversions'
 ms.openlocfilehash: aba6990fbed5b24d63d4ab5c16e192718aeff305
 ms.sourcegitcommit: 321497065ecd7ecde9bff378464db8da426e9e14
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 08/01/2019
 ms.locfileid: "68714681"
@@ -73,7 +73,7 @@ ms.locfileid: "68714681"
 
     + SQL テーブルからストアドモデルを呼び出すには、SELECT ステートメントを使用します。 モデルはテーブルから**varbinary (max)** データとして取得され、SQL 変数 _\@lmodel2_に格納されて、パラメーター *mod*としてシステムストアドプロシージャ[sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)に渡されます。
 
-    + スコアリングの入力として使用されるデータは、sql クエリとして定義され、sql 変数 _\@入力_に文字列として格納されます。 データベースからデータが取得されると、 *Inputdataset*と呼ばれるデータフレームに格納されます。これは、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャに対する入力データの既定の名前にすぎません。必要に応じて、  *_\@input_data_1_name_* パラメーターを使用して別の変数名を定義できます。
+    + スコアリングの入力として使用されるデータは、sql クエリとして定義され、sql 変数 _\@入力_に文字列として格納されます。 データベースからデータが取得されると、 *Inputdataset*と呼ばれるデータフレームに格納されます。これは、 [sp_execute_external_script](../../relational-databases/system-stored-procedures/sp-execute-external-script-transact-sql.md)プロシージャに対する入力データの既定の名前にすぎません。必要に応じて、 *_\@input_data_1_name_* パラメーターを使用して別の変数名を定義できます。
 
     + スコアを生成するために、ストアドプロシージャは**RevoScaleR**ライブラリから rxPredict 関数を呼び出します。
 

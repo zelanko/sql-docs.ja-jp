@@ -9,12 +9,12 @@ ms.date: 08/21/2019
 ms.topic: tutorial
 ms.prod: sql
 ms.technology: big-data-cluster
-ms.openlocfilehash: 5ffc2773144d2b1a170e2f087d7abf607af99ef6
-ms.sourcegitcommit: 4fb6bc7c81a692a2df706df063d36afad42816af
-ms.translationtype: MT
+ms.openlocfilehash: 6ebcc95d48f894ff8cef9771946130fc67216a45
+ms.sourcegitcommit: c8b8101c62a6af3e4a7244683e3f34f7189c150f
+ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 10/29/2019
-ms.locfileid: "73049855"
+ms.lasthandoff: 10/31/2019
+ms.locfileid: "73182638"
 ---
 # <a name="tutorial-ingest-data-into-a-sql-server-data-pool-with-spark-jobs"></a>チュートリアル: Spark ジョブを使用して SQL Server データプールにデータを取り込む
 
@@ -38,7 +38,7 @@ ms.locfileid: "73049855"
    - **kubectl**
    - **Azure Data Studio**
    - **SQL Server 2019 拡張機能**
-- [ビッグ データ クラスターにサンプル データを読み込む](tutorial-load-sample-data.md)
+- [ビッグ データ クラスターへのサンプル データの読み込み](tutorial-load-sample-data.md)
 
 ## <a name="create-an-external-table-in-the-data-pool"></a>データ プールに外部テーブルを作成する
 
@@ -131,9 +131,9 @@ ms.locfileid: "73049855"
 
 次の手順は、HDFS からデータをデータ プールに読み込む Spark ストリーミング ジョブを示しています。
 
-1. 取り込まれたデータに対してクエリを実行する前に、タスク履歴出力を調べて、ジョブが完了したことを確認します。
+1. 取り込まれたデータに対してクエリを実行する前に、Yarn App ID、Spark UI、およびドライバーログを含む Spark の実行状態を確認してください。
 
-   ![Spark ジョブ履歴](media/tutorial-data-pool-ingest-spark/spark-task-history.png)
+   ![Spark 実行の詳細](./media/tutorial-data-pool-ingest-spark/Spark-Joblog-sparkui-yarn.png)
 
 1. このチュートリアルで最初に開いた SQL Server マスター インスタンス クエリ ウィンドウに戻ります。
 

@@ -292,7 +292,7 @@ PAUSE
   
 2.  パブリケーション データベースに <xref:Microsoft.SqlServer.Replication.ReplicationDatabase> クラスのインスタンスを作成するには、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.ConnectionContext%2A> プロパティに手順 1. の <xref:Microsoft.SqlServer.Management.Common.ServerConnection> インスタンスを設定し、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> メソッドを呼び出します。 If <xref:Microsoft.SqlServer.Replication.ReplicationObject.LoadProperties%2A> から **false**が返された場合は、データベースが存在していることを確認してください。  
   
-3.  If <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> プロパティが **false**の場合は、このプロパティに **@allow_subscriber_initiated_snapshot** を設定して、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>」をご覧ください。  
+3.  If <xref:Microsoft.SqlServer.Replication.ReplicationDatabase.EnabledMergePublishing%2A> プロパティが **false**の場合は、このプロパティに **\@allow_subscriber_initiated_snapshot** を設定して、 <xref:Microsoft.SqlServer.Replication.ReplicationObject.CommitPropertyChanges%2A>」をご覧ください。  
   
 4.  <xref:Microsoft.SqlServer.Replication.MergePublication> クラスのインスタンスを作成し、このオブジェクトに次のプロパティを設定します。  
   
@@ -322,7 +322,7 @@ PAUSE
   
 8.  手順 4. で作成した <xref:Microsoft.SqlServer.Replication.Publication.StartSnapshotGenerationAgentJob%2A> オブジェクトの <xref:Microsoft.SqlServer.Replication.MergePublication> メソッドを呼び出します。 これにより、初期スナップショットを生成するエージェント ジョブが開始されます。 初期スナップショットの作成と、スナップショット エージェントのカスタム スケジュールの定義については、「 [Create and Apply the Initial Snapshot](../../relational-databases/replication/create-and-apply-the-initial-snapshot.md)」を参照してください。  
   
-9. (省略可) 初期スナップショットが使用できる状態にあるかを調べるには、 **@allow_subscriber_initiated_snapshot** プロパティの値が <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> であることを確認します。  
+9. (省略可) 初期スナップショットが使用できる状態にあるかを調べるには、 **\@allow_subscriber_initiated_snapshot** プロパティの値が <xref:Microsoft.SqlServer.Replication.MergePublication.SnapshotAvailable%2A> であることを確認します。  
   
 10. サブスクライバーのマージ エージェントの初回接続時に、パーティション スナップショットが自動的に生成されます。  
   

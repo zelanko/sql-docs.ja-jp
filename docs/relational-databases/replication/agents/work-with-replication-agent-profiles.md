@@ -140,7 +140,7 @@ ms.locfileid: "72907805"
   
 1.  ディストリビューターで、[sp_add_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-add-agent-profile-transact-sql.md) を実行します。 **\@name** を指定し、 **\@profile_type** に **1** を、 **\@agent_type** に次のいずれかの値を指定します。  
   
-    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -158,7 +158,7 @@ ms.locfileid: "72907805"
   
 1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **\@agent_type** に指定します。  
   
-    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -189,7 +189,7 @@ ms.locfileid: "72907805"
   
 1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **\@agent_type** に指定します。  
   
-    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
@@ -207,7 +207,7 @@ ms.locfileid: "72907805"
   
 1.  ディストリビューターで、[sp_help_agent_profile &#40;Transact-SQL&#41;](../../../relational-databases/system-stored-procedures/sp-help-agent-profile-transact-sql.md) を実行します。 次のいずれかの値を **\@agent_type** に指定します。  
   
-    -   **@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
+    -   **\@profile_type** - [Replication Snapshot Agent](../../../relational-databases/replication/agents/replication-snapshot-agent.md)  
   
     -   **2** - [Replication Log Reader Agent](../../../relational-databases/replication/agents/replication-log-reader-agent.md)  
   
