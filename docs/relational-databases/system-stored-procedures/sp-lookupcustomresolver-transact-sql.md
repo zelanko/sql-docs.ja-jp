@@ -1,5 +1,5 @@
 ---
-title: sp_lookupcustomresolver (TRANSACT-SQL) |Microsoft Docs
+title: sp_lookupcustomresolver (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67937903"
 ---
-# <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (TRANSACT-SQL)
+# <a name="splookupcustomresolver-transact-sql"></a>sp_lookupcustomresolver (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   ビジネス ロジック ハンドラーの情報、またはディストリビューターで登録されている COM ベースのカスタム競合回避モジュールのクラス ID (CLSID) の値を返します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -50,7 +50,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 `[ @dotnet_assembly_name = ] 'dotnet_assembly_name' OUTPUT` ビジネス ロジック ハンドラーを実装するアセンブリの名前です。 *@dotnet_assembly_name*は**nvarchar (255)** 既定値は NULL です。  
   
-`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` オーバーライドするクラスの名前を指定<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ビジネス ロジック ハンドラーを実装します。 *@dotnet_class_name*は**nvarchar (255)** 既定値は NULL です。  
+`[ @dotnet_class_name = ] 'dotnet_class_name' OUTPUT` オーバーライドするクラスの名前を指定<xref:Microsoft.SqlServer.Replication.BusinessLogicSupport.BusinessLogicModule>ビジネス ロジック ハンドラーを実装します。 *dotnet_class_name*は**nvarchar (255)** 既定値は NULL です。  
   
 `[ @publisher = ] 'publisher'` パブリッシャーの名前です。 *パブリッシャー*は**sysname**既定値は NULL です。 このパラメーターは、ストアド プロシージャをパブリッシャーから呼び出さないときに使用します。 指定しない場合、ローカル サーバーがパブリッシャーであると見なされます。  
   
@@ -69,11 +69,11 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 ## <a name="see-also"></a>関連項目  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [マージ同期中のビジネス ロジックを実行します。](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
+ [マージ同期中のビジネス ロジックの実行](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [マージ アーティクルの競合回避モジュールを指定します。](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
- [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
- [sp_unregistercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
+ [sp_registercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
+ [sp_unregistercustomresolver &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-unregistercustomresolver-transact-sql.md)   
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)  
   
   
