@@ -17,12 +17,12 @@ author: stevestein
 ms.author: sstein
 ms.openlocfilehash: ff5bd9978be59f6a512ce4173b851692b9506d96
 ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "67997556"
 ---
-# <a name="sphelpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
+# <a name="sp_helpreplfailovermode-transact-sql"></a>sp_helpreplfailovermode (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   サブスクリプションの現在のフェールオーバー モードを表示します。 このストアド プロシージャは、任意のデータベース上のサブスクライバー側で実行されます。 フェールオーバー モードの詳細については、次を参照してください。[更新可能な Subscriptions for Transactional Replication](../../relational-databases/replication/transactional/updatable-subscriptions-for-transactional-replication.md)します。  
@@ -49,7 +49,7 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` フェールオーバー モードの整数値を返し、、**出力**パラメーター。 *failover_mode_id*は、 **tinyint** 、既定値は**0**します。 返します**0**即時更新と**1**のキュー更新します。  
   
- [**\@failover_mode=**] **'***failover_mode***' 出力**  
+ [ **@failover_mode=** ] **'***failover_mode***' 出力**  
  サブスクライバーでデータ変更が行われるモードを返します。 *failover_mode*は、 **nvarchar (10)** 既定値は NULL です。 **出力**パラメーター。  
   
 |値|説明|  
@@ -67,6 +67,6 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  メンバーのみ、 **sysadmin**固定サーバー ロールまたは**db_owner**固定データベース ロールが実行できる**sp_helpreplfailovermode**します。  
   
 ## <a name="see-also"></a>参照  
- [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   

@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68771154"
 ---
-# <a name="sphelptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
+# <a name="sp_helptracertokenhistory-transact-sql"></a>sp_helptracertokenhistory (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   指定されたトレーサー トークンの詳細な待機時間情報を、各サブスクライバーに対して 1 行ずつ返します。 このストアドプロシージャは、パブリッシャー側でパブリケーションデータベースに対して、またはディストリビューター側でディストリビューションデータベースに対して実行されます。  
@@ -42,7 +42,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="arguments"></a>引数  
 `[ @publication = ] 'publication'`トレーサートークンが挿入されたパブリケーションの名前を指定します。 *パブリケーション* は **sysname** 、既定値はありません。  
   
-`[ @tracer_id = ] tracer_id`履歴情報が返される[MStracer_tokens &#40;Transact-SQL&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)テーブル内のトレーサートークンの ID を指定します。 *tracer_id*は**int**,、既定値はありません。  
+`[ @tracer_id = ] tracer_id`履歴情報が返される[MStracer_tokens &#40;transact-sql&#41; ](../../relational-databases/system-tables/mstracer-tokens-transact-sql.md)テーブル内のトレーサートークンの ID を指定します。 *tracer_id*は**int**,、既定値はありません。  
   
 `[ @publisher = ] 'publisher'`パブリッシャーの名前です。 *publisher*は**sysname**で、既定値は NULL です。  
   
@@ -67,7 +67,7 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
 ## <a name="remarks"></a>コメント  
  **sp_helptracertokenhistory**は、トランザクションレプリケーションで使用します。  
   
- [Sp_helptracertokens &#40;Transact-SQL&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)を実行して、パブリケーションのトレーサートークンの一覧を取得します。  
+ [Sp_helptracertokens &#40;transact-sql&#41; ](../../relational-databases/system-stored-procedures/sp-helptracertokens-transact-sql.md)を実行して、パブリケーションのトレーサートークンの一覧を取得します。  
   
  結果セットの値が NULL の場合は、待機時間の統計を計算できないことを意味します。 これは、トレーサートークンがディストリビューターまたはいずれかのサブスクライバーで受信されていないためです。  
   
@@ -79,6 +79,6 @@ sp_helptracertokenhistory [ @publication = ] 'publication'
   
 ## <a name="see-also"></a>関連項目  
  [トランザクション レプリケーションの待機時間の計測および接続の検証](../../relational-databases/replication/monitor/measure-latency-and-validate-connections-for-transactional-replication.md)   
- [sp_deletetracertokenhistory &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
+ [sp_deletetracertokenhistory &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-deletetracertokenhistory-transact-sql.md)  
   
   
