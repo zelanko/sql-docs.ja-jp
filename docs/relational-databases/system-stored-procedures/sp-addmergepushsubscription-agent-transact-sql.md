@@ -1,5 +1,5 @@
 ---
-title: sp_addmergepushsubscription_agent (Transact-sql) |Microsoft Docs
+title: sp_addmergepushsubscription_agent (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/16/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 08/03/2019
 ms.locfileid: "68769160"
 ---
-# <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-sql)
+# <a name="spaddmergepushsubscriptionagent-transact-sql"></a>sp_addmergepushsubscription_agent (Transact-SQL)
 [!INCLUDE[appliesto-ss-asdbmi-xxxx-xxx-md](../../includes/appliesto-ss-asdbmi-xxxx-xxx-md.md)]
 
   マージパブリケーションに対するプッシュサブスクリプションの同期をスケジュールするために使用する、新しいエージェントジョブを追加します。 このストアド プロシージャは、パブリッシャー側でパブリケーション データベースについて実行されます。  
@@ -125,7 +125,7 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |**7**|土曜日|  
 |**8**|Day|  
 |**9**|平日|  
-|"**10**"|週末|  
+|**10**|週末|  
 |NULL (既定値)||  
   
 `[ @frequency_relative_interval = ] frequency_relative_interval`マージエージェントの日付を指定します。 このパラメーターが使用されるときに *frequency_type* に設定されている **32** (月単位)。 *frequency_relative_interval*は**int**,、値は次のいずれかを指定することができます。  
@@ -133,9 +133,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 |値|説明|  
 |-----------|-----------------|  
 |**1**|First|  
-|**2**|第 2 週|  
-|**4**|サードパーティ|  
-|**8**|4 番目|  
+|**2**|Second|  
+|**4**|Third|  
+|**8**|Fourth|  
 |**16**|Last|  
 |NULL (既定値)||  
   
@@ -145,8 +145,8 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
   
 |[値]|説明|  
 |-----------|-----------------|  
-|**1**|1 回。|  
-|**2**|第 2 週|  
+|**1**|Once|  
+|**2**|Second|  
 |**4**|Minute|  
 |**8**|Hour|  
 |NULL (既定値)||  
@@ -178,9 +178,9 @@ sp_addmergepushsubscription_agent [ @publication =] 'publication'
 ## <a name="see-also"></a>関連項目  
  [ssSDSFull](../../relational-databases/replication/create-a-push-subscription.md)   
  [パブリケーションのサブスクライブ](../../relational-databases/replication/subscribe-to-publications.md)   
- [sp_addmergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
- [sp_changemergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
- [sp_dropmergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
- [sp_helpmergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
+ [sp_addmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-addmergesubscription-transact-sql.md)   
+ [sp_changemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-changemergesubscription-transact-sql.md)   
+ [sp_dropmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-dropmergesubscription-transact-sql.md)   
+ [sp_helpmergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-helpmergesubscription-transact-sql.md)  
   
   
