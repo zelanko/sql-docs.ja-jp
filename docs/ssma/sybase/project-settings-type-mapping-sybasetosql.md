@@ -58,8 +58,8 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**bit**|**bit**|  
 |**char**|**char**|  
 |**char varying**|**varchar**|  
-|**char のさまざまな [\*..8000]**|**varchar[\*]**|  
-|**char のさまざまな [8001...\*]**|**varchar(max)**|  
+|**character varying [\*..8000]**|**varchar[\*]**|  
+|**character varying [8001...\*]**|**varchar(max)**|  
 |**char [\*..8000]**|**char[\*]**|  
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
