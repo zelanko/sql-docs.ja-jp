@@ -1,5 +1,5 @@
 ---
-title: sp_addmergearticle (Transact-sql) |Microsoft Docs
+title: sp_addmergearticle (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -83,14 +83,14 @@ sp_addmergearticle [ @publication = ] 'publication'
   
 |値|説明|  
 |-----------|-----------------|  
-|**テーブル**(既定値)|スキーマとデータを含むテーブル。 レプリケーションはテーブルを監視して、レプリケートするデータを特定します。|  
-|**func スキーマのみ**|スキーマのみを使用する関数。|  
-|**インデックス付きビュー** **スキーマのみ**|スキーマのみを使用するインデックス付きビュー。|  
-|**proc スキーマのみ**|スキーマのみを使用するストアド プロシージャ。|  
-|**シノニムスキーマのみ**|スキーマのみを使用するシノニム。|  
-|**スキーマのみを表示**|スキーマのみを使用するビュー。|  
+|**table** (既定値)|スキーマとデータを含むテーブル。 レプリケーションはテーブルを監視して、レプリケートするデータを特定します。|  
+|**func schema only**|スキーマのみを使用する関数。|  
+|**indexed view schema only**|スキーマのみを使用するインデックス付きビュー。|  
+|**proc schema only**|スキーマのみを使用するストアド プロシージャ。|  
+|**synonym schema only**|スキーマのみを使用するシノニム。|  
+|**view schema only**|スキーマのみを使用するビュー。|  
   
-`[ @description = ] 'description'` は、アーティクルの説明です。 *説明*は**nvarchar (255)** ,、既定値は NULL です。  
+`[ @description = ] 'description'` は、アーティクルの説明です。 *description*は**nvarchar (255)** ,、既定値は NULL です。  
   
 `[ @column_tracking = ] 'column_tracking'` は、列レベルの追跡の設定です。 *column_tracking*は**nvarchar (10)** ,、既定値は FALSE。 **true**列の追跡を有効にします。 **false**列の追跡をオフにし、競合の検出を行レベルで行います。 テーブルが他のマージ レプリケーションで既にパブリッシュされている場合は、このテーブルに基づく既存のアーティクルが使用しているものと同じ列追跡値を使用する必要があります。 このパラメーターは、テーブル アーティクルのみに固有のものです。  
   
