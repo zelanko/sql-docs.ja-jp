@@ -64,9 +64,9 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**char[8001..\*;]**|**varchar(max)**|  
 |**character**|**char**|  
 |**character varying**|**varchar**|  
-|**文字がさまざまな [\*..8000]**|**varchar[\*]**|  
-|**文字がさまざまな [8001...\*]**|**varchar(max)**|  
-|**文字 [\*..8000]**|**char[\*]**|  
+|**character varying [\*..8000]**|**varchar[\*]**|  
+|**character varying [8001...\*]**|**varchar(max)**|  
+|**character[\*..8000]**|**char[\*]**|  
 |**character[8001..\*]**|**varchar(max)**|  
 |**date**|**date**|  
 |**datetime**|**datetime2[3]**|  
@@ -92,18 +92,18 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**varying、national char [4001...\*]**|**nvarchar(max)**|  
 |**national char [4001...\*]**|**nvarchar(max)**|  
 |**national character**|**nchar**|  
-|**各国語文字 [\*..4000]**|**nchar[\*]**|  
-|**各国語文字 [4001...\*]**|**nvarchar(max)**|  
+|**national character [\*..4000]**|**nchar[\*]**|  
+|**national character [4001...\*]**|**nvarchar(max)**|  
 |**national character varying**|**nvarchar**|  
-|**各国語文字がさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**各国語文字がさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**national character varying [\*..4000]**|**nvarchar[\*]**|  
+|**national character varying [4001...\*]**|**nvarchar(max)**|  
 |**national varchar**|**nvarchar**|  
 |**national varchar [\*..4000]**|**nvarchar[\*]**|  
 |**national varchar [4001...\*]**|**nvarchar(max)**|  
 |**nchar**|**nchar**|  
 |**nchar varying**|**nvarchar**|  
-|**nchar のさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**nchar のさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**nchar varying [\*..4000]**|**nvarchar[\*]**|  
+|**nchar varying [4001...\*]**|**nvarchar(max)**|  
 |**nchar[\*..4000]**|**nchar[\*]**|  
 |**nchar[4001..\*]**|**nvarchar(max)**|  
 |**numeric**|**numeric**|  
@@ -124,8 +124,8 @@ SSMA の既定値に型マッピングのリストをリセットする をク�
 |**tinyint**|**tinyint**|  
 |**unichar**|**nchar**|  
 |**unichar varying**|**nvarchar**|  
-|**unichar がさまざまな [\*..4000]**|**nvarchar[\*]**|  
-|**unichar がさまざまな [4001...\*]**|**nvarchar(max)**|  
+|**unichar varying [\*..4000]**|**nvarchar[\*]**|  
+|**unichar varying [4001....\*]**|**nvarchar(max)**|  
 |**unichar[\*..4000]**|**nchar[\*]**|  
 |**unichar[4001..\*]**|**nvarchar(max)**|  
 |**unitext**|**nvarchar(max)**|  
