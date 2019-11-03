@@ -1,5 +1,5 @@
 ---
-title: sp_helpreplfailovermode (Transact-sql) |Microsoft Docs
+title: sp_helpreplfailovermode (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/04/2017
 ms.prod: sql
@@ -49,12 +49,12 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
   
 `[ @failover_mode_id = ] 'failover_mode_id' OUTPUT` は、フェールオーバーモードの整数値を返し、は**出力**パラメーターです。 *failover_mode_id*は**tinyint**で、既定値は**0**です。 即時更新の場合は**0** 、キュー更新の場合は**1**を返します。  
   
- [ **\@failover_mode =** ] **'***failover_mode***' 出力**  
+`[ @failover_mode = ] 'failover_mode' OUTPUT`
  サブスクライバーでデータ変更が行われるモードを返します。 *failover_mode*は**nvarchar (10)** で、既定値は NULL です。 は**出力**パラメーターです。  
   
 |の値|Description|  
 |-----------|-----------------|  
-|**すばやい**|即時更新: サブスクライバーで行われた更新は、2フェーズコミットプロトコル (2PC) を使用してパブリッシャーに直ちに反映されます。|  
+|**immediate**|即時更新: サブスクライバーで行われた更新は、2フェーズコミットプロトコル (2PC) を使用してパブリッシャーに直ちに反映されます。|  
 |**queued**|キュー更新。サブスクライバーでの更新は、キューに格納されます。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
@@ -67,6 +67,6 @@ sp_helpreplfailovermode [ @publisher= ] 'publisher'
  **Sp_helpreplfailovermode**を実行できるのは、固定サーバーロール**sysadmin**または固定データベースロール**db_owner**のメンバーだけです。  
   
 ## <a name="see-also"></a>「  
- [sp_setreplfailovermode &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
+ [sp_setreplfailovermode &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-setreplfailovermode-transact-sql.md)  
   
   
