@@ -1,5 +1,5 @@
 ---
-title: sp_validatemergepublication (Transact-sql) |Microsoft Docs
+title: sp_validatemergepublication (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -38,10 +38,10 @@ sp_validatemergepublication [@publication=] 'publication'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **\@publication=** ] **'***publication***'**  
+`[ @publication = ] publication`
  パブリケーションの名前です。 *publication* は **sysname** 、既定値はありません。  
   
-`[ @level = ] level` は、実行する検証の種類です。 *レベル*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
+`[ @level = ] level` は、実行する検証の種類です。 *level*は**tinyint**,、既定値はありません。 レベルには次のいずれかの値を指定できます。  
   
 |レベルの値|説明|  
 |-----------------|-----------------|  
@@ -61,6 +61,6 @@ sp_validatemergepublication [@publication=] 'publication'
 ## <a name="see-also"></a>関連項目  
  [システム ストアド プロシージャ &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/system-stored-procedures-transact-sql.md)   
  [レプリケート](../../relational-databases/replication/validate-data-at-the-subscriber.md)されたデータの検証    
- [sp_validatemergesubscription &#40;transact-sql&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
+ [sp_validatemergesubscription &#40;Transact-SQL&#41;](../../relational-databases/system-stored-procedures/sp-validatemergesubscription-transact-sql.md)  
   
   
