@@ -69,7 +69,7 @@ sp_lookupcustomresolver [ @article_resolver = ] 'article_resolver'
   
 ## <a name="see-also"></a>関連項目  
  [Advanced Merge Replication Conflict Detection and Resolution](../../relational-databases/replication/merge/advanced-merge-replication-conflict-detection-and-resolution.md)   
- [マージ同期中のビジネス ロジックを実行します。](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
+ [マージ同期中のビジネス ロジックの実行](../../relational-databases/replication/merge/execute-business-logic-during-merge-synchronization.md)   
  [マージ アーティクルのビジネス ロジック ハンドラーの実装](../../relational-databases/replication/implement-a-business-logic-handler-for-a-merge-article.md)   
  [マージ アーティクルの競合回避モジュールを指定します。](../../relational-databases/replication/publish/specify-a-merge-article-resolver.md)   
  [sp_registercustomresolver &#40;TRANSACT-SQL&#41;](../../relational-databases/system-stored-procedures/sp-registercustomresolver-transact-sql.md)   
