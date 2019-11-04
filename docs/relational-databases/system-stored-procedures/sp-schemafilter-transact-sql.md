@@ -1,5 +1,5 @@
 ---
-title: sp_schemafilter (TRANSACT-SQL) |Microsoft Docs
+title: sp_schemafilter (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -22,7 +22,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68126403"
 ---
-# <a name="spschemafilter-transact-sql"></a>sp_schemafilter (TRANSACT-SQL)
+# <a name="spschemafilter-transact-sql"></a>sp_schemafilter (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
 
   変更され、パブリッシュできる Oracle テーブルを一覧表示するときに除外されているスキーマ情報が表示されます。  
@@ -39,14 +39,14 @@ sp_schemafilter [ @publisher = ] 'publisher'
 ```  
   
 ## <a name="arguments"></a>引数  
- [ **@publisher** =] **'***パブリッシャー***'**  
- 以外の名前を指定します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *パブリッシャー* は **sysname** 、既定値はありません。  
+`[ @publisher = ] 'publisher'`
+ 以外の名前を指定します[!INCLUDE[msCoName](../../includes/msconame-md.md)][!INCLUDE[ssNoVersion](../../includes/ssnoversion-md.md)]パブリッシャーです。 *publisher* は **sysname** 、既定値はありません。  
   
- [ **@schema** =] **'***スキーマ***'**  
- スキーマの名前です。 *スキーマ*は**sysname**既定値は NULL です。  
+`[ @schema = ] 'schema'`
+ スキーマの名前です。 *schema*は**sysname**既定値は NULL です。  
   
- [ **@operation** =] **'***操作***'**  
- このスキーマで実行されるアクションです。 *操作*は**nvarchar (4)** 値は次のいずれかを指定できます。  
+`[ @operation = ] 'operation'`
+ このスキーマで実行されるアクションです。 *operation*は**nvarchar (4)** 値は次のいずれかを指定できます。  
   
 |[値]|説明|  
 |-----------|-----------------|  
@@ -58,7 +58,7 @@ sp_schemafilter [ @publisher = ] 'publisher'
   
 |列名|データ型|説明|  
 |-----------------|---------------|-----------------|  
-|**スキーマ名**|**sysname**|スキーマの名前パブリケーションに適さない。|  
+|**schemaname**|**sysname**|スキーマの名前パブリケーションに適さない。|  
   
 ## <a name="return-code-values"></a>リターン コードの値  
  **0** (成功) または**1** (失敗)  
