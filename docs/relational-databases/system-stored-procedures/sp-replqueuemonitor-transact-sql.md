@@ -1,5 +1,5 @@
 ---
-title: sp_replqueuemonitor (Transact-sql) |Microsoft Docs
+title: sp_replqueuemonitor (Transact-SQL) |Microsoft Docs
 ms.custom: ''
 ms.date: 03/14/2017
 ms.prod: sql
@@ -49,7 +49,7 @@ sp_replqueuemonitor [ @publisher = ] 'publisher'
   
 `[ @tranid = ] 'tranid' ]`トランザクション ID を示します。 *tranid*は**sysname**,、既定値は NULL です。 すべてのトランザクションに対して NULL です。  
   
- **[@queuetype=** ] **'***queuetype***'** ]  
+`[ @queuetype = ] 'queuetype' ]`
  トランザクションを格納するキューの種類です。 *queuetype*は**tinyint**で、既定値は**0**です。次のいずれかの値を指定できます。  
   
 |[値]|説明|  
