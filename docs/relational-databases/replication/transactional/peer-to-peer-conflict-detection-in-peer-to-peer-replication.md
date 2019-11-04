@@ -101,6 +101,6 @@ ms.locfileid: "68041091"
     5.  [sp_changepublication](../../../relational-databases/system-stored-procedures/sp-changepublication-transact-sql.md) を実行します。このとき、@property パラメーターに 'p2p_continue_onconflict' を指定し、@value パラメーターに **false** を指定します。  
   
 ## <a name="see-also"></a>参照  
- [@loopback_detection](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
+ [ピア ツー ピア トランザクション レプリケーション](../../../relational-databases/replication/transactional/peer-to-peer-transactional-replication.md)  
   
   

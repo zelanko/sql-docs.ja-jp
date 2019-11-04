@@ -21,7 +21,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 07/15/2019
 ms.locfileid: "68070220"
 ---
-# <a name="alter-table-indexoption-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
+# <a name="alter-table-index_option-transact-sql"></a>ALTER TABLE index_option (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-asdb-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-asdb-xxxx-xxx-md.md)]
 
   [ALTER TABLE](../../t-sql/statements/alter-table-transact-sql.md) で作成される制約定義の一部であるインデックスに適用できる一連のオプションを指定します。  
@@ -192,7 +192,7 @@ ms.locfileid: "68070220"
   
  指定したテーブル、パーティション番号、またはパーティション範囲に、データ圧縮オプションを指定します。 次のオプションがあります。  
   
- なし  
+ NONE  
  テーブルまたは指定したパーティションが圧縮されません。 行ストア テーブルにのみ適用され、列ストア テーブルには適用されません。  
   
  ROW  
@@ -257,10 +257,10 @@ DATA_COMPRESSION = COLUMNSTORE_ARCHIVE ON PARTITIONS (2, 4, 6 TO 8)
  このテーブルに対するブロック操作がなくなるとすぐに、**SWITCH** またはオンライン インデックス再構築が完了します。 *WAIT_AT_LOW_PRIORITY* は、**SWITCH** またはオンライン インデックス再構築の操作が直ちに完了できない場合は待機することを示します。 この操作は優先度の低いロックを保持し、DDL ステートメントと競合するロックを保持する他の操作が続行できるようにします。 **WAIT AT LOW PRIORITY** オプションを省略すると、`WAIT_AT_LOW_PRIORITY ( MAX_DURATION = 0 minutes, ABORT_AFTER_WAIT = NONE)` と同等になります。  
   
 MAX_DURATION = *time* **[MINUTES]**  
- 取得する必要がある、**SWITCH** またはオンライン インデックス再構築のロックが、DDL コマンドの実行時に待機する時間 (分単位で指定される整数値) です。 スイッチまたはオンライン インデックス再構築の操作は、直ちに完了しようとします。 操作が **MAX_DURATION** の期間ブロックされると、**ABORT_AFTER_WAIT** アクションのいずれかが実行されます。 **MAX_DURATION** の期間は常に分単位なので、**MINUTES** という単語は省略できます。  
+ 取得する必要がある、**SWITCH** またはオンライン インデックス再構築のロックが、DDL コマンドの実行時に待機する時間 (分単位で指定される整数値) です。 SWITCH またはオンライン インデックス再構築の操作は、直ちに完了しようとします。 操作が **MAX_DURATION** の期間ブロックされると、**ABORT_AFTER_WAIT** アクションのいずれかが実行されます。 **MAX_DURATION** の期間は常に分単位なので、**MINUTES** という単語は省略できます。  
   
 ABORT_AFTER_WAIT = [**NONE** | **SELF** | **BLOCKERS** } ]  
- なし  
+ NONE  
  ロックの優先順位を変更せずに (通常の優先順位を使用して)、**SWITCH** またはオンライン インデックス再構築の操作を続行します。  
   
 SELF  

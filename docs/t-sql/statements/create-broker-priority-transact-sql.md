@@ -25,12 +25,12 @@ helpviewer_keywords:
 ms.assetid: e0bbebfa-b7c3-4825-8169-7281f7e6de98
 author: CarlRabeler
 ms.author: carlrab
-ms.openlocfilehash: 3e9ff3121d9a961981b1a6933f3e1433999c72ba
-ms.sourcegitcommit: b2464064c0566590e486a3aafae6d67ce2645cef
+ms.openlocfilehash: 18e916c3f9a9d99ea177d0d266cb20bee44a3868
+ms.sourcegitcommit: e9c1527281f2f3c7c68981a1be94fe587ae49ee9
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 07/15/2019
-ms.locfileid: "68061153"
+ms.lasthandoff: 10/30/2019
+ms.locfileid: "73064679"
 ---
 # <a name="create-broker-priority-transact-sql"></a>CREATE BROKER PRIORITY (Transact-SQL)
 [!INCLUDE[tsql-appliesto-ss2008-xxxx-xxxx-xxx-md](../../includes/tsql-appliesto-ss2008-xxxx-xxxx-xxx-md.md)]
@@ -220,7 +220,7 @@ CREATE BROKER PRIORITY [//Adventure-Works.com/Expenses/BasePriority]
 ### <a name="d-creating-three-priority-levels-for-a-target-service-by-using-services"></a>D. サービスを使用して、1 つの発信先サービスに対して 3 つの優先順位を作成する  
  次の 3 つのパフォーマンス レベルを備えたシステムをサポートします: ゴールド (高)、シルバー (中)、ブロンズ (低)。 コントラクトは 1 つですが、各レベルには個別の発信側サービスがあります。 すべての発信側サービスは、中心となる 1 つの発信先サービスと通信します。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldInitToTargetPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = SimpleContract,  
@@ -262,7 +262,7 @@ CREATE BROKER PRIORITY BronzeTargetToInitPriority
 ### <a name="e-creating-three-priority-levels-for-multiple-services-using-contracts"></a>E. コントラクトを使用して、複数のサービスに対して 3 つの優先順位を作成する  
  次の 3 つのパフォーマンス レベルを備えたシステムをサポートします: ゴールド (高)、シルバー (中)、ブロンズ (低)。 各レベルには、個別のコントラクトがあります。 これらの優先度は、そのコントラクトを使用するメッセージ交換によって参照されるすべてのサービスに適用されます。  
   
-```  
+```sql  
 CREATE BROKER PRIORITY GoldPriority  
     FOR CONVERSATION  
     SET (CONTRACT_NAME = GoldContract,  

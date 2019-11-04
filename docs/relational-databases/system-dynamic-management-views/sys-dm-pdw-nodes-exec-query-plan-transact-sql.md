@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73145637"
 ---
-# <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>sys.dm_pdw _nodes_dm_exec_query_plan (Transact-sql)
+# <a name="syspdw_nodes_dm_exec_query_plan-transact-sql"></a>システム pdw _nodes_dm_exec_query_plan (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 プラン ハンドルで指定されたバッチのプラン表示を XML 形式で返します。 プランハンドルで指定されたプランは、キャッシュされるか、現在実行中であることができます。  

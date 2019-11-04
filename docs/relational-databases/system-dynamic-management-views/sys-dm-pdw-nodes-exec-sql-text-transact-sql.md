@@ -20,7 +20,7 @@ ms.contentlocale: ja-JP
 ms.lasthandoff: 10/30/2019
 ms.locfileid: "73145677"
 ---
-# <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>sys.dm_pdw_nodes_dm_exec_sql_text (Transact-sql)
+# <a name="syspdw_nodes_dm_exec_sql_text-transact-sql"></a>システム pdw _nodes_dm_exec_sql_text (Transact-sql)
 [!INCLUDE[tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md](../../includes/tsql-appliesto-xxxxxx-xxxx-asdw-xxx-md.md)]
 
 指定された*sql_handle*によって識別される SQL バッチのテキストを返します。 このテーブル値関数は、システム関数**fn_get_sql**を置き換えます。  
