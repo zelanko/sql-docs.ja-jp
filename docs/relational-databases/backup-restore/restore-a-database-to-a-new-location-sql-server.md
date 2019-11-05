@@ -19,12 +19,12 @@ helpviewer_keywords:
 ms.assetid: 4da76d61-5e11-4bee-84f5-b305240d9f42
 author: MikeRayMSFT
 ms.author: mikeray
-ms.openlocfilehash: 42cd70465f890e1da1f40076da5e41f0b4b40884
-ms.sourcegitcommit: 26715b4dbef95d99abf2ab7198a00e6e2c550243
+ms.openlocfilehash: 4e3c7cfdc24c55dde67e8abe5473b934fc6ac5f4
+ms.sourcegitcommit: d65cef35cdf992297496095d3ad76e3c18c9794a
 ms.translationtype: HT
 ms.contentlocale: ja-JP
-ms.lasthandoff: 09/04/2019
-ms.locfileid: "70278924"
+ms.lasthandoff: 10/28/2019
+ms.locfileid: "72989564"
 ---
 # <a name="restore-a-database-to-a-new-location-sql-server"></a>データベースを新しい場所に復元する (SQL Server)
 [!INCLUDE[appliesto-ss-xxxx-xxxx-xxx-md](../../includes/appliesto-ss-xxxx-xxxx-xxx-md.md)]
@@ -108,25 +108,25 @@ ms.locfileid: "70278924"
 2.  [RESTORE DATABASE](../../t-sql/statements/restore-statements-transact-sql.md) ステートメントを使用し、データベースの完全バックアップを復元します。 既定で、データとログ ファイルが元の場所に復元されます。 データベースを再配置するには、MOVE オプションを使用して、各データベース ファイルを再配置し、既存ファイルとの衝突が発生するのを防ぎます。  
 
   データベースを新しい場所と新しい名前に復元するための基本的な [!INCLUDE[tsql](../../includes/tsql-md.md)] 構文は以下のとおりです。  
-  
+  ```sql
   RESTORE DATABASE *new_database_name*  
   
   FROM *backup_device* [ ,...*n* ]  
   
   [ WITH  
+ 
+   {  
   
-  {  
+      [ **RECOVERY** | NORECOVERY ]  
   
-  [ **RECOVERY** | NORECOVERY ]  
+      [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
   
-  [ , ] [ FILE ={ *backup_set_file_number* | @*backup_set_file_number* } ]  
-  
-  [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
+      [ , ] MOVE '*logical_file_name_in_backup*' TO '*operating_system_file_name*' [ ,...*n* ]  
   
   }  
   
   ;  
-  
+  ```
   > [!NOTE] 
   > データベースを別のディスクに再配置する準備をする場合は、容量が十分あるかどうか、および既存のファイルと衝突する可能性がないかどうかを確認してください。 この作業は、 [RESTORE VERIFYONLY](../../t-sql/statements/restore-statements-verifyonly-transact-sql.md) ステートメントを使用して、RESTORE DATABASE ステートメントで使用するのと同じ MOVE パラメーターを指定する必要があります。  
   
