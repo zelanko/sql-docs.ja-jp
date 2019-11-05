@@ -31,7 +31,7 @@ Microsoft SqlClient Data Provider SQL Server の各イテレーションは、�
 |  Version  |  リリース日 | サポート レベル | サポートされている修正プログラムのバージョン | サポートの終了 |
 | -- | -- | -- | -- | -- |
 | [.NET Core 2.2](https://aka.ms/netcore22announce) | 2018 年 12 月 04 日 | Current | [2.2.6](https://www.microsoft.com/net/download/dotnet-core/runtime-2.2.6) | |
-| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | 2018 年 5 月 30 日 | LTS | [2.1.12](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.12) | LTS 宣言 (2018 年8月21日) から少なくとも3年。 |
+| [.NET Core 2.1](https://blogs.msdn.microsoft.com/dotnet/2018/05/30/announcing-net-core-2-1) | 2018 年 5 月 30 日 | LTS | [2.1.12](https://www.microsoft.com/net/download/dotnet-core/runtime-2.1.12) | LTS 宣言 (2018 年 8 月 21 日) から少なくとも 3 年。 |
 
 ## <a name="microsoft-support-for-net-framework"></a>Microsoft による .NET Framework のサポート
 
